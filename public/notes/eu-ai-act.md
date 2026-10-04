@@ -9,8 +9,8 @@ official_reference: "Regulation (EU) 2024/1689"
 consolidated_version: 2026-07-27
 aliases: [AI Act, Artificial Intelligence Act, KI-Verordnung]
 sources:
-  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689
-  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1689
+  - https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+  - https://eur-lex.europa.eu/eli/reg/2024/1689/oj/deu
   - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02024R1689-20260727
   - https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:02024R1689-20260727
   - https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng
