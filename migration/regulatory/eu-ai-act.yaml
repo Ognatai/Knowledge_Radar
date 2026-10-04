@@ -1,0 +1,36 @@
+# Input for `python -m app.agents.regulatory_articles <command> eu-ai-act`.
+# Application dates were verified against Art. 111 and 113 of the consolidated text.
+note: eu-ai-act
+act_context: >-
+  the EU AI Act (Regulation (EU) 2024/1689, consolidated version of 27 July 2026,
+  as amended by Regulation (EU) 2026/1744, the "Digital Omnibus on AI")
+sources:
+  en: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02024R1689-20260727
+  de: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:02024R1689-20260727
+# Article whose detailed section serves as the style example.
+style_example: 4
+# Important articles (see "Depth" in docs/note-templates.md) and when they apply.
+detailed_articles:
+  "1": 2 February 2025 (Chapter I)
+  "2": 2 February 2025 (Chapter I)
+  "3": 2 February 2025 (Chapter I)
+  "4": 2 February 2025 (Chapter I)
+  "5": 2 February 2025; points (ba) and (bb) of paragraph 1 and paragraphs 1a and 1b from 2 December 2026
+  "6": >-
+    Chapter III Section 1 applies from 2 December 2027 for Annex III systems and from
+    2 August 2028 for Annex I systems; Article 6(5) is excepted from that deferral
+  "9": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "10": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "12": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "13": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "14": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "15": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "25": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "26": 2 December 2027 (Annex III systems) / 2 August 2028 (Annex I systems)
+  "50": >-
+    2 August 2026; for generative systems placed on the market before 2 August 2026,
+    paragraph 2 from 2 December 2026 (Art. 111(4))
+  "53": 2 August 2025; models placed on the market before 2 August 2025 by 2 August 2027 (Art. 111(3))
+  "55": 2 August 2025; models placed on the market before 2 August 2025 by 2 August 2027 (Art. 111(3))
+  "99": 2 August 2025 (Chapter XII)
+  "113": Article 113 itself sets the dates; the Regulation entered into force on 1 August 2024
