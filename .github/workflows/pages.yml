@@ -1,10 +1,9 @@
 name: Deploy public site
 
-# Lightweight, no LLM calls: runs after a merge to main and publishes the static
-# site built from public/ only.
+# Lightweight, no LLM calls: publishes the static site built from public/ only.
+# Manual only until the site is cleared for publication (legal pages complete);
+# then add `push: branches: [main]` to deploy after every merge.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

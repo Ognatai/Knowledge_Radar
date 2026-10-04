@@ -51,9 +51,16 @@ npm run build      # static build in app/site/dist
 In VS Code: **Terminal: Run Task → Knowledge Radar: Public site (dev)** exports
 the data and starts the development server.
 
-On every push to `main`, GitHub Actions runs the same export and build and
-deploys `app/site/dist` to GitHub Pages (`.github/workflows/pages.yml`). In
-the repository settings, set **Pages → Source** to **GitHub Actions**.
+To test exactly what would be published, run **Knowledge Radar: Public site
+(production preview)**: it exports the data, builds the site and serves
+`app/site/dist` on `http://127.0.0.1:4173`.
+
+Publishing is manual: the workflow `.github/workflows/pages.yml` runs the same
+export and build and deploys `app/site/dist` to GitHub Pages only when started
+via **Actions → Deploy public site → Run workflow** (repository settings:
+**Pages → Source** set to **GitHub Actions**). It is deliberately not triggered
+by merges until the site, including its legal pages, is cleared for
+publication.
 
 ## 5. Local app API
 
