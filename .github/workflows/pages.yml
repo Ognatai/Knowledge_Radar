@@ -24,6 +24,12 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+      - name: Refuse to publish with incomplete legal pages
+        run: |
+          if grep -n "TODO(" app/site/src/legal.ts; then
+            echo "::error::Legal pages still contain TODO markers; complete them before publishing."
+            exit 1
+          fi
       - name: Private-data safety check (full tree)
         env:
           KNOWLEDGE_RADAR_PRIVATE_PATTERNS: ${{ secrets.KNOWLEDGE_RADAR_PRIVATE_PATTERNS }}
