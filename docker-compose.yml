@@ -1,0 +1,18 @@
+# Local app (ThinkPad deployment). Ports are bound to localhost only.
+# The chat + Review Dashboard frontend (app/frontend/) joins here in milestone 7;
+# the public site (app/site/) is static and deployed to GitHub Pages instead.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: app/backend/Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./public/notes:/workspace/public/notes:ro
+    environment:
+      KNOWLEDGE_RADAR_NOTES_DIR: /workspace/public/notes
+      # Ollama stays a host installation; the container reaches it via the host gateway.
+      OLLAMA_BASE_URL: http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

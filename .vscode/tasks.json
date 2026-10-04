@@ -1,0 +1,85 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "ollamaModel",
+      "type": "pickString",
+      "description": "Ollama model: qwen3.5:4b is the chat model (ThinkPad), qwen3:14b the pipeline model (Desktop).",
+      "options": ["qwen3.5:4b", "qwen3:14b"],
+      "default": "qwen3.5:4b"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Knowledge Radar: API",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "uvicorn",
+        "app.backend.knowledge_radar.api:app",
+        "--reload",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "group": "knowledge-radar",
+        "panel": "dedicated",
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "Knowledge Radar: Export site data",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "app.backend.knowledge_radar.site_export"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Knowledge Radar: Public site (dev)",
+      "dependsOn": ["Knowledge Radar: Export site data"],
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}\\app\\site"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "group": "knowledge-radar",
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Knowledge Radar: Ollama chat",
+      "type": "process",
+      "command": "ollama",
+      "args": ["run", "${input:ollamaModel}"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "always",
+        "focus": true
+      }
+    }
+  ]
+}

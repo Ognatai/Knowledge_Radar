@@ -1,0 +1,6 @@
+# Copy to `local-config.yaml` (untracked) and adjust per machine.
+# Without this file the app runs against the public notes only.
+
+# Absolute path to the separate private repository checkout. It must be a
+# sibling of this repository, never nested inside it. Leave empty if absent.
+private_repo_path:
