@@ -216,3 +216,51 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Architecture notes are local planning material and must not be published.
+/architecture-public-repo.md
+/architecture-private-repo.md
+
+# Local configuration and secrets
+.env*
+!.env.example
+/local-config.yaml
+/private-repo.yaml
+*.secret
+*.pem
+*.key
+
+# Local indexes, databases, and generated pipeline data
+/.knowledge-radar/
+/data/
+/indexes/
+/artifacts/
+*.kuzu
+*.wal
+*.sqlite
+*.sqlite3
+*.db
+*.faiss
+*.parquet
+*.tmp
+*.log
+
+# Frontend dependencies and generated output (site data is built by site_export)
+/app/site/node_modules/
+/app/site/dist/
+/app/site/.vite/
+/app/site/public/data/
+/app/frontend/node_modules/
+*.tsbuildinfo
+npm-debug.log*
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+/.claude/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json

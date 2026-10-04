@@ -1,0 +1,5 @@
+* text=auto
+# Git hooks run under sh, also on Windows: keep LF line endings.
+.githooks/* text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
