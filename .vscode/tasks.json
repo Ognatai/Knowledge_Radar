@@ -67,6 +67,35 @@
       }
     },
     {
+      "label": "Knowledge Radar: Build site",
+      "dependsOn": ["Knowledge Radar: Export site data"],
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": ["run", "build"],
+      "options": {
+        "cwd": "${workspaceFolder}\\app\\site"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Knowledge Radar: Public site (production preview)",
+      "detail": "Exactly the build that GitHub Pages would publish, served on http://127.0.0.1:4173",
+      "dependsOn": ["Knowledge Radar: Build site"],
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": ["run", "preview", "--", "--port", "4173"],
+      "options": {
+        "cwd": "${workspaceFolder}\\app\\site"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "group": "knowledge-radar",
+        "panel": "dedicated",
+        "reveal": "always"
+      }
+    },
+    {
       "label": "Knowledge Radar: Ollama chat",
       "type": "process",
       "command": "ollama",
