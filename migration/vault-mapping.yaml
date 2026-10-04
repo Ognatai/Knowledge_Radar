@@ -1,0 +1,151 @@
+# Hand-maintained mapping from the Obsidian vault ("Wissensdatenbank") to this
+# repository: stable English IDs (future note slugs), bilingual titles, entity
+# type, and which note template applies. Input for
+# `python -m app.agents.vault_inventory`.
+#
+# The note template follows from the area: legal -> regulatory, otherwise
+# technical; a `template:` key on an entry overrides that.
+# hub: true  marks overview notes (MOCs). They are not migrated as notes; their
+#            sections become topic groups in the inventory.
+# Technology is not yet in schema.yaml; see schema_proposals.md.
+
+version: 1
+
+areas:
+  Künstliche Intelligenz: ai
+  Legal: legal
+  Sprachen & Werkzeuge: tools
+
+notes:
+  # --- Hubs -------------------------------------------------------------------
+  Übersicht: {hub: true}
+  Künstliche Intelligenz - Übersicht: {hub: true}
+  Legal - Übersicht: {hub: true}
+  Sprachen & Werkzeuge - Übersicht: {hub: true}
+
+  # --- Künstliche Intelligenz ------------------------------------------------
+  Agentic AI: {id: agentic-ai, title_en: Agentic AI, title_de: Agentic AI, entity_type: Concept}
+  Attention und Transformer: {id: attention-and-transformers, title_en: Attention and Transformers, title_de: Attention und Transformer, entity_type: Method}
+  Autoencoder und GAN: {id: autoencoders-and-gans, title_en: Autoencoders and GANs, title_de: Autoencoder und GANs, entity_type: Method}
+  Bias in NLP: {id: bias-in-nlp, title_en: Bias in NLP, title_de: Bias in NLP, entity_type: Concept}
+  CNN (Convolutional Neural Networks): {id: convolutional-neural-networks, title_en: Convolutional Neural Networks (CNN), title_de: Convolutional Neural Networks (CNN), entity_type: Method}
+  Causal Inference: {id: causal-inference, title_en: Causal Inference, title_de: Kausale Inferenz, entity_type: Method}
+  Clustering: {id: clustering, title_en: Clustering, title_de: Clustering, entity_type: Method}
+  ComplEx: {id: complex, title_en: ComplEx, title_de: ComplEx, entity_type: Method}
+  Context Engineering: {id: context-engineering, title_en: Context Engineering, title_de: Context Engineering, entity_type: Method}
+  Contract Intelligence: {id: contract-intelligence, title_en: Contract Intelligence, title_de: Contract Intelligence, entity_type: Concept}
+  Differential Privacy & Federated Learning: {id: differential-privacy-and-federated-learning, title_en: Differential Privacy and Federated Learning, title_de: Differential Privacy und Federated Learning, entity_type: Method}
+  Diffusion Models: {id: diffusion-models, title_en: Diffusion Models, title_de: Diffusionsmodelle, entity_type: Method}
+  DistMult: {id: distmult, title_en: DistMult, title_de: DistMult, entity_type: Method}
+  Embeddings: {id: embeddings, title_en: Embeddings, title_de: Embeddings, entity_type: Concept}
+  Engineering-Methoden für KI-Systeme: {id: engineering-methods-for-ai-systems, title_en: Engineering Methods for AI Systems, title_de: Engineering-Methoden für KI-Systeme, entity_type: Concept}
+  Ensemble-Methoden: {id: ensemble-methods, title_en: Ensemble Methods, title_de: Ensemble-Methoden, entity_type: Method}
+  Entitätsextraktion: {id: entity-extraction, title_en: Entity Extraction, title_de: Entitätsextraktion, entity_type: Method}
+  Entscheidungsbäume: {id: decision-trees, title_en: Decision Trees, title_de: Entscheidungsbäume, entity_type: Method}
+  Experiment Tracking: {id: experiment-tracking, title_en: Experiment Tracking, title_de: Experiment Tracking, entity_type: Method}
+  Explainable AI: {id: explainable-ai, title_en: Explainable AI (XAI), title_de: Erklärbare KI (XAI), entity_type: Concept}
+  Fairness-Metriken: {id: fairness-metrics, title_en: Fairness Metrics, title_de: Fairness-Metriken, entity_type: Concept}
+  Feature Engineering: {id: feature-engineering, title_en: Feature Engineering, title_de: Feature Engineering, entity_type: Method}
+  Graph Databases: {id: graph-databases, title_en: Graph Databases, title_de: Graphdatenbanken, entity_type: Concept}
+  Graph Engineering: {id: graph-engineering, title_en: Graph Engineering, title_de: Graph Engineering, entity_type: Method}
+  GraphRAG: {id: graphrag, title_en: GraphRAG, title_de: GraphRAG, entity_type: Method}
+  Harness Engineering: {id: harness-engineering, title_en: Harness Engineering, title_de: Harness Engineering, entity_type: Method}
+  Information Extraction: {id: information-extraction, title_en: Information Extraction, title_de: Informationsextraktion, entity_type: Method}
+  Information Retrieval: {id: information-retrieval, title_en: Information Retrieval, title_de: Information Retrieval, entity_type: Concept}
+  Keras und TensorFlow: {id: keras-and-tensorflow, title_en: Keras and TensorFlow, title_de: Keras und TensorFlow, entity_type: Technology}
+  Klassifikationsmetriken: {id: classification-metrics, title_en: Classification Metrics, title_de: Klassifikationsmetriken, entity_type: Concept}
+  Klassifizierung: {id: classification, title_en: Classification, title_de: Klassifikation, entity_type: Concept}
+  Klassische ML-Verfahren: {id: classical-machine-learning, title_en: Classical Machine Learning Methods, title_de: Klassische ML-Verfahren, entity_type: Concept}
+  Knowledge Distillation: {id: knowledge-distillation, title_en: Knowledge Distillation, title_de: Knowledge Distillation, entity_type: Method}
+  Knowledge Graph Engineering: {id: knowledge-graph-engineering, title_en: Knowledge Graph Engineering, title_de: Knowledge Graph Engineering, entity_type: Method}
+  Knowledge Graphs: {id: knowledge-graphs, title_en: Knowledge Graphs, title_de: Wissensgraphen, entity_type: Concept}
+  LLM Evaluation: {id: llm-evaluation, title_en: LLM Evaluation, title_de: LLM-Evaluation, entity_type: Method}
+  LLM Observability & Tracing: {id: llm-observability-and-tracing, title_en: LLM Observability and Tracing, title_de: LLM-Observability und Tracing, entity_type: Method}
+  LLM-Anpassung: {id: llm-adaptation, title_en: LLM Adaptation, title_de: LLM-Anpassung, entity_type: Concept}
+  LLM-Kostenoptimierung: {id: llm-cost-optimization, title_en: LLM Cost Optimization, title_de: LLM-Kostenoptimierung, entity_type: Method}
+  LLM-as-a-Judge: {id: llm-as-a-judge, title_en: LLM-as-a-Judge, title_de: LLM-as-a-Judge, entity_type: Method}
+  Large Language Models: {id: large-language-models, title_en: Large Language Models, title_de: Large Language Models, entity_type: Concept}
+  Legal AI: {id: legal-ai, title_en: Legal AI, title_de: Legal AI, entity_type: Concept}
+  LoRA: {id: lora, title_en: LoRA (Low-Rank Adaptation), title_de: LoRA (Low-Rank Adaptation), entity_type: Method}
+  Loop Engineering: {id: loop-engineering, title_en: Loop Engineering, title_de: Loop Engineering, entity_type: Method}
+  MCP und ähnliche Protokolle: {id: mcp-and-related-protocols, title_en: MCP and Related Protocols, title_de: MCP und ähnliche Protokolle, entity_type: Concept}
+  MLOps und Deployment: {id: mlops-and-deployment, title_en: MLOps and Deployment, title_de: MLOps und Deployment, entity_type: Method}
+  Mixed Precision Training: {id: mixed-precision-training, title_en: Mixed Precision Training, title_de: Mixed Precision Training, entity_type: Method}
+  Modellbewertung neuronaler Netze: {id: neural-network-evaluation, title_en: Evaluating Neural Networks, title_de: Modellbewertung neuronaler Netze, entity_type: Method}
+  Modellvergleiche: {id: model-comparison, title_en: Model Comparison, title_de: Modellvergleiche, entity_type: Method}
+  Multimodale Modelle: {id: multimodal-models, title_en: Multimodal Models, title_de: Multimodale Modelle, entity_type: Concept}
+  Natural Language Processing: {id: natural-language-processing, title_en: Natural Language Processing, title_de: Natural Language Processing, entity_type: Concept}
+  Neuronale Netze: {id: neural-networks, title_en: Neural Networks, title_de: Neuronale Netze, entity_type: Method}
+  Ontologie-Design: {id: ontology-design, title_en: Ontology Design, title_de: Ontologie-Design, entity_type: Method}
+  PCA (Principal Component Analysis): {id: principal-component-analysis, title_en: Principal Component Analysis (PCA), title_de: Hauptkomponentenanalyse (PCA), entity_type: Method}
+  Preprocessing für Machine Learning: {id: ml-preprocessing, title_en: Preprocessing for Machine Learning, title_de: Preprocessing für Machine Learning, entity_type: Method}
+  Prompt Engineering: {id: prompt-engineering, title_en: Prompt Engineering, title_de: Prompt Engineering, entity_type: Method}
+  Prompt-Vergleiche: {id: prompt-comparison, title_en: Prompt Comparison, title_de: Prompt-Vergleiche, entity_type: Method}
+  Qualitätskontrolle: {id: quality-control, title_en: Quality Control, title_de: Qualitätskontrolle, entity_type: Method}
+  Quantization: {id: quantization, title_en: Quantization, title_de: Quantisierung, entity_type: Method}
+  RAG - Chunking: {id: rag-chunking, title_en: "RAG: Chunking", title_de: "RAG: Chunking", entity_type: Method}
+  RAG - Evaluation: {id: rag-evaluation, title_en: "RAG: Evaluation", title_de: "RAG: Evaluation", entity_type: Method}
+  RAG - Generation Evaluation: {id: rag-generation-evaluation, title_en: "RAG: Generation Evaluation", title_de: "RAG: Evaluation der Generierung", entity_type: Method}
+  RAG - Retrieval Evaluation: {id: rag-retrieval-evaluation, title_en: "RAG: Retrieval Evaluation", title_de: "RAG: Evaluation des Retrievals", entity_type: Method}
+  RAG - Retrieval: {id: rag-retrieval, title_en: "RAG: Retrieval", title_de: "RAG: Retrieval", entity_type: Method}
+  RAG - Typische Fehlerarten: {id: rag-failure-modes, title_en: "RAG: Failure Modes", title_de: "RAG: Typische Fehlerarten", entity_type: Concept}
+  RAG vs Fine-Tuning: {id: rag-vs-fine-tuning, title_en: RAG vs. Fine-Tuning, title_de: RAG vs. Fine-Tuning, entity_type: Concept}
+  RAG: {id: retrieval-augmented-generation, title_en: Retrieval-Augmented Generation, title_de: Retrieval-Augmented Generation, entity_type: Method}
+  RNN und Zeitreihen: {id: recurrent-neural-networks, title_en: Recurrent Neural Networks and Time Series, title_de: RNN und Zeitreihen, entity_type: Method}
+  Regression Tests: {id: regression-testing, title_en: Regression Testing, title_de: Regressionstests, entity_type: Method}
+  Regularisierung und Hyperparameter: {id: regularization-and-hyperparameters, title_en: Regularization and Hyperparameters, title_de: Regularisierung und Hyperparameter, entity_type: Method}
+  Reinforcement Learning Grundlagen: {id: reinforcement-learning, title_en: Reinforcement Learning Fundamentals, title_de: Grundlagen des Reinforcement Learning, entity_type: Method}
+  RotatE: {id: rotate, title_en: RotatE, title_de: RotatE, entity_type: Method}
+  Skills: {id: agent-skills, title_en: Agent Skills, title_de: Agent Skills, entity_type: Concept}
+  Statistik-Grundlagen: {id: statistics-fundamentals, title_en: Statistics Fundamentals, title_de: Statistik-Grundlagen, entity_type: Concept}
+  Support Vector Machines: {id: support-vector-machines, title_en: Support Vector Machines, title_de: Support Vector Machines, entity_type: Method}
+  Textähnlichkeitsmetriken: {id: text-similarity-metrics, title_en: Text Similarity Metrics, title_de: Textähnlichkeitsmetriken, entity_type: Concept}
+  Time Series Analysis: {id: time-series-analysis, title_en: Time Series Analysis, title_de: Zeitreihenanalyse, entity_type: Method}
+  Tokenisierung: {id: tokenization, title_en: Tokenization, title_de: Tokenisierung, entity_type: Method}
+  Training neuronaler Netze: {id: neural-network-training, title_en: Training Neural Networks, title_de: Training neuronaler Netze, entity_type: Method}
+  TransE: {id: transe, title_en: TransE, title_de: TransE, entity_type: Method}
+  Vector Databases: {id: vector-databases, title_en: Vector Databases, title_de: Vektordatenbanken, entity_type: Concept}
+  Vibe Coding: {id: vibe-coding, title_en: Vibe Coding, title_de: Vibe Coding, entity_type: Concept}
+  k-Nearest Neighbors: {id: k-nearest-neighbors, title_en: k-Nearest Neighbors, title_de: k-Nearest Neighbors, entity_type: Method}
+  semantisches Retrieval: {id: semantic-retrieval, title_en: Semantic Retrieval, title_de: Semantisches Retrieval, entity_type: Method}
+  strukturierte Kontextbildung: {id: structured-context-construction, title_en: Structured Context Construction, title_de: Strukturierte Kontextbildung, entity_type: Method}
+
+  # --- Legal -----------------------------------------------------------------
+  BCBS 239 & ECB RDARR-Guide: {id: bcbs-239-and-ecb-rdarr-guide, title_en: BCBS 239 and the ECB RDARR Guide, title_de: BCBS 239 und ECB-RDARR-Leitfaden, entity_type: Regulation, jurisdiction: EU}
+  BDSG: {id: bdsg, title_en: Federal Data Protection Act (BDSG), title_de: Bundesdatenschutzgesetz (BDSG), entity_type: Regulation, jurisdiction: DE}
+  BSI-KritisV: {id: bsi-kritisv, title_en: BSI Critical Infrastructure Ordinance (BSI-KritisV), title_de: BSI-Kritisverordnung (BSI-KritisV), entity_type: Regulation, jurisdiction: DE}
+  BSIG: {id: bsig, title_en: BSI Act (BSIG), title_de: BSI-Gesetz (BSIG), entity_type: Regulation, jurisdiction: DE}
+  CER-Richtlinie: {id: cer-directive, title_en: Critical Entities Resilience Directive (CER), title_de: CER-Richtlinie, entity_type: Regulation, jurisdiction: EU}
+  CRA: {id: cyber-resilience-act, title_en: Cyber Resilience Act (CRA), title_de: Cyber Resilience Act (CRA), entity_type: Regulation, jurisdiction: EU}
+  CRR und CRD: {id: crr-and-crd, title_en: Capital Requirements Regulation and Directive (CRR/CRD), title_de: CRR und CRD, entity_type: Regulation, jurisdiction: EU}
+  Cybersecurity Act & ENISA: {id: cybersecurity-act, title_en: Cybersecurity Act and ENISA, title_de: Cybersecurity Act und ENISA, entity_type: Regulation, jurisdiction: EU}
+  DORA: {id: dora, title_en: Digital Operational Resilience Act (DORA), title_de: Digital Operational Resilience Act (DORA), entity_type: Regulation, jurisdiction: EU}
+  DSGVO: {id: gdpr, title_en: General Data Protection Regulation (GDPR), title_de: Datenschutz-Grundverordnung (DSGVO), entity_type: Regulation, jurisdiction: EU}
+  Data Act: {id: data-act, title_en: Data Act, title_de: Data Act, entity_type: Regulation, jurisdiction: EU}
+  Data Governance Act: {id: data-governance-act, title_en: Data Governance Act, title_de: Data Governance Act, entity_type: Regulation, jurisdiction: EU}
+  Digital Markets Act: {id: digital-markets-act, title_en: Digital Markets Act (DMA), title_de: Digital Markets Act (DMA), entity_type: Regulation, jurisdiction: EU}
+  Digital Services Act: {id: digital-services-act, title_en: Digital Services Act (DSA), title_de: Digital Services Act (DSA), entity_type: Regulation, jurisdiction: EU}
+  EBA Internal Governance & Outsourcing Guidelines: {id: eba-governance-and-outsourcing-guidelines, title_en: EBA Guidelines on Internal Governance and Outsourcing, title_de: EBA-Leitlinien zu interner Governance und Auslagerung, entity_type: Regulation, jurisdiction: EU}
+  EECC-Richtlinie: {id: eecc, title_en: European Electronic Communications Code (EECC), title_de: Europäischer Kodex für die elektronische Kommunikation (EECC), entity_type: Regulation, jurisdiction: EU}
+  EU AI Act: {id: eu-ai-act, title_en: EU AI Act, title_de: EU KI-Verordnung, entity_type: Regulation, jurisdiction: EU}
+  GeschGehG: {id: geschgehg, title_en: Trade Secrets Act (GeschGehG), title_de: Geschäftsgeheimnisgesetz (GeschGehG), entity_type: Regulation, jurisdiction: DE}
+  Informationssicherheit und Kontrollsysteme im Bankumfeld: {id: information-security-in-banking, title_en: Information Security and Control Systems in Banking, title_de: Informationssicherheit und Kontrollsysteme im Bankumfeld, entity_type: Concept, jurisdiction: DE}
+  KI-Haftungsrecht: {id: ai-liability-law, title_en: AI Liability Law, title_de: KI-Haftungsrecht, entity_type: Concept, jurisdiction: EU}
+  KWG: {id: kwg, title_en: German Banking Act (KWG), title_de: Kreditwesengesetz (KWG), entity_type: Regulation, jurisdiction: DE}
+  MaRisk: {id: marisk, title_en: Minimum Requirements for Risk Management (MaRisk), title_de: Mindestanforderungen an das Risikomanagement (MaRisk), entity_type: Regulation, jurisdiction: DE}
+  NIS2: {id: nis2-directive, title_en: NIS2 Directive, title_de: NIS-2-Richtlinie, entity_type: Regulation, jurisdiction: EU}
+  TDDDG: {id: tdddg, title_en: Telecommunications Digital Services Data Protection Act (TDDDG), title_de: Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz (TDDDG), entity_type: Regulation, jurisdiction: DE}
+  Urheberrecht & KI-Trainingsdaten: {id: copyright-and-ai-training-data, title_en: Copyright and AI Training Data, title_de: Urheberrecht und KI-Trainingsdaten, entity_type: Concept, jurisdiction: EU}
+  eIDAS-Verordnung: {id: eidas, title_en: eIDAS Regulation, title_de: eIDAS-Verordnung, entity_type: Regulation, jurisdiction: EU}
+  ePrivacy-Richtlinie: {id: eprivacy-directive, title_en: ePrivacy Directive, title_de: ePrivacy-Richtlinie, entity_type: Regulation, jurisdiction: EU}
+
+  # --- Sprachen & Werkzeuge --------------------------------------------------
+  Confluence: {id: confluence, title_en: Confluence, title_de: Confluence, entity_type: Technology}
+  Docker: {id: docker, title_en: Docker, title_de: Docker, entity_type: Technology}
+  Git: {id: git, title_en: Git, title_de: Git, entity_type: Technology}
+  Kubernetes: {id: kubernetes, title_en: Kubernetes, title_de: Kubernetes, entity_type: Technology}
+  LangChain & LangGraph: {id: langchain-and-langgraph, title_en: LangChain and LangGraph, title_de: LangChain und LangGraph, entity_type: Technology}
+  Python: {id: python, title_en: Python, title_de: Python, entity_type: Technology}
+  RDF: {id: rdf, title_en: RDF (Resource Description Framework), title_de: RDF (Resource Description Framework), entity_type: Technology}
+  SPARQL: {id: sparql, title_en: SPARQL, title_de: SPARQL, entity_type: Technology}
+  SQL: {id: sql, title_en: SQL, title_de: SQL, entity_type: Technology}
