@@ -1,0 +1,1 @@
+"""Knowledge Radar API backend."""

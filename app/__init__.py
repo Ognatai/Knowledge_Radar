@@ -1,0 +1,1 @@
+"""Knowledge Radar application packages."""
