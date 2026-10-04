@@ -17,6 +17,7 @@ import {
   type SiteData,
 } from "./data";
 import type { Language } from "./i18n";
+import { isDraft, legalPages } from "./legal";
 import { outlineNote, slugify, type TocEntry } from "./toc";
 
 type Screen =
@@ -27,55 +28,9 @@ type Screen =
   | { kind: "entity"; id: string }
   | { kind: "legal"; pageId: string };
 
-interface LegalPage {
-  id: string;
-  title_en: string;
-  title_de: string;
-  body_en: string;
-  body_de: string;
-}
-
 const PAGE_SIZE = 24;
 // The force-graph bundle is large; load it only when the graph is shown.
 const GraphView = lazy(() => import("./GraphView").then((module) => ({ default: module.GraphView })));
-
-const legalPages: LegalPage[] = [
-  {
-    id: "imprint",
-    title_en: "Imprint",
-    title_de: "Impressum",
-    body_en: "Operator name, postal address and any legally required disclosures must be added before public launch.",
-    body_de: "Name und Postanschrift des Betreibers sowie gegebenenfalls weitere gesetzlich erforderliche Angaben müssen vor einer öffentlichen Veröffentlichung ergänzt werden.",
-  },
-  {
-    id: "contact",
-    title_en: "Contact",
-    title_de: "Kontakt",
-    body_en: "A public contact address has not yet been provided. Add a monitored contact method before launch.",
-    body_de: "Eine öffentliche Kontaktadresse liegt noch nicht vor. Vor der Veröffentlichung muss ein betreuter Kontaktweg ergänzt werden.",
-  },
-  {
-    id: "privacy",
-    title_en: "Privacy",
-    title_de: "Datenschutz",
-    body_en: "This is a purely static site: it sets no cookies and uses no analytics or tracking. The hosting provider (GitHub Pages) may process server logs; this must be documented before public launch.",
-    body_de: "Dies ist eine rein statische Seite: Sie setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Der Hosting-Anbieter (GitHub Pages) kann Serverprotokolle verarbeiten; das muss vor der Veröffentlichung beschrieben werden.",
-  },
-  {
-    id: "accessibility",
-    title_en: "Accessibility",
-    title_de: "Barrierefreiheit",
-    body_en: "This draft is not an accessibility statement. The applicable requirements and a tested conformance status need to be established before launch.",
-    body_de: "Dieser Entwurf ist keine Barrierefreiheitserklärung. Die anwendbaren Anforderungen und ein geprüfter Konformitätsstand müssen vor der Veröffentlichung ermittelt werden.",
-  },
-  {
-    id: "sources",
-    title_en: "Sources and use",
-    title_de: "Quellen und Nutzung",
-    body_en: "Code and notes in this repository are released under the MIT license. Every note links to its sources; the terms of those sources apply to them.",
-    body_de: "Code und Notizen in diesem Repository stehen unter der MIT-Lizenz. Jede Notiz verweist auf ihre Quellen; für diese gelten deren eigene Bedingungen.",
-  },
-];
 
 function readScreen(): Screen {
   const params = new URLSearchParams(window.location.search);
@@ -387,9 +342,13 @@ function App() {
         {screen.kind === "legal" && (
           legalPage ? (
             <article className="content-card legal-draft" aria-labelledby="legal-title">
-              <p className="draft-label">{t("draftLabel")}</p>
+              {isDraft(legalPage) && <p className="draft-label">{t("draftLabel")}</p>}
               <h2 id="legal-title">{language === "en" ? legalPage.title_en : legalPage.title_de}</h2>
-              <p>{language === "en" ? legalPage.body_en : legalPage.body_de}</p>
+              <div className="markdown-body">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {language === "en" ? legalPage.body_en : legalPage.body_de}
+                </ReactMarkdown>
+              </div>
             </article>
           ) : (
             <div className="error-message" role="alert">{t("legalNotFound")}</div>
