@@ -7,6 +7,14 @@ repository's note format: YAML frontmatter, a `## EN` and a `## DE` section
 with identical structure, and an optional `## Original Source Text (DE)`.
 Sub-sections use `###`, details `####`.
 
+The rules below are enforced by `python -m app.agents.validate_notes` (also run
+in CI): required frontmatter, the LLM notice, TL;DR first, required sections in
+order, no manual table of contents or "related topics" list, identical EN/DE
+outline, and every frontmatter source cited in the text. The template defaults
+to *regulatory* for `entity_type: Regulation` and *technical* otherwise; a
+`template:` frontmatter key overrides it (e.g. legal concepts such as
+copyright and AI training data use the regulatory template).
+
 Common rules:
 
 - Factual, reference style; no personal opinion, no first person.
