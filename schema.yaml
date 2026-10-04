@@ -1,0 +1,110 @@
+version: 1
+
+# Type and property names are always English. Bilingual names are stored as
+# separate name_en/name_de properties, not as separate nodes. Private-only
+# types are fully specified in the private repository's architecture document.
+
+node_types:
+  Note:
+    visibility: public
+    properties:
+      - path
+      - title_en
+      - title_de
+      - update_count
+      - last_rewrite_date
+  Method:
+    visibility: public
+    properties: [name_en, name_de, category, description, aliases]
+  Regulation:
+    visibility: public
+    properties: [name_en, name_de, jurisdiction, status, description, aliases]
+  Person:
+    visibility: public
+    properties: [name_en, name_de, affiliation, role, aliases]
+  Organization:
+    visibility: public
+    properties: [name_en, name_de, type, aliases]
+  Conference:
+    visibility: public
+    properties: [name_en, name_de, year, location]
+  Concept:
+    visibility: public
+    properties: [name_en, name_de, description, aliases]
+  Technology:
+    # Programming/query languages, frameworks, tools, and standards.
+    # category: language | framework | tool | standard
+    visibility: public
+    properties: [name_en, name_de, category, description, aliases]
+  Source:
+    visibility: public
+    properties: [title, url, date, type, tier, source_kind]
+  Company:
+    visibility: private
+    properties: []
+  JobPosting:
+    visibility: private
+    properties: []
+  Requirement:
+    visibility: private
+    properties: []
+  InterviewRound:
+    visibility: private
+    properties: []
+  InterviewRetro:
+    visibility: private
+    properties: []
+
+relation_types:
+  BASED_ON:
+    visibility: public
+    from: [Method, Concept]
+    to: [Method, Concept]
+  REGULATES:
+    visibility: public
+    from: [Regulation, Organization]
+    to: [Method, Organization, Concept]
+  DEVELOPED_BY:
+    visibility: public
+    from: [Method, Concept, Technology]
+    to: [Person, Organization]
+  IMPLEMENTS:
+    visibility: public
+    from: [Technology]
+    to: [Method, Concept]
+  MENTIONED_IN:
+    visibility: public
+    from: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Source]
+    to: [Source]
+  IS_EXAMPLE_OF:
+    visibility: public
+    from: [Method, Regulation]
+    to: [Concept]
+  CONTRADICTS:
+    visibility: public
+    from: [Method, Concept]
+    to: [Method, Concept]
+  PRESENTED_AT:
+    visibility: public
+    from: [Source, Person]
+    to: [Conference]
+  DISCUSSES:
+    visibility: public
+    from: [Note]
+    to: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Source]
+  RELATED_TO:
+    visibility: public
+    from: [Note]
+    to: [Note]
+  IDENTIFIED_GAP_IN:
+    visibility: private
+    from: [InterviewRetro]
+    to: [Requirement]
+  RETRO_OF:
+    visibility: private
+    from: [InterviewRetro]
+    to: [InterviewRound]
+  INTERVIEWED_BY:
+    visibility: private
+    from: [InterviewRound]
+    to: [Person, Company]
