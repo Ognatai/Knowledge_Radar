@@ -1,0 +1,60 @@
+name: Deploy public site
+
+# Lightweight, no LLM calls: runs after a merge to main and publishes the static
+# site built from public/ only.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Private-data safety check (full tree)
+        env:
+          KNOWLEDGE_RADAR_PRIVATE_PATTERNS: ${{ secrets.KNOWLEDGE_RADAR_PRIVATE_PATTERNS }}
+        run: python scripts/check_private_leaks.py --all
+      - run: python -m pip install -e .
+      - name: Export public notes and graph
+        run: python -m app.backend.knowledge_radar.site_export
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: app/site/package-lock.json
+      - run: npm ci
+        working-directory: app/site
+      - run: npm run build
+        working-directory: app/site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

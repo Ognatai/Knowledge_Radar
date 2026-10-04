@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  private-data-check:
+    name: Private-data safety check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scan changes for private data
+        env:
+          # Newline-separated regexes (company names, retro markers, ...); kept as a
+          # repository secret so the patterns themselves never enter this public repo.
+          KNOWLEDGE_RADAR_PRIVATE_PATTERNS: ${{ secrets.KNOWLEDGE_RADAR_PRIVATE_PATTERNS }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            python scripts/check_private_leaks.py --range "$PR_BASE_SHA..HEAD"
+          elif [ -n "$PUSH_BEFORE_SHA" ] && ! echo "$PUSH_BEFORE_SHA" | grep -qE '^0+$' \
+               && git cat-file -e "$PUSH_BEFORE_SHA^{commit}" 2>/dev/null; then
+            python scripts/check_private_leaks.py --range "$PUSH_BEFORE_SHA..HEAD"
+          else
+            python scripts/check_private_leaks.py --all
+          fi
+
+  tests:
+    name: pytest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m app.agents.validate_notes
+      - run: python -m pytest
+
+  site-build:
+    name: Static site build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: app/site/package-lock.json
+      - run: python -m pip install -e .
+      - run: python -m app.backend.knowledge_radar.site_export
+      - run: npm ci
+        working-directory: app/site
+      - run: npm run build
+        working-directory: app/site

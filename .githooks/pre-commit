@@ -1,0 +1,19 @@
+#!/bin/sh
+# Blocks commits that reference anything outside this repository (absolute local
+# paths, paths into the private repo, symlinks) or match private-data patterns.
+# Enable once per clone:  git config core.hooksPath .githooks
+
+repo_root=$(git rev-parse --show-toplevel) || exit 1
+
+for candidate in \
+    "$repo_root/.venv/Scripts/python.exe" \
+    "$repo_root/.venv/bin/python" \
+    python3 \
+    python; do
+    if command -v "$candidate" >/dev/null 2>&1 || [ -x "$candidate" ]; then
+        exec "$candidate" "$repo_root/scripts/check_private_leaks.py" --staged
+    fi
+done
+
+echo "pre-commit: no Python interpreter found; cannot run the private-data check." >&2
+exit 1
