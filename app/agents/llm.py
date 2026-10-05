@@ -23,21 +23,41 @@ def model_name() -> str:
     return os.environ.get("KNOWLEDGE_RADAR_MODEL", DEFAULT_MODEL)
 
 
+def translation_model_name() -> str:
+    """Model for EN->DE translation; Qwen3 14B translates reliably without reasoning mode."""
+    return os.environ.get("KNOWLEDGE_RADAR_TRANSLATION_MODEL", DEFAULT_MODEL)
+
+
 def generate(
     prompt: str,
     *,
     temperature: float = 0.2,
     json_output: bool = False,
     context_tokens: int = 24576,
-    timeout: float = 1800,
+    max_tokens: int | None = None,
+    sampling: dict[str, float] | None = None,
+    think: bool = False,
+    model: str | None = None,
+    timeout: float = 3600,
 ) -> str:
-    """Return the model's completion for a single prompt (thinking disabled)."""
+    """Return the model's completion for a single prompt.
+
+    `max_tokens` caps the output including reasoning (protects against loops);
+    `sampling` adds options such as top_p or presence_penalty. With `think`,
+    the model reasons first; Ollama returns that reasoning separately, so the
+    answer contains only the final text (models such as qwen3:30b-a3b otherwise
+    write their planning into the answer).
+    """
+    options: dict[str, Any] = {"temperature": temperature, "num_ctx": context_tokens}
+    if max_tokens:
+        options["num_predict"] = max_tokens
+    options.update(sampling or {})
     body: dict[str, Any] = {
-        "model": model_name(),
+        "model": model or model_name(),
         "prompt": prompt,
         "stream": False,
-        "think": False,
-        "options": {"temperature": temperature, "num_ctx": context_tokens},
+        "think": think,
+        "options": options,
     }
     if json_output:
         body["format"] = "json"

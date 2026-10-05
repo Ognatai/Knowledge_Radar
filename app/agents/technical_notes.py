@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import sys
@@ -50,9 +51,16 @@ DRAFTS = REPOSITORY_ROOT / ".knowledge-radar" / "drafts" / "technical"
 PROMPTS = Path(__file__).parent / "prompts"
 NUMBER = re.compile(r"(?<![\w.])\d+(?:[.,]\d+)*(?![\w])")
 SOURCES_HEADING = re.compile(r"^### (?:Sources|Quellen)\s*$", re.M)
-REGULATION_HINT = re.compile(r"Regulatorisch|DSGVO|AI Act|KI-Verordnung|\[\[(?:DSGVO|EU AI Act|BDSG|DORA|NIS2)")
+# Only vault notes with their own regulatory section get a "Regulatory context" section.
+REGULATION_HINT = re.compile(r"^#+\s*Regulatorischer Kontext", re.M)
 SHINGLE = 6  # words per n-gram for the originality check
 ORIGINALITY_LIMIT = 0.10  # share of a draft's 6-grams found verbatim in vault note or abstracts
+# Qwen3's recommended non-thinking sampling; low temperatures cause repetition loops.
+# Writing parts use the model's reasoning mode (KNOWLEDGE_RADAR_THINK=0 disables it):
+# better content, and answers free of planning text. Qwen3's recommended thinking sampling.
+THINK = os.environ.get("KNOWLEDGE_RADAR_THINK", "1") != "0"
+WRITING_SAMPLING = {"top_p": 0.95, "top_k": 20} if THINK else {"top_p": 0.8, "top_k": 20, "presence_penalty": 1.5}
+PART_TOKENS = 6000 if THINK else 900  # hard cap per part, including reasoning
 
 
 @dataclass(frozen=True)
@@ -149,7 +157,10 @@ SECTION_TASKS = {
         "Only what a regulation concretely requires for this specific topic, as stated in the vault "
         "note; one short paragraph."
     ),
-    "Key takeaway": "Exactly one sentence that summarises the note.",
+    "Key takeaway": (
+        "Exactly one sentence that summarises the whole note (what the topic is and its main "
+        "trade-off). No citation, no link, not about a single paper or method variant."
+    ),
     "Common usage": "Typical commands or API calls as a short Markdown table or code block, with one line of explanation each.",
 }
 NOTICE_EN = "> **Note:** LLM-generated summary based on the listed sources; it may be incomplete, outdated or wrong."
@@ -174,7 +185,11 @@ def section_prompt(plan: NotePlan, part: str, task: str, required: list[sources.
     citation_rule = ""
     if required:
         forms = ", ".join(f'"{source.short}"' for source in required)
-        citation_rule = f"You MUST cite {forms} in this part, exactly in that form, where it supports the text.\n"
+        citation_rule = (
+            f"Relevant sources for this part: {forms}. Cite a source only where it directly supports a "
+            "specific statement (a finding, a number, the origin of a method), in exactly that form, and "
+            "at most once in this part. Do not attach sources to general statements.\n"
+        )
     return render(
         "technical_section.md",
         title=plan.title_en,
@@ -200,17 +215,11 @@ def unlink_citations(text: str, resolved: list[sources.Source]) -> str:
     return re.sub(r"\[\[([^\[\]|]+)(?:\\?\|[^\[\]]*)?\]\]", replace, text)
 
 
-def write_part(prompt: str, required: list[sources.Source]) -> str:
-    """Generate one part; retry once if a required citation is missing."""
-    text = ""
-    for _ in range(2):
-        text = clean(llm.generate(prompt, context_tokens=32768))
-        text = re.sub(r"^#{3,4} .*\n+", "", text)  # the heading is set by the pipeline
-        missing = [source for source in required if not cites(text, source)]
-        if not missing:
-            break
-        prompt += "\nYour previous answer did not cite: " + ", ".join(s.short for s in missing) + ". Cite them.\n"
-    return text
+def write_part(prompt: str) -> str:
+    """Generate one part; the heading line is set by the pipeline."""
+    text = clean(llm.generate(prompt, temperature=0.6 if THINK else 0.7, sampling=WRITING_SAMPLING,
+                              max_tokens=PART_TOKENS, think=THINK, context_tokens=32768))
+    return re.sub(r"^#{3,4} .*\n+", "", text)
 
 
 def heading_count(text: str) -> int:
@@ -221,7 +230,9 @@ def translate(text: str) -> str:
     """Translate one part; retry once if the number of '####' headings changed."""
     german = ""
     for _ in range(2):
-        german = clean(llm.generate(render("translate_de.md", english=text), context_tokens=32768))
+        german = clean(llm.generate(render("translate_de.md", english=text), temperature=0.3,
+                                    model=llm.translation_model_name(),
+                                    max_tokens=4000 + 3 * len(text.split()), context_tokens=32768))
         if heading_count(german) == heading_count(text):
             break
     return german
@@ -281,7 +292,41 @@ def unknown_numbers(text: str, evidence: list[str]) -> list[str]:
 
 def uncited(text: str, resolved: list[sources.Source]) -> list[sources.Source]:
     body = SOURCES_HEADING.split(text)[0]
-    return [source for source in resolved if source.short not in body]
+    return [source for source in resolved if not cites(body, source)]
+
+
+def label_bare_links(text: str, titles: dict[str, str]) -> str:
+    """Give [[id]] links without a label the title of the target note as label."""
+    return re.sub(
+        r"\[\[([^\[\]|#\\]+)\]\]",
+        lambda m: f"[[{m.group(1)}|{titles[m.group(1)]}]]" if m.group(1) in titles else m.group(0),
+        text,
+    )
+
+
+LATEX = re.compile(r"\$[^$\n]+\$|\\(?:frac|mathbf|text|cdot|sum)\b")
+DANGLING_LINKS = re.compile(r"[.!?:]\s*(?:\[\[[^\[\]]+\]\]\s*)+$", re.M)
+CITATION_REPEAT_LIMIT = 4
+
+
+def style_problems(text: str, resolved: list[sources.Source]) -> list[str]:
+    """Formatting problems the template check does not cover (one language part)."""
+    body = SOURCES_HEADING.split(text)[0]
+    problems = []
+    if LATEX.search(body):
+        problems.append("LaTeX formula (the site does not render LaTeX; use inline code)")
+    dangling = DANGLING_LINKS.findall(body)
+    if dangling:
+        problems.append(f"{len(dangling)} link(s) appended after the end of a sentence")
+    if body.count("[[") != body.count("]]"):
+        problems.append("unbalanced [[ ]] (broken link)")
+    for source in resolved:
+        surname = re.escape(source.short.split()[0].rstrip(","))
+        year = source.short[-5:-1]
+        count = len(re.findall(rf"{surname}[^\n]{{0,40}}{year}", body))
+        if count > CITATION_REPEAT_LIMIT:
+            problems.append(f"{source.short} cited {count} times")
+    return problems
 
 
 def link_problems(note: str, known: set[str]) -> list[str]:
@@ -315,8 +360,17 @@ class Drafter:
             resolved = [sources.resolve(entry) for entry in plan.sources]
             vault_text = self.vault_text(plan)
 
-            raw_outline = llm.generate(outline_prompt(plan, resolved, vault_text), json_output=True)
-            outline = json.loads(raw_outline)
+            outline = {}
+            for _ in range(3):  # models sometimes echo the example or placeholders instead of planning
+                outline = json.loads(llm.generate(
+                    outline_prompt(plan, resolved, vault_text), json_output=True, think=THINK,
+                    max_tokens=PART_TOKENS, context_tokens=32768,
+                ))
+                headings = [str(step.get("heading", "")) for step in outline.get("steps", [])]
+                if len(headings) >= 3 and not any("<" in h or "dropout" in h.lower() for h in headings):
+                    break
+            else:
+                raise llm.LLMError(f"{plan.id}: no usable outline after 3 attempts")
             (self.drafts / f"{plan.id}.outline.md").write_text(format_outline(outline) + "\n", encoding="utf-8")
             english, german = self.write_parts(plan, resolved, vault_text, outline)
 
@@ -356,7 +410,7 @@ class Drafter:
                     "One paragraph overview of how it works, then a ```text``` flow diagram with arrows (▼, ─▶), lines at most "
                     f"72 characters) showing these steps in order: {step_names}.",
                     [], resolved, vault_text, context, self.titles,
-                ), [])]
+                ))]
                 for step in steps:
                     required = [by_short[str(n)] for n in step.get("sources", []) if str(n) in by_short]
                     covers = "; ".join(map(str, step.get("covers", [])))
@@ -365,7 +419,7 @@ class Drafter:
                         f"Explain this step precisely (100-250 words): {covers}. Cover inputs and outputs, "
                         "the algorithm or data structure, design choices and their trade-offs.",
                         required, resolved, vault_text, context, self.titles,
-                    ), required)
+                    ))
                     body.append(f"#### {str(step['heading']).strip()}\n\n{text}")
                 written.append((heading, "\n\n".join(body)))
             else:
@@ -373,12 +427,13 @@ class Drafter:
                 text = write_part(section_prompt(
                     plan, f"### {heading}", SECTION_TASKS.get(heading, ""), required,
                     resolved, vault_text, context, self.titles,
-                ), required)
+                ))
                 leftover = [source for source in leftover if not cites(text, source)]
                 written.append((heading, text))
             if heading == "TL;DR":
                 context = f"TL;DR: {written[-1][1]}\nSections of the note: " + ", ".join(order)
 
+        written = [(h, label_bare_links(unlink_citations(b, resolved), self.titles)) for h, b in written]
         english = "\n\n".join([NOTICE_EN] + [f"### {h}\n\n{b}" for h, b in written])
         german = "\n\n".join([NOTICE_DE] + [f"### {heading_de[h]}\n\n{translate(b)}" for h, b in written])
         return english, german
@@ -392,6 +447,7 @@ class Drafter:
             "template": check_template(note),
             "links": link_problems(note, known),
             "uncited_sources": [source.short for source in uncited(english, resolved)],
+            "style": style_problems(english, resolved),
             "numbers_not_in_evidence": unknown_numbers(english, evidence),
             "overlap_en_with_abstracts": round(originality_overlap(english, [s.summary for s in resolved]), 3),
             "overlap_de_with_vault": round(originality_overlap(german, [vault_text]), 3),
@@ -416,9 +472,10 @@ class Drafter:
                 f" | template: {len(report['template'])} | links: {len(report['links'])}"
                 f" | verbatim overlap: {copied:.0%}"
                 f" | uncited: {report.get('uncited_sources') or '-'}"
+                f" | style: {len(report.get('style', []))}"
                 f" | numbers to verify: {report['numbers_not_in_evidence'] or '-'}"
             )
-            for problem in blocking:
+            for problem in blocking + report.get("style", []):
                 print(f"    - {problem}")
         return clean_run
 
