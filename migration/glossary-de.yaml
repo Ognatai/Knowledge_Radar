@@ -1,0 +1,19 @@
+# German post-processing for translated notes: established English technical
+# terms stay English (docs/note-templates.md). Each rule is a regular
+# expression and its replacement, applied in order to the German text.
+rules:
+  - [ '\bdichte[snm]? Retrieval', 'Dense Retrieval' ]
+  - [ '\bdünne[snm]? Retrieval', 'Sparse Retrieval' ]
+  - [ '\bspärliche[snm]? Retrieval', 'Sparse Retrieval' ]
+  - [ '\bhybride[snm]? Retrieval', 'Hybrid Retrieval' ]
+  - [ '\bdichte[n]? (Vektoren|Embeddings|Repräsentationen)', 'Dense \1' ]
+  - [ '\bKosinus-?Ähnlichkeit', 'Cosine Similarity' ]
+  - [ '\binvertierte[nrm]? Index', 'Inverted Index' ]
+  - [ '\bapproximative[n]? Nächste-Nachbarn-Suche', 'Approximate Nearest Neighbor Search' ]
+  - [ '\bNächste-Nachbarn-Suche', 'Nearest Neighbor Search' ]
+  - [ '\bProduktquantisierung', 'Product Quantization' ]
+  - [ '\bspätes Chunking', 'Late Chunking' ]
+  - [ '\bSpätes Chunking', 'Late Chunking' ]
+  - [ '\bSatz-Einbettungen', 'Sentence Embeddings' ]
+  - [ '\bEinbettungen\b', 'Embeddings' ]
+  - [ '\bEinbettungsmodell', 'Embedding-Modell' ]
