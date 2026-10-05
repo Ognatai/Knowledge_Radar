@@ -101,3 +101,21 @@ def test_resolve_arxiv_verifies_the_title(tmp_path, monkeypatch):
 def test_non_arxiv_sources_need_a_citation():
     with pytest.raises(sources.SourceError, match="needs 'citation'"):
         sources.resolve({"url": "https://example.org"})
+
+
+def test_outline_round_trips_through_its_editable_file():
+    outline = {"overview": "Explains retrieval.", "steps": [
+        {"heading": "1. BM25", "covers": ["term weighting"], "sources": ["Robertson & Zaragoza (2009)"]},
+        {"heading": "Origin and variants", "covers": ["history"], "sources": ["A et al. (2020)", "B (2021)"]},
+    ]}
+
+    assert tn.parse_outline(tn.format_outline(outline)) == outline
+
+
+def test_glossary_restores_english_terms(tmp_path):
+    glossary = tmp_path / "glossary.yaml"
+    glossary.write_text(r"rules: [['\bdichte[snm]? Retrieval', 'Dense Retrieval']]", encoding="utf-8")
+
+    assert tn.apply_glossary("Das dichte Retrieval und dichtes Retrieval.", glossary) == (
+        "Das Dense Retrieval und Dense Retrieval."
+    )

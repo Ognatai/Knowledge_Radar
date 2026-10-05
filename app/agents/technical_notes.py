@@ -8,6 +8,7 @@ and translates it part by part into German; the sources sections are generated f
 Drafts are checked against the template, links, citations, numbers and
 originality, reviewed by a person and only then accepted into `public/notes/`.
 
+    python -m app.agents.technical_notes outline rag   # plan; review/edit the .outline.md files
     python -m app.agents.technical_notes draft  rag [--notes rag-chunking,...] [--force]
     python -m app.agents.technical_notes review rag
     python -m app.agents.technical_notes accept rag --notes rag-chunking,...
@@ -59,6 +60,9 @@ ORIGINALITY_LIMIT = 0.10  # share of a draft's 6-grams found verbatim in vault n
 # Writing parts use the model's reasoning mode (KNOWLEDGE_RADAR_THINK=0 disables it):
 # better content, and answers free of planning text. Qwen3's recommended thinking sampling.
 THINK = os.environ.get("KNOWLEDGE_RADAR_THINK", "1") != "0"
+# Writer: qwen3:30b-a3b with reasoning gave far fewer factual errors than qwen3:14b in the RAG pilot.
+WRITER_MODEL = os.environ.get("KNOWLEDGE_RADAR_WRITER_MODEL", "qwen3:30b-a3b")
+GLOSSARY = MIGRATION / "glossary-de.yaml"
 WRITING_SAMPLING = {"top_p": 0.95, "top_k": 20} if THINK else {"top_p": 0.8, "top_k": 20, "presence_penalty": 1.5}
 PART_TOKENS = 6000 if THINK else 900  # hard cap per part, including reasoning
 
@@ -137,8 +141,27 @@ def format_outline(outline: dict) -> str:
         lines.append(f"#### {str(step.get('heading', '')).strip()}")
         lines += [f"  - {point}" for point in step.get("covers", [])]
         if step.get("sources"):
-            lines.append(f"  - cite: {', '.join(map(str, step['sources']))}")
+            lines.append(f"  - cite: {'; '.join(map(str, step['sources']))}")
     return "\n".join(line for line in lines if line)
+
+
+def parse_outline(markdown: str) -> dict:
+    """Read an outline file (as written by format_outline, possibly edited by hand)."""
+    lines = markdown.splitlines()
+    outline: dict = {"overview": "", "steps": []}
+    for line in lines:
+        if line.startswith("#### "):
+            outline["steps"].append({"heading": line[5:].strip(), "covers": [], "sources": []})
+        elif line.strip().startswith("- ") and outline["steps"]:
+            item = line.strip()[2:].strip()
+            step = outline["steps"][-1]
+            if item.startswith("cite:"):
+                step["sources"] += [name.strip() for name in item[5:].split(";") if name.strip()]
+            else:
+                step["covers"].append(item)
+        elif line.strip() and not outline["steps"] and not line.startswith("#"):
+            outline["overview"] = (outline["overview"] + " " + line.strip()).strip()
+    return outline
 
 
 SECTION_TASKS = {
@@ -218,8 +241,18 @@ def unlink_citations(text: str, resolved: list[sources.Source]) -> str:
 def write_part(prompt: str) -> str:
     """Generate one part; the heading line is set by the pipeline."""
     text = clean(llm.generate(prompt, temperature=0.6 if THINK else 0.7, sampling=WRITING_SAMPLING,
-                              max_tokens=PART_TOKENS, think=THINK, context_tokens=32768))
+                              max_tokens=PART_TOKENS, think=THINK, model=WRITER_MODEL,
+                              context_tokens=32768))
     return re.sub(r"^#{3,4} .*\n+", "", text)
+
+
+def apply_glossary(german: str, glossary_path: Path = GLOSSARY) -> str:
+    """Restore established English technical terms the translation germanised."""
+    if not glossary_path.is_file():
+        return german
+    for pattern, replacement in yaml.safe_load(glossary_path.read_text(encoding="utf-8"))["rules"]:
+        german = re.sub(pattern, replacement, german)
+    return german
 
 
 def heading_count(text: str) -> int:
@@ -350,6 +383,33 @@ class Drafter:
             raise SystemExit(f"vault note {plan.source_title!r}: found {len(matches)} files")
         return matches[0].read_text(encoding="utf-8")
 
+    def write_outline(self, plan: NotePlan, resolved: list[sources.Source], vault_text: str) -> Path:
+        outline: dict = {}
+        for _ in range(3):  # models sometimes echo the example or placeholders instead of planning
+            outline = json.loads(llm.generate(
+                outline_prompt(plan, resolved, vault_text), json_output=True, think=THINK,
+                model=WRITER_MODEL, max_tokens=PART_TOKENS, context_tokens=32768,
+            ))
+            headings = [str(step.get("heading", "")) for step in outline.get("steps", [])]
+            if len(headings) >= 3 and not any("<" in h or "dropout" in h.lower() for h in headings):
+                break
+        else:
+            raise llm.LLMError(f"{plan.id}: no usable outline after 3 attempts")
+        target = self.drafts / f"{plan.id}.outline.md"
+        target.write_text(format_outline(outline) + "\n", encoding="utf-8")
+        return target
+
+    def outline(self, plans: list[NotePlan], force: bool = False) -> None:
+        """Plan the "How it works" steps of each note, for review before drafting."""
+        self.drafts.mkdir(parents=True, exist_ok=True)
+        for plan in plans:
+            if (self.drafts / f"{plan.id}.outline.md").exists() and not force:
+                continue
+            started = time.time()
+            resolved = [sources.resolve(entry) for entry in plan.sources]
+            self.write_outline(plan, resolved, self.vault_text(plan))
+            print(f"{plan.id}: outline in {time.time() - started:.0f}s", flush=True)
+
     def draft(self, plans: list[NotePlan], force: bool = False) -> None:
         self.drafts.mkdir(parents=True, exist_ok=True)
         for plan in plans:
@@ -360,18 +420,10 @@ class Drafter:
             resolved = [sources.resolve(entry) for entry in plan.sources]
             vault_text = self.vault_text(plan)
 
-            outline = {}
-            for _ in range(3):  # models sometimes echo the example or placeholders instead of planning
-                outline = json.loads(llm.generate(
-                    outline_prompt(plan, resolved, vault_text), json_output=True, think=THINK,
-                    max_tokens=PART_TOKENS, context_tokens=32768,
-                ))
-                headings = [str(step.get("heading", "")) for step in outline.get("steps", [])]
-                if len(headings) >= 3 and not any("<" in h or "dropout" in h.lower() for h in headings):
-                    break
-            else:
-                raise llm.LLMError(f"{plan.id}: no usable outline after 3 attempts")
-            (self.drafts / f"{plan.id}.outline.md").write_text(format_outline(outline) + "\n", encoding="utf-8")
+            outline_file = self.drafts / f"{plan.id}.outline.md"
+            if not outline_file.exists():
+                self.write_outline(plan, resolved, vault_text)
+            outline = parse_outline(outline_file.read_text(encoding="utf-8"))
             english, german = self.write_parts(plan, resolved, vault_text, outline)
 
             english, german = unlink_citations(english, resolved), unlink_citations(german, resolved)
@@ -435,7 +487,9 @@ class Drafter:
 
         written = [(h, label_bare_links(unlink_citations(b, resolved), self.titles)) for h, b in written]
         english = "\n\n".join([NOTICE_EN] + [f"### {h}\n\n{b}" for h, b in written])
-        german = "\n\n".join([NOTICE_DE] + [f"### {heading_de[h]}\n\n{translate(b)}" for h, b in written])
+        german = "\n\n".join(
+            [NOTICE_DE] + [f"### {heading_de[h]}\n\n{apply_glossary(translate(b))}" for h, b in written]
+        )
         return english, german
 
     def check(self, plan: NotePlan, note: str, resolved: list[sources.Source], vault_text: str) -> dict:
@@ -494,7 +548,7 @@ class Drafter:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("command", choices=["draft", "review", "accept"])
+    parser.add_argument("command", choices=["outline", "draft", "review", "accept"])
     parser.add_argument("package", help="package config in migration/technical/")
     parser.add_argument("--notes", help="comma-separated subset of the package")
     parser.add_argument("--force", action="store_true", help="redraft existing drafts")
@@ -512,7 +566,9 @@ def main() -> int:
 
     drafter = Drafter(configured_notes_directory())
     try:
-        if args.command == "draft":
+        if args.command == "outline":
+            drafter.outline(plans, args.force)
+        elif args.command == "draft":
             drafter.draft(plans, args.force)
         elif args.command == "review":
             return 0 if drafter.review(plans) else 1

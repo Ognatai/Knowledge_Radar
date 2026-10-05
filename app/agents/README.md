@@ -35,10 +35,17 @@ Run from the repository root.
   title). Needs `vault_path` in `local-config.yaml`.
 
   ```powershell
-  python -m app.agents.technical_notes draft  rag             # ~5-6 min per note
+  python -m app.agents.technical_notes outline rag            # ~2 min per note; read/edit the .outline.md files
+  python -m app.agents.technical_notes draft  rag             # ~20-25 min per note (overnight run)
   python -m app.agents.technical_notes review rag             # template, links, citations, numbers, originality
   python -m app.agents.technical_notes accept rag --notes rag-chunking   # after reading the draft
   ```
+
+  Models: `qwen3:30b-a3b` writes with reasoning mode (`KNOWLEDGE_RADAR_WRITER_MODEL`),
+  `qwen3:14b` translates (`KNOWLEDGE_RADAR_TRANSLATION_MODEL`). In the RAG pilot,
+  qwen3:14b as writer produced fluent text with factual errors and invented
+  attributions; the 30B model with reasoning did not. German terms are
+  post-processed with `migration/glossary-de.yaml`.
 
 - `vault_inventory.py`: structural inventory of the Obsidian vault for the
   migration (`migration/inventory.yaml`).
