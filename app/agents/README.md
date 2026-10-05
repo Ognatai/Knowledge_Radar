@@ -26,6 +26,20 @@ Run from the repository root.
   produces many false positives, so its findings are listed for the factual
   sub-sections only and must be judged by a person.
 
+- `technical_notes.py`: migrates technical notes in packages
+  (`migration/technical/<package>.yaml`: notes and their sources). Per note the
+  local model plans the topic-specific "How it works" steps, writes the
+  English note part by part (each step cites its sources; vault note only for
+  topic coverage), then translates it part by part. Sources sections are
+  generated from verified metadata (arXiv IDs are checked against an expected
+  title). Needs `vault_path` in `local-config.yaml`.
+
+  ```powershell
+  python -m app.agents.technical_notes draft  rag             # ~5-6 min per note
+  python -m app.agents.technical_notes review rag             # template, links, citations, numbers, originality
+  python -m app.agents.technical_notes accept rag --notes rag-chunking   # after reading the draft
+  ```
+
 - `vault_inventory.py`: structural inventory of the Obsidian vault for the
   migration (`migration/inventory.yaml`).
 

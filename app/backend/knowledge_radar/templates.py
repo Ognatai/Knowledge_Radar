@@ -137,6 +137,11 @@ def _check_language(text: str, lang: str, template: str, entity_type: str) -> li
     return problems
 
 
+def check_language_part(text: str, lang: str, template: str, entity_type: str) -> list[str]:
+    """Template problems of one language part ("EN"/"DE") on its own, e.g. for a draft."""
+    return _check_language(text, lang, template, entity_type)
+
+
 def check_template(text: str) -> list[str]:
     """Return all template problems of one note's file content (empty if it conforms)."""
     match = FRONTMATTER_PATTERN.match(text)
