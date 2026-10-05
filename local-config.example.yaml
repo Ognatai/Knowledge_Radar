@@ -4,3 +4,7 @@
 # Absolute path to the separate private repository checkout. It must be a
 # sibling of this repository, never nested inside it. Leave empty if absent.
 private_repo_path:
+
+# Absolute path to the Obsidian vault folder the migration reads from
+# (structure and topics only; texts are rewritten). Leave empty if absent.
+vault_path:

@@ -26,6 +26,8 @@ class LocalConfigError(ValueError):
 @dataclass(frozen=True)
 class LocalConfig:
     private_repo_path: Path | None = None
+    # Obsidian vault the migration reads from (structure and topics only).
+    vault_path: Path | None = None
 
     @property
     def has_private_repo(self) -> bool:
@@ -53,18 +55,10 @@ def load_local_config(
     if not isinstance(raw, dict):
         raise LocalConfigError(f"{path}: local config must be a YAML mapping.")
 
-    value = raw.get("private_repo_path")
-    if value is None or (isinstance(value, str) and not value.strip()):
-        return LocalConfig()
-    if not isinstance(value, str):
-        raise LocalConfigError(f"{path}: 'private_repo_path' must be a string.")
-
-    private_repo = Path(value).expanduser()
-    if not private_repo.is_absolute():
-        raise LocalConfigError(f"{path}: 'private_repo_path' must be an absolute path.")
-    private_repo = private_repo.resolve()
-    if not private_repo.is_dir():
-        raise LocalConfigError(f"{path}: private repo directory does not exist: {private_repo}")
+    vault = _directory(raw, "vault_path", path)
+    private_repo = _directory(raw, "private_repo_path", path)
+    if private_repo is None:
+        return LocalConfig(vault_path=vault)
 
     public_repo = repository_root.resolve()
     if private_repo == public_repo or private_repo.is_relative_to(public_repo):
@@ -73,4 +67,20 @@ def load_local_config(
         )
     if public_repo.is_relative_to(private_repo):
         raise LocalConfigError(f"{path}: the public repo must not live inside the private repo.")
-    return LocalConfig(private_repo_path=private_repo)
+    return LocalConfig(private_repo_path=private_repo, vault_path=vault)
+
+
+def _directory(raw: dict, key: str, path: Path) -> Path | None:
+    """An optional absolute directory path from the config; empty means not configured."""
+    value = raw.get(key)
+    if value is None or (isinstance(value, str) and not value.strip()):
+        return None
+    if not isinstance(value, str):
+        raise LocalConfigError(f"{path}: '{key}' must be a string.")
+    directory = Path(value).expanduser()
+    if not directory.is_absolute():
+        raise LocalConfigError(f"{path}: '{key}' must be an absolute path.")
+    directory = directory.resolve()
+    if not directory.is_dir():
+        raise LocalConfigError(f"{path}: directory for '{key}' does not exist: {directory}")
+    return directory

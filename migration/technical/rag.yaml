@@ -1,0 +1,89 @@
+# Migration package "RAG": input for `python -m app.agents.technical_notes <command> rag`.
+# arXiv sources are verified against the `expect` title fragment before drafting.
+notes:
+  rag-chunking:
+    sources:
+      - {arxiv: "2312.10997", expect: "Retrieval-Augmented Generation for Large Language Models"}
+      - {arxiv: "2312.06648", expect: "Dense X Retrieval"}
+      - {arxiv: "2409.04701", expect: "Late Chunking"}
+      - {arxiv: "2307.03172", expect: "Lost in the Middle", venue: TACL}
+  rag-retrieval:
+    sources:
+      - {arxiv: "2004.04906", expect: "Dense Passage Retrieval", venue: EMNLP 2020}
+      - {arxiv: "1908.10084", expect: "Sentence-BERT", venue: EMNLP 2019}
+      - {arxiv: "2004.12832", expect: "ColBERT", venue: SIGIR 2020}
+      - {arxiv: "2212.10496", expect: "Precise Zero-Shot Dense Retrieval"}
+      - {arxiv: "1901.04085", expect: "Passage Re-ranking with BERT"}
+      - {arxiv: "1603.09320", expect: "Hierarchical Navigable Small World"}
+      - url: https://doi.org/10.1561/1500000019
+        citation: "Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval."
+        short: Robertson & Zaragoza (2009)
+        link_label: doi:10.1561/1500000019
+        summary: "Monograph on the probabilistic relevance framework and the BM25 ranking function: term-frequency saturation, inverse document frequency and document-length normalisation."
+      - url: https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf
+        citation: "Cormack, G. V., Clarke, C. L. A. & Büttcher, S. (2009). *Reciprocal Rank Fusion outperforms Condorcet and individual Rank Learning Methods.* SIGIR 2009."
+        short: Cormack et al. (2009)
+        link_label: PDF
+        summary: "Reciprocal Rank Fusion scores each document by the sum over all rankings of 1/(k + rank), with k = 60 fixed in a pilot study; it outperformed Condorcet Fuse, CombMNZ and individual learning-to-rank methods."
+  rag-evaluation:
+    sources:
+      - {arxiv: "2309.15217", expect: "Ragas"}
+      - {arxiv: "2311.09476", expect: "ARES"}
+      - {arxiv: "2405.07437", expect: "Evaluation of Retrieval-Augmented Generation"}
+      - {arxiv: "2312.10997", expect: "Retrieval-Augmented Generation for Large Language Models"}
+  rag-retrieval-evaluation:
+    sources:
+      - {arxiv: "2104.08663", expect: "BEIR"}
+      - {arxiv: "1611.09268", expect: "MS MARCO"}
+      - url: https://doi.org/10.1145/582415.582418
+        citation: "Järvelin, K. & Kekäläinen, J. (2002). *Cumulated gain-based evaluation of IR techniques.* ACM Transactions on Information Systems 20(4)."
+        short: Järvelin & Kekäläinen (2002)
+        link_label: doi:10.1145/582415.582418
+        summary: "Introduces cumulated gain measures, including discounted cumulated gain (DCG) and its normalised form (nDCG), which credit highly relevant documents more and discount documents ranked lower."
+      - url: https://nlp.stanford.edu/IR-book/
+        citation: "Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press."
+        short: Manning et al. (2008)
+        link_label: online edition
+        summary: "Textbook covering evaluation of ranked retrieval: precision, recall, precision at k, mean average precision and related measures."
+  rag-generation-evaluation:
+    sources:
+      - {arxiv: "2309.15217", expect: "Ragas"}
+      - {arxiv: "2305.14251", expect: "FActScore"}
+      - {arxiv: "2305.14627", expect: "Generate Text with Citations"}
+      - {arxiv: "2306.05685", expect: "Judging LLM-as-a-Judge"}
+      - {arxiv: "2311.09476", expect: "ARES"}
+  rag-failure-modes:
+    sources:
+      - {arxiv: "2401.05856", expect: "Seven Failure Points"}
+      - {arxiv: "2307.03172", expect: "Lost in the Middle", venue: TACL}
+      - {arxiv: "2401.14887", expect: "The Power of Noise"}
+      - {arxiv: "2305.14627", expect: "Generate Text with Citations"}
+  rag-vs-fine-tuning:
+    sources:
+      - {arxiv: "2312.05934", expect: "Fine-Tuning or Retrieval"}
+      - {arxiv: "2401.08406", expect: "RAG vs Fine-tuning"}
+      - {arxiv: "2403.10131", expect: "RAFT"}
+      - {arxiv: "2005.11401", expect: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", venue: NeurIPS 2020}
+  embeddings:
+    sources:
+      - {arxiv: "1301.3781", expect: "Efficient Estimation of Word Representations"}
+      - {arxiv: "1810.04805", expect: "BERT"}
+      - {arxiv: "1908.10084", expect: "Sentence-BERT", venue: EMNLP 2019}
+      - {arxiv: "2210.07316", expect: "MTEB"}
+      - {arxiv: "2205.13147", expect: "Matryoshka Representation Learning"}
+      - url: https://aclanthology.org/D14-1162/
+        citation: "Pennington, J., Socher, R. & Manning, C. D. (2014). *GloVe: Global Vectors for Word Representation.* EMNLP 2014."
+        short: Pennington et al. (2014)
+        link_label: ACL Anthology
+        summary: "GloVe learns word vectors from global word-word co-occurrence statistics with a weighted least-squares objective, combining global matrix factorisation and local context window methods."
+  vector-databases:
+    sources:
+      - {arxiv: "1603.09320", expect: "Hierarchical Navigable Small World"}
+      - {arxiv: "1702.08734", expect: "Billion-scale similarity search with GPUs"}
+      - {arxiv: "2310.14021", expect: "Vector Database Management Systems"}
+      - {arxiv: "1908.10396", expect: "Anisotropic Vector Quantization"}
+      - url: https://doi.org/10.1109/TPAMI.2010.57
+        citation: "Jégou, H., Douze, M. & Schmid, C. (2011). *Product Quantization for Nearest Neighbor Search.* IEEE Transactions on Pattern Analysis and Machine Intelligence 33(1)."
+        short: Jégou et al. (2011)
+        link_label: doi:10.1109/TPAMI.2010.57
+        summary: "Product quantization splits a vector into sub-vectors and quantizes each with its own small codebook; distances are estimated from the compact codes, enabling approximate nearest neighbor search over large collections with little memory."
