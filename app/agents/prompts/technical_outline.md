@@ -4,11 +4,15 @@ The section must explain how $title itself works, technically and step by step: 
 
 Use the VAULT NOTE (German personal note) to see which aspects the topic covers, and the SOURCES for specific methods.
 
-Return JSON:
-{"overview": "one sentence on what the section explains",
- "steps": [{"heading": "1. <short English heading>", "covers": ["point", "point", "..."], "sources": ["<citation as given, if a source supports this step>"]}]}
+Answer with JSON only. Example of the expected form, for a different topic ("Dropout"):
+{"overview": "How dropout randomly disables units during training and why this regularises the network.",
+ "steps": [
+  {"heading": "1. Sampling the dropout mask", "covers": ["Bernoulli mask per unit with keep probability p", "new mask for every training example"], "sources": []},
+  {"heading": "2. Scaling activations", "covers": ["inverted dropout scales kept activations by 1/p", "no change needed at inference time"], "sources": []},
+  {"heading": "Origin and variants", "covers": ["original proposal", "DropConnect, spatial dropout"], "sources": []}
+ ]}
 
-Rules: 4 to 8 steps, in the order the data flows or the method proceeds; the last step is {"heading": "Origin and variants", ...}. Every source should support at least one step.
+Rules: each step covers one technique or stage (no catch-all steps such as "Advanced techniques" or "Other methods"); 4 to 8 steps for "$title", in the order the data flows or the method proceeds; the last step is "Origin and variants". In "sources", list citations exactly as given below where a source supports the step.
 
 SOURCES:
 $sources
