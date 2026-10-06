@@ -1,0 +1,64 @@
+# Migration package "Data protection": input for `python -m app.agents.regulatory_notes <command> data-protection`.
+# Frame sections (TL;DR, scope, timeline, ...) are written by hand in
+# migration/regulatory/frames/<note>.en.md; article summaries are drafted locally.
+notes:
+  gdpr:
+    source: eurlex
+    urls:
+      en: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02016R0679-20160504
+      de: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:02016R0679-20160504
+    act: the General Data Protection Regulation (Regulation (EU) 2016/679)
+    frontmatter:
+      jurisdiction: EU
+      instrument: regulation
+      status: in-force
+      official_reference: "Regulation (EU) 2016/679"
+      consolidated_version: 2016-05-04
+      aliases: [GDPR, DSGVO, DS-GVO]
+    sources:
+      - https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng
+      - https://eur-lex.europa.eu/eli/reg/2016/679/oj/deu
+      - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02016R0679-20160504
+  eprivacy-directive:
+    source: eurlex
+    urls:
+      en: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02002L0058-20091219
+      de: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:02002L0058-20091219
+    act: the ePrivacy Directive (Directive 2002/58/EC)
+    frontmatter:
+      jurisdiction: EU
+      instrument: directive
+      status: in-force
+      official_reference: "Directive 2002/58/EC"
+      consolidated_version: 2009-12-19
+      aliases: [ePrivacy Directive, ePrivacy-Richtlinie, Datenschutzrichtlinie für elektronische Kommunikation]
+    sources:
+      - https://eur-lex.europa.eu/eli/dir/2002/58/oj/eng
+      - https://eur-lex.europa.eu/eli/dir/2002/58/oj/deu
+      - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02002L0058-20091219
+  bdsg:
+    source: gesetze
+    slug: bdsg_2018
+    act: the German Federal Data Protection Act (Bundesdatenschutzgesetz, BDSG)
+    frontmatter:
+      jurisdiction: DE
+      instrument: national-law
+      status: in-force
+      official_reference: "BGBl. I 2017, 2097"
+      consolidated_version: 2026-05-12
+      aliases: [BDSG, Bundesdatenschutzgesetz, Federal Data Protection Act]
+    sources:
+      - https://www.gesetze-im-internet.de/bdsg_2018/
+  tdddg:
+    source: gesetze
+    slug: ttdsg
+    act: the German Telecommunications Digital Services Data Protection Act (TDDDG)
+    frontmatter:
+      jurisdiction: DE
+      instrument: national-law
+      status: in-force
+      official_reference: "BGBl. I 2021, 1982"
+      consolidated_version: 2026-03-10
+      aliases: [TDDDG, TTDSG, Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz]
+    sources:
+      - https://www.gesetze-im-internet.de/ttdsg/

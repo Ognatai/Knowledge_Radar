@@ -66,16 +66,29 @@ def _text(element: ET.Element | None) -> str:
     if element is None:
         return ""
     parts: list[str] = []
-    for node in element.iter():
+
+    def walk(node: ET.Element) -> None:
+        # Document order: own text, children (each followed by its tail).
         if node.tag in {"P", "DT", "DD", "LA", "BR"} and parts and not parts[-1].endswith("\n"):
             parts.append("\n")
         if node.text:
             parts.append(node.text)
-        if node.tail:
-            parts.append(node.tail)
+        for child in node:
+            walk(child)
+            if child.tail:
+                if child.tag in {"DL", "BR"} and parts and not parts[-1].endswith("\n"):
+                    parts.append("\n")
+                parts.append(child.tail)
+
+    walk(element)
     text = "".join(parts)
     text = re.sub(r"[ \t]+", " ", text)
     return re.sub(r"\s*\n\s*", "\n", text).strip()
+
+
+def _join_hyphenation(title: str) -> str:
+    """Undo line-break hyphenation ("Anwendungs- bereiche"), keep "Bußgeld- und Straf..."."""
+    return re.sub(r"(\w)- (?!und\b|oder\b|sowie\b|bzw\.)([a-zäöüß])", r"\1\2", title)
 
 
 def parse(xml: bytes, slug: str) -> Law:
@@ -116,7 +129,7 @@ def parse(xml: bytes, slug: str) -> Law:
             continue  # table of contents, annexes, final formulas
         law.sections.append(Section(
             number=number,
-            title=(meta.findtext("titel") or "").strip(),
+            title=_join_hyphenation((meta.findtext("titel") or "").strip()),
             text=_text(norm.find("textdaten/text/Content")),
             path=tuple(path),
         ))
