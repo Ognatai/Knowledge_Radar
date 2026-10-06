@@ -55,6 +55,21 @@ def test_gesetze_parses_metadata_structure_and_sections():
     assert law.url == "https://www.gesetze-im-internet.de/bdsg_2018/"
 
 
+def test_gesetze_keeps_text_after_lists_in_order_and_joins_hyphenation():
+    xml = GESETZ_XML.replace(
+        "<titel>Beschäftigungsverhältnisse</titel>",
+        "<titel>Tätigkeiten außerhalb der Anwendungs- bereiche; Bußgeld- und Strafverfahren</titel>",
+    ).replace(
+        "<P>(1) Daten von Beschäftigten.</P>",
+        '<P>(1) Dienste, die <DL Type="arabic"><DT>1.</DT><DD><LA>A haben,</LA></DD>'
+        "<DT>2.</DT><DD><LA>B haben,</LA></DD></DL>können anerkannt werden.</P>",
+    )
+    section = gesetze.parse(xml.encode("utf-8"), "bdsg_2018").sections[1]
+
+    assert section.text == "(1) Dienste, die\n1.\nA haben,\n2.\nB haben,\nkönnen anerkannt werden."
+    assert section.title == "Tätigkeiten außerhalb der Anwendungsbereiche; Bußgeld- und Strafverfahren"
+
+
 FLAT_PAGE = """<html><body><p class="title-doc-first">RICHTLINIE 2002/58/EG</p>
 <p class="title-article-norm">Artikel 1</p><p class="stitle-article-norm">Geltungsbereich</p>
 <p>(1) Diese Richtlinie gilt.</p>
