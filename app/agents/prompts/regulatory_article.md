@@ -1,6 +1,6 @@
 You write one section of a factual reference note about $act_context.
 
-Write the detailed section for Article $article in $language.
+Write the detailed section for $provision in $language.
 
 Rules:
 - Use ONLY information contained in the OFFICIAL ARTICLE TEXT below and the APPLICATION DATE given. Do not add facts, numbers, authorities, examples or interpretations from outside knowledge. If the article refers to other articles or annexes, name them, but do not describe their content.

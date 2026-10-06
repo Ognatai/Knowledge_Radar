@@ -66,7 +66,35 @@ Requires providers of publicly available electronic communications services to t
 
 #### Article 5 — Confidentiality of the communications
 
-Requires Member States to ensure the confidentiality of communications and related traffic data, and allows storing or accessing information on a user's terminal equipment only with consent unless strictly necessary.
+##### What is it about?
+
+Article 5 establishes requirements for the confidentiality of communications and related traffic data, and governs the storing or accessing of information on a user's terminal equipment. It focuses on preventing unauthorised interception and mandating user consent for certain data processing activities related to electronic communications services.
+
+##### What does the article require?
+
+- **Paragraph 1** – Member States shall ensure confidentiality of communications and related traffic data via national legislation. This prohibits listening, tapping, storage, or other interception/surveillance by persons other than users without user consent, except for legally authorised activities under Article 15(1). Technical storage necessary for communication conveyance is permitted without prejudice to confidentiality.
+- **Paragraph 2** – Paragraph 1 does not affect legally authorised recording of communications and related traffic data for lawful business practice purposes, such as providing evidence of commercial transactions or business communications.
+- **Paragraph 3** – Member States shall ensure storing or accessing information in terminal equipment is only permitted with the subscriber or user’s consent, following clear and comprehensive information in accordance with Directive 95/46/EC, now the GDPR, inter alia about the purposes of the processing. This does not prevent technical storage/access solely for communication transmission or as strictly necessary for an explicitly requested information society service.
+
+##### Who is affected?
+
+The article addresses the Member States, which must transpose it. Through national law, its rules bind anyone other than the users who intercepts or monitors communications, and anyone who stores or accesses information on terminal equipment, such as website and app operators. Subscribers and users are the protected persons.
+
+##### What is not specified?
+
+The article does not specify what constitutes "legally authorised" surveillance under Article 15(1), the precise form of "clear and comprehensive information" required for consent, or the exact scope of "strictly necessary" for technical storage/access under paragraph 3. It also does not define the boundaries of "lawful business practice" in paragraph 2.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Record all cookies, SDKs and similar techniques of a website or app and obtain consent for those that are not strictly necessary, e.g. tracking for training recommendation or personalisation models.
+- Before analysing the content of messages or calls with AI, e.g. classifiers or assistants, check whether the consent of the users concerned or a legal exception covers it.
+- Follow the national transposition, in Germany § 25 and § 3 TDDDG, rather than the Directive itself.
+
+##### When does it apply?
+
+Applies through national transposition (deadline **31 October 2003**, Art. 17); paragraph 3 in its current wording was introduced by **Directive 2009/136/EC**, to be transposed by **25 May 2011**.
 
 #### Article 6 — Traffic data
 
@@ -227,7 +255,38 @@ Verpflichtet Anbieter öffentlich zugänglicher elektronischer Kommunikationsdie
 
 #### Artikel 5 – Vertraulichkeit der Kommunikation
 
-Verpflichtet die Mitgliedstaaten, die Vertraulichkeit der Nachrichten und der zugehörigen Verkehrsdaten sicherzustellen, und erlaubt das Speichern von oder den Zugriff auf Informationen im Endgerät nur mit Einwilligung, sofern nicht unbedingt erforderlich.
+##### Worum geht es?
+
+Artikel 5 schützt die Vertraulichkeit der Kommunikation und der damit verbundenen Verkehrsdaten und regelt das Speichern von Informationen im Endgerät eines Nutzers sowie den Zugriff darauf. Absatz 3 ist die europäische Grundlage für die Einwilligung in Cookies und ähnliche Techniken.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Die Mitgliedstaaten stellen durch innerstaatliche Vorschriften die Vertraulichkeit der Nachrichten und der damit verbundenen Verkehrsdaten sicher. Insbesondere untersagen sie das Mithören, Abhören, Speichern oder andere Arten des Abfangens oder Überwachens durch andere Personen als die Nutzer ohne deren Einwilligung, soweit dies nicht nach Artikel 15 Absatz 1 gesetzlich zulässig ist. Die für die Weiterleitung einer Nachricht technisch erforderliche Speicherung bleibt unberührt.
+- **Absatz 2** – Absatz 1 betrifft nicht das rechtlich zulässige Aufzeichnen von Nachrichten und Verkehrsdaten im Rahmen einer rechtmäßigen Geschäftspraxis, etwa zum Nachweis kommerzieller Transaktionen oder sonstiger geschäftlicher Nachrichten.
+- **Absatz 3** – Die Mitgliedstaaten stellen sicher, dass die Speicherung von Informationen im Endgerät eines Teilnehmers oder Nutzers und der Zugriff auf dort gespeicherte Informationen nur gestattet sind, wenn der Teilnehmer oder Nutzer auf der Grundlage klarer und umfassender Informationen, unter anderem über die Zwecke der Verarbeitung, gemäß der Richtlinie 95/46/EG (heute der DSGVO) seine Einwilligung gegeben hat. Ausgenommen sind die technische Speicherung oder der Zugriff, wenn der alleinige Zweck die Übertragung einer Nachricht ist oder wenn dies unbedingt erforderlich ist, damit ein ausdrücklich gewünschter Dienst der Informationsgesellschaft zur Verfügung gestellt werden kann.
+
+##### Wer ist betroffen?
+
+Der Artikel richtet sich an die Mitgliedstaaten, die ihn umsetzen müssen. Über das nationale Recht binden seine Regeln alle Personen außer den Nutzern, die Kommunikation abfangen oder überwachen, sowie alle, die Informationen in Endgeräten speichern oder auslesen, etwa Betreiber von Websites und Apps. Geschützt sind Teilnehmer und Nutzer.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Welche Überwachung nach Artikel 15 Absatz 1 im Einzelnen gesetzlich zulässig ist.
+- Wie die „klaren und umfassenden Informationen“ für die Einwilligung genau auszusehen haben.
+- Wann eine Speicherung oder ein Zugriff „unbedingt erforderlich“ ist.
+- Wo die Grenzen der „rechtmäßigen Geschäftspraxis“ nach Absatz 2 liegen.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Alle Cookies, SDKs und ähnlichen Techniken einer Website oder App erfassen und für alle nicht unbedingt erforderlichen eine Einwilligung einholen, etwa für Tracking zum Training von Empfehlungs- oder Personalisierungsmodellen.
+- Vor der Auswertung von Nachrichten- oder Gesprächsinhalten mit KI, etwa durch Klassifikatoren oder Assistenten, prüfen, ob eine Einwilligung der betroffenen Nutzer oder eine gesetzliche Ausnahme besteht.
+- Die nationale Umsetzung beachten, in Deutschland § 25 und § 3 TDDDG, statt der Richtlinie selbst.
+
+##### Ab wann gilt der Artikel?
+
+Gilt über die nationale Umsetzung (Umsetzungsfrist **31. Oktober 2003**, Art. 17); Absatz 3 in der heutigen Fassung wurde durch die **Richtlinie 2009/136/EG** eingeführt, umzusetzen bis **25. Mai 2011**.
 
 #### Artikel 6 – Verkehrsdaten
 

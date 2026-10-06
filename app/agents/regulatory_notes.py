@@ -9,6 +9,7 @@ for EU acts, German for German federal law); the other language is a
 translation of it, with the official headings where they exist.
 
     python -m app.agents.regulatory_notes summaries data-protection [--notes gdpr]
+    python -m app.agents.regulatory_notes details   data-protection [--notes gdpr]
     python -m app.agents.regulatory_notes assemble  data-protection [--notes gdpr]
     python -m app.agents.regulatory_notes accept    data-protection --notes gdpr
 
@@ -25,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import sys
@@ -42,6 +44,26 @@ from app.backend.knowledge_radar.templates import REGULATORY_REQUIRED, check_tem
 MIGRATION = REPOSITORY_ROOT / "migration"
 FRAMES = MIGRATION / "regulatory" / "frames"
 CORRECTIONS = MIGRATION / "regulatory" / "corrections"
+DETAILS = MIGRATION / "regulatory" / "details"
+WRITER_MODEL = os.environ.get("KNOWLEDGE_RADAR_WRITER_MODEL", "qwen3:30b-a3b")
+DETAIL_HEADINGS = {  # same sub-sections as the EU AI Act note (docs/note-templates.md, "Depth")
+    ("en", "article"): ("What is it about?", "What does the article require?", "Who is affected?",
+                        "What is not specified?", "What could this mean in practice?", "When does it apply?"),
+    ("de", "article"): ("Worum geht es?", "Was verlangt der Artikel?", "Wer ist betroffen?",
+                        "Was ist nicht ausdrücklich geregelt?", "Was könnte das in der Praxis bedeuten?",
+                        "Ab wann gilt der Artikel?"),
+    ("en", "section"): ("What is it about?", "What does the section require?", "Who is affected?",
+                        "What is not specified?", "What could this mean in practice?", "When does it apply?"),
+    ("de", "section"): ("Worum geht es?", "Was verlangt die Vorschrift?", "Wer ist betroffen?",
+                        "Was ist nicht ausdrücklich geregelt?", "Was könnte das in der Praxis bedeuten?",
+                        "Ab wann gilt die Vorschrift?"),
+}
+PRACTICE_RULES = {
+    "en": "Start the practice sub-section with '**Possible implementation – not a legally prescribed checklist:**'.",
+    "de": "Beginne den Praxis-Abschnitt mit "
+          "'**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**'.",
+}
+PARAGRAPH_LABELS = {"en": 'e.g. "**Paragraph 3** – ..."', "de": 'z. B. "**Absatz 3** – ..."'}
 DRAFTS = REPOSITORY_ROOT / ".knowledge-radar" / "drafts" / "regulatory"
 PROMPTS = Path(__file__).parent / "prompts"
 PROVISIONS_MARKER = "<!-- PROVISIONS -->"
@@ -188,6 +210,28 @@ def heading_title(title: str) -> str:
 
 def heading_label(label: str) -> str:
     return " ".join(part if re.fullmatch(r"[IVXLC]+|\d+\w?", part) else part.capitalize() for part in label.split())
+
+
+def item_key(item: dict) -> str:
+    """Key of a provision ("26" for "§ 26", "5" for "Article 5")."""
+    return item["number"].split()[-1].rstrip(".")
+
+
+def detail_body(text: str) -> str:
+    """Body of a detailed section: everything after an optional `####` heading line."""
+    text = text.strip()
+    if text.startswith("#### "):
+        text = text.split("\n", 1)[1] if "\n" in text else ""
+    return text.strip()
+
+
+def load_details(note: str, language: str, directory: Path | None = None) -> dict[str, str]:
+    """Reviewed detailed sections: migration/regulatory/details/<note>/<key>.<language>.md."""
+    folder = (directory or DETAILS) / note
+    return {
+        path.name[: -len(f".{language}.md")]: detail_body(path.read_text(encoding="utf-8"))
+        for path in sorted(folder.glob(f"*.{language}.md"))
+    } if folder.is_dir() else {}
 
 
 def fix_heading_terms(data: dict, terms: dict | None) -> dict:
@@ -346,8 +390,61 @@ class Builder:
                 path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"{note}: {changed} corrections applied", flush=True)
 
+    # -- detailed sections of important provisions ------------------------------------
+    def details(self, note: str, keys: list[str] | None = None, force: bool = False) -> None:
+        """Draft detailed sections in the source language only, from the official text.
+
+        Drafts go to the drafts folder; after review, the final sections (both
+        languages) are stored in migration/regulatory/details/<note>/<key>.<lang>.md.
+        """
+        from app.agents import regulatory_articles
+
+        spec = self.specs[note]
+        language = "de" if spec["source"] == "gesetze" else "en"
+        unit = "section" if spec["source"] == "gesetze" else "article"
+        headings = DETAIL_HEADINGS[(language, unit)]
+        data = json.loads(self.summaries_path(note).read_text(encoding="utf-8"))
+        sections = {s.key: s for s in provisions(spec, language)}
+        ai_act = (self.notes_directory / "eu-ai-act.md").read_text(encoding="utf-8")
+        example = regulatory_articles.article_sections(ai_act, regulatory_articles.LANGUAGES[language])["4"]
+        example = example.split("\n", 1)[1]
+        target_folder = self.drafts / note / "details"
+        target_folder.mkdir(parents=True, exist_ok=True)
+
+        for key in keys or [str(k) for k in spec["detailed"]]:
+            target = target_folder / f"{key}.{language}.md"
+            if target.exists() and not force:
+                continue
+            section, item = sections[key], data[language][key]
+            dash = " — " if language == "en" else " – "
+            prompt = render(
+                "regulatory_article.md",
+                act_context=spec["act"], provision=section.number, language=LANGUAGE_NAMES[language],
+                heading_requires=headings[1], heading_open=headings[3], heading_applies=headings[5],
+                paragraph_label=PARAGRAPH_LABELS[language],
+                title=f"#### {item['number']}{dash}{item['title']}",
+                headings="\n".join(f"##### {heading}" for heading in headings),
+                practice_rule=PRACTICE_RULES[language], application=spec["detailed"][key],
+                language_rules=LANGUAGE_RULES[language] + " Keep established English technical terms "
+                               "of AI and IT untranslated in German text.",
+                example=example, existing=item["summary"], official=section.text,
+            )
+            started = time.time()
+            draft = llm.generate(prompt, temperature=0.6, sampling={"top_p": 0.95, "top_k": 20}, think=True,
+                                 max_tokens=12000, context_tokens=32768, model=WRITER_MODEL, timeout=1800)
+            draft = re.sub(r"^```(?:markdown)?\n|\n```$", "", draft.strip()).strip() + "\n"
+            target.write_text(draft, encoding="utf-8")
+            missing = [h for h in headings if f"##### {h}" not in draft]
+            body = detail_body(draft).split(f"##### {headings[5]}")[0]
+            allowed = set(NUMBER.findall(section.text + " " + section.number))
+            numbers = sorted({n for n in NUMBER.findall(body) if n not in allowed})
+            print(f"{note} {section.number} ({language}): {len(draft.split())} words in "
+                  f"{time.time() - started:.0f}s | missing sub-headings: {missing or '-'} | "
+                  f"numbers not in source: {numbers or '-'}", flush=True)
+
     # -- step 2: assemble the note --------------------------------------------------
-    def provisions_block(self, data: dict, language: str) -> str:
+    def provisions_block(self, data: dict, language: str, details: dict[str, str] | None = None) -> str:
+        """Chapters and provisions; a reviewed detailed section replaces the one-sentence summary."""
         dash = " — " if language == "en" else " – "
         lines: list[str] = []
         current: list[tuple] = []
@@ -361,7 +458,8 @@ class Builder:
                 lines.append("")
             current = path
             title = f"{dash}{item['title']}" if item["title"] else ""
-            lines += [f"#### {item['number']}{title}", "", item["summary"], ""]
+            body = (details or {}).get(item_key(item)) or item["summary"]
+            lines += [f"#### {item['number']}{title}", "", body, ""]
         return "\n".join(lines).strip()
 
     def german_frame(self, note: str, english_frame: str, force: bool = False) -> str:
@@ -397,9 +495,9 @@ class Builder:
             "title_en": entry["title_en"], "title_de": entry["title_de"], "entity_type": entry["entity_type"],
             **spec["frontmatter"], "sources": spec["sources"],
         }
-        english = english_frame.replace(
-            PROVISIONS_MARKER, self.provisions_block(fix_heading_terms(data, spec.get("english_heading_terms")), "en"))
-        german = german_frame.replace(PROVISIONS_MARKER, self.provisions_block(data, "de"))
+        english = english_frame.replace(PROVISIONS_MARKER, self.provisions_block(
+            fix_heading_terms(data, spec.get("english_heading_terms")), "en", load_details(note, "en")))
+        german = german_frame.replace(PROVISIONS_MARKER, self.provisions_block(data, "de", load_details(note, "de")))
         note_text = (
             "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False) + "---\n\n"
             f"## EN\n\n{english.strip()}\n\n## DE\n\n{german.strip()}\n"
@@ -423,7 +521,7 @@ class Builder:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("command", choices=["summaries", "assemble", "accept"])
+    parser.add_argument("command", choices=["summaries", "details", "assemble", "accept"])
     parser.add_argument("package")
     parser.add_argument("--notes", help="comma-separated subset")
     parser.add_argument("--force", action="store_true")
@@ -438,6 +536,9 @@ def main() -> int:
         for note in notes:
             if args.command == "summaries":
                 builder.summaries(note, args.force)
+            elif args.command == "details":
+                if builder.specs[note].get("detailed"):
+                    builder.details(note, force=args.force)
             elif args.command == "assemble":
                 builder.assemble(note)
             else:
