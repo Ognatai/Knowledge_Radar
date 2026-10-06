@@ -29,7 +29,7 @@ WINDOWS_BROWSERS = [
 BROWSER_COMMANDS = ["msedge", "google-chrome", "chromium", "chromium-browser"]
 # Every structural unit (chapter, article, annex) starts a part; only articles are kept,
 # so an article never runs into a following chapter title or annex.
-ARTICLE_START = re.compile(r'(?=<div (?:class="eli-subdivision" )?id="(?:art|prt|cpt|anx|enc|fnp)_)')
+ARTICLE_START = re.compile(r'(?=<div (?:class="eli-subdivision" )?id="(?:art|prt|tis|cpt|anx|enc|fnp)_)')
 ARTICLE_ID = re.compile(r'<div class="eli-subdivision" id="art_([0-9a-z]+)"')
 # Consolidation markers such as "▼M1", "►B" or "◄".
 AMENDMENT_MARKER = re.compile("[\u25bc\u25ba\u25c4]\\s*(?:[A-Z]\\d*)?\\s*")
@@ -179,7 +179,7 @@ def split_articles(page: str) -> dict[str, str]:
     return articles
 
 
-UNIT_ID = re.compile(r'<div (?:class="eli-subdivision" )?id="(art|prt|cpt|anx|enc|fnp)_([^"]+)"')
+UNIT_ID = re.compile(r'<div (?:class="eli-subdivision" )?id="(art|prt|tis|cpt|anx|enc|fnp)_([^"]+)"')
 TITLE = re.compile(r'<p\b[^>]*?\bclass="([a-z0-9-]+)"[^>]*>(.*?)</p>', re.S)
 
 
@@ -193,8 +193,8 @@ def parse_structure(page: str) -> list[Section]:
             continue
         kind, ident = unit.groups()
         titles = {cls: html_to_text(body) for cls, body in TITLE.findall(part[:3000])}
-        if kind in ("prt", "cpt"):
-            level = ident.count(".") + 1  # cpt_III -> 1, cpt_III.sct_1 -> 2, prt_I.tis_II -> 2
+        if kind in ("prt", "tis", "cpt"):
+            level = ident.count(".") + 1  # cpt_III -> 1, cpt_III.sct_1 -> 2, prt_I.tis_II -> 2, tis_II.cpt_I -> 2
             heading = Heading(level, titles.get("title-division-1", ""), titles.get("title-division-2", ""))
             path = [h for h in path if h.level < level] + [heading]
         elif kind == "art":

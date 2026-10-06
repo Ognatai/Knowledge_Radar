@@ -115,10 +115,10 @@ notes:
   BDSG: {id: bdsg, title_en: Federal Data Protection Act (BDSG), title_de: Bundesdatenschutzgesetz (BDSG), entity_type: Regulation, jurisdiction: DE}
   BSI-KritisV: {id: bsi-kritisv, title_en: BSI Critical Infrastructure Ordinance (BSI-KritisV), title_de: BSI-Kritisverordnung (BSI-KritisV), entity_type: Regulation, jurisdiction: DE}
   BSIG: {id: bsig, title_en: BSI Act (BSIG), title_de: BSI-Gesetz (BSIG), entity_type: Regulation, jurisdiction: DE}
-  CER-Richtlinie: {id: cer-directive, title_en: Critical Entities Resilience Directive (CER), title_de: CER-Richtlinie, entity_type: Regulation, jurisdiction: EU}
-  CRA: {id: cyber-resilience-act, title_en: Cyber Resilience Act (CRA), title_de: Cyber Resilience Act (CRA), entity_type: Regulation, jurisdiction: EU}
+  CER-Richtlinie: {id: cer-directive, title_en: Critical Entities Resilience Directive (CER), title_de: Richtlinie über die Resilienz kritischer Einrichtungen (CER), entity_type: Regulation, jurisdiction: EU}
+  CRA: {id: cyber-resilience-act, title_en: Cyber Resilience Act (CRA), title_de: Cyberresilienz-Verordnung (CRA), entity_type: Regulation, jurisdiction: EU}
   CRR und CRD: {id: crr-and-crd, title_en: Capital Requirements Regulation and Directive (CRR/CRD), title_de: CRR und CRD, entity_type: Regulation, jurisdiction: EU}
-  Cybersecurity Act & ENISA: {id: cybersecurity-act, title_en: Cybersecurity Act and ENISA, title_de: Cybersecurity Act und ENISA, entity_type: Regulation, jurisdiction: EU}
+  Cybersecurity Act & ENISA: {id: cybersecurity-act, title_en: Cybersecurity Act and ENISA, title_de: Rechtsakt zur Cybersicherheit und ENISA, entity_type: Regulation, jurisdiction: EU}
   DORA: {id: dora, title_en: Digital Operational Resilience Act (DORA), title_de: Digital Operational Resilience Act (DORA), entity_type: Regulation, jurisdiction: EU}
   DSGVO: {id: gdpr, title_en: General Data Protection Regulation (GDPR), title_de: Datenschutz-Grundverordnung (DSGVO), entity_type: Regulation, jurisdiction: EU}
   Data Act: {id: data-act, title_en: Data Act, title_de: Datenverordnung (Data Act), entity_type: Regulation, jurisdiction: EU}

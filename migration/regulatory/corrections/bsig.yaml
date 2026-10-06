@@ -1,0 +1,259 @@
+# Reviewed corrections of the model summaries (source language: de).
+de:
+  "1": Bestimmt das Bundesamt für Sicherheit in der Informationstechnik als Bundesoberbehörde im Geschäftsbereich des Bundesministeriums des Innern und zentrale Stelle für Informationssicherheit auf nationaler Ebene.
+  "2": Definiert die Begriffe des Gesetzes, darunter Sicherheitsvorfall, erheblicher Sicherheitsvorfall, Beinahevorfall, Cyberbedrohung, Schwachstelle und Managed Service Provider; kritische Anlage und kritische Dienstleistung bestimmen sich nach dem KRITIS-Dachgesetz.
+  "3": Weist dem Bundesamt die Förderung der Sicherheit in der Informationstechnik zu und zählt seine Aufgaben auf, etwa Gefahrenabwehr für die IT des Bundes, Zertifizierung, Warnungen, Verbraucherinformation und die Rolle als zentrale Stelle für besonders wichtige und wichtige Einrichtungen.
+  "4": Macht das Bundesamt zur zentralen Meldestelle der Einrichtungen der Bundesverwaltung, die Informationen zu Schwachstellen, Schadprogrammen und Angriffen sammelt und auswertet, die Einrichtungen unverzüglich unterrichtet und Empfehlungen bereitstellt.
+  "5": Macht das Bundesamt zur Meldestelle für Dritte, die auch anonyme Meldungen zu Schwachstellen und Sicherheitsvorfällen entgegennimmt, und zum nationalen Koordinator für die koordinierte Offenlegung von Schwachstellen nach der NIS-2-Richtlinie.
+  "6": Verpflichtet das Bundesamt, eine Online-Plattform zum Informationsaustausch mit besonders wichtigen und wichtigen Einrichtungen sowie Einrichtungen der Bundesverwaltung zu betreiben, zu der es Hersteller, Lieferanten und Dienstleister hinzuziehen kann.
+  "7": Erlaubt dem Bundesamt, die Sicherheit der Kommunikationstechnik des Bundes zu kontrollieren, dazu Informationen und Unterlagen zu verlangen und Betriebsräume zu betreten, und regelt Ausnahmen etwa für die Streitkräfte und die Auslandstechnik.
+  "8": Erlaubt dem Bundesamt, Protokolldaten und Daten an den Schnittstellen der Kommunikationstechnik des Bundes automatisiert auszuwerten, um Schadprogramme abzuwehren, und regelt Speicherung, Pseudonymisierung und die Übermittlung an Sicherheitsbehörden.
+  "9": Erlaubt dem Bundesamt, Protokollierungsdaten der Kommunikationstechnik des Bundes zur Erkennung und Beseitigung von Störungen, Sicherheitsvorfällen und Angriffen zu verarbeiten, und verpflichtet die Einrichtungen der Bundesverwaltung, ihm Zugang zu verschaffen.
+  "11": Erlaubt dem Bundesamt, in herausgehobenen Fällen, etwa bei Angriffen von besonderer technischer Qualität, auf Ersuchen Maßnahmen zur Wiederherstellung informationstechnischer Systeme von Bundeseinrichtungen sowie besonders wichtigen und wichtigen Einrichtungen zu treffen.
+  "12": Erlaubt dem Bundesamt, von Telekommunikationsanbietern Auskunft über Bestandsdaten, auch anhand von IP-Adressen, zu verlangen, um besonders wichtige oder wichtige Einrichtungen vor einer drohenden Beeinträchtigung ihrer IT-Systeme zu warnen.
+  "13": Erlaubt dem Bundesamt, die Öffentlichkeit oder betroffene Kreise vor Schwachstellen, Schadprogrammen und Datenverlusten zu warnen, auch unter Nennung von Produkt und Hersteller, und Sicherheitsmaßnahmen zu empfehlen.
+  "14": Erlaubt dem Bundesamt, IT-Produkte und -Systeme auf dem Markt zu untersuchen und von Herstellern die nötigen Auskünfte zu verlangen, und die Öffentlichkeit zu informieren, wenn ein Hersteller nicht ausreichend Auskunft gibt.
+  "15": Erlaubt dem Bundesamt, öffentlich erreichbare IT-Systeme auf bekannte Schwachstellen abzufragen und die Verantwortlichen zu informieren, sowie Systeme einzusetzen, die Angreifern einen erfolgreichen Angriff vortäuschen.
+  "16": Erlaubt dem Bundesamt, Anbietern öffentlich zugänglicher Telekommunikationsdienste zur Abwehr erheblicher Gefahren Maßnahmen anzuordnen, etwa Datenverkehr umzuleiten oder Bereinigungsbefehle gegen ein bestimmtes Schadprogramm an betroffene Systeme zu verteilen.
+  "17": Erlaubt dem Bundesamt, Anbietern digitaler Dienste, deren unzureichend gesicherte Dienste die IT-Systeme vieler Nutzer erheblich gefährden, im Einzelfall die zur Herstellung des ordnungsgemäßen Zustands nötigen Maßnahmen anzuordnen.
+  "18": Erlaubt dem Bundesamt, von Herstellern, deren IKT-Produkte von erheblichen Sicherheitsvorfällen betroffen sind, die Mitwirkung an der Beseitigung oder Vermeidung solcher Vorfälle bei besonders wichtigen und wichtigen Einrichtungen zu verlangen.
+  "19": Regelt, dass das Bundesamt IT-Sicherheitsprodukte für die Bundesverwaltung nach Vergabeverfahren und nur in begründeten Ausnahmefällen durch Eigenentwicklung bereitstellt.
+  "20": Erlaubt dem Bundesamt, personenbezogene Daten zur Erfüllung seiner Aufgaben zu verarbeiten, und regelt, wann es sie zu anderen Zwecken und wann es besondere Kategorien personenbezogener Daten verarbeiten darf.
+  "22": Schränkt die Informationspflichten nach Art. 13 und 14 DSGVO ein, wenn die Information die Aufgaben des Bundesamtes oder die öffentliche Sicherheit gefährden würde, und verlangt dann Ersatzmaßnahmen wie eine öffentliche Information.
+  "24": Schränkt das Recht auf Berichtigung ein, wenn es die Aufgaben des Bundesamtes gefährden würde, und gibt der betroffenen Person dann das Recht, den Daten eine Gegendarstellung beizufügen.
+  "25": Schränkt bei nicht automatisierter Verarbeitung die Löschpflicht ein, wenn die Löschung nur mit unverhältnismäßigem Aufwand möglich und das Interesse der betroffenen Person gering ist; an ihre Stelle tritt dann die Einschränkung der Verarbeitung.
+  "26": Schließt die Pflicht zur Einschränkung der Verarbeitung während der Prüfung der Richtigkeit von Daten aus, wenn die Verarbeitung gesetzlich ausdrücklich geregelt ist oder die Einschränkung die Gefahrenabwehr gefährden würde.
+  "27": Schließt das Widerspruchsrecht aus, wenn ein überwiegendes zwingendes öffentliches Interesse an der Verarbeitung besteht oder eine Rechtsvorschrift das Bundesamt zur Verarbeitung verpflichtet.
+  "28": Bestimmt nach Einrichtungsart (Anlagen 1 und 2), Mitarbeiterzahl, Jahresumsatz und Bilanzsumme, wer besonders wichtige und wer wichtige Einrichtung ist, und nimmt etwa Telekommunikations- und Energieanbieter sowie Finanzunternehmen von zentralen Pflichten aus.
+  "29": Bestimmt, welche Stellen Einrichtungen der Bundesverwaltung sind, und wendet auf sie die Regeln für besonders wichtige Einrichtungen an, ohne Geschäftsleitungspflichten, Aufsichtsmaßnahmen nach § 61 und Bußgelder.
+  "30": Verpflichtet besonders wichtige und wichtige Einrichtungen zu wirksamen Risikomanagementmaßnahmen nach dem Stand der Technik, mindestens etwa zu Vorfallbewältigung, Notfallmanagement, Lieferkettensicherheit, Kryptographie und Multi-Faktor-Authentifizierung, und zu deren Dokumentation.
+  "31": Lässt für die IT-Systeme kritischer Anlagen auch weitergehende Schutzmaßnahmen als verhältnismäßig gelten und verpflichtet deren Betreiber, Systeme zur Angriffserkennung einzusetzen.
+  "32": Verpflichtet besonders wichtige und wichtige Einrichtungen, erhebliche Sicherheitsvorfälle der gemeinsamen Meldestelle von BSI und BBK zu melden, mit Erstmeldung binnen 24 Stunden, Meldung binnen 72 Stunden und Abschlussmeldung nach einem Monat.
+  "33": Verpflichtet besonders wichtige und wichtige Einrichtungen sowie Domain-Name-Registry-Dienstleister, sich spätestens drei Monate nach Eintritt der Voraussetzungen beim Bundesamt zu registrieren und Änderungen binnen zwei Wochen mitzuteilen.
+  "34": Verpflichtet digitale Anbieter nach § 60, etwa DNS-, Cloud- und Rechenzentrumsanbieter, Managed Service Provider, Online-Marktplätze, Suchmaschinen und soziale Netzwerke, binnen drei Monaten zusätzliche Angaben wie Hauptniederlassung und IP-Adressbereiche zu übermitteln.
+  "35": Erlaubt dem Bundesamt anzuordnen, dass Einrichtungen ihre Kunden über erhebliche Sicherheitsvorfälle unterrichten, und verpflichtet Einrichtungen bestimmter Sektoren, etwa der digitalen Infrastruktur, betroffene Kunden über erhebliche Cyberbedrohungen und mögliche Abhilfemaßnahmen zu informieren.
+  "36": Verpflichtet das Bundesamt, Meldungen möglichst binnen 24 Stunden zu bestätigen und auf Ersuchen zu beraten, und erlaubt ihm, Einrichtungen zur Information der Öffentlichkeit über erhebliche Sicherheitsvorfälle zu verpflichten.
+  "37": Erlaubt dem Bundesministerium des Innern, Einrichtungen aus den Bereichen nationale und öffentliche Sicherheit, Verteidigung und Strafverfolgung teilweise oder ganz von Pflichten zu befreien, wenn sie gleichwertige Vorgaben einhalten; Vertrauensdiensteanbieter sind ausgenommen.
+  "38": Verpflichtet die Geschäftsleitungen besonders wichtiger und wichtiger Einrichtungen, die Risikomanagementmaßnahmen umzusetzen und zu überwachen und regelmäßig an Schulungen teilzunehmen, und lässt sie bei Pflichtverletzungen nach Gesellschaftsrecht haften.
+  "39": Verpflichtet Betreiber kritischer Anlagen, ihre Sicherheitsmaßnahmen alle drei Jahre durch Audits, Prüfungen oder Zertifizierungen nachzuweisen und dem Bundesamt die Ergebnisse samt aufgedeckter Sicherheitsmängel zu übermitteln.
+  "41": Erlaubt dem Bundesministerium des Innern, Betreibern kritischer Anlagen den Einsatz kritischer Komponenten eines Herstellers zu untersagen, wenn er die öffentliche Ordnung oder Sicherheit voraussichtlich beeinträchtigt, etwa bei Kontrolle des Herstellers durch einen Drittstaat.
+  "42": Schließt den Zugang Dritter zu Informationen und Akten in Angelegenheiten der §§ 4 bis 10 und des Teils 3 aus; Akteneinsichtsrechte von Verfahrensbeteiligten bleiben unberührt.
+  "43": Macht die Leitung jeder Einrichtung der Bundesverwaltung für die Informationssicherheit verantwortlich, verpflichtet sie zu regelmäßigen Schulungen und verlangt spätestens fünf Jahre nach Inkrafttreten Nachweise gegenüber dem Bundesamt.
+  "44": Verpflichtet die Bundesverwaltung auf Mindestanforderungen aus IT-Grundschutz, BSI-Standards und Mindeststandards des Bundesamtes, deren Umsetzung die Risikomanagementpflichten nach § 30 erfüllt, und regelt Beratung und Hilfsmittel des Bundesamtes.
+  "48": Überträgt der Leitung des Bundesamtes die Aufgaben der Koordinatorin oder des Koordinators der Bundesregierung für Informationssicherheit, die das operative Informationssicherheitsmanagement des Bundes koordiniert, unter Fachaufsicht des Bundesministeriums für Digitales und Staatsmodernisierung.
+  "49": Verpflichtet Top Level Domain Name Registries und Domain-Name-Registry-Dienstleister, genaue und vollständige Domain-Namen-Registrierungsdaten in einer Datenbank zu pflegen und die nicht personenbezogenen Daten nach der Registrierung zu veröffentlichen.
+  "52": Macht das Bundesamt zur nationalen Zertifizierungsstelle der Bundesverwaltung für IT-Sicherheit und regelt Sicherheits- und Personenzertifizierungen, deren Erteilung das Bundesministerium des Innern aus überwiegenden öffentlichen Interessen untersagen kann.
+  "55": Führt ein freiwilliges IT-Sicherheitskennzeichen für Verbraucherprodukte ein, das aus einer Herstellererklärung und einer Sicherheitsinformation des Bundesamtes besteht und nur nach Freigabe durch das Bundesamt verwendet werden darf.
+  "56": Ermächtigt das Bundesministerium des Innern zu Rechtsverordnungen, etwa über Zertifizierung und IT-Sicherheitskennzeichen, verpflichtende Zertifizierungen, die Erheblichkeit von Sicherheitsvorfällen und die Bestimmung kritischer Komponenten.
+  "57": Stellt fest, dass die §§ 7, 8, 9, 11, 12, 15 und 16 das Fernmeldegeheimnis nach Artikel 10 des Grundgesetzes einschränken.
+  "58": Verpflichtet das Bundesamt, das Bundesministerium des Innern zu unterrichten, das mindestens jährlich öffentlich über Gefahren berichtet, und regelt Berichte an den Bundestag, an die ENISA und an die Europäische Kommission.
+  "60": Macht das Bundesamt für DNS-, Cloud- und Rechenzentrumsanbieter, Managed Service Provider, Online-Marktplätze, Suchmaschinen und soziale Netzwerke nur zuständig, wenn ihre Hauptniederlassung in der EU in Deutschland liegt, dann aber für die gesamte Europäische Union.
+  "61": Erlaubt dem Bundesamt, bei besonders wichtigen Einrichtungen Audits anzuordnen, Nachweise zu verlangen, vor Ort zu prüfen und Maßnahmen anzuordnen; als letztes Mittel kann die Fachaufsicht Genehmigungen aussetzen und Geschäftsleitungen die Tätigkeit vorübergehend untersagen.
+  "62": Erlaubt dem Bundesamt, bei wichtigen Einrichtungen die Einhaltung von Risikomanagement-, Melde- und Schulungspflichten nur dann zu prüfen und Maßnahmen nach § 61 zu treffen, wenn Tatsachen auf Verstöße hindeuten.
+  "63": Begrenzt Zwangsgelder des Bundesamtes abweichend vom Verwaltungsvollstreckungsgesetz auf bis zu 100.000 Euro.
+  "65": Regelt Ordnungswidrigkeiten, etwa bei Verstößen gegen Risikomanagement-, Melde- und Registrierungspflichten, mit Geldbußen bis zu 10 Millionen Euro und bei großen Unternehmen bis zu 2 Prozent des weltweiten Gesamtumsatzes.
+  "66": Lässt die Begriffe kritische Anlage und kritische Dienstleistung sowie Teile der Registrierungspflicht erst gelten, wenn die Rechtsverordnung nach dem KRITIS-Dachgesetz in Kraft ist; bis dahin gelten die bisherigen Fassungen weiter.
+
+# English: written from the verified German summaries and the German text
+# (German is the only authentic version; no model translation).
+# Terms: besonders wichtige Einrichtung = particularly important entity, wichtige Einrichtung =
+# important entity, kritische Anlage = critical facility, Bundesamt = Federal Office (BSI).
+en:
+  "1":
+    title: Federal Office for Information Security
+    summary: Establishes the Federal Office for Information Security as a higher federal authority within the remit of the Federal Ministry of the Interior and as the central body for information security at national level.
+  "2":
+    title: Definitions
+    summary: Defines the terms of the Act, including security incident, significant security incident, near miss, cyber threat, vulnerability and managed service provider; critical facility and critical service follow the KRITIS Umbrella Act.
+  "3":
+    title: Tasks of the Federal Office
+    summary: Assigns the Federal Office the promotion of IT security and lists its tasks, such as defending federal IT against threats, certification, warnings, consumer information and acting as central body for particularly important and important entities.
+  "4":
+    title: Central Reporting Point for the Security of Federal Information Technology
+    summary: Makes the Federal Office the central reporting point for federal administration bodies, which collects and analyses information on vulnerabilities, malware and attacks, informs the bodies without delay and provides recommendations.
+  "5":
+    title: General Reporting Point for IT Security
+    summary: Makes the Federal Office the reporting point for third parties, accepting anonymous reports on vulnerabilities and security incidents, and the national coordinator for coordinated vulnerability disclosure under the NIS2 Directive.
+  "6":
+    title: Information Exchange
+    summary: Requires the Federal Office to operate an online platform for information exchange with particularly important and important entities and federal administration bodies, to which it may invite manufacturers, suppliers and service providers.
+  "7":
+    title: Inspection of Federal Communications Technology, Rights of Entry
+    summary: Allows the Federal Office to inspect the security of federal communications technology, request information and documents for this purpose and enter operating premises, with exceptions such as for the armed forces and IT abroad.
+  "8":
+    title: Defence against Malware and Threats to Federal Communications Technology
+    summary: Allows the Federal Office to analyse protocol data and data at the interfaces of federal communications technology automatically to defend against malware, and regulates storage, pseudonymisation and transfers to security authorities.
+  "9":
+    title: Processing of Logging Data of Federal Communications Technology
+    summary: Allows the Federal Office to process logging data of federal communications technology to detect and remedy faults, security incidents and attacks, and requires federal administration bodies to give it access.
+  "10":
+    title: Orders to Prevent or Remedy Security Incidents
+    summary: Allows the Federal Office to order federal administration bodies to take measures to prevent or remedy a current security incident and to report on them.
+  "11":
+    title: Restoring the Security or Functioning of IT Systems in Exceptional Cases
+    summary: Allows the Federal Office, in exceptional cases such as attacks of particular technical quality, to take measures on request to restore IT systems of federal bodies and of particularly important and important entities.
+  "12":
+    title: Subscriber Data Requests
+    summary: Allows the Federal Office to request subscriber data from telecommunications providers, including on the basis of IP addresses, in order to warn particularly important or important entities of an imminent impairment of their IT systems.
+  "13":
+    title: Warnings
+    summary: Allows the Federal Office to warn the public or affected groups about vulnerabilities, malware and data losses, including by naming the product and manufacturer, and to recommend security measures.
+  "14":
+    title: Examination of IT Security, Requests for Information
+    summary: Allows the Federal Office to examine IT products and systems on the market and require manufacturers to provide the necessary information, and to inform the public if a manufacturer does not provide sufficient information.
+  "15":
+    title: Detection of Attack Methods and Security Risks for Network and IT Security
+    summary: Allows the Federal Office to scan publicly accessible IT systems for known vulnerabilities and inform those responsible, and to use systems that simulate a successful attack to attackers.
+  "16":
+    title: Orders by the Federal Office to Providers of Telecommunications Services
+    summary: Allows the Federal Office to order providers of publicly available telecommunications services to take measures against significant threats, such as redirecting traffic or distributing clean-up commands against a specific piece of malware to affected systems.
+  "17":
+    title: Orders by the Federal Office to Providers of Digital Services
+    summary: Allows the Federal Office, in individual cases, to order providers of digital services whose insufficiently secured services significantly threaten the IT systems of many users to take the measures needed to restore a proper state.
+  "18":
+    title: Orders by the Federal Office to Manufacturers of ICT Products
+    summary: Allows the Federal Office to require manufacturers whose ICT products are affected by significant security incidents to cooperate in remedying or preventing such incidents at particularly important and important entities.
+  "19":
+    title: Provision of IT Security Products
+    summary: Provides that the Federal Office supplies IT security products to the federal administration through procurement procedures and develops them in-house only in justified exceptional cases.
+  "20":
+    title: Processing of Personal Data
+    summary: Allows the Federal Office to process personal data to perform its tasks, and regulates when it may process them for other purposes and when it may process special categories of personal data.
+  "21":
+    title: Restrictions of the Rights of the Data Subject
+    summary: Adds further restrictions to the exceptions in the GDPR for the rights of data subjects towards the Federal Office, with the BDSG applying in addition.
+  "22":
+    title: Duty to Inform When Collecting Personal Data
+    summary: Restricts the information obligations under Articles 13 and 14 GDPR where informing would endanger the tasks of the Federal Office or public security, and then requires alternative measures such as public information.
+  "23":
+    title: Right of Access of the Data Subject
+    summary: Restricts the data subject's right of access where providing information would endanger the tasks of the Federal Office, public security, network and information security or criminal investigations.
+  "24":
+    title: Right to Rectification
+    summary: Restricts the right to rectification where it would endanger the tasks of the Federal Office, and then gives the data subject the right to add a counterstatement to the data.
+  "25":
+    title: Right to Erasure
+    summary: Restricts the duty to erase in non-automated processing where erasure is possible only with disproportionate effort and the data subject's interest is low; restriction of processing then replaces erasure.
+  "26":
+    title: Right to Restriction of Processing
+    summary: Excludes the duty to restrict processing while the accuracy of data is being checked if the processing is expressly regulated by law or restriction would endanger the defence against threats.
+  "27":
+    title: Right to Object
+    summary: Excludes the right to object where an overriding compelling public interest in the processing exists or a legal provision obliges the Federal Office to process the data.
+  "28":
+    title: Particularly Important Entities and Important Entities
+    summary: Determines by type of entity (Annexes 1 and 2), number of employees, annual turnover and balance sheet total which entities are particularly important or important, and exempts for example telecommunications and energy providers and financial entities from core obligations.
+  "29":
+    title: Federal Administration Bodies
+    summary: Determines which bodies are federal administration bodies and applies the rules for particularly important entities to them, without management obligations, supervisory measures under § 61 and fines.
+  "30":
+    title: Risk Management Measures of Particularly Important and Important Entities
+    summary: Requires particularly important and important entities to take effective state-of-the-art risk management measures, at least on incident handling, business continuity, supply chain security, cryptography and multi-factor authentication, and to document them.
+  "31":
+    title: Special Requirements for the Risk Management Measures of Operators of Critical Facilities
+    summary: Treats stronger protective measures as proportionate for the IT systems of critical facilities and requires their operators to use attack detection systems.
+  "32":
+    title: Reporting Obligations
+    summary: Requires particularly important and important entities to report significant security incidents to the joint reporting office of the BSI and the BBK, with an early warning within 24 hours, a notification within 72 hours and a final report after one month.
+  "33":
+    title: Registration Obligation
+    summary: Requires particularly important and important entities and domain name registration service providers to register with the Federal Office no later than three months after they meet the criteria and to report changes within two weeks.
+  "34":
+    title: Special Registration Obligation for Certain Types of Entities
+    summary: Requires digital providers under § 60, such as DNS, cloud and data centre providers, managed service providers, online marketplaces, search engines and social networks, to submit additional details such as main establishment and IP address ranges within three months.
+  "35":
+    title: Obligations to Inform
+    summary: Allows the Federal Office to order entities to inform their customers of significant security incidents, and requires entities in certain sectors, such as digital infrastructure, to inform affected customers of significant cyber threats and possible remedies.
+  "36":
+    title: Feedback from the Federal Office to Reporting Entities
+    summary: Requires the Federal Office to acknowledge reports, where possible within 24 hours, and to advise on request, and allows it to oblige entities to inform the public about significant security incidents.
+  "37":
+    title: Exemption Decision
+    summary: Allows the Federal Ministry of the Interior to exempt entities in national and public security, defence and law enforcement partly or fully from obligations if they comply with equivalent requirements; trust service providers cannot be exempted.
+  "38":
+    title: Implementation, Monitoring and Training Obligations for the Management of Particularly Important and Important Entities
+    summary: Requires the management of particularly important and important entities to implement and monitor the risk management measures and to attend training regularly, and makes them liable under company law for breaches.
+  "39":
+    title: Obligations of Operators of Critical Facilities to Provide Evidence
+    summary: Requires operators of critical facilities to demonstrate their security measures every three years through audits, inspections or certifications and to send the results, including security deficiencies found, to the Federal Office.
+  "40":
+    title: National Liaison Office and Central Reporting Office and Single Point of Contact for Particularly Important and Important Entities
+    summary: Sets out the tasks of the Federal Office as national liaison office and central reporting office and single point of contact for particularly important and important entities.
+  "41":
+    title: Prohibition of the Use of Critical Components
+    summary: Allows the Federal Ministry of the Interior to prohibit operators of critical facilities from using critical components of a manufacturer if this is likely to impair public order or security, for example where a third country controls the manufacturer.
+  "42":
+    title: Requests for Access to Information
+    summary: Excludes third-party access to information and files in matters under §§ 4 to 10 and Part 3; rights of parties to proceedings to inspect files remain unaffected.
+  "43":
+    title: Information Security Management
+    summary: Makes the head of each federal administration body responsible for information security, requires regular training and requires evidence to the Federal Office no later than five years after entry into force.
+  "44":
+    title: Requirements of the Federal Office
+    summary: Obliges the federal administration to meet minimum requirements from IT-Grundschutz, BSI standards and the Federal Office's minimum standards, whose implementation fulfils the risk management obligations under § 30, and regulates advice and tools from the Federal Office.
+  "45":
+    title: Information Security Officers of Federal Administration Bodies
+    summary: Regulates the appointment and tasks of information security officers of federal administration bodies.
+  "46":
+    title: Information Security Officers of the Ministries
+    summary: Regulates the appointment and tasks of information security officers of the federal ministries and other supreme federal authorities.
+  "47":
+    title: Major Digitalisation Projects and Communications Infrastructures of the Federation
+    summary: Requires separate information security officers to be appointed for major digitalisation projects and communications infrastructures of the Federation.
+  "48":
+    title: Office of the Information Security Coordinator
+    summary: Assigns to the head of the Federal Office the tasks of the Federal Government's information security coordinator, who coordinates operational information security management of the Federation, under the supervision of the Federal Ministry for Digital Affairs and State Modernisation.
+  "49":
+    title: Obligation to Maintain a Database
+    summary: Requires top-level domain name registries and domain name registration service providers to maintain accurate and complete domain name registration data in a database and to publish the non-personal data after registration.
+  "50":
+    title: Obligation to Grant Access
+    summary: Requires top-level domain name registries and domain name registration service providers to grant legitimate access seekers access to domain name registration data within 72 hours of a justified request.
+  "51":
+    title: Obligation to Cooperate
+    summary: Requires top-level domain name registries and domain name registration service providers to cooperate in fulfilling the obligations under §§ 49 and 50.
+  "52":
+    title: Certification
+    summary: Makes the Federal Office the national certification body of the federal administration for IT security and regulates security and personal certifications, whose issue the Federal Ministry of the Interior may prohibit for overriding public interests.
+  "53":
+    title: Conformity Assessment and Declaration of Conformity
+    summary: Regulates self-assessment of conformity by manufacturers, providers and IT security service providers against technical guidelines of the Federal Office, and the issue of a declaration of conformity for which the issuer is responsible.
+  "54":
+    title: National Cybersecurity Certification Authority
+    summary: Makes the Federal Office the national cybersecurity certification authority under the Cybersecurity Act and regulates the authorisation of conformity assessment bodies.
+  "55":
+    title: Voluntary IT Security Label
+    summary: Introduces a voluntary IT security label for consumer products, consisting of a manufacturer's declaration and security information from the Federal Office, which may only be used after release by the Federal Office.
+  "56":
+    title: Authorisation to Issue Ordinances
+    summary: Empowers the Federal Ministry of the Interior to issue ordinances, for example on certification and the IT security label, mandatory certification, when security incidents are significant and which components are critical.
+  "57":
+    title: Restriction of Fundamental Rights
+    summary: States that §§ 7, 8, 9, 11, 12, 15 and 16 restrict the secrecy of telecommunications under Article 10 of the Basic Law.
+  "58":
+    title: Reporting Obligations of the Federal Office
+    summary: Requires the Federal Office to report to the Federal Ministry of the Interior, which informs the public about threats at least once a year, and regulates reports to the Bundestag, ENISA and the European Commission.
+  "59":
+    title: Competence of the Federal Office
+    summary: Makes the Federal Office the supervisory authority for compliance with Part 3 by particularly important and important entities established in Germany, operators of critical facilities in Germany and federal administration bodies.
+  "60":
+    title: Central Competence in the European Union for Certain Types of Entities
+    summary: Makes the Federal Office competent for DNS, cloud and data centre providers, managed service providers, online marketplaces, search engines and social networks only if their main establishment in the EU is in Germany, but then for the whole European Union.
+  "61":
+    title: Supervisory and Enforcement Measures for Particularly Important Entities
+    summary: Allows the Federal Office to order audits of particularly important entities, require evidence, carry out on-site inspections and order measures; as a last resort, the sectoral authority may suspend authorisations and temporarily bar managers from their duties.
+  "62":
+    title: Supervisory and Enforcement Measures for Important Entities
+    summary: Allows the Federal Office to check important entities' compliance with risk management, reporting and training obligations and take measures under § 61 only where facts indicate a breach.
+  "63":
+    title: Administrative Enforcement
+    summary: Limits periodic penalty payments imposed by the Federal Office to 100,000 euros, deviating from the Administrative Enforcement Act.
+  "64":
+    title: Infringements by Social Security Institutions
+    summary: Regulates how infringements by social security institutions are handled, in agreement with or by informing the competent supervisory authorities, which enforce the measures.
+  "65":
+    title: Provisions on Fines
+    summary: Sets out administrative offences, such as breaches of risk management, reporting and registration obligations, with fines of up to 10 million euros and, for large undertakings, up to 2 percent of worldwide turnover.
+  "66":
+    title: Application Provisions and Transitional Provisions
+    summary: Applies the terms critical facility and critical service and parts of the registration obligation only once the ordinance under the KRITIS Umbrella Act has entered into force; until then, the previous versions continue to apply.

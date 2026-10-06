@@ -129,3 +129,19 @@ def test_parts_titles_and_chapters_nest():
     section = eurlex.parse_structure(PARTS_PAGE)[0]
 
     assert [(h.level, h.label) for h in section.path] == [(1, "PART I"), (2, "TITLE I"), (3, "CHAPTER I")]
+
+
+TITLES_PAGE = """<html><body>
+<div id="tis_II"><p class="title-division-1">TITLE II</p><p class="title-division-2">ENISA</p>
+<div id="tis_II.cpt_III"><p class="title-division-1">CHAPTER III</p><p class="title-division-2">Organisation</p>
+<div id="tis_II.cpt_III.sct_1"><p class="title-division-1">SECTION 1</p><p class="title-division-2">Board</p>
+<div class="eli-subdivision" id="art_14"><p class="title-article-norm">Article 14</p>
+<p class="stitle-article-norm">Composition</p><p>The Board is composed of members.</p></div></div></div></div>
+</body></html>"""
+
+
+def test_top_level_titles_nest_like_parts():
+    # Consolidated texts with titles but no parts (e.g. the Cybersecurity Act) use tis_ containers.
+    section = eurlex.parse_structure(TITLES_PAGE)[0]
+    assert [(h.level, h.label, h.title) for h in section.path] == [
+        (1, "TITLE II", "ENISA"), (2, "CHAPTER III", "Organisation"), (3, "SECTION 1", "Board")]
