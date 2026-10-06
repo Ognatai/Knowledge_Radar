@@ -181,6 +181,13 @@ def test_group_units_merges_consecutive_articles_of_a_chapter():
     assert rn.group_units(sections, 2, "de")[0].number == "Artikel 92–93"
 
 
+def test_group_units_keeps_the_heading_of_a_whole_part():
+    part = Heading(1, "PART FOUR", "LARGE EXPOSURES")
+    sections = [Section("Article 395", "Limits to large exposures", "Exposures are limited.", (part,))]
+    unit = rn.group_units(sections, 3, "en")[0]
+    assert (unit.title, unit.path) == ("LARGE EXPOSURES", (part,))
+
+
 def test_composite_note_prefixes_parts_with_their_act_heading():
     builder = rn.Builder.__new__(rn.Builder)
     item = {"number": "Article 1", "title": "Subject matter", "summary": "Lays down rules.", "problems": [],
@@ -190,3 +197,10 @@ def test_composite_note_prefixes_parts_with_their_act_heading():
     block = builder.provisions_block(merged, "en")
     assert block.splitlines()[0] == "### Capital Requirements Directive (CRD)"
     assert "**Title I — General provisions**" in block
+
+
+def test_english_unit_label_translates_german_ordinals():
+    assert rn.english_unit_label("Erster Abschnitt") == "Division 1"
+    assert rn.english_unit_label("Siebenter Abschnitt") == "Division 7"
+    assert rn.english_unit_label("Abschnitt 6a") == "Division 6a"
+    assert rn.english_unit_label("Teil 2") == "Part 2"

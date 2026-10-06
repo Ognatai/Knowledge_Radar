@@ -32,6 +32,20 @@ notes:
       aliases: [KWG, Kreditwesengesetz, German Banking Act]
     sources:
       - https://www.gesetze-im-internet.de/kredwg/
+    # Reviewed corrections of the model-translated unit headings.
+    english_heading_terms:
+      Federal Agency for Financial Services Supervision: Federal Financial Supervisory Authority
+      Provisions for Institutions, Institutional Groups, Financial Holding Groups, Mixed Financial Holding Groups and Mixed Holding Companies: Provisions for Institutions, Groups of Institutions, Financial Holding Groups, Mixed Financial Holding Groups and Mixed Holding Companies
+      Submission of Financial Statements: Submission of Accounting Documents
+      Special Obligations Regarding Qualified Cryptocurrency Custody: Special Obligations for Qualified Crypto Custody
+      Inspection and Appointment of Auditors: Audit and Appointment of Auditors
+      Authorisation to Operate a Business: Authorisation to Conduct Business
+      Measures against Credit Institutions in Cases of Risks to Financial System Stability: Measures against Credit Institutions in the Event of Risks to the Stability of the Financial System
+      Enforceability, Compulsory Measures, Levy and Costs: Enforceability, Coercive Measures, Levy and Costs
+      Special Provisions for Central Counterparties and Central Custodians: Special Provisions for Central Counterparties and Central Securities Depositories
+      Central Custodians: Central Securities Depositories
+      DLT Pilot Regulation under Regulation (EU) 2022/858: DLT Pilot Regime under Regulation (EU) 2022/858
+      Criminal and Fines Provisions: Criminal Provisions, Provisions on Fines
   # CRR and CRD form one note (as in the vault). CRD is summarised per article, CRR per
   # structural unit up to chapter level (737 articles, mostly calculation rules).
   # Legal status checked on 2026-10-06: consolidated versions in force on that date.
@@ -62,6 +76,57 @@ notes:
     part_heading:
       en: Capital Requirements Regulation (Regulation (EU) No 575/2013, CRR)
       de: Verordnung über Aufsichtsanforderungen an Kreditinstitute (Verordnung (EU) Nr. 575/2013, CRR)
+    # Reviewed casing of German headings that the Official Journal prints in capitals (shared with crd).
+    english_heading_terms:
+      MINORITY INTEREST AND ADDITIONAL TIER 1 AND TIER 2 INSTRUMENTS ISSUED BY SUBSIDIARIES: Minority interest and Additional Tier 1 and Tier 2 instruments issued by subsidiaries
+    german_heading_terms: &crr_crd_german_headings
+      "MINDERHEITSBETEILIGUNGEN UND DURCH TOCHTERUNTERNEHMEN BEGEBENE INSTRUMENTE DES ZUSÄTZLICHEN KERNKAPITALS UND DES ERGÄNZUNGSKAPITALS": "Minderheitsbeteiligungen und durch Tochterunternehmen begebene Instrumente des zusätzlichen Kernkapitals und des Ergänzungskapitals"
+      "EIGENMITTELANFORDERUNGEN FÜR DAS RISIKO EINER ANPASSUNG DER KREDITBEWERTUNG (CVA-RISIKO)": "Eigenmittelanforderungen für das Risiko einer Anpassung der Kreditbewertung (CVA-Risiko)"
+      "BESTIMMUNGEN ÜBER DIE FREIE NIEDERLASSUNG UND DEN FREIEN DIENSTLEISTUNGSVERKEHR": "Bestimmungen über die freie Niederlassung und den freien Dienstleistungsverkehr"
+      "ANFORDERUNGEN AN DIE VERWENDUNG BESTIMMTER INSTRUMENTE ODER METHODEN": "Anforderungen an die Verwendung bestimmter Instrumente oder Methoden"
+      "WESENTLICHE ÜBERTRAGUNGEN VON VERMÖGENSWERTEN UND VERBINDLICHKEITEN": "Wesentliche Übertragungen von Vermögenswerten und Verbindlichkeiten"
+      "BERECHNUNG DER EIGENMITTELANFORDERUNG FÜR DAS OPERATIONELLE RISIKO": "Berechnung der Eigenmittelanforderung für das operationelle Risiko"
+      "VORAUSSETZUNGEN FÜR DEN ZUGANG ZUR TÄTIGKEIT VON KREDITINSTITUTEN": "Voraussetzungen für den Zugang zur Tätigkeit von Kreditinstituten"
+      "EIGENMITTEL UND BERÜCKSICHTIGUNGSFÄHIGE VERBINDLICHKEITEN": "Eigenmittel und berücksichtigungsfähige Verbindlichkeiten"
+      "ÜBERGANGSBESTIMMUNGEN, BERICHTE, PRÜFUNGEN UND ÄNDERUNGEN": "Übergangsbestimmungen, Berichte, Prüfungen und Änderungen"
+      "QUALIFIZIERTE BETEILIGUNGEN AUSSERHALB DES FINANZSEKTORS": "Qualifizierte Beteiligungen außerhalb des Finanzsektors"
+      "ERWERB ODER VERÄUẞERUNG EINER WESENTLICHEN BETEILIGUNG": "Erwerb oder Veräußerung einer wesentlichen Beteiligung"
+      "GEGENSTAND, ANWENDUNGSBEREICH UND BEGRIFFSBESTIMMUNGEN": "Gegenstand, Anwendungsbereich und Begriffsbestimmungen"
+      "TECHNISCHE KRITERIEN FÜR TRANSPARENZ UND OFFENLEGUNG": "Technische Kriterien für Transparenz und Offenlegung"
+      "EIGENMITTELANFORDERUNG FÜR DAS OPERATIONELLE RISIKO": "Eigenmittelanforderung für das operationelle Risiko"
+      "EIGENMITTELANFORDERUNGEN FÜR DAS ABWICKLUNGSRISIKO": "Eigenmittelanforderungen für das Abwicklungsrisiko"
+      "BEGRIFFSBESTIMMUNGEN UND LIQUIDITÄTSANFORDERUNGEN": "Begriffsbestimmungen und Liquiditätsanforderungen"
+      "BEKANNTMACHUNGSPFLICHTEN DER ZUSTÄNDIGEN BEHÖRDEN": "Bekanntmachungspflichten der zuständigen Behörden"
+      "DELEGIERTE RECHTSAKTE UND DURCHFÜHRUNGSRECHTSAKTE": "Delegierte Rechtsakte und Durchführungsrechtsakte"
+      "ALLGEMEINE ANFORDERUNGEN, BEWERTUNG UND MELDUNG": "Allgemeine Anforderungen, Bewertung und Meldung"
+      "MELDUNGEN BETREFFEND DIE STABILE REFINANZIERUNG": "Meldungen betreffend die stabile Refinanzierung"
+      "EIGENMITTELANFORDERUNGEN FÜR DAS KREDITRISIKO": "Eigenmittelanforderungen für das Kreditrisiko"
+      "EIGENMITTELANFORDERUNGEN FÜR DAS MARKTRISIKO": "Eigenmittelanforderungen für das Marktrisiko"
+      "ÄNDERUNG DER RICHTLINIE 2002/87/EG": "Änderung der Richtlinie 2002/87/EG"
+      "ÜBERGANGS- UND SCHLUSSBESTIMMUNGEN": "Übergangs- und Schlussbestimmungen"
+      "OFFENLEGUNG DURCH DIE INSTITUTE": "Offenlegung durch die Institute"
+      "VERSCHMELZUNGEN UND SPALTUNGEN": "Verschmelzungen und Spaltungen"
+      "DATENERHEBUNG UND -GOVERNANCE": "Datenerhebung und -governance"
+      "DURCHFÜHRUNG DER VORSCHRIFTEN": "Durchführung der Vorschriften"
+      "STRUKTURELLE LIQUIDITÄTSQUOTE": "Strukturelle Liquiditätsquote"
+      "BESTANDTEILE DER EIGENMITTEL": "Bestandteile der Eigenmittel"
+      "BEZIEHUNGEN ZU DRITTLÄNDERN": "Beziehungen zu Drittländern"
+      "BERICHTE UND ÜBERPRÜFUNGEN": "Berichte und Überprüfungen"
+      "EIGENMITTELANFORDERUNGEN": "Eigenmittelanforderungen"
+      "ALLGEMEINE BESTIMMUNGEN": "Allgemeine Bestimmungen"
+      "ALLGEMEINE GRUNDSÄTZE": "Allgemeine Grundsätze"
+      "ÜBERGANGSBESTIMMUNGEN": "Übergangsbestimmungen"
+      "LIQUIDITÄTSMELDUNGEN": "Liquiditätsmeldungen"
+      "SCHLUSSBESTIMMUNGEN": "Schlussbestimmungen"
+      "ZUSTÄNDIGE BEHÖRDEN": "Zuständige Behörden"
+      "ANWENDUNGSEBENEN": "Anwendungsebenen"
+      "BEAUFSICHTIGUNG": "Beaufsichtigung"
+      "MELDEPFLICHTEN": "Meldepflichten"
+      "GROSSKREDITE": "Großkredite"
+      "VERSCHULDUNG": "Verschuldung"
+      "LIQUIDITÄT": "Liquidität"
+      "ÄNDERUNGEN": "Änderungen"
+      "Allgemeine bestimmungen": "Allgemeine Bestimmungen"
   crd:
     part_of: crr-and-crd
     source: eurlex
@@ -72,3 +137,44 @@ notes:
     part_heading:
       en: Capital Requirements Directive (Directive 2013/36/EU, CRD)
       de: Richtlinie über den Zugang zur Tätigkeit von Kreditinstituten und deren Beaufsichtigung (Richtlinie 2013/36/EU, CRD)
+    german_heading_terms: *crr_crd_german_headings
+    english_heading_terms:
+      AMENDMENTS OF DIRECTIVE 2002/87/EC: Amendments of Directive 2002/87/EC
+  # Soft law: provisions written by hand from the official documents (migration/regulatory/manual),
+  # one reviewed sentence per module, section or principle.
+  marisk:
+    source: manual
+    frontmatter:
+      jurisdiction: DE
+      instrument: guideline
+      status: in-force
+      official_reference: "BaFin-Rundschreiben 06/2026 (BA)"
+      consolidated_version: 2026-06-30
+      aliases: [MaRisk, Mindestanforderungen an das Risikomanagement, Minimum Requirements for Risk Management]
+    sources:
+      - https://www.bafin.de/SharedDocs/Downloads/DE/Rundschreiben/dl_rs_0626_9_marisk.html
+  eba-governance-and-outsourcing-guidelines:
+    source: manual
+    frontmatter:
+      jurisdiction: EU
+      instrument: guideline
+      status: in-force
+      official_reference: "EBA/GL/2021/05; EBA/GL/2019/02"
+      consolidated_version: 2021-07-02
+      aliases: [EBA Guidelines on internal governance, EBA Guidelines on outsourcing, EBA/GL/2021/05, EBA/GL/2019/02, EBA-Leitlinien zur internen Governance, EBA-Leitlinien zu Auslagerungen]
+    sources:
+      - https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/internal-governance/guidelines-internal-governance-under-crd
+      - https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/internal-governance/guidelines-outsourcing-arrangements
+  # BCBS 239 and the ECB guide exist only in English; the German note is Claude's unofficial rendering.
+  bcbs-239-and-ecb-rdarr-guide:
+    source: manual
+    frontmatter:
+      jurisdiction: EU
+      instrument: standard
+      status: in-force
+      official_reference: "BCBS 239 (January 2013); ECB Guide on effective risk data aggregation and risk reporting (May 2024)"
+      consolidated_version: 2024-05-03
+      aliases: [BCBS 239, RDARR, Risk data aggregation and risk reporting, ECB RDARR Guide, EZB-RDARR-Leitfaden]
+    sources:
+      - https://www.bis.org/publ/bcbs239.htm
+      - https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.supervisory_guides240503_riskreporting.en.pdf
