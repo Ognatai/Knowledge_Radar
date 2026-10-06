@@ -1,0 +1,96 @@
+# Reviewed corrections of the model summaries. German law: German is the source language.
+# Every summary was checked against the full text of the section (23 sections). The English
+# summaries and titles are written from the reviewed German, not translated by the model.
+de:
+  "1": "Dient dem Schutz von Geschäftsgeheimnissen vor unerlaubter Erlangung, Nutzung und Offenlegung, lässt öffentlich-rechtliche Geheimhaltungsvorschriften vorgehen und lässt unter anderem die Meinungs- und Pressefreiheit, die Tarifautonomie und die Rechte aus dem Arbeitsverhältnis unberührt."
+  "2": "Bestimmt als Geschäftsgeheimnis eine nicht allgemein bekannte und daher wirtschaftlich wertvolle Information, die durch angemessene Geheimhaltungsmaßnahmen geschützt ist und an deren Geheimhaltung ein berechtigtes Interesse besteht, und definiert Inhaber, Rechtsverletzer und rechtsverletzendes Produkt."
+  "3": "Erlaubt die Erlangung eines Geschäftsgeheimnisses insbesondere durch eigenständige Entdeckung oder Schöpfung, durch Beobachten, Untersuchen, Rückbauen oder Testen öffentlich verfügbarer oder rechtmäßig besessener Produkte (Reverse Engineering) und durch Ausübung von Arbeitnehmerrechten."
+  "4": "Verbietet die Erlangung eines Geschäftsgeheimnisses durch unbefugten Zugang, Aneignung oder Kopieren oder sonst treuwidriges Verhalten sowie die Nutzung oder Offenlegung unter Verstoß gegen solche Handlungen oder gegen Nutzungs- und Geheimhaltungspflichten, auch durch Dritte, die dies wissen oder wissen müssten."
+  "5": "Nimmt die Erlangung, Nutzung oder Offenlegung eines Geschäftsgeheimnisses von den Verboten aus, wenn sie dem Schutz eines berechtigten Interesses dient, etwa der Meinungs- und Pressefreiheit, der Aufdeckung rechtswidriger Handlungen oder Fehlverhaltens im öffentlichen Interesse oder der Arbeit der Arbeitnehmervertretung."
+  "7": "Gibt dem Inhaber des Geschäftsgeheimnisses Ansprüche gegen den Rechtsverletzer auf Vernichtung oder Herausgabe von Dokumenten und Dateien mit dem Geschäftsgeheimnis sowie auf Rückruf, Entfernung aus den Vertriebswegen, Vernichtung und Rücknahme rechtsverletzender Produkte vom Markt."
+  "8": "Gibt dem Inhaber des Geschäftsgeheimnisses einen Auskunftsanspruch gegen den Rechtsverletzer über Hersteller, Lieferanten und Abnehmer, Mengen und Preise rechtsverletzender Produkte und die Herkunft des Geheimnisses und verpflichtet den Rechtsverletzer bei vorsätzlich oder grob fahrlässig unterlassener oder falscher Auskunft zum Schadensersatz."
+  "9": "Schließt die Ansprüche auf Beseitigung, Unterlassung, Vernichtung, Rückruf und Auskunft aus, wenn ihre Erfüllung im Einzelfall unverhältnismäßig wäre, etwa mit Blick auf den Wert des Geheimnisses, die Geheimhaltungsmaßnahmen, das Verhalten des Rechtsverletzers, Interessen Dritter oder das öffentliche Interesse."
+  "10": "Verpflichtet den vorsätzlich oder fahrlässig handelnden Rechtsverletzer zum Schadensersatz, der auch nach dem erzielten Gewinn oder einer angemessenen Lizenzgebühr bemessen werden kann, und gibt einen Anspruch auf Entschädigung für immaterielle Schäden."
+  "11": "Erlaubt einem Rechtsverletzer, der weder vorsätzlich noch fahrlässig gehandelt hat, die Ansprüche auf Beseitigung, Unterlassung und Vernichtung durch eine Abfindung in Höhe einer angemessenen Lizenzgebühr abzuwenden, wenn ihm sonst ein unverhältnismäßig großer Nachteil entstünde."
+  "12": "Gibt dem Inhaber des Geschäftsgeheimnisses die Ansprüche auf Beseitigung, Unterlassung, Vernichtung und Auskunft auch gegen den Inhaber eines Unternehmens, wenn der Rechtsverletzer dessen Beschäftigter oder Beauftragter ist."
+  "13": "Verpflichtet den Rechtsverletzer, der vorsätzlich oder fahrlässig gehandelt hat, auch nach Verjährung des Schadensersatzanspruchs zur Herausgabe des Erlangten nach Bereicherungsrecht; dieser Anspruch verjährt sechs Jahre nach seiner Entstehung."
+  "14": "Erklärt die missbräuchliche Geltendmachung von Ansprüchen nach diesem Gesetz für unzulässig und gibt dem Anspruchsgegner in diesem Fall einen Anspruch auf Ersatz seiner Aufwendungen für die Rechtsverteidigung."
+  "15": "Weist Klagen nach diesem Gesetz ausschließlich den Landgerichten zu, regelt die örtliche Zuständigkeit nach dem Gerichtsstand des Beklagten und erlaubt den Ländern, die Klagen bei einem Landgericht zu konzentrieren."
+  "16": "Erlaubt dem Gericht, streitgegenständliche Informationen auf Antrag als geheimhaltungsbedürftig einzustufen, und verpflichtet alle Verfahrensbeteiligten, solche Informationen vertraulich zu behandeln und außerhalb des Verfahrens nicht zu nutzen oder offenzulegen."
+  "17": "Erlaubt dem Gericht, bei Verstößen gegen die Geheimhaltungspflicht nach § 16 Abs. 2 auf Antrag ein Ordnungsgeld bis zu 100 000 Euro oder Ordnungshaft bis zu sechs Monaten festzusetzen."
+  "18": "Lässt die Geheimhaltungspflichten nach § 16 Abs. 2 nach Abschluss des Verfahrens fortbestehen, es sei denn, das Gericht hat das Geschäftsgeheimnis rechtskräftig verneint oder die Informationen werden in den einschlägigen Kreisen bekannt oder zugänglich."
+  "19": "Verpflichtet das Gericht, auf Antrag den Zugang zu Dokumenten und zur mündlichen Verhandlung mit Geschäftsgeheimnissen auf eine bestimmte Zahl zuverlässiger Personen zu beschränken, wobei mindestens eine natürliche Person jeder Partei und ihre Vertreter Zugang behalten."
+  "20": "Regelt das Verfahren für Geheimhaltungsmaßnahmen, darunter die Anordnung ab Anhängigkeit, die Anhörung der Gegenseite, die Glaubhaftmachung des Geschäftsgeheimnisses und die Kennzeichnung geheimhaltungsbedürftiger Ausführungen."
+  "21": "Erlaubt dem Gericht, der obsiegenden Partei auf Antrag die Befugnis zuzusprechen, das Urteil auf Kosten der unterliegenden Partei öffentlich bekannt zu machen, wenn sie ein berechtigtes Interesse darlegt."
+  "22": "Erlaubt dem Gericht, auf Antrag einer Partei, deren wirtschaftliche Lage durch die Prozesskosten erheblich gefährdet würde, die Gerichts- und Anwaltskosten dieser Partei nach einem angepassten Teil des Streitwerts zu bemessen."
+  "23": "Bestraft die Verletzung von Geschäftsgeheimnissen zur Förderung des Wettbewerbs, aus Eigennutz, zugunsten Dritter oder mit Schädigungsabsicht mit Freiheitsstrafe bis zu drei Jahren, in schweren Fällen bis zu fünf Jahren, oder Geldstrafe; die Tat wird grundsätzlich nur auf Antrag verfolgt."
+en:
+  "1":
+    title: Scope
+    summary: "Protects trade secrets against unlawful acquisition, use and disclosure, gives precedence to public-law confidentiality rules and leaves unaffected, among others, freedom of expression and of the media, collective bargaining autonomy and rights arising from employment."
+  "2":
+    title: Definitions
+    summary: "Defines a trade secret as information that is not generally known and therefore of economic value, is protected by reasonable confidentiality measures and has a legitimate interest in confidentiality, and defines holder, infringer and infringing product."
+  "3":
+    title: Permitted acts
+    summary: "Allows a trade secret to be acquired in particular through independent discovery or creation, through observing, studying, disassembling or testing a product that is publicly available or lawfully possessed (reverse engineering) and through exercising employee rights."
+  "4":
+    title: Prohibited acts
+    summary: "Prohibits acquiring a trade secret through unauthorised access, appropriation or copying or other conduct contrary to good faith, and using or disclosing it in breach of such acts or of use and confidentiality obligations, including by third parties who know or should know this."
+  "5":
+    title: Exceptions
+    summary: "Exempts the acquisition, use or disclosure of a trade secret from the prohibitions where it serves a legitimate interest, such as freedom of expression and of the media, revealing unlawful acts or misconduct in the public interest, or the work of employee representatives."
+  "6":
+    title: Removal and injunction
+    summary: "Gives the holder of a trade secret claims against the infringer for removal of the impairment and, where there is a risk of repetition or a first infringement is imminent, for an injunction."
+  "7":
+    title: Destruction; surrender; recall; removal and withdrawal from the market
+    summary: "Gives the holder of a trade secret claims against the infringer for the destruction or surrender of documents and files containing the trade secret and for the recall, removal from distribution channels, destruction and withdrawal from the market of infringing products."
+  "8":
+    title: Information on infringing products; damages for breach of the duty to provide information
+    summary: "Gives the holder of a trade secret a right to information from the infringer on manufacturers, suppliers and customers, quantities and prices of infringing products and the source of the secret, and makes the infringer liable for damages for intentionally or grossly negligently withheld or incorrect information."
+  "9":
+    title: Exclusion of claims in case of disproportionality
+    summary: "Excludes the claims for removal, injunction, destruction, recall and information where fulfilling them would be disproportionate in the individual case, considering for instance the value of the secret, the confidentiality measures, the infringer's conduct, third-party interests or the public interest."
+  "10":
+    title: Liability of the infringer
+    summary: "Makes an infringer acting intentionally or negligently liable for damages, which may also be calculated on the basis of the profit made or a reasonable licence fee, and grants compensation for non-material damage."
+  "11":
+    title: Monetary compensation
+    summary: "Allows an infringer who acted neither intentionally nor negligently to avert the claims for removal, injunction and destruction by paying compensation equal to a reasonable licence fee if fulfilling them would cause disproportionate harm."
+  "12":
+    title: Liability of the owner of a business
+    summary: "Gives the holder of a trade secret the claims for removal, injunction, destruction and information also against the owner of a business if the infringer is its employee or agent."
+  "13":
+    title: Claim to surrender after expiry of the limitation period
+    summary: "Requires an infringer who acted intentionally or negligently to surrender what it obtained under the rules on unjust enrichment even after the damages claim has become time-barred; this claim becomes time-barred six years after it arises."
+  "14":
+    title: Prohibition of abuse
+    summary: "Makes the abusive assertion of claims under this Act inadmissible and, in that case, entitles the opposing party to reimbursement of its costs of defence."
+  "15":
+    title: Subject-matter and local jurisdiction; authorisation to issue ordinances
+    summary: "Gives the regional courts (Landgerichte) exclusive jurisdiction over actions under this Act, determines local jurisdiction by the defendant's general place of jurisdiction and allows the Länder to concentrate these actions at one regional court."
+  "16":
+    title: Confidentiality
+    summary: "Allows the court, on application, to classify information in dispute as confidential and requires all participants in the proceedings to treat such information confidentially and not to use or disclose it outside the proceedings."
+  "17":
+    title: Coercive measures
+    summary: "Allows the court, on application, to impose a coercive fine of up to EUR 100,000 or coercive detention of up to six months for breaches of the confidentiality obligation under section 16(2)."
+  "18":
+    title: Confidentiality after the end of the proceedings
+    summary: "Keeps the confidentiality obligations under section 16(2) in force after the proceedings end, unless the court has finally ruled that there is no trade secret or the information becomes known or readily accessible in the relevant circles."
+  "19":
+    title: Further judicial restrictions
+    summary: "Requires the court, on application, to restrict access to documents and hearings containing trade secrets to a limited number of reliable persons, while at least one natural person of each party and their representatives retain access."
+  "20":
+    title: Procedure for measures under sections 16 to 19
+    summary: "Governs the procedure for confidentiality measures, including orders from the start of proceedings, hearing the other party, showing prima facie that a trade secret exists and marking the passages that contain trade secrets."
+  "21":
+    title: Publication of the judgment
+    summary: "Allows the court, on application, to authorise the successful party to publish the judgment at the expense of the unsuccessful party if it shows a legitimate interest."
+  "22":
+    title: Reduction of the amount in dispute
+    summary: "Allows the court, on application of a party whose economic situation would be seriously endangered by the litigation costs, to calculate that party's court and lawyer's fees on an adjusted part of the amount in dispute."
+  "23":
+    title: Infringement of trade secrets
+    summary: "Punishes the infringement of trade secrets to promote competition, for personal gain, for the benefit of a third party or with intent to cause harm with imprisonment of up to three years, in serious cases up to five years, or a fine; as a rule the offence is prosecuted only on request."
