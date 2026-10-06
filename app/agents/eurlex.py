@@ -60,19 +60,24 @@ def fetch_html(url: str, cache_directory: Path = CACHE_DIRECTORY, refresh: bool 
     if cached.is_file() and not refresh:
         return cached.read_text(encoding="utf-8")
 
-    with tempfile.TemporaryDirectory() as profile:
-        result = subprocess.run(
-            [
-                find_browser(), "--headless=new", "--disable-gpu", f"--user-data-dir={profile}",
-                "--virtual-time-budget=25000", "--dump-dom", url,
-            ],
-            capture_output=True,
-            timeout=180,
-            check=False,
-        )
-    page = result.stdout.decode("utf-8", errors="replace")
-    if "eli-subdivision" not in page:
-        raise EurLexError(f"No legal text received from {url} (browser exit code {result.returncode}).")
+    # The bot protection does not always let the first attempt through; retry with more time.
+    page, returncode = "", 0
+    for budget in (25000, 40000, 60000):
+        with tempfile.TemporaryDirectory() as profile:
+            result = subprocess.run(
+                [
+                    find_browser(), "--headless=new", "--disable-gpu", f"--user-data-dir={profile}",
+                    f"--virtual-time-budget={budget}", "--dump-dom", url,
+                ],
+                capture_output=True,
+                timeout=240,
+                check=False,
+            )
+        page, returncode = result.stdout.decode("utf-8", errors="replace"), result.returncode
+        if "eli-subdivision" in page or "title-article-norm" in page:
+            break
+    else:
+        raise EurLexError(f"No legal text received from {url} (browser exit code {returncode}).")
     cached.write_text(page, encoding="utf-8")
     return page
 
@@ -125,5 +130,27 @@ def parse_structure(page: str) -> list[Section]:
         elif kind in ("anx", "fnp"):
             path = []
     if not sections:
+        sections = _parse_flat(page)
+    if not sections:
         raise EurLexError("The page contains no articles.")
+    return sections
+
+
+FLAT_ARTICLE = re.compile(r'(?=<p class="title-article-norm")')
+
+
+def _parse_flat(page: str) -> list[Section]:
+    """Older consolidated texts mark article titles but have no article containers."""
+    sections = []
+    parts = FLAT_ARTICLE.split(page)[1:]
+    for part in parts:
+        part = re.split(r'<div id="anx_|<p class="title-annex', part)[0]
+        titles = {cls: html_to_text(body) for cls, body in TITLE.findall(part[:3000])}
+        number = titles.get("title-article-norm", "")
+        title = titles.get("stitle-article-norm", "").strip(" '’")
+        text = html_to_text(part)
+        for prefix in (number, titles.get("stitle-article-norm", "")):
+            if prefix and text.startswith(prefix):
+                text = text[len(prefix):].lstrip(" '’")
+        sections.append(Section(number=number, title=title, text=text, path=()))
     return sections
