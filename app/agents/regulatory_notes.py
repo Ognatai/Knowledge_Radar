@@ -89,6 +89,18 @@ LEGAL_TERM_HINT = {
     "en": "For German law use established English renderings, e.g. Verantwortlicher = controller, Aufsichtsbehörde = supervisory authority.",
 }
 GERMAN_UNIT_LABELS = {"Teil": "Part", "Kapitel": "Chapter", "Abschnitt": "Division", "Unterabschnitt": "Subdivision"}
+GERMAN_ORDINALS = {"Erst": 1, "Zweit": 2, "Dritt": 3, "Viert": 4, "Fünft": 5, "Sechst": 6, "Siebent": 7, "Siebt": 7,
+                   "Acht": 8, "Neunt": 9, "Zehnt": 10, "Elft": 11, "Zwölft": 12}
+
+
+def english_unit_label(label: str) -> str:
+    """English label of a German unit: "Abschnitt 6a" -> "Division 6a", "Erster Abschnitt" -> "Division 1"."""
+    parts = label.split()
+    if len(parts) == 2 and parts[1] in GERMAN_UNIT_LABELS:
+        ordinal = re.fullmatch(r"(\w+?)(?:er|es|e)", parts[0])
+        if ordinal and ordinal.group(1) in GERMAN_ORDINALS:
+            return f"{GERMAN_UNIT_LABELS[parts[1]]} {GERMAN_ORDINALS[ordinal.group(1)]}"
+    return " ".join(GERMAN_UNIT_LABELS.get(part, part) for part in parts)
 
 
 def render(name: str, **values: str) -> str:
@@ -134,7 +146,9 @@ def group_units(sections: list[Section], depth: int, language: str) -> list[Sect
         headings = "\n".join(f"{s.number} {s.title}".strip() for s in current)
         text = headings + "\n\n" + "\n\n".join(s.text for s in current)
         number = f"{one} {first}" if first == last else f"{many} {first}–{last}"
-        units.append(Section(number=number, title=path[-1].title if path else "", text=text, path=path[:-1]))
+        # A unit that is a whole top-level part keeps that heading, so it is not read as part of the previous one.
+        units.append(Section(number=number, title=path[-1].title if path else "", text=text,
+                             path=path[:-1] if len(path) > 1 else path))
 
     for section in sections:
         if current and section.path[:depth] != current[0].path[:depth]:
@@ -402,7 +416,7 @@ class Builder:
                 problems.append("numbers changed in translation")
             data["en"][key] = {
                 "number": item["number"], "title": title, "summary": summary, "problems": problems,
-                "path": [[level, " ".join(GERMAN_UNIT_LABELS.get(p, p) for p in label.split()), heading_map.get(t, t)]
+                "path": [[level, english_unit_label(label), heading_map.get(t, t)]
                          for level, label, t in item["path"]],
             }
 
