@@ -342,7 +342,7 @@ Das Gesetz über digitale Märkte (Digital Markets Act, DMA) setzt Regeln für g
 
 **Torwächter** (Art. 3): Unternehmen mit erheblichem Einfluss auf den Binnenmarkt, einem zentralen Plattformdienst als wichtigem Zugangstor für gewerbliche Nutzer und einer gefestigten und dauerhaften Position. Das wird unter anderem vermutet bei einem Jahresumsatz in der EU von mindestens 7,5 Mrd. EUR oder einer Marktkapitalisierung von mindestens 75 Mrd. EUR und mindestens 45 Millionen monatlich aktiven Endnutzern und 10 000 jährlich aktiven gewerblichen Nutzern in der EU.
 
-### Kapitel I – Gegenstand, anwendungsbereich und begriffsbestimmungen
+### Kapitel I – Gegenstand, Anwendungsbereich und Begriffsbestimmungen
 
 #### Artikel 1 – Gegenstand und Anwendungsbereich
 
@@ -362,7 +362,7 @@ Regelt, wann ein Unternehmen als Torwächter benannt wird, mit Vermutungen anhan
 
 Erlaubt der Kommission, Benennungsbeschlüsse jederzeit zu überprüfen, zu ändern oder aufzuheben, und verpflichtet sie, regelmäßig, mindestens alle drei Jahre, zu prüfen, ob die Torwächter die Voraussetzungen noch erfüllen.
 
-### Kapitel III – Unfaire oder die bestreitbarkeit beschränkende praktiken von torwächtern
+### Kapitel III – Unfaire oder die Bestreitbarkeit beschränkende Praktiken von Torwächtern
 
 #### Artikel 5 – Verpflichtungen von Torwächtern
 
@@ -426,7 +426,7 @@ Erlaubt der Kommission, eine Marktuntersuchung zu systematischer Nichteinhaltung
 
 Regelt die Durchführung von Marktuntersuchungen durch die Kommission zur Prüfung der Aufnahme von Diensten in die Liste der zentralen Plattformdienste oder zur Erforschung von Praktiken, die die Bestreitbarkeit zentraler Plattformdienste beschränken oder unfair sind.
 
-### Kapitel V – Untersuchungs-, durchsetzungs- und überwachungsbefugnisse
+### Kapitel V – Untersuchungs-, Durchsetzungs- und Überwachungsbefugnisse
 
 #### Artikel 20 – Einleitung eines Verfahrens
 
