@@ -121,10 +121,10 @@ notes:
   Cybersecurity Act & ENISA: {id: cybersecurity-act, title_en: Cybersecurity Act and ENISA, title_de: Cybersecurity Act und ENISA, entity_type: Regulation, jurisdiction: EU}
   DORA: {id: dora, title_en: Digital Operational Resilience Act (DORA), title_de: Digital Operational Resilience Act (DORA), entity_type: Regulation, jurisdiction: EU}
   DSGVO: {id: gdpr, title_en: General Data Protection Regulation (GDPR), title_de: Datenschutz-Grundverordnung (DSGVO), entity_type: Regulation, jurisdiction: EU}
-  Data Act: {id: data-act, title_en: Data Act, title_de: Data Act, entity_type: Regulation, jurisdiction: EU}
-  Data Governance Act: {id: data-governance-act, title_en: Data Governance Act, title_de: Data Governance Act, entity_type: Regulation, jurisdiction: EU}
-  Digital Markets Act: {id: digital-markets-act, title_en: Digital Markets Act (DMA), title_de: Digital Markets Act (DMA), entity_type: Regulation, jurisdiction: EU}
-  Digital Services Act: {id: digital-services-act, title_en: Digital Services Act (DSA), title_de: Digital Services Act (DSA), entity_type: Regulation, jurisdiction: EU}
+  Data Act: {id: data-act, title_en: Data Act, title_de: Datenverordnung (Data Act), entity_type: Regulation, jurisdiction: EU}
+  Data Governance Act: {id: data-governance-act, title_en: Data Governance Act, title_de: Daten-Governance-Rechtsakt (Data Governance Act), entity_type: Regulation, jurisdiction: EU}
+  Digital Markets Act: {id: digital-markets-act, title_en: Digital Markets Act (DMA), title_de: Gesetz über digitale Märkte (DMA), entity_type: Regulation, jurisdiction: EU}
+  Digital Services Act: {id: digital-services-act, title_en: Digital Services Act (DSA), title_de: Gesetz über digitale Dienste (DSA), entity_type: Regulation, jurisdiction: EU}
   EBA Internal Governance & Outsourcing Guidelines: {id: eba-governance-and-outsourcing-guidelines, title_en: EBA Guidelines on Internal Governance and Outsourcing, title_de: EBA-Leitlinien zu interner Governance und Auslagerung, entity_type: Regulation, jurisdiction: EU}
   EECC-Richtlinie: {id: eecc, title_en: European Electronic Communications Code (EECC), title_de: Europäischer Kodex für die elektronische Kommunikation (EECC), entity_type: Regulation, jurisdiction: EU}
   EU AI Act: {id: eu-ai-act, title_en: EU AI Act, title_de: EU KI-Verordnung, entity_type: Regulation, jurisdiction: EU}

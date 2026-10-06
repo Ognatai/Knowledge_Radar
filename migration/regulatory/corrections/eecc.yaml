@@ -1,0 +1,122 @@
+# Reviewed corrections of the model summaries (each language summarised from its own official text).
+# Recurring model error: obligations that national regulatory authorities MAY impose after a market
+# analysis were described as obligations imposed directly by the Directive.
+en:
+  "2": Defines the terms used in the Directive, including electronic communications network and service, interpersonal communications service, very high capacity network, end-user, access, interconnection and security incident.
+  "7": Requires heads and members of national regulatory authorities to be appointed for at least three years on the basis of merit, skills, knowledge and experience in an open and transparent selection procedure.
+  "13": Sets out the conditions that may be attached to the general authorisation and to rights of use for radio spectrum and numbering resources, which must be non-discriminatory, proportionate and transparent.
+  "14": Requires competent authorities to issue, within one week of a request, a standardised declaration confirming the notification and describing the rights of the undertaking under the general authorisation.
+  "15": Gives undertakings under the general authorisation the right to provide networks and services and to apply for rights to install facilities and for rights of use for radio spectrum and numbering resources.
+  "16": Allows administrative charges on providers only to cover the administrative costs of the general authorisation system and related tasks, imposed in an objective, transparent and proportionate manner.
+  "19": Requires Member States to ensure that rights to install facilities and rights of use for radio spectrum or numbering resources are restricted or withdrawn only where justified, under pre-established procedures and proportionately.
+  "27": Allows parties to refer cross-border disputes to the national regulatory authorities concerned, which coordinate their efforts and notify BEREC.
+  "29": Requires Member States to lay down penalties, including fines and non-criminal predetermined or periodic penalties, for infringements of national provisions and binding decisions under the Directive.
+  "32": Requires national regulatory authorities to cooperate with each other, the Commission and BEREC, and to notify draft measures that would affect trade between Member States.
+  "33": Sets out the procedure in which the Commission and BEREC review draft remedies notified by national regulatory authorities, with a three-month suspension and cooperation to ensure consistent practice.
+  "34": Allows the Commission to adopt recommendations or guidelines on the form, content and level of detail of notifications and on the circumstances in which notifications are not required.
+  "35": Requires national authorities to inform the Radio Spectrum Policy Group of certain draft measures on radio spectrum selection procedures, which may lead to a peer review forum.
+  "36": Requires Member States to grant rights of use for harmonised radio spectrum without further conditions where access conditions, procedures and the selection of undertakings have been agreed under international agreements or Union rules.
+  "38": Allows the Commission to adopt recommendations or implementing decisions to harmonise the implementation of the Directive, and requires national regulatory authorities to take utmost account of such recommendations.
+  "39": Requires the Commission to draw up and publish a list of non-compulsory standards or specifications and allows it to request European standardisation organisations to draw up standards.
+  "44": Allows competent authorities to impose co-location and sharing of network elements and associated facilities to protect the environment, public health, public security or town planning objectives, after public consultation.
+  "61": Requires national regulatory authorities to encourage and, where appropriate, ensure adequate access, interconnection and interoperability of services in the interest of efficiency, competition, investment and end-users.
+  "64": Requires the Commission to adopt a Recommendation on relevant product and service markets after public consultation, including of national regulatory authorities and BEREC.
+  "65": Requires BEREC to analyse a potential transnational market on a reasoned request from the Commission or at least two national regulatory authorities concerned.
+  "66": Requires BEREC to analyse transnational end-user demand on a reasoned request showing a serious demand problem.
+  "68": Requires national regulatory authorities to impose appropriate obligations on undertakings designated as having significant market power, based on the market analysis and the principle of proportionality.
+  "69": Allows national regulatory authorities to impose transparency obligations on access or interconnection, e.g. publication of accounting information, prices, technical specifications and terms.
+  "70": Allows national regulatory authorities to impose obligations of non-discrimination, so that undertakings apply equivalent conditions and supply equivalent services to other providers.
+  "71": Allows national regulatory authorities to impose accounting separation for activities related to access or interconnection, including transparency of wholesale and internal transfer prices.
+  "72": Allows national regulatory authorities to require undertakings to meet reasonable requests for access to civil engineering where denial would hinder a sustainable competitive market and harm end-users.
+  "73": Allows national regulatory authorities to require undertakings to meet reasonable requests for access to and use of specific network elements and associated facilities where needed for competition and end-users.
+  "74": Allows national regulatory authorities to impose price control and cost accounting obligations where a market analysis shows a lack of effective competition.
+  "75": Requires the Commission to set, by delegated act, a single Union-wide maximum mobile and a single maximum fixed voice termination rate, by 31 December 2020.
+  "76": Allows undertakings with significant market power to offer commitments to open new very high capacity networks to co-investment; where conditions are met, the authority refrains from imposing further obligations on those elements.
+  "77": Allows national regulatory authorities, as an exceptional measure, to impose functional separation on vertically integrated undertakings.
+  "79": Allows undertakings with significant market power to offer commitments on access or co-investment, which the national regulatory authority assesses and may make binding.
+  "80": Limits the obligations that national regulatory authorities may impose on wholesale-only undertakings with significant market power, after assessing that they are genuinely wholesale-only.
+  "83": Allows national regulatory authorities to impose obligations on undertakings with significant market power in retail markets where wholesale measures would not achieve the objectives.
+  "84": Requires Member States to ensure that all consumers have access at an affordable price to an adequate broadband internet access service and voice communications services at a fixed location.
+  "85": Requires national authorities to monitor retail prices of universal services and Member States to ensure affordability for consumers with low incomes or special social needs.
+  "87": Allows Member States to continue to ensure the availability or affordability of other universal services if the need is established in light of national circumstances.
+  "89": Requires national regulatory authorities to calculate the net cost of universal service obligations where they may represent an unfair burden, with audit and publication of the results.
+  "90": Allows Member States, on request of a provider bearing an unfair burden, to compensate it from public funds or to share the net cost among providers.
+  "93": Requires Member States to ensure that national authorities control the granting of rights of use for numbering resources and provide adequate numbering resources.
+  "96": Requires Member States to ensure free access to a hotline for reporting missing children on the number 116000, also for end-users with disabilities as far as possible.
+  "97": Requires Member States to ensure that, where economically feasible, end-users can access services using non-geographic numbers and all numbers provided in the Union.
+  "100": Requires national measures concerning end-users' access to or use of services to respect the Charter of Fundamental Rights and general principles of Union law.
+  "101": Prohibits Member States from maintaining or introducing end-user protection provisions diverging from Articles 102 to 115, unless otherwise provided for in this Title.
+  "103": Requires competent authorities to ensure that providers publish clear, comprehensive, machine-readable information on their offers and that end-users have free access to at least one independent comparison tool.
+  "104": Allows national regulatory authorities to require providers of internet access and interpersonal communications services to publish comparable information on service quality and on measures for end-users with disabilities.
+  "105": Limits the commitment period in consumer contracts to 24 months, sets rules on automatic prolongation and termination, and gives end-users the right to terminate without costs when providers change contract conditions.
+  "106": Requires providers to ensure continuity of service during switching, with loss of service not exceeding one working day, and gives end-users the right to keep their numbers when switching.
+  "108": Requires Member States to ensure the fullest possible availability of voice and internet access services in case of catastrophic network breakdown or force majeure, and uninterrupted access to emergency services.
+  "109": Requires Member States to ensure that all end-users can access emergency services free of charge through the single European emergency number 112 and national emergency numbers.
+  "110": Requires Member States to ensure by 21 June 2022 that, where public warning systems exist, providers of mobile number-based interpersonal communications services transmit public warnings to end-users concerned.
+  "111": Requires Member States to ensure that competent authorities specify requirements so that end-users with disabilities have access to services equivalent to that enjoyed by the majority of end-users.
+  "113": Requires Member States to ensure the interoperability of car radio receivers and consumer digital television equipment in accordance with Annex XI.
+  "114": Allows Member States to impose reasonable 'must carry' obligations on network providers to transmit specified radio and television channels and complementary services where necessary for general interest objectives.
+  "115": Allows competent authorities to require providers to make available, free of charge and subject to technical feasibility, additional facilities listed in Annex VI.
+  "118": Provides that the Commission is assisted by the Communications Committee, a committee within the meaning of Regulation (EU) No 182/2011.
+  "123": Requires BEREC to monitor market and technological developments and to publish an opinion on their impact on the end-user rights in Title III of Part III.
+  "127": Addresses the Directive to the Member States.
+de:
+  "1": Schafft einen harmonisierten Rahmen für die Regulierung elektronischer Kommunikationsnetze und -dienste, zugehöriger Einrichtungen und Dienste sowie bestimmter Aspekte von Endeinrichtungen und legt die Aufgaben der nationalen Regulierungsbehörden fest.
+  "14": Verpflichtet die zuständigen Behörden, innerhalb einer Woche nach Antrag eine standardisierte Erklärung auszustellen, die die Meldung bestätigt und die Rechte des Unternehmens aus der Allgemeingenehmigung beschreibt.
+  "22": Verpflichtet die nationalen Regulierungsbehörden oder anderen zuständigen Behörden, bis zum 21. Dezember 2023 eine geografische Erhebung zur Reichweite der Breitbandnetze durchzuführen und mindestens alle drei Jahre zu aktualisieren.
+  "25": Verpflichtet die Mitgliedstaaten sicherzustellen, dass eine zuständige Behörde oder unabhängige Stelle als Stelle für alternative Streitbeilegung zwischen Anbietern und Verbrauchern aufgeführt ist.
+  "32": Verpflichtet die nationalen Regulierungsbehörden, miteinander, mit der Kommission und dem GEREK zusammenzuarbeiten und Maßnahmenentwürfe zu notifizieren, die den Handel zwischen Mitgliedstaaten beeinflussen würden.
+  "34": Erlaubt der Kommission, Empfehlungen oder Leitlinien zu Form, Inhalt und Detailgenauigkeit der Notifizierungen und zu den Fällen zu erlassen, in denen keine Notifizierung erforderlich ist.
+  "36": Verpflichtet die Mitgliedstaaten, Nutzungsrechte für harmonisierte Funkfrequenzen ohne weitere Bedingungen zu erteilen, wenn Zugangsbedingungen, Verfahren und Auswahl der Unternehmen in internationalen Vereinbarungen oder Unionsvorschriften festgelegt wurden.
+  "37": Erlaubt zwei oder mehr Mitgliedstaaten, gemeinsam Genehmigungsverfahren zur Erteilung individueller Frequenznutzungsrechte durchzuführen.
+  "38": Erlaubt der Kommission, Empfehlungen oder Durchführungsbeschlüsse zur harmonisierten Anwendung der Richtlinie zu erlassen, und verpflichtet die nationalen Regulierungsbehörden, Empfehlungen weitestgehend zu berücksichtigen.
+  "39": Verpflichtet die Kommission, ein Verzeichnis nicht zwingender Normen oder Spezifikationen zu erstellen und zu veröffentlichen, und erlaubt ihr, europäische Normungsorganisationen um die Ausarbeitung von Normen zu ersuchen.
+  "44": Erlaubt den zuständigen Behörden, nach öffentlicher Konsultation die gemeinsame Unterbringung und Nutzung von Netzbestandteilen und zugehörigen Einrichtungen zum Schutz von Umwelt, Gesundheit, Sicherheit oder Städteplanung vorzuschreiben.
+  "47": Erlaubt den zuständigen Behörden, individuelle Frequenznutzungsrechte mit Bedingungen zu verknüpfen, etwa zur gemeinsamen Nutzung von Infrastruktur oder zu Roamingvereinbarungen.
+  "52": Verpflichtet die nationalen Regulierungsbehörden und anderen zuständigen Behörden, bei der Erteilung, Änderung oder Verlängerung von Frequenznutzungsrechten wirksamen Wettbewerb zu fördern und Wettbewerbsverfälschungen zu vermeiden.
+  "56": Verpflichtet die zuständigen Behörden, den Zugang zu öffentlichen Kommunikationsnetzen über lokale Funknetze (RLAN) zu ermöglichen, und hindert Anbieter nicht daran, ihre RLAN der Öffentlichkeit zugänglich zu machen.
+  "57": Verbietet den zuständigen Behörden, die Einrichtung und den Betrieb drahtloser Zugangspunkte mit geringer Reichweite unangemessen zu beschränken, und verlangt im Voraus veröffentlichte, einheitliche nationale Regeln.
+  "61": Verpflichtet die nationalen Regulierungsbehörden, angemessenen Zugang, Zusammenschaltung und Interoperabilität der Dienste im Interesse von Effizienz, Wettbewerb, Investitionen und Endnutzern zu fördern und gegebenenfalls sicherzustellen.
+  "65": Verpflichtet das GEREK, auf begründeten Antrag der Kommission oder mindestens zweier nationaler Regulierungsbehörden einen potenziellen länderübergreifenden Markt zu analysieren.
+  "66": Verpflichtet das GEREK, auf begründeten Antrag, der ein ernstes Nachfrageproblem belegt, die länderübergreifende Endnutzernachfrage zu analysieren.
+  "69": Erlaubt den nationalen Regulierungsbehörden, Transparenzverpflichtungen für Zugang oder Zusammenschaltung aufzuerlegen, etwa zur Veröffentlichung von Buchführungsinformationen, Preisen, technischen Spezifikationen und Bedingungen.
+  "70": Erlaubt den nationalen Regulierungsbehörden, Gleichbehandlungsverpflichtungen aufzuerlegen, damit Unternehmen anderen Anbietern gleichwertige Bedingungen und Dienste bieten.
+  "71": Erlaubt den nationalen Regulierungsbehörden, für Tätigkeiten im Zusammenhang mit Zugang oder Zusammenschaltung eine getrennte Buchführung vorzuschreiben.
+  "72": Erlaubt den nationalen Regulierungsbehörden, Unternehmen zu verpflichten, angemessenen Anträgen auf Zugang zu baulichen Anlagen stattzugeben, wenn eine Verweigerung den Wettbewerb und die Interessen der Endnutzer beeinträchtigen würde.
+  "73": Erlaubt den nationalen Regulierungsbehörden, Unternehmen zu verpflichten, angemessenen Anträgen auf Zugang zu bestimmten Netzkomponenten und zugehörigen Einrichtungen stattzugeben, wenn dies für Wettbewerb und Endnutzer erforderlich ist.
+  "74": Erlaubt den nationalen Regulierungsbehörden, bei fehlendem wirksamem Wettbewerb Preiskontroll- und Kostenrechnungsverpflichtungen aufzuerlegen.
+  "75": Verpflichtet die Kommission, durch delegierten Rechtsakt bis zum 31. Dezember 2020 ein unionsweit einheitliches maximales Mobilfunk- und Festnetzzustellungsentgelt festzulegen.
+  "76": Erlaubt Unternehmen mit beträchtlicher Marktmacht, Verpflichtungszusagen zur Öffnung neuer Netze mit sehr hoher Kapazität für Ko-Investitionen anzubieten; sind die Bedingungen erfüllt, sieht die Behörde von weiteren Verpflichtungen für diese Netzbestandteile ab.
+  "77": Erlaubt den nationalen Regulierungsbehörden, vertikal integrierten Unternehmen als außergewöhnliche Maßnahme eine funktionelle Trennung aufzuerlegen.
+  "80": Begrenzt die Verpflichtungen, die nationale Regulierungsbehörden reinen Vorleistungsunternehmen mit beträchtlicher Marktmacht auferlegen dürfen, nachdem sie geprüft haben, dass diese ausschließlich auf Vorleistungsmärkten tätig sind.
+  "81": Verpflichtet Unternehmen mit beträchtlicher Marktmacht, die nationale Regulierungsbehörde rechtzeitig über die geplante Außerbetriebnahme oder Ersetzung herkömmlicher Infrastruktur zu unterrichten.
+  "82": Verpflichtet das GEREK, bis zum 21. Dezember 2020 Leitlinien zu Kriterien für Netze mit sehr hoher Kapazität herauszugeben, die die nationalen Regulierungsbehörden weitestgehend berücksichtigen.
+  "84": Verpflichtet die Mitgliedstaaten sicherzustellen, dass alle Verbraucher zu einem erschwinglichen Preis Zugang zu einem angemessenen Breitbandinternetzugangsdienst und Sprachkommunikationsdiensten an einem festen Standort haben.
+  "89": Verpflichtet die nationalen Regulierungsbehörden, die Nettokosten von Universaldienstverpflichtungen zu berechnen, wenn diese eine unzumutbare Belastung darstellen können, und die Ergebnisse prüfen und veröffentlichen zu lassen.
+  "91": Verpflichtet die nationalen Regulierungsbehörden, die Grundsätze für die Berechnung und Aufteilung der Nettokosten öffentlich zugänglich zu machen und einen Jahresbericht zu veröffentlichen.
+  "93": Verpflichtet die Mitgliedstaaten sicherzustellen, dass die zuständigen Behörden die Erteilung von Nutzungsrechten für Nummerierungsressourcen kontrollieren und ausreichend Nummerierungsressourcen bereitstellen.
+  "94": Verpflichtet die nationalen Regulierungsbehörden oder anderen zuständigen Behörden, Nutzungsrechte für Nummerierungsressourcen auf Antrag in offenen, objektiven, transparenten und nichtdiskriminierenden Verfahren zu erteilen.
+  "95": Erlaubt den Mitgliedstaaten, ihren Behörden die Erhebung von Entgelten für Nutzungsrechte an Nummerierungsressourcen zu gestatten, die eine optimale Nutzung dieser Ressourcen sicherstellen sollen.
+  "96": Verpflichtet die Mitgliedstaaten, den kostenlosen Zugang zu einer Hotline für die Meldung vermisster Kinder unter der Nummer 116000 sicherzustellen, möglichst auch für Endnutzer mit Behinderungen.
+  "97": Verpflichtet die Mitgliedstaaten sicherzustellen, dass Endnutzer, soweit wirtschaftlich vertretbar, Dienste mit geografisch nicht gebundenen Nummern und alle Rufnummern in der Union erreichen können.
+  "103": Verpflichtet die zuständigen Behörden sicherzustellen, dass Anbieter klare, umfassende und maschinenlesbare Informationen zu ihren Angeboten veröffentlichen und Endnutzer kostenlos mindestens ein unabhängiges Vergleichsinstrument nutzen können.
+  "104": Erlaubt den nationalen Regulierungsbehörden, Anbieter von Internetzugangsdiensten und interpersonellen Kommunikationsdiensten zur Veröffentlichung vergleichbarer Informationen über die Dienstqualität und Maßnahmen für Endnutzer mit Behinderungen zu verpflichten.
+  "105": Begrenzt die Mindestvertragslaufzeit von Verbraucherverträgen auf 24 Monate, regelt automatische Verlängerung und Kündigung und gibt Endnutzern ein kostenloses Kündigungsrecht bei Änderungen der Vertragsbedingungen durch den Anbieter.
+  "106": Verpflichtet die Anbieter, beim Anbieterwechsel die Kontinuität des Dienstes zu wahren, mit einer Unterbrechung von höchstens einem Arbeitstag, und gibt Endnutzern das Recht, ihre Rufnummer mitzunehmen.
+  "108": Verpflichtet die Mitgliedstaaten, bei Netzzusammenbrüchen oder höherer Gewalt die größtmögliche Verfügbarkeit von Sprach- und Internetzugangsdiensten und den ununterbrochenen Zugang zu Notdiensten sicherzustellen.
+  "109": Verpflichtet die Mitgliedstaaten sicherzustellen, dass alle Endnutzer kostenlos Zugang zu Notdiensten über die einheitliche europäische Notrufnummer 112 und nationale Notrufnummern haben.
+  "110": Verpflichtet die Mitgliedstaaten sicherzustellen, dass bis zum 21. Juni 2022 Anbieter mobiler nummerngebundener interpersoneller Kommunikationsdienste öffentliche Warnungen an betroffene Endnutzer übermitteln, wo Warnsysteme bestehen.
+  "111": Verpflichtet die Mitgliedstaaten sicherzustellen, dass die zuständigen Behörden Anforderungen festlegen, damit Endnutzer mit Behinderungen einen gleichwertigen Zugang zu Diensten und eine gleichwertige Auswahl haben.
+  "112": Verpflichtet Anbieter nummerngebundener interpersoneller Kommunikationsdienste, Verzeichnisauskunftsdiensten die einschlägigen Informationen zu gerechten, objektiven, kostenorientierten und nichtdiskriminierenden Bedingungen zur Verfügung zu stellen.
+  "113": Verpflichtet die Mitgliedstaaten, die Interoperabilität von Autoradios und digitalen Fernsehgeräten für Verbraucher gemäß Anhang XI sicherzustellen.
+  "114": Erlaubt den Mitgliedstaaten, Betreibern elektronischer Kommunikationsnetze zumutbare Übertragungspflichten für bestimmte Hörfunk- und Fernsehkanäle und ergänzende Dienste aufzuerlegen, soweit dies für Ziele von allgemeinem Interesse erforderlich ist.
+  "115": Erlaubt den zuständigen Behörden, Anbieter zu verpflichten, bestimmte zusätzliche Dienstmerkmale nach Anhang VI kostenlos bereitzustellen, soweit technisch machbar.
+  "117": Regelt die Ausübung der Befugnis der Kommission zum Erlass delegierter Rechtsakte.
+  "118": Bestimmt, dass die Kommission vom Kommunikationsausschuss unterstützt wird, einem Ausschuss im Sinne der Verordnung (EU) Nr. 182/2011.
+  "120": Verpflichtet die Mitgliedstaaten sicherzustellen, dass aktuelle Informationen über die Durchführung der Richtlinie öffentlich und für alle interessierten Kreise leicht zugänglich sind.
+  "121": Verpflichtet die nationalen Regulierungsbehörden, der Kommission die Unternehmen mit Universaldienstverpflichtungen oder beträchtlicher Marktmacht und Änderungen dieser Verpflichtungen mitzuteilen.
+  "122": Verpflichtet die Kommission, die Anwendung der Richtlinie bis zum 21. Dezember 2025 und danach alle fünf Jahre zu überprüfen, insbesondere die Marktauswirkungen und die Eingriffsbefugnisse.
+  "123": Verpflichtet das GEREK, die Markt- und Technologieentwicklung zu beobachten und eine Stellungnahme zu deren Auswirkungen auf die Endnutzerrechte in Teil III Titel III zu veröffentlichen.
+  "125": Hebt die Richtlinien 2002/19/EG, 2002/20/EG, 2002/21/EG und 2002/22/EG mit Wirkung vom 21. Dezember 2020 auf.
+  "126": Bestimmt, dass die Richtlinie am dritten Tag nach ihrer Veröffentlichung im Amtsblatt der Europäischen Union in Kraft tritt.
+  "127": Richtet die Richtlinie an die Mitgliedstaaten.

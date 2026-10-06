@@ -72,13 +72,13 @@ ACRONYMS = {"AI", "EU", "GPAI", "IT", "ICT", "IKT", "KI", "EWR", "EEA", "UN"}
 LANGUAGE_NAMES = {"en": "English", "de": "German"}
 LANGUAGE_RULES = {
     "en": "Use the terms of the official English text of the act.",
-    "de": "Verwende die Begriffe des amtlichen deutschen Textes (z. B. Verantwortlicher, Auftragsverarbeiter, betroffene Person, Einwilligung).",
+    "de": "Verwende genau die Begriffe des amtlichen deutschen Textes; übersetze nichts ins Englische.",
 }
 START_RULES = {
     "en": "Start with a verb in the third person, without a subject, e.g. \"Defines ...\", \"Sets out ...\", "
-          "\"Requires the controller to ...\", \"Gives the data subject the right to ...\".",
+          "\"Requires providers to ...\", \"Gives users the right to ...\".",
     "de": "Beginne mit einem Verb ohne Subjekt, z. B. \"Regelt ...\", \"Legt fest, ...\", "
-          "\"Verpflichtet den Verantwortlichen, ...\", \"Gibt der betroffenen Person das Recht, ...\".",
+          "\"Verpflichtet die Anbieter, ...\", \"Gibt den Nutzern das Recht, ...\".",
 }
 MAX_SUMMARY_WORDS = 40
 PROVISION_WORD = re.compile(r"^(Article|Artikel|Art\.|§|Paragraph|Section)\s*\d", re.I)
@@ -101,7 +101,7 @@ def load_package(package: str) -> dict[str, dict]:
 def provisions(spec: dict, language: str) -> list[Section]:
     """Articles/sections of the act in one language (German law: always the German text)."""
     if spec["source"] == "eurlex":
-        return eurlex.parse_structure(eurlex.fetch_html(spec["urls"][language]))
+        return eurlex.parse_structure(eurlex.fetch(spec["urls"][language], language))
     return gesetze.load(spec["slug"]).sections
 
 
@@ -293,21 +293,24 @@ class Builder:
         def save() -> None:
             path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
-        # Summaries are written once, from the text in the source language ...
-        for section in provisions(spec, source_language):
-            if section.key in data[source_language]:
-                continue
-            summary, problems = summarise(spec, section, source_language)
-            data[source_language][section.key] = {
-                "number": section.number, "title": section.title, "summary": summary,
-                "problems": problems, "path": [[h.level, h.label, h.title] for h in section.path],
-            }
-            save()
+        # Summaries come from an authentic text: for EU acts both language versions are
+        # authentic, so each language is summarised from its own text. German law exists
+        # only in German; its English summaries are translations, reviewed afterwards.
+        languages = [source_language] if german_law or spec.get("german_summaries") == "translate" else ["en", "de"]
+        for language in languages:
+            for section in provisions(spec, language):
+                if section.key in data[language]:
+                    continue
+                summary, problems = summarise(spec, section, language)
+                data[language][section.key] = {
+                    "number": section.number, "title": section.title, "summary": summary,
+                    "problems": problems, "path": [[h.level, h.label, h.title] for h in section.path],
+                }
+                save()
 
-        # ... and translated, so both languages say the same.
         if german_law:
             self.english_from_german(data)
-        else:
+        elif "de" not in languages:
             self.german_from_english(spec, data, save)
         save()
         flagged = [f"{lang}:{key} ({', '.join(item['problems'])})"
@@ -363,7 +366,11 @@ class Builder:
         if not corrections_file.exists():
             return
         corrections = yaml.safe_load(corrections_file.read_text(encoding="utf-8")) or {}
-        source_language = "de" if self.specs[note]["source"] == "gesetze" else "en"
+        spec = self.specs[note]
+        source_language = "de" if spec["source"] == "gesetze" else "en"
+        # Only a language that was produced by translation follows corrections of the other one;
+        # for EU acts summarised from both official texts, each language stands on its own.
+        translated_counterpart = spec["source"] == "gesetze" or spec.get("german_summaries") == "translate"
         path = self.summaries_path(note)
         data = json.loads(path.read_text(encoding="utf-8"))
         changed = 0
@@ -381,7 +388,8 @@ class Builder:
                     item["title"] = title
                 item.update(summary=summary, problems=[], reviewed=True)
                 # Translate only from the source language, never into it.
-                if language == source_language and key not in {str(k) for k in (corrections.get(other) or {})}:
+                if (translated_counterpart and language == source_language
+                        and key not in {str(k) for k in (corrections.get(other) or {})}):
                     translated = re.sub(r"\s+", " ", translate(summary, language, other))
                     data[other][key].update(summary=translated, reviewed=True, problems=(
                         [] if set(NUMBER.findall(translated)) == set(NUMBER.findall(summary))

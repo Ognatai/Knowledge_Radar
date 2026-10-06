@@ -123,3 +123,27 @@ def test_detailed_section_replaces_summary_and_keeps_generated_heading(tmp_path)
     assert "#### § 26 – Datenverarbeitung für Zwecke des Beschäftigungsverhältnisses\n\n##### Worum geht es?" in block
     assert "Falsche Überschrift" not in block
     assert "#### § 27 – Forschung\n\nErlaubt." in block
+
+
+def test_corrections_do_not_translate_when_both_languages_come_from_official_texts(tmp_path, monkeypatch):
+    import json
+
+    corrections = tmp_path / "corrections"
+    corrections.mkdir()
+    (corrections / "act.yaml").write_text('en:\n  "7": Provides a corrected sentence.\n', encoding="utf-8")
+    monkeypatch.setattr(rn, "CORRECTIONS", corrections)
+    monkeypatch.setattr(rn, "translate", lambda *args: (_ for _ in ()).throw(AssertionError("no translation")))
+
+    builder = rn.Builder.__new__(rn.Builder)
+    builder.drafts = tmp_path
+    builder.specs = {"act": {"source": "eurlex"}}
+    item = {"number": "Article 7", "title": "x", "summary": "Model text.", "problems": [], "path": []}
+    german = {**item, "summary": "Aus dem deutschen Text."}
+    (tmp_path / "act").mkdir()
+    (tmp_path / "act" / "summaries.json").write_text(json.dumps({"en": {"7": dict(item)}, "de": {"7": german}}))
+
+    builder.apply_corrections("act")
+
+    data = json.loads((tmp_path / "act" / "summaries.json").read_text())
+    assert data["en"]["7"]["summary"] == "Provides a corrected sentence."
+    assert data["de"]["7"]["summary"] == "Aus dem deutschen Text."
