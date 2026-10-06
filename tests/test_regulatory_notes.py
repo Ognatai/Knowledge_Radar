@@ -51,3 +51,55 @@ def test_provisions_block_groups_by_structure():
         "### Part 2 — Implementing provisions", "",
         "#### § 26 — Employment", "", "Governs employee data.",
     ]
+
+
+def test_apply_corrections_replaces_summary_and_retranslates_other_language(tmp_path, monkeypatch):
+    import json
+
+    corrections = tmp_path / "corrections"
+    corrections.mkdir()
+    (corrections / "law.yaml").write_text('de:\n  "1": Regelt den Vorrang anderer Gesetze.\n', encoding="utf-8")
+    monkeypatch.setattr(rn, "CORRECTIONS", corrections)
+    calls = []
+    monkeypatch.setattr(rn, "translate", lambda text, source, target: calls.append(text) or "Governs precedence.")
+
+    builder = rn.Builder.__new__(rn.Builder)
+    builder.drafts = tmp_path
+    builder.specs = {"law": {"source": "gesetze"}}
+    item = {"number": "§ 1", "title": "x", "summary": "falsch", "problems": ["check: wrong"], "path": []}
+    (tmp_path / "law").mkdir()
+    (tmp_path / "law" / "summaries.json").write_text(json.dumps({"de": {"1": dict(item)}, "en": {"1": dict(item)}}))
+
+    builder.apply_corrections("law")
+    builder.apply_corrections("law")  # second run: nothing to translate again
+
+    data = json.loads((tmp_path / "law" / "summaries.json").read_text())
+    assert data["de"]["1"]["summary"] == "Regelt den Vorrang anderer Gesetze."
+    assert data["de"]["1"]["problems"] == []
+    assert data["en"]["1"]["summary"] == "Governs precedence."
+    assert calls == ["Regelt den Vorrang anderer Gesetze."]
+
+
+def test_corrections_of_the_translation_never_overwrite_the_source_language(tmp_path, monkeypatch):
+    import json
+
+    corrections = tmp_path / "corrections"
+    corrections.mkdir()
+    (corrections / "law.yaml").write_text(
+        'en:\n  "38":\n    title: Data protection officers of non-public bodies\n    summary: Requires a DPO.\n',
+        encoding="utf-8")
+    monkeypatch.setattr(rn, "CORRECTIONS", corrections)
+    monkeypatch.setattr(rn, "translate", lambda *args: (_ for _ in ()).throw(AssertionError("no translation")))
+
+    builder = rn.Builder.__new__(rn.Builder)
+    builder.drafts = tmp_path
+    builder.specs = {"law": {"source": "gesetze"}}
+    item = {"number": "§ 38", "title": "x", "summary": "Verpflichtet.", "problems": [], "path": []}
+    (tmp_path / "law").mkdir()
+    (tmp_path / "law" / "summaries.json").write_text(json.dumps({"de": {"38": dict(item)}, "en": {"38": dict(item)}}))
+
+    builder.apply_corrections("law")
+
+    data = json.loads((tmp_path / "law" / "summaries.json").read_text())
+    assert data["de"]["38"]["summary"] == "Verpflichtet."
+    assert (data["en"]["38"]["title"], data["en"]["38"]["summary"]) == ("Data protection officers of non-public bodies", "Requires a DPO.")

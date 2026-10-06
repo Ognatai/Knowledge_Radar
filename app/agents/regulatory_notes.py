@@ -12,9 +12,12 @@ translation of it, with the official headings where they exist.
     python -m app.agents.regulatory_notes assemble  data-protection [--notes gdpr]
     python -m app.agents.regulatory_notes accept    data-protection --notes gdpr
 
-Frames: migration/regulatory/frames/<note>.en.md, with the line
-<!-- PROVISIONS --> where the chapters and articles go. The German frame is
-translated once and kept in the drafts folder for review.
+Corrections from the review: migration/regulatory/corrections/<note>.yaml
+({language: {key: summary}}), applied by `assemble`.
+Frames: migration/regulatory/frames/<note>.en.md and <note>.de.md, with the
+line <!-- PROVISIONS --> where the chapters and articles go. German law needs
+a written German frame (German is the authentic text). For EU acts without a
+written German frame, it is translated once and kept in the drafts folder.
 Drafts: .knowledge-radar/drafts/regulatory/ (untracked).
 """
 
@@ -34,10 +37,11 @@ import yaml
 from app.agents import eurlex, gesetze, llm
 from app.agents.legal_text import Heading, Section
 from app.backend.knowledge_radar.notes import REPOSITORY_ROOT, configured_notes_directory
-from app.backend.knowledge_radar.templates import check_template
+from app.backend.knowledge_radar.templates import REGULATORY_REQUIRED, check_template
 
 MIGRATION = REPOSITORY_ROOT / "migration"
 FRAMES = MIGRATION / "regulatory" / "frames"
+CORRECTIONS = MIGRATION / "regulatory" / "corrections"
 DRAFTS = REPOSITORY_ROOT / ".knowledge-radar" / "drafts" / "regulatory"
 PROMPTS = Path(__file__).parent / "prompts"
 PROVISIONS_MARKER = "<!-- PROVISIONS -->"
@@ -186,6 +190,40 @@ def heading_label(label: str) -> str:
     return " ".join(part if re.fullmatch(r"[IVXLC]+|\d+\w?", part) else part.capitalize() for part in label.split())
 
 
+def fix_heading_terms(data: dict, terms: dict | None) -> dict:
+    """Copy of the summaries with term fixes applied to the English provision and unit titles."""
+    if not terms:
+        return data
+
+    def fix(text: str) -> str:
+        for wrong, right in terms.items():
+            text = text.replace(wrong, right)
+        return text
+
+    english = {
+        key: {**item, "title": fix(item["title"]),
+              "path": [[level, label, fix(title)] for level, label, title in item["path"]]}
+        for key, item in data["en"].items()
+    }
+    return {**data, "en": english}
+
+
+def template_headings(english_frame: str, german_frame: str) -> str:
+    """Use the template's German headings: the n-th `###` of the German frame gets the
+    German counterpart of the n-th English heading, whatever the model made of it."""
+    names = dict(REGULATORY_REQUIRED)
+    english = re.findall(r"^### (.+?)\s*$", english_frame, flags=re.M)
+    german_headings = iter(english)
+
+    def replace(match: re.Match) -> str:
+        source = next(german_headings, None)
+        return f"### {names[source]}" if source in names else match.group(0)
+
+    if len(re.findall(r"^### ", german_frame, flags=re.M)) != len(english):
+        return german_frame  # structure differs; the template check will report it
+    return re.sub(r"^### .+$", replace, german_frame, flags=re.M)
+
+
 class Builder:
     def __init__(self, package: str, notes_directory: Path, drafts: Path = DRAFTS):
         self.package = package
@@ -270,6 +308,44 @@ class Builder:
                          for level, label, t in item["path"]],
             }
 
+    def apply_corrections(self, note: str) -> None:
+        """Apply reviewed corrections (migration/regulatory/corrections/<note>.yaml) to the summaries.
+
+        A corrected summary replaces the model's text and its problems; the other
+        language is re-translated from it unless the file corrects that one too.
+        Applied corrections are remembered, so a second run does not translate again.
+        """
+        corrections_file = CORRECTIONS / f"{note}.yaml"
+        if not corrections_file.exists():
+            return
+        corrections = yaml.safe_load(corrections_file.read_text(encoding="utf-8")) or {}
+        source_language = "de" if self.specs[note]["source"] == "gesetze" else "en"
+        path = self.summaries_path(note)
+        data = json.loads(path.read_text(encoding="utf-8"))
+        changed = 0
+        for language, entries in corrections.items():
+            other = "de" if language == "en" else "en"
+            for key, entry in (entries or {}).items():
+                key = str(key)
+                item = data[language][key]
+                # An entry is the corrected summary, or {summary, title} to fix a translated heading too.
+                summary = entry["summary"] if isinstance(entry, dict) else entry
+                title = entry.get("title") if isinstance(entry, dict) else None
+                if item.get("reviewed") and item["summary"] == summary and (not title or item["title"] == title):
+                    continue
+                if title:
+                    item["title"] = title
+                item.update(summary=summary, problems=[], reviewed=True)
+                # Translate only from the source language, never into it.
+                if language == source_language and key not in {str(k) for k in (corrections.get(other) or {})}:
+                    translated = re.sub(r"\s+", " ", translate(summary, language, other))
+                    data[other][key].update(summary=translated, reviewed=True, problems=(
+                        [] if set(NUMBER.findall(translated)) == set(NUMBER.findall(summary))
+                        else ["numbers changed in translation"]))
+                changed += 1
+                path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"{note}: {changed} corrections applied", flush=True)
+
     # -- step 2: assemble the note --------------------------------------------------
     def provisions_block(self, data: dict, language: str) -> str:
         dash = " — " if language == "en" else " – "
@@ -289,9 +365,15 @@ class Builder:
         return "\n".join(lines).strip()
 
     def german_frame(self, note: str, english_frame: str, force: bool = False) -> str:
+        written = FRAMES / f"{note}.de.md"
+        if written.exists():
+            # Written German frame (required for German law, where German is the authentic text).
+            return written.read_text(encoding="utf-8")
+        if self.specs[note]["source"] == "gesetze":
+            raise ValueError(f"{note}: German law needs a written German frame ({written.name}), not a translation")
         target = self.drafts / note / "frame.de.md"
         if target.exists() and not force:
-            return target.read_text(encoding="utf-8")
+            return template_headings(english_frame, target.read_text(encoding="utf-8"))
         parts = re.split(r"(?=^### )", english_frame, flags=re.M)
         german = "\n\n".join(
             part if not part.strip() or part.strip() == PROVISIONS_MARKER else translate(part, "en", "de")
@@ -301,14 +383,13 @@ class Builder:
             "> **Wichtiger Hinweis:** Diese Seite ist eine LLM-generierte Zusammenfassung. Sie kann unvollständig, "
             "veraltet oder falsch sein. Sie ist keine Rechtsberatung und entfaltet keine rechtliche Wirkung; "
             "maßgeblich sind allein die amtlich veröffentlichten Texte."), german, count=1, flags=re.M)
-        if PROVISIONS_MARKER not in german:
-            german = german.replace("### Zeitplan", f"{PROVISIONS_MARKER}\n\n### Zeitplan", 1)
         target.write_text(german, encoding="utf-8")
-        return german
+        return template_headings(english_frame, german)
 
     def assemble(self, note: str) -> Path:
         spec = self.specs[note]
         entry = self.mapping[note]
+        self.apply_corrections(note)
         data = json.loads(self.summaries_path(note).read_text(encoding="utf-8"))
         english_frame = (FRAMES / f"{note}.en.md").read_text(encoding="utf-8")
         german_frame = self.german_frame(note, english_frame)
@@ -316,7 +397,8 @@ class Builder:
             "title_en": entry["title_en"], "title_de": entry["title_de"], "entity_type": entry["entity_type"],
             **spec["frontmatter"], "sources": spec["sources"],
         }
-        english = english_frame.replace(PROVISIONS_MARKER, self.provisions_block(data, "en"))
+        english = english_frame.replace(
+            PROVISIONS_MARKER, self.provisions_block(fix_heading_terms(data, spec.get("english_heading_terms")), "en"))
         german = german_frame.replace(PROVISIONS_MARKER, self.provisions_block(data, "de"))
         note_text = (
             "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False) + "---\n\n"
