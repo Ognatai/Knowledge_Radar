@@ -164,3 +164,29 @@ def test_german_heading_terms_fix_capitalised_headings_and_unreviewed_ones_are_l
 
 def test_heading_title_keeps_enisa():
     assert rn.heading_title("ENISA (THE EUROPEAN UNION AGENCY FOR CYBERSECURITY)").startswith("ENISA (the")
+
+
+def test_group_units_merges_consecutive_articles_of_a_chapter():
+    part = Heading(1, "PART THREE", "CAPITAL REQUIREMENTS")
+    sections = [
+        Section("Article 92", "Own funds requirements", "Institutions shall hold own funds.", (part, Heading(2, "TITLE I", "GENERAL"))),
+        Section("Article 93", "Initial capital", "Initial capital shall be kept.", (part, Heading(2, "TITLE I", "GENERAL"))),
+        Section("Article 111", "Exposure value", "Exposure values are calculated.", (part, Heading(2, "TITLE II", "CREDIT RISK"))),
+    ]
+    units = rn.group_units(sections, 2, "en")
+    assert [(u.number, u.key, u.title) for u in units] == [
+        ("Articles 92–93", "92–93", "GENERAL"), ("Article 111", "111", "CREDIT RISK")]
+    assert units[0].path == (part,)
+    assert units[0].text.startswith("Article 92 Own funds requirements\nArticle 93 Initial capital")
+    assert rn.group_units(sections, 2, "de")[0].number == "Artikel 92–93"
+
+
+def test_composite_note_prefixes_parts_with_their_act_heading():
+    builder = rn.Builder.__new__(rn.Builder)
+    item = {"number": "Article 1", "title": "Subject matter", "summary": "Lays down rules.", "problems": [],
+            "path": [[1, "TITLE I", "General provisions"]]}
+    merged = builder.merge_parts([("crd", {"en": {"1": item}, "de": {}}, {"en": "Capital Requirements Directive (CRD)"})], "en")
+    assert list(merged["en"]) == ["crd:1"]
+    block = builder.provisions_block(merged, "en")
+    assert block.splitlines()[0] == "### Capital Requirements Directive (CRD)"
+    assert "**Title I — General provisions**" in block
