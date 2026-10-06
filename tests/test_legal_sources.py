@@ -53,3 +53,22 @@ def test_gesetze_parses_metadata_structure_and_sections():
     assert [h.label for h in law.sections[0].path] == ["Teil 1", "Kapitel 1"]
     assert [h.label for h in law.sections[1].path] == ["Teil 2"]
     assert law.url == "https://www.gesetze-im-internet.de/bdsg_2018/"
+
+
+FLAT_PAGE = """<html><body><p class="title-doc-first">RICHTLINIE 2002/58/EG</p>
+<p class="title-article-norm">Artikel 1</p><p class="stitle-article-norm">Geltungsbereich</p>
+<p>(1) Diese Richtlinie gilt.</p>
+<p class="title-article-norm">Artikel 14a</p><p class="stitle-article-norm">Ausschussverfahren</p>
+<p>(1) Die Kommission.</p>
+<p class="title-annex">ANHANG</p><p>Anhangtext</p>
+</body></html>"""
+
+
+def test_eurlex_parses_older_format_without_article_containers():
+    sections = eurlex.parse_structure(FLAT_PAGE)
+
+    assert [(s.number, s.title, s.key) for s in sections] == [
+        ("Artikel 1", "Geltungsbereich", "1"), ("Artikel 14a", "Ausschussverfahren", "14a"),
+    ]
+    assert sections[0].text == "(1) Diese Richtlinie gilt."
+    assert "Anhangtext" not in sections[1].text
