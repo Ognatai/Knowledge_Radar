@@ -1,0 +1,90 @@
+# Migration package "NLP basics": input for `python -m app.agents.technical_notes <command> nlp`.
+# arXiv sources are verified against the `expect` title fragment before drafting; summaries of
+# non-arXiv sources describe only what the cited work is established to contain.
+notes:
+  natural-language-processing:
+    sources:
+      - url: https://web.stanford.edu/~jurafsky/slp3/
+        citation: "Jurafsky, D. & Martin, J. H. *Speech and Language Processing* (3rd ed. draft)."
+        short: Jurafsky & Martin (SLP3)
+        link_label: online draft
+        summary: "Textbook covering the field of natural language processing: text normalisation and tokenization, n-gram language models, classification, vector semantics and embeddings, neural networks, Transformers and large language models, sequence labelling such as part-of-speech tagging and named entity recognition, parsing, information extraction, question answering and machine translation."
+      - {arxiv: "1301.3781", expect: "Efficient Estimation of Word Representations in Vector Space"}
+      - {arxiv: "1706.03762", expect: "Attention Is All You Need", venue: NeurIPS 2017}
+      - {arxiv: "1810.04805", expect: "BERT", venue: NAACL 2019}
+      - {arxiv: "2005.14165", expect: "Language Models are Few-Shot Learners", venue: NeurIPS 2020}
+  tokenization:
+    sources:
+      - {arxiv: "1508.07909", expect: "Neural Machine Translation of Rare Words with Subword Units", venue: ACL 2016}
+      - {arxiv: "1609.08144", expect: "Google's Neural Machine Translation System"}
+      - {arxiv: "1804.10959", expect: "Subword Regularization", venue: ACL 2018}
+      - {arxiv: "1808.06226", expect: "SentencePiece", venue: EMNLP 2018}
+  text-similarity-metrics:
+    sources:
+      - url: https://aclanthology.org/P02-1040/
+        citation: "Papineni, K., Roukos, S., Ward, T. & Zhu, W.-J. (2002). *BLEU: a Method for Automatic Evaluation of Machine Translation.* ACL 2002."
+        short: Papineni et al. (2002)
+        link_label: ACL Anthology
+        summary: "BLEU scores a candidate translation against one or more reference translations using modified (clipped) n-gram precision for n-grams up to length four, combined by a geometric mean and multiplied by a brevity penalty for candidates shorter than the references; it was shown to correlate with human judgements at corpus level."
+      - url: https://aclanthology.org/W04-1013/
+        citation: "Lin, C.-Y. (2004). *ROUGE: A Package for Automatic Evaluation of Summaries.* Text Summarization Branches Out, ACL Workshop."
+        short: Lin (2004)
+        link_label: ACL Anthology
+        summary: "ROUGE evaluates summaries by overlap with reference summaries and is recall-oriented; variants include ROUGE-N (n-gram overlap), ROUGE-L (longest common subsequence), ROUGE-W (weighted longest common subsequence) and ROUGE-S (skip-bigram co-occurrence)."
+      - {arxiv: "1904.09675", expect: "BERTScore", venue: ICLR 2020}
+      - {arxiv: "1908.10084", expect: "Sentence-BERT", venue: EMNLP 2019}
+  entity-extraction:
+    sources:
+      - url: https://aclanthology.org/W03-0419/
+        citation: "Tjong Kim Sang, E. F. & De Meulder, F. (2003). *Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition.* CoNLL 2003."
+        short: Tjong Kim Sang & De Meulder (2003)
+        link_label: ACL Anthology
+        summary: "Shared task on named entity recognition for English and German with four entity types: persons, locations, organisations and miscellaneous names. Systems were evaluated with precision, recall and F1 on exact entity matches; the data set became a standard NER benchmark."
+      - {arxiv: "1603.01360", expect: "Neural Architectures for Named Entity Recognition", venue: NAACL 2016}
+      - {arxiv: "1810.04805", expect: "BERT", venue: NAACL 2019}
+      - {arxiv: "2311.08526", expect: "GLiNER", venue: NAACL 2024}
+      - {arxiv: "2304.10428", expect: "GPT-NER"}
+  information-extraction:
+    sources:
+      - url: https://www.ijcai.org/Proceedings/07/Papers/429.pdf
+        citation: "Banko, M., Cafarella, M. J., Soderland, S., Broadhead, M. & Etzioni, O. (2007). *Open Information Extraction from the Web.* IJCAI 2007."
+        short: Banko et al. (2007)
+        link_label: PDF
+        summary: "Introduces open information extraction: instead of extracting a predefined set of relations, the system TextRunner extracts relational tuples of the form (argument, relation phrase, argument) from web text in a single pass over the corpus, without hand-labelled examples for each relation."
+      - url: https://aclanthology.org/2021.findings-emnlp.204/
+        citation: "Huguet Cabot, P.-L. & Navigli, R. (2021). *REBEL: Relation Extraction By End-to-end Language generation.* Findings of EMNLP 2021."
+        short: Huguet Cabot & Navigli (2021)
+        link_label: ACL Anthology
+        summary: "Treats relation extraction as sequence-to-sequence generation: a BART-based model generates the relation triplets expressed in a text as a linearised sequence, covering more than 200 relation types, and was evaluated on several relation extraction benchmarks."
+      - {arxiv: "2312.17617", expect: "Large Language Models for Generative Information Extraction"}
+      - {arxiv: "1603.01360", expect: "Neural Architectures for Named Entity Recognition", venue: NAACL 2016}
+  information-retrieval:
+    sources:
+      - url: https://nlp.stanford.edu/IR-book/
+        citation: "Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press."
+        short: Manning et al. (2008)
+        link_label: online edition
+        summary: "Textbook covering the inverted index that maps each term to the list of documents containing it, Boolean retrieval, term weighting with tf-idf, the vector space model with cosine similarity, probabilistic retrieval including BM25, and evaluation of retrieval systems with precision, recall and ranked measures."
+      - url: https://doi.org/10.1561/1500000019
+        citation: "Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval."
+        short: Robertson & Zaragoza (2009)
+        link_label: doi:10.1561/1500000019
+        summary: "Monograph on the probabilistic relevance framework and the BM25 ranking function: term-frequency saturation, inverse document frequency and document-length normalisation."
+      - url: https://doi.org/10.1145/361219.361220
+        citation: "Salton, G., Wong, A. & Yang, C. S. (1975). *A Vector Space Model for Automatic Indexing.* Communications of the ACM 18(11)."
+        short: Salton et al. (1975)
+        link_label: doi:10.1145/361219.361220
+        summary: "Represents documents and queries as vectors of term weights in a common space and ranks documents by their similarity to the query; indexing quality is related to how well the vector space separates documents."
+      - url: https://doi.org/10.1016/0306-4573(88)90021-0
+        citation: "Salton, G. & Buckley, C. (1988). *Term-weighting approaches in automatic text retrieval.* Information Processing & Management 24(5)."
+        short: Salton & Buckley (1988)
+        link_label: doi:10.1016/0306-4573(88)90021-0
+        summary: "Systematic comparison of term-weighting schemes for automatic text retrieval, combining term frequency, inverse document frequency (collection frequency) and length normalisation; weighting schemes based on term frequency times inverse document frequency with normalisation performed well."
+      - {arxiv: "2004.04906", expect: "Dense Passage Retrieval", venue: EMNLP 2020}
+  bias-in-nlp:
+    sources:
+      - {arxiv: "1607.06520", expect: "Man is to Computer Programmer as Woman is to Homemaker", venue: NeurIPS 2016}
+      - {arxiv: "1608.07187", expect: "Semantics derived automatically from language corpora contain human-like biases", venue: Science}
+      - {arxiv: "2005.14050", expect: "Language (Technology) is Power", venue: ACL 2020}
+      - {arxiv: "2004.09456", expect: "StereoSet", venue: ACL 2021}
+      - {arxiv: "2110.08193", expect: "BBQ", venue: Findings of ACL 2022}
