@@ -21,6 +21,22 @@ notes:
     sources:
       - https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng
       - https://eur-lex.europa.eu/eli/reg/2023/2854/oj/deu
+    # Reviewed casing of the unit headings (the Official Journal prints them in capitals).
+    english_heading_terms:
+      MAKING DATA AVAILABLE TO PUBLIC SECTOR BODIES, THE COMMISSION, THE EUROPEAN CENTRAL BANK AND UNION BODIES ON THE BASIS OF AN EXCEPTIONAL NEED: Making data available to public sector bodies, the Commission, the European Central Bank and Union bodies on the basis of an exceptional need
+      OBLIGATIONS FOR DATA HOLDERS OBLIGED TO MAKE DATA AVAILABLE PURSUANT TO UNION LAW: Obligations for data holders obliged to make data available pursuant to Union law
+    german_heading_terms:
+      ALLGEMEINE BESTIMMUNGEN: Allgemeine Bestimmungen
+      DATENWEITERGABE VON UNTERNEHMEN AN VERBRAUCHER UND ZWISCHEN UNTERNEHMEN: Datenweitergabe von Unternehmen an Verbraucher und zwischen Unternehmen
+      PFLICHTEN DER DATENINHABER, DIE GEMÄSS DEM UNIONSRECHT VERPFLICHTET SIND, DATEN BEREITZUSTELLEN: Pflichten der Dateninhaber, die gemäß dem Unionsrecht verpflichtet sind, Daten bereitzustellen
+      MISSBRÄUCHLICHE VERTRAGSKLAUSELN IN BEZUG AUF DEN DATENZUGANG UND DIE DATENNUTZUNG ZWISCHEN UNTERNEHMEN: Missbräuchliche Vertragsklauseln in Bezug auf den Datenzugang und die Datennutzung zwischen Unternehmen
+      BEREITSTELLUNG VON DATEN FÜR ÖFFENTLICHE STELLEN, DIE KOMMISSION, DIE EUROPÄISCHE ZENTRALBANK UND EINRICHTUNGEN DER UNION WEGEN AUSSERGEWÖHNLICHER NOTWENDIGKEIT: Bereitstellung von Daten für öffentliche Stellen, die Kommission, die Europäische Zentralbank und Einrichtungen der Union wegen außergewöhnlicher Notwendigkeit
+      WECHSEL ZWISCHEN DATENVERARBEITUNGSDIENSTEN: Wechsel zwischen Datenverarbeitungsdiensten
+      UNRECHTMÄSSIGER STAATLICHER ZUGANG ZU UND UNRECHTMÄSSIGE STAATLICHE ÜBERMITTLUNG VON NICHT-PERSONENBEZOGENEN DATEN IM INTERNATIONALEN UMFELD: Unrechtmäßiger staatlicher Zugang zu und unrechtmäßige staatliche Übermittlung von nicht-personenbezogenen Daten im internationalen Umfeld
+      INTEROPERABILITÄT: Interoperabilität
+      SCHUTZRECHT SUI GENERIS NACH DER RICHTLINIE 96/9/EG: Schutzrecht sui generis nach der Richtlinie 96/9/EG
+      ANWENDUNG UND DURCHSETZUNG: Anwendung und Durchsetzung
+      SCHLUSSBESTIMMUNGEN: Schlussbestimmungen
   data-governance-act:
     source: eurlex
     urls:
@@ -53,6 +69,13 @@ notes:
     sources:
       - https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng
       - https://eur-lex.europa.eu/eli/reg/2022/2065/oj/deu
+    # Reviewed casing of the unit headings (the Official Journal prints them in capitals).
+    german_heading_terms:
+      ALLGEMEINE BESTIMMUNGEN: Allgemeine Bestimmungen
+      HAFTUNG DER ANBIETER VON VERMITTLUNGSDIENSTEN: Haftung der Anbieter von Vermittlungsdiensten
+      SORGFALTSPFLICHTEN FÜR EIN TRANSPARENTES UND SICHERES ONLINE-UMFELD: Sorgfaltspflichten für ein transparentes und sicheres Online-Umfeld
+      UMSETZUNG, ZUSAMMENARBEIT, SANKTIONEN UND DURCHSETZUNG: Umsetzung, Zusammenarbeit, Sanktionen und Durchsetzung
+      SCHLUSSBESTIMMUNGEN: Schlussbestimmungen
   digital-markets-act:
     source: eurlex
     urls:
@@ -69,6 +92,14 @@ notes:
     sources:
       - https://eur-lex.europa.eu/eli/reg/2022/1925/oj/eng
       - https://eur-lex.europa.eu/eli/reg/2022/1925/oj/deu
+    # Reviewed casing of the unit headings (the Official Journal prints them in capitals).
+    german_heading_terms:
+      GEGENSTAND, ANWENDUNGSBEREICH UND BEGRIFFSBESTIMMUNGEN: Gegenstand, Anwendungsbereich und Begriffsbestimmungen
+      UNFAIRE ODER DIE BESTREITBARKEIT BESCHRÄNKENDE PRAKTIKEN VON TORWÄCHTERN: Unfaire oder die Bestreitbarkeit beschränkende Praktiken von Torwächtern
+      UNTERSUCHUNGS-, DURCHSETZUNGS- UND ÜBERWACHUNGSBEFUGNISSE: Untersuchungs-, Durchsetzungs- und Überwachungsbefugnisse
+      MARKTUNTERSUCHUNG: Marktuntersuchung
+      TORWÄCHTER: Torwächter
+      SCHLUSSBESTIMMUNGEN: Schlussbestimmungen
   eecc:
     source: eurlex
     urls:
@@ -86,6 +117,21 @@ notes:
       - https://eur-lex.europa.eu/eli/dir/2018/1972/oj/eng
       - https://eur-lex.europa.eu/eli/dir/2018/1972/oj/deu
       - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02018L1972-20241018
+    # Reviewed casing of the unit headings (the Official Journal prints them in capitals).
+    german_heading_terms:
+      RAHMEN (ALLGEMEINE VORSCHRIFTEN FÜR DIE ORGANISATION DES SEKTORS): Rahmen (allgemeine Vorschriften für die Organisation des Sektors)
+      ANWENDUNGSBEREICH, ZIELE UND BEGRIFFSBESTIMMUNGEN: Anwendungsbereich, Ziele und Begriffsbestimmungen
+      INSTITUTIONELLE STRUKTUR UND VERWALTUNG: Institutionelle Struktur und Verwaltung
+      MARKTZUTRITT UND NETZAUSBAU: Marktzutritt und Netzausbau
+      BINNENMARKTVERFAHREN: Binnenmarktverfahren
+      NUMMERIERUNGSRESSOURCEN: Nummerierungsressourcen
+      UNIVERSALDIENSTVERPFLICHTUNGEN: Universaldienstverpflichtungen
+      ENDNUTZERRECHTE: Endnutzerrechte
+      DURCHFÜHRUNG: Durchführung
+      SCHLUSSBESTIMMUNGEN: Schlussbestimmungen
+      DIENSTE: Dienste
+      NETZE: Netze
+      ZUGANG: Zugang
   eidas:
     source: eurlex
     urls:
@@ -103,3 +149,12 @@ notes:
       - https://eur-lex.europa.eu/eli/reg/2014/910/oj/eng
       - https://eur-lex.europa.eu/eli/reg/2014/910/oj/deu
       - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02014R0910-20241018
+    # Reviewed casing of the unit headings (the Official Journal prints them in capitals).
+    german_heading_terms:
+      ALLGEMEINE BESTIMMUNGEN: Allgemeine Bestimmungen
+      ELEKTRONISCHE IDENTIFIZIERUNG: Elektronische Identifizierung
+      VERTRAUENSDIENSTE: Vertrauensdienste
+      ELEKTRONISCHE DOKUMENTE: Elektronische Dokumente
+      RAHMEN FÜR DIE GOVERNANCE: Rahmen für die Governance
+      BEFUGNISÜBERTRAGUNGEN UND DURCHFÜHRUNGSBESTIMMUNGEN: Befugnisübertragungen und Durchführungsbestimmungen
+      SCHLUSSBESTIMMUNGEN: Schlussbestimmungen

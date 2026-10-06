@@ -529,7 +529,7 @@ Das Gesetz über digitale Dienste (Digital Services Act, DSA) legt EU-weite Rege
 
 **Ausnahmen**: Kleinst- und Kleinunternehmen sind von den Pflichten für Online-Plattformen ausgenommen, sofern sie nicht als sehr groß benannt sind (Art. 19, 29).
 
-### Kapitel I – Allgemeine bestimmungen
+### Kapitel I – Allgemeine Bestimmungen
 
 #### Artikel 1 – Gegenstand
 
@@ -543,7 +543,7 @@ Regelt den Geltungsbereich der Verordnung für Vermittlungsdienste, die für Nut
 
 Regelt die Begriffsbestimmungen für die Zwecke der Verordnung, insbesondere den Begriff „Dienst der Informationsgesellschaft“, „Nutzer“, „Verbraucher“ und andere relevante Begriffe.
 
-### Kapitel II – Haftung der anbieter von vermittlungsdiensten
+### Kapitel II – Haftung der Anbieter von Vermittlungsdiensten
 
 #### Artikel 4 – „Reine Durchleitung“
 
@@ -573,7 +573,7 @@ Verpflichtet die Anbieter von Vermittlungsdiensten, nach Eingang einer Anordnung
 
 Verpflichtet die Anbieter von Vermittlungsdiensten, nach Eingang einer Auskunftsanordnung durch die zuständigen nationalen Behörden unverzüglich über den Erhalt und die Ausführung der Anordnung zu informieren.
 
-### Kapitel III – Sorgfaltspflichten für ein transparentes und sicheres online-umfeld
+### Kapitel III – Sorgfaltspflichten für ein transparentes und sicheres Online-Umfeld
 
 **Abschnitt 1 – Bestimmungen für alle Anbieter von Vermittlungsdiensten**
 
@@ -739,7 +739,7 @@ Verpflichtet die Kommission, die Ausarbeitung von Verhaltenskodizes zur Verbesse
 
 Ermöglicht dem Gremium, der Kommission die Einleitung freiwilliger Krisenprotokolle für außergewöhnliche Umstände zu empfehlen, die die öffentliche Sicherheit oder Gesundheit beeinträchtigen.
 
-### Kapitel IV – Umsetzung, zusammenarbeit, sanktionen und durchsetzung
+### Kapitel IV – Umsetzung, Zusammenarbeit, Sanktionen und Durchsetzung
 
 **Abschnitt 1 – Zuständige Behörden und nationale Koordinatoren für digitale Dienste**
 

@@ -484,7 +484,7 @@ Die eIDAS-Verordnung legt EU-weite Regeln für elektronische Identifizierung und
 
 **Qualifiziert und nichtqualifiziert**: Qualifizierte Vertrauensdienste müssen zusätzliche Anforderungen erfüllen, werden mindestens alle 24 Monate geprüft (Art. 20) und in nationalen Vertrauenslisten geführt (Art. 22); dafür haben sie besondere Rechtswirkungen, etwa die Gleichstellung der qualifizierten elektronischen Signatur mit der handschriftlichen Unterschrift (Art. 25 Abs. 2).
 
-### Kapitel I – Allgemeine bestimmungen
+### Kapitel I – Allgemeine Bestimmungen
 
 #### Artikel 1 – Gegenstand
 
@@ -506,7 +506,7 @@ Regelt die Freizügigkeit von Vertrauensdiensten und Produkten im Binnenmarkt oh
 
 Bestimmt, dass die Verwendung von Pseudonymen in elektronischen Transaktionen nicht untersagt werden darf, sofern nicht Unionsrecht oder nationales Recht eine Identifizierung verlangt.
 
-### Kapitel II – Elektronische identifizierung
+### Kapitel II – Elektronische Identifizierung
 
 **Abschnitt 1 – europäische brieftasche für die digitale identität**
 
@@ -792,13 +792,13 @@ Regelt, dass elektronische Journale nicht allein aufgrund ihrer elektronischen F
 
 Regelt die Anforderungen an qualifizierte elektronische Journale, die von qualifizierten Vertrauensdiensteanbietern erstellt und verwaltet werden müssen.
 
-### Kapitel IV – Elektronische dokumente
+### Kapitel IV – Elektronische Dokumente
 
 #### Artikel 46 – Rechtswirkung elektronischer Dokumente
 
 Regelt, dass die Rechtswirkung und die Zulässigkeit eines elektronischen Dokuments als Beweismittel in Gerichtsverfahren nicht allein aufgrund seiner elektronischen Form abgesprochen werden darf.
 
-### Kapitel Iva – Rahmen für die governance
+### Kapitel Iva – Rahmen für die Governance
 
 #### Artikel 46a – Aufsicht über den Rahmen für die europäischen Brieftasche für die Digitale Identität
 
@@ -820,7 +820,7 @@ Regelt die gegenseitige Amtshilfe zwischen Aufsichtsstellen, um die Beaufsichtig
 
 Regelt die Einrichtung und die Aufgaben der europäischen Kooperationsgruppe für die digitale Identität, die von der Kommission geleitet und unterstützt wird.
 
-### Kapitel V – Befugnisübertragungen und durchführungsbestimmungen
+### Kapitel V – Befugnisübertragungen und Durchführungsbestimmungen
 
 #### Artikel 47 – Ausübung der Befugnisübertragung
 

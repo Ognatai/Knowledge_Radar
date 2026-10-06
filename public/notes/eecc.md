@@ -696,9 +696,9 @@ Der Europäische Kodex für die elektronische Kommunikation (EKEK, englisch EECC
 - Teil III (Art. 84–116): Dienste, also Universaldienst, Nummerierung und Endnutzerrechte.
 - Teil IV (Art. 117–127): Schlussbestimmungen.
 
-### Teil I – Rahmen (allgemeine vorschriften für die organisation des sektors)
+### Teil I – Rahmen (allgemeine Vorschriften für die Organisation des Sektors)
 
-**Titel I – Anwendungsbereich, ziele und begriffsbestimmungen**
+**Titel I – Anwendungsbereich, Ziele und Begriffsbestimmungen**
 
 **Kapitel I – Gegenstand, Ziel und Begriffsbestimmungen**
 
@@ -720,7 +720,7 @@ Regelt die allgemeinen Ziele der nationalen Regulierungsbehörden und anderen zu
 
 Regelt die Zusammenarbeit der Mitgliedstaaten und der Kommission bei der strategischen Planung, Koordinierung und Harmonisierung der Funkfrequenznutzung in der Union.
 
-**Titel II – Institutionelle struktur und verwaltung**
+**Titel II – Institutionelle Struktur und Verwaltung**
 
 **Kapitel I – Nationale Regulierungsbehörden und andere zuständige Behörden**
 
@@ -884,7 +884,7 @@ Verpflichtet die Kommission, ein Verzeichnis nicht zwingender Normen oder Spezif
 
 ### Teil II – Netze
 
-**Titel I – Marktzutritt und netzausbau**
+**Titel I – Marktzutritt und Netzausbau**
 
 **Kapitel I – Entgelte**
 
