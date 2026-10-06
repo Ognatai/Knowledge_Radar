@@ -87,3 +87,45 @@ def test_eurlex_parses_older_format_without_article_containers():
     ]
     assert sections[0].text == "(1) Diese Richtlinie gilt."
     assert "Anhangtext" not in sections[1].text
+
+
+OJ_PAGE = """<html><body>
+<div id="cpt_I"><p id="d1" class="oj-ti-section-1">CHAPTER I</p>
+<div class="eli-title" id="cpt_I.tit_1"><p id="d2" class="oj-ti-section-2"><span class="oj-bold">GENERAL PROVISIONS</span></p></div>
+<div class="eli-subdivision" id="art_1"><p id="d3" class="oj-ti-art">Article 1</p>
+<div class="eli-title" id="art_1.tit_1"><p class="oj-sti-art">Subject matter</p></div>
+<p class="oj-normal">1. This Regulation lays down rules.</p></div></div>
+</body></html>"""
+
+PARTS_PAGE = """<html><body>
+<div id="prt_I"><p class="title-division-1">PART I</p><p class="title-division-2">FRAMEWORK</p>
+<div id="prt_I.tis_I"><p class="title-division-1">TITLE I</p><p class="title-division-2">SCOPE</p>
+<div id="prt_I.tis_I.cpt_I"><p class="title-division-1">CHAPTER I</p><p class="title-division-2">Definitions</p>
+<div class="eli-subdivision" id="art_2"><p class="title-article-norm">Article 2</p>
+<p class="stitle-article-norm">Definitions</p><p>For the purposes of this Directive.</p></div></div></div></div>
+</body></html>"""
+
+
+def test_official_journal_xhtml_is_parsed_after_class_mapping(tmp_path, monkeypatch):
+    class Response:
+        def __init__(self, body):
+            self.body = body
+        def read(self):
+            return self.body.encode("utf-8")
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            return False
+
+    monkeypatch.setattr(eurlex.urllib.request, "urlopen", lambda request, timeout: Response(OJ_PAGE))
+    page = eurlex.fetch_cellar("32023R2854", "en", tmp_path)
+    sections = eurlex.parse_structure(page)
+
+    assert [(s.number, s.title, s.text) for s in sections] == [("Article 1", "Subject matter", "1. This Regulation lays down rules.")]
+    assert [(h.label, h.title) for h in sections[0].path] == [("CHAPTER I", "GENERAL PROVISIONS")]
+
+
+def test_parts_titles_and_chapters_nest():
+    section = eurlex.parse_structure(PARTS_PAGE)[0]
+
+    assert [(h.level, h.label) for h in section.path] == [(1, "PART I"), (2, "TITLE I"), (3, "CHAPTER I")]
