@@ -16,6 +16,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from app.agents.legal_text import Heading, Section
 from app.backend.knowledge_radar.notes import REPOSITORY_ROOT
 
 CACHE_DIRECTORY = REPOSITORY_ROOT / ".knowledge-radar" / "cache" / "eurlex"
@@ -93,3 +94,36 @@ def split_articles(page: str) -> dict[str, str]:
     if not articles:
         raise EurLexError("The page contains no articles.")
     return articles
+
+
+UNIT_ID = re.compile(r'<div (?:class="eli-subdivision" )?id="(art|cpt|anx|enc|fnp)_([^"]+)"')
+TITLE = re.compile(r'<p class="([a-z0-9-]+)"[^>]*>(.*?)</p>', re.S)
+
+
+def parse_structure(page: str) -> list[Section]:
+    """Articles with number, title and text, and the chapters/sections enclosing them."""
+    sections: list[Section] = []
+    path: list[Heading] = []
+    for part in ARTICLE_START.split(page):
+        unit = UNIT_ID.match(part)
+        if not unit:
+            continue
+        kind, ident = unit.groups()
+        titles = {cls: html_to_text(body) for cls, body in TITLE.findall(part[:3000])}
+        if kind == "cpt":
+            level = ident.count(".") + 1  # cpt_III -> 1, cpt_III.sct_1 -> 2
+            heading = Heading(level, titles.get("title-division-1", ""), titles.get("title-division-2", ""))
+            path = [h for h in path if h.level < level] + [heading]
+        elif kind == "art":
+            number = titles.get("title-article-norm", f"Article {ident}")
+            title = titles.get("stitle-article-norm", "").strip(" '’")  # drop amendment-marker remnants
+            text = html_to_text(part)
+            prefix = f"{number} {title}".strip()
+            if text.startswith(prefix):
+                text = text[len(prefix):].lstrip(" '’")
+            sections.append(Section(number=number, title=title, text=text, path=tuple(path)))
+        elif kind in ("anx", "fnp"):
+            path = []
+    if not sections:
+        raise EurLexError("The page contains no articles.")
+    return sections
