@@ -1,0 +1,74 @@
+# Migration package "Finance": input for `python -m app.agents.regulatory_notes <command> finance`.
+# EU texts from the Publications Office (CELLAR), German law via gesetze-im-internet XML.
+# Legal status checked with `python -m app.agents.cellar` on 2026-10-06: DORA unamended.
+# KWG: as promulgated on 9 September 1998 (BGBl. I S. 2776), last amended 12 May 2026.
+notes:
+  dora:
+    source: eurlex
+    urls:
+      en: cellar:32022R2554
+      de: cellar:32022R2554
+    act: the Digital Operational Resilience Act (Regulation (EU) 2022/2554)
+    frontmatter:
+      jurisdiction: EU
+      instrument: regulation
+      status: in-force
+      official_reference: "Regulation (EU) 2022/2554"
+      consolidated_version: 2022-12-27
+      aliases: [DORA, Digital Operational Resilience Act, Verordnung über die digitale operationale Resilienz im Finanzsektor]
+    sources:
+      - https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng
+      - https://eur-lex.europa.eu/eli/reg/2022/2554/oj/deu
+  kwg:
+    source: gesetze
+    slug: kredwg
+    act: the German Banking Act (Gesetz über das Kreditwesen, KWG)
+    frontmatter:
+      jurisdiction: DE
+      instrument: national-law
+      status: in-force
+      official_reference: "BGBl. I 1998, 2776"
+      consolidated_version: 2026-05-12
+      aliases: [KWG, Kreditwesengesetz, German Banking Act]
+    sources:
+      - https://www.gesetze-im-internet.de/kredwg/
+  # CRR and CRD form one note (as in the vault). CRD is summarised per article, CRR per
+  # structural unit up to chapter level (737 articles, mostly calculation rules).
+  # Legal status checked on 2026-10-06: consolidated versions in force on that date.
+  crr-and-crd:
+    parts: [crr, crd]
+    frontmatter:
+      jurisdiction: EU
+      instrument: regulation
+      status: in-force
+      official_reference: "Regulation (EU) No 575/2013; Directive 2013/36/EU"
+      consolidated_version: 2026-07-11
+      aliases: [CRR, CRD, CRR III, CRD VI, Capital Requirements Regulation, Capital Requirements Directive, Eigenkapitalrichtlinie, Basel III]
+    sources:
+      - https://eur-lex.europa.eu/eli/reg/2013/575/oj/eng
+      - https://eur-lex.europa.eu/eli/reg/2013/575/oj/deu
+      - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02013R0575-20260626
+      - https://eur-lex.europa.eu/eli/dir/2013/36/oj/eng
+      - https://eur-lex.europa.eu/eli/dir/2013/36/oj/deu
+      - https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02013L0036-20260711
+  crr:
+    part_of: crr-and-crd
+    source: eurlex
+    unit_depth: 3
+    urls:
+      en: cellar:02013R0575-20260626
+      de: cellar:02013R0575-20260626
+    act: the Capital Requirements Regulation (Regulation (EU) No 575/2013)
+    part_heading:
+      en: Capital Requirements Regulation (Regulation (EU) No 575/2013, CRR)
+      de: Verordnung über Aufsichtsanforderungen an Kreditinstitute (Verordnung (EU) Nr. 575/2013, CRR)
+  crd:
+    part_of: crr-and-crd
+    source: eurlex
+    urls:
+      en: cellar:02013L0036-20260711
+      de: cellar:02013L0036-20260711
+    act: the Capital Requirements Directive (Directive 2013/36/EU)
+    part_heading:
+      en: Capital Requirements Directive (Directive 2013/36/EU, CRD)
+      de: Richtlinie über den Zugang zur Tätigkeit von Kreditinstituten und deren Beaufsichtigung (Richtlinie 2013/36/EU, CRD)

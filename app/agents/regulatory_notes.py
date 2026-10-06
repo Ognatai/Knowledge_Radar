@@ -45,6 +45,7 @@ MIGRATION = REPOSITORY_ROOT / "migration"
 FRAMES = MIGRATION / "regulatory" / "frames"
 CORRECTIONS = MIGRATION / "regulatory" / "corrections"
 DETAILS = MIGRATION / "regulatory" / "details"
+MANUAL = MIGRATION / "regulatory" / "manual"  # hand-written provisions of soft law (guidelines, circulars)
 WRITER_MODEL = os.environ.get("KNOWLEDGE_RADAR_WRITER_MODEL", "qwen3:30b-a3b")
 DETAIL_HEADINGS = {  # same sub-sections as the EU AI Act note (docs/note-templates.md, "Depth")
     ("en", "article"): ("What is it about?", "What does the article require?", "Who is affected?",
@@ -98,11 +99,50 @@ def load_package(package: str) -> dict[str, dict]:
     return yaml.safe_load((MIGRATION / "regulatory" / f"{package}.yaml").read_text(encoding="utf-8"))["notes"]
 
 
+UNIT_WORDS = {"en": ("Article", "Articles"), "de": ("Artikel", "Artikel")}
+
+
 def provisions(spec: dict, language: str) -> list[Section]:
-    """Articles/sections of the act in one language (German law: always the German text)."""
+    """Articles/sections of the act in one language (German law: always the German text).
+
+    With `unit_depth`, consecutive articles of the same structural unit are summarised together.
+    """
     if spec["source"] == "eurlex":
-        return eurlex.parse_structure(eurlex.fetch(spec["urls"][language], language))
-    return gesetze.load(spec["slug"]).sections
+        sections = eurlex.parse_structure(eurlex.fetch(spec["urls"][language], language))
+    else:
+        sections = gesetze.load(spec["slug"]).sections
+    if spec.get("unit_depth"):
+        sections = group_units(sections, spec["unit_depth"], language)
+    return sections
+
+
+def group_units(sections: list[Section], depth: int, language: str) -> list[Section]:
+    """Consecutive articles sharing the first `depth` headings as one section ("Articles 92–98").
+
+    The key is the article range, the same in every language; the text starts with the
+    article headings so that they survive truncation of long units.
+    """
+    units: list[Section] = []
+    current: list[Section] = []
+
+    def flush() -> None:
+        if not current:
+            return
+        first, last = current[0].key, current[-1].key
+        one, many = UNIT_WORDS[language]
+        path = current[0].path[:depth]
+        headings = "\n".join(f"{s.number} {s.title}".strip() for s in current)
+        text = headings + "\n\n" + "\n\n".join(s.text for s in current)
+        number = f"{one} {first}" if first == last else f"{many} {first}–{last}"
+        units.append(Section(number=number, title=path[-1].title if path else "", text=text, path=path[:-1]))
+
+    for section in sections:
+        if current and section.path[:depth] != current[0].path[:depth]:
+            flush()
+            current = []
+        current.append(section)
+    flush()
+    return units
 
 
 def summary_numbers_ok(summary: str, section: Section) -> bool:
@@ -257,8 +297,10 @@ def fix_heading_terms(data: dict, terms: dict | None, language: str = "en") -> d
 
 
 def capitalised_headings(data: dict, language: str) -> list[str]:
-    """Unit headings still in capitals (for German: casing not yet reviewed)."""
-    return sorted({title for item in data[language].values() for _, _, title in item["path"] if title.isupper()})
+    """Unit headings still in capitals (for German: casing not yet reviewed), including unit titles."""
+    titles = {title for item in data[language].values() for _, _, title in item["path"]}
+    titles |= {item["title"] for item in data[language].values()}
+    return sorted(title for title in titles if title.isupper())
 
 
 def template_headings(english_frame: str, german_frame: str) -> str:
@@ -470,11 +512,16 @@ class Builder:
             for depth, (level, label, title) in enumerate(path):
                 if depth < len(current) and current[depth] == (level, label, title):
                     continue
-                heading = f"{heading_label(label)}{dash}{heading_title(title)}" if title else heading_label(label)
+                if level == 0:  # act heading of a part of a composite note, used as written
+                    heading = label
+                elif title:
+                    heading = f"{heading_label(label)}{dash}{heading_title(title)}"
+                else:
+                    heading = heading_label(label)
                 lines.append(f"### {heading}" if depth == 0 else f"**{heading}**")
                 lines.append("")
             current = path
-            title = f"{dash}{item['title']}" if item["title"] else ""
+            title = f"{dash}{heading_title(item['title'])}" if item["title"] else ""
             body = (details or {}).get(item_key(item)) or item["summary"]
             lines += [f"#### {item['number']}{title}", "", body, ""]
         return "\n".join(lines).strip()
@@ -484,7 +531,7 @@ class Builder:
         if written.exists():
             # Written German frame (required for German law, where German is the authentic text).
             return written.read_text(encoding="utf-8")
-        if self.specs[note]["source"] == "gesetze":
+        if self.specs[note].get("source") == "gesetze":
             raise ValueError(f"{note}: German law needs a written German frame ({written.name}), not a translation")
         target = self.drafts / note / "frame.de.md"
         if target.exists() and not force:
@@ -501,21 +548,47 @@ class Builder:
         target.write_text(german, encoding="utf-8")
         return template_headings(english_frame, german)
 
+    def merge_parts(self, parts: list[tuple[str, dict, dict]], language: str) -> dict:
+        """One language of a composite note: each part's provisions under its act heading."""
+        merged = {}
+        for name, data, heading in parts:
+            for key, item in data[language].items():
+                merged[f"{name}:{key}"] = {**item, "path": [[0, heading[language], ""]] + item["path"]}
+        return {language: merged}
+
+    def note_data(self, note: str) -> tuple[dict, dict]:
+        """Corrected summaries with heading fixes, English and German; composite notes merge their parts."""
+        spec = self.specs[note]
+        english, german = [], []
+        for name in spec.get("parts") or [note]:
+            part = self.specs[name]
+            self.apply_corrections(name)
+            data = json.loads(self.summaries_path(name).read_text(encoding="utf-8"))
+            english.append((name, fix_heading_terms(data, part.get("english_heading_terms")), part.get("part_heading")))
+            german.append((name, fix_heading_terms(data, part.get("german_heading_terms"), "de"), part.get("part_heading")))
+        if not spec.get("parts"):
+            return english[0][1], german[0][1]
+        return self.merge_parts(english, "en"), self.merge_parts(german, "de")
+
+    def provisions_text(self, note: str, data: dict, language: str) -> str:
+        """Provisions part of a note; for soft law (source: manual) written by hand."""
+        if self.specs[note].get("source") == "manual":
+            return (MANUAL / f"{note}.{language}.md").read_text(encoding="utf-8").strip()
+        return self.provisions_block(data, language, load_details(note, language))
+
     def assemble(self, note: str) -> Path:
         spec = self.specs[note]
         entry = self.mapping[note]
-        self.apply_corrections(note)
-        data = json.loads(self.summaries_path(note).read_text(encoding="utf-8"))
+        manual = spec.get("source") == "manual"
+        english_data, german_data = ({"en": {}}, {"de": {}}) if manual else self.note_data(note)
         english_frame = (FRAMES / f"{note}.en.md").read_text(encoding="utf-8")
         german_frame = self.german_frame(note, english_frame)
         frontmatter = {
             "title_en": entry["title_en"], "title_de": entry["title_de"], "entity_type": entry["entity_type"],
             **spec["frontmatter"], "sources": spec["sources"],
         }
-        english = english_frame.replace(PROVISIONS_MARKER, self.provisions_block(
-            fix_heading_terms(data, spec.get("english_heading_terms")), "en", load_details(note, "en")))
-        german_data = fix_heading_terms(data, spec.get("german_heading_terms"), "de")
-        german = german_frame.replace(PROVISIONS_MARKER, self.provisions_block(german_data, "de", load_details(note, "de")))
+        english = english_frame.replace(PROVISIONS_MARKER, self.provisions_text(note, english_data, "en"))
+        german = german_frame.replace(PROVISIONS_MARKER, self.provisions_text(note, german_data, "de"))
         note_text = (
             "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False) + "---\n\n"
             f"## EN\n\n{english.strip()}\n\n## DE\n\n{german.strip()}\n"
@@ -555,8 +628,12 @@ def main() -> int:
     try:
         problems = []
         for note in notes:
+            spec = builder.specs[note]
+            if spec.get("part_of") and args.command in ("assemble", "accept") and not args.notes:
+                continue  # parts are assembled into their composite note
             if args.command == "summaries":
-                builder.summaries(note, args.force)
+                if not spec.get("parts") and spec.get("source") != "manual":
+                    builder.summaries(note, args.force)
             elif args.command == "details":
                 if builder.specs[note].get("detailed"):
                     builder.details(note, force=args.force)
