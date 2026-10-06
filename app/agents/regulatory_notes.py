@@ -68,7 +68,7 @@ DRAFTS = REPOSITORY_ROOT / ".knowledge-radar" / "drafts" / "regulatory"
 PROMPTS = Path(__file__).parent / "prompts"
 PROVISIONS_MARKER = "<!-- PROVISIONS -->"
 NUMBER = re.compile(r"\d+(?:[.,]\d+)*")
-ACRONYMS = {"AI", "EU", "GPAI", "IT", "ICT", "IKT", "KI", "EWR", "EEA", "UN"}
+ACRONYMS = {"AI", "EU", "GPAI", "IT", "ICT", "IKT", "KI", "EWR", "EEA", "UN", "ENISA"}
 LANGUAGE_NAMES = {"en": "English", "de": "German"}
 LANGUAGE_RULES = {
     "en": "Use the terms of the official English text of the act.",
@@ -234,8 +234,12 @@ def load_details(note: str, language: str, directory: Path | None = None) -> dic
     } if folder.is_dir() else {}
 
 
-def fix_heading_terms(data: dict, terms: dict | None) -> dict:
-    """Copy of the summaries with term fixes applied to the English provision and unit titles."""
+def fix_heading_terms(data: dict, terms: dict | None, language: str = "en") -> dict:
+    """Copy of the summaries with term fixes applied to one language's provision and unit titles.
+
+    English: fixes for translated headings. German: reviewed casing for headings that the
+    Official Journal prints in capitals (sentence-casing would lower-case German nouns).
+    """
     if not terms:
         return data
 
@@ -244,12 +248,17 @@ def fix_heading_terms(data: dict, terms: dict | None) -> dict:
             text = text.replace(wrong, right)
         return text
 
-    english = {
+    fixed = {
         key: {**item, "title": fix(item["title"]),
               "path": [[level, label, fix(title)] for level, label, title in item["path"]]}
-        for key, item in data["en"].items()
+        for key, item in data[language].items()
     }
-    return {**data, "en": english}
+    return {**data, language: fixed}
+
+
+def capitalised_headings(data: dict, language: str) -> list[str]:
+    """Unit headings still in capitals (for German: casing not yet reviewed)."""
+    return sorted({title for item in data[language].values() for _, _, title in item["path"] if title.isupper()})
 
 
 def template_headings(english_frame: str, german_frame: str) -> str:
@@ -505,7 +514,8 @@ class Builder:
         }
         english = english_frame.replace(PROVISIONS_MARKER, self.provisions_block(
             fix_heading_terms(data, spec.get("english_heading_terms")), "en", load_details(note, "en")))
-        german = german_frame.replace(PROVISIONS_MARKER, self.provisions_block(data, "de", load_details(note, "de")))
+        german_data = fix_heading_terms(data, spec.get("german_heading_terms"), "de")
+        german = german_frame.replace(PROVISIONS_MARKER, self.provisions_block(german_data, "de", load_details(note, "de")))
         note_text = (
             "---\n" + yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False) + "---\n\n"
             f"## EN\n\n{english.strip()}\n\n## DE\n\n{german.strip()}\n"
@@ -513,6 +523,9 @@ class Builder:
         target = self.drafts / f"{note}.md"
         target.write_text(note_text, encoding="utf-8")
         problems = check_template(note_text)
+        unreviewed = capitalised_headings(german_data, "de")
+        if unreviewed:
+            problems.append(f"German headings in capitals, add them to german_heading_terms: {unreviewed}")
         print(f"{note}: assembled, {len(problems)} template problems", flush=True)
         for problem in problems:
             print(f"    - {problem}")

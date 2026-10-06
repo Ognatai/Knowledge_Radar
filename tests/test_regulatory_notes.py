@@ -147,3 +147,20 @@ def test_corrections_do_not_translate_when_both_languages_come_from_official_tex
     data = json.loads((tmp_path / "act" / "summaries.json").read_text())
     assert data["en"]["7"]["summary"] == "Provides a corrected sentence."
     assert data["de"]["7"]["summary"] == "Aus dem deutschen Text."
+
+
+def test_german_heading_terms_fix_capitalised_headings_and_unreviewed_ones_are_listed():
+    # Sentence-casing German capitals would lower-case nouns ("Allgemeine bestimmungen"),
+    # so reviewed German headings are given in the package and the rest is reported.
+    item = {"number": "Artikel 1", "title": "Gegenstand", "summary": "Regelt den Gegenstand.", "problems": [],
+            "path": [[1, "KAPITEL I", "ALLGEMEINE BESTIMMUNGEN"], [2, "ABSCHNITT 1", "ZIELE"]]}
+    data = {"en": {}, "de": {"1": item}}
+    fixed = rn.fix_heading_terms(data, {"ALLGEMEINE BESTIMMUNGEN": "Allgemeine Bestimmungen"}, "de")
+    assert fixed["de"]["1"]["path"][0][2] == "Allgemeine Bestimmungen"
+    assert data["de"]["1"]["path"][0][2] == "ALLGEMEINE BESTIMMUNGEN"  # input unchanged
+    assert rn.capitalised_headings(fixed, "de") == ["ZIELE"]
+    assert "### Kapitel I – Allgemeine Bestimmungen" in rn.Builder.provisions_block(None, fixed, "de")
+
+
+def test_heading_title_keeps_enisa():
+    assert rn.heading_title("ENISA (THE EUROPEAN UNION AGENCY FOR CYBERSECURITY)").startswith("ENISA (the")
