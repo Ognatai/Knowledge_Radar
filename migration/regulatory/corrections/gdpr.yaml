@@ -1,0 +1,139 @@
+# Reviewed corrections of the model summaries (source language: en).
+# The German summaries of these provisions are re-translated from the corrected text.
+en:
+  "3": Applies the Regulation to processing in the context of an EU establishment of a controller or processor, and to non-EU controllers or processors that offer goods or services to, or monitor the behaviour of, people in the Union.
+  "4": Defines the key terms of the Regulation, including personal data, processing, profiling, pseudonymisation, controller, processor, consent, personal data breach, and genetic, biometric and health data.
+  "8": Sets the conditions for a child's consent to information society services offered directly to a child; below the age of 16, which Member States may lower to 13, consent must be given or authorised by the holder of parental responsibility.
+  "13": Requires the controller to give the data subject specified information when collecting personal data from them, including the controller's identity, the purposes and legal basis of the processing and the data subject's rights.
+  "14": Requires the controller to give the data subject specified information when personal data have not been obtained from them, including the controller's identity, the purposes, the categories of data and their source.
+  "21": Gives the data subject the right to object to processing based on public interest or legitimate interests, including profiling, and an unconditional right to object to processing for direct marketing.
+  "30": Requires controllers and processors, and where applicable their representatives, to maintain records of processing activities with specified content.
+  "41": Allows compliance with approved codes of conduct to be monitored by bodies accredited for this purpose by the competent supervisory authority.
+  "47": Requires the competent supervisory authority to approve binding corporate rules that meet the specified requirements and sets out their minimum content.
+  "48": Provides that a third-country court judgment or administrative decision requiring the transfer or disclosure of personal data is only recognised or enforceable if based on an international agreement such as a mutual legal assistance treaty.
+  "49": Allows transfers without an adequacy decision or appropriate safeguards only in specific situations, such as explicit consent of the data subject or necessity for the performance of a contract.
+  "51": Requires each Member State to provide for one or more independent public authorities responsible for monitoring the application of the Regulation.
+  "53": Requires Member States to appoint the members of their supervisory authorities by a transparent procedure, through their parliament, government, head of state or an independent body.
+  "60": Requires the lead supervisory authority to cooperate with the other supervisory authorities concerned, to exchange all relevant information with them and to endeavour to reach consensus.
+  "62": Provides for joint operations of supervisory authorities, including joint investigations and joint enforcement measures with members or staff of the authorities of other Member States.
+  "67": Allows the Commission to adopt implementing acts specifying the arrangements for the electronic exchange of information between supervisory authorities and with the Board.
+  "70": Sets out the tasks of the Board for ensuring the consistent application of the Regulation, including monitoring, advising the Commission and issuing guidelines, recommendations and best practices.
+  "72": Provides that the Board takes decisions by a simple majority of its members unless otherwise provided and adopts its rules of procedure by a two-thirds majority.
+  "73": Requires the Board to elect a chair and two deputy chairs from among its members by simple majority, for a term of five years renewable once.
+  "76": Provides that the discussions of the Board are confidential where the Board deems it necessary, as provided for in its rules of procedure.
+  "78": Gives every natural or legal person the right to an effective judicial remedy against a legally binding decision of a supervisory authority, and data subjects a remedy where the authority does not handle their complaint or inform them within three months.
+  "80": Gives the data subject the right to mandate a not-for-profit body to lodge a complaint and exercise certain rights on his or her behalf.
+  "81": Allows a court to suspend its proceedings where proceedings concerning the same subject matter and the same controller or processor are pending in a court of another Member State.
+  "82": Gives any person who has suffered material or non-material damage as a result of an infringement of the Regulation the right to compensation from the controller or processor.
+  "83": Sets out the conditions for imposing administrative fines, including the factors to be taken into account and maximum amounts of up to EUR 20 million or 4 % of total worldwide annual turnover.
+  "86": Allows personal data in official documents held by public authorities or bodies, or by private bodies performing public interest tasks, to be disclosed under Union or Member State law to reconcile public access with data protection.
+  "89": Requires appropriate safeguards for processing for archiving, scientific or historical research or statistical purposes and allows Union or Member State law to provide for derogations from certain data subject rights.
+  "90": Allows Member States to adopt specific rules on the powers of supervisory authorities in relation to controllers or processors subject to professional secrecy, where necessary to reconcile data protection with that obligation.
+  "91": Allows churches and religious associations to continue to apply comprehensive data protection rules applied when the Regulation entered into force if they are brought into line with the Regulation and subject to an independent supervisory authority.
+  "92": Sets out the conditions under which the Commission exercises the power to adopt delegated acts, including revocation by the European Parliament or the Council and the objection procedure.
+  "93": Provides that the Commission is assisted by a committee within the meaning of Regulation (EU) No 182/2011.
+  "95": Provides that the Regulation imposes no additional obligations on providers of publicly available electronic communications services where Directive 2002/58/EC sets specific obligations with the same objective.
+  "99": Provides that the Regulation enters into force on the twentieth day following its publication and applies from 25 May 2018.
+
+# German: written with the terms of the official German text (an authentic
+# language version), not translated by the model.
+de:
+  "1": Legt Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten fest.
+  "2": Erfasst die ganz oder teilweise automatisierte Verarbeitung personenbezogener Daten und die Verarbeitung in Dateisystemen und nimmt bestimmte Verarbeitungen aus.
+  "3": Erstreckt die Verordnung auf Verarbeitungen im Rahmen einer Niederlassung in der Union sowie auf Verantwortliche und Auftragsverarbeiter außerhalb der Union, die Personen in der Union Waren oder Dienstleistungen anbieten oder ihr Verhalten beobachten.
+  "4": Bestimmt die zentralen Begriffe der Verordnung, darunter personenbezogene Daten, Verarbeitung, Profiling, Pseudonymisierung, Verantwortlicher, Auftragsverarbeiter, Einwilligung, Verletzung des Schutzes personenbezogener Daten sowie genetische, biometrische und Gesundheitsdaten.
+  "5": Legt die Grundsätze für die Verarbeitung fest, darunter Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung sowie Integrität und Vertraulichkeit.
+  "6": Bestimmt, wann eine Verarbeitung rechtmäßig ist, etwa aufgrund von Einwilligung, Vertragserfüllung, rechtlicher Verpflichtung, lebenswichtigen Interessen, öffentlichem Interesse oder berechtigten Interessen.
+  "7": Verpflichtet den Verantwortlichen nachzuweisen, dass die betroffene Person in die Verarbeitung ihrer personenbezogenen Daten eingewilligt hat.
+  "8": Regelt die Einwilligung eines Kindes bei Diensten der Informationsgesellschaft; unter 16 Jahren, von den Mitgliedstaaten absenkbar bis auf 13 Jahre, muss der Träger der elterlichen Verantwortung einwilligen oder zustimmen.
+  "9": Untersagt die Verarbeitung besonderer Kategorien personenbezogener Daten, sofern keine der Ausnahmen greift, etwa ausdrückliche Einwilligung, rechtliche Pflichten oder der Schutz lebenswichtiger Interessen.
+  "10": Erlaubt die Verarbeitung von Daten über strafrechtliche Verurteilungen und Straftaten nur unter behördlicher Aufsicht oder wenn das Unionsrecht oder mitgliedstaatliche Recht sie mit geeigneten Garantien zulässt.
+  "11": Befreit den Verantwortlichen von der Pflicht, zusätzliche Informationen zur Identifizierung der betroffenen Person aufzubewahren, einzuholen oder zu verarbeiten, wenn der Zweck keine Identifizierung erfordert.
+  "12": Verpflichtet den Verantwortlichen, Informationen und Mitteilungen in präziser, transparenter, verständlicher und leicht zugänglicher Form in einer klaren und einfachen Sprache zu übermitteln.
+  "13": Verpflichtet den Verantwortlichen, der betroffenen Person bei der Erhebung ihrer Daten bestimmte Informationen zu geben, darunter seine Identität, Zwecke und Rechtsgrundlage der Verarbeitung und ihre Rechte.
+  "14": Verpflichtet den Verantwortlichen, der betroffenen Person bestimmte Informationen zu geben, wenn die Daten nicht bei ihr erhoben wurden, darunter seine Identität, die Zwecke, die Datenkategorien und die Quelle.
+  "15": Gibt der betroffenen Person das Recht auf Bestätigung, ob sie betreffende personenbezogene Daten verarbeitet werden, und auf Auskunft über diese Daten und weitere Informationen.
+  "16": Gibt der betroffenen Person das Recht, vom Verantwortlichen unverzüglich die Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen.
+  "17": Gibt der betroffenen Person das Recht, vom Verantwortlichen die unverzügliche Löschung sie betreffender personenbezogener Daten zu verlangen, wenn einer der genannten Gründe zutrifft.
+  "18": Gibt der betroffenen Person das Recht auf Einschränkung der Verarbeitung, etwa wenn die Richtigkeit bestritten wird, die Verarbeitung unrechtmäßig ist oder über einen Widerspruch noch nicht entschieden ist.
+  "19": Verpflichtet den Verantwortlichen, allen Empfängern jede Berichtigung, Löschung oder Einschränkung mitzuteilen, sofern das nicht unmöglich oder unverhältnismäßig ist, und die betroffene Person auf Verlangen über diese Empfänger zu unterrichten.
+  "20": Gibt der betroffenen Person das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten und einem anderen Verantwortlichen ohne Behinderung zu übermitteln.
+  "21": Gibt der betroffenen Person das Recht, Verarbeitungen aufgrund öffentlichen Interesses oder berechtigter Interessen einschließlich Profiling zu widersprechen, und ein uneingeschränktes Widerspruchsrecht gegen Direktwerbung.
+  "22": Gibt der betroffenen Person das Recht, nicht einer ausschließlich auf automatisierter Verarbeitung einschließlich Profiling beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt.
+  "23": Erlaubt dem Unionsrecht und dem Recht der Mitgliedstaaten, Pflichten und Rechte nach den Artikeln 12 bis 22 und 34 sowie Teile des Artikels 5 zu beschränken, wenn dies zum Schutz wichtiger Ziele wie der nationalen oder öffentlichen Sicherheit notwendig und verhältnismäßig ist.
+  "24": Verpflichtet den Verantwortlichen, geeignete technische und organisatorische Maßnahmen umzusetzen und zu überprüfen, um die Einhaltung der Verordnung sicherzustellen und nachweisen zu können.
+  "25": Verpflichtet den Verantwortlichen zu geeigneten technischen und organisatorischen Maßnahmen für Datenschutz durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen, etwa Pseudonymisierung und Datenminimierung.
+  "26": Verpflichtet gemeinsam Verantwortliche, in einer Vereinbarung in transparenter Form festzulegen, wer welche Pflichten aus der Verordnung erfüllt.
+  "27": Verpflichtet nicht in der Union niedergelassene Verantwortliche oder Auftragsverarbeiter, in den Fällen des Artikels 3 Absatz 2 schriftlich einen Vertreter in der Union zu benennen.
+  "28": Verpflichtet den Verantwortlichen, nur mit Auftragsverarbeitern zu arbeiten, die hinreichende Garantien für geeignete technische und organisatorische Maßnahmen bieten.
+  "29": Verpflichtet den Auftragsverarbeiter und alle ihm oder dem Verantwortlichen unterstellten Personen, personenbezogene Daten nur auf Weisung des Verantwortlichen zu verarbeiten, sofern nicht gesetzlich anders vorgeschrieben.
+  "30": Verpflichtet Verantwortliche und Auftragsverarbeiter sowie gegebenenfalls ihre Vertreter, ein Verzeichnis von Verarbeitungstätigkeiten mit festgelegtem Inhalt zu führen.
+  "31": Verpflichtet Verantwortliche, Auftragsverarbeiter und gegebenenfalls ihre Vertreter, auf Anfrage mit der Aufsichtsbehörde zusammenzuarbeiten.
+  "32": Verpflichtet Verantwortliche und Auftragsverarbeiter zu geeigneten technischen und organisatorischen Maßnahmen, die ein dem Risiko angemessenes Schutzniveau gewährleisten.
+  "33": Verpflichtet den Verantwortlichen, eine Verletzung des Schutzes personenbezogener Daten unverzüglich und möglichst binnen 72 Stunden der Aufsichtsbehörde zu melden, es sei denn, sie führt voraussichtlich nicht zu einem Risiko für natürliche Personen.
+  "34": Verpflichtet den Verantwortlichen, die betroffene Person unverzüglich zu benachrichtigen, wenn eine Verletzung des Schutzes personenbezogener Daten voraussichtlich ein hohes Risiko für ihre Rechte und Freiheiten zur Folge hat.
+  "35": Verpflichtet den Verantwortlichen, vorab eine Datenschutz-Folgenabschätzung durchzuführen, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
+  "36": Verpflichtet den Verantwortlichen, vor der Verarbeitung die Aufsichtsbehörde zu konsultieren, wenn die Datenschutz-Folgenabschätzung trotz Abhilfemaßnahmen ein hohes Risiko ergibt.
+  "37": Verpflichtet Verantwortliche und Auftragsverarbeiter, einen Datenschutzbeauftragten zu benennen, etwa bei Behörden, umfangreicher Überwachung von Personen oder umfangreicher Verarbeitung besonderer Datenkategorien.
+  "38": Verpflichtet Verantwortliche und Auftragsverarbeiter, den Datenschutzbeauftragten frühzeitig in alle Datenschutzfragen einzubinden und ihn mit den nötigen Ressourcen zu unterstützen.
+  "39": Legt die Aufgaben des Datenschutzbeauftragten fest, darunter Unterrichtung, Beratung, Überwachung der Einhaltung, Beratung zur Datenschutz-Folgenabschätzung und Zusammenarbeit mit der Aufsichtsbehörde.
+  "40": Fördert die Ausarbeitung von Verhaltensregeln, die zur ordnungsgemäßen Anwendung der Verordnung beitragen und die Besonderheiten einzelner Branchen sowie kleiner und mittlerer Unternehmen berücksichtigen.
+  "41": Erlaubt die Überwachung genehmigter Verhaltensregeln durch Stellen, die von der zuständigen Aufsichtsbehörde dafür akkreditiert wurden.
+  "42": Fördert datenschutzspezifische Zertifizierungsverfahren sowie Datenschutzsiegel und -prüfzeichen, mit denen Verantwortliche und Auftragsverarbeiter die Einhaltung der Verordnung nachweisen können.
+  "43": Regelt die Zertifizierungsstellen, die über Fachwissen im Datenschutz verfügen und von der Aufsichtsbehörde oder der nationalen Akkreditierungsstelle akkreditiert sein müssen.
+  "44": Verlangt, dass jede Übermittlung personenbezogener Daten an Drittländer oder internationale Organisationen die Bedingungen dieses Kapitels einhält, damit das Schutzniveau nicht untergraben wird.
+  "45": Erlaubt Übermittlungen an Drittländer oder internationale Organisationen, für die die Kommission ein angemessenes Schutzniveau beschlossen hat.
+  "46": Erlaubt Übermittlungen ohne Angemessenheitsbeschluss nur, wenn der Verantwortliche oder Auftragsverarbeiter geeignete Garantien vorsieht und durchsetzbare Rechte und wirksame Rechtsbehelfe bestehen.
+  "47": Verpflichtet die zuständige Aufsichtsbehörde, verbindliche interne Datenschutzvorschriften zu genehmigen, die die festgelegten Anforderungen erfüllen, und legt ihren Mindestinhalt fest.
+  "48": Bestimmt, dass Urteile und Entscheidungen von Drittlandsgerichten oder -behörden, die eine Übermittlung oder Offenlegung verlangen, nur auf Grundlage einer internationalen Übereinkunft wie eines Rechtshilfeabkommens anerkannt oder vollstreckt werden.
+  "49": Erlaubt Übermittlungen ohne Angemessenheitsbeschluss oder geeignete Garantien nur in bestimmten Fällen, etwa mit ausdrücklicher Einwilligung der betroffenen Person oder zur Erfüllung eines Vertrags.
+  "50": Verpflichtet die Kommission und die Aufsichtsbehörden, die internationale Zusammenarbeit beim Schutz personenbezogener Daten zu fördern.
+  "51": Verpflichtet jeden Mitgliedstaat, eine oder mehrere unabhängige Behörden mit der Überwachung der Anwendung der Verordnung zu betrauen.
+  "52": Garantiert, dass jede Aufsichtsbehörde bei der Erfüllung ihrer Aufgaben und der Ausübung ihrer Befugnisse völlig unabhängig handelt.
+  "53": Verpflichtet die Mitgliedstaaten, die Mitglieder ihrer Aufsichtsbehörden in einem transparenten Verfahren durch Parlament, Regierung, Staatsoberhaupt oder eine unabhängige Stelle ernennen zu lassen.
+  "54": Verpflichtet die Mitgliedstaaten, die Errichtung jeder Aufsichtsbehörde gesetzlich zu regeln, darunter Qualifikation, Amtszeit, Wiederernennung und Pflichten der Mitglieder und Bediensteten.
+  "55": Bestimmt, dass jede Aufsichtsbehörde im Hoheitsgebiet ihres eigenen Mitgliedstaats zuständig ist.
+  "56": Bestimmt die Aufsichtsbehörde der Haupt- oder einzigen Niederlassung als federführende Aufsichtsbehörde für grenzüberschreitende Verarbeitungen.
+  "57": Legt die Aufgaben der Aufsichtsbehörden fest, darunter die Überwachung und Durchsetzung der Verordnung und die Sensibilisierung der Öffentlichkeit.
+  "58": Legt die Untersuchungs-, Abhilfe-, Genehmigungs- und beratenden Befugnisse jeder Aufsichtsbehörde fest.
+  "59": Verpflichtet die Aufsichtsbehörden, einen Jahresbericht über ihre Tätigkeit zu erstellen, ihn den zuständigen Stellen zu übermitteln und zu veröffentlichen.
+  "60": Verpflichtet die federführende Aufsichtsbehörde, mit den anderen betroffenen Aufsichtsbehörden zusammenzuarbeiten, alle zweckdienlichen Informationen auszutauschen und einen Konsens anzustreben.
+  "61": Verpflichtet die Aufsichtsbehörden, einander zweckdienliche Informationen zu übermitteln und Amtshilfe zu leisten, damit die Verordnung einheitlich angewendet wird.
+  "62": Sieht gemeinsame Maßnahmen der Aufsichtsbehörden vor, darunter gemeinsame Untersuchungen und Durchsetzungsmaßnahmen mit Mitgliedern oder Bediensteten anderer Mitgliedstaaten.
+  "63": Verpflichtet die Aufsichtsbehörden, im Kohärenzverfahren untereinander und gegebenenfalls mit der Kommission zusammenzuarbeiten, damit die Verordnung einheitlich angewendet wird.
+  "64": Verpflichtet die zuständige Aufsichtsbehörde, dem Ausschuss Beschlussentwürfe zu bestimmten Maßnahmen vorzulegen, etwa zu Listen für Datenschutz-Folgenabschätzungen, Standarddatenschutzklauseln oder verbindlichen internen Datenschutzvorschriften, und regelt die Stellungnahme des Ausschusses.
+  "65": Verpflichtet den Ausschuss, bei Einsprüchen gegen Beschlussentwürfe, Zuständigkeitsstreitigkeiten oder Nichtbeachtung seiner Stellungnahmen einen verbindlichen Beschluss zu erlassen.
+  "66": Erlaubt einer Aufsichtsbehörde, unter außergewöhnlichen Umständen sofort einstweilige Maßnahmen mit einer Geltungsdauer von höchstens drei Monaten zu erlassen.
+  "67": Erlaubt der Kommission, Durchführungsrechtsakte über den elektronischen Informationsaustausch zwischen den Aufsichtsbehörden und mit dem Ausschuss zu erlassen.
+  "68": Errichtet den Europäischen Datenschutzausschuss als Einrichtung der Union mit eigener Rechtspersönlichkeit, bestehend aus den Leitern der Aufsichtsbehörden und dem Europäischen Datenschutzbeauftragten.
+  "69": Verpflichtet den Ausschuss, seine Aufgaben unabhängig zu erfüllen und weder Weisungen einzuholen noch entgegenzunehmen.
+  "70": Legt die Aufgaben des Ausschusses für die einheitliche Anwendung der Verordnung fest, darunter Überwachung, Beratung der Kommission sowie Leitlinien, Empfehlungen und bewährte Verfahren.
+  "71": Verpflichtet den Ausschuss, einen öffentlichen Jahresbericht über den Schutz natürlicher Personen bei der Verarbeitung in der Union und gegebenenfalls in Drittländern zu erstellen.
+  "72": Bestimmt, dass der Ausschuss in der Regel mit einfacher Mehrheit beschließt und sich mit Zweidrittelmehrheit eine Geschäftsordnung gibt.
+  "73": Verpflichtet den Ausschuss, mit einfacher Mehrheit einen Vorsitz und zwei stellvertretende Vorsitzende für fünf Jahre zu wählen, einmal wiederwählbar.
+  "74": Legt die Aufgaben des Vorsitzes fest, darunter die Einberufung der Sitzungen, die Mitteilung der Beschlüsse und die fristgerechte Erfüllung der Aufgaben des Ausschusses.
+  "75": Stellt dem Ausschuss ein Sekretariat beim Europäischen Datenschutzbeauftragten zur Seite, das ihn analytisch, administrativ und logistisch unterstützt.
+  "76": Bestimmt, dass die Beratungen des Ausschusses vertraulich sind, wenn er dies für erforderlich hält.
+  "77": Gibt jeder betroffenen Person das Recht auf Beschwerde bei einer Aufsichtsbehörde, wenn sie meint, dass die Verarbeitung ihrer Daten gegen die Verordnung verstößt.
+  "78": Gibt jeder Person das Recht auf einen wirksamen gerichtlichen Rechtsbehelf gegen rechtsverbindliche Beschlüsse einer Aufsichtsbehörde und betroffenen Personen einen Rechtsbehelf, wenn die Behörde eine Beschwerde nicht binnen drei Monaten bearbeitet oder sie unterrichtet.
+  "79": Gibt der betroffenen Person das Recht auf einen wirksamen gerichtlichen Rechtsbehelf gegen Verantwortliche oder Auftragsverarbeiter, wenn ihre Rechte durch eine verordnungswidrige Verarbeitung verletzt wurden.
+  "80": Gibt der betroffenen Person das Recht, eine Organisation ohne Gewinnerzielungsabsicht zu beauftragen, in ihrem Namen Beschwerde einzulegen und bestimmte Rechte wahrzunehmen.
+  "81": Erlaubt einem Gericht, sein Verfahren auszusetzen, wenn in einem anderen Mitgliedstaat ein Verfahren zum selben Gegenstand und gegen denselben Verantwortlichen oder Auftragsverarbeiter anhängig ist.
+  "82": Gibt jeder Person, der wegen eines Verstoßes gegen die Verordnung ein materieller oder immaterieller Schaden entstanden ist, einen Anspruch auf Schadenersatz gegen den Verantwortlichen oder Auftragsverarbeiter.
+  "83": Regelt die Verhängung von Geldbußen, die dabei zu berücksichtigenden Kriterien und Höchstbeträge von bis zu 20 Millionen Euro oder 4 % des weltweiten Jahresumsatzes.
+  "84": Verpflichtet die Mitgliedstaaten, wirksame, verhältnismäßige und abschreckende Sanktionen für Verstöße ohne Geldbuße festzulegen und der Kommission bis zum 25. Mai 2018 mitzuteilen.
+  "85": Verpflichtet die Mitgliedstaaten, den Datenschutz mit der Meinungs- und Informationsfreiheit in Einklang zu bringen, und erlaubt Ausnahmen für journalistische, wissenschaftliche, künstlerische und literarische Zwecke.
+  "86": Erlaubt die Offenlegung personenbezogener Daten in amtlichen Dokumenten von Behörden oder öffentlich beauftragten privaten Einrichtungen nach Unionsrecht oder mitgliedstaatlichem Recht, um den Zugang der Öffentlichkeit mit dem Datenschutz in Einklang zu bringen.
+  "87": Erlaubt den Mitgliedstaaten, die Verarbeitung einer nationalen Kennziffer oder anderer Kennzeichen von allgemeiner Bedeutung näher zu regeln, nur mit geeigneten Garantien.
+  "88": Erlaubt den Mitgliedstaaten spezifischere Vorschriften für die Verarbeitung von Beschäftigtendaten im Beschäftigungskontext, etwa bei Einstellung und Vertragserfüllung, mit Schutzmaßnahmen für die Rechte und die Würde der Beschäftigten.
+  "89": Verlangt geeignete Garantien für Verarbeitungen zu Archiv-, Forschungs- und Statistikzwecken und erlaubt dem Unionsrecht und dem Recht der Mitgliedstaaten Ausnahmen von bestimmten Betroffenenrechten.
+  "90": Erlaubt den Mitgliedstaaten besondere Vorschriften zu den Befugnissen der Aufsichtsbehörden gegenüber Verantwortlichen oder Auftragsverarbeitern, die einem Berufsgeheimnis unterliegen.
+  "91": Erlaubt Kirchen und religiösen Vereinigungen, bei Inkrafttreten der Verordnung bestehende umfassende Datenschutzregeln weiter anzuwenden, wenn sie mit der Verordnung in Einklang gebracht werden und einer unabhängigen Aufsicht unterliegen.
+  "92": Regelt die Ausübung der Befugnis der Kommission zum Erlass delegierter Rechtsakte, einschließlich Widerruf durch Europäisches Parlament oder Rat und Einwandverfahren.
+  "93": Bestimmt, dass die Kommission von einem Ausschuss im Sinne der Verordnung (EU) Nr. 182/2011 unterstützt wird.
+  "94": Hebt die Richtlinie 95/46/EG mit Wirkung vom 25. Mai 2018 auf; Verweise auf sie gelten als Verweise auf diese Verordnung.
+  "95": Bestimmt, dass die Verordnung Anbietern öffentlich zugänglicher elektronischer Kommunikationsdienste keine zusätzlichen Pflichten auferlegt, soweit die Richtlinie 2002/58/EG besondere Pflichten mit derselben Zielsetzung enthält.
+  "96": Lässt vor dem 24. Mai 2016 von Mitgliedstaaten geschlossene und mit dem damaligen Unionsrecht vereinbare internationale Übereinkünfte über Datenübermittlungen in Kraft, bis sie geändert, ersetzt oder aufgehoben werden.
+  "97": Verpflichtet die Kommission, dem Europäischen Parlament und dem Rat bis zum 25. Mai 2020 und danach alle vier Jahre Berichte über die Bewertung und Überprüfung der Verordnung vorzulegen.
+  "98": Verpflichtet die Kommission, gegebenenfalls Gesetzgebungsvorschläge zur Änderung anderer Datenschutzrechtsakte der Union vorzulegen, um einen einheitlichen Schutz sicherzustellen.
+  "99": Bestimmt, dass die Verordnung am zwanzigsten Tag nach ihrer Veröffentlichung in Kraft tritt und ab dem 25. Mai 2018 gilt.

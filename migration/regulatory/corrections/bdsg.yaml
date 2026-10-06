@@ -1,0 +1,149 @@
+# Reviewed corrections of the model summaries (source language: de).
+# The English summaries of these sections are re-translated from the corrected text.
+de:
+  "1": Regelt den Anwendungsbereich des Gesetzes für öffentliche und nichtöffentliche Stellen sowie den Vorrang anderer Datenschutzvorschriften des Bundes.
+  "2": Definiert öffentliche Stellen des Bundes und der Länder sowie nichtöffentliche Stellen.
+  "4": Erlaubt die Videoüberwachung öffentlich zugänglicher Räume nur, soweit sie zur Aufgabenerfüllung öffentlicher Stellen, zur Wahrnehmung des Hausrechts oder berechtigter Interessen erforderlich ist, und verlangt, sie erkennbar zu machen.
+  "5": Verpflichtet öffentliche Stellen, eine Datenschutzbeauftragte oder einen Datenschutzbeauftragten zu benennen, und regelt die Benennung gemeinsamer Datenschutzbeauftragter.
+  "6": Regelt die Stellung der oder des Datenschutzbeauftragten öffentlicher Stellen, insbesondere die frühzeitige Einbindung, die Unterstützung durch die öffentliche Stelle und den Schutz vor Benachteiligung.
+  "10": Regelt die völlige Unabhängigkeit der oder des Bundesbeauftragten bei der Erfüllung der Aufgaben und der Ausübung der Befugnisse.
+  "11": Regelt die Wahl der oder des Bundesbeauftragten durch den Deutschen Bundestag, die Ernennung durch die Bundespräsidentin oder den Bundespräsidenten und die Amtszeit.
+  "13": Regelt Rechte und Pflichten der oder des Bundesbeauftragten, insbesondere die Unvereinbarkeit mit anderen Ämtern und Tätigkeiten, die Mitteilung von Geschenken und die Verschwiegenheit.
+  "15": Verpflichtet die oder den Bundesbeauftragten, einen jährlichen Tätigkeitsbericht zu erstellen und ihn Bundestag, Bundesrat, Bundesregierung, Öffentlichkeit, Europäischer Kommission und Europäischem Datenschutzausschuss zugänglich zu machen.
+  "27": Erlaubt die Verarbeitung besonderer Kategorien personenbezogener Daten für wissenschaftliche oder historische Forschungszwecke und statistische Zwecke auch ohne Einwilligung, wenn die Interessen des Verantwortlichen erheblich überwiegen, und beschränkt dafür bestimmte Betroffenenrechte.
+  "29": Beschränkt Informationspflichten und Auskunftsrecht nach der DSGVO sowie die Befugnisse der Aufsichtsbehörden, soweit gesetzliche oder berufliche Geheimhaltungspflichten entgegenstehen.
+  "30": Verpflichtet Auskunfteien, Auskunftsverlangen von Darlehensgebern aus anderen EU-Mitgliedstaaten wie inländische zu behandeln, und verlangt die Unterrichtung von Verbrauchern, deren Kreditantrag aufgrund einer Auskunft abgelehnt wird.
+  "34": Schränkt das Auskunftsrecht nach Artikel 15 DSGVO ein, etwa für Daten, die nur wegen Aufbewahrungsvorschriften gespeichert sind oder ausschließlich der Datensicherung oder Datenschutzkontrolle dienen, wenn die Auskunft unverhältnismäßigen Aufwand erfordert.
+  "35": Schränkt das Recht auf Löschung nach Artikel 17 DSGVO ein; ist die Löschung bei nicht automatisierter Verarbeitung nur mit unverhältnismäßig hohem Aufwand möglich, tritt an ihre Stelle die Einschränkung der Verarbeitung.
+  "36": Schließt das Widerspruchsrecht nach Artikel 21 Absatz 1 DSGVO gegenüber öffentlichen Stellen aus, soweit ein zwingendes öffentliches Interesse überwiegt oder eine Rechtsvorschrift zur Verarbeitung verpflichtet.
+  "38": Verpflichtet nichtöffentliche Stellen, eine Datenschutzbeauftragte oder einen Datenschutzbeauftragten zu benennen, wenn in der Regel mindestens 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind oder bestimmte Verarbeitungen erfolgen.
+  "39": Regelt, dass die zuständige Aufsichtsbehörde die Befugnis, als Zertifizierungsstelle tätig zu werden, auf der Grundlage einer Akkreditierung durch die Deutsche Akkreditierungsstelle erteilt.
+  "42": Stellt die gewerbsmäßige unbefugte Weitergabe nicht allgemein zugänglicher Daten einer großen Zahl von Personen sowie die unbefugte Verarbeitung oder Erschleichung solcher Daten gegen Entgelt oder in Bereicherungs- oder Schädigungsabsicht unter Strafe.
+  "43": Ahndet Verstöße gegen die Pflichten nach § 30 als Ordnungswidrigkeit mit Geldbußen bis zu fünfzigtausend Euro und schließt Geldbußen gegen öffentliche Stellen des Bundes aus.
+  "48": Erlaubt die Verarbeitung besonderer Kategorien personenbezogener Daten nur, wenn sie zur Aufgabenerfüllung unbedingt erforderlich ist, und verlangt geeignete Garantien für die Rechtsgüter der betroffenen Personen.
+  "51": Regelt die Voraussetzungen einer wirksamen Einwilligung, darunter ihren Nachweis, ihre Freiwilligkeit und ihre jederzeitige Widerrufbarkeit.
+  "54": Erlaubt ausschließlich automatisierte Entscheidungen, die mit einer nachteiligen Rechtsfolge verbunden sind oder die betroffene Person erheblich beeinträchtigen, nur, wenn sie in einer Rechtsvorschrift vorgesehen sind.
+  "55": Verpflichtet den Verantwortlichen, allgemeine Informationen über die Zwecke der Verarbeitung, die Rechte der betroffenen Personen, seine Kontaktdaten und die der oder des Datenschutzbeauftragten sowie das Recht, die oder den Bundesbeauftragten anzurufen, bereitzustellen.
+  "58": Gibt der betroffenen Person das Recht auf Berichtigung unrichtiger und Löschung unzulässig verarbeiteter Daten; unter bestimmten Voraussetzungen tritt an die Stelle der Löschung die Einschränkung der Verarbeitung.
+  "59": Verpflichtet den Verantwortlichen, mit betroffenen Personen in präziser, verständlicher und leicht zugänglicher Form in einer klaren und einfachen Sprache zu kommunizieren, sie unverzüglich über die Bearbeitung ihrer Anträge zu unterrichten und diese grundsätzlich unentgeltlich zu bearbeiten.
+  "60": Gibt der betroffenen Person das Recht, sich mit einer Beschwerde an die oder den Bundesbeauftragten zu wenden, wenn sie sich durch die Verarbeitung ihrer Daten durch öffentliche Stellen in ihren Rechten verletzt sieht.
+  "63": Regelt, dass Verantwortliche, die gemeinsam Zwecke und Mittel der Verarbeitung festlegen, als gemeinsam Verantwortliche gelten und ihre Aufgaben in einer Vereinbarung festlegen müssen.
+  "65": Verpflichtet den Verantwortlichen, Verletzungen des Schutzes personenbezogener Daten unverzüglich und möglichst binnen 72 Stunden der oder dem Bundesbeauftragten zu melden, es sei denn, sie führen voraussichtlich zu keiner Gefahr für die Rechtsgüter natürlicher Personen.
+  "66": Verpflichtet den Verantwortlichen, betroffene Personen unverzüglich über eine Verletzung des Schutzes personenbezogener Daten zu benachrichtigen, wenn diese voraussichtlich eine erhebliche Gefahr für ihre Rechtsgüter zur Folge hat.
+  "72": Verpflichtet den Verantwortlichen, bei der Verarbeitung so weit wie möglich zwischen verschiedenen Kategorien betroffener Personen zu unterscheiden, etwa Verdächtigen, Verurteilten, Opfern und Zeugen.
+  "75": Verpflichtet den Verantwortlichen, unrichtige Daten zu berichtigen und unzulässig verarbeitete oder nicht mehr erforderliche Daten zu löschen; unter bestimmten Voraussetzungen tritt an die Stelle der Löschung die Einschränkung der Verarbeitung.
+  "81": Erlaubt Verantwortlichen im besonderen Einzelfall, personenbezogene Daten unmittelbar an andere als die für Strafverfolgung zuständigen Stellen in Drittstaaten zu übermitteln, wenn dies unbedingt erforderlich ist und weitere Voraussetzungen erfüllt sind.
+  "83": Verpflichtet den Verantwortlichen zum Schadensersatz bei rechtswidriger Verarbeitung und gibt der betroffenen Person für immaterielle Schäden einen Anspruch auf angemessene Entschädigung in Geld.
+  "85": Regelt die Verarbeitung und Übermittlung personenbezogener Daten bei Tätigkeiten außerhalb der Anwendungsbereiche der DSGVO und der Richtlinie (EU) 2016/680, etwa aus zwingenden Gründen der Verteidigung oder für humanitäre Maßnahmen.
+
+# English: written from the verified German summaries and the German text
+# (German is the only authentic version; no model translation).
+en:
+  "1": Sets out the scope of the Act for public and non-public bodies and the precedence of other federal data protection provisions.
+  "2": Defines federal and state public bodies and non-public bodies.
+  "3": Allows public bodies to process personal data where necessary to perform a task within the controller's responsibility or in the exercise of official authority.
+  "4": Allows video surveillance of publicly accessible spaces only where necessary for the tasks of public bodies, to exercise domiciliary rights or for legitimate interests, and requires it to be made recognisable.
+  "5": Requires public bodies to designate a data protection officer and regulates the designation of joint data protection officers.
+  "6": Sets out the position of the data protection officer of public bodies, in particular early involvement, support by the public body and protection against disadvantage.
+  "7":
+    title: Tasks
+    summary: Sets out the tasks of the data protection officer of public bodies, in particular informing, advising, monitoring and cooperating with the supervisory authority.
+  "8": Establishes the Federal Commissioner for Data Protection and Freedom of Information as a supreme federal authority with its seat in Bonn.
+  "9":
+    title: Competence
+    summary: Makes the Federal Commissioner competent to supervise federal public bodies and, for telecommunications services, certain companies.
+  "10": Guarantees the complete independence of the Federal Commissioner in performing tasks and exercising powers.
+  "11": Regulates the election of the Federal Commissioner by the Bundestag, the appointment by the Federal President and the term of office.
+  "12":
+    title: Official Relationship
+    summary: Regulates the Federal Commissioner's public-law official relationship with the Federation, including its beginning and end and the remuneration.
+  "13": Sets out the rights and duties of the Federal Commissioner, in particular incompatibility with other offices and activities, the disclosure of gifts and confidentiality.
+  "14":
+    title: Tasks
+    summary: Sets out the tasks of the Federal Commissioner, in particular monitoring and enforcing data protection law and advising public institutions.
+  "15": Requires the Federal Commissioner to prepare an annual activity report and make it available to the Bundestag, Bundesrat, Federal Government, the public, the European Commission and the European Data Protection Board.
+  "16":
+    title: Powers
+    summary: Sets out the powers of the Federal Commissioner to monitor compliance with data protection law and to object to infringements, and the duties of public bodies to cooperate.
+  "17": Makes the Federal Commissioner the joint representative of Germany in the European Data Protection Board and the single point of contact.
+  "18": Regulates the cooperation of the federal and state supervisory authorities in EU matters to ensure uniform application of Regulation (EU) 2016/679 and Directive (EU) 2016/680.
+  "19":
+    title: Competences
+    summary: Determines the lead supervisory authority in the cooperation and consistency procedure and the forwarding of complaints to the competent authority.
+  "20":
+    title: Judicial Remedies
+    summary: Regulates judicial protection in disputes between a natural or legal person and a supervisory authority.
+  "21": Regulates the application of a supervisory authority for a court decision where it considers a decision of the European Commission unlawful.
+  "22": Allows public and non-public bodies to process special categories of personal data under specified conditions and with appropriate safeguards.
+  "23": Allows public bodies to process personal data for purposes other than those of collection under specified conditions.
+  "24": Allows non-public bodies to process personal data for other purposes where necessary to prevent threats or to assert civil law claims and the data subject's interests do not prevail.
+  "25": Regulates transfers of personal data by public bodies to public and non-public bodies, including special categories of personal data, under specified conditions.
+  "26": Regulates the processing of employees' personal data for employment purposes, in particular for decisions on establishing, carrying out or terminating employment.
+  "27": Allows special categories of personal data to be processed for scientific or historical research and statistical purposes without consent where the controller's interests significantly prevail, and restricts certain data subject rights for this purpose.
+  "28": Allows special categories of personal data to be processed for archiving purposes in the public interest and requires the controller to take appropriate safeguards.
+  "29": Restricts information obligations and the right of access under the GDPR, and the powers of supervisory authorities, where statutory or professional secrecy obligations apply.
+  "30": Requires credit agencies to treat information requests from lenders in other EU Member States like domestic ones, and requires consumers to be informed if a credit application is refused because of such information.
+  "31": Sets out the conditions for using probability values about a person's future behaviour (scoring) and credit reports, including the use of information about claims.
+  "32": Regulates the controller's obligation to inform the data subject when collecting personal data from them, with exceptions in certain circumstances.
+  "33": Regulates the obligation to inform the data subject when personal data have not been collected from them, with exceptions for public and non-public bodies.
+  "34": Restricts the right of access under Article 15 GDPR, for example for data stored only because of retention rules or used only for data security or data protection control, where access would require disproportionate effort.
+  "35": Restricts the right to erasure under Article 17 GDPR; where erasure in non-automated processing is only possible with disproportionate effort, restriction of processing takes its place.
+  "36": Excludes the right to object under Article 21(1) GDPR against public bodies where an overriding public interest exists or a legal provision requires the processing.
+  "37": Adds an exception to the right under Article 22 GDPR not to be subject to solely automated decisions, for decisions under insurance contracts.
+  "38": Requires non-public bodies to designate a data protection officer if, as a rule, at least 20 persons are permanently engaged in the automated processing of personal data, or if certain processing takes place.
+  "39": Provides that the competent supervisory authority grants the authorisation to act as a certification body on the basis of an accreditation by the German national accreditation body.
+  "40": Makes the authorities competent under state law responsible for supervising data protection compliance of non-public bodies.
+  "41": Applies the rules on regulatory offence and criminal proceedings, with modifications, to infringements under Article 83(4) to (6) GDPR.
+  "42": Makes it a criminal offence to commercially disclose non-public data of a large number of persons without authorisation, or to process or obtain such data without authorisation for payment or with intent to enrich or harm.
+  "43": Makes infringements of the obligations under § 30 a regulatory offence punishable by fines of up to fifty thousand euros and excludes fines against federal public bodies.
+  "44": Allows data subjects to bring actions against controllers or processors at the court of an establishment or of their own habitual residence.
+  "45": Sets out the scope of Part 3, the processing of personal data by public bodies responsible for preventing, investigating, detecting, prosecuting or punishing criminal or regulatory offences.
+  "46": Defines terms such as personal data, processing, controller, processor and consent for Part 3.
+  "47": Sets out the general principles of processing, in particular lawfulness, purpose limitation, accuracy, storage limitation and security.
+  "48": Allows special categories of personal data to be processed only where strictly necessary for the performance of tasks, and requires appropriate safeguards for the data subjects.
+  "49": Regulates the processing of personal data for purposes other than those for which they were collected and the conditions for its lawfulness.
+  "50": Allows processing for archiving, scientific and statistical purposes in the public interest, subject to appropriate safeguards for the data subjects.
+  "51": Sets out the conditions for valid consent, including its proof, its voluntary nature and the right to withdraw it at any time.
+  "52": Requires persons with access to personal data to process them only on the controller's instructions, unless a legal provision requires them to process the data.
+  "53": Obliges persons involved in data processing not to process personal data without authorisation (data secrecy).
+  "54": Allows solely automated decisions with an adverse legal effect or a significant impact on the data subject only where a legal provision provides for them.
+  "55": Requires the controller to make general information available on the purposes of processing, the data subjects' rights, its contact details and those of the data protection officer, and the right to lodge a complaint with the Federal Commissioner.
+  "56": Requires the controller to notify data subjects about the processing of their personal data in certain cases.
+  "57": Gives the data subject the right of access to their personal data and to further information about the processing.
+  "58": Gives the data subject the right to rectification of inaccurate data and erasure of unlawfully processed data; under certain conditions, restriction of processing replaces erasure.
+  "59": Requires the controller to communicate with data subjects in a concise, intelligible and easily accessible form using clear and plain language, to inform them promptly about the handling of their requests and in principle to act free of charge.
+  "60": Gives the data subject the right to lodge a complaint with the Federal Commissioner if they consider their rights infringed by processing by public bodies.
+  "61": Gives the data subject the right to judicial remedy against legally binding decisions of the Federal Commissioner or in case of inaction.
+  "62":
+    title: Processing on Behalf of a Controller
+    summary: Requires the controller to ensure that processors process personal data in accordance with the law and safeguard the data subjects' rights.
+  "63": Provides that controllers who jointly determine the purposes and means of processing are joint controllers and must set out their tasks in an agreement.
+  "64": Requires controllers and processors to take technical and organisational measures that ensure a level of protection appropriate to the risk.
+  "65": Requires the controller to notify personal data breaches to the Federal Commissioner without undue delay and where possible within 72 hours, unless they are unlikely to pose a risk to the legal interests of natural persons.
+  "66": Requires the controller to inform data subjects without undue delay of a personal data breach that is likely to pose a significant risk to their legal interests.
+  "67": Requires the controller to carry out a data protection impact assessment in advance where processing is likely to pose a significant risk to the legal interests of data subjects.
+  "68": Requires the controller to cooperate with the Federal Commissioner in the performance of the Commissioner's tasks.
+  "69": Requires the controller to consult the Federal Commissioner before putting new filing systems into operation where the impact assessment or the type of processing indicates a significant risk.
+  "70":
+    title: Records of Processing Activities
+    summary: Requires the controller to keep a record of all categories of processing activities with specified content.
+  "71": Requires the controller to take appropriate measures to implement data protection principles effectively and safeguard data subjects' rights (data protection by design and by default).
+  "72": Requires the controller to distinguish as far as possible between categories of data subjects, such as suspects, convicted persons, victims and witnesses.
+  "73": Requires the controller to distinguish between facts and personal assessments when processing personal data.
+  "74": Requires the controller to take appropriate measures so that inaccurate or outdated personal data are not transmitted.
+  "75": Requires the controller to rectify inaccurate data and erase unlawfully processed or no longer necessary data; under certain conditions, restriction of processing replaces erasure.
+  "76": Requires controllers and processors to log certain processing operations in automated processing systems.
+  "77": Requires the controller to enable confidential reporting of infringements of data protection provisions within its area of responsibility.
+  "78": Sets out the general conditions for transfers of personal data to third countries or international organisations, including the competence of the recipient and an adequacy decision of the European Commission.
+  "79": Allows transfers subject to appropriate safeguards where there is no adequacy decision under Article 36(3) of Directive (EU) 2016/680, and requires the controller to document them.
+  "80": Allows transfers without appropriate safeguards in specific cases, for example to protect vital interests or the legitimate interests of the data subject or to prevent a threat to public security.
+  "81": Allows controllers in specific individual cases to transfer personal data directly to bodies in third countries other than law enforcement authorities, where strictly necessary and further conditions are met.
+  "82":
+    title: Mutual Assistance
+    summary: Requires the Federal Commissioner to comply with requests for mutual assistance from supervisory authorities of other EU Member States without delay and at the latest within one month.
+  "83":
+    title: Compensation for Damage
+    summary: Obliges the controller to pay compensation for damage caused by unlawful processing and gives the data subject a claim to appropriate monetary compensation for non-material damage.
+  "84": Applies § 42 to processing of personal data by public bodies in the course of activities under § 45 sentences 1, 3 or 4.
+  "85": Regulates the processing and transfer of personal data in activities outside the scope of the GDPR and Directive (EU) 2016/680, for example for compelling reasons of defence or for humanitarian measures.
+  "86": Allows public and non-public bodies to process personal data for state awards and honours without the data subject's consent.

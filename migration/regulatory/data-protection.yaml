@@ -49,6 +49,16 @@ notes:
       aliases: [BDSG, Bundesdatenschutzgesetz, Federal Data Protection Act]
     sources:
       - https://www.gesetze-im-internet.de/bdsg_2018/
+    # Fixes for the translated English headings (German is authentic).
+    english_heading_terms:
+      Affected Persons: Data Subjects
+      Personal Data Protection Breaches: Personal Data Breaches
+      Rights to Correction: Rights to Rectification
+      Correction and Erasure: Rectification and Erasure
+      Fines Provisions: Provisions on Fines
+      Protection of Economic Traffic: Protection of Commercial Transactions
+      Data Confidentiality: Data Secrecy
+      Appeal to the Federal Commissioner: Complaint to the Federal Commissioner
   tdddg:
     source: gesetze
     slug: ttdsg
@@ -62,3 +72,10 @@ notes:
       aliases: [TDDDG, TTDSG, Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz]
     sources:
       - https://www.gesetze-im-internet.de/ttdsg/
+    english_heading_terms:
+      End Devices: Terminal Equipment
+      End User Registers: End User Directories
+      Information Procedure: Disclosure Procedure
+      Message Transmission with Storage: Message Transmission with Intermediate Storage
+      Disruption of Telecommunications Equipment: Faults in Telecommunications Systems
+      Penalties and Fines: Criminal Provisions and Fines
