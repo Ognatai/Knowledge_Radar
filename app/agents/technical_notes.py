@@ -239,11 +239,20 @@ def unlink_citations(text: str, resolved: list[sources.Source]) -> str:
 
 
 def write_part(prompt: str) -> str:
-    """Generate one part; the heading line is set by the pipeline."""
-    text = clean(llm.generate(prompt, temperature=0.6 if THINK else 0.7, sampling=WRITING_SAMPLING,
-                              max_tokens=PART_TOKENS, think=THINK, model=WRITER_MODEL,
-                              context_tokens=32768))
-    return re.sub(r"^#{3,4} .*\n+", "", text)
+    """Generate one part; the heading line is set by the pipeline.
+
+    With reasoning mode the model can use up the token budget for thinking and return
+    nothing; such a part is retried once with twice the budget.
+    """
+    text = ""
+    for budget in (PART_TOKENS, 2 * PART_TOKENS):
+        text = clean(llm.generate(prompt, temperature=0.6 if THINK else 0.7, sampling=WRITING_SAMPLING,
+                                  max_tokens=budget, think=THINK, model=WRITER_MODEL,
+                                  context_tokens=32768))
+        text = re.sub(r"^#{3,4} .*\n+", "", text)  # the heading is set by the pipeline
+        if text.strip():
+            break
+    return text
 
 
 def apply_glossary(german: str, glossary_path: Path = GLOSSARY) -> str:
@@ -253,6 +262,22 @@ def apply_glossary(german: str, glossary_path: Path = GLOSSARY) -> str:
     for pattern, replacement in yaml.safe_load(glossary_path.read_text(encoding="utf-8"))["rules"]:
         german = re.sub(pattern, replacement, german)
     return german
+
+
+def split_steps(body: str) -> list[str]:
+    """Split a section body into its intro and one chunk per '####' step."""
+    return [chunk for chunk in re.split(r"\n(?=#### )", body) if chunk.strip()]
+
+
+def translate_section(body: str) -> str:
+    """Translate a section; long sections step by step (whole blocks made the model loop)."""
+    return "\n\n".join(apply_glossary(translate(chunk)) for chunk in split_steps(body))
+
+
+def english_sections(english: str) -> list[tuple[str, str]]:
+    """(heading, body) pairs of an English note part, without notice and sources."""
+    parts = re.split(r"^### (.+)$", SOURCES_HEADING.split(english)[0], flags=re.M)
+    return [(parts[i].strip(), parts[i + 1].strip()) for i in range(1, len(parts) - 1, 2)]
 
 
 def heading_count(text: str) -> int:
@@ -410,10 +435,13 @@ class Drafter:
             self.write_outline(plan, resolved, self.vault_text(plan))
             print(f"{plan.id}: outline in {time.time() - started:.0f}s", flush=True)
 
-    def draft(self, plans: list[NotePlan], force: bool = False) -> None:
+    def draft(self, plans: list[NotePlan], force: bool = False, retranslate: bool = False) -> None:
         self.drafts.mkdir(parents=True, exist_ok=True)
         for plan in plans:
             target = self.drafts / f"{plan.id}.md"
+            if retranslate and target.exists():
+                self.retranslate(plan, target)
+                continue
             if target.exists() and not force:
                 continue
             started = time.time()
@@ -435,6 +463,22 @@ class Drafter:
             )
             print(f"{plan.id}: drafted in {time.time() - started:.0f}s, "
                   f"{len(report['template'])} template problems", flush=True)
+
+    def retranslate(self, plan: NotePlan, target: Path) -> None:
+        """Rebuild the German part of an existing draft from its English part."""
+        started = time.time()
+        resolved = [sources.resolve(entry) for entry in plan.sources]
+        english = target.read_text(encoding="utf-8").split("\n## EN\n", 1)[1].split("\n## DE\n", 1)[0]
+        english = SOURCES_HEADING.split(english)[0].strip()
+        german = unlink_citations(self.german(plan, english_sections(english)), resolved)
+        note = assemble(plan, resolved, english, german)
+        target.write_text(note, encoding="utf-8")
+        report = self.check(plan, note, resolved, self.vault_text(plan))
+        (self.drafts / f"{plan.id}.review.json").write_text(
+            json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8"
+        )
+        print(f"{plan.id}: German part rebuilt in {time.time() - started:.0f}s, "
+              f"{len(report['template'])} template problems", flush=True)
 
     def write_parts(self, plan: NotePlan, resolved: list[sources.Source], vault_text: str,
                     outline: dict) -> tuple[str, str]:
@@ -487,10 +531,15 @@ class Drafter:
 
         written = [(h, label_bare_links(unlink_citations(b, resolved), self.titles)) for h, b in written]
         english = "\n\n".join([NOTICE_EN] + [f"### {h}\n\n{b}" for h, b in written])
-        german = "\n\n".join(
-            [NOTICE_DE] + [f"### {heading_de[h]}\n\n{apply_glossary(translate(b))}" for h, b in written]
+        return english, self.german(plan, written)
+
+    def german(self, plan: NotePlan, written: list[tuple[str, str]]) -> str:
+        en_required, en_optional = sections_for(plan.entity_type, 0)
+        de_required, de_optional = sections_for(plan.entity_type, 1)
+        heading_de = dict(zip(en_required + en_optional, de_required + de_optional))
+        return "\n\n".join(
+            [NOTICE_DE] + [f"### {heading_de[h]}\n\n{translate_section(b)}" for h, b in written]
         )
-        return english, german
 
     def check(self, plan: NotePlan, note: str, resolved: list[sources.Source], vault_text: str) -> dict:
         english = note.split("\n## EN\n", 1)[1].split("\n## DE\n", 1)[0]
@@ -502,6 +551,7 @@ class Drafter:
             "links": link_problems(note, known),
             "uncited_sources": [source.short for source in uncited(english, resolved)],
             "style": style_problems(english, resolved),
+            "empty_sections": [heading for heading, body in english_sections(english) if not body.strip()],
             "numbers_not_in_evidence": unknown_numbers(english, evidence),
             "overlap_en_with_abstracts": round(originality_overlap(english, [s.summary for s in resolved]), 3),
             "overlap_de_with_vault": round(originality_overlap(german, [vault_text]), 3),
@@ -519,7 +569,9 @@ class Drafter:
                 continue
             report = json.loads(report_path.read_text(encoding="utf-8"))
             copied = max(report["overlap_en_with_abstracts"], report["overlap_de_with_vault"])
-            blocking = report["template"] + report["links"]
+            blocking = report["template"] + report["links"] + [
+                f"empty section: {heading}" for heading in report.get("empty_sections", [])
+            ]
             clean_run &= not blocking and copied <= ORIGINALITY_LIMIT
             print(
                 f"{plan.id}: EN {report['words_en']} / DE {report['words_de']} words"
@@ -552,6 +604,7 @@ def main() -> int:
     parser.add_argument("package", help="package config in migration/technical/")
     parser.add_argument("--notes", help="comma-separated subset of the package")
     parser.add_argument("--force", action="store_true", help="redraft existing drafts")
+    parser.add_argument("--retranslate", action="store_true", help="only rebuild the German part of drafts")
     args = parser.parse_args()
 
     plans = load_package(args.package)
@@ -569,7 +622,7 @@ def main() -> int:
         if args.command == "outline":
             drafter.outline(plans, args.force)
         elif args.command == "draft":
-            drafter.draft(plans, args.force)
+            drafter.draft(plans, args.force, args.retranslate)
         elif args.command == "review":
             return 0 if drafter.review(plans) else 1
         else:
