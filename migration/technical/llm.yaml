@@ -1,0 +1,62 @@
+# Migration package "LLMs & Prompting": input for `python -m app.agents.technical_notes <command> llm`.
+# arXiv sources are verified against the `expect` title fragment before drafting.
+notes:
+  large-language-models:
+    sources:
+      - {arxiv: "1706.03762", expect: "Attention Is All You Need", venue: NeurIPS 2017}
+      - {arxiv: "2005.14165", expect: "Language Models are Few-Shot Learners", venue: NeurIPS 2020}
+      - {arxiv: "2001.08361", expect: "Scaling Laws for Neural Language Models"}
+      - {arxiv: "2203.15556", expect: "Training Compute-Optimal Large Language Models"}
+      - {arxiv: "2203.02155", expect: "Training language models to follow instructions"}
+      - {arxiv: "2206.07682", expect: "Emergent Abilities of Large Language Models", venue: TMLR}
+      - {arxiv: "1508.07909", expect: "Neural Machine Translation of Rare Words with Subword Units", venue: ACL 2016}
+      - {arxiv: "1904.09751", expect: "The Curious Case of Neural Text Degeneration", venue: ICLR 2020}
+  llm-adaptation:
+    sources:
+      - {arxiv: "2005.11401", expect: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", venue: NeurIPS 2020}
+      - {arxiv: "2109.01652", expect: "Finetuned Language Models Are Zero-Shot Learners", venue: ICLR 2022}
+      - {arxiv: "2106.09685", expect: "LoRA", venue: ICLR 2022}
+      - {arxiv: "2305.14314", expect: "QLoRA", venue: NeurIPS 2023}
+      - {arxiv: "1503.02531", expect: "Distilling the Knowledge in a Neural Network"}
+      - {arxiv: "1710.03740", expect: "Mixed Precision Training", venue: ICLR 2018}
+  lora:
+    sources:
+      - {arxiv: "2106.09685", expect: "LoRA", venue: ICLR 2022}
+      - {arxiv: "2012.13255", expect: "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning", venue: ACL 2021}
+      - {arxiv: "2305.14314", expect: "QLoRA", venue: NeurIPS 2023}
+      - {arxiv: "2402.09353", expect: "DoRA", venue: ICML 2024}
+  prompt-engineering:
+    sources:
+      - {arxiv: "2005.14165", expect: "Language Models are Few-Shot Learners", venue: NeurIPS 2020}
+      - {arxiv: "2201.11903", expect: "Chain-of-Thought Prompting Elicits Reasoning", venue: NeurIPS 2022}
+      - {arxiv: "2205.11916", expect: "Large Language Models are Zero-Shot Reasoners", venue: NeurIPS 2022}
+      - {arxiv: "2203.11171", expect: "Self-Consistency Improves Chain of Thought Reasoning", venue: ICLR 2023}
+      - {arxiv: "2406.06608", expect: "The Prompt Report"}
+  context-engineering:
+    sources:
+      - {arxiv: "2507.13334", expect: "A Survey of Context Engineering for Large Language Models"}
+      - {arxiv: "2307.03172", expect: "Lost in the Middle", venue: TACL}
+      - {arxiv: "2310.05736", expect: "LLMLingua", venue: EMNLP 2023}
+      - {arxiv: "2310.08560", expect: "MemGPT"}
+      - {arxiv: "2005.11401", expect: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", venue: NeurIPS 2020}
+  prompt-comparison:
+    sources:
+      - {arxiv: "2310.11324", expect: "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design", venue: ICLR 2024}
+      - {arxiv: "2401.00595", expect: "State of What Art? A Call for Multi-Prompt LLM Evaluation", venue: TACL}
+      - {arxiv: "2406.06608", expect: "The Prompt Report"}
+      - {arxiv: "2306.05685", expect: "Judging LLM-as-a-Judge", venue: NeurIPS 2023}
+  llm-evaluation:
+    sources:
+      - {arxiv: "2211.09110", expect: "Holistic Evaluation of Language Models", venue: TMLR}
+      - {arxiv: "2009.03300", expect: "Measuring Massive Multitask Language Understanding", venue: ICLR 2021}
+      - {arxiv: "2109.07958", expect: "TruthfulQA", venue: ACL 2022}
+      - {arxiv: "2306.05685", expect: "Judging LLM-as-a-Judge", venue: NeurIPS 2023}
+      - {arxiv: "2403.04132", expect: "Chatbot Arena", venue: ICML 2024}
+  llm-as-a-judge:
+    sources:
+      - {arxiv: "2306.05685", expect: "Judging LLM-as-a-Judge", venue: NeurIPS 2023}
+      - {arxiv: "2303.16634", expect: "G-Eval", venue: EMNLP 2023}
+      - {arxiv: "2305.17926", expect: "Large Language Models are not Fair Evaluators", venue: ACL 2024}
+      - {arxiv: "2404.13076", expect: "LLM Evaluators Recognize and Favor Their Own Generations", venue: NeurIPS 2024}
+      - {arxiv: "2310.08491", expect: "Prometheus", venue: ICLR 2024}
+      - {arxiv: "2411.15594", expect: "A Survey on LLM-as-a-Judge"}
