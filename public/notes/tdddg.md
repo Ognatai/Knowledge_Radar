@@ -172,7 +172,39 @@ Allows providers of digital services and other addressees to process personal da
 
 #### § 25 — Protection of Privacy in Terminal Equipment
 
-Allows information to be stored in or accessed from an end user's terminal equipment only with consent, unless strictly necessary to transmit a message or to provide a digital service explicitly requested by the user.
+##### What is it about?
+
+§ 25 protects the end user's terminal equipment, such as computers, smartphones or connected devices. Anyone who stores information there or accesses information already stored there needs consent in principle. The provision transposes Art. 5(3) of the [[eprivacy-directive|ePrivacy Directive]] and is the legal basis for cookie banners in Germany. It applies regardless of whether the information is personal data.
+
+##### What does the section require?
+
+- **Paragraph 1** – Storing information in the end user's terminal equipment, or accessing information already stored there, is only permitted if the end user has consented on the basis of clear and comprehensive information. Information and consent follow the GDPR.
+- **Paragraph 2** – Consent is not required
+  1. where the sole purpose is to transmit a message over a public telecommunications network, or
+  2. where the storage or access is strictly necessary for the provider of a digital service to provide a digital service explicitly requested by the user.
+
+##### Who is affected?
+
+Anyone who stores or reads information on terminal equipment, in particular operators of websites and apps and providers of tracking, analytics and advertising services. End users are the protected persons. Supervision lies with the state data protection authorities and, for telecommunications providers and federal public bodies, with the Federal Commissioner (§ 29). Infringements of paragraph 1 can be fined up to **EUR 300,000** (§ 28).
+
+##### What is not specified?
+
+- When storage or access is "strictly necessary" and which service is "explicitly requested", for example for audience measurement or security features.
+- How consent banners are to be designed in detail; the GDPR requirements for consent apply.
+- The subsequent processing of personal data, which needs its own legal basis under the GDPR.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Record all cookies, SDKs, local storage entries and fingerprinting techniques of a website or app, and note for each whether it is strictly necessary.
+- Collect usage data from devices for training recommendation or personalisation models only after consent.
+- For on-device AI, check whether storing models, embeddings or profiles on the device is strictly necessary for the requested service.
+- Define a legal basis under the GDPR for any further processing of the data.
+
+##### When does it apply?
+
+Applies since the Act entered into force (then as TTDSG) on **1 December 2021**.
 
 #### § 26 — Recognised Services for Consent Management, End User Settings
 
@@ -387,7 +419,39 @@ Erlaubt die Verarbeitung personenbezogener Daten durch Anbieter digitaler Dienst
 
 #### § 25 – Schutz der Privatsphäre bei Endeinrichtungen
 
-Erlaubt das Speichern von Informationen in der Endeinrichtung des Endnutzers und den Zugriff darauf nur mit Einwilligung, es sei denn, dies ist für die Übertragung einer Nachricht oder einen ausdrücklich gewünschten digitalen Dienst unbedingt erforderlich.
+##### Worum geht es?
+
+§ 25 schützt die Endeinrichtung des Endnutzers, also etwa Computer, Smartphone oder vernetzte Geräte. Wer Informationen dort speichert oder auf dort gespeicherte Informationen zugreift, braucht grundsätzlich eine Einwilligung. Die Vorschrift setzt Art. 5 Abs. 3 der [[eprivacy-directive|ePrivacy-Richtlinie]] um und ist die Grundlage für Cookie-Banner in Deutschland. Sie gilt unabhängig davon, ob die Informationen personenbezogen sind.
+
+##### Was verlangt die Vorschrift?
+
+- **Absatz 1** – Das Speichern von Informationen in der Endeinrichtung des Endnutzers und der Zugriff auf dort bereits gespeicherte Informationen sind nur zulässig, wenn der Endnutzer auf Grundlage klarer und umfassender Informationen eingewilligt hat. Information und Einwilligung richten sich nach der DSGVO.
+- **Absatz 2** – Eine Einwilligung ist nicht erforderlich,
+  1. wenn der alleinige Zweck die Übertragung einer Nachricht über ein öffentliches Telekommunikationsnetz ist, oder
+  2. wenn das Speichern oder der Zugriff unbedingt erforderlich ist, damit der Anbieter eines digitalen Dienstes einen vom Nutzer ausdrücklich gewünschten digitalen Dienst zur Verfügung stellen kann.
+
+##### Wer ist betroffen?
+
+Alle, die Informationen in Endeinrichtungen speichern oder auslesen, insbesondere Betreiber von Websites und Apps sowie Anbieter von Tracking-, Analyse- und Werbediensten. Geschützt sind die Endnutzer. Die Aufsicht liegt bei den Landesdatenschutzbehörden und, für Telekommunikationsanbieter und öffentliche Stellen des Bundes, bei der oder dem BfDI (§ 29). Verstöße gegen Absatz 1 können mit Geldbußen bis zu **300.000 Euro** geahndet werden (§ 28).
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Wann ein Speichern oder Zugriff „unbedingt erforderlich“ ist und welcher Dienst „ausdrücklich gewünscht“ ist, etwa bei Reichweitenmessung oder Sicherheitsfunktionen.
+- Wie Einwilligungsbanner im Einzelnen zu gestalten sind; dafür gelten die Anforderungen der DSGVO an die Einwilligung.
+- Die anschließende Verarbeitung personenbezogener Daten; sie braucht eine eigene Rechtsgrundlage nach der DSGVO.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Alle Cookies, SDKs, Local-Storage-Einträge und Fingerprinting-Techniken einer Website oder App erfassen und jeweils festhalten, ob sie unbedingt erforderlich sind.
+- Nutzungsdaten für das Training von Empfehlungs- oder Personalisierungsmodellen nur nach Einwilligung auf dem Endgerät erheben.
+- Bei On-Device-KI prüfen, ob das Speichern von Modellen, Embeddings oder Profilen auf dem Gerät für den gewünschten Dienst unbedingt erforderlich ist.
+- Für die weitere Verarbeitung der Daten zusätzlich eine Rechtsgrundlage nach der DSGVO festlegen.
+
+##### Ab wann gilt die Vorschrift?
+
+Gilt seit dem Inkrafttreten des Gesetzes (damals TTDSG) am **1. Dezember 2021**.
 
 #### § 26 – Anerkannte Dienste zur Einwilligungsverwaltung, Endnutzereinstellungen
 

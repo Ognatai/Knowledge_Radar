@@ -103,3 +103,23 @@ def test_corrections_of_the_translation_never_overwrite_the_source_language(tmp_
     data = json.loads((tmp_path / "law" / "summaries.json").read_text())
     assert data["de"]["38"]["summary"] == "Verpflichtet."
     assert (data["en"]["38"]["title"], data["en"]["38"]["summary"]) == ("Data protection officers of non-public bodies", "Requires a DPO.")
+
+
+def test_detailed_section_replaces_summary_and_keeps_generated_heading(tmp_path):
+    folder = tmp_path / "law"
+    folder.mkdir()
+    (folder / "26.de.md").write_text(
+        "#### § 26 – Falsche Überschrift\n\n##### Worum geht es?\n\nBeschäftigtendaten.\n", encoding="utf-8")
+    details = rn.load_details("law", "de", tmp_path)
+    data = {"de": {
+        "26": {"number": "§ 26", "title": "Datenverarbeitung für Zwecke des Beschäftigungsverhältnisses",
+               "summary": "Regelt.", "problems": [], "path": []},
+        "27": {"number": "§ 27", "title": "Forschung", "summary": "Erlaubt.", "problems": [], "path": []},
+    }}
+
+    block = rn.Builder.provisions_block(None, data, "de", details)
+
+    assert details == {"26": "##### Worum geht es?\n\nBeschäftigtendaten."}
+    assert "#### § 26 – Datenverarbeitung für Zwecke des Beschäftigungsverhältnisses\n\n##### Worum geht es?" in block
+    assert "Falsche Überschrift" not in block
+    assert "#### § 27 – Forschung\n\nErlaubt." in block

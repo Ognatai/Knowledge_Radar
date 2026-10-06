@@ -173,7 +173,43 @@ Regulates transfers of personal data by public bodies to public and non-public b
 
 #### § 26 — Data Processing for Employment Purposes
 
-Regulates the processing of employees' personal data for employment purposes, in particular for decisions on establishing, carrying out or terminating employment.
+##### What is it about?
+
+§ 26 is the central provision on employee data protection. It sets out when employers may process employees' personal data for employment purposes, which requirements apply to consent in the employment relationship, when special categories of personal data may be processed, and who counts as an employee. The provision uses the opening clause of Art. 88 GDPR. On whether paragraph 1 meets its requirements, see the CJEU judgment C-34/21 in the timeline.
+
+##### What does the section require?
+
+- **Paragraph 1** – Employee data may be processed where necessary for deciding on the establishment of an employment relationship, for carrying it out or terminating it, or for exercising or fulfilling the rights and duties of the employees' representative body under a statute, collective agreement or works or service agreement (collective agreement). To detect criminal offences, processing is only permitted if factual indications, which must be documented, give rise to a suspicion of an offence committed in the employment relationship, the processing is necessary, and the employee's legitimate interest does not prevail.
+- **Paragraph 2** – Where consent is used, its voluntary nature is assessed in particular in view of the employee's dependence in the employment relationship and the circumstances in which consent was given. Consent may in particular be voluntary if the employee gains a legal or economic advantage or employer and employee pursue aligned interests. Consent is given in writing or electronically unless special circumstances justify another form; the employer informs the employee in text form of the purpose and of the right to withdraw consent under Art. 7(3) GDPR.
+- **Paragraph 3** – By derogation from Art. 9(1) GDPR, special categories of personal data may be processed where necessary to exercise rights or fulfil legal obligations under employment, social security and social protection law and there is no reason to assume that the data subject's legitimate interest prevails. Consent must refer explicitly to these data; § 22(2) applies accordingly.
+- **Paragraph 4** – Processing is also permitted on the basis of collective agreements; the negotiating parties must observe Art. 88(2) GDPR.
+- **Paragraph 5** – The controller must take appropriate measures to ensure compliance, in particular, with the principles of Art. 5 GDPR.
+- **Paragraph 6** – The participation rights of employee representative bodies, such as the works council, remain unaffected.
+- **Paragraph 7** – Paragraphs 1 to 6 also apply to processing outside a filing system.
+- **Paragraph 8** – Employees include, among others, employees (including temporary agency workers in relation to the hirer), trainees, persons in vocational rehabilitation, persons employed in sheltered workshops for people with disabilities, volunteers under the Youth Voluntary Service Act or Federal Voluntary Service Act, persons similar to employees, and federal civil servants, federal judges and soldiers. Job applicants and former employees are also treated as employees.
+
+##### Who is affected?
+
+Employers and other controllers processing data of employees within the meaning of paragraph 8, including job applicants. The employees are the protected persons. Works and staff councils are involved through their participation rights (paragraph 6) and as parties to collective agreements (paragraph 4).
+
+##### What is not specified?
+
+- When processing is "necessary" in the individual case and how the balancing of interests is to be carried out.
+- Which measures under paragraph 5 are "appropriate".
+- Which "special circumstances" justify a form of consent other than written or electronic.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Before using AI tools in recruiting, performance analysis or workforce planning, assess and document whether the processing is necessary for the specific purpose; after C-34/21, also check the general legal bases of the GDPR.
+- Rely on employee consent only where it can genuinely be voluntary, and explain the purpose and the right to withdraw in text form.
+- Involve the works or staff council early and, where appropriate, regulate the use of such systems in a works agreement that observes Art. 88(2) GDPR.
+- Treat applicants' data in the same way as employee data.
+
+##### When does it apply?
+
+Applies since the Act entered into force on **25 May 2018**.
 
 #### § 27 — Data Processing for Scientific or Historical Research and Statistical Purposes
 
@@ -193,7 +229,47 @@ Requires credit agencies to treat information requests from lenders in other EU 
 
 #### § 31 — Protection of Commercial Transactions in Scoring and Creditworthiness Reports
 
-Sets out the conditions for using probability values about a person's future behaviour (scoring) and credit reports, including the use of information about claims.
+##### What is it about?
+
+§ 31 sets out when probability values about a person's future behaviour (scoring) may be used for contract decisions, and which claims may be included in credit scores of credit agencies. On the relationship with Art. 22 GDPR, see the CJEU judgment C-634/21 (SCHUFA) in the timeline.
+
+##### What does the section require?
+
+- **Paragraph 1** – A probability value about a specific future behaviour of a natural person may be used to decide on establishing, carrying out or terminating a contract with that person only if
+  1. data protection law has been complied with,
+  2. the data used are demonstrably relevant for the calculation on the basis of a scientifically recognised mathematical-statistical method,
+  3. address data were not the only data used, and
+  4. where address data are used, the data subject was informed beforehand; this must be documented.
+- **Paragraph 2** – A value on a person's ability and willingness to pay determined by a credit agency may include information about claims only if paragraph 1 is met and the claims are due and unpaid and
+  1. established by a final or provisionally enforceable judgment, or covered by an enforceable title under § 794 of the Code of Civil Procedure,
+  2. established under § 178 of the Insolvency Code and not disputed by the debtor at the verification meeting,
+  3. expressly acknowledged by the debtor,
+  4. undisputed after at least **two** written reminders, the first at least **four weeks** earlier, with prior notice that a credit agency may take the claim into account, or
+  5. arising from a contract that can be terminated without notice because of payment arrears, where the debtor was informed beforehand that a credit agency may take the claim into account.
+
+  The processing of other creditworthiness data under general data protection law remains unaffected.
+
+##### Who is affected?
+
+Companies using scores for contract decisions, such as banks, mail-order retailers, landlords or insurers, and credit agencies that calculate credit scores. The scored natural persons are the protected persons.
+
+##### What is not specified?
+
+- Which methods count as "scientifically recognised" and how the relevance of the data is to be demonstrated.
+- How scoring by the credit agency and the use of the score by the company relate to each other; the CJEU's SCHUFA judgment (C-634/21) is decisive here.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- For Machine Learning models used in scoring, document that every feature is demonstrably relevant for the prediction, for example by validation on test data.
+- Design models so that they do not rely on address data alone, and inform data subjects before address data are used.
+- Before claims data are used in a model, check that one of the five cases of paragraph 2 applies.
+- Check whether the decision draws strongly on the score within the meaning of Art. 22 GDPR and, if so, provide the safeguards required there.
+
+##### When does it apply?
+
+Applies since the Act entered into force on **25 May 2018**.
 
 **Chapter 2 — Rights of the Data Subject**
 
@@ -641,7 +717,43 @@ Regelt die Übermittlung personenbezogener Daten durch öffentliche Stellen an �
 
 #### § 26 – Datenverarbeitung für Zwecke des Beschäftigungsverhältnisses
 
-Regelt die Verarbeitung personenbezogener Daten von Beschäftigten für Zwecke des Beschäftigungsverhältnisses, insbesondere zur Entscheidung über die Begründung, Durchführung oder Beendigung des Beschäftigungsverhältnisses.
+##### Worum geht es?
+
+§ 26 ist die zentrale Vorschrift für den Beschäftigtendatenschutz. Er regelt, wann Arbeitgeber personenbezogene Daten von Beschäftigten für Zwecke des Beschäftigungsverhältnisses verarbeiten dürfen, welche Anforderungen für Einwilligungen im Beschäftigungsverhältnis gelten, wann besondere Kategorien personenbezogener Daten verarbeitet werden dürfen und wer als beschäftigt gilt. Die Vorschrift nutzt die Öffnungsklausel des Art. 88 DSGVO. Zur Frage, ob Absatz 1 deren Anforderungen genügt, siehe das EuGH-Urteil C-34/21 im Zeitplan.
+
+##### Was verlangt die Vorschrift?
+
+- **Absatz 1** – Beschäftigtendaten dürfen verarbeitet werden, wenn dies für die Entscheidung über die Begründung eines Beschäftigungsverhältnisses, für dessen Durchführung oder Beendigung oder zur Ausübung oder Erfüllung der Rechte und Pflichten der Interessenvertretung der Beschäftigten aus Gesetz, Tarifvertrag oder Betriebs- oder Dienstvereinbarung (Kollektivvereinbarung) erforderlich ist. Zur Aufdeckung von Straftaten ist die Verarbeitung nur zulässig, wenn zu dokumentierende tatsächliche Anhaltspunkte den Verdacht einer Straftat im Beschäftigungsverhältnis begründen, die Verarbeitung erforderlich ist und das schutzwürdige Interesse der beschäftigten Person nicht überwiegt.
+- **Absatz 2** – Bei einer Einwilligung sind für die Freiwilligkeit insbesondere die Abhängigkeit im Beschäftigungsverhältnis und die Umstände der Erteilung zu berücksichtigen. Freiwilligkeit kann insbesondere vorliegen, wenn die beschäftigte Person einen rechtlichen oder wirtschaftlichen Vorteil erlangt oder Arbeitgeber und beschäftigte Person gleichgelagerte Interessen verfolgen. Die Einwilligung erfolgt schriftlich oder elektronisch, soweit nicht besondere Umstände eine andere Form rechtfertigen; der Arbeitgeber klärt in Textform über den Zweck und das Widerrufsrecht nach Art. 7 Abs. 3 DSGVO auf.
+- **Absatz 3** – Abweichend von Art. 9 Abs. 1 DSGVO dürfen besondere Kategorien personenbezogener Daten verarbeitet werden, wenn dies zur Ausübung von Rechten oder Erfüllung rechtlicher Pflichten aus dem Arbeitsrecht, dem Recht der sozialen Sicherheit und des Sozialschutzes erforderlich ist und kein Grund zu der Annahme besteht, dass das schutzwürdige Interesse der betroffenen Person überwiegt. Eine Einwilligung muss sich ausdrücklich auf diese Daten beziehen; § 22 Abs. 2 gilt entsprechend.
+- **Absatz 4** – Die Verarbeitung ist auch auf Grundlage von Kollektivvereinbarungen zulässig; die Verhandlungspartner müssen dabei Art. 88 Abs. 2 DSGVO beachten.
+- **Absatz 5** – Der Verantwortliche muss durch geeignete Maßnahmen sicherstellen, dass insbesondere die Grundsätze des Art. 5 DSGVO eingehalten werden.
+- **Absatz 6** – Die Beteiligungsrechte der Interessenvertretungen der Beschäftigten, etwa des Betriebsrats, bleiben unberührt.
+- **Absatz 7** – Die Absätze 1 bis 6 gelten auch für Verarbeitungen ohne Dateisystem.
+- **Absatz 8** – Beschäftigte sind unter anderem Arbeitnehmerinnen und Arbeitnehmer (einschließlich Leiharbeit im Verhältnis zum Entleiher), Auszubildende, Rehabilitandinnen und Rehabilitanden, Beschäftigte in Werkstätten für behinderte Menschen, Freiwillige nach dem Jugendfreiwilligendienstegesetz oder Bundesfreiwilligendienstgesetz, arbeitnehmerähnliche Personen sowie Beamtinnen und Beamte, Richterinnen und Richter des Bundes und Soldatinnen und Soldaten. Bewerberinnen und Bewerber sowie ehemalige Beschäftigte gelten ebenfalls als Beschäftigte.
+
+##### Wer ist betroffen?
+
+Arbeitgeber und andere Verantwortliche, die Daten von Beschäftigten im Sinne des Absatzes 8 verarbeiten, einschließlich Bewerberinnen und Bewerbern. Geschützt sind die Beschäftigten. Betriebs- und Personalräte sind über ihre Beteiligungsrechte (Absatz 6) und als Partner von Kollektivvereinbarungen (Absatz 4) beteiligt.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Wann eine Verarbeitung im Einzelfall „erforderlich“ ist und wie die Interessenabwägung vorzunehmen ist.
+- Welche Maßnahmen nach Absatz 5 „geeignet“ sind.
+- Welche „besonderen Umstände“ eine andere Form der Einwilligung als schriftlich oder elektronisch rechtfertigen.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Vor dem Einsatz von KI-Werkzeugen in Recruiting, Leistungsanalyse oder Personalplanung prüfen und dokumentieren, ob die Verarbeitung für den konkreten Zweck erforderlich ist; nach C-34/21 zusätzlich die allgemeinen Rechtsgrundlagen der DSGVO prüfen.
+- Einwilligungen von Beschäftigten nur dort nutzen, wo sie tatsächlich freiwillig sein können, und Zweck sowie Widerrufsrecht in Textform erläutern.
+- Den Betriebs- oder Personalrat frühzeitig einbinden und den Einsatz solcher Systeme gegebenenfalls in einer Betriebsvereinbarung regeln, die Art. 88 Abs. 2 DSGVO beachtet.
+- Daten von Bewerberinnen und Bewerbern genauso behandeln wie Beschäftigtendaten.
+
+##### Ab wann gilt die Vorschrift?
+
+Gilt seit dem Inkrafttreten des Gesetzes am **25. Mai 2018**.
 
 #### § 27 – Datenverarbeitung zu wissenschaftlichen oder historischen Forschungszwecken und zu statistischen Zwecken
 
@@ -661,7 +773,47 @@ Verpflichtet Auskunfteien, Auskunftsverlangen von Darlehensgebern aus anderen EU
 
 #### § 31 – Schutz des Wirtschaftsverkehrs bei Scoring und Bonitätsauskünften
 
-Regelt die Voraussetzungen für die Verwendung von Wahrscheinlichkeitswerten zum Zweck von Scoring und Bonitätsauskünften sowie die Berücksichtigung von Forderungen.
+##### Worum geht es?
+
+§ 31 regelt, unter welchen Voraussetzungen Wahrscheinlichkeitswerte über das künftige Verhalten einer Person (Scoring) für Entscheidungen über Verträge verwendet werden dürfen, und welche Forderungen in Bonitätsscores von Auskunfteien einfließen dürfen. Zum Verhältnis zu Art. 22 DSGVO siehe das EuGH-Urteil C-634/21 (SCHUFA) im Zeitplan.
+
+##### Was verlangt die Vorschrift?
+
+- **Absatz 1** – Ein Wahrscheinlichkeitswert über ein bestimmtes künftiges Verhalten einer natürlichen Person darf zur Entscheidung über Begründung, Durchführung oder Beendigung eines Vertrags mit ihr nur verwendet werden, wenn
+  1. die Vorschriften des Datenschutzrechts eingehalten wurden,
+  2. die genutzten Daten nach einem wissenschaftlich anerkannten mathematisch-statistischen Verfahren nachweisbar für die Berechnung erheblich sind,
+  3. nicht ausschließlich Anschriftendaten genutzt wurden und
+  4. die betroffene Person bei Nutzung von Anschriftendaten vorher unterrichtet wurde; die Unterrichtung ist zu dokumentieren.
+- **Absatz 2** – Ein von einer Auskunftei ermittelter Wert zur Zahlungsfähigkeit und Zahlungswilligkeit darf Informationen über Forderungen nur einbeziehen, wenn die Voraussetzungen des Absatzes 1 vorliegen und es sich um fällige, nicht erbrachte Forderungen handelt, die
+  1. durch ein rechtskräftiges oder vorläufig vollstreckbares Urteil festgestellt sind oder für die ein Schuldtitel nach § 794 ZPO vorliegt,
+  2. nach § 178 InsO festgestellt und im Prüfungstermin nicht bestritten wurden,
+  3. ausdrücklich anerkannt wurden,
+  4. nach mindestens **zwei** schriftlichen Mahnungen, deren erste mindestens **vier Wochen** zurückliegt, und vorheriger Unterrichtung über eine mögliche Berücksichtigung durch eine Auskunftei unbestritten geblieben sind, oder
+  5. aus einem Vertrag stammen, der wegen Zahlungsrückständen fristlos gekündigt werden kann, wenn der Schuldner vorher über eine mögliche Berücksichtigung unterrichtet wurde.
+
+  Die Verarbeitung anderer bonitätsrelevanter Daten nach allgemeinem Datenschutzrecht bleibt unberührt.
+
+##### Wer ist betroffen?
+
+Unternehmen, die Scores für Vertragsentscheidungen verwenden, etwa Banken, Versandhändler, Vermieter oder Versicherungen, sowie Auskunfteien, die Bonitätsscores ermitteln. Geschützt sind die bewerteten natürlichen Personen.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Welche Verfahren als „wissenschaftlich anerkannt“ gelten und wie die Erheblichkeit der Daten nachzuweisen ist.
+- Wie Scoring durch die Auskunftei selbst und die Verwendung des Scores durch das Unternehmen voneinander abzugrenzen sind; dazu ist das SCHUFA-Urteil des EuGH (C-634/21) maßgeblich.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Für Machine-Learning-Modelle im Scoring dokumentieren, dass jedes verwendete Merkmal nachweisbar für die Vorhersage erheblich ist, etwa durch Validierung auf Testdaten.
+- Modelle so gestalten, dass sie nicht allein auf Anschriftendaten beruhen, und Betroffene vor der Nutzung von Anschriftendaten unterrichten.
+- Bei Forderungsdaten prüfen, ob eine der fünf Fallgruppen des Absatzes 2 erfüllt ist, bevor sie in ein Modell einfließen.
+- Prüfen, ob die Entscheidung im Sinne von Art. 22 DSGVO maßgeblich auf dem Score beruht, und dann die dortigen Schutzmaßnahmen vorsehen.
+
+##### Ab wann gilt die Vorschrift?
+
+Gilt seit dem Inkrafttreten des Gesetzes am **25. Mai 2018**.
 
 **Kapitel 2 – Rechte der betroffenen Person**
 

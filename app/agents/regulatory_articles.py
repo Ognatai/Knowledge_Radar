@@ -120,7 +120,7 @@ def draft_prompt(config: ActConfig, article: str, language: Language, official: 
     return render(
         "regulatory_article.md",
         act_context=config.act_context,
-        article=article,
+        provision=f"{language.article_word} {article}",
         language=language.name,
         heading_requires=headings[1],
         heading_open=headings[3],

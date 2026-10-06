@@ -70,11 +70,74 @@ Defines the key terms of the Regulation, including personal data, processing, pr
 
 #### Article 5 — Principles relating to processing of personal data
 
-Sets out the principles that personal data must be processed in accordance with, including lawfulness, fairness, transparency, purpose limitation, data minimisation, accuracy, storage limitation and integrity and confidentiality.
+##### What is it about?
+
+Article 5 sets out the principles that personal data must be processed in accordance with, including lawfulness, fairness, transparency, purpose limitation, data minimisation, accuracy, storage limitation, and integrity and confidentiality. It also establishes the accountability principle for controllers.
+
+##### What does the article require?
+
+- **Paragraph 1** – Personal data shall be:
+  - (a) processed lawfully, fairly and in a transparent manner (*lawfulness, fairness and transparency*);
+  - (b) collected for specified, explicit and legitimate purposes and not further processed in a manner incompatible with those purposes; further processing for archiving in the public interest, scientific or historical research or statistical purposes under Article 89(1) is not considered incompatible (*purpose limitation*);
+  - (c) adequate, relevant and limited to what is necessary for the purposes (*data minimisation*);
+  - (d) accurate and, where necessary, kept up to date; inaccurate data must be erased or rectified without delay (*accuracy*);
+  - (e) kept in a form which permits identification no longer than necessary; longer storage is possible for the purposes under Article 89(1) with appropriate safeguards (*storage limitation*);
+  - (f) processed with appropriate security, including protection against unauthorised or unlawful processing and accidental loss, destruction or damage (*integrity and confidentiality*).
+- **Paragraph 2** – The controller is responsible for, and must be able to demonstrate, compliance with paragraph 1 (*accountability*).
+
+##### Who is affected?
+
+Every controller, for every processing of personal data. Processors are bound indirectly through their contracts and their own obligations under the Regulation.
+
+##### What is not specified?
+
+The article does not specify the exact methods for demonstrating compliance with paragraph 1. It does not define "fairness" in specific contexts; the legal bases for lawfulness are set out in Article 6. It does not detail the "appropriate technical or organisational measures" required for security under point (f) of paragraph 1. It does not specify the scope or nature of the "demonstration" required under paragraph 2.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Define and document the purpose of each training or fine-tuning dataset before collecting data; check compatibility before reusing data collected for other purposes (purpose limitation).
+- Remove fields that the model does not need, and prefer anonymised or pseudonymised data (data minimisation).
+- Set retention periods for training data, logs and prompts and delete data when they expire (storage limitation).
+- Keep records that show how each principle is met, since the controller must be able to demonstrate compliance (accountability).
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 6 — Lawfulness of processing
 
-Defines the conditions under which processing of personal data is lawful, including consent, contract performance, legal obligation, vital interests, public interest, and legitimate interests.
+##### What is it about?
+
+Article 6 establishes the conditions under which the processing of personal data is lawful. It defines the lawful bases for processing, including consent, contract, legal obligation, vital interests, public interest, and legitimate interests. It also specifies requirements for legal bases related to points (c) and (e) of paragraph 1, and sets out criteria for determining compatibility of further processing.
+
+##### What does the article require?
+
+- **Paragraph 1** – Processing shall be lawful only if and to the extent that at least one of the following applies: (a) the data subject has given consent; (b) processing is necessary for a contract; (c) processing is necessary for compliance with a legal obligation; (d) processing is necessary to protect vital interests; (e) processing is necessary for a task in the public interest or exercise of official authority; (f) processing is necessary for legitimate interests, except where overridden by the data subject’s rights (including children’s rights). Point (f) does not apply to public authorities performing their tasks.
+- **Paragraph 2** – Member States may maintain or introduce more specific provisions to adapt the application of rules regarding processing for compliance with points (c) and (e) of paragraph 1, including determining specific requirements for processing and ensuring lawful and fair processing.
+- **Paragraph 3** – The basis for processing referred to in points (c) and (e) of paragraph 1 shall be laid down by Union law or Member State law. The legal basis must meet an objective of public interest and be proportionate. It may contain specific provisions on general conditions, types of data, data subjects, disclosure entities, purpose limitation, storage periods, processing operations, and safeguards.
+- **Paragraph 4** – Where further processing is not based on consent or Union/Member State law under Article 23(1), the controller must assess compatibility by considering: (a) link between initial and further purposes; (b) context of collection; (c) nature of data (including special categories under Article 9 or criminal data under Article 10); (d) consequences for data subjects; (e) existence of appropriate safeguards (e.g., encryption).
+
+##### Who is affected?
+
+Controllers are directly affected by the requirements in paragraphs 1, 3, and 4. Member States are affected by the obligation in paragraph 2. Public authorities are affected by the exclusion in paragraph 1, point (f).
+
+##### What is not specified?
+
+The article does not specify what constitutes "necessary" for contract performance or legal obligation. It does not define "vital interests" or "public interest" in detail. It does not prescribe specific safeguards beyond mentioning encryption or pseudonymisation in paragraph 4. It does not detail how to determine proportionality under paragraph 3.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Choose and document a legal basis for each processing purpose before it starts, e.g. separately for operating a service and for training models on its data.
+- Where legitimate interests (point (f)) are relied on for training, document the balancing test, including the reasonable expectations of the data subjects.
+- Before reusing data for a new purpose such as model training, carry out the compatibility test of paragraph 4 and consider safeguards such as pseudonymisation.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 7 — Conditions for consent
 
@@ -86,7 +149,46 @@ Sets the conditions for a child's consent to information society services offere
 
 #### Article 9 — Processing of special categories of personal data
 
-Prohibits processing of special categories of personal data unless specific exceptions apply, including explicit consent, legal obligations, protection of vital interests, or processing by non-profit organisations with appropriate safeguards.
+##### What is it about?
+
+Article 9 prohibits the processing of special categories of personal data, including racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data for identification, health data, and data concerning sex life or sexual orientation. It sets out specific exceptions to this prohibition.
+
+##### What does the article require?
+
+- **Paragraph 1** – Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation is prohibited.
+- **Paragraph 2** – Paragraph 1 shall not apply if one of the following applies:
+  - (a) the data subject has given explicit consent;
+  - (b) processing is necessary for obligations or rights in employment and social security law;
+  - (c) processing is necessary to protect vital interests where the data subject cannot consent;
+  - (d) processing is carried out by a foundation, association, or non-profit body with a political, philosophical, religious, or trade union aim, with appropriate safeguards and solely for members or persons with regular contact;
+  - (e) processing relates to data manifestly made public by the data subject;
+  - (f) processing is necessary for legal claims or judicial proceedings;
+  - (g) processing is necessary for substantial public interest under proportionate law providing safeguards;
+  - (h) processing is necessary for preventive or occupational medicine, medical diagnosis, or health care under specific law and safeguards;
+  - (i) processing is necessary for public health under specific law providing safeguards;
+  - (j) processing is necessary for archiving, research, or statistical purposes under specific law providing safeguards.
+- **Paragraph 3** – Personal data referred to in paragraph 1 may be processed for the purposes referred to in point (h) of paragraph 2 when processed by or under the responsibility of a professional subject to professional secrecy, or by another person subject to an obligation of secrecy.
+- **Paragraph 4** – Member States may maintain or introduce further conditions, including limitations, regarding the processing of genetic data, biometric data, or data concerning health.
+
+##### Who is affected?
+
+Controllers processing special categories of personal data are directly affected. The data subject is affected regarding consent requirements. Member States are affected regarding the ability to maintain or introduce further conditions. Entities processing data for purposes listed in paragraph 2(b), (d), (h), (i), or (j) are affected by the specific conditions stated.
+
+##### What is not specified?
+
+The article does not specify what constitutes "explicit consent" under paragraph 2(a), nor the precise content of "appropriate safeguards" under paragraphs 2(b), (d), (h), and (j). It does not define "substantial public interest" under paragraph 2(g) or "proportionate" measures under paragraphs 2(g) and (j). It does not specify the nature of "further conditions" Member States may introduce under paragraph 4.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Check training and evaluation datasets for special categories of data, including data from which such characteristics can be inferred, e.g. health or ethnic origin.
+- Process biometric data for uniquely identifying persons, e.g. face recognition, only under one of the exceptions of paragraph 2.
+- Where special categories are needed for bias detection, identify the exception relied on; for high-risk AI systems, Art. 4a of the AI Act adds a specific basis.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 10 — Processing of personal data relating to criminal convictions and offences
 
@@ -126,7 +228,36 @@ Gives the data subject the right to obtain from the controller without undue del
 
 #### Article 17 — Right to erasure (‘right to be forgotten’)
 
-Gives the data subject the right to obtain from the controller the erasure of personal data concerning him or her without undue delay where one of the specified grounds applies.
+##### What is it about?
+
+Article 17 establishes the right of a data subject to obtain the erasure of personal data concerning them from a controller without undue delay, and the controller's obligation to erase such data where specific grounds apply. It also addresses the controller's duty when personal data has been made public and outlines exceptions to this right.
+
+##### What does the article require?
+
+- **Paragraph 1** – The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay, and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies: (a) the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; (b) the data subject withdraws consent on which the processing is based according to point (a) of Article 6(1), or point (a) of Article 9(2), and where there is no other legal ground for the processing; (c) the data subject objects to the processing pursuant to Article 21(1) and there are no overriding legitimate grounds for the processing, or the data subject objects to the processing pursuant to Article 21(2); (d) the personal data have been unlawfully processed; (e) the personal data have to be erased for compliance with a legal obligation in Union or Member State law to which the controller is subject; (f) the personal data have been collected in relation to the offer of information society services referred to in Article 8(1).
+- **Paragraph 2** – Where the controller has made the personal data public and is obliged pursuant to paragraph 1 to erase the personal data, the controller, taking account of available technology and the cost of implementation, shall take reasonable steps, including technical measures, to inform controllers which are processing the personal data that the data subject has requested the erasure by such controllers of any links to, or copy or replication of, those personal data.
+- **Paragraph 3** – Paragraphs 1 and 2 shall not apply to the extent that processing is necessary: (a) for exercising the right of freedom of expression and information; (b) for compliance with a legal obligation which requires processing by Union or Member State law to which the controller is subject or for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller; (c) for reasons of public interest in the area of public health in accordance with points (h) and (i) of Article 9(2) as well as Article 9(3); (d) for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) in so far as the right referred to in paragraph 1 is likely to render impossible or seriously impair the achievement of the objectives of that processing; or (e) for the establishment, exercise or defence of legal claims.
+
+##### Who is affected?
+
+The data subject is affected by the right to erasure. The controller is affected by the obligation to erase personal data under the specified grounds and by the duty to inform other controllers under paragraph 2. Other controllers processing data made public by the controller are to be informed under paragraph 2; the article does not itself oblige them to erase.
+
+##### What is not specified?
+
+The article does not specify what constitutes "undue delay" for the erasure obligation. It does not define the scope or limits of "reasonable steps" or "technical measures" under paragraph 2. It does not elaborate on the meaning of "overriding legitimate grounds" under paragraph 1(c). It does not specify the criteria for determining when processing is "necessary" under paragraph 3 for the listed exceptions.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Set up a process to receive, verify and answer erasure requests without undue delay, and check the exceptions of paragraph 3 before refusing.
+- Design systems so that personal data can be found and deleted, e.g. documents in a retrieval index of a RAG system.
+- Note that data absorbed into model weights cannot be removed selectively without retraining; decide in advance how erasure requests affecting training data will be handled.
+- Where data were made public, inform other controllers processing them, e.g. by technical means, as far as reasonable.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 18 — Right to restriction of processing
 
@@ -148,7 +279,37 @@ Gives the data subject the right to object to processing based on public interes
 
 #### Article 22 — Automated individual decision-making, including profiling
 
-Gives the data subject the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
+##### What is it about?
+
+Article 22 concerns the right of a data subject not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning the data subject or similarly significantly affects them.
+
+##### What does the article require?
+
+- **Paragraph 1** – The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
+- **Paragraph 2** – Paragraph 1 shall not apply if the decision: (a) is necessary for entering into, or performance of, a contract between the data subject and a data controller; (b) is authorised by Union or Member State law to which the controller is subject and which also lays down suitable measures to safeguard the data subject's rights and freedoms and legitimate interests; or (c) is based on the data subject's explicit consent.
+- **Paragraph 3** – In the cases referred to in points (a) and (c) of paragraph 2, the data controller shall implement suitable measures to safeguard the data subject's rights and freedoms and legitimate interests, at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision.
+- **Paragraph 4** – Decisions referred to in paragraph 2 shall not be based on special categories of personal data referred to in Article 9(1), unless point (a) or (g) of Article 9(2) applies and suitable measures to safeguard the data subject's rights and freedoms and legitimate interests are in place.
+
+##### Who is affected?
+
+The data subject is affected by the right under Paragraph 1. The data controller is affected by the requirements in Paragraphs 2, 3, and 4, particularly regarding the implementation of suitable measures and restrictions on processing special categories of personal data. In Germany, § 37 BDSG adds a further exception for insurance contracts.
+
+##### What is not specified?
+
+The article does not specify what constitutes "suitable measures" to safeguard rights and freedoms. It does not define "legal effects" or "similarly significantly affects" in detail. It does not specify how "human intervention" must be implemented. It does not detail the requirements for "suitable measures" under Paragraph 4 when applying Article 9(2)(a) or (g).
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Identify decisions taken solely by an AI system that have legal or similarly significant effects, e.g. credit, recruiting or insurance decisions.
+- Use such decisions only under one of the exceptions of paragraph 2 and provide human intervention, a way to express one's point of view and a way to contest the decision.
+- Make sure that human review is meaningful and not a formality; otherwise the decision may still be solely automated.
+- Avoid special categories of data in such decisions unless point (a) or (g) of Art. 9(2) applies.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 **Section 5 — Restrictions**
 
@@ -166,7 +327,35 @@ Requires the controller to implement and review appropriate technical and organi
 
 #### Article 25 — Data protection by design and by default
 
-Requires the controller to implement appropriate technical and organisational measures to ensure data protection by design and by default, including pseudonymisation and data minimisation.
+##### What is it about?
+
+Article 25 sets out requirements for controllers to implement data protection by design and by default, including technical and organisational measures to ensure compliance with the Regulation.
+
+##### What does the article require?
+
+- **Paragraph 1** – The controller shall implement appropriate technical and organisational measures, such as pseudonymisation, taking into account the state of the art, the cost of implementation, and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons. These measures must be designed to implement data-protection principles, such as data minimisation, in an effective manner and integrate necessary safeguards into processing to meet the requirements of this Regulation and protect the rights of data subjects. This applies both at the time of determining the means for processing and at the time of processing itself.
+- **Paragraph 2** – The controller shall implement appropriate technical and organisational measures to ensure that, by default, only personal data necessary for each specific purpose of the processing are processed. This obligation applies to the amount of personal data collected, the extent of their processing, the period of their storage, and their accessibility. In particular, such measures shall ensure that by default personal data are not made accessible without the individual's intervention to an indefinite number of natural persons.
+- **Paragraph 3** – An approved certification mechanism pursuant to **Article 42** may be used as an element to demonstrate compliance with the requirements set out in paragraphs 1 and 2 of this Article.
+
+##### Who is affected?
+
+The controller. Recital 78 encourages producers of products, services and applications to take the right to data protection into account during development; the article itself does not oblige them.
+
+##### What is not specified?
+
+The article does not specify what constitutes the "state of the art" or the "cost of implementation" for the purposes of paragraph 1. It does not specify the exact technical or organisational measures required beyond examples given. It does not define "by default" beyond the context of paragraph 2. It does not specify the criteria for an "approved certification mechanism" under Article 42.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Consider data protection when designing an AI system, e.g. pseudonymise training data, limit features to what the purpose needs and restrict access to models and logs.
+- Choose privacy-friendly defaults, e.g. no use of user inputs for training unless the user decides otherwise, and short retention of prompts and outputs.
+- Consider privacy-preserving techniques such as differential privacy or federated learning where they fit the purpose.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 26 — Joint controllers
 
@@ -210,7 +399,43 @@ Requires the controller to communicate a personal data breach to the data subjec
 
 #### Article 35 — Data protection impact assessment
 
-Requires the controller to carry out a data protection impact assessment prior to processing if the envisaged operations are likely to result in a high risk to the rights and freedoms of natural persons.
+##### What is it about?
+
+Article 35 establishes the requirement for a data protection impact assessment in specific circumstances involving processing operations likely to result in high risk to the rights and freedoms of natural persons. It defines the scope, content, and procedural steps for such assessments.
+
+##### What does the article require?
+
+- **Paragraph 1** – Where a type of processing, particularly using new technologies and considering nature, scope, context, and purposes, is likely to result in high risk to rights and freedoms of natural persons, the controller shall carry out a data protection impact assessment prior to processing. A single assessment may cover similar processing operations presenting similar high risks.
+- **Paragraph 2** – The controller shall seek the advice of the data protection officer, where designated, when carrying out a data protection impact assessment.
+- **Paragraph 3** – A data protection impact assessment is required in the case of: (a) systematic and extensive evaluation of personal aspects based on automated processing including profiling, leading to decisions with legal effects or significant impacts; (b) large-scale processing of special categories of data under Article 9(1), or personal data relating to criminal convictions under Article 10; or (c) systematic monitoring of a publicly accessible area on a large scale.
+- **Paragraph 4** – The supervisory authority shall establish and make public a list of processing operations subject to the impact assessment requirement. This list shall be communicated to the Board referred to in Article 68.
+- **Paragraph 5** – The supervisory authority may establish and make public a list of processing operations for which no impact assessment is required. This list shall be communicated to the Board.
+- **Paragraph 6** – Prior to adopting lists under paragraphs 4 and 5, the competent supervisory authority shall apply the consistency mechanism under Article 63 for processing activities related to offering goods/services or monitoring behaviour across several Member States, or affecting the free movement of personal data within the Union.
+- **Paragraph 7** – The assessment shall contain at least: (a) systematic description of processing operations and purposes, including legitimate interest; (b) assessment of necessity and proportionality; (c) assessment of risks to rights and freedoms; and (d) measures to address risks, including safeguards and security measures.
+- **Paragraph 8** – Compliance with approved codes of conduct under Article 40 shall be taken into account when assessing the impact of processing operations for the purpose of a data protection impact assessment.
+- **Paragraph 9** – Where appropriate, the controller shall seek the views of data subjects or their representatives on the intended processing, without prejudice to protection of commercial or public interests or security.
+- **Paragraph 10** – Where processing under Article 6(1) points (c) or (e) has a legal basis in Union or Member State law that regulates the specific processing, and a data protection impact assessment has already been carried out as part of a general impact assessment for that legal basis, paragraphs 1 to 7 do not apply unless Member States deem it necessary to carry out such an assessment prior to processing.
+- **Paragraph 11** – The controller shall carry out a review to assess if processing is performed in accordance with the data protection impact assessment at least when there is a change in the risk represented by processing operations.
+
+##### Who is affected?
+
+The controller is directly affected by the requirement to carry out a data protection impact assessment. The data protection officer, where designated, is affected by the requirement to be consulted under paragraph 2. The supervisory authority is affected by the requirements to establish and communicate lists under paragraphs 4, 5, and 6. The Board referred to in Article 68 is affected by the requirement to receive lists under paragraphs 4 and 5.
+
+##### What is not specified?
+
+The article does not specify the exact format or duration of the data protection impact assessment. It does not define the threshold for "high risk" beyond the circumstances listed in paragraph 3. It does not specify how to determine "necessity and proportionality" in paragraph 7(b). It does not detail the content of "approved codes of conduct" under Article 40 that would be taken into account under paragraph 8. It does not specify the criteria for when Member States deem it necessary to carry out an assessment under paragraph 10.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Check new AI systems against paragraph 3 and the national lists under paragraph 4; profiling with significant effects and large-scale processing of special categories regularly require an assessment.
+- Carry out the assessment before processing starts, involve the data protection officer, and document the content required by paragraph 7.
+- Review the assessment when the risk changes, e.g. after retraining a model on new data or extending it to new purposes.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 36 — Prior consultation
 
@@ -260,7 +485,37 @@ Allows transfers of personal data to third countries or international organisati
 
 #### Article 46 — Transfers subject to appropriate safeguards
 
-Requires the controller or processor to provide appropriate safeguards for transfers of personal data to a third country or international organisation, ensuring enforceable data subject rights and legal remedies are available.
+##### What is it about?
+
+Article 46 establishes the conditions under which a controller or processor may transfer personal data to a third country or an international organisation. It requires appropriate safeguards to ensure enforceable data subject rights and effective legal remedies are available for such transfers, without relying on a decision under Article 45(3).
+
+##### What does the article require?
+
+- **Paragraph 1** – In the absence of an adequacy decision under Article 45(3), a controller or processor may transfer personal data to a third country or international organisation only if appropriate safeguards are provided, and enforceable data subject rights and effective legal remedies are available.
+- **Paragraph 2** – The appropriate safeguards may be provided without requiring specific authorisation from a supervisory authority by: (a) a legally binding and enforceable instrument between public authorities or bodies; (b) binding corporate rules under Article 47; (c) standard data protection clauses adopted by the Commission under Article 93(2); (d) standard data protection clauses adopted by a supervisory authority and approved by the Commission under Article 93(2); (e) an approved code of conduct under Article 40 with binding commitments from the controller or processor in the third country; or (f) an approved certification mechanism under Article 42 with binding commitments from the controller or processor in the third country.
+- **Paragraph 3** – Subject to authorisation from the competent supervisory authority, appropriate safeguards may also be provided by: (a) contractual clauses between the controller or processor and the recipient in the third country or international organisation; or (b) provisions in administrative arrangements between public authorities or bodies that include enforceable and effective data subject rights.
+- **Paragraph 4** – The supervisory authority shall apply the consistency mechanism under Article 63 for cases referred to in paragraph 3.
+- **Paragraph 5** – Authorisations under Article 26(2) of Directive 95/46/EC remain valid until amended, replaced, or repealed by the supervisory authority. Decisions under Article 26(4) of Directive 95/46/EC remain in force until amended, replaced, or repealed by a Commission Decision under paragraph 2 of this Article.
+
+##### Who is affected?
+
+Controllers and processors are affected by the requirements in paragraphs 1, 2, and 3. Supervisory authorities are affected by the requirements in paragraphs 3 and 4 regarding authorisation and the consistency mechanism. Under paragraph 5, earlier authorisations and Commission decisions under Directive 95/46/EC remain valid until amended, replaced or repealed.
+
+##### What is not specified?
+
+The article does not specify the exact nature or form of "appropriate safeguards" beyond the listed mechanisms. It does not define "enforceable data subject rights" or "effective legal remedies." It does not specify the criteria for supervisory authority authorisation under paragraph 3. It does not detail how supervisory authorities must apply the consistency mechanism under Article 63 for paragraph 3 cases.
+
+##### What could this mean in practice?
+
+**Possible implementation – not a legally prescribed checklist:**
+
+- Before using AI services or APIs hosted outside the EU, check whether personal data are transferred and whether an adequacy decision exists.
+- Without an adequacy decision, use one of the safeguards of paragraph 2, typically the Commission's standard data protection clauses, and keep them up to date.
+- Check whether the recipient's commitments make data subject rights enforceable in practice.
+
+##### When does it apply?
+
+Applies from **25 May 2018** (Art. 99(2)).
 
 #### Article 47 — Binding corporate rules
 
@@ -588,11 +843,91 @@ Bestimmt die zentralen Begriffe der Verordnung, darunter personenbezogene Daten,
 
 #### Artikel 5 – Grundsätze für die Verarbeitung personenbezogener Daten
 
-Legt die Grundsätze für die Verarbeitung fest, darunter Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung sowie Integrität und Vertraulichkeit.
+##### Worum geht es?
+
+Artikel 5 legt die Grundsätze fest, die jede Verarbeitung personenbezogener Daten einhalten muss: Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung sowie Integrität und Vertraulichkeit. Außerdem begründet er die Rechenschaftspflicht des Verantwortlichen.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Personenbezogene Daten müssen
+  - a) auf rechtmäßige Weise, nach Treu und Glauben und in einer für die betroffene Person nachvollziehbaren Weise verarbeitet werden (*Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz*);
+  - b) für festgelegte, eindeutige und legitime Zwecke erhoben und nicht in einer damit unvereinbaren Weise weiterverarbeitet werden; eine Weiterverarbeitung für im öffentlichen Interesse liegende Archivzwecke, wissenschaftliche oder historische Forschungszwecke oder statistische Zwecke gilt nach Artikel 89 Absatz 1 nicht als unvereinbar (*Zweckbindung*);
+  - c) dem Zweck angemessen und erheblich sowie auf das notwendige Maß beschränkt sein (*Datenminimierung*);
+  - d) sachlich richtig und erforderlichenfalls auf dem neuesten Stand sein; unrichtige Daten sind unverzüglich zu löschen oder zu berichtigen (*Richtigkeit*);
+  - e) nur so lange in identifizierbarer Form gespeichert werden, wie es für die Zwecke erforderlich ist; für die Zwecke nach Artikel 89 Absatz 1 ist mit geeigneten Garantien eine längere Speicherung möglich (*Speicherbegrenzung*);
+  - f) mit angemessener Sicherheit verarbeitet werden, einschließlich Schutz vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, unbeabsichtigter Zerstörung oder Schädigung (*Integrität und Vertraulichkeit*).
+- **Absatz 2** – Der Verantwortliche ist für die Einhaltung des Absatzes 1 verantwortlich und muss sie nachweisen können (*Rechenschaftspflicht*).
+
+##### Wer ist betroffen?
+
+Jeder Verantwortliche, bei jeder Verarbeitung personenbezogener Daten. Auftragsverarbeiter sind mittelbar über ihre Verträge und ihre eigenen Pflichten aus der Verordnung gebunden.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Wie die Einhaltung nach Absatz 2 im Einzelnen nachzuweisen ist.
+- Was „nach Treu und Glauben“ im konkreten Fall bedeutet; die Rechtsgrundlagen für die Rechtmäßigkeit stehen in Artikel 6.
+- Welche technischen und organisatorischen Maßnahmen für die Sicherheit nach Buchstabe f geeignet sind.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Den Zweck jedes Trainings- oder Fine-Tuning-Datensatzes vor der Erhebung festlegen und dokumentieren; vor der Weiterverwendung von Daten, die zu anderen Zwecken erhoben wurden, die Vereinbarkeit prüfen (Zweckbindung).
+- Felder entfernen, die das Modell nicht braucht, und anonymisierte oder pseudonymisierte Daten bevorzugen (Datenminimierung).
+- Speicherfristen für Trainingsdaten, Logs und Prompts festlegen und Daten nach Ablauf löschen (Speicherbegrenzung).
+- Nachweise darüber führen, wie jeder Grundsatz eingehalten wird, da der Verantwortliche die Einhaltung belegen können muss (Rechenschaftspflicht).
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 6 – Rechtmäßigkeit der Verarbeitung
 
-Bestimmt, wann eine Verarbeitung rechtmäßig ist, etwa aufgrund von Einwilligung, Vertragserfüllung, rechtlicher Verpflichtung, lebenswichtigen Interessen, öffentlichem Interesse oder berechtigten Interessen.
+##### Worum geht es?
+
+Artikel 6 bestimmt, wann eine Verarbeitung personenbezogener Daten rechtmäßig ist. Er nennt die Rechtsgrundlagen (Einwilligung, Vertrag, rechtliche Verpflichtung, lebenswichtige Interessen, öffentliches Interesse, berechtigte Interessen), regelt die Anforderungen an Rechtsgrundlagen im Unionsrecht und im Recht der Mitgliedstaaten und legt fest, wie die Vereinbarkeit einer Weiterverarbeitung zu prüfen ist.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Die Verarbeitung ist nur rechtmäßig, wenn mindestens eine der folgenden Bedingungen erfüllt ist:
+  - a) die betroffene Person hat eingewilligt;
+  - b) die Verarbeitung ist für die Erfüllung eines Vertrags oder vorvertragliche Maßnahmen erforderlich;
+  - c) sie ist zur Erfüllung einer rechtlichen Verpflichtung des Verantwortlichen erforderlich;
+  - d) sie ist erforderlich, um lebenswichtige Interessen zu schützen;
+  - e) sie ist für eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt erforderlich;
+  - f) sie ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten erforderlich, sofern nicht die Interessen oder Grundrechte der betroffenen Person überwiegen, insbesondere wenn es sich um ein Kind handelt.
+
+  Buchstabe f gilt nicht für die von Behörden in Erfüllung ihrer Aufgaben vorgenommene Verarbeitung.
+- **Absatz 2** – Die Mitgliedstaaten können spezifischere Bestimmungen für Verarbeitungen nach Absatz 1 Buchstaben c und e beibehalten oder einführen.
+- **Absatz 3** – Die Rechtsgrundlage für Verarbeitungen nach Absatz 1 Buchstaben c und e wird durch Unionsrecht oder das Recht der Mitgliedstaaten festgelegt. Sie muss ein im öffentlichen Interesse liegendes Ziel verfolgen und verhältnismäßig sein; sie kann spezifische Bestimmungen etwa zu Datenarten, betroffenen Personen, Empfängern, Zweckbindung und Speicherfristen enthalten.
+- **Absatz 4** – Beruht eine Weiterverarbeitung zu einem anderen Zweck weder auf einer Einwilligung noch auf einer Rechtsvorschrift im Sinne des Artikels 23 Absatz 1, prüft der Verantwortliche die Vereinbarkeit der Zwecke, unter anderem anhand
+  - a) der Verbindung zwischen den Zwecken,
+  - b) des Zusammenhangs, in dem die Daten erhoben wurden,
+  - c) der Art der Daten, insbesondere besonderer Kategorien nach Artikel 9 oder Daten über Straftaten nach Artikel 10,
+  - d) der möglichen Folgen für die betroffenen Personen und
+  - e) des Vorhandenseins geeigneter Garantien wie Verschlüsselung oder Pseudonymisierung.
+
+##### Wer ist betroffen?
+
+Jeder Verantwortliche, der personenbezogene Daten verarbeitet. Die Mitgliedstaaten können nach den Absätzen 2 und 3 Rechtsgrundlagen schaffen. Behörden können sich bei der Erfüllung ihrer Aufgaben nicht auf Absatz 1 Buchstabe f stützen.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Wann eine Verarbeitung im Einzelfall „erforderlich“ ist.
+- Wie die Interessenabwägung nach Absatz 1 Buchstabe f vorzunehmen ist.
+- Wie die Verhältnismäßigkeit einer Rechtsgrundlage nach Absatz 3 zu beurteilen ist.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Für jeden Verarbeitungszweck vor Beginn eine Rechtsgrundlage wählen und dokumentieren, etwa getrennt für den Betrieb eines Dienstes und für das Training von Modellen mit dessen Daten.
+- Wenn das Training auf berechtigte Interessen (Buchstabe f) gestützt wird, die Interessenabwägung dokumentieren, einschließlich der vernünftigen Erwartungen der betroffenen Personen.
+- Vor der Weiterverwendung von Daten für einen neuen Zweck wie Modelltraining die Vereinbarkeitsprüfung nach Absatz 4 durchführen und Garantien wie Pseudonymisierung vorsehen.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 7 – Bedingungen für die Einwilligung
 
@@ -604,7 +939,48 @@ Regelt die Einwilligung eines Kindes bei Diensten der Informationsgesellschaft; 
 
 #### Artikel 9 – Verarbeitung besonderer Kategorien personenbezogener Daten
 
-Untersagt die Verarbeitung besonderer Kategorien personenbezogener Daten, sofern keine der Ausnahmen greift, etwa ausdrückliche Einwilligung, rechtliche Pflichten oder der Schutz lebenswichtiger Interessen.
+##### Worum geht es?
+
+Artikel 9 verbietet grundsätzlich die Verarbeitung besonderer Kategorien personenbezogener Daten, etwa zur ethnischen Herkunft, zu Gesundheit oder Sexualleben, und nennt die Ausnahmen von diesem Verbot.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Untersagt ist die Verarbeitung personenbezogener Daten, aus denen die rassische und ethnische Herkunft, politische Meinungen, religiöse oder weltanschauliche Überzeugungen oder die Gewerkschaftszugehörigkeit hervorgehen, sowie die Verarbeitung von genetischen Daten, biometrischen Daten zur eindeutigen Identifizierung einer natürlichen Person, Gesundheitsdaten oder Daten zum Sexualleben oder der sexuellen Orientierung.
+- **Absatz 2** – Das Verbot gilt nicht, wenn unter anderem
+  - a) die betroffene Person ausdrücklich eingewilligt hat;
+  - b) die Verarbeitung für Rechte und Pflichten aus dem Arbeitsrecht und dem Recht der sozialen Sicherheit und des Sozialschutzes erforderlich ist;
+  - c) sie zum Schutz lebenswichtiger Interessen erforderlich ist und die betroffene Person nicht einwilligen kann;
+  - d) eine politisch, weltanschaulich, religiös oder gewerkschaftlich ausgerichtete Organisation ohne Gewinnerzielungsabsicht mit geeigneten Garantien Daten ihrer Mitglieder oder regelmäßiger Kontaktpersonen verarbeitet;
+  - e) die betroffene Person die Daten offensichtlich öffentlich gemacht hat;
+  - f) die Verarbeitung zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder bei justizieller Tätigkeit der Gerichte erforderlich ist;
+  - g) sie aus Gründen eines erheblichen öffentlichen Interesses auf Grundlage einer verhältnismäßigen Rechtsvorschrift mit Schutzmaßnahmen erforderlich ist;
+  - h) sie für Gesundheitsvorsorge, Arbeitsmedizin, medizinische Diagnostik oder Versorgung auf gesetzlicher oder vertraglicher Grundlage erforderlich ist;
+  - i) sie aus Gründen des öffentlichen Interesses im Bereich der öffentlichen Gesundheit auf gesetzlicher Grundlage erforderlich ist;
+  - j) sie für Archiv-, Forschungs- oder Statistikzwecke nach Artikel 89 Absatz 1 auf gesetzlicher Grundlage erforderlich ist.
+- **Absatz 3** – Für Zwecke nach Absatz 2 Buchstabe h dürfen die Daten von Fachpersonal oder unter dessen Verantwortung verarbeitet werden, das einem Berufsgeheimnis oder einer Geheimhaltungspflicht unterliegt.
+- **Absatz 4** – Die Mitgliedstaaten können für genetische, biometrische und Gesundheitsdaten zusätzliche Bedingungen einschließlich Beschränkungen einführen oder aufrechterhalten.
+
+##### Wer ist betroffen?
+
+Alle Verantwortlichen, die besondere Kategorien personenbezogener Daten verarbeiten. Die Mitgliedstaaten können nach Absatz 2 Buchstaben b, g, h, i und j sowie Absatz 4 Rechtsgrundlagen und weitere Bedingungen schaffen; in Deutschland etwa in §§ 22, 26 und 27 BDSG.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Was eine „ausdrückliche“ Einwilligung von einer einfachen Einwilligung unterscheidet.
+- Welche „geeigneten Garantien“ im Einzelnen erforderlich sind.
+- Wann ein „erhebliches öffentliches Interesse“ nach Buchstabe g vorliegt.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Trainings- und Evaluationsdatensätze auf besondere Kategorien prüfen, auch auf Daten, aus denen sich solche Merkmale ableiten lassen, etwa Gesundheit oder ethnische Herkunft.
+- Biometrische Daten zur eindeutigen Identifizierung, etwa für Gesichtserkennung, nur unter einer der Ausnahmen des Absatzes 2 verarbeiten.
+- Wenn besondere Kategorien für die Erkennung von Bias benötigt werden, die genutzte Ausnahme festhalten; für Hochrisiko-KI-Systeme sieht Art. 4a AI Act eine eigene Grundlage vor.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 10 – Verarbeitung von personenbezogenen Daten über strafrechtliche Verurteilungen und Straftaten
 
@@ -644,7 +1020,49 @@ Gibt der betroffenen Person das Recht, vom Verantwortlichen unverzüglich die Be
 
 #### Artikel 17 – Recht auf Löschung („Recht auf Vergessenwerden“)
 
-Gibt der betroffenen Person das Recht, vom Verantwortlichen die unverzügliche Löschung sie betreffender personenbezogener Daten zu verlangen, wenn einer der genannten Gründe zutrifft.
+##### Worum geht es?
+
+Artikel 17 gibt der betroffenen Person das Recht, die unverzügliche Löschung ihrer personenbezogenen Daten zu verlangen, und verpflichtet den Verantwortlichen zur Löschung, wenn einer der genannten Gründe vorliegt („Recht auf Vergessenwerden“). Er regelt außerdem Pflichten bei veröffentlichten Daten und die Ausnahmen vom Löschungsrecht.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Die betroffene Person kann die unverzügliche Löschung verlangen, und der Verantwortliche muss unverzüglich löschen, wenn
+  - a) die Daten für die Zwecke nicht mehr notwendig sind;
+  - b) die betroffene Person ihre Einwilligung nach Artikel 6 Absatz 1 Buchstabe a oder Artikel 9 Absatz 2 Buchstabe a widerruft und keine andere Rechtsgrundlage besteht;
+  - c) sie nach Artikel 21 Absatz 1 widerspricht und keine vorrangigen berechtigten Gründe vorliegen, oder nach Artikel 21 Absatz 2 gegen Direktwerbung widerspricht;
+  - d) die Daten unrechtmäßig verarbeitet wurden;
+  - e) die Löschung zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist;
+  - f) die Daten in Bezug auf angebotene Dienste der Informationsgesellschaft nach Artikel 8 Absatz 1 erhoben wurden.
+- **Absatz 2** – Hat der Verantwortliche die Daten öffentlich gemacht und ist er zur Löschung verpflichtet, trifft er unter Berücksichtigung der verfügbaren Technologie und der Implementierungskosten angemessene Maßnahmen, auch technischer Art, um andere Verantwortliche, die die Daten verarbeiten, darüber zu informieren, dass die betroffene Person die Löschung aller Links, Kopien oder Replikationen verlangt hat.
+- **Absatz 3** – Die Absätze 1 und 2 gelten nicht, soweit die Verarbeitung erforderlich ist
+  - a) zur Ausübung des Rechts auf freie Meinungsäußerung und Information;
+  - b) zur Erfüllung einer rechtlichen Verpflichtung oder einer Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt;
+  - c) aus Gründen des öffentlichen Interesses im Bereich der öffentlichen Gesundheit;
+  - d) für Archiv-, Forschungs- oder Statistikzwecke nach Artikel 89 Absatz 1, soweit die Löschung diese Zwecke unmöglich machen oder ernsthaft beeinträchtigen würde;
+  - e) zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+
+##### Wer ist betroffen?
+
+Die betroffene Person als Inhaberin des Rechts und der Verantwortliche als Verpflichteter. Andere Verantwortliche, die vom Verantwortlichen veröffentlichte Daten verarbeiten, sind nach Absatz 2 zu informieren; der Artikel verpflichtet sie nicht selbst zur Löschung.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Was „unverzüglich“ im Einzelfall bedeutet.
+- Welche Maßnahmen nach Absatz 2 „angemessen“ sind.
+- Wann „vorrangige berechtigte Gründe“ nach Absatz 1 Buchstabe c vorliegen.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Einen Prozess einrichten, um Löschanträge entgegenzunehmen, zu prüfen und unverzüglich zu beantworten; vor einer Ablehnung die Ausnahmen des Absatzes 3 prüfen.
+- Systeme so gestalten, dass personenbezogene Daten auffindbar und löschbar sind, etwa Dokumente im Retrieval-Index eines RAG-Systems.
+- Beachten, dass in Modellgewichte eingeflossene Daten ohne erneutes Training nicht gezielt entfernt werden können, und vorab festlegen, wie mit Löschanträgen zu Trainingsdaten umgegangen wird.
+- Bei veröffentlichten Daten andere Verantwortliche, soweit angemessen, auch mit technischen Mitteln informieren.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 18 – Recht auf Einschränkung der Verarbeitung
 
@@ -666,7 +1084,42 @@ Gibt der betroffenen Person das Recht, Verarbeitungen aufgrund öffentlichen Int
 
 #### Artikel 22 – Automatisierte Entscheidungen im Einzelfall einschließlich Profiling
 
-Gibt der betroffenen Person das Recht, nicht einer ausschließlich auf automatisierter Verarbeitung einschließlich Profiling beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt.
+##### Worum geht es?
+
+Artikel 22 gibt der betroffenen Person das Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung, einschließlich Profiling, beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt. Für KI-Systeme, die über Menschen entscheiden, ist er eine der wichtigsten Vorschriften der DSGVO.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Die betroffene Person hat das Recht, nicht einer ausschließlich automatisierten Entscheidung einschließlich Profiling unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt.
+- **Absatz 2** – Absatz 1 gilt nicht, wenn die Entscheidung
+  - a) für den Abschluss oder die Erfüllung eines Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich ist,
+  - b) aufgrund von Unionsrecht oder dem Recht der Mitgliedstaaten zulässig ist, das angemessene Schutzmaßnahmen enthält, oder
+  - c) mit ausdrücklicher Einwilligung der betroffenen Person erfolgt.
+- **Absatz 3** – In den Fällen von Absatz 2 Buchstaben a und c trifft der Verantwortliche angemessene Maßnahmen zum Schutz der betroffenen Person, wozu mindestens das Recht auf Erwirkung des Eingreifens einer Person seitens des Verantwortlichen, auf Darlegung des eigenen Standpunkts und auf Anfechtung der Entscheidung gehört.
+- **Absatz 4** – Entscheidungen nach Absatz 2 dürfen nicht auf besonderen Kategorien personenbezogener Daten nach Artikel 9 Absatz 1 beruhen, es sei denn, Artikel 9 Absatz 2 Buchstabe a oder g gilt und angemessene Schutzmaßnahmen sind getroffen.
+
+##### Wer ist betroffen?
+
+Verantwortliche, die Entscheidungen ausschließlich automatisiert treffen, und die betroffenen Personen, über die entschieden wird. In Deutschland ergänzt § 37 BDSG eine weitere Ausnahme für Versicherungsverträge.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Wann eine Entscheidung „ausschließlich“ automatisiert ist, insbesondere wie weit eine menschliche Beteiligung gehen muss.
+- Was eine „in ähnlicher Weise erhebliche“ Beeinträchtigung ist.
+- Wie das Eingreifen einer Person nach Absatz 3 auszugestalten ist.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Entscheidungen identifizieren, die ein KI-System allein trifft und die rechtliche oder ähnlich erhebliche Wirkung haben, etwa bei Kredit-, Bewerbungs- oder Versicherungsentscheidungen.
+- Solche Entscheidungen nur unter einer Ausnahme des Absatzes 2 treffen und das Eingreifen einer Person, die Darlegung des eigenen Standpunkts und eine Anfechtungsmöglichkeit vorsehen.
+- Sicherstellen, dass die menschliche Prüfung tatsächlich inhaltlich erfolgt und keine bloße Formalität ist; sonst kann die Entscheidung weiterhin ausschließlich automatisiert sein.
+- Besondere Kategorien personenbezogener Daten in solchen Entscheidungen vermeiden, sofern nicht Artikel 9 Absatz 2 Buchstabe a oder g greift.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 **Abschnitt 5 – Beschränkungen**
 
@@ -684,7 +1137,37 @@ Verpflichtet den Verantwortlichen, geeignete technische und organisatorische Ma�
 
 #### Artikel 25 – Datenschutz durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen
 
-Verpflichtet den Verantwortlichen zu geeigneten technischen und organisatorischen Maßnahmen für Datenschutz durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen, etwa Pseudonymisierung und Datenminimierung.
+##### Worum geht es?
+
+Artikel 25 verpflichtet den Verantwortlichen zu Datenschutz durch Technikgestaltung („Privacy by Design“) und durch datenschutzfreundliche Voreinstellungen („Privacy by Default“).
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Der Verantwortliche trifft sowohl bei der Festlegung der Mittel für die Verarbeitung als auch bei der Verarbeitung selbst geeignete technische und organisatorische Maßnahmen, etwa Pseudonymisierung, um die Datenschutzgrundsätze wie Datenminimierung wirksam umzusetzen und die nötigen Garantien in die Verarbeitung aufzunehmen. Dabei berücksichtigt er den Stand der Technik, die Implementierungskosten, Art, Umfang, Umstände und Zwecke der Verarbeitung sowie die Risiken für die Rechte und Freiheiten natürlicher Personen.
+- **Absatz 2** – Der Verantwortliche stellt durch Voreinstellungen sicher, dass nur die für den jeweiligen Zweck erforderlichen Daten verarbeitet werden. Das gilt für die Menge der erhobenen Daten, den Umfang der Verarbeitung, die Speicherfrist und die Zugänglichkeit. Insbesondere dürfen Daten durch Voreinstellungen nicht ohne Eingreifen der Person einer unbestimmten Zahl von Personen zugänglich gemacht werden.
+- **Absatz 3** – Ein genehmigtes Zertifizierungsverfahren nach Artikel 42 kann als Faktor herangezogen werden, um die Erfüllung der Absätze 1 und 2 nachzuweisen.
+
+##### Wer ist betroffen?
+
+Der Verantwortliche. Hersteller von Produkten, Diensten und Anwendungen werden in Erwägungsgrund 78 ermutigt, das Recht auf Datenschutz bei der Entwicklung zu berücksichtigen; der Artikel selbst verpflichtet sie nicht.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Was der „Stand der Technik“ im Einzelfall ist.
+- Welche Maßnahmen über die genannten Beispiele hinaus erforderlich sind.
+- Nach welchen Kriterien Zertifizierungsverfahren nach Artikel 42 genehmigt werden.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Datenschutz schon beim Entwurf eines KI-Systems berücksichtigen, etwa Trainingsdaten pseudonymisieren, Merkmale auf das für den Zweck Nötige beschränken und den Zugriff auf Modelle und Logs begrenzen.
+- Datenschutzfreundliche Voreinstellungen wählen, etwa keine Nutzung von Nutzereingaben für das Training ohne Entscheidung der Nutzer und kurze Speicherfristen für Prompts und Ausgaben.
+- Datenschutzfreundliche Verfahren wie Differential Privacy oder Federated Learning prüfen, wo sie zum Zweck passen.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 26 – Gemeinsam Verantwortliche
 
@@ -728,7 +1211,52 @@ Verpflichtet den Verantwortlichen, die betroffene Person unverzüglich zu benach
 
 #### Artikel 35 – Datenschutz-Folgenabschätzung
 
-Verpflichtet den Verantwortlichen, vorab eine Datenschutz-Folgenabschätzung durchzuführen, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
+##### Worum geht es?
+
+Artikel 35 verpflichtet den Verantwortlichen, vor Verarbeitungen mit voraussichtlich hohem Risiko für die Rechte und Freiheiten natürlicher Personen eine Datenschutz-Folgenabschätzung durchzuführen. Er legt fest, wann sie erforderlich ist, was sie enthalten muss und welche Rolle Aufsichtsbehörden, Datenschutzbeauftragte und betroffene Personen dabei haben.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Hat eine Form der Verarbeitung, insbesondere bei Verwendung neuer Technologien, aufgrund ihrer Art, ihres Umfangs, ihrer Umstände und ihrer Zwecke voraussichtlich ein hohes Risiko zur Folge, führt der Verantwortliche vorab eine Datenschutz-Folgenabschätzung durch. Für ähnliche Verarbeitungsvorgänge mit ähnlich hohen Risiken genügt eine einzige Abschätzung.
+- **Absatz 2** – Der Verantwortliche holt dabei den Rat der oder des Datenschutzbeauftragten ein, sofern benannt.
+- **Absatz 3** – Erforderlich ist sie insbesondere bei
+  - a) systematischer und umfassender Bewertung persönlicher Aspekte auf Grundlage automatisierter Verarbeitung einschließlich Profiling, die als Grundlage für Entscheidungen mit rechtlicher oder ähnlich erheblicher Wirkung dient,
+  - b) umfangreicher Verarbeitung besonderer Kategorien nach Artikel 9 Absatz 1 oder von Daten über Straftaten nach Artikel 10,
+  - c) systematischer umfangreicher Überwachung öffentlich zugänglicher Bereiche.
+- **Absatz 4** – Die Aufsichtsbehörde erstellt und veröffentlicht eine Liste der Verarbeitungsvorgänge, für die eine Abschätzung durchzuführen ist, und übermittelt sie dem Europäischen Datenschutzausschuss.
+- **Absatz 5** – Die Aufsichtsbehörde kann außerdem eine Liste der Vorgänge veröffentlichen, für die keine Abschätzung erforderlich ist.
+- **Absatz 6** – Betreffen die Listen grenzüberschreitende Tätigkeiten, wendet die Aufsichtsbehörde vor ihrer Festlegung das Kohärenzverfahren nach Artikel 63 an.
+- **Absatz 7** – Die Abschätzung enthält mindestens
+  - a) eine systematische Beschreibung der Verarbeitungsvorgänge und Zwecke,
+  - b) eine Bewertung der Notwendigkeit und Verhältnismäßigkeit,
+  - c) eine Bewertung der Risiken für die Rechte und Freiheiten der betroffenen Personen und
+  - d) die geplanten Abhilfemaßnahmen, Garantien und Sicherheitsvorkehrungen.
+- **Absatz 8** – Die Einhaltung genehmigter Verhaltensregeln nach Artikel 40 ist bei der Beurteilung gebührend zu berücksichtigen.
+- **Absatz 9** – Gegebenenfalls holt der Verantwortliche den Standpunkt der betroffenen Personen oder ihrer Vertreter ein, unbeschadet geschäftlicher oder öffentlicher Interessen und der Sicherheit der Verarbeitung.
+- **Absatz 10** – Beruht eine Verarbeitung nach Artikel 6 Absatz 1 Buchstabe c oder e auf einer Rechtsvorschrift, bei deren Erlass bereits eine allgemeine Folgenabschätzung durchgeführt wurde, gelten die Absätze 1 bis 7 nicht, sofern die Mitgliedstaaten eine vorherige Abschätzung nicht für erforderlich halten.
+- **Absatz 11** – Der Verantwortliche überprüft erforderlichenfalls, ob die Verarbeitung gemäß der Abschätzung erfolgt, zumindest wenn sich das Risiko ändert.
+
+##### Wer ist betroffen?
+
+Verantwortliche, die Verarbeitungen mit voraussichtlich hohem Risiko planen; die oder der Datenschutzbeauftragte, die oder der beratend mitwirkt; die Aufsichtsbehörden, die die Listen nach den Absätzen 4 bis 6 erstellen.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Ab wann ein Risiko „hoch“ ist, über die Fälle des Absatzes 3 und die Listen der Aufsichtsbehörden hinaus.
+- Welche Form und Methodik die Abschätzung haben muss.
+- Wie Notwendigkeit und Verhältnismäßigkeit nach Absatz 7 Buchstabe b zu bewerten sind.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Neue KI-Systeme anhand des Absatzes 3 und der nationalen Listen nach Absatz 4 prüfen; Profiling mit erheblicher Wirkung und umfangreiche Verarbeitung besonderer Kategorien erfordern regelmäßig eine Abschätzung.
+- Die Abschätzung vor Beginn der Verarbeitung durchführen, die oder den Datenschutzbeauftragten einbinden und die Inhalte nach Absatz 7 dokumentieren.
+- Die Abschätzung überprüfen, wenn sich das Risiko ändert, etwa nach erneutem Training eines Modells mit neuen Daten oder bei Erweiterung auf neue Zwecke.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 36 – Vorherige Konsultation
 
@@ -778,7 +1306,46 @@ Erlaubt Übermittlungen an Drittländer oder internationale Organisationen, für
 
 #### Artikel 46 – Datenübermittlung vorbehaltlich geeigneter Garantien
 
-Erlaubt Übermittlungen ohne Angemessenheitsbeschluss nur, wenn der Verantwortliche oder Auftragsverarbeiter geeignete Garantien vorsieht und durchsetzbare Rechte und wirksame Rechtsbehelfe bestehen.
+##### Worum geht es?
+
+Artikel 46 regelt Übermittlungen personenbezogener Daten an Drittländer oder internationale Organisationen, für die kein Angemessenheitsbeschluss der Kommission vorliegt. Sie sind nur mit geeigneten Garantien zulässig, etwa Standarddatenschutzklauseln oder verbindlichen internen Datenschutzvorschriften.
+
+##### Was verlangt der Artikel?
+
+- **Absatz 1** – Liegt kein Beschluss nach Artikel 45 Absatz 3 vor, darf ein Verantwortlicher oder Auftragsverarbeiter Daten nur übermitteln, wenn er geeignete Garantien vorsieht und den betroffenen Personen durchsetzbare Rechte und wirksame Rechtsbehelfe zur Verfügung stehen.
+- **Absatz 2** – Ohne besondere Genehmigung einer Aufsichtsbehörde können geeignete Garantien bestehen in
+  - a) einem rechtlich bindenden und durchsetzbaren Dokument zwischen Behörden oder öffentlichen Stellen,
+  - b) verbindlichen internen Datenschutzvorschriften nach Artikel 47,
+  - c) von der Kommission erlassenen Standarddatenschutzklauseln,
+  - d) von einer Aufsichtsbehörde angenommenen und von der Kommission genehmigten Standarddatenschutzklauseln,
+  - e) genehmigten Verhaltensregeln nach Artikel 40 mit verbindlichen Verpflichtungen des Empfängers im Drittland oder
+  - f) einem genehmigten Zertifizierungsmechanismus nach Artikel 42 mit verbindlichen Verpflichtungen des Empfängers im Drittland.
+- **Absatz 3** – Mit Genehmigung der zuständigen Aufsichtsbehörde können geeignete Garantien auch bestehen in
+  - a) individuell ausgehandelten Vertragsklauseln mit dem Empfänger oder
+  - b) Bestimmungen in Verwaltungsvereinbarungen zwischen Behörden mit durchsetzbaren Rechten der betroffenen Personen.
+- **Absatz 4** – In den Fällen des Absatzes 3 wendet die Aufsichtsbehörde das Kohärenzverfahren nach Artikel 63 an.
+- **Absatz 5** – Genehmigungen und Beschlüsse der Kommission nach Artikel 26 der Richtlinie 95/46/EG bleiben gültig, bis sie geändert, ersetzt oder aufgehoben werden.
+
+##### Wer ist betroffen?
+
+Verantwortliche und Auftragsverarbeiter, die Daten in Drittländer oder an internationale Organisationen übermitteln, und die Aufsichtsbehörden, die nach Absatz 3 genehmigen.
+
+##### Was ist nicht ausdrücklich geregelt?
+
+- Was „durchsetzbare Rechte“ und „wirksame Rechtsbehelfe“ im Einzelnen erfordern.
+- Nach welchen Kriterien Aufsichtsbehörden Vertragsklauseln nach Absatz 3 genehmigen.
+
+##### Was könnte das in der Praxis bedeuten?
+
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
+
+- Vor der Nutzung von KI-Diensten oder APIs, die außerhalb der EU betrieben werden, prüfen, ob personenbezogene Daten übermittelt werden und ob ein Angemessenheitsbeschluss besteht.
+- Ohne Angemessenheitsbeschluss eine Garantie nach Absatz 2 nutzen, typischerweise die Standarddatenschutzklauseln der Kommission, und sie aktuell halten.
+- Prüfen, ob die Zusagen des Empfängers die Rechte der betroffenen Personen tatsächlich durchsetzbar machen.
+
+##### Ab wann gilt der Artikel?
+
+Gilt ab dem **25. Mai 2018** (Art. 99 Abs. 2).
 
 #### Artikel 47 – Verbindliche interne Datenschutzvorschriften
 
