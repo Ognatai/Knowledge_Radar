@@ -17,3 +17,7 @@ rules:
   - [ '\bSatz-Einbettungen', 'Sentence Embeddings' ]
   - [ '\bEinbettungen\b', 'Embeddings' ]
   - [ '\bEinbettungsmodell', 'Embedding-Modell' ]
+  - [ '\bTermausprägungssättigung', 'Term Frequency Saturation' ]
+  - [ '\bSättigung der Termhäufigkeit', 'Term Frequency Saturation' ]
+  - [ '\binverse[nr]? Dokumentfrequenz', 'Inverse Document Frequency' ]
+  - [ '\binverse[nr]? Dokumenthäufigkeit', 'Inverse Document Frequency' ]
