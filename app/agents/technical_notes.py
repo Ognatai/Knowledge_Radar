@@ -378,6 +378,12 @@ def style_problems(text: str, resolved: list[sources.Source]) -> list[str]:
         problems.append(f"{len(dangling)} link(s) appended after the end of a sentence")
     if body.count("[[") != body.count("]]"):
         problems.append("unbalanced [[ ]] (broken link)")
+    for heading, section in english_sections(text):
+        last_line = section.strip().splitlines()[-1].strip() if section.strip() else ""
+        if last_line and not last_line.startswith(("|", "```", "-", "*")) and not re.search(r"[.!?:)\]`*]$", last_line):
+            problems.append(f"section '{heading}' ends mid-sentence (truncated?)")
+        elif last_line.startswith("-") and not re.search(r"[.!?:)\]`*a-z0-9]$", last_line):
+            problems.append(f"section '{heading}' ends mid-sentence (truncated?)")
     for source in resolved:
         surname = re.escape(source.short.split()[0].rstrip(","))
         year = source.short[-5:-1]
