@@ -3,6 +3,7 @@ title_en: Entity Extraction
 title_de: Entitätsextraktion
 entity_type: Method
 sources:
+- https://edoc.ub.uni-muenchen.de/36297/
 - https://aclanthology.org/W03-0419/
 - https://arxiv.org/abs/1603.01360
 - https://arxiv.org/abs/1810.04805
@@ -32,6 +33,8 @@ A model reads a text and marks each entity span together with its type. Classica
 4. Arbitrary entity types with a compact encoder
 ▼
 5. NER with large language models
+▼
+6. From entities to actors
 ```
 
 #### 1. Task and evaluation
@@ -54,9 +57,13 @@ Traditional NER models are limited to the entity types they were trained on. Lar
 
 Out of the box, large language models performed significantly below supervised baselines on NER, because NER is a sequence labelling task and LLMs generate text (Wang et al., 2023). GPT-NER bridges this gap by turning labelling into generation: to find location entities in "Columbus is a city", the model generates "@@Columbus## is a city", where the special tokens mark the entity. Against the tendency of LLMs to label inputs without entities over-confidently as entities, a self-verification step asks the model whether each extracted entity really belongs to the label. On five widely used NER datasets GPT-NER achieved performance comparable to fully supervised baselines, and with very little training data it performed significantly better than supervised models (Wang et al., 2023).
 
+#### 6. From entities to actors
+
+NER labels each mention separately and does not resolve coreference: a full name and a later title with surname are treated as unrelated entities (Urchs, 2025). Analyses that need one profile per person therefore add coreference resolution to group all mentions of the same person. Urchs (2025) uses person entities grouped this way as actors and approximates each actor's gender only from the pronouns used for them, deliberately avoiding name-based gender inference and external databases, which are culturally biased ([[bias-in-nlp|Bias in NLP]]).
+
 #### Origin and variants
 
-CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) set a common benchmark. Neural architectures (Lample et al., 2016) removed the need for hand-crafted features, pretrained encoders (Devlin et al., 2018) made fine-tuning the standard approach, and GLiNER (Zaratiana et al., 2023) and GPT-NER (Wang et al., 2023) opened NER to arbitrary entity types and low-resource settings.
+CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) set a common benchmark. Neural architectures (Lample et al., 2016) removed the need for hand-crafted features, pretrained encoders (Devlin et al., 2018) made fine-tuning the standard approach, and GLiNER (Zaratiana et al., 2023) and GPT-NER (Wang et al., 2023) opened NER to arbitrary entity types and low-resource settings. Combined with coreference resolution, person entities become actor profiles for corpus analyses (Urchs, 2025).
 
 ### When to use it
 
@@ -75,6 +82,7 @@ CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) set a common benchmark. Neural ar
 - Classical models only recognise the entity types they were trained on (Zaratiana et al., 2023).
 - Large language models are costly to run, especially via APIs, which makes them impractical in resource-limited scenarios (Zaratiana et al., 2023).
 - LLMs tend to label inputs without entities over-confidently as entities and need extra verification (Wang et al., 2023).
+- NER does not link different mentions of the same person; that requires coreference resolution (Urchs, 2025).
 
 ### Comparison
 
@@ -95,6 +103,7 @@ Entity extraction finds and types the named entities in a text; fine-tuned encod
 
 ### Sources
 
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 - Tjong Kim Sang, E. F. & De Meulder, F. (2003). *Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition.* CoNLL 2003. [ACL Anthology](https://aclanthology.org/W03-0419/)
 - Lample, G. et al. (2016). *Neural Architectures for Named Entity Recognition.* NAACL 2016. [arXiv:1603.01360](https://arxiv.org/abs/1603.01360)
 - Devlin, J. et al. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.* NAACL 2019. [arXiv:1810.04805](https://arxiv.org/abs/1810.04805)
@@ -123,6 +132,8 @@ Ein Modell liest einen Text und markiert jede Entität mit ihrem Typ. Klassische
 4. Beliebige Entitätstypen mit einem kompakten Encoder
 ▼
 5. NER mit großen Sprachmodellen
+▼
+6. Von Entitäten zu Akteur:innen
 ```
 
 #### 1. Aufgabe und Evaluation
@@ -145,9 +156,13 @@ Klassische NER-Modelle sind auf die Entitätstypen beschränkt, mit denen sie tr
 
 Ohne Anpassung lagen große Sprachmodelle bei NER deutlich unter überwachten Baselines, weil NER eine Sequenz-Labeling-Aufgabe ist und LLMs Text erzeugen (Wang et al., 2023). GPT-NER überbrückt diese Lücke, indem es das Labeling in Generierung umwandelt: Um Ortsentitäten in „Columbus is a city“ zu finden, erzeugt das Modell „@@Columbus## is a city“, wobei die Sondertoken die Entität markieren. Gegen die Neigung von LLMs, Eingaben ohne Entitäten übermäßig selbstsicher als Entitäten zu labeln, fragt ein Selbstverifikationsschritt das Modell, ob jede extrahierte Entität wirklich zum Label gehört. Auf fünf verbreiteten NER-Datensätzen erreichte GPT-NER eine mit vollständig überwachten Baselines vergleichbare Leistung und war bei sehr wenigen Trainingsdaten deutlich besser als überwachte Modelle (Wang et al., 2023).
 
+#### 6. Von Entitäten zu Akteur:innen
+
+NER labelt jede Erwähnung einzeln und löst keine Koreferenz auf: Ein voller Name und eine spätere Nennung mit Titel und Nachname gelten als voneinander unabhängige Entitäten (Urchs, 2025). Analysen, die ein Profil je Person brauchen, ergänzen daher eine Koreferenzauflösung, die alle Erwähnungen derselben Person zusammenführt. Urchs (2025) nutzt so gruppierte Personenentitäten als Akteur:innen und erschließt ihr Geschlecht ausschließlich aus den für sie verwendeten Pronomen; auf namensbasierte Geschlechtszuordnung und externe Datenbanken, die kulturell verzerrt sind, wird bewusst verzichtet ([[bias-in-nlp|Bias in NLP]]).
+
 #### Ursprung und Varianten
 
-CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) schuf einen gemeinsamen Benchmark. Neuronale Architekturen (Lample et al., 2016) machten handgefertigte Merkmale überflüssig, vortrainierte Encoder (Devlin et al., 2018) machten Fine-Tuning zum Standard, und GLiNER (Zaratiana et al., 2023) sowie GPT-NER (Wang et al., 2023) öffneten NER für beliebige Entitätstypen und Szenarien mit wenigen Daten.
+CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) schuf einen gemeinsamen Benchmark. Neuronale Architekturen (Lample et al., 2016) machten handgefertigte Merkmale überflüssig, vortrainierte Encoder (Devlin et al., 2018) machten Fine-Tuning zum Standard, und GLiNER (Zaratiana et al., 2023) sowie GPT-NER (Wang et al., 2023) öffneten NER für beliebige Entitätstypen und Szenarien mit wenigen Daten. Zusammen mit Koreferenzauflösung werden Personenentitäten zu Profilen von Akteur:innen für Korpusanalysen (Urchs, 2025).
 
 ### Wann einsetzen
 
@@ -166,6 +181,7 @@ CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) schuf einen gemeinsamen Benchmark
 - Klassische Modelle erkennen nur die Entitätstypen, mit denen sie trainiert wurden (Zaratiana et al., 2023).
 - Große Sprachmodelle sind im Betrieb teuer, besonders über APIs, und daher in ressourcenbeschränkten Szenarien unpraktisch (Zaratiana et al., 2023).
 - LLMs neigen dazu, Eingaben ohne Entitäten übermäßig selbstsicher als Entitäten zu labeln, und brauchen eine zusätzliche Prüfung (Wang et al., 2023).
+- NER verknüpft verschiedene Erwähnungen derselben Person nicht; dafür ist Koreferenzauflösung nötig (Urchs, 2025).
 
 ### Vergleich
 
@@ -186,6 +202,7 @@ Entitätsextraktion findet und typisiert die benannten Entitäten in einem Text;
 
 ### Quellen
 
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 - Tjong Kim Sang, E. F. & De Meulder, F. (2003). *Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition.* CoNLL 2003. [ACL Anthology](https://aclanthology.org/W03-0419/)
 - Lample, G. et al. (2016). *Neural Architectures for Named Entity Recognition.* NAACL 2016. [arXiv:1603.01360](https://arxiv.org/abs/1603.01360)
 - Devlin, J. et al. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.* NAACL 2019. [arXiv:1810.04805](https://arxiv.org/abs/1810.04805)

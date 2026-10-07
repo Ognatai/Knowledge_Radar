@@ -3,6 +3,7 @@ title_en: Information Retrieval
 title_de: Information Retrieval
 entity_type: Concept
 sources:
+- https://edoc.ub.uni-muenchen.de/36297/
 - https://nlp.stanford.edu/IR-book/
 - https://doi.org/10.1561/1500000019
 - https://doi.org/10.1145/361219.361220
@@ -34,6 +35,8 @@ Documents are indexed in advance. At query time, the system looks up candidate d
 5. Dense retrieval
 ▼
 6. Evaluation
+▼
+7. Fairness of retrieval results
 ```
 
 #### 1. Inverted index
@@ -64,9 +67,13 @@ Sparse vector models such as tf-idf and BM25 were the de facto method for passag
 
 Retrieval systems are evaluated against relevance judgements with precision (the share of retrieved documents that are relevant), recall (the share of relevant documents that are retrieved) and measures for ranked lists (Manning et al., 2008). How these measures are applied to RAG retrievers is described in [[rag-retrieval-evaluation|RAG: Retrieval Evaluation]].
 
+#### 7. Fairness of retrieval results
+
+Retrieval systems decide who and what becomes visible. Urchs (2025) introduces a bias-preserving definition of algorithmic gender fairness, which asks whether algorithmic outputs reflect real-world gender distributions without introducing or amplifying disparities, and applies it to professors at German universities and universities of applied sciences: completeness of their metadata, retrieval of their publications in academic databases and their visibility in Google search results. No overt algorithmic discrimination was found, but male professors were associated with more search results and more aligned publication records, while female professors showed higher variability in digital visibility, reflecting the interplay of platform algorithms, institutional curation and self-presentation ([[fairness-metrics|Fairness Metrics]]).
+
 #### Origin and variants
 
-The vector space model (Salton et al., 1975) and the comparison of term-weighting schemes (Salton & Buckley, 1988) shaped classical ranked retrieval. BM25 grew out of the probabilistic relevance framework (Robertson & Zaragoza, 2009), and dense passage retrieval (Karpukhin et al., 2020) replaced sparse term vectors with learned embeddings. Manning et al. (2008) give a textbook overview of the classical methods.
+The vector space model (Salton et al., 1975) and the comparison of term-weighting schemes (Salton & Buckley, 1988) shaped classical ranked retrieval. BM25 grew out of the probabilistic relevance framework (Robertson & Zaragoza, 2009), and dense passage retrieval (Karpukhin et al., 2020) replaced sparse term vectors with learned embeddings. Manning et al. (2008) give a textbook overview of the classical methods. Urchs (2025) extends retrieval evaluation to representational fairness between genders.
 
 ### When to use it
 
@@ -85,6 +92,7 @@ The vector space model (Salton et al., 1975) and the comparison of term-weightin
 - Term-based models only match the words that occur in the query; different wording for the same meaning is not matched (Salton et al., 1975).
 - Dense retrievers need training data of questions and passages (Karpukhin et al., 2020).
 - Ranking quality depends on weighting choices that have to be compared empirically (Salton & Buckley, 1988).
+- Technically correct retrieval can still give some groups less visibility than others (Urchs, 2025).
 
 ### Comparison
 
@@ -97,7 +105,7 @@ The vector space model (Salton et al., 1975) and the comparison of term-weightin
 
 ### In practice
 
-BM25 is a strong baseline that should be measured before more complex methods are introduced, since it requires no training (Robertson & Zaragoza, 2009). Lexical and dense retrieval are often combined, because they fail in different situations ([[rag-retrieval|RAG: Retrieval]]). Retrieval quality is measured on a set of queries with relevance judgements from the target domain (Manning et al., 2008; [[rag-retrieval-evaluation|RAG: Retrieval Evaluation]]).
+BM25 is a strong baseline that should be measured before more complex methods are introduced, since it requires no training (Robertson & Zaragoza, 2009). Lexical and dense retrieval are often combined, because they fail in different situations ([[rag-retrieval|RAG: Retrieval]]). Retrieval quality is measured on a set of queries with relevance judgements from the target domain (Manning et al., 2008; [[rag-retrieval-evaluation|RAG: Retrieval Evaluation]]). Where results concern people, it is also checked whether groups are represented in proportion to reality (Urchs, 2025).
 
 ### Key takeaway
 
@@ -105,6 +113,7 @@ Information retrieval ranks documents for a query, classically with an inverted 
 
 ### Sources
 
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 - Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press. [online edition](https://nlp.stanford.edu/IR-book/)
 - Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
 - Salton, G., Wong, A. & Yang, C. S. (1975). *A Vector Space Model for Automatic Indexing.* Communications of the ACM 18(11). [doi:10.1145/361219.361220](https://doi.org/10.1145/361219.361220)
@@ -135,6 +144,8 @@ Dokumente werden vorab indexiert. Zur Anfragezeit sucht das System Kandidatendok
 5. Dense Retrieval
 ▼
 6. Evaluation
+▼
+7. Fairness von Suchergebnissen
 ```
 
 #### 1. Invertierter Index
@@ -165,9 +176,13 @@ Dünnbesetzte (sparse) Vektormodelle wie tf-idf und BM25 waren die übliche Meth
 
 Retrieval-Systeme werden gegen Relevanzurteile mit Precision (Anteil der gefundenen Dokumente, die relevant sind), Recall (Anteil der relevanten Dokumente, die gefunden werden) und Maßen für Ranglisten evaluiert (Manning et al., 2008). Wie diese Maße auf RAG-Retriever angewendet werden, beschreibt [[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]].
 
+#### 7. Fairness von Suchergebnissen
+
+Retrieval-Systeme entscheiden mit darüber, wer und was sichtbar wird. Urchs (2025) führt eine bias-erhaltende Definition algorithmischer Geschlechterfairness ein, die fragt, ob algorithmische Ausgaben die realen Geschlechterverhältnisse abbilden, ohne Ungleichheiten einzuführen oder zu verstärken, und wendet sie auf Professor:innen an deutschen Universitäten und Hochschulen für angewandte Wissenschaften an: auf die Vollständigkeit ihrer Metadaten, das Auffinden ihrer Publikationen in wissenschaftlichen Datenbanken und ihre Sichtbarkeit in den Suchergebnissen von Google. Offene algorithmische Diskriminierung zeigte sich nicht, doch Professoren waren mit mehr Suchergebnissen und stimmigeren Publikationsnachweisen verbunden, während die digitale Sichtbarkeit von Professorinnen stärker schwankte; darin spiegelt sich das Zusammenspiel von Plattformalgorithmen, institutioneller Pflege und Selbstdarstellung ([[fairness-metrics|Fairness-Metriken]]).
+
 #### Ursprung und Varianten
 
-Das Vektorraummodell (Salton et al., 1975) und der Vergleich von Termgewichtungsschemata (Salton & Buckley, 1988) prägten das klassische Ranked Retrieval. BM25 entstand aus dem probabilistischen Relevanzmodell (Robertson & Zaragoza, 2009), und Dense Passage Retrieval (Karpukhin et al., 2020) ersetzte dünnbesetzte Termvektoren durch gelernte Embeddings. Manning et al. (2008) geben einen Lehrbuchüberblick über die klassischen Verfahren.
+Das Vektorraummodell (Salton et al., 1975) und der Vergleich von Termgewichtungsschemata (Salton & Buckley, 1988) prägten das klassische Ranked Retrieval. BM25 entstand aus dem probabilistischen Relevanzmodell (Robertson & Zaragoza, 2009), und Dense Passage Retrieval (Karpukhin et al., 2020) ersetzte dünnbesetzte Termvektoren durch gelernte Embeddings. Manning et al. (2008) geben einen Lehrbuchüberblick über die klassischen Verfahren. Urchs (2025) erweitert die Evaluation von Retrieval um die Fairness der Repräsentation zwischen den Geschlechtern.
 
 ### Wann einsetzen
 
@@ -186,6 +201,7 @@ Das Vektorraummodell (Salton et al., 1975) und der Vergleich von Termgewichtungs
 - Termbasierte Modelle treffen nur die Wörter, die in der Anfrage vorkommen; andere Formulierungen derselben Bedeutung werden nicht gefunden (Salton et al., 1975).
 - Dense Retriever brauchen Trainingsdaten aus Fragen und Passagen (Karpukhin et al., 2020).
 - Die Ranking-Qualität hängt von Gewichtungsentscheidungen ab, die empirisch verglichen werden müssen (Salton & Buckley, 1988).
+- Auch technisch korrektes Retrieval kann manchen Gruppen weniger Sichtbarkeit geben als anderen (Urchs, 2025).
 
 ### Vergleich
 
@@ -198,7 +214,7 @@ Das Vektorraummodell (Salton et al., 1975) und der Vergleich von Termgewichtungs
 
 ### In der Praxis
 
-BM25 ist eine starke Baseline, die gemessen werden sollte, bevor aufwendigere Verfahren eingeführt werden, da sie kein Training erfordert (Robertson & Zaragoza, 2009). Lexikalisches und Dense Retrieval werden oft kombiniert, weil sie in unterschiedlichen Situationen versagen ([[rag-retrieval|RAG: Retrieval]]). Die Retrieval-Qualität wird an einer Menge von Anfragen mit Relevanzurteilen aus der Zieldomäne gemessen (Manning et al., 2008; [[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]]).
+BM25 ist eine starke Baseline, die gemessen werden sollte, bevor aufwendigere Verfahren eingeführt werden, da sie kein Training erfordert (Robertson & Zaragoza, 2009). Lexikalisches und Dense Retrieval werden oft kombiniert, weil sie in unterschiedlichen Situationen versagen ([[rag-retrieval|RAG: Retrieval]]). Die Retrieval-Qualität wird an einer Menge von Anfragen mit Relevanzurteilen aus der Zieldomäne gemessen (Manning et al., 2008; [[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]]). Betreffen die Ergebnisse Personen, wird zusätzlich geprüft, ob Gruppen ihrem tatsächlichen Anteil entsprechend vertreten sind (Urchs, 2025).
 
 ### Merksatz
 
@@ -206,6 +222,7 @@ Information Retrieval bringt Dokumente für eine Anfrage in eine Rangfolge, klas
 
 ### Quellen
 
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 - Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press. [online edition](https://nlp.stanford.edu/IR-book/)
 - Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
 - Salton, G., Wong, A. & Yang, C. S. (1975). *A Vector Space Model for Automatic Indexing.* Communications of the ACM 18(11). [doi:10.1145/361219.361220](https://doi.org/10.1145/361219.361220)

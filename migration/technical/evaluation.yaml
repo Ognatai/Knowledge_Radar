@@ -1,0 +1,144 @@
+# Migration package "Evaluation, metrics and explainability": input for
+# `python -m app.agents.technical_notes <command> evaluation`.
+# arXiv sources are verified against the `expect` title fragment; DOIs checked against Crossref,
+# abstracts against OpenAlex where available; the dissertation (Urchs, 2025) was read in full text.
+notes:
+  classification-metrics:
+    sources:
+      - url: https://doi.org/10.1016/j.ipm.2009.03.002
+        citation: "Sokolova, M. & Lapalme, G. (2009). *A systematic analysis of performance measures for classification tasks.* Information Processing & Management 45(4)."
+        short: Sokolova & Lapalme (2009)
+        link_label: doi:10.1016/j.ipm.2009.03.002
+        summary: "Systematic analysis of performance measures computed from the confusion matrix (true and false positives and negatives), such as accuracy, precision, recall (sensitivity), specificity and F-score, for binary, multi-class, multi-labelled and hierarchical classification; studies which measures stay invariant under changes of the confusion matrix, e.g. when only the number of true negatives changes, and therefore which measures suit which evaluation goal."
+      - url: https://doi.org/10.1016/j.patrec.2005.10.010
+        citation: "Fawcett, T. (2006). *An introduction to ROC analysis.* Pattern Recognition Letters 27(8)."
+        short: Fawcett (2006)
+        link_label: doi:10.1016/j.patrec.2005.10.010
+        summary: "Tutorial on receiver operating characteristic (ROC) graphs, which plot the true positive rate against the false positive rate of a classifier as its decision threshold varies. The area under the ROC curve (AUC) equals the probability that the classifier ranks a randomly chosen positive instance higher than a randomly chosen negative one; ROC curves are insensitive to changes in class distribution."
+      - url: https://doi.org/10.1145/1143844.1143874
+        citation: "Davis, J. & Goadrich, M. (2006). *The relationship between Precision-Recall and ROC curves.* ICML 2006."
+        short: Davis & Goadrich (2006)
+        link_label: doi:10.1145/1143844.1143874
+        summary: "For highly skewed datasets, precision-recall (PR) curves give a more informative picture than ROC curves. A curve dominates in ROC space if and only if it dominates in PR space; in PR space it is incorrect to interpolate linearly between points, and optimising the area under the ROC curve does not guarantee optimising the area under the PR curve."
+      - url: https://doi.org/10.1371/journal.pone.0118432
+        citation: "Saito, T. & Rehmsmeier, M. (2015). *The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets.* PLoS ONE 10(3)."
+        short: Saito & Rehmsmeier (2015)
+        link_label: doi:10.1371/journal.pone.0118432
+        summary: "On strongly imbalanced datasets, where negatives far outnumber positives, ROC plots can be visually deceptive about the reliability of a classifier because of an intuitive but wrong interpretation of specificity. Precision-recall plots evaluate the fraction of true positives among positive predictions and give a more accurate picture of future performance."
+      - url: https://doi.org/10.1186/s12864-019-6413-7
+        citation: "Chicco, D. & Jurman, G. (2020). *The advantages of the Matthews correlation coefficient (MCC) over F1 score and accuracy in binary classification evaluation.* BMC Genomics 21."
+        short: Chicco & Jurman (2020)
+        link_label: doi:10.1186/s12864-019-6413-7
+        summary: "Accuracy and F1 score can show overoptimistic, inflated results, especially on imbalanced datasets. The Matthews correlation coefficient (MCC) produces a high score only if the prediction is good in all four confusion matrix categories (true positives, false negatives, true negatives, false positives), proportionally to the sizes of the positive and negative classes."
+      - {arxiv: "1606.05250", expect: "SQuAD", venue: EMNLP 2016}
+  fairness-metrics:
+    sources:
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. It distinguishes bias (imbalances or distortions in data or model behaviour), fairness (identifying and mitigating normatively problematic differences in treatment, a context-dependent concept going back to Aristotle's idea of treating equals equally) and discrimination (the manifestation of unequal treatment that systematically disadvantages people because of attributes such as gender). It contrasts bias-preserving approaches, which aim at formal equality and reflect the real world (most fairness metrics, such as equalised odds or predictive parity), with bias-transforming approaches, which correct for real-world inequalities but require contested value judgements about a desired world. It presents three families of statistical fairness metrics with loan examples: individual fairness (fairness through awareness: similar individuals receive similar outcomes; fairness through unawareness: protected attributes are excluded, which is vulnerable to proxies such as name or occupation; counterfactual fairness: the decision stays the same in a counterfactual world with a different protected attribute), group fairness (demographic parity, equalised odds, equal opportunity, predictive parity, conditional statistical parity, treatment equality, false positive and false negative rate balance, overall accuracy equality) and subgroup fairness (constraints over many intersectional subgroups against fairness gerrymandering, e.g. a classifier that approves loans only for Black men and White women satisfies parity per attribute but never approves White men or Black women). Limits: group metrics are often mutually incompatible and sensitive to base rates; formal metrics need discrete group labels, which is difficult for non-binary or fluid identities, and tend to treat groups as symmetric and ahistorical, ignoring structural inequality."
+      - url: https://doi.org/10.1145/2090236.2090255
+        citation: "Dwork, C., Hardt, M., Pitassi, T., Reingold, O. & Zemel, R. (2012). *Fairness Through Awareness.* ITCS 2012."
+        short: Dwork et al. (2012)
+        link_label: doi:10.1145/2090236.2090255
+        summary: "Framework for fair classification with a task-specific similarity metric between individuals and an algorithm that maximises utility subject to the constraint that similar individuals are treated similarly (individual fairness). Also adapts the approach to achieve statistical parity, i.e. the demographics of those receiving a classification match the population, while treating similar individuals as similarly as possible; discusses the relationship between fairness and privacy."
+      - {arxiv: "1610.02413", expect: "Equality of Opportunity in Supervised Learning", venue: NeurIPS 2016}
+      - {arxiv: "1609.05807", expect: "Inherent Trade-Offs in the Fair Determination of Risk Scores", venue: ITCS 2017}
+      - {arxiv: "1703.00056", expect: "Fair prediction with disparate impact"}
+      - url: https://proceedings.mlr.press/v80/kearns18a.html
+        citation: "Kearns, M., Neel, S., Roth, A. & Wu, Z. S. (2018). *Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness.* ICML 2018."
+        short: Kearns et al. (2018)
+        link_label: PMLR
+        summary: "Statistical fairness definitions fix a few predefined groups and ask for parity of a statistic across them; they are susceptible to fairness gerrymandering, where a classifier looks fair for each group but badly violates fairness on structured subgroups defined over the protected attributes. The paper demands fairness across exponentially or infinitely many subgroups, proves that auditing subgroup fairness for equal false positive rates and statistical parity is computationally hard in the worst case, and gives practical algorithms for auditing and learning."
+      - url: https://doi.org/10.1145/3457607
+        citation: "Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K. & Galstyan, A. (2021). *A Survey on Bias and Fairness in Machine Learning.* ACM Computing Surveys 54(6)."
+        short: Mehrabi et al. (2021)
+        link_label: doi:10.1145/3457607
+        summary: "Survey of real-world applications that have shown biases, sources of bias that can affect AI applications, and a taxonomy of fairness definitions proposed in machine learning, together with methods for mitigating bias in different subdomains."
+      - {arxiv: "1703.06856", expect: "Counterfactual Fairness", venue: NeurIPS 2017}
+  neural-network-evaluation:
+    sources:
+      - url: https://www.deeplearningbook.org/
+        citation: "Goodfellow, I., Bengio, Y. & Courville, A. (2016). *Deep Learning.* MIT Press."
+        short: Goodfellow et al. (2016)
+        link_label: online edition
+        summary: "Textbook on deep learning. Covers generalisation: training error versus test error, underfitting (training error too high) and overfitting (gap between training and test error too large), model capacity and its relation to both, the use of validation sets and early stopping; and practical methodology: choosing performance metrics that match the goal of the application, such as accuracy, precision, recall and coverage, and diagnosing whether a model underfits or overfits."
+      - {arxiv: "1611.03530", expect: "Understanding deep learning requires rethinking generalization", venue: ICLR 2017}
+      - {arxiv: "1812.11118", expect: "Reconciling modern machine learning practice and the bias-variance trade-off", venue: PNAS 2019}
+      - {arxiv: "1706.04599", expect: "On Calibration of Modern Neural Networks", venue: ICML 2017}
+      - url: https://aclanthology.org/P02-1040/
+        citation: "Papineni, K., Roukos, S., Ward, T. & Zhu, W.-J. (2002). *BLEU: a Method for Automatic Evaluation of Machine Translation.* ACL 2002."
+        short: Papineni et al. (2002)
+        link_label: ACL Anthology
+        summary: "BLEU scores a candidate translation against one or more reference translations using modified (clipped) n-gram precision for n-grams up to length four, combined by a geometric mean and multiplied by a brevity penalty for candidates shorter than the references; it was shown to correlate with human judgements at corpus level."
+      - url: https://doi.org/10.1016/j.ijforecast.2006.03.001
+        citation: "Hyndman, R. J. & Koehler, A. B. (2006). *Another look at measures of forecast accuracy.* International Journal of Forecasting 22(4)."
+        short: Hyndman & Koehler (2006)
+        link_label: doi:10.1016/j.ijforecast.2006.03.001
+        summary: "Reviews accuracy measures for numerical predictions: scale-dependent measures such as mean absolute error (MAE) and root mean squared error (RMSE), percentage errors such as MAPE, which can be infinite or misleading when actual values are zero or close to zero, and relative measures. Proposes the mean absolute scaled error (MASE), which scales errors by the in-sample mean absolute error of a naive forecast."
+  model-comparison:
+    sources:
+      - url: https://doi.org/10.1162/089976698300017197
+        citation: "Dietterich, T. G. (1998). *Approximate Statistical Tests for Comparing Supervised Classification Learning Algorithms.* Neural Computation 10(7)."
+        short: Dietterich (1998)
+        link_label: doi:10.1162/089976698300017197
+        summary: "Compares five tests for whether one learning algorithm outperforms another on a task. A difference-of-proportions test and a paired t test over random train-test splits have high type I error and should not be used; the 10-fold cross-validated t test has somewhat elevated type I error; McNemar's test and the new 5x2 cv test have acceptable type I error. The cross-validated t test is the most powerful."
+      - url: https://jmlr.org/papers/v7/demsar06a.html
+        citation: "Demšar, J. (2006). *Statistical Comparisons of Classifiers over Multiple Data Sets.* JMLR 7."
+        short: Demšar (2006)
+        link_label: JMLR
+        summary: "Reviews how classifiers are compared over multiple datasets and recommends non-parametric tests: the Wilcoxon signed-ranks test for comparing two classifiers and the Friedman test with corresponding post-hoc tests for comparing several classifiers over multiple datasets; results can be presented with critical difference diagrams."
+      - {arxiv: "2103.03098", expect: "Accounting for Variance in Machine Learning Benchmarks", venue: MLSys 2021}
+      - {arxiv: "1909.03004", expect: "Show Your Work", venue: EMNLP 2019}
+      - {arxiv: "1807.03341", expect: "Troubling Trends in Machine Learning Scholarship"}
+      - {arxiv: "2211.09110", expect: "Holistic Evaluation of Language Models", venue: TMLR}
+  explainable-ai:
+    sources:
+      - {arxiv: "1702.08608", expect: "Towards A Rigorous Science of Interpretable Machine Learning"}
+      - {arxiv: "1811.10154", expect: "Stop Explaining Black Box Machine Learning Models", venue: Nature Machine Intelligence 2019}
+      - {arxiv: "1602.04938", expect: "Why Should I Trust You", venue: KDD 2016}
+      - {arxiv: "1705.07874", expect: "A Unified Approach to Interpreting Model Predictions", venue: NeurIPS 2017}
+      - {arxiv: "1703.01365", expect: "Axiomatic Attribution for Deep Networks", venue: ICML 2017}
+      - {arxiv: "1711.00399", expect: "Counterfactual Explanations without Opening the Black Box", venue: Harvard Journal of Law & Technology 2018}
+      - {arxiv: "1810.03292", expect: "Sanity Checks for Saliency Maps", venue: NeurIPS 2018}
+      - {arxiv: "1902.10186", expect: "Attention is not Explanation", venue: NAACL 2019}
+      - {arxiv: "2305.04388", expect: "Language Models Don't Always Say What They Think", venue: NeurIPS 2023}
+  causal-inference:
+    sources:
+      - url: https://doi.org/10.1080/01621459.1986.10478354
+        citation: "Holland, P. W. (1986). *Statistics and Causal Inference.* Journal of the American Statistical Association 81(396)."
+        short: Holland (1986)
+        link_label: doi:10.1080/01621459.1986.10478354
+        summary: "Correlation does not imply causation, yet causal conclusions from carefully designed experiments are often valid. Uses the potential-outcomes model of causal inference (Rubin) to discuss causation: the causal effect for a unit is the difference between its outcomes under treatment and control, but only one of them can be observed for any unit (the fundamental problem of causal inference), so causal inference relies on assumptions such as those justified by randomisation to estimate average effects."
+      - url: https://doi.org/10.1214/09-SS057
+        citation: "Pearl, J. (2009). *Causal inference in statistics: An overview.* Statistics Surveys 3."
+        short: Pearl (2009)
+        link_label: doi:10.1214/09-SS057
+        summary: "Review of causal inference based on the structural causal model (SCM), which unifies other approaches and represents causal assumptions, for example as causal graphs. Stresses that all causal claims rest on assumptions that cannot be tested from data alone and surveys tools for three types of causal queries: effects of interventions, probabilities of counterfactuals, and direct and indirect effects."
+      - url: https://doi.org/10.1093/biomet/70.1.41
+        citation: "Rosenbaum, P. R. & Rubin, D. B. (1983). *The central role of the propensity score in observational studies for causal effects.* Biometrika 70(1)."
+        short: Rosenbaum & Rubin (1983)
+        link_label: doi:10.1093/biomet/70.1.41
+        summary: "The propensity score is the conditional probability of assignment to a treatment given observed covariates. Adjusting for this single score is sufficient to remove bias due to all observed covariates; applications include matching on the propensity score, subclassification and covariance adjustment."
+      - url: https://doi.org/10.1080/01621459.1996.10476902
+        citation: "Angrist, J. D., Imbens, G. W. & Rubin, D. B. (1996). *Identification of Causal Effects Using Instrumental Variables.* Journal of the American Statistical Association 91(434)."
+        short: Angrist et al. (1996)
+        link_label: doi:10.1080/01621459.1996.10476902
+        summary: "When assignment to a treatment is random but compliance is imperfect, instrumental variables identify causal effects: under simple, interpretable assumptions the IV estimand is the average causal effect for the subgroup of compliers. Applied to the effect of veteran status in the Vietnam era on mortality, using the draft lottery as instrument."
+      - url: https://doi.org/10.1126/science.187.4175.398
+        citation: "Bickel, P. J., Hammel, E. A. & O'Connell, J. W. (1975). *Sex Bias in Graduate Admissions: Data from Berkeley.* Science 187(4175)."
+        short: Bickel et al. (1975)
+        link_label: doi:10.1126/science.187.4175.398
+        summary: "Aggregate graduate admissions data of the University of California, Berkeley, for fall 1973 show a clear but misleading pattern of bias against women. Disaggregated by department, few units show significant departures, and properly pooled data show a small bias in favour of women; the aggregate pattern arises because women applied more often to departments that were harder to enter for applicants of either sex (an instance of Simpson's paradox)."
+      - url: https://miguelhernan.org/whatifbook
+        citation: "Hernán, M. A. & Robins, J. M. (2020). *Causal Inference: What If.* Chapman & Hall/CRC."
+        short: Hernán & Robins (2020)
+        link_label: book website
+        summary: "Textbook on causal inference with potential outcomes and causal graphs: definition of causal effects, randomised experiments, observational studies under exchangeability, positivity and consistency, confounding and selection bias represented with causal diagrams, and methods such as standardisation, inverse probability weighting, propensity scores and instrumental variables."
+      - {arxiv: "1703.06856", expect: "Counterfactual Fairness", venue: NeurIPS 2017}
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. Explains counterfactual fairness as an individual-level fairness notion based on a causal model: a decision is fair if it would have stayed the same had the individual belonged to a different demographic group, holding latent background variables fixed. In a loan example, a woman denied a loan must also be denied in the counterfactual world where she is male with the same qualifications; this matters even if gender is not a feature, because gender may have influenced intermediate variables such as income history. The approach offers strong guarantees but depends on a well-specified causal model. The dissertation also describes causal front-door adjustment with intermediate variables, such as chain-of-thought prompts, as a mitigation strategy for bias in language models."

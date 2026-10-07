@@ -3,6 +3,8 @@ title_en: Information Extraction
 title_de: Informationsextraktion
 entity_type: Method
 sources:
+- https://edoc.ub.uni-muenchen.de/36297/
+- https://aclanthology.org/2024.gebnlp-1.8/
 - https://www.ijcai.org/Proceedings/07/Papers/429.pdf
 - https://aclanthology.org/2021.findings-emnlp.204/
 - https://arxiv.org/abs/2312.17617
@@ -29,6 +31,8 @@ Entities are identified first, because they are the arguments that relations con
 3. Relation extraction as generation
 ▼
 4. Generative IE with large language models
+▼
+5. IE pipelines for discourse analysis
 ```
 
 #### 1. Entities as building blocks
@@ -47,15 +51,20 @@ REBEL (Huguet Cabot & Navigli, 2021) treats relation extraction as sequence-to-s
 
 Generative large language models have strong text understanding and generation capabilities, and many recent works use them for IE in a generative paradigm (Xu et al., 2023). Their survey categorises these works by IE subtask, such as named entity recognition, relation extraction and event extraction, and by technique, empirically analyses the most advanced methods and identifies emerging trends and open research directions. In practice, the desired output structure is usually described in the prompt ([[prompt-engineering|Prompt Engineering]]).
 
+#### 5. IE pipelines for discourse analysis
+
+IE steps can be chained into pipelines that answer questions beyond single facts. Urchs (2025) describes named entity recognition, syntactic processing (dependency parsing to find who does what to whom), coreference resolution (grouping a full name, a title and a pronoun that refer to the same person), semantic role labelling and cross-document coreference resolution, and notes that errors in early steps propagate to later ones. Urchs et al. (2024) combine such steps to partly automate linguistic discourse analysis: the pipeline identifies each person mentioned in a text (actor) and all forms it is referred to (nomination), and the characteristics ascribed to it (predication). Scaled to more than 1.8 million German newspaper articles, it reports per gender how often actors are mentioned, how they are described and with which sentiment, and, for German, whether the generic masculine or gender-neutral language is used (Urchs, 2025; [[bias-in-nlp|Bias in NLP]]).
+
 #### Origin and variants
 
-Open IE (Banko et al., 2007) extracted relation tuples from the web without a fixed schema. Neural entity recognition (Lample et al., 2016) replaced hand-crafted features, REBEL (Huguet Cabot & Navigli, 2021) generated relation triplets end to end, and LLM-based generative IE (Xu et al., 2023) extends the generative approach to many IE subtasks.
+Open IE (Banko et al., 2007) extracted relation tuples from the web without a fixed schema. Neural entity recognition (Lample et al., 2016) replaced hand-crafted features, REBEL (Huguet Cabot & Navigli, 2021) generated relation triplets end to end, and LLM-based generative IE (Xu et al., 2023) extends the generative approach to many IE subtasks. Pipelines that combine several IE steps also support analyses in the social sciences, for example of how genders are represented in news texts (Urchs et al., 2024; Urchs, 2025).
 
 ### When to use it
 
 - When relations of interest are not known in advance and a broad overview of a large text collection is needed, open IE avoids defining a schema first (Banko et al., 2007).
 - When relations from a fixed inventory are needed, for example to populate a knowledge graph, generative relation extraction produces typed triplets (Huguet Cabot & Navigli, 2021).
 - When extraction tasks change often or labelled data is scarce, LLM-based generative IE can be adapted through the prompt (Xu et al., 2023).
+- When large text collections are analysed for how people are named and described, an IE pipeline with coreference resolution can automate parts of discourse analysis (Urchs et al., 2024).
 
 ### Strengths and limitations
 
@@ -63,11 +72,13 @@ Open IE (Banko et al., 2007) extracted relation tuples from the web without a fi
 - Open IE needs no hand-labelled examples per relation and processes a corpus in a single pass (Banko et al., 2007).
 - Generative relation extraction covers more than 200 relation types with one model (Huguet Cabot & Navigli, 2021).
 - Neural entity recognition works without hand-crafted features or gazetteers (Lample et al., 2016).
+- Modular IE pipelines can be adapted, extended and scaled to large corpora (Urchs et al., 2024; Urchs, 2025).
 
 **Limitations**
 - Open IE relation phrases are not mapped to a schema, so the same relation can appear under different phrases (Banko et al., 2007).
 - Typed relation extraction only finds relations from its inventory (Huguet Cabot & Navigli, 2021).
 - LLM-based IE is an active research area with open problems that the survey identifies (Xu et al., 2023).
+- In multi-step pipelines, errors from early steps such as tokenisation or parsing propagate to later ones (Urchs, 2025).
 
 ### Comparison
 
@@ -76,6 +87,7 @@ Open IE (Banko et al., 2007) extracted relation tuples from the web without a fi
 | Open IE (TextRunner) | Free relation phrases, no schema, no labelled examples per relation (Banko et al., 2007) | Broad exploration of large text collections |
 | Generative relation extraction (REBEL) | Typed triplets from a fixed inventory, generated by a fine-tuned seq2seq model (Huguet Cabot & Navigli, 2021) | Populating a schema or knowledge graph |
 | LLM-based generative IE | Structure described in the prompt, many subtasks with one model (Xu et al., 2023) | Changing tasks, little labelled data |
+| Multi-step IE pipeline | NER, parsing and coreference combined into actor profiles (Urchs et al., 2024; Urchs, 2025) | Discourse and representation analyses |
 
 ### In practice
 
@@ -87,6 +99,8 @@ Information extraction turns text into entities, relations and events, either op
 
 ### Sources
 
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
+- Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2024). *Detecting Gender Discrimination on Actor Level Using Linguistic Discourse Analysis.* Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP), ACL 2024. [ACL Anthology](https://aclanthology.org/2024.gebnlp-1.8/)
 - Banko, M., Cafarella, M. J., Soderland, S., Broadhead, M. & Etzioni, O. (2007). *Open Information Extraction from the Web.* IJCAI 2007. [PDF](https://www.ijcai.org/Proceedings/07/Papers/429.pdf)
 - Huguet Cabot, P.-L. & Navigli, R. (2021). *REBEL: Relation Extraction By End-to-end Language generation.* Findings of EMNLP 2021. [ACL Anthology](https://aclanthology.org/2021.findings-emnlp.204/)
 - Xu, D. et al. (2023). *Large Language Models for Generative Information Extraction: A Survey.* [arXiv:2312.17617](https://arxiv.org/abs/2312.17617)
@@ -112,6 +126,8 @@ Zuerst werden Entitäten erkannt, denn sie sind die Argumente, die Relationen ve
 3. Relationsextraktion als Generierung
 ▼
 4. Generative IE mit großen Sprachmodellen
+▼
+5. IE-Pipelines für die Diskursanalyse
 ```
 
 #### 1. Entitäten als Bausteine
@@ -130,15 +146,20 @@ REBEL (Huguet Cabot & Navigli, 2021) behandelt Relationsextraktion als Sequence-
 
 Generative große Sprachmodelle verfügen über ausgeprägte Fähigkeiten im Verstehen und Erzeugen von Text, und viele neuere Arbeiten setzen sie im generativen Paradigma für IE ein (Xu et al., 2023). Deren Übersichtsarbeit ordnet diese Arbeiten nach IE-Teilaufgaben wie Named Entity Recognition, Relationsextraktion und Ereignisextraktion sowie nach Techniken, analysiert die fortgeschrittensten Methoden empirisch und benennt Trends und offene Forschungsfragen. In der Praxis wird die gewünschte Ausgabestruktur meist im Prompt beschrieben ([[prompt-engineering|Prompt Engineering]]).
 
+#### 5. IE-Pipelines für die Diskursanalyse
+
+IE-Schritte lassen sich zu Pipelines verketten, die Fragen jenseits einzelner Fakten beantworten. Urchs (2025) beschreibt Named Entity Recognition, syntaktische Verarbeitung (Dependenzparsing, um zu erkennen, wer was mit wem tut), Koreferenzauflösung (Zusammenführen von vollem Namen, Titel und Pronomen, die dieselbe Person bezeichnen), semantische Rollenzuweisung und dokumentübergreifende Koreferenzauflösung und weist darauf hin, dass sich Fehler früher Schritte in spätere fortpflanzen. Urchs et al. (2024) kombinieren solche Schritte, um die linguistische Diskursanalyse teilweise zu automatisieren: Die Pipeline erkennt jede in einem Text genannte Person (Akteur:in) und alle Formen, mit denen sie bezeichnet wird (Nomination), sowie die ihr zugeschriebenen Eigenschaften (Prädikation). Auf mehr als 1,8 Millionen deutschsprachige Zeitungsartikel skaliert, berichtet sie je Geschlecht, wie oft Akteur:innen erwähnt werden, wie und mit welchem Sentiment sie beschrieben werden und, für das Deutsche, ob das generische Maskulinum oder geschlechtergerechte Sprache verwendet wird (Urchs, 2025; [[bias-in-nlp|Bias in NLP]]).
+
 #### Ursprung und Varianten
 
-Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes Schema. Neuronale Entitätserkennung (Lample et al., 2016) löste handgefertigte Merkmale ab, REBEL (Huguet Cabot & Navigli, 2021) erzeugte Relationstripel durchgängig in einem Modell, und LLM-basierte generative IE (Xu et al., 2023) überträgt den generativen Ansatz auf viele IE-Teilaufgaben.
+Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes Schema. Neuronale Entitätserkennung (Lample et al., 2016) löste handgefertigte Merkmale ab, REBEL (Huguet Cabot & Navigli, 2021) erzeugte Relationstripel durchgängig in einem Modell, und LLM-basierte generative IE (Xu et al., 2023) überträgt den generativen Ansatz auf viele IE-Teilaufgaben. Pipelines aus mehreren IE-Schritten unterstützen auch sozialwissenschaftliche Analysen, etwa wie Geschlechter in Nachrichtentexten dargestellt werden (Urchs et al., 2024; Urchs, 2025).
 
 ### Wann einsetzen
 
 - Wenn die relevanten Relationen vorab nicht bekannt sind und ein breiter Überblick über eine große Textsammlung gebraucht wird, erspart Open IE das vorherige Definieren eines Schemas (Banko et al., 2007).
 - Wenn Relationen aus einem festen Inventar benötigt werden, etwa zum Befüllen eines Wissensgraphen, liefert generative Relationsextraktion typisierte Tripel (Huguet Cabot & Navigli, 2021).
 - Wenn sich Extraktionsaufgaben oft ändern oder annotierte Daten knapp sind, lässt sich LLM-basierte generative IE über den Prompt anpassen (Xu et al., 2023).
+- Wenn große Textsammlungen daraufhin untersucht werden, wie Personen benannt und beschrieben werden, kann eine IE-Pipeline mit Koreferenzauflösung Teile der Diskursanalyse automatisieren (Urchs et al., 2024).
 
 ### Stärken und Grenzen
 
@@ -146,11 +167,13 @@ Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes 
 - Open IE braucht keine manuell annotierten Beispiele pro Relation und verarbeitet ein Korpus in einem Durchlauf (Banko et al., 2007).
 - Generative Relationsextraktion deckt mit einem Modell mehr als 200 Relationstypen ab (Huguet Cabot & Navigli, 2021).
 - Neuronale Entitätserkennung kommt ohne handgefertigte Merkmale oder Gazetteers aus (Lample et al., 2016).
+- Modulare IE-Pipelines lassen sich anpassen, erweitern und auf große Korpora skalieren (Urchs et al., 2024; Urchs, 2025).
 
 **Einschränkungen**
 - Relationsphrasen aus Open IE werden keinem Schema zugeordnet, sodass dieselbe Relation unter verschiedenen Phrasen auftreten kann (Banko et al., 2007).
 - Typisierte Relationsextraktion findet nur Relationen aus ihrem Inventar (Huguet Cabot & Navigli, 2021).
 - LLM-basierte IE ist ein aktives Forschungsfeld mit offenen Problemen, die die Übersichtsarbeit benennt (Xu et al., 2023).
+- In mehrstufigen Pipelines pflanzen sich Fehler früher Schritte wie Tokenisierung oder Parsing in spätere fort (Urchs, 2025).
 
 ### Vergleich
 
@@ -159,6 +182,7 @@ Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes 
 | Open IE (TextRunner) | Freie Relationsphrasen, kein Schema, keine annotierten Beispiele pro Relation (Banko et al., 2007) | Breite Exploration großer Textsammlungen |
 | Generative Relationsextraktion (REBEL) | Typisierte Tripel aus einem festen Inventar, erzeugt von einem feinabgestimmten Seq2Seq-Modell (Huguet Cabot & Navigli, 2021) | Befüllen eines Schemas oder Wissensgraphen |
 | LLM-basierte generative IE | Struktur im Prompt beschrieben, viele Teilaufgaben mit einem Modell (Xu et al., 2023) | Wechselnde Aufgaben, wenige annotierte Daten |
+| Mehrstufige IE-Pipeline | NER, Parsing und Koreferenz zu Profilen von Akteur:innen kombiniert (Urchs et al., 2024; Urchs, 2025) | Diskurs- und Repräsentationsanalysen |
 
 ### In der Praxis
 
@@ -170,6 +194,8 @@ Informationsextraktion überführt Text in Entitäten, Relationen und Ereignisse
 
 ### Quellen
 
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
+- Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2024). *Detecting Gender Discrimination on Actor Level Using Linguistic Discourse Analysis.* Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP), ACL 2024. [ACL Anthology](https://aclanthology.org/2024.gebnlp-1.8/)
 - Banko, M., Cafarella, M. J., Soderland, S., Broadhead, M. & Etzioni, O. (2007). *Open Information Extraction from the Web.* IJCAI 2007. [PDF](https://www.ijcai.org/Proceedings/07/Papers/429.pdf)
 - Huguet Cabot, P.-L. & Navigli, R. (2021). *REBEL: Relation Extraction By End-to-end Language generation.* Findings of EMNLP 2021. [ACL Anthology](https://aclanthology.org/2021.findings-emnlp.204/)
 - Xu, D. et al. (2023). *Large Language Models for Generative Information Extraction: A Survey.* [arXiv:2312.17617](https://arxiv.org/abs/2312.17617)

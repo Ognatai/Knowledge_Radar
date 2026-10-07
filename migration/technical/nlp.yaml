@@ -35,6 +35,11 @@ notes:
       - {arxiv: "1908.10084", expect: "Sentence-BERT", venue: EMNLP 2019}
   entity-extraction:
     sources:
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. Describes named entity recognition as assigning each token an entity type such as person, location or organisation, and notes that NER does not resolve coreference: expressions like a full name and a title with surname are treated independently, so coreference resolution is needed to group all mentions of one person. Describes rule-based, statistical (HMM, SVM, CRF) and deep learning NER (BiLSTM-CRF, BERT) and challenges in domain-specific and low-resource settings. Uses person entities as actors in a pipeline that approximates each actor's gender only from the pronouns used for them, deliberately avoiding name-based gender inference or external databases, which are culturally biased."
       - url: https://aclanthology.org/W03-0419/
         citation: "Tjong Kim Sang, E. F. & De Meulder, F. (2003). *Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition.* CoNLL 2003."
         short: Tjong Kim Sang & De Meulder (2003)
@@ -46,6 +51,16 @@ notes:
       - {arxiv: "2304.10428", expect: "GPT-NER"}
   information-extraction:
     sources:
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. Describes information extraction as identifying and structuring predefined types of information from text, with named entity recognition, syntactic processing (dependency parsing for who does what to whom), coreference resolution (grouping mentions such as a full name, a title and a pronoun that refer to the same person), semantic role labelling and cross-document coreference resolution, each with typical challenges such as error propagation from earlier steps and domain transfer. Uses these steps in a language-agnostic pipeline for discourse analysis: actor extraction, gender approximation from pronouns only, extraction of nomination (how actors are named) and predication (how they are described), and a report with counts of actors and mentions, sentiment, gender-coded language and, for German, markers for the generic masculine and gender-neutral language plus PMI-ranked adjectives per actor. Scaled with multiprocessing to taz2024full, over 1.8 million German newspaper articles from 1980 to 2024."
+      - url: https://aclanthology.org/2024.gebnlp-1.8/
+        citation: "Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2024). *Detecting Gender Discrimination on Actor Level Using Linguistic Discourse Analysis.* Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP), ACL 2024."
+        short: Urchs et al. (2024)
+        link_label: ACL Anthology
+        summary: "Introduces an approach for automatically detecting gender discrimination in text data at the actor level, based on linguistic discourse analysis, to help select and monitor training data for large language models. Existing information extraction techniques partly automate qualitative discourse analysis in two steps: identifying each person named entity (actor) and all forms it is referred to (nomination), and detecting the characteristics ascribed to it (predication). As a proof of concept the steps form a pipeline whose building blocks can be adapted, extended and scaled; it was evaluated on real and simulated example texts."
       - url: https://www.ijcai.org/Proceedings/07/Papers/429.pdf
         citation: "Banko, M., Cafarella, M. J., Soderland, S., Broadhead, M. & Etzioni, O. (2007). *Open Information Extraction from the Web.* IJCAI 2007."
         short: Banko et al. (2007)
@@ -60,6 +75,11 @@ notes:
       - {arxiv: "1603.01360", expect: "Neural Architectures for Named Entity Recognition", venue: NAACL 2016}
   information-retrieval:
     sources:
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. Introduces a bias-preserving definition of algorithmic gender fairness, which asks whether algorithmic outputs reflect real-world gender distributions without introducing or amplifying disparities, and applies it to search and retrieval for professors at German universities and universities of applied sciences: metadata completeness, publication retrieval in academic databases and visibility in Google search results. No overt algorithmic discrimination was found, but male professors were associated with more search results and more aligned publication records, while female professors showed higher variability in digital visibility, reflecting the interplay of platform algorithms, institutional curation and self-presentation."
       - url: https://nlp.stanford.edu/IR-book/
         citation: "Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press."
         short: Manning et al. (2008)
@@ -83,6 +103,21 @@ notes:
       - {arxiv: "2004.04906", expect: "Dense Passage Retrieval", venue: EMNLP 2020}
   bias-in-nlp:
     sources:
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. Distinguishes bias (imbalances in data or model behaviour) from discrimination (its manifestation as systematically unequal treatment) and focuses on detecting discrimination in text. Summarises limits of directional debiasing of word embeddings: bias is distributed across many dimensions, and gender can still be predicted from debiased embeddings well above chance. Finds that downstream, post-hoc mitigation in ChatGPT caused overcorrection, and argues that mitigation should happen upstream by improving training data. Develops a language-agnostic pipeline that extracts actors, approximates their gender only from pronouns in the text (no names or external databases), collects how they are named (nomination) and described (predication), and reports counts of actors and mentions, sentiment and gender-coded language per gender without labelling texts as discriminatory. Applied to taz2024full, over 1.8 million German newspaper articles from 1980 to 2024: men consistently appear more often and receive more textual space, with a gradual shift towards balance in recent years. Filtering and rebalancing the corpus reduced surface-level asymmetries, but subtler bias in sentiment and framing persisted."
+      - url: https://doi.org/10.1007/978-3-031-74630-7_20
+        citation: "Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2023). *How Prevalent Is Gender Bias in ChatGPT? Exploring German and English ChatGPT Responses.* ECML PKDD 2023 Workshops, Communications in Computer and Information Science 2133, Springer (2025)."
+        short: Urchs et al. (2023)
+        link_label: doi:10.1007/978-3-031-74630-7_20
+        summary: "Systematically analyses prompts and ChatGPT responses with a focus on gender bias, in English and German, when the system is asked to answer from a female, male or neutral perspective, and examines how responses differ when the same prompt is repeated. ChatGPT is useful for helping non-IT users draft texts, but its responses must be checked thoroughly for biases as well as syntactic and grammatical mistakes. Overt discrimination was rare, but post-hoc fairness interventions led to overcorrection: an over-representation of female personas in responses to neutral prompts and an exaggerated emphasis on diversity in gendered prompts."
+      - url: https://aclanthology.org/2024.gebnlp-1.8/
+        citation: "Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2024). *Detecting Gender Discrimination on Actor Level Using Linguistic Discourse Analysis.* Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP), ACL 2024."
+        short: Urchs et al. (2024)
+        link_label: ACL Anthology
+        summary: "Introduces an approach for automatically detecting gender discrimination in text data at the actor level, based on linguistic discourse analysis, to help select and monitor training data for large language models. Existing information extraction techniques partly automate qualitative discourse analysis in two steps: identifying each person named entity (actor) and all forms it is referred to (nomination), and detecting the characteristics ascribed to it (predication). As a proof of concept the steps form a pipeline whose building blocks can be adapted, extended and scaled; it was evaluated on real and simulated example texts."
       - {arxiv: "1607.06520", expect: "Man is to Computer Programmer as Woman is to Homemaker", venue: NeurIPS 2016}
       - {arxiv: "1608.07187", expect: "Semantics derived automatically from language corpora contain human-like biases", venue: Science}
       - {arxiv: "2005.14050", expect: "Language (Technology) is Power", venue: ACL 2020}
