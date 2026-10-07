@@ -79,7 +79,7 @@ Copying the dependency file and installing it before copying the rest of the cod
 
 ### In practice
 
-ML models are commonly served from container images that pin the model, code and dependencies, which makes deployments reproducible ([[mlops-and-deployment|MLOps and Deployment]]). Images are kept small with slim base images, secrets are passed at run time rather than baked into images, and agent sandboxes often run tool code inside containers to isolate it from the host.
+ML models are commonly served from container images that pin the model, code and dependencies, which makes deployments reproducible ([[mlops-and-deployment|MLOps and Deployment]]). Images are kept small with slim base images, secrets are passed at run time rather than baked into images, and agent sandboxes often run tool code inside containers to isolate it from the host. Services running in containers are usually accessed through [[apis|APIs]].
 
 ### Key takeaway
 
@@ -162,7 +162,7 @@ Wird die Abhängigkeitsdatei vor dem übrigen Code kopiert und installiert, kann
 
 ### In der Praxis
 
-ML-Modelle werden häufig aus Container-Images bereitgestellt, die Modell, Code und Abhängigkeiten festschreiben, was Deployments reproduzierbar macht ([[mlops-and-deployment|MLOps und Deployment]]). Images werden mit schlanken Basis-Images klein gehalten, Geheimnisse werden zur Laufzeit übergeben statt ins Image eingebaut, und Sandboxes für Agenten führen Werkzeugcode oft in Containern aus, um ihn vom Host zu isolieren.
+ML-Modelle werden häufig aus Container-Images bereitgestellt, die Modell, Code und Abhängigkeiten festschreiben, was Deployments reproduzierbar macht ([[mlops-and-deployment|MLOps und Deployment]]). Images werden mit schlanken Basis-Images klein gehalten, Geheimnisse werden zur Laufzeit übergeben statt ins Image eingebaut, und Sandboxes für Agenten führen Werkzeugcode oft in Containern aus, um ihn vom Host zu isolieren. Dienste in Containern werden meist über [[apis|APIs (Programmierschnittstellen)]] angesprochen.
 
 ### Merksatz
 
