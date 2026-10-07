@@ -1,0 +1,149 @@
+# Migration package "Knowledge graphs and embeddings": input for
+# `python -m app.agents.technical_notes <command> graphs`.
+# arXiv sources are verified against the `expect` title fragment; DOIs checked against Crossref,
+# abstracts against OpenAlex; W3C specifications and documentation read directly.
+notes:
+  knowledge-graphs:
+    sources:
+      - {arxiv: "2003.02320", expect: "Knowledge Graphs", venue: ACM Computing Surveys 2021}
+      - url: https://www.w3.org/TR/rdf11-concepts/
+        citation: "W3C (2014). *RDF 1.1 Concepts and Abstract Syntax.* W3C Recommendation."
+        short: W3C RDF 1.1 Concepts
+        link_label: w3.org
+        summary: "RDF represents information as a graph of triples, each consisting of a subject, a predicate and an object. Subjects and predicates are IRIs (or blank nodes for subjects); objects can be IRIs, literals (values such as strings or numbers with an optional datatype or language tag) or blank nodes. A set of triples is an RDF graph; an RDF dataset groups a default graph and named graphs. IRIs give resources globally unique names, so data from different sources can be merged."
+      - url: https://www.w3.org/TR/owl2-primer/
+        citation: "W3C (2012). *OWL 2 Web Ontology Language Primer (Second Edition).* W3C Recommendation."
+        short: W3C OWL 2 Primer
+        link_label: w3.org
+        summary: "OWL 2 is a language for ontologies: it describes classes, properties, individuals and data values with formally defined meaning, so that reasoners can derive implicit knowledge and check consistency. Classes form hierarchies (subclass), properties can be declared transitive, symmetric, inverse or functional, and domain and range restrict their use. OWL follows the open-world assumption: missing information is not taken as false."
+      - url: https://neo4j.com/docs/cypher-manual/current/introduction/
+        citation: "Neo4j. *Cypher Manual: Introduction.* Neo4j documentation."
+        short: Neo4j Cypher Manual
+        link_label: neo4j.com
+        summary: "Cypher is Neo4j's declarative query language for property graphs. A property graph consists of nodes, which can have labels, and relationships, which have exactly one type and a direction; both nodes and relationships can carry properties as key-value pairs. Queries describe the graph patterns to find with an ASCII-art-like syntax, e.g. (a:Person)-[:KNOWS]->(b:Person), using clauses such as MATCH, WHERE and RETURN."
+      - {arxiv: "2002.00388", expect: "A Survey on Knowledge Graphs", venue: IEEE TNNLS 2022}
+      - {arxiv: "2306.08302", expect: "Unifying Large Language Models and Knowledge Graphs", venue: IEEE TKDE 2024}
+      - {arxiv: "2404.16130", expect: "From Local to Global"}
+  knowledge-graph-engineering:
+    sources:
+      - {arxiv: "2003.02320", expect: "Knowledge Graphs", venue: ACM Computing Surveys 2021}
+      - url: https://www.w3.org/TR/shacl/
+        citation: "W3C (2017). *Shapes Constraint Language (SHACL).* W3C Recommendation."
+        short: W3C SHACL
+        link_label: w3.org
+        summary: "SHACL is a language for validating RDF graphs against a set of conditions, called shapes. Shapes graphs describe constraints such as required properties, cardinalities (sh:minCount, sh:maxCount), datatypes, value classes and patterns for the focus nodes they target; a SHACL processor checks a data graph against them and produces a validation report listing every violation. Unlike OWL, SHACL checks data under a closed-world view."
+      - {arxiv: "1905.06397", expect: "End-to-End Entity Resolution for Big Data", venue: ACM Computing Surveys 2021}
+      - url: https://doi.org/10.3233/SW-160218
+        citation: "Paulheim, H. (2017). *Knowledge graph refinement: A survey of approaches and evaluation methods.* Semantic Web 8(3)."
+        short: Paulheim (2017)
+        link_label: doi:10.3233/SW-160218
+        summary: "Survey of knowledge graph refinement: since knowledge graphs such as DBpedia, YAGO and Freebase are never complete or fully correct, refinement methods either add missing knowledge (completion, e.g. missing types or relations) or identify erroneous information (error detection). The survey categorises approaches by goal, the refined targets and whether they use internal or external knowledge, and reviews how refinement is evaluated, e.g. against a partial gold standard, by retrospective human evaluation or against the graph itself."
+      - url: https://doi.org/10.3233/SW-150175
+        citation: "Zaveri, A., Rula, A., Maurino, A., Pietrobon, R., Lehmann, J. & Auer, S. (2016). *Quality assessment for Linked Data: A Survey.* Semantic Web 7(1)."
+        short: Zaveri et al. (2016)
+        link_label: doi:10.3233/SW-150175
+        summary: "Systematic review of approaches for assessing the quality of Linked Data, whose quality ranges from extensively curated to crowdsourced and extracted data of low quality. Unifies terminology and lists 18 quality dimensions and 69 metrics, and analyses 30 core approaches and 12 tools."
+      - url: https://www.w3.org/TR/prov-o/
+        citation: "W3C (2013). *PROV-O: The PROV Ontology.* W3C Recommendation."
+        short: W3C PROV-O
+        link_label: w3.org
+        summary: "PROV-O expresses provenance in OWL: entities (things such as documents or datasets), activities (processes that use and generate entities) and agents (people, organisations or software responsible for activities), connected by relations such as wasGeneratedBy, used, wasDerivedFrom and wasAttributedTo. It allows recording where data came from and how it was produced."
+  graph-databases:
+    sources:
+      - url: https://doi.org/10.1145/1322432.1322433
+        citation: "Angles, R. & Gutierrez, C. (2008). *Survey of graph database models.* ACM Computing Surveys 40(1)."
+        short: Angles & Gutierrez (2008)
+        link_label: doi:10.1145/1322432.1322433
+        summary: "Graph database models are those in which data structures for schema and instances are modelled as graphs or generalisations of them, and data manipulation is expressed by graph-oriented operations. They took off in the 1980s and early 1990s, faded with other models, and regained relevance with the need to manage information of graph-like nature. The survey covers data structures, query languages and integrity constraints."
+      - url: https://doi.org/10.1145/3183713.3190657
+        citation: "Francis, N., Green, A., Guagliardo, P., Libkin, L., Lindaaker, T., Marsault, V., Plantikow, S., Rydberg, M., Selmer, P. & Taylor, A. (2018). *Cypher: An Evolving Query Language for Property Graphs.* SIGMOD 2018."
+        short: Francis et al. (2018)
+        link_label: doi:10.1145/3183713.3190657
+        summary: "Describes Cypher 9, the property graph query language originally designed for the Neo4j graph database and used by several commercial products, governed by the openCypher Implementers Group. Gives a formal semantics of the core read-query features, including its property graph data model and its ASCII-art graph pattern matching for expressing subgraphs of interest, and compares Cypher with other property graph query languages."
+      - url: https://www.w3.org/TR/sparql11-query/
+        citation: "W3C (2013). *SPARQL 1.1 Query Language.* W3C Recommendation."
+        short: W3C SPARQL 1.1
+        link_label: w3.org
+        summary: "SPARQL is the query language for RDF. Queries match triple patterns, i.e. triples that may contain variables, against an RDF graph; basic graph patterns are combined with FILTER, OPTIONAL and UNION, results can be grouped, aggregated, ordered and limited, and property paths match paths of arbitrary length. Query forms are SELECT, CONSTRUCT, ASK and DESCRIBE."
+      - url: https://neo4j.com/docs/cypher-manual/current/introduction/
+        citation: "Neo4j. *Cypher Manual: Introduction.* Neo4j documentation."
+        short: Neo4j Cypher Manual
+        link_label: neo4j.com
+        summary: "Cypher is Neo4j's declarative query language for property graphs. A property graph consists of nodes, which can have labels, and relationships, which have exactly one type and a direction; both can carry properties as key-value pairs. Queries describe graph patterns with an ASCII-art-like syntax, e.g. (a:Person)-[:KNOWS]->(b:Person), using clauses such as MATCH, WHERE, CREATE and RETURN."
+      - {arxiv: "2003.02320", expect: "Knowledge Graphs", venue: ACM Computing Surveys 2021}
+  graphrag:
+    sources:
+      - {arxiv: "2404.16130", expect: "From Local to Global"}
+      - {arxiv: "2408.08921", expect: "Graph Retrieval-Augmented Generation: A Survey"}
+      - {arxiv: "2405.14831", expect: "HippoRAG", venue: NeurIPS 2024}
+      - {arxiv: "2410.05779", expect: "LightRAG"}
+      - {arxiv: "2306.08302", expect: "Unifying Large Language Models and Knowledge Graphs", venue: IEEE TKDE 2024}
+      - {arxiv: "2005.11401", expect: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", venue: NeurIPS 2020}
+  ontology-design:
+    sources:
+      - url: https://protege.stanford.edu/publications/ontology_development/ontology101.pdf
+        citation: "Noy, N. F. & McGuinness, D. L. (2001). *Ontology Development 101: A Guide to Creating Your First Ontology.* Stanford Knowledge Systems Laboratory Technical Report KSL-01-05."
+        short: Noy & McGuinness (2001)
+        link_label: PDF
+        summary: "Guide to building an ontology, i.e. an explicit formal specification of the terms in a domain and the relations among them. Reasons to develop one include sharing a common understanding of the structure of information, enabling reuse of domain knowledge, making domain assumptions explicit and separating domain knowledge from operational knowledge. Proposes an iterative process: determine the domain and scope, using competency questions the ontology should be able to answer; consider reusing existing ontologies; enumerate important terms; define classes and the class hierarchy (top-down, bottom-up or combined); define properties (slots) and their facets such as value type and cardinality; and create instances. There is no single correct way to model a domain; the best solution depends on the intended application."
+      - url: https://www.w3.org/TR/owl2-primer/
+        citation: "W3C (2012). *OWL 2 Web Ontology Language Primer (Second Edition).* W3C Recommendation."
+        short: W3C OWL 2 Primer
+        link_label: w3.org
+        summary: "OWL 2 is a language for ontologies with formally defined meaning: classes, properties, individuals and data values. Classes form hierarchies and can be declared disjoint; properties can be transitive, symmetric, inverse or functional, and domain and range restrict their use; reasoners derive implicit knowledge and check consistency. OWL follows the open-world assumption: missing information is not taken as false."
+      - url: https://www.w3.org/TR/rdf-schema/
+        citation: "W3C (2014). *RDF Schema 1.1.* W3C Recommendation."
+        short: W3C RDF Schema 1.1
+        link_label: w3.org
+        summary: "RDF Schema provides a basic vocabulary for describing RDF data: rdfs:Class and rdf:type for classes and membership, rdfs:subClassOf and rdfs:subPropertyOf for hierarchies, rdfs:domain and rdfs:range to state which classes a property connects, and rdfs:label and rdfs:comment for human-readable descriptions."
+      - url: https://www.w3.org/TR/skos-reference/
+        citation: "W3C (2009). *SKOS Simple Knowledge Organization System Reference.* W3C Recommendation."
+        short: W3C SKOS
+        link_label: w3.org
+        summary: "SKOS is a vocabulary for representing thesauri, classification schemes and taxonomies in RDF: concepts (skos:Concept) grouped in concept schemes, preferred and alternative labels (skos:prefLabel, skos:altLabel), and broader, narrower and related links between concepts. It is lighter than OWL and intended for knowledge organisation rather than formal logic."
+      - {arxiv: "2003.02320", expect: "Knowledge Graphs", venue: ACM Computing Surveys 2021}
+  transe:
+    sources:
+      - url: https://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data
+        citation: "Bordes, A., Usunier, N., Garcia-Durán, A., Weston, J. & Yakhnenko, O. (2013). *Translating Embeddings for Modeling Multi-relational Data.* NeurIPS 2013."
+        short: Bordes et al. (2013)
+        link_label: NeurIPS proceedings
+        summary: "TransE embeds entities and relationships of multi-relational data in low-dimensional vector spaces and models a relationship as a translation on the entity embeddings: for a true triple (head, relation, tail), the head embedding plus the relation vector should be close to the tail embedding. It is trained with a margin-based ranking loss against corrupted triples in which head or tail are replaced. The model is easy to train, has few parameters, outperformed earlier methods on link prediction on WordNet and Freebase, and was trained on a large dataset with 1 million entities, 25,000 relationships and more than 17 million training triples. The paper notes that one-to-many and many-to-many relations are harder for the model."
+      - {arxiv: "1412.6575", expect: "Embedding Entities and Relations for Learning and Inference in Knowledge Bases", venue: ICLR 2015}
+      - url: https://doi.org/10.1109/TKDE.2017.2754499
+        citation: "Wang, Q., Mao, Z., Wang, B. & Guo, L. (2017). *Knowledge Graph Embedding: A Survey of Approaches and Applications.* IEEE Transactions on Knowledge and Data Engineering 29(12)."
+        short: Wang et al. (2017)
+        link_label: doi:10.1109/TKDE.2017.2754499
+        summary: "Survey of knowledge graph embedding, which embeds entities and relations into continuous vector spaces while preserving the graph's structure, for tasks such as knowledge graph completion and relation extraction. Distinguishes translational distance models such as TransE and its extensions (TransH, TransR) from semantic matching models such as RESCAL and DistMult, describes training with negative sampling, and discusses limitations of TransE for one-to-many, many-to-one and many-to-many relations."
+      - {arxiv: "1902.10197", expect: "RotatE", venue: ICLR 2019}
+  distmult:
+    sources:
+      - {arxiv: "1412.6575", expect: "Embedding Entities and Relations for Learning and Inference in Knowledge Bases", venue: ICLR 2015}
+      - url: https://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data
+        citation: "Bordes, A., Usunier, N., Garcia-Durán, A., Weston, J. & Yakhnenko, O. (2013). *Translating Embeddings for Modeling Multi-relational Data.* NeurIPS 2013."
+        short: Bordes et al. (2013)
+        link_label: NeurIPS proceedings
+        summary: "TransE models a relationship as a translation on entity embeddings: head plus relation should be close to tail for true triples; trained with a margin-based ranking loss against corrupted triples."
+      - {arxiv: "1606.06357", expect: "Complex Embeddings for Simple Link Prediction", venue: ICML 2016}
+      - url: https://doi.org/10.1109/TKDE.2017.2754499
+        citation: "Wang, Q., Mao, Z., Wang, B. & Guo, L. (2017). *Knowledge Graph Embedding: A Survey of Approaches and Applications.* IEEE Transactions on Knowledge and Data Engineering 29(12)."
+        short: Wang et al. (2017)
+        link_label: doi:10.1109/TKDE.2017.2754499
+        summary: "Survey of knowledge graph embedding. Semantic matching models such as RESCAL score triples with a bilinear form between head and tail embeddings and a relation matrix; DistMult restricts the relation matrix to be diagonal, which reduces parameters but makes the score symmetric, so it can only model symmetric relations. Translational models such as TransE are the other main family."
+  complex:
+    sources:
+      - {arxiv: "1606.06357", expect: "Complex Embeddings for Simple Link Prediction", venue: ICML 2016}
+      - {arxiv: "1412.6575", expect: "Embedding Entities and Relations for Learning and Inference in Knowledge Bases", venue: ICLR 2015}
+      - {arxiv: "1902.10197", expect: "RotatE", venue: ICLR 2019}
+      - {arxiv: "2002.00388", expect: "A Survey on Knowledge Graphs", venue: IEEE TNNLS 2022}
+  rotate:
+    sources:
+      - {arxiv: "1902.10197", expect: "RotatE", venue: ICLR 2019}
+      - url: https://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data
+        citation: "Bordes, A., Usunier, N., Garcia-Durán, A., Weston, J. & Yakhnenko, O. (2013). *Translating Embeddings for Modeling Multi-relational Data.* NeurIPS 2013."
+        short: Bordes et al. (2013)
+        link_label: NeurIPS proceedings
+        summary: "TransE models a relationship as a translation on entity embeddings: head plus relation should be close to tail for true triples; trained with a margin-based ranking loss against corrupted triples. One-to-many and many-to-many relations are harder for the model."
+      - {arxiv: "1412.6575", expect: "Embedding Entities and Relations for Learning and Inference in Knowledge Bases", venue: ICLR 2015}
+      - {arxiv: "1606.06357", expect: "Complex Embeddings for Simple Link Prediction", venue: ICML 2016}
+      - {arxiv: "2002.00388", expect: "A Survey on Knowledge Graphs", venue: IEEE TNNLS 2022}
