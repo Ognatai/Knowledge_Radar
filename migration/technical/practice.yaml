@@ -1,0 +1,95 @@
+# Migration package "Practice and deployment": input for
+# `python -m app.agents.technical_notes <command> practice`.
+# arXiv sources are verified against the `expect` title fragment; DOIs checked against Crossref,
+# abstracts against OpenAlex; documentation and proceedings pages read directly.
+notes:
+  legal-ai:
+    sources:
+      - {arxiv: "2401.01301", expect: "Large Legal Fictions", venue: Journal of Legal Analysis 2024}
+      - {arxiv: "2405.20362", expect: "Hallucination-Free", venue: Journal of Empirical Legal Studies 2025}
+      - {arxiv: "2308.11462", expect: "LegalBench", venue: NeurIPS 2023 Datasets and Benchmarks}
+      - {arxiv: "2110.00976", expect: "LexGLUE", venue: ACL 2022}
+      - url: https://doi.org/10.1098/rsta.2023.0254
+        citation: "Katz, D. M., Bommarito, M. J., Gao, S. & Arredondo, P. (2024). *GPT-4 passes the bar exam.* Philosophical Transactions of the Royal Society A 382(2270)."
+        short: Katz et al. (2024)
+        link_label: doi:10.1098/rsta.2023.0254
+        summary: "Evaluates the zero-shot performance of GPT-4 on the entire US Uniform Bar Examination. On the multiple-choice part (MBE), GPT-4 significantly outperformed both human test-takers and prior models, with a 26% increase over ChatGPT and beating humans in five of seven subject areas; on the essay (MEE) and performance test (MPT) parts it averaged 4.2 out of 6.0. Graded like a human test-taker, it scored approximately 297 points, above the passing threshold in all UBE jurisdictions."
+      - {arxiv: "2404.16130", expect: "From Local to Global"}
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP. Argues that the text corpora on which LLMs are trained are not neutral but encode historical and structural inequalities, for example in relation to gender, so that models can amplify stereotypes even when they appear neutral on the surface, and that addressing discrimination requires more than post-hoc adjustments to model outputs. Notes that ethical recommendations and emerging legislation such as the EU AI Act require AI systems, including systems based on LLMs, not to reproduce, reinforce or disseminate existing biases, stereotypes or discriminatory patterns. Also notes that parsers trained on general corpora often underperform on specialised texts such as biomedical or legal texts."
+  contract-intelligence:
+    sources:
+      - {arxiv: "2103.06268", expect: "CUAD", venue: NeurIPS 2021 Datasets and Benchmarks}
+      - {arxiv: "2110.01799", expect: "ContractNLI", venue: Findings of EMNLP 2021}
+      - {arxiv: "2110.00976", expect: "LexGLUE", venue: ACL 2022}
+      - {arxiv: "2308.11462", expect: "LegalBench", venue: NeurIPS 2023 Datasets and Benchmarks}
+      - {arxiv: "2405.20362", expect: "Hallucination-Free", venue: Journal of Empirical Legal Studies 2025}
+  quality-control:
+    sources:
+      - url: https://doi.org/10.1109/BigData.2017.8258038
+        citation: "Breck, E., Cai, S., Nielsen, E., Salib, M. & Sculley, D. (2017). *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.* IEEE BigData 2017."
+        short: Breck et al. (2017)
+        link_label: doi:10.1109/BigData.2017.8258038
+        summary: "Testing and monitoring are key to the production readiness of ML systems and to reducing their technical debt, but specific tests are hard to formulate because a model's prediction behaviour is difficult to specify in advance. The paper presents 28 specific tests and monitoring needs, drawn from experience with a wide range of production ML systems, organised into tests for features and data, model development, ML infrastructure and monitoring, with a score that measures production readiness."
+      - url: https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems
+        citation: "Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.-F. & Dennison, D. (2015). *Hidden Technical Debt in Machine Learning Systems.* NeurIPS 2015."
+        short: Sculley et al. (2015)
+        link_label: NeurIPS proceedings
+        summary: "Machine learning offers a powerful toolkit for building complex prediction systems quickly, but it is dangerous to think of these quick wins as free: real-world ML systems commonly incur massive ongoing maintenance costs. ML-specific risk factors include boundary erosion, entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration issues, changes in the external world and a variety of system-level anti-patterns."
+      - url: https://doi.org/10.1109/ICSE-SEIP.2019.00042
+        citation: "Amershi, S., Begel, A., Bird, C., DeLine, R., Gall, H., Kamar, E., Nagappan, N., Nushi, B. & Zimmermann, T. (2019). *Software Engineering for Machine Learning: A Case Study.* ICSE-SEIP 2019."
+        short: Amershi et al. (2019)
+        link_label: doi:10.1109/ICSE-SEIP.2019.00042
+        summary: "Study of Microsoft software teams developing AI-based applications. Describes a nine-stage ML workflow (model requirements, data collection, data cleaning, data labelling, feature engineering, model training, model evaluation, model deployment and model monitoring) that teams integrated into existing agile software engineering processes, identifies essential engineering challenges, such as data management and model evolution, and collects best practices."
+      - {arxiv: "1810.03993", expect: "Model Cards for Model Reporting", venue: FAT* 2019}
+      - {arxiv: "1803.09010", expect: "Datasheets for Datasets", venue: Communications of the ACM 2021}
+      - {arxiv: "2005.04118", expect: "Beyond Accuracy: Behavioral Testing of NLP models with CheckList", venue: ACL 2020}
+  regression-testing:
+    sources:
+      - {arxiv: "2005.04118", expect: "Beyond Accuracy: Behavioral Testing of NLP models with CheckList", venue: ACL 2020}
+      - {arxiv: "2307.09009", expect: "How is ChatGPT's behavior changing over time"}
+      - {arxiv: "2011.09161", expect: "Positive-Congruent Training", venue: CVPR 2021}
+      - url: https://doi.org/10.1109/BigData.2017.8258038
+        citation: "Breck, E., Cai, S., Nielsen, E., Salib, M. & Sculley, D. (2017). *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.* IEEE BigData 2017."
+        short: Breck et al. (2017)
+        link_label: doi:10.1109/BigData.2017.8258038
+        summary: "Presents 28 specific tests and monitoring needs for production ML systems, drawn from experience at Google, covering features and data, model development (e.g. testing against a simpler baseline and checking model quality on important data slices), ML infrastructure (e.g. reproducible training, canary tests before serving and rollback of serving models) and monitoring (e.g. detecting changes in input data and prediction quality)."
+      - {arxiv: "2211.09110", expect: "Holistic Evaluation of Language Models", venue: TMLR}
+  mlops-and-deployment:
+    sources:
+      - {arxiv: "2205.02302", expect: "Machine Learning Operations (MLOps)", venue: IEEE Access 2023}
+      - url: https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems
+        citation: "Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.-F. & Dennison, D. (2015). *Hidden Technical Debt in Machine Learning Systems.* NeurIPS 2015."
+        short: Sculley et al. (2015)
+        link_label: NeurIPS proceedings
+        summary: "Real-world ML systems commonly incur massive ongoing maintenance costs; ML-specific risk factors include entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration issues and changes in the external world."
+      - {arxiv: "2011.09926", expect: "Challenges in Deploying Machine Learning", venue: ACM Computing Surveys 2022}
+      - {arxiv: "1810.11953", expect: "Failing Loudly", venue: NeurIPS 2019}
+      - url: https://doi.org/10.1109/BigData.2017.8258038
+        citation: "Breck, E., Cai, S., Nielsen, E., Salib, M. & Sculley, D. (2017). *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.* IEEE BigData 2017."
+        short: Breck et al. (2017)
+        link_label: doi:10.1109/BigData.2017.8258038
+        summary: "Presents 28 tests and monitoring needs for production ML systems, including reproducible training, canary tests of models before they enter production serving, the ability to roll back serving models, and monitoring of input data and prediction quality in production; it is based on production ML systems at Google."
+      - url: https://doi.org/10.1109/ICSE-SEIP.2019.00042
+        citation: "Amershi, S., Begel, A., Bird, C., DeLine, R., Gall, H., Kamar, E., Nagappan, N., Nushi, B. & Zimmermann, T. (2019). *Software Engineering for Machine Learning: A Case Study.* ICSE-SEIP 2019."
+        short: Amershi et al. (2019)
+        link_label: doi:10.1109/ICSE-SEIP.2019.00042
+        summary: "Study of Microsoft teams developing AI applications: a nine-stage ML workflow from model requirements, data collection, cleaning and labelling, feature engineering, training and evaluation to deployment and monitoring, integrated into agile software engineering processes, with engineering challenges and best practices."
+  experiment-tracking:
+    sources:
+      - url: https://people.eecs.berkeley.edu/~matei/papers/2018/ieee_mlflow.pdf
+        citation: "Zaharia, M., Chen, A., Davidson, A., Ghodsi, A., Hong, S. A., Konwinski, A., Murching, S., Nykodym, T., Ogilvie, P., Parkhe, M., Xie, F. & Zumar, C. (2018). *Accelerating the Machine Learning Lifecycle with MLflow.* IEEE Data Engineering Bulletin 41(4)."
+        short: Zaharia et al. (2018)
+        link_label: PDF
+        summary: "ML development brings challenges not present in traditional software development: keeping track of the many inputs to an ML application (data versions, code and tuning parameters), reproducing results and deploying to production; ML development revolves around constant experimentation with datasets, models, libraries and parameters. MLflow is an open-source platform that addresses experimentation, reproducibility and model deployment with generic APIs that work with any ML library, algorithm and language."
+      - url: https://mlflow.org/docs/latest/ml/tracking/
+        citation: "MLflow. *MLflow Tracking.* MLflow documentation."
+        short: MLflow Tracking docs
+        link_label: mlflow.org
+        summary: "MLflow Tracking is an API and UI for logging parameters, code versions, metrics and output files when running ML code and for visualising the results later. It is organised around runs, executions of data science code such as one python train.py execution; each run records metadata (metrics, parameters, start and end times) and artifacts (output files such as model weights or images). Runs are grouped into experiments, trained models can be logged and registered, and APIs exist for Python, REST, R and Java."
+      - {arxiv: "2003.12206", expect: "Improving Reproducibility in Machine Learning Research", venue: JMLR 2021}
+      - {arxiv: "1909.03004", expect: "Show Your Work", venue: EMNLP 2019}
+      - {arxiv: "2103.03098", expect: "Accounting for Variance in Machine Learning Benchmarks", venue: MLSys 2021}
