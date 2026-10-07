@@ -110,7 +110,7 @@ Best practices for AI-assisted programming follow from the layers:
 - **Software fundamentals remain mandatory:** in a user study, participants with an AI code assistant wrote significantly less secure code but were more likely to believe it was secure (Perry et al., 2022), and in a randomised trial, experienced open-source developers took 19% longer with early-2025 AI tools although they believed they had been faster (Becker et al., 2025). Judging architecture, test coverage and security becomes more important, not less.
 - **Maintain documentation and memory:** project conventions and known pitfalls belong in maintained files, not in every single request.
 
-Further background: [[large-language-models|Large Language Models]].
+Further background: [[large-language-models|Large Language Models]]. Principles of readable, maintainable code are described in [[clean-code|Clean Code]].
 
 ### Key takeaway
 
@@ -224,7 +224,7 @@ Aus den Ebenen folgen Best Practices für KI-gestütztes Programmieren:
 - **Software-Grundlagen bleiben Pflicht:** In einer Nutzerstudie schrieben Teilnehmende mit KI-Code-Assistent deutlich unsichereren Code, hielten ihn aber eher für sicher (Perry et al., 2022), und in einer randomisierten Studie brauchten erfahrene Open-Source-Entwickler:innen mit KI-Werkzeugen von Anfang 2025 19 % länger, obwohl sie glaubten, schneller gewesen zu sein (Becker et al., 2025). Architektur, Testabdeckung und Sicherheit beurteilen zu können, wird wichtiger, nicht unwichtiger.
 - **Dokumentation und Gedächtnis pflegen:** Projektkonventionen und bekannte Stolperfallen gehören in gepflegte Dateien, nicht in jede einzelne Anfrage.
 
-Weiterer Hintergrund: [[large-language-models|Large Language Models]].
+Weiterer Hintergrund: [[large-language-models|Large Language Models]]. Grundsätze für lesbaren, wartbaren Code beschreibt [[clean-code|Clean Code]].
 
 ### Merksatz
 

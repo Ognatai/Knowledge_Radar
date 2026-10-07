@@ -73,7 +73,7 @@ Undo operations differ in how far they reach: restore discards changes in the wo
 
 ### In practice
 
-Commits are small, focused and described in the imperative mood, work happens on feature branches that are merged after review, and secrets and environment files are listed in .gitignore. Experiments in ML projects are tracked separately from the code ([[experiment-tracking|Experiment Tracking]]), and CI pipelines start from commits ([[mlops-and-deployment|MLOps and Deployment]]).
+Commits are small, focused and described in the imperative mood, work happens on feature branches that are merged after review, and secrets and environment files are listed in .gitignore. Experiments in ML projects are tracked separately from the code ([[experiment-tracking|Experiment Tracking]]), and CI pipelines start from commits ([[mlops-and-deployment|MLOps and Deployment]]). Small, focused commits also support readable, reviewable code ([[clean-code|Clean Code]]).
 
 ### Key takeaway
 
@@ -150,7 +150,7 @@ Rückgängig-Operationen unterscheiden sich in ihrer Reichweite: restore verwirf
 
 ### In der Praxis
 
-Commits sind klein, fokussiert und im Imperativ beschrieben, gearbeitet wird auf Feature-Branches, die nach einem Review zusammengeführt werden, und Geheimnisse sowie Umgebungsdateien stehen in .gitignore. Experimente in ML-Projekten werden getrennt vom Code nachverfolgt ([[experiment-tracking|Experiment Tracking]]), und CI-Pipelines starten bei Commits ([[mlops-and-deployment|MLOps und Deployment]]).
+Commits sind klein, fokussiert und im Imperativ beschrieben, gearbeitet wird auf Feature-Branches, die nach einem Review zusammengeführt werden, und Geheimnisse sowie Umgebungsdateien stehen in .gitignore. Experimente in ML-Projekten werden getrennt vom Code nachverfolgt ([[experiment-tracking|Experiment Tracking]]), und CI-Pipelines starten bei Commits ([[mlops-and-deployment|MLOps und Deployment]]). Kleine, fokussierte Commits unterstützen auch lesbaren, prüfbaren Code ([[clean-code|Clean Code]]).
 
 ### Merksatz
 

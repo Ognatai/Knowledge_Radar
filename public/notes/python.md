@@ -80,7 +80,7 @@ A project typically starts with python -m venv .venv, activates the environment 
 
 ### In practice
 
-Code follows PEP 8: 4-space indentation, imports at the top grouped into standard library, third-party and local modules, lowercase_with_underscores for functions and variables, CapWords for classes and UPPER_CASE for constants (PEP 8). Each project gets its own virtual environment and a pinned list of dependencies, and version control tracks the code but not the environment ([[git|Git]]).
+Code follows PEP 8: 4-space indentation, imports at the top grouped into standard library, third-party and local modules, lowercase_with_underscores for functions and variables, CapWords for classes and UPPER_CASE for constants (PEP 8). Each project gets its own virtual environment and a pinned list of dependencies, and version control tracks the code but not the environment ([[git|Git]]). Readable code beyond the style guide is the subject of [[clean-code|Clean Code]], and web services built with Python expose [[apis|APIs]].
 
 ### Key takeaway
 
@@ -164,7 +164,7 @@ Ein Projekt beginnt typischerweise mit python -m venv .venv, aktiviert die Umgeb
 
 ### In der Praxis
 
-Code folgt PEP 8: Einrückung mit 4 Leerzeichen, Importe am Dateianfang, gruppiert nach Standardbibliothek, Drittanbietern und lokalen Modulen, lowercase_with_underscores für Funktionen und Variablen, CapWords für Klassen und UPPER_CASE für Konstanten (PEP 8). Jedes Projekt erhält eine eigene virtuelle Umgebung und eine festgelegte Liste von Abhängigkeiten, und die Versionsverwaltung erfasst den Code, nicht aber die Umgebung ([[git|Git]]).
+Code folgt PEP 8: Einrückung mit 4 Leerzeichen, Importe am Dateianfang, gruppiert nach Standardbibliothek, Drittanbietern und lokalen Modulen, lowercase_with_underscores für Funktionen und Variablen, CapWords für Klassen und UPPER_CASE für Konstanten (PEP 8). Jedes Projekt erhält eine eigene virtuelle Umgebung und eine festgelegte Liste von Abhängigkeiten, und die Versionsverwaltung erfasst den Code, nicht aber die Umgebung ([[git|Git]]). Lesbarer Code über den Styleguide hinaus ist Thema von [[clean-code|Clean Code]], und mit Python gebaute Webdienste stellen [[apis|APIs (Programmierschnittstellen)]] bereit.
 
 ### Merksatz
 

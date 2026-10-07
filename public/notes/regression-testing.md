@@ -96,7 +96,7 @@ Regression testing is a core practice of software engineering. For ML, it was ex
 
 ### In practice
 
-Typical rules: a new chunking method may not reduce recall on known test questions; a prompt update may not increase hallucinations or reduce faithfulness; a model change may not break solved critical cases; a new embedding model may not worsen retrieval quality unless this is a deliberate trade-off ([[rag-evaluation|RAG: Evaluation]]; [[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Results per run are stored with the configuration that produced them ([[experiment-tracking|Experiment Tracking]]), and regression testing is part of the wider [[quality-control|Quality Control]], for example for [[legal-ai|Legal AI]] and [[contract-intelligence|Contract Intelligence]].
+Typical rules: a new chunking method may not reduce recall on known test questions; a prompt update may not increase hallucinations or reduce faithfulness; a model change may not break solved critical cases; a new embedding model may not worsen retrieval quality unless this is a deliberate trade-off ([[rag-evaluation|RAG: Evaluation]]; [[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Results per run are stored with the configuration that produced them ([[experiment-tracking|Experiment Tracking]]), and regression testing is part of the wider [[quality-control|Quality Control]], for example for [[legal-ai|Legal AI]] and [[contract-intelligence|Contract Intelligence]]. Tests are code as well and follow the same principles of readability ([[clean-code|Clean Code]]).
 
 ### Key takeaway
 
@@ -196,7 +196,7 @@ Regressionstests sind eine Kernpraxis der Softwareentwicklung. Für ML wurden si
 
 ### In der Praxis
 
-Typische Regeln: Ein neues Chunking-Verfahren darf den Recall bei bekannten Testfragen nicht senken; ein Prompt-Update darf nicht zu mehr Halluzinationen oder geringerer Faithfulness führen; ein Modellwechsel darf gelöste kritische Fälle nicht brechen; ein neues Embedding-Modell darf die Retrieval-Qualität nicht verschlechtern, außer dies ist ein bewusst eingegangener Zielkonflikt ([[rag-evaluation|RAG: Evaluation]]; [[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Ergebnisse jedes Laufs werden mit der erzeugenden Konfiguration gespeichert ([[experiment-tracking|Experiment Tracking]]), und Regressionstests sind Teil der umfassenderen [[quality-control|Qualitätskontrolle]], etwa für [[legal-ai|Legal AI]] und [[contract-intelligence|Contract Intelligence]].
+Typische Regeln: Ein neues Chunking-Verfahren darf den Recall bei bekannten Testfragen nicht senken; ein Prompt-Update darf nicht zu mehr Halluzinationen oder geringerer Faithfulness führen; ein Modellwechsel darf gelöste kritische Fälle nicht brechen; ein neues Embedding-Modell darf die Retrieval-Qualität nicht verschlechtern, außer dies ist ein bewusst eingegangener Zielkonflikt ([[rag-evaluation|RAG: Evaluation]]; [[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Ergebnisse jedes Laufs werden mit der erzeugenden Konfiguration gespeichert ([[experiment-tracking|Experiment Tracking]]), und Regressionstests sind Teil der umfassenderen [[quality-control|Qualitätskontrolle]], etwa für [[legal-ai|Legal AI]] und [[contract-intelligence|Contract Intelligence]]. Tests sind ebenfalls Code und folgen denselben Grundsätzen der Lesbarkeit ([[clean-code|Clean Code]]).
 
 ### Merksatz
 

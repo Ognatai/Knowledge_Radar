@@ -94,7 +94,7 @@ helm rollback notes 1                         # return to revision 1
 
 ### In practice
 
-ML models and LLM services are deployed as container images in Deployments, with readiness probes that wait until the model is loaded and rolling updates for new model versions ([[mlops-and-deployment|MLOps and Deployment]]; Kubernetes probes docs). Configuration and secrets are kept separate from images, and Helm values files hold environment-specific settings (Kubernetes overview; Helm docs).
+ML models and LLM services are deployed as container images in Deployments, with readiness probes that wait until the model is loaded and rolling updates for new model versions ([[mlops-and-deployment|MLOps and Deployment]]; Kubernetes probes docs). Configuration and secrets are kept separate from images, and Helm values files hold environment-specific settings (Kubernetes overview; Helm docs). Services on the cluster offer their functionality through [[apis|APIs]].
 
 ### Key takeaway
 
@@ -192,7 +192,7 @@ helm rollback notes 1                         # zu Revision 1 zurückkehren
 
 ### In der Praxis
 
-ML-Modelle und LLM-Dienste werden als Container-Images in Deployments bereitgestellt, mit Readiness-Probes, die warten, bis das Modell geladen ist, und Rolling Updates für neue Modellversionen ([[mlops-and-deployment|MLOps und Deployment]]; Kubernetes probes docs). Konfiguration und Geheimnisse werden von den Images getrennt gehalten, und Helm-Values-Dateien enthalten umgebungsspezifische Einstellungen (Kubernetes overview; Helm docs).
+ML-Modelle und LLM-Dienste werden als Container-Images in Deployments bereitgestellt, mit Readiness-Probes, die warten, bis das Modell geladen ist, und Rolling Updates für neue Modellversionen ([[mlops-and-deployment|MLOps und Deployment]]; Kubernetes probes docs). Konfiguration und Geheimnisse werden von den Images getrennt gehalten, und Helm-Values-Dateien enthalten umgebungsspezifische Einstellungen (Kubernetes overview; Helm docs). Dienste im Cluster stellen ihre Funktionen über [[apis|APIs (Programmierschnittstellen)]] bereit.
 
 ### Merksatz
 

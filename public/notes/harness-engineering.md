@@ -98,7 +98,7 @@ logging:     every tool call recorded
 recovery:    commits after each step, so bad changes can be reverted
 ```
 
-Containers isolate execution ([[docker|Docker]]), tools often come from MCP servers ([[mcp-and-related-protocols|MCP and Related Protocols]]), and the same harness principles apply to agents in general ([[agentic-ai|Agentic AI]]), to working styles such as [[vibe-coding|Vibe Coding]] and to multi-agent setups ([[graph-engineering|Graph Engineering]]). Robustness is tested with varied inputs ([[llm-evaluation|LLM Evaluation]]), costs are capped ([[llm-cost-optimization|LLM Cost Optimization]]), and the discipline sits among the others described in [[engineering-methods-for-ai-systems|Engineering Methods for AI Systems]]; background on the models themselves is in [[large-language-models|Large Language Models]].
+Containers isolate execution ([[docker|Docker]]), tools often come from MCP servers ([[mcp-and-related-protocols|MCP and Related Protocols]]), and the same harness principles apply to agents in general ([[agentic-ai|Agentic AI]]), to working styles such as [[vibe-coding|Vibe Coding]] and to multi-agent setups ([[graph-engineering|Graph Engineering]]). Robustness is tested with varied inputs ([[llm-evaluation|LLM Evaluation]]), costs are capped ([[llm-cost-optimization|LLM Cost Optimization]]), and the discipline sits among the others described in [[engineering-methods-for-ai-systems|Engineering Methods for AI Systems]]; background on the models themselves is in [[large-language-models|Large Language Models]]. Tools usually wrap existing [[apis|APIs]], so their permissions and error handling become part of the harness.
 
 ### Key takeaway
 
@@ -200,7 +200,7 @@ Logging:        jeder Werkzeugaufruf wird protokolliert
 Wiederherstellung: Commit nach jedem Schritt, sodass schlechte Änderungen rückgängig gemacht werden können
 ```
 
-Container isolieren die Ausführung ([[docker|Docker]]), Werkzeuge stammen oft von MCP-Servern ([[mcp-and-related-protocols|MCP und ähnliche Protokolle]]), und dieselben Prinzipien gelten für Agenten allgemein ([[agentic-ai|Agentic AI]]), für Arbeitsweisen wie [[vibe-coding|Vibe Coding]] und für Multi-Agenten-Setups ([[graph-engineering|Graph Engineering]]). Die Robustheit wird mit variierten Eingaben getestet ([[llm-evaluation|LLM-Evaluation]]), Kosten werden begrenzt ([[llm-cost-optimization|LLM-Kostenoptimierung]]), und die Disziplin steht neben den anderen in [[engineering-methods-for-ai-systems|Engineering-Methoden für KI-Systeme]] beschriebenen; Hintergrund zu den Modellen selbst bietet [[large-language-models|Large Language Models]].
+Container isolieren die Ausführung ([[docker|Docker]]), Werkzeuge stammen oft von MCP-Servern ([[mcp-and-related-protocols|MCP und ähnliche Protokolle]]), und dieselben Prinzipien gelten für Agenten allgemein ([[agentic-ai|Agentic AI]]), für Arbeitsweisen wie [[vibe-coding|Vibe Coding]] und für Multi-Agenten-Setups ([[graph-engineering|Graph Engineering]]). Die Robustheit wird mit variierten Eingaben getestet ([[llm-evaluation|LLM-Evaluation]]), Kosten werden begrenzt ([[llm-cost-optimization|LLM-Kostenoptimierung]]), und die Disziplin steht neben den anderen in [[engineering-methods-for-ai-systems|Engineering-Methoden für KI-Systeme]] beschriebenen; Hintergrund zu den Modellen selbst bietet [[large-language-models|Large Language Models]]. Werkzeuge kapseln meist bestehende [[apis|APIs (Programmierschnittstellen)]], sodass deren Berechtigungen und Fehlerbehandlung Teil des Harness werden.
 
 ### Merksatz
 

@@ -84,7 +84,7 @@ The examples follow the legal knowledge graph modelled in [[knowledge-graphs|Kno
 
 ### In practice
 
-Queries are developed incrementally, starting with a basic graph pattern and adding OPTIONAL, FILTER and aggregation step by step; well-designed patterns, in which OPTIONAL is used in a disciplined way, evaluate more efficiently (Pérez et al., 2009). Named graphs can record where data comes from, and queries can restrict themselves to particular graphs (W3C RDF 1.1 Concepts; [[rdf|RDF (Resource Description Framework)]]).
+Queries are developed incrementally, starting with a basic graph pattern and adding OPTIONAL, FILTER and aggregation step by step; well-designed patterns, in which OPTIONAL is used in a disciplined way, evaluate more efficiently (Pérez et al., 2009). Named graphs can record where data comes from, and queries can restrict themselves to particular graphs (W3C RDF 1.1 Concepts; [[rdf|RDF (Resource Description Framework)]]). SPARQL endpoints are query APIs over HTTP ([[apis|APIs]]).
 
 ### Key takeaway
 
@@ -172,7 +172,7 @@ Die Beispiele folgen dem juristischen Wissensgraphen aus [[knowledge-graphs|Wiss
 
 ### In der Praxis
 
-Abfragen werden schrittweise entwickelt: zuerst ein Basic Graph Pattern, dann nach und nach OPTIONAL, FILTER und Aggregation; wohlgeformte Muster, in denen OPTIONAL diszipliniert eingesetzt wird, lassen sich effizienter auswerten (Pérez et al., 2009). Named Graphs können festhalten, woher Daten stammen, und Abfragen können sich auf bestimmte Graphen beschränken (W3C RDF 1.1 Concepts; [[rdf|RDF (Resource Description Framework)]]).
+Abfragen werden schrittweise entwickelt: zuerst ein Basic Graph Pattern, dann nach und nach OPTIONAL, FILTER und Aggregation; wohlgeformte Muster, in denen OPTIONAL diszipliniert eingesetzt wird, lassen sich effizienter auswerten (Pérez et al., 2009). Named Graphs können festhalten, woher Daten stammen, und Abfragen können sich auf bestimmte Graphen beschränken (W3C RDF 1.1 Concepts; [[rdf|RDF (Resource Description Framework)]]). SPARQL-Endpunkte sind Abfrage-APIs über HTTP ([[apis|APIs (Programmierschnittstellen)]]).
 
 ### Merksatz
 
