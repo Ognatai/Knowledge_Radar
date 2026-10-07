@@ -88,8 +88,12 @@ def load_package(package: str) -> list[NotePlan]:
     by_id = {entry["id"]: (title, entry) for title, entry in mapping.items() if not entry.get("hub")}
     plans = []
     for note_id, spec in config["notes"].items():
-        source_title, entry = by_id[note_id]
-        linked = inventory[note_id]["links_inline"] + inventory[note_id]["links_related_only"]
+        if "new" in spec:  # note without a vault counterpart: titles and type come from the package
+            source_title, entry = "", spec["new"]
+            linked = []
+        else:
+            source_title, entry = by_id[note_id]
+            linked = inventory[note_id]["links_inline"] + inventory[note_id]["links_related_only"]
         package_members = [other for other in config["notes"] if other != note_id]
         links = list(dict.fromkeys(linked + package_members + spec.get("extra_links", [])))
         plans.append(NotePlan(

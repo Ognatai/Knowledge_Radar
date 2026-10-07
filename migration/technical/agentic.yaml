@@ -1,0 +1,182 @@
+# Migration package "Agentic AI and engineering methods": input for
+# `python -m app.agents.technical_notes <command> agentic`.
+# arXiv sources are verified against the `expect` title fragment; web pages were read in full
+# and the summaries only contain statements found there (checked 2026-10-07).
+# Shared source entries are defined once under `sources` and reused with YAML anchors.
+sources:
+  react: &react {arxiv: "2210.03629", expect: "ReAct", venue: ICLR 2023}
+  toolformer: &toolformer {arxiv: "2302.04761", expect: "Toolformer", venue: NeurIPS 2023}
+  reflexion: &reflexion {arxiv: "2303.11366", expect: "Reflexion", venue: NeurIPS 2023}
+  selfrefine: &selfrefine {arxiv: "2303.17651", expect: "Self-Refine", venue: NeurIPS 2023}
+  greshake: &greshake {arxiv: "2302.12173", expect: "Indirect Prompt Injection", venue: AISec 2023}
+  survey: &survey {arxiv: "2308.11432", expect: "Autonomous Agents", venue: Frontiers of Computer Science 2024}
+  swebench: &swebench {arxiv: "2310.06770", expect: "SWE-bench", venue: ICLR 2024}
+  agentbench: &agentbench {arxiv: "2308.03688", expect: "AgentBench", venue: ICLR 2024}
+  lostmiddle: &lostmiddle {arxiv: "2307.03172", expect: "Lost in the Middle", venue: TACL 2024}
+  autogen: &autogen {arxiv: "2308.08155", expect: "AutoGen", venue: COLM 2024}
+  memgpt: &memgpt {arxiv: "2310.08560", expect: "MemGPT"}
+  perry: &perry {arxiv: "2211.03622", expect: "Insecure Code", venue: ACM CCS 2023}
+  metr: &metr {arxiv: "2507.09089", expect: "Developer Productivity"}
+  frugal: &frugal {arxiv: "2305.05176", expect: "FrugalGPT", venue: TMLR 2024}
+  routellm: &routellm {arxiv: "2406.18665", expect: "RouteLLM", venue: ICLR 2025}
+  llmlingua: &llmlingua {arxiv: "2310.05736", expect: "LLMLingua", venue: EMNLP 2023}
+  graphrag: &graphrag {arxiv: "2404.16130", expect: "From Local to Global"}
+  bea: &bea
+    url: https://www.anthropic.com/engineering/building-effective-agents
+    citation: "Erik S. & Zhang, B. (2024). *Building effective agents.* Anthropic Engineering, 19 December 2024."
+    short: Anthropic (2024a)
+    link_label: anthropic.com
+    summary: "Distinguishes two kinds of agentic systems: workflows, in which LLMs and tools are orchestrated through predefined code paths, and agents, in which LLMs dynamically direct their own processes and tool usage. Recommends finding the simplest solution and only adding complexity when needed, since agentic systems often trade latency and cost for better task performance; for many applications, optimising single LLM calls with retrieval and in-context examples is enough. Frameworks simplify getting started but add abstraction layers that can obscure prompts and responses. The building block is an LLM augmented with retrieval, tools and memory. Workflow patterns: prompt chaining (with programmatic gates), routing (for example easy questions to smaller, cost-efficient models and hard ones to more capable models), parallelisation (sectioning and voting, e.g. guardrails screening in a separate call), orchestrator-workers (a central LLM breaks down tasks dynamically and delegates them) and evaluator-optimizer (one LLM generates, another evaluates in a loop). Agents are typically LLMs using tools based on environmental feedback in a loop; they need ground truth from the environment at each step, can pause for human feedback, and often use stopping conditions such as a maximum number of iterations. Autonomy means higher costs and compounding errors, so extensive testing in sandboxed environments and guardrails are recommended. Principles: simplicity, transparency by showing planning steps, and a carefully designed agent-computer interface through tool documentation and testing. For coding agents, automated tests verify functionality, but human review remains crucial."
+  ctx: &ctx
+    url: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+    citation: "Rajasekaran, P., Dixon, E., Ryan, C. & Hadfield, J. (2025). *Effective context engineering for AI agents.* Anthropic Engineering, 29 September 2025."
+    short: Anthropic (2025a)
+    link_label: anthropic.com
+    summary: "Views context engineering as the progression of prompt engineering: curating and maintaining the optimal set of tokens during inference, including system instructions, tools, MCP, external data and message history; an agent running in a loop generates ever more data, so curation happens each time something is passed to the model. As the number of tokens grows, the model's ability to recall information decreases (context rot), so context is a finite resource with diminishing returns; good context engineering means the smallest possible set of high-signal tokens. Recommends clear system prompts at the right altitude, minimal tool sets without overlapping functionality, and diverse canonical examples. Defines agents simply as LLMs autonomously using tools in a loop. Describes just-in-time retrieval, in which agents keep lightweight references such as file paths and load data with tools at runtime, enabling progressive disclosure, and hybrid strategies. For long-horizon tasks it describes compaction (summarising a conversation near the context limit and restarting with the summary), structured note-taking (agentic memory persisted outside the context window) and sub-agent architectures, in which sub-agents explore with clean context windows and return condensed summaries."
+  harness: &harness
+    url: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
+    citation: "Young, J. (2025). *Effective harnesses for long-running agents.* Anthropic Engineering, 26 November 2025."
+    short: Anthropic (2025b)
+    link_label: anthropic.com
+    summary: "Long-running agents work in discrete sessions, and each new session begins with no memory of what came before; compaction alone is not sufficient. Observed failure modes of a coding agent with only a high-level prompt: trying to do too much at once and running out of context mid-implementation, declaring the job done too early, and marking features complete without end-to-end testing. The described harness uses an initializer agent that sets up the environment (an init script, a progress file, an initial git commit and a JSON feature list with all features initially failing) and a coding agent that works on one feature at a time, commits to git with descriptive messages, writes progress summaries, leaves the environment in a clean state and tests features end to end, for example with browser automation; git allows reverting bad changes. Each session starts by reading progress notes and git logs and running a basic test."
+  skills: &skills
+    url: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+    citation: "Zhang, B., Lazuka, K. & Murag, M. (2025). *Equipping agents for the real world with Agent Skills.* Anthropic Engineering, 16 October 2025."
+    short: Anthropic (2025c)
+    link_label: anthropic.com
+    summary: "Published 16 October 2025; on 18 December 2025, Agent Skills were published as an open standard for cross-platform portability. Agent Skills are organised folders of instructions, scripts and resources that agents can discover and load dynamically. A skill is a directory with a SKILL.md file that starts with YAML frontmatter containing a name and a description. At startup, the agent pre-loads the name and description of every installed skill into its system prompt (first level of progressive disclosure); if a skill is relevant, it reads the full SKILL.md (second level); further bundled files are read only as needed (third level), so the amount of context bundled into a skill is effectively unbounded. Skills can include code that the agent executes, which is cheaper and more deterministic than generating the result token by token. Recommends starting from evaluation, splitting large skills, paying attention to name and description, and iterating with the agent. Malicious skills may introduce vulnerabilities or direct the agent to exfiltrate data, so skills should be installed only from trusted sources and audited otherwise. Skills can complement MCP servers by teaching agents workflows that involve external tools."
+  skillspec: &skillspec
+    url: https://agentskills.io/specification
+    citation: "Agent Skills. *Specification.* agentskills.io."
+    short: Agent Skills specification
+    link_label: agentskills.io
+    summary: "A skill is a directory containing at least a SKILL.md file, optionally with scripts/, references/ and assets/ directories. SKILL.md contains YAML frontmatter followed by Markdown instructions. Required fields: name (1 to 64 characters, lowercase letters, numbers and hyphens, matching the directory name) and description (1 to 1024 characters, describing what the skill does and when to use it, with keywords that help agents identify relevant tasks). Optional fields: license, compatibility, metadata and an experimental allowed-tools list of pre-approved tools. The agent loads the entire SKILL.md once it decides to activate a skill, so longer content should be split into referenced files."
+  osmh: &osmh
+    url: https://addyosmani.com/blog/agent-harness-engineering/
+    citation: "Osmani, A. (2026). *Agent Harness Engineering.* AddyOsmani.com."
+    short: Osmani (2026a)
+    link_label: addyosmani.com
+    summary: "A coding agent is the model plus everything built around it; harness engineering treats that scaffolding as a real artifact. The harness comprises the prompts, tools, context policies, hooks, sandboxes, subagents, feedback loops and recovery paths around the model; following Viv Trivedy, who coined the term, Agent = Model + Harness. Concretely: system prompts, AGENTS.md or CLAUDE.md files, skill files and subagent prompts; tools, skills and MCP servers; bundled infrastructure such as filesystem, sandbox and browser; orchestration logic such as subagent spawning and model routing; hooks and middleware for deterministic execution; and observability such as logs, traces and cost metering. A decent model with a great harness beats a great model with a bad harness. Agent failures are treated as signals: whenever the agent makes a mistake, a rule, hook or check is added so it does not happen again, and constraints are removed when a more capable model makes them redundant. The filesystem and Git give the agent durable state, versioning and the ability to roll back."
+  osml: &osml
+    url: https://addyosmani.com/blog/loop-engineering/
+    citation: "Osmani, A. (2026). *Loop Engineering.* AddyOsmani.com."
+    short: Osmani (2026b)
+    link_label: addyosmani.com
+    summary: "Loop engineering means replacing yourself as the person who prompts the agent and designing the system that does it instead: a small system finds the work, hands it out, checks it, writes down what is done and decides the next step. It sits one level above agent harness engineering. A loop needs automations that run on a schedule for discovery and triage, worktrees that isolate parallel agents, skills that codify project knowledge, connectors and plugins (built on MCP) to existing tools, and sub-agents so that one agent proposes and another verifies, plus memory outside the conversation, such as a Markdown file or an issue board, because the model forgets between runs. A goal command keeps an agent working until a verifiable condition holds, checked by a separate model. The author is sceptical, calls it early and warns that token costs vary widely."
+  tns: &tns
+    url: https://thenewstack.io/loop-engineering/
+    citation: "Janakiram MSV (2026). *The Anthropic leader who built Claude Code says he ditched prompting — now he just writes loops.* The New Stack, 10 June 2026."
+    short: Janakiram MSV (2026)
+    link_label: thenewstack.io
+    summary: "Reports on a June 2026 discussion in which Boris Cherny, head of Claude Code at Anthropic, said he no longer prompts Claude directly and that his job is to write loops, and Addy Osmani named the pattern loop engineering. Describes it as an orchestration pattern that combines scheduled execution, isolated workspaces, verifier agents and persistent memory; the most consequential design choice is separating the agent that writes code from the agent that checks it, because a model grading its own output is too generous. Notes that developers moved from prompt engineering to context engineering to harness engineering to loop engineering in fewer than 18 months, that a cron job runs a fixed script while a loop runs a model that chooses its next action, and that Osmani warns about token costs, mistakes made unattended and comprehension debt, the gap that widens when a system ships code nobody read."
+  mcparch: &mcparch
+    url: https://modelcontextprotocol.io/docs/learn/architecture
+    citation: "Model Context Protocol. *Architecture overview.* modelcontextprotocol.io."
+    short: MCP architecture docs
+    link_label: modelcontextprotocol.io
+    summary: "MCP follows a client-server architecture: an MCP host, an AI application such as Claude Code or Visual Studio Code, creates one MCP client per MCP server, and each client maintains a dedicated connection to its server. Servers run locally (typically with the stdio transport, serving a single client) or remotely (with the Streamable HTTP transport, serving many clients). MCP has a data layer, a JSON-RPC 2.0 based protocol with discovery, server features, client features and notifications, and a transport layer (stdio or Streamable HTTP with optional Server-Sent Events; OAuth is recommended for tokens). MCP focuses solely on the protocol for context exchange and does not dictate how applications use LLMs or manage the provided context. Servers expose three core primitives: tools (executable functions the application can invoke), resources (data sources providing context) and prompts (reusable templates); each has list and get methods, and tools are executed with tools/call. Clients can expose elicitation, which lets servers request information or confirmation from users; sampling is deprecated as of protocol version 2026-07-28. Every request carries the protocol version and capabilities, and servers advertise versions and capabilities through a discovery request."
+  mcpspec: &mcpspec
+    url: https://modelcontextprotocol.io/specification/2025-06-18
+    citation: "Model Context Protocol. *Specification, version 2025-06-18.* modelcontextprotocol.io."
+    short: MCP specification
+    link_label: modelcontextprotocol.io
+    summary: "MCP provides a standardised way for applications to share contextual information with language models, expose tools and capabilities to AI systems and build composable integrations. It uses JSON-RPC 2.0 messages between hosts (LLM applications that initiate connections), clients (connectors within the host) and servers (services that provide context and capabilities). MCP takes some inspiration from the Language Server Protocol, which standardises how to add support for programming languages across development tools; in a similar way, MCP standardises how to integrate context and tools into AI applications."
+  mcptools: &mcptools
+    url: https://modelcontextprotocol.io/specification/latest/server/tools
+    citation: "Model Context Protocol. *Specification: Tools.* modelcontextprotocol.io."
+    short: MCP tools specification
+    link_label: modelcontextprotocol.io
+    summary: "Tools in MCP are model-controlled: the language model can discover and invoke them automatically. For trust, safety and security there should always be a human in the loop with the ability to deny tool invocations; applications should show which tools are exposed, indicate tool invocations and ask for confirmation. Clients must consider tool annotations untrusted unless they come from trusted servers. Servers must validate all tool inputs, implement access controls, rate-limit invocations and sanitise outputs; clients should ask for confirmation on sensitive operations, show tool inputs before calling the server to avoid data exfiltration, validate tool results before passing them to the LLM, implement timeouts and log tool usage for audits."
+  mcpsec: &mcpsec
+    url: https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
+    citation: "Model Context Protocol. *Security Best Practices.* modelcontextprotocol.io."
+    short: MCP security best practices
+    link_label: modelcontextprotocol.io
+    summary: "Describes attacks and mitigations for MCP implementations: the confused deputy problem with MCP proxy servers that connect to third-party APIs, token passthrough (accepting tokens not issued for the server and passing them to downstream APIs, explicitly forbidden), scope minimisation (broad token scopes increase the impact of a compromise), and local MCP server compromise: local servers run on the user's machine with direct system access, so malicious startup commands or payloads can lead to arbitrary code execution with client privileges, data exfiltration and data loss. Clients offering one-click local server configuration must show the exact command, flag it as potentially dangerous and require explicit approval; sandboxing is recommended."
+  mcpann: &mcpann
+    url: https://www.anthropic.com/news/model-context-protocol
+    citation: "Anthropic (2024). *Introducing the Model Context Protocol.* Anthropic News, 25 November 2024."
+    short: Anthropic (2024b)
+    link_label: anthropic.com
+    summary: "On 25 November 2024, Anthropic open-sourced the Model Context Protocol, an open standard for connecting AI assistants to the systems where data lives. Every new data source otherwise requires its own custom implementation; MCP replaces fragmented integrations with a single protocol. Developers either expose data through MCP servers or build AI applications (MCP clients) that connect to them. Released with the specification and SDKs, local server support in Claude Desktop and an open-source repository of servers for systems such as Google Drive, Slack, GitHub, Git, Postgres and Puppeteer."
+  a2a: &a2a
+    url: https://a2a-protocol.org/latest/
+    citation: "A2A Project. *Agent2Agent (A2A) Protocol.* a2a-protocol.org."
+    short: A2A protocol docs
+    link_label: a2a-protocol.org
+    summary: "The Agent2Agent (A2A) Protocol is an open standard for communication and collaboration between AI agents built with different frameworks and by different vendors. Agents can delegate sub-tasks, exchange information and coordinate actions without sharing internal memory, tools or proprietary logic. MCP and A2A are complementary: MCP is for agent-to-tool communication, standardising how an agent connects to tools, APIs and resources; A2A is for agent-to-agent communication, letting independent agents discover each other, delegate tasks and share results."
+  willison: &willison
+    url: https://simonwillison.net/2025/Mar/19/vibe-coding/
+    citation: "Willison, S. (2025). *Not all AI-assisted programming is vibe coding (but vibe coding rocks).* Simon Willison's Weblog, 19 March 2025."
+    short: Willison (2025)
+    link_label: simonwillison.net
+    summary: "The term vibe coding was coined by Andrej Karpathy on 6 February 2025; his original post, quoted in full, describes fully giving in to the vibes and forgetting that the code exists, always accepting all changes without reading the diffs, pasting error messages back without comment, code growing beyond his comprehension and working around bugs, and calls it not too bad for throwaway weekend projects. Willison defines vibe coding as building software with an LLM without reviewing the code it writes and argues that it is not the same as all AI-assisted programming: if an LLM wrote the code and you reviewed it, tested it thoroughly and can explain how it works, that is software development. His rule for production code is not to commit code he could not explain to somebody else. Vibe coding lowers the barrier for beginners and helps experienced developers build intuition. Guidance: keep projects low stakes, consider security (secrets, data privacy), be a good network citizen, beware of usage-based billing, and use sandboxes, which make it hard to cause harm."
+  truefoundry: &truefoundry
+    url: https://www.truefoundry.com/blog/graph-engineering-enterprise-guide
+    citation: "Wang, B. (2026). *Graph Engineering for Multi-Agent Systems: Architecture, Governance, and Observability.* TrueFoundry Blog, 20 July 2026."
+    short: Wang (2026)
+    link_label: truefoundry.com
+    summary: "Describes graph engineering, as synthesised in a July 2026 discussion, as designing the topology of a multi-agent system: which nodes exist (agents, deterministic functions, routers, joins, tools, human checkpoints), which transitions are permitted and how runtime work graphs form and change, while loop engineering designs how each agentic node executes. Calls it an emerging, contested framing rather than a settled standard and distinguishes it from knowledge-graph engineering: knowledge graphs structure what a system knows, graph engineering structures who the system is. Traces the lineage to dataflow and DAG orchestration, multi-agent systems research and organisational charts, and to agent frameworks that made graphs first-class objects (LangGraph, AutoGen, CrewAI) and to the A2A protocol. Production use needs explicit identities, propagated graph, run and node identifiers, policy enforcement for tool and MCP access, budgets and per-node observability."
+  aioperator: &aioperator
+    url: https://theaioperator.io/p/what-is-graph-engineering-a-field
+    citation: "Ghelbur, E. (2026). *What Is Graph Engineering? A Field Guide for Builders.* The AI Operator, 21 July 2026."
+    short: Ghelbur (2026)
+    link_label: theaioperator.io
+    summary: "Reports that the term graph engineering spread on X within 48 hours after Peter Steinberger posted on 18 July 2026 'Are we still talking loops or did we shift to graphs yet?', with three competing meanings: orchestration graphs (multi-agent systems as explicit graphs with typed nodes, transitions and checkpoints), graphs of loops (networks of self-improvement cycles watching each other, the most abstract and least actionable meaning) and graph-structured knowledge and memory (agent knowledge stored as typed nodes and edges). The earliest documented use found is a blog post by Josh Simmons on 4 July 2026. A viral claim about a large Stanford and Anthropic study was found to be fabricated. Only the third meaning has a decade of research, working tools and benchmark numbers that survived independent evaluation. Places the term in a sequence of labels: prompt engineering (2023), context engineering (mid-2025), loop engineering (June 2026) and graph engineering (July 2026). Explains that typed edges such as supersedes, depends_on, decided_by or caused carry meaning that untyped links lack, and that graph traversal helps with multi-hop questions where vector search fails, while graphs lose on simple lookups and cost."
+  langgraph: &langgraph
+    url: https://docs.langchain.com/oss/python/langgraph/overview
+    citation: "LangChain. *LangGraph overview.* LangChain documentation."
+    short: LangGraph docs
+    link_label: docs.langchain.com
+    summary: "LangGraph is a low-level orchestration framework and runtime for building, managing and deploying long-running, stateful agents, focused on durable execution, streaming, human-in-the-loop and persistence. It allows deterministic, hand-coded steps and LLM-driven agentic steps to be mixed in the same graph, so that parts of the logic are predictable and auditable while others are model-driven. LangChain agents provide prebuilt architectures on top of it, and LangSmith offers tracing, evaluation and deployment."
+  caching: &caching
+    url: https://platform.claude.com/docs/en/build-with-claude/prompt-caching
+    citation: "Anthropic. *Prompt caching.* Claude Platform documentation."
+    short: Prompt caching docs
+    link_label: platform.claude.com
+    summary: "Prompt caching reuses a prompt prefix up to a cache breakpoint: if the prefix was cached by a recent request, the cached version is used, reducing processing time and costs; otherwise the full prompt is processed and the prefix cached. Useful for prompts with many examples, large background context, repetitive tasks with consistent instructions and long multi-turn conversations. The cache has a default lifetime of 5 minutes, refreshed each time the content is used. Pricing per million tokens: cache writes cost more than base input tokens (for example 1.25 times the base input price for 5-minute writes), while cache hits cost a fraction (0.1 times the base input price for most models); output tokens cost several times as much as input tokens (for example 2 versus 10 US dollars per million tokens). A minimum cacheable prompt length applies, and tools, system messages, messages, images and documents can be cached."
+  batch: &batch
+    url: https://platform.claude.com/docs/en/build-with-claude/batch-processing
+    citation: "Anthropic. *Batch processing.* Claude Platform documentation."
+    short: Batch processing docs
+    link_label: platform.claude.com
+    summary: "Batch processing submits many requests together for asynchronous processing; it suits large volumes of data, cases where immediate responses are not required, cost optimisation and large-scale evaluations. The Message Batches API processes each request independently; most batches finish in less than one hour, costs are reduced by 50%, and batches expire if processing does not complete within 24 hours."
+  oteltraces: &oteltraces
+    url: https://opentelemetry.io/docs/concepts/signals/traces/
+    citation: "OpenTelemetry. *Traces.* OpenTelemetry documentation."
+    short: OpenTelemetry traces docs
+    link_label: opentelemetry.io
+    summary: "Traces give the big picture of what happens when a request is made to an application and show the full path a request takes. A span represents a unit of work or operation and is the building block of traces; it includes a name, a parent span ID (empty for root spans), start and end timestamps, a span context with trace and span IDs, attributes, events, links and a status."
+  otelsampling: &otelsampling
+    url: https://opentelemetry.io/docs/concepts/sampling/
+    citation: "OpenTelemetry. *Sampling.* OpenTelemetry documentation."
+    short: OpenTelemetry sampling docs
+    link_label: opentelemetry.io
+    summary: "Head sampling decides as early as possible whether to sample or drop a trace, without inspecting the whole trace, for example consistent probability sampling of a fixed percentage based on the trace ID; it cannot ensure that all traces with errors are sampled. Tail sampling decides after considering all or most spans of a trace, for example always sampling traces with errors or high latency; larger systems almost always need it, but it is difficult to implement and operate, requires stateful components that store large amounts of data, and is often vendor-specific. Both can be combined."
+  langfuse: &langfuse
+    url: https://langfuse.com/docs/observability/overview
+    citation: "Langfuse. *Observability & Application Tracing.* Langfuse documentation."
+    short: Langfuse docs
+    link_label: langfuse.com
+    summary: "Generative AI systems are non-deterministic, so debugging without observability is guesswork. The core of AI observability is application tracing: structured logs of every request that capture the exact prompt, the model's response, token usage, latency and any tools or retrieval steps in between; production traces also feed evaluations. Langfuse is open source, can be self-hosted, and its SDKs send tracing data asynchronously so that application response time is not affected; it also offers LLM-as-a-judge evaluation, prompt management, experiments and datasets."
+notes:
+  agentic-ai:
+    sources: [*react, *toolformer, *reflexion, *survey, *bea, *ctx, *greshake, *agentbench, *swebench, *memgpt]
+  engineering-methods-for-ai-systems:
+    sources: [*bea, *ctx, *osmh, *osml, *tns, *willison, *lostmiddle, *perry, *metr]
+  harness-engineering:
+    sources: [*osmh, *harness, *bea, *greshake, *mcptools]
+  loop-engineering:
+    sources: [*osml, *tns, *react, *reflexion, *selfrefine, *lostmiddle, *ctx, *bea]
+  graph-engineering:
+    sources: [*truefoundry, *aioperator, *langgraph, *autogen, *graphrag, *a2a]
+  agent-skills:
+    sources: [*skills, *skillspec, *ctx, *osml]
+  vibe-coding:
+    sources: [*willison, *tns, *perry, *metr, *bea]
+  mcp-and-related-protocols:
+    sources: [*mcpann, *mcparch, *mcpspec, *mcptools, *mcpsec, *a2a, *greshake]
+  llm-cost-optimization:
+    sources: [*frugal, *routellm, *caching, *batch, *llmlingua, *bea]
+  llm-observability-and-tracing:
+    sources: [*oteltraces, *otelsampling, *langfuse, *bea]
