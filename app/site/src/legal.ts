@@ -22,8 +22,8 @@ export const TODO_MARKER = "TODO" + "(";
 export const ADDRESS_TOKEN = "{{postal-address}}";
 
 /**
- * The postal address, XOR-encoded so that it appears neither in the HTML nor as
- * plain text in the source or the bundle; it is decoded in the browser.
+ * The postal address and the email address, XOR-encoded so that they appear neither
+ * in the HTML nor as plain text in the source or the bundle; they are decoded in the browser.
  */
 const ADDRESS_KEY = 0x5a;
 const ADDRESS_CODES = [
@@ -32,8 +32,16 @@ const ADDRESS_CODES = [
   [98, 107, 108, 109, 105, 122, 23, 166, 52, 57, 50, 63, 52],
 ];
 
-export const decodeAddress = (): string[] =>
-  ADDRESS_CODES.map((codes) => String.fromCharCode(...codes.map((code) => code ^ ADDRESS_KEY)));
+const EMAIL_CODES = [9, 46, 63, 60, 59, 52, 51, 63, 116, 15, 40, 57, 50, 41, 26, 61, 55, 59, 51, 54, 116, 57, 53, 55];
+
+/** Link target in a page body that is replaced by the decoded email address (see EmailLink). */
+export const EMAIL_HREF = "#email";
+
+const decode = (codes: number[]) => String.fromCharCode(...codes.map((code) => code ^ ADDRESS_KEY));
+
+export const decodeAddress = (): string[] => ADDRESS_CODES.map(decode);
+
+export const decodeEmail = (): string => decode(EMAIL_CODES);
 
 export const isDraft = (page: LegalPage) =>
   page.body_de.includes(TODO_MARKER) || page.body_en.includes(TODO_MARKER);
@@ -53,7 +61,7 @@ Deutschland
 
 ### Kontakt
 
-E-Mail: [email removed]
+E-Mail: [E-Mail-Adresse](#email)
 `,
     body_en: `${GERMAN_AUTHORITATIVE}
 
@@ -65,18 +73,18 @@ Germany
 
 ### Contact
 
-Email: [email removed]
+Email: [email address](#email)
 `,
   },
   {
     id: "contact",
     title_en: "Contact",
     title_de: "Kontakt",
-    body_de: `Fragen, Hinweise auf Fehler in einer Notiz und Rückmeldungen zur Barrierefreiheit bitte per E-Mail an [email removed].
+    body_de: `Fragen, Hinweise auf Fehler in einer Notiz und Rückmeldungen zur Barrierefreiheit bitte per E-Mail an [E-Mail-Adresse](#email).
 
 Die Seite hat kein Kontaktformular und keine Kommentarfunktion. Wie Nachrichten verarbeitet werden, steht in der [Datenschutzerklärung](?view=legal&id=privacy).
 `,
-    body_en: `Questions, reports of errors in a note and feedback on accessibility: please email [email removed].
+    body_en: `Questions, reports of errors in a note and feedback on accessibility: please email [email address](#email).
 
 The site has no contact form and no comment function. How messages are processed is described in the [privacy policy](?view=legal&id=privacy).
 `,

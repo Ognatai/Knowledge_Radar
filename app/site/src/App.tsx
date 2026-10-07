@@ -17,7 +17,7 @@ import {
   type SiteData,
 } from "./data";
 import type { Language } from "./i18n";
-import { ADDRESS_TOKEN, decodeAddress, isDraft, legalPages } from "./legal";
+import { ADDRESS_TOKEN, decodeAddress, decodeEmail, EMAIL_HREF, isDraft, legalPages } from "./legal";
 import { outlineNote, slugify, type TocEntry } from "./toc";
 
 type Screen =
@@ -348,7 +348,7 @@ function App() {
                 {(language === "en" ? legalPage.body_en : legalPage.body_de).split(ADDRESS_TOKEN).map((part, index) => (
                   <div key={index}>
                     {index > 0 && <PostalAddress />}
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{part}</ReactMarkdown>
+                    <ReactMarkdown components={legalComponents} remarkPlugins={[remarkGfm]}>{part}</ReactMarkdown>
                   </div>
                 ))}
               </div>
@@ -647,3 +647,14 @@ function PostalAddress() {
     </p>
   );
 }
+
+/** Renders the decoded email address as a mailto link; like the postal address, it is not in the HTML. */
+function EmailLink() {
+  const [email, setEmail] = useState("");
+  useEffect(() => setEmail(decodeEmail()), []);
+  return <a href={email ? `mailto:${email}` : undefined}>{email}</a>;
+}
+
+const legalComponents: Components = {
+  a: ({ href, children }) => (href === EMAIL_HREF ? <EmailLink /> : <a href={href}>{children}</a>),
+};
