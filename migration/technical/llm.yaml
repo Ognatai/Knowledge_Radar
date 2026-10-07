@@ -11,6 +11,16 @@ notes:
       - {arxiv: "2206.07682", expect: "Emergent Abilities of Large Language Models", venue: TMLR}
       - {arxiv: "1508.07909", expect: "Neural Machine Translation of Rare Words with Subword Units", venue: ACL 2016}
       - {arxiv: "1904.09751", expect: "The Curious Case of Neural Text Degeneration", venue: ICLR 2020}
+      - url: https://edoc.ub.uni-muenchen.de/36297/
+        citation: "Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München."
+        short: Urchs (2025)
+        link_label: LMU edoc
+        summary: "Dissertation on gender discrimination in NLP with a background chapter on large language models. The GPT family uses a decoder-only Transformer trained left to right on next-token prediction; GPT-2 showed zero-shot generalisation and GPT-3 with 175 billion parameters few-shot learning via prompts, shifting the focus from fine-tuning to prompt design. Reinforcement learning from human feedback trains a reward model on human preferences that guides fine-tuning, with Kullback-Leibler penalties keeping the updated policy close to the original distribution; ChatGPT combined a GPT model with RLHF and a dialogue interface, which made LLMs accessible to the public and raised concerns about ethics, misinformation and AI governance. Proprietary families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan raise concerns about transparency, reproducibility and dataset opacity. Open alternatives such as LLaMA, Zephyr and DeepSeek LLM (trained from scratch on 2 trillion English and Chinese tokens, 7B and 67B parameters, MIT licence, outperforming LLaMA-2 70B on several benchmarks, especially reasoning, mathematics and coding) promote reproducibility and access, but transparency about pretraining data and fine-tuning remains limited for many open models."
+      - url: https://doi.org/10.1007/978-3-031-74630-7_20
+        citation: "Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2023). *How Prevalent Is Gender Bias in ChatGPT? Exploring German and English ChatGPT Responses.* ECML PKDD 2023 Workshops, Communications in Computer and Information Science 2133, Springer (2025)."
+        short: Urchs et al. (2023)
+        link_label: doi:10.1007/978-3-031-74630-7_20
+        summary: "Systematically analyses prompts and ChatGPT responses in English and German with a focus on gender bias, when the system is asked to answer from a female, male or neutral perspective, and examines how responses differ when the same prompt is repeated. ChatGPT is useful for helping non-IT users draft texts, but its responses must be checked thoroughly for biases as well as syntactic and grammatical mistakes. Post-hoc fairness interventions led to overcorrection: an over-representation of female personas for neutral prompts and an exaggerated emphasis on diversity for gendered prompts."
   llm-adaptation:
     sources:
       - {arxiv: "2005.11401", expect: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", venue: NeurIPS 2020}
