@@ -75,7 +75,7 @@ notes:
         short: Salton et al. (1975)
         link_label: doi:10.1145/361219.361220
         summary: "Represents documents and queries as vectors of term weights in a common space and ranks documents by their similarity to the query; indexing quality is related to how well the vector space separates documents."
-      - url: https://doi.org/10.1016/0306-4573(88)90021-0
+      - url: https://doi.org/10.1016/0306-4573%2888%2990021-0
         citation: "Salton, G. & Buckley, C. (1988). *Term-weighting approaches in automatic text retrieval.* Information Processing & Management 24(5)."
         short: Salton & Buckley (1988)
         link_label: doi:10.1016/0306-4573(88)90021-0

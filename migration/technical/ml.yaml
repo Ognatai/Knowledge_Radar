@@ -93,7 +93,7 @@ notes:
         short: Friedman (2001)
         link_label: doi:10.1214/aos/1013203451
         summary: "Views boosting as numerical optimisation in function space: stagewise additive expansions are fitted by steepest descent, each new component fitted to the negative gradient of an arbitrary loss (least squares, least absolute deviation, Huber, multiclass logistic). Gradient boosting of regression trees gives competitive, robust procedures for regression and classification."
-      - url: https://doi.org/10.1016/S0893-6080(05)80023-1
+      - url: https://doi.org/10.1016/S0893-6080%2805%2980023-1
         citation: "Wolpert, D. H. (1992). *Stacked Generalization.* Neural Networks 5(2)."
         short: Wolpert (1992)
         link_label: doi:10.1016/S0893-6080(05)80023-1
