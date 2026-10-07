@@ -119,3 +119,20 @@ def test_glossary_restores_english_terms(tmp_path):
     assert tn.apply_glossary("Das dichte Retrieval und dichtes Retrieval.", glossary) == (
         "Das Dense Retrieval und Dense Retrieval."
     )
+
+
+def test_load_package_accepts_notes_without_vault_counterpart(tmp_path, monkeypatch):
+    (tmp_path / "technical").mkdir()
+    (tmp_path / "vault-mapping.yaml").write_text("notes: {}\n", encoding="utf-8")
+    (tmp_path / "inventory.yaml").write_text("notes: []\n", encoding="utf-8")
+    (tmp_path / "technical" / "pkg.yaml").write_text(
+        "notes:\n"
+        "  apis:\n"
+        "    new: {title_en: APIs, title_de: APIs, entity_type: Concept}\n"
+        "    extra_links: [python]\n"
+        "    sources: [{url: 'https://example.org', citation: c, short: s}]\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(tn, "MIGRATION", tmp_path)
+    (plan,) = tn.load_package("pkg")
+    assert (plan.id, plan.title_de, plan.entity_type, plan.links) == ("apis", "APIs", "Concept", ["python"])
