@@ -11,6 +11,8 @@ sources:
 - https://arxiv.org/abs/2206.07682
 - https://arxiv.org/abs/1508.07909
 - https://arxiv.org/abs/1904.09751
+- https://edoc.ub.uni-muenchen.de/36297/
+- https://doi.org/10.1007/978-3-031-74630-7_20
 ---
 
 ## EN
@@ -37,6 +39,8 @@ Text is split into subword tokens, a Transformer computes a contextual represent
 5. Decoding at inference time
 ▼
 6. Scaling
+▼
+7. Proprietary and open models
 ```
 
 #### 1. Subword tokenization
@@ -53,7 +57,7 @@ Given the preceding tokens, the model outputs a probability distribution over th
 
 #### 4. Training phases
 
-Pretraining optimises next-token prediction on large text corpora. With 175 billion parameters, GPT-3 performed many tasks from a task description and a few examples in the prompt, without gradient updates or fine-tuning (Brown et al., 2020). Larger models are not automatically better at following user intent and can produce untruthful or toxic outputs; InstructGPT therefore fine-tuned GPT-3 on demonstrations written by labellers and then applied reinforcement learning from human feedback ([[reinforcement-learning|Reinforcement Learning Fundamentals]]) using rankings of model outputs (Ouyang et al., 2022). In human evaluations, outputs of the 1.3B-parameter InstructGPT model were preferred to those of the 175B GPT-3, despite 100 times fewer parameters, with improvements in truthfulness and reductions in toxic output (Ouyang et al., 2022).
+Pretraining optimises next-token prediction on large text corpora. With 175 billion parameters, GPT-3 performed many tasks from a task description and a few examples in the prompt, without gradient updates or fine-tuning (Brown et al., 2020). Larger models are not automatically better at following user intent and can produce untruthful or toxic outputs; InstructGPT therefore fine-tuned GPT-3 on demonstrations written by labellers and then applied reinforcement learning from human feedback ([[reinforcement-learning|Reinforcement Learning Fundamentals]]) using rankings of model outputs (Ouyang et al., 2022). In human evaluations, outputs of the 1.3B-parameter InstructGPT model were preferred to those of the 175B GPT-3, despite 100 times fewer parameters, with improvements in truthfulness and reductions in toxic output (Ouyang et al., 2022). In RLHF, a reward model trained on human preferences guides the fine-tuning, and a Kullback-Leibler penalty keeps the updated model close to its original distribution (Urchs, 2025). ChatGPT combined a GPT model trained this way with a dialogue interface, which made LLMs accessible to the general public and raised new concerns about ethics, misinformation and AI governance (Urchs, 2025).
 
 #### 5. Decoding at inference time
 
@@ -63,9 +67,13 @@ Greedy decoding always picks the most probable token, and beam search keeps seve
 
 The cross-entropy loss of language models falls as a power law with model size, data set size and training compute, and larger models are more sample-efficient (Kaplan et al., 2020). For compute-optimal training, model size and the number of training tokens should be scaled in equal proportion: for every doubling of model size, the number of training tokens should also be doubled (Hoffmann et al., 2022). Following this, Chinchilla (70B parameters, trained on four times more data than Gopher with the same compute) outperformed larger models such as Gopher (280B) and GPT-3 (175B), reaching an average accuracy of 67.5% on MMLU, more than 7 percentage points above Gopher (Hoffmann et al., 2022). Some abilities are described as emergent: they are absent in smaller models and appear only in larger ones, so they cannot be predicted by extrapolating from smaller models (Wei et al., 2022).
 
+#### 7. Proprietary and open models
+
+Besides the GPT family, proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used; like GPT, they raise concerns about transparency, reproducibility and the opacity of their training data (Urchs, 2025). Open alternatives such as LLaMA, Zephyr and DeepSeek LLM promote reproducibility and equitable access; DeepSeek LLM, for example, was trained from scratch on 2 trillion English and Chinese tokens, is available with 7 and 67 billion parameters under the MIT licence and outperformed LLaMA-2 70B on several benchmarks, especially in reasoning, mathematics and coding. Even for open models, however, transparency about pretraining data and fine-tuning often remains limited (Urchs, 2025).
+
 #### Origin and variants
 
-The Transformer (Vaswani et al., 2017) was introduced for machine translation and reached 28.4 BLEU on WMT 2014 English-German and 41.8 BLEU on English-French. GPT-3 (Brown et al., 2020) showed that scaling a Transformer language model to 175 billion parameters enables few-shot learning from prompts. InstructGPT (Ouyang et al., 2022) added instruction tuning and reinforcement learning from human feedback, and Chinchilla (Hoffmann et al., 2022) showed that many large models had been trained on too little data for their size.
+The Transformer (Vaswani et al., 2017) was introduced for machine translation and reached 28.4 BLEU on WMT 2014 English-German and 41.8 BLEU on English-French. GPT-3 (Brown et al., 2020) showed that scaling a Transformer language model to 175 billion parameters enables few-shot learning from prompts. InstructGPT (Ouyang et al., 2022) added instruction tuning and reinforcement learning from human feedback, and Chinchilla (Hoffmann et al., 2022) showed that many large models had been trained on too little data for their size. ChatGPT brought such models to a broad public, and proprietary and open model families now coexist (Urchs, 2025).
 
 ### When to use it
 
@@ -84,6 +92,7 @@ The Transformer (Vaswani et al., 2017) was introduced for machine translation an
 - Pretrained models can produce untruthful, toxic or unhelpful outputs and need alignment, for instance with human feedback (Ouyang et al., 2022).
 - GPT-3's few-shot learning still struggled on some data sets, and some data sets raised methodological issues related to training on large web corpora (Brown et al., 2020).
 - Many large models were significantly undertrained because the amount of training data was kept constant while model size grew (Hoffmann et al., 2022).
+- Training data and fine-tuning methods are often not disclosed, even for openly released models (Urchs, 2025).
 
 ### Comparison
 
@@ -95,7 +104,7 @@ The Transformer (Vaswani et al., 2017) was introduced for machine translation an
 
 ### In practice
 
-LLMs are evaluated with benchmarks such as MMLU, which Hoffmann et al. (2022) report for Chinchilla, and, for alignment, with human preference judgements (Ouyang et al., 2022); see [[llm-evaluation|LLM Evaluation]]. Decoding settings such as temperature or the nucleus threshold p are chosen per application, since maximisation-based decoding tends to produce repetitive text (Holtzman et al., 2019). Untruthful outputs remain a known failure mode even after alignment (Ouyang et al., 2022).
+LLMs are evaluated with benchmarks such as MMLU, which Hoffmann et al. (2022) report for Chinchilla, and, for alignment, with human preference judgements (Ouyang et al., 2022); see [[llm-evaluation|LLM Evaluation]]. Decoding settings such as temperature or the nucleus threshold p are chosen per application, since maximisation-based decoding tends to produce repetitive text (Holtzman et al., 2019). Untruthful outputs remain a known failure mode even after alignment (Ouyang et al., 2022). Responses should also be checked for biases and language errors: in a study of ChatGPT in English and German, identical prompts gave varying answers, and post-hoc fairness interventions led to overcorrection, such as an over-representation of female personas for neutral prompts (Urchs et al., 2023; [[bias-in-nlp|Bias in NLP]]).
 
 ### Key takeaway
 
@@ -111,6 +120,8 @@ LLMs generate text by repeatedly predicting the next token with a Transformer; t
 - Wei, J. et al. (2022). *Emergent Abilities of Large Language Models.* TMLR. [arXiv:2206.07682](https://arxiv.org/abs/2206.07682)
 - Sennrich, R. et al. (2015). *Neural Machine Translation of Rare Words with Subword Units.* ACL 2016. [arXiv:1508.07909](https://arxiv.org/abs/1508.07909)
 - Holtzman, A. et al. (2019). *The Curious Case of Neural Text Degeneration.* ICLR 2020. [arXiv:1904.09751](https://arxiv.org/abs/1904.09751)
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
+- Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2023). *How Prevalent Is Gender Bias in ChatGPT? Exploring German and English ChatGPT Responses.* ECML PKDD 2023 Workshops, Communications in Computer and Information Science 2133, Springer (2025). [doi:10.1007/978-3-031-74630-7_20](https://doi.org/10.1007/978-3-031-74630-7_20)
 
 ## DE
 
@@ -136,6 +147,8 @@ Text wird in Subwort-Token aufgeteilt, ein Transformer berechnet eine kontextuel
 5. Decodierung zur Inferenzzeit
 ▼
 6. Skalierung
+▼
+7. Proprietäre und offene Modelle
 ```
 
 #### 1. Subwort-Tokenisierung
@@ -152,7 +165,7 @@ Gegeben die vorherigen Tokens gibt das Modell eine Wahrscheinlichkeitsverteilung
 
 #### 4. Trainingsphasen
 
-Das Vortraining optimiert die Vorhersage des nächsten Tokens anhand großer Textkorpora. Mit 175 Milliarden Parametern konnte GPT-3 viele Aufgaben aus einer Aufgabenbeschreibung und einigen Beispielen im Prompt durchführen, ohne Gradientenupdates oder Feinabstimmung (Brown et al., 2020). Größere Modelle sind nicht automatisch besser darin, der Absicht der Nutzer zu folgen, und können unwahre oder toxische Ausgaben erzeugen; InstructGPT hat GPT-3 daher anhand von Demonstrationen, die von Annotatoren geschrieben wurden, feinabgestimmt und anschließend Verstärkungslernen aus menschlicher Rückmeldung ([[reinforcement-learning|Reinforcement Learning Fundamentals]]) angewendet, wobei Ranglisten der Modellausgaben genutzt wurden (Ouyang et al., 2022). In menschlichen Evaluierungen wurden die Ausgaben des 1,3B-Parametern-InstructGPT-Modells gegenüber denen des 175B GPT-3 bevorzugt, obwohl es nur ein Hundertstel so viele Parameter hatte, bei höherer Wahrhaftigkeit und weniger toxischen Ausgaben (Ouyang et al., 2022).
+Das Vortraining optimiert die Vorhersage des nächsten Tokens anhand großer Textkorpora. Mit 175 Milliarden Parametern konnte GPT-3 viele Aufgaben aus einer Aufgabenbeschreibung und einigen Beispielen im Prompt durchführen, ohne Gradientenupdates oder Feinabstimmung (Brown et al., 2020). Größere Modelle sind nicht automatisch besser darin, der Absicht der Nutzer zu folgen, und können unwahre oder toxische Ausgaben erzeugen; InstructGPT hat GPT-3 daher anhand von Demonstrationen, die von Annotatoren geschrieben wurden, feinabgestimmt und anschließend Verstärkungslernen aus menschlicher Rückmeldung ([[reinforcement-learning|Reinforcement Learning Fundamentals]]) angewendet, wobei Ranglisten der Modellausgaben genutzt wurden (Ouyang et al., 2022). In menschlichen Evaluierungen wurden die Ausgaben des 1,3B-Parametern-InstructGPT-Modells gegenüber denen des 175B GPT-3 bevorzugt, obwohl es nur ein Hundertstel so viele Parameter hatte, bei höherer Wahrhaftigkeit und weniger toxischen Ausgaben (Ouyang et al., 2022). Bei RLHF steuert ein auf menschlichen Präferenzen trainiertes Reward-Modell das Fine-Tuning, und ein Kullback-Leibler-Strafterm hält das angepasste Modell nahe an seiner ursprünglichen Verteilung (Urchs, 2025). ChatGPT verband ein so trainiertes GPT-Modell mit einer Dialogoberfläche, machte LLMs damit einer breiten Öffentlichkeit zugänglich und warf neue Fragen zu Ethik, Desinformation und KI-Governance auf (Urchs, 2025).
 
 #### 5. Decodieren zur Inferenzzeit
 
@@ -162,9 +175,13 @@ Greedy-Decodierung wählt immer den wahrscheinlichsten Token aus, und der Beam-S
 
 Die Kreuzentropie-Verlustfunktion von Sprachmodellen nimmt mit der Modellgröße, der Größe des Datensatzes und dem Rechenaufwand für das Training nach einem Potenzgesetz ab, und größere Modelle sind dateneffizienter (Kaplan et al., 2020). Für ein rechenoptimales Training sollten Modellgröße und die Anzahl der Trainings-Token im gleichen Verhältnis skaliert werden: bei jedem Verdoppeln der Modellgröße sollte auch die Anzahl der Trainings-Token verdoppelt werden (Hoffmann et al., 2022). Danach übertraf Chinchilla (70B Parameter, trainiert auf viermal mehr Daten als Gopher mit demselben Rechenaufwand) größere Modelle wie Gopher (280B) und GPT-3 (175B), indem es eine durchschnittliche Genauigkeit von 67,5 % auf MMLU erreichte, was mehr als 7 Prozentpunkte über Gopher lag (Hoffmann et al., 2022). Einige Fähigkeiten werden als emergent beschrieben: sie fehlen in kleineren Modellen und treten erst in größeren auf, weshalb sie nicht durch Extrapolation von kleineren Modellen vorhergesagt werden können (Wei et al., 2022).
 
+#### 7. Proprietäre und offene Modelle
+
+Neben der GPT-Familie sind proprietäre Modellfamilien wie Claude 3 von Anthropic, Gemini von Google DeepMind, die Modelle von Mistral und Titan von Amazon verbreitet; wie bei GPT bestehen Bedenken hinsichtlich Transparenz, Reproduzierbarkeit und der Undurchsichtigkeit ihrer Trainingsdaten (Urchs, 2025). Offene Alternativen wie LLaMA, Zephyr und DeepSeek LLM fördern Reproduzierbarkeit und gleichberechtigten Zugang; DeepSeek LLM etwa wurde von Grund auf mit 2 Billionen englischen und chinesischen Token trainiert, ist mit 7 und 67 Milliarden Parametern unter der MIT-Lizenz verfügbar und übertraf LLaMA-2 70B auf mehreren Benchmarks, vor allem beim Schließen, in Mathematik und beim Programmieren. Auch bei offenen Modellen bleibt die Transparenz über Vortrainingsdaten und Fine-Tuning aber oft begrenzt (Urchs, 2025).
+
 #### Ursprung und Varianten
 
-Der Transformer (Vaswani et al., 2017) wurde für maschinelles Übersetzen eingeführt und erreichte 28,4 BLEU auf WMT 2014 Englisch-Deutsch und 41,8 BLEU auf Englisch-Französisch. GPT-3 (Brown et al., 2020) zeigte, dass das Skalieren eines Transformer-Sprachmodells auf 175 Milliarden Parameter das Lernen aus Prompts mit wenigen Beispielen ermöglicht. InstructGPT (Ouyang et al., 2022) ergänzte Instruction Tuning und Reinforcement Learning from Human Feedback, und Chinchilla (Hoffmann et al., 2022) zeigte, dass viele große Modelle auf zu wenig Daten für ihre Größe trainiert wurden.
+Der Transformer (Vaswani et al., 2017) wurde für maschinelles Übersetzen eingeführt und erreichte 28,4 BLEU auf WMT 2014 Englisch-Deutsch und 41,8 BLEU auf Englisch-Französisch. GPT-3 (Brown et al., 2020) zeigte, dass das Skalieren eines Transformer-Sprachmodells auf 175 Milliarden Parameter das Lernen aus Prompts mit wenigen Beispielen ermöglicht. InstructGPT (Ouyang et al., 2022) ergänzte Instruction Tuning und Reinforcement Learning from Human Feedback, und Chinchilla (Hoffmann et al., 2022) zeigte, dass viele große Modelle auf zu wenig Daten für ihre Größe trainiert wurden. ChatGPT brachte solche Modelle einer breiten Öffentlichkeit nahe, und heute bestehen proprietäre und offene Modellfamilien nebeneinander (Urchs, 2025).
 
 ### Wann einsetzen
 
@@ -183,6 +200,7 @@ Der Transformer (Vaswani et al., 2017) wurde für maschinelles Übersetzen einge
 - Vortrainierte Modelle können unwahre, toxische oder unhilfreiche Ausgaben produzieren und benötigen Ausrichtung, beispielsweise durch menschliche Rückmeldung (Ouyang et al., 2022).
 - Das few-shot Learning von GPT-3 hatte immer noch Schwierigkeiten mit einigen Datensätzen, und einige Datensätze brachten methodische Probleme hervor, die mit dem Training auf großen Web-Corpora zusammenhingen (Brown et al., 2020).
 - Viele große Modelle wurden erheblich untertrainiert, da die Menge an Trainingsdaten konstant blieb, während die Modellgröße wuchs (Hoffmann et al., 2022).
+- Trainingsdaten und Fine-Tuning-Verfahren werden oft nicht offengelegt, selbst bei offen veröffentlichten Modellen (Urchs, 2025).
 
 ### Vergleich
 
@@ -194,7 +212,7 @@ Der Transformer (Vaswani et al., 2017) wurde für maschinelles Übersetzen einge
 
 ### In der Praxis
 
-LLMs werden mit Benchmarks wie MMLU bewertet, für die Hoffmann et al. (2022) die Ergebnisse für Chinchilla berichten, und für die Ausrichtung mit menschlichen Präferenzurteilen (Ouyang et al., 2022); siehe [[llm-evaluation|LLM Evaluation]]. Decodier-Einstellungen wie Temperatur oder der Nucleus-Threshold p werden je nach Anwendung gewählt, da auf Maximierung basierende Decodierverfahren tendenziell wiederholten Text erzeugen (Holtzman et al., 2019). Unwahre Ausgaben bleiben auch nach der Ausrichtung ein bekannter Fehlermodus (Ouyang et al., 2022).
+LLMs werden mit Benchmarks wie MMLU bewertet, für die Hoffmann et al. (2022) die Ergebnisse für Chinchilla berichten, und für die Ausrichtung mit menschlichen Präferenzurteilen (Ouyang et al., 2022); siehe [[llm-evaluation|LLM Evaluation]]. Decodier-Einstellungen wie Temperatur oder der Nucleus-Threshold p werden je nach Anwendung gewählt, da auf Maximierung basierende Decodierverfahren tendenziell wiederholten Text erzeugen (Holtzman et al., 2019). Unwahre Ausgaben bleiben auch nach der Ausrichtung ein bekannter Fehlermodus (Ouyang et al., 2022). Antworten sollten zudem auf Bias und sprachliche Fehler geprüft werden: In einer Untersuchung von ChatGPT auf Englisch und Deutsch lieferten identische Prompts unterschiedliche Antworten, und nachträgliche Fairness-Eingriffe führten zu Überkorrekturen, etwa zu überproportional vielen weiblichen Personen bei neutralen Prompts (Urchs et al., 2023; [[bias-in-nlp|Bias in NLP]]).
 
 ### Merksatz
 
@@ -210,3 +228,5 @@ LLMs generieren Text, indem sie mit einem Transformer wiederholt den nächsten T
 - Wei, J. et al. (2022). *Emergent Abilities of Large Language Models.* TMLR. [arXiv:2206.07682](https://arxiv.org/abs/2206.07682)
 - Sennrich, R. et al. (2015). *Neural Machine Translation of Rare Words with Subword Units.* ACL 2016. [arXiv:1508.07909](https://arxiv.org/abs/1508.07909)
 - Holtzman, A. et al. (2019). *The Curious Case of Neural Text Degeneration.* ICLR 2020. [arXiv:1904.09751](https://arxiv.org/abs/1904.09751)
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
+- Urchs, S., Thurner, V., Aßenmacher, M., Heumann, C. & Thiemichen, S. (2023). *How Prevalent Is Gender Bias in ChatGPT? Exploring German and English ChatGPT Responses.* ECML PKDD 2023 Workshops, Communications in Computer and Information Science 2133, Springer (2025). [doi:10.1007/978-3-031-74630-7_20](https://doi.org/10.1007/978-3-031-74630-7_20)
