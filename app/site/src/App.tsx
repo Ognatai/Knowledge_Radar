@@ -17,7 +17,7 @@ import {
   type SiteData,
 } from "./data";
 import type { Language } from "./i18n";
-import { isDraft, legalPages } from "./legal";
+import { ADDRESS_TOKEN, decodeAddress, isDraft, legalPages } from "./legal";
 import { outlineNote, slugify, type TocEntry } from "./toc";
 
 type Screen =
@@ -345,9 +345,12 @@ function App() {
               {isDraft(legalPage) && <p className="draft-label">{t("draftLabel")}</p>}
               <h2 id="legal-title">{language === "en" ? legalPage.title_en : legalPage.title_de}</h2>
               <div className="markdown-body">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {language === "en" ? legalPage.body_en : legalPage.body_de}
-                </ReactMarkdown>
+                {(language === "en" ? legalPage.body_en : legalPage.body_de).split(ADDRESS_TOKEN).map((part, index) => (
+                  <div key={index}>
+                    {index > 0 && <PostalAddress />}
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{part}</ReactMarkdown>
+                  </div>
+                ))}
               </div>
             </article>
           ) : (
@@ -628,3 +631,19 @@ function EntityStub({ data, entity, language, navigate, notesBySlug }: EntityStu
 }
 
 export default App;
+
+/** Renders the decoded postal address; it is assembled in the browser, so it is not in the HTML. */
+function PostalAddress() {
+  const [lines, setLines] = useState<string[]>([]);
+  useEffect(() => setLines(decodeAddress()), []);
+  return (
+    <p>
+      {lines.map((line, index) => (
+        <span key={index}>
+          {line}
+          {index < lines.length - 1 && <br />}
+        </span>
+      ))}
+    </p>
+  );
+}

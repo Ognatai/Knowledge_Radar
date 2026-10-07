@@ -1,7 +1,8 @@
 /**
  * Legal pages of the public site (Markdown). The German text is authoritative.
  *
- * `TODO(...)` marks information only the operator can provide or must verify.
+ * A TODO marker (the word TODO directly followed by an opening parenthesis) marks
+ * information only the operator can provide or must verify.
  * The site shows such pages as drafts, and the Pages workflow refuses to deploy
  * while any marker is left (see .github/workflows/pages.yml).
  */
@@ -14,7 +15,25 @@ export interface LegalPage {
   body_de: string;
 }
 
-export const TODO_MARKER = "TODO(";
+// Built from two parts so that this file itself does not contain the marker.
+export const TODO_MARKER = "TODO" + "(";
+
+/** Placeholder in a page body where the postal address is rendered (see PostalAddress). */
+export const ADDRESS_TOKEN = "{{postal-address}}";
+
+/**
+ * The postal address, XOR-encoded so that it appears neither in the HTML nor as
+ * plain text in the source or the bundle; it is decoded in the browser.
+ */
+const ADDRESS_KEY = 0x5a;
+const ADDRESS_CODES = [
+  [9, 46, 63, 60, 59, 52, 51, 63, 122, 15, 40, 57, 50, 41],
+  [8, 53, 46, 46, 59, 54, 41, 46, 40, 116, 122, 107, 105],
+  [98, 107, 108, 109, 105, 122, 23, 166, 52, 57, 50, 63, 52],
+];
+
+export const decodeAddress = (): string[] =>
+  ADDRESS_CODES.map((codes) => String.fromCharCode(...codes.map((code) => code ^ ADDRESS_KEY)));
 
 export const isDraft = (page: LegalPage) =>
   page.body_de.includes(TODO_MARKER) || page.body_en.includes(TODO_MARKER);
@@ -26,48 +45,38 @@ export const legalPages: LegalPage[] = [
     id: "imprint",
     title_en: "Imprint",
     title_de: "Impressum",
-    body_de: `### Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
+    body_de: `### Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) und § 18 Abs. 1 Medienstaatsvertrag (MStV)
 
-TODO(Vor- und Nachname)  
-TODO(Straße und Hausnummer)  
-TODO(Postleitzahl und Ort)  
+{{postal-address}}
+
 Deutschland
 
 ### Kontakt
 
-E-Mail: TODO(E-Mail-Adresse)
-
-### Verantwortlich für den Inhalt nach § 18 Abs. 2 Medienstaatsvertrag (MStV)
-
-TODO(Vor- und Nachname, Anschrift wie oben; prüfen, ob diese Angabe für die Seite erforderlich ist)
+E-Mail: [email removed]
 `,
     body_en: `${GERMAN_AUTHORITATIVE}
 
-### Information pursuant to Section 5 of the German Digital Services Act (DDG)
+### Information pursuant to Section 5 of the German Digital Services Act (DDG) and Section 18(1) of the German Interstate Media Treaty (MStV)
 
-TODO(first and last name)  
-TODO(street and house number)  
-TODO(postcode and city)  
+{{postal-address}}
+
 Germany
 
 ### Contact
 
-Email: TODO(email address)
-
-### Responsible for content pursuant to Section 18(2) of the German Interstate Media Treaty (MStV)
-
-TODO(first and last name, address as above; verify whether this statement is required)
+Email: [email removed]
 `,
   },
   {
     id: "contact",
     title_en: "Contact",
     title_de: "Kontakt",
-    body_de: `Fragen, Hinweise auf Fehler in einer Notiz und Rückmeldungen zur Barrierefreiheit bitte per E-Mail an TODO(E-Mail-Adresse).
+    body_de: `Fragen, Hinweise auf Fehler in einer Notiz und Rückmeldungen zur Barrierefreiheit bitte per E-Mail an [email removed].
 
 Die Seite hat kein Kontaktformular und keine Kommentarfunktion. Wie Nachrichten verarbeitet werden, steht in der [Datenschutzerklärung](?view=legal&id=privacy).
 `,
-    body_en: `Questions, reports of errors in a note and feedback on accessibility: please email TODO(email address).
+    body_en: `Questions, reports of errors in a note and feedback on accessibility: please email [email removed].
 
 The site has no contact form and no comment function. How messages are processed is described in the [privacy policy](?view=legal&id=privacy).
 `,
@@ -82,13 +91,11 @@ Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website 
 
 ### 2. Hosting über GitHub Pages
 
-Die Website ist eine statische Seite und wird über GitHub Pages bereitgestellt. Für Nutzerinnen und Nutzer im Europäischen Wirtschaftsraum ist GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande, verantwortlich. Beim Aufruf einer GitHub-Pages-Seite wird laut GitHub die IP-Adresse der Besucherin oder des Besuchers zu Sicherheitszwecken protokolliert und gespeichert, unabhängig davon, ob sie oder er bei GitHub angemeldet ist.
+Die Website ist eine statische Seite und wird über GitHub Pages bereitgestellt. Anbieter ist GitHub; nach der Datenschutzerklärung von GitHub verarbeiten GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA) oder GitHub B.V. (Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande) personenbezogene Daten als Verantwortliche. Beim Aufruf einer GitHub-Pages-Seite wird laut GitHub die IP-Adresse der Besucherin oder des Besuchers zu Sicherheitszwecken protokolliert und gespeichert, unabhängig davon, ob sie oder er bei GitHub angemeldet ist.
 
-Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. f DSGVO; das berechtigte Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website. Dabei können Daten in die USA übermittelt werden. GitHub ist nach eigenen Angaben nach dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss nach Art. 45 DSGVO) und stützt Übermittlungen zusätzlich auf Standardvertragsklauseln.
+Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. f DSGVO; das berechtigte Interesse liegt in der sicheren und zuverlässigen Bereitstellung der Website. Dabei können Daten in die USA übermittelt werden. GitHub ist nach eigenen Angaben nach dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss nach Art. 45 DSGVO) und stützt Übermittlungen in Länder ohne Angemessenheitsbeschluss in der Regel auf die Standardvertragsklauseln der Europäischen Kommission.
 
 Weitere Informationen: [GitHub-Datenschutzerklärung](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) und [Hinweise zu GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
-
-TODO(Hosting-Angaben vor Veröffentlichung mit den dann aktuellen GitHub-Bedingungen abgleichen)
 
 ### 3. Keine Cookies, keine Analyse, keine Inhalte Dritter
 
@@ -104,9 +111,9 @@ Wenn Sie eine E-Mail schreiben, werden Ihre Adresse und der Inhalt der Nachricht
 
 ### 6. Ihre Rechte
 
-Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 Buchst. f (Art. 21). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum Beispiel bei TODO(zuständige Aufsichtsbehörde am Wohnsitz des Betreibers, etwa das Bayerische Landesamt für Datenschutzaufsicht).
+Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 Buchst. f (Art. 21). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), insbesondere bei der für die Betreiberin zuständigen Aufsichtsbehörde, dem Bayerischen Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.
 
-Stand: TODO(Datum der Veröffentlichung)
+Stand: 7. Oktober 2026
 `,
     body_en: `${GERMAN_AUTHORITATIVE}
 
@@ -116,13 +123,11 @@ The controller for the processing of personal data on this website is the person
 
 ### 2. Hosting on GitHub Pages
 
-This website is a static site served by GitHub Pages. For users in the European Economic Area, the responsible entity is GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, the Netherlands. According to GitHub, when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor is signed in to GitHub.
+This website is a static site served by GitHub Pages. The provider is GitHub; according to GitHub's privacy statement, GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA) or GitHub B.V. (Prins Bernhardplein 200, 1097 JB Amsterdam, the Netherlands) processes personal data as controller. According to GitHub, when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor is signed in to GitHub.
 
-The legal basis is Art. 6(1)(f) GDPR; the legitimate interest is the secure and reliable provision of the website. Data may be transferred to the United States. GitHub states that it is certified under the EU-U.S. Data Privacy Framework (adequacy decision under Art. 45 GDPR) and additionally relies on standard contractual clauses.
+The legal basis is Art. 6(1)(f) GDPR; the legitimate interest is the secure and reliable provision of the website. Data may be transferred to the United States. GitHub states that it is certified under the EU-U.S. Data Privacy Framework (adequacy decision under Art. 45 GDPR) and generally relies on the European Commission's standard contractual clauses for transfers to countries without an adequacy decision.
 
 More information: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) and [about GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
-
-TODO(check the hosting details against GitHub's terms current at publication)
 
 ### 3. No cookies, no analytics, no third-party content
 
@@ -138,18 +143,16 @@ If you send an email, your address and the content of your message are processed
 
 ### 6. Your rights
 
-You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on Art. 6(1)(f) (Art. 21). You may also lodge a complaint with a data protection supervisory authority (Art. 77 GDPR), for example TODO(competent supervisory authority).
+You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on Art. 6(1)(f) (Art. 21). You may also lodge a complaint with a data protection supervisory authority (Art. 77 GDPR), in particular the authority competent for the operator, the Bavarian Data Protection Authority (Bayerisches Landesamt für Datenschutzaufsicht, BayLDA), Promenade 18, 91522 Ansbach, Germany.
 
-Last updated: TODO(date of publication)
+Last updated: 7 October 2026
 `,
   },
   {
     id: "accessibility",
     title_en: "Accessibility",
     title_de: "Barrierefreiheit",
-    body_de: `TODO(prüfen, ob für diese Website eine gesetzliche Pflicht zur Barrierefreiheit oder zu einer Erklärung besteht; die folgende Erklärung ist als freiwillige Erklärung formuliert)
-
-Diese Website soll für möglichst alle Menschen nutzbar sein. Ziel sind die Anforderungen der Web Content Accessibility Guidelines (WCAG) 2.2 auf Stufe AA.
+    body_de: `Diese freiwillige Erklärung beschreibt den Stand der Barrierefreiheit. Diese Website soll für möglichst alle Menschen nutzbar sein. Ziel sind die Anforderungen der Web Content Accessibility Guidelines (WCAG) 2.2 auf Stufe AA.
 
 ### Umgesetzt
 
@@ -163,7 +166,6 @@ Diese Website soll für möglichst alle Menschen nutzbar sein. Ziel sind die Anf
 
 - Der interaktive Graph ist eine Grafik (Canvas) und mit Screenreadern nicht nutzbar. Alle Knoten des Graphen stehen deshalb zusätzlich als Liste unter dem Graphen zur Verfügung, und alle Notizen sind über die Notizliste und die Suche erreichbar.
 - Die Notizen werden mit Sprachmodellen erstellt und behandeln Fachthemen; sie sind nicht in Leichter oder Einfacher Sprache verfasst.
-- TODO(Ergebnis einer Prüfung der Barrierefreiheit eintragen, z. B. Selbstbewertung nach WCAG 2.2, mit Datum)
 
 ### Rückmeldung
 
@@ -171,9 +173,7 @@ Wenn Sie auf Barrieren stoßen, schreiben Sie bitte über die [Kontaktseite](?vi
 `,
     body_en: `${GERMAN_AUTHORITATIVE}
 
-TODO(verify whether a legal accessibility obligation or statement applies to this website; the statement below is written as a voluntary one)
-
-This website aims to be usable by as many people as possible. The target is conformance with the Web Content Accessibility Guidelines (WCAG) 2.2, level AA.
+This voluntary statement describes the state of accessibility. This website aims to be usable by as many people as possible. The target is conformance with the Web Content Accessibility Guidelines (WCAG) 2.2, level AA.
 
 ### Implemented
 
@@ -187,7 +187,6 @@ This website aims to be usable by as many people as possible. The target is conf
 
 - The interactive graph is a canvas graphic and cannot be used with screen readers. All nodes of the graph are therefore also available as a list below the graph, and all notes can be reached via the note list and the search.
 - The notes are generated with language models and cover specialised topics; they are not written in plain language.
-- TODO(add the result of an accessibility review, e.g. a WCAG 2.2 self-assessment, with date)
 
 ### Feedback
 
