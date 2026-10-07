@@ -1,0 +1,239 @@
+# Migration package "Languages, frameworks and tools": input for
+# `python -m app.agents.technical_notes <command> tech`.
+# Documentation pages were fetched and read (Python 3.14, PostgreSQL 18, Helm 4, Keras 3 era);
+# DOIs checked against Crossref, abstracts against OpenAlex; arXiv sources verified by title.
+notes:
+  python:
+    sources:
+      - url: https://docs.python.org/3/tutorial/index.html
+        citation: "Python Software Foundation. *The Python Tutorial.* Python 3 documentation."
+        short: Python Tutorial
+        link_label: docs.python.org
+        summary: "Python is an easy to learn, powerful programming language with efficient high-level data structures and a simple but effective approach to object-oriented programming; its syntax, dynamic typing and interpreted nature make it suited for scripting and rapid application development. The tutorial covers indentation-based blocks, numbers, strings (immutable, with slicing and f-strings), lists, tuples, sets and dictionaries, list comprehensions, functions with default and keyword arguments, modules and packages, errors and exceptions handled with try/except/else/finally and raised with raise, classes with attributes, methods and inheritance, iterators, and generators, which use yield to produce values lazily one at a time."
+      - url: https://docs.python.org/3/library/collections.html
+        citation: "Python Software Foundation. *collections — Container datatypes.* Python 3 documentation."
+        short: Python collections docs
+        link_label: docs.python.org
+        summary: "The collections module provides specialised container datatypes as alternatives to dict, list, set and tuple: namedtuple (tuple subclasses with named fields), deque (list-like container with fast appends and pops on either end), ChainMap (single view of multiple mappings), Counter (dict subclass for counting hashable objects), OrderedDict (remembers insertion order) and defaultdict (calls a factory function to supply missing values)."
+      - url: https://docs.python.org/3/library/venv.html
+        citation: "Python Software Foundation. *venv — Creation of virtual environments.* Python 3 documentation."
+        short: Python venv docs
+        link_label: docs.python.org
+        summary: "The venv module creates lightweight virtual environments, each with its own independent set of Python packages installed in its site directories. A virtual environment is created on top of an existing base Python installation and is by default isolated from the base environment's packages, so that only explicitly installed packages are available. It is created with python -m venv <directory> and activated with an activation script; packages are then installed with pip."
+      - url: https://peps.python.org/pep-0008/
+        citation: "van Rossum, G., Warsaw, B. & Coghlan, A. (2001). *PEP 8 – Style Guide for Python Code.* Python Enhancement Proposal."
+        short: PEP 8
+        link_label: peps.python.org
+        summary: "Style guide for Python code: 4 spaces per indentation level, limited line length, blank lines around top-level definitions, imports at the top of the file grouped into standard library, third-party and local imports, consistent whitespace, comments and docstrings, and naming conventions such as lowercase_with_underscores for functions and variables, CapWords for classes and UPPER_CASE for constants. It stresses that code is read much more often than it is written and that consistency within a project matters most."
+      - url: https://doi.org/10.1038/s41586-020-2649-2
+        citation: "Harris, C. R., Millman, K. J., van der Walt, S. J. et al. (2020). *Array programming with NumPy.* Nature 585."
+        short: Harris et al. (2020)
+        link_label: doi:10.1038/s41586-020-2649-2
+        summary: "NumPy is the primary array programming library for Python, providing a compact and expressive syntax for accessing, manipulating and operating on data in vectors, matrices and higher-dimensional arrays. It plays an essential role in research analysis pipelines across many sciences and is the foundation on which the scientific Python ecosystem is built; a few fundamental array concepts such as vectorised operations, broadcasting and indexing lead to a simple and powerful programming paradigm."
+  sql:
+    sources:
+      - url: https://doi.org/10.1145/362384.362685
+        citation: "Codd, E. F. (1970). *A relational model of data for large shared data banks.* Communications of the ACM 13(6)."
+        short: Codd (1970)
+        link_label: doi:10.1145/362384.362685
+        summary: "Users of large data banks should be protected from having to know how the data is organised internally; applications should remain unaffected when the internal representation changes. Proposes a model based on n-ary relations, a normal form for database relations and a universal data sublanguage, replacing tree-structured and network models; this relational model is the basis of relational databases and SQL."
+      - url: https://www.postgresql.org/docs/current/tutorial-sql-intro.html
+        citation: "PostgreSQL Global Development Group. *PostgreSQL Documentation, Chapter 2: The SQL Language.*"
+        short: PostgreSQL SQL tutorial
+        link_label: postgresql.org
+        summary: "Introduction to SQL with PostgreSQL: data is stored in tables of rows and columns created with CREATE TABLE; rows are added with INSERT, read with SELECT ... FROM ... WHERE ... ORDER BY, changed with UPDATE and removed with DELETE. Joins combine rows from several tables (inner joins and left, right and full outer joins, which keep unmatched rows with NULLs); aggregate functions such as count, sum, avg, max and min compute one result from many rows, GROUP BY groups rows, and HAVING filters groups after aggregation while WHERE filters rows before it. Some PostgreSQL features are extensions to the SQL standard."
+      - url: https://www.postgresql.org/docs/current/tutorial-window.html
+        citation: "PostgreSQL Global Development Group. *PostgreSQL Documentation, 3.5: Window Functions.*"
+        short: PostgreSQL window functions
+        link_label: postgresql.org
+        summary: "A window function performs a calculation across a set of table rows related to the current row, comparable to an aggregate function, but the rows are not grouped into a single output row; each row keeps its identity. The OVER clause defines the window with PARTITION BY (which rows belong together) and ORDER BY (their order); typical functions are rank(), row_number() and aggregates such as sum() and avg() computed over the partition or a running frame."
+      - url: https://www.postgresql.org/docs/current/queries-with.html
+        citation: "PostgreSQL Global Development Group. *PostgreSQL Documentation, 7.8: WITH Queries (Common Table Expressions).*"
+        short: PostgreSQL CTEs
+        link_label: postgresql.org
+        summary: "WITH provides a way to write auxiliary statements for use in a larger query; these common table expressions (CTEs) can be thought of as temporary tables that exist only for one query. They make complex queries more readable by breaking them into named steps, and WITH RECURSIVE lets a query refer to its own output, for example to traverse hierarchies or graphs."
+      - url: https://www.postgresql.org/docs/current/indexes-intro.html
+        citation: "PostgreSQL Global Development Group. *PostgreSQL Documentation, 11.1: Indexes, Introduction.*"
+        short: PostgreSQL indexes
+        link_label: postgresql.org
+        summary: "Without an index, a query such as SELECT content FROM test1 WHERE id = constant must scan the whole table row by row. An index, created with CREATE INDEX, lets the system find matching rows much faster, similar to the index of a book; but indexes add overhead to the database system as a whole and must be updated on every insert, update and delete, so they should be used sensibly."
+  sparql:
+    sources:
+      - url: https://www.w3.org/TR/sparql11-query/
+        citation: "W3C (2013). *SPARQL 1.1 Query Language.* W3C Recommendation."
+        short: W3C SPARQL 1.1
+        link_label: w3.org
+        summary: "SPARQL is the query language for RDF. Queries match triple patterns, triples that may contain variables written with ?, against an RDF graph; a group of triple patterns forms a basic graph pattern. PREFIX declares namespace abbreviations. FILTER restricts solutions with conditions, OPTIONAL adds information if available without discarding solutions, UNION combines alternatives, and MINUS and FILTER NOT EXISTS express negation. Results can be modified with DISTINCT, ORDER BY, LIMIT and OFFSET; GROUP BY with aggregates such as COUNT, SUM and AVG and HAVING groups results; BIND assigns values and VALUES supplies inline data. Property paths match paths of arbitrary length, e.g. with * and +. Query forms are SELECT (variable bindings), CONSTRUCT (a new RDF graph), ASK (true or false) and DESCRIBE (an RDF description of resources)."
+      - url: https://doi.org/10.1145/1567274.1567278
+        citation: "Pérez, J., Arenas, M. & Gutierrez, C. (2009). *Semantics and complexity of SPARQL.* ACM Transactions on Database Systems 34(3)."
+        short: Pérez et al. (2009)
+        link_label: doi:10.1145/1567274.1567278
+        summary: "Formal study of SPARQL's graph pattern matching: gives a compositional semantics for the core of SPARQL and studies the complexity of evaluating its fragments. Evaluating general SPARQL patterns is PSPACE-complete; for well-designed patterns, defined by a simple syntactic restriction on the use of OPTIONAL, evaluation is coNP-complete, and rewriting rules for them can considerably improve query evaluation."
+      - url: https://www.w3.org/TR/rdf11-concepts/
+        citation: "W3C (2014). *RDF 1.1 Concepts and Abstract Syntax.* W3C Recommendation."
+        short: W3C RDF 1.1 Concepts
+        link_label: w3.org
+        summary: "RDF represents information as a graph of triples of subject, predicate and object; subjects and predicates are IRIs, objects can be IRIs, literals or blank nodes. An RDF dataset consists of a default graph and named graphs identified by IRIs."
+      - url: https://neo4j.com/docs/cypher-manual/current/introduction/
+        citation: "Neo4j. *Cypher Manual: Introduction.* Neo4j documentation."
+        short: Neo4j Cypher Manual
+        link_label: neo4j.com
+        summary: "Cypher is Neo4j's declarative query language for property graphs, whose nodes have labels and whose relationships have a type and direction, both with key-value properties. Queries describe graph patterns with an ASCII-art-like syntax such as (a:Person)-[:KNOWS]->(b:Person), using clauses such as MATCH, WHERE and RETURN."
+      - url: https://www.postgresql.org/docs/current/tutorial-sql-intro.html
+        citation: "PostgreSQL Global Development Group. *PostgreSQL Documentation, Chapter 2: The SQL Language.*"
+        short: PostgreSQL SQL tutorial
+        link_label: postgresql.org
+        summary: "SQL queries tables of rows and columns with SELECT ... FROM ... WHERE, combines tables with joins, and aggregates with GROUP BY and aggregate functions."
+  rdf:
+    sources:
+      - url: https://www.w3.org/TR/rdf11-concepts/
+        citation: "W3C (2014). *RDF 1.1 Concepts and Abstract Syntax.* W3C Recommendation."
+        short: W3C RDF 1.1 Concepts
+        link_label: w3.org
+        summary: "RDF represents information as a graph of triples, each consisting of a subject, a predicate and an object. Subjects are IRIs or blank nodes, predicates are IRIs, and objects are IRIs, literals (values such as strings, numbers or dates with a datatype IRI or a language tag) or blank nodes, which denote resources without a global name. IRIs give resources globally unique names, so graphs from different sources can be merged. An RDF dataset groups a default graph and zero or more named graphs, each identified by an IRI, which allows statements about graphs, for example their source."
+      - url: https://www.w3.org/TR/turtle/
+        citation: "W3C (2014). *RDF 1.1 Turtle: Terse RDF Triple Language.* W3C Recommendation."
+        short: W3C Turtle
+        link_label: w3.org
+        summary: "Turtle is a compact text syntax for RDF. @prefix (or PREFIX) declares namespace abbreviations so that IRIs can be written as prefixed names such as ex:Norm; a triple is written as subject predicate object followed by a period; a semicolon repeats the subject with a new predicate and a comma repeats subject and predicate with a new object; the keyword a abbreviates rdf:type; literals can carry language tags (\"text\"@de) or datatypes (\"2024-01-01\"^^xsd:date); blank nodes are written as _:name or in square brackets."
+      - url: https://www.w3.org/TR/rdf11-primer/
+        citation: "W3C (2014). *RDF 1.1 Primer.* W3C Working Group Note."
+        short: W3C RDF 1.1 Primer
+        link_label: w3.org
+        summary: "Introductory guide to RDF: triples, IRIs, literals and blank nodes, multiple graphs, RDF vocabularies such as RDF Schema, and the main serialisation formats: Turtle and TriG (Turtle with named graphs), N-Triples and N-Quads (line-based), JSON-LD (JSON-based) and RDF/XML. It also points to commonly used vocabularies such as FOAF, Dublin Core, schema.org and SKOS."
+      - url: https://www.w3.org/TR/rdf-schema/
+        citation: "W3C (2014). *RDF Schema 1.1.* W3C Recommendation."
+        short: W3C RDF Schema 1.1
+        link_label: w3.org
+        summary: "RDF Schema provides a basic vocabulary for RDF data: rdfs:Class and rdf:type, rdfs:subClassOf and rdfs:subPropertyOf, rdfs:domain and rdfs:range, rdfs:label and rdfs:comment. It also defines the reification vocabulary rdf:Statement, rdf:subject, rdf:predicate and rdf:object, with which a triple can be described as a resource so that statements can be made about it."
+      - url: https://www.w3.org/TR/json-ld11/
+        citation: "W3C (2020). *JSON-LD 1.1: A JSON-based Serialization for Linked Data.* W3C Recommendation."
+        short: W3C JSON-LD 1.1
+        link_label: w3.org
+        summary: "JSON-LD is a JSON-based serialisation for linked data. A @context maps JSON keys to IRIs, @id gives a node's identifier and @type its type, so ordinary-looking JSON can be interpreted as RDF; it is designed to be usable by developers already working with JSON."
+      - url: https://www.w3.org/TR/owl2-primer/
+        citation: "W3C (2012). *OWL 2 Web Ontology Language Primer (Second Edition).* W3C Recommendation."
+        short: W3C OWL 2 Primer
+        link_label: w3.org
+        summary: "OWL 2 is a language for ontologies with formal semantics, extending what RDF Schema can express: equivalent and disjoint classes, property characteristics such as transitive, symmetric, inverse or functional, and restrictions; reasoners derive implicit knowledge under the open-world assumption."
+  git:
+    sources:
+      - url: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
+        citation: "Chacon, S. & Straub, B. *Pro Git* (2nd ed.), 1.3 What is Git? Apress / git-scm.com."
+        short: Pro Git
+        link_label: git-scm.com
+        summary: "Git thinks of its data as a series of snapshots of the project rather than a list of file-based changes; nearly every operation is local because each clone holds the full history; content is checksummed with hashes, so changes cannot go unnoticed. Files are in one of three states, modified, staged and committed, corresponding to the working tree, the staging area (index) and the repository. The basic workflow is to modify files, stage the changes to include (git add) and commit them as a snapshot (git commit). The book also covers branches as lightweight movable pointers to commits, merging and rebasing, undoing changes, and working with remotes (git clone, fetch, pull, push)."
+      - url: https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+        citation: "Chacon, S. & Straub, B. *Pro Git* (2nd ed.), 3.1 Branches in a Nutshell. Apress / git-scm.com."
+        short: Pro Git branching
+        link_label: git-scm.com
+        summary: "A branch in Git is simply a lightweight movable pointer to a commit; creating a branch creates a new pointer, and HEAD points to the branch currently checked out. Because branches are cheap, Git encourages workflows that branch and merge often; merging combines diverging histories, either by fast-forward or with a merge commit, and conflicts must be resolved when the same lines were changed."
+      - url: https://git-scm.com/docs/gitignore
+        citation: "Git project. *gitignore Documentation.* git-scm.com."
+        short: gitignore docs
+        link_label: git-scm.com
+        summary: "A gitignore file specifies intentionally untracked files that Git should ignore; files already tracked are not affected. Each line is a pattern; a leading ! negates a pattern and re-includes previously excluded files, but a file cannot be re-included if a parent directory is excluded; a trailing slash matches only directories."
+      - url: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+        citation: "GitHub. *Generating a new SSH key and adding it to the ssh-agent.* GitHub Docs."
+        short: GitHub SSH docs
+        link_label: docs.github.com
+        summary: "When connecting to GitHub via SSH, users authenticate with a private key file on their machine. A new key is generated with ssh-keygen -t ed25519 -C \"your_email@example.com\" (or ssh-keygen -t rsa -b 4096 on legacy systems), optionally protected by a passphrase; the ssh-agent manages keys and remembers the passphrase. The public key is then added to the GitHub account. Instructions are given for macOS, Windows and Linux."
+  docker:
+    sources:
+      - url: https://docs.docker.com/get-started/docker-overview/
+        citation: "Docker Inc. *What is Docker?* Docker documentation."
+        short: Docker overview
+        link_label: docs.docker.com
+        summary: "Docker is an open platform for developing, shipping and running applications that separates applications from infrastructure. Containers are lightweight and contain everything needed to run the application, so they do not rely on what is installed on the host and behave the same for everyone they are shared with. An image is a read-only template with instructions for creating a container, often based on another image; a container is a runnable instance of an image. Registries store images, and Docker Hub is a public registry."
+      - url: https://docs.docker.com/reference/dockerfile/
+        citation: "Docker Inc. *Dockerfile reference.* Docker documentation."
+        short: Dockerfile reference
+        link_label: docs.docker.com
+        summary: "Docker builds images automatically by reading the instructions from a Dockerfile, a text document with the commands a user could call to assemble an image. Instructions include FROM (base image), RUN (execute commands during the build), COPY and ADD (add files), WORKDIR, ENV, EXPOSE, ARG, CMD and ENTRYPOINT (default command when the container starts); each instruction creates a layer, and unchanged layers are reused from the build cache."
+      - url: https://docs.docker.com/engine/storage/volumes/
+        citation: "Docker Inc. *Volumes.* Docker documentation."
+        short: Docker volumes
+        link_label: docs.docker.com
+        summary: "Volumes are persistent data stores for containers, created and managed by Docker, for example with docker volume create or automatically when a container is created. A volume is stored in a directory on the Docker host and mounted into the container; its data persists when the container is removed."
+      - url: https://docs.docker.com/compose/
+        citation: "Docker Inc. *Docker Compose.* Docker documentation."
+        short: Docker Compose docs
+        link_label: docs.docker.com
+        summary: "Docker Compose is a tool for defining and running multi-container applications: services, networks and volumes are defined in a single YAML configuration file, and with a single command (docker compose up) all services are created and started."
+      - url: https://doi.org/10.1145/2890784
+        citation: "Burns, B., Grant, B., Oppenheimer, D., Brewer, E. & Wilkes, J. (2016). *Borg, Omega, and Kubernetes.* Communications of the ACM 59(5)."
+        short: Burns et al. (2016)
+        link_label: doi:10.1145/2890784
+        summary: "Lessons learned from three container-management systems at Google over a decade: containers isolate applications and package them with their dependencies, so that the deployed image is the same in development and production; managing applications rather than machines, with declarative configuration and controllers that reconcile the actual state with the desired state, led to Kubernetes."
+  kubernetes:
+    sources:
+      - url: https://kubernetes.io/docs/concepts/overview/
+        citation: "The Kubernetes Authors. *Overview.* Kubernetes documentation."
+        short: Kubernetes overview
+        link_label: kubernetes.io
+        summary: "Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services that facilitates both declarative configuration and automation. Features include service discovery and load balancing, storage orchestration, automated rollouts and rollbacks (describing the desired state and changing the actual state at a controlled rate), automatic bin packing, self-healing (restarting and replacing failed containers and not advertising them until they are ready), and secret and configuration management."
+      - url: https://kubernetes.io/docs/concepts/workloads/pods/
+        citation: "The Kubernetes Authors. *Pods.* Kubernetes documentation."
+        short: Kubernetes Pods docs
+        link_label: kubernetes.io
+        summary: "Pods are the smallest deployable units in Kubernetes: a group of one or more containers with shared storage and network resources and a specification for how to run them. A Pod's containers are always co-located and co-scheduled and run in a shared context."
+      - url: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+        citation: "The Kubernetes Authors. *Deployments.* Kubernetes documentation."
+        short: Kubernetes Deployments docs
+        link_label: kubernetes.io
+        summary: "A Deployment provides declarative updates for Pods and ReplicaSets: the user describes a desired state, and the Deployment controller changes the actual state to the desired state at a controlled rate. Rolling updates replace Pods gradually, and a Deployment can be rolled back to an earlier revision; scaling changes the number of replicas."
+      - url: https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/
+        citation: "The Kubernetes Authors. *Liveness, Readiness, and Startup Probes.* Kubernetes documentation."
+        short: Kubernetes probes docs
+        link_label: kubernetes.io
+        summary: "Liveness probes determine when to restart a container, for example to recover from a deadlock where the application runs but cannot make progress; if a container fails its liveness probe more times than the configured tolerance, the kubelet restarts it. Readiness probes determine when a container is ready to accept traffic, for example after loading files or warming caches; a container that is not ready is removed from service endpoints. Startup probes protect slow-starting containers."
+      - url: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+        citation: "The Kubernetes Authors. *Namespaces.* Kubernetes documentation."
+        short: Kubernetes namespaces docs
+        link_label: kubernetes.io
+        summary: "Namespaces provide a mechanism for isolating groups of resources within a single cluster. Resource names must be unique within a namespace but not across namespaces; namespace scoping applies to namespaced objects such as Deployments and Services, not to cluster-wide objects such as Nodes or PersistentVolumes. They are intended for environments with many users across multiple teams or projects."
+      - url: https://helm.sh/docs/intro/using_helm/
+        citation: "The Helm Authors. *Using Helm.* Helm documentation."
+        short: Helm docs
+        link_label: helm.sh
+        summary: "Helm is a package manager for Kubernetes. A chart is a Helm package containing the resource definitions needed to run an application on a Kubernetes cluster; a repository is a place where charts are collected and shared; a release is an instance of a chart running in a cluster. helm install installs a chart as a named release, helm upgrade changes a release to a new chart version or configuration, and helm rollback returns to a previous revision; configuration values can be overridden at install or upgrade time."
+      - url: https://doi.org/10.1145/2890784
+        citation: "Burns, B., Grant, B., Oppenheimer, D., Brewer, E. & Wilkes, J. (2016). *Borg, Omega, and Kubernetes.* Communications of the ACM 59(5)."
+        short: Burns et al. (2016)
+        link_label: doi:10.1145/2890784
+        summary: "Lessons learned from three container-management systems at Google over a decade (Borg, Omega and Kubernetes): containers as the unit of management, application-oriented rather than machine-oriented infrastructure, declarative desired state, and controllers that continuously reconcile actual with desired state."
+  confluence:
+    sources:
+      - url: https://support.atlassian.com/confluence-cloud/docs/what-is-a-space/
+        citation: "Atlassian. *What is a space?* Confluence Cloud documentation."
+        short: Confluence spaces docs
+        link_label: support.atlassian.com
+        summary: "A space is a container where a team creates, stores and collaborates on work related to a team, shared project or initiative, like a collaborative workspace or knowledge base. Spaces contain pages, organised in a page tree with parent and child pages, as well as blog posts; content can be categorised with labels, extended with macros (such as table of contents, page tree, status or code block), and created from templates."
+      - url: https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/
+        citation: "Atlassian. *Advanced searching using CQL.* Confluence developer documentation."
+        short: Confluence CQL docs
+        link_label: developer.atlassian.com
+        summary: "The Confluence Query Language (CQL) searches content in Confluence. A simple query (clause) consists of a field, an operator and one or more values or functions, for example space = \"TEST\"; clauses are combined with AND, OR and NOT. CQL offers some SQL-like syntax such as ORDER BY but is not a database query language and has no SELECT statement. Fields include type, space, title, text, label, creator and lastmodified; the content REST API accepts CQL as a query parameter."
+      - url: https://developer.atlassian.com/cloud/confluence/rest/v2/intro/
+        citation: "Atlassian. *The Confluence Cloud REST API v2.* Confluence developer documentation."
+        short: Confluence REST API docs
+        link_label: developer.atlassian.com
+        summary: "The Confluence Cloud REST API v2 provides endpoints for resources such as pages, blog posts, spaces, attachments, comments, labels and properties, with authentication and authorisation for apps and users. Methods that return multiple objects use cursor-based pagination with limit and cursor parameters; the Link header gives the URL of the next page of results."
+  langchain-and-langgraph:
+    sources:
+      - url: https://docs.langchain.com/oss/python/langchain/overview
+        citation: "LangChain. *LangChain overview.* LangChain documentation (Python)."
+        short: LangChain docs
+        link_label: docs.langchain.com
+        summary: "LangChain provides create_agent, a minimal, highly configurable agent harness: an agent is a model plus a harness, the harness being everything around the model loop, such as the prompt, the tools and middleware. Developers compose the agent they need from a model, tools, a prompt and middleware, with a standard interface to many model providers. LangChain agents are built on top of LangGraph, which provides durable execution, human-in-the-loop support and persistence; LangSmith is used to inspect traces, tool calls, state transitions and latency."
+      - url: https://docs.langchain.com/oss/python/langgraph/overview
+        citation: "LangChain. *LangGraph overview.* LangGraph documentation (Python)."
+        short: LangGraph docs
+        link_label: docs.langchain.com
+        summary: "LangGraph is a low-level orchestration framework and runtime for building, managing and deploying long-running, stateful agents. It gives fine-grained control to mix deterministic, hand-coded steps with LLM-driven agentic steps in the same graph, whose nodes update a shared state and whose edges determine the next step. It focuses on agent orchestration and provides durable execution, streaming, human-in-the-loop and persistence; it does not abstract prompts or architecture."
+      - url: https://github.com/langchain-ai/langchain-mcp-adapters
+        citation: "LangChain. *langchain-mcp-adapters.* GitHub repository."
+        short: LangChain MCP adapters
+        link_label: github.com
+        summary: "A lightweight wrapper that makes Model Context Protocol (MCP) tools compatible with LangChain and LangGraph: it converts MCP tools into LangChain tools that can be used with LangGraph agents and provides a client implementation for connecting to multiple MCP servers and loading tools from them."
+      - {arxiv: "2210.03629", expect: "ReAct", venue: ICLR 2023}
