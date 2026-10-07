@@ -1,6 +1,6 @@
 """Source metadata for note drafting: arXiv lookups and citation formatting.
 
-A source entry in a migration package config is either an arXiv paper
+A source entry is either an arXiv paper
 (`arxiv: 2004.04906`, verified against an expected title fragment) or any
 other URL with a hand-written citation. arXiv metadata comes from the official
 API, is cached under `.knowledge-radar/cache/arxiv/`, and requests are spaced

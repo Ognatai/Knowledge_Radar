@@ -1,8 +1,7 @@
 # Note templates
 
-Every public note follows one of two templates, chosen by area
-(`template` in `migration/vault-mapping.yaml`): **regulatory** for legal
-topics, **technical** for methods, concepts, and technologies. Both share the
+Every public note follows one of two templates, chosen by area:
+**regulatory** for legal topics, **technical** for methods, concepts, and technologies. Both share the
 repository's note format: YAML frontmatter, a `## EN` and a `## DE` section
 with identical structure, and an optional `## Original Source Text (DE)`.
 Sub-sections use `###`, details `####`.
@@ -24,9 +23,8 @@ Common rules:
   the sentence where the relation matters, not in a trailing link list.
   Related notes and backlinks are shown automatically from the graph.
   Inside Markdown tables, escape the pipe: `[[graphrag\|GraphRAG]]`.
-- Links may point to notes that are planned but not written yet (IDs in
-  `migration/vault-mapping.yaml`); give them a label, because they render as
-  plain text until the target exists.
+- Links must point to existing public notes; `validate_notes` rejects unknown
+  targets. Give links a label, so they read well in the text.
 - Cite sources in the text as "Author et al. (year)" and list them in the
   closing sources section; the frontmatter `sources` holds the same URLs.
 - EN and DE carry the same content; headings are translated.
@@ -46,7 +44,7 @@ Common rules:
 ## Regulatory template
 
 Based on the EU AI Act note, plus the "relevance for AI development" section
-that 25 of 27 vault notes already have.
+that most regulatory notes have.
 
 ```markdown
 ---
@@ -147,8 +145,8 @@ that is intended.
 
 ## Technical template
 
-Synthesises the recurring vault sections (Grundidee, Vorteile/Grenzen,
-Vergleich, Merksatz, Regulatorischer Kontext) into one fixed order.
+Brings the recurring sections (idea, strengths and limitations, comparison,
+key takeaway, regulatory context) into one fixed order.
 
 ```markdown
 ---
@@ -217,5 +215,5 @@ tools.
 **Length guideline:** driven by "How it works": roughly 1,000–2,500 words per
 language for a method with a multi-step mechanism, less for narrow concepts.
 An overview note explains every step at the depth needed to understand the
-whole mechanism; sub-notes go deeper into single steps, as the vault already
-does for RAG ([[rag-retrieval]], [[rag-chunking]], …).
+whole mechanism; sub-notes go deeper into single steps, as the notes
+do for RAG ([[rag-retrieval]], [[rag-chunking]], …).

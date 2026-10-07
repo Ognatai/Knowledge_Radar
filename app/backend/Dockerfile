@@ -4,7 +4,6 @@ WORKDIR /workspace
 COPY pyproject.toml README.md schema.yaml ./
 COPY app ./app
 COPY public/notes ./public/notes
-COPY migration/vault-mapping.yaml ./migration/
 RUN pip install --no-cache-dir .
 
 EXPOSE 8000

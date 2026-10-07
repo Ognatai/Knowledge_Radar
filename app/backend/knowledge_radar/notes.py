@@ -15,8 +15,6 @@ from app.backend.knowledge_radar.models import NoteDetail
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_NOTES_DIRECTORY = REPOSITORY_ROOT / "public" / "notes"
 SCHEMA_PATH = REPOSITORY_ROOT / "schema.yaml"
-# Notes planned by the vault migration; wikilinks to them are allowed before they exist.
-PLANNED_NOTES_PATH = REPOSITORY_ROOT / "migration" / "vault-mapping.yaml"
 FRONTMATTER_PATTERN = re.compile(r"\A---\s*\r?\n(.*?)\r?\n---\s*(?:\r?\n|$)", re.DOTALL)
 SECTION_PATTERN = re.compile(
     r"(?m)^## (EN|DE|Original Source Text \(DE\))\s*$"
@@ -55,23 +53,6 @@ def public_entity_types(schema_path: Path = SCHEMA_PATH) -> frozenset[str]:
         if name != "Note"
         and isinstance(definition, dict)
         and definition.get("visibility") == "public"
-    )
-
-
-@cache
-def planned_note_slugs(mapping_path: Path = PLANNED_NOTES_PATH) -> frozenset[str]:
-    """IDs of notes the migration will create; empty if there is no migration mapping."""
-    if not mapping_path.is_file():
-        return frozenset()
-    try:
-        mapping = yaml.safe_load(mapping_path.read_text(encoding="utf-8"))
-    except (OSError, yaml.YAMLError) as exc:
-        raise NoteRepositoryError(f"Could not read {mapping_path}: {exc}") from exc
-    entries = mapping.get("notes", {}) if isinstance(mapping, dict) else {}
-    return frozenset(
-        entry["id"]
-        for entry in entries.values()
-        if isinstance(entry, dict) and isinstance(entry.get("id"), str)
     )
 
 
@@ -179,15 +160,14 @@ def load_note(path: Path, notes_directory: Path) -> NoteDetail:
 
 def load_notes(
     notes_directory: Path | None = None,
-    planned_slugs: frozenset[str] | None = None,
+    planned_slugs: frozenset[str] = frozenset(),
 ) -> list[NoteDetail]:
     """Load all public notes in stable title order; fail explicitly on malformed notes.
 
-    Wikilinks to planned notes (see `planned_note_slugs`) are accepted but not yet
-    returned as links; they become links once the target note exists.
+    Wikilinks to `planned_slugs` (notes that are about to be written) are accepted but
+    not yet returned as links; they become links once the target note exists.
     """
     directory = notes_directory or configured_notes_directory()
-    planned = planned_note_slugs() if planned_slugs is None else planned_slugs
     if not directory.is_dir():
         raise NoteRepositoryError(f"Public notes directory does not exist: {directory}")
 
@@ -212,7 +192,7 @@ def load_notes(
         for target in note.links:
             slug = resolve(target)
             if slug is None:
-                if target not in planned:
+                if target not in planned_slugs:
                     unknown.append(target)
             elif slug != note.slug and slug not in links:
                 links.append(slug)

@@ -26,8 +26,6 @@ class LocalConfigError(ValueError):
 @dataclass(frozen=True)
 class LocalConfig:
     private_repo_path: Path | None = None
-    # Obsidian vault the migration reads from (structure and topics only).
-    vault_path: Path | None = None
 
     @property
     def has_private_repo(self) -> bool:
@@ -55,10 +53,9 @@ def load_local_config(
     if not isinstance(raw, dict):
         raise LocalConfigError(f"{path}: local config must be a YAML mapping.")
 
-    vault = _directory(raw, "vault_path", path)
     private_repo = _directory(raw, "private_repo_path", path)
     if private_repo is None:
-        return LocalConfig(vault_path=vault)
+        return LocalConfig()
 
     public_repo = repository_root.resolve()
     if private_repo == public_repo or private_repo.is_relative_to(public_repo):
@@ -67,7 +64,7 @@ def load_local_config(
         )
     if public_repo.is_relative_to(private_repo):
         raise LocalConfigError(f"{path}: the public repo must not live inside the private repo.")
-    return LocalConfig(private_repo_path=private_repo, vault_path=vault)
+    return LocalConfig(private_repo_path=private_repo)
 
 
 def _directory(raw: dict, key: str, path: Path) -> Path | None:
