@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "1af984ecccc1d7ab8f702127699ce4ddf6d77d88878bd0d6bdcd875d393bbb58"
+note_sha256: "b036e1b91c13f9947d8f2cd98ee78c95175ba9b8b5810fe8b5073be01938c0d6"
 extracted_by: manual
 discusses: [bsig, critical-facility, kritis-dachgesetz, cer-directive, nis2-directive]
 relations:

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "4f00a67b9664e276c240fcdb71941f230383ac47f70aa1e75318dff16e77432f"
+note_sha256: "b9b027b78ceb5106c7672136d77c6f36935d0d513e423c9a8613022e183da737"
 extracted_by: manual
 discusses: [anthropic, json-rpc, language-server-protocol, a2a, openapi, function-calling, langchain-and-langgraph, prompt-injection]
 relations:

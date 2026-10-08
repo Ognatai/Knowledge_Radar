@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "59f0449f3c35b5374141c31d3ceb12a237a817e72df3c6283969433445ad9af2"
+note_sha256: "4dde70145b47c688d14cbb1173b48193c8bbe27d06a83f345e8d04a4884b86c6"
 extracted_by: manual
 discusses: [container, container-image, dockerfile, docker-volume, docker-compose, kubernetes, mlops-and-deployment]
 relations:

@@ -85,7 +85,9 @@ def public_relation_types(schema_path: Path = SCHEMA_PATH) -> dict[str, tuple[fr
 
 
 def note_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash of a note's content; line endings are normalised, since Git checks
+    notes out with CRLF on Windows and LF elsewhere."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def plain_text(markdown: str) -> str:

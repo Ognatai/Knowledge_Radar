@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "c6b250d6e7f0478c67d206f189f24eaf42578b4214b652459f4e2575dbfce0a5"
+note_sha256: "6dbbdeb9b794eed57090848092688d1e6d7f4d2b6b9672c4b2704be95d39be0d"
 extracted_by: manual
 discusses: [property-graph, cypher, neo4j, rdf, sparql, vector-databases, graphrag]
 relations:

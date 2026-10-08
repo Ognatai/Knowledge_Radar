@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "94ee79f833c7651f628eb5b63085654523f981247b748cee2f8eeec5831280f8"
+note_sha256: "c0c047fdb97263a0e21ae77f5c457550fc980a426ada9eb3ec21447ab98e54a1"
 extracted_by: manual
 discusses: [llm-adaptation, intrinsic-dimension, qlora, weight-decomposed-low-rank-adaptation, quantization, adapter-layers]
 relations:

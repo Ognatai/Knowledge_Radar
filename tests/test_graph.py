@@ -1,8 +1,6 @@
-import hashlib
-
 import pytest
 
-from app.backend.knowledge_radar.graph import GraphError, load_graph
+from app.backend.knowledge_radar.graph import GraphError, load_graph, note_sha256
 from app.backend.knowledge_radar.notes import load_notes
 from tests.test_notes_api import write_note
 
@@ -21,7 +19,7 @@ entities:
 
 
 def note_hash(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return note_sha256(path)
 
 
 def setup_repo(tmp_path, registry=REGISTRY):
@@ -198,3 +196,12 @@ def test_registry_ids_are_slugs(tmp_path):
 
     with pytest.raises(GraphError, match="Microsoft Corp"):
         load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+
+def test_note_hash_ignores_line_endings(tmp_path):
+    lf = tmp_path / "lf.md"
+    crlf = tmp_path / "crlf.md"
+    lf.write_bytes(b"---\ntitle_en: A\n---\n")
+    crlf.write_bytes(b"---\r\ntitle_en: A\r\n---\r\n")
+
+    assert note_sha256(lf) == note_sha256(crlf)
