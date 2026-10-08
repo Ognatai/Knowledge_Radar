@@ -48,6 +48,11 @@ GUIDELINES_PATH = REPOSITORY_ROOT / "docs" / "extraction-guidelines.md"
 # About 3,000 tokens of note text per call, leaving room for the guidelines,
 # the entity list and the answer in the context window.
 MAX_CHUNK_CHARS = 12_000
+# Caps per model call: a model stuck in a repetition loop otherwise generates
+# until the request times out (observed with qwen3:14b at temperature 0).
+MAX_ANSWER_TOKENS = 8_192
+MAX_ANSWER_TOKENS_THINKING = 16_384
+CALL_TIMEOUT_SECONDS = 900
 NOTICE_PATTERN = re.compile(r"\A(?:>[^\n]*\n)+\s*")
 CODE_BLOCK_PATTERN = re.compile(r"^```.*?^```[^\n]*\n?", re.DOTALL | re.MULTILINE)
 SOURCES_HEADING_PATTERN = re.compile(r"^### (?:Official )?[Ss]ources\s*$", re.MULTILINE)
@@ -304,13 +309,20 @@ def extract_note(
         prompt = build_prompt(note, chunk, known, guidelines)
         current_prompt = prompt
         for attempt in range(1, max_attempts + 1):
-            answer = generate(
-                current_prompt,
-                json_schema=output_schema(),
-                temperature=0,
-                model=model,
-                think=think,
-            )
+            try:
+                answer = generate(
+                    current_prompt,
+                    json_schema=output_schema(),
+                    temperature=0,
+                    model=model,
+                    think=think,
+                    max_tokens=MAX_ANSWER_TOKENS_THINKING if think else MAX_ANSWER_TOKENS,
+                    timeout=CALL_TIMEOUT_SECONDS,
+                )
+            except llm.LLMError as exc:
+                # Timeouts and truncated answers: try the same prompt again.
+                checked = _ChunkResult([], [], {}, [f"model call failed: {exc}"])
+                continue
             checked = _check(answer, note, known, note_text)
             if not checked.problems or attempt == max_attempts:
                 break
@@ -376,7 +388,7 @@ def extract_notes(
     model: str | None = None,
     think: bool = False,
     generate: Generate = llm.generate,
-    log: Callable[[str], None] = print,
+    log: Callable[[str], None] = lambda line: print(line, flush=True),
 ) -> dict[str, NoteExtraction]:
     """Extract the given notes (all if None) into `graph_directory`, one after another,
     so that entities registered for one note are known for the next."""
@@ -402,6 +414,8 @@ def extract_notes(
             f"{slug}: {len(extraction.discusses)} entities, {len(extraction.relations)} relations, "
             f"{len(extraction.dropped)} dropped"
         )
+        for problem in extraction.dropped:
+            log(f"  dropped: {problem}")
     return results
 
 

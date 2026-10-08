@@ -163,7 +163,9 @@ def main() -> int:
             model = args.model or llm.model_name()
             stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
             run_directory = RUNS_DIRECTORY / f"{stamp}-{model.replace(':', '-')}{'-think' if args.think else ''}"
-            extract_notes(slugs, args.notes_dir, run_directory, model=model, think=args.think)
+            results = extract_notes(slugs, args.notes_dir, run_directory, model=model, think=args.think)
+            dropped = {slug: result.dropped for slug, result in results.items() if result.dropped}
+            (run_directory / "dropped.json").write_text(json.dumps(dropped, indent=2, ensure_ascii=False), encoding="utf-8")
         predicted = load_graph(run_directory, notes, args.notes_dir)
     except (NoteRepositoryError, GraphError, llm.LLMError) as exc:
         print(f"Evaluation failed: {exc}", file=sys.stderr)

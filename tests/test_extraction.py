@@ -2,6 +2,8 @@ import json
 
 import yaml
 
+from app.agents import llm
+
 from app.agents.extraction import (
     chunk_text,
     extract_note,
@@ -166,3 +168,19 @@ def test_write_extraction_produces_a_valid_graph(tmp_path):
     data = yaml.safe_load((graph_dir / "extractions" / "alpha.yaml").read_text(encoding="utf-8"))
     assert data["extracted_by"] == "test-model"
     assert data["note_sha256"] == note_sha256(notes_dir / "alpha.md")
+
+
+def test_failed_model_call_counts_as_an_attempt(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    calls = []
+
+    def flaky(prompt, **options):
+        calls.append(options)
+        if len(calls) == 1:
+            raise llm.LLMError("timed out")
+        return json.dumps({"new_entities": [], "discusses": ["beta"], "relations": []})
+
+    result = extract_note(alpha, known_entities(graph), generate=flaky)
+
+    assert result.discusses == ["beta"] and result.dropped == []
+    assert calls[0]["max_tokens"] and calls[0]["timeout"]

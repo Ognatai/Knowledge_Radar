@@ -23,23 +23,23 @@ of further reading, does not count.
 
 - Use an existing entity if there is one: the entity of another note (its slug,
   e.g. `retrieval-augmented-generation`) or an entry in the registry
-  (`public/graph/entities.yaml`). Match by meaning, not by spelling: "vector
-  representations" is `embeddings`, "an LLM" is `large-language-models`.
+  (`public/graph/entities.yaml`). Match by meaning, not by spelling: a
+  paraphrase, abbreviation or plural of a known entity refers to it.
 - Otherwise register a new entity with a lowercase ASCII slug of its usual
-  English name (`hipporag`, `personalized-pagerank`, `microsoft`).
+  English name (`bm25`, `openai`).
 - **Named** methods, systems, regulations, organisations, technologies and
   people are entities. **Generic** terms (an index, a prompt, LLM calls,
   documents) are not.
 - **Concepts** are entities only if a note exists for them or the text defines
   or explains them; otherwise they stay plain text.
-- **Named models and architectures** (BERT, GPT, Vision Transformer) are
-  `Method` entities when the text describes them; models that only serve as an
-  evaluation setting ("evaluated it on RoBERTa and GPT-3") are not discussed.
+- **Named models and architectures** are `Method` entities when the text
+  describes them; models that only serve as an evaluation setting ("evaluated
+  on model X and model Y") are not discussed.
 - **Components** that appear only in an enumeration of another method's parts
-  ("it uses NF4, double quantization and paged optimizers") are not separate
+  ("it uses A, B and C") are not separate
   entities; a component that the text describes in its own sentence is.
 - **People** are entities only when the text names them as actors ("developed
-  by Geoffrey Hinton"). Citations such as "Edge et al. (2024)" are references,
+  by Geoffrey Hinton"). Citations such as "Author et al. (2024)" are references,
   not entities.
 - **Sources** (papers, articles) and their `MENTIONED_IN` / `PRESENTED_AT`
   relations are not extracted: a note's sources are already listed in its
@@ -55,22 +55,36 @@ of further reading, does not count.
   own. Keep it short, usually a clause.
 - Both ends must be listed in `discusses` (or be the note's own entity).
 - In relations of the note's own entity, the evidence may leave the subject
-  implicit ("The Act implements the ePrivacy Directive" in the TDDDG note).
+  implicit ("The Act implements Directive D" in the note about that act).
 - Type constraints come from `schema.yaml`. If a stated relation fits no type,
   do not force it into one; record it as a proposal in `schema_proposals.md`.
 - Each (from, type, to) triple appears at most once per note; pick the clearest
   evidence.
+- Relations between **any** two discussed entities count, not only those of
+  the note's own entity: in a note about X, "Y builds on Z" gives `Y BASED_ON Z`.
+- **Direction**: the subject (`from`) is the more specific, newer or dependent
+  side. A method that the note lists as an example of the note's topic is the
+  subject of `IS_EXAMPLE_OF`; the topic is not `BASED_ON` its examples.
+- Choose the most specific type: a technology that realises a method or concept
+  `IMPLEMENTS` it (not `BASED_ON`); a regulation that governs something
+  `REGULATES` it (not `IMPLEMENTS`); `IMPLEMENTS` between regulations only for
+  transposition or supplementing.
+- `COMPLEMENTS` only when the text says so explicitly (complement, combine, used
+  together, each covers what the other does not). Being related, mentioned in
+  the same section or linked is not enough.
 
 ### Relation types in use
 
-| Type | Meaning | Example evidence |
+Examples use placeholders; A, B are entities discussed in the note.
+
+| Type | Meaning (from → to) | Typical wording |
 | --- | --- | --- |
-| `BASED_ON` | builds on, extends, combines, uses as a component (also between technologies) | "GraphRAG extends retrieval-augmented generation"; "MCP builds on JSON-RPC" |
-| `DEVELOPED_BY` | created or introduced by a person or organisation; for a regulation, the issuing body | "Microsoft's GraphRAG builds an entity graph"; "BCBS 239 is the Basel Committee's set of 14 principles" |
-| `IMPLEMENTS` | a technology implements a method or concept; a national act transposes a directive or supplements a regulation | "transposes Directive (EU) 2016/943" |
-| `IS_EXAMPLE_OF` | an instance or variant of a broader concept, method or technology | "BM25 is a ranking function" |
-| `AMENDS` | a regulation amends, replaces or repeals another | "replaces the criminal provisions of sections 17 to 19 of the Act against Unfair Competition (UWG)" |
-| `REGULATES` | a regulation or authority governs something | "protects trade secrets against unlawful acquisition" |
-| `TAKES_PRECEDENCE_OVER` | a regulation prevails over another (lex specialis or an explicit precedence rule) | "the TDDDG (...) takes precedence over the BDSG" |
-| `COMPLEMENTS` | each covers what the other does not, or they are explicitly combined; symmetric, so list each pair once in either order | "MCP is agent-to-tool, A2A agent-to-agent, and both are complementary" |
-| `CONTRADICTS` | the text states the two are opposed or incompatible | |
+| `BASED_ON` | A builds on, extends, combines or uses B as a component (also between technologies) | "A extends B", "A combines B and C", "A builds on B" |
+| `DEVELOPED_BY` | A was created or introduced by person or organisation B; for a regulation, B issued it | "B's A", "A, introduced by B", "B published A" |
+| `IMPLEMENTS` | technology A realises method or concept B; national act A transposes directive B or supplements regulation B | "A is an implementation of B", "A transposes B" |
+| `IS_EXAMPLE_OF` | A is an instance or variant of the broader concept, method or technology B | "A is a B", "Bs such as A" |
+| `AMENDS` | regulation A amends, replaces or repeals regulation B | "A replaces B", "A amended B" |
+| `REGULATES` | regulation or authority A governs B | "A protects B", "A requires B", "A supervises B" |
+| `TAKES_PRECEDENCE_OVER` | regulation A prevails over regulation B (lex specialis or an explicit precedence rule) | "A takes precedence over B" |
+| `COMPLEMENTS` | A and B cover each other's gaps or are explicitly combined; symmetric, list each pair once | "A and B are complementary", "A is combined with B" |
+| `CONTRADICTS` | the text states that A and B are opposed or incompatible | "A contradicts B" |
