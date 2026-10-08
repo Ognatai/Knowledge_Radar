@@ -1,0 +1,51 @@
+version: 1
+note_sha256: "655e55cc4716d218de901a2edc2dbdb60f2b56bdd4fde12b41757f5e3ff48338"
+extracted_by: manual
+discusses:
+  - retrieval-augmented-generation
+  - knowledge-graphs
+  - large-language-models
+  - entity-extraction
+  - embeddings
+  - microsoft
+  - hipporag
+  - lightrag
+  - personalized-pagerank
+  - ircot
+relations:
+  - from: graphrag
+    type: BASED_ON
+    to: retrieval-augmented-generation
+    evidence: GraphRAG extends retrieval-augmented generation
+  - from: graphrag
+    type: BASED_ON
+    to: knowledge-graphs
+    evidence: entities and relations are extracted into a knowledge graph, and retrieval follows the graph
+  - from: graphrag
+    type: BASED_ON
+    to: large-language-models
+    evidence: Microsoft's GraphRAG builds an entity graph with an LLM
+  - from: graphrag
+    type: DEVELOPED_BY
+    to: microsoft
+    evidence: Microsoft's GraphRAG builds an entity graph with an LLM
+  - from: graphrag
+    type: BASED_ON
+    to: entity-extraction
+    evidence: an LLM extracts entities and relationships from the source documents to derive an entity knowledge graph
+  - from: hipporag
+    type: BASED_ON
+    to: large-language-models
+    evidence: HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized PageRank algorithm
+  - from: hipporag
+    type: BASED_ON
+    to: knowledge-graphs
+    evidence: HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized PageRank algorithm
+  - from: hipporag
+    type: BASED_ON
+    to: personalized-pagerank
+    evidence: HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized PageRank algorithm
+  - from: lightrag
+    type: BASED_ON
+    to: embeddings
+    evidence: combines graph structures with vector representations to retrieve related entities and their relationships

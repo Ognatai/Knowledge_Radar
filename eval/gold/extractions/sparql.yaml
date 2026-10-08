@@ -1,0 +1,9 @@
+version: 1
+note_sha256: "b30aa9220dae25a89886c4c9f2207b97f78ff02d12d4bc09e2b05e680a67dd26"
+extracted_by: manual
+discusses: [w3c, rdf, sql, cypher]
+relations:
+  - from: sparql
+    type: DEVELOPED_BY
+    to: w3c
+    evidence: SPARQL is the W3C query language for RDF knowledge graphs

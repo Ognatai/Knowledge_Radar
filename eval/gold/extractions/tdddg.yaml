@@ -1,0 +1,33 @@
+version: 1
+note_sha256: "3a9e607efff2db9b986ebf75fb58ed4bd6c950b8df3ecb1ee76fdf00e935f572"
+extracted_by: manual
+discusses: [eprivacy-directive, secrecy-of-telecommunications, cookie-consent, gdpr, bdsg, bfdi, federal-network-agency, digitale-dienste-gesetz, digital-services-act, tkg, e-evidence-regulation, einwilligungsverwaltungsverordnung]
+relations:
+  - from: tdddg
+    type: IMPLEMENTS
+    to: eprivacy-directive
+    evidence: The Act implements the ePrivacy Directive
+  - from: tdddg
+    type: REGULATES
+    to: secrecy-of-telecommunications
+    evidence: It protects the secrecy of telecommunications
+  - from: tdddg
+    type: REGULATES
+    to: cookie-consent
+    evidence: requires consent before information is stored on or read from a user's device, unless strictly necessary
+  - from: digitale-dienste-gesetz
+    type: AMENDS
+    to: tdddg
+    evidence: Renamed TDDDG by the Digitale-Dienste-Gesetz
+  - from: digitale-dienste-gesetz
+    type: IMPLEMENTS
+    to: digital-services-act
+    evidence: the Digitale-Dienste-Gesetz, which implements the EU Digital Services Act
+  - from: tdddg
+    type: IMPLEMENTS
+    to: e-evidence-regulation
+    evidence: Regulates the processing of personal data by telecommunications providers to comply with European production or preservation orders under Regulation (EU) 2023/1543
+  - from: einwilligungsverwaltungsverordnung
+    type: IMPLEMENTS
+    to: tdddg
+    evidence: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung) under § 26 enters into force

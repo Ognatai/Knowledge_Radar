@@ -1,0 +1,17 @@
+version: 1
+note_sha256: "59f0449f3c35b5374141c31d3ceb12a237a817e72df3c6283969433445ad9af2"
+extracted_by: manual
+discusses: [container, container-image, dockerfile, docker-volume, docker-compose, kubernetes, mlops-and-deployment]
+relations:
+  - from: docker
+    type: IMPLEMENTS
+    to: container
+    evidence: Docker packages an application with everything it needs into a container
+  - from: container
+    type: BASED_ON
+    to: container-image
+    evidence: Containers are started from images
+  - from: mlops-and-deployment
+    type: BASED_ON
+    to: container-image
+    evidence: ML models are commonly served from container images that pin the model, code and dependencies

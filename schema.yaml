@@ -69,17 +69,24 @@ relation_types:
     from: [Method, Concept, Technology]
     to: [Person, Organization]
   IMPLEMENTS:
+    # Technology -> Method/Concept; Regulation -> Regulation: a national act
+    # transposes a directive or supplements a regulation.
     visibility: public
-    from: [Technology]
-    to: [Method, Concept]
+    from: [Technology, Regulation]
+    to: [Method, Concept, Regulation]
   MENTIONED_IN:
     visibility: public
     from: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Source]
     to: [Source]
   IS_EXAMPLE_OF:
     visibility: public
-    from: [Method, Regulation]
-    to: [Concept]
+    from: [Method, Regulation, Technology]
+    to: [Concept, Method, Technology]
+  AMENDS:
+    # Amends, replaces or repeals; the evidence quote says which.
+    visibility: public
+    from: [Regulation]
+    to: [Regulation]
   CONTRADICTS:
     visibility: public
     from: [Method, Concept]

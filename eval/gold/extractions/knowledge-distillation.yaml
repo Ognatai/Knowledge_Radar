@@ -1,0 +1,29 @@
+version: 1
+note_sha256: "12ad7cb980abb3dba8c5a20522354454a83537e213b5f31cf653fb826d5b8c14"
+extracted_by: manual
+discusses: [fitnets, distilbert, tinybert, bert, llm-adaptation]
+relations:
+  - from: fitnets
+    type: BASED_ON
+    to: knowledge-distillation
+    evidence: FitNets extend distillation so that a student can be deeper and thinner than its teacher
+  - from: distilbert
+    type: BASED_ON
+    to: knowledge-distillation
+    evidence: DistilBERT applies distillation during pretraining rather than for one task
+  - from: distilbert
+    type: BASED_ON
+    to: bert
+    evidence: it reduced BERT's size by 40% while retaining 97% of its language understanding
+  - from: tinybert
+    type: BASED_ON
+    to: knowledge-distillation
+    evidence: TinyBERT designs a distillation method for Transformer layers
+  - from: tinybert
+    type: BASED_ON
+    to: bert
+    evidence: TinyBERT reached over 96.8% of BERT-base with a model 7.5 times smaller
+  - from: knowledge-distillation
+    type: IS_EXAMPLE_OF
+    to: llm-adaptation
+    evidence: Distillation is one of several options for adapting and shrinking language models

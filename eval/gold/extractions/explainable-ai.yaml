@@ -1,0 +1,33 @@
+version: 1
+note_sha256: "2b521cbca158c96ac08f3f76eaf0359d9c378f66b147999bc54afcaf81436d17"
+extracted_by: manual
+discusses: [lime, shap, integrated-gradients, counterfactual-explanations, interpretable-models, decision-trees, attention-and-transformers, chain-of-thought-prompting, gdpr, eu-ai-act]
+relations:
+  - from: lime
+    type: IS_EXAMPLE_OF
+    to: explainable-ai
+    evidence: LIME (Ribeiro et al., 2016), SHAP (Lundberg & Lee, 2017) and Integrated Gradients (Sundararajan et al., 2017) are widely used post-hoc methods
+  - from: shap
+    type: IS_EXAMPLE_OF
+    to: explainable-ai
+    evidence: LIME (Ribeiro et al., 2016), SHAP (Lundberg & Lee, 2017) and Integrated Gradients (Sundararajan et al., 2017) are widely used post-hoc methods
+  - from: integrated-gradients
+    type: IS_EXAMPLE_OF
+    to: explainable-ai
+    evidence: LIME (Ribeiro et al., 2016), SHAP (Lundberg & Lee, 2017) and Integrated Gradients (Sundararajan et al., 2017) are widely used post-hoc methods
+  - from: counterfactual-explanations
+    type: IS_EXAMPLE_OF
+    to: explainable-ai
+    evidence: post-hoc explanation methods for black-box models, such as local surrogate models (Ribeiro et al., 2016), Shapley-value attributions (Lundberg & Lee, 2017), gradient-based attributions (Sundararajan et al., 2017) and counterfactual explanations
+  - from: decision-trees
+    type: IS_EXAMPLE_OF
+    to: interpretable-models
+    evidence: Decision trees and linear models are typical interpretable models
+  - from: gdpr
+    type: REGULATES
+    to: explainable-ai
+    evidence: The GDPR requires meaningful information about the logic involved in automated decision-making under Article 22
+  - from: eu-ai-act
+    type: REGULATES
+    to: explainable-ai
+    evidence: the EU AI Act gives affected persons a right to an explanation of individual decisions
