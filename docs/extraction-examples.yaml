@@ -83,3 +83,25 @@ examples:
       Supplementing a regulation and transposing a directive are both IMPLEMENTS
       between regulations. "Alongside the GDPR" alone is not COMPLEMENTS. The
       listed topics (employee data, scoring) are only enumerated, not defined.
+  - note: kubernetes
+    note_type: Technology
+    note_name: Kubernetes
+    known: []
+    text: |-
+      - Declarative configuration: Resources are described in manifests (usually YAML) and applied to the cluster; Kubernetes reconciles the actual state with the described state (Kubernetes overview; Burns et al., 2016).
+      - Probes: Liveness probes decide when to restart a container, for example after a deadlock; readiness probes decide when a container may receive traffic, for example after warming caches; startup probes protect slow-starting containers (Kubernetes probes docs).
+      - Namespaces: Isolate groups of resources within one cluster; names must be unique within a namespace but not across namespaces (Kubernetes namespaces docs).
+    answer:
+      new_entities:
+        - {id: declarative-configuration, type: Concept, name_en: Declarative configuration, name_de: Deklarative Konfiguration}
+        - {id: probe, type: Concept, name_en: Probe, name_de: Probe}
+        - {id: kubernetes-namespace, type: Concept, name_en: Namespace (Kubernetes), name_de: Namespace (Kubernetes)}
+      discusses: [declarative-configuration, probe, kubernetes-namespace]
+      relations:
+        - {from: kubernetes, type: IMPLEMENTS, to: declarative-configuration, evidence: "Kubernetes reconciles the actual state with the described state"}
+    why: >-
+      A list of core concepts defines each term, so each defined term is a
+      Concept entity, even without a note of its own; register them all, since
+      relations can only connect registered entities. Generic words inside the
+      definitions (manifests, cluster, traffic) are not entities. Kubernetes
+      realises declarative configuration, so it IMPLEMENTS it.
