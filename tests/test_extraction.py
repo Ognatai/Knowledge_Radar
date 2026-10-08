@@ -184,3 +184,19 @@ def test_failed_model_call_counts_as_an_attempt(tmp_path):
 
     assert result.discusses == ["beta"] and result.dropped == []
     assert calls[0]["max_tokens"] and calls[0]["timeout"]
+
+
+def test_new_entity_without_german_name_uses_the_english_name(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    llm_answer = fake_llm(
+        {
+            "new_entities": [{"id": "openai", "type": "Organization", "name_en": "OpenAI", "name_de": ""}],
+            "discusses": ["openai"],
+            "relations": [],
+        }
+    )
+
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer)
+
+    assert [(e.id, e.name_de) for e in result.new_entities] == [("openai", "OpenAI")]
+    assert result.dropped == []

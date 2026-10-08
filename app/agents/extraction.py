@@ -242,11 +242,13 @@ def _check(answer: str, note: NoteDetail, entities: dict[str, Entity], note_text
         if item.get("type") not in allowed_types:
             problems.append(f"new entity {entity_id!r} has an unknown type {item.get('type')!r}.")
             continue
-        names = [str(item.get(key, "")).strip() for key in ("name_en", "name_de")]
-        if not all(names):
-            problems.append(f"new entity {entity_id!r} needs name_en and name_de.")
+        name_en = str(item.get("name_en", "")).strip()
+        if not name_en:
+            problems.append(f"new entity {entity_id!r} needs name_en.")
             continue
-        new_entities[entity_id] = Entity(id=entity_id, type=item["type"], name_en=names[0], name_de=names[1])
+        # Models leave name_de empty when the German name is the same (proper names).
+        name_de = str(item.get("name_de", "")).strip() or name_en
+        new_entities[entity_id] = Entity(id=entity_id, type=item["type"], name_en=name_en, name_de=name_de)
 
     available = {**entities, **new_entities}
     discusses: list[str] = []
