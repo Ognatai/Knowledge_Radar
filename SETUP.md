@@ -79,7 +79,7 @@ Install Ollama on the host (it is not containerized). Models:
 | Use | Model | Machine in this project's deployment |
 | --- | --- | --- |
 | Chat (local app) | `ollama pull qwen3.5:4b` | ThinkPad (CUDA) |
-| Agent pipeline (extraction) | `ollama pull qwen3:14b` | Desktop (ROCm) |
+| Agent pipeline (extraction) | `ollama pull qwen3:30b-a3b` | Desktop (ROCm) |
 
 On a single machine, pull whichever fits your GPU. In VS Code, **Knowledge
 Radar: Ollama chat** opens an interactive session with a model of your choice.

@@ -414,7 +414,7 @@ def extract_note(
     generate: Generate = llm.generate,
     max_attempts: int = 3,
     model: str | None = None,
-    think: bool = False,
+    think: bool = True,
     guidelines: str | None = None,
 ) -> NoteExtraction:
     """Extract one note chunk by chunk; new entities of earlier chunks are known later."""
@@ -507,7 +507,7 @@ def extract_notes(
     graph_directory: Path,
     *,
     model: str | None = None,
-    think: bool = False,
+    think: bool = True,
     generate: Generate = llm.generate,
     log: Callable[[str], None] = lambda line: print(line, flush=True),
 ) -> dict[str, NoteExtraction]:
@@ -545,8 +545,13 @@ def main() -> int:
     parser.add_argument("notes", nargs="*", help="Note slugs to extract (default: all notes).")
     parser.add_argument("--notes-dir", type=Path, default=configured_notes_directory())
     parser.add_argument("--graph-dir", type=Path, default=DEFAULT_GRAPH_DIRECTORY)
-    parser.add_argument("--model", default=None, help="Ollama model (default: KNOWLEDGE_RADAR_MODEL or qwen3:14b).")
-    parser.add_argument("--think", action="store_true", help="Let the model reason before answering.")
+    parser.add_argument("--model", default=None, help=f"Ollama model (default: KNOWLEDGE_RADAR_MODEL or {llm.DEFAULT_MODEL}).")
+    parser.add_argument(
+        "--no-think",
+        dest="think",
+        action="store_false",
+        help="Answer without reasoning first (faster, but clearly worse in the evaluation).",
+    )
     args = parser.parse_args()
     try:
         extract_notes(args.notes or None, args.notes_dir, args.graph_dir, model=args.model, think=args.think)

@@ -138,7 +138,7 @@ def main() -> int:
         help="Gold notes to use: dev for tuning (default), test only for final numbers.",
     )
     parser.add_argument("--model", default=None)
-    parser.add_argument("--think", action="store_true")
+    parser.add_argument("--no-think", dest="think", action="store_false", help="Answer without reasoning first.")
     parser.add_argument("--predictions", type=Path, help="Score an existing run directory instead of extracting.")
     parser.add_argument("--notes-dir", type=Path, default=configured_notes_directory())
     args = parser.parse_args()
@@ -154,7 +154,7 @@ def main() -> int:
         else:
             model = args.model or llm.model_name()
             stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-            run_directory = RUNS_DIRECTORY / f"{stamp}-{args.split}-{model.replace(':', '-')}{'-think' if args.think else ''}"
+            run_directory = RUNS_DIRECTORY / f"{stamp}-{args.split}-{model.replace(':', '-')}{'' if args.think else '-no-think'}"
             results = extract_notes(slugs, args.notes_dir, run_directory, model=model, think=args.think)
             dropped = {slug: result.dropped for slug, result in results.items() if result.dropped}
             (run_directory / "dropped.json").write_text(json.dumps(dropped, indent=2, ensure_ascii=False), encoding="utf-8")

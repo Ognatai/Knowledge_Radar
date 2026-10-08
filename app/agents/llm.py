@@ -8,7 +8,9 @@ import urllib.request
 from typing import Any
 
 DEFAULT_BASE_URL = "http://127.0.0.1:11434"
-DEFAULT_MODEL = "qwen3:14b"
+# Mixture-of-experts model (30B parameters, 3B active per token): fits the
+# Desktop's 20 GB VRAM. Replaced qwen3:14b, whose extraction quality was too low.
+DEFAULT_MODEL = "qwen3:30b-a3b"
 
 
 class LLMError(RuntimeError):
@@ -21,11 +23,6 @@ def base_url() -> str:
 
 def model_name() -> str:
     return os.environ.get("KNOWLEDGE_RADAR_MODEL", DEFAULT_MODEL)
-
-
-def translation_model_name() -> str:
-    """Model for EN->DE translation; Qwen3 14B translates reliably without reasoning mode."""
-    return os.environ.get("KNOWLEDGE_RADAR_TRANSLATION_MODEL", DEFAULT_MODEL)
 
 
 def generate(
