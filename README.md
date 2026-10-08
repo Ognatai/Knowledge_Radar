@@ -12,7 +12,7 @@ free and Ollama-only; no API key is required.
 | Path | Contents |
 | --- | --- |
 | `public/notes/` | Public Markdown notes (MIT, like the code) |
-| `public/synonyms.yaml` | Public entity synonym/alias registry |
+| `public/graph/` | Versioned knowledge graph: `entities.yaml` (entities without a note, with aliases) and `extractions/<note>.yaml` (entities and relations per note, with evidence quotes) |
 | `schema.yaml` | Entity/relation schema, `visibility: public/private` per type |
 | `app/site/` | Static public site (React, GitHub Pages): graph + text view, DE/EN, client-side search |
 | `app/backend/` | Python package: note loading/validation, static-site export, local app API (FastAPI) |

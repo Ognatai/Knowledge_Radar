@@ -1,0 +1,7 @@
+# Entities without a note of their own. Every public note already describes one
+# entity, whose id is the note's slug; those are not listed here. An entity
+# gets its own note once more than 3 notes discuss it.
+# Fields: id (lowercase ASCII slug), type (public entity type from schema.yaml),
+# name_en, name_de, aliases (optional; replaces the former synonyms.yaml).
+version: 1
+entities: []

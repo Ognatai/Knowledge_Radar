@@ -1,7 +1,8 @@
 """Validate public Markdown notes before they enter the agent pipeline.
 
-Checks the basic note contract (frontmatter, sources, EN/DE sections, links)
-and the note templates (docs/note-templates.md).
+Checks the basic note contract (frontmatter, sources, EN/DE sections, links),
+the note templates (docs/note-templates.md), and the versioned graph files
+(public/graph/) against schema.yaml.
 """
 
 from __future__ import annotations
@@ -10,6 +11,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, GraphError, load_graph
 from app.backend.knowledge_radar.notes import (
     NoteRepositoryError,
     configured_notes_directory,
@@ -25,6 +27,12 @@ def main() -> int:
         type=Path,
         default=configured_notes_directory(),
         help="Public Markdown directory to validate.",
+    )
+    parser.add_argument(
+        "--graph-dir",
+        type=Path,
+        default=DEFAULT_GRAPH_DIRECTORY,
+        help="Versioned graph directory (entity registry and per-note extractions).",
     )
     args = parser.parse_args()
 
@@ -45,7 +53,19 @@ def main() -> int:
     if failed:
         return 1
 
-    print(f"Validated {len(notes)} public note(s) in {args.notes_dir}.")
+    try:
+        graph = load_graph(args.graph_dir, notes, args.notes_dir)
+    except GraphError as exc:
+        print(f"Graph validation failed: {exc}", file=sys.stderr)
+        return 1
+    # A stale extraction is still valid; the pipeline extracts the note again.
+    for slug in graph.stale_extractions:
+        print(f"Warning: {slug} changed since its extraction; extract it again.", file=sys.stderr)
+
+    print(
+        f"Validated {len(notes)} public note(s) in {args.notes_dir} and the graph "
+        f"({len(graph.entities)} entities, {len(graph.relations)} relations)."
+    )
     return 0
 
 

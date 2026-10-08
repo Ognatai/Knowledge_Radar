@@ -19,6 +19,9 @@ const EDGE_COLORS: Record<string, string> = {
   DISCUSSES: "#c9d3ce",
   RELATED_TO: "#8eafa2",
 };
+// Entity-to-entity relations (BASED_ON, REGULATES, ...) are directed facts.
+const RELATION_COLOR = "#5c6f68";
+const isRelation = (edge: GraphEdge) => !(edge.type in EDGE_COLORS);
 
 type RenderedNode = NodeObject<GraphNode & { label: string }>;
 
@@ -109,8 +112,11 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
             cooldownTicks={120}
             graphData={graphData}
             height={height}
-            linkColor={(link) => EDGE_COLORS[link.type] ?? "#b9cdc5"}
-            linkWidth={(link) => (link.type === "RELATED_TO" ? 2 : 1)}
+            linkColor={(link) => EDGE_COLORS[link.type] ?? RELATION_COLOR}
+            linkDirectionalArrowLength={(link) => (isRelation(link) ? 4 : 0)}
+            linkDirectionalArrowRelPos={1}
+            linkLabel={(link) => escapeHtml(link.type)}
+            linkWidth={(link) => (link.type === "RELATED_TO" ? 2 : link.type === "DISCUSSES" ? 1 : 1.5)}
             nodeCanvasObject={(node: RenderedNode, context, scale) => {
               const x = node.x ?? 0;
               const y = node.y ?? 0;
