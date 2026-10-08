@@ -137,7 +137,7 @@ def test_new_entity_with_a_known_id_refers_to_the_known_entity(tmp_path):
     *_, graph, alpha = load(tmp_path)
     llm = fake_llm(
         {
-            "new_entities": [{"id": "microsoft", "type": "Concept", "name_en": "MS", "name_de": "MS"}],
+            "new_entities": [{"id": "microsoft", "type": "Organization", "name_en": "MS", "name_de": "MS"}],
             "discusses": ["microsoft"],
             "relations": [],
         }
@@ -200,3 +200,50 @@ def test_new_entity_without_german_name_uses_the_english_name(tmp_path):
 
     assert [(e.id, e.name_de) for e in result.new_entities] == [("openai", "OpenAI")]
     assert result.dropped == []
+
+
+def test_prompt_lists_only_entities_mentioned_in_the_chunk(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    llm_answer = fake_llm({"new_entities": [], "discusses": [], "relations": []})
+
+    extract_note(alpha, known_entities(graph), generate=llm_answer)
+
+    table = llm_answer.prompts[0].split("<known_entities>")[1].split("</known_entities>")[0]
+    assert "microsoft | Organization" in table  # named in the text
+    assert "beta | Method" in table  # linked from the text
+    assert "knowledge-graph |" not in table  # not mentioned
+
+
+def test_new_entity_matching_a_known_name_is_resolved_to_it(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    llm_answer = fake_llm(
+        {
+            "new_entities": [{"id": "microsoft-research", "type": "Organization", "name_en": "Microsoft Research", "name_de": ""}],
+            "discusses": ["microsoft-research"],
+            "relations": [
+                {"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft-research", "evidence": "Alpha was developed by Microsoft"}
+            ],
+        }
+    )
+
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer)
+
+    assert result.new_entities == []
+    assert result.discusses == ["microsoft"]
+    assert [(r["from"], r["to"]) for r in result.relations] == [("alpha", "microsoft")]
+
+
+def test_new_entity_is_not_merged_with_a_known_entity_of_another_type(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    answer = {
+        "new_entities": [{"id": "microsoft", "type": "Method", "name_en": "Microsoft", "name_de": ""}],
+        "discusses": [],
+        "relations": [],
+    }
+    llm_answer = fake_llm(answer, answer)
+
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer, max_attempts=2)
+
+    assert result.new_entities == []
+    assert "already used by" in result.dropped[0]
+    assert "already used by" in llm_answer.prompts[1]

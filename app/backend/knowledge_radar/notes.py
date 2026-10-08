@@ -140,6 +140,11 @@ def load_note(path: Path, notes_directory: Path) -> NoteDetail:
             )
         sources.append(source)
 
+    alias_value = frontmatter.get("aliases") or []
+    if not isinstance(alias_value, list) or not all(isinstance(a, str) and a.strip() for a in alias_value):
+        raise NoteRepositoryError(f"{path}: 'aliases' must be a list of non-empty strings.")
+    aliases = [str(alias).strip() for alias in alias_value]
+
     body = text[match.end() :]
     sections = _parse_sections(body, path)
     relative_path = path.relative_to(notes_directory).with_suffix("")
@@ -150,6 +155,7 @@ def load_note(path: Path, notes_directory: Path) -> NoteDetail:
         title_de=title_de,
         entity_type=entity_type,
         sources=sources,
+        aliases=aliases,
         # Unresolved targets; load_notes() resolves them against all public notes.
         links=wikilink_targets(body),
         content_en=sections["EN"] or "",

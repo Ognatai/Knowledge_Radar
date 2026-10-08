@@ -9,6 +9,10 @@ class NoteSummary(BaseModel):
     title_de: str
     entity_type: str
     sources: list[str]
+    aliases: list[str] = Field(
+        default_factory=list,
+        description="Other names of the entity the note describes (frontmatter `aliases`).",
+    )
     links: list[str] = Field(
         default_factory=list,
         description="Slugs of notes referenced via [[wikilinks]] (RELATED_TO edges).",

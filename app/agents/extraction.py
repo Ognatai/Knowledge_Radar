@@ -29,7 +29,9 @@ from app.backend.knowledge_radar.graph import (
     REGISTRY_FILE_NAME,
     Entity,
     GraphError,
+    entity_keys,
     load_graph,
+    normalize_name,
     note_sha256,
     plain_text,
     public_relation_types,
@@ -42,6 +44,7 @@ from app.backend.knowledge_radar.notes import (
     configured_notes_directory,
     load_notes,
     public_entity_types,
+    wikilink_targets,
 )
 
 GUIDELINES_PATH = REPOSITORY_ROOT / "docs" / "extraction-guidelines.md"
@@ -113,6 +116,34 @@ def chunk_text(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
 
 def known_entities(graph) -> dict[str, Entity]:
     return dict(graph.entities)
+
+
+def _name_variants(entity: Entity) -> set[str]:
+    variants: set[str] = set()
+    for name in (entity.name_en, entity.name_de, *entity.aliases, entity.id.replace("-", " ")):
+        variants.add(name)
+        variants.add(re.sub(r"\([^)]*\)", "", name))
+        variants.update(re.findall(r"\(([^)]*)\)", name))
+    return {re.sub(r"\s+", " ", variant).strip().casefold() for variant in variants if len(variant.strip()) >= 2}
+
+
+def mentioned_entities(chunk: str, entities: dict[str, Entity]) -> dict[str, Entity]:
+    """Known entities the chunk names (by name, alias or a plural of it) or links to.
+
+    Only these are offered to the model, instead of every known entity."""
+    text = plain_text(chunk)
+    linked = set(wikilink_targets(chunk))
+    mentioned: dict[str, Entity] = {}
+    for entity in entities.values():
+        if entity.id in linked:
+            mentioned[entity.id] = entity
+            continue
+        for variant in _name_variants(entity):
+            stem = re.escape(variant[:-1] if variant.endswith("s") and len(variant) > 3 else variant)
+            if re.search(rf"(?<![0-9a-z]){stem}(?:s|es)?(?![0-9a-z])", text):
+                mentioned[entity.id] = entity
+                break
+    return mentioned
 
 
 def output_schema() -> dict[str, Any]:
@@ -232,10 +263,48 @@ def _check(answer: str, note: NoteDetail, entities: dict[str, Entity], note_text
     problems: list[str] = []
     new_entities: dict[str, Entity] = {}
     allowed_types = public_entity_types()
+    # Entity resolution: a "new" entity whose id, name or alias matches a known
+    # entity is that entity ("LLM" for an entity with the alias LLM).
+    known_by_key: dict[str, str] = {}
+    for known in entities.values():
+        for key in entity_keys(known):
+            known_by_key.setdefault(key, known.id)
+    resolved: dict[str, str] = {}
+
+    def resolve(entity_id: str) -> str:
+        entity_id = resolved.get(entity_id, entity_id)
+        if entity_id in entities or entity_id in new_entities:
+            return entity_id
+        return known_by_key.get(normalize_name(entity_id), entity_id)
+
     for item in data.get("new_entities") or []:
         entity_id = str(item.get("id", "")).strip()
+        entity_type = str(item.get("type", ""))
         if entity_id in entities:
+            if entities[entity_id].type != entity_type:
+                problems.append(
+                    f"new entity id {entity_id!r} is already used by a {entities[entity_id].type}; "
+                    f"if you mean a different {entity_type}, choose another id."
+                )
             continue  # A known entity: use it instead of registering a duplicate.
+        candidate = Entity(
+            id=entity_id,
+            type=str(item.get("type", "")),
+            name_en=str(item.get("name_en", "")),
+            name_de=str(item.get("name_de", "")),
+        )
+        # Only same-type matches: the method DoRA is not the regulation DORA.
+        match = next(
+            (
+                known_by_key[key]
+                for key in sorted(entity_keys(candidate))
+                if key in known_by_key and entities[known_by_key[key]].type == entity_type
+            ),
+            None,
+        )
+        if match:
+            resolved[entity_id] = match
+            continue
         if not ENTITY_ID_PATTERN.match(entity_id):
             problems.append(f"new entity id {entity_id!r} is not a lowercase ASCII slug.")
             continue
@@ -253,7 +322,7 @@ def _check(answer: str, note: NoteDetail, entities: dict[str, Entity], note_text
     available = {**entities, **new_entities}
     discusses: list[str] = []
     for entity_id in data.get("discusses") or []:
-        entity_id = str(entity_id).strip()
+        entity_id = resolve(str(entity_id).strip())
         if entity_id == note.slug or entity_id in discusses:
             continue
         if entity_id not in available:
@@ -264,6 +333,7 @@ def _check(answer: str, note: NoteDetail, entities: dict[str, Entity], note_text
     relations: list[dict[str, str]] = []
     for item in data.get("relations") or []:
         relation = {key: str(item.get(key, "")).strip() for key in ("from", "type", "to", "evidence")}
+        relation["from"], relation["to"] = resolve(relation["from"]), resolve(relation["to"])
         label = f"relation {relation['from']} {relation['type']} {relation['to']}"
         unknown = [end for end in (relation["from"], relation["to"]) if end not in available]
         if unknown:
@@ -308,7 +378,7 @@ def extract_note(
     seen_relations: set[tuple[str, str, str]] = set()
 
     for chunk in chunk_text(reading_text(note.content_en)):
-        prompt = build_prompt(note, chunk, known, guidelines)
+        prompt = build_prompt(note, chunk, mentioned_entities(chunk, known), guidelines)
         current_prompt = prompt
         for attempt in range(1, max_attempts + 1):
             try:

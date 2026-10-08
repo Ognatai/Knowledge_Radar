@@ -15,11 +15,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+import yaml
 
 from app.agents import llm
 from app.agents.extraction import extract_notes
@@ -27,6 +28,7 @@ from app.backend.knowledge_radar.graph import (
     Entity,
     GraphError,
     KnowledgeGraph,
+    entity_keys,
     load_graph,
     public_relation_types,
 )
@@ -49,35 +51,18 @@ def prf(predicted: set, gold: set) -> dict[str, Any]:
     return {"precision": precision, "recall": recall, "f1": f1, "tp": tp, "fp": fp, "fn": fn}
 
 
-def _normalize(text: str) -> str:
-    return re.sub(r"[^0-9a-z]", "", text.casefold())
-
-
-def _keys(entity: Entity) -> set[str]:
-    names = [entity.id, entity.name_en, entity.name_de, *entity.aliases]
-    keys: set[str] = set()
-    for name in names:
-        keys.add(_normalize(name))
-        # "World Wide Web Consortium (W3C)" also matches "World Wide Web Consortium" and "W3C".
-        outside = re.sub(r"\([^)]*\)", "", name)
-        keys.add(_normalize(outside))
-        keys.update(_normalize(inside) for inside in re.findall(r"\(([^)]*)\)", name))
-    keys.discard("")
-    return keys
-
-
 def align_entities(predicted: dict[str, Entity], gold: dict[str, Entity]) -> dict[str, str]:
     """Map predicted entity ids to gold entity ids where they mean the same entity."""
     gold_by_key: dict[str, str] = {}
     for entity in gold.values():
-        for key in _keys(entity):
+        for key in entity_keys(entity):
             gold_by_key.setdefault(key, entity.id)
     alignment: dict[str, str] = {}
     for entity in predicted.values():
         if entity.id in gold:
             alignment[entity.id] = entity.id
             continue
-        for key in sorted(_keys(entity)):
+        for key in sorted(entity_keys(entity)):
             if key in gold_by_key:
                 alignment[entity.id] = gold_by_key[key]
                 break
@@ -145,7 +130,13 @@ def _format(report: dict[str, Any]) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("notes", nargs="*", help="Gold notes to evaluate (default: all).")
+    parser.add_argument("notes", nargs="*", help="Gold notes to evaluate (default: the --split notes).")
+    parser.add_argument(
+        "--split",
+        choices=["dev", "test", "all"],
+        default="dev",
+        help="Gold notes to use: dev for tuning (default), test only for final numbers.",
+    )
     parser.add_argument("--model", default=None)
     parser.add_argument("--think", action="store_true")
     parser.add_argument("--predictions", type=Path, help="Score an existing run directory instead of extracting.")
@@ -155,14 +146,15 @@ def main() -> int:
     try:
         notes = load_notes(args.notes_dir)
         gold = load_graph(GOLD_DIRECTORY, notes, args.notes_dir)
-        gold_slugs = sorted({slug for slug, _ in gold.discusses if (GOLD_DIRECTORY / "extractions" / f"{slug}.yaml").is_file()})
-        slugs = args.notes or gold_slugs
+        split = yaml.safe_load((GOLD_DIRECTORY / "split.yaml").read_text(encoding="utf-8"))
+        split_slugs = split["dev"] + split["test"] if args.split == "all" else split[args.split]
+        slugs = args.notes or sorted(split_slugs)
         if args.predictions:
             run_directory = args.predictions
         else:
             model = args.model or llm.model_name()
             stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-            run_directory = RUNS_DIRECTORY / f"{stamp}-{model.replace(':', '-')}{'-think' if args.think else ''}"
+            run_directory = RUNS_DIRECTORY / f"{stamp}-{args.split}-{model.replace(':', '-')}{'-think' if args.think else ''}"
             results = extract_notes(slugs, args.notes_dir, run_directory, model=model, think=args.think)
             dropped = {slug: result.dropped for slug, result in results.items() if result.dropped}
             (run_directory / "dropped.json").write_text(json.dumps(dropped, indent=2, ensure_ascii=False), encoding="utf-8")

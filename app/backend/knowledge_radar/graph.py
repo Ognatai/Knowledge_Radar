@@ -98,6 +98,23 @@ def public_relation_types(schema_path: Path = SCHEMA_PATH) -> dict[str, Relation
     return relation_types
 
 
+def normalize_name(name: str) -> str:
+    """Comparable form of a name: lowercase letters and digits only."""
+    return re.sub(r"[^0-9a-z]", "", name.casefold())
+
+
+def entity_keys(entity: Entity) -> set[str]:
+    """Normalised id, names and aliases; "World Wide Web Consortium (W3C)" also
+    yields "World Wide Web Consortium" and "W3C"."""
+    keys: set[str] = set()
+    for name in (entity.id, entity.name_en, entity.name_de, *entity.aliases):
+        keys.add(normalize_name(name))
+        keys.add(normalize_name(re.sub(r"\([^)]*\)", "", name)))
+        keys.update(normalize_name(inner) for inner in re.findall(r"\(([^)]*)\)", name))
+    keys.discard("")
+    return keys
+
+
 def note_sha256(path: Path) -> str:
     """Hash of a note's content; line endings are normalised, since Git checks
     notes out with CRLF on Windows and LF elsewhere."""
@@ -269,6 +286,7 @@ def load_graph(
                 type=note.entity_type,
                 name_en=note.title_en,
                 name_de=note.title_de,
+                aliases=list(note.aliases),
                 note=note.slug,
             )
             for note in notes

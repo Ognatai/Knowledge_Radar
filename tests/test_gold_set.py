@@ -10,3 +10,13 @@ def test_gold_set_is_valid_and_current():
     # A note changed after labelling: its gold labels must be reviewed again.
     assert graph.stale_extractions == []
     assert list((GOLD_DIRECTORY / "extractions").glob("*.yaml"))
+
+
+def test_split_covers_every_gold_note_exactly_once():
+    import yaml
+
+    split = yaml.safe_load((GOLD_DIRECTORY / "split.yaml").read_text(encoding="utf-8"))
+    labelled = sorted(path.stem for path in (GOLD_DIRECTORY / "extractions").glob("*.yaml"))
+
+    assert sorted(split["dev"] + split["test"]) == labelled
+    assert not set(split["dev"]) & set(split["test"])

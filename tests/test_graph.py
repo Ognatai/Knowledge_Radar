@@ -235,3 +235,20 @@ def test_evidence_may_differ_in_surrounding_punctuation(tmp_path):
     graph = load_graph(graph_dir, load_notes(notes_dir), notes_dir)
 
     assert len(graph.relations) == 1
+
+
+def test_note_entities_carry_frontmatter_aliases(tmp_path):
+    notes_dir = tmp_path / "notes"
+    write_note(notes_dir, name="gamma.md", extra_frontmatter="aliases: [GA, Gamma Act]\n")
+
+    graph = load_graph(None, load_notes(notes_dir))
+
+    assert graph.entities["gamma"].aliases == ["GA", "Gamma Act"]
+
+
+def test_entity_keys_cover_names_aliases_and_parentheses():
+    from app.backend.knowledge_radar.graph import Entity, entity_keys
+
+    entity = Entity(id="w3c", type="Organization", name_en="World Wide Web Consortium (W3C)", name_de="W3C", aliases=["Web Consortium"])
+
+    assert {"w3c", "worldwidewebconsortium", "webconsortium"} <= entity_keys(entity)

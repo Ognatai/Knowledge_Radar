@@ -1,0 +1,24 @@
+# Development notes are used to tune the extraction agent (prompts, models,
+# pipeline); test notes are held out and only used to report final numbers.
+# Stratified by entity type and number of relations. The error analysis behind
+# the first guideline revision used only development notes.
+dev:
+  - agentic-ai
+  - decision-trees
+  - docker
+  - explainable-ai
+  - geschgehg
+  - graphrag
+  - knowledge-graphs
+  - lora
+  - tdddg
+test:
+  - attention-and-transformers
+  - bcbs-239-and-ecb-rdarr-guide
+  - bsi-kritisv
+  - graph-databases
+  - knowledge-distillation
+  - langchain-and-langgraph
+  - llm-as-a-judge
+  - mcp-and-related-protocols
+  - sparql
