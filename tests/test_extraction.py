@@ -23,7 +23,8 @@ def fake_llm(*answers):
 
     def generate(prompt, **_options):
         prompts.append(prompt)
-        return remaining.pop(0)
+        # Once the scripted answers are used up (e.g. by the relation pass), find nothing.
+        return remaining.pop(0) if remaining else json.dumps({"new_entities": [], "discusses": [], "relations": []})
 
     generate.prompts = prompts
     return generate
@@ -178,11 +179,11 @@ def test_failed_model_call_counts_as_an_attempt(tmp_path):
         calls.append(options)
         if len(calls) == 1:
             raise llm.LLMError("timed out")
-        return json.dumps({"new_entities": [], "discusses": ["beta"], "relations": []})
+        return json.dumps({"new_entities": [], "discusses": ["microsoft"], "relations": []})
 
     result = extract_note(alpha, known_entities(graph), generate=flaky)
 
-    assert result.discusses == ["beta"] and result.dropped == []
+    assert result.discusses == ["microsoft"] and result.dropped == []
     assert calls[0]["max_tokens"] and calls[0]["timeout"]
 
 
@@ -275,3 +276,42 @@ def test_prompt_contains_the_worked_examples(tmp_path):
     extract_note(alpha, known_entities(graph), generate=llm_answer)
 
     assert "Helm packages Kubernetes applications as charts" in llm_answer.prompts[0]
+
+
+def test_acronyms_match_only_in_their_exact_spelling():
+    from app.agents.extraction import mentioned_entities
+    from app.backend.knowledge_radar.graph import Entity
+
+    dora = Entity(id="dora", type="Regulation", name_en="Digital Operational Resilience Act (DORA)", name_de="DORA", aliases=["DORA"])
+
+    assert mentioned_entities("DoRA decomposes each weight matrix.", {"dora": dora}) == {}
+    assert "dora" in mentioned_entities("DORA requires ICT risk management.", {"dora": dora})
+    assert "dora" in mentioned_entities("the digital operational resilience act applies", {"dora": dora})
+
+
+def test_relation_pass_finds_relations_the_entity_pass_missed(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    llm_answer = fake_llm(
+        {"new_entities": [], "discusses": ["microsoft", "beta"], "relations": []},
+        {
+            "new_entities": [],
+            "discusses": [],
+            "relations": [{"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"}],
+        },
+    )
+
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer)
+
+    assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "DEVELOPED_BY", "microsoft")]
+    assert "Find every relation" in llm_answer.prompts[1]
+    assert "microsoft | Organization" in llm_answer.prompts[1]
+
+
+def test_entities_only_referenced_by_a_link_in_parentheses_are_not_discussed(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    note = alpha.model_copy(update={"content_en": "Alpha was developed by Microsoft; see also ([[beta|Beta]])."})
+    llm_answer = fake_llm({"new_entities": [], "discusses": ["microsoft", "beta"], "relations": []})
+
+    result = extract_note(note, known_entities(graph), generate=llm_answer)
+
+    assert result.discusses == ["microsoft"]

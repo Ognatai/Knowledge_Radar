@@ -111,6 +111,8 @@ def entity_keys(entity: Entity) -> set[str]:
         keys.add(normalize_name(name))
         keys.add(normalize_name(re.sub(r"\([^)]*\)", "", name)))
         keys.update(normalize_name(inner) for inner in re.findall(r"\(([^)]*)\)", name))
+    # Singular and plural name the same entity ("Random forests").
+    keys.update(key[:-1] for key in list(keys) if key.endswith("s") and len(key) > 4)
     keys.discard("")
     return keys
 

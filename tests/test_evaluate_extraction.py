@@ -64,3 +64,10 @@ def test_score_maps_predictions_to_gold_and_ignores_symmetric_direction():
     assert report["relations"]["tp"] == 2 and report["relations"]["fp"] == 1
     assert report["relations"]["recall"] == pytest.approx(1.0)
     assert report["notes"]["alpha"]["false_positive_relations"] == ["alpha DEVELOPED_BY predicted:openai"]
+
+
+def test_entities_align_across_singular_and_plural():
+    gold = {"random-forest": entity("random-forest", "Random forest")}
+    predicted = {"random-forests": entity("random-forests", "Random forests")}
+
+    assert align_entities(predicted, gold) == {"random-forests": "random-forest"}
