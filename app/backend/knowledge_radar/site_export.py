@@ -2,8 +2,8 @@
 
 The export reads only `public/notes/`. It produces the two-layer graph model:
 `Note` nodes, the `Entity` node each note describes (`DISCUSSES`), and note-to-note
-`RELATED_TO` edges from [[wikilinks]]. Once the Kuzu public index exists, this
-module becomes its export step; the JSON shape stays the same.
+`RELATED_TO` edges from [[wikilinks]]. Once versioned extraction results exist, this
+module reads them as well, still without a database; the JSON shape stays the same.
 """
 
 from __future__ import annotations
