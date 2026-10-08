@@ -39,3 +39,7 @@ relations:
     type: DEVELOPED_BY
     to: w3c
     evidence: RDF (W3C RDF 1.1 Concepts) and OWL (W3C OWL 2 Primer) are W3C standards
+  - from: knowledge-graphs
+    type: COMPLEMENTS
+    to: large-language-models
+    evidence: knowledge graphs increasingly complement large language models

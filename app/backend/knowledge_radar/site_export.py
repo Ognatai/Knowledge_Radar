@@ -14,7 +14,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, GraphError, load_graph
+from app.backend.knowledge_radar.graph import (
+    DEFAULT_GRAPH_DIRECTORY,
+    GraphError,
+    load_graph,
+    public_relation_types,
+)
 from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import (
     REPOSITORY_ROOT,
@@ -52,15 +57,19 @@ def build_site_data(notes: list[NoteDetail], graph_directory: Path | None) -> di
         for entity in sorted(graph.entities.values(), key=lambda entity: entity.id)
     ]
 
-    edges: list[dict[str, str]] = []
+    edges: list[dict[str, Any]] = []
     for note_slug, entity in sorted(graph.discusses):
         edges.append({"source": f"note:{note_slug}", "target": f"entity:{entity}", "type": "DISCUSSES"})
     for note in notes:
         for linked_slug in note.links:
             edges.append({"source": f"note:{note.slug}", "target": f"note:{linked_slug}", "type": "RELATED_TO"})
     # Several notes may support the same relation; the site shows it once.
+    symmetric_types = {name for name, definition in public_relation_types().items() if definition.symmetric}
     for source, relation_type, target in sorted({(r.source, r.type, r.target) for r in graph.relations}):
-        edges.append({"source": f"entity:{source}", "target": f"entity:{target}", "type": relation_type})
+        edge: dict[str, Any] = {"source": f"entity:{source}", "target": f"entity:{target}", "type": relation_type}
+        if relation_type in symmetric_types:
+            edge["undirected"] = True
+        edges.append(edge)
 
     return {
         "version": EXPORT_FORMAT_VERSION,

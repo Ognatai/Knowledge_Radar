@@ -15,3 +15,15 @@ relations:
     type: IMPLEMENTS
     to: mcp-and-related-protocols
     evidence: Frameworks such as LangChain and LangGraph convert MCP tools into their own tools
+  - from: mcp-and-related-protocols
+    type: BASED_ON
+    to: json-rpc
+    evidence: MCP builds on JSON-RPC, one of several API styles
+  - from: mcp-and-related-protocols
+    type: BASED_ON
+    to: language-server-protocol
+    evidence: "LSP: not an AI protocol, but the model for MCP's client-server idea"
+  - from: a2a
+    type: COMPLEMENTS
+    to: mcp-and-related-protocols
+    evidence: MCP is agent-to-tool, A2A agent-to-agent, and both are complementary

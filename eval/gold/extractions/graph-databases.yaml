@@ -15,3 +15,7 @@ relations:
     type: BASED_ON
     to: vector-databases
     evidence: Applications such as GraphRAG combine graph and vector stores
+  - from: graph-databases
+    type: COMPLEMENTS
+    to: vector-databases
+    evidence: They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search

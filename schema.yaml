@@ -58,15 +58,16 @@ node_types:
 relation_types:
   BASED_ON:
     visibility: public
-    from: [Method, Concept]
-    to: [Method, Concept]
+    from: [Method, Concept, Technology]
+    to: [Method, Concept, Technology]
   REGULATES:
     visibility: public
     from: [Regulation, Organization]
     to: [Method, Organization, Concept]
   DEVELOPED_BY:
+    # For a Regulation: the body that issued it.
     visibility: public
-    from: [Method, Concept, Technology]
+    from: [Method, Concept, Technology, Regulation]
     to: [Person, Organization]
   IMPLEMENTS:
     # Technology -> Method/Concept; Regulation -> Regulation: a national act
@@ -87,6 +88,17 @@ relation_types:
     visibility: public
     from: [Regulation]
     to: [Regulation]
+  TAKES_PRECEDENCE_OVER:
+    # Lex specialis or an explicit precedence rule.
+    visibility: public
+    from: [Regulation]
+    to: [Regulation]
+  COMPLEMENTS:
+    # Each covers what the other does not; order does not matter.
+    visibility: public
+    symmetric: true
+    from: [Method, Concept, Technology, Regulation]
+    to: [Method, Concept, Technology, Regulation]
   CONTRADICTS:
     visibility: public
     from: [Method, Concept]

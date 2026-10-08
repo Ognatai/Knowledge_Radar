@@ -37,6 +37,8 @@ export interface GraphEdge {
   source: string;
   target: string;
   type: string;
+  /** Symmetric relations such as COMPLEMENTS have no direction. */
+  undirected?: boolean;
 }
 
 export interface SiteData {

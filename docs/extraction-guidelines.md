@@ -65,10 +65,12 @@ of further reading, does not count.
 
 | Type | Meaning | Example evidence |
 | --- | --- | --- |
-| `BASED_ON` | builds on, extends, combines, uses as a component | "GraphRAG extends retrieval-augmented generation" |
-| `DEVELOPED_BY` | created or introduced by a person or organisation | "Microsoft's GraphRAG builds an entity graph" |
+| `BASED_ON` | builds on, extends, combines, uses as a component (also between technologies) | "GraphRAG extends retrieval-augmented generation"; "MCP builds on JSON-RPC" |
+| `DEVELOPED_BY` | created or introduced by a person or organisation; for a regulation, the issuing body | "Microsoft's GraphRAG builds an entity graph"; "BCBS 239 is the Basel Committee's set of 14 principles" |
 | `IMPLEMENTS` | a technology implements a method or concept; a national act transposes a directive or supplements a regulation | "transposes Directive (EU) 2016/943" |
 | `IS_EXAMPLE_OF` | an instance or variant of a broader concept, method or technology | "BM25 is a ranking function" |
 | `AMENDS` | a regulation amends, replaces or repeals another | "replaces the criminal provisions of sections 17 to 19 of the Act against Unfair Competition (UWG)" |
 | `REGULATES` | a regulation or authority governs something | "protects trade secrets against unlawful acquisition" |
+| `TAKES_PRECEDENCE_OVER` | a regulation prevails over another (lex specialis or an explicit precedence rule) | "the TDDDG (...) takes precedence over the BDSG" |
+| `COMPLEMENTS` | each covers what the other does not, or they are explicitly combined; symmetric, so list each pair once in either order | "MCP is agent-to-tool, A2A agent-to-agent, and both are complementary" |
 | `CONTRADICTS` | the text states the two are opposed or incompatible | |

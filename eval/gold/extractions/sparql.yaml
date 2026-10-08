@@ -7,3 +7,7 @@ relations:
     type: DEVELOPED_BY
     to: w3c
     evidence: SPARQL is the W3C query language for RDF knowledge graphs
+  - from: sparql
+    type: BASED_ON
+    to: rdf
+    evidence: SPARQL is the W3C query language for RDF knowledge graphs

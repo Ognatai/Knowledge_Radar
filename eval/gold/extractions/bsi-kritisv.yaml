@@ -1,7 +1,7 @@
 version: 1
 note_sha256: "b036e1b91c13f9947d8f2cd98ee78c95175ba9b8b5810fe8b5073be01938c0d6"
 extracted_by: manual
-discusses: [bsig, critical-facility, kritis-dachgesetz, cer-directive, nis2-directive]
+discusses: [bsig, critical-facility, kritis-dachgesetz, cer-directive, nis2-directive, federal-ministry-of-the-interior]
 relations:
   - from: bsi-kritisv
     type: IMPLEMENTS
@@ -19,3 +19,7 @@ relations:
     type: IMPLEMENTS
     to: nis2-directive
     evidence: under the German implementation of NIS2 in the BSIG
+  - from: bsi-kritisv
+    type: DEVELOPED_BY
+    to: federal-ministry-of-the-interior
+    evidence: Federal Ministry of the Interior as issuer of the Ordinance

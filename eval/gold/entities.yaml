@@ -331,3 +331,7 @@ entities:
     type: Regulation
     name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
     name_de: Einwilligungsverwaltungsverordnung (EinwV)
+  - id: federal-ministry-of-the-interior
+    type: Organization
+    name_en: Federal Ministry of the Interior
+    name_de: Bundesministerium des Innern

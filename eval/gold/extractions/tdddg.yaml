@@ -31,3 +31,11 @@ relations:
     type: IMPLEMENTS
     to: tdddg
     evidence: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung) under § 26 enters into force
+  - from: tdddg
+    type: TAKES_PRECEDENCE_OVER
+    to: bdsg
+    evidence: the TDDDG is a specific federal data protection law and takes precedence over the BDSG
+  - from: tdddg
+    type: COMPLEMENTS
+    to: gdpr
+    evidence: The TDDDG only covers access to the device; any subsequent processing of personal data needs a legal basis under the GDPR

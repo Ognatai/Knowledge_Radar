@@ -43,3 +43,25 @@ def test_relation_supported_by_several_notes_is_exported_once(tmp_path):
     edges = json.loads(output.read_text(encoding="utf-8"))["graph"]["edges"]
 
     assert sum(edge["type"] == "DEVELOPED_BY" for edge in edges) == 1
+
+
+def test_symmetric_relations_are_exported_as_undirected(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    relations = ALPHA_RELATIONS + """
+  - from: beta
+    type: COMPLEMENTS
+    to: alpha
+    evidence: builds on Beta
+"""
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), relations))
+
+    output = export_site_data(notes_dir, graph_dir, tmp_path / "out")
+    edges = {edge["type"]: edge for edge in json.loads(output.read_text(encoding="utf-8"))["graph"]["edges"]}
+
+    assert edges["COMPLEMENTS"] == {
+        "source": "entity:alpha",
+        "target": "entity:beta",
+        "type": "COMPLEMENTS",
+        "undirected": True,
+    }
+    assert "undirected" not in edges["BASED_ON"]

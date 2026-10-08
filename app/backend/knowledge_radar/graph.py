@@ -62,6 +62,15 @@ class Relation:
     evidence: str
 
 
+@dataclass(frozen=True)
+class RelationType:
+    from_types: frozenset[str]
+    to_types: frozenset[str]
+    # Symmetric relations (A COMPLEMENTS B = B COMPLEMENTS A) are stored with the
+    # smaller id as source, so both directions count as the same relation.
+    symmetric: bool = False
+
+
 @dataclass
 class KnowledgeGraph:
     entities: dict[str, Entity]
@@ -73,14 +82,18 @@ class KnowledgeGraph:
 
 
 @cache
-def public_relation_types(schema_path: Path = SCHEMA_PATH) -> dict[str, tuple[frozenset[str], frozenset[str]]]:
-    """Extractable public relation types with their allowed (from, to) entity types."""
+def public_relation_types(schema_path: Path = SCHEMA_PATH) -> dict[str, RelationType]:
+    """Extractable public relation types with their allowed entity types."""
     schema = yaml.safe_load(schema_path.read_text(encoding="utf-8"))
-    relation_types: dict[str, tuple[frozenset[str], frozenset[str]]] = {}
+    relation_types: dict[str, RelationType] = {}
     for name, definition in schema.get("relation_types", {}).items():
         if definition.get("visibility") != "public" or name in DERIVED_RELATION_TYPES:
             continue
-        relation_types[name] = (frozenset(definition["from"]), frozenset(definition["to"]))
+        relation_types[name] = RelationType(
+            from_types=frozenset(definition["from"]),
+            to_types=frozenset(definition["to"]),
+            symmetric=bool(definition.get("symmetric", False)),
+        )
     return relation_types
 
 
@@ -197,17 +210,19 @@ def _load_extraction(
         for endpoint in (source, target):
             if endpoint not in discussed:
                 raise GraphError(f"{label}: '{endpoint}' is not listed in 'discusses'.")
-        from_types, to_types = allowed[relation_type]
+        definition = allowed[relation_type]
         source_type = graph.entities[source].type
         target_type = graph.entities[target].type
-        if source_type not in from_types or target_type not in to_types:
+        if source_type not in definition.from_types or target_type not in definition.to_types:
             raise GraphError(
                 f"{label}: {relation_type} does not allow {source_type} -> {target_type} "
-                f"(schema: {sorted(from_types)} -> {sorted(to_types)})."
+                f"(schema: {sorted(definition.from_types)} -> {sorted(definition.to_types)})."
             )
         evidence = _text(entry, "evidence", label)
         if plain_text(evidence) not in note_text:
             raise GraphError(f"{label}: evidence is not a verbatim quote from the EN section: {evidence!r}.")
+        if definition.symmetric and target < source:
+            source, target = target, source
         graph.relations.append(
             Relation(source=source, type=relation_type, target=target, note=note.slug, evidence=evidence)
         )

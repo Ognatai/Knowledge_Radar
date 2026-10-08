@@ -113,7 +113,7 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
             graphData={graphData}
             height={height}
             linkColor={(link) => EDGE_COLORS[link.type] ?? RELATION_COLOR}
-            linkDirectionalArrowLength={(link) => (isRelation(link) ? 4 : 0)}
+            linkDirectionalArrowLength={(link) => (isRelation(link) && !link.undirected ? 4 : 0)}
             linkDirectionalArrowRelPos={1}
             linkLabel={(link) => escapeHtml(link.type)}
             linkWidth={(link) => (link.type === "RELATED_TO" ? 2 : link.type === "DISCUSSES" ? 1 : 1.5)}

@@ -205,3 +205,18 @@ def test_note_hash_ignores_line_endings(tmp_path):
     crlf.write_bytes(b"---\r\ntitle_en: A\r\n---\r\n")
 
     assert note_sha256(lf) == note_sha256(crlf)
+
+
+def test_symmetric_relations_are_stored_in_one_direction(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    relations = """
+  - from: beta
+    type: COMPLEMENTS
+    to: alpha
+    evidence: Alpha was developed by Microsoft and builds on Beta
+"""
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), relations))
+
+    graph = load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+    assert [(r.source, r.type, r.target) for r in graph.relations] == [("alpha", "COMPLEMENTS", "beta")]

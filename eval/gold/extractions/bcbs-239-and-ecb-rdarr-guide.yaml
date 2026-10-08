@@ -11,3 +11,11 @@ relations:
     type: IMPLEMENTS
     to: crr-and-crd
     evidence: the expectations specify the governance and risk management requirements of the CRD (Articles 74, 76 and 88)
+  - from: bcbs-239-and-ecb-rdarr-guide
+    type: DEVELOPED_BY
+    to: basel-committee
+    evidence: BCBS 239 is the Basel Committee's set of 14 principles
+  - from: bcbs-239-and-ecb-rdarr-guide
+    type: DEVELOPED_BY
+    to: ecb
+    evidence: sets out the ECB's minimum supervisory expectations

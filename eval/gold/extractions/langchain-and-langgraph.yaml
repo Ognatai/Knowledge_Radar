@@ -11,3 +11,7 @@ relations:
     type: IMPLEMENTS
     to: mcp-and-related-protocols
     evidence: Convert Model Context Protocol tools into LangChain tools
+  - from: langchain-and-langgraph
+    type: BASED_ON
+    to: react
+    evidence: an approach introduced as ReAct

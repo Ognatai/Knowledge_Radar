@@ -15,3 +15,11 @@ relations:
     type: BASED_ON
     to: container-image
     evidence: ML models are commonly served from container images that pin the model, code and dependencies
+  - from: container-image
+    type: BASED_ON
+    to: dockerfile
+    evidence: images, which are built from a Dockerfile
+  - from: kubernetes
+    type: BASED_ON
+    to: container
+    evidence: Containers became the unit of deployment that orchestrators such as Kubernetes manage
