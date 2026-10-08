@@ -1,0 +1,85 @@
+# Worked examples for the extraction prompt (few-shot), labelled by hand following
+# docs/extraction-guidelines.md. Passages come from notes outside the gold
+# standard; sentences whose facts also appear in gold labels are left out, so
+# the examples teach the rules without giving away gold answers.
+# tests/test_extraction.py checks that every example is valid.
+version: 1
+examples:
+  - note: quantization
+    note_type: Method
+    note_name: Quantization
+    known: []
+    text: >-
+      Quantization stores a network's weights, and often its activations, with
+      fewer bits, for example 8-bit integers instead of 32-bit floats, which
+      reduces memory, power and latency at the cost of some added noise (Nagel
+      et al., 2021). Post-training quantization works without retraining and
+      usually suffices for 8 bits; quantization-aware training enables lower bit
+      widths (Nagel et al., 2021; Jacob et al., 2017). For large language models,
+      methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al.,
+      2022) and AWQ (Lin et al., 2023) quantize weights to 8, 4 or 3 bits with
+      little loss.
+    answer:
+      new_entities:
+        - {id: post-training-quantization, type: Method, name_en: Post-training quantization, name_de: Post-Training Quantization}
+        - {id: quantization-aware-training, type: Method, name_en: Quantization-aware training, name_de: Quantization-Aware Training}
+        - {id: llm-int8, type: Method, name_en: LLM.int8(), name_de: LLM.int8()}
+        - {id: gptq, type: Method, name_en: GPTQ, name_de: GPTQ}
+        - {id: awq, type: Method, name_en: AWQ, name_de: AWQ}
+      discusses: [post-training-quantization, quantization-aware-training, llm-int8, gptq, awq]
+      relations:
+        - {from: llm-int8, type: IS_EXAMPLE_OF, to: quantization, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
+        - {from: gptq, type: IS_EXAMPLE_OF, to: quantization, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
+        - {from: awq, type: IS_EXAMPLE_OF, to: quantization, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
+    why: >-
+      The listed methods are the subjects of IS_EXAMPLE_OF; the topic is not
+      BASED_ON them. Post-training quantization and quantization-aware training
+      are described, so they are discussed, but the text states no relation for
+      them. "Large language models" is only the setting, and the cited authors
+      are references, not entities.
+  - note: kubernetes
+    note_type: Technology
+    note_name: Kubernetes
+    known: []
+    text: >-
+      Users describe the desired state, for example three replicas of an API,
+      and controllers continuously move the actual state towards it, restarting
+      failed containers, rolling out new versions and rolling them back
+      (Kubernetes Deployments docs). Its design grew out of a decade of container
+      management at Google (Burns et al., 2016), and Helm packages Kubernetes
+      applications as charts (Helm docs).
+    answer:
+      new_entities:
+        - {id: google, type: Organization, name_en: Google, name_de: Google}
+        - {id: helm, type: Technology, name_en: Helm, name_de: Helm}
+      discusses: [google, helm]
+      relations:
+        - {from: kubernetes, type: DEVELOPED_BY, to: google, evidence: "Its design grew out of a decade of container management at Google"}
+        - {from: helm, type: BASED_ON, to: kubernetes, evidence: "Helm packages Kubernetes applications as charts"}
+    why: >-
+      Helm is the subject of its relation: it builds on Kubernetes, so the
+      note's own entity is the object here. Generic terms (replicas, controllers,
+      versions) are not entities.
+  - note: bdsg
+    note_type: Regulation
+    note_name: Federal Data Protection Act (BDSG)
+    known:
+      - {id: gdpr, type: Regulation, name_en: General Data Protection Regulation (GDPR)}
+    text: >-
+      The Federal Data Protection Act (Bundesdatenschutzgesetz, BDSG) is
+      Germany's general data protection law alongside the GDPR. It does not
+      repeat the GDPR. Instead, it fills the GDPR's opening clauses with German
+      rules, for example on employee data, video surveillance, scoring, research
+      and data protection officers. It also implements the EU directive on data
+      protection in criminal law enforcement (Directive (EU) 2016/680).
+    answer:
+      new_entities:
+        - {id: law-enforcement-directive, type: Regulation, name_en: Law Enforcement Directive (EU) 2016/680, name_de: Richtlinie (EU) 2016/680 (JI-Richtlinie)}
+      discusses: [gdpr, law-enforcement-directive]
+      relations:
+        - {from: bdsg, type: IMPLEMENTS, to: gdpr, evidence: "it fills the GDPR's opening clauses with German rules"}
+        - {from: bdsg, type: IMPLEMENTS, to: law-enforcement-directive, evidence: "It also implements the EU directive on data protection in criminal law enforcement (Directive (EU) 2016/680)"}
+    why: >-
+      Supplementing a regulation and transposing a directive are both IMPLEMENTS
+      between regulations. "Alongside the GDPR" alone is not COMPLEMENTS. The
+      listed topics (employee data, scoring) are only enumerated, not defined.

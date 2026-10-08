@@ -48,6 +48,7 @@ from app.backend.knowledge_radar.notes import (
 )
 
 GUIDELINES_PATH = REPOSITORY_ROOT / "docs" / "extraction-guidelines.md"
+EXAMPLES_PATH = REPOSITORY_ROOT / "docs" / "extraction-examples.yaml"
 # About 3,000 tokens of note text per call, leaving room for the guidelines,
 # the entity list and the answer in the context window.
 MAX_CHUNK_CHARS = 12_000
@@ -204,12 +205,54 @@ def _entity_table(entities: dict[str, Entity]) -> str:
     return "\n".join(rows)
 
 
-def build_prompt(note: NoteDetail, chunk: str, entities: dict[str, Entity], guidelines: str) -> str:
+def example_note(example: dict[str, Any]) -> NoteDetail:
+    """The note a worked example's passage belongs to."""
+    return NoteDetail(
+        slug=example["note"],
+        title_en=example["note_name"],
+        title_de=example["note_name"],
+        entity_type=example["note_type"],
+        sources=["https://example.org"],
+        content_en=example["text"],
+        content_de=example["text"],
+    )
+
+
+def render_examples(examples: list[dict[str, Any]]) -> str:
+    blocks = []
+    for number, example in enumerate(examples, start=1):
+        known = "\n".join(f"{k['id']} | {k['type']} | {k['name_en']}" for k in example["known"]) or "(none)"
+        blocks.append(
+            f"""<example number="{number}">
+Note about `{example['note']}` ({example['note_type']}: {example['note_name']}).
+Known entities mentioned:
+{known}
+Text:
+{example['text']}
+Answer:
+{json.dumps(example['answer'], ensure_ascii=False, indent=1)}
+Why: {example['why']}
+</example>"""
+        )
+    return "\n\n".join(blocks)
+
+
+def build_prompt(
+    note: NoteDetail,
+    chunk: str,
+    entities: dict[str, Entity],
+    guidelines: str,
+    examples: str = "",
+) -> str:
     return f"""You extract a knowledge graph from a note, following these guidelines exactly.
 
 <guidelines>
 {guidelines}
 </guidelines>
+
+<worked_examples>
+{examples}
+</worked_examples>
 
 <schema>
 {_schema_summary()}
@@ -252,6 +295,11 @@ class _ChunkResult:
     relations: list[dict[str, str]]
     new_entities: dict[str, Entity]
     problems: list[str]
+
+
+def check_answer(answer: str, note: NoteDetail, entities: dict[str, Entity]) -> _ChunkResult:
+    """Validate a model answer for `note`; public for checking the worked examples."""
+    return _check(answer, note, entities, plain_text(note.content_en))
 
 
 def _check(answer: str, note: NoteDetail, entities: dict[str, Entity], note_text: str) -> _ChunkResult:
@@ -371,6 +419,7 @@ def extract_note(
 ) -> NoteExtraction:
     """Extract one note chunk by chunk; new entities of earlier chunks are known later."""
     guidelines = guidelines if guidelines is not None else GUIDELINES_PATH.read_text(encoding="utf-8")
+    examples = render_examples(yaml.safe_load(EXAMPLES_PATH.read_text(encoding="utf-8"))["examples"])
     note_text = plain_text(note.content_en)
     known = dict(entities)
     result = NoteExtraction()
@@ -378,7 +427,7 @@ def extract_note(
     seen_relations: set[tuple[str, str, str]] = set()
 
     for chunk in chunk_text(reading_text(note.content_en)):
-        prompt = build_prompt(note, chunk, mentioned_entities(chunk, known), guidelines)
+        prompt = build_prompt(note, chunk, mentioned_entities(chunk, known), guidelines, examples)
         current_prompt = prompt
         for attempt in range(1, max_attempts + 1):
             try:

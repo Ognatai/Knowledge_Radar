@@ -247,3 +247,31 @@ def test_new_entity_is_not_merged_with_a_known_entity_of_another_type(tmp_path):
     assert result.new_entities == []
     assert "already used by" in result.dropped[0]
     assert "already used by" in llm_answer.prompts[1]
+
+
+def test_worked_examples_follow_the_rules():
+    from app.agents.extraction import EXAMPLES_PATH, check_answer, example_note
+    from app.backend.knowledge_radar.graph import Entity
+
+    examples = yaml.safe_load(EXAMPLES_PATH.read_text(encoding="utf-8"))["examples"]
+    assert examples
+    for example in examples:
+        note = example_note(example)
+        known = {
+            note.slug: Entity(id=note.slug, type=note.entity_type, name_en=note.title_en, name_de=note.title_en, note=note.slug),
+            **{k["id"]: Entity(id=k["id"], type=k["type"], name_en=k["name_en"], name_de=k["name_en"]) for k in example["known"]},
+        }
+
+        checked = check_answer(json.dumps(example["answer"]), note, known)
+
+        assert checked.problems == [], example["note"]
+        assert len(checked.relations) == len(example["answer"]["relations"])
+
+
+def test_prompt_contains_the_worked_examples(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    llm_answer = fake_llm({"new_entities": [], "discusses": [], "relations": []})
+
+    extract_note(alpha, known_entities(graph), generate=llm_answer)
+
+    assert "Helm packages Kubernetes applications as charts" in llm_answer.prompts[0]
