@@ -168,6 +168,42 @@ def _load_registry(path: Path, entities: dict[str, Entity]) -> None:
         )
 
 
+def relation_problem(
+    entities: dict[str, Entity],
+    discussed: set[str],
+    note_text: str,
+    source: str,
+    relation_type: str,
+    target: str,
+    evidence: str,
+) -> str | None:
+    """Why a relation violates the graph contract, or None if it is valid.
+
+    `note_text` is `plain_text()` of the note's EN section; `discussed` includes the
+    note's own entity. Shared by the loader and the extraction agent.
+    """
+    allowed = public_relation_types()
+    if relation_type not in allowed:
+        return (
+            f"'{relation_type}' is not an extractable public relation type "
+            f"({', '.join(sorted(allowed))})."
+        )
+    for endpoint in (source, target):
+        if endpoint not in discussed:
+            return f"'{endpoint}' is not listed in 'discusses'."
+    definition = allowed[relation_type]
+    source_type = entities[source].type
+    target_type = entities[target].type
+    if source_type not in definition.from_types or target_type not in definition.to_types:
+        return (
+            f"{relation_type} does not allow {source_type} -> {target_type} "
+            f"(schema: {sorted(definition.from_types)} -> {sorted(definition.to_types)})."
+        )
+    if plain_text(evidence) not in note_text:
+        return f"evidence is not a verbatim quote from the EN section: {evidence!r}."
+    return None
+
+
 def _load_extraction(
     path: Path,
     note: NoteDetail,
@@ -202,25 +238,11 @@ def _load_extraction(
         relation_type = _text(entry, "type", where)
         target = _text(entry, "to", where)
         label = f"{where}: relation {source} {relation_type} {target}"
-        if relation_type not in allowed:
-            raise GraphError(
-                f"{label}: '{relation_type}' is not an extractable public relation type "
-                f"({', '.join(sorted(allowed))})."
-            )
-        for endpoint in (source, target):
-            if endpoint not in discussed:
-                raise GraphError(f"{label}: '{endpoint}' is not listed in 'discusses'.")
-        definition = allowed[relation_type]
-        source_type = graph.entities[source].type
-        target_type = graph.entities[target].type
-        if source_type not in definition.from_types or target_type not in definition.to_types:
-            raise GraphError(
-                f"{label}: {relation_type} does not allow {source_type} -> {target_type} "
-                f"(schema: {sorted(definition.from_types)} -> {sorted(definition.to_types)})."
-            )
         evidence = _text(entry, "evidence", label)
-        if plain_text(evidence) not in note_text:
-            raise GraphError(f"{label}: evidence is not a verbatim quote from the EN section: {evidence!r}.")
+        problem = relation_problem(graph.entities, discussed, note_text, source, relation_type, target, evidence)
+        if problem:
+            raise GraphError(f"{label}: {problem}")
+        definition = allowed[relation_type]
         if definition.symmetric and target < source:
             source, target = target, source
         graph.relations.append(

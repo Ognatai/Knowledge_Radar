@@ -33,6 +33,7 @@ def generate(
     *,
     temperature: float = 0.2,
     json_output: bool = False,
+    json_schema: dict[str, Any] | None = None,
     context_tokens: int = 24576,
     max_tokens: int | None = None,
     sampling: dict[str, float] | None = None,
@@ -42,7 +43,8 @@ def generate(
 ) -> str:
     """Return the model's completion for a single prompt.
 
-    `max_tokens` caps the output including reasoning (protects against loops);
+    `json_schema` constrains the answer to that JSON schema (Ollama structured
+    outputs); `json_output` only requires valid JSON. `max_tokens` caps the output including reasoning (protects against loops);
     `sampling` adds options such as top_p or presence_penalty. With `think`,
     the model reasons first; Ollama returns that reasoning separately, so the
     answer contains only the final text (models such as qwen3:30b-a3b otherwise
@@ -59,7 +61,9 @@ def generate(
         "think": think,
         "options": options,
     }
-    if json_output:
+    if json_schema is not None:
+        body["format"] = json_schema
+    elif json_output:
         body["format"] = "json"
     request = urllib.request.Request(
         f"{base_url()}/api/generate",

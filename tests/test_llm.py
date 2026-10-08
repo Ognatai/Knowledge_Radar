@@ -28,3 +28,18 @@ def test_llm_errors_are_wrapped(monkeypatch):
 
     with pytest.raises(llm.LLMError, match="connection refused"):
         llm.generate("hello")
+
+
+def test_llm_generate_can_constrain_output_to_a_json_schema(monkeypatch):
+    sent = {}
+
+    def fake_urlopen(request, timeout):
+        sent.update(json.loads(request.data))
+        return io.BytesIO(json.dumps({"response": "{}"}).encode())
+
+    monkeypatch.setattr(llm.urllib.request, "urlopen", fake_urlopen)
+    schema = {"type": "object", "properties": {"a": {"type": "string"}}}
+
+    llm.generate("hello", json_schema=schema)
+
+    assert sent["format"] == schema
