@@ -36,6 +36,7 @@ FORMAT_VERSION = 1
 # Relations a note's text can support; DISCUSSES and RELATED_TO are derived, not extracted.
 DERIVED_RELATION_TYPES = frozenset({"DISCUSSES", "RELATED_TO"})
 ENTITY_ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+EVIDENCE_EDGE_CHARACTERS = " .,;:!?"
 WIKILINK_LABEL_PATTERN = re.compile(r"\[\[([^\[\]|#\\]+)(?:#[^\[\]|\\]*)?(?:\\?\|([^\[\]]*))?\]\]")
 
 
@@ -199,7 +200,8 @@ def relation_problem(
             f"{relation_type} does not allow {source_type} -> {target_type} "
             f"(schema: {sorted(definition.from_types)} -> {sorted(definition.to_types)})."
         )
-    if plain_text(evidence) not in note_text:
+    # Models often end a correct quote with different punctuation than the text.
+    if plain_text(evidence).strip(EVIDENCE_EDGE_CHARACTERS) not in note_text:
         return f"evidence is not a verbatim quote from the EN section: {evidence!r}."
     return None
 

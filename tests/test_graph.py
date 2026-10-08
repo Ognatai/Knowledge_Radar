@@ -220,3 +220,18 @@ def test_symmetric_relations_are_stored_in_one_direction(tmp_path):
     graph = load_graph(graph_dir, load_notes(notes_dir), notes_dir)
 
     assert [(r.source, r.type, r.target) for r in graph.relations] == [("alpha", "COMPLEMENTS", "beta")]
+
+
+def test_evidence_may_differ_in_surrounding_punctuation(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    relations = """
+  - from: alpha
+    type: DEVELOPED_BY
+    to: microsoft
+    evidence: "Alpha was developed by Microsoft."
+"""
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), relations))
+
+    graph = load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+    assert len(graph.relations) == 1
