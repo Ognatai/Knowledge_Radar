@@ -1157,3 +1157,34 @@ entities:
   type: Method
   name_en: Rule mining
   name_de: Regel-Mining
+- id: ict-risk-management
+  type: Concept
+  name_en: ICT risk management
+  name_de: IKT-Risikomanagement
+- id: ict-third-party-risk
+  type: Concept
+  name_en: ICT third-party risk
+  name_de: IKT-Drittparteienrisiko
+- id: threat-led-penetration-testing
+  type: Method
+  name_en: Threat-led penetration testing (TLPT)
+  name_de: Bedrohungsorientierte Penetrationstests (TLPT)
+  aliases:
+  - TLPT
+- id: critical-ict-third-party-provider
+  type: Concept
+  name_en: Critical ICT third-party service provider
+  name_de: Kritischer IKT-Drittdienstleister
+- id: credit-rating-agencies-regulation
+  type: Regulation
+  name_en: Credit Rating Agencies Regulation (EC) No 1060/2009
+  name_de: Ratingagentur-Verordnung (EG) Nr. 1060/2009
+  aliases:
+  - Regulation (EC) No 1060/2009
+- id: emir
+  type: Regulation
+  name_en: European Market Infrastructure Regulation (EU) No 648/2012 (EMIR)
+  name_de: Verordnung (EU) Nr. 648/2012 über OTC-Derivate
+  aliases:
+  - EMIR
+  - Regulation (EU) No 648/2012

@@ -1,0 +1,57 @@
+version: 1
+note_sha256: df5c5d9b02ff969c605a55d4f9f803a499f82f18af75ce2c0f969036b29d8582
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- nis2-directive
+- cer-directive
+- eba-governance-and-outsourcing-guidelines
+- crr-and-crd
+- kwg
+- marisk
+- gdpr
+- ecb
+- bafin
+- eba
+- ict-risk-management
+- ict-third-party-risk
+- threat-led-penetration-testing
+- critical-ict-third-party-provider
+- credit-rating-agencies-regulation
+- emir
+relations:
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: nis2-directive
+  evidence: DORA takes precedence for financial entities
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: cer-directive
+  evidence: banking and financial market infrastructure entities are exempt from CER resilience obligations because DORA applies
+- from: dora
+  type: COMPLEMENTS
+  to: eba-governance-and-outsourcing-guidelines
+  evidence: DORA governs ICT third-party risk, the EBA guidelines the remaining outsourcing and governance requirements
+- from: dora
+  type: AMENDS
+  to: credit-rating-agencies-regulation
+  evidence: Amends Regulation (EC) No 1060/2009 to require credit rating agencies to have sound administrative and accounting procedures
+- from: dora
+  type: AMENDS
+  to: emir
+  evidence: Amends Regulation (EU) No 648/2012 to require central counterparties to maintain organisational structures and employ ICT systems
+- from: dora
+  type: REGULATES
+  to: ict-risk-management
+  evidence: They need an ICT risk management framework for which the management body is responsible
+- from: dora
+  type: REGULATES
+  to: ict-third-party-risk
+  evidence: manage the risk from ICT third-party service providers through registers, contract terms and exit strategies
+- from: dora
+  type: REGULATES
+  to: threat-led-penetration-testing
+  evidence: for selected entities through threat-led penetration testing every three years
+- from: dora
+  type: REGULATES
+  to: critical-ict-third-party-provider
+  evidence: critical ICT third-party service providers such as large cloud providers are directly overseen at EU level
