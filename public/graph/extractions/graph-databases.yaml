@@ -1,0 +1,21 @@
+version: 1
+note_sha256: "6dbbdeb9b794eed57090848092688d1e6d7f4d2b6b9672c4b2704be95d39be0d"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [property-graph, cypher, neo4j, rdf, sparql, vector-databases, graphrag]
+relations:
+  - from: neo4j
+    type: IS_EXAMPLE_OF
+    to: graph-databases
+    evidence: Property graph databases such as Neo4j with Cypher
+  - from: graphrag
+    type: BASED_ON
+    to: graph-databases
+    evidence: Applications such as GraphRAG combine graph and vector stores
+  - from: graphrag
+    type: BASED_ON
+    to: vector-databases
+    evidence: Applications such as GraphRAG combine graph and vector stores
+  - from: graph-databases
+    type: COMPLEMENTS
+    to: vector-databases
+    evidence: They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search

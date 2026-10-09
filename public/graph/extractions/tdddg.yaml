@@ -1,0 +1,41 @@
+version: 1
+note_sha256: "eeeabf277a120ea872339baa3b793fa861bf53f40c7480a1a4f5353627a2abe4"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [eprivacy-directive, secrecy-of-telecommunications, cookie-consent, gdpr, bdsg, bfdi, federal-network-agency, digitale-dienste-gesetz, digital-services-act, tkg, e-evidence-regulation, einwilligungsverwaltungsverordnung]
+relations:
+  - from: tdddg
+    type: IMPLEMENTS
+    to: eprivacy-directive
+    evidence: The Act implements the ePrivacy Directive
+  - from: tdddg
+    type: REGULATES
+    to: secrecy-of-telecommunications
+    evidence: It protects the secrecy of telecommunications
+  - from: tdddg
+    type: REGULATES
+    to: cookie-consent
+    evidence: requires consent before information is stored on or read from a user's device, unless strictly necessary
+  - from: digitale-dienste-gesetz
+    type: AMENDS
+    to: tdddg
+    evidence: Renamed TDDDG by the Digitale-Dienste-Gesetz
+  - from: digitale-dienste-gesetz
+    type: IMPLEMENTS
+    to: digital-services-act
+    evidence: the Digitale-Dienste-Gesetz, which implements the EU Digital Services Act
+  - from: tdddg
+    type: IMPLEMENTS
+    to: e-evidence-regulation
+    evidence: Regulates the processing of personal data by telecommunications providers to comply with European production or preservation orders under Regulation (EU) 2023/1543
+  - from: einwilligungsverwaltungsverordnung
+    type: IMPLEMENTS
+    to: tdddg
+    evidence: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung) under § 26 enters into force
+  - from: tdddg
+    type: TAKES_PRECEDENCE_OVER
+    to: bdsg
+    evidence: the TDDDG is a specific federal data protection law and takes precedence over the BDSG
+  - from: tdddg
+    type: COMPLEMENTS
+    to: gdpr
+    evidence: The TDDDG only covers access to the device; any subsequent processing of personal data needs a legal basis under the GDPR

@@ -1,0 +1,13 @@
+version: 1
+note_sha256: "1dd7aabe533c842875944e65926ed74908eb6dae41733afb5b3c1c10f9323aa6"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [large-language-models, toolformer, function-calling, react, memgpt, reflexion, prompt-injection, multi-agent-systems, langchain-and-langgraph]
+relations:
+  - from: agentic-ai
+    type: BASED_ON
+    to: large-language-models
+    evidence: agents are LLMs autonomously using tools in a loop
+  - from: langchain-and-langgraph
+    type: IMPLEMENTS
+    to: agentic-ai
+    evidence: frameworks such as LangChain and LangGraph made them easier to build

@@ -1,0 +1,21 @@
+version: 1
+note_sha256: "0f111ef94eef5693df8b603371e9ab8fa3f271c5d2ad4841c9e3c706b6fb22a2"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [basel-committee, ecb, risk-data-aggregation, crr-and-crd, eba-governance-and-outsourcing-guidelines, marisk, dora]
+relations:
+  - from: bcbs-239-and-ecb-rdarr-guide
+    type: REGULATES
+    to: risk-data-aggregation
+    evidence: BCBS 239 is the Basel Committee's set of 14 principles for effective risk data aggregation and risk reporting (RDARR)
+  - from: bcbs-239-and-ecb-rdarr-guide
+    type: IMPLEMENTS
+    to: crr-and-crd
+    evidence: the expectations specify the governance and risk management requirements of the CRD (Articles 74, 76 and 88)
+  - from: bcbs-239-and-ecb-rdarr-guide
+    type: DEVELOPED_BY
+    to: basel-committee
+    evidence: BCBS 239 is the Basel Committee's set of 14 principles
+  - from: bcbs-239-and-ecb-rdarr-guide
+    type: DEVELOPED_BY
+    to: ecb
+    evidence: sets out the ECB's minimum supervisory expectations

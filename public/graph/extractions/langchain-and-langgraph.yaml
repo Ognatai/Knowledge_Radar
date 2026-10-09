@@ -1,0 +1,17 @@
+version: 1
+note_sha256: "cbe947e3f5751ddcddffddabb809c44b8db85bd8c085fa6b9f275878d70b867e"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [agentic-ai, react, mcp-and-related-protocols]
+relations:
+  - from: langchain-and-langgraph
+    type: IMPLEMENTS
+    to: agentic-ai
+    evidence: LangChain and LangGraph are open-source frameworks for building LLM applications and agents
+  - from: langchain-and-langgraph
+    type: IMPLEMENTS
+    to: mcp-and-related-protocols
+    evidence: Convert Model Context Protocol tools into LangChain tools
+  - from: langchain-and-langgraph
+    type: BASED_ON
+    to: react
+    evidence: an approach introduced as ReAct

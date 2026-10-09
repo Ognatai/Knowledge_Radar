@@ -1,0 +1,33 @@
+version: 1
+note_sha256: "bbee684dc37dae9b997d9e04b0ffc6111ff2b39009a3c63eedc70e91d6d0508a"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [id3, cart, cost-complexity-pruning, random-forest, ensemble-methods, scikit-learn]
+relations:
+  - from: id3
+    type: IS_EXAMPLE_OF
+    to: decision-trees
+    evidence: ID3 (Quinlan, 1986) and CART-style trees (Hastie et al., 2009) are the classical tree-building methods
+  - from: cart
+    type: IS_EXAMPLE_OF
+    to: decision-trees
+    evidence: ID3 (Quinlan, 1986) and CART-style trees (Hastie et al., 2009) are the classical tree-building methods
+  - from: cart
+    type: BASED_ON
+    to: cost-complexity-pruning
+    evidence: CART therefore grows a large tree and prunes it back by cost-complexity pruning
+  - from: random-forest
+    type: BASED_ON
+    to: decision-trees
+    evidence: Random forests reduce this variance by growing many trees on bootstrap samples
+  - from: random-forest
+    type: IS_EXAMPLE_OF
+    to: ensemble-methods
+    evidence: Random forests (Breiman, 2001) and boosting build ensembles of trees
+  - from: scikit-learn
+    type: IMPLEMENTS
+    to: decision-trees
+    evidence: Decision trees and random forests are available in common libraries such as scikit-learn
+  - from: scikit-learn
+    type: IMPLEMENTS
+    to: random-forest
+    evidence: Decision trees and random forests are available in common libraries such as scikit-learn

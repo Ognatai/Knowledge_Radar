@@ -1,0 +1,25 @@
+version: 1
+note_sha256: "c0c047fdb97263a0e21ae77f5c457550fc980a426ada9eb3ec21447ab98e54a1"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [llm-adaptation, intrinsic-dimension, qlora, weight-decomposed-low-rank-adaptation, quantization, adapter-layers]
+relations:
+  - from: lora
+    type: IS_EXAMPLE_OF
+    to: llm-adaptation
+    evidence: LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning method (LLM Adaptation)
+  - from: lora
+    type: BASED_ON
+    to: intrinsic-dimension
+    evidence: The motivation from intrinsic dimensionality comes from Aghajanyan et al. (2020)
+  - from: qlora
+    type: BASED_ON
+    to: lora
+    evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantized base model
+  - from: qlora
+    type: BASED_ON
+    to: quantization
+    evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantized base model
+  - from: weight-decomposed-low-rank-adaptation
+    type: BASED_ON
+    to: lora
+    evidence: using LoRA for the direction to keep the number of trainable parameters small

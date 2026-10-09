@@ -1,0 +1,25 @@
+version: 1
+note_sha256: "4dde70145b47c688d14cbb1173b48193c8bbe27d06a83f345e8d04a4884b86c6"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [container, container-image, dockerfile, docker-volume, docker-compose, kubernetes, mlops-and-deployment]
+relations:
+  - from: docker
+    type: IMPLEMENTS
+    to: container
+    evidence: Docker packages an application with everything it needs into a container
+  - from: container
+    type: BASED_ON
+    to: container-image
+    evidence: Containers are started from images
+  - from: mlops-and-deployment
+    type: BASED_ON
+    to: container-image
+    evidence: ML models are commonly served from container images that pin the model, code and dependencies
+  - from: container-image
+    type: BASED_ON
+    to: dockerfile
+    evidence: images, which are built from a Dockerfile
+  - from: kubernetes
+    type: BASED_ON
+    to: container
+    evidence: Containers became the unit of deployment that orchestrators such as Kubernetes manage

@@ -1,0 +1,29 @@
+version: 1
+note_sha256: "b9b027b78ceb5106c7672136d77c6f36935d0d513e423c9a8613022e183da737"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [anthropic, json-rpc, language-server-protocol, a2a, openapi, function-calling, langchain-and-langgraph, prompt-injection]
+relations:
+  - from: mcp-and-related-protocols
+    type: DEVELOPED_BY
+    to: anthropic
+    evidence: Anthropic open-sourced MCP on 25 November 2024
+  - from: mcp-and-related-protocols
+    type: BASED_ON
+    to: function-calling
+    evidence: Function calling remains the basis; MCP standardises how tool definitions and results travel
+  - from: langchain-and-langgraph
+    type: IMPLEMENTS
+    to: mcp-and-related-protocols
+    evidence: Frameworks such as LangChain and LangGraph convert MCP tools into their own tools
+  - from: mcp-and-related-protocols
+    type: BASED_ON
+    to: json-rpc
+    evidence: MCP builds on JSON-RPC, one of several API styles
+  - from: mcp-and-related-protocols
+    type: BASED_ON
+    to: language-server-protocol
+    evidence: "LSP: not an AI protocol, but the model for MCP's client-server idea"
+  - from: a2a
+    type: COMPLEMENTS
+    to: mcp-and-related-protocols
+    evidence: MCP is agent-to-tool, A2A agent-to-agent, and both are complementary

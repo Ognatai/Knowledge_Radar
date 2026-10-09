@@ -4,4 +4,366 @@
 # Fields: id (lowercase ASCII slug), type (public entity type from schema.yaml),
 # name_en, name_de, aliases (optional; replaces the former synonyms.yaml).
 version: 1
-entities: []
+entities:
+- id: hipporag
+  type: Method
+  name_en: HippoRAG
+  name_de: HippoRAG
+- id: lightrag
+  type: Method
+  name_en: LightRAG
+  name_de: LightRAG
+- id: personalized-pagerank
+  type: Method
+  name_en: Personalized PageRank
+  name_de: Personalized PageRank
+- id: ircot
+  type: Method
+  name_en: IRCoT
+  name_de: IRCoT
+- id: microsoft
+  type: Organization
+  name_en: Microsoft
+  name_de: Microsoft
+- id: trade-secret
+  type: Concept
+  name_en: Trade secret
+  name_de: Geschäftsgeheimnis
+- id: reverse-engineering
+  type: Concept
+  name_en: Reverse engineering
+  name_de: Reverse Engineering
+- id: trade-secrets-directive
+  type: Regulation
+  name_en: Trade Secrets Directive (EU) 2016/943
+  name_de: Geschäftsgeheimnis-Richtlinie (EU) 2016/943
+  aliases:
+  - Directive (EU) 2016/943
+- id: uwg
+  type: Regulation
+  name_en: Act against Unfair Competition (UWG)
+  name_de: Gesetz gegen den unlauteren Wettbewerb (UWG)
+  aliases:
+  - UWG
+- id: intrinsic-dimension
+  type: Concept
+  name_en: Intrinsic dimension
+  name_de: Intrinsische Dimension
+- id: qlora
+  type: Method
+  name_en: QLoRA
+  name_de: QLoRA
+- id: weight-decomposed-low-rank-adaptation
+  type: Method
+  name_en: DoRA (Weight-Decomposed Low-Rank Adaptation)
+  name_de: DoRA (Weight-Decomposed Low-Rank Adaptation)
+  aliases:
+  - DoRA
+- id: adapter-layers
+  type: Method
+  name_en: Adapter layers
+  name_de: Adapter-Layer
+- id: sequence-to-sequence
+  type: Method
+  name_en: Sequence-to-sequence model
+  name_de: Sequence-to-Sequence-Modell
+  aliases:
+  - seq2seq
+- id: bert
+  type: Method
+  name_en: BERT
+  name_de: BERT
+- id: t5
+  type: Method
+  name_en: T5
+  name_de: T5
+- id: gpt
+  type: Method
+  name_en: GPT
+  name_de: GPT
+  aliases:
+  - GPT family
+  - GPT models
+- id: masked-language-modelling
+  type: Method
+  name_en: Masked language modelling
+  name_de: Masked Language Modelling
+- id: vision-transformer
+  type: Method
+  name_en: Vision Transformer
+  name_de: Vision Transformer
+  aliases:
+  - ViT
+- id: flashattention
+  type: Method
+  name_en: FlashAttention
+  name_de: FlashAttention
+- id: id3
+  type: Method
+  name_en: ID3
+  name_de: ID3
+- id: cart
+  type: Method
+  name_en: CART
+  name_de: CART
+- id: cost-complexity-pruning
+  type: Method
+  name_en: Cost-complexity pruning
+  name_de: Cost-Complexity Pruning
+- id: random-forest
+  type: Method
+  name_en: Random forest
+  name_de: Random Forest
+- id: scikit-learn
+  type: Technology
+  name_en: scikit-learn
+  name_de: scikit-learn
+- id: fitnets
+  type: Method
+  name_en: FitNets
+  name_de: FitNets
+- id: distilbert
+  type: Method
+  name_en: DistilBERT
+  name_de: DistilBERT
+- id: tinybert
+  type: Method
+  name_en: TinyBERT
+  name_de: TinyBERT
+- id: g-eval
+  type: Method
+  name_en: G-Eval
+  name_de: G-Eval
+- id: chain-of-thought-prompting
+  type: Method
+  name_en: Chain-of-thought prompting
+  name_de: Chain-of-Thought-Prompting
+- id: prometheus
+  type: Method
+  name_en: Prometheus (evaluator model)
+  name_de: Prometheus (Evaluator-Modell)
+  aliases:
+  - Prometheus
+- id: position-bias
+  type: Concept
+  name_en: Position bias
+  name_de: Position Bias
+- id: verbosity-bias
+  type: Concept
+  name_en: Verbosity bias
+  name_de: Verbosity Bias
+- id: self-enhancement-bias
+  type: Concept
+  name_en: Self-enhancement bias
+  name_de: Self-Enhancement Bias
+  aliases:
+  - self-preference
+- id: property-graph
+  type: Concept
+  name_en: Property graph
+  name_de: Property Graph
+- id: ontology
+  type: Concept
+  name_en: Ontology
+  name_de: Ontologie
+- id: owl
+  type: Technology
+  name_en: OWL (Web Ontology Language)
+  name_de: OWL (Web Ontology Language)
+  aliases:
+  - OWL
+  - OWL 2
+- id: open-world-assumption
+  type: Concept
+  name_en: Open-world assumption
+  name_de: Open-World-Annahme
+- id: neo4j
+  type: Technology
+  name_en: Neo4j
+  name_de: Neo4j
+- id: cypher
+  type: Technology
+  name_en: Cypher
+  name_de: Cypher
+- id: knowledge-graph-embeddings
+  type: Method
+  name_en: Knowledge graph embeddings
+  name_de: Knowledge Graph Embeddings
+- id: w3c
+  type: Organization
+  name_en: World Wide Web Consortium (W3C)
+  name_de: World Wide Web Consortium (W3C)
+  aliases:
+  - W3C
+- id: toolformer
+  type: Method
+  name_en: Toolformer
+  name_de: Toolformer
+- id: function-calling
+  type: Method
+  name_en: Function calling
+  name_de: Function Calling
+- id: react
+  type: Method
+  name_en: ReAct
+  name_de: ReAct
+- id: memgpt
+  type: Method
+  name_en: MemGPT
+  name_de: MemGPT
+- id: reflexion
+  type: Method
+  name_en: Reflexion
+  name_de: Reflexion
+- id: prompt-injection
+  type: Concept
+  name_en: Prompt injection
+  name_de: Prompt Injection
+  aliases:
+  - indirect prompt injection
+- id: multi-agent-systems
+  type: Concept
+  name_en: Multi-agent system
+  name_de: Multi-Agenten-System
+- id: anthropic
+  type: Organization
+  name_en: Anthropic
+  name_de: Anthropic
+- id: json-rpc
+  type: Technology
+  name_en: JSON-RPC
+  name_de: JSON-RPC
+- id: language-server-protocol
+  type: Technology
+  name_en: Language Server Protocol (LSP)
+  name_de: Language Server Protocol (LSP)
+  aliases:
+  - LSP
+- id: a2a
+  type: Technology
+  name_en: A2A (Agent2Agent protocol)
+  name_de: A2A (Agent2Agent-Protokoll)
+  aliases:
+  - Agent2Agent
+- id: openapi
+  type: Technology
+  name_en: OpenAPI
+  name_de: OpenAPI
+- id: lime
+  type: Method
+  name_en: LIME
+  name_de: LIME
+- id: shap
+  type: Method
+  name_en: SHAP
+  name_de: SHAP
+- id: integrated-gradients
+  type: Method
+  name_en: Integrated Gradients
+  name_de: Integrated Gradients
+- id: counterfactual-explanations
+  type: Method
+  name_en: Counterfactual explanations
+  name_de: Kontrafaktische Erklärungen
+- id: interpretable-models
+  type: Concept
+  name_en: Inherently interpretable models
+  name_de: Inhärent interpretierbare Modelle
+- id: container
+  type: Concept
+  name_en: Container
+  name_de: Container
+- id: container-image
+  type: Concept
+  name_en: Container image
+  name_de: Container-Image
+  aliases:
+  - Image
+  - Docker image
+- id: dockerfile
+  type: Technology
+  name_en: Dockerfile
+  name_de: Dockerfile
+- id: docker-volume
+  type: Concept
+  name_en: Docker volume
+  name_de: Docker-Volume
+- id: docker-compose
+  type: Technology
+  name_en: Docker Compose
+  name_de: Docker Compose
+- id: critical-facility
+  type: Concept
+  name_en: Critical facility
+  name_de: Kritische Anlage
+- id: kritis-dachgesetz
+  type: Regulation
+  name_en: KRITIS Umbrella Act (KRITIS-Dachgesetz)
+  name_de: KRITIS-Dachgesetz (KRITISDachG)
+  aliases:
+  - KRITIS Umbrella Act
+  - KRITISDachG
+- id: basel-committee
+  type: Organization
+  name_en: Basel Committee on Banking Supervision
+  name_de: Basler Ausschuss für Bankenaufsicht
+  aliases:
+  - Basel Committee
+  - BCBS
+- id: ecb
+  type: Organization
+  name_en: European Central Bank (ECB)
+  name_de: Europäische Zentralbank (EZB)
+  aliases:
+  - ECB
+  - EZB
+- id: risk-data-aggregation
+  type: Concept
+  name_en: Risk data aggregation and risk reporting (RDARR)
+  name_de: Risikodatenaggregation und Risikoberichterstattung (RDARR)
+  aliases:
+  - RDARR
+- id: secrecy-of-telecommunications
+  type: Concept
+  name_en: Secrecy of telecommunications
+  name_de: Fernmeldegeheimnis
+- id: cookie-consent
+  type: Concept
+  name_en: Consent for cookies and device access
+  name_de: Einwilligung für Cookies und Endgerätezugriff
+- id: bfdi
+  type: Organization
+  name_en: Federal Commissioner for Data Protection and Freedom of Information (BfDI)
+  name_de: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
+  aliases:
+  - BfDI
+- id: federal-network-agency
+  type: Organization
+  name_en: Federal Network Agency
+  name_de: Bundesnetzagentur
+- id: digitale-dienste-gesetz
+  type: Regulation
+  name_en: Digital Services Act implementation law (Digitale-Dienste-Gesetz, DDG)
+  name_de: Digitale-Dienste-Gesetz (DDG)
+  aliases:
+  - DDG
+- id: tkg
+  type: Regulation
+  name_en: Telecommunications Act (TKG)
+  name_de: Telekommunikationsgesetz (TKG)
+  aliases:
+  - TKG
+- id: e-evidence-regulation
+  type: Regulation
+  name_en: Regulation (EU) 2023/1543 on European production and preservation orders
+  name_de: Verordnung (EU) 2023/1543 über Europäische Herausgabe- und Sicherungsanordnungen
+  aliases:
+  - Regulation (EU) 2023/1543
+- id: einwilligungsverwaltungsverordnung
+  type: Regulation
+  name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
+  name_de: Einwilligungsverwaltungsverordnung (EinwV)
+- id: federal-ministry-of-the-interior
+  type: Organization
+  name_en: Federal Ministry of the Interior
+  name_de: Bundesministerium des Innern

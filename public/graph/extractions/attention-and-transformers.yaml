@@ -1,0 +1,37 @@
+version: 1
+note_sha256: "35601e9b10d6ad486c175f1c7a22ef8ed43bfab6f3418e5aee10a92acba83bc3"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [sequence-to-sequence, recurrent-neural-networks, bert, t5, gpt, masked-language-modelling, vision-transformer, flashattention]
+relations:
+  - from: sequence-to-sequence
+    type: BASED_ON
+    to: recurrent-neural-networks
+    evidence: Sequence-to-sequence models encode an input sequence into a vector of fixed dimensionality with one LSTM
+  - from: attention-and-transformers
+    type: BASED_ON
+    to: sequence-to-sequence
+    evidence: Attention for neural machine translation (Bahdanau et al., 2014) extended sequence-to-sequence models
+  - from: bert
+    type: BASED_ON
+    to: attention-and-transformers
+    evidence: Its encoder, decoder or both underlie BERT, T5 and the GPT family
+  - from: t5
+    type: BASED_ON
+    to: attention-and-transformers
+    evidence: Its encoder, decoder or both underlie BERT, T5 and the GPT family
+  - from: gpt
+    type: BASED_ON
+    to: attention-and-transformers
+    evidence: Its encoder, decoder or both underlie BERT, T5 and the GPT family
+  - from: bert
+    type: BASED_ON
+    to: masked-language-modelling
+    evidence: is pretrained with masked language modelling
+  - from: vision-transformer
+    type: BASED_ON
+    to: attention-and-transformers
+    evidence: A pure Transformer applied to sequences of image patches, the Vision Transformer
+  - from: flashattention
+    type: BASED_ON
+    to: attention-and-transformers
+    evidence: FlashAttention computes exact attention with tiling

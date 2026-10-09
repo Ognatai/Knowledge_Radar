@@ -1,0 +1,45 @@
+version: 1
+note_sha256: "ea93daa271104dd2f973bb10e91f4ea3eff18c826d6b8cd55ec29f20fc822d83"
+extracted_by: claude (hand-labelled gold standard)
+discusses: [rdf, property-graph, ontology, owl, open-world-assumption, neo4j, graph-databases, cypher, sparql, knowledge-graph-embeddings, large-language-models, graphrag, information-extraction, w3c]
+relations:
+  - from: rdf
+    type: IMPLEMENTS
+    to: knowledge-graphs
+    evidence: "Two data models dominate: RDF, where every fact is a subject-predicate-object triple"
+  - from: neo4j
+    type: IMPLEMENTS
+    to: property-graph
+    evidence: property graphs are popularised by graph databases such as Neo4j
+  - from: neo4j
+    type: IS_EXAMPLE_OF
+    to: graph-databases
+    evidence: property graphs are popularised by graph databases such as Neo4j
+  - from: knowledge-graph-embeddings
+    type: BASED_ON
+    to: knowledge-graphs
+    evidence: Knowledge graph embeddings represent entities and relations as vectors for tasks such as predicting missing links
+  - from: graphrag
+    type: BASED_ON
+    to: knowledge-graphs
+    evidence: GraphRAG, for example, uses an LLM to build an entity knowledge graph from documents
+  - from: graphrag
+    type: BASED_ON
+    to: large-language-models
+    evidence: GraphRAG, for example, uses an LLM to build an entity knowledge graph from documents
+  - from: knowledge-graphs
+    type: BASED_ON
+    to: information-extraction
+    evidence: Creation and enrichment draw on structured sources and on text via information extraction
+  - from: rdf
+    type: DEVELOPED_BY
+    to: w3c
+    evidence: RDF (W3C RDF 1.1 Concepts) and OWL (W3C OWL 2 Primer) are W3C standards
+  - from: owl
+    type: DEVELOPED_BY
+    to: w3c
+    evidence: RDF (W3C RDF 1.1 Concepts) and OWL (W3C OWL 2 Primer) are W3C standards
+  - from: knowledge-graphs
+    type: COMPLEMENTS
+    to: large-language-models
+    evidence: knowledge graphs increasingly complement large language models

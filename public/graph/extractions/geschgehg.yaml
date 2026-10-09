@@ -1,0 +1,25 @@
+version: 1
+note_sha256: "d4886ed629c20a363e371e4f7485bc342346b454f7ec2a5fdc91c92f29cdcfd5"
+extracted_by: claude (hand-labelled gold standard)
+discusses:
+  - trade-secret
+  - reverse-engineering
+  - trade-secrets-directive
+  - uwg
+relations:
+  - from: geschgehg
+    type: REGULATES
+    to: trade-secret
+    evidence: Protects trade secrets against unlawful acquisition, use and disclosure
+  - from: geschgehg
+    type: REGULATES
+    to: reverse-engineering
+    evidence: The Act sets out which acts are permitted (such as independent development and reverse engineering, section 3)
+  - from: geschgehg
+    type: IMPLEMENTS
+    to: trade-secrets-directive
+    evidence: The German Trade Secrets Act (Gesetz zum Schutz von Geschäftsgeheimnissen, GeschGehG) transposes Directive (EU) 2016/943
+  - from: geschgehg
+    type: AMENDS
+    to: uwg
+    evidence: replaces the criminal provisions of sections 17 to 19 of the Act against Unfair Competition (UWG)
