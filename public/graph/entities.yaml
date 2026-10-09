@@ -990,3 +990,45 @@ entities:
   type: Concept
   name_en: European cybersecurity certification
   name_de: Europäische Cybersicherheitszertifizierung
+- id: edib
+  type: Organization
+  name_en: European Data Innovation Board (EDIB)
+  name_de: Europäischer Dateninnovationsrat (EDIB)
+  aliases:
+  - EDIB
+- id: database-directive
+  type: Regulation
+  name_en: Database Directive 96/9/EC
+  name_de: Datenbank-Richtlinie 96/9/EG
+  aliases:
+  - Directive 96/9/EC
+- id: connected-product
+  type: Concept
+  name_en: Connected product
+  name_de: Vernetztes Produkt
+- id: cloud-switching
+  type: Concept
+  name_en: Switching between data processing services
+  name_de: Wechsel zwischen Datenverarbeitungsdiensten
+  aliases:
+  - cloud switching
+- id: data-intermediation-service
+  type: Concept
+  name_en: Data intermediation service
+  name_de: Datenvermittlungsdienst
+  aliases:
+  - data intermediary
+- id: data-altruism
+  type: Concept
+  name_en: Data altruism
+  name_de: Datenaltruismus
+- id: open-data-directive
+  type: Regulation
+  name_en: Open Data Directive (EU) 2019/1024
+  name_de: Open-Data-Richtlinie (EU) 2019/1024
+  aliases:
+  - Directive (EU) 2019/1024
+- id: public-sector-data-reuse
+  type: Concept
+  name_en: Re-use of protected public sector data
+  name_de: Weiterverwendung geschützter Daten des öffentlichen Sektors

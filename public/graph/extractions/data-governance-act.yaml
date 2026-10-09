@@ -1,0 +1,41 @@
+version: 1
+note_sha256: f6663044f5362748677d5015ddeff0f7b087f0e1a4824279c4ae008f57f79e81
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- gdpr
+- data-act
+- eu-ai-act
+- edib
+- data-intermediation-service
+- data-altruism
+- open-data-directive
+- public-sector-data-reuse
+relations:
+- from: gdpr
+  type: TAKES_PRECEDENCE_OVER
+  to: data-governance-act
+  evidence: applies to all personal data; in case of conflict, data protection law prevails
+- from: data-governance-act
+  type: COMPLEMENTS
+  to: data-act
+  evidence: complementary; the Data Act creates rights to access and use data, the DGA provides trusted intermediaries and data altruism
+- from: data-governance-act
+  type: COMPLEMENTS
+  to: open-data-directive
+  evidence: covers re-use of public sector data that are not protected; the DGA adds rules for protected data without creating a right to re-use
+- from: data-governance-act
+  type: REGULATES
+  to: data-intermediation-service
+  evidence: it requires data intermediation services to be notified and neutral
+- from: data-governance-act
+  type: REGULATES
+  to: data-altruism
+  evidence: it allows organisations that collect data for purposes of general interest to register as recognised data altruism organisations
+- from: data-governance-act
+  type: REGULATES
+  to: edib
+  evidence: and it establishes the European Data Innovation Board
+- from: data-governance-act
+  type: REGULATES
+  to: public-sector-data-reuse
+  evidence: It sets conditions for re-using protected data held by public sector bodies
