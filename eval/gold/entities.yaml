@@ -259,6 +259,7 @@ entities:
     type: Concept
     name_en: Container image
     name_de: Container-Image
+    aliases: [Image, Docker image]
   - id: dockerfile
     type: Technology
     name_en: Dockerfile

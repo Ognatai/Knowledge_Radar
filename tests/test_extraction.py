@@ -24,7 +24,9 @@ def fake_llm(*answers):
     def generate(prompt, **_options):
         prompts.append(prompt)
         # Once the scripted answers are used up (e.g. by the relation pass), find nothing.
-        return remaining.pop(0) if remaining else json.dumps({"new_entities": [], "discusses": [], "relations": []})
+        return remaining.pop(0) if remaining else json.dumps(
+            {"new_entities": [], "discusses": [], "relations": [], "supported": True}
+        )
 
     generate.prompts = prompts
     return generate
@@ -303,7 +305,7 @@ def test_relation_pass_finds_relations_the_entity_pass_missed(tmp_path):
     result = extract_note(alpha, known_entities(graph), generate=llm_answer)
 
     assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "DEVELOPED_BY", "microsoft")]
-    assert "Find every relation" in llm_answer.prompts[1]
+    assert "find every relation" in llm_answer.prompts[1]
     assert "microsoft | Organization" in llm_answer.prompts[1]
 
 
@@ -328,3 +330,51 @@ def test_relation_pass_can_run_without_reasoning(tmp_path):
     extract_note(alpha, known_entities(graph), generate=recording, think=True, relation_think=False)
 
     assert calls == [True, False]
+
+
+def test_relation_pass_may_register_entities_the_first_pass_missed(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    note = alpha.model_copy(update={"content_en": "Alpha was created by the Gamma Lab."})
+    llm_answer = fake_llm(
+        {"new_entities": [], "discusses": [], "relations": []},
+        {
+            "new_entities": [{"id": "gamma-lab", "type": "Organization", "name_en": "Gamma Lab", "name_de": ""}],
+            "discusses": [],
+            "relations": [{"from": "alpha", "type": "DEVELOPED_BY", "to": "gamma-lab", "evidence": "Alpha was created by the Gamma Lab"}],
+        },
+    )
+
+    result = extract_note(note, known_entities(graph), generate=llm_answer)
+
+    assert [e.id for e in result.new_entities] == ["gamma-lab"]
+    assert [(r["from"], r["to"]) for r in result.relations] == [("alpha", "gamma-lab")]
+
+
+def test_relations_the_verifier_rejects_are_dropped(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    prompts = []
+
+    def generate(prompt, **options):
+        prompts.append(prompt)
+        if "Does the text state" in prompt:
+            supported = "DEVELOPED_BY" in prompt
+            return json.dumps({"supported": supported, "reason": "test"})
+        if len(prompts) == 1:
+            return json.dumps(
+                {
+                    "new_entities": [],
+                    "discusses": ["microsoft", "beta"],
+                    "relations": [
+                        {"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"},
+                        {"from": "alpha", "type": "IS_EXAMPLE_OF", "to": "beta", "evidence": "builds on Beta"},
+                    ],
+                }
+            )
+        return json.dumps({"new_entities": [], "discusses": [], "relations": []})
+
+    result = extract_note(alpha, known_entities(graph), generate=generate)
+
+    assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "DEVELOPED_BY", "microsoft")]
+    assert any("not supported" in problem for problem in result.dropped)
+    verification = next(p for p in prompts if "Does the text state" in p)
+    assert "Alpha was developed by" in verification  # the evidence's sentence as context

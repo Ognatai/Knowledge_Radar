@@ -52,19 +52,21 @@ def prf(predicted: set, gold: set) -> dict[str, Any]:
 
 
 def align_entities(predicted: dict[str, Entity], gold: dict[str, Entity]) -> dict[str, str]:
-    """Map predicted entity ids to gold entity ids where they mean the same entity."""
-    gold_by_key: dict[str, str] = {}
+    """Map predicted entity ids to gold entity ids where they mean the same entity.
+
+    Only entities of the same type align: the method DoRA is not the regulation DORA."""
+    gold_by_key: dict[tuple[str, str], str] = {}
     for entity in gold.values():
         for key in entity_keys(entity):
-            gold_by_key.setdefault(key, entity.id)
+            gold_by_key.setdefault((entity.type, key), entity.id)
     alignment: dict[str, str] = {}
     for entity in predicted.values():
-        if entity.id in gold:
+        if entity.id in gold and gold[entity.id].type == entity.type:
             alignment[entity.id] = entity.id
             continue
         for key in sorted(entity_keys(entity)):
-            if key in gold_by_key:
-                alignment[entity.id] = gold_by_key[key]
+            if (entity.type, key) in gold_by_key:
+                alignment[entity.id] = gold_by_key[(entity.type, key)]
                 break
     return alignment
 

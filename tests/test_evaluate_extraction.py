@@ -71,3 +71,15 @@ def test_entities_align_across_singular_and_plural():
     predicted = {"random-forests": entity("random-forests", "Random forests")}
 
     assert align_entities(predicted, gold) == {"random-forests": "random-forest"}
+
+
+def test_entities_align_only_within_the_same_type():
+    gold = {
+        "dora": entity("dora", "Digital Operational Resilience Act (DORA)", "Regulation", aliases=["DORA"], note="dora"),
+        "weight-decomposed-low-rank-adaptation": entity(
+            "weight-decomposed-low-rank-adaptation", "DoRA (Weight-Decomposed Low-Rank Adaptation)", aliases=["DoRA"]
+        ),
+    }
+    predicted = {"dora-method": entity("dora-method", "DoRA")}
+
+    assert align_entities(predicted, gold) == {"dora-method": "weight-decomposed-low-rank-adaptation"}
