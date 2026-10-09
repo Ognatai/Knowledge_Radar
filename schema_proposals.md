@@ -48,4 +48,5 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - classification-metrics: precision, recall, F1, MCC, ROC and PR curves `IS_EXAMPLE_OF` classification-metrics (2)
 - contract-intelligence: `IS_EXAMPLE_OF legal-ai` (2); CUAD, ContractNLI as datasets (1)
 - context-engineering: multi-agent systems as a system implementation (2)
+- convolutional-neural-networks: ImageNet (1)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

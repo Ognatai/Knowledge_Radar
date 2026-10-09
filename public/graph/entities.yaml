@@ -806,3 +806,34 @@ entities:
   type: Method
   name_en: Redlining
   name_de: Redlining
+- id: lenet
+  type: Method
+  name_en: LeNet
+  name_de: LeNet
+- id: alexnet
+  type: Method
+  name_en: AlexNet
+  name_de: AlexNet
+- id: vgg
+  type: Method
+  name_en: VGG
+  name_de: VGG
+- id: resnet
+  type: Method
+  name_en: ResNet (residual network)
+  name_de: ResNet (Residual Network)
+  aliases:
+  - ResNet
+  - residual network
+- id: convolution
+  type: Concept
+  name_en: Convolution
+  name_de: Faltung
+- id: pooling
+  type: Concept
+  name_en: Pooling
+  name_de: Pooling
+- id: transfer-learning
+  type: Concept
+  name_en: Transfer learning
+  name_de: Transfer Learning

@@ -1,0 +1,37 @@
+version: 1
+note_sha256: 2a53e0d61b95b2aaa1295b208400da98e25883295ef1864373c542b1de4681da
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- lenet
+- alexnet
+- vgg
+- resnet
+- convolution
+- pooling
+- transfer-learning
+- vision-transformer
+relations:
+- from: lenet
+  type: IS_EXAMPLE_OF
+  to: convolutional-neural-networks
+  evidence: LeNet-style networks (LeCun et al., 1998) established CNNs for document recognition
+- from: alexnet
+  type: IS_EXAMPLE_OF
+  to: convolutional-neural-networks
+  evidence: AlexNet (Krizhevsky et al., 2012) started the deep learning era in computer vision
+- from: vgg
+  type: IS_EXAMPLE_OF
+  to: convolutional-neural-networks
+  evidence: VGG (Simonyan & Zisserman, 2014) and ResNet (He et al., 2015) made networks much deeper
+- from: resnet
+  type: IS_EXAMPLE_OF
+  to: convolutional-neural-networks
+  evidence: VGG (Simonyan & Zisserman, 2014) and ResNet (He et al., 2015) made networks much deeper
+- from: convolutional-neural-networks
+  type: BASED_ON
+  to: convolution
+  evidence: Stacked convolution and pooling layers learn features from edges to objects
+- from: convolutional-neural-networks
+  type: BASED_ON
+  to: pooling
+  evidence: Stacked convolution and pooling layers learn features from edges to objects
