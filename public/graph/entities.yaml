@@ -517,3 +517,74 @@ entities:
   type: Method
   name_en: Actor-level corpus analysis
   name_de: Akteursbasierte Korpusanalyse
+- id: bsi
+  type: Organization
+  name_en: Federal Office for Information Security (BSI)
+  name_de: Bundesamt für Sicherheit in der Informationstechnik (BSI)
+  aliases:
+  - BSI
+- id: bsig-2009
+  type: Regulation
+  name_en: BSI Act (2009 version)
+  name_de: BSI-Gesetz (Fassung von 2009)
+- id: it-security-label
+  type: Concept
+  name_en: IT security label
+  name_de: IT-Sicherheitskennzeichen
+- id: propensity-score
+  type: Method
+  name_en: Propensity score
+  name_de: Propensity Score
+- id: instrumental-variables
+  type: Method
+  name_en: Instrumental variables
+  name_de: Instrumentvariablen
+- id: randomised-experiments
+  type: Method
+  name_en: Randomised experiment
+  name_de: Randomisiertes Experiment
+  aliases:
+  - randomized experiment
+  - randomised controlled trial
+- id: structural-causal-model
+  type: Method
+  name_en: Structural causal model
+  name_de: Strukturelles Kausalmodell
+- id: potential-outcomes-model
+  type: Concept
+  name_en: Potential-outcomes model
+  name_de: Potential-Outcomes-Modell
+- id: counterfactual-fairness
+  type: Concept
+  name_en: Counterfactual fairness
+  name_de: Counterfactual Fairness
+- id: front-door-adjustment
+  type: Method
+  name_en: Causal front-door adjustment
+  name_de: Kausale Front-Door-Adjustierung
+- id: ab-testing
+  type: Method
+  name_en: A/B testing
+  name_de: A/B-Test
+  aliases:
+  - A/B test
+- id: simpsons-paradox
+  type: Concept
+  name_en: Simpson's paradox
+  name_de: Simpson-Paradoxon
+- id: bbk
+  type: Organization
+  name_en: Federal Office of Civil Protection and Disaster Assistance (BBK)
+  name_de: Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)
+  aliases:
+  - BBK
+- id: eci-directive
+  type: Regulation
+  name_en: European Critical Infrastructures Directive 2008/114/EC
+  name_de: Richtlinie 2008/114/EG über Europäische kritische Infrastrukturen
+  aliases:
+  - Directive 2008/114/EC
+- id: critical-entity
+  type: Concept
+  name_en: Critical entity
+  name_de: Kritische Einrichtung

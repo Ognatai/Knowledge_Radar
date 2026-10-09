@@ -1,0 +1,47 @@
+version: 1
+note_sha256: 427e7f7dcf771fb44c601409ee5af6fa6fcaf22472b10f750a95338816fec1e2
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- propensity-score
+- instrumental-variables
+- randomised-experiments
+- structural-causal-model
+- potential-outcomes-model
+- counterfactual-fairness
+- front-door-adjustment
+- chain-of-thought-prompting
+- ab-testing
+- simpsons-paradox
+relations:
+- from: propensity-score
+  type: IS_EXAMPLE_OF
+  to: causal-inference
+  evidence: for observational data, with methods such as propensity scores (Rosenbaum & Rubin, 1983) and instrumental variables
+- from: instrumental-variables
+  type: IS_EXAMPLE_OF
+  to: causal-inference
+  evidence: for observational data, with methods such as propensity scores (Rosenbaum & Rubin, 1983) and instrumental variables
+- from: randomised-experiments
+  type: IS_EXAMPLE_OF
+  to: causal-inference
+  evidence: randomised experiments are therefore the reference design for causal effects
+- from: structural-causal-model
+  type: IS_EXAMPLE_OF
+  to: causal-inference
+  evidence: Pearl (2009) describes causal inference with the structural causal model, which unifies other approaches
+- from: counterfactual-fairness
+  type: BASED_ON
+  to: causal-inference
+  evidence: Causal reasoning also underlies counterfactual fairness
+- from: instrumental-variables
+  type: BASED_ON
+  to: potential-outcomes-model
+  evidence: Angrist et al. (1996) embedded instrumental variables in the potential-outcomes model
+- from: ab-testing
+  type: BASED_ON
+  to: randomised-experiments
+  evidence: Online A/B tests apply this idea to product decisions
+- from: front-door-adjustment
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: causal front-door adjustment, which routes an intervention through intermediate variables such as chain-of-thought prompts

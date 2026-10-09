@@ -1,0 +1,38 @@
+version: 1
+note_sha256: 4eba50640fdc50ce8cc77e669a712477a1c2e67b792a70a90853bf89cf5c8608
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- nis2-directive
+- dora
+- kritis-dachgesetz
+- bbk
+- eci-directive
+- critical-entity
+- bsig
+- bsi-kritisv
+- gdpr
+relations:
+- from: cer-directive
+  type: COMPLEMENTS
+  to: nis2-directive
+  evidence: It is the physical-resilience counterpart to the NIS2 Directive, which covers cybersecurity
+- from: kritis-dachgesetz
+  type: IMPLEMENTS
+  to: cer-directive
+  evidence: the KRITIS Umbrella Act (KRITIS-Dachgesetz) of 11 March 2026 transposes the Directive
+- from: cer-directive
+  type: AMENDS
+  to: eci-directive
+  evidence: Directive 2008/114/EC is repealed
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: cer-directive
+  evidence: for banking and financial market infrastructure, the competent authorities are in principle those under DORA (Art. 9(1)); these entities are exempt from the CER resilience obligations
+- from: kritis-dachgesetz
+  type: REGULATES
+  to: bbk
+  evidence: the Federal Office of Civil Protection and Disaster Assistance (BBK) is the single point of contact under the KRITIS Umbrella Act
+- from: cer-directive
+  type: REGULATES
+  to: critical-entity
+  evidence: obliges Member States to identify critical entities in eleven sectors

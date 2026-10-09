@@ -1,0 +1,50 @@
+version: 1
+note_sha256: 36c55b16aadec9b31524705f7f7557b8e48262a09e3ef478a1fbb2a50aa2be5d
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- nis2-directive
+- dora
+- bsi
+- bsig-2009
+- kritis-dachgesetz
+- cer-directive
+- bsi-kritisv
+- critical-facility
+- cybersecurity-act
+- federal-ministry-of-the-interior
+- gdpr
+- tdddg
+- it-security-label
+relations:
+- from: bsig
+  type: IMPLEMENTS
+  to: nis2-directive
+  evidence: In the version in force since 6 December 2025, it implements the NIS2 Directive
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: bsig
+  evidence: for financial entities, DORA's requirements take precedence over §§ 30 to 39
+- from: bsig
+  type: REGULATES
+  to: bsi
+  evidence: The Act also sets out the tasks and powers of the BSI
+- from: bsig
+  type: COMPLEMENTS
+  to: kritis-dachgesetz
+  evidence: The KRITIS Umbrella Act covers physical resilience and implements the CER Directive; the BSIG covers IT security
+- from: kritis-dachgesetz
+  type: IMPLEMENTS
+  to: cer-directive
+  evidence: The KRITIS Umbrella Act covers physical resilience and implements the CER Directive
+- from: bsig
+  type: AMENDS
+  to: bsig-2009
+  evidence: the BSI Act of 2009 is replaced
+- from: kritis-dachgesetz
+  type: AMENDS
+  to: bsig
+  evidence: Amended by the act containing the KRITIS Umbrella Act
+- from: bsig
+  type: REGULATES
+  to: it-security-label
+  evidence: Introduces a voluntary IT security label for consumer products
