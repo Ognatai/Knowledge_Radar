@@ -136,10 +136,16 @@ def _is_acronym(name: str) -> bool:
     return not re.search(r"[a-z]", name) and len(name) <= 12
 
 
+def _is_case_sensitive(name: str) -> bool:
+    """Acronyms (DORA) and names with inner capitals (ComplEx, TransE, DoRA) must match
+    exactly; in any other spelling they are ordinary words or other entities."""
+    return _is_acronym(name) or re.search(r"[a-z][A-Z]", name) is not None
+
+
 def _mentions(text: str, variant: str) -> bool:
     """Whether `text` (plain text, original case) names `variant`, also in plural.
     Acronyms must match exactly: "DoRA" is not "DORA"."""
-    if _is_acronym(variant):
+    if _is_case_sensitive(variant):
         return re.search(rf"(?<![0-9A-Za-z]){re.escape(variant)}s?(?![0-9A-Za-z])", text) is not None
     lowered = variant.casefold()
     stem = re.escape(lowered[:-1] if lowered.endswith("s") and len(lowered) > 3 else lowered)

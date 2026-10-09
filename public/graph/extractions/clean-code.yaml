@@ -1,0 +1,24 @@
+version: 1
+note_sha256: d4c84aa4429159f8e09ee0609b1b9ddf0abe94cc02665a5b75d4637135631a20
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- robert-c-martin
+- pep-8
+- modular-design
+- code-smell
+- refactoring
+- technical-debt
+- code-review
+relations:
+- from: clean-code
+  type: DEVELOPED_BY
+  to: robert-c-martin
+  evidence: The term clean code became popular through Robert C. Martin's 2008 book
+- from: pep-8
+  type: IMPLEMENTS
+  to: clean-code
+  evidence: Language style guides such as PEP 8 (PEP 8) and review guidelines such as Google's (Google code review guide) turn the principles into concrete rules
+- from: clean-code
+  type: BASED_ON
+  to: modular-design
+  evidence: Modular design as a means to flexibility and comprehensibility goes back to the early 1970s

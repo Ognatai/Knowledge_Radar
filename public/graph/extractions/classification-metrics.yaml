@@ -1,0 +1,47 @@
+version: 1
+note_sha256: 192b24ccc8be448f8a3759059e85ced084e130d1b0e6c0ee74c9d4665b52bb6e
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- confusion-matrix
+- precision
+- recall
+- specificity
+- accuracy
+- f1-score
+- matthews-correlation-coefficient
+- roc-curve
+- precision-recall-curve
+- exact-match
+relations:
+- from: precision
+  type: BASED_ON
+  to: confusion-matrix
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: recall
+  type: BASED_ON
+  to: confusion-matrix
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: specificity
+  type: BASED_ON
+  to: confusion-matrix
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: accuracy
+  type: BASED_ON
+  to: confusion-matrix
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: f1-score
+  type: BASED_ON
+  to: precision
+  evidence: The F1 score is the harmonic mean of precision and recall
+- from: f1-score
+  type: BASED_ON
+  to: recall
+  evidence: The F1 score is the harmonic mean of precision and recall
+- from: matthews-correlation-coefficient
+  type: BASED_ON
+  to: confusion-matrix
+  evidence: The Matthews correlation coefficient (MCC) produces a high score only if the prediction is good in all four confusion-matrix categories
+- from: precision-recall-curve
+  type: BASED_ON
+  to: precision
+  evidence: Precision-recall (PR) curves show the fraction of true positives among positive predictions

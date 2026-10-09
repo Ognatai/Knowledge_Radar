@@ -417,3 +417,13 @@ def test_extract_notes_can_skip_the_classifier(tmp_path):
 
     assert len(results["alpha"].relations) == 1
     assert not any("Which relation does the text state" in prompt for prompt in prompts)
+
+
+def test_names_with_inner_capitals_match_only_in_their_exact_spelling():
+    from app.agents.extraction import mentioned_entities
+    from app.backend.knowledge_radar.graph import Entity
+
+    complex_ = Entity(id="complex", type="Method", name_en="ComplEx", name_de="ComplEx", note="complex")
+
+    assert mentioned_entities("Code that is too complex invites bugs.", {"complex": complex_}) == {}
+    assert "complex" in mentioned_entities("ComplEx uses complex-valued embeddings.", {"complex": complex_})

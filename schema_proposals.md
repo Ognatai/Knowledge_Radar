@@ -22,3 +22,20 @@ for the documents a note cites. Found while reviewing:
   Arena (llm-as-a-judge), HumanEval, AgentBench and SWE-bench (agentic-ai).
 
 Until decided, such datasets are left out of the reviewed extractions.
+
+## 2. `IS_EXAMPLE_OF`: allow Concept as subject
+
+**Change:** `IS_EXAMPLE_OF.from` adds `Concept`.
+
+**Justification:** concepts are often instances of broader concepts, and today
+only methods, regulations and technologies can be an example of something.
+Found while reviewing:
+
+- classification-metrics: precision, recall, F1, MCC and ROC AUC are classification
+  metrics ("Classification metrics measure how well a classifier's predictions
+  match the true labels. Most are computed from the confusion matrix (...)").
+- agentic-ai and mcp-and-related-protocols (gold): prompt injection as a
+  security risk of agents.
+
+On acceptance, the reviewed notes gain these links (e.g. `precision
+IS_EXAMPLE_OF classification-metrics`).

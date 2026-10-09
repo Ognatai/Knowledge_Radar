@@ -656,3 +656,84 @@ entities:
   type: Method
   name_en: Isotonic regression
   name_de: Isotone Regression
+- id: confusion-matrix
+  type: Concept
+  name_en: Confusion matrix
+  name_de: Konfusionsmatrix
+- id: precision
+  type: Concept
+  name_en: Precision
+  name_de: Precision
+- id: recall
+  type: Concept
+  name_en: Recall (sensitivity)
+  name_de: Recall (Sensitivität)
+  aliases:
+  - sensitivity
+- id: specificity
+  type: Concept
+  name_en: Specificity
+  name_de: Spezifität
+- id: accuracy
+  type: Concept
+  name_en: Accuracy
+  name_de: Accuracy
+- id: f1-score
+  type: Concept
+  name_en: F1 score
+  name_de: F1-Score
+  aliases:
+  - F1
+- id: matthews-correlation-coefficient
+  type: Concept
+  name_en: Matthews correlation coefficient (MCC)
+  name_de: Matthews-Korrelationskoeffizient (MCC)
+  aliases:
+  - MCC
+- id: roc-curve
+  type: Concept
+  name_en: ROC curve and AUC
+  name_de: ROC-Kurve und AUC
+  aliases:
+  - ROC
+  - ROC AUC
+  - receiver operating characteristic
+- id: precision-recall-curve
+  type: Concept
+  name_en: Precision-recall curve
+  name_de: Precision-Recall-Kurve
+  aliases:
+  - PR curve
+  - PR AUC
+- id: exact-match
+  type: Concept
+  name_en: Exact match
+  name_de: Exact Match
+- id: robert-c-martin
+  type: Person
+  name_en: Robert C. Martin
+  name_de: Robert C. Martin
+- id: pep-8
+  type: Technology
+  name_en: PEP 8
+  name_de: PEP 8
+- id: modular-design
+  type: Concept
+  name_en: Modular design
+  name_de: Modulares Design
+- id: code-smell
+  type: Concept
+  name_en: Code smell
+  name_de: Code Smell
+- id: refactoring
+  type: Method
+  name_en: Refactoring
+  name_de: Refactoring
+- id: technical-debt
+  type: Concept
+  name_en: Technical debt
+  name_de: Technische Schulden
+- id: code-review
+  type: Method
+  name_en: Code review
+  name_de: Code Review
