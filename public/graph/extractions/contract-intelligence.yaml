@@ -1,0 +1,20 @@
+version: 1
+note_sha256: 5f18313ce2ed4c866c7067856f80fc88cb26fcb4d5efa36b9ec2b37efe6b46c5
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- information-extraction
+- legal-ai
+- classification
+- clause-extraction
+- contract-type-classification
+- contract-playbook
+- redlining
+relations:
+- from: contract-intelligence
+  type: BASED_ON
+  to: information-extraction
+  evidence: It is a concrete application of Legal AI and Information Extraction
+- from: contract-type-classification
+  type: BASED_ON
+  to: classification
+  evidence: systems often first determine the type, a text classification problem

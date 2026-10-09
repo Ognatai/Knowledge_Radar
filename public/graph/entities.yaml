@@ -790,3 +790,19 @@ entities:
   type: Method
   name_en: LLMLingua
   name_de: LLMLingua
+- id: clause-extraction
+  type: Method
+  name_en: Clause extraction
+  name_de: Klauselextraktion
+- id: contract-type-classification
+  type: Method
+  name_en: Contract type classification
+  name_de: Klassifikation des Vertragstyps
+- id: contract-playbook
+  type: Concept
+  name_en: Contract playbook
+  name_de: Vertrags-Playbook
+- id: redlining
+  type: Method
+  name_en: Redlining
+  name_de: Redlining
