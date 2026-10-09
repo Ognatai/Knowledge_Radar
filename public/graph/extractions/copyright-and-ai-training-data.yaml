@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 83e6b9911298849e4afd78c30f2fa34d88f6f10dbcb7917a2ed4bae5a72a4ee7
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- eu-ai-act
+- dsm-directive
+- urhg
+- text-and-data-mining
+- fair-use
+- memorisation
+- laion
+- gema
+- openai
+- chatgpt
+- ai-office
+relations:
+- from: eu-ai-act
+  type: REGULATES
+  to: copyright-and-ai-training-data
+  evidence: The EU AI Act requires providers of general-purpose AI models to respect such reservations and to publish a summary of their training content
+- from: dsm-directive
+  type: REGULATES
+  to: text-and-data-mining
+  evidence: the DSM Directive (2019) provides two text and data mining (TDM) exceptions
+- from: urhg
+  type: IMPLEMENTS
+  to: dsm-directive
+  evidence: § 44b UrhG, which transposes Art. 4 DSM Directive (2019), permits reproductions of lawfully accessible works for TDM for any purpose
+- from: urhg
+  type: REGULATES
+  to: text-and-data-mining
+  evidence: § 44b UrhG, which transposes Art. 4 DSM Directive (2019), permits reproductions of lawfully accessible works for TDM for any purpose

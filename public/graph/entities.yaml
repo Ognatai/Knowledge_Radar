@@ -837,3 +837,50 @@ entities:
   type: Concept
   name_en: Transfer learning
   name_de: Transfer Learning
+- id: dsm-directive
+  type: Regulation
+  name_en: Directive (EU) 2019/790 on copyright in the Digital Single Market (DSM Directive)
+  name_de: Richtlinie (EU) 2019/790 über das Urheberrecht im digitalen Binnenmarkt (DSM-Richtlinie)
+  aliases:
+  - DSM Directive
+  - DSM-Richtlinie
+- id: urhg
+  type: Regulation
+  name_en: German Copyright Act (UrhG)
+  name_de: Urheberrechtsgesetz (UrhG)
+  aliases:
+  - UrhG
+- id: text-and-data-mining
+  type: Concept
+  name_en: Text and data mining (TDM)
+  name_de: Text und Data Mining (TDM)
+  aliases:
+  - TDM
+- id: fair-use
+  type: Concept
+  name_en: Fair use
+  name_de: Fair Use
+- id: memorisation
+  type: Concept
+  name_en: Memorisation in models
+  name_de: Memorisierung in Modellen
+  aliases:
+  - memorization
+- id: laion
+  type: Organization
+  name_en: LAION
+  name_de: LAION
+- id: gema
+  type: Organization
+  name_en: GEMA
+  name_de: GEMA
+- id: openai
+  type: Organization
+  name_en: OpenAI
+  name_de: OpenAI
+- id: ai-office
+  type: Organization
+  name_en: AI Office (European Commission)
+  name_de: KI-Büro (Europäische Kommission)
+  aliases:
+  - AI Office
