@@ -92,7 +92,7 @@ def test_extract_note_accepts_valid_output_and_registers_new_entities(tmp_path):
         }
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm)
+    result = extract_note(alpha, known_entities(graph), generate=llm, classify=False)
 
     assert result.discusses == ["microsoft", "beta"]
     assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [
@@ -114,7 +114,7 @@ def test_extract_note_asks_for_corrections_and_drops_what_stays_invalid(tmp_path
         {"new_entities": [], "discusses": ["microsoft"], "relations": [invented]},
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm, max_attempts=2)
+    result = extract_note(alpha, known_entities(graph), generate=llm, max_attempts=2, classify=False)
 
     assert result.relations == []
     assert len(result.dropped) == 1 and "evidence" in result.dropped[0]
@@ -131,7 +131,7 @@ def test_extract_note_adds_relation_endpoints_to_discusses(tmp_path):
         }
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm)
+    result = extract_note(alpha, known_entities(graph), generate=llm, classify=False)
 
     assert result.discusses == ["beta"]
 
@@ -146,7 +146,7 @@ def test_new_entity_with_a_known_id_refers_to_the_known_entity(tmp_path):
         }
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm)
+    result = extract_note(alpha, known_entities(graph), generate=llm, classify=False)
 
     assert result.new_entities == [] and result.discusses == ["microsoft"]
 
@@ -160,7 +160,7 @@ def test_write_extraction_produces_a_valid_graph(tmp_path):
             "relations": [{"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"}],
         }
     )
-    result = extract_note(alpha, known_entities(graph), generate=llm)
+    result = extract_note(alpha, known_entities(graph), generate=llm, classify=False)
 
     write_extraction(graph_dir, notes_dir / "alpha.md", alpha, result, extracted_by="test-model")
 
@@ -183,7 +183,7 @@ def test_failed_model_call_counts_as_an_attempt(tmp_path):
             raise llm.LLMError("timed out")
         return json.dumps({"new_entities": [], "discusses": ["microsoft"], "relations": []})
 
-    result = extract_note(alpha, known_entities(graph), generate=flaky)
+    result = extract_note(alpha, known_entities(graph), generate=flaky, classify=False)
 
     assert result.discusses == ["microsoft"] and result.dropped == []
     assert calls[0]["max_tokens"] and calls[0]["timeout"]
@@ -199,7 +199,7 @@ def test_new_entity_without_german_name_uses_the_english_name(tmp_path):
         }
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm_answer)
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer, classify=False)
 
     assert [(e.id, e.name_de) for e in result.new_entities] == [("openai", "OpenAI")]
     assert result.dropped == []
@@ -209,7 +209,7 @@ def test_prompt_lists_only_entities_mentioned_in_the_chunk(tmp_path):
     *_, graph, alpha = load(tmp_path)
     llm_answer = fake_llm({"new_entities": [], "discusses": [], "relations": []})
 
-    extract_note(alpha, known_entities(graph), generate=llm_answer)
+    extract_note(alpha, known_entities(graph), generate=llm_answer, classify=False)
 
     table = llm_answer.prompts[0].split("<known_entities>")[1].split("</known_entities>")[0]
     assert "microsoft | Organization" in table  # named in the text
@@ -229,7 +229,7 @@ def test_new_entity_matching_a_known_name_is_resolved_to_it(tmp_path):
         }
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm_answer)
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer, classify=False)
 
     assert result.new_entities == []
     assert result.discusses == ["microsoft"]
@@ -245,7 +245,7 @@ def test_new_entity_is_not_merged_with_a_known_entity_of_another_type(tmp_path):
     }
     llm_answer = fake_llm(answer, answer)
 
-    result = extract_note(alpha, known_entities(graph), generate=llm_answer, max_attempts=2)
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer, max_attempts=2, classify=False)
 
     assert result.new_entities == []
     assert "already used by" in result.dropped[0]
@@ -275,7 +275,7 @@ def test_prompt_contains_the_worked_examples(tmp_path):
     *_, graph, alpha = load(tmp_path)
     llm_answer = fake_llm({"new_entities": [], "discusses": [], "relations": []})
 
-    extract_note(alpha, known_entities(graph), generate=llm_answer)
+    extract_note(alpha, known_entities(graph), generate=llm_answer, classify=False)
 
     assert "Helm packages Kubernetes applications as charts" in llm_answer.prompts[0]
 
@@ -302,7 +302,7 @@ def test_relation_pass_finds_relations_the_entity_pass_missed(tmp_path):
         },
     )
 
-    result = extract_note(alpha, known_entities(graph), generate=llm_answer)
+    result = extract_note(alpha, known_entities(graph), generate=llm_answer, classify=False)
 
     assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "DEVELOPED_BY", "microsoft")]
     assert "find every relation" in llm_answer.prompts[1]
@@ -314,7 +314,7 @@ def test_entities_only_referenced_by_a_link_in_parentheses_are_not_discussed(tmp
     note = alpha.model_copy(update={"content_en": "Alpha was developed by Microsoft; see also ([[beta|Beta]])."})
     llm_answer = fake_llm({"new_entities": [], "discusses": ["microsoft", "beta"], "relations": []})
 
-    result = extract_note(note, known_entities(graph), generate=llm_answer)
+    result = extract_note(note, known_entities(graph), generate=llm_answer, classify=False)
 
     assert result.discusses == ["microsoft"]
 
@@ -327,7 +327,7 @@ def test_relation_pass_can_run_without_reasoning(tmp_path):
         calls.append(options["think"])
         return json.dumps({"new_entities": [], "discusses": ["microsoft"], "relations": []})
 
-    extract_note(alpha, known_entities(graph), generate=recording, think=True, relation_think=False)
+    extract_note(alpha, known_entities(graph), generate=recording, think=True, relation_think=False, classify=False)
 
     assert calls == [True, False]
 
@@ -344,37 +344,52 @@ def test_relation_pass_may_register_entities_the_first_pass_missed(tmp_path):
         },
     )
 
-    result = extract_note(note, known_entities(graph), generate=llm_answer)
+    result = extract_note(note, known_entities(graph), generate=llm_answer, classify=False)
 
     assert [e.id for e in result.new_entities] == ["gamma-lab"]
     assert [(r["from"], r["to"]) for r in result.relations] == [("alpha", "gamma-lab")]
 
 
-def test_relations_the_verifier_rejects_are_dropped(tmp_path):
-    *_, graph, alpha = load(tmp_path)
+def _scripted_extraction(relations):
+    """A generate() that answers the first pass with `relations` and lets the classifier
+    decide each relation by the function given in the prompt check."""
     prompts = []
 
-    def generate(prompt, **options):
+    def generate(prompt, classify=None, **options):
         prompts.append(prompt)
-        if "Does the text state" in prompt:
-            supported = "DEVELOPED_BY" in prompt
-            return json.dumps({"supported": supported, "reason": "test"})
+        if "Which relation does the text state" in prompt:
+            return json.dumps(classify(prompt))
         if len(prompts) == 1:
-            return json.dumps(
-                {
-                    "new_entities": [],
-                    "discusses": ["microsoft", "beta"],
-                    "relations": [
-                        {"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"},
-                        {"from": "alpha", "type": "IS_EXAMPLE_OF", "to": "beta", "evidence": "builds on Beta"},
-                    ],
-                }
-            )
+            return json.dumps({"new_entities": [], "discusses": ["microsoft", "beta"], "relations": relations})
         return json.dumps({"new_entities": [], "discusses": [], "relations": []})
 
-    result = extract_note(alpha, known_entities(graph), generate=generate)
+    generate.prompts = prompts
+    return generate
 
-    assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "DEVELOPED_BY", "microsoft")]
-    assert any("not supported" in problem for problem in result.dropped)
-    verification = next(p for p in prompts if "Does the text state" in p)
-    assert "Alpha was developed by" in verification  # the evidence's sentence as context
+
+def test_classifier_corrects_type_and_direction(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    generate = _scripted_extraction(
+        [{"from": "beta", "type": "IS_EXAMPLE_OF", "to": "alpha", "evidence": "builds on Beta"}]
+    )
+    answer = {"type": "BASED_ON", "direction": "B_TO_A", "reason": "Alpha builds on Beta"}
+
+    result = extract_note(alpha, known_entities(graph), generate=lambda p, **o: generate(p, classify=lambda _: answer, **o))
+
+    assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "BASED_ON", "beta")]
+    classification = next(p for p in generate.prompts if "Which relation does the text state" in p)
+    assert "Alpha was developed by" in classification  # the evidence's surroundings as context
+    assert "IS_EXAMPLE_OF" in classification and "COMPLEMENTS" in classification  # all options offered
+
+
+def test_classifier_can_reject_a_relation(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    generate = _scripted_extraction(
+        [{"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"}]
+    )
+    answer = {"type": "NONE", "direction": "A_TO_B", "reason": "only mentioned"}
+
+    result = extract_note(alpha, known_entities(graph), generate=lambda p, **o: generate(p, classify=lambda _: answer, **o))
+
+    assert result.relations == []
+    assert any("no relation" in problem for problem in result.dropped)
