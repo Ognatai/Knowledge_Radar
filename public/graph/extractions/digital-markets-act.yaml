@@ -1,0 +1,42 @@
+version: 1
+note_sha256: a175cdbc137c5e13cd592c24b677c10b827dd83d5250f646bf1b8439b2da72de
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- gatekeeper
+- core-platform-service
+- european-commission
+- whistleblower-directive
+- tfeu
+- digital-services-act
+- gdpr
+- data-act
+- eidas
+relations:
+- from: digital-markets-act
+  type: REGULATES
+  to: gatekeeper
+  evidence: The Digital Markets Act (DMA) sets rules for large digital platforms that act as gatekeepers between businesses and consumers
+- from: digital-markets-act
+  type: REGULATES
+  to: core-platform-service
+  evidence: The Commission designates undertakings as gatekeepers for specific core platform services
+- from: european-commission
+  type: REGULATES
+  to: gatekeeper
+  evidence: The Commission designates undertakings as gatekeepers for specific core platform services
+- from: digital-markets-act
+  type: COMPLEMENTS
+  to: digital-services-act
+  evidence: complementary; the DSA regulates content and systemic risks, the DMA market power
+- from: digital-markets-act
+  type: AMENDS
+  to: whistleblower-directive
+  evidence: Amendment to Directive (EU) 2019/1937
+- from: eidas
+  type: REGULATES
+  to: gatekeeper
+  evidence: gatekeepers must give providers of European Digital Identity Wallets access to operating system and hardware features
+- from: digital-markets-act
+  type: COMPLEMENTS
+  to: tfeu
+  evidence: applies in parallel; the DMA sets ex ante obligations that do not depend on proving an abuse of dominance

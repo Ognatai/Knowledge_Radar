@@ -1,0 +1,77 @@
+version: 1
+note_sha256: 66d47a47ff96d46efd2eb87309a14a22835ca1ac6b883f1891d2e2879b5ece06
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- intermediary-service
+- very-large-online-platform
+- european-commission
+- european-board-for-digital-services
+- cjeu
+- e-commerce-directive
+- representative-actions-directive
+- recommender-system
+- content-moderation
+- online-advertising
+- systemic-risk
+- dark-patterns
+- digital-markets-act
+- gatekeeper
+- gdpr
+- eu-ai-act
+relations:
+- from: digital-services-act
+  type: REGULATES
+  to: intermediary-service
+  evidence: The Digital Services Act (DSA) sets EU-wide rules for intermediary services such as internet access providers, hosting services, online platforms and search engines
+- from: digital-services-act
+  type: REGULATES
+  to: very-large-online-platform
+  evidence: Very large online platforms and search engines with at least 45 million monthly active users in the EU must also assess and mitigate systemic risks
+- from: european-commission
+  type: REGULATES
+  to: very-large-online-platform
+  evidence: The Commission supervises them directly, with fines of up to 6 % of worldwide annual turnover
+- from: digital-services-act
+  type: REGULATES
+  to: european-board-for-digital-services
+  evidence: Establishes an independent advisory group named ‘European Board for Digital Services’
+- from: digital-services-act
+  type: REGULATES
+  to: cjeu
+  evidence: Gives the Court of Justice of the European Union unlimited jurisdiction to review and adjust fines or periodic penalty payments imposed by the Commission
+- from: digital-services-act
+  type: AMENDS
+  to: e-commerce-directive
+  evidence: the DSA replaces its liability rules (Art. 12-15 of the Directive) with Art. 4, 5, 6 and 8 DSA
+- from: digital-services-act
+  type: AMENDS
+  to: representative-actions-directive
+  evidence: Amendment to Directive (EU) 2020/1828
+- from: digital-services-act
+  type: COMPLEMENTS
+  to: digital-markets-act
+  evidence: complementary; the DMA addresses the market power of gatekeepers, the DSA the handling of content and systemic risks
+- from: digital-services-act
+  type: COMPLEMENTS
+  to: eu-ai-act
+  evidence: AI systems used for content moderation or recommendations remain subject to the DSA; the AI Act adds its own requirements
+- from: digital-services-act
+  type: REGULATES
+  to: recommender-system
+  evidence: online platforms must explain the main parameters of their recommender systems
+- from: digital-services-act
+  type: REGULATES
+  to: content-moderation
+  evidence: gives users rights against content moderation decisions
+- from: digital-services-act
+  type: REGULATES
+  to: online-advertising
+  evidence: targeting parameters must be disclosed; very large services keep a public advertisement repository
+- from: digital-services-act
+  type: REGULATES
+  to: systemic-risk
+  evidence: very large services must assess risks arising from their algorithmic systems
+- from: digital-services-act
+  type: REGULATES
+  to: dark-patterns
+  evidence: interfaces may not deceive or manipulate users

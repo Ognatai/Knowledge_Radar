@@ -1067,3 +1067,85 @@ entities:
   type: Method
   name_en: Classifier-free guidance
   name_de: Classifier-free Guidance
+- id: gatekeeper
+  type: Concept
+  name_en: Gatekeeper (DMA)
+  name_de: Torwächter (DMA)
+  aliases:
+  - gatekeeper
+- id: core-platform-service
+  type: Concept
+  name_en: Core platform service
+  name_de: Zentraler Plattformdienst
+- id: european-commission
+  type: Organization
+  name_en: European Commission
+  name_de: Europäische Kommission
+- id: whistleblower-directive
+  type: Regulation
+  name_en: Whistleblower Directive (EU) 2019/1937
+  name_de: Whistleblower-Richtlinie (EU) 2019/1937
+  aliases:
+  - Directive (EU) 2019/1937
+- id: tfeu
+  type: Regulation
+  name_en: Treaty on the Functioning of the European Union (TFEU)
+  name_de: Vertrag über die Arbeitsweise der Europäischen Union (AEUV)
+  aliases:
+  - TFEU
+  - AEUV
+- id: intermediary-service
+  type: Concept
+  name_en: Intermediary service
+  name_de: Vermittlungsdienst
+- id: very-large-online-platform
+  type: Concept
+  name_en: Very large online platforms and search engines (VLOPs and VLOSEs)
+  name_de: Sehr große Online-Plattformen und Suchmaschinen (VLOPs und VLOSEs)
+  aliases:
+  - VLOP
+  - VLOSE
+  - very large online platform
+- id: european-board-for-digital-services
+  type: Organization
+  name_en: European Board for Digital Services
+  name_de: Europäisches Gremium für digitale Dienste
+- id: cjeu
+  type: Organization
+  name_en: Court of Justice of the European Union (CJEU)
+  name_de: Gerichtshof der Europäischen Union (EuGH)
+  aliases:
+  - CJEU
+  - EuGH
+- id: e-commerce-directive
+  type: Regulation
+  name_en: E-Commerce Directive 2000/31/EC
+  name_de: E-Commerce-Richtlinie 2000/31/EG
+  aliases:
+  - Directive 2000/31/EC
+- id: representative-actions-directive
+  type: Regulation
+  name_en: Representative Actions Directive (EU) 2020/1828
+  name_de: Verbandsklagenrichtlinie (EU) 2020/1828
+  aliases:
+  - Directive (EU) 2020/1828
+- id: recommender-system
+  type: Concept
+  name_en: Recommender system
+  name_de: Empfehlungssystem
+- id: content-moderation
+  type: Concept
+  name_en: Content moderation
+  name_de: Inhaltsmoderation
+- id: online-advertising
+  type: Concept
+  name_en: Online advertising
+  name_de: Online-Werbung
+- id: systemic-risk
+  type: Concept
+  name_en: Systemic risk (DSA)
+  name_de: Systemisches Risiko (DSA)
+- id: dark-patterns
+  type: Concept
+  name_en: Dark patterns
+  name_de: Dark Patterns
