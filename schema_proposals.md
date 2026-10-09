@@ -40,6 +40,18 @@ Found while reviewing:
 On acceptance, the reviewed notes gain these links (e.g. `precision
 IS_EXAMPLE_OF classification-metrics`).
 
+## 3. `BASED_ON`: allow Regulation → Regulation
+
+**Change:** `BASED_ON.from` and `BASED_ON.to` add `Regulation`.
+
+**Justification:** acts build on frameworks of other acts without transposing
+them (`IMPLEMENTS`) or changing them (`AMENDS`). Found while reviewing:
+
+- cybersecurity-act: "Other acts such as the NIS2 Directive and the Cyber
+  Resilience Act build on these schemes."
+- cyber-resilience-act: "the CRA uses NIS2's definitions of incident and near
+  miss and its CSIRTs designated as coordinators".
+
 ## Edges waiting for these proposals
 
 Reviewed notes whose extraction will gain edges once the proposals are decided:
@@ -49,4 +61,6 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - contract-intelligence: `IS_EXAMPLE_OF legal-ai` (2); CUAD, ContractNLI as datasets (1)
 - context-engineering: multi-agent systems as a system implementation (2)
 - convolutional-neural-networks: ImageNet (1)
+- cybersecurity-act: NIS2 and CRA `BASED_ON` cybersecurity-act (3)
+- cyber-resilience-act: `BASED_ON nis2-directive` (3)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

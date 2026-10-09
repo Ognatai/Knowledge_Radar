@@ -966,3 +966,27 @@ entities:
   type: Concept
   name_en: Product with digital elements
   name_de: Produkt mit digitalen Elementen
+- id: european-ombudsman
+  type: Organization
+  name_en: European Ombudsman
+  name_de: Europäische Bürgerbeauftragte
+- id: enisa-regulation-2013
+  type: Regulation
+  name_en: ENISA Regulation (EU) No 526/2013
+  name_de: ENISA-Verordnung (EU) Nr. 526/2013
+  aliases:
+  - Regulation (EU) No 526/2013
+- id: regulation-2025-37
+  type: Regulation
+  name_en: Regulation (EU) 2025/37 (managed security services)
+  name_de: Verordnung (EU) 2025/37 (gemanagte Sicherheitsdienste)
+- id: eucc
+  type: Regulation
+  name_en: EUCC certification scheme (Implementing Regulation (EU) 2024/482)
+  name_de: EUCC-Zertifizierungsschema (Durchführungsverordnung (EU) 2024/482)
+  aliases:
+  - EUCC
+- id: cybersecurity-certification
+  type: Concept
+  name_en: European cybersecurity certification
+  name_de: Europäische Cybersicherheitszertifizierung

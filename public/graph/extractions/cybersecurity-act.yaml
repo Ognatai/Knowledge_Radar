@@ -1,0 +1,44 @@
+version: 1
+note_sha256: a473bfdd2c9da9fe87fb35e73e83508a8e58135104b7a59e90145ac066206fdc
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- enisa
+- european-ombudsman
+- enisa-regulation-2013
+- regulation-2025-37
+- eucc
+- cybersecurity-certification
+- bsig
+- bsi
+- nis2-directive
+- cyber-resilience-act
+- eu-ai-act
+relations:
+- from: cybersecurity-act
+  type: REGULATES
+  to: enisa
+  evidence: It gives ENISA, the European Union Agency for Cybersecurity, a permanent mandate and sets out its tasks
+- from: cybersecurity-act
+  type: REGULATES
+  to: cybersecurity-certification
+  evidence: it creates the European cybersecurity certification framework
+- from: european-ombudsman
+  type: REGULATES
+  to: enisa
+  evidence: Subjects ENISA's operations to supervision by the European Ombudsman
+- from: cybersecurity-act
+  type: AMENDS
+  to: enisa-regulation-2013
+  evidence: Regulation (EU) No 526/2013 repealed
+- from: regulation-2025-37
+  type: AMENDS
+  to: cybersecurity-act
+  evidence: 'Regulation (EU) 2025/37 enters into force: certification schemes can also cover managed security services'
+- from: eucc
+  type: IMPLEMENTS
+  to: cybersecurity-act
+  evidence: 'First European scheme adopted: the Common Criteria-based scheme EUCC (Implementing Regulation (EU) 2024/482)'
+- from: bsig
+  type: IMPLEMENTS
+  to: cybersecurity-act
+  evidence: designates the BSI as Germany's national cybersecurity certification authority (§ 54 BSIG)
