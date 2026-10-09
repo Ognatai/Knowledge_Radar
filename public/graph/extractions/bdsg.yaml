@@ -1,0 +1,46 @@
+version: 1
+note_sha256: 352a5ae870ebfd282bd08ff6cc6d135c7d1a4fc773cc47e1d6173f2b74314cb8
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- gdpr
+- law-enforcement-directive
+- tdddg
+- bfdi
+- eu-ai-act
+- employee-data-protection
+- credit-scoring
+- video-surveillance
+- data-protection-officer
+relations:
+- from: bdsg
+  type: IMPLEMENTS
+  to: gdpr
+  evidence: it fills the GDPR's opening clauses with German rules
+- from: bdsg
+  type: IMPLEMENTS
+  to: law-enforcement-directive
+  evidence: It also implements the EU directive on data protection in criminal law enforcement (Directive (EU) 2016/680)
+- from: tdddg
+  type: TAKES_PRECEDENCE_OVER
+  to: bdsg
+  evidence: Specific federal laws such as the TDDDG take precedence over it
+- from: bdsg
+  type: REGULATES
+  to: bfdi
+  evidence: Guarantees the complete independence of the Federal Commissioner in performing tasks and exercising powers
+- from: bdsg
+  type: REGULATES
+  to: employee-data-protection
+  evidence: § 26 is the central provision on employee data protection
+- from: bdsg
+  type: REGULATES
+  to: credit-scoring
+  evidence: § 31 sets out when probability values about a person's future behaviour (scoring) may be used for contract decisions
+- from: bdsg
+  type: REGULATES
+  to: video-surveillance
+  evidence: computer vision on cameras in publicly accessible spaces is only permitted for the purposes listed and has to be made recognisable
+- from: bdsg
+  type: REGULATES
+  to: data-protection-officer
+  evidence: required from 20 persons permanently engaged in automated processing

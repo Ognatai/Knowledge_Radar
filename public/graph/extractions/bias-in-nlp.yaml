@@ -1,0 +1,39 @@
+version: 1
+note_sha256: ffb74f71a410ef1bd3413c851dab9e3e4d6224ac14af76c12f755fba7759767d
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- embeddings
+- eu-ai-act
+- weat
+- wefat
+- glove
+- geometric-debiasing
+- chatgpt
+- actor-level-corpus-analysis
+- information-extraction
+- large-language-models
+relations:
+- from: eu-ai-act
+  type: REGULATES
+  to: bias-in-nlp
+  evidence: requires training, validation and test data to be examined for possible biases
+- from: weat
+  type: BASED_ON
+  to: embeddings
+  evidence: which compare how strongly sets of target words are associated with sets of attribute words in the embedding
+- from: wefat
+  type: BASED_ON
+  to: embeddings
+  evidence: which compare how strongly sets of target words are associated with sets of attribute words in the embedding
+- from: glove
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: Using GloVe embeddings, they replicated a spectrum of biases
+- from: geometric-debiasing
+  type: BASED_ON
+  to: embeddings
+  evidence: Using these properties, the authors modify an embedding to remove stereotypes
+- from: actor-level-corpus-analysis
+  type: BASED_ON
+  to: information-extraction
+  evidence: Urchs et al. (2024) combine linguistic discourse analysis with information extraction

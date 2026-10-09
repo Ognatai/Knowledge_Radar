@@ -446,3 +446,74 @@ entities:
   name_de: Problem Details for HTTP APIs (RFC 9457)
   aliases:
   - RFC 9457
+- id: variational-autoencoder
+  type: Method
+  name_en: Variational autoencoder (VAE)
+  name_de: Variational Autoencoder (VAE)
+  aliases:
+  - VAE
+- id: dcgan
+  type: Method
+  name_en: Deep convolutional GAN (DCGAN)
+  name_de: Deep Convolutional GAN (DCGAN)
+  aliases:
+  - DCGAN
+- id: wasserstein-gan
+  type: Method
+  name_en: Wasserstein GAN
+  name_de: Wasserstein-GAN
+  aliases:
+  - WGAN
+- id: law-enforcement-directive
+  type: Regulation
+  name_en: Law Enforcement Directive (EU) 2016/680
+  name_de: Richtlinie (EU) 2016/680 (JI-Richtlinie)
+  aliases:
+  - Directive (EU) 2016/680
+- id: employee-data-protection
+  type: Concept
+  name_en: Employee data protection
+  name_de: Beschäftigtendatenschutz
+- id: credit-scoring
+  type: Concept
+  name_en: Scoring (probability values for contract decisions)
+  name_de: Scoring (Wahrscheinlichkeitswerte für Vertragsentscheidungen)
+  aliases:
+  - scoring
+  - credit scoring
+- id: video-surveillance
+  type: Concept
+  name_en: Video surveillance
+  name_de: Videoüberwachung
+- id: data-protection-officer
+  type: Concept
+  name_en: Data protection officer
+  name_de: Datenschutzbeauftragte
+- id: weat
+  type: Method
+  name_en: Word Embedding Association Test (WEAT)
+  name_de: Word Embedding Association Test (WEAT)
+  aliases:
+  - WEAT
+- id: wefat
+  type: Method
+  name_en: Word Embedding Factual Association Test (WEFAT)
+  name_de: Word Embedding Factual Association Test (WEFAT)
+  aliases:
+  - WEFAT
+- id: glove
+  type: Method
+  name_en: GloVe
+  name_de: GloVe
+- id: geometric-debiasing
+  type: Method
+  name_en: Geometric debiasing of word embeddings
+  name_de: Geometrisches Debiasing von Word Embeddings
+- id: chatgpt
+  type: Technology
+  name_en: ChatGPT
+  name_de: ChatGPT
+- id: actor-level-corpus-analysis
+  type: Method
+  name_en: Actor-level corpus analysis
+  name_de: Akteursbasierte Korpusanalyse

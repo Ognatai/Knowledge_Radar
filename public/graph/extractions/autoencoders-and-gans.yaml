@@ -1,0 +1,27 @@
+version: 1
+note_sha256: fa814cf0d90885437eb1f4966db9f767b3a15e5ab610688a1d40d8663b977702
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- variational-autoencoder
+- dcgan
+- wasserstein-gan
+- convolutional-neural-networks
+- principal-component-analysis
+- diffusion-models
+relations:
+- from: variational-autoencoder
+  type: IS_EXAMPLE_OF
+  to: autoencoders-and-gans
+  evidence: variational autoencoders turn this into a probabilistic generative model
+- from: dcgan
+  type: IS_EXAMPLE_OF
+  to: autoencoders-and-gans
+  evidence: Convolutional GANs learn useful image representations
+- from: dcgan
+  type: BASED_ON
+  to: convolutional-neural-networks
+  evidence: Deep convolutional GANs (DCGANs) introduced architectural constraints that make convolutional networks work well as generator and discriminator
+- from: wasserstein-gan
+  type: IS_EXAMPLE_OF
+  to: autoencoders-and-gans
+  evidence: the Wasserstein GAN makes training more stable
