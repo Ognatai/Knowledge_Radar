@@ -208,6 +208,8 @@ def relation_problem(
             f"'{relation_type}' is not an extractable public relation type "
             f"({', '.join(sorted(allowed))})."
         )
+    if source == target:
+        return f"'{source}' cannot be related to itself."
     for endpoint in (source, target):
         if endpoint not in discussed:
             return f"'{endpoint}' is not listed in 'discusses'."

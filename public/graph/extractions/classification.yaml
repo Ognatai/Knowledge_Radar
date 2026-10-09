@@ -1,0 +1,66 @@
+version: 1
+note_sha256: 319dfd9d0af6ca34c1b0188e0437265ded2df452c6e22d4d852c834713e2bdb3
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- logistic-regression
+- naive-bayes
+- discriminant-analysis
+- linear-discriminant-analysis
+- quadratic-discriminant-analysis
+- discriminative-model
+- generative-model
+- probability-calibration
+- platt-scaling
+- isotonic-regression
+- ensemble-methods
+- support-vector-machines
+- neural-networks
+relations:
+- from: logistic-regression
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Classical methods are logistic regression (Cox, 1958), naive Bayes and discriminant analysis
+- from: naive-bayes
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Classical methods are logistic regression (Cox, 1958), naive Bayes and discriminant analysis
+- from: discriminant-analysis
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Classical methods are logistic regression (Cox, 1958), naive Bayes and discriminant analysis
+- from: linear-discriminant-analysis
+  type: IS_EXAMPLE_OF
+  to: discriminant-analysis
+  evidence: Linear discriminant analysis (LDA) assumes that all classes share one covariance matrix
+- from: quadratic-discriminant-analysis
+  type: IS_EXAMPLE_OF
+  to: discriminant-analysis
+  evidence: quadratic discriminant analysis (QDA) allows a separate covariance matrix per class
+- from: logistic-regression
+  type: IS_EXAMPLE_OF
+  to: discriminative-model
+  evidence: Logistic regression models the class probability directly as a function of the inputs, which makes it a discriminative model
+- from: naive-bayes
+  type: IS_EXAMPLE_OF
+  to: generative-model
+  evidence: Naive Bayes is a generative classifier
+- from: platt-scaling
+  type: IS_EXAMPLE_OF
+  to: probability-calibration
+  evidence: Platt scaling and isotonic regression correct these distortions
+- from: isotonic-regression
+  type: IS_EXAMPLE_OF
+  to: probability-calibration
+  evidence: Platt scaling and isotonic regression correct these distortions
+- from: ensemble-methods
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Tree ensembles, support vector machines and neural networks are further classifiers
+- from: support-vector-machines
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Tree ensembles, support vector machines and neural networks are further classifiers
+- from: neural-networks
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Tree ensembles, support vector machines and neural networks are further classifiers

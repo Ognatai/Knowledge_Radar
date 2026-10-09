@@ -252,3 +252,17 @@ def test_entity_keys_cover_names_aliases_and_parentheses():
     entity = Entity(id="w3c", type="Organization", name_en="World Wide Web Consortium (W3C)", name_de="W3C", aliases=["Web Consortium"])
 
     assert {"w3c", "worldwidewebconsortium", "webconsortium"} <= entity_keys(entity)
+
+
+def test_an_entity_cannot_relate_to_itself(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    relations = """
+  - from: beta
+    type: BASED_ON
+    to: beta
+    evidence: builds on Beta
+"""
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), relations))
+
+    with pytest.raises(GraphError, match="itself"):
+        load_graph(graph_dir, load_notes(notes_dir), notes_dir)

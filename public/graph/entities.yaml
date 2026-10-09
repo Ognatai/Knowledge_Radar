@@ -588,3 +588,71 @@ entities:
   type: Concept
   name_en: Critical entity
   name_de: Kritische Einrichtung
+- id: linear-regression
+  type: Method
+  name_en: Linear regression
+  name_de: Lineare Regression
+- id: logistic-regression
+  type: Method
+  name_en: Logistic regression
+  name_de: Logistische Regression
+- id: supervised-learning
+  type: Concept
+  name_en: Supervised learning
+  name_de: Überwachtes Lernen
+- id: unsupervised-learning
+  type: Concept
+  name_en: Unsupervised learning
+  name_de: Unüberwachtes Lernen
+- id: bias-variance-tradeoff
+  type: Concept
+  name_en: Bias-variance trade-off
+  name_de: Bias-Varianz-Dilemma
+- id: cross-validation
+  type: Method
+  name_en: Cross-validation
+  name_de: Kreuzvalidierung
+- id: xgboost
+  type: Method
+  name_en: XGBoost
+  name_de: XGBoost
+- id: naive-bayes
+  type: Method
+  name_en: Naive Bayes
+  name_de: Naive Bayes
+- id: discriminant-analysis
+  type: Method
+  name_en: Discriminant analysis
+  name_de: Diskriminanzanalyse
+- id: linear-discriminant-analysis
+  type: Method
+  name_en: Linear discriminant analysis (LDA)
+  name_de: Lineare Diskriminanzanalyse (LDA)
+  aliases:
+  - LDA
+- id: quadratic-discriminant-analysis
+  type: Method
+  name_en: Quadratic discriminant analysis (QDA)
+  name_de: Quadratische Diskriminanzanalyse (QDA)
+  aliases:
+  - QDA
+- id: discriminative-model
+  type: Concept
+  name_en: Discriminative model
+  name_de: Diskriminatives Modell
+- id: generative-model
+  type: Concept
+  name_en: Generative model
+  name_de: Generatives Modell
+- id: probability-calibration
+  type: Concept
+  name_en: Probability calibration
+  name_de: Kalibrierung von Wahrscheinlichkeiten
+- id: platt-scaling
+  type: Method
+  name_en: Platt scaling
+  name_de: Platt Scaling
+- id: isotonic-regression
+  type: Method
+  name_en: Isotonic regression
+  name_de: Isotone Regression

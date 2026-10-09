@@ -1,0 +1,75 @@
+version: 1
+note_sha256: ad901f4ad4912e61326cb83e100db89c8bb58dc540e9033535a7c96d76ff5e7b
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- decision-trees
+- ensemble-methods
+- random-forest
+- support-vector-machines
+- k-nearest-neighbors
+- clustering
+- principal-component-analysis
+- linear-regression
+- logistic-regression
+- supervised-learning
+- unsupervised-learning
+- classification
+- bias-variance-tradeoff
+- cross-validation
+- scikit-learn
+- python
+- xgboost
+- neural-networks
+relations:
+- from: decision-trees
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
+- from: ensemble-methods
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
+- from: support-vector-machines
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
+- from: k-nearest-neighbors
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
+- from: clustering
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
+- from: principal-component-analysis
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
+- from: linear-regression
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression
+- from: logistic-regression
+  type: IS_EXAMPLE_OF
+  to: classical-machine-learning
+  evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression
+- from: clustering
+  type: IS_EXAMPLE_OF
+  to: unsupervised-learning
+  evidence: In unsupervised learning there is no response, and the goal is to find structure, for example groups of similar observations (Clustering)
+- from: principal-component-analysis
+  type: IS_EXAMPLE_OF
+  to: unsupervised-learning
+  evidence: or a lower-dimensional representation (Principal Component Analysis)
+- from: random-forest
+  type: IS_EXAMPLE_OF
+  to: ensemble-methods
+  evidence: Tree ensembles (random forests, boosting)
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: classical-machine-learning
+  evidence: scikit-learn is a Python module that integrates a wide range of machine learning algorithms for medium-scale supervised and unsupervised problems
+- from: scikit-learn
+  type: BASED_ON
+  to: python
+  evidence: scikit-learn is a Python module
