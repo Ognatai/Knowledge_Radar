@@ -139,6 +139,13 @@ def main() -> int:
     )
     parser.add_argument("--model", default=None)
     parser.add_argument("--no-think", dest="think", action="store_false", help="Answer without reasoning first.")
+    parser.add_argument(
+        "--no-think-relations",
+        dest="relation_think",
+        action="store_false",
+        default=None,
+        help="Run only the relation pass without reasoning.",
+    )
     parser.add_argument("--predictions", type=Path, help="Score an existing run directory instead of extracting.")
     parser.add_argument("--notes-dir", type=Path, default=configured_notes_directory())
     args = parser.parse_args()
@@ -154,8 +161,15 @@ def main() -> int:
         else:
             model = args.model or llm.model_name()
             stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-            run_directory = RUNS_DIRECTORY / f"{stamp}-{args.split}-{model.replace(':', '-')}{'' if args.think else '-no-think'}"
-            results = extract_notes(slugs, args.notes_dir, run_directory, model=model, think=args.think)
+            run_directory = RUNS_DIRECTORY / f"{stamp}-{args.split}-{model.replace(':', '-')}{'' if args.think else '-no-think'}{'-no-think-relations' if args.relation_think is False else ''}"
+            results = extract_notes(
+                slugs,
+                args.notes_dir,
+                run_directory,
+                model=model,
+                think=args.think,
+                relation_think=args.relation_think,
+            )
             dropped = {slug: result.dropped for slug, result in results.items() if result.dropped}
             (run_directory / "dropped.json").write_text(json.dumps(dropped, indent=2, ensure_ascii=False), encoding="utf-8")
         predicted = load_graph(run_directory, notes, args.notes_dir)

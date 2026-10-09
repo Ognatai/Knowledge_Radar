@@ -315,3 +315,16 @@ def test_entities_only_referenced_by_a_link_in_parentheses_are_not_discussed(tmp
     result = extract_note(note, known_entities(graph), generate=llm_answer)
 
     assert result.discusses == ["microsoft"]
+
+
+def test_relation_pass_can_run_without_reasoning(tmp_path):
+    *_, graph, alpha = load(tmp_path)
+    calls = []
+
+    def recording(prompt, **options):
+        calls.append(options["think"])
+        return json.dumps({"new_entities": [], "discusses": ["microsoft"], "relations": []})
+
+    extract_note(alpha, known_entities(graph), generate=recording, think=True, relation_think=False)
+
+    assert calls == [True, False]

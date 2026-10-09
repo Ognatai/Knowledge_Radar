@@ -486,9 +486,14 @@ def extract_note(
     max_attempts: int = 3,
     model: str | None = None,
     think: bool = True,
+    relation_think: bool | None = None,
     guidelines: str | None = None,
 ) -> NoteExtraction:
-    """Extract one note chunk by chunk; new entities of earlier chunks are known later."""
+    """Extract one note chunk by chunk; new entities of earlier chunks are known later.
+
+    `relation_think` sets reasoning for the relation pass separately (default: `think`);
+    the relation pass makes most of the calls, so it dominates the run time."""
+    relation_think = think if relation_think is None else relation_think
     guidelines = guidelines if guidelines is not None else GUIDELINES_PATH.read_text(encoding="utf-8")
     examples = render_examples(yaml.safe_load(EXAMPLES_PATH.read_text(encoding="utf-8"))["examples"])
     note_text = plain_text(note.content_en)
@@ -497,7 +502,7 @@ def extract_note(
     registered: dict[str, Entity] = {}
     seen_relations: set[tuple[str, str, str]] = set()
 
-    def ask(prompt: str) -> _ChunkResult:
+    def ask(prompt: str, think: bool) -> _ChunkResult:
         current_prompt = prompt
         checked = _ChunkResult([], [], {}, [])
         for attempt in range(1, max_attempts + 1):
@@ -536,7 +541,7 @@ def extract_note(
 
     for chunk in chunk_text(reading_text(note.content_en)):
         # Pass 1: entities (and the relations the model sees right away).
-        merge(ask(build_prompt(note, chunk, mentioned_entities(chunk, known), guidelines, examples)))
+        merge(ask(build_prompt(note, chunk, mentioned_entities(chunk, known), guidelines, examples), think))
         # Pass 2: relations, window by window, between the entities each window names.
         for window in chunk_text(chunk, RELATION_WINDOW_CHARS):
             named = mentioned_entities(window, known)
@@ -544,7 +549,7 @@ def extract_note(
             if not named:
                 continue
             named[note.slug] = known[note.slug]
-            merge(ask(build_relation_prompt(note, window, named, guidelines, examples)))
+            merge(ask(build_relation_prompt(note, window, named, guidelines, examples), relation_think))
 
     # Links in parentheses only point elsewhere; without a relation they are not discussed.
     in_relations = {end for relation in result.relations for end in (relation["from"], relation["to"])}
@@ -601,6 +606,7 @@ def extract_notes(
     *,
     model: str | None = None,
     think: bool = True,
+    relation_think: bool | None = None,
     generate: Generate = llm.generate,
     log: Callable[[str], None] = lambda line: print(line, flush=True),
 ) -> dict[str, NoteExtraction]:
@@ -615,7 +621,14 @@ def extract_notes(
     for slug in slugs or sorted(by_slug):
         note = by_slug[slug]
         graph = load_graph(graph_directory, notes, notes_directory)
-        extraction = extract_note(note, known_entities(graph), generate=generate, model=model, think=think)
+        extraction = extract_note(
+            note,
+            known_entities(graph),
+            generate=generate,
+            model=model,
+            think=think,
+            relation_think=relation_think,
+        )
         write_extraction(
             graph_directory,
             notes_directory / f"{slug}.md",
@@ -645,9 +658,23 @@ def main() -> int:
         action="store_false",
         help="Answer without reasoning first (faster, but clearly worse in the evaluation).",
     )
+    parser.add_argument(
+        "--no-think-relations",
+        dest="relation_think",
+        action="store_false",
+        default=None,
+        help="Run only the relation pass without reasoning.",
+    )
     args = parser.parse_args()
     try:
-        extract_notes(args.notes or None, args.notes_dir, args.graph_dir, model=args.model, think=args.think)
+        extract_notes(
+            args.notes or None,
+            args.notes_dir,
+            args.graph_dir,
+            model=args.model,
+            think=args.think,
+            relation_think=args.relation_think,
+        )
     except (NoteRepositoryError, GraphError, llm.LLMError) as exc:
         print(f"Extraction failed: {exc}", file=sys.stderr)
         return 1
