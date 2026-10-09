@@ -393,3 +393,27 @@ def test_classifier_can_reject_a_relation(tmp_path):
 
     assert result.relations == []
     assert any("no relation" in problem for problem in result.dropped)
+
+
+def test_extract_notes_can_skip_the_classifier(tmp_path):
+    from app.agents.extraction import extract_notes
+
+    notes_dir, graph_dir, *_ = load(tmp_path)
+    prompts = []
+
+    def generate(prompt, **options):
+        prompts.append(prompt)
+        if len(prompts) == 1:
+            return json.dumps(
+                {
+                    "new_entities": [],
+                    "discusses": ["microsoft"],
+                    "relations": [{"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"}],
+                }
+            )
+        return json.dumps({"new_entities": [], "discusses": [], "relations": []})
+
+    results = extract_notes(["alpha"], notes_dir, graph_dir, generate=generate, classify=False, log=lambda _: None)
+
+    assert len(results["alpha"].relations) == 1
+    assert not any("Which relation does the text state" in prompt for prompt in prompts)

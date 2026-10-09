@@ -751,6 +751,7 @@ def extract_notes(
     model: str | None = None,
     think: bool = True,
     relation_think: bool | None = None,
+    classify: bool = True,
     generate: Generate = llm.generate,
     log: Callable[[str], None] = lambda line: print(line, flush=True),
 ) -> dict[str, NoteExtraction]:
@@ -772,6 +773,7 @@ def extract_notes(
             model=model,
             think=think,
             relation_think=relation_think,
+            classify=classify,
         )
         write_extraction(
             graph_directory,
@@ -809,6 +811,12 @@ def main() -> int:
         default=None,
         help="Run only the relation pass without reasoning.",
     )
+    parser.add_argument(
+        "--no-classify",
+        dest="classify",
+        action="store_false",
+        help="Skip the type-and-direction classifier (much faster; for output that is reviewed anyway).",
+    )
     args = parser.parse_args()
     try:
         extract_notes(
@@ -818,6 +826,7 @@ def main() -> int:
             model=args.model,
             think=args.think,
             relation_think=args.relation_think,
+            classify=args.classify,
         )
     except (NoteRepositoryError, GraphError, llm.LLMError) as exc:
         print(f"Extraction failed: {exc}", file=sys.stderr)
