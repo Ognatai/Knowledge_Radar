@@ -943,3 +943,26 @@ entities:
   name_de: Aufsichtlicher Überprüfungs- und Bewertungsprozess (SREP)
   aliases:
   - SREP
+- id: enisa
+  type: Organization
+  name_en: European Union Agency for Cybersecurity (ENISA)
+  name_de: Agentur der Europäischen Union für Cybersicherheit (ENISA)
+  aliases:
+  - ENISA
+- id: general-product-safety-regulation
+  type: Regulation
+  name_en: General Product Safety Regulation (EU) 2023/988
+  name_de: Verordnung (EU) 2023/988 über die allgemeine Produktsicherheit
+  aliases:
+  - GPSR
+- id: european-health-data-space
+  type: Regulation
+  name_en: European Health Data Space Regulation (EU) 2025/327
+  name_de: Verordnung (EU) 2025/327 über den europäischen Gesundheitsdatenraum
+  aliases:
+  - EHDS
+  - European Health Data Space
+- id: product-with-digital-elements
+  type: Concept
+  name_en: Product with digital elements
+  name_de: Produkt mit digitalen Elementen

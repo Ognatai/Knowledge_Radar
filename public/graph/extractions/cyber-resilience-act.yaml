@@ -1,0 +1,29 @@
+version: 1
+note_sha256: 4be679e9febe2b5b81934ed9b582141fb4cb906816c190a3fd634aee708a62ef
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- enisa
+- general-product-safety-regulation
+- european-health-data-space
+- product-with-digital-elements
+- eu-ai-act
+- nis2-directive
+- cybersecurity-act
+- gdpr
+relations:
+- from: cyber-resilience-act
+  type: COMPLEMENTS
+  to: general-product-safety-regulation
+  evidence: 'General Product Safety Regulation (EU) 2023/988: applies for risks not covered by the CRA'
+- from: cyber-resilience-act
+  type: REGULATES
+  to: enisa
+  evidence: CSIRTs designated as coordinators and ENISA for reports
+- from: european-health-data-space
+  type: AMENDS
+  to: cyber-resilience-act
+  evidence: 'Article 104 of Regulation (EU) 2025/327 (European Health Data Space), applicable from 26 March 2027: EHR systems demonstrate conformity through the EHDS procedure'
+- from: cyber-resilience-act
+  type: REGULATES
+  to: product-with-digital-elements
+  evidence: The Cyber Resilience Act (CRA) sets EU-wide cybersecurity requirements for hardware and software products with digital elements
