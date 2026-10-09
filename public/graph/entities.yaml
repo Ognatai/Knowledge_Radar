@@ -737,3 +737,32 @@ entities:
   type: Method
   name_en: Code review
   name_de: Code Review
+- id: k-means
+  type: Method
+  name_en: k-means
+  name_de: k-Means
+  aliases:
+  - Lloyd's algorithm
+- id: k-means-plus-plus
+  type: Method
+  name_en: k-means++
+  name_de: k-Means++
+- id: hierarchical-clustering
+  type: Method
+  name_en: Hierarchical clustering
+  name_de: Hierarchisches Clustering
+  aliases:
+  - agglomerative clustering
+  - Ward's method
+- id: dbscan
+  type: Method
+  name_en: DBSCAN
+  name_de: DBSCAN
+- id: hermitian-dot-product
+  type: Concept
+  name_en: Hermitian dot product
+  name_de: Hermitesches Skalarprodukt
+- id: link-prediction
+  type: Concept
+  name_en: Link prediction
+  name_de: Link Prediction

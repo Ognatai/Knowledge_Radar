@@ -1,0 +1,40 @@
+version: 1
+note_sha256: c7e1b4f9056311fee2a6c911516287a3b2af419b0603560f060d16e45a251031
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- k-means
+- k-means-plus-plus
+- hierarchical-clustering
+- dbscan
+- scikit-learn
+- embeddings
+- principal-component-analysis
+relations:
+- from: k-means
+  type: IS_EXAMPLE_OF
+  to: clustering
+  evidence: k-means minimises the squared distances between points and their cluster centres
+- from: hierarchical-clustering
+  type: IS_EXAMPLE_OF
+  to: clustering
+  evidence: hierarchical clustering merges groups step by step into a hierarchy
+- from: dbscan
+  type: IS_EXAMPLE_OF
+  to: clustering
+  evidence: DBSCAN finds dense regions of arbitrary shape and marks isolated points as noise
+- from: k-means-plus-plus
+  type: BASED_ON
+  to: k-means
+  evidence: k-means++ chooses them with a simple randomised seeding technique
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: k-means
+  evidence: k-means, hierarchical clustering and DBSCAN are available in scikit-learn
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: hierarchical-clustering
+  evidence: k-means, hierarchical clustering and DBSCAN are available in scikit-learn
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: dbscan
+  evidence: k-means, hierarchical clustering and DBSCAN are available in scikit-learn

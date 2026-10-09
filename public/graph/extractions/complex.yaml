@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 62c31808ce424d18036459066f8b2371b93b6299a7262e29f54fbaeea55cc3c2
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- distmult
+- rotate
+- knowledge-graph-embeddings
+- knowledge-graphs
+- hermitian-dot-product
+- link-prediction
+- transe
+relations:
+- from: complex
+  type: BASED_ON
+  to: distmult
+  evidence: ComplEx (Trouillon et al., 2016) extended the bilinear DistMult (Yang et al., 2014) to complex numbers
+- from: complex
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: Knowledge graph embedding is organised by representation space, scoring function and encoding model, and ComplEx stands for complex vector spaces
+- from: rotate
+  type: BASED_ON
+  to: complex
+  evidence: RotatE (Sun et al., 2019) followed with rotations in complex space
+- from: complex
+  type: BASED_ON
+  to: knowledge-graphs
+  evidence: ComplEx embeds entities and relations of a knowledge graph as complex-valued vectors
+- from: complex
+  type: BASED_ON
+  to: hermitian-dot-product
+  evidence: ComplEx uses only the Hermitian dot product
