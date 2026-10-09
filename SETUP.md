@@ -79,10 +79,31 @@ Install Ollama on the host (it is not containerized). Models:
 | Use | Model | Machine in this project's deployment |
 | --- | --- | --- |
 | Chat (local app) | `ollama pull qwen3.5:4b` | ThinkPad (CUDA) |
-| Agent pipeline (extraction) | `ollama pull qwen3:30b-a3b` | Desktop (ROCm) |
+| Agent pipeline (extraction) | `ollama pull qwen3:30b-a3b` | Desktop (AMD, Vulkan) |
 
 On a single machine, pull whichever fits your GPU. In VS Code, **Knowledge
 Radar: Ollama chat** opens an interactive session with a model of your choice.
+
+### AMD GPUs on Windows
+
+On the Desktop (Radeon RX 7900 XT, 20 GB), `scripts\start-ollama.ps1` starts
+Ollama with the Vulkan backend and a q8_0 KV cache, for the Ollama processes
+only. Under ROCm, decode speed fell from about 110 to 18 tokens/s as the context
+grew to 14k tokens; Vulkan keeps about 30 tokens/s, and the smaller cache lets
+`qwen3:30b-a3b` with a 24k context fit completely into VRAM. To use it at logon,
+replace Ollama's own autostart shortcut:
+
+```powershell
+$startup = [Environment]::GetFolderPath('Startup')
+Move-Item "$startup\Ollama.lnk" "$env:LOCALAPPDATA\Ollama\Ollama.lnk.bak"
+$shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut("$startup\Ollama (Vulkan).lnk")
+$shortcut.TargetPath = "powershell.exe"
+$shortcut.Arguments = "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$PWD\scripts\start-ollama.ps1`" -Delay 20"
+$shortcut.Save()
+```
+
+Ollama updates may restore `Ollama.lnk`; the script then replaces that instance
+20 seconds after logon. Running the script by hand restarts Ollama the same way.
 
 ## 7. Optional: private repository
 
