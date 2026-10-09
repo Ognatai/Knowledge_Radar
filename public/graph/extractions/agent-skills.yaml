@@ -1,0 +1,30 @@
+version: 1
+note_sha256: b740d161b7f8c1c08de1d54d2ad806d3d8bd237754fda42cc6252402fa88cc2e
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- mcp-and-related-protocols
+- anthropic
+- claude-code
+- codex
+- context-engineering
+relations:
+- from: agent-skills
+  type: COMPLEMENTS
+  to: mcp-and-related-protocols
+  evidence: Skills complement MCP servers
+- from: agent-skills
+  type: DEVELOPED_BY
+  to: anthropic
+  evidence: Anthropic introduced Agent Skills in October 2025
+- from: claude-code
+  type: IMPLEMENTS
+  to: agent-skills
+  evidence: both Claude Code and Codex use the same SKILL.md format
+- from: codex
+  type: IMPLEMENTS
+  to: agent-skills
+  evidence: both Claude Code and Codex use the same SKILL.md format
+- from: agent-skills
+  type: BASED_ON
+  to: context-engineering
+  evidence: This implements the principle of keeping the context small and loading information just in time

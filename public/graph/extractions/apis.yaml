@@ -1,0 +1,41 @@
+version: 1
+note_sha256: c79464ae424ee599d4edbd6a48566c6800c4db76dd2025dd41ecadbaa2677daa
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- rest
+- remote-procedure-call
+- grpc
+- json-rpc
+- graphql
+- protocol-buffers
+- http
+- problem-details
+- openapi
+- sparql
+- knowledge-graphs
+- mcp-and-related-protocols
+relations:
+- from: grpc
+  type: IS_EXAMPLE_OF
+  to: remote-procedure-call
+  evidence: remote procedure calls such as gRPC (gRPC docs) or JSON-RPC
+- from: json-rpc
+  type: IS_EXAMPLE_OF
+  to: remote-procedure-call
+  evidence: remote procedure calls such as gRPC (gRPC docs) or JSON-RPC
+- from: grpc
+  type: BASED_ON
+  to: protocol-buffers
+  evidence: gRPC builds on Protocol Buffers
+- from: rest
+  type: BASED_ON
+  to: http
+  evidence: REST over HTTP, which treats data as resources with a uniform interface
+- from: sparql
+  type: BASED_ON
+  to: http
+  evidence: knowledge graphs offer SPARQL endpoints, a query API over HTTP
+- from: mcp-and-related-protocols
+  type: BASED_ON
+  to: json-rpc
+  evidence: JSON-RPC is a light, stateless and transport-agnostic RPC protocol with JSON messages (JSON-RPC 2.0 specification), used for example by MCP and Related Protocols

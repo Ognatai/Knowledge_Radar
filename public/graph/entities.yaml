@@ -367,3 +367,82 @@ entities:
   type: Organization
   name_en: Federal Ministry of the Interior
   name_de: Bundesministerium des Innern
+- id: claude-code
+  type: Technology
+  name_en: Claude Code
+  name_de: Claude Code
+- id: codex
+  type: Technology
+  name_en: Codex
+  name_de: Codex
+- id: product-liability-directive-2024
+  type: Regulation
+  name_en: Product Liability Directive (EU) 2024/2853
+  name_de: Produkthaftungsrichtlinie (EU) 2024/2853
+  aliases:
+  - Product Liability Directive (2024)
+- id: product-liability-directive-1985
+  type: Regulation
+  name_en: Product Liability Directive 85/374/EEC
+  name_de: Produkthaftungsrichtlinie 85/374/EWG
+  aliases:
+  - Directive 85/374/EEC
+- id: ai-liability-directive-proposal
+  type: Regulation
+  name_en: AI Liability Directive (proposal
+  name_de: KI-Haftungsrichtlinie (Vorschlag
+  aliases:
+  - AI Liability Directive
+- id: produkthaftungsgesetz
+  type: Regulation
+  name_en: Product Liability Act (ProdHaftG)
+  name_de: Produkthaftungsgesetz (ProdHaftG)
+  aliases:
+  - ProdHaftG
+  - Produkthaftungsgesetz
+- id: product-liability-bill-2026
+  type: Regulation
+  name_en: German government bill on product liability (2026)
+  name_de: Regierungsentwurf zum Produkthaftungsrecht (2026)
+- id: bgb
+  type: Regulation
+  name_en: German Civil Code (BGB)
+  name_de: Bürgerliches Gesetzbuch (BGB)
+  aliases:
+  - BGB
+- id: rest
+  type: Concept
+  name_en: REST
+  name_de: REST
+  aliases:
+  - Representational State Transfer
+- id: remote-procedure-call
+  type: Concept
+  name_en: Remote procedure call (RPC)
+  name_de: Remote Procedure Call (RPC)
+  aliases:
+  - RPC
+- id: grpc
+  type: Technology
+  name_en: gRPC
+  name_de: gRPC
+- id: graphql
+  type: Technology
+  name_en: GraphQL
+  name_de: GraphQL
+- id: protocol-buffers
+  type: Technology
+  name_en: Protocol Buffers
+  name_de: Protocol Buffers
+- id: http
+  type: Technology
+  name_en: HTTP
+  name_de: HTTP
+  aliases:
+  - Hypertext Transfer Protocol
+- id: problem-details
+  type: Technology
+  name_en: Problem Details for HTTP APIs (RFC 9457)
+  name_de: Problem Details for HTTP APIs (RFC 9457)
+  aliases:
+  - RFC 9457

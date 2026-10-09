@@ -1,0 +1,33 @@
+version: 1
+note_sha256: a2b6c8918e2f16d99f71373bccfde978e651337e6d66e0808a22f2c79b56d053
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- product-liability-directive-2024
+- product-liability-directive-1985
+- ai-liability-directive-proposal
+- produkthaftungsgesetz
+- product-liability-bill-2026
+- bgb
+- eu-ai-act
+- explainable-ai
+relations:
+- from: product-liability-directive-2024
+  type: REGULATES
+  to: ai-liability-law
+  evidence: the new Product Liability Directive (2024) makes manufacturers liable without fault for defective products, explicitly including software and therefore AI systems
+- from: ai-liability-directive-proposal
+  type: REGULATES
+  to: ai-liability-law
+  evidence: the Commission had also proposed an AI Liability Directive to harmonise fault-based liability
+- from: produkthaftungsgesetz
+  type: IMPLEMENTS
+  to: product-liability-directive-1985
+  evidence: Directive 85/374/EEC of 1985, transposed in Germany by the Product Liability Act (Produkthaftungsgesetz) of 1989
+- from: product-liability-directive-2024
+  type: AMENDS
+  to: product-liability-directive-1985
+  evidence: The new Directive replaces it
+- from: product-liability-bill-2026
+  type: AMENDS
+  to: produkthaftungsgesetz
+  evidence: the federal government introduced a bill in February 2026 that replaces the 1989 Act
