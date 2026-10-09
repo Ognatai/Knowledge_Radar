@@ -884,3 +884,62 @@ entities:
   name_de: KI-Büro (Europäische Kommission)
   aliases:
   - AI Office
+- id: basel-iii
+  type: Regulation
+  name_en: Basel III
+  name_de: Basel III
+- id: crr-iii-and-crd-vi
+  type: Regulation
+  name_en: CRR III (Regulation (EU) 2024/1623) and CRD VI (Directive (EU) 2024/1619)
+  name_de: CRR III (Verordnung (EU) 2024/1623) und CRD VI (Richtlinie (EU) 2024/1619)
+  aliases:
+  - CRR III
+  - CRD VI
+- id: bafin
+  type: Organization
+  name_en: Federal Financial Supervisory Authority (BaFin)
+  name_de: Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)
+  aliases:
+  - BaFin
+- id: deutsche-bundesbank
+  type: Organization
+  name_en: Deutsche Bundesbank
+  name_de: Deutsche Bundesbank
+  aliases:
+  - Bundesbank
+- id: eba
+  type: Organization
+  name_en: European Banking Authority (EBA)
+  name_de: Europäische Bankenaufsichtsbehörde (EBA)
+  aliases:
+  - EBA
+- id: esrb
+  type: Organization
+  name_en: European Systemic Risk Board (ESRB)
+  name_de: Europäischer Ausschuss für Systemrisiken (ESRB)
+  aliases:
+  - ESRB
+- id: capital-buffer
+  type: Concept
+  name_en: Capital buffer
+  name_de: Kapitalpuffer
+- id: leverage-ratio
+  type: Concept
+  name_en: Leverage ratio
+  name_de: Verschuldungsquote (Leverage Ratio)
+- id: output-floor
+  type: Concept
+  name_en: Output floor
+  name_de: Output Floor
+- id: irb-approach
+  type: Method
+  name_en: Internal ratings-based approach (IRB)
+  name_de: Auf internen Ratings basierender Ansatz (IRB-Ansatz)
+  aliases:
+  - IRB
+- id: srep
+  type: Concept
+  name_en: Supervisory review and evaluation process (SREP)
+  name_de: Aufsichtlicher Überprüfungs- und Bewertungsprozess (SREP)
+  aliases:
+  - SREP

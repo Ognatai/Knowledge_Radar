@@ -1,0 +1,67 @@
+version: 1
+note_sha256: 0e32571c2b12b0e54f5e3d7bc2ea6e545e082535131482c309841b41fc4fe431
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- kwg
+- marisk
+- eba-governance-and-outsourcing-guidelines
+- bcbs-239-and-ecb-rdarr-guide
+- basel-iii
+- crr-iii-and-crd-vi
+- ecb
+- bafin
+- deutsche-bundesbank
+- eba
+- esrb
+- dora
+- gdpr
+- capital-buffer
+- leverage-ratio
+- output-floor
+- irb-approach
+- srep
+relations:
+- from: kwg
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: transposes the CRD in Germany and contains the national supplements to the CRR
+- from: marisk
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: specify the governance and risk management requirements of CRD Art. 74 and 88
+- from: eba-governance-and-outsourcing-guidelines
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: specify the governance and risk management requirements of CRD Art. 74 and 88
+- from: bcbs-239-and-ecb-rdarr-guide
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: specify the expectations for risk data aggregation and risk reporting that underlie the CRD governance requirements
+- from: crr-and-crd
+  type: IMPLEMENTS
+  to: basel-iii
+  evidence: The Capital Requirements Regulation (CRR) and the Capital Requirements Directive (CRD) implement the Basel III standards in the EU
+- from: crr-iii-and-crd-vi
+  type: AMENDS
+  to: crr-and-crd
+  evidence: CRR III and CRD VI (2024) added the output floor, new approaches for credit, market and operational risk
+- from: crr-and-crd
+  type: REGULATES
+  to: capital-buffer
+  evidence: governs authorisation, qualifying holdings, governance, remuneration, the supervisory review and evaluation process (SREP), additional own funds requirements, capital buffers and penalties
+- from: crr-and-crd
+  type: REGULATES
+  to: srep
+  evidence: governs authorisation, qualifying holdings, governance, remuneration, the supervisory review and evaluation process (SREP)
+- from: crr-and-crd
+  type: REGULATES
+  to: leverage-ratio
+  evidence: at least 4.5 % Common Equity Tier 1, 6 % Tier 1 and 8 % total capital, plus a 3 % leverage ratio
+- from: crr-and-crd
+  type: REGULATES
+  to: output-floor
+  evidence: Output floor fully applies at 72.5 %
+- from: crr-and-crd
+  type: REGULATES
+  to: irb-approach
+  evidence: banks that calculate capital requirements with internal ratings-based or market risk models need supervisory permission
