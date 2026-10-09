@@ -1149,3 +1149,11 @@ entities:
   type: Concept
   name_en: Dark patterns
   name_de: Dark Patterns
+- id: semantic-matching-model
+  type: Method
+  name_en: Semantic matching model
+  name_de: Semantic-Matching-Modell
+- id: rule-mining
+  type: Method
+  name_en: Rule mining
+  name_de: Regel-Mining

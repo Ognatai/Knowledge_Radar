@@ -31,6 +31,7 @@ from app.backend.knowledge_radar.graph import (
     GraphError,
     entity_keys,
     load_graph,
+    name_parts,
     normalize_name,
     note_sha256,
     WIKILINK_LABEL_PATTERN,
@@ -126,9 +127,7 @@ def known_entities(graph) -> dict[str, Entity]:
 def _name_variants(entity: Entity) -> set[str]:
     variants: set[str] = set()
     for name in (entity.name_en, entity.name_de, *entity.aliases):
-        variants.add(name)
-        variants.add(re.sub(r"\([^)]*\)", "", name))
-        variants.update(re.findall(r"\(([^)]*)\)", name))
+        variants.update(name_parts(name))
     return {re.sub(r"\s+", " ", variant).strip() for variant in variants if len(variant.strip()) >= 2}
 
 

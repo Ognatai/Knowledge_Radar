@@ -427,3 +427,16 @@ def test_names_with_inner_capitals_match_only_in_their_exact_spelling():
 
     assert mentioned_entities("Code that is too complex invites bugs.", {"complex": complex_}) == {}
     assert "complex" in mentioned_entities("ComplEx uses complex-valued embeddings.", {"complex": complex_})
+
+
+def test_parenthetical_qualifiers_are_not_names_of_their_own():
+    from app.agents.extraction import mentioned_entities
+    from app.backend.knowledge_radar.graph import Entity
+
+    space = Entity(id="confluence-space", type="Concept", name_en="Space (Confluence)", name_de="Bereich (Confluence)")
+    w3c = Entity(id="w3c", type="Organization", name_en="World Wide Web Consortium (W3C)", name_de="W3C")
+    entities = {"confluence-space": space, "w3c": w3c}
+
+    assert mentioned_entities("Confluence is a wiki in vector spaces.", entities) == {}
+    assert set(mentioned_entities("RDF is a W3C standard.", entities)) == {"w3c"}
+    assert set(mentioned_entities("A Space (Confluence) holds pages.", entities)) == {"confluence-space"}

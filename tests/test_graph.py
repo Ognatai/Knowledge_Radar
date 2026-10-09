@@ -266,3 +266,22 @@ def test_an_entity_cannot_relate_to_itself(tmp_path):
 
     with pytest.raises(GraphError, match="itself"):
         load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+
+def test_entity_keys_split_parentheses_only_for_acronyms():
+    from app.backend.knowledge_radar.graph import Entity, entity_keys
+
+    space = Entity(id="confluence-space", type="Concept", name_en="Space (Confluence)", name_de="Bereich (Confluence)")
+
+    assert "confluence" not in entity_keys(space) and "space" not in entity_keys(space)
+
+
+def test_only_a_trailing_acronym_in_parentheses_is_a_name():
+    from app.backend.knowledge_radar.graph import name_parts
+
+    assert name_parts("Directive (EU) 2019/790 on copyright") == ["Directive (EU) 2019/790 on copyright"]
+    assert name_parts("General Data Protection Regulation (GDPR)") == [
+        "General Data Protection Regulation (GDPR)",
+        "GDPR",
+        "General Data Protection Regulation",
+    ]

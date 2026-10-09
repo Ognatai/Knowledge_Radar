@@ -1,0 +1,24 @@
+version: 1
+note_sha256: 6f777adad36b4a1e0e87012b60d357c96c00d9694ed86079f3376e03e22853a6
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- knowledge-graph-embeddings
+- semantic-matching-model
+- rule-mining
+- link-prediction
+- transe
+- complex
+- rotate
+relations:
+- from: distmult
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: DistMult is a knowledge graph embedding model
+- from: distmult
+  type: IS_EXAMPLE_OF
+  to: semantic-matching-model
+  evidence: Wang et al. (2017) classify it among semantic matching models
+- from: complex
+  type: BASED_ON
+  to: distmult
+  evidence: ComplEx (Trouillon et al., 2016) extends it to complex numbers

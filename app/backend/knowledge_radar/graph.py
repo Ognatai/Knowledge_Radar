@@ -103,14 +103,25 @@ def normalize_name(name: str) -> str:
     return re.sub(r"[^0-9a-z]", "", name.casefold())
 
 
+ACRONYM_IN_PARENTHESES = re.compile(r"\(([A-Z0-9][A-Z0-9-]{1,11})\)\s*$")
+
+
+def name_parts(name: str) -> list[str]:
+    """A name and, if it ends in an acronym in parentheses, the long form and the
+    acronym: "World Wide Web Consortium (W3C)" also yields "World Wide Web Consortium"
+    and "W3C". Other parentheses qualify the name ("Space (Confluence)") and are kept."""
+    parts = [name]
+    for acronym in ACRONYM_IN_PARENTHESES.findall(name):
+        parts.append(acronym)
+        parts.append(name.replace(f"({acronym})", ""))
+    return [part.strip() for part in parts if part.strip()]
+
+
 def entity_keys(entity: Entity) -> set[str]:
-    """Normalised id, names and aliases; "World Wide Web Consortium (W3C)" also
-    yields "World Wide Web Consortium" and "W3C"."""
+    """Normalised id, names, aliases and their long forms and acronyms."""
     keys: set[str] = set()
     for name in (entity.id, entity.name_en, entity.name_de, *entity.aliases):
-        keys.add(normalize_name(name))
-        keys.add(normalize_name(re.sub(r"\([^)]*\)", "", name)))
-        keys.update(normalize_name(inner) for inner in re.findall(r"\(([^)]*)\)", name))
+        keys.update(normalize_name(part) for part in name_parts(name))
     # Singular and plural name the same entity ("Random forests").
     keys.update(key[:-1] for key in list(keys) if key.endswith("s") and len(key) > 4)
     keys.discard("")
