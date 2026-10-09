@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 2f6918f2a444d37db55da899aca7e84da781825f0718f1cbfebbeb6658311746
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- privacy-preserving-ml
+- dp-deep-learning
+- federated-averaging
+- gradient-leakage
+- neural-networks
+relations:
+- from: differential-privacy-and-federated-learning
+  type: IS_EXAMPLE_OF
+  to: privacy-preserving-ml
+  evidence: Differential privacy and federated learning are two techniques for privacy-preserving machine learning
+- from: dp-deep-learning
+  type: IS_EXAMPLE_OF
+  to: differential-privacy-and-federated-learning
+  evidence: Abadi et al. (2016) developed algorithmic techniques for learning and a refined analysis of privacy costs within the framework of differential privacy
+- from: dp-deep-learning
+  type: BASED_ON
+  to: neural-networks
+  evidence: deep neural networks with non-convex objectives can be trained under a modest privacy budget
+- from: federated-averaging
+  type: IS_EXAMPLE_OF
+  to: differential-privacy-and-federated-learning
+  evidence: an approach they called federated learning. Their method is based on iterative model averaging

@@ -1,0 +1,30 @@
+version: 1
+note_sha256: dfd2ba9d038e04b84ac9198335e189867f6fa9c576819e357b02df927f38fd61
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- latent-diffusion
+- classifier-guidance
+- classifier-free-guidance
+- autoencoders-and-gans
+- attention-and-transformers
+relations:
+- from: latent-diffusion
+  type: IS_EXAMPLE_OF
+  to: diffusion-models
+  evidence: Latent diffusion models apply diffusion in the latent space of a powerful pretrained autoencoder
+- from: latent-diffusion
+  type: BASED_ON
+  to: autoencoders-and-gans
+  evidence: Latent diffusion models apply diffusion in the latent space of a powerful pretrained autoencoder
+- from: latent-diffusion
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: Cross-attention layers make them flexible generators for conditions such as text or bounding boxes
+- from: classifier-guidance
+  type: BASED_ON
+  to: diffusion-models
+  evidence: Classifier guidance trades off diversity and sample fidelity in conditional diffusion models
+- from: classifier-free-guidance
+  type: BASED_ON
+  to: diffusion-models
+  evidence: a conditional and an unconditional diffusion model are trained jointly, and their score estimates are combined

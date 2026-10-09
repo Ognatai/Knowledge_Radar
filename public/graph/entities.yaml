@@ -1032,3 +1032,38 @@ entities:
   type: Concept
   name_en: Re-use of protected public sector data
   name_de: Weiterverwendung geschützter Daten des öffentlichen Sektors
+- id: privacy-preserving-ml
+  type: Concept
+  name_en: Privacy-preserving machine learning
+  name_de: Datenschutzfreundliches maschinelles Lernen
+- id: dp-deep-learning
+  type: Method
+  name_en: Differentially private deep learning
+  name_de: Differentially Private Deep Learning
+  aliases:
+  - DP-SGD
+- id: federated-averaging
+  type: Method
+  name_en: Federated averaging
+  name_de: Federated Averaging
+  aliases:
+  - FedAvg
+  - iterative model averaging
+- id: gradient-leakage
+  type: Concept
+  name_en: Gradient leakage
+  name_de: Gradient Leakage
+- id: latent-diffusion
+  type: Method
+  name_en: Latent diffusion model
+  name_de: Latent Diffusion Model
+  aliases:
+  - latent diffusion
+- id: classifier-guidance
+  type: Method
+  name_en: Classifier guidance
+  name_de: Classifier Guidance
+- id: classifier-free-guidance
+  type: Method
+  name_en: Classifier-free guidance
+  name_de: Classifier-free Guidance
