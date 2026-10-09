@@ -1,0 +1,30 @@
+version: 1
+note_sha256: c7b14a721d75883e2b29533dda2dfd268b71094dc12ab9e8147ab3c60643d697
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- prompt-engineering
+- retrieval-augmented-generation
+- sequence-to-sequence
+- llmlingua
+- memgpt
+relations:
+- from: context-engineering
+  type: BASED_ON
+  to: prompt-engineering
+  evidence: Context engineering grew out of prompt engineering
+- from: retrieval-augmented-generation
+  type: IS_EXAMPLE_OF
+  to: context-engineering
+  evidence: shows how they are combined in system implementations such as retrieval-augmented generation
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: sequence-to-sequence
+  evidence: Lewis et al. (2020) combined a pretrained sequence-to-sequence model with a dense vector index of Wikipedia
+- from: llmlingua
+  type: IS_EXAMPLE_OF
+  to: context-engineering
+  evidence: Compression keeps the context within budget. LLMLingua (Jiang et al., 2023) compresses prompts
+- from: memgpt
+  type: IS_EXAMPLE_OF
+  to: context-engineering
+  evidence: When information does not fit into the window, it can be moved to external storage. MemGPT (Packer et al., 2023) uses virtual context management

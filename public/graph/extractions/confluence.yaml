@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 68a32ef465d3dc33c563f7c1a52ad34999177e23a68b46064c34a4def52e8954
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- atlassian
+- confluence-space
+- confluence-page-tree
+- cql
+- rest
+- retrieval-augmented-generation
+relations:
+- from: confluence
+  type: DEVELOPED_BY
+  to: atlassian
+  evidence: Confluence is Atlassian's team wiki
+- from: confluence
+  type: IMPLEMENTS
+  to: confluence-space
+  evidence: content lives in spaces, which act as collaborative workspaces or knowledge bases for a team, project or initiative
+- from: confluence
+  type: IMPLEMENTS
+  to: confluence-page-tree
+  evidence: contain pages organised in a page tree
+- from: confluence
+  type: IMPLEMENTS
+  to: rest
+  evidence: automated through a REST API

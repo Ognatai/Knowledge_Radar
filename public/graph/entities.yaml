@@ -766,3 +766,27 @@ entities:
   type: Concept
   name_en: Link prediction
   name_de: Link Prediction
+- id: atlassian
+  type: Organization
+  name_en: Atlassian
+  name_de: Atlassian
+- id: confluence-space
+  type: Concept
+  name_en: Space (Confluence)
+  name_de: Bereich (Confluence)
+  aliases:
+  - Confluence space
+- id: confluence-page-tree
+  type: Concept
+  name_en: Page tree (Confluence)
+  name_de: Seitenbaum (Confluence)
+- id: cql
+  type: Technology
+  name_en: Confluence Query Language (CQL)
+  name_de: Confluence Query Language (CQL)
+  aliases:
+  - CQL
+- id: llmlingua
+  type: Method
+  name_en: LLMLingua
+  name_de: LLMLingua
