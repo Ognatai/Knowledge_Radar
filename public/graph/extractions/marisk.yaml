@@ -1,0 +1,52 @@
+version: 1
+note_sha256: 1102d8006514bd75dac2a6c41a3399bec411a72590fec6586edc5faffe9fdef1
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- bafin
+- deutsche-bundesbank
+- ecb
+- kwg
+- crr-and-crd
+- dora
+- eba-governance-and-outsourcing-guidelines
+- bcbs-239-and-ecb-rdarr-guide
+- risk-bearing-capacity
+- internal-control-system
+- explainable-ai
+relations:
+- from: marisk
+  type: DEVELOPED_BY
+  to: bafin
+  evidence: are a BaFin circular that specifies the duty to maintain a proper business organisation
+- from: marisk
+  type: IMPLEMENTS
+  to: kwg
+  evidence: specifies the duty to maintain a proper business organisation under section 25a of the KWG
+- from: marisk
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: MaRisk provide the qualitative framework for the CRD rules on organisation and risk management
+- from: marisk
+  type: IMPLEMENTS
+  to: eba-governance-and-outsourcing-guidelines
+  evidence: 'EBA guidelines on internal governance and outsourcing: are implemented through MaRisk'
+- from: marisk
+  type: IMPLEMENTS
+  to: bcbs-239-and-ecb-rdarr-guide
+  evidence: the requirements on data quality (AT 7.2) and risk reporting (BT 2) reflect the principles for risk data aggregation
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: marisk
+  evidence: ICT services subject to ICT third-party risk management under DORA are outside the outsourcing rules of AT 9; ICT risk management follows DORA
+- from: marisk
+  type: REGULATES
+  to: risk-bearing-capacity
+  evidence: 'They govern how banks manage their risks: risk-bearing capacity, strategies'
+- from: marisk
+  type: REGULATES
+  to: internal-control-system
+  evidence: an internal control system with risk control and compliance functions and internal audit
+- from: marisk
+  type: REGULATES
+  to: explainable-ai
+  evidence: regular validation of accuracy, stability and consistency, and sufficient explainability, which deserves particular attention for AI models

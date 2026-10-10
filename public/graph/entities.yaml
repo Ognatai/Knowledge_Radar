@@ -1888,3 +1888,23 @@ entities:
   type: Concept
   name_en: Distributed tracing
   name_de: Distributed Tracing
+- id: addy-osmani
+  type: Person
+  name_en: Addy Osmani
+  name_de: Addy Osmani
+- id: boris-cherny
+  type: Person
+  name_en: Boris Cherny
+  name_de: Boris Cherny
+- id: reflection-loop
+  type: Method
+  name_en: Reflection loop
+  name_de: Reflexionsschleife
+- id: self-refine
+  type: Method
+  name_en: Self-Refine
+  name_de: Self-Refine
+- id: risk-bearing-capacity
+  type: Concept
+  name_en: Risk-bearing capacity
+  name_de: Risikotragfähigkeit

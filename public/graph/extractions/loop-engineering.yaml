@@ -1,0 +1,38 @@
+version: 1
+note_sha256: feb27f4c96a8060c55ce3df58ed1bc5a5ac292724e8cb066baba721d2cfb18e9
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- agentic-ai
+- harness-engineering
+- graph-engineering
+- addy-osmani
+- boris-cherny
+- reflection-loop
+- self-refine
+- reflexion
+- context-engineering
+relations:
+- from: loop-engineering
+  type: BASED_ON
+  to: agentic-ai
+  evidence: Loop engineering is the deliberate design of the iterative control loop around an agent
+- from: loop-engineering
+  type: BASED_ON
+  to: harness-engineering
+  evidence: It is described as one level above Harness Engineering
+- from: loop-engineering
+  type: DEVELOPED_BY
+  to: addy-osmani
+  evidence: Addy Osmani gave the pattern its name
+- from: loop-engineering
+  type: BASED_ON
+  to: reflection-loop
+  evidence: Reflection loops let a model review and improve its own output
+- from: self-refine
+  type: IS_EXAMPLE_OF
+  to: reflection-loop
+  evidence: Self-Refine uses the same LLM as generator, critic and refiner
+- from: reflexion
+  type: IS_EXAMPLE_OF
+  to: reflection-loop
+  evidence: Reflexion stores verbal reflections on feedback in an episodic memory for later attempts
