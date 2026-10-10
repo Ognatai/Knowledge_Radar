@@ -1,0 +1,45 @@
+version: 1
+note_sha256: 5998dfe4d829264c9f3e7f57ad4de2858ca7e1738f35bc99ea9445b770a2c642
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- bagging
+- random-forest
+- adaboost
+- gradient-boosting
+- xgboost
+- stacking
+- decision-trees
+- classical-machine-learning
+relations:
+- from: bagging
+  type: IS_EXAMPLE_OF
+  to: ensemble-methods
+  evidence: Bagging and random forests average models trained on bootstrap samples to reduce variance
+- from: random-forest
+  type: IS_EXAMPLE_OF
+  to: ensemble-methods
+  evidence: Bagging and random forests average models trained on bootstrap samples to reduce variance
+- from: adaboost
+  type: IS_EXAMPLE_OF
+  to: ensemble-methods
+  evidence: Stacking (Wolpert, 1992), bagging (Breiman, 1996) and AdaBoost (Freund & Schapire, 1997) introduced the main ensemble strategies
+- from: stacking
+  type: IS_EXAMPLE_OF
+  to: ensemble-methods
+  evidence: Stacking (Wolpert, 1992), bagging (Breiman, 1996) and AdaBoost (Freund & Schapire, 1997) introduced the main ensemble strategies
+- from: gradient-boosting
+  type: IS_EXAMPLE_OF
+  to: ensemble-methods
+  evidence: Random forests (Breiman, 2001) and gradient boosting (Friedman, 2001) became the standard tree ensembles
+- from: xgboost
+  type: IS_EXAMPLE_OF
+  to: gradient-boosting
+  evidence: XGBoost (Chen & Guestrin, 2016) is a scalable tree boosting system
+- from: random-forest
+  type: BASED_ON
+  to: decision-trees
+  evidence: Random forests grow many decision trees, each on a bootstrap sample
+- from: gradient-boosting
+  type: BASED_ON
+  to: decision-trees
+  evidence: Gradient boosting of regression trees gives competitive and robust procedures for regression and classification

@@ -1,0 +1,53 @@
+version: 1
+note_sha256: 1493837583a251d7977c2ce7ad7bedc57ceb01e4c06f2f8cab060bdd36ef35c1
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- gliner
+- gpt-ner
+- bilstm-crf
+- bert
+- coreference-resolution
+- actor-level-corpus-analysis
+- information-extraction
+- knowledge-graphs
+- large-language-models
+- attention-and-transformers
+- natural-language-processing
+- bias-in-nlp
+relations:
+- from: gliner
+  type: IS_EXAMPLE_OF
+  to: entity-extraction
+  evidence: GLiNER is a compact NER model built on a bidirectional transformer encoder and trained to identify any type of entity
+- from: gliner
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: GLiNER is a compact NER model built on a bidirectional transformer encoder
+- from: gpt-ner
+  type: IS_EXAMPLE_OF
+  to: entity-extraction
+  evidence: GPT-NER bridges this gap by turning labelling into generation
+- from: gpt-ner
+  type: BASED_ON
+  to: large-language-models
+  evidence: Out of the box, large language models performed significantly below supervised baselines on NER, because NER is a sequence labelling task and LLMs generate text (Wang et al., 2023). GPT-NER bridges this gap
+- from: bilstm-crf
+  type: IS_EXAMPLE_OF
+  to: entity-extraction
+  evidence: 'Lample et al. (2016) introduced two neural architectures: a bidirectional LSTM combined with a conditional random field (CRF)'
+- from: information-extraction
+  type: BASED_ON
+  to: entity-extraction
+  evidence: Extracted entities are the building blocks of Information Extraction and Knowledge Graphs
+- from: knowledge-graphs
+  type: BASED_ON
+  to: entity-extraction
+  evidence: Extracted entities are the building blocks of Information Extraction and Knowledge Graphs
+- from: actor-level-corpus-analysis
+  type: BASED_ON
+  to: entity-extraction
+  evidence: Combined with coreference resolution, person entities become actor profiles for corpus analyses
+- from: actor-level-corpus-analysis
+  type: BASED_ON
+  to: coreference-resolution
+  evidence: Combined with coreference resolution, person entities become actor profiles for corpus analyses

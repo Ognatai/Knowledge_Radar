@@ -1285,3 +1285,40 @@ entities:
   type: Method
   name_en: Cross-encoder
   name_de: Cross-Encoder
+- id: bagging
+  type: Method
+  name_en: Bagging (bootstrap aggregating)
+  name_de: Bagging (Bootstrap Aggregating)
+  aliases:
+  - bootstrap aggregating
+- id: adaboost
+  type: Method
+  name_en: AdaBoost
+  name_de: AdaBoost
+- id: gradient-boosting
+  type: Method
+  name_en: Gradient boosting
+  name_de: Gradient Boosting
+- id: stacking
+  type: Method
+  name_en: Stacking (stacked generalisation)
+  name_de: Stacking (Stacked Generalisation)
+  aliases:
+  - stacked generalisation
+  - stacked generalization
+- id: gliner
+  type: Method
+  name_en: GLiNER
+  name_de: GLiNER
+- id: gpt-ner
+  type: Method
+  name_en: GPT-NER
+  name_de: GPT-NER
+- id: bilstm-crf
+  type: Method
+  name_en: BiLSTM-CRF
+  name_de: BiLSTM-CRF
+- id: coreference-resolution
+  type: Method
+  name_en: Coreference resolution
+  name_de: Koreferenzauflösung
