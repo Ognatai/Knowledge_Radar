@@ -1,0 +1,42 @@
+version: 1
+note_sha256: efc4f6408577af6e1cde0da09b1dbb5372a29d5a4c57cbb5722d8c7fb4a8aed5
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- ml-test-score
+- behavioural-testing
+- checklist-nlp
+- model-cards
+- datasheets-for-datasets
+- technical-debt
+- microsoft
+- llm-as-a-judge
+- regression-testing
+relations:
+- from: quality-control
+  type: BASED_ON
+  to: ml-test-score
+  evidence: The ML Test Score lists 28 tests and monitoring needs in four groups
+- from: quality-control
+  type: BASED_ON
+  to: behavioural-testing
+  evidence: behavioural tests beyond aggregate accuracy (Ribeiro et al., 2020)
+- from: checklist-nlp
+  type: IS_EXAMPLE_OF
+  to: behavioural-testing
+  evidence: CheckList adapts behavioural testing from software engineering to NLP
+- from: quality-control
+  type: BASED_ON
+  to: model-cards
+  evidence: Model cards accompany trained models with their intended use and with evaluation results across conditions
+- from: quality-control
+  type: BASED_ON
+  to: datasheets-for-datasets
+  evidence: Datasheets document a dataset's motivation, composition, collection process and recommended uses
+- from: regression-testing
+  type: IS_EXAMPLE_OF
+  to: quality-control
+  evidence: Each change to prompt, model, retriever or chunking runs against a fixed test set before rollout
+- from: llm-as-a-judge
+  type: IS_EXAMPLE_OF
+  to: quality-control
+  evidence: Semantic ratings at scale
