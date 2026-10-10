@@ -1,0 +1,118 @@
+version: 1
+note_sha256: 4b730b3be7fbb79de667abed8f15e2f62ff8fcd5d0de8b364bc7fc94167d4128
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- ai-system
+- general-purpose-ai-model
+- general-purpose-ai-system
+- high-risk-ai-system
+- prohibited-ai-practice
+- ai-literacy
+- ai-regulatory-sandbox
+- deep-fake
+- ai-act-provider
+- ai-act-deployer
+- digital-omnibus-on-ai
+- representative-actions-directive
+- ai-office
+- edps
+- gdpr
+- eprivacy-directive
+- law-enforcement-directive
+- digital-services-act
+- dsm-directive
+- crr-and-crd
+- dora
+- explainable-ai
+- bias-in-nlp
+- fairness-metrics
+- ml-preprocessing
+- agentic-ai
+- diffusion-models
+- multimodal-models
+- large-language-models
+relations:
+- from: eu-ai-act
+  type: REGULATES
+  to: ai-system
+  evidence: The AI Act regulates AI systems and general-purpose AI (GPAI) models along their value chain
+- from: eu-ai-act
+  type: REGULATES
+  to: general-purpose-ai-model
+  evidence: The AI Act regulates AI systems and general-purpose AI (GPAI) models along their value chain
+- from: general-purpose-ai-system
+  type: BASED_ON
+  to: general-purpose-ai-model
+  evidence: based on a general-purpose AI model
+- from: eu-ai-act
+  type: REGULATES
+  to: high-risk-ai-system
+  evidence: sets requirements for high-risk systems
+- from: eu-ai-act
+  type: REGULATES
+  to: prohibited-ai-practice
+  evidence: it prohibits certain practices
+- from: eu-ai-act
+  type: REGULATES
+  to: ai-literacy
+  evidence: providers and deployers must take measures to support the development of AI literacy of their staff working with AI systems
+- from: eu-ai-act
+  type: REGULATES
+  to: ai-regulatory-sandbox
+  evidence: Requires at least one national sandbox per Member State
+- from: eu-ai-act
+  type: REGULATES
+  to: deep-fake
+  evidence: deep fakes must be disclosed
+- from: eu-ai-act
+  type: REGULATES
+  to: ai-act-provider
+  evidence: The rules apply to different actors—including providers, deployers, importers and distributors
+- from: eu-ai-act
+  type: REGULATES
+  to: ai-act-deployer
+  evidence: The rules apply to different actors—including providers, deployers, importers and distributors
+- from: digital-omnibus-on-ai
+  type: AMENDS
+  to: eu-ai-act
+  evidence: The Digital Omnibus on AI (Regulation (EU) 2026/1744) postponed the high-risk dates
+- from: eu-ai-act
+  type: AMENDS
+  to: representative-actions-directive
+  evidence: Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828
+- from: ai-office
+  type: REGULATES
+  to: general-purpose-ai-model
+  evidence: The AI Office of the Commission supervises GPAI models
+- from: eu-ai-act
+  type: REGULATES
+  to: explainable-ai
+  evidence: a right to an explanation of individual decisions based on the output of certain high-risk systems
+- from: eu-ai-act
+  type: REGULATES
+  to: bias-in-nlp
+  evidence: This turns data preparation, bias analysis and fairness metrics into documented obligations
+- from: eu-ai-act
+  type: REGULATES
+  to: fairness-metrics
+  evidence: This turns data preparation, bias analysis and fairness metrics into documented obligations
+- from: eu-ai-act
+  type: REGULATES
+  to: ml-preprocessing
+  evidence: This turns data preparation, bias analysis and fairness metrics into documented obligations
+- from: eu-ai-act
+  type: REGULATES
+  to: agentic-ai
+  evidence: human-in-the-loop designs in Agentic AI become a requirement
+- from: eu-ai-act
+  type: REGULATES
+  to: diffusion-models
+  evidence: This concerns diffusion models, multimodal models and LLMs
+- from: eu-ai-act
+  type: REGULATES
+  to: multimodal-models
+  evidence: This concerns diffusion models, multimodal models and LLMs
+- from: eu-ai-act
+  type: REGULATES
+  to: large-language-models
+  evidence: This concerns diffusion models, multimodal models and LLMs

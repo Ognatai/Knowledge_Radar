@@ -1348,3 +1348,60 @@ entities:
   type: Concept
   name_en: Unsolicited direct marketing
   name_de: Unerbetene Direktwerbung
+- id: ai-system
+  type: Concept
+  name_en: AI system
+  name_de: KI-System
+- id: general-purpose-ai-model
+  type: Concept
+  name_en: General-purpose AI model (GPAI model)
+  name_de: KI-Modell mit allgemeinem Verwendungszweck
+  aliases:
+  - GPAI model
+  - general-purpose AI model
+- id: general-purpose-ai-system
+  type: Concept
+  name_en: General-purpose AI system
+  name_de: KI-System mit allgemeinem Verwendungszweck
+- id: high-risk-ai-system
+  type: Concept
+  name_en: High-risk AI system
+  name_de: Hochrisiko-KI-System
+- id: prohibited-ai-practice
+  type: Concept
+  name_en: Prohibited AI practice
+  name_de: Verbotene Praktik im KI-Bereich
+- id: ai-literacy
+  type: Concept
+  name_en: AI literacy
+  name_de: KI-Kompetenz
+- id: ai-regulatory-sandbox
+  type: Concept
+  name_en: AI regulatory sandbox
+  name_de: KI-Reallabor
+- id: deep-fake
+  type: Concept
+  name_en: Deep fake
+  name_de: Deepfake
+- id: ai-act-provider
+  type: Concept
+  name_en: Provider (AI Act)
+  name_de: Anbieter (KI-Verordnung)
+- id: ai-act-deployer
+  type: Concept
+  name_en: Deployer (AI Act)
+  name_de: Betreiber (KI-Verordnung)
+- id: digital-omnibus-on-ai
+  type: Regulation
+  name_en: Digital Omnibus on AI (Regulation (EU) 2026/1744)
+  name_de: Digital-Omnibus zur KI (Verordnung (EU) 2026/1744)
+  aliases:
+  - Digital Omnibus on AI
+  - Regulation (EU) 2026/1744
+- id: edps
+  type: Organization
+  name_en: European Data Protection Supervisor (EDPS)
+  name_de: Europäischer Datenschutzbeauftragter (EDSB)
+  aliases:
+  - EDPS
+  - EDSB
