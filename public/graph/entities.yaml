@@ -1977,3 +1977,23 @@ entities:
   type: Concept
   name_en: Concept drift
   name_de: Concept Drift
+- id: mcnemars-test
+  type: Method
+  name_en: McNemar's test
+  name_de: McNemar-Test
+- id: five-two-cv-test
+  type: Method
+  name_en: 5×2 cv test
+  name_de: 5×2-cv-Test
+- id: wilcoxon-signed-ranks-test
+  type: Method
+  name_en: Wilcoxon signed-ranks test
+  name_de: Wilcoxon-Vorzeichen-Rang-Test
+- id: friedman-test
+  type: Method
+  name_en: Friedman test
+  name_de: Friedman-Test
+- id: expected-validation-performance
+  type: Method
+  name_en: Expected validation performance
+  name_de: Erwartete Validierungsleistung

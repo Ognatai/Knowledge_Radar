@@ -1,0 +1,36 @@
+version: 1
+note_sha256: 0c9b2ed9ae99427b4c26f273cb7ea6bf5792074830541938bbdab0baa2f266ed
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- mcnemars-test
+- five-two-cv-test
+- wilcoxon-signed-ranks-test
+- friedman-test
+- expected-validation-performance
+- helm-framework
+- cross-validation
+relations:
+- from: model-comparison
+  type: BASED_ON
+  to: mcnemars-test
+  evidence: McNemar's test and the 5×2 cv test had acceptable type I error
+- from: model-comparison
+  type: BASED_ON
+  to: five-two-cv-test
+  evidence: McNemar's test and the 5×2 cv test had acceptable type I error
+- from: model-comparison
+  type: BASED_ON
+  to: wilcoxon-signed-ranks-test
+  evidence: 'Demšar (2006) recommends non-parametric tests: the Wilcoxon signed-ranks test for two classifiers'
+- from: model-comparison
+  type: BASED_ON
+  to: friedman-test
+  evidence: the Friedman test with post-hoc tests for several classifiers
+- from: expected-validation-performance
+  type: IS_EXAMPLE_OF
+  to: model-comparison
+  evidence: The authors propose reporting the expected validation performance of the best model found as a function of the computation budget
+- from: helm-framework
+  type: IS_EXAMPLE_OF
+  to: model-comparison
+  evidence: HELM (Liang et al., 2022) extended comparisons of language models to many metrics and scenarios
