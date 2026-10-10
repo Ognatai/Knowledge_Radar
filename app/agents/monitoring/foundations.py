@@ -51,13 +51,22 @@ def _normalise_title(title: str) -> str:
     return re.sub(r"[^a-z0-9]", "", title.casefold())
 
 
-def arxiv_id_for_title(title: str, fetch: Callable[[str], str] = feeds.fetch) -> str | None:
-    """The arXiv id of the paper with exactly this title, if arXiv has it."""
+def arxiv_id_for_title(
+    title: str,
+    year: int | None = None,
+    fetch: Callable[[str], str] = feeds.fetch,
+) -> str | None:
+    """The arXiv id of the paper with exactly this title and a matching year, if arXiv has
+    it. The year guards generic titles: "Model compression" (Buciluǎ et al., 2006) is not
+    the 2021 arXiv paper of the same name."""
     words = re.sub(r"[^\w\s-]", " ", title).split()
-    query = urllib.parse.urlencode({"search_query": f'ti:"{" ".join(words)}"', "max_results": 3})
+    query = urllib.parse.urlencode({"search_query": f'ti:"{" ".join(words)}"', "max_results": 5})
     for finding in feeds.parse_arxiv(fetch(f"{feeds.ARXIV_API}?{query}"), query=title, fetched_at=datetime.now()):
-        if _normalise_title(finding.title) == _normalise_title(title):
-            return finding.id.removeprefix("arxiv:")
+        if _normalise_title(finding.title) != _normalise_title(title):
+            continue
+        if year is not None and finding.published is not None and abs(finding.published.year - year) > 1:
+            continue
+        return finding.id.removeprefix("arxiv:")
     return None
 
 
@@ -70,15 +79,15 @@ def foundational_findings(
     topic: str,
     limit: int = 3,
     fetch: Callable[[str], str] = feeds.fetch,
-    find_arxiv: Callable[[str], str | None] | None = None,
+    find_arxiv: Callable[[str, int | None], str | None] | None = None,
 ) -> list[Finding]:
-    find_arxiv = find_arxiv or (lambda title: arxiv_id_for_title(title, fetch))
+    find_arxiv = find_arxiv or (lambda title, year: arxiv_id_for_title(title, year, fetch))
     fetched_at = datetime.now().astimezone()
     findings = []
     for work in parse_works(fetch(openalex_query_url(topic)), limit, fetched_at):
         title = re.sub(r"\s+", " ", work["title"]).strip()
         try:
-            arxiv_id = find_arxiv(title)
+            arxiv_id = find_arxiv(title, work.get("publication_year"))
         except Exception:  # arXiv unreachable: the abstract still serves
             arxiv_id = None
         year = work.get("publication_year")

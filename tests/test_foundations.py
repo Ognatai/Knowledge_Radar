@@ -55,8 +55,14 @@ def test_abstracts_are_rebuilt_from_the_inverted_index():
 
 
 def test_arxiv_ids_are_matched_by_exact_title():
-    assert arxiv_id_for_title("Prompt Injection Attack against LLM-integrated Applications!", fetch=lambda url: ARXIV) == "2306.05499"
-    assert arxiv_id_for_title("Another paper", fetch=lambda url: ARXIV) is None
+    title = "Prompt Injection Attack against LLM-integrated Applications!"
+    assert arxiv_id_for_title(title, 2023, fetch=lambda url: ARXIV) == "2306.05499"
+    assert arxiv_id_for_title("Another paper", 2023, fetch=lambda url: ARXIV) is None
+
+
+def test_a_title_match_from_another_year_is_rejected():
+    title = "Prompt Injection attack against LLM-integrated Applications"
+    assert arxiv_id_for_title(title, 2006, fetch=lambda url: ARXIV) is None
 
 
 def test_well_cited_works_with_abstracts_become_findings():
@@ -64,7 +70,7 @@ def test_well_cited_works_with_abstracts_become_findings():
         "prompt injection",
         limit=3,
         fetch=lambda url: WORKS,
-        find_arxiv=lambda title: "2306.05499" if title.startswith("Prompt Injection") else None,
+        find_arxiv=lambda title, year: "2306.05499" if title.startswith("Prompt Injection") else None,
     )
 
     assert [f.id for f in findings] == ["openalex:W1", "arxiv:2306.05499"]
