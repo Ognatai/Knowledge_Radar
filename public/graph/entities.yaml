@@ -1498,3 +1498,53 @@ entities:
   name_de: Data Leakage
   aliases:
   - leakage
+- id: data-protection-directive-1995
+  type: Regulation
+  name_en: Data Protection Directive 95/46/EC
+  name_de: Datenschutzrichtlinie 95/46/EG
+  aliases:
+  - Directive 95/46/EC
+- id: edpb
+  type: Organization
+  name_en: European Data Protection Board (EDPB)
+  name_de: Europäischer Datenschutzausschuss (EDSA)
+  aliases:
+  - EDPB
+  - EDSA
+- id: personal-data
+  type: Concept
+  name_en: Personal data
+  name_de: Personenbezogene Daten
+- id: special-categories-of-personal-data
+  type: Concept
+  name_en: Special categories of personal data
+  name_de: Besondere Kategorien personenbezogener Daten
+- id: data-minimisation
+  type: Concept
+  name_en: Data minimisation
+  name_de: Datenminimierung
+- id: right-to-erasure
+  type: Concept
+  name_en: Right to erasure
+  name_de: Recht auf Löschung
+- id: automated-decision-making
+  type: Concept
+  name_en: Automated individual decision-making
+  name_de: Automatisierte Entscheidung im Einzelfall
+- id: dpia
+  type: Concept
+  name_en: Data protection impact assessment (DPIA)
+  name_de: Datenschutz-Folgenabschätzung (DSFA)
+  aliases:
+  - DPIA
+  - DSFA
+- id: binding-corporate-rules
+  type: Concept
+  name_en: Binding corporate rules
+  name_de: Verbindliche interne Datenschutzvorschriften
+- id: standard-contractual-clauses
+  type: Concept
+  name_en: Standard contractual clauses
+  name_de: Standardvertragsklauseln
+  aliases:
+  - standard data protection clauses

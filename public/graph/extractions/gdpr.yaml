@@ -1,0 +1,111 @@
+version: 1
+note_sha256: d59b1075f58c8a61f32e63c88d2453197895caaa56b7e692356c0841a1c4e6af
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- data-protection-directive-1995
+- edpb
+- personal-data
+- special-categories-of-personal-data
+- data-minimisation
+- right-to-erasure
+- automated-decision-making
+- dpia
+- binding-corporate-rules
+- standard-contractual-clauses
+- eprivacy-directive
+- tdddg
+- bdsg
+- law-enforcement-directive
+- eu-ai-act
+- data-act
+- data-governance-act
+- bias-in-nlp
+- fairness-metrics
+- explainable-ai
+- differential-privacy-and-federated-learning
+- retrieval-augmented-generation
+relations:
+- from: gdpr
+  type: REGULATES
+  to: personal-data
+  evidence: The General Data Protection Regulation (GDPR) is the EU's central law on the processing of personal data
+- from: gdpr
+  type: AMENDS
+  to: data-protection-directive-1995
+  evidence: repeal of Directive 95/46/EC (Art. 94)
+- from: gdpr
+  type: REGULATES
+  to: edpb
+  evidence: the European Data Protection Board ensures consistent application (Art. 63-76)
+- from: gdpr
+  type: REGULATES
+  to: special-categories-of-personal-data
+  evidence: health, biometric or ethnic-origin data may only be processed under the narrow conditions of Art. 9(2)
+- from: gdpr
+  type: REGULATES
+  to: data-minimisation
+  evidence: only data necessary for the purpose may be processed
+- from: gdpr
+  type: REGULATES
+  to: right-to-erasure
+  evidence: 'Right to erasure (Art. 17): personal data must be deletable'
+- from: gdpr
+  type: REGULATES
+  to: automated-decision-making
+  evidence: decisions based solely on automated processing that produce legal or similarly significant effects are only permitted under the exceptions of Art. 22(2)
+- from: gdpr
+  type: REGULATES
+  to: dpia
+  evidence: new technologies with likely high risk require a data protection impact assessment before processing starts
+- from: gdpr
+  type: REGULATES
+  to: binding-corporate-rules
+  evidence: Requires the competent supervisory authority to approve binding corporate rules that meet the specified requirements
+- from: gdpr
+  type: REGULATES
+  to: standard-contractual-clauses
+  evidence: needs an adequacy decision or appropriate safeguards such as standard contractual clauses
+- from: eprivacy-directive
+  type: TAKES_PRECEDENCE_OVER
+  to: gdpr
+  evidence: the GDPR imposes no additional obligations where the ePrivacy Directive sets specific obligations with the same objective
+- from: tdddg
+  type: IMPLEMENTS
+  to: eprivacy-directive
+  evidence: In Germany, the Directive is implemented by the TDDDG
+- from: bdsg
+  type: IMPLEMENTS
+  to: gdpr
+  evidence: the German Federal Data Protection Act uses the GDPR's opening clauses
+- from: bdsg
+  type: IMPLEMENTS
+  to: law-enforcement-directive
+  evidence: and implements Directive (EU) 2016/680
+- from: law-enforcement-directive
+  type: COMPLEMENTS
+  to: gdpr
+  evidence: governs processing by authorities for the prevention, investigation and prosecution of criminal offences instead of the GDPR
+- from: eu-ai-act
+  type: COMPLEMENTS
+  to: gdpr
+  evidence: The AI Act adds its own rules for processing special categories of data for bias detection
+- from: gdpr
+  type: TAKES_PRECEDENCE_OVER
+  to: data-act
+  evidence: where they concern personal data, the GDPR prevails
+- from: gdpr
+  type: TAKES_PRECEDENCE_OVER
+  to: data-governance-act
+  evidence: where they concern personal data, the GDPR prevails
+- from: gdpr
+  type: REGULATES
+  to: bias-in-nlp
+  evidence: which also limits collecting such data for bias analysis and fairness testing
+- from: gdpr
+  type: REGULATES
+  to: fairness-metrics
+  evidence: which also limits collecting such data for bias analysis and fairness testing
+- from: gdpr
+  type: REGULATES
+  to: explainable-ai
+  evidence: with safeguards including human intervention and the right to contest; this links to explainable AI
