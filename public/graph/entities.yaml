@@ -2124,3 +2124,19 @@ entities:
   type: Concept
   name_en: Incident reporting
   name_de: Meldung von Sicherheitsvorfällen
+- id: rdf-schema
+  type: Technology
+  name_en: RDF Schema
+  name_de: RDF Schema
+  aliases:
+  - RDFS
+- id: skos
+  type: Technology
+  name_en: SKOS (Simple Knowledge Organization System)
+  name_de: SKOS (Simple Knowledge Organization System)
+  aliases:
+  - SKOS
+- id: competency-questions
+  type: Method
+  name_en: Competency questions
+  name_de: Kompetenzfragen

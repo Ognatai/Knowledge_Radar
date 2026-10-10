@@ -1,0 +1,50 @@
+version: 1
+note_sha256: 0dc40e4087a22fa2a0e61c15dc092b3c4c5bae0fb00fb4d943f7c1c8e56cdbde
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- ontology
+- rdf-schema
+- owl
+- skos
+- prov-o
+- w3c
+- open-world-assumption
+- competency-questions
+- knowledge-graphs
+relations:
+- from: ontology-design
+  type: BASED_ON
+  to: rdf-schema
+  evidence: is expressed in standards such as RDF Schema, OWL and SKOS
+- from: ontology-design
+  type: BASED_ON
+  to: owl
+  evidence: is expressed in standards such as RDF Schema, OWL and SKOS
+- from: ontology-design
+  type: BASED_ON
+  to: skos
+  evidence: is expressed in standards such as RDF Schema, OWL and SKOS
+- from: ontology-design
+  type: BASED_ON
+  to: competency-questions
+  evidence: Design starts by fixing the domain and scope, for example with competency questions
+- from: rdf-schema
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) and SKOS (W3C SKOS) are the W3C standards for vocabularies
+- from: owl
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) and SKOS (W3C SKOS) are the W3C standards for vocabularies
+- from: skos
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) and SKOS (W3C SKOS) are the W3C standards for vocabularies
+- from: owl
+  type: BASED_ON
+  to: open-world-assumption
+  evidence: which lets reasoners infer implicit facts under the open-world assumption
+- from: knowledge-graphs
+  type: BASED_ON
+  to: ontology-design
+  evidence: It provides the schema layer of a knowledge graph
