@@ -2596,3 +2596,23 @@ entities:
   type: Method
   name_en: BERTScore
   name_de: BERTScore
+- id: exponential-smoothing
+  type: Method
+  name_en: Exponential smoothing (ETS)
+  name_de: Exponentielle Glättung (ETS)
+- id: arima
+  type: Method
+  name_en: ARIMA
+  name_de: ARIMA
+- id: stationarity
+  type: Concept
+  name_en: Stationarity
+  name_de: Stationarität
+- id: autocorrelation
+  type: Concept
+  name_en: Autocorrelation
+  name_de: Autokorrelation
+- id: dickey-fuller-test
+  type: Method
+  name_en: Dickey-Fuller test
+  name_de: Dickey-Fuller-Test

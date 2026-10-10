@@ -1,0 +1,35 @@
+version: 1
+note_sha256: 696e874c30071c1d46c932d0247a57fb29774f44681cec37bf107f1a36e5e00b
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- exponential-smoothing
+- arima
+- stationarity
+- autocorrelation
+- dickey-fuller-test
+- mean-absolute-scaled-error
+- lstm
+- recurrent-neural-networks
+- cross-validation
+- feature-engineering
+relations:
+- from: exponential-smoothing
+  type: IS_EXAMPLE_OF
+  to: time-series-analysis
+  evidence: Exponential smoothing (ETS) and ARIMA models, including seasonal ARIMA, are the classical forecasting models
+- from: arima
+  type: IS_EXAMPLE_OF
+  to: time-series-analysis
+  evidence: Exponential smoothing (ETS) and ARIMA models, including seasonal ARIMA, are the classical forecasting models
+- from: arima
+  type: BASED_ON
+  to: stationarity
+  evidence: Many models, such as ARIMA, assume that a series is stationary
+- from: arima
+  type: BASED_ON
+  to: autocorrelation
+  evidence: Models autocorrelation of a stationary (differenced) series
+- from: time-series-analysis
+  type: BASED_ON
+  to: autocorrelation
+  evidence: uses autocorrelation to select models such as exponential smoothing and ARIMA
