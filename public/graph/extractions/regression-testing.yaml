@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 4643136bc34a3f87e5454b9050f694a5effefec0c400f0d4067ba11d8584deab
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- checklist-nlp
+- llm-as-a-judge
+- ml-test-score
+- positive-congruent-training
+- negative-flip
+- recall-at-k
+- precision-at-k
+- gpt
+- canary-release
+relations:
+- from: regression-testing
+  type: BASED_ON
+  to: checklist-nlp
+  evidence: CheckList helps to generate many test cases along a matrix of linguistic capabilities and test types
+- from: regression-testing
+  type: BASED_ON
+  to: llm-as-a-judge
+  evidence: automated metrics + LLM-as-a-judge
+- from: positive-congruent-training
+  type: BASED_ON
+  to: negative-flip
+  evidence: Positive-congruent training calls a sample that the new model gets wrong although the old model got it right a "negative flip"

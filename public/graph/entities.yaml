@@ -2472,3 +2472,11 @@ entities:
   type: Concept
   name_en: Vanishing and exploding gradients
   name_de: Verschwindende und explodierende Gradienten
+- id: positive-congruent-training
+  type: Method
+  name_en: Positive-congruent training
+  name_de: Positive-Congruent Training
+- id: negative-flip
+  type: Concept
+  name_en: Negative flip
+  name_de: Negative Flip
