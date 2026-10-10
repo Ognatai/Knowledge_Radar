@@ -1,0 +1,16 @@
+version: 1
+note_sha256: 3744b3cd8769939a4a6ad0f79c3d7769c375ad80bfbc2d1149e323df2581fe3a
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- relational-model
+- window-functions
+- common-table-expressions
+- database-index
+- sparql
+- cypher
+- graph-databases
+relations:
+- from: sql
+  type: BASED_ON
+  to: relational-model
+  evidence: SQL is the language of relational databases, which store data in tables of rows and columns based on the relational model

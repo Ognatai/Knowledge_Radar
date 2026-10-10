@@ -2532,3 +2532,19 @@ entities:
   type: Method
   name_en: Self-adversarial negative sampling
   name_de: Self-adversarial Negative Sampling
+- id: relational-model
+  type: Concept
+  name_en: Relational model
+  name_de: Relationenmodell
+- id: window-functions
+  type: Method
+  name_en: Window functions (SQL)
+  name_de: Fensterfunktionen (SQL)
+- id: common-table-expressions
+  type: Method
+  name_en: Common table expressions (CTEs)
+  name_de: Common Table Expressions (CTEs)
+- id: database-index
+  type: Method
+  name_en: Database index
+  name_de: Datenbankindex
