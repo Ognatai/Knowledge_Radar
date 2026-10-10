@@ -1,0 +1,46 @@
+version: 1
+note_sha256: a8c0b9a6b1e9f5ee47c8c170bb049df19082c19d7dd41d1fcff5adf9deaa8088
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- zero-shot-prompting
+- zero-shot-chain-of-thought
+- few-shot-prompting
+- chain-of-thought-prompting
+- self-consistency
+- prompt-report
+- gpt
+- large-language-models
+- llm-adaptation
+relations:
+- from: zero-shot-prompting
+  type: IS_EXAMPLE_OF
+  to: prompt-engineering
+  evidence: A zero-shot prompt contains only the task instruction and the input
+- from: few-shot-prompting
+  type: IS_EXAMPLE_OF
+  to: prompt-engineering
+  evidence: A few-shot prompt adds a small number of input-output demonstrations before the new input
+- from: chain-of-thought-prompting
+  type: IS_EXAMPLE_OF
+  to: prompt-engineering
+  evidence: Chain-of-thought prompting uses demonstrations that contain a series of intermediate reasoning steps before the answer
+- from: chain-of-thought-prompting
+  type: BASED_ON
+  to: few-shot-prompting
+  evidence: Chain-of-thought prompting uses demonstrations that contain a series of intermediate reasoning steps before the answer
+- from: zero-shot-chain-of-thought
+  type: IS_EXAMPLE_OF
+  to: chain-of-thought-prompting
+  evidence: Chain-of-thought prompting (Wei et al., 2022), its zero-shot variant (Kojima et al., 2022)
+- from: self-consistency
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: Self-consistency replaces greedy decoding in chain-of-thought prompting
+- from: self-consistency
+  type: IS_EXAMPLE_OF
+  to: prompt-engineering
+  evidence: voting over several sampled reasoning paths (self-consistency)
+- from: prompt-engineering
+  type: BASED_ON
+  to: large-language-models
+  evidence: Prompt engineering designs the input text so that a large language model performs a task without any change to its weights

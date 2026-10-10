@@ -2156,3 +2156,25 @@ entities:
   type: Method
   name_en: Multi-prompt evaluation
   name_de: Multi-Prompt-Evaluation
+- id: zero-shot-prompting
+  type: Method
+  name_en: Zero-shot prompting
+  name_de: Zero-Shot-Prompting
+- id: zero-shot-chain-of-thought
+  type: Method
+  name_en: Zero-shot chain of thought
+  name_de: Zero-Shot Chain of Thought
+- id: few-shot-prompting
+  type: Method
+  name_en: Few-shot prompting
+  name_de: Few-Shot-Prompting
+  aliases:
+  - In-context learning
+- id: self-consistency
+  type: Method
+  name_en: Self-consistency
+  name_de: Self-Consistency
+- id: prompt-report
+  type: Method
+  name_en: The Prompt Report (taxonomy of prompting techniques)
+  name_de: The Prompt Report (Taxonomie von Prompting-Techniken)
