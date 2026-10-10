@@ -1221,3 +1221,33 @@ entities:
   type: Concept
   name_en: Universal service (telecommunications)
   name_de: Universaldienst (Telekommunikation)
+- id: eidas-2
+  type: Regulation
+  name_en: Regulation (EU) 2024/1183 (eIDAS 2.0)
+  name_de: Verordnung (EU) 2024/1183 (eIDAS 2.0)
+  aliases:
+  - eIDAS 2.0
+- id: e-signatures-directive
+  type: Regulation
+  name_en: Electronic Signatures Directive 1999/93/EC
+  name_de: Signaturrichtlinie 1999/93/EG
+  aliases:
+  - Directive 1999/93/EC
+- id: eudi-wallet
+  type: Concept
+  name_en: European Digital Identity Wallet
+  name_de: Europäische Brieftasche für die Digitale Identität (EUDI-Wallet)
+  aliases:
+  - EUDI Wallet
+- id: trust-service
+  type: Concept
+  name_en: Trust service
+  name_de: Vertrauensdienst
+- id: electronic-signature
+  type: Concept
+  name_en: Electronic signature
+  name_de: Elektronische Signatur
+- id: eudi-cooperation-group
+  type: Organization
+  name_en: European Digital Identity Cooperation Group
+  name_de: Kooperationsgruppe für die europäische digitale Identität

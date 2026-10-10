@@ -1,0 +1,49 @@
+version: 1
+note_sha256: 9bed586b1aa35b5ddbd7d63c84cdeacab89bc0d144f39b6f997bb0acd09b954f
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- eidas-2
+- e-signatures-directive
+- nis2-directive
+- eudi-wallet
+- trust-service
+- electronic-signature
+- eudi-cooperation-group
+- gatekeeper
+- very-large-online-platform
+- digital-markets-act
+- digital-services-act
+- gdpr
+relations:
+- from: eidas
+  type: REGULATES
+  to: gatekeeper
+  evidence: gatekeepers must give wallet providers access to hardware and software features
+- from: eidas
+  type: REGULATES
+  to: very-large-online-platform
+  evidence: very large online platforms under the DSA must accept the wallet at the user's request
+- from: eidas-2
+  type: AMENDS
+  to: eidas
+  evidence: Regulation (EU) 2024/1183 ("eIDAS 2.0", European Digital Identity Wallet), in force since 20 May 2024
+- from: nis2-directive
+  type: AMENDS
+  to: eidas
+  evidence: Security and notification rules for trust service providers move to the NIS2 Directive
+- from: eidas
+  type: AMENDS
+  to: e-signatures-directive
+  evidence: Directive 1999/93/EC on electronic signatures is repealed
+- from: eidas
+  type: REGULATES
+  to: eudi-wallet
+  evidence: to provide every citizen and resident with a European Digital Identity Wallet
+- from: eidas
+  type: REGULATES
+  to: trust-service
+  evidence: The eIDAS Regulation sets EU-wide rules for electronic identification and trust services
+- from: eidas
+  type: REGULATES
+  to: electronic-signature
+  evidence: such as the equivalence of a qualified electronic signature with a handwritten signature
