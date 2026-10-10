@@ -2572,3 +2572,19 @@ entities:
   type: Method
   name_en: RAPTOR
   name_de: RAPTOR
+- id: support-vector-regression
+  type: Method
+  name_en: Support vector regression
+  name_de: Support-Vector-Regression
+- id: kernel-trick
+  type: Method
+  name_en: Kernel trick
+  name_de: Kernel-Trick
+- id: soft-margin
+  type: Method
+  name_en: Soft margin
+  name_de: Soft Margin
+- id: hinge-loss
+  type: Method
+  name_en: Hinge loss
+  name_de: Hinge Loss

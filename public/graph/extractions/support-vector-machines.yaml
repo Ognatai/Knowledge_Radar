@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 28a08bdd6d707ead985b73a4655bb2fa776012cf064e3a2f49490a74805df032
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- classification
+- support-vector-regression
+- kernel-trick
+- soft-margin
+- hinge-loss
+- perceptron
+- cross-validation
+relations:
+- from: support-vector-machines
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: A support vector machine (SVM) classifies by finding the decision boundary with the largest margin to the nearest training points
+- from: support-vector-machines
+  type: BASED_ON
+  to: soft-margin
+  evidence: Cortes & Vapnik (1995) extended the method to non-separable training data with a soft margin, which allows training errors at a cost
+- from: support-vector-machines
+  type: BASED_ON
+  to: kernel-trick
+  evidence: Kernels such as polynomial or radial basis kernels compute the required inner products in this enlarged space without constructing it explicitly
+- from: soft-margin
+  type: BASED_ON
+  to: hinge-loss
+  evidence: the approach corresponds to fitting a regularised hinge loss
+- from: support-vector-regression
+  type: BASED_ON
+  to: support-vector-machines
+  evidence: Support vector regression (Smola & Schölkopf, 2004) carries the approach over to continuous targets
