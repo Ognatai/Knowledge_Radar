@@ -1826,3 +1826,39 @@ entities:
   type: Organization
   name_en: Amazon
   name_de: Amazon
+- id: instruction-tuning
+  type: Method
+  name_en: Instruction tuning
+  name_de: Instruction Tuning
+- id: flan
+  type: Method
+  name_en: FLAN
+  name_de: FLAN
+- id: frugalgpt
+  type: Method
+  name_en: FrugalGPT
+  name_de: FrugalGPT
+- id: routellm
+  type: Method
+  name_en: RouteLLM
+  name_de: RouteLLM
+- id: model-routing
+  type: Method
+  name_en: Model routing
+  name_de: Model Routing
+- id: llm-cascade
+  type: Method
+  name_en: LLM cascade
+  name_de: LLM-Kaskade
+- id: prompt-caching
+  type: Method
+  name_en: Prompt caching
+  name_de: Prompt Caching
+- id: semantic-caching
+  type: Method
+  name_en: Semantic caching
+  name_de: Semantic Caching
+- id: request-batching
+  type: Method
+  name_en: Batching of LLM requests
+  name_de: Batching von LLM-Anfragen

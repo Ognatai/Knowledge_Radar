@@ -1,0 +1,67 @@
+version: 1
+note_sha256: 2500b8a4f72601752e435b5175f43119ee2ce210797f272f6ee9eee01fd415e9
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- frugalgpt
+- routellm
+- model-routing
+- llm-cascade
+- prompt-caching
+- semantic-caching
+- request-batching
+- llmlingua
+- quantization
+- knowledge-distillation
+- classification
+- embeddings
+- llm-as-a-judge
+- context-engineering
+relations:
+- from: frugalgpt
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: FrugalGPT, for example, matched the best single model with up to 98% lower cost
+- from: frugalgpt
+  type: BASED_ON
+  to: llm-cascade
+  evidence: FrugalGPT combines prompt adaptation, LLM approximation and LLM cascades
+- from: model-routing
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: The main levers are caching, routing requests to smaller models, batching
+- from: model-routing
+  type: BASED_ON
+  to: classification
+  evidence: A router, often a small model or a classifier
+- from: routellm
+  type: IS_EXAMPLE_OF
+  to: model-routing
+  evidence: RouteLLM trains routers on human preference data that choose between a strong and a weak model
+- from: prompt-caching
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: the provider caches a prompt prefix up to a breakpoint and reuses it in later requests with the same prefix, which reduces processing time and cost
+- from: semantic-caching
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: similar, not only identical, requests are answered from the cache using embeddings
+- from: semantic-caching
+  type: BASED_ON
+  to: embeddings
+  evidence: similar, not only identical, requests are answered from the cache using embeddings
+- from: request-batching
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: batch APIs reduce costs by 50%
+- from: llmlingua
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: 'Prompt compression: LLMLingua compresses prompts by up to 20 times with little loss in performance'
+- from: quantization
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: both lower the cost per request structurally
+- from: knowledge-distillation
+  type: IS_EXAMPLE_OF
+  to: llm-cost-optimization
+  evidence: both lower the cost per request structurally

@@ -1,0 +1,60 @@
+version: 1
+note_sha256: e62aa1c6844d9c61a10112d086835ccc19b4f81f33ce49334dcb72c1eec9b111
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- prompt-engineering
+- retrieval-augmented-generation
+- instruction-tuning
+- flan
+- lora
+- qlora
+- knowledge-distillation
+- sequence-to-sequence
+- attention-and-transformers
+- quantization
+- mixed-precision-training
+relations:
+- from: prompt-engineering
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: The options range from leaving the weights unchanged (prompting, Retrieval-Augmented Generation)
+- from: retrieval-augmented-generation
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: The options range from leaving the weights unchanged (prompting, Retrieval-Augmented Generation)
+- from: instruction-tuning
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA)
+- from: lora
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA)
+- from: qlora
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA)
+- from: knowledge-distillation
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: to transferring knowledge into a smaller model (distillation)
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: sequence-to-sequence
+  evidence: Retrieval-augmented generation combines the parametric memory of a pretrained sequence-to-sequence model with a non-parametric memory
+- from: lora
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: LoRA freezes the pretrained weights and injects trainable rank-decomposition matrices into each layer of the Transformer
+- from: qlora
+  type: BASED_ON
+  to: lora
+  evidence: QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters
+- from: qlora
+  type: BASED_ON
+  to: quantization
+  evidence: QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters
+- from: flan
+  type: IS_EXAMPLE_OF
+  to: instruction-tuning
+  evidence: Instruction tuning a 137B-parameter model on more than 60 NLP tasks (FLAN) substantially improved its zero-shot performance
