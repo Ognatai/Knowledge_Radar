@@ -42,6 +42,8 @@ from app.backend.knowledge_radar.templates import check_template
 DRAFTS_DIRECTORY = RUNS_DIRECTORY.parent / "drafts"
 MAX_SOURCES = 8
 PASSAGES_PER_SECTION = 8
+SECTION_MAX_TOKENS = 3000
+SECTION_TIMEOUT_SECONDS = 600
 GERMAN_TERMS = (
     "Keep established English technical terms in English (e.g. Prompt Injection, Retrieval, "
     "Embedding, Fine-Tuning, Benchmark, Recall, Faithfulness); translate only where an established "
@@ -175,9 +177,23 @@ TEXT_SCHEMA = {"type": "object", "properties": {"markdown": {"type": "string"}},
 
 def _generate_text(generate: Callable[..., str], prompt: str) -> str:
     # Asked for free text, qwen3 writes its planning into the answer; a JSON object
-    # with a single field makes it return only the finished text.
-    answer = generate(prompt, json_schema=TEXT_SCHEMA, temperature=0.2, context_tokens=24576)
-    text = str(json.loads(answer).get("markdown", ""))
+    # with a single field makes it return only the finished text. The token cap and
+    # timeout stop the repetition loops it sometimes falls into; one retry follows.
+    for attempt in range(2):
+        try:
+            answer = generate(
+                prompt,
+                json_schema=TEXT_SCHEMA,
+                temperature=0.2,
+                context_tokens=24576,
+                max_tokens=SECTION_MAX_TOKENS,
+                timeout=SECTION_TIMEOUT_SECONDS,
+            )
+            text = str(json.loads(answer).get("markdown", ""))
+            break
+        except (llm.LLMError, json.JSONDecodeError):
+            if attempt:
+                raise
     return re.sub(r"^#+ .*\n", "", text.strip()).strip()
 
 
@@ -344,43 +360,46 @@ def main() -> int:
     out.mkdir(parents=True, exist_ok=True)
     today = dt.date.today()
 
+    failures = 0
     for proposal in report["proposals"]:
         finding = finding_from_json(proposal["finding"])
         if finding.category == "regulatory":
             print(f"Skipped (regulatory, needs the legal workflow): {finding.title[:70]}")
             continue
-        if proposal["decision"] == "update":
-            slug = proposal["note"]
-            if args.only and args.only != slug:
-                continue
-            note = notes[slug]
-            source = source_text(finding)
-            text, english = draft_update(
-                (notes_directory / f"{slug}.md").read_text(encoding="utf-8"),
-                note.title_en,
-                note.content_en[:1500],
-                source,
-                today,
-                embeddings.embed,
-            )
-            draft = Draft(slug, "update", text, [source])
-        else:
-            slug = slugify(proposal["topic"])
-            if args.only and args.only != slug:
-                continue
-            if slug in known:
-                print(f"Skipped (a note '{slug}' exists): {proposal['topic']}")
-                continue
-            members = [finding] + [findings_by_id[i] for i in proposal.get("related", []) if i in findings_by_id]
-            members = members[:MAX_SOURCES]
-            sources = [source_text(member) for member in members]
-            links = [(c["note"], c["title"]) for c in proposal.get("candidates", [])]
-            text, _ = draft_new_note(proposal["topic"], members, sources, links, known, embeddings.embed)
-            english = english_part(text)
-            draft = Draft(slug, "new_topic", text, sources)
-
-        print(f"Checking {slug} ...")
-        run_gates(draft, english, embeddings.embed)
+        slug = proposal["note"] if proposal["decision"] == "update" else slugify(proposal["topic"])
+        if args.only and args.only != slug:
+            continue
+        if proposal["decision"] != "update" and slug in known:
+            print(f"Skipped (a note '{slug}' exists): {proposal['topic']}")
+            continue
+        try:
+            if proposal["decision"] == "update":
+                note = notes[slug]
+                source = source_text(finding)
+                text, english = draft_update(
+                    (notes_directory / f"{slug}.md").read_text(encoding="utf-8"),
+                    note.title_en,
+                    note.content_en[:1500],
+                    source,
+                    today,
+                    embeddings.embed,
+                )
+                draft = Draft(slug, "update", text, [source])
+            else:
+                members = [finding] + [findings_by_id[i] for i in proposal.get("related", []) if i in findings_by_id]
+                members = members[:MAX_SOURCES]
+                sources = [source_text(member) for member in members]
+                links = [(c["note"], c["title"]) for c in proposal.get("candidates", [])]
+                text, _ = draft_new_note(proposal["topic"], members, sources, links, known, embeddings.embed)
+                english = english_part(text)
+                draft = Draft(slug, "new_topic", text, sources)
+            print(f"Checking {slug} ...")
+            run_gates(draft, english, embeddings.embed)
+        except (llm.LLMError, embeddings.EmbeddingError, json.JSONDecodeError, KeyError) as exc:
+            # One failing proposal must not cost the others; it is retried next run.
+            failures += 1
+            print(f"Failed {slug}: {exc}", file=sys.stderr)
+            continue
         (out / f"{slug}.md").write_text(draft.text, encoding="utf-8")
         (out / f"{slug}.review.md").write_text(review_report(draft), encoding="utf-8")
         print(
@@ -389,7 +408,7 @@ def main() -> int:
             f"{len(draft.unsupported)}/{len(draft.checks)} sentences unsupported"
         )
     print(f"Drafts: {out}")
-    return 0
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":

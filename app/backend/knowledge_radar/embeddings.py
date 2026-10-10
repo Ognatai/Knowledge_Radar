@@ -26,6 +26,12 @@ def model_name() -> str:
     return os.environ.get("KNOWLEDGE_RADAR_EMBEDDING_MODEL", DEFAULT_MODEL)
 
 
+def on_cpu() -> bool:
+    """KNOWLEDGE_RADAR_EMBEDDING_ON_CPU=1 keeps the embedding model off the GPU, so that
+    Ollama does not swap it with a large generation model that fills the GPU memory."""
+    return os.environ.get("KNOWLEDGE_RADAR_EMBEDDING_ON_CPU", "").lower() in {"1", "true", "yes"}
+
+
 def query_text(query: str, instruction: str = QUERY_INSTRUCTION) -> str:
     return f"Instruct: {instruction}\nQuery: {query}"
 
@@ -36,9 +42,12 @@ def embed(texts: list[str], *, model: str | None = None, timeout: float = 600) -
     vectors: list[list[float]] = []
     for start in range(0, len(texts), BATCH_SIZE):
         batch = texts[start : start + BATCH_SIZE]
+        body: dict = {"model": model or model_name(), "input": batch}
+        if on_cpu():
+            body["options"] = {"num_gpu": 0}
         request = urllib.request.Request(
             f"{base_url}/api/embed",
-            data=json.dumps({"model": model or model_name(), "input": batch}).encode("utf-8"),
+            data=json.dumps(body).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
         try:

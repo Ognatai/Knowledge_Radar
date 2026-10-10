@@ -136,7 +136,13 @@ def check_faithfulness(
         ranked = sorted(range(len(passages)), key=lambda i: -sum(a * b for a, b in zip(vector, passage_vectors[i])))
         nearest = [passages[i] for i in ranked[:PASSAGES_PER_CLAIM]]
         answer = json.loads(
-            generate(build_faithfulness_prompt(sentence, nearest), json_schema=FAITHFULNESS_SCHEMA, temperature=0.0)
+            generate(
+                build_faithfulness_prompt(sentence, nearest),
+                json_schema=FAITHFULNESS_SCHEMA,
+                temperature=0.0,
+                max_tokens=400,
+                timeout=300,
+            )
         )
         checks.append(ClaimCheck(sentence, bool(answer.get("supported")), str(answer.get("evidence", ""))))
     return checks

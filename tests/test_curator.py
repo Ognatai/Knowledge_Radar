@@ -137,3 +137,19 @@ def test_review_report_lists_problems_for_the_reviewer():
     assert "- EN: missing sections: Comparison." in report
     assert "## Originality: FAILED (20% copied 8-grams)" in report
     assert "## Faithfulness: 1 of 2 sentences unsupported\n- It was invented in 1990." in report
+
+
+def test_section_generation_is_capped_and_retried_once():
+    from app.agents.llm import LLMError
+    from app.agents.monitoring.curator import SECTION_MAX_TOKENS, _generate_text
+
+    calls = []
+
+    def generate(prompt, **options):
+        calls.append(options)
+        if len(calls) == 1:
+            raise LLMError("timed out")
+        return json.dumps({"markdown": "Text."})
+
+    assert _generate_text(generate, "prompt") == "Text."
+    assert len(calls) == 2 and calls[0]["max_tokens"] == SECTION_MAX_TOKENS and calls[0]["timeout"] > 0
