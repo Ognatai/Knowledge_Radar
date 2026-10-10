@@ -1405,3 +1405,74 @@ entities:
   aliases:
   - EDPS
   - EDSB
+- id: mlflow
+  type: Technology
+  name_en: MLflow
+  name_de: MLflow
+- id: weights-and-biases
+  type: Technology
+  name_en: Weights & Biases
+  name_de: Weights & Biases
+  aliases:
+  - W&B
+  - wandb
+- id: neptune
+  type: Technology
+  name_en: Neptune (experiment tracking)
+  name_de: Neptune (Experiment Tracking)
+- id: tensorboard
+  type: Technology
+  name_en: TensorBoard
+  name_de: TensorBoard
+- id: model-registry
+  type: Concept
+  name_en: Model registry
+  name_de: Model Registry
+- id: neurips
+  type: Conference
+  name_en: NeurIPS
+  name_de: NeurIPS
+- id: individual-fairness
+  type: Concept
+  name_en: Individual fairness
+  name_de: Individuelle Fairness
+- id: group-fairness
+  type: Concept
+  name_en: Group fairness
+  name_de: Gruppenfairness
+- id: subgroup-fairness
+  type: Concept
+  name_en: Subgroup fairness
+  name_de: Subgruppen-Fairness
+- id: fairness-through-awareness
+  type: Concept
+  name_en: Fairness through awareness
+  name_de: Fairness through Awareness
+- id: fairness-through-unawareness
+  type: Concept
+  name_en: Fairness through unawareness
+  name_de: Fairness through Unawareness
+- id: demographic-parity
+  type: Concept
+  name_en: Demographic parity
+  name_de: Demographic Parity
+  aliases:
+  - statistical parity
+- id: equalised-odds
+  type: Concept
+  name_en: Equalised odds
+  name_de: Equalised Odds
+  aliases:
+  - equalized odds
+- id: equal-opportunity
+  type: Concept
+  name_en: Equal opportunity
+  name_de: Equal Opportunity
+- id: predictive-parity
+  type: Concept
+  name_en: Predictive parity
+  name_de: Predictive Parity
+- id: fairness-gerrymandering
+  type: Concept
+  name_en: Fairness gerrymandering
+  name_de: Fairness Gerrymandering

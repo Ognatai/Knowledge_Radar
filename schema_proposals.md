@@ -67,4 +67,5 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - embeddings: MTEB (1)
 - engineering-methods-for-ai-systems: agent-skills, mcp-and-related-protocols, vibe-coding `IS_EXAMPLE_OF` it (2)
 - entity-extraction: CoNLL-2003 (1)
+- fairness-metrics: individual, group and subgroup fairness `IS_EXAMPLE_OF` fairness-metrics; fairness through (un)awareness and counterfactual fairness `IS_EXAMPLE_OF` individual-fairness; demographic parity, equalised odds, equal opportunity, predictive parity `IS_EXAMPLE_OF` group-fairness (2)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

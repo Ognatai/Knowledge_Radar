@@ -1,0 +1,30 @@
+version: 1
+note_sha256: 704d0977a3bc5f33b0360b8ba66af92dcda99117431272a9c62145c0a1715263
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- individual-fairness
+- group-fairness
+- subgroup-fairness
+- fairness-through-awareness
+- fairness-through-unawareness
+- counterfactual-fairness
+- demographic-parity
+- equalised-odds
+- equal-opportunity
+- predictive-parity
+- fairness-gerrymandering
+- causal-inference
+- precision
+relations:
+- from: counterfactual-fairness
+  type: BASED_ON
+  to: causal-inference
+  evidence: Counterfactual fairness (Kusner et al., 2017) uses a causal model
+- from: predictive-parity
+  type: BASED_ON
+  to: precision
+  evidence: 'Predictive parity: equal precision'
+- from: subgroup-fairness
+  type: BASED_ON
+  to: group-fairness
+  evidence: Subgroup fairness therefore requires that statistical parity or false positive rates hold across a rich class of subgroups

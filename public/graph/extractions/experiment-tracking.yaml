@@ -1,0 +1,32 @@
+version: 1
+note_sha256: cbda86681c4ef11f649ce4259ff6d5f8e625c6ea305ccf8205489be2c5e53d39
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- mlflow
+- weights-and-biases
+- neptune
+- tensorboard
+- model-registry
+- neurips
+- mlops-and-deployment
+relations:
+- from: mlflow
+  type: IMPLEMENTS
+  to: experiment-tracking
+  evidence: Tools such as MLflow Tracking log parameters, code versions, metrics and artifacts per run
+- from: weights-and-biases
+  type: IMPLEMENTS
+  to: experiment-tracking
+  evidence: other tools such as Weights & Biases, Neptune or TensorBoard emphasise visualisation, collaboration or training curves
+- from: neptune
+  type: IMPLEMENTS
+  to: experiment-tracking
+  evidence: other tools such as Weights & Biases, Neptune or TensorBoard emphasise visualisation, collaboration or training curves
+- from: tensorboard
+  type: IMPLEMENTS
+  to: experiment-tracking
+  evidence: other tools such as Weights & Biases, Neptune or TensorBoard emphasise visualisation, collaboration or training curves
+- from: mlflow
+  type: IMPLEMENTS
+  to: model-registry
+  evidence: MLflow logs and registers trained models in this way
