@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import re
 import sys
 from collections.abc import Callable
@@ -349,6 +350,10 @@ def main() -> int:
     parser.add_argument("--run", type=Path, help="relevance report (default: the latest)")
     parser.add_argument("--only", help="draft only this topic slug or note slug")
     args = parser.parse_args()
+    # The curator alternates embedding and generation calls; on the GPU, Ollama would swap
+    # the 19 GB generation model out for every embedding. On the CPU, the few hundred
+    # passages of a run take about two minutes (3 per second).
+    os.environ.setdefault("KNOWLEDGE_RADAR_EMBEDDING_ON_CPU", "1")
 
     report_path = args.run or latest_relevance_run()
     report = json.loads(report_path.read_text(encoding="utf-8"))
