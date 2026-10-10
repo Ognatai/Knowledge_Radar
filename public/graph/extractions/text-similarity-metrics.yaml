@@ -1,0 +1,46 @@
+version: 1
+note_sha256: 58b87d79e8e853966987b04b38c8fb60e97751841143942ad1e03dec6f8e17f8
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- bleu
+- rouge
+- bertscore
+- sentence-bert
+- bert
+- embeddings
+- clustering
+- llm-as-a-judge
+- rag-generation-evaluation
+relations:
+- from: bleu
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: BLEU (Papineni et al., 2002) scores a candidate translation against one or more reference translations
+- from: rouge
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: ROUGE (Lin, 2004) evaluates summaries by their overlap with reference summaries
+- from: bertscore
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: BERTScore (Zhang et al., 2019) computes a similarity score for each token in the candidate with each token in the reference
+- from: sentence-bert
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings efficient enough for similarity search over large collections
+- from: bertscore
+  type: BASED_ON
+  to: embeddings
+  evidence: it uses contextual embeddings, so different words with similar meaning in context can still match
+- from: sentence-bert
+  type: BASED_ON
+  to: bert
+  evidence: Sentence-BERT modifies BERT with siamese and triplet network structures
+- from: llm-as-a-judge
+  type: COMPLEMENTS
+  to: text-similarity-metrics
+  evidence: lexical and embedding-based metrics are complemented by task-specific checks
+- from: rag-generation-evaluation
+  type: COMPLEMENTS
+  to: text-similarity-metrics
+  evidence: lexical and embedding-based metrics are complemented by task-specific checks such as faithfulness to the retrieved context

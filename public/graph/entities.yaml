@@ -2588,3 +2588,11 @@ entities:
   type: Method
   name_en: Hinge loss
   name_de: Hinge Loss
+- id: rouge
+  type: Method
+  name_en: ROUGE
+  name_de: ROUGE
+- id: bertscore
+  type: Method
+  name_en: BERTScore
+  name_de: BERTScore
