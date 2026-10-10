@@ -1,0 +1,39 @@
+version: 1
+note_sha256: a8b31c01a411b28fe51768ed1f1506424f0129fbb84d7e593e8253d23eed9568
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- tokenization
+- word2vec
+- embeddings
+- attention-and-transformers
+- bert
+- gpt
+- large-language-models
+- neural-networks
+- information-extraction
+- entity-extraction
+relations:
+- from: natural-language-processing
+  type: BASED_ON
+  to: neural-networks
+  evidence: Modern NLP represents text as tokens and learned vectors and models it with neural networks
+- from: natural-language-processing
+  type: BASED_ON
+  to: tokenization
+  evidence: Before any modelling, text is normalised and split into tokens, the units that later steps operate on
+- from: large-language-models
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: The Transformer is the basis of today's pretrained language models
+- from: information-extraction
+  type: IS_EXAMPLE_OF
+  to: natural-language-processing
+  evidence: for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and machine translation
+- from: entity-extraction
+  type: IS_EXAMPLE_OF
+  to: natural-language-processing
+  evidence: for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and machine translation
+- from: gpt
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: few-shot prompting of large models such as GPT-3
