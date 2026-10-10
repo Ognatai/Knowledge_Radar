@@ -15,7 +15,12 @@ $repository = Split-Path -Parent $PSScriptRoot
 if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
     throw "Docker is not installed or not on PATH (see SETUP.md, 'Local index')."
 }
-$password = python -m keyring get knowledge-radar neo4j
+# The repository's virtual environment has keyring even when it is not activated.
+$python = Join-Path $repository ".venv\Scripts\python.exe"
+if (-not (Test-Path $python)) {
+    $python = "python"
+}
+$password = & $python -m keyring get knowledge-radar neo4j
 if (-not $password) {
     throw "No Neo4j password in the Credential Manager. Run: python -m keyring set knowledge-radar neo4j"
 }
