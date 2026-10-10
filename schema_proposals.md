@@ -70,4 +70,5 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - fairness-metrics: individual, group and subgroup fairness `IS_EXAMPLE_OF` fairness-metrics; fairness through (un)awareness and counterfactual fairness `IS_EXAMPLE_OF` individual-fairness; demographic parity, equalised odds, equal opportunity, predictive parity `IS_EXAMPLE_OF` group-fairness (2)
 - information-retrieval: bias-preserving-gender-fairness `IS_EXAMPLE_OF` fairness-metrics (2)
 - knowledge-graph-engineering: DBpedia, YAGO, Freebase (1)
+- legal-ai: LexGLUE, LegalBench (1)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

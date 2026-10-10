@@ -1,0 +1,34 @@
+version: 1
+note_sha256: a2c56a109a4ba550efa008e8bcf063907932ed91e9cc8a95cb89d4d015e33215
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- retrieval-augmented-generation
+- large-language-models
+- eu-ai-act
+- gdpr
+- dora
+- contract-intelligence
+- information-extraction
+- graphrag
+- knowledge-graphs
+relations:
+- from: eu-ai-act
+  type: REGULATES
+  to: legal-ai
+  evidence: Under the EU AI Act, high-risk AI systems include
+- from: gdpr
+  type: REGULATES
+  to: legal-ai
+  evidence: As soon as personal data from mandates, contracts or cases are processed, the General Data Protection Regulation (GDPR) applies
+- from: dora
+  type: REGULATES
+  to: legal-ai
+  evidence: in the financial sector, the Digital Operational Resilience Act (DORA) can add requirements
+- from: legal-ai
+  type: BASED_ON
+  to: retrieval-augmented-generation
+  evidence: finding relevant norms, judgments and commentary for a legal question, usually through Retrieval-Augmented Generation over a curated corpus of statutes and case law
+- from: legal-ai
+  type: BASED_ON
+  to: large-language-models
+  evidence: Large language models make these tasks far more accessible
