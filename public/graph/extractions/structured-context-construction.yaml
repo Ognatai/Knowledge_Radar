@@ -1,0 +1,29 @@
+version: 1
+note_sha256: e36284065936faf1ffeb582666c164a3aaa4bf1212f6b858d751d0ed9cb98c4a
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- retrieval-augmented-generation
+- lost-in-the-middle
+- raptor
+- graphrag
+- llama
+- gpt
+- clustering
+- embeddings
+relations:
+- from: structured-context-construction
+  type: BASED_ON
+  to: retrieval-augmented-generation
+  evidence: A RAG model conditions its generation on retrieved passages
+- from: raptor
+  type: IS_EXAMPLE_OF
+  to: structured-context-construction
+  evidence: RAPTOR recursively embeds, clusters and summarises chunks into a tree with different levels of abstraction
+- from: raptor
+  type: BASED_ON
+  to: clustering
+  evidence: RAPTOR recursively embeds, clusters and summarises chunks into a tree
+- from: graphrag
+  type: IS_EXAMPLE_OF
+  to: structured-context-construction
+  evidence: GraphRAG similarly provides community summaries of an entity graph as context for global questions about a corpus

@@ -2568,3 +2568,7 @@ entities:
   type: Organization
   name_en: American Statistical Association (ASA)
   name_de: American Statistical Association (ASA)
+- id: raptor
+  type: Method
+  name_en: RAPTOR
+  name_de: RAPTOR
