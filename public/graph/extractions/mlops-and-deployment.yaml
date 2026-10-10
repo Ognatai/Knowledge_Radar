@@ -1,0 +1,29 @@
+version: 1
+note_sha256: 9e9348d7a45964060118e381259f79f1d74acd66c843f2336fd3df3c8bee4a71
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- devops
+- shadow-deployment
+- canary-release
+- blue-green-deployment
+- ml-test-score
+- data-drift
+- concept-drift
+- technical-debt
+relations:
+- from: mlops-and-deployment
+  type: BASED_ON
+  to: devops
+  evidence: MLOps transfers DevOps principles such as automation, versioning, continuous integration and monitoring to the lifecycle of ML models
+- from: shadow-deployment
+  type: IS_EXAMPLE_OF
+  to: mlops-and-deployment
+  evidence: the new model runs alongside the old one; its predictions are logged but not shown to users
+- from: canary-release
+  type: IS_EXAMPLE_OF
+  to: mlops-and-deployment
+  evidence: the new model first receives a small share of requests, for example 5%, which grows step by step if no problems occur
+- from: blue-green-deployment
+  type: IS_EXAMPLE_OF
+  to: mlops-and-deployment
+  evidence: two complete production environments run in parallel, and switching between them is a single step that can be undone immediately

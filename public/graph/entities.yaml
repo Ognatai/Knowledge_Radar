@@ -1949,3 +1949,31 @@ entities:
   type: Method
   name_en: Temperature scaling
   name_de: Temperature Scaling
+- id: devops
+  type: Method
+  name_en: DevOps
+  name_de: DevOps
+- id: shadow-deployment
+  type: Method
+  name_en: Shadow deployment
+  name_de: Shadow Deployment
+- id: canary-release
+  type: Method
+  name_en: Canary release
+  name_de: Canary Release
+- id: blue-green-deployment
+  type: Method
+  name_en: Blue-green deployment
+  name_de: Blue-Green Deployment
+- id: ml-test-score
+  type: Method
+  name_en: ML Test Score
+  name_de: ML Test Score
+- id: data-drift
+  type: Concept
+  name_en: Data drift
+  name_de: Data Drift
+- id: concept-drift
+  type: Concept
+  name_en: Concept drift
+  name_de: Concept Drift
