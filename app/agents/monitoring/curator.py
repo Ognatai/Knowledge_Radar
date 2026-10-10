@@ -158,20 +158,26 @@ Where another article is relevant, link it inline with exactly one of these wiki
 
 {_passage_block(selected)}
 
-Write the section text in Markdown now."""
+Answer with JSON: "markdown" holds the section text in Markdown."""
 
 
 def translate_prompt(markdown: str) -> str:
     return f"""Translate this section of a technical encyclopedia article from English into German.
 {GERMAN_TERMS}
 Keep the Markdown structure, wikilinks ([[slug|label]]: translate only the label), citations
-and tables exactly; translate table contents. Output only the German text.
+and tables exactly; translate table contents. Answer with JSON: "markdown" holds the German text.
 
 {markdown}"""
 
 
+TEXT_SCHEMA = {"type": "object", "properties": {"markdown": {"type": "string"}}, "required": ["markdown"]}
+
+
 def _generate_text(generate: Callable[..., str], prompt: str) -> str:
-    text = generate(prompt, temperature=0.2, context_tokens=24576)
+    # Asked for free text, qwen3 writes its planning into the answer; a JSON object
+    # with a single field makes it return only the finished text.
+    answer = generate(prompt, json_schema=TEXT_SCHEMA, temperature=0.2, context_tokens=24576)
+    text = str(json.loads(answer).get("markdown", ""))
     return re.sub(r"^#+ .*\n", "", text.strip()).strip()
 
 

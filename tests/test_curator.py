@@ -83,9 +83,12 @@ def fake_generate(prompt, json_schema=None, **options):
                 "steps": ["1. Mechanism", "2. Defences"],
             }
         )
+    assert json_schema["required"] == ["markdown"]
     if prompt.startswith("Translate"):
-        return "Deutscher Text mit [[agentic-ai|Agenten]] und [[unknown|Unbekanntem]]."
-    return "## Stray heading\nEnglish text (Lovelace et al., 2026) with [[agentic-ai|agents]] and [[unknown|nothing]]."
+        return json.dumps({"markdown": "Deutscher Text mit [[agentic-ai|Agenten]] und [[unknown|Unbekanntem]]."})
+    return json.dumps(
+        {"markdown": "## Stray heading\nEnglish text (Lovelace et al., 2026) with [[agentic-ai|agents]] and [[unknown|nothing]]."}
+    )
 
 
 def test_new_note_drafts_follow_the_technical_template():
