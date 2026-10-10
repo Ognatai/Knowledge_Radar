@@ -2079,3 +2079,23 @@ entities:
   type: Method
   name_en: Weight decay
   name_de: Weight Decay
+- id: perceptron
+  type: Method
+  name_en: Perceptron
+  name_de: Perzeptron
+- id: multilayer-perceptron
+  type: Method
+  name_en: Multilayer perceptron
+  name_de: Mehrschichtiges Perzeptron
+- id: deep-learning
+  type: Method
+  name_en: Deep learning
+  name_de: Deep Learning
+- id: universal-approximation-theorem
+  type: Concept
+  name_en: Universal approximation theorem
+  name_de: Universeller Approximationssatz
+- id: relu
+  type: Method
+  name_en: Rectified linear unit (ReLU)
+  name_de: Rectified Linear Unit (ReLU)

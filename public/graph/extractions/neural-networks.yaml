@@ -1,0 +1,48 @@
+version: 1
+note_sha256: 365c67d8178af87117168ed7602c0a3227f9a0c20523650a08cfc162bb2bee51
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- perceptron
+- multilayer-perceptron
+- deep-learning
+- universal-approximation-theorem
+- relu
+- back-propagation
+- convolutional-neural-networks
+- recurrent-neural-networks
+- attention-and-transformers
+- keras-and-tensorflow
+- pytorch
+relations:
+- from: neural-networks
+  type: BASED_ON
+  to: back-propagation
+  evidence: they learn their weights from data with back-propagation (Rumelhart et al., 1986)
+- from: perceptron
+  type: IS_EXAMPLE_OF
+  to: neural-networks
+  evidence: The perceptron, a single such unit with a threshold, is the historical starting point
+- from: multilayer-perceptron
+  type: IS_EXAMPLE_OF
+  to: neural-networks
+  evidence: Multilayer perceptron | Hidden layers with non-linear activations
+- from: deep-learning
+  type: BASED_ON
+  to: neural-networks
+  evidence: Deep learning uses models with many processing layers that learn representations of data with multiple levels of abstraction
+- from: convolutional-neural-networks
+  type: IS_EXAMPLE_OF
+  to: neural-networks
+  evidence: Specialised layer types exploit structure in the data, such as convolutions for images
+- from: recurrent-neural-networks
+  type: IS_EXAMPLE_OF
+  to: neural-networks
+  evidence: and recurrence for sequences
+- from: keras-and-tensorflow
+  type: IMPLEMENTS
+  to: neural-networks
+  evidence: Frameworks such as Keras and PyTorch provide layers and automatic gradients
+- from: pytorch
+  type: IMPLEMENTS
+  to: neural-networks
+  evidence: Frameworks such as Keras and PyTorch provide layers and automatic gradients
