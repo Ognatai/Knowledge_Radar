@@ -1574,3 +1574,21 @@ entities:
   type: Technology
   name_en: GitHub
   name_de: GitHub
+- id: autogen
+  type: Technology
+  name_en: AutoGen
+  name_de: AutoGen
+- id: viv-trivedy
+  type: Person
+  name_en: Viv Trivedy
+  name_de: Viv Trivedy
+- id: sandboxing
+  type: Concept
+  name_en: Sandboxing
+  name_de: Sandboxing
+- id: least-privilege
+  type: Concept
+  name_en: Least privilege
+  name_de: Least Privilege
+  aliases:
+  - principle of least privilege

@@ -1,0 +1,40 @@
+version: 1
+note_sha256: 02f2af2b7f75527f739ee34b2f45931fed6c5fffa0f7dbe676a1c97770696ec7
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- engineering-methods-for-ai-systems
+- loop-engineering
+- multi-agent-systems
+- agentic-ai
+- langchain-and-langgraph
+- autogen
+- a2a
+- knowledge-graph-engineering
+- graphrag
+- knowledge-graphs
+- quality-control
+relations:
+- from: graph-engineering
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: The term sits among the disciplines in
+- from: graph-engineering
+  type: BASED_ON
+  to: loop-engineering
+  evidence: '"Graph engineering" is a term that spread rapidly in the AI engineering community in July 2026 as the supposed next step after Loop Engineering'
+- from: graph-engineering
+  type: BASED_ON
+  to: multi-agent-systems
+  evidence: The most discussed reading treats the topology of a multi-agent system, which nodes exist and which transitions are allowed, as an engineered artifact
+- from: graph-engineering
+  type: BASED_ON
+  to: agentic-ai
+  evidence: Patterns described earlier, such as orchestrator-workers, routers and supervisors, are building blocks of such graphs
+- from: langchain-and-langgraph
+  type: IMPLEMENTS
+  to: graph-engineering
+  evidence: agent frameworks that made graphs first-class objects (Wang, 2026), such as LangGraph
+- from: autogen
+  type: IMPLEMENTS
+  to: graph-engineering
+  evidence: AutoGen, in which multiple agents converse to solve tasks

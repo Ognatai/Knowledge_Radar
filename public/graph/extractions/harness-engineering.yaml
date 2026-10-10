@@ -1,0 +1,37 @@
+version: 1
+note_sha256: 3f42a46436e97664424bedec270835dd4f202f1281f072fc023ead804b6c81fd
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- prompt-engineering
+- loop-engineering
+- viv-trivedy
+- sandboxing
+- least-privilege
+- git
+- prompt-injection
+- context-engineering
+relations:
+- from: prompt-engineering
+  type: BASED_ON
+  to: harness-engineering
+  evidence: Prompt Engineering and Loop Engineering both build on a working harness
+- from: loop-engineering
+  type: BASED_ON
+  to: harness-engineering
+  evidence: Prompt Engineering and Loop Engineering both build on a working harness
+- from: harness-engineering
+  type: DEVELOPED_BY
+  to: viv-trivedy
+  evidence: The term harness engineering was coined by Viv Trivedy
+- from: harness-engineering
+  type: BASED_ON
+  to: sandboxing
+  evidence: code execution and file access run in an isolated environment
+- from: harness-engineering
+  type: BASED_ON
+  to: least-privilege
+  evidence: least privilege, so that an agent can only use the tools and data its task requires
+- from: harness-engineering
+  type: BASED_ON
+  to: git
+  evidence: the file system and Git give the agent a workspace, versioning and the ability to roll back
