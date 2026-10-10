@@ -65,4 +65,5 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - cyber-resilience-act: `BASED_ON nis2-directive` (3)
 - eecc: eprivacy-directive `BASED_ON` eecc (3)
 - embeddings: MTEB (1)
+- engineering-methods-for-ai-systems: agent-skills, mcp-and-related-protocols, vibe-coding `IS_EXAMPLE_OF` it (2)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

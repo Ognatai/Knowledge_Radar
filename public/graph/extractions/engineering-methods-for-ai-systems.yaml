@@ -1,0 +1,39 @@
+version: 1
+note_sha256: 6d5baef199a740229ebb89937a6a5488e6b9530ab5c60d70612db0c9d4416add
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- prompt-engineering
+- context-engineering
+- agent-skills
+- mcp-and-related-protocols
+- loop-engineering
+- graph-engineering
+- harness-engineering
+- vibe-coding
+- llm-cost-optimization
+- llm-observability-and-tracing
+relations:
+- from: prompt-engineering
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: context-engineering
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: loop-engineering
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: graph-engineering
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: harness-engineering
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: context-engineering
+  type: BASED_ON
+  to: prompt-engineering
+  evidence: then context engineering as its progression
