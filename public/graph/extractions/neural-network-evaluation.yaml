@@ -1,0 +1,45 @@
+version: 1
+note_sha256: 755d33303c49937d47fe0dc84ee06230ce909208aaf4b73e19658d7fa491ceda
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- neural-networks
+- classification-metrics
+- accuracy
+- precision
+- recall
+- mean-absolute-error
+- root-mean-squared-error
+- mean-absolute-scaled-error
+- bleu
+- overfitting
+- underfitting
+- double-descent
+- bias-variance-tradeoff
+- probability-calibration
+- temperature-scaling
+- platt-scaling
+relations:
+- from: neural-network-evaluation
+  type: BASED_ON
+  to: classification-metrics
+  evidence: 'with metrics that match the task: classification metrics'
+- from: neural-network-evaluation
+  type: BASED_ON
+  to: mean-absolute-error
+  evidence: error measures such as MAE and RMSE for regression
+- from: neural-network-evaluation
+  type: BASED_ON
+  to: root-mean-squared-error
+  evidence: error measures such as MAE and RMSE for regression
+- from: neural-network-evaluation
+  type: BASED_ON
+  to: bleu
+  evidence: overlap metrics such as BLEU for generated text
+- from: temperature-scaling
+  type: IS_EXAMPLE_OF
+  to: platt-scaling
+  evidence: temperature scaling, a single-parameter variant of Platt scaling
+- from: temperature-scaling
+  type: IS_EXAMPLE_OF
+  to: probability-calibration
+  evidence: a single-parameter variant of Platt scaling, was surprisingly effective at correcting it

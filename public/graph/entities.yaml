@@ -2017,3 +2017,31 @@ entities:
   type: Method
   name_en: Contrastive learning
   name_de: Kontrastives Lernen
+- id: overfitting
+  type: Concept
+  name_en: Overfitting
+  name_de: Overfitting
+- id: underfitting
+  type: Concept
+  name_en: Underfitting
+  name_de: Underfitting
+- id: double-descent
+  type: Concept
+  name_en: Double descent
+  name_de: Double Descent
+- id: bleu
+  type: Method
+  name_en: BLEU
+  name_de: BLEU
+- id: mean-absolute-error
+  type: Method
+  name_en: Mean absolute error (MAE)
+  name_de: Mittlerer absoluter Fehler (MAE)
+- id: root-mean-squared-error
+  type: Method
+  name_en: Root mean squared error (RMSE)
+  name_de: Wurzel der mittleren quadratischen Abweichung (RMSE)
+- id: mean-absolute-scaled-error
+  type: Method
+  name_en: Mean absolute scaled error (MASE)
+  name_de: Mittlerer absoluter skalierter Fehler (MASE)
