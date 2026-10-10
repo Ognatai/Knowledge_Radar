@@ -2528,3 +2528,7 @@ entities:
   type: Method
   name_en: Epsilon-greedy action selection
   name_de: Epsilon-Greedy-Aktionsauswahl
+- id: self-adversarial-negative-sampling
+  type: Method
+  name_en: Self-adversarial negative sampling
+  name_de: Self-adversarial Negative Sampling

@@ -1,0 +1,41 @@
+version: 1
+note_sha256: 42fb1ec5c5c1b0003a8e6da3ccf8ab4e4f859b7000c3da7fa83d6441f0285f1b
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- transe
+- distmult
+- complex
+- knowledge-graph-embeddings
+- link-prediction
+- self-adversarial-negative-sampling
+- mean-reciprocal-rank
+- knowledge-graphs
+relations:
+- from: rotate
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: Ji et al. (2020) place it among embedding models organised by representation space and scoring function
+- from: rotate
+  type: BASED_ON
+  to: transe
+  evidence: This generalises the translational idea of TransE, h + r ≈ t, from vector addition to rotation
+- from: rotate
+  type: BASED_ON
+  to: distmult
+  evidence: builds on translational models (Bordes et al., 2013), bilinear models (Yang et al., 2014) and complex-valued embeddings (Trouillon et al., 2016)
+- from: rotate
+  type: BASED_ON
+  to: complex
+  evidence: builds on translational models (Bordes et al., 2013), bilinear models (Yang et al., 2014) and complex-valued embeddings (Trouillon et al., 2016)
+- from: rotate
+  type: BASED_ON
+  to: self-adversarial-negative-sampling
+  evidence: Trained with self-adversarial negative sampling, it outperformed earlier models on link prediction benchmarks
+- from: distmult
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: and compared with TransE, DistMult and ComplEx on the same data
+- from: complex
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: and compared with TransE, DistMult and ComplEx on the same data
