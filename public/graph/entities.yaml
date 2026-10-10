@@ -1592,3 +1592,60 @@ entities:
   name_de: Least Privilege
   aliases:
   - principle of least privilege
+- id: open-ie
+  type: Method
+  name_en: Open information extraction (Open IE)
+  name_de: Open Information Extraction (Open IE)
+  aliases:
+  - Open IE
+- id: textrunner
+  type: Method
+  name_en: TextRunner
+  name_de: TextRunner
+- id: relation-extraction
+  type: Method
+  name_en: Relation extraction
+  name_de: Relationsextraktion
+- id: rebel
+  type: Method
+  name_en: REBEL
+  name_de: REBEL
+- id: bart
+  type: Method
+  name_en: BART
+  name_de: BART
+- id: bm25
+  type: Method
+  name_en: BM25
+  name_de: BM25
+  aliases:
+  - Okapi BM25
+- id: tf-idf
+  type: Method
+  name_en: tf-idf
+  name_de: tf-idf
+  aliases:
+  - TF-IDF
+- id: inverted-index
+  type: Concept
+  name_en: Inverted index
+  name_de: Invertierter Index
+- id: vector-space-model
+  type: Method
+  name_en: Vector space model
+  name_de: Vektorraummodell
+- id: dense-passage-retrieval
+  type: Method
+  name_en: Dense passage retrieval (DPR)
+  name_de: Dense Passage Retrieval (DPR)
+  aliases:
+  - DPR
+  - dense retrieval
+- id: probabilistic-relevance-framework
+  type: Concept
+  name_en: Probabilistic relevance framework
+  name_de: Probabilistisches Relevanzmodell
+- id: bias-preserving-gender-fairness
+  type: Concept
+  name_en: Bias-preserving algorithmic gender fairness
+  name_de: Bias-erhaltende algorithmische Gender-Fairness

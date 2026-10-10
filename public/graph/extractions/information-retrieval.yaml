@@ -1,0 +1,53 @@
+version: 1
+note_sha256: 18fab01cb70e663dc000091c78213c9ec023efe711ca98eb80e784dfb1804edd
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- retrieval-augmented-generation
+- bm25
+- tf-idf
+- inverted-index
+- vector-space-model
+- cosine-similarity
+- dense-passage-retrieval
+- embeddings
+- probabilistic-relevance-framework
+- bias-preserving-gender-fairness
+- precision
+- recall
+relations:
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: information-retrieval
+  evidence: IR is the retrieval step of Retrieval-Augmented Generation
+- from: information-retrieval
+  type: BASED_ON
+  to: inverted-index
+  evidence: Classical systems use an inverted index
+- from: tf-idf
+  type: IS_EXAMPLE_OF
+  to: information-retrieval
+  evidence: rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic BM25 function
+- from: bm25
+  type: IS_EXAMPLE_OF
+  to: information-retrieval
+  evidence: rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic BM25 function
+- from: bm25
+  type: BASED_ON
+  to: probabilistic-relevance-framework
+  evidence: BM25 is a ranking function derived from the probabilistic relevance framework
+- from: vector-space-model
+  type: IS_EXAMPLE_OF
+  to: information-retrieval
+  evidence: The vector space model (Salton et al., 1975) and the comparison of term-weighting schemes (Salton & Buckley, 1988) shaped classical ranked retrieval
+- from: vector-space-model
+  type: BASED_ON
+  to: cosine-similarity
+  evidence: a common measure is the cosine similarity, the cosine of the angle between the two vectors
+- from: dense-passage-retrieval
+  type: IS_EXAMPLE_OF
+  to: information-retrieval
+  evidence: Karpukhin et al. (2020) showed that retrieval can be implemented with dense representations alone
+- from: dense-passage-retrieval
+  type: BASED_ON
+  to: embeddings
+  evidence: a dual encoder learns embeddings of questions and passages

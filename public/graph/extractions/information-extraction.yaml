@@ -1,0 +1,64 @@
+version: 1
+note_sha256: 8ecdafbef3238cc11e3f711d853f6225ad951158d6fea0a312f22731c314f1ce
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- entity-extraction
+- open-ie
+- textrunner
+- relation-extraction
+- rebel
+- bart
+- sequence-to-sequence
+- large-language-models
+- coreference-resolution
+- actor-level-corpus-analysis
+- bilstm-crf
+- knowledge-graphs
+- contract-intelligence
+- prompt-engineering
+- bias-in-nlp
+relations:
+- from: information-extraction
+  type: BASED_ON
+  to: entity-extraction
+  evidence: Relations connect entities, so entity recognition is usually the first step
+- from: open-ie
+  type: IS_EXAMPLE_OF
+  to: information-extraction
+  evidence: Open information extraction (Banko et al., 2007) drops this restriction
+- from: textrunner
+  type: IS_EXAMPLE_OF
+  to: open-ie
+  evidence: the system TextRunner extracts relational tuples of the form (argument, relation phrase, argument) from web text
+- from: relation-extraction
+  type: IS_EXAMPLE_OF
+  to: information-extraction
+  evidence: Their survey categorises these works by IE subtask, such as named entity recognition, relation extraction and event extraction
+- from: rebel
+  type: IS_EXAMPLE_OF
+  to: relation-extraction
+  evidence: REBEL (Huguet Cabot & Navigli, 2021) treats relation extraction as sequence-to-sequence generation
+- from: rebel
+  type: BASED_ON
+  to: sequence-to-sequence
+  evidence: REBEL (Huguet Cabot & Navigli, 2021) treats relation extraction as sequence-to-sequence generation
+- from: rebel
+  type: BASED_ON
+  to: bart
+  evidence: A BART-based model reads a text and generates the relation triplets expressed in it
+- from: coreference-resolution
+  type: IS_EXAMPLE_OF
+  to: information-extraction
+  evidence: Urchs (2025) describes named entity recognition, syntactic processing (dependency parsing to find who does what to whom), coreference resolution
+- from: actor-level-corpus-analysis
+  type: BASED_ON
+  to: information-extraction
+  evidence: Urchs et al. (2024) combine such steps to partly automate linguistic discourse analysis
+- from: knowledge-graphs
+  type: BASED_ON
+  to: information-extraction
+  evidence: The results feed applications such as Knowledge Graphs and Contract Intelligence
+- from: contract-intelligence
+  type: BASED_ON
+  to: information-extraction
+  evidence: The results feed applications such as Knowledge Graphs and Contract Intelligence
