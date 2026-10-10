@@ -1,0 +1,39 @@
+version: 1
+note_sha256: 1f56e529ab419fa6498ef1f626ef982d63750d8f2dbc142d150710fd4b26f9ab
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- tkg
+- nis2-directive
+- berec
+- telecom-framework-directives-2002
+- electronic-communications-service
+- universal-service
+- federal-network-agency
+- eprivacy-directive
+- tdddg
+- digital-markets-act
+relations:
+- from: tkg
+  type: IMPLEMENTS
+  to: eecc
+  evidence: the TKG transposes most of the EECC
+- from: nis2-directive
+  type: AMENDS
+  to: eecc
+  evidence: Directive (EU) 2022/2555 (NIS2) deleted the security rules of Art. 40 and 41
+- from: eecc
+  type: AMENDS
+  to: telecom-framework-directives-2002
+  evidence: the previous framework directives 2002/19/EC to 2002/22/EC are repealed
+- from: eecc
+  type: REGULATES
+  to: berec
+  evidence: BEREC to monitor market and technological developments and to publish an opinion on their impact on the end-user rights
+- from: eecc
+  type: REGULATES
+  to: electronic-communications-service
+  evidence: Its definition of electronic communications services also covers internet-based messaging and calling services
+- from: eecc
+  type: REGULATES
+  to: universal-service
+  evidence: which universal services must be available

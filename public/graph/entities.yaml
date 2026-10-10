@@ -1188,3 +1188,36 @@ entities:
   aliases:
   - EMIR
   - Regulation (EU) No 648/2012
+- id: eba-gl-2026-09
+  type: Regulation
+  name_en: EBA Guidelines on third-party risk for non-ICT services (EBA/GL/2026/09)
+  name_de: EBA-Leitlinien zum Drittparteienrisiko bei Nicht-IKT-Dienstleistungen (EBA/GL/2026/09)
+  aliases:
+  - EBA/GL/2026/09
+- id: outsourcing
+  type: Concept
+  name_en: Outsourcing (banking supervision)
+  name_de: Auslagerung (Bankenaufsicht)
+- id: internal-governance
+  type: Concept
+  name_en: Internal governance (banks)
+  name_de: Interne Governance (Banken)
+- id: berec
+  type: Organization
+  name_en: Body of European Regulators for Electronic Communications (BEREC)
+  name_de: Gremium Europäischer Regulierungsstellen für elektronische Kommunikation (GEREK)
+  aliases:
+  - BEREC
+  - GEREK
+- id: telecom-framework-directives-2002
+  type: Regulation
+  name_en: Telecommunications framework directives 2002/19/EC to 2002/22/EC
+  name_de: Telekommunikations-Rahmenrichtlinien 2002/19/EG bis 2002/22/EG
+- id: electronic-communications-service
+  type: Concept
+  name_en: Electronic communications service
+  name_de: Elektronischer Kommunikationsdienst
+- id: universal-service
+  type: Concept
+  name_en: Universal service (telecommunications)
+  name_de: Universaldienst (Telekommunikation)

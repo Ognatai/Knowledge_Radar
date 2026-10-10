@@ -1,0 +1,47 @@
+version: 1
+note_sha256: 484e2068ff59ed0a53efd94a51649627f3e50da9754b2ed850f7f6ac15302548
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- eba
+- crr-and-crd
+- marisk
+- kwg
+- dora
+- gdpr
+- bcbs-239-and-ecb-rdarr-guide
+- eba-gl-2026-09
+- outsourcing
+- internal-governance
+relations:
+- from: eba-governance-and-outsourcing-guidelines
+  type: DEVELOPED_BY
+  to: eba
+  evidence: guidelines of the European Banking Authority under Article 16 of Regulation (EU) No 1093/2010
+- from: eba-governance-and-outsourcing-guidelines
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: the guidelines specify the governance requirements of CRD Articles 74, 76, 88 and 109
+- from: marisk
+  type: IMPLEMENTS
+  to: eba-governance-and-outsourcing-guidelines
+  evidence: in Germany, BaFin implements them mainly through MaRisk
+- from: bcbs-239-and-ecb-rdarr-guide
+  type: COMPLEMENTS
+  to: eba-governance-and-outsourcing-guidelines
+  evidence: complement the governance requirements with expectations for risk data aggregation and risk reporting
+- from: dora
+  type: COMPLEMENTS
+  to: eba-governance-and-outsourcing-guidelines
+  evidence: governs ICT risk management and ICT third-party risk; the new EBA third-party risk guidelines therefore cover only non-ICT services
+- from: eba-gl-2026-09
+  type: AMENDS
+  to: eba-governance-and-outsourcing-guidelines
+  evidence: they will repeal the outsourcing guidelines from a date still to be set
+- from: eba-governance-and-outsourcing-guidelines
+  type: REGULATES
+  to: outsourcing
+  evidence: The outsourcing guidelines cover when an arrangement counts as outsourcing, how to identify critical or important functions
+- from: eba-governance-and-outsourcing-guidelines
+  type: REGULATES
+  to: internal-governance
+  evidence: specify how banks must organise their governance under the CRD
