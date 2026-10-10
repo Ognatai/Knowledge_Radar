@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 6eb6337157c7a9df34ccae5afc945a40a4caff45bc06cf7c6fc5116ef949185b
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- formatspread
+- multi-prompt-evaluation
+- llm-as-a-judge
+- position-bias
+- verbosity-bias
+- self-enhancement-bias
+- llama
+- gpt
+- instruction-tuning
+relations:
+- from: formatspread
+  type: IS_EXAMPLE_OF
+  to: prompt-comparison
+  evidence: Their method FormatSpread quickly evaluates a sampled set of plausible prompt formats for a task
+- from: multi-prompt-evaluation
+  type: IS_EXAMPLE_OF
+  to: prompt-comparison
+  evidence: Evaluates several instruction paraphrases with use-case-specific metrics
+- from: prompt-comparison
+  type: BASED_ON
+  to: llm-as-a-judge
+  evidence: on LLM judges for open-ended answers (Zheng et al., 2023)

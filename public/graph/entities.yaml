@@ -2148,3 +2148,11 @@ entities:
   type: Method
   name_en: Eigenvalue decomposition
   name_de: Eigenwertzerlegung
+- id: formatspread
+  type: Method
+  name_en: FormatSpread
+  name_de: FormatSpread
+- id: multi-prompt-evaluation
+  type: Method
+  name_en: Multi-prompt evaluation
+  name_de: Multi-Prompt-Evaluation
