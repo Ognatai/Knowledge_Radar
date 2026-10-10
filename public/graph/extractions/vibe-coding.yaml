@@ -1,0 +1,35 @@
+version: 1
+note_sha256: 3bfd527e47b1f1ffb51771f29758e6417db0bb257250e76e7060d340426d8fb8
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- andrej-karpathy
+- agentic-ai
+- harness-engineering
+- loop-engineering
+- regression-testing
+- quality-control
+- comprehension-debt
+- technical-debt
+- mcp-and-related-protocols
+- graph-engineering
+relations:
+- from: vibe-coding
+  type: DEVELOPED_BY
+  to: andrej-karpathy
+  evidence: The term was coined by Andrej Karpathy in February 2025
+- from: vibe-coding
+  type: BASED_ON
+  to: agentic-ai
+  evidence: Iteration with a coding agent in a loop
+- from: vibe-coding
+  type: BASED_ON
+  to: harness-engineering
+  evidence: a harness with controlled tool access, sandboxing and visible diffs
+- from: vibe-coding
+  type: BASED_ON
+  to: loop-engineering
+  evidence: a loop with clear stopping conditions instead of endless patching
+- from: vibe-coding
+  type: BASED_ON
+  to: regression-testing
+  evidence: a reliable test suite and execution environment as replacement for manual review

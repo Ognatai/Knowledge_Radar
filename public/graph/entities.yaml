@@ -2642,3 +2642,11 @@ entities:
   type: Method
   name_en: TransR
   name_de: TransR
+- id: andrej-karpathy
+  type: Person
+  name_en: Andrej Karpathy
+  name_de: Andrej Karpathy
+- id: comprehension-debt
+  type: Concept
+  name_en: Comprehension debt
+  name_de: Comprehension Debt
