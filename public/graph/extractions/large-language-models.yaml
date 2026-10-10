@@ -1,0 +1,113 @@
+version: 1
+note_sha256: 5faf7e5dfcc83335c2339e089c149b046d7c1dcc8b0131de7a7c034ba369cce4
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- attention-and-transformers
+- tokenization
+- byte-pair-encoding
+- gpt
+- instructgpt
+- rlhf
+- reinforcement-learning
+- chatgpt
+- chinchilla
+- scaling-laws
+- emergent-abilities
+- nucleus-sampling
+- claude-3
+- gemini
+- mistral-models
+- amazon-titan
+- llama
+- zephyr
+- deepseek-llm
+- anthropic
+- google-deepmind
+- mistral-ai
+- amazon
+- prompt-engineering
+relations:
+- from: large-language-models
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: Large language models (LLMs) are Transformer-based neural networks
+- from: large-language-models
+  type: BASED_ON
+  to: tokenization
+  evidence: Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces
+- from: byte-pair-encoding
+  type: IS_EXAMPLE_OF
+  to: tokenization
+  evidence: Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols
+- from: gpt
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: GPT-3 (Brown et al., 2020) showed that scaling a Transformer language model to 175 billion parameters enables few-shot learning from prompts
+- from: instructgpt
+  type: BASED_ON
+  to: gpt
+  evidence: InstructGPT therefore fine-tuned GPT-3 on demonstrations written by labellers
+- from: instructgpt
+  type: BASED_ON
+  to: rlhf
+  evidence: InstructGPT (Ouyang et al., 2022) added instruction tuning and reinforcement learning from human feedback
+- from: rlhf
+  type: BASED_ON
+  to: reinforcement-learning
+  evidence: then applied reinforcement learning from human feedback (Reinforcement Learning Fundamentals) using rankings of model outputs
+- from: chatgpt
+  type: BASED_ON
+  to: gpt
+  evidence: ChatGPT combined a GPT model trained this way with a dialogue interface
+- from: chinchilla
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: Chinchilla (Hoffmann et al., 2022) showed that many large models had been trained on too little data for their size
+- from: chinchilla
+  type: BASED_ON
+  to: scaling-laws
+  evidence: Following this, Chinchilla (70B parameters, trained on four times more data than Gopher with the same compute) outperformed larger models
+- from: claude-3
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used
+- from: gemini
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used
+- from: mistral-models
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used
+- from: amazon-titan
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used
+- from: claude-3
+  type: DEVELOPED_BY
+  to: anthropic
+  evidence: Anthropic's Claude 3
+- from: gemini
+  type: DEVELOPED_BY
+  to: google-deepmind
+  evidence: Google DeepMind's Gemini
+- from: mistral-models
+  type: DEVELOPED_BY
+  to: mistral-ai
+  evidence: Mistral's models
+- from: amazon-titan
+  type: DEVELOPED_BY
+  to: amazon
+  evidence: Amazon's Titan
+- from: llama
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: Open alternatives such as LLaMA, Zephyr and DeepSeek LLM promote reproducibility and equitable access
+- from: zephyr
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: Open alternatives such as LLaMA, Zephyr and DeepSeek LLM promote reproducibility and equitable access
+- from: deepseek-llm
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: Open alternatives such as LLaMA, Zephyr and DeepSeek LLM promote reproducibility and equitable access

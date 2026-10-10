@@ -1746,3 +1746,83 @@ entities:
   type: Concept
   name_en: Creditworthiness assessment
   name_de: Kreditwürdigkeitsprüfung
+- id: byte-pair-encoding
+  type: Method
+  name_en: Byte pair encoding (BPE)
+  name_de: Byte Pair Encoding (BPE)
+  aliases:
+  - BPE
+- id: instructgpt
+  type: Method
+  name_en: InstructGPT
+  name_de: InstructGPT
+- id: rlhf
+  type: Method
+  name_en: Reinforcement learning from human feedback (RLHF)
+  name_de: Reinforcement Learning from Human Feedback (RLHF)
+  aliases:
+  - RLHF
+- id: chinchilla
+  type: Method
+  name_en: Chinchilla
+  name_de: Chinchilla
+- id: scaling-laws
+  type: Concept
+  name_en: Scaling laws
+  name_de: Skalierungsgesetze
+  aliases:
+  - compute-optimal scaling
+- id: emergent-abilities
+  type: Concept
+  name_en: Emergent abilities
+  name_de: Emergente Fähigkeiten
+- id: nucleus-sampling
+  type: Method
+  name_en: Nucleus (top-p) sampling
+  name_de: Nucleus-Sampling (Top-p)
+  aliases:
+  - top-p sampling
+- id: claude-3
+  type: Method
+  name_en: Claude 3
+  name_de: Claude 3
+- id: gemini
+  type: Method
+  name_en: Gemini
+  name_de: Gemini
+- id: mistral-models
+  type: Method
+  name_en: Mistral models
+  name_de: Mistral-Modelle
+- id: amazon-titan
+  type: Method
+  name_en: Amazon Titan
+  name_de: Amazon Titan
+  aliases:
+  - Titan
+- id: llama
+  type: Method
+  name_en: LLaMA
+  name_de: LLaMA
+- id: zephyr
+  type: Method
+  name_en: Zephyr
+  name_de: Zephyr
+- id: deepseek-llm
+  type: Method
+  name_en: DeepSeek LLM
+  name_de: DeepSeek LLM
+- id: google-deepmind
+  type: Organization
+  name_en: Google DeepMind
+  name_de: Google DeepMind
+- id: mistral-ai
+  type: Organization
+  name_en: Mistral AI
+  name_de: Mistral AI
+  aliases:
+  - Mistral
+- id: amazon
+  type: Organization
+  name_en: Amazon
+  name_de: Amazon
