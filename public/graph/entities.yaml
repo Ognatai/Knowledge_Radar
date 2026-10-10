@@ -2616,3 +2616,21 @@ entities:
   type: Method
   name_en: Dickey-Fuller test
   name_de: Dickey-Fuller-Test
+- id: unigram-language-model-tokenization
+  type: Method
+  name_en: Unigram language model (tokenization)
+  name_de: Unigram-Sprachmodell (Tokenisierung)
+- id: subword-regularization
+  type: Method
+  name_en: Subword regularization
+  name_de: Subword-Regularisierung
+- id: sentencepiece
+  type: Technology
+  name_en: SentencePiece
+  name_de: SentencePiece
+- id: gnmt
+  type: Technology
+  name_en: Google neural machine translation (GNMT)
+  name_de: Google Neural Machine Translation (GNMT)
+  aliases:
+  - GNMT
