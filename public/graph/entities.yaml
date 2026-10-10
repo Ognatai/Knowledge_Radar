@@ -2178,3 +2178,15 @@ entities:
   type: Method
   name_en: The Prompt Report (taxonomy of prompting techniques)
   name_de: The Prompt Report (Taxonomie von Prompting-Techniken)
+- id: numpy
+  type: Technology
+  name_en: NumPy
+  name_de: NumPy
+- id: pandas
+  type: Technology
+  name_en: pandas
+  name_de: pandas
+- id: venv
+  type: Technology
+  name_en: venv (virtual environments)
+  name_de: venv (virtuelle Umgebungen)

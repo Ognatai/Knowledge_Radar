@@ -1,0 +1,22 @@
+version: 1
+note_sha256: 8b93c8c518522a9b6ba05af57e62bb8146caa1995b3d5fca62f68ae1db909cba
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- numpy
+- pandas
+- scikit-learn
+- venv
+- pep-8
+relations:
+- from: pandas
+  type: BASED_ON
+  to: numpy
+  evidence: NumPy provides vectorised array operations, broadcasting and indexing on which libraries such as pandas and scikit-learn build
+- from: scikit-learn
+  type: BASED_ON
+  to: numpy
+  evidence: NumPy provides vectorised array operations, broadcasting and indexing on which libraries such as pandas and scikit-learn build
+- from: numpy
+  type: BASED_ON
+  to: python
+  evidence: NumPy forms the foundation of the scientific Python ecosystem
