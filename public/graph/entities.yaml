@@ -1251,3 +1251,37 @@ entities:
   type: Organization
   name_en: European Digital Identity Cooperation Group
   name_de: Kooperationsgruppe für die europäische digitale Identität
+- id: word2vec
+  type: Method
+  name_en: word2vec
+  name_de: word2vec
+- id: sentence-bert
+  type: Method
+  name_en: Sentence-BERT (SBERT)
+  name_de: Sentence-BERT (SBERT)
+  aliases:
+  - SBERT
+- id: matryoshka-representation-learning
+  type: Method
+  name_en: Matryoshka Representation Learning (MRL)
+  name_de: Matryoshka Representation Learning (MRL)
+  aliases:
+  - MRL
+  - Matryoshka representations
+  - Matryoshka embeddings
+- id: wordpiece
+  type: Method
+  name_en: WordPiece
+  name_de: WordPiece
+- id: faiss
+  type: Technology
+  name_en: FAISS
+  name_de: FAISS
+- id: cosine-similarity
+  type: Concept
+  name_en: Cosine similarity
+  name_de: Cosine Similarity
+- id: cross-encoder
+  type: Method
+  name_en: Cross-encoder
+  name_de: Cross-Encoder

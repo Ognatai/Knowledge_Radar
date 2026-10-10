@@ -1,0 +1,55 @@
+version: 1
+note_sha256: cdda6df401de6989404e708bfe39ac74f3a823d03a5ddc4ca36e415338220b0f
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- word2vec
+- glove
+- bert
+- sentence-bert
+- matryoshka-representation-learning
+- wordpiece
+- tokenization
+- faiss
+- vector-databases
+- cosine-similarity
+- cross-encoder
+- information-retrieval
+- attention-and-transformers
+- neural-networks
+relations:
+- from: information-retrieval
+  type: BASED_ON
+  to: embeddings
+  evidence: as fundamental to modern information retrieval
+- from: word2vec
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: Static word embeddings, including word2vec (Mikolov et al. 2013) and GloVe (Pennington et al. 2014)
+- from: glove
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: Static word embeddings, including word2vec (Mikolov et al. 2013) and GloVe (Pennington et al. 2014)
+- from: bert
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: Contextual embeddings, such as those from BERT (Devlin et al. 2018)
+- from: sentence-bert
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: Reimers & Gurevych (2019) demonstrated that this approach, as implemented in Sentence-BERT, reduces semantic similarity search latency
+- from: matryoshka-representation-learning
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: Matryoshka Representation Learning (MRL; Kusupati et al., 2022) addresses this by designing nested embeddings
+- from: wordpiece
+  type: IS_EXAMPLE_OF
+  to: tokenization
+  evidence: Tokenization processes input text into a sequence of subword tokens using a fixed vocabulary, commonly implemented via WordPiece
+- from: word2vec
+  type: BASED_ON
+  to: neural-networks
+  evidence: word2vec employs neural networks (CBOW or skip-gram) trained on local context windows
+- from: faiss
+  type: IS_EXAMPLE_OF
+  to: vector-databases
+  evidence: This allows vector databases to use plain inner product search (e.g., FAISS' IndexFlatIP)

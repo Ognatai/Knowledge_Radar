@@ -64,4 +64,5 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - cybersecurity-act: NIS2 and CRA `BASED_ON` cybersecurity-act (3)
 - cyber-resilience-act: `BASED_ON nis2-directive` (3)
 - eecc: eprivacy-directive `BASED_ON` eecc (3)
+- embeddings: MTEB (1)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)
