@@ -1,0 +1,51 @@
+version: 1
+note_sha256: 4743e49ea9db65c1af9fd7fa9ccf5d9632adcd4cf46727daaeca1602bb56fefa
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- q-learning
+- deep-q-learning
+- markov-decision-process
+- exploration-exploitation-tradeoff
+- epsilon-greedy
+- convolutional-neural-networks
+- rlhf
+- gpt
+- instructgpt
+- llm-adaptation
+relations:
+- from: reinforcement-learning
+  type: BASED_ON
+  to: markov-decision-process
+  evidence: The problem is formalised as a Markov decision process
+- from: q-learning
+  type: IS_EXAMPLE_OF
+  to: reinforcement-learning
+  evidence: Q-learning (Watkins & Dayan, 1992) is a model-free method
+- from: deep-q-learning
+  type: IS_EXAMPLE_OF
+  to: reinforcement-learning
+  evidence: Mnih et al. (2013) presented the first deep learning model that learned control policies directly from high-dimensional sensory input with reinforcement learning
+- from: deep-q-learning
+  type: BASED_ON
+  to: q-learning
+  evidence: A convolutional neural network, trained with a variant of Q-learning, took raw pixels as input
+- from: deep-q-learning
+  type: BASED_ON
+  to: convolutional-neural-networks
+  evidence: A convolutional neural network, trained with a variant of Q-learning, took raw pixels as input
+- from: epsilon-greedy
+  type: IS_EXAMPLE_OF
+  to: exploration-exploitation-tradeoff
+  evidence: This exploration-exploitation trade-off is handled, for example, with epsilon-greedy action selection
+- from: rlhf
+  type: BASED_ON
+  to: reinforcement-learning
+  evidence: The same idea, reinforcement learning from human feedback, was used to fine-tune GPT-3 into InstructGPT
+- from: instructgpt
+  type: BASED_ON
+  to: rlhf
+  evidence: The same idea, reinforcement learning from human feedback, was used to fine-tune GPT-3 into InstructGPT
+- from: instructgpt
+  type: BASED_ON
+  to: gpt
+  evidence: was used to fine-tune GPT-3 into InstructGPT

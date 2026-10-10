@@ -2508,3 +2508,23 @@ entities:
   type: Method
   name_en: Gaussian process
   name_de: Gauß-Prozess
+- id: q-learning
+  type: Method
+  name_en: Q-learning
+  name_de: Q-Learning
+- id: deep-q-learning
+  type: Method
+  name_en: Deep Q-learning (DQN)
+  name_de: Deep Q-Learning (DQN)
+- id: markov-decision-process
+  type: Concept
+  name_en: Markov decision process
+  name_de: Markov-Entscheidungsprozess
+- id: exploration-exploitation-tradeoff
+  type: Concept
+  name_en: Exploration-exploitation trade-off
+  name_de: Exploration-Exploitation-Abwägung
+- id: epsilon-greedy
+  type: Method
+  name_en: Epsilon-greedy action selection
+  name_de: Epsilon-Greedy-Aktionsauswahl
