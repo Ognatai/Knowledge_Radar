@@ -2480,3 +2480,31 @@ entities:
   type: Concept
   name_en: Negative flip
   name_de: Negative Flip
+- id: ridge-regression
+  type: Method
+  name_en: Ridge regression (L2 regularisation)
+  name_de: Ridge-Regression (L2-Regularisierung)
+- id: dropout
+  type: Method
+  name_en: Dropout
+  name_de: Dropout
+- id: early-stopping
+  type: Method
+  name_en: Early stopping
+  name_de: Early Stopping
+- id: random-search
+  type: Method
+  name_en: Random search
+  name_de: Zufallssuche (Random Search)
+- id: grid-search
+  type: Method
+  name_en: Grid search
+  name_de: Rastersuche (Grid Search)
+- id: bayesian-optimisation
+  type: Method
+  name_en: Bayesian optimisation
+  name_de: Bayessche Optimierung
+- id: gaussian-process
+  type: Method
+  name_en: Gaussian process
+  name_de: Gauß-Prozess

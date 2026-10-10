@@ -1,0 +1,43 @@
+version: 1
+note_sha256: 75a1753b300b6578b5c80c1bbc4cae84c3f4ee4395677773e7987487e4601cc8
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- ridge-regression
+- lasso
+- dropout
+- early-stopping
+- random-search
+- grid-search
+- bayesian-optimisation
+- gaussian-process
+- overfitting
+- cross-validation
+relations:
+- from: ridge-regression
+  type: IS_EXAMPLE_OF
+  to: regularization-and-hyperparameters
+  evidence: Ridge regression adds small positive quantities to the diagonal of X′X
+- from: lasso
+  type: IS_EXAMPLE_OF
+  to: regularization-and-hyperparameters
+  evidence: The lasso minimises the residual sum of squares subject to the sum of the absolute values of the coefficients being below a constant
+- from: dropout
+  type: IS_EXAMPLE_OF
+  to: regularization-and-hyperparameters
+  evidence: Dropout randomly drops units, together with their connections, from a neural network during training
+- from: early-stopping
+  type: IS_EXAMPLE_OF
+  to: regularization-and-hyperparameters
+  evidence: Early stopping ends training when the error on a validation set starts to increase, before the model overfits
+- from: random-search
+  type: IS_EXAMPLE_OF
+  to: regularization-and-hyperparameters
+  evidence: randomly chosen trials are more efficient for hyperparameter optimisation than trials on a grid
+- from: bayesian-optimisation
+  type: IS_EXAMPLE_OF
+  to: regularization-and-hyperparameters
+  evidence: Bayesian optimisation models the generalisation performance as a sample from a Gaussian process
+- from: bayesian-optimisation
+  type: BASED_ON
+  to: gaussian-process
+  evidence: Bayesian optimisation models the generalisation performance as a sample from a Gaussian process
