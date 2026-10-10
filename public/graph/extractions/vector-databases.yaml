@@ -1,0 +1,72 @@
+version: 1
+note_sha256: 03b939b4b16038ca460f97029f7c3de2f6749e3b0be6c061fbe41d3361f8365b
+extracted_by: claude
+discusses:
+- approximate-nearest-neighbour-search
+- hnsw
+- inverted-file-index
+- product-quantization
+- ivf-pq
+- anisotropic-quantization
+- maximum-inner-product-search
+- scann
+- google
+- faiss
+- k-means
+- metadata-filtering
+- embeddings
+- retrieval-augmented-generation
+- large-language-models
+relations:
+- from: vector-databases
+  type: BASED_ON
+  to: approximate-nearest-neighbour-search
+  evidence: Vector databases provide scalable approximate nearest neighbor search for high-dimensional vector embeddings
+- from: vector-databases
+  type: BASED_ON
+  to: metadata-filtering
+  evidence: supporting metadata filtering for context-aware retrieval
+- from: vector-databases
+  type: BASED_ON
+  to: faiss
+  evidence: Vector database management systems (VDBMSs) evolved from similarity search libraries (e.g., FAISS)
+- from: hnsw
+  type: IS_EXAMPLE_OF
+  to: approximate-nearest-neighbour-search
+  evidence: Hierarchical Graph Construction in HNSW incrementally builds a multi-layer graph
+- from: inverted-file-index
+  type: IS_EXAMPLE_OF
+  to: approximate-nearest-neighbour-search
+  evidence: IVF (Inverted File Index), which partitions vectors into clusters to reduce search space
+- from: inverted-file-index
+  type: BASED_ON
+  to: k-means
+  evidence: clusters the vector space using a coarse quantizer, such as k-means
+- from: product-quantization
+  type: BASED_ON
+  to: k-means
+  evidence: a small codebook (a set of centroids learned via k-means clustering) is created
+- from: ivf-pq
+  type: BASED_ON
+  to: inverted-file-index
+  evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantization, see below), which is known as IVF-PQ
+- from: ivf-pq
+  type: BASED_ON
+  to: product-quantization
+  evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantization, see below), which is known as IVF-PQ
+- from: faiss
+  type: IMPLEMENTS
+  to: inverted-file-index
+  evidence: Their implementation is the FAISS library
+- from: anisotropic-quantization
+  type: IS_EXAMPLE_OF
+  to: maximum-inner-product-search
+  evidence: Anisotropic quantization for maximum inner product search (MIPS) modifies the quantization loss
+- from: scann
+  type: IMPLEMENTS
+  to: anisotropic-quantization
+  evidence: the method is implemented in Google's ScaNN library
+- from: scann
+  type: DEVELOPED_BY
+  to: google
+  evidence: the method is implemented in Google's ScaNN library
