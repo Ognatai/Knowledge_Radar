@@ -1,0 +1,55 @@
+version: 1
+note_sha256: 7660aa6ead0fbddab3b4e7f528725a3bacc74565ca1df6ce6b3d04a5a5471701
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- bm25
+- embeddings
+- bi-encoder
+- sentence-bert
+- dense-retrieval
+- dense-passage-retrieval
+- colbert
+- cross-encoder
+- bert
+- hyde
+- contriever
+- hybrid-retrieval
+- recall-at-k
+- ndcg
+relations:
+- from: semantic-retrieval
+  type: BASED_ON
+  to: embeddings
+  evidence: queries and documents are encoded as vectors, and documents whose vectors are close to the query vector are returned
+- from: semantic-retrieval
+  type: BASED_ON
+  to: bi-encoder
+  evidence: Sentence-BERT encodes each text separately into an embedding compared with cosine similarity
+- from: sentence-bert
+  type: IS_EXAMPLE_OF
+  to: bi-encoder
+  evidence: Sentence-BERT encodes each text separately into an embedding compared with cosine similarity
+- from: dense-retrieval
+  type: IS_EXAMPLE_OF
+  to: semantic-retrieval
+  evidence: Dense retrievers outperformed BM25 on open-domain question answering
+- from: dense-passage-retrieval
+  type: IS_EXAMPLE_OF
+  to: dense-retrieval
+  evidence: retrieval for open-domain question answering can be implemented with dense representations alone, learned from a small number of questions and passages by a dual-encoder framework
+- from: colbert
+  type: IS_EXAMPLE_OF
+  to: semantic-retrieval
+  evidence: ColBERT encodes query and document separately with BERT but keeps an embedding per token
+- from: hyde
+  type: IS_EXAMPLE_OF
+  to: semantic-retrieval
+  evidence: HyDE first lets an instruction-following language model write a hypothetical answer document for the query
+- from: bm25
+  type: COMPLEMENTS
+  to: semantic-retrieval
+  evidence: BM25 remains a robust baseline, so semantic and lexical retrieval are often combined
+- from: cross-encoder
+  type: COMPLEMENTS
+  to: semantic-retrieval
+  evidence: it is applied only to the top candidates
