@@ -1,0 +1,56 @@
+version: 1
+note_sha256: dfc8d5464d4d3610d743bbdfcf344a04ef9ef7297e54a7f5bc4872149f22ba6c
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- google
+- helm
+- pod
+- kubernetes-deployment
+- declarative-configuration
+- self-healing
+- probe
+- kubernetes-namespace
+- container
+- docker
+- docker-compose
+relations:
+- from: kubernetes
+  type: DEVELOPED_BY
+  to: google
+  evidence: Its design grew out of a decade of container management at Google
+- from: kubernetes
+  type: BASED_ON
+  to: container
+  evidence: Kubernetes is an open-source platform for managing containerized workloads and services
+- from: helm
+  type: BASED_ON
+  to: kubernetes
+  evidence: Helm packages Kubernetes applications as charts
+- from: kubernetes
+  type: IMPLEMENTS
+  to: pod
+  evidence: 'The smallest deployable unit: one or more containers with shared storage and network resources'
+- from: pod
+  type: BASED_ON
+  to: container
+  evidence: 'The smallest deployable unit: one or more containers with shared storage and network resources'
+- from: kubernetes
+  type: IMPLEMENTS
+  to: kubernetes-deployment
+  evidence: Provide declarative updates for Pods and ReplicaSets
+- from: kubernetes
+  type: IMPLEMENTS
+  to: declarative-configuration
+  evidence: Kubernetes reconciles the actual state with the described state
+- from: kubernetes
+  type: IMPLEMENTS
+  to: self-healing
+  evidence: Kubernetes restarts failed containers, replaces them, kills containers that do not respond to health checks
+- from: kubernetes
+  type: IMPLEMENTS
+  to: probe
+  evidence: Liveness probes decide when to restart a container
+- from: kubernetes
+  type: IMPLEMENTS
+  to: kubernetes-namespace
+  evidence: Isolate groups of resources within one cluster

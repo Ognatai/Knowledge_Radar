@@ -1699,3 +1699,35 @@ entities:
   type: Method
   name_en: Knowledge graph refinement
   name_de: Knowledge Graph Refinement
+- id: google
+  type: Organization
+  name_en: Google
+  name_de: Google
+- id: helm
+  type: Technology
+  name_en: Helm
+  name_de: Helm
+- id: pod
+  type: Concept
+  name_en: Pod (Kubernetes)
+  name_de: Pod (Kubernetes)
+- id: kubernetes-deployment
+  type: Concept
+  name_en: Deployment (Kubernetes)
+  name_de: Deployment (Kubernetes)
+- id: declarative-configuration
+  type: Concept
+  name_en: Declarative configuration
+  name_de: Deklarative Konfiguration
+- id: self-healing
+  type: Concept
+  name_en: Self-healing
+  name_de: Self-Healing
+- id: probe
+  type: Concept
+  name_en: Probe (Kubernetes)
+  name_de: Probe (Kubernetes)
+- id: kubernetes-namespace
+  type: Concept
+  name_en: Namespace (Kubernetes)
+  name_de: Namespace (Kubernetes)
