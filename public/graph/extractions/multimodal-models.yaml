@@ -1,0 +1,54 @@
+version: 1
+note_sha256: 3c42b44cef1de141cd880b2401c2ce52ebb9c871fad242ca7ad980b706fb7616
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- clip
+- flamingo
+- blip-2
+- llava
+- contrastive-learning
+- vision-transformer
+- attention-and-transformers
+- resnet
+- gpt
+- instruction-tuning
+- latent-diffusion
+- diffusion-models
+- embeddings
+relations:
+- from: clip
+  type: IS_EXAMPLE_OF
+  to: multimodal-models
+  evidence: Contrastive models such as CLIP learn a shared embedding space in which matching images and captions lie close together
+- from: clip
+  type: BASED_ON
+  to: contrastive-learning
+  evidence: CLIP (Radford et al., 2021) aligned images and text contrastively
+- from: flamingo
+  type: IS_EXAMPLE_OF
+  to: multimodal-models
+  evidence: Flamingo bridges pretrained vision-only and language-only models, handles arbitrarily interleaved sequences of images and text
+- from: blip-2
+  type: IS_EXAMPLE_OF
+  to: multimodal-models
+  evidence: BLIP-2 keeps both the image encoder and the language model frozen and bridges them with a lightweight Querying Transformer
+- from: llava
+  type: IS_EXAMPLE_OF
+  to: multimodal-models
+  evidence: instruction-tuned a model that connects a vision encoder with a large language model
+- from: llava
+  type: BASED_ON
+  to: instruction-tuning
+  evidence: LLaVA used language-only GPT-4 to generate multimodal instruction-following data and instruction-tuned a model
+- from: multimodal-models
+  type: BASED_ON
+  to: embeddings
+  evidence: To relate images and text, both must be represented in comparable vectors
+- from: vision-transformer
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: A Vision Transformer splits an image into patches and processes them as a sequence of tokens with a standard Transformer
+- from: latent-diffusion
+  type: IS_EXAMPLE_OF
+  to: diffusion-models
+  evidence: latent diffusion models generate images conditioned on text

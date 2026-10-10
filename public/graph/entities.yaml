@@ -1997,3 +1997,23 @@ entities:
   type: Method
   name_en: Expected validation performance
   name_de: Erwartete Validierungsleistung
+- id: clip
+  type: Method
+  name_en: CLIP
+  name_de: CLIP
+- id: flamingo
+  type: Method
+  name_en: Flamingo
+  name_de: Flamingo
+- id: blip-2
+  type: Method
+  name_en: BLIP-2
+  name_de: BLIP-2
+- id: llava
+  type: Method
+  name_en: LLaVA
+  name_de: LLaVA
+- id: contrastive-learning
+  type: Method
+  name_en: Contrastive learning
+  name_de: Kontrastives Lernen
