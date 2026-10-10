@@ -9,6 +9,7 @@ description = "Local-first bilingual knowledge base and public note browser."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "defusedxml>=0.7,<0.8",
     "fastapi>=0.110,<1.0",
     "keyring>=25,<26",
     "neo4j>=5.28,<7",

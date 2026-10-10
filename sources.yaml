@@ -1,0 +1,153 @@
+# Curated sources for the weekly monitoring run (architecture document,
+# "Source Diversity & Prioritization"). Read by app/agents/monitoring/.
+#
+# source_kind: primary_research | secondary_commentary
+# tier (optional): peer_reviewed | preprint; only meaningful for primary research
+# include_keywords (optional): for broad feeds, keep only items whose title or
+#   summary contains one of these words (case-insensitive, whole words; a
+#   trailing * matches word starts, e.g. "Daten*" also matches "Datenschutz").
+#
+# No usable feed was found (2026-10-10) for: Anthropic, Meta AI blog, The Batch,
+# BfDI, BSI.
+
+# Upper limit of proposals (new notes plus updates) per weekly run; the relevance
+# agent prioritises within it.
+max_proposals_per_week: 10
+
+arxiv:
+  # Each phrase is searched in title or abstract, within these categories.
+  categories: [cs.CL, cs.AI, cs.LG, cs.IR, cs.CY, cs.CR, cs.SE]
+  max_results_per_query: 25
+  queries:
+    - retrieval-augmented generation
+    - GraphRAG
+    - knowledge graph construction
+    - knowledge graph embedding
+    - LLM agents
+    - model context protocol
+    - context engineering
+    - LLM-as-a-judge
+    - hallucination detection
+    - prompt injection
+    - gender bias
+    - algorithmic fairness
+    - explainable AI
+    - AI Act
+    - legal NLP
+    - parameter-efficient fine-tuning
+    - post-training quantization
+    - knowledge distillation
+    - named entity recognition
+    - dense retrieval
+    - text embeddings
+
+rss:
+  # Lab blogs: often the first description of a new technique.
+  - name: OpenAI News
+    url: https://openai.com/news/rss.xml
+    category: lab_blog
+    source_kind: primary_research
+  - name: Google DeepMind Blog
+    url: https://deepmind.google/blog/rss.xml
+    category: lab_blog
+    source_kind: primary_research
+  - name: Google AI Blog
+    url: https://blog.google/technology/ai/rss/
+    category: lab_blog
+    source_kind: primary_research
+  - name: Meta Research
+    url: https://research.facebook.com/feed/
+    category: lab_blog
+    source_kind: primary_research
+  - name: BAIR Blog
+    url: https://bair.berkeley.edu/blog/feed.xml
+    category: lab_blog
+    source_kind: primary_research
+  - name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    category: lab_blog
+    source_kind: primary_research
+
+  # Conferences and journals.
+  - name: PMLR
+    url: https://proceedings.mlr.press/feed.xml
+    category: conference
+    source_kind: primary_research
+    tier: peer_reviewed
+  - name: JMLR
+    url: https://jmlr.org/jmlr.xml
+    category: conference
+    source_kind: primary_research
+    tier: peer_reviewed
+  - name: media.ccc.de
+    url: https://media.ccc.de/podcast-hq.xml
+    category: conference
+    source_kind: primary_research
+    include_keywords: [AI, KI, machine learning, maschinelles Lernen, LLM*, algorithm*, privacy, Datenschutz, surveillance, Überwachung, neural]
+
+  # Newsletters and commentary.
+  - name: Import AI
+    url: https://importai.substack.com/feed
+    category: newsletter
+    source_kind: secondary_commentary
+  - name: Interconnects
+    url: https://www.interconnects.ai/feed
+    category: newsletter
+    source_kind: secondary_commentary
+  - name: The Gradient
+    url: https://thegradient.pub/rss/
+    category: newsletter
+    source_kind: secondary_commentary
+  - name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    category: newsletter
+    source_kind: secondary_commentary
+
+  # Regulatory primary sources (EU and Germany).
+  - name: EUR-Lex legislation
+    url: https://eur-lex.europa.eu/EN/display-feed.rss?rssId=162
+    category: regulatory
+    source_kind: primary_research
+    include_keywords:
+      - artificial intelligence
+      - personal data
+      - data
+      - digital
+      - cyber*
+      - cybersecurity
+      - electronic communications
+      - network and information
+      - trust services
+      - credit institutions
+      - operational resilience
+      - copyright
+      - platform*
+  - name: Bundesgesetzblatt Teil I
+    url: https://www.recht.bund.de/rss/feeds/rss_bgbl-1.xml
+    category: regulatory
+    source_kind: primary_research
+    include_keywords:
+      - Künstliche Intelligenz
+      - KI
+      - Daten*
+      - digital*
+      - Cyber*
+      - Informationssicherheit
+      - Telekommunikation*
+      - Kreditwesen*
+      - Geschäftsgeheim*
+      - Urheberrecht*
+      - elektronisch*
+      - NIS-2*
+  - name: EDPB News
+    url: https://www.edpb.europa.eu/feed/news_en
+    category: regulatory
+    source_kind: primary_research
+  - name: Datenschutzkonferenz
+    url: https://www.datenschutzkonferenz-online.de/rss.xml
+    category: regulatory
+    source_kind: primary_research
+  - name: EU Digital Strategy
+    url: https://digital-strategy.ec.europa.eu/en/rss.xml
+    category: regulatory
+    source_kind: primary_research

@@ -25,6 +25,22 @@ Building blocks for the agent pipeline that will write new notes:
 - `legal_text.py`: source-independent structure of legal texts, shared by
   `eurlex` and `gesetze`.
 
+Monitoring pipeline (milestone 3), in `monitoring/`:
+
+- `run_sources.py`: the source agents. Fetches arXiv (curated search phrases)
+  and the curated feeds from `sources.yaml`, keeps findings that are new, and
+  writes them to `.knowledge-radar/monitoring/runs/findings-<time>.jsonl` for the
+  relevance agent. `seen.json` next to it remembers what earlier runs handed on.
+
+  ```powershell
+  python -m app.agents.monitoring.run_sources --dry-run   # counts only, writes nothing
+  python -m app.agents.monitoring.run_sources             # last 7 days
+  ```
+
+- `feeds.py`: arXiv API and RSS 2.0 / Atom / RSS 1.0 parsing (defusedxml).
+- `config.py`: validation of `sources.yaml`.
+- `findings.py`: the `Finding` record shared by all sources.
+
 The tools of the one-off migration of the Obsidian vault into public notes
 (completed on 7 October 2026) were removed afterwards; they remain in the Git
 history.
