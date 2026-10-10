@@ -2634,3 +2634,11 @@ entities:
   name_de: Google Neural Machine Translation (GNMT)
   aliases:
   - GNMT
+- id: transh
+  type: Method
+  name_en: TransH
+  name_de: TransH
+- id: transr
+  type: Method
+  name_en: TransR
+  name_de: TransR

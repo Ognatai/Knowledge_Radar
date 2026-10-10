@@ -1,0 +1,28 @@
+version: 1
+note_sha256: ff21ed4302819d0756cb571a29a52019eddde13eca8814a1bab195bf20812acd
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- knowledge-graphs
+- knowledge-graph-embeddings
+- link-prediction
+- distmult
+- rotate
+- transh
+- transr
+relations:
+- from: transe
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: TransE embeds the entities and relations of a knowledge graph as vectors and models each relation as a translation
+- from: transh
+  type: BASED_ON
+  to: transe
+  evidence: which is why extensions such as TransH and TransR project entities into relation-specific spaces
+- from: transr
+  type: BASED_ON
+  to: transe
+  evidence: which is why extensions such as TransH and TransR project entities into relation-specific spaces
+- from: rotate
+  type: BASED_ON
+  to: transe
+  evidence: RotatE (Sun et al., 2019) generalises translation to rotation
