@@ -2302,3 +2302,37 @@ entities:
   name_de: Normalized Discounted Cumulative Gain (nDCG)
   aliases:
   - nDCG
+- id: context-pollution
+  type: Concept
+  name_en: Context pollution
+  name_de: Kontextverschmutzung
+- id: citation-hallucination
+  type: Concept
+  name_en: Citation hallucination
+  name_de: Zitat-Halluzination
+- id: grounding-hallucination
+  type: Concept
+  name_en: Grounding hallucination
+  name_de: Grounding-Halluzination
+- id: hybrid-retrieval
+  type: Method
+  name_en: Hybrid retrieval
+  name_de: Hybrides Retrieval
+- id: reciprocal-rank-fusion
+  type: Method
+  name_en: Reciprocal rank fusion
+  name_de: Reciprocal Rank Fusion
+- id: query-expansion
+  type: Method
+  name_en: Query expansion
+  name_de: Query Expansion
+- id: natural-language-inference
+  type: Method
+  name_en: Natural language inference (NLI)
+  name_de: Natural Language Inference (NLI)
+  aliases:
+  - NLI
+- id: claim-level-grounding-check
+  type: Method
+  name_en: Claim-level grounding check
+  name_de: Grounding-Prüfung auf Aussageebene

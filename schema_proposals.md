@@ -72,4 +72,8 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - knowledge-graph-engineering: DBpedia, YAGO, Freebase (1)
 - legal-ai: LexGLUE, LegalBench (1)
 - llm-evaluation: MMLU, TruthfulQA, MT-bench, Chatbot Arena (1)
+- natural-language-processing: GLUE, SQuAD, WMT 2014 (1)
+- nis2-directive: repeal of NIS1 (Directive (EU) 2016/1148); no relation type for repeal yet
+- rag-failure-modes: context-pollution, citation-hallucination, grounding-hallucination `IS_EXAMPLE_OF` rag-failure-modes (2); ALCE, ELI5 (1)
+- rag-evaluation: KILT, SuperGLUE, AIS (1)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

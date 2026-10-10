@@ -1,0 +1,38 @@
+version: 1
+note_sha256: dfd673781169886c13f7d1404b36125049e08f2d784acce0e3b770251202e6ae
+extracted_by: claude
+discusses:
+- retrieval-augmented-generation
+- context-pollution
+- citation-hallucination
+- grounding-hallucination
+- lost-in-the-middle
+- cross-encoder
+- hybrid-retrieval
+- reciprocal-rank-fusion
+- bm25
+- query-expansion
+- natural-language-inference
+- claim-level-grounding-check
+- recall-at-k
+- mean-reciprocal-rank
+- ndcg
+- llm-as-a-judge
+- embeddings
+relations:
+- from: rag-failure-modes
+  type: BASED_ON
+  to: retrieval-augmented-generation
+  evidence: RAG failure modes define the distinct failure points within the RAG pipeline
+- from: hybrid-retrieval
+  type: BASED_ON
+  to: bm25
+  evidence: a weighted sum such as `score = w1 * bm25_score + w2 * embedding_score`
+- from: hybrid-retrieval
+  type: BASED_ON
+  to: reciprocal-rank-fusion
+  evidence: Hybrid retrieval fuses sparse and dense results, either by rank (reciprocal rank fusion)
+- from: claim-level-grounding-check
+  type: BASED_ON
+  to: natural-language-inference
+  evidence: Natural Language Inference (NLI) models compute entailment scores between a claim
