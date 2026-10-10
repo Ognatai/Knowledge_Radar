@@ -1,0 +1,89 @@
+version: 1
+note_sha256: 976a3fc8e4326f40287cd6cdb285f0c3a5482f5459a356ee750a7ec0789cc29a
+extracted_by: claude
+discusses:
+- large-language-models
+- rag-chunking
+- embeddings
+- bi-encoder
+- sentence-bert
+- vector-databases
+- approximate-nearest-neighbour-search
+- hnsw
+- faiss
+- inverted-index
+- dense-retrieval
+- sparse-retrieval
+- bm25
+- hybrid-retrieval
+- reciprocal-rank-fusion
+- cross-encoder
+- bert
+- lost-in-the-middle
+- naive-rag
+- advanced-rag
+- modular-rag
+- agentic-ai
+- graphrag
+- llm-adaptation
+- ragas
+- llm-as-a-judge
+- gdpr
+- right-to-erasure
+relations:
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: large-language-models
+  evidence: The language model generates the answer from the prompt
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: rag-chunking
+  evidence: Documents are split into passages (chunks)
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: bi-encoder
+  evidence: 'RAG uses bi-encoders: query and passage are encoded independently by the same model'
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: approximate-nearest-neighbour-search
+  evidence: Vector indexes therefore use approximate nearest-neighbour (ANN) search
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: hybrid-retrieval
+  evidence: Hybrid retrieval runs both and merges the result lists
+- from: retrieval-augmented-generation
+  type: BASED_ON
+  to: cross-encoder
+  evidence: are re-scored by a cross-encoder
+- from: hnsw
+  type: IS_EXAMPLE_OF
+  to: approximate-nearest-neighbour-search
+  evidence: HNSW (Malkov & Yashunin, 2016) builds a hierarchy of proximity graphs
+- from: faiss
+  type: IMPLEMENTS
+  to: approximate-nearest-neighbour-search
+  evidence: Inverted-file and quantisation methods, as implemented in FAISS (Johnson et al., 2017)
+- from: sparse-retrieval
+  type: BASED_ON
+  to: inverted-index
+  evidence: the chunks are additionally tokenised into an inverted index that maps each term to the chunks containing it
+- from: hybrid-retrieval
+  type: BASED_ON
+  to: reciprocal-rank-fusion
+  evidence: A common method is Reciprocal Rank Fusion (Cormack et al., 2009)
+- from: naive-rag
+  type: IS_EXAMPLE_OF
+  to: retrieval-augmented-generation
+  evidence: Naive RAG (index, retrieve, generate)
+- from: advanced-rag
+  type: IS_EXAMPLE_OF
+  to: retrieval-augmented-generation
+  evidence: Advanced RAG (added query processing, reranking and context compression)
+- from: modular-rag
+  type: IS_EXAMPLE_OF
+  to: retrieval-augmented-generation
+  evidence: Modular RAG (interchangeable modules and flexible control flows
+- from: advanced-rag
+  type: BASED_ON
+  to: naive-rag
+  evidence: Advanced RAG (added query processing, reranking and context compression)

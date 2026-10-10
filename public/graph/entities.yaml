@@ -2392,3 +2392,15 @@ entities:
   name_de: RAFT (Retrieval Augmented Fine-Tuning)
   aliases:
   - RAFT
+- id: naive-rag
+  type: Method
+  name_en: Naive RAG
+  name_de: Naive RAG
+- id: advanced-rag
+  type: Method
+  name_en: Advanced RAG
+  name_de: Advanced RAG
+- id: modular-rag
+  type: Method
+  name_en: Modular RAG
+  name_de: Modular RAG
