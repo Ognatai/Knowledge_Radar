@@ -2386,3 +2386,9 @@ entities:
   type: Method
   name_en: Contriever
   name_de: Contriever
+- id: raft
+  type: Method
+  name_en: RAFT (Retrieval Augmented Fine-Tuning)
+  name_de: RAFT (Retrieval Augmented Fine-Tuning)
+  aliases:
+  - RAFT

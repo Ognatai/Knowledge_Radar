@@ -1,0 +1,33 @@
+version: 1
+note_sha256: 87b71fb56c456cc9e1aad1b003b3c250df760a05f6b30bc5ccccb27ce871e1e6
+extracted_by: claude
+discusses:
+- retrieval-augmented-generation
+- llm-adaptation
+- lora
+- raft
+- vector-databases
+- approximate-nearest-neighbour-search
+- faiss
+- chain-of-thought-prompting
+relations:
+- from: rag-vs-fine-tuning
+  type: BASED_ON
+  to: retrieval-augmented-generation
+  evidence: RAG adds retrieved documents to the prompt at inference time
+- from: rag-vs-fine-tuning
+  type: BASED_ON
+  to: llm-adaptation
+  evidence: Fine-tuning adjusts model weights via gradient updates on domain-specific data
+- from: llm-adaptation
+  type: COMPLEMENTS
+  to: retrieval-augmented-generation
+  evidence: 'RAG and fine-tuning can complement each other: in an agricultural case study their accuracy gains were cumulative'
+- from: raft
+  type: BASED_ON
+  to: retrieval-augmented-generation
+  evidence: RAFT keeps retrieval at inference time but fine-tunes the model to use retrieved documents well
+- from: raft
+  type: BASED_ON
+  to: llm-adaptation
+  evidence: Fine-tunes the model to answer from retrieved documents and to ignore distractors
