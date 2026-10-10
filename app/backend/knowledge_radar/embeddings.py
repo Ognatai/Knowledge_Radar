@@ -26,8 +26,8 @@ def model_name() -> str:
     return os.environ.get("KNOWLEDGE_RADAR_EMBEDDING_MODEL", DEFAULT_MODEL)
 
 
-def query_text(query: str) -> str:
-    return f"Instruct: {QUERY_INSTRUCTION}\nQuery: {query}"
+def query_text(query: str, instruction: str = QUERY_INSTRUCTION) -> str:
+    return f"Instruct: {instruction}\nQuery: {query}"
 
 
 def embed(texts: list[str], *, model: str | None = None, timeout: float = 600) -> list[list[float]]:

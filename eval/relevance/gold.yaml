@@ -1,0 +1,812 @@
+# Gold labels for the relevance agent: 40 findings of the first source run
+# (2026-10-10), 22 from arXiv and 18 from feeds, drawn at random per source.
+# Labelled by Claude by the rules in app/agents/monitoring/relevance.py; the
+# user skimmed them. "dev" items tune prompts, "test" items give the final
+# numbers. Proposals are update and new_topic; everything else is discarded.
+version: 1
+items:
+- split: dev
+  decision: irrelevant
+  note: null
+  why: GPU cluster scheduling; outside scope, no summary
+  finding:
+    id: rss:e05551817b225bef
+    source: Hugging Face Blog
+    category: lab_blog
+    url: https://huggingface.co/blog/allenai/impactful-scheduling
+    title: Impactful scheduling for GPU clusters
+    summary: ''
+    published: '2026-10-09'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:14.759237+02:00'
+    query: null
+- split: test
+  decision: duplicate
+  note: eu-ai-act
+  why: position paper on Article 12 logging; no new legal fact
+  finding:
+    id: arxiv:2610.07459
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.07459
+    title: Auditable Claims about AI Agents
+    summary: 'Organizations make claims about their AI agents: a person approves every external email, every action is logged, an evaluation shows the agent is safe to deploy. Article 12 of the EU AI Act requires high-risk systems to allow the automatic recording of events but does not say which records settle a given claim. The position is one sentence: to be checked, a claim about an agent must first name its policy, its scope, the records that would settle it, and who writes them. Adapting the preconditions of an assurance engagement, we call a claim auditable when these elements and a decision rule are fixed before any verdict and the records are obtainable. This extends the Policy Checkability dimension of our Auditable Agents framework from single actions to claims. Agents add three conditions: coverage by an independent record, authorization bound to each action''s arguments, and completeness beyond integrity. Under an explicit model, we prove that support is impossible without each
+      wherever its hypotheses hold. A claim-check table applies the method to six common claims, anchored in current NIST, IETF, and OWASP drafts. A worked case follows one claim through five evidence states. We close with a practice box and steps for operators, buyers, auditors, and standard setters.'
+    published: '2026-10-05'
+    authors:
+    - Yue Zhao
+    - Jiate Li
+    - Li Li
+    - Yi Nian
+    - Jinbo Liu
+    - Xiaolin Zhou
+    - Xiyang Hu
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:50.182824+02:00'
+    query: AI Act
+- split: dev
+  decision: duplicate
+  note: gdpr
+  why: routine national DPA decision
+  finding:
+    id: rss:d02167d5a8441b55
+    source: EDPB News
+    category: regulatory
+    url: https://www.edpb.europa.eu/news/hellenic-dpa-decision-on-a-data-breach-involving-eetaa-sa-as-processor-for-the-ministry-of_en
+    title: Hellenic DPA decision on a data breach involving E.E.T.A.A. S.A. as processor for the Ministry of Social Cohesion and Family Affairs
+    summary: 'Background information Date of final decision: 28/07/2026 National case Controller: Ministry of Social Cohesion and Family Affairs Legal Reference(s): Article 25 (Data protection by design and by default), Article 28 (Processor), Article 32 (Security of processing), Article 33 (Notification of a personal data breach to the supervisory authority) and Article 34 (Communication of a personal data breach to the data subject) Decision: Administrative fine, Compliance order, Summary of the Decision Origin of the case The Hellenic Data Protection Authority (DPA) investigated a large-scale personal data breach affecting the information systems of the Hellenic Agency for Local Development and Local Government (E.E.T.A.A.) S.A., which were used to implement programmes of the Ministry of Social Cohesion and Family Affairs. Key Findings The breach affected databases containing personal data of a large number of data subjects, including identification and contact details, financial and
+      health data. The Hellenic DPA found that the Ministry of Social Cohesion and Family Affairs, in its capacity as controller, had complied with its obligations concerning the notification of the breach to the Authority and its communication to the affected data subjects. However, the Authority found that the success of the attack was associated with E.E.T.A.A.’s continued use of outdated information systems and inadequate security measures, despite its awareness of the relevant risks. The DPA found infringements of the requirements relating to the security of processing, as well as deficiencies in compliance with the requirements of Article 28 GDPR governing the relationship between the controller and the processor. Decision The Hellenic DPA imposed administrative fines of EUR 200 000 on the Ministry of Social Cohesion and Family Affairs and EUR 150 000 on E.E.T.A.A. It also ordered the parties (i.e. the Ministry and E.E.T.A.A.) to enter into a data processing agreement pursuant to Article
+      28 GDPR a'
+    published: '2026-10-08'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:17.770796+02:00'
+    query: null
+- split: test
+  decision: irrelevant
+  note: null
+  why: anecdotal model experiment
+  finding:
+    id: rss:69f5bd9058f87f8c
+    source: Simon Willison
+    category: newsletter
+    url: https://simonwillison.net/2026/Oct/4/qwen38-addition-in-words/
+    title: Qwen3.8 27B addition in words
+    summary: 'Research: Qwen3.8 27B addition in words Colin Frasier posted on Bluesky about an experiment he ran over two years ago using GPT-4o to see how well it could "compute the sum but return the answer in words" across increasingly large numbers. Here''s the chart he shared of those results: I''m confident GPT-4o didn''t cheat and use a calculator, especially since it got so many of the calculations wrong, but I was inspired to run the experiment again on local hardware (a DGX Spark) to explore the effect in a fully controlled environment. I pasted his image into a Codex Remote session (GPT-6 Astra) and had it run the same experiment using Qwen3.8-27B-Q4_K_M.gguf . Here''s the result for a run of 30 attempts per combination with reasoning disabled: Then I ran it again with reasoning enabled. This took a lot longer per pair, so instead of running 30 samples per square I ran just one - which results in a much less visually appealing heatmap since each square is either 100% or 0%: It
+      got the right answer in 167 out of 169 attempts, and since these were one-shot I''m confident a second run would produce different results here. Here''s a version of the report that includes the reasoning traces from some of those larger calculations, which include text like this: Wait, let me redo this more carefully. 4,299,366,105,622 6,088,794,067,970 Let me align them: 4 2 9 9 3 6 6 1 0 5 6 2 2 6 0 8 8 7 9 4 0 6 7 9 7 0 Adding from right to left: Position 1 (units): 2 + 0 = 2 Position 2 (tens): 2 + 7 = 9 Position 3 (hundreds): 6 + 9 = 15, write 5, carry 1 Tags: mathematics , ai , generative-ai , local-llms , llms , qwen , llm-reasoning , dgx-spark'
+    published: '2026-10-04'
+    authors: []
+    tier: null
+    source_kind: secondary_commentary
+    fetched_at: '2026-10-10T17:06:17.357236+02:00'
+    query: null
+- split: dev
+  decision: irrelevant
+  note: null
+  why: news about misuse; nothing for a reference article
+  finding:
+    id: rss:a919ba35a5e056c2
+    source: Simon Willison
+    category: newsletter
+    url: https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/
+    title: OpenAI “rogue” agent activities found on Wikimedia projects
+    summary: 'OpenAI “rogue” agent activities found on Wikimedia projects Given how tempting a target wikis are for rogue agent swarms, it''s not a huge surprise that Wikipedia found evidence of that activity once they went looking: The Wikimedia Foundation conducted its own investigation to see whether Wikimedia websites had been similarly affected by AI agents, focusing on those operated by OpenAI. We can confirm that we have discovered some activity by these “rogue” OpenAI agents on Wikimedia platforms. The unauthorized bot activities included edits to our wikis, some unsuccessful attempts to exploit a public note-taking tool we host, and heavy traffic, which are described more below. They found evidence of agents editing sandbox pages, trying to use pieces of infrastructure such as Etherpad to help proxy content from elsewhere, and saw widespread crawling and "hundreds of thousands of data queries" to their Wikidata Query Service. My best guess is that most of this was a similar (or
+      the same) swarm of agents as those that defaced that German wiki while training for research tasks. The Wikipedia sandbox wiki edits appear to have started on May 12th, and the initial test edits to the UseModWiki Sandbox page reported by that incident started on May 11th. Tags: wikimedia , wikipedia , wikis , ai , generative-ai , llms , ai-ethics , accidental-cyberattacks'
+    published: '2026-10-07'
+    authors: []
+    tier: null
+    source_kind: secondary_commentary
+    fetched_at: '2026-10-10T17:06:17.357236+02:00'
+    query: null
+- split: test
+  decision: irrelevant
+  note: null
+  why: EEA energy network code; outside scope
+  finding:
+    id: rss:8e991a51cb3e7ac6
+    source: EUR-Lex legislation
+    category: regulatory
+    url: https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D2237
+    title: 'CELEX:32026D2237: Council Decision (EU) 2026/2237 of 24 September 2026 on the position to be adopted on behalf of the European Union within the EEA Joint Committee concerning the amendment of Annex IV (Energy) to the EEA Agreement (Network code on interoperability and data exchange rules) (Text with EEA relevance)'
+    summary: ''
+    published: '2026-10-05'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:17.577122+02:00'
+    query: null
+- split: dev
+  decision: duplicate
+  note: context-engineering
+  why: incremental method for curating agent context files
+  finding:
+    id: arxiv:2610.11007
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.11007
+    title: 'Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback'
+    summary: 'At the start of every session, LLM agents load a fixed context file, such as $\texttt{AGENTS.md}$. Each loaded token in the file is charged again in every later round of the session, and these files can degrade performance as they grow in size. However, in practice, human or automated curators usually grow these files by appending. We formulate context curation as a capacitated assortment problem. Instructions consume tokens under a finite attention capacity; adding an instruction never raises the compliance of the others, while retained instructions incur a per-session setup cost. We prove an upper bound on the optimal file size, regardless of the number of available candidate instructions, and that appending every instruction with positive standalone value can be arbitrarily worse in net value than selecting an optimal subset. A token budget also limits the loss when the token price is underestimated. We then examine what can be learned from past sessions and how this information
+      can guide decisions to add or remove instructions. Feedback is inherently censored: the benefits and harms of loaded instructions are observable, whereas missing instructions generate feedback only when their absence causes harm. In this setting, we show that deleting instructions ignored by agents can inevitably remove helpful ones. We characterize how much evidence should be collected before adding an instruction. Besides, we bound regret when human reviewers can inspect only a limited number of edits per period. Empirical experiments further show that irrelevant rules drawn from real context files reduce language-model compliance.'
+    published: '2026-10-07'
+    authors:
+    - Zexuan Liu
+    - Yuning Yang
+    - Tiancheng Zhao
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:22.714990+02:00'
+    query: LLM agents
+- split: test
+  decision: duplicate
+  note: mcp-and-related-protocols
+  why: incremental benchmark
+  finding:
+    id: arxiv:2610.04378
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.04378
+    title: 'COPEX: Benchmarking LLM Robustness to Adversarial Context Across Model Context Protocol Layers'
+    summary: 'Large language models increasingly mediate tool use in Model Context Protocol (MCP) systems, where adversarial influence may enter through user instructions, tool schemas, tool outputs, or protocol messages. Existing benchmarks often evaluate deployed agents, conflating model susceptibility with guardrails, orchestration, and general task capability. We introduce COPEX (COntext Provider EXploitation), a controlled benchmark that isolates the model as an MCP client by fixing the surrounding agent stack and varying only the tool-selecting model. COPEX covers 25 attack types instantiated as 125 scenarios across four entry surfaces: model/agent, client, server/tool, and transport. Across nine models and 3,375 trials, the mean attack success rate is 64.4%, with surface-level means ranging from 58.3% to 71.4%. Some client- and transport-level attacks succeed partly outside the model''s observation or control, separating system exposure from model susceptibility. Combined input and
+      context scanning reduces mean attack success by 49.6% on an eight-attack defense subset relative to the undefended setting. The benchmark is available at https://github.com/inspire-center/copex.'
+    published: '2026-10-03'
+    authors:
+    - Nahom Birhan
+    - Mehrdad Rostamzadeh
+    - Sidhant Narula
+    - Mahmoud Nazzal
+    - Mohammad Ghasemigol
+    - Daniel Takabi
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:25.755886+02:00'
+    query: model context protocol
+- split: dev
+  decision: irrelevant
+  note: null
+  why: niche model supply-chain sanitisation method
+  finding:
+    id: arxiv:2610.04319
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.04319
+    title: 'GrayShield: Bit-Level Sanitization for Transformer Model Supply-Chain Security'
+    summary: Transformer models such as BERT and Vision Transformer~(ViT) achieve strong performance via densely parameterized attention backbones. However, the least significant bits~(LSBs) of their 32-bit floating-point weights can be abused as covert channels to conceal malicious payloads, posing a serious threat to the AI model supply chain. We propose \GS (\GSabbr), a lightweight, post-training, zero-data sanitization method that completely replaces the declared mantissa-LSB channel with a Gray-code-guided low-transition sequence. Complete payload-independent overwrite, whether keyed or public, makes the sanitized target bits independent of the embedded payload and gives that declared channel zero capacity. Gray coding supplies overwrite structure, while a keyed per-tensor phase supplies pattern diversity. Benchmarked against seven post-training defenses on four Transformer model presets and two real-world malware payloads, \GSabbr maintains sub-$1\%$ accuracy impact and achieves $49.96\pm0.66$
+      percentage-point Recovery Reduction (RR) under five implemented attacker variants. Because pre-defense recovery is effectively $100\%$, RR near 50 percentage points corresponds to post-sanitization bit accuracy at binary chance. Its main empirical advantage is stable near-chance sanitization with substantially smaller weight-distribution shift than the evaluated near-chance baselines PatternMask (PM) and Post-Training Quantization (PTQ).
+    published: '2026-10-03'
+    authors:
+    - Armstrong Foundjem
+    - Tsung-Hsien Chuang
+    - Foutse Khomh
+    - Mohamed Amine Merzouk
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:59.304905+02:00'
+    query: post-training quantization
+- split: test
+  decision: irrelevant
+  note: null
+  why: opinion piece
+  finding:
+    id: rss:377afb641e4cb3d6
+    source: Interconnects
+    category: newsletter
+    url: https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards
+    title: I expect rapid progress but not towards general superintelligence
+    summary: I’ve often been surprised when I hear from top researchers in industry that they think AI will be better than them at their job in a few years, and I didn’t really know why I doubted it.
+    published: '2026-10-09'
+    authors: []
+    tier: null
+    source_kind: secondary_commentary
+    fetched_at: '2026-10-10T17:06:15.940129+02:00'
+    query: null
+- split: dev
+  decision: irrelevant
+  note: null
+  why: opinion piece
+  finding:
+    id: rss:673fb60ae75259d9
+    source: Interconnects
+    category: newsletter
+    url: https://www.interconnects.ai/p/the-cyber-risk-discourse-is-broken
+    title: The Cyber Risk Discourse is Broken
+    summary: Open-weights, ideology, and acknowledging trade-offs.
+    published: '2026-10-06'
+    authors: []
+    tier: null
+    source_kind: secondary_commentary
+    fetched_at: '2026-10-10T17:06:15.940129+02:00'
+    query: null
+- split: test
+  decision: irrelevant
+  note: null
+  why: personal blog feature
+  finding:
+    id: rss:305ba874f36ffe29
+    source: Simon Willison
+    category: newsletter
+    url: https://simonwillison.net/2026/Oct/9/built-using-my-voice/
+    title: A new feature for my blog, built using my voice
+    summary: 'I shipped a new feature for my blog today: the Newsletters page, which offers an index of all of the newsletters I''ve sent out, both my free weekly Substack and my monthly sponsors-only updates. I built the feature almost entirely using my voice, chatting away to my laptop while I cooked dinner. Codex voice mode I used the ChatGPT desktop app for this, in the Codex tab, using the voice conversation mode, running against a local development environment. Here''s what that looks like: I started the session against my local simonwillisonblog checkout by typing: Start dev server and open in browser This gave me a preview of the site that it would be working on, and meant that I could later ask it to show me the new pages so I could visually track its progress. Then I clicked the "Start new voice chat" button - that''s not the microphone button, it''s the one to the right of it - and set my laptop up in the kitchen so I could talk to it while I cooked. Talking to my computer I had
+      a pretty good idea of what I wanted to build, and it''s a simple enough Django feature that I was certain the model (in this case GPT-6 Astra High) would be able to do it. A new model, a migration, some view code, templates, and a couple of import functions to populate the database from external sources. Here''s an extract of my voice transcript that was captured by Codex: Um, they do not. Um, this is going to be a new type of content. Um, it''s not going to show up... Oh, hold on. Yeah, no- I do not want this to show up in my, um, tag pages and date archive pages and... Actually, no, I think... I don''t want it on the tag pages. I don''t want it on the, um, blog index page. But I think I do want it to show up on the date-based pages. You know, if you navigate to September the 19th, and I sent a newsletter on that page, I think I want that to show up. So... this is- so I think we probably need a new model. The other thing is that I want them searchable, uh the Substack ones are not
+      searchable, because t'
+    published: '2026-10-09'
+    authors: []
+    tier: null
+    source_kind: secondary_commentary
+    fetched_at: '2026-10-10T17:06:17.357236+02:00'
+    query: null
+- split: dev
+  decision: irrelevant
+  note: null
+  why: narrow application to requirements engineering
+  finding:
+    id: arxiv:2610.10628
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.10628
+    title: 'Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking'
+    summary: Existing LLM-based approaches for software Requirements Engineering (RE) typically rely on basic prompting strategies or rudimentary agent collaboration, under-utilizing the full potential of multi-agent systems. Meanwhile, available datasets focus on isolated subtasks, such as requirements extraction, classification, and completeness detection, leaving the absence of an end-to-end RE benchmark that spans from requirements elicitation to generation. We present Agent4RE - a self-refining multi-agent RE system that orchestrates specialized agents and incorporates two iterative improvement loops. To support evaluation, we construct RE-E2E - a real-world dataset built from human-written requirement specifications, enabling end-to-end assessment of RE workflows. Building on this foundation, we further propose two enhanced Agent4RE versions that incorporate either autonomous self-refinement or structured human feedback, and analyze their strengths and limitations across different
+      scenarios. Evaluation on 8 Large Language Models (LLMs) demonstrates that all three Agent4RE variants consistently outperform a domain-context-augmented prompting baseline by average 8% in text-based metrics. The two enhanced variants achieve the highest LLM-as-a-judge and human ratings, surpassing two RE baselines by approximately 0.8 points on a four-point scale. This consistent performance establishes Agent4RE as a practical end-to-end RE solution for industrial environments.
+    published: '2026-10-07'
+    authors:
+    - Yongjian Tang
+    - Linhan Li
+    - Thomas Runkler
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:31.846091+02:00'
+    query: LLM-as-a-judge
+- split: test
+  decision: irrelevant
+  note: null
+  why: narrow application to audio deepfake detection
+  finding:
+    id: arxiv:2610.05264
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.05264
+    title: Task-Aware Joint Pruning and Distillation for Efficient Audio Deepfake Detection
+    summary: Advances in speech synthesis have made deepfake speeches increasingly convincing, posing growing threats to security. While self-supervised learning (SSL) based detectors achieve state-of-the-art performance, their computational demands (typically 300M+ parameters) prevent deployment on resource-constrained devices. Existing compression methods, designed mainly for content-centric tasks, struggle to maintain competitive performance when directly adapted to deepfake detection. We propose a Task-Aware Joint Pruning and Distillation framework that combines cross-domain knowledge distillation with movement-guided structured pruning to transfer forgery-discriminative knowledge and preserve critical structures under aggressive compression. Our framework reduces the model to 31.9M parameters with 6.3$\times$ FLOPs reduction, with an average performance drop of only 1.30\% across multiple datasets compared to the uncompressed baseline, demonstrating strong potential for on-device deployment.
+    published: '2026-10-04'
+    authors:
+    - Miao He
+    - Peng Cheng
+    - Zhongjie Ba
+    - Qing Wen
+    - Li Lu
+    - Xin Yang
+    - Kui Ren
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:02.345203+02:00'
+    query: knowledge distillation
+- split: dev
+  decision: new_topic
+  note: null
+  why: 'prompt injection: discussed in five notes, no note of its own'
+  finding:
+    id: arxiv:2610.05163
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.05163
+    title: 'Blocking at the Boundary: Auditing Long-Horizon Agents against Staged Prompt Injection'
+    summary: 'Long-horizon agents consume external content, invoke tools, and modify persistent state. Indirect prompt injection can exploit task-specific context, propagate across causally connected stages, and alter a consequential action while the workflow continues; we term this staged prompt injection. We build an automated, feedback-guided attack generation pipeline and apply it to Claude Code and Codex in their native runtimes. The confirmed attacks span eight workflow scenarios, seven attack goals, and six injection surfaces, showing that production agents are vulnerable to context-aware, multi-step injection over long horizons. Stopping such attacks requires a decision before each consequential action: input screening and completed-run evaluation cannot locate the intervention point, and existing pre-action methods use incompatible units and labels. We therefore formulate boundary action auditing: given initial context, a trajectory prefix, and a fully specified pending message
+      or tool call, an auditor predicts Pass or Block before its effect occurs. Pairing attacked and benign executions yields a 479-pair, 3,112-unit benchmark. We further propose Path-Aligned Attribution (PAA), a training-free auditor that decomposes pending actions into operative elements and traces what supplied each value and guided each decision. PAA blocks only when the model attributes an unwarranted, material effect on an element to an attacker-reachable source that either provides unqualified steering or conflicts with visible evidence. Under full-benchmark fail-open scoring with Claude Sonnet 5, PAA reaches 86% Block recall at a 6-8% false-block rate (FBR), whereas ARGUS reaches 44-47% recall at 16-33% FBR. Under the same backend, on the tool calls that all three auditors natively support, PAA has higher recall and lower FBR than VIGIL and ARGUS; all paired 95% confidence intervals exclude zero.'
+    published: '2026-10-04'
+    authors:
+    - Jingkai Liu
+    - Yufei Han
+    - Xiaoting Lyu
+    - Wei Wang
+    - Ting Yu
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:37.948152+02:00'
+    query: prompt injection
+- split: test
+  decision: new_topic
+  note: null
+  why: 'prompt injection: discussed in five notes, no note of its own'
+  finding:
+    id: arxiv:2610.05295
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.05295
+    title: 'Readable Before Actionable: Causal Tracing of Indirect Prompt Injection'
+    summary: 'Indirect prompt injection causes LLM agents to follow commands embedded in external data. A probe may distinguish instructions from data without identifying a state edit that changes the next action. We study this gap through counterfactual role probes, component-wise activation patching, and separate interventions on AgentDojo trajectories. Role decoding survives changes in content and format. In controlled Qwen tests, it precedes strong tool-choice effects from patches along an independently estimated role direction. On AgentDojo, directions estimated from hijacked and resisted training trajectories reduce attack success at pre-action and injected-span positions, but have little effect at random positions. In longer Qwen trajectories, single-position edits become less effective at later layers; span-wide and repeated edits reduce attack success on the same evaluation set. Removing the learned channel subspace preserves role decoding, yet effective intervention directions
+      transfer poorly across the tested channels. These findings distinguish a readable role signal from an effective behavioral intervention: depth matters in controlled tool choice, while position and context also matter in attack trajectories.'
+    published: '2026-10-04'
+    authors:
+    - Zhe Yu
+    - Wenpeng Xing
+    - Xingxing Yang
+    - Meng Han
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:37.948152+02:00'
+    query: prompt injection
+- split: dev
+  decision: irrelevant
+  note: null
+  why: narrow application study
+  finding:
+    id: arxiv:2610.11482
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.11482
+    title: 'Evaluating Local Language Model Agents for Reproducible Data Engineering: An Empirical Software Engineering Study of Mobility Workflows'
+    summary: 'Context: Large language model (LLM) agents are increasingly used as software and data-engineering assistants, yet evidence about locally deployable open-weight agents remains limited. Existing evaluations often emphasize textual responses or isolated code generation rather than the validity of complete engineering artifacts. Objectives: We evaluate whether local LLM agents can produce correct and reproducible data-engineering artifacts, quantify the effect of a closed-loop workspace condition, and examine trade-offs in model scale, architecture, quantization, runtime, tool use, and failure. Methods: We introduce a benchmark of fifteen mobility-workflow tasks covering data discovery, connectors, transport-feed processing, semantic enrichment, feature engineering, validation, visualization, and reporting. Deterministic checkers assess generated scripts, tables, structured files, figures, and reports. Ten local configurations are evaluated in one-shot and closed-loop conditions,
+      with five repetitions per model, mode, and task, yielding 1,500 scored attempts on a consumer-grade GPU. Results: Among models larger than two billion parameters, the workspace condition increases pass rates by 26.7-52.0 percentage points over one-shot generation. The strongest configuration reaches 85.3% artifact-level success, and a quantized 9-billion-parameter model reaches 69.3% with an approximately 6.5 GB memory footprint. Gains are largest when intermediate artifacts expose errors the agent can inspect and repair. Conclusion: Local open-weight agents can support a meaningful subset of software-intensive data-engineering work, but reliability depends on model capability, task verifiability, and deterministic validation. The benchmark provides a reproducible method for evaluating complete agent configurations before adoption in engineering workflows.'
+    published: '2026-10-08'
+    authors:
+    - Jorge García-Carrasco
+    - Javier Sanchis
+    - Alejandro Reina-Reina
+    - Alejandro Maté
+    - Juan Trujillo
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:22.714990+02:00'
+    query: LLM agents
+- split: test
+  decision: duplicate
+  note: llm-as-a-judge
+  why: single study on LLM relevance judges
+  finding:
+    id: arxiv:2610.09820
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.09820
+    title: The Impact of Backbone Evolution on LLM-Based Relevance Assessments
+    summary: 'LLMs are evolving rapidly, with newer models offering stronger capabilities. This suggests that in LLM-based relevance judging, more capable models will achieve higher agreement with human judgements under the same prompt. We challenge this understanding by investigating the behavior of LLM-based relevance judges under backbone evolution. Keeping the prompts fixed, we evaluate a representative single-prompt (UMBRELA) and a rubric-based prompt (EXAM) across sequential model versions of commercial (Gemini, GPT) and open-weight (Qwen, Llama) models. Overall, we find no consistent evidence that newer versions lead to better relevance judges. Crucially, similar or improved aggregate performance does not imply judgment stability: correct judgements made by an earlier version of an LLM backbone are not necessarily preserved by later versions. We investigate the potential drivers of these regressions. Our findings caution against the assumption that judging prompts designed and validated
+      for one backbone version will perform equivalently or better when the model is updated, even within the same family.'
+    published: '2026-10-07'
+    authors:
+    - Chuting Yu
+    - Guido Zuccon
+    - Teerapong Leelanupab
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:31.846091+02:00'
+    query: LLM-as-a-judge
+- split: dev
+  decision: irrelevant
+  note: null
+  why: product announcement without content
+  finding:
+    id: rss:88e871d5a8d26738
+    source: Hugging Face Blog
+    category: lab_blog
+    url: https://huggingface.co/blog/LiquidAI/open-d1
+    title: Multimodal open d1 decision models for the edge
+    summary: ''
+    published: '2026-10-07'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:14.759237+02:00'
+    query: null
+- split: test
+  decision: duplicate
+  note: lora
+  why: incremental LoRA variant
+  finding:
+    id: arxiv:2610.07036
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.07036
+    title: 'JIVEAdapter: A Multi-Task Additive Low-Rank Adapter via Joint and Individual Variation Explained (JIVE)'
+    summary: Parameter-efficient fine-tuning adapts pretrained models at a fraction of the cost of full fine-tuning, yet most low-rank adapters are single-task and represent each weight update multiplicatively, leaving no explicit account of what is shared across tasks and what is task-specific. We introduce JIVEAdapter, a multi-task "additive" low-rank adapter inspired by statistical Joint and Individual Variation Explained (JIVE). JIVEAdapter decomposes every weight update into a Joint structure shared across all tasks plus a per-task Individual structure, penalizes the Individual structures to be near-orthogonal to the Joint so shared and task-specific signal stay "interpretable" and separated, and allocates rank adaptively across a shared Joint pool and a per-task Individual pool. The Joint is learned once, jointly over a task group or incrementally, one task at a time, then frozen and reused as a prior for new tasks without retraining the shared part. On GLUE and SuperGLUE with DeBERTaV3-base,
+      JIVEAdapter is competitive with strong single-task and multi-task low-rank baselines at a matched per-task effective rank, without extra modules such as MoE, and when a related held-in task exists its frozen Joint serves a held-out task by reusing that task's Individual with only a cheap per-direction scale, otherwise training a small new one.
+    published: '2026-10-04'
+    authors:
+    - Sara Abdali
+    - Pashmina Cameron
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:56.260982+02:00'
+    query: parameter-efficient fine-tuning
+- split: dev
+  decision: irrelevant
+  note: null
+  why: narrow geographic IR application
+  finding:
+    id: arxiv:2610.05028
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.05028
+    title: Do We Still Need Gazetteers in the Era of LLMs? Chaining Retrieval with a Spatial Neuro-Symbolic Index
+    summary: 'Geographic information retrieval (GeoIR) tasks require systems to interpret ambiguous toponyms for downstream applications. Traditionally, toponym resolution relies on gazetteers to provide an explicit index of place entities and spatial relationships. Recently, gazetteer-free approaches seek to reduce dependence on handcrafted searches: dense retrieval utilizes text encoders to capture rich context, moving beyond the limitations of lexical search. However, text encoders implicitly assume that learned representations can function as reliable spatial-semantic indexes. In this paper, we evaluate this assumption through a spatial-semantic indexing setup: given a contextualized toponym mention, we retrieve the corresponding gazetteer entity represented by text derived from a gazetteer knowledge graph. We benchmark five frozen text encoders under two retrieval strategies: brute-force nearest-neighbor retrieval over entity representations, and a neuro-symbolic hierarchical beam search
+      that constrains retrieval (i.e. chaining the search with gazetteer hierarchy). Experimental results reveal a distinct coarse-versus-fine trade-off. Unconstrained dense retrieval frequently incurs catastrophic spatial errors. Conversely, hierarchical constraints improve coarse geographic grounding, but still yield limited benefit for fine-grained localization metrics: vanilla text encoders fail to capture the fine-scale spatial fidelity encoded in gazetteers. Our code is publicly available at: https://doi.org/10.25439/rmt.31094269'
+    published: '2026-10-04'
+    authors:
+    - Alexis Horde-Vo
+    - Matt Duckham
+    - Estrid He
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:08.453544+02:00'
+    query: dense retrieval
+- split: test
+  decision: irrelevant
+  note: null
+  why: niche security variant of speculative decoding
+  finding:
+    id: arxiv:2610.08678
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.08678
+    title: Secure Speculative Decoding for Large Language Models
+    summary: 'Speculative decoding accelerates inference for a large language model (LLM), referred to as the \emph{target model}, by first using a smaller model, referred to as the \emph{draft model}, to generate candidate tokens and then verifying them with the target model for acceptance or rejection. Prior studies primarily focused on the efficiency-utility trade-off of speculative decoding, e.g., lossy speculative decoding, leaving its security implications largely unexplored. In this work, we bridge this gap by providing the \emph{first} systematic study of the security implications of speculative decoding. Through a large-scale measurement study, we reveal a pronounced security-utility asymmetry: across a wide range of lossy speculative decoding methods, improvements in inference efficiency come at a disproportionately high cost to security, with attack success rates for jailbreak and prompt injection attacks increasing much faster than utility degrades. We then propose SecureSD,
+      a new theory-guided speculative decoding method that enhances security while maintaining efficiency and utility. Specifically, our theoretical analysis reveals that security degradation primarily originates from the early tokens generated by the draft model. Motivated by this insight, SecureSD applies a stricter verification criterion to draft-model tokens at early decoding positions. Extensive experiments on both security and utility benchmarks demonstrate that SecureSD significantly improves security while preserving efficiency and utility compared to existing speculative decoding methods.'
+    published: '2026-10-06'
+    authors:
+    - Yichi Zhang
+    - Zhiqi Wang
+    - Neil Gong
+    - Yuchen Yang
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:37.948152+02:00'
+    query: prompt injection
+- split: dev
+  decision: duplicate
+  note: rag-failure-modes
+  why: incremental hallucination detector
+  finding:
+    id: arxiv:2610.04642
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.04642
+    title: 'Grounding Probes: Generator-Independent Hallucination Detection from Observer Model Hidden States'
+    summary: 'Detecting responses that retrieval-augmented generation does not ground in its context trades speed against accuracy: surface checks miss paraphrased fabrication, sampling-based methods cost extra generations. Hidden-state probes sit between the two, but every existing one reads the generating model''s own activations, so a change of generator invalidates the detector and a closed-weight generator is out of reach. This paper removes that coupling. The Grounding Probe is logistic regression over the mean-pooled middle-layer hidden states of an observer language model that reads the context, question, and response in one forward pass and generates nothing, with the recipe it needs: pool over response tokens, read a middle layer, and control capacity, which closes the train-test AUROC gap from 0.087-0.202 to 0.009-0.013. Asking the observer outright, rather than reading its hidden state, costs at least +0.166 AUROC in every one of four models. Fitted on 15,090 annotated responses
+      it reaches 0.879-0.894 AUROC on RAGTruth test across four observers, and 0.924 AUROC with 0.820 F1@0.5 averaged with a supervised span detector, 0.060 above that detector alone. One probe holds across six generators, and hold-out controls, including one in which no evaluation prompt appears in training, bound the cost of removing a generator at about 0.02 AUROC. Code, probes, and predictions are released.'
+    published: '2026-10-03'
+    authors:
+    - Michael Rathmayr
+    - Ádám Kovács
+    - Gábor Recski
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:34.899490+02:00'
+    query: hallucination detection
+- split: test
+  decision: irrelevant
+  note: null
+  why: blog post without content
+  finding:
+    id: rss:ffd2818196374b7e
+    source: Hugging Face Blog
+    category: lab_blog
+    url: https://huggingface.co/blog/building-with-ml-intern
+    title: The model that didn't exist, so you made it yourself
+    summary: ''
+    published: '2026-10-08'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:14.759237+02:00'
+    query: null
+- split: dev
+  decision: irrelevant
+  note: null
+  why: tooling TIL
+  finding:
+    id: rss:16278565d5091551
+    source: Simon Willison
+    category: newsletter
+    url: https://simonwillison.net/2026/Oct/6/datasette-parseable-opentelemetry/
+    title: Using Parseable with Datasette for OpenTelemetry traces
+    summary: 'TIL: Using Parseable with Datasette for OpenTelemetry traces I saw Parseable in a Show HN today - it''s a new observability platform with both an open source (AGPL) Rust implementation (a single ~180MB binary), an "Enterprise" version with extra features and a cloud hosted option. Since Datasette 1.0a41 added OpenTelemetry support (thanks, Alex Garcia), I decided to fire up Codex and have it figure out how to run Parseable and feed it traces from Datasette. Here''s my (human-written) TIL showing the patterns that worked, and here''s a screenshot of a Datasette trace displayed within the Parseable localhost web application: Traces > datas" (cut off), search box "Search... ⌘K", nav items "Home", "Ingest telemetry", section "ANALYZE": "Keystone", "Dashboards", "SQL Editor", section "OBSERVE": "Logs", "Metrics", "Traces" (selected), "APM", "Agents", section "MONITOR": "Alerts", "Errors", section "DATA": "Datasets", and at the bottom "Settings", "Book a call", "Support". Dimmed
+      filter column, cut off at the right edge: "Search fi", "Core", "Log format", "User agent", "Source IPs", "Error", "Service", "service.ins", "service.na", "datasett" (checked), "Span", "Database", "HTTP", "http.reque", "NULL" (unchecked), "GET" (checked), "http.respo", "http.route", "Server", "server.add", "Telemetry", "URL", "All fields". Trace panel header: "Trace detail > 6f819a2170bcd1e91c6ea3ae236ec60b" with a copy icon, a "Related logs" button and a close X. Summary: "Start time 6:56 PM, Oct 6, 2026 UTC", "Duration 40.9 ms", "Spans 247". A minimap with axis "0ns 10.2ms 20.5ms 30.7ms 40.9ms" shows many short span bars cascading diagonally from top left toward the lower middle, with a few longer bars. Below is a span table with a "Span name" header, a "Search spans..." box, collapse and expand buttons, and a timeline axis "0ns 10.2ms 20.5ms 30.7ms 40.9ms". Rows (name, service, duration): root span with collapse toggle "123", "GET /..." "datasette..." 40.9ms spanning the full timeline;
+      then alterna'
+    published: '2026-10-06'
+    authors: []
+    tier: null
+    source_kind: secondary_commentary
+    fetched_at: '2026-10-10T17:06:17.357236+02:00'
+    query: null
+- split: test
+  decision: irrelevant
+  note: null
+  why: speech model release; outside scope
+  finding:
+    id: rss:16b7810afb00bdc0
+    source: Hugging Face Blog
+    category: lab_blog
+    url: https://huggingface.co/blog/tiiuae/falcon-asr
+    title: Introducing Falcon ASR
+    summary: ''
+    published: '2026-10-07'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:14.759237+02:00'
+    query: null
+- split: dev
+  decision: duplicate
+  note: lora
+  why: analysis of LoRA rank choice; single study
+  finding:
+    id: arxiv:2610.06542
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.06542
+    title: A Fine-Grained Analysis of the LoRA Fine-Tuning Landscape with Implications for Data Selection
+    summary: 'Low-Rank Adaptation (LoRA) has become a standard approach for parameter-efficient fine-tuning, yet a fundamental practical question remains unresolved: how should the adapter rank be chosen? An overly small rank may lead to a poorly conditioned optimization landscape, whereas an unnecessarily large rank sacrifices the efficiency that motivates LoRA in the first place. Existing theoretical analyses provide only limited guidance on this trade-off, and their guarantees are typically established under restrictive theoretical settings. We address this gap by developing a substantially sharper landscape theory for LoRA, building on modern results from nonconvex low-rank matrix sensing. Our central insight is that the appropriate adapter rank should depend on the quality of the data-induced optimization geometry, rather than on the model alone. To formalize this connection, we introduce LoRA-RIP, a data-dependent restricted-isometry metric that characterizes the conditioning of the
+      cross-entropy (CE) objective along LoRA-relevant low-rank directions. We prove that sufficient rank over-parameterization, with the required rank explicitly determined by the LoRA-RIP constant, eliminates spurious local minima, thereby extending existing RIP-based guarantees beyond the classical 1/3 regime. This characterization further enables principled data selection under a fixed rank budget. Experiments across language and vision tasks support these theoretical predictions, showing that rank and data quality are two coupled resources that should be jointly considered for more efficient and reliable LoRA fine-tuning.'
+    published: '2026-10-05'
+    authors:
+    - Bowen Zhang
+    - Changrui Fang
+    - Xinsong Ma
+    - Jiaye Teng
+    - Ziye Ma
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:56.260982+02:00'
+    query: parameter-efficient fine-tuning
+- split: test
+  decision: irrelevant
+  note: null
+  why: narrow application to embedded software
+  finding:
+    id: arxiv:2610.11447
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.11447
+    title: Closed-loop evaluation of LLM agents for embedded software development
+    summary: 'Large language models (LLMs) are increasingly deployed as coding agents that edit files, run builds and tests, inspect execution results, and repair software iteratively. Embedded firmware is a demanding target because correctness depends on closed-loop behavior under sensing, timing, and safety constraints, not only on static source quality. Yet embedded-agent evaluation remains limited and often emphasizes one-shot synthesis or offline correctness. We present a benchmark for closed-loop evaluation of embedded coding agents. Each task provides a plain-text engineering description, constrained workspace, and visible build-and-runtime surface. The agent must translate requirements into implementation and self-verification steps, then iterate until the required device behavior is achieved. The suite contains five embedded-control tasks and four feedback scenarios: one-shot generation, realistic self-verification, CI-style red/green feedback, and oracle-style detailed feedback.
+      The implementation targets simulated ESP32 firmware for reproducibility. We evaluate seven GPT-family and Qwen-family configurations across five tasks and four scenarios, with three repetitions per condition for 420 runs. gpt-5.4 has the highest pass rate among evaluated configurations but does not saturate the benchmark; qwen3.5-27B is the strongest observed local model; and smaller local models degrade sharply in pass rate and search efficiency. These results suggest that capable local embedded coding agents are emerging.'
+    published: '2026-10-08'
+    authors:
+    - Jorge García-Carrasco
+    - Sergio García-Carrasco
+    - Alejandro Maté
+    - Juan Trujillo
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:22.714990+02:00'
+    query: LLM agents
+- split: dev
+  decision: irrelevant
+  note: null
+  why: incremental self-evolving agent method
+  finding:
+    id: arxiv:2610.11345
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.11345
+    title: 'SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning'
+    summary: 'Self-evolving LLM agents promise to improve autonomously through continual interaction and learning, reducing their dependence on manually curated supervision. Realizing this promise requires not only updating the agent, but also evolving its training experience as its capabilities change. However, most existing pipelines rely on static datasets or separately updated synthesis models, causing previously useful tasks to become trivial while overly difficult tasks remain uninformative. This growing mismatch between agent capability and training experience limits sustained self-improvement. To address this problem, we propose SynCo, an agentic data synthesis co-training framework for self-evolving LLMs based on multi-agent reinforcement learning. SynCo jointly optimizes two independently parameterized agents: a Synthesizer that constructs training tasks from the Reasoner''s evolving capability state, and a Reasoner that learns from the resulting experience. Each synthesized task
+      induces multiple Reasoner rollouts whose outcomes provide complementary rewards to both agents. Correctness feedback improves the Reasoner, while task quality, answer reliability, and outcome-grounded teachability guide the Synthesizer. Their updates are fed back into subsequent synthesis rounds, allowing the task-solving policy and its training distribution to evolve together. Extensive experiments across eight mathematical reasoning benchmarks demonstrate that SynCo substantially outperforms a broad range of existing synthetic-data methods and controlled baselines, achieving the strongest overall performance while deriving most of its gains from previously unsolved problems.'
+    published: '2026-10-08'
+    authors:
+    - Wei Yang
+    - Shawn Li
+    - Yuehan Qin
+    - Yawei Wang
+    - Mingxi Wang
+    - Shixuan Li
+    - Tiankai Yang
+    - Jiate Li
+    - Jesse Thomason
+    - Xuezhe Ma
+    - Yue Zhao
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:22.714990+02:00'
+    query: LLM agents
+- split: test
+  decision: irrelevant
+  note: null
+  why: customer story
+  finding:
+    id: rss:855092fba1df7e8a
+    source: OpenAI News
+    category: lab_blog
+    url: https://openai.com/index/pollo-ai
+    title: Pollo AI turns creative ideas into campaigns with OpenAI
+    summary: With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.
+    published: '2026-10-08'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:11.626187+02:00'
+    query: null
+- split: dev
+  decision: irrelevant
+  note: null
+  why: product news
+  finding:
+    id: rss:661f64ddb5f472a2
+    source: OpenAI News
+    category: lab_blog
+    url: https://openai.com/index/teens-learn-and-plan
+    title: Helping teens learn, plan, and shape the future of AI
+    summary: College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.
+    published: '2026-10-07'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:11.626187+02:00'
+    query: null
+- split: test
+  decision: duplicate
+  note: harness-engineering
+  why: single study on agent permissions
+  finding:
+    id: arxiv:2610.05840
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.05840
+    title: 'Compromise Is Not Consequence: Evaluating Task-Scoped Authorization in LLM Agents with Paired Replay'
+    summary: A tool-using model can follow a malicious instruction even when its credentials are valid. We study whether task-scoped authorization contains the resulting tool execution. Our paired-replay testbed samples a model request once and submits the same action, resource, and arguments to broad bearer, scoped JWT, sender-constrained, and Open Policy Agent conditions. The frozen main experiment uses 128 scenarios across four tool domains and five local model configurations. Among valid attacked post-exposure decisions, broad-bearer harmful execution ranges from 8.9% to 37.8% across models; all three scoped conditions record zero. The policy changes execution, not the frozen model decision. These results support containment of the tested cross-action and cross-resource consequences under researcher-supplied task authority, not prevention of prompt injection. A bounded six-task AgentDojo extension preserves native scoring and records 11/24 injected broad-policy attack flags versus 0/24
+      scoped flags, with utility of 5/24 and 6/24. Low exposure, invalid decisions, and purposive task selection limit that comparison. The primary experiment measures safe continuation rather than final-answer correctness. An empirical-bank fresh-sampling comparison finds no estimation advantage from pairing when scoped outcomes are constant zero. The contribution is a controlled measurement of compromise, enforcement, and continuation, with explicit limits on what each observation establishes.
+    published: '2026-10-05'
+    authors:
+    - Tural Hagverdiyev
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:37.948152+02:00'
+    query: prompt injection
+- split: dev
+  decision: new_topic
+  note: null
+  why: prompt injection via agent skills
+  finding:
+    id: arxiv:2610.08098
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.08098
+    title: 'Surviving the Router: Optimizing Skill Injections for Retrieval and Execution'
+    summary: AI agents increasingly rely on modular third-party "skills" that are dynamically selected by skill routers to execute complex tasks. While recent studies highlight the threat of prompt injections embedded in these skills, existing evaluations often assume settings where the malicious skill is already selected for execution. We show that this assumption can substantially overestimate attack success. In realistic multi-skill environments, injected skills must first compete for retrieval, reducing the effective attack success rate (ASR) of existing injections by 87-97%. To address this limitation, we introduce CORSA (Cluster Optimization for Router-Aware Skill Attacks), a router-aware attack that optimizes skill injections for both retrieval and execution across clusters of related tasks. We evaluate skill injection attacks under router-managed multi-skill settings by extending the benchmark introduced by SkillRouter with eight malicious payload categories. CORSA uses successive
+      optimization stages to first improve retrieval and then optimize end-to-end attack success, while we evaluate user utility and injection naturalism separately. Our experiments show that CORSA substantially improves both retrieval and end-to-end attack success over existing skill injections while preserving user utility, and that the resulting attacks transfer across different router architectures and LLM backbones.
+    published: '2026-10-06'
+    authors:
+    - Haneen Najjar
+    - Luca Scionis
+    - Haritz Puerto
+    - Sahar Abdelnabi
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:37.948152+02:00'
+    query: prompt injection
+- split: test
+  decision: irrelevant
+  note: null
+  why: security application
+  finding:
+    id: arxiv:2610.12415
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.12415
+    title: 'ORCAGen: Orchestrating Context-Aware Malware Deception with RAG-Guided Generative AI'
+    summary: 'Malware defenses often remove or isolate suspicious programs as quickly as possible. While effective for containment, this approach can also waste an opportunity to observe attacker behavior and deploy targeted countermeasures. ORCAGen takes a different approach: it uses GenAI to build malware-specific deception playbooks offline, validates them before deployment, and enforces only the verified logic at runtime. ORCAGen combines Retrieval-Augmented Generation (RAG) with structured prompt engineering to generate both proof-of-concept (PoC) malware and corresponding deception orchestration code. A curated knowledge base (KB) of malware procedures and active defense strategies grounds the generation process, helping the LLM produce threat-specific and executable deception logic rather than generic or hallucinated outputs. The generated PoC malware provides a safe and reproducible way to test whether a deception strategy can disrupt, redirect, or suppress targeted malware behavior
+      before the strategy is added to the runtime playbook. We evaluate ORCAGen across GPT-4o, GPT-5.5, Gemini 3.5 Flash, Qwen3-Coder, and Claude Sonnet 4.5 using execution success, hallucination rate, refinement effort, deception effectiveness, and runtime overhead. The evaluation covers synthesized malware scenarios and 150 real-world malware samples across keyloggers, information stealers, and ransomware. Across the evaluated scenarios, GPT-5.5 required the fewest refinements and produced no observed hallucinated APIs, while Gemini 3.5 Flash achieved the lowest response time and runtime overhead. The results show that RAG-guided structured prompting can support the scalable construction of malware-specific deception playbooks that remain lightweight and deterministic during runtime enforcement.'
+    published: '2026-10-08'
+    authors:
+    - Shihab Ahmed
+    - Md Sajidul Islam Sajid
+    - Teryl Taylor
+    - Frederico Araujo
+    - Tariqul Islam
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:10.537493+02:00'
+    query: retrieval-augmented generation
+- split: dev
+  decision: duplicate
+  note: explainable-ai
+  why: governance framework proposal
+  finding:
+    id: arxiv:2610.10957
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.10957
+    title: 'TRACE: A Governance Framework for Measuring Explainability Debt in Production AI Systems'
+    summary: 'Production AI systems deployed in high-stakes domains accumulate a governance liability that existing monitoring frameworks fail to detect: the progressive inability to explain individual decisions when regulators, auditors, or affected individuals demand accountability. We introduce TRACE (Transparency, Risk, Accountability, Compliance, and Explainability), a seven-instrument governance framework for measuring, tracking, and remediating Explainability Debt in production AI systems. The foundational instrument, the Explainability Debt Score (EDS), quantifies the proportion of production decisions falling below a governance-defined explainability confidence threshold at any point in time. Complementary instruments include DART (Debt Accumulation Rate Tracker for breach forecasting), SHIV (Scenario Health and Integrity Validator for daily governance), FDE (Feature Drift Evaluator for causal attribution), HVE (Human Validation Engine), AIDE (Audit Intervention Decision Engine),
+      and ZERO (Zero Explainability Risk Optimiser for remediation). Through a twelve-month longitudinal case study of a production fraud detection system processing 50,000 daily financial transactions, achieving 98.46% accuracy and ROC-AUC of 0.9990, we demonstrate that an EDS of 0.23 on audit day was statistically predictable six months in advance using DART trajectory analysis (beta = 0.008/week, R-squared = 0.94, 95% CI: [0.006, 0.010]), and that 78% of Explainability Debt was concentrated in the highest-regulatory-risk decision category (transactions above $10,000), a risk asymmetry completely invisible to system-level metrics. TRACE provides the first quantitative operational architecture for EU AI Act Article 13 compliance in production AI deployment, establishing a new subdiscipline of explanation governance distinct from explanation generation.'
+    published: '2026-10-07'
+    authors:
+    - Harish Kant Pathak
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:50.182824+02:00'
+    query: AI Act
+- split: test
+  decision: irrelevant
+  note: null
+  why: threat report news
+  finding:
+    id: rss:d9e485b409fe8517
+    source: OpenAI News
+    category: lab_blog
+    url: https://openai.com/index/disrupting-ai-enabled-false-front-operations
+    title: Disrupting AI-enabled “false front” operations
+    summary: OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.
+    published: '2026-10-08'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:11.626187+02:00'
+    query: null
+- split: dev
+  decision: irrelevant
+  note: null
+  why: product rollout; the LLM note does not track individual models
+  finding:
+    id: rss:a097ef0d441a7216
+    source: OpenAI News
+    category: lab_blog
+    url: https://openai.com/index/gpt-6-for-everyone
+    title: GPT-6 and Intelligent UI for everyone
+    summary: GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.
+    published: '2026-10-07'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:11.626187+02:00'
+    query: null
+- split: test
+  decision: duplicate
+  note: rag-chunking
+  why: single ablation study
+  finding:
+    id: arxiv:2610.10170
+    source: arXiv
+    category: arxiv
+    url: https://arxiv.org/abs/2610.10170
+    title: Does Document Structure Help Dense Retrieval? A Placebo-Controlled Ablation of Four Mechanisms Across Two Corpora
+    summary: 'Retrieval-augmented generation systems increasingly rely on document-structure treatments: structure-aligned chunking, LLM-generated chunk contexts, heading-path metadata, and hierarchical two-stage retrieval. Separate studies support each on different corpora, embedders, and metrics, and none control for a shared confound: any text prepended to a chunk perturbs its embedding. We present a mechanism-isolating ablation testing all four treatments under one protocol, matching chunk sizes across conditions and adding a semantically null placebo---heading paths that are structurally valid but shuffled across documents. We score retrieval with a coverage-aware nDCG and test four pre-registered contrasts via document-clustered bootstrap with Holm correction, on two distant corpora: 200 Wikipedia Featured Articles (951 queries) and 1,585 QASPER papers (4,303 questions). Organization helps, and the cause is content, not tokens: structure-aligned chunks with real heading paths beat
+      contextualized fixed windows (+0.022 / +0.012 cov-nDCG@10) and the placebo (+0.010 / +0.016). Naive two-stage hierarchical retrieval hurts (-0.033 / -0.015), traceable to first-stage section recall. Gold structure beats LLM-induced structure on Wikipedia but not on QASPER. Effects are small ($dz$ 0.06-0.11) but Holm-significant and consistent across corpora.'
+    published: '2026-10-07'
+    authors:
+    - Andrey Kuehlkamp
+    - Priscila Correa Saboia Moreira
+    - Samuel Rund
+    tier: preprint
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:05:10.537493+02:00'
+    query: retrieval-augmented generation
+- split: dev
+  decision: duplicate
+  note: gdpr
+  why: routine national DPA fine
+  finding:
+    id: rss:17481df922a97ffd
+    source: EDPB News
+    category: regulatory
+    url: https://www.edpb.europa.eu/news/swedish-dpa-fines-miljodata-i-karlskrona-approximately-eur-160-000-for-insufficient-technical_en
+    title: Swedish DPA fines Miljödata i Karlskrona approximately EUR 160 000 for insufficient technical and organisational measures to ensure information security
+    summary: 'Background information Date of final decision: 22/09/2026 National case Legal Reference(s): Article 32 (Security of processing) Decision: Administrative fine Website topics: Cybersecurity, personal data breaches Summary of the Decision Origin of the case In August 2025, the IT service provider Miljödata was targeted in a cyberattack, during which a malicious actor gained access to a large volume of personal data and subsequently published data on the darknet. According to the company, the incident affected 2.2 million individuals. Among Miljödata’s customers affected by the attack are a majority of Sweden’s municipalities, several regions, and government agencies, as well as a large number of private companies. The compromised data included personal identity numbers, contact details, and sensitive data related to sick leave, rehabilitation, and student-related incidents in schools. Key Findings The review shows that the company did not maintain a sufficiently high level of
+      technical and organizational security, given the types of personal data it processed. Miljödata failed to conduct adequate checks when installing new software and did not have automated real-time monitoring of its systems to detect intrusions or suspicious activity. Decision IMY, the Swedish Data Protection Authority, assesses that Miljödata acted negligently and has therefore decided to impose an administrative fine of SEK 1 800 000 (approximately EUR 160 000) for violating Article 32(1) GDPR. For further information: Administrative Fine against Miljödata'
+    published: '2026-10-08'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:17.770796+02:00'
+    query: null
+- split: test
+  decision: duplicate
+  note: gdpr
+  why: routine national DPA fine
+  finding:
+    id: rss:d8757e83c6b200a1
+    source: EDPB News
+    category: regulatory
+    url: https://www.edpb.europa.eu/news/italian-dpa-fines-bbva-eur-5-508-000-for-failing-to-respect-a-customers-objection-to-direct_en
+    title: Italian DPA fines BBVA EUR 5 508 000 for failing to respect a customer’s objection to direct marketing
+    summary: 'Background information Date of final decision: 3 July 2026 National case Controller: Banco Bilbao Vizcaya Argentaria, S.A., Italian branch (BBVA) Legal Reference(s): Article 5 (Principles relating to processing of personal data), Article 12 (Transparent information, communication and modalities for the exercise of the rights of the data subject), Article 21 (Right to object), Article 24 (Responsibility of the controller) Decision: Administrative fine, Compliance order Website topics: Basic principles, Data subjects rights, Marketing Summary of the Decision Origin of the case The Italian Data Protection Authority (DPA) investigated BBVA, a multinational Spanish banking group, following a complaint from a customer who continued to receive promotional communications through the bank’s mobile app despite having objected to direct marketing. The customer exercised his right to object through the settings provided in the BBVA app and subsequently reiterated his objection to the bank’s
+      Customer Service. Nevertheless, promotional notifications continued for seven months, from October 2025 to May 2026. BBVA explained that the customer’s choice had been correctly recorded but that a technical failure prevented synchronisation between its internal systems and the Customer Relationship Management unit responsible for sending commercial communications. Key Findings The Italian DPA found that BBVA failed to give effect to the customer’s objection correctly and in a timely manner. During the relevant period, the customer received at least ten unsolicited commercial notifications. The DPA rejected BBVA’s argument that the customer should have used the dedicated email addresses indicated in its privacy policy. The customer had correctly exercised his right through the app and had also contacted Customer Service. Controllers must facilitate the exercise of data subject rights and cannot disregard a valid request merely because it was not submitted through a preferred channel.
+      The DPA'
+    published: '2026-10-09'
+    authors: []
+    tier: null
+    source_kind: primary_research
+    fetched_at: '2026-10-10T17:06:17.770796+02:00'
+    query: null
