@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 70372dbef2c9e2c6ce71f77619c428ec9bab52f4ef2bcd3b700dd35be4e821f7
+extracted_by: claude
+discusses:
+- recall-at-k
+- precision-at-k
+- mean-reciprocal-rank
+- ndcg
+- bm25
+- cross-encoder
+- information-retrieval
+relations:
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: recall-at-k
+  evidence: Recall@k quantifies the proportion of relevant documents retrieved within the top-k ranked results
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: precision-at-k
+  evidence: Precision@k quantifies the proportion of relevant items within the top-k retrieved results for a query
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: mean-reciprocal-rank
+  evidence: Mean Reciprocal Rank (MRR) evaluates retrieval quality by measuring the position of the first relevant result across multiple queries
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: ndcg
+  evidence: nDCG@k evaluates ranking quality by incorporating graded relevance scores and position
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: information-retrieval
+  evidence: From this comparison, standard information retrieval metrics are computed
