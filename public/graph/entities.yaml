@@ -1677,3 +1677,25 @@ entities:
   type: Concept
   name_en: Curse of dimensionality
   name_de: Fluch der Dimensionalität
+- id: pytorch
+  type: Technology
+  name_en: PyTorch
+  name_de: PyTorch
+- id: shacl
+  type: Technology
+  name_en: SHACL
+  name_de: SHACL
+  aliases:
+  - Shapes Constraint Language
+- id: prov-o
+  type: Technology
+  name_en: PROV-O
+  name_de: PROV-O
+- id: entity-resolution
+  type: Method
+  name_en: Entity resolution
+  name_de: Entity Resolution
+- id: kg-refinement
+  type: Method
+  name_en: Knowledge graph refinement
+  name_de: Knowledge Graph Refinement

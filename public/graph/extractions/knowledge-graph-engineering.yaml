@@ -1,0 +1,51 @@
+version: 1
+note_sha256: 642f16f43ab06e4f14c5561b8397b526d05b69ea21a98f47bbbc3aa657ff2e7c
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- w3c
+- shacl
+- prov-o
+- entity-resolution
+- kg-refinement
+- rdf
+- owl
+- knowledge-graphs
+- graphrag
+- ontology-design
+relations:
+- from: shacl
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: SHACL (W3C SHACL) and PROV-O (W3C PROV-O) are the corresponding W3C standards
+- from: prov-o
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: SHACL (W3C SHACL) and PROV-O (W3C PROV-O) are the corresponding W3C standards
+- from: shacl
+  type: IMPLEMENTS
+  to: knowledge-graph-engineering
+  evidence: Key tools are SHACL for validation
+- from: prov-o
+  type: IMPLEMENTS
+  to: knowledge-graph-engineering
+  evidence: PROV-O for provenance
+- from: shacl
+  type: BASED_ON
+  to: rdf
+  evidence: SHACL validates RDF graphs against shapes
+- from: knowledge-graph-engineering
+  type: BASED_ON
+  to: knowledge-graphs
+  evidence: Knowledge graph engineering is the practice of building and operating knowledge graphs as reliable data products
+- from: knowledge-graph-engineering
+  type: BASED_ON
+  to: entity-resolution
+  evidence: entity resolution merges duplicate descriptions
+- from: knowledge-graph-engineering
+  type: BASED_ON
+  to: kg-refinement
+  evidence: refinement completes and corrects it
+- from: graphrag
+  type: BASED_ON
+  to: knowledge-graph-engineering
+  evidence: When downstream applications, such as GraphRAG, depend on the graph's correctness

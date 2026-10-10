@@ -1,0 +1,21 @@
+version: 1
+note_sha256: 5f0056c6b108c119847b82d9cce08f219d837996ff1beb344b2d5b0df535d8f4
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- pytorch
+- neural-network-training
+- convolutional-neural-networks
+- recurrent-neural-networks
+relations:
+- from: keras-and-tensorflow
+  type: IMPLEMENTS
+  to: neural-network-training
+  evidence: Keras is a high-level API for building and training neural networks
+- from: keras-and-tensorflow
+  type: IMPLEMENTS
+  to: recurrent-neural-networks
+  evidence: For sequence data, recurrent layers such as LSTM are stacked in the same way
+- from: keras-and-tensorflow
+  type: IMPLEMENTS
+  to: convolutional-neural-networks
+  evidence: for images, convolution and pooling layers are combined
