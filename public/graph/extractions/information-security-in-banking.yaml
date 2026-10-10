@@ -1,0 +1,57 @@
+version: 1
+note_sha256: 7445cf6c0e40fbd428736339aa2c3771e97f7b675a0432c05eaf2411e9beb9d3
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- kwg
+- marisk
+- dora
+- bait
+- bafin
+- eba
+- ecb
+- eba-governance-and-outsourcing-guidelines
+- three-lines-of-defence
+- internal-control-system
+- ict-risk-management
+- least-privilege
+relations:
+- from: kwg
+  type: REGULATES
+  to: information-security-in-banking
+  evidence: German banks organise information security and internal control on the basis of § 25a of the KWG
+- from: marisk
+  type: IMPLEMENTS
+  to: kwg
+  evidence: The BaFin circular MaRisk specifies these requirements for institutions that are not directly supervised by the European Central Bank
+- from: marisk
+  type: REGULATES
+  to: internal-control-system
+  evidence: MaRisk specifies the internal control system
+- from: bait
+  type: IMPLEMENTS
+  to: kwg
+  evidence: § 25a KWG is also the legal basis of the BAIT, the circular with IT requirements for banks
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: bait
+  evidence: all institutions that must carry out ICT risk management under Articles 5 to 15 or Article 16 DORA are excluded from the scope of the BAIT
+- from: dora
+  type: REGULATES
+  to: information-security-in-banking
+  evidence: since 17 January 2025, DORA governs ICT risk management for institutions within its scope
+- from: dora
+  type: REGULATES
+  to: three-lines-of-defence
+  evidence: DORA applies the same principle to ICT risk
+- from: dora
+  type: REGULATES
+  to: least-privilege
+  evidence: This is the least-privilege principle as a legal requirement
+- from: eba-governance-and-outsourcing-guidelines
+  type: REGULATES
+  to: three-lines-of-defence
+  evidence: The EBA guidelines on internal governance follow the three lines of defence model
+- from: eba-governance-and-outsourcing-guidelines
+  type: DEVELOPED_BY
+  to: eba
+  evidence: EBA internal governance guidelines (2021)

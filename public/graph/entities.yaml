@@ -1649,3 +1649,31 @@ entities:
   type: Concept
   name_en: Bias-preserving algorithmic gender fairness
   name_de: Bias-erhaltende algorithmische Gender-Fairness
+- id: three-lines-of-defence
+  type: Concept
+  name_en: Three lines of defence
+  name_de: Three Lines of Defence (drei Verteidigungslinien)
+  aliases:
+  - three lines of defense
+- id: bait
+  type: Regulation
+  name_en: Supervisory Requirements for IT in Financial Institutions (BAIT)
+  name_de: Bankaufsichtliche Anforderungen an die IT (BAIT)
+  aliases:
+  - BAIT
+- id: internal-control-system
+  type: Concept
+  name_en: Internal control system
+  name_de: Internes Kontrollsystem
+- id: nearest-neighbour-rule
+  type: Method
+  name_en: Nearest neighbour rule
+  name_de: Nächste-Nachbarn-Regel
+- id: lazy-learning
+  type: Concept
+  name_en: Lazy learning
+  name_de: Lazy Learning
+- id: curse-of-dimensionality
+  type: Concept
+  name_en: Curse of dimensionality
+  name_de: Fluch der Dimensionalität

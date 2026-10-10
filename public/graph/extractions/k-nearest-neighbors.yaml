@@ -1,0 +1,33 @@
+version: 1
+note_sha256: 0d58e209ffcea7d76f1dfe5db3b0d4750fe1c12b1ded147501df86dd0f5953ad
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- scikit-learn
+- vector-databases
+- classification
+- nearest-neighbour-rule
+- lazy-learning
+- curse-of-dimensionality
+- bias-variance-tradeoff
+- embeddings
+relations:
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: k-nearest-neighbors
+  evidence: k-NN is available in common libraries such as scikit-learn
+- from: vector-databases
+  type: BASED_ON
+  to: k-nearest-neighbors
+  evidence: The same idea of finding the nearest points underlies similarity search over embeddings
+- from: k-nearest-neighbors
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: taking a majority vote for classification or an average for regression
+- from: k-nearest-neighbors
+  type: BASED_ON
+  to: nearest-neighbour-rule
+  evidence: k-NN generalises the rule to the k closest training points
+- from: k-nearest-neighbors
+  type: IS_EXAMPLE_OF
+  to: lazy-learning
+  evidence: Because all computation happens at prediction time, the method is called lazy learning
