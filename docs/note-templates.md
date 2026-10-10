@@ -38,6 +38,12 @@ Common rules:
   Long outlines collapse to the top level.
 - Every note opens with a short notice that it is LLM-generated (regulatory
   notes additionally state that it is not legal advice).
+- New developments do not change a note's text: the curator appends them as
+  dated entries (`#### YYYY-MM-DD — Title`) under a final `### Updates` /
+  `### Aktualisierungen` section, in both languages, and adds the source to
+  `sources`. A note with more than three updates, or whose optional frontmatter
+  `last_rewrite_date` is more than six months old, is rewritten from scratch
+  (`app/backend/knowledge_radar/note_updates.py`).
 
 ---
 

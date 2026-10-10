@@ -43,6 +43,8 @@ TECHNICAL_OPTIONAL = [
     ("In practice", "In der Praxis"),
     ("Regulatory context", "Regulatorischer Kontext"),
 ]
+# Dated update entries (note_updates.py); always the last section.
+UPDATES = ("Updates", "Aktualisierungen")
 # Technology notes replace "How it works" with these two sections.
 TECHNOLOGY_MECHANISM = [("Core concepts", "Kernkonzepte"), ("Common usage", "Typische Verwendung")]
 
@@ -123,7 +125,10 @@ def _check_language(text: str, lang: str, template: str, entity_type: str) -> li
             how = TECHNICAL_REQUIRED.index(("How it works", "Funktionsweise"))
             pairs = pairs[:how] + TECHNOLOGY_MECHANISM + pairs[how + 1:]
         required = [pair[index] for pair in pairs]
-        allowed = set(required) | {pair[index] for pair in TECHNICAL_OPTIONAL}
+        allowed = set(required) | {pair[index] for pair in TECHNICAL_OPTIONAL} | {UPDATES[index]}
+
+    if UPDATES[index] in top and top[-1] != UPDATES[index]:
+        problems.append(f"{lang}: '### {UPDATES[index]}' must be the last section.")
 
     missing = [title for title in required if title not in top]
     if missing:
