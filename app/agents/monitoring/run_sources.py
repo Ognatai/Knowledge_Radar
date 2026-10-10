@@ -39,9 +39,7 @@ def _keyword_pattern(keyword: str) -> re.Pattern[str]:
     return re.compile(rf"\b{re.escape(keyword)}\b", re.IGNORECASE)
 
 
-def _matches_keywords(finding: Finding, keywords: list[str]) -> bool:
-    if not keywords:
-        return True
+def _matches_any(finding: Finding, keywords: list[str]) -> bool:
     text = f"{finding.title} {finding.summary}"
     return any(_keyword_pattern(keyword).search(text) for keyword in keywords)
 
@@ -58,31 +56,32 @@ def collect_findings(
 ) -> CollectResult:
     """New findings published since `since`. Items without a date count as new,
     except on the first fetch of their source (see `CollectResult.baseline`)."""
-    batches: list[tuple[str, list[Finding], list[str]]] = []
+    # (source, findings, include_keywords, exclude_keywords)
+    batches: list[tuple[str, list[Finding], list[str], list[str]]] = []
     errors: list[str] = []
     for phrase in config.arxiv.queries:
         query = feeds.ArxivQuery(phrase, config.arxiv.categories, config.arxiv.max_results_per_query)
         try:
-            batches.append(("arXiv", fetch_arxiv(query), []))
+            batches.append(("arXiv", fetch_arxiv(query), [], []))
         except Exception as exc:  # network and parse errors of one source must not stop the run
             errors.append(f"arXiv ({phrase}): {exc}")
     if config.daily_papers_top_per_day:
         day, last = since, today or date.today()
         while day <= last:
             try:
-                batches.append(("Hugging Face Daily Papers", fetch_daily_papers(day, config.daily_papers_top_per_day), []))
+                batches.append(("Hugging Face Daily Papers", fetch_daily_papers(day, config.daily_papers_top_per_day), [], []))
             except Exception as exc:
                 errors.append(f"Hugging Face Daily Papers ({day}): {exc}")
             day += timedelta(days=1)
     for feed in config.rss:
         try:
-            batches.append((feed.name, fetch_feed(feed), feed.include_keywords))
+            batches.append((feed.name, fetch_feed(feed), feed.include_keywords, feed.exclude_keywords))
         except Exception as exc:
             errors.append(f"{feed.name}: {exc}")
 
     findings: dict[str, Finding] = {}
     baseline: dict[str, Finding] = {}
-    for source, batch, keywords in batches:
+    for source, batch, include, exclude in batches:
         for finding in batch:
             if finding.id in findings or finding.id in baseline or seen.contains(finding.id):
                 continue
@@ -91,13 +90,13 @@ def collect_findings(
                 continue
             if finding.published is not None and finding.published < since:
                 continue
-            if _matches_keywords(finding, keywords):
+            if (not include or _matches_any(finding, include)) and not _matches_any(finding, exclude):
                 findings[finding.id] = finding
     return CollectResult(
         findings=list(findings.values()),
         errors=errors,
         baseline=list(baseline.values()),
-        fetched_sources=sorted({source for source, _, _ in batches}),
+        fetched_sources=sorted({batch[0] for batch in batches}),
     )
 
 

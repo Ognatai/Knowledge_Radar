@@ -15,10 +15,16 @@ noise and of relevant work overlapped (0.73-0.76 vs. 0.74), so similarity alone
 cannot separate them. It only names candidate notes; findings below
 `MIN_SIMILARITY` are dropped without a model call.
 
-Updates and new topics are proposals; at most `max_proposals_per_week` of them
-(sources.yaml) are kept, ranked by the model's importance score, then tier and
-source kind. New topics found outside the arXiv search phrases also suggest new
-search phrases when they recur.
+The model answers narrow questions (kind of item, scope, which note has the topic
+as its main subject, landmark or not) and the decision follows from them; asked
+for a decision directly, it called nearly every new paper an update.
+
+New topics are proposed per topic, not per finding: a topic qualifies when a
+finding was judged new or when it recurs in several substantive findings, and the
+model then checks it once, with reasoning, against the notes with the most similar
+titles. Updates and new topics are proposals; at most `max_proposals_per_week`
+(sources.yaml) are kept, ranked by importance, then tier, source kind and upvotes.
+Recurring new topics outside the arXiv search phrases suggest new search phrases.
 
     python -m app.agents.monitoring.relevance                    # latest source run
     python -m app.agents.monitoring.relevance --run <findings.jsonl> --limit 10
@@ -28,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections.abc import Callable
 from dataclasses import asdict, dataclass, field
@@ -51,6 +58,9 @@ SEARCH_PASSAGES = 20
 MIN_SIMILARITY = 0.70
 # Topic labels at least this similar count as the same topic.
 SAME_TOPIC_SIMILARITY = 0.85
+RECURRING_TOPIC_FINDINGS = 3
+# Notes with the most similar titles shown when checking a candidate topic.
+TOPIC_CHECK_NOTES = 5
 FINDING_INSTRUCTION = "Given a new publication, retrieve knowledge base passages about the same topic"
 SCOPE = (
     "AI and machine learning methods, NLP and large language models, agents, retrieval-augmented "
@@ -77,6 +87,8 @@ class Decision:
     importance: int  # 1-5, how much it matters for a reference knowledge base
     reason: str
     candidates: list[Candidate] = field(default_factory=list)
+    # Other findings on the same topic, for a new-topic proposal.
+    related: list[str] = field(default_factory=list)
 
     @property
     def is_proposal(self) -> bool:
@@ -232,6 +244,173 @@ def select_proposals(decisions: list[Decision], limit: int) -> list[Decision]:
     return sorted(proposals, key=priority, reverse=True)[:limit]
 
 
+def _similarity(a: list[float], b: list[float]) -> float:
+    return sum(x * y for x, y in zip(a, b))
+
+
+def group_topics(vectors: list[list[float]], threshold: float = SAME_TOPIC_SIMILARITY) -> list[list[int]]:
+    """Greedy grouping: each topic joins the first group whose first topic is similar enough."""
+    groups: list[list[int]] = []
+    for index, vector in enumerate(vectors):
+        for group in groups:
+            if _similarity(vector, vectors[group[0]]) >= threshold:
+                group.append(index)
+                break
+        else:
+            groups.append([index])
+    return groups
+
+
+@dataclass(frozen=True)
+class TopicVerdict:
+    name: str  # the general subject, e.g. "prompt injection" for "indirect prompt injection"
+    dedicated_note: str | None  # a note whose main subject is exactly this topic
+    worth_article: bool
+
+
+def topic_verdict_schema(note_slugs: list[str]) -> dict[str, Any]:
+    return {
+        "type": "object",
+        "properties": {
+            "name": {"type": "string"},
+            "dedicated_note": {"enum": [*note_slugs, None]},
+            "worth_article": {"type": "boolean"},
+        },
+        "required": ["name", "dedicated_note", "worth_article"],
+    }
+
+
+def build_topic_prompt(labels: list[str], titles: list[str], notes: list[tuple[str, str]]) -> str:
+    listed_labels = "\n".join(f"- {label}" for label in labels[:8])
+    listed_titles = "\n".join(f"- {title}" for title in titles[:5])
+    listed_notes = "\n".join(f"[{slug}] {title}" for slug, title in notes)
+    return f"""You maintain a reference knowledge base: factual articles, one per method, concept,
+technology or law, like an encyclopedia. Its scope: {SCOPE}.
+
+New items share a topic. Their topic labels:
+{listed_labels}
+Some of their titles:
+{listed_titles}
+
+Existing articles with similar titles:
+{listed_notes}
+
+Answer:
+- "name": the general subject of these items as a short English noun phrase (lowercase), e.g.
+  "prompt injection" for "indirect prompt injection" and "staged prompt injection".
+- "dedicated_note": the slug (without brackets) of the article whose main subject is exactly
+  this topic, or null. An article on a related or broader subject that only mentions the
+  topic does not count.
+- "worth_article": would the knowledge base need a separate article on this topic: an
+  established subject within the scope, clearly distinct from the existing articles? false
+  for one-off items (a corrigendum, a single event) and for subtopics an existing article
+  covers well.
+Answer with JSON only."""
+
+
+def verify_topic(
+    labels: list[str],
+    titles: list[str],
+    notes: list[tuple[str, str]],
+    generate: Callable[..., str] = llm.generate,
+) -> TopicVerdict:
+    slugs = [slug for slug, _ in notes]
+    answer = json.loads(
+        # Reasoning first: without it, the model names a note for almost every topic. There are
+        # only a few candidate topics per run, so the slower mode is affordable here.
+        generate(
+            build_topic_prompt(labels, titles, notes),
+            json_schema=topic_verdict_schema(slugs),
+            temperature=0.0,
+            think=True,
+        )
+    )
+    dedicated = str(answer.get("dedicated_note") or "").strip("[] ") or None
+    return TopicVerdict(
+        name=str(answer.get("name", labels[0])).strip().lower() or labels[0],
+        dedicated_note=dedicated if dedicated in slugs else None,
+        worth_article=bool(answer.get("worth_article")),
+    )
+
+
+def merge_subtopics(topics: dict[str, list[Decision]]) -> dict[str, list[Decision]]:
+    """A topic whose name contains another topic's name as whole words joins that more
+    general topic: "indirect prompt injection" goes to "prompt injection"."""
+    merged: dict[str, list[Decision]] = {}
+    for name in sorted(topics, key=len):
+        general = next((other for other in merged if re.search(rf"\b{re.escape(other)}\b", name)), None)
+        merged.setdefault(general or name, []).extend(topics[name])
+    return merged
+
+
+def topic_proposals(
+    decisions: list[Decision],
+    notes: list[tuple[str, str]],
+    embed: Callable[[list[str]], list[list[float]]],
+    verify: Callable[[list[str], list[str], list[tuple[str, str]]], TopicVerdict] = verify_topic,
+    min_findings: int = RECURRING_TOPIC_FINDINGS,
+) -> list[Decision]:
+    """One new-topic proposal per topic, not per finding.
+
+    Candidate topics are the topics of findings judged new, and topics that recur
+    in at least `min_findings` substantive findings: a single paper is weak
+    evidence of a missing note, a topic many findings share is strong evidence.
+    Each candidate is verified once by the model against the notes with the most
+    similar titles (similar words are not the same subject: "prompt injection" vs.
+    "Prompt Engineering"); candidates with the same general name are merged.
+    """
+    pool = [d for d in decisions if d.decision != "irrelevant" and d.topic]
+    if not pool:
+        return []
+    labels = [d.topic for d in pool]
+    titles = [title for _, title in notes]
+    vectors = embed(labels + titles)
+    topic_vectors, title_vectors = vectors[: len(labels)], vectors[len(labels) :]
+
+    merged: dict[str, list[Decision]] = {}
+    for group in group_topics(topic_vectors):
+        members = [pool[index] for index in group]
+        if not (any(m.decision == "new_topic" for m in members) or len(members) >= min_findings):
+            continue
+        ranked = sorted(range(len(notes)), key=lambda i: -_similarity(topic_vectors[group[0]], title_vectors[i]))
+        verdict = verify(
+            [m.topic for m in members],
+            [m.finding.title for m in members],
+            [notes[i] for i in ranked[:TOPIC_CHECK_NOTES]],
+        )
+        if verdict.dedicated_note is None and verdict.worth_article:
+            merged.setdefault(verdict.name, []).extend(members)
+
+    topics = merge_subtopics(merged)
+    # Findings left out of every group whose topic names a proposed topic join it
+    # ("staged prompt injection" joins "prompt injection").
+    grouped = {id(member) for members in topics.values() for member in members}
+    for decision in pool:
+        if id(decision) in grouped:
+            continue
+        for name, members in topics.items():
+            if re.search(rf"\b{re.escape(name)}\b", decision.topic):
+                members.append(decision)
+                break
+
+    proposals = []
+    for name, members in topics.items():
+        representative = max(members, key=priority)
+        proposals.append(
+            Decision(
+                finding=representative.finding,
+                decision="new_topic",
+                note=None,
+                topic=name,
+                importance=max(member.importance for member in members),
+                reason=f"topic without a note of its own ({len(members)} findings)",
+                candidates=representative.candidates,
+                related=[member.finding.id for member in members if member is not representative],
+            )
+        )
+    return proposals
+
+
 def suggest_search_phrases(
     decisions: list[Decision],
     existing_phrases: list[str],
@@ -246,23 +425,11 @@ def suggest_search_phrases(
     vectors = embed(labels + existing_phrases)
     topic_vectors, phrase_vectors = vectors[: len(labels)], vectors[len(labels) :]
 
-    def similarity(a: list[float], b: list[float]) -> float:
-        return sum(x * y for x, y in zip(a, b))
-
-    groups: list[list[int]] = []
-    for index, vector in enumerate(topic_vectors):
-        for group in groups:
-            if similarity(vector, topic_vectors[group[0]]) >= SAME_TOPIC_SIMILARITY:
-                group.append(index)
-                break
-        else:
-            groups.append([index])
-
     suggestions = []
-    for group in groups:
+    for group in group_topics(topic_vectors):
         if len(group) < min_occurrences:
             continue
-        if any(similarity(topic_vectors[group[0]], phrase) >= SAME_TOPIC_SIMILARITY for phrase in phrase_vectors):
+        if any(_similarity(topic_vectors[group[0]], phrase) >= SAME_TOPIC_SIMILARITY for phrase in phrase_vectors):
             continue
         suggestions.append(
             {
@@ -294,7 +461,8 @@ def main() -> int:
     if args.limit:
         findings = findings[: args.limit]
     config = load_sources_config()
-    summaries = note_summaries(load_notes(configured_notes_directory()))
+    notes = load_notes(configured_notes_directory())
+    summaries = note_summaries(notes)
     vectors = embeddings.embed([embeddings.query_text(finding_text(f), FINDING_INSTRUCTION) for f in findings])
 
     decisions: list[Decision] = []
@@ -315,11 +483,13 @@ def main() -> int:
             target = f" -> {decision.note}" if decision.note else ""
             print(f"[{position}/{len(findings)}] {decision.decision:10} {decision.importance} {finding.title[:70]}{target}")
 
-    proposals = select_proposals(decisions, config.max_proposals_per_week)
+    topics = topic_proposals(decisions, [(note.slug, note.title_en) for note in notes], embeddings.embed)
+    updates = [decision for decision in decisions if decision.decision == "update"]
+    proposals = select_proposals(updates + topics, config.max_proposals_per_week)
     suggestions = suggest_search_phrases(decisions, config.arxiv.queries, embeddings.embed)
     report = {
         "findings_file": str(run_path),
-        "proposals": [decision.finding.id for decision in proposals],
+        "proposals": [decision.to_json() for decision in proposals],
         "search_phrase_suggestions": suggestions,
         "errors": errors,
         "decisions": [decision.to_json() for decision in decisions],
@@ -329,10 +499,11 @@ def main() -> int:
 
     counts = {name: sum(1 for d in decisions if d.decision == name) for name in DECISIONS}
     print(", ".join(f"{count} {name}" for name, count in counts.items()))
-    print(f"Proposals ({len(proposals)} of {counts['update'] + counts['new_topic']}):")
+    print(f"Proposals ({len(proposals)} of {len(updates) + len(topics)}):")
     for decision in proposals:
         target = decision.note or "new note"
-        print(f"  {decision.importance}  {decision.decision:9} {target:35} {decision.finding.title[:70]}")
+        label = decision.finding.title if decision.decision == "update" else f"{decision.topic} ({decision.reason})"
+        print(f"  {decision.importance}  {decision.decision:9} {target:35} {label[:90]}")
     for suggestion in suggestions:
         print(f"Suggested search phrase: {suggestion['phrase']!r} ({suggestion['occurrences']} findings)")
     for error in errors:

@@ -6,6 +6,7 @@
 # include_keywords (optional): for broad feeds, keep only items whose title or
 #   summary contains one of these words (case-insensitive, whole words; a
 #   trailing * matches word starts, e.g. "Daten*" also matches "Datenschutz").
+# exclude_keywords (optional): drop items containing one of these, same matching.
 #
 # No usable feed was found (2026-10-10) for: Anthropic, Meta AI blog, The Batch,
 # BfDI, BSI.
@@ -127,6 +128,7 @@ rss:
       - operational resilience
       - copyright
       - platform*
+    exclude_keywords: [Corrigendum]
   - name: Bundesgesetzblatt Teil I
     url: https://www.recht.bund.de/rss/feeds/rss_bgbl-1.xml
     category: regulatory
@@ -144,6 +146,7 @@ rss:
       - Urheberrecht*
       - elektronisch*
       - NIS-2*
+    exclude_keywords: [Berichtigung]
   - name: EDPB News
     url: https://www.edpb.europa.eu/feed/news_en
     category: regulatory

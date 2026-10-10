@@ -37,7 +37,20 @@ Monitoring pipeline (milestone 3), in `monitoring/`:
   python -m app.agents.monitoring.run_sources             # last 7 days
   ```
 
-- `feeds.py`: arXiv API and RSS 2.0 / Atom / RSS 1.0 parsing (defusedxml).
+- `relevance.py`: the relevance agent. Reads the latest source run, finds the
+  closest notes in the local index (Neo4j must run), lets the local model decide
+  irrelevant / duplicate / update / new_topic, and writes
+  `relevance-<time>.json` with at most `max_proposals_per_week` proposals and
+  suggested search phrases. A weekly run takes about 20 minutes on the Desktop.
+
+  ```powershell
+  python -m app.agents.monitoring.relevance
+  ```
+
+- `evaluate_relevance.py`: scores the relevance agent against
+  `eval/relevance/gold.yaml` (see `eval/README.md`).
+- `feeds.py`: arXiv API, Hugging Face Daily Papers and RSS 2.0 / Atom / RSS 1.0
+  parsing (defusedxml).
 - `config.py`: validation of `sources.yaml`.
 - `findings.py`: the `Finding` record shared by all sources.
 

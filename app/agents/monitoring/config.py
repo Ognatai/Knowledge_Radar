@@ -35,6 +35,8 @@ class FeedConfig:
     # For broad feeds (official journals): keep only items whose title or
     # summary contains one of these, case-insensitively.
     include_keywords: list[str] = field(default_factory=list)
+    # Items whose title or summary contains one of these are dropped (e.g. corrigenda).
+    exclude_keywords: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -91,6 +93,7 @@ def load_sources_config(path: Path = SOURCES_PATH) -> SourcesConfig:
                 source_kind=_choice(entry.get("source_kind"), SOURCE_KINDS, "source_kind", where),
                 tier=_choice(entry.get("tier"), TIERS, "tier", where, optional=True),
                 include_keywords=_strings(entry.get("include_keywords"), "include_keywords", where),
+                exclude_keywords=_strings(entry.get("exclude_keywords"), "exclude_keywords", where),
             )
         )
     names = [feed.name for feed in feeds]

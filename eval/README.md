@@ -81,6 +81,37 @@ keeps about 30 tokens/s (`scripts/start-ollama.ps1`). With reasoning, one
 extraction call produces about 6,000 tokens. A development run takes about
 50 minutes without the classifier and about three times as long with it.
 
+## Relevance agent
+
+`relevance/gold.yaml`: 40 findings of the first source run (2026-10-10), 22 from
+arXiv and 18 from feeds, labelled by Claude and split into 20 development and 20
+held-out test items. Proposals are `update` and `new_topic`; 3 of the 40 are
+proposals (all on prompt injection, which five notes mention but none covers).
+
+```powershell
+python -m app.agents.monitoring.evaluate_relevance --split test
+```
+
+Per-finding classifier, `qwen3:30b-a3b` without reasoning, 2026-10-10:
+
+| Variant (dev split) | Proposal precision | Proposal recall | Accuracy |
+| --- | --- | --- | --- |
+| model chooses the decision directly | 0.12 | 1.00 | 0.20 |
+| narrow questions, decision derived in code | 1.00 | 0.00 | 0.60-0.70 |
+| same with reasoning (46 s per finding) | 0.25 | 1.00 | 0.55 |
+
+Held-out test split, final variant: no false proposals, accuracy 0.70; the one
+prompt-injection item was classified as a duplicate of the agentic AI note.
+Duplicate and irrelevant are often confused, which does not matter: both are
+discarded.
+
+New topics are therefore found per topic across the whole run: on the full first
+run (225 findings) the topic check proposed prompt injection (8 findings, among
+them a gold item), hallucination detection, model compression and LLM judge
+reliability (the last arguably covered by the LLM-as-a-judge note). With
+reasoning, the topic check is not fully deterministic; a corrigendum passed it in
+one of two runs, so corrigenda are now excluded at the source.
+
 ## Provenance
 
 `extracted_by` in each `public/graph/extractions/<slug>.yaml` records where an

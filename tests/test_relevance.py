@@ -15,6 +15,10 @@ from app.agents.monitoring.relevance import (
     finding_from_json,
     select_proposals,
     suggest_search_phrases,
+    TopicVerdict,
+    merge_subtopics,
+    topic_proposals,
+    verify_topic,
 )
 
 NOW = datetime(2026, 10, 10, 12, tzinfo=timezone.utc)
@@ -174,3 +178,90 @@ def test_scores_focus_on_proposals():
     assert scores.accuracy == 0.5
     assert scores.update_note_accuracy == 0.0
     assert scores.confusion[("new_topic", "duplicate")] == 1
+
+
+NOTES = [("lora", "low-rank adaptation (LoRA)"), ("prompt-engineering", "prompt engineering")]
+
+
+def verdict(name, dedicated=None, worth=True):
+    return lambda labels, titles, notes: TopicVerdict(name, dedicated, worth)
+
+
+def test_a_topic_judged_new_becomes_one_proposal_with_its_related_findings():
+    decisions = [
+        topic_decision("prompt injection attacks", kind="duplicate", title="a"),
+        topic_decision("prompt injection", kind="new_topic", title="b"),
+        topic_decision("low-rank adaptation", kind="duplicate", title="c"),
+    ]
+
+    proposals = topic_proposals(decisions, NOTES, fake_embed, verify=verdict("prompt injection"))
+
+    assert len(proposals) == 1
+    assert proposals[0].decision == "new_topic" and proposals[0].topic == "prompt injection"
+    assert len(proposals[0].related) == 1
+
+
+def test_recurring_topics_are_checked_against_the_most_similar_note_titles():
+    decisions = [topic_decision("prompt injection", kind="duplicate", title=str(i)) for i in range(3)]
+    decisions += [topic_decision("watermarking", kind="duplicate", title="once")]
+    checked = []
+
+    def verify(labels, titles, notes):
+        checked.append((labels, notes))
+        return TopicVerdict("prompt injection", None, True)
+
+    proposals = topic_proposals(decisions, NOTES, fake_embed, verify=verify)
+
+    assert [p.topic for p in proposals] == ["prompt injection"]
+    assert proposals[0].reason == "topic without a note of its own (3 findings)"
+    assert len(checked) == 1 and checked[0][1][0] == ("prompt-engineering", "prompt engineering")
+
+
+@pytest.mark.parametrize("dedicated, worth", [("lora", True), (None, False)])
+def test_topics_with_a_note_or_not_worth_an_article_are_dropped(dedicated, worth):
+    decisions = [topic_decision("low-rank adaptation", kind="new_topic")]
+
+    assert topic_proposals(decisions, NOTES, fake_embed, verify=verdict("low-rank adaptation", dedicated, worth)) == []
+
+
+def test_groups_with_the_same_general_name_are_merged():
+    decisions = [topic_decision("indirect injection", kind="new_topic", title="a")]
+    decisions += [topic_decision("staged injection", kind="new_topic", title="b")]
+
+    proposals = topic_proposals(decisions, NOTES, fake_embed, verify=verdict("prompt injection"))
+
+    assert len(proposals) == 1 and len(proposals[0].related) == 1
+
+
+def test_irrelevant_findings_do_not_make_a_topic_recur():
+    decisions = [topic_decision("crypto prices", kind="irrelevant") for _ in range(5)]
+
+    assert topic_proposals(decisions, NOTES, fake_embed, verify=verdict("crypto")) == []
+
+
+def test_verify_topic_only_accepts_offered_notes():
+    def generate(prompt, json_schema, **options):
+        assert json_schema["properties"]["dedicated_note"]["enum"] == ["lora", "prompt-engineering", None]
+        return json.dumps({"name": " Prompt Injection ", "dedicated_note": "[other]", "worth_article": True})
+
+    result = verify_topic(["prompt injection"], ["A paper"], NOTES, generate=generate)
+
+    assert result == TopicVerdict("prompt injection", None, True)
+
+
+def test_subtopics_join_the_more_general_topic():
+    a, b, c = topic_decision("x", title="a"), topic_decision("x", title="b"), topic_decision("x", title="c")
+
+    merged = merge_subtopics({"indirect prompt injection": [a], "prompt injection": [b], "injection molding": [c]})
+
+    assert merged == {"prompt injection": [b, a], "injection molding": [c]}
+
+
+def test_findings_naming_a_proposed_topic_join_it():
+    decisions = [topic_decision("prompt injection", kind="new_topic", title="a")]
+    decisions += [topic_decision("staged prompt injection", kind="duplicate", title="b")]
+    decisions += [topic_decision("skill routing", kind="duplicate", title="c")]
+
+    proposals = topic_proposals(decisions, NOTES, fake_embed, verify=verdict("prompt injection"))
+
+    assert len(proposals) == 1 and len(proposals[0].related) == 1

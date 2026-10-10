@@ -330,3 +330,22 @@ def test_daily_papers_are_fetched_for_every_day_of_the_window(tmp_path):
 
     assert days == [date(2026, 10, 8), date(2026, 10, 9), date(2026, 10, 10)]
     assert len(result.findings) == 3
+
+
+def test_exclude_keywords_drop_items(tmp_path):
+    text = CONFIG.replace("    include_keywords: [artificial intelligence, Daten]", "    exclude_keywords: [Corrigendum]")
+    config = load_sources_config(write_config(tmp_path, text))
+
+    def fetch_feed(feed):
+        if feed.name != "Official journal":
+            return []
+        return [
+            finding("rss:fix", title="Corrigendum to Regulation (EU) 2024/1689", source=feed.name),
+            finding("rss:act", title="Regulation on data", source=feed.name),
+        ]
+
+    result = collect_findings(
+        config, SeenStore(tmp_path / "seen.json"), since=date(2026, 10, 3), fetch_arxiv=lambda query: [], fetch_feed=fetch_feed
+    )
+
+    assert [f.id for f in result.findings] == ["rss:act"]
