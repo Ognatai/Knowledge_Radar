@@ -2206,3 +2206,29 @@ entities:
   type: Method
   name_en: Datasheets for datasets
   name_de: Datasheets for Datasets
+- id: post-training-quantization
+  type: Method
+  name_en: Post-training quantization (PTQ)
+  name_de: Post-Training-Quantisierung (PTQ)
+  aliases:
+  - PTQ
+- id: quantization-aware-training
+  type: Method
+  name_en: Quantization-aware training (QAT)
+  name_de: Quantization-Aware Training (QAT)
+  aliases:
+  - QAT
+- id: llm-int8
+  type: Method
+  name_en: LLM.int8()
+  name_de: LLM.int8()
+- id: gptq
+  type: Method
+  name_en: GPTQ
+  name_de: GPTQ
+- id: awq
+  type: Method
+  name_en: AWQ (Activation-aware Weight Quantization)
+  name_de: AWQ (Activation-aware Weight Quantization)
+  aliases:
+  - AWQ

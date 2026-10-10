@@ -1,0 +1,48 @@
+version: 1
+note_sha256: 7a6789cfa44261caa42063908488e6e5503e86c538721dff63bafa0a2daee279
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- post-training-quantization
+- quantization-aware-training
+- llm-int8
+- gptq
+- awq
+- qlora
+- lora
+- large-language-models
+- knowledge-distillation
+- gpt
+- fp16
+relations:
+- from: post-training-quantization
+  type: IS_EXAMPLE_OF
+  to: quantization
+  evidence: Post-training quantization (PTQ) converts a trained model without retraining or labelled data
+- from: quantization-aware-training
+  type: IS_EXAMPLE_OF
+  to: quantization
+  evidence: Quantization-aware training (QAT) simulates quantization during training or fine-tuning so that the model adapts to it
+- from: llm-int8
+  type: IS_EXAMPLE_OF
+  to: quantization
+  evidence: LLM.int8() quantizes most features with vector-wise scaling and isolates the outlier dimensions in a 16-bit matrix multiplication
+- from: gptq
+  type: IS_EXAMPLE_OF
+  to: quantization
+  evidence: GPTQ is a one-shot weight quantization method based on approximate second-order information
+- from: awq
+  type: IS_EXAMPLE_OF
+  to: quantization
+  evidence: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantization error
+- from: qlora
+  type: BASED_ON
+  to: quantization
+  evidence: QLoRA back-propagates gradients through a frozen, 4-bit quantized pretrained language model into low-rank adapters
+- from: qlora
+  type: BASED_ON
+  to: lora
+  evidence: QLoRA back-propagates gradients through a frozen, 4-bit quantized pretrained language model into low-rank adapters
+- from: knowledge-distillation
+  type: COMPLEMENTS
+  to: quantization
+  evidence: Quantization complements distillation and parameter-efficient fine-tuning in the toolbox for adapting LLMs
