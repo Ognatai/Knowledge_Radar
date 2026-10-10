@@ -2268,3 +2268,37 @@ entities:
   type: Concept
   name_en: Lost in the middle
   name_de: Lost in the Middle
+- id: ragas
+  type: Method
+  name_en: Ragas
+  name_de: Ragas
+- id: ares
+  type: Method
+  name_en: ARES
+  name_de: ARES
+- id: prediction-powered-inference
+  type: Method
+  name_en: Prediction-powered inference (PPI)
+  name_de: Prediction-Powered Inference (PPI)
+  aliases:
+  - PPI
+- id: recall-at-k
+  type: Method
+  name_en: Recall@k
+  name_de: Recall@k
+- id: precision-at-k
+  type: Method
+  name_en: Precision@k
+  name_de: Precision@k
+- id: mean-reciprocal-rank
+  type: Method
+  name_en: Mean reciprocal rank (MRR)
+  name_de: Mean Reciprocal Rank (MRR)
+  aliases:
+  - MRR
+- id: ndcg
+  type: Method
+  name_en: Normalized discounted cumulative gain (nDCG)
+  name_de: Normalized Discounted Cumulative Gain (nDCG)
+  aliases:
+  - nDCG

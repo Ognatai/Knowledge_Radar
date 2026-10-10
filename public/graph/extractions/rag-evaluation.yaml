@@ -1,0 +1,50 @@
+version: 1
+note_sha256: 5f07b809d3d49eb63c632e726fd1173455c99954b01bb792f9932570b82999fa
+extracted_by: claude
+discusses:
+- ragas
+- ares
+- prediction-powered-inference
+- recall-at-k
+- precision-at-k
+- mean-reciprocal-rank
+- ndcg
+- exact-match
+- rag-retrieval-evaluation
+- rag-generation-evaluation
+- llm-as-a-judge
+- retrieval-augmented-generation
+- large-language-models
+relations:
+- from: rag-evaluation
+  type: BASED_ON
+  to: rag-retrieval-evaluation
+  evidence: RAG evaluation systematically assesses retrieval and generation components through a test set
+- from: rag-evaluation
+  type: BASED_ON
+  to: rag-generation-evaluation
+  evidence: RAG evaluation systematically assesses retrieval and generation components through a test set
+- from: ragas
+  type: IS_EXAMPLE_OF
+  to: rag-evaluation
+  evidence: Reference-free evaluation frameworks such as Ragas (Es et al. 2023) assess RAG pipelines without ground-truth human annotations
+- from: ares
+  type: IS_EXAMPLE_OF
+  to: rag-evaluation
+  evidence: ARES trains lightweight language model (LM) judges on synthetic data to evaluate three dimensions
+- from: ares
+  type: BASED_ON
+  to: ragas
+  evidence: ARES (Saad-Falcon et al. 2023) evolved this by introducing synthetic data generation for lightweight LM judges
+- from: ares
+  type: BASED_ON
+  to: prediction-powered-inference
+  evidence: ARES uses prediction-powered inference (PPI) with a small set of human-annotated datapoints
+- from: ares
+  type: BASED_ON
+  to: llm-as-a-judge
+  evidence: ARES creates its own synthetic training data and fine-tunes lightweight LM judges on it
+- from: ragas
+  type: BASED_ON
+  to: large-language-models
+  evidence: the metrics are computed with the help of an LLM
