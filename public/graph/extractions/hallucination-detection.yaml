@@ -1,0 +1,26 @@
+version: 1
+note_sha256: a40b39417a1418b3b05a98386da48b1dcdeee350d1452aa8f294fc5ed4eb19cd
+extracted_by: claude
+discusses:
+- large-language-models
+- retrieval-augmented-generation
+- rag-failure-modes
+- rag-generation-evaluation
+- legal-ai
+- llm-as-a-judge
+- natural-language-inference
+- bertscore
+- selfcheckgpt
+- hades
+- reld
+- grounding-probe
+- parcel
+relations:
+- from: hallucination-detection
+  type: BASED_ON
+  to: natural-language-inference
+  evidence: Checking each claim against the source it cites can be cast as natural language inference
+- from: selfcheckgpt
+  type: IS_EXAMPLE_OF
+  to: hallucination-detection
+  evidence: SelfCheckGPT (Manakul et al., 2023) made detection possible for black-box models

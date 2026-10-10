@@ -215,12 +215,6 @@ entities:
   type: Method
   name_en: Reflexion
   name_de: Reflexion
-- id: prompt-injection
-  type: Concept
-  name_en: Prompt injection
-  name_de: Prompt Injection
-  aliases:
-  - indirect prompt injection
 - id: multi-agent-systems
   type: Concept
   name_en: Multi-agent system
@@ -2758,3 +2752,55 @@ entities:
   type: Dataset
   name_en: SWE-bench
   name_de: SWE-bench
+- id: houyi
+  type: Method
+  name_en: HouYi
+  name_de: HouYi
+- id: injecagent
+  type: Dataset
+  name_en: InjecAgent
+  name_de: InjecAgent
+- id: ltbd
+  type: Method
+  name_en: Learnable Trust-Boundary Delimiters (LTBD)
+  name_de: Learnable Trust-Boundary Delimiters (LTBD)
+- id: raised
+  type: Method
+  name_en: RAISED
+  name_de: RAISED
+- id: apex-execution-boundary
+  type: Method
+  name_en: APEX
+  name_de: APEX
+- id: rag-pibench
+  type: Dataset
+  name_en: RAG-PIBench
+  name_de: RAG-PIBench
+- id: pruning
+  type: Method
+  name_en: Pruning
+  name_de: Pruning
+- id: low-rank-factorisation
+  type: Method
+  name_en: Low-rank factorisation
+  name_de: Low-Rank-Faktorisierung
+- id: selfcheckgpt
+  type: Method
+  name_en: SelfCheckGPT
+  name_de: SelfCheckGPT
+- id: hades
+  type: Dataset
+  name_en: HaDes
+  name_de: HaDes
+- id: reld
+  type: Method
+  name_en: RelD
+  name_de: RelD
+- id: grounding-probe
+  type: Method
+  name_en: Grounding Probe
+  name_de: Grounding Probe
+- id: parcel
+  type: Dataset
+  name_en: PARCEL
+  name_de: PARCEL

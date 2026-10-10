@@ -9,6 +9,7 @@ sources:
 - https://arxiv.org/abs/2404.13076
 - https://arxiv.org/abs/2310.08491
 - https://arxiv.org/abs/2411.15594
+- https://arxiv.org/abs/2610.12083
 ---
 
 ## EN
@@ -103,6 +104,11 @@ An LLM judge can replace much human rating of open-ended answers, provided its b
 - Kim, S. et al. (2023). *Prometheus: Inducing Fine-grained Evaluation Capability in Language Models.* ICLR 2024. [arXiv:2310.08491](https://arxiv.org/abs/2310.08491)
 - Gu, J. et al. (2024). *A Survey on LLM-as-a-Judge.* [arXiv:2411.15594](https://arxiv.org/abs/2411.15594)
 
+### Updates
+
+#### 2026-10-10 — Verdicts are less stable than assumed
+A reliability audit of six frontier models as judges, across four benchmarks, five prompt formats, two presentation orders, three temperatures and ten repetitions per condition, found that verdicts change between identical runs even at temperature zero and that swapping the order of the answers flips the majority of verdicts on challenging tasks. The most consistent judge was consistent because it repeated wrong verdicts and agreed with the ground truth only 51% of the time; reliability turned out to depend on the item rather than on the model. The authors propose the trustworthy verdict rate, the probability that a verdict is reproducible, order-invariant and correct, and found that holistic rubric scoring improves it more than any single prompt change to pairwise comparison (Kumar et al., 2026; AACL 2026; [arXiv:2610.12083](https://arxiv.org/abs/2610.12083)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -194,3 +200,8 @@ Ein LLM-Judge kann viel menschliche Bewertung offener Antworten ersetzen, voraus
 - Panickssery, A. et al. (2024). *LLM Evaluators Recognize and Favor Their Own Generations.* NeurIPS 2024. [arXiv:2404.13076](https://arxiv.org/abs/2404.13076)
 - Kim, S. et al. (2023). *Prometheus: Inducing Fine-grained Evaluation Capability in Language Models.* ICLR 2024. [arXiv:2310.08491](https://arxiv.org/abs/2310.08491)
 - Gu, J. et al. (2024). *A Survey on LLM-as-a-Judge.* [arXiv:2411.15594](https://arxiv.org/abs/2411.15594)
+
+### Aktualisierungen
+
+#### 2026-10-10 — Urteile sind weniger stabil als angenommen
+Eine Zuverlässigkeitsprüfung von sechs Frontier-Modellen als Judges über vier Benchmarks, fünf Prompt-Formate, zwei Reihenfolgen, drei Temperaturen und zehn Wiederholungen je Bedingung ergab, dass sich Urteile zwischen identischen Durchläufen selbst bei Temperatur null ändern und dass das Vertauschen der Reihenfolge der Antworten bei schwierigen Aufgaben die Mehrheit der Urteile umkehrt. Der konsistenteste Judge war nur deshalb konsistent, weil er falsche Urteile wiederholte, und stimmte nur in 51 % der Fälle mit der Ground Truth überein; die Zuverlässigkeit hing vom einzelnen Item ab, nicht vom Modell. Die Autoren schlagen die Trustworthy Verdict Rate vor, die Wahrscheinlichkeit, dass ein Urteil reproduzierbar, unabhängig von der Reihenfolge und korrekt ist, und fanden, dass ganzheitliches Bewerten nach Rubrik sie stärker verbessert als jede einzelne Prompt-Änderung am paarweisen Vergleich (Kumar et al., 2026; AACL 2026; [arXiv:2610.12083](https://arxiv.org/abs/2610.12083)).

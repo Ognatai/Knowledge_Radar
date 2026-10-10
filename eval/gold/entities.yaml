@@ -200,11 +200,6 @@ entities:
     type: Method
     name_en: Reflexion
     name_de: Reflexion
-  - id: prompt-injection
-    type: Concept
-    name_en: Prompt injection
-    name_de: Prompt Injection
-    aliases: [indirect prompt injection]
   - id: multi-agent-systems
     type: Concept
     name_en: Multi-agent system

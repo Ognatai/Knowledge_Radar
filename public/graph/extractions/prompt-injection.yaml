@@ -1,0 +1,36 @@
+version: 1
+note_sha256: 8fce5ae857fb89ab239fa98cfabeb08f57b517f3f9265c43b3ae2d2100ccf16d
+extracted_by: claude
+discusses:
+- large-language-models
+- agentic-ai
+- retrieval-augmented-generation
+- mcp-and-related-protocols
+- harness-engineering
+- houyi
+- injecagent
+- ltbd
+- raised
+- apex-execution-boundary
+- rag-pibench
+- distilbert
+- cyber-resilience-act
+- nis2-directive
+- eu-ai-act
+relations:
+- from: houyi
+  type: IS_EXAMPLE_OF
+  to: prompt-injection
+  evidence: Their black-box attack HouYi builds the injected text from three components
+- from: injecagent
+  type: EVALUATES
+  to: prompt-injection
+  evidence: Benchmarks such as InjecAgent measure how often an agent follows injected instructions
+- from: rag-pibench
+  type: EVALUATES
+  to: distilbert
+  evidence: On the RAG-PIBench benchmark of 4,876 examples from retrieval-augmented settings, a fine-tuned DistilBERT detected injections best
+- from: cyber-resilience-act
+  type: REGULATES
+  to: prompt-injection
+  evidence: requires actively exploited vulnerabilities to be reported within 24 hours; prompt injection leading to code execution in an AI feature of a product is such a vulnerability

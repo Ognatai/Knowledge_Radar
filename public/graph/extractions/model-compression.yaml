@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 6139a855294fbafcbae3f18203add1250adacb1870a1c8bf139367573beca872
+extracted_by: claude
+discusses:
+- quantization
+- knowledge-distillation
+- pruning
+- low-rank-factorisation
+- llm-cost-optimization
+relations:
+- from: pruning
+  type: IS_EXAMPLE_OF
+  to: model-compression
+  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+- from: quantization
+  type: IS_EXAMPLE_OF
+  to: model-compression
+  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+- from: low-rank-factorisation
+  type: IS_EXAMPLE_OF
+  to: model-compression
+  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+- from: knowledge-distillation
+  type: IS_EXAMPLE_OF
+  to: model-compression
+  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
