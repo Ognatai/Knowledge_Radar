@@ -51,8 +51,10 @@ def collect_findings(
     seen: SeenStore,
     *,
     since: date,
+    today: date | None = None,
     fetch_arxiv: Callable[[feeds.ArxivQuery], list[Finding]] = feeds.fetch_arxiv,
     fetch_feed: Callable[[FeedConfig], list[Finding]] = feeds.fetch_feed,
+    fetch_daily_papers: Callable[[date, int], list[Finding]] = feeds.fetch_daily_papers,
 ) -> CollectResult:
     """New findings published since `since`. Items without a date count as new,
     except on the first fetch of their source (see `CollectResult.baseline`)."""
@@ -64,6 +66,14 @@ def collect_findings(
             batches.append(("arXiv", fetch_arxiv(query), []))
         except Exception as exc:  # network and parse errors of one source must not stop the run
             errors.append(f"arXiv ({phrase}): {exc}")
+    if config.daily_papers_top_per_day:
+        day, last = since, today or date.today()
+        while day <= last:
+            try:
+                batches.append(("Hugging Face Daily Papers", fetch_daily_papers(day, config.daily_papers_top_per_day), []))
+            except Exception as exc:
+                errors.append(f"Hugging Face Daily Papers ({day}): {exc}")
+            day += timedelta(days=1)
     for feed in config.rss:
         try:
             batches.append((feed.name, fetch_feed(feed), feed.include_keywords))

@@ -11,6 +11,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import html
+import json
 import re
 import time
 import urllib.parse
@@ -26,6 +27,7 @@ from app.agents.monitoring.config import FeedConfig
 from app.agents.monitoring.findings import Finding
 
 ARXIV_API = "https://export.arxiv.org/api/query"
+DAILY_PAPERS_API = "https://huggingface.co/api/daily_papers?date={day}"
 ARXIV_REQUEST_SPACING_SECONDS = 3.0
 USER_AGENT = "KnowledgeRadar/0.1 (+https://github.com/Ognatai/Knowledge_Radar)"
 MAX_SUMMARY_CHARACTERS = 2000
@@ -217,3 +219,31 @@ def fetch_feed(feed: FeedConfig) -> list[Finding]:
         tier=feed.tier,
         fetched_at=datetime.now().astimezone(),
     )
+
+
+def parse_daily_papers(body: str, *, top: int, fetched_at: datetime) -> list[Finding]:
+    """The `top` most upvoted papers of one day of Hugging Face Daily Papers, as arXiv findings."""
+    papers = [entry["paper"] for entry in json.loads(body) if entry.get("paper", {}).get("id")]
+    papers.sort(key=lambda paper: paper.get("upvotes", 0), reverse=True)
+    return [
+        Finding(
+            id=f"arxiv:{paper['id']}",
+            source="Hugging Face Daily Papers",
+            category="arxiv",
+            url=f"https://arxiv.org/abs/{paper['id']}",
+            title=_clean(paper.get("title")),
+            summary=_clean(paper.get("summary")),
+            published=_date(paper.get("publishedAt")),
+            authors=[_clean(author.get("name")) for author in paper.get("authors", [])],
+            tier="preprint",
+            source_kind="primary_research",
+            fetched_at=fetched_at,
+            upvotes=paper.get("upvotes"),
+        )
+        for paper in papers[:top]
+    ]
+
+
+def fetch_daily_papers(day: date, top: int) -> list[Finding]:
+    body = fetch(DAILY_PAPERS_API.format(day=day.isoformat()))
+    return parse_daily_papers(body, top=top, fetched_at=datetime.now().astimezone())

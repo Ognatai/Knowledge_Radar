@@ -42,6 +42,9 @@ class SourcesConfig:
     max_proposals_per_week: int
     arxiv: ArxivConfig
     rss: list[FeedConfig]
+    # Hugging Face Daily Papers: the most upvoted papers per day, found without
+    # search phrases; 0 disables the source.
+    daily_papers_top_per_day: int = 0
 
 
 def _choice(value: object, allowed: frozenset[str], key: str, where: str, optional: bool = False) -> str | None:
@@ -98,4 +101,5 @@ def load_sources_config(path: Path = SOURCES_PATH) -> SourcesConfig:
         max_proposals_per_week=int(raw.get("max_proposals_per_week", 10)),
         arxiv=arxiv,
         rss=feeds,
+        daily_papers_top_per_day=int((raw.get("huggingface_daily_papers") or {}).get("top_per_day", 0)),
     )

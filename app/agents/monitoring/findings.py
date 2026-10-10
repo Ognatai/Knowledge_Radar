@@ -38,6 +38,7 @@ class Finding:
     source_kind: str
     fetched_at: datetime
     query: str | None = None  # the arXiv search phrase that found it
+    upvotes: int | None = None  # Hugging Face Daily Papers community votes
 
     def to_json(self) -> dict:
         data = asdict(self)

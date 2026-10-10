@@ -10,6 +10,7 @@ from app.agents.monitoring.feeds import (
     arxiv_query_url,
     decode_body,
     parse_arxiv,
+    parse_daily_papers,
     parse_feed,
 )
 from app.agents.monitoring.findings import Finding, SeenStore
@@ -286,3 +287,46 @@ def test_undated_items_of_a_new_feed_become_the_baseline(tmp_path):
     assert first.findings == [] and [f.id for f in first.baseline] == ["rss:volume-1"]
     assert "Proceedings" in first.fetched_sources
     assert [f.id for f in second.findings] == ["rss:volume-2"]
+
+
+DAILY_PAPERS = json.dumps(
+    [
+        {"paper": {"id": "2610.00003", "title": "Low", "summary": "c", "upvotes": 3, "publishedAt": "2026-10-07T00:00:00.000Z", "authors": []}},
+        {"paper": {"id": "2610.00001", "title": "Top", "summary": "a", "upvotes": 150, "publishedAt": "2026-10-07T00:00:00.000Z",
+                   "authors": [{"name": "Ada Lovelace"}]}},
+        {"paper": {"id": "2610.00002", "title": "Second", "summary": "b", "upvotes": 40, "publishedAt": "2026-10-06T00:00:00.000Z", "authors": []}},
+    ]
+)
+
+
+def test_daily_papers_keep_the_most_upvoted_as_arxiv_findings():
+    findings = parse_daily_papers(DAILY_PAPERS, top=2, fetched_at=NOW)
+
+    assert [f.id for f in findings] == ["arxiv:2610.00001", "arxiv:2610.00002"]
+    assert findings[0].upvotes == 150
+    assert findings[0].source == "Hugging Face Daily Papers"
+    assert findings[0].url == "https://arxiv.org/abs/2610.00001"
+    assert findings[0].authors == ["Ada Lovelace"]
+    assert (findings[0].tier, findings[0].published) == ("preprint", date(2026, 10, 7))
+
+
+def test_daily_papers_are_fetched_for_every_day_of_the_window(tmp_path):
+    config = load_sources_config(write_config(tmp_path, "huggingface_daily_papers:\n  top_per_day: 2\n" + CONFIG))
+    days = []
+
+    def fetch_daily(day, top):
+        days.append(day)
+        return [finding(f"arxiv:{day}", published=day, source="Hugging Face Daily Papers")] if top == 2 else []
+
+    result = collect_findings(
+        config,
+        SeenStore(tmp_path / "seen.json"),
+        since=date(2026, 10, 8),
+        today=date(2026, 10, 10),
+        fetch_arxiv=lambda query: [],
+        fetch_feed=lambda feed: [],
+        fetch_daily_papers=fetch_daily,
+    )
+
+    assert days == [date(2026, 10, 8), date(2026, 10, 9), date(2026, 10, 10)]
+    assert len(result.findings) == 3

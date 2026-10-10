@@ -14,6 +14,11 @@
 # agent prioritises within it.
 max_proposals_per_week: 10
 
+# The most upvoted papers of each day on Hugging Face Daily Papers: a community
+# selection that finds new work without our search phrases.
+huggingface_daily_papers:
+  top_per_day: 5
+
 arxiv:
   # Each phrase is searched in title or abstract, within these categories.
   categories: [cs.CL, cs.AI, cs.LG, cs.IR, cs.CY, cs.CR, cs.SE]
