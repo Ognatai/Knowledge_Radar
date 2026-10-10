@@ -2548,3 +2548,23 @@ entities:
   type: Method
   name_en: Database index
   name_de: Datenbankindex
+- id: bootstrap
+  type: Method
+  name_en: Bootstrap
+  name_de: Bootstrap
+- id: p-value
+  type: Concept
+  name_en: p-value
+  name_de: p-Wert
+- id: confidence-interval
+  type: Concept
+  name_en: Confidence interval
+  name_de: Konfidenzintervall
+- id: bayesian-inference
+  type: Method
+  name_en: Bayesian inference
+  name_de: Bayessche Inferenz
+- id: american-statistical-association
+  type: Organization
+  name_en: American Statistical Association (ASA)
+  name_de: American Statistical Association (ASA)

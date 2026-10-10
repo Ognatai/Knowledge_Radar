@@ -1,0 +1,40 @@
+version: 1
+note_sha256: 43a3d8dd541c567f75b2ae02d2e094f82cd970889e1483dbff5b7192c6018d46
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- bootstrap
+- p-value
+- confidence-interval
+- ab-testing
+- mcnemars-test
+- five-two-cv-test
+- cross-validation
+- bayesian-inference
+- linear-discriminant-analysis
+- american-statistical-association
+- model-comparison
+relations:
+- from: bootstrap
+  type: IS_EXAMPLE_OF
+  to: statistics-fundamentals
+  evidence: The bootstrap estimates the sampling distribution of such a statistic from the observed data by resampling it
+- from: ab-testing
+  type: IS_EXAMPLE_OF
+  to: statistics-fundamentals
+  evidence: Online controlled experiments, or A/B tests, randomly assign users to a control and a treatment variant
+- from: mcnemars-test
+  type: IS_EXAMPLE_OF
+  to: statistics-fundamentals
+  evidence: McNemar's test and the new 5×2 cv test, based on five repetitions of twofold cross-validation, had acceptable type I error
+- from: five-two-cv-test
+  type: IS_EXAMPLE_OF
+  to: statistics-fundamentals
+  evidence: McNemar's test and the new 5×2 cv test, based on five repetitions of twofold cross-validation, had acceptable type I error
+- from: five-two-cv-test
+  type: BASED_ON
+  to: cross-validation
+  evidence: the new 5×2 cv test, based on five repetitions of twofold cross-validation
+- from: bayesian-inference
+  type: IS_EXAMPLE_OF
+  to: statistics-fundamentals
+  evidence: a prior distribution is combined with the likelihood of the data via Bayes' rule into a posterior distribution
