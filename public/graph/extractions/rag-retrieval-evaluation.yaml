@@ -9,6 +9,8 @@ discusses:
 - bm25
 - cross-encoder
 - information-retrieval
+- ms-marco
+- beir
 relations:
 - from: rag-retrieval-evaluation
   type: BASED_ON

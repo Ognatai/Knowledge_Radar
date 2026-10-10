@@ -28,3 +28,31 @@ relations:
   type: BASED_ON
   to: group-fairness
   evidence: Subgroup fairness therefore requires that statistical parity or false positive rates hold across a rich class of subgroups
+- from: individual-fairness
+  type: IS_EXAMPLE_OF
+  to: fairness-metrics
+  evidence: 'They fall into three families: individual fairness (similar people are treated similarly), group fairness (statistics such as approval or error rates are equal across groups) and subgroup fairness'
+- from: group-fairness
+  type: IS_EXAMPLE_OF
+  to: fairness-metrics
+  evidence: 'They fall into three families: individual fairness (similar people are treated similarly), group fairness (statistics such as approval or error rates are equal across groups) and subgroup fairness'
+- from: subgroup-fairness
+  type: IS_EXAMPLE_OF
+  to: fairness-metrics
+  evidence: 'They fall into three families: individual fairness (similar people are treated similarly), group fairness (statistics such as approval or error rates are equal across groups) and subgroup fairness'
+- from: fairness-through-awareness
+  type: IS_EXAMPLE_OF
+  to: individual-fairness
+  evidence: Individual fairness asks whether similar individuals receive similar outcomes. Fairness through awareness (Dwork et al., 2012) uses a task-specific similarity metric d between individuals
+- from: counterfactual-fairness
+  type: IS_EXAMPLE_OF
+  to: individual-fairness
+  evidence: 'Counterfactual fairness (Kusner et al., 2017) uses a causal model: a decision is fair towards an individual if it would be the same in a counterfactual world'
+- from: equal-opportunity
+  type: IS_EXAMPLE_OF
+  to: group-fairness
+  evidence: equal opportunity and equalised odds (Hardt et al., 2016) became standard group criteria
+- from: equalised-odds
+  type: IS_EXAMPLE_OF
+  to: group-fairness
+  evidence: equal opportunity and equalised odds (Hardt et al., 2016) became standard group criteria

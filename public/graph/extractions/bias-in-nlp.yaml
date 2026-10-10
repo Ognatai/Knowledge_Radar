@@ -12,6 +12,9 @@ discusses:
 - actor-level-corpus-analysis
 - information-extraction
 - large-language-models
+- stereoset
+- bbq
+- taz2024full
 relations:
 - from: eu-ai-act
   type: REGULATES
@@ -37,3 +40,11 @@ relations:
   type: BASED_ON
   to: information-extraction
   evidence: Urchs et al. (2024) combine linguistic discourse analysis with information extraction
+- from: stereoset
+  type: EVALUATES
+  to: bias-in-nlp
+  evidence: Benchmarks such as StereoSet and BBQ make bias in language models and QA systems comparable
+- from: bbq
+  type: EVALUATES
+  to: bias-in-nlp
+  evidence: Benchmarks such as StereoSet and BBQ make bias in language models and QA systems comparable

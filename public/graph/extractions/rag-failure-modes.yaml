@@ -19,6 +19,7 @@ discusses:
 - ndcg
 - llm-as-a-judge
 - embeddings
+- alce
 relations:
 - from: rag-failure-modes
   type: BASED_ON
@@ -36,3 +37,11 @@ relations:
   type: BASED_ON
   to: natural-language-inference
   evidence: Natural Language Inference (NLI) models compute entailment scores between a claim
+- from: context-pollution
+  type: IS_EXAMPLE_OF
+  to: rag-failure-modes
+  evidence: RAG failure modes define the distinct failure points within the RAG pipeline (retrieval, ranking, context construction, generation) that cause erroneous outputs, such as retrieval failures or context pollution
+- from: alce
+  type: EVALUATES
+  to: citation-hallucination
+  evidence: First, ALCE benchmark validation uses a standardized dataset of diverse questions and retrieval corpora to assess citation correctness

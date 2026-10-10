@@ -2650,3 +2650,111 @@ entities:
   type: Concept
   name_en: Comprehension debt
   name_de: Comprehension Debt
+- id: stereoset
+  type: Dataset
+  name_en: StereoSet
+  name_de: StereoSet
+- id: bbq
+  type: Dataset
+  name_en: Bias Benchmark for QA (BBQ)
+  name_de: Bias Benchmark for QA (BBQ)
+- id: taz2024full
+  type: Dataset
+  name_en: taz2024full
+  name_de: taz2024full
+- id: cuad
+  type: Dataset
+  name_en: CUAD
+  name_de: CUAD
+  aliases:
+  - Contract Understanding Atticus Dataset
+- id: contractnli
+  type: Dataset
+  name_en: ContractNLI
+  name_de: ContractNLI
+- id: imagenet
+  type: Dataset
+  name_en: ImageNet
+  name_de: ImageNet
+- id: mteb
+  type: Dataset
+  name_en: Massive Text Embedding Benchmark (MTEB)
+  name_de: Massive Text Embedding Benchmark (MTEB)
+- id: conll-2003
+  type: Dataset
+  name_en: CoNLL-2003
+  name_de: CoNLL-2003
+- id: dbpedia
+  type: Dataset
+  name_en: DBpedia
+  name_de: DBpedia
+- id: yago
+  type: Dataset
+  name_en: YAGO
+  name_de: YAGO
+- id: freebase
+  type: Dataset
+  name_en: Freebase
+  name_de: Freebase
+- id: lexglue
+  type: Dataset
+  name_en: LexGLUE
+  name_de: LexGLUE
+- id: legalbench
+  type: Dataset
+  name_en: LegalBench
+  name_de: LegalBench
+- id: mmlu
+  type: Dataset
+  name_en: MMLU
+  name_de: MMLU
+  aliases:
+  - Massive Multitask Language Understanding
+- id: truthfulqa
+  type: Dataset
+  name_en: TruthfulQA
+  name_de: TruthfulQA
+- id: mt-bench
+  type: Dataset
+  name_en: MT-bench
+  name_de: MT-bench
+- id: chatbot-arena
+  type: Technology
+  name_en: Chatbot Arena
+  name_de: Chatbot Arena
+- id: glue
+  type: Dataset
+  name_en: GLUE
+  name_de: GLUE
+  aliases:
+  - General Language Understanding Evaluation
+- id: squad
+  type: Dataset
+  name_en: SQuAD
+  name_de: SQuAD
+  aliases:
+  - Stanford Question Answering Dataset
+- id: alce
+  type: Dataset
+  name_en: ALCE
+  name_de: ALCE
+- id: ms-marco
+  type: Dataset
+  name_en: MS MARCO
+  name_de: MS MARCO
+- id: beir
+  type: Dataset
+  name_en: BEIR
+  name_de: BEIR
+- id: humaneval
+  type: Dataset
+  name_en: HumanEval
+  name_de: HumanEval
+- id: agentbench
+  type: Dataset
+  name_en: AgentBench
+  name_de: AgentBench
+- id: swe-bench
+  type: Dataset
+  name_en: SWE-bench
+  name_de: SWE-bench

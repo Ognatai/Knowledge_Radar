@@ -1,7 +1,7 @@
 version: 1
 note_sha256: "1dd7aabe533c842875944e65926ed74908eb6dae41733afb5b3c1c10f9323aa6"
 extracted_by: claude (hand-labelled gold standard)
-discusses: [large-language-models, toolformer, function-calling, react, memgpt, reflexion, prompt-injection, multi-agent-systems, langchain-and-langgraph]
+discusses: [large-language-models, toolformer, function-calling, react, memgpt, reflexion, prompt-injection, multi-agent-systems, langchain-and-langgraph, humaneval, agentbench, swe-bench]
 relations:
   - from: agentic-ai
     type: BASED_ON

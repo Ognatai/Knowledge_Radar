@@ -16,6 +16,8 @@ discusses:
 - hybrid-retrieval
 - recall-at-k
 - ndcg
+- beir
+- ms-marco
 relations:
 - from: semantic-retrieval
   type: BASED_ON

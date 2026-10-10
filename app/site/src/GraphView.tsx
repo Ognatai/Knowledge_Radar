@@ -12,6 +12,7 @@ const ENTITY_COLORS: Record<string, string> = {
   Conference: "#9c7a1c",
   Concept: "#b0466b",
   Technology: "#3d7f8f",
+  Dataset: "#7a6a3a",
   Source: "#5f6b66",
 };
 const NOTE_COLOR = "#8f9a94";

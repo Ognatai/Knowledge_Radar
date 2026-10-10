@@ -27,3 +27,7 @@ relations:
   type: REGULATES
   to: product-with-digital-elements
   evidence: The Cyber Resilience Act (CRA) sets EU-wide cybersecurity requirements for hardware and software products with digital elements
+- from: cyber-resilience-act
+  type: BASED_ON
+  to: nis2-directive
+  evidence: the CRA uses NIS2's definitions of incident and near miss and its CSIRTs designated as coordinators

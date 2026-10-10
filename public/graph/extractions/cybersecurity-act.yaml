@@ -42,3 +42,11 @@ relations:
   type: IMPLEMENTS
   to: cybersecurity-act
   evidence: designates the BSI as Germany's national cybersecurity certification authority (§ 54 BSIG)
+- from: nis2-directive
+  type: BASED_ON
+  to: cybersecurity-act
+  evidence: Other acts such as the NIS2 Directive and the Cyber Resilience Act build on these schemes
+- from: cyber-resilience-act
+  type: BASED_ON
+  to: cybersecurity-act
+  evidence: Other acts such as the NIS2 Directive and the Cyber Resilience Act build on these schemes

@@ -11,6 +11,8 @@ discusses:
 - information-extraction
 - graphrag
 - knowledge-graphs
+- lexglue
+- legalbench
 relations:
 - from: eu-ai-act
   type: REGULATES
@@ -32,3 +34,7 @@ relations:
   type: BASED_ON
   to: large-language-models
   evidence: Large language models make these tasks far more accessible
+- from: legalbench
+  type: EVALUATES
+  to: large-language-models
+  evidence: LegalBench consists of 162 tasks covering six types of legal reasoning, designed by legal professionals and used to evaluate 20 open-source and commercial LLMs

@@ -12,6 +12,9 @@ discusses:
 - knowledge-graphs
 - graphrag
 - ontology-design
+- dbpedia
+- yago
+- freebase
 relations:
 - from: shacl
   type: DEVELOPED_BY

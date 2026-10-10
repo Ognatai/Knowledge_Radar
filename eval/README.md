@@ -43,6 +43,10 @@ type-and-direction classifier (commit 381dc55), 2026-10-09:
 | Relations | 0.35 | 0.35 | **0.35** |
 | Untyped relations | 0.42 | 0.42 | 0.42 |
 
+These numbers predate the schema extension of 2026-10-10 (`Dataset`,
+`EVALUATES`), which added benchmark entities and one relation to the gold
+notes agentic-ai and llm-as-a-judge.
+
 The target was F1 0.75 for entities and 0.6 for relations. The local model
 finds most entities and many of the right entity pairs, but often chooses the
 wrong relation type or direction. Its output is therefore used as a proposal:

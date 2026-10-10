@@ -45,3 +45,23 @@ relations:
   type: BASED_ON
   to: precision
   evidence: Precision-recall (PR) curves show the fraction of true positives among positive predictions
+- from: accuracy
+  type: IS_EXAMPLE_OF
+  to: classification-metrics
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: precision
+  type: IS_EXAMPLE_OF
+  to: classification-metrics
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: recall
+  type: IS_EXAMPLE_OF
+  to: classification-metrics
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: specificity
+  type: IS_EXAMPLE_OF
+  to: classification-metrics
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
+- from: f1-score
+  type: IS_EXAMPLE_OF
+  to: classification-metrics
+  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'

@@ -336,3 +336,23 @@ entities:
     type: Organization
     name_en: Federal Ministry of the Interior
     name_de: Bundesministerium des Innern
+  - id: mt-bench
+    type: Dataset
+    name_en: MT-bench
+    name_de: MT-bench
+  - id: chatbot-arena
+    type: Technology
+    name_en: Chatbot Arena
+    name_de: Chatbot Arena
+  - id: humaneval
+    type: Dataset
+    name_en: HumanEval
+    name_de: HumanEval
+  - id: agentbench
+    type: Dataset
+    name_en: AgentBench
+    name_de: AgentBench
+  - id: swe-bench
+    type: Dataset
+    name_en: SWE-bench
+    name_de: SWE-bench

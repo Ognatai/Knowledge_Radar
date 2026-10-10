@@ -1,6 +1,6 @@
 import pytest
 
-from app.backend.knowledge_radar.graph import GraphError, load_graph, note_sha256
+from app.backend.knowledge_radar.graph import GraphError, load_graph, note_sha256, public_relation_types
 from app.backend.knowledge_radar.notes import load_notes
 from tests.test_notes_api import write_note
 
@@ -112,6 +112,29 @@ def test_relation_types_follow_schema(tmp_path):
 
     with pytest.raises(GraphError, match="BASED_ON.*Organization"):
         load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+
+def test_relation_type_pairs_restrict_from_and_to(tmp_path):
+    schema = tmp_path / "schema.yaml"
+    schema.write_text(
+        """
+relation_types:
+  IMPLEMENTS:
+    visibility: public
+    from: [Technology, Regulation]
+    to: [Method, Regulation]
+    pairs:
+      - [Technology, Method]
+      - [Regulation, Regulation]
+""",
+        encoding="utf-8",
+    )
+    implements = public_relation_types(schema)["IMPLEMENTS"]
+
+    assert implements.allows("Technology", "Method")
+    assert implements.allows("Regulation", "Regulation")
+    assert not implements.allows("Regulation", "Method")
+    assert "Regulation -> Regulation" in implements.describe()
 
 
 @pytest.mark.parametrize("relation_type", ["DISCUSSES", "RELATED_TO", "RETRO_OF", "UNKNOWN"])

@@ -66,3 +66,7 @@ relations:
   type: REGULATES
   to: critical-entity
   evidence: entities identified as critical entities under CER are essential entities under NIS2
+- from: nis2-directive
+  type: AMENDS
+  to: nis-directive-2016
+  evidence: Repeals Directive (EU) 2016/1148 with effect from 18 October 2024

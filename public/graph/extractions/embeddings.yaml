@@ -16,6 +16,7 @@ discusses:
 - information-retrieval
 - attention-and-transformers
 - neural-networks
+- mteb
 relations:
 - from: information-retrieval
   type: BASED_ON
@@ -53,3 +54,7 @@ relations:
   type: IS_EXAMPLE_OF
   to: vector-databases
   evidence: This allows vector databases to use plain inner product search (e.g., FAISS' IndexFlatIP)
+- from: mteb
+  type: EVALUATES
+  to: embeddings
+  evidence: evaluation on benchmarks such as MTEB (Muennighoff et al., 2022) determine cost and fitness for a task

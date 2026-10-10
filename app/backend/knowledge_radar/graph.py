@@ -70,6 +70,19 @@ class RelationType:
     # Symmetric relations (A COMPLEMENTS B = B COMPLEMENTS A) are stored with the
     # smaller id as source, so both directions count as the same relation.
     symmetric: bool = False
+    # Optional (from type, to type) combinations; empty allows every from x to.
+    pairs: frozenset[tuple[str, str]] = frozenset()
+
+    def allows(self, source_type: str, target_type: str) -> bool:
+        if self.pairs:
+            return (source_type, target_type) in self.pairs
+        return source_type in self.from_types and target_type in self.to_types
+
+    def describe(self) -> str:
+        """Allowed entity types, for prompts and error messages."""
+        if self.pairs:
+            return ", ".join(f"{source} -> {target}" for source, target in sorted(self.pairs))
+        return f"from {', '.join(sorted(self.from_types))} to {', '.join(sorted(self.to_types))}"
 
 
 @dataclass
@@ -94,6 +107,7 @@ def public_relation_types(schema_path: Path = SCHEMA_PATH) -> dict[str, Relation
             from_types=frozenset(definition["from"]),
             to_types=frozenset(definition["to"]),
             symmetric=bool(definition.get("symmetric", False)),
+            pairs=frozenset(tuple(pair) for pair in definition.get("pairs", [])),
         )
     return relation_types
 
@@ -227,11 +241,8 @@ def relation_problem(
     definition = allowed[relation_type]
     source_type = entities[source].type
     target_type = entities[target].type
-    if source_type not in definition.from_types or target_type not in definition.to_types:
-        return (
-            f"{relation_type} does not allow {source_type} -> {target_type} "
-            f"(schema: {sorted(definition.from_types)} -> {sorted(definition.to_types)})."
-        )
+    if not definition.allows(source_type, target_type):
+        return f"{relation_type} does not allow {source_type} -> {target_type} (schema: {definition.describe()})."
     # Models often end a correct quote with different punctuation than the text.
     if plain_text(evidence).strip(EVIDENCE_EDGE_CHARACTERS) not in note_text:
         return f"evidence is not a verbatim quote from the EN section: {evidence!r}."

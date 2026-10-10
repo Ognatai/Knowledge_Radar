@@ -9,6 +9,8 @@ discusses:
 - contract-type-classification
 - contract-playbook
 - redlining
+- cuad
+- contractnli
 relations:
 - from: contract-intelligence
   type: BASED_ON
@@ -18,3 +20,15 @@ relations:
   type: BASED_ON
   to: classification
   evidence: systems often first determine the type, a text classification problem
+- from: contract-intelligence
+  type: IS_EXAMPLE_OF
+  to: legal-ai
+  evidence: It is a concrete application of Legal AI and Information Extraction
+- from: cuad
+  type: EVALUATES
+  to: contract-intelligence
+  evidence: Expert-annotated datasets such as CUAD with over 13,000 annotations (Hendrycks et al., 2021) and ContractNLI with 607 contracts (Koreeda & Manning, 2021) make the task measurable
+- from: contractnli
+  type: EVALUATES
+  to: contract-intelligence
+  evidence: Expert-annotated datasets such as CUAD with over 13,000 annotations (Hendrycks et al., 2021) and ContractNLI with 607 contracts (Koreeda & Manning, 2021) make the task measurable

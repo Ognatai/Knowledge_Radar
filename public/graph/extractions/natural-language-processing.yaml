@@ -12,6 +12,8 @@ discusses:
 - neural-networks
 - information-extraction
 - entity-extraction
+- glue
+- squad
 relations:
 - from: natural-language-processing
   type: BASED_ON
@@ -37,3 +39,11 @@ relations:
   type: IS_EXAMPLE_OF
   to: large-language-models
   evidence: few-shot prompting of large models such as GPT-3
+- from: glue
+  type: EVALUATES
+  to: natural-language-processing
+  evidence: GLUE and SQuAD for understanding and question answering
+- from: squad
+  type: EVALUATES
+  to: natural-language-processing
+  evidence: GLUE and SQuAD for understanding and question answering

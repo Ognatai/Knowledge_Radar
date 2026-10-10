@@ -1,7 +1,7 @@
 version: 1
 note_sha256: "1c3811dab3e3ad15e0b997db5a09c080020b9472bc2466f6784484f9c0f8376b"
 extracted_by: manual
-discusses: [large-language-models, g-eval, chain-of-thought-prompting, prometheus, position-bias, verbosity-bias, self-enhancement-bias]
+discusses: [large-language-models, g-eval, chain-of-thought-prompting, prometheus, position-bias, verbosity-bias, self-enhancement-bias, mt-bench, chatbot-arena]
 relations:
   - from: llm-as-a-judge
     type: BASED_ON
@@ -19,3 +19,7 @@ relations:
     type: IS_EXAMPLE_OF
     to: llm-as-a-judge
     evidence: Prometheus (Kim et al., 2023) is an open 13B evaluator model
+  - from: mt-bench
+    type: EVALUATES
+    to: llm-as-a-judge
+    evidence: Strong LLMs as judges were systematically studied with MT-bench and Chatbot Arena

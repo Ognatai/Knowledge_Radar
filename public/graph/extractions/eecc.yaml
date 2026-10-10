@@ -37,3 +37,7 @@ relations:
   type: REGULATES
   to: universal-service
   evidence: which universal services must be available
+- from: eprivacy-directive
+  type: BASED_ON
+  to: eecc
+  evidence: 'ePrivacy Directive: uses the EECC''s definition of electronic communications services'

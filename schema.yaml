@@ -36,6 +36,10 @@ node_types:
     # category: language | framework | tool | standard
     visibility: public
     properties: [name_en, name_de, category, description, aliases]
+  Dataset:
+    # Benchmarks and corpora (GLUE, MS MARCO); not the documents a note cites.
+    visibility: public
+    properties: [name_en, name_de, description, aliases]
   Source:
     visibility: public
     properties: [title, url, date, type, tier, source_kind]
@@ -57,9 +61,11 @@ node_types:
 
 relation_types:
   BASED_ON:
+    # Regulation -> Regulation: an act builds on another act's framework
+    # without transposing (IMPLEMENTS) or changing (AMENDS) it.
     visibility: public
-    from: [Method, Concept, Technology]
-    to: [Method, Concept, Technology]
+    from: [Method, Concept, Technology, Regulation]
+    to: [Method, Concept, Technology, Regulation]
   REGULATES:
     visibility: public
     from: [Regulation, Organization]
@@ -67,27 +73,38 @@ relation_types:
   DEVELOPED_BY:
     # For a Regulation: the body that issued it.
     visibility: public
-    from: [Method, Concept, Technology, Regulation]
+    from: [Method, Concept, Technology, Regulation, Dataset]
     to: [Person, Organization]
   IMPLEMENTS:
     # Technology -> Method/Concept; Regulation -> Regulation: a national act
-    # transposes a directive or supplements a regulation.
+    # transposes a directive or supplements a regulation. `pairs` restricts
+    # from/to to these combinations (a regulation implements no concept).
     visibility: public
     from: [Technology, Regulation]
     to: [Method, Concept, Regulation]
+    pairs:
+      - [Technology, Method]
+      - [Technology, Concept]
+      - [Regulation, Regulation]
   MENTIONED_IN:
     visibility: public
-    from: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Source]
+    from: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Dataset, Source]
     to: [Source]
   IS_EXAMPLE_OF:
     visibility: public
-    from: [Method, Regulation, Technology]
+    from: [Method, Regulation, Technology, Concept]
     to: [Concept, Method, Technology]
   AMENDS:
     # Amends, replaces or repeals; the evidence quote says which.
     visibility: public
     from: [Regulation]
     to: [Regulation]
+  EVALUATES:
+    # A benchmark or evaluation method measures B ("StereoSet measures
+    # stereotypical bias in language models").
+    visibility: public
+    from: [Dataset, Method]
+    to: [Method, Concept, Technology]
   TAKES_PRECEDENCE_OVER:
     # Lex specialis or an explicit precedence rule.
     visibility: public
@@ -110,7 +127,7 @@ relation_types:
   DISCUSSES:
     visibility: public
     from: [Note]
-    to: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Source]
+    to: [Method, Regulation, Person, Organization, Conference, Concept, Technology, Dataset, Source]
   RELATED_TO:
     visibility: public
     from: [Note]

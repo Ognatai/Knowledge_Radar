@@ -223,10 +223,7 @@ def _schema_summary() -> str:
     lines = [f"Entity types: {', '.join(sorted(public_entity_types()))}.", "Relation types:"]
     for name, definition in sorted(public_relation_types().items()):
         symmetric = " (symmetric)" if definition.symmetric else ""
-        lines.append(
-            f"- {name}{symmetric}: from {', '.join(sorted(definition.from_types))} "
-            f"to {', '.join(sorted(definition.to_types))}"
-        )
+        lines.append(f"- {name}{symmetric}: {definition.describe()}")
     return "\n".join(lines)
 
 
@@ -400,7 +397,7 @@ def build_classification_prompt(
         symmetric = ", symmetric" if definition.symmetric else ""
         options.append(
             f"- {name}: {meanings.get(name, name)} "
-            f"(from {', '.join(sorted(definition.from_types))} to {', '.join(sorted(definition.to_types))}{symmetric})"
+            f"({definition.describe()}{symmetric})"
         )
     listed = "\n".join(options)
     return f"""You decide which relation a text states between two entities of a knowledge graph.

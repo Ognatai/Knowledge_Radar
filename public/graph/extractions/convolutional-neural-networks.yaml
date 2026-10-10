@@ -10,6 +10,7 @@ discusses:
 - pooling
 - transfer-learning
 - vision-transformer
+- imagenet
 relations:
 - from: lenet
   type: IS_EXAMPLE_OF

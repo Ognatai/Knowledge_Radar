@@ -7,6 +7,7 @@ discusses:
 - sequence-to-sequence
 - llmlingua
 - memgpt
+- multi-agent-systems
 relations:
 - from: context-engineering
   type: BASED_ON
@@ -28,3 +29,7 @@ relations:
   type: IS_EXAMPLE_OF
   to: context-engineering
   evidence: When information does not fit into the window, it can be moved to external storage. MemGPT (Packer et al., 2023) uses virtual context management
+- from: multi-agent-systems
+  type: IS_EXAMPLE_OF
+  to: context-engineering
+  evidence: shows how they are combined in system implementations such as retrieval-augmented generation, memory systems, tool-integrated reasoning and multi-agent systems

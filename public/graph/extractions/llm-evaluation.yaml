@@ -8,6 +8,10 @@ discusses:
 - position-bias
 - verbosity-bias
 - self-enhancement-bias
+- mmlu
+- truthfulqa
+- mt-bench
+- chatbot-arena
 relations:
 - from: llm-as-a-judge
   type: IS_EXAMPLE_OF

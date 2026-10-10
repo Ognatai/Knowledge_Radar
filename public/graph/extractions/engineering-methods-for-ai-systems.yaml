@@ -37,3 +37,15 @@ relations:
   type: BASED_ON
   to: prompt-engineering
   evidence: then context engineering as its progression
+- from: agent-skills
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: mcp-and-related-protocols
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
+- from: vibe-coding
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: several "engineering" disciplines have emerged, each addressing a different layer of the same system
