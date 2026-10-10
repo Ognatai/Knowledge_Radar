@@ -1548,3 +1548,29 @@ entities:
   name_de: Standardvertragsklauseln
   aliases:
   - standard data protection clauses
+- id: version-control
+  type: Concept
+  name_en: Version control
+  name_de: Versionskontrolle
+- id: git-snapshot
+  type: Concept
+  name_en: Snapshot (Git)
+  name_de: Snapshot (Git)
+- id: git-branch
+  type: Concept
+  name_en: Branch (Git)
+  name_de: Branch (Git)
+- id: git-staging-area
+  type: Concept
+  name_en: Staging area (Git)
+  name_de: Staging Area (Git)
+  aliases:
+  - three states
+- id: gitignore
+  type: Technology
+  name_en: .gitignore
+  name_de: .gitignore
+- id: github
+  type: Technology
+  name_en: GitHub
+  name_de: GitHub

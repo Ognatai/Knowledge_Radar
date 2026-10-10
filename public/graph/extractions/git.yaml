@@ -1,0 +1,31 @@
+version: 1
+note_sha256: e32eb5b3672fb87660b8a2b1eb5c7c42ac41b6ac659d970c8b44b28672c08ad1
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- version-control
+- git-snapshot
+- git-branch
+- git-staging-area
+- gitignore
+- github
+relations:
+- from: git
+  type: IS_EXAMPLE_OF
+  to: version-control
+  evidence: Git is a distributed version control system that stores a project's history as a series of snapshots
+- from: git
+  type: IMPLEMENTS
+  to: git-snapshot
+  evidence: Git thinks of its data as snapshots of the whole project rather than lists of file changes
+- from: git
+  type: IMPLEMENTS
+  to: git-branch
+  evidence: branches are lightweight pointers to commits that make parallel work and merging cheap
+- from: git
+  type: IMPLEMENTS
+  to: git-staging-area
+  evidence: Changes move through three states, modified, staged and committed
+- from: gitignore
+  type: BASED_ON
+  to: git
+  evidence: A .gitignore file keeps untracked files out of the repository
