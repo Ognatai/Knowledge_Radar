@@ -407,7 +407,8 @@ def connect() -> Any:
 
     uri = os.environ.get("NEO4J_URI", "bolt://127.0.0.1:7687")
     user = os.environ.get("NEO4J_USER", KEYRING_USER)
-    driver = GraphDatabase.driver(uri, auth=(user, neo4j_password()))
+    # Notifications only warn about labels that do not exist yet in a new database.
+    driver = GraphDatabase.driver(uri, auth=(user, neo4j_password()), notifications_min_severity="OFF")
     driver.verify_connectivity()
     return driver
 

@@ -27,7 +27,12 @@ if (-not $password) {
 
 $env:NEO4J_PASSWORD = $password
 try {
+    # Docker reports progress on stderr; Windows PowerShell would treat that as an error.
+    $ErrorActionPreference = "Continue"
     docker compose --project-directory $repository up -d neo4j
+    if ($LASTEXITCODE -ne 0) {
+        throw "docker compose failed with exit code $LASTEXITCODE"
+    }
 } finally {
     Remove-Item Env:NEO4J_PASSWORD
 }
