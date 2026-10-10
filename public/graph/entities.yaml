@@ -2099,3 +2099,28 @@ entities:
   type: Method
   name_en: Rectified linear unit (ReLU)
   name_de: Rectified Linear Unit (ReLU)
+- id: nis-directive-2016
+  type: Regulation
+  name_en: NIS Directive (EU) 2016/1148
+  name_de: NIS-Richtlinie (EU) 2016/1148
+  aliases:
+  - NIS1
+  - Directive (EU) 2016/1148
+- id: eu-cyclone
+  type: Organization
+  name_en: EU-CyCLONe (European cyber crisis liaison organisation network)
+  name_de: EU-CyCLONe
+  aliases:
+  - EU-CyCLONe
+- id: essential-and-important-entities
+  type: Concept
+  name_en: Essential and important entities (NIS2)
+  name_de: Wesentliche und wichtige Einrichtungen (NIS2)
+- id: cybersecurity-risk-management-measures
+  type: Concept
+  name_en: Cybersecurity risk-management measures
+  name_de: Risikomanagementmaßnahmen im Bereich der Cybersicherheit
+- id: incident-reporting
+  type: Concept
+  name_en: Incident reporting
+  name_de: Meldung von Sicherheitsvorfällen

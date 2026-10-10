@@ -1,0 +1,68 @@
+version: 1
+note_sha256: 7b058704914a8441ed60adffa59c1f063f41234ea9e078c2dce395c11650e0e4
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- bsig
+- bsi
+- bsi-kritisv
+- enisa
+- european-commission
+- eu-cyclone
+- dora
+- cer-directive
+- critical-entity
+- cybersecurity-act
+- cybersecurity-certification
+- cyber-resilience-act
+- eecc
+- eidas
+- gdpr
+- nis-directive-2016
+- essential-and-important-entities
+- cybersecurity-risk-management-measures
+- incident-reporting
+relations:
+- from: bsig
+  type: IMPLEMENTS
+  to: nis2-directive
+  evidence: in Germany it is implemented by the BSI Act
+- from: dora
+  type: TAKES_PRECEDENCE_OVER
+  to: nis2-directive
+  evidence: as a sector-specific act with equivalent requirements, DORA takes precedence for financial entities (Art. 4)
+- from: nis2-directive
+  type: AMENDS
+  to: eecc
+  evidence: NIS2 replaces the security and incident rules for telecoms providers (Articles 40 and 41 EECC)
+- from: nis2-directive
+  type: AMENDS
+  to: eidas
+  evidence: trust service providers (Article 19 eIDAS), deleted from 18 October 2024 (Art. 42, 43)
+- from: cer-directive
+  type: COMPLEMENTS
+  to: nis2-directive
+  evidence: adopted alongside NIS2 and covers the physical resilience of critical entities
+- from: cyber-resilience-act
+  type: COMPLEMENTS
+  to: nis2-directive
+  evidence: covers the security of products with digital elements, while NIS2 covers the security of the entities using them
+- from: gdpr
+  type: COMPLEMENTS
+  to: nis2-directive
+  evidence: applies alongside NIS2; processing of personal data under NIS2 relies on Article 6 GDPR
+- from: nis2-directive
+  type: REGULATES
+  to: essential-and-important-entities
+  evidence: Covered entities are classed as essential or important
+- from: nis2-directive
+  type: REGULATES
+  to: cybersecurity-risk-management-measures
+  evidence: Requires essential and important entities to take appropriate and proportionate risk-management measures based on an all-hazards approach
+- from: nis2-directive
+  type: REGULATES
+  to: incident-reporting
+  evidence: report significant incidents in stages (24 hours, 72 hours, one month)
+- from: nis2-directive
+  type: REGULATES
+  to: critical-entity
+  evidence: entities identified as critical entities under CER are essential entities under NIS2
