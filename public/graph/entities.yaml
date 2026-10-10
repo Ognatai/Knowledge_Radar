@@ -1908,3 +1908,34 @@ entities:
   type: Concept
   name_en: Risk-bearing capacity
   name_de: Risikotragfähigkeit
+- id: fp16
+  type: Concept
+  name_en: FP16 (IEEE half precision)
+  name_de: FP16 (IEEE-Halbgenauigkeit)
+  aliases:
+  - FP16
+- id: fp32
+  type: Concept
+  name_en: FP32 (single precision)
+  name_de: FP32 (einfache Genauigkeit)
+  aliases:
+  - FP32
+- id: bfloat16
+  type: Concept
+  name_en: bfloat16 (BF16)
+  name_de: bfloat16 (BF16)
+  aliases:
+  - BF16
+  - BFLOAT16
+- id: loss-scaling
+  type: Method
+  name_en: Loss scaling
+  name_de: Loss Scaling
+- id: eight-bit-optimizers
+  type: Method
+  name_en: 8-bit optimizers
+  name_de: 8-Bit-Optimierer
+- id: adam-optimizer
+  type: Method
+  name_en: Adam
+  name_de: Adam

@@ -1,0 +1,29 @@
+version: 1
+note_sha256: 2186243f2160fc21dba23b5b134ffe465148da9eb1d5591bc6992467f4289202
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- fp16
+- fp32
+- bfloat16
+- loss-scaling
+- eight-bit-optimizers
+- adam-optimizer
+- quantization
+- flashattention
+relations:
+- from: mixed-precision-training
+  type: BASED_ON
+  to: fp16
+  evidence: Weights, activations and gradients are held in half precision during the forward and backward pass
+- from: mixed-precision-training
+  type: BASED_ON
+  to: loss-scaling
+  evidence: 'Two measures preserve accuracy: a 32-bit master copy of the weights and loss scaling to keep small gradients representable'
+- from: mixed-precision-training
+  type: COMPLEMENTS
+  to: quantization
+  evidence: For fine-tuning large language models, mixed precision is combined with quantization and parameter-efficient methods
+- from: eight-bit-optimizers
+  type: BASED_ON
+  to: quantization
+  evidence: Block-wise dynamic quantization stores these statistics in 8 bits while maintaining the performance of 32-bit optimizer states
