@@ -1,0 +1,40 @@
+version: 1
+note_sha256: a7a486346be5c02d81f48d3f3d39a7c2b93a9e2bd279b0da18f66c2f98bcd58b
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- w3c
+- turtle
+- json-ld
+- n-triples
+- rdf-schema
+- owl
+- skos
+- sparql
+- reification
+- property-graph
+- open-world-assumption
+relations:
+- from: rdf
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: RDF (Resource Description Framework) is the W3C data model for knowledge graphs
+- from: turtle
+  type: BASED_ON
+  to: rdf
+  evidence: Turtle and TriG (with named graphs), N-Triples and N-Quads (one statement per line), JSON-LD and RDF/XML express the same data model
+- from: json-ld
+  type: BASED_ON
+  to: rdf
+  evidence: Turtle and TriG (with named graphs), N-Triples and N-Quads (one statement per line), JSON-LD and RDF/XML express the same data model
+- from: n-triples
+  type: BASED_ON
+  to: rdf
+  evidence: Turtle and TriG (with named graphs), N-Triples and N-Quads (one statement per line), JSON-LD and RDF/XML express the same data model
+- from: sparql
+  type: BASED_ON
+  to: rdf
+  evidence: and queried with SPARQL
+- from: reification
+  type: BASED_ON
+  to: rdf-schema
+  evidence: The RDF Schema vocabulary rdf:Statement, rdf:subject, rdf:predicate and rdf:object describes a triple as a resource

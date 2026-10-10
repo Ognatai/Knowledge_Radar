@@ -2436,3 +2436,19 @@ entities:
   type: Method
   name_en: Metadata filtering
   name_de: Metadatenfilterung
+- id: turtle
+  type: Technology
+  name_en: Turtle
+  name_de: Turtle
+- id: json-ld
+  type: Technology
+  name_en: JSON-LD
+  name_de: JSON-LD
+- id: n-triples
+  type: Technology
+  name_en: N-Triples / N-Quads
+  name_de: N-Triples / N-Quads
+- id: reification
+  type: Method
+  name_en: Reification (RDF)
+  name_de: Reifikation (RDF)
