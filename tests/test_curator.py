@@ -83,6 +83,8 @@ def fake_generate(prompt, json_schema=None, **options):
                 "steps": ["1. Mechanism", "2. Defences"],
             }
         )
+    if json_schema["required"] == ["title"]:
+        return json.dumps({"title": "1. Mechanismus"})
     assert json_schema["required"] == ["markdown"]
     if prompt.startswith("Translate"):
         return json.dumps({"markdown": "Deutscher Text mit [[agentic-ai|Agenten]] und [[unknown|Unbekanntem]]."})

@@ -44,3 +44,16 @@ def test_a_translation_that_adds_content_is_retried_then_replaced_by_the_english
 
     assert translate(answers(invented, invented), "Text.", warnings) == "Text."
     assert warnings == ["translation failed, English text kept: Text."]
+
+
+def test_titles_are_translated_on_their_own_and_kept_when_the_answer_is_a_paragraph():
+    from app.agents.monitoring.curator import translate_title
+
+    def short(prompt, **options):
+        return json.dumps({"title": "1. Mechanismus von Prompt Injection"})
+
+    def paragraph(prompt, **options):
+        return json.dumps({"title": "Prompt Injection ist ein Angriff, bei dem ... " * 5})
+
+    assert translate_title(short, "1. Mechanism of Prompt Injection") == "1. Mechanismus von Prompt Injection"
+    assert translate_title(paragraph, "1. Mechanism") == "1. Mechanism"

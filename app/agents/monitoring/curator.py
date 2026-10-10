@@ -234,6 +234,24 @@ def _generate_text(generate: Callable[..., str], prompt: str) -> str:
     return text.strip()
 
 
+TITLE_SCHEMA = {"type": "object", "properties": {"title": {"type": "string"}}, "required": ["title"]}
+
+
+def translate_title(generate: Callable[..., str], title: str) -> str:
+    """A heading on its own: asked like a section, the model wrote a whole paragraph."""
+    prompt = f"""Translate this heading of a technical encyclopedia article into German.
+{GERMAN_TERMS}
+Keep any leading number. Answer with JSON: "title" holds only the German heading.
+
+{title}"""
+    try:
+        answer = json.loads(generate(prompt, json_schema=TITLE_SCHEMA, temperature=0.0, max_tokens=80, timeout=120))
+        german = str(answer.get("title", "")).strip().lstrip("#").strip()
+    except (llm.LLMError, json.JSONDecodeError):
+        return title
+    return german if german and len(german) <= 2 * len(title) + 20 else title
+
+
 def translate(generate: Callable[..., str], text: str, warnings: list[str]) -> str:
     """German version of one section. A translation much longer than the original has
     added content (once, five invented subsections); it is retried once, and if it is
@@ -287,7 +305,7 @@ def draft_new_note(
         how = "How it works" if lang == "EN" else "Funktionsweise"
         lines = [notice, "", f"### {heading('TL;DR')}", translate(en_parts[0][1]), "", f"### {how}", ""]
         for step, text in steps:
-            lines += [f"#### {translate(step) if lang == 'DE' else step}", translate(text), ""]
+            lines += [f"#### {translate_title(generate, step) if lang == 'DE' else step}", translate(text), ""]
         for section_heading, text in en_parts[1:]:
             lines += [f"### {heading(section_heading)}", translate(text), ""]
         lines += [f"### {'Sources' if lang == 'EN' else 'Quellen'}", citations]
