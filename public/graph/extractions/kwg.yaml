@@ -1,0 +1,62 @@
+version: 1
+note_sha256: 3959b0fb798182f3a0bd4606adb482700c06dfc4a240dfb5f46e129b4b64525e
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- crr-and-crd
+- dora
+- marisk
+- eba-governance-and-outsourcing-guidelines
+- gwg
+- gdpr
+- eu-ai-act
+- bafin
+- deutsche-bundesbank
+- ecb
+- banking-licence
+- capital-buffer
+- creditworthiness-assessment
+relations:
+- from: kwg
+  type: IMPLEMENTS
+  to: crr-and-crd
+  evidence: The Act transposes the Capital Requirements Directive (CRD) and supplements the directly applicable CRR
+- from: kwg
+  type: IMPLEMENTS
+  to: dora
+  evidence: from 1 January 2027 the same applies to the requirements of DORA
+- from: kwg
+  type: IMPLEMENTS
+  to: gwg
+  evidence: sections 25g to 25m supplement the due diligence obligations of the Money Laundering Act
+- from: kwg
+  type: IMPLEMENTS
+  to: gdpr
+  evidence: section 10(2) allows institutions to process personal data for the purposes of the CRR, such as risk models, under certain conditions
+- from: marisk
+  type: IMPLEMENTS
+  to: kwg
+  evidence: BaFin's circular specifies the risk management requirements under section 25a and the outsourcing requirements under section 25b
+- from: eba-governance-and-outsourcing-guidelines
+  type: IMPLEMENTS
+  to: kwg
+  evidence: they specify at EU level the governance and outsourcing requirements that the KWG lays down in sections 25a to 25d
+- from: kwg
+  type: REGULATES
+  to: banking-licence
+  evidence: Anyone who wants to conduct banking business or provide financial services in Germany needs an authorisation (section 32)
+- from: kwg
+  type: REGULATES
+  to: capital-buffer
+  evidence: such as capital buffers (sections 10c–10j)
+- from: kwg
+  type: REGULATES
+  to: creditworthiness-assessment
+  evidence: creditworthiness must be assessed before a consumer credit agreement
+- from: kwg
+  type: REGULATES
+  to: bafin
+  evidence: Governs BaFin's power
+- from: kwg
+  type: REGULATES
+  to: deutsche-bundesbank
+  evidence: the Deutsche Bundesbank carries out ongoing monitoring (section 7)

@@ -1731,3 +1731,18 @@ entities:
   type: Concept
   name_en: Namespace (Kubernetes)
   name_de: Namespace (Kubernetes)
+- id: gwg
+  type: Regulation
+  name_en: Money Laundering Act (GwG)
+  name_de: Geldwäschegesetz (GwG)
+  aliases:
+  - GwG
+  - Money Laundering Act
+- id: banking-licence
+  type: Concept
+  name_en: Authorisation requirement for banking business
+  name_de: Erlaubnispflicht für Bankgeschäfte
+- id: creditworthiness-assessment
+  type: Concept
+  name_en: Creditworthiness assessment
+  name_de: Kreditwürdigkeitsprüfung
