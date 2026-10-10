@@ -1,0 +1,23 @@
+version: 1
+note_sha256: a673e5efaa809da5a59a971afdeee4ffbc6b247182b88bfccec0ee117dc765cd
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- llm-as-a-judge
+- helm-framework
+- crowdsourced-pairwise-comparison
+- position-bias
+- verbosity-bias
+- self-enhancement-bias
+relations:
+- from: llm-as-a-judge
+  type: IS_EXAMPLE_OF
+  to: llm-evaluation
+  evidence: For open-ended answers without a single correct reference, strong LLMs can act as judges
+- from: helm-framework
+  type: IS_EXAMPLE_OF
+  to: llm-evaluation
+  evidence: holistic frameworks such as HELM (Liang et al., 2022), which broadened evaluation beyond accuracy
+- from: crowdsourced-pairwise-comparison
+  type: IS_EXAMPLE_OF
+  to: llm-evaluation
+  evidence: crowdsourced pairwise comparisons that rank models by human preference

@@ -1862,3 +1862,29 @@ entities:
   type: Method
   name_en: Batching of LLM requests
   name_de: Batching von LLM-Anfragen
+- id: helm-framework
+  type: Method
+  name_en: HELM (Holistic Evaluation of Language Models)
+  name_de: HELM (Holistic Evaluation of Language Models)
+  aliases:
+  - HELM
+- id: crowdsourced-pairwise-comparison
+  type: Method
+  name_en: Crowdsourced pairwise comparison
+  name_de: Crowdsourcing-Paarvergleich
+- id: langfuse
+  type: Technology
+  name_en: Langfuse
+  name_de: Langfuse
+- id: langsmith
+  type: Technology
+  name_en: LangSmith
+  name_de: LangSmith
+- id: opentelemetry
+  type: Technology
+  name_en: OpenTelemetry
+  name_de: OpenTelemetry
+- id: distributed-tracing
+  type: Concept
+  name_en: Distributed tracing
+  name_de: Distributed Tracing

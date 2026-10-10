@@ -71,4 +71,5 @@ Reviewed notes whose extraction will gain edges once the proposals are decided:
 - information-retrieval: bias-preserving-gender-fairness `IS_EXAMPLE_OF` fairness-metrics (2)
 - knowledge-graph-engineering: DBpedia, YAGO, Freebase (1)
 - legal-ai: LexGLUE, LegalBench (1)
+- llm-evaluation: MMLU, TruthfulQA, MT-bench, Chatbot Arena (1)
 - gold notes: GLUE, MT-bench, Chatbot Arena, HumanEval, AgentBench, SWE-bench (1); prompt injection (2)

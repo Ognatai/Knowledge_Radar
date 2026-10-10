@@ -1,0 +1,40 @@
+version: 1
+note_sha256: 57e7c01f0e3ae25d3290a73d7dc4e1f1e51c44f586bedab9e4980aa57a397779
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- langfuse
+- langsmith
+- opentelemetry
+- distributed-tracing
+- engineering-methods-for-ai-systems
+- llm-cost-optimization
+- gdpr
+relations:
+- from: llm-observability-and-tracing
+  type: IS_EXAMPLE_OF
+  to: engineering-methods-for-ai-systems
+  evidence: Observability is one of the cross-cutting topics in Engineering Methods for AI Systems
+- from: llm-observability-and-tracing
+  type: BASED_ON
+  to: distributed-tracing
+  evidence: Distributed tracing makes the full path of a request visible
+- from: langfuse
+  type: IMPLEMENTS
+  to: llm-observability-and-tracing
+  evidence: Specialised LLM tracing tools such as Langfuse or LangSmith are tailored to prompts, tokens and costs
+- from: langsmith
+  type: IMPLEMENTS
+  to: llm-observability-and-tracing
+  evidence: Specialised LLM tracing tools such as Langfuse or LangSmith are tailored to prompts, tokens and costs
+- from: opentelemetry
+  type: IMPLEMENTS
+  to: llm-observability-and-tracing
+  evidence: Generic tracing with OpenTelemetry, an open standard for distributed tracing, integrates LLM traces
+- from: opentelemetry
+  type: IMPLEMENTS
+  to: distributed-tracing
+  evidence: OpenTelemetry, an open standard for distributed tracing
+- from: gdpr
+  type: REGULATES
+  to: llm-observability-and-tracing
+  evidence: prompts and responses can contain personal or confidential data, so logging needs the same care as any other processing
