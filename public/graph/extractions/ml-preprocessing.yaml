@@ -1,0 +1,41 @@
+version: 1
+note_sha256: 640d20003f9335facaa69b00e0e2999fb53f17ffea8f43209bad13c8085078d6
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- scikit-learn
+- cross-validation
+- naive-bayes
+- smote
+- probability-calibration
+- platt-scaling
+- isotonic-regression
+- temperature-scaling
+relations:
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: ml-preprocessing
+  evidence: scikit-learn implements most of these steps (Pedregosa et al., 2011)
+- from: ml-preprocessing
+  type: BASED_ON
+  to: cross-validation
+  evidence: models are compared with cross-validation, for which ten-fold stratified cross-validation is a robust default
+- from: smote
+  type: IS_EXAMPLE_OF
+  to: ml-preprocessing
+  evidence: Imbalanced classes require suitable metrics and, if needed, resampling such as SMOTE
+- from: platt-scaling
+  type: IS_EXAMPLE_OF
+  to: probability-calibration
+  evidence: Platt scaling and isotonic regression correct these distortions
+- from: isotonic-regression
+  type: IS_EXAMPLE_OF
+  to: probability-calibration
+  evidence: Platt scaling and isotonic regression correct these distortions
+- from: temperature-scaling
+  type: IS_EXAMPLE_OF
+  to: probability-calibration
+  evidence: Modern neural networks are also poorly calibrated; on most datasets, temperature scaling
+- from: temperature-scaling
+  type: IS_EXAMPLE_OF
+  to: platt-scaling
+  evidence: temperature scaling, a single-parameter variant of Platt scaling

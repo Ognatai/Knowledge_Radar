@@ -1939,3 +1939,13 @@ entities:
   type: Method
   name_en: Adam
   name_de: Adam
+- id: smote
+  type: Method
+  name_en: SMOTE (Synthetic Minority Over-sampling Technique)
+  name_de: SMOTE (Synthetic Minority Over-sampling Technique)
+  aliases:
+  - SMOTE
+- id: temperature-scaling
+  type: Method
+  name_en: Temperature scaling
+  name_de: Temperature Scaling
