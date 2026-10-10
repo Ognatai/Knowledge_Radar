@@ -67,13 +67,21 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
   // force-graph mutates the objects it receives, so it gets fresh copies.
   const graphData = useMemo(() => {
     const ids = new Set(visibleNodes.map((node) => node.id));
+    const links = edges.filter((edge) => ids.has(edge.source) && ids.has(edge.target));
+    // Without notes, entities that only notes discuss would float unconnected; they
+    // are drawn once notes are shown and stay in the node list below either way.
+    const linked = new Set(links.flatMap((edge) => [edge.source, edge.target]));
     return {
-      nodes: visibleNodes.map((node) => ({ ...node, label: nodeLabel(node, language) })),
-      links: edges
-        .filter((edge) => ids.has(edge.source) && ids.has(edge.target))
-        .map((edge) => ({ ...edge })),
+      nodes: visibleNodes
+        .filter((node) => showNotes || linked.has(node.id))
+        .map((node) => ({ ...node, label: nodeLabel(node, language) })),
+      links: links.map((edge) => ({ ...edge })),
     };
-  }, [edges, language, visibleNodes]);
+  }, [edges, language, showNotes, visibleNodes]);
+  const listedNodes = useMemo(
+    () => visibleNodes.map((node) => ({ ...node, label: nodeLabel(node, language) })),
+    [language, visibleNodes],
+  );
 
   const height = width < 600 ? 380 : 520;
 
@@ -149,9 +157,9 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
       <p className="graph-caption">{t("graphCaption")}</p>
       {/* The canvas is not keyboard accessible; the same nodes as a list. */}
       <details className="graph-node-list">
-        <summary>{t("graphNodeList")} ({graphData.nodes.length})</summary>
+        <summary>{t("graphNodeList")} ({listedNodes.length})</summary>
         <ul>
-          {graphData.nodes.map((node) => (
+          {listedNodes.map((node) => (
             <li key={node.id}>
               <button className="text-link" onClick={() => openNode(node)} type="button">
                 {node.label}
