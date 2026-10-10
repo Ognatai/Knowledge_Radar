@@ -2045,3 +2045,37 @@ entities:
   type: Method
   name_en: Mean absolute scaled error (MASE)
   name_de: Mittlerer absoluter skalierter Fehler (MASE)
+- id: back-propagation
+  type: Method
+  name_en: Back-propagation
+  name_de: Backpropagation
+  aliases:
+  - Backpropagation
+- id: stochastic-gradient-descent
+  type: Method
+  name_en: Stochastic gradient descent (SGD)
+  name_de: Stochastischer Gradientenabstieg (SGD)
+- id: adamw
+  type: Method
+  name_en: AdamW
+  name_de: AdamW
+- id: batch-normalisation
+  type: Method
+  name_en: Batch normalisation
+  name_de: Batch-Normalisierung
+  aliases:
+  - Batch normalization
+- id: glorot-initialisation
+  type: Method
+  name_en: Glorot initialisation
+  name_de: Glorot-Initialisierung
+  aliases:
+  - Xavier initialisation
+- id: he-initialisation
+  type: Method
+  name_en: He initialisation
+  name_de: He-Initialisierung
+- id: weight-decay
+  type: Method
+  name_en: Weight decay
+  name_de: Weight Decay

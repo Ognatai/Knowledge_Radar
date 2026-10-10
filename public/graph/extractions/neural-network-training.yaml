@@ -1,0 +1,38 @@
+version: 1
+note_sha256: fdcb54099636dfb4611ef3910867c8191535518181961a16b7496b65f8e64edf
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- back-propagation
+- stochastic-gradient-descent
+- adam-optimizer
+- adamw
+- batch-normalisation
+- glorot-initialisation
+- he-initialisation
+- weight-decay
+- overfitting
+relations:
+- from: neural-network-training
+  type: BASED_ON
+  to: back-propagation
+  evidence: Back-propagation computes the gradients
+- from: neural-network-training
+  type: BASED_ON
+  to: stochastic-gradient-descent
+  evidence: a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights
+- from: neural-network-training
+  type: BASED_ON
+  to: adam-optimizer
+  evidence: a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights
+- from: adamw
+  type: BASED_ON
+  to: adam-optimizer
+  evidence: AdamW | Adam with decoupled weight decay
+- from: adamw
+  type: BASED_ON
+  to: weight-decay
+  evidence: decoupling the weight decay from the gradient update (AdamW) substantially improved Adam's generalisation
+- from: neural-network-training
+  type: BASED_ON
+  to: batch-normalisation
+  evidence: Batch normalisation normalises layer inputs over each minibatch; it allows much higher learning rates, makes initialisation less critical
