@@ -55,12 +55,11 @@ To test exactly what would be published, run **Knowledge Radar: Public site
 (production preview)**: it exports the data, builds the site and serves
 `app/site/dist` on `http://127.0.0.1:4173`.
 
-Publishing is manual: the workflow `.github/workflows/pages.yml` runs the same
-export and build and deploys `app/site/dist` to GitHub Pages only when started
-via **Actions → Deploy public site → Run workflow** (repository settings:
-**Pages → Source** set to **GitHub Actions**). It is deliberately not triggered
-by merges until the site, including its legal pages, is cleared for
-publication.
+Every push to `main` publishes the site: the workflow
+`.github/workflows/pages.yml` runs the same export and build and deploys
+`app/site/dist` to GitHub Pages (repository settings: **Pages → Source** set to
+**GitHub Actions**). It can also be started by hand via **Actions → Deploy
+public site → Run workflow**. Check changes locally before they reach `main`.
 
 ## 5. Local app API
 
@@ -105,14 +104,37 @@ $shortcut.Save()
 Ollama updates may restore `Ollama.lnk`; the script then replaces that instance
 20 seconds after logon. Running the script by hand restarts Ollama the same way.
 
-## 7. Optional: private repository
+## 7. Local index (Neo4j)
+
+Each machine keeps its own index of the notes and the knowledge graph: a Neo4j
+Community container (graph plus built-in vector index) with embeddings from
+Ollama. It is derived data; it can be deleted and rebuilt at any time.
+
+```powershell
+ollama pull qwen3-embedding:0.6b
+python -m keyring set knowledge-radar neo4j     # choose a password, stored in the Credential Manager
+scripts\start-neo4j.ps1                         # docker compose up -d neo4j, localhost only
+python -m app.backend.knowledge_radar.index      # first run builds everything (about 2-3 minutes)
+python -m app.backend.knowledge_radar.index search "How does LoRA work?"
+```
+
+Later runs embed only notes whose content changed; `index rebuild` starts from
+scratch, and a different embedding model (`KNOWLEDGE_RADAR_EMBEDDING_MODEL`)
+triggers a rebuild automatically. `NEO4J_URI` (default
+`bolt://127.0.0.1:7687`) and `NEO4J_PASSWORD` override the defaults.
+
+`tests/test_index_neo4j.py` runs against a real Neo4j only when
+`KNOWLEDGE_RADAR_NEO4J_TEST_URI` points at a **throwaway** instance (it wipes the
+database; password in `KNOWLEDGE_RADAR_NEO4J_TEST_PASSWORD`).
+
+## 8. Optional: private repository
 
 Copy `local-config.example.yaml` to `local-config.yaml` and set
 `private_repo_path` to the absolute path of the private checkout. It must be a
 sibling directory, never nested inside this repository; the app refuses a
 nested path.
 
-## 8. Optional: weekly monitoring job (Windows)
+## 9. Optional: weekly monitoring job (Windows)
 
 ```powershell
 .\scripts\register-scheduled-task.ps1 -DryRun   # show the task definition
@@ -124,7 +146,7 @@ off) as the logged-on user, which is required for toast notifications and for
 reading secrets from the Windows Credential Manager. Every run writes a log to
 `.knowledge-radar/logs/` and shows a toast on success and on failure.
 
-## 9. GitHub repository settings
+## 10. GitHub repository settings
 
 - **Secrets → Actions:** `KNOWLEDGE_RADAR_PRIVATE_PATTERNS`, newline-separated
   regexes for the CI private-data check (company names, interview markers, …).

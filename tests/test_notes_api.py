@@ -12,6 +12,7 @@ def write_note(
     entity_type="Concept",
     extra_frontmatter="",
     content_en="An English description.",
+    content_de="Eine deutsche Beschreibung.",
 ):
     directory.mkdir(parents=True, exist_ok=True)
     path = directory / name
@@ -28,7 +29,7 @@ entity_type: {entity_type}
 {content_en}
 
 ## DE
-Eine deutsche Beschreibung.
+{content_de}
 """,
         encoding="utf-8",
     )
