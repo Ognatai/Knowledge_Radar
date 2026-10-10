@@ -1,0 +1,38 @@
+version: 1
+note_sha256: b5887537ba23a0110082cfe0e332d21e50ab8fb6b3cc275cdaa493f4a55252d3
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- back-propagation
+- back-propagation-through-time
+- vanishing-and-exploding-gradients
+- lstm
+- gru
+- sequence-to-sequence
+- attention-and-transformers
+- convolutional-neural-networks
+- time-series-analysis
+relations:
+- from: recurrent-neural-networks
+  type: BASED_ON
+  to: back-propagation-through-time
+  evidence: They are trained with back-propagation through time
+- from: back-propagation-through-time
+  type: BASED_ON
+  to: back-propagation
+  evidence: back-propagation is applied to this unrolled graph; this is called back-propagation through time
+- from: lstm
+  type: IS_EXAMPLE_OF
+  to: recurrent-neural-networks
+  evidence: Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this
+- from: gru
+  type: IS_EXAMPLE_OF
+  to: recurrent-neural-networks
+  evidence: Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this
+- from: sequence-to-sequence
+  type: BASED_ON
+  to: recurrent-neural-networks
+  evidence: In an encoder-decoder, one RNN encodes an input sequence into a fixed-length vector and another decodes it into an output sequence
+- from: sequence-to-sequence
+  type: BASED_ON
+  to: lstm
+  evidence: Sutskever et al. (2014) used deep LSTMs this way

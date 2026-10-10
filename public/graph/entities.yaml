@@ -2452,3 +2452,23 @@ entities:
   type: Method
   name_en: Reification (RDF)
   name_de: Reifikation (RDF)
+- id: lstm
+  type: Method
+  name_en: Long short-term memory (LSTM)
+  name_de: Long Short-Term Memory (LSTM)
+  aliases:
+  - LSTM
+- id: gru
+  type: Method
+  name_en: Gated recurrent unit (GRU)
+  name_de: Gated Recurrent Unit (GRU)
+  aliases:
+  - GRU
+- id: back-propagation-through-time
+  type: Method
+  name_en: Back-propagation through time
+  name_de: Backpropagation Through Time
+- id: vanishing-and-exploding-gradients
+  type: Concept
+  name_en: Vanishing and exploding gradients
+  name_de: Verschwindende und explodierende Gradienten
