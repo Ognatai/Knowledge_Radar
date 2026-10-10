@@ -21,6 +21,7 @@ NGRAM = 8
 MAX_COPIED_SHARE = 0.15
 PASSAGES_PER_CLAIM = 3
 MIN_CLAIM_WORDS = 6
+UNCHECKED = "(check failed)"
 WORD = re.compile(r"[\w'-]+", re.UNICODE)
 
 
@@ -135,14 +136,20 @@ def check_faithfulness(
     for sentence, vector in zip(sentences, claim_vectors):
         ranked = sorted(range(len(passages)), key=lambda i: -sum(a * b for a, b in zip(vector, passage_vectors[i])))
         nearest = [passages[i] for i in ranked[:PASSAGES_PER_CLAIM]]
-        answer = json.loads(
-            generate(
-                build_faithfulness_prompt(sentence, nearest),
-                json_schema=FAITHFULNESS_SCHEMA,
-                temperature=0.0,
-                max_tokens=400,
-                timeout=300,
+        try:
+            answer = json.loads(
+                generate(
+                    build_faithfulness_prompt(sentence, nearest),
+                    json_schema=FAITHFULNESS_SCHEMA,
+                    temperature=0.0,
+                    max_tokens=800,
+                    timeout=300,
+                )
             )
-        )
+        except (llm.LLMError, json.JSONDecodeError):
+            # A long evidence quote can hit the token cap; the sentence then counts as
+            # unsupported, so the review looks at it, and the other checks go on.
+            checks.append(ClaimCheck(sentence, False, UNCHECKED))
+            continue
         checks.append(ClaimCheck(sentence, bool(answer.get("supported")), str(answer.get("evidence", ""))))
     return checks

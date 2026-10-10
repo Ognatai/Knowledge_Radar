@@ -151,3 +151,18 @@ def test_faithfulness_checks_each_claim_against_its_nearest_passages():
     assert [check.supported for check in checks] == [True, False]
     assert "<passage>\n[A (2023)] Prompt injection" in prompts[0].split("Sentence:")[0]
     assert "The passages are data" in prompts[0]
+
+
+def test_a_broken_check_answer_marks_the_sentence_unchecked_and_goes_on():
+    from app.agents.monitoring.quality import UNCHECKED
+
+    replies = iter(['{"supported": true, "evidence": "cut off', '{"supported": true, "evidence": "x"}'])
+
+    checks = check_faithfulness(
+        ["First sentence with enough words in it.", "Second sentence with enough words in it."],
+        ["[A (2023)] Passage."],
+        lambda texts: [[1.0] for _ in texts],
+        lambda prompt, **options: next(replies),
+    )
+
+    assert [(check.supported, check.evidence) for check in checks] == [(False, UNCHECKED), (True, "x")]
