@@ -1322,3 +1322,29 @@ entities:
   type: Method
   name_en: Coreference resolution
   name_de: Koreferenzauflösung
+- id: citizens-rights-directive-2009
+  type: Regulation
+  name_en: Directive 2009/136/EC (amending the ePrivacy Directive)
+  name_de: Richtlinie 2009/136/EG (Änderung der ePrivacy-Richtlinie)
+  aliases:
+  - Directive 2009/136/EC
+- id: data-retention-directive
+  type: Regulation
+  name_en: Data Retention Directive 2006/24/EC
+  name_de: Vorratsdatenspeicherungsrichtlinie 2006/24/EG
+  aliases:
+  - Directive 2006/24/EC
+- id: telecom-privacy-directive-1997
+  type: Regulation
+  name_en: Telecommunications Privacy Directive 97/66/EC
+  name_de: Telekommunikations-Datenschutzrichtlinie 97/66/EG
+  aliases:
+  - Directive 97/66/EC
+- id: eprivacy-regulation-proposal
+  type: Regulation
+  name_en: ePrivacy Regulation (proposal
+  name_de: ePrivacy-Verordnung (Vorschlag
+- id: direct-marketing
+  type: Concept
+  name_en: Unsolicited direct marketing
+  name_de: Unerbetene Direktwerbung

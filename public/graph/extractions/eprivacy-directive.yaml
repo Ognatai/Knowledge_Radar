@@ -1,0 +1,52 @@
+version: 1
+note_sha256: 654bac731f9722a67f264b144f12235a2057bd41e680dfa4af2288e3388e27ab
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- gdpr
+- tdddg
+- tkg
+- eecc
+- citizens-rights-directive-2009
+- data-retention-directive
+- telecom-privacy-directive-1997
+- eprivacy-regulation-proposal
+- cookie-consent
+- secrecy-of-telecommunications
+- direct-marketing
+relations:
+- from: eprivacy-directive
+  type: COMPLEMENTS
+  to: gdpr
+  evidence: It particularises and complements the general data protection rules now set out in the GDPR
+- from: eprivacy-directive
+  type: TAKES_PRECEDENCE_OVER
+  to: gdpr
+  evidence: the Directive is the more specific law for electronic communications; the GDPR imposes no additional obligations where the Directive sets specific obligations with the same objective
+- from: tdddg
+  type: IMPLEMENTS
+  to: eprivacy-directive
+  evidence: the German implementation; § 25 TDDDG transposes Art. 5(3)
+- from: citizens-rights-directive-2009
+  type: AMENDS
+  to: eprivacy-directive
+  evidence: Directive 2009/136/EC amends the Directive (consent rule for terminal equipment, personal data breach notification, penalties)
+- from: data-retention-directive
+  type: AMENDS
+  to: eprivacy-directive
+  evidence: Directive 2006/24/EC on data retention amends the Directive
+- from: eprivacy-directive
+  type: AMENDS
+  to: telecom-privacy-directive-1997
+  evidence: Repeals Directive 97/66/EC with effect from the date specified in Article 17(1)
+- from: eprivacy-directive
+  type: REGULATES
+  to: cookie-consent
+  evidence: It requires consent before information is stored on or read from a user's device (the basis of cookie banners)
+- from: eprivacy-directive
+  type: REGULATES
+  to: secrecy-of-telecommunications
+  evidence: protects the confidentiality of communications
+- from: eprivacy-directive
+  type: REGULATES
+  to: direct-marketing
+  evidence: regulates unsolicited marketing messages
