@@ -2350,3 +2350,39 @@ entities:
   type: Method
   name_en: Hallucination rate
   name_de: Halluzinationsrate
+- id: sparse-retrieval
+  type: Method
+  name_en: Sparse retrieval
+  name_de: Sparse Retrieval
+- id: dense-retrieval
+  type: Method
+  name_en: Dense retrieval
+  name_de: Dense Retrieval
+- id: bi-encoder
+  type: Method
+  name_en: Bi-encoder
+  name_de: Bi-Encoder
+- id: approximate-nearest-neighbour-search
+  type: Method
+  name_en: Approximate nearest neighbour (ANN) search
+  name_de: Approximative Nächste-Nachbarn-Suche (ANN)
+- id: hnsw
+  type: Method
+  name_en: HNSW (Hierarchical Navigable Small World)
+  name_de: HNSW (Hierarchical Navigable Small World)
+  aliases:
+  - HNSW
+- id: colbert
+  type: Method
+  name_en: ColBERT
+  name_de: ColBERT
+- id: hyde
+  type: Method
+  name_en: HyDE (Hypothetical Document Embeddings)
+  name_de: HyDE (Hypothetical Document Embeddings)
+  aliases:
+  - HyDE
+- id: contriever
+  type: Method
+  name_en: Contriever
+  name_de: Contriever
