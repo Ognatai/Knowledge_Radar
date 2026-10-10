@@ -1,0 +1,21 @@
+version: 1
+note_sha256: 4876dfa05a71359ac0102149d6190ec877226210e51287cd1843e4b5a340772e
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- dimensionality-reduction
+- eigendecomposition
+- autoencoders-and-gans
+- data-leakage
+relations:
+- from: principal-component-analysis
+  type: IS_EXAMPLE_OF
+  to: dimensionality-reduction
+  evidence: Principal component analysis (PCA) reduces the dimensionality of data
+- from: principal-component-analysis
+  type: BASED_ON
+  to: eigendecomposition
+  evidence: Finding them reduces to an eigenvalue problem
+- from: autoencoders-and-gans
+  type: IS_EXAMPLE_OF
+  to: dimensionality-reduction
+  evidence: deep autoencoders learned codes that worked much better than PCA as a tool to reduce dimensionality

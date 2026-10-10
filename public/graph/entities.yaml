@@ -2140,3 +2140,11 @@ entities:
   type: Method
   name_en: Competency questions
   name_de: Kompetenzfragen
+- id: dimensionality-reduction
+  type: Concept
+  name_en: Dimensionality reduction
+  name_de: Dimensionsreduktion
+- id: eigendecomposition
+  type: Method
+  name_en: Eigenvalue decomposition
+  name_de: Eigenwertzerlegung
