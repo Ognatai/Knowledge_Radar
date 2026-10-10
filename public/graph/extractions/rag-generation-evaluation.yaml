@@ -1,0 +1,57 @@
+version: 1
+note_sha256: 8294d2996aef7af4575d6714b618c81cf7fc2e69780fd1691c770b98fc29e2e4
+extracted_by: claude
+discusses:
+- factscore
+- ragas
+- ares
+- claim-level-grounding-check
+- citation-verification
+- hallucination-rate
+- citation-hallucination
+- grounding-hallucination
+- llm-as-a-judge
+- natural-language-inference
+- prediction-powered-inference
+- position-bias
+- verbosity-bias
+- self-enhancement-bias
+- gpt
+- chatgpt
+relations:
+- from: rag-generation-evaluation
+  type: BASED_ON
+  to: claim-level-grounding-check
+  evidence: decomposing outputs into atomic claims, validating each claim against retrieved context
+- from: rag-generation-evaluation
+  type: BASED_ON
+  to: llm-as-a-judge
+  evidence: LLM-as-a-Judge scoring employs lightweight language models to automate semantic evaluation of RAG generations
+- from: factscore
+  type: IS_EXAMPLE_OF
+  to: claim-level-grounding-check
+  evidence: Claim-level checking underlies both FActScore (Min et al., 2023), which scores the share of supported atomic facts, and the faithfulness metric of Ragas
+- from: ragas
+  type: IS_EXAMPLE_OF
+  to: rag-generation-evaluation
+  evidence: Ragas (Es et al. 2023) computes faithfulness by decomposing the generated answer into claims and verifying each against the retrieved context
+- from: ragas
+  type: BASED_ON
+  to: natural-language-inference
+  evidence: verifying each against the retrieved context using LLM-based natural language inference
+- from: ares
+  type: IS_EXAMPLE_OF
+  to: rag-generation-evaluation
+  evidence: as implemented in ARES (Saad-Falcon et al. (2023))
+- from: citation-verification
+  type: IS_EXAMPLE_OF
+  to: rag-generation-evaluation
+  evidence: Citation correctness verification ensures generated citations are valid and contextually supported
+- from: citation-verification
+  type: BASED_ON
+  to: natural-language-inference
+  evidence: semantic support employs a natural language inference model
+- from: hallucination-rate
+  type: IS_EXAMPLE_OF
+  to: rag-generation-evaluation
+  evidence: Hallucination rate is defined as the ratio of unsupported claims to the total claims examined

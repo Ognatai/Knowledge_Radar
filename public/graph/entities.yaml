@@ -2336,3 +2336,17 @@ entities:
   type: Method
   name_en: Claim-level grounding check
   name_de: Grounding-Prüfung auf Aussageebene
+- id: factscore
+  type: Method
+  name_en: FActScore
+  name_de: FActScore
+  aliases:
+  - FACTSCORE
+- id: citation-verification
+  type: Method
+  name_en: Citation correctness verification
+  name_de: Prüfung der Zitatkorrektheit
+- id: hallucination-rate
+  type: Method
+  name_en: Hallucination rate
+  name_de: Halluzinationsrate
