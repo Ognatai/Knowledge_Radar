@@ -1476,3 +1476,25 @@ entities:
   type: Concept
   name_en: Fairness gerrymandering
   name_de: Fairness Gerrymandering
+- id: target-encoding
+  type: Method
+  name_en: Target encoding
+  name_de: Target Encoding
+- id: fourier-terms
+  type: Method
+  name_en: Fourier terms (seasonal features)
+  name_de: Fourier-Terme (saisonale Merkmale)
+- id: feature-selection
+  type: Method
+  name_en: Feature selection
+  name_de: Feature Selection
+- id: lasso
+  type: Method
+  name_en: Lasso
+  name_de: Lasso
+- id: data-leakage
+  type: Concept
+  name_en: Data leakage
+  name_de: Data Leakage
+  aliases:
+  - leakage

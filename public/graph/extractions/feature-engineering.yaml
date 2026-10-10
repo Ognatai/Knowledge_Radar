@@ -1,0 +1,30 @@
+version: 1
+note_sha256: 7fdb039f921fa14b12872f164e30705a032551c1a3177e22fa62fd0cb8285e3f
+extracted_by: qwen3:30b-a3b, reviewed by claude
+discusses:
+- target-encoding
+- fourier-terms
+- feature-selection
+- lasso
+- data-leakage
+- ml-preprocessing
+- time-series-analysis
+- regularization-and-hyperparameters
+- classical-machine-learning
+relations:
+- from: target-encoding
+  type: IS_EXAMPLE_OF
+  to: feature-engineering
+  evidence: categorical features encoded, for example by target encoding
+- from: fourier-terms
+  type: IS_EXAMPLE_OF
+  to: feature-engineering
+  evidence: useful predictors include a trend, seasonal dummy variables and Fourier terms
+- from: feature-selection
+  type: IS_EXAMPLE_OF
+  to: feature-engineering
+  evidence: seasonal patterns represented explicitly (Hyndman & Athanasopoulos, 2021), and relevant features selected
+- from: lasso
+  type: IS_EXAMPLE_OF
+  to: feature-selection
+  evidence: embedded methods that select during training, such as the lasso
