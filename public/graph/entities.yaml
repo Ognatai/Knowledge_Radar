@@ -2232,3 +2232,39 @@ entities:
   name_de: AWQ (Activation-aware Weight Quantization)
   aliases:
   - AWQ
+- id: fixed-size-chunking
+  type: Method
+  name_en: Fixed-size chunking
+  name_de: Chunking mit fester Größe
+- id: semantic-chunking
+  type: Method
+  name_en: Semantic chunking
+  name_de: Semantisches Chunking
+- id: structure-based-chunking
+  type: Method
+  name_en: Structure-based chunking
+  name_de: Strukturbasiertes Chunking
+- id: proposition-indexing
+  type: Method
+  name_en: Proposition indexing
+  name_de: Indexierung nach Propositionen
+- id: late-chunking
+  type: Method
+  name_en: Late chunking
+  name_de: Late Chunking
+- id: context-enrichment
+  type: Method
+  name_en: Context enrichment of chunks
+  name_de: Kontextanreicherung von Chunks
+- id: chunk-overlap
+  type: Method
+  name_en: Chunk overlap
+  name_de: Überlappung von Chunks
+- id: parent-child-retrieval
+  type: Method
+  name_en: Parent-child retrieval
+  name_de: Parent-Child-Retrieval
+- id: lost-in-the-middle
+  type: Concept
+  name_en: Lost in the middle
+  name_de: Lost in the Middle

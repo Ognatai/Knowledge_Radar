@@ -1,0 +1,48 @@
+version: 1
+note_sha256: 88476a4eaa248fed786fe78f7750b525a0b1968aff08196b340f32006b1313c9
+extracted_by: claude
+discusses:
+- fixed-size-chunking
+- semantic-chunking
+- structure-based-chunking
+- proposition-indexing
+- late-chunking
+- context-enrichment
+- chunk-overlap
+- parent-child-retrieval
+- lost-in-the-middle
+- embeddings
+- vector-databases
+relations:
+- from: fixed-size-chunking
+  type: IS_EXAMPLE_OF
+  to: rag-chunking
+  evidence: Fixed-size chunking splits input text into uniform-length segments
+- from: semantic-chunking
+  type: IS_EXAMPLE_OF
+  to: rag-chunking
+  evidence: Semantic chunking places chunk boundaries where the content changes instead of after a fixed length
+- from: semantic-chunking
+  type: BASED_ON
+  to: embeddings
+  evidence: A common implementation embeds consecutive sentences and starts a new chunk where the similarity between neighbouring sentences drops below a threshold
+- from: structure-based-chunking
+  type: IS_EXAMPLE_OF
+  to: semantic-chunking
+  evidence: structure-based variants split along headings, paragraphs or, in legal texts, articles
+- from: proposition-indexing
+  type: IS_EXAMPLE_OF
+  to: rag-chunking
+  evidence: Proposition-level indexing (Chen et al., 2023) moved the retrieval unit down to single factoids
+- from: late-chunking
+  type: IS_EXAMPLE_OF
+  to: rag-chunking
+  evidence: Late chunking embeds the entire document as a single sequence through a long-context embedding model
+- from: late-chunking
+  type: BASED_ON
+  to: embeddings
+  evidence: Late chunking embeds the entire document as a single sequence through a long-context embedding model, generating token-level embeddings before applying chunking operations
+- from: parent-child-retrieval
+  type: BASED_ON
+  to: vector-databases
+  evidence: Children (e.g., sentences or short paragraphs) are embedded and indexed in a vector database for precise retrieval
