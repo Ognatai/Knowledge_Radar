@@ -24,6 +24,35 @@ promotions_per_week: 3
 huggingface_daily_papers:
   top_per_day: 5
 
+# Semantic Scholar: the arXiv search phrases below, restricted to these venues
+# (names as Semantic Scholar spells them); papers are peer_reviewed. It indexes
+# conference papers late, so it looks back further than the weekly run.
+semantic_scholar:
+  lookback_days: 120
+  max_results_per_query: 25
+  venues:
+    - Neural Information Processing Systems
+    - International Conference on Learning Representations
+    - International Conference on Machine Learning
+    - Annual Meeting of the Association for Computational Linguistics
+    - Conference on Empirical Methods in Natural Language Processing
+    - North American Chapter of the Association for Computational Linguistics
+    - Transactions of the Association for Computational Linguistics
+    - Journal of machine learning research
+    - Trans. Mach. Learn. Res.
+    - Annual International ACM SIGIR Conference on Research and Development in Information Retrieval
+    - European Conference on Information Retrieval
+    - Conference on Fairness, Accountability and Transparency
+    - AAAI Conference on Artificial Intelligence
+    - International Joint Conference on Artificial Intelligence
+    - The Web Conference
+    - Knowledge Discovery and Data Mining
+    - International Conference on Information and Knowledge Management
+    - Nature Machine Intelligence
+    - Semantic Web
+    - Journal of Web Semantics
+    - Artificial Intelligence and Law
+
 arxiv:
   # Each phrase is searched in title or abstract, within these categories.
   categories: [cs.CL, cs.AI, cs.LG, cs.IR, cs.CY, cs.CR, cs.SE]

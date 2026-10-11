@@ -1,4 +1,4 @@
-"""Run the source agents: fetch arXiv and the curated feeds, keep what is new.
+"""Run the source agents: fetch Semantic Scholar, arXiv and the curated feeds, keep what is new.
 
     python -m app.agents.monitoring.run_sources            # findings of the last 7 days
     python -m app.agents.monitoring.run_sources --days 14
@@ -17,7 +17,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 
-from app.agents.monitoring import feeds
+from app.agents.monitoring import feeds, semantic_scholar
 from app.agents.monitoring.config import ConfigError, FeedConfig, SourcesConfig, load_sources_config
 from app.agents.monitoring.findings import Finding, SeenStore, write_run
 
@@ -53,42 +53,55 @@ def collect_findings(
     fetch_arxiv: Callable[[feeds.ArxivQuery], list[Finding]] = feeds.fetch_arxiv,
     fetch_feed: Callable[[FeedConfig], list[Finding]] = feeds.fetch_feed,
     fetch_daily_papers: Callable[[date, int], list[Finding]] = feeds.fetch_daily_papers,
+    fetch_scholar: Callable[[semantic_scholar.ScholarQuery], list[Finding]] = semantic_scholar.fetch_papers,
 ) -> CollectResult:
     """New findings published since `since`. Items without a date count as new,
-    except on the first fetch of their source (see `CollectResult.baseline`)."""
-    # (source, findings, include_keywords, exclude_keywords)
-    batches: list[tuple[str, list[Finding], list[str], list[str]]] = []
+    except on the first fetch of their source (see `CollectResult.baseline`).
+    Semantic Scholar looks back further (`lookback_days`), since it indexes late;
+    it comes first, so that a paper found there and on arXiv counts as peer-reviewed."""
+    today = today or date.today()
+    # (source, findings, include_keywords, exclude_keywords, earliest publication date)
+    batches: list[tuple[str, list[Finding], list[str], list[str], date]] = []
     errors: list[str] = []
+    scholar = config.semantic_scholar
+    if scholar.venues:
+        scholar_since = min(since, today - timedelta(days=scholar.lookback_days))
+        for phrase in config.arxiv.queries:
+            query = semantic_scholar.ScholarQuery(phrase, scholar.venues, scholar_since, scholar.max_results_per_query)
+            try:
+                batches.append((semantic_scholar.SOURCE_NAME, fetch_scholar(query), [], [], scholar_since))
+            except Exception as exc:
+                errors.append(f"Semantic Scholar ({phrase}): {exc}")
     for phrase in config.arxiv.queries:
         query = feeds.ArxivQuery(phrase, config.arxiv.categories, config.arxiv.max_results_per_query)
         try:
-            batches.append(("arXiv", fetch_arxiv(query), [], []))
+            batches.append(("arXiv", fetch_arxiv(query), [], [], since))
         except Exception as exc:  # network and parse errors of one source must not stop the run
             errors.append(f"arXiv ({phrase}): {exc}")
     if config.daily_papers_top_per_day:
-        day, last = since, today or date.today()
+        day, last = since, today
         while day <= last:
             try:
-                batches.append(("Hugging Face Daily Papers", fetch_daily_papers(day, config.daily_papers_top_per_day), [], []))
+                batches.append(("Hugging Face Daily Papers", fetch_daily_papers(day, config.daily_papers_top_per_day), [], [], since))
             except Exception as exc:
                 errors.append(f"Hugging Face Daily Papers ({day}): {exc}")
             day += timedelta(days=1)
     for feed in config.rss:
         try:
-            batches.append((feed.name, fetch_feed(feed), feed.include_keywords, feed.exclude_keywords))
+            batches.append((feed.name, fetch_feed(feed), feed.include_keywords, feed.exclude_keywords, since))
         except Exception as exc:
             errors.append(f"{feed.name}: {exc}")
 
     findings: dict[str, Finding] = {}
     baseline: dict[str, Finding] = {}
-    for source, batch, include, exclude in batches:
+    for source, batch, include, exclude, earliest in batches:
         for finding in batch:
             if finding.id in findings or finding.id in baseline or seen.contains(finding.id):
                 continue
             if finding.published is None and not seen.knows_source(source):
                 baseline[finding.id] = finding
                 continue
-            if finding.published is not None and finding.published < since:
+            if finding.published is not None and finding.published < earliest:
                 continue
             if (not include or _matches_any(finding, include)) and not _matches_any(finding, exclude):
                 findings[finding.id] = finding

@@ -1,4 +1,4 @@
-"""The curated source list `sources.yaml`: arXiv search phrases and RSS feeds."""
+"""The curated source list `sources.yaml`: arXiv search phrases, Semantic Scholar venues and RSS feeds."""
 
 from __future__ import annotations
 
@@ -26,6 +26,14 @@ class ArxivConfig:
 
 
 @dataclass(frozen=True)
+class SemanticScholarConfig:
+    # Venue names as Semantic Scholar spells them; empty disables the source.
+    venues: list[str] = field(default_factory=list)
+    lookback_days: int = 60
+    max_results_per_query: int = 25
+
+
+@dataclass(frozen=True)
 class FeedConfig:
     name: str
     url: str
@@ -49,6 +57,7 @@ class SourcesConfig:
     daily_papers_top_per_day: int = 0
     # Registry entities promoted to a note of their own, within max_proposals_per_week.
     promotions_per_week: int = 0
+    semantic_scholar: SemanticScholarConfig = field(default_factory=SemanticScholarConfig)
 
 
 def _choice(value: object, allowed: frozenset[str], key: str, where: str, optional: bool = False) -> str | None:
@@ -82,6 +91,7 @@ def load_sources_config(path: Path = SOURCES_PATH) -> SourcesConfig:
         max_results_per_query=int(arxiv_raw.get("max_results_per_query", 25)),
     )
 
+    scholar_raw = raw.get("semantic_scholar") or {}
     feeds: list[FeedConfig] = []
     for index, entry in enumerate(raw.get("rss") or []):
         where = f"{path}: rss[{index}]"
@@ -108,4 +118,9 @@ def load_sources_config(path: Path = SOURCES_PATH) -> SourcesConfig:
         rss=feeds,
         daily_papers_top_per_day=int((raw.get("huggingface_daily_papers") or {}).get("top_per_day", 0)),
         promotions_per_week=int(raw.get("promotions_per_week", 0)),
+        semantic_scholar=SemanticScholarConfig(
+            venues=_strings(scholar_raw.get("venues"), "semantic_scholar.venues", str(path)),
+            lookback_days=int(scholar_raw.get("lookback_days", 60)),
+            max_results_per_query=int(scholar_raw.get("max_results_per_query", 25)),
+        ),
     )
