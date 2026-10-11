@@ -19,11 +19,14 @@ $userId = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 $escape = { param($value) [System.Security.SecurityElement]::Escape($value) }
 $xml = $template.Replace("{{REPO_ROOT}}", (& $escape $repoRoot)).Replace("{{USER_ID}}", (& $escape $userId))
 [xml]$xml | Out-Null  # fail early on malformed XML
+# The template declares UTF-8, but Register-ScheduledTask receives a .NET string
+# (UTF-16) and rejects the declaration ("unable to switch the encoding").
+$xml = $xml -replace '^\s*<\?xml[^>]*\?>\s*', ''
 
 if ($DryRun) {
     $xml
     return
 }
 
-Register-ScheduledTask -TaskPath "\Knowledge Radar\" -TaskName "Weekly monitoring" -Xml $xml -Force | Out-Null
+Register-ScheduledTask -TaskPath "\Knowledge Radar\" -TaskName "Weekly monitoring" -Xml $xml -Force -ErrorAction Stop | Out-Null
 Write-Host "Registered '\Knowledge Radar\Weekly monitoring' for $userId (repository: $repoRoot)."
