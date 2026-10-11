@@ -97,6 +97,8 @@ function App() {
   const language = (i18n.language === "de" ? "de" : "en") as Language;
   const [data, setData] = useState<SiteData | null>(null);
   const [query, setQuery] = useState("");
+  // On the graph page, the search box filters the graph instead of searching notes.
+  const [graphFilter, setGraphFilter] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [screen, setScreen] = useState<Screen>(readScreen);
@@ -161,6 +163,13 @@ function App() {
   function search(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const trimmed = query.trim();
+    if (screen.kind === "graph") {
+      setError(null);
+      setGraphFilter(trimmed);
+      // The graph sits below the introduction and the news; bring it into view.
+      requestAnimationFrame(() => document.getElementById("graph-title")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      return;
+    }
     if (!trimmed) {
       setError(t("enterSearchTerm"));
       return;
@@ -245,7 +254,7 @@ function App() {
           <input
             id="global-search"
             onChange={(event) => setQuery(event.target.value)}
-            placeholder={t("searchPlaceholder")}
+            placeholder={t(screen.kind === "graph" ? "graphSearchPlaceholder" : "searchPlaceholder")}
             value={query}
           />
           <button aria-label={t("search")} type="submit">⌕</button>
@@ -309,7 +318,17 @@ function App() {
                 </div>
               </div>
               <Suspense fallback={<p className="muted">{t("loading")}</p>}>
-                <GraphView edges={data.graph.edges} language={language} nodes={data.graph.nodes} openNode={openNode} />
+                <GraphView
+                  clearFilter={() => {
+                    setGraphFilter("");
+                    setQuery("");
+                  }}
+                  edges={data.graph.edges}
+                  filter={graphFilter}
+                  language={language}
+                  nodes={data.graph.nodes}
+                  openNode={openNode}
+                />
               </Suspense>
             </section>
           </>
@@ -324,7 +343,16 @@ function App() {
           />
         )}
 
-        {data && (screen.kind === "search" || (screen.kind === "notes" && !data.areas?.length)) && (
+        {data && screen.kind === "search" && (data.areas?.length ?? 0) > 0 && (
+          <SearchResultsByArea
+            areas={data.areas ?? []}
+            language={language}
+            notes={searchHits}
+            openNote={(slug) => navigate({ kind: "note", slug })}
+          />
+        )}
+
+        {data && ((screen.kind === "search" || screen.kind === "notes") && !data.areas?.length) && (
           <NoteResults
             changePage={(page) => navigate({ ...screen, page })}
             language={language}
@@ -443,6 +471,55 @@ function NoteResults({ language, notes, openNote, page, changePage }: NoteResult
               <button disabled={current >= totalPages} onClick={() => changePage(current + 1)} type="button">{t("next")}</button>
             </nav>
           )}
+        </>
+      )}
+    </section>
+  );
+}
+
+interface SearchResultsByAreaProps {
+  areas: Area[];
+  language: Language;
+  notes: Note[];
+  openNote: (slug: string) => void;
+}
+
+/** Search hits grouped by their main area; areas keep their order, hits their rank. */
+function SearchResultsByArea({ areas, language, notes, openNote }: SearchResultsByAreaProps) {
+  const { t } = useTranslation();
+  const mainArea = new Map(areas.flatMap((area) => area.notes.map((slug) => [slug, area.id] as const)));
+  // The area of the best hit comes first and is open; the others follow by their best hit.
+  const groups = [
+    ...areas.map((area) => ({ id: area.id, name: areaName(area, language), hits: notes.filter((note) => mainArea.get(note.slug) === area.id) })),
+    { id: "other", name: t("otherArea"), hits: notes.filter((note) => !mainArea.has(note.slug)) },
+  ]
+    .filter((group) => group.hits.length > 0)
+    .sort((a, b) => notes.indexOf(a.hits[0]) - notes.indexOf(b.hits[0]));
+  return (
+    <section className="content-card" aria-label={t("headingSearch")}>
+      {notes.length === 0 ? (
+        <p className="muted" role="status" aria-live="polite">{t("noNotesFound")}</p>
+      ) : (
+        <>
+          <p className="results-count" role="status">{t("notesCount", { count: notes.length })}</p>
+          {groups.map((group, index) => (
+            <details className="area" key={group.id} open={index === 0 || groups.length <= 3}>
+              <summary>
+                <span className="area-name">{group.name}</span>
+                <span className="area-count">{group.hits.length}</span>
+              </summary>
+              <ul className="result-list area-notes">
+                {group.hits.map((note) => (
+                  <li key={note.slug}>
+                    <button className="result-card" onClick={() => openNote(note.slug)} type="button">
+                      <span className="note-type">{note.entity_type}</span>
+                      <span className="note-title">{noteTitle(note, language)}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
         </>
       )}
     </section>

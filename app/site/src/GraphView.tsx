@@ -45,6 +45,18 @@ interface GraphViewProps {
   edges: GraphEdge[];
   language: Language;
   openNode: (node: GraphNode) => void;
+  /** Show only nodes whose English or German name contains this text. */
+  filter?: string;
+  clearFilter?: () => void;
+}
+
+/** Whether a word of the node's English or German name starts with `text`, ignoring
+ * case: "Act" finds "EU AI Act" but not "Extraction". */
+export function nodeMatches(node: GraphNode, text: string): boolean {
+  const needle = text.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])${needle}`, "iu");
+  const names = node.kind === "note" ? [node.title_en, node.title_de] : [node.name_en, node.name_de];
+  return names.some((name) => pattern.test(name));
 }
 
 function escapeHtml(text: string): string {
@@ -56,7 +68,7 @@ function endpointId(endpoint: unknown): string {
   return typeof endpoint === "object" && endpoint !== null ? String((endpoint as { id: string }).id) : String(endpoint);
 }
 
-export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) {
+export function GraphView({ nodes, edges, language, openNode, filter, clearFilter }: GraphViewProps) {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const graphRef = useRef<ForceGraphMethods<RenderedNode, RenderedLink>>();
@@ -81,10 +93,12 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
 
   const visibleNodes = useMemo(
     () =>
-      nodes.filter((node) =>
-        node.kind === "note" ? showNotes : !hiddenTypes.has(node.entity_type),
+      nodes.filter(
+        (node) =>
+          (node.kind === "note" ? showNotes : !hiddenTypes.has(node.entity_type)) &&
+          (!filter || nodeMatches(node, filter)),
       ),
-    [hiddenTypes, nodes, showNotes],
+    [filter, hiddenTypes, nodes, showNotes],
   );
 
   const { graphData, neighbours, degree } = useMemo(() => {
@@ -106,12 +120,13 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
       // force-graph mutates the objects it receives, so it gets fresh copies.
       graphData: {
         nodes: visibleNodes
-          .filter((node) => showNotes || degree(node.id) > 0)
+          // With a search filter, every match is drawn, connected or not.
+          .filter((node) => showNotes || Boolean(filter) || degree(node.id) > 0)
           .map((node) => ({ ...node, label: nodeLabel(node, language) })),
         links: links.map((edge) => ({ ...edge })),
       },
     };
-  }, [edges, language, showNotes, visibleNodes]);
+  }, [edges, filter, language, showNotes, visibleNodes]);
 
   const hubs = useMemo(
     () =>
@@ -177,6 +192,14 @@ export function GraphView({ nodes, edges, language, openNode }: GraphViewProps) 
 
   return (
     <>
+      {filter && (
+        <p className="graph-filter" role="status">
+          {t("graphFilterActive", { count: visibleNodes.length, query: filter })}
+          {clearFilter && (
+            <button onClick={clearFilter} type="button">{t("graphFilterClear")}</button>
+          )}
+        </p>
+      )}
       <div className="graph-controls">
         <label className="toggle">
           <input checked={showNotes} onChange={(event) => setShowNotes(event.target.checked)} type="checkbox" />

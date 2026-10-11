@@ -46,6 +46,8 @@ a { color: var(--green); }
 .section-heading h2 { margin: 6px 0 0; color: var(--ink); font-size: clamp(22px, 2.5vw, 30px); }
 .section-heading .eyebrow { margin: 0; }
 .graph-caption { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 13px; }
+.graph-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 12px; padding: 10px 14px; border-radius: 8px; background: #edf4ef; font-weight: 600; }
+.graph-filter button { padding: 6px 10px; border: 1px solid #78a996; border-radius: 6px; color: #145f50; background: white; font-weight: 600; }
 .graph-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-bottom: 14px; }
 .graph-controls .toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; }
 .type-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
