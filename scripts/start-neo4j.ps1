@@ -45,7 +45,7 @@ try {
     # Docker reports progress on stderr; Windows PowerShell would treat that as an error.
     $ErrorActionPreference = "Continue"
     if ($Private) {
-        docker compose --project-directory $repository --profile private up -d $service
+        docker compose --project-directory $repository -f (Join-Path $repository "docker-compose.private.yml") up -d $service
     } else {
         docker compose --project-directory $repository up -d $service
     }

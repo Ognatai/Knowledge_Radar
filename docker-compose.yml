@@ -28,21 +28,6 @@ services:
       NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?Start Neo4j with scripts/start-neo4j.ps1 or set NEO4J_PASSWORD}
     volumes:
       - neo4j-data:/data
-  # Private local index: the private repository only, physically separate from the
-  # public index above (own container, volume, password and ports). Only the chat
-  # and /prep read it; the monitoring pipeline never connects to it. The "private"
-  # profile keeps `docker compose up` from starting it: scripts/start-neo4j.ps1 -Private.
-  neo4j-private:
-    image: neo4j:5.26.29-community
-    profiles: ["private"]
-    ports:
-      - "127.0.0.1:7475:7474"
-      - "127.0.0.1:7688:7687"
-    environment:
-      NEO4J_AUTH: neo4j/${NEO4J_PRIVATE_PASSWORD:?Start the private index with scripts/start-neo4j.ps1 -Private}
-    volumes:
-      - neo4j-private-data:/data
 
 volumes:
   neo4j-data:
-  neo4j-private-data:

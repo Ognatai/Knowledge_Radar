@@ -132,7 +132,22 @@ database; password in `KNOWLEDGE_RADAR_NEO4J_TEST_PASSWORD`).
 Copy `local-config.example.yaml` to `local-config.yaml` and set
 `private_repo_path` to the absolute path of the private checkout. It must be a
 sibling directory, never nested inside this repository; the app refuses a
-nested path.
+nested path. The private repository's README describes its layout and file
+formats.
+
+The private repository has its **own index**, physically separate from the
+public one: its own compose file, container, volume, password and ports. The
+monitoring pipeline never connects to it; only the topic names of knowledge
+gaps from interview retros reach the monitoring search
+(`app/backend/knowledge_radar/watchlist.py`).
+
+```powershell
+python -m keyring set knowledge-radar neo4j-private   # a different password
+scripts\start-neo4j.ps1 -Private                     # docker-compose.private.yml, bolt port 7688
+python -m app.agents.private_ingest                   # structural graph, no language model
+python -m app.agents.private_extract                  # free text and requirements, local Ollama only
+python -m app.backend.knowledge_radar.private_index   # build or update the private index
+```
 
 ## 9. Optional: weekly monitoring job (Windows)
 

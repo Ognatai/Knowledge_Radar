@@ -1,0 +1,19 @@
+# Private local index: the private repository only, physically separate from the
+# public index in docker-compose.yml (own compose project, container, volume,
+# password and ports). Only the chat and /prep read it; the monitoring pipeline
+# never connects to it. Start it with scripts/start-neo4j.ps1 -Private; the
+# password comes from the Windows Credential Manager entry neo4j-private.
+name: knowledge-radar-private
+services:
+  neo4j-private:
+    image: neo4j:5.26.29-community
+    ports:
+      - "127.0.0.1:7475:7474"
+      - "127.0.0.1:7688:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PRIVATE_PASSWORD:?Start the private index with scripts/start-neo4j.ps1 -Private}
+    volumes:
+      - neo4j-private-data:/data
+
+volumes:
+  neo4j-private-data:
