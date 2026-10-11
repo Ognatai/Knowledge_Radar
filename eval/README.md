@@ -112,6 +112,40 @@ reliability (the last arguably covered by the LLM-as-a-judge note). With
 reasoning, the topic check is not fully deterministic; a corrigendum passed it in
 one of two runs, so corrigenda are now excluded at the source.
 
+## Entity resolution
+
+`resolution/cases.yaml` holds 80 cases built from the entity registry
+(`python -m app.agents.evaluate_resolution --build`), split evenly into
+dev and test:
+
+- 40 `alias` cases: an alias of a known entity that exact name matching
+  cannot recover (abbreviations, translations, spellings, synonyms) is
+  withheld and presented as a new entity; the expected answer is that entity.
+- 40 `distinct` cases: an entity whose name is closest to another entity of
+  the same type (WEAT and WEFAT, BM25 and BM25F, EDPS and EDPB) is withheld;
+  the expected answer is no match.
+
+Precision is what matters: a wrong merge corrupts the graph silently, a
+missed one leaves a duplicate for the review.
+
+```powershell
+python -m app.agents.evaluate_resolution                 # dev split
+python -m app.agents.evaluate_resolution --split test    # held-out cases
+```
+
+`qwen3:30b-a3b` with reasoning, shortlist of 5 (commit d9cdfd9), 2026-10-11:
+
+| Split | Merges | Precision | Recall (aliases) | Shortlist recall | Distinct pairs kept apart |
+|---|---|---|---|---|---|
+| dev | 12 | 1.00 | 0.55 | 0.91 | 18 of 18 |
+| test | 13 | 1.00 | 0.72 | 0.89 | 22 of 22 |
+
+Most missed aliases are notes that bundle two acts ("CRD" in the CRR/CRD
+note, the EBA governance and outsourcing guidelines), which the model treats
+as parts, as instructed. The shortlist misses citation-style aliases
+("Directive 2008/114/EC") and synonyms without shared words ("Lloyd's
+algorithm" for k-means).
+
 ## Provenance
 
 `extracted_by` in each `public/graph/extractions/<slug>.yaml` records where an
