@@ -293,6 +293,14 @@ function App() {
               <h2 id="about-title">{t("aboutTitle")}</h2>
               <p>{t("aboutBody")}</p>
             </section>
+            <NewsSection
+              data={data}
+              language={language}
+              limit={6}
+              notesBySlug={notesBySlug}
+              openNote={(slug) => navigate({ kind: "note", slug })}
+              showAll={() => navigate({ kind: "notes", page: 1 })}
+            />
             <section className="content-card graph-section" aria-labelledby="graph-title">
               <div className="section-heading">
                 <div>
@@ -441,6 +449,52 @@ function NoteResults({ language, notes, openNote, page, changePage }: NoteResult
   );
 }
 
+interface NewsSectionProps {
+  data: SiteData;
+  language: Language;
+  notesBySlug: Map<string, Note>;
+  openNote: (slug: string) => void;
+  /** Show at most this many items, with a link to the full list in the notes view. */
+  limit?: number;
+  showAll?: () => void;
+}
+
+/** Notes added after the initial migration and dated update entries, newest first. */
+function NewsSection({ data, language, notesBySlug, openNote, limit, showAll }: NewsSectionProps) {
+  const { t } = useTranslation();
+  const all = (data.news ?? []).filter((item) => notesBySlug.has(item.slug));
+  const news = limit ? all.slice(0, limit) : all;
+  if (news.length === 0) return null;
+  const formatDate = (date: string) =>
+    new Date(`${date}T00:00:00`).toLocaleDateString(language === "en" ? "en-GB" : "de-DE", { day: "numeric", month: "short", year: "numeric" });
+  return (
+    <section className="content-card" aria-labelledby="news-title">
+      <h2 className="area-section-title" id="news-title">{t("newAndUpdated")}</h2>
+      <ul className="news-list">
+        {news.map((item) => {
+          const note = notesBySlug.get(item.slug)!;
+          const updateTitle = language === "en" ? item.title_en : item.title_de;
+          return (
+            <li key={`${item.kind}:${item.slug}:${item.date}`}>
+              <button className="news-item" onClick={() => openNote(item.slug)} type="button">
+                <span className="news-meta">
+                  <span className={`news-badge news-badge-${item.kind}`}>{t(item.kind === "new" ? "newNote" : "updatedNote")}</span>
+                  <time dateTime={item.date}>{formatDate(item.date)}</time>
+                </span>
+                <span className="note-title">{noteTitle(note, language)}</span>
+                {item.kind === "update" && updateTitle && <span className="news-detail">{updateTitle}</span>}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      {showAll && all.length > news.length && (
+        <button className="news-more" onClick={showAll} type="button">{t("allNewAndUpdated", { count: all.length })}</button>
+      )}
+    </section>
+  );
+}
+
 interface NoteAreasProps {
   data: SiteData;
   language: Language;
@@ -452,36 +506,10 @@ interface NoteAreasProps {
 function NoteAreas({ data, language, notesBySlug, openNote }: NoteAreasProps) {
   const { t } = useTranslation();
   const areas = data.areas ?? [];
-  const news = (data.news ?? []).filter((item) => notesBySlug.has(item.slug));
   const mainArea = new Map(areas.flatMap((area) => area.notes.map((slug) => [slug, area] as const)));
-  const formatDate = (date: string) =>
-    new Date(`${date}T00:00:00`).toLocaleDateString(language === "en" ? "en-GB" : "de-DE", { day: "numeric", month: "short", year: "numeric" });
-
   return (
     <>
-      {news.length > 0 && (
-        <section className="content-card" aria-labelledby="news-title">
-          <h2 className="area-section-title" id="news-title">{t("newAndUpdated")}</h2>
-          <ul className="news-list">
-            {news.map((item) => {
-              const note = notesBySlug.get(item.slug)!;
-              const updateTitle = language === "en" ? item.title_en : item.title_de;
-              return (
-                <li key={`${item.kind}:${item.slug}:${item.date}`}>
-                  <button className="news-item" onClick={() => openNote(item.slug)} type="button">
-                    <span className="news-meta">
-                      <span className={`news-badge news-badge-${item.kind}`}>{t(item.kind === "new" ? "newNote" : "updatedNote")}</span>
-                      <time dateTime={item.date}>{formatDate(item.date)}</time>
-                    </span>
-                    <span className="note-title">{noteTitle(note, language)}</span>
-                    {item.kind === "update" && updateTitle && <span className="news-detail">{updateTitle}</span>}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      )}
+      <NewsSection data={data} language={language} notesBySlug={notesBySlug} openNote={openNote} />
 
       <section className="content-card" aria-labelledby="areas-title">
         <h2 className="area-section-title" id="areas-title">{t("byArea")}</h2>

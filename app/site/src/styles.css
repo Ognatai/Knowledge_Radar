@@ -74,6 +74,7 @@ a { color: var(--green); }
 .news-badge { padding: 2px 8px; border-radius: 999px; font: 600 10px Consolas, "Courier New", monospace; letter-spacing: .08em; text-transform: uppercase; }
 .news-badge-new { color: #0b4639; background: #d9ece3; }
 .news-badge-update { color: #6b5414; background: #f4ead0; }
+.news-more { margin-top: 14px; padding: 8px 4px; border: 0; color: #145f50; background: none; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .news-detail { color: var(--muted); font-size: 13px; line-height: 1.5; }
 .area { border-top: 1px solid var(--line); }
 .area:last-of-type { border-bottom: 1px solid var(--line); }
