@@ -50,7 +50,7 @@ Predicted probabilities do not always match true probabilities. Niculescu-Mizil 
 
 #### Origin and variants
 
-Fisher (1936) introduced the linear discriminant and Cox (1958) the regression analysis of binary outcomes. Ng & Jordan (2001) compared generative and discriminative classifiers, and Niculescu-Mizil & Caruana (2005) studied the calibration of predicted probabilities. Tree ensembles, support vector machines and neural networks are further classifiers ([[ensemble-methods|Ensemble Methods]], [[support-vector-machines|Support Vector Machines]]).
+Fisher (1936) introduced the linear discriminant and Cox (1958) the regression analysis of binary outcomes. Ng & Jordan (2001) compared generative and discriminative classifiers, and Niculescu-Mizil & Caruana (2005) studied the calibration of predicted probabilities. Tree ensembles, support vector machines and [[neural-networks|neural networks]] are further classifiers ([[ensemble-methods|Ensemble Methods]], [[support-vector-machines|Support Vector Machines]]).
 
 ### When to use it
 
@@ -81,7 +81,7 @@ Fisher (1936) introduced the linear discriminant and Cox (1958) the regression a
 
 ### In practice
 
-Classifiers are compared with cross-validation on appropriate metrics ([[classification-metrics|Classification Metrics]], [[ml-preprocessing|ML Preprocessing]]). If predicted probabilities are used for decisions, their calibration is checked and, if needed, corrected with Platt scaling or isotonic regression on held-out data (Niculescu-Mizil & Caruana, 2005).
+Classifiers are compared with [[cross-validation|cross-validation]] on appropriate metrics ([[classification-metrics|Classification Metrics]], [[ml-preprocessing|ML Preprocessing]]). If predicted probabilities are used for decisions, their calibration is checked and, if needed, corrected with Platt scaling or isotonic regression on held-out data (Niculescu-Mizil & Caruana, 2005).
 
 ### Key takeaway
 
@@ -131,7 +131,7 @@ Fisher (1936) führte die lineare Diskriminanzfunktion ein, eine Linearkombinati
 
 #### 4. Kalibrierte Wahrscheinlichkeiten
 
-Vorhergesagte Wahrscheinlichkeiten stimmen nicht immer mit den tatsächlichen überein. Niculescu-Mizil & Caruana (2005) zeigten, dass Boosted Trees und Stumps die Wahrscheinlichkeiten von 0 und 1 wegdrängen, Naive Bayes sie zu 0 und 1 hindrängt und neuronale Netze sowie Bagged Trees gut kalibriert sind. Platt Scaling und isotone Regression korrigieren diese Verzerrungen; nach der Kalibrierung lieferten Boosted Trees, Random Forests und SVMs die besten Wahrscheinlichkeiten.
+Vorhergesagte Wahrscheinlichkeiten stimmen nicht immer mit den tatsächlichen überein. Niculescu-Mizil & Caruana (2005) zeigten, dass Boosted Trees und Stumps die Wahrscheinlichkeiten von 0 und 1 wegdrängen, Naive Bayes sie zu 0 und 1 hindrängt und [[neural-networks|neuronale Netze]] sowie Bagged Trees gut kalibriert sind. Platt Scaling und isotone Regression korrigieren diese Verzerrungen; nach der Kalibrierung lieferten Boosted Trees, Random Forests und SVMs die besten Wahrscheinlichkeiten.
 
 #### Ursprung und Varianten
 
@@ -166,7 +166,7 @@ Fisher (1936) führte die lineare Diskriminanzfunktion ein, Cox (1958) die Regre
 
 ### In der Praxis
 
-Klassifikatoren werden per Kreuzvalidierung mit geeigneten Metriken verglichen ([[classification-metrics|Klassifikationsmetriken]], [[ml-preprocessing|Preprocessing für Machine Learning]]). Werden vorhergesagte Wahrscheinlichkeiten für Entscheidungen genutzt, wird ihre Kalibrierung geprüft und bei Bedarf mit Platt Scaling oder isotoner Regression auf zurückgehaltenen Daten korrigiert (Niculescu-Mizil & Caruana, 2005).
+Klassifikatoren werden per [[cross-validation|Kreuzvalidierung]] mit geeigneten Metriken verglichen ([[classification-metrics|Klassifikationsmetriken]], [[ml-preprocessing|Preprocessing für Machine Learning]]). Werden vorhergesagte Wahrscheinlichkeiten für Entscheidungen genutzt, wird ihre Kalibrierung geprüft und bei Bedarf mit Platt Scaling oder isotoner Regression auf zurückgehaltenen Daten korrigiert (Niculescu-Mizil & Caruana, 2005).
 
 ### Merksatz
 

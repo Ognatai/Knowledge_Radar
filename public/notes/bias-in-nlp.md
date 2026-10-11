@@ -51,7 +51,7 @@ Caliskan et al. (2016) showed that standard machine learning on ordinary web tex
 
 #### 3. Stereotypes in pretrained language models
 
-StereoSet (Nadeem et al., 2020) is a large-scale natural dataset in English for measuring stereotypical bias in four domains: gender, profession, race and religion. The authors note that earlier work evaluated models on small sets of artificially constructed sentences. On StereoSet, popular pretrained models such as BERT, GPT-2, RoBERTa and XLNet showed strong stereotypical biases. A leaderboard with a hidden test set tracks the bias of future models.
+StereoSet (Nadeem et al., 2020) is a large-scale natural dataset in English for measuring stereotypical bias in four domains: gender, profession, race and religion. The authors note that earlier work evaluated models on small sets of artificially constructed sentences. On StereoSet, popular pretrained models such as [[bert|BERT]], GPT-2, RoBERTa and XLNet showed strong stereotypical biases. A leaderboard with a hidden test set tracks the bias of future models.
 
 #### 4. Bias in a downstream task
 
@@ -165,7 +165,7 @@ Caliskan et al. (2016) zeigten, dass gewöhnliches maschinelles Lernen auf allt�
 
 #### 3. Stereotype in vortrainierten Sprachmodellen
 
-StereoSet (Nadeem et al., 2020) ist ein großer englischsprachiger Datensatz aus natürlichen Sätzen, der stereotype Verzerrungen in vier Bereichen misst: Geschlecht, Beruf, Herkunft und Religion. Die Autoren weisen darauf hin, dass frühere Arbeiten Modelle mit kleinen Mengen künstlich konstruierter Sätze bewerteten. Auf StereoSet zeigten verbreitete vortrainierte Modelle wie BERT, GPT-2, RoBERTa und XLNet starke stereotype Verzerrungen. Ein Leaderboard mit verborgenem Testdatensatz verfolgt den Bias künftiger Modelle.
+StereoSet (Nadeem et al., 2020) ist ein großer englischsprachiger Datensatz aus natürlichen Sätzen, der stereotype Verzerrungen in vier Bereichen misst: Geschlecht, Beruf, Herkunft und Religion. Die Autoren weisen darauf hin, dass frühere Arbeiten Modelle mit kleinen Mengen künstlich konstruierter Sätze bewerteten. Auf StereoSet zeigten verbreitete vortrainierte Modelle wie [[bert|BERT]], GPT-2, RoBERTa und XLNet starke stereotype Verzerrungen. Ein Leaderboard mit verborgenem Testdatensatz verfolgt den Bias künftiger Modelle.
 
 #### 4. Bias in einer nachgelagerten Aufgabe
 

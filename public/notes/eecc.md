@@ -35,7 +35,7 @@ The European Electronic Communications Code (EECC) is the EU's framework for tel
 | Adopted | 11 December 2018 |
 | Entry into force | 20 December 2018 (Art. 126) |
 | Transposition deadline | 21 December 2020 (Art. 124) |
-| Amendments | Directive (EU) 2022/2555 (NIS2) deleted the security rules of Art. 40 and 41 |
+| Amendments | Directive (EU) 2022/2555 ([[nis2-directive\|NIS2]]) deleted the security rules of Art. 40 and 41 |
 | Competent authorities | national regulatory authorities and other competent authorities (Art. 5); Body of European Regulators for Electronic Communications (BEREC) |
 | Version summarised | consolidated text of 18 October 2024 |
 
@@ -1273,7 +1273,7 @@ Richtet die Richtlinie an die Mitgliedstaaten.
 | 20. Dezember 2018 | Inkrafttreten |
 | 21. Dezember 2020 | Umsetzungsfrist; die bisherigen Rahmenrichtlinien 2002/19/EG bis 2002/22/EG werden aufgehoben (Art. 125) |
 | 21. Juni 2022 | Frist für öffentliche Warnsysteme über Mobilfunkdienste (Art. 110) |
-| 18. Oktober 2024 | Art. 40 und 41 durch die NIS-2-Richtlinie gestrichen; die Netzsicherheit fällt nun unter NIS-2 |
+| 18. Oktober 2024 | Art. 40 und 41 durch die [[nis2-directive\|NIS-2-Richtlinie]] gestrichen; die Netzsicherheit fällt nun unter NIS-2 |
 | 21. Dezember 2025 | Überprüfung der Richtlinie durch die Kommission, danach alle fünf Jahre (Art. 122) |
 
 ### Durchsetzung und Sanktionen

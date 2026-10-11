@@ -191,7 +191,7 @@ Attention für neuronale maschinelle Übersetzung (Bahdanau et al., 2014) erweit
 | RNN-Encoder-Decoder | Ganze Eingabe in einem Vektor fester Länge (Sutskever et al., 2014) | Kurze Sequenzen, historische Baseline |
 | RNN mit Attention | Decoder achtet auf alle Encoder-Zustände (Bahdanau et al., 2014) | Übersetzung mit rekurrenten Modellen |
 | Transformer | Nur Attention, parallel über die Positionen (Vaswani et al., 2017) | Sprache und viele weitere Modalitäten |
-| Reiner Encoder (BERT) | Bidirektionaler Kontext, je Aufgabe feinabgestimmt (Devlin et al., 2018) | Klassifikation, NER, extraktive Fragebeantwortung |
+| Reiner Encoder (BERT) | Bidirektionaler Kontext, je Aufgabe feinabgestimmt (Devlin et al., 2018) | [[classification\|Klassifikation]], NER, extraktive Fragebeantwortung |
 | Reiner Decoder ([[gpt\|GPT]]) | Autoregressive Vorhersage des nächsten Tokens (Urchs, 2025) | Textgenerierung, Prompting |
 
 ### In der Praxis

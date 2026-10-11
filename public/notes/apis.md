@@ -65,7 +65,7 @@ Problem details carry machine-readable error information in the response body in
 
 - **RPC:** the client calls a remote method as if it were local. gRPC defines services with methods, parameters and return types, by default with Protocol Buffers as interface definition language and message format (gRPC docs); JSON-RPC is a light, stateless and transport-agnostic RPC protocol with JSON messages (JSON-RPC 2.0 specification), used for example by [[mcp-and-related-protocols|MCP and Related Protocols]].
 - **GraphQL:** a strongly typed query language in which the client specifies at field level which data it needs, instead of the server fixing the shape of the response per endpoint; the type system can be queried itself (GraphQL specification).
-- **Query endpoints for data:** knowledge graphs offer SPARQL endpoints, a query API over HTTP ([[sparql|SPARQL]]).
+- **Query endpoints for data:** [[knowledge-graphs|knowledge graphs]] offer SPARQL endpoints, a query API over HTTP ([[sparql|SPARQL]]).
 
 #### 6. Description and design guidelines
 
@@ -178,7 +178,7 @@ Problem Details transportieren maschinenlesbare Fehlerinformationen im Antwortk�
 
 - **RPC:** Der Client ruft eine entfernte Methode auf, als wäre sie lokal. gRPC definiert Dienste mit Methoden, Parametern und Rückgabetypen, standardmäßig mit Protocol Buffers als Schnittstellenbeschreibungssprache und Nachrichtenformat (gRPC docs); JSON-RPC ist ein schlankes, zustandsloses und transportunabhängiges RPC-Protokoll mit JSON-Nachrichten (JSON-RPC 2.0 specification), das etwa [[mcp-and-related-protocols|MCP und ähnliche Protokolle]] nutzen.
 - **GraphQL:** eine stark typisierte Abfragesprache, in der der Client auf Feldebene festlegt, welche Daten er braucht, statt dass der Server die Form der Antwort pro Endpunkt bestimmt; das Typsystem lässt sich selbst abfragen (GraphQL specification).
-- **Abfrage-Endpunkte für Daten:** Wissensgraphen bieten SPARQL-Endpunkte, eine Abfrage-API über HTTP ([[sparql|SPARQL]]).
+- **Abfrage-Endpunkte für Daten:** [[knowledge-graphs|Wissensgraphen]] bieten SPARQL-Endpunkte, eine Abfrage-API über HTTP ([[sparql|SPARQL]]).
 
 #### 6. Beschreibung und Designrichtlinien
 

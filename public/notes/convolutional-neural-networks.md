@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Convolutional neural networks (CNNs) process grid-like data such as images by sliding small learned filters over the input, so that the same weights detect a pattern wherever it occurs (Goodfellow et al., 2016). Stacked convolution and pooling layers learn features from edges to objects. CNNs outperformed all other methods on handwritten digit recognition (LeCun et al., 1998), won ImageNet in 2012 (Krizhevsky et al., 2012), and became much deeper with small filters (Simonyan & Zisserman, 2014) and residual connections (He et al., 2015).
+Convolutional [[neural-networks|neural networks]] (CNNs) process grid-like data such as images by sliding small learned filters over the input, so that the same weights detect a pattern wherever it occurs (Goodfellow et al., 2016). Stacked convolution and pooling layers learn features from edges to objects. CNNs outperformed all other methods on handwritten digit recognition (LeCun et al., 1998), won ImageNet in 2012 (Krizhevsky et al., 2012), and became much deeper with small filters (Simonyan & Zisserman, 2014) and residual connections (He et al., 2015).
 
 ### How it works
 

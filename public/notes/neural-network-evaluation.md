@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Evaluating a neural network means measuring how well it performs on data it was not trained on, with metrics that match the task: classification metrics, error measures such as MAE and RMSE for regression (Hyndman & Koehler, 2006), and overlap metrics such as BLEU for generated text (Papineni et al., 2002). Comparing training and validation error reveals underfitting and overfitting (Goodfellow et al., 2016), although large networks can fit even random labels and still generalise on real data (Zhang et al., 2016). Predicted probabilities of modern networks are often poorly calibrated (Guo et al., 2017).
+Evaluating a neural network means measuring how well it performs on data it was not trained on, with metrics that match the task: [[classification|classification]] metrics, error measures such as MAE and RMSE for regression (Hyndman & Koehler, 2006), and overlap metrics such as BLEU for generated text (Papineni et al., 2002). Comparing training and validation error reveals underfitting and overfitting (Goodfellow et al., 2016), although large networks can fit even random labels and still generalise on real data (Zhang et al., 2016). Predicted probabilities of modern networks are often poorly calibrated (Guo et al., 2017).
 
 ### How it works
 
@@ -47,7 +47,7 @@ For numerical predictions, scale-dependent measures such as the mean absolute er
 
 #### 3. Metrics for generated text
 
-For generated text, such as translations, outputs are compared with reference texts. BLEU computes clipped n-gram precision up to length four, combines it by a geometric mean and applies a brevity penalty; it correlates with human judgements at corpus level (Papineni et al., 2002). Further lexical and embedding-based metrics are covered in [[text-similarity-metrics|Text Similarity Metrics]], and the evaluation of large language models in [[llm-evaluation|LLM Evaluation]].
+For generated text, such as translations, outputs are compared with reference texts. BLEU computes clipped n-gram precision up to length four, combines it by a geometric mean and applies a brevity penalty; it correlates with human judgements at corpus level (Papineni et al., 2002). Further lexical and embedding-based metrics are covered in [[text-similarity-metrics|Text Similarity Metrics]], and the evaluation of [[large-language-models|large language models]] in [[llm-evaluation|LLM Evaluation]].
 
 #### 4. Underfitting and overfitting
 
@@ -59,7 +59,7 @@ Zhang et al. (2016) showed that state-of-the-art convolutional networks for imag
 
 #### 6. Calibration
 
-Calibration means that predicted probabilities reflect the true likelihood of being correct. Modern neural networks, unlike those from a decade ago, are poorly calibrated; depth, width, weight decay and batch normalisation influence this (Guo et al., 2017). On most datasets, temperature scaling, a single-parameter variant of Platt scaling, was surprisingly effective at correcting it ([[ml-preprocessing|ML Preprocessing]]).
+Calibration means that predicted probabilities reflect the true likelihood of being correct. Modern [[neural-networks|neural networks]], unlike those from a decade ago, are poorly calibrated; depth, width, weight decay and batch normalisation influence this (Guo et al., 2017). On most datasets, temperature scaling, a single-parameter variant of Platt scaling, was surprisingly effective at correcting it ([[ml-preprocessing|ML Preprocessing]]).
 
 #### Origin and variants
 
@@ -158,7 +158,7 @@ Zhang et al. (2016) zeigten, dass aktuelle konvolutionale Netze für Bildklassif
 
 #### 6. Kalibrierung
 
-Kalibrierung bedeutet, dass vorhergesagte Wahrscheinlichkeiten die tatsächliche Trefferwahrscheinlichkeit widerspiegeln. Moderne neuronale Netze sind anders als die von vor zehn Jahren schlecht kalibriert; Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen das (Guo et al., 2017). Auf den meisten Datensätzen korrigierte Temperature Scaling, eine Variante von Platt Scaling mit einem einzigen Parameter, dies überraschend wirksam ([[ml-preprocessing|Preprocessing für Machine Learning]]).
+Kalibrierung bedeutet, dass vorhergesagte Wahrscheinlichkeiten die tatsächliche Trefferwahrscheinlichkeit widerspiegeln. Moderne [[neural-networks|neuronale Netze]] sind anders als die von vor zehn Jahren schlecht kalibriert; Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen das (Guo et al., 2017). Auf den meisten Datensätzen korrigierte Temperature Scaling, eine Variante von Platt Scaling mit einem einzigen Parameter, dies überraschend wirksam ([[ml-preprocessing|Preprocessing für Machine Learning]]).
 
 #### Ursprung und Varianten
 

@@ -37,7 +37,7 @@ Several base models are trained, either independently on resampled data (paralle
 
 #### 1. Bagging
 
-Bagging (bootstrap aggregating) trains multiple versions of a predictor on bootstrap replicates of the training set, i.e. samples drawn with replacement, and aggregates them by averaging for regression or by plurality vote for classification (Breiman, 1996). It improves accuracy most when the base method is unstable, meaning that small changes in the training data change the predictor substantially, as with [[decision-trees|Decision Trees]].
+Bagging (bootstrap aggregating) trains multiple versions of a predictor on bootstrap replicates of the training set, i.e. samples drawn with replacement, and aggregates them by averaging for regression or by plurality vote for [[classification|classification]] (Breiman, 1996). It improves accuracy most when the base method is unstable, meaning that small changes in the training data change the predictor substantially, as with [[decision-trees|Decision Trees]].
 
 #### 2. Random forests
 
@@ -89,7 +89,7 @@ Stacking (Wolpert, 1992), bagging (Breiman, 1996) and AdaBoost (Freund & Schapir
 
 ### In practice
 
-Random forests work well with little tuning and provide out-of-bag error estimates (Breiman, 2001). Gradient boosting usually needs more tuning of learning rate, number and depth of trees, chosen with cross-validation ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]). For stacking, the base predictions used to train the higher-level model must come from data the base models were not trained on (Wolpert, 1992).
+Random forests work well with little tuning and provide out-of-bag error estimates (Breiman, 2001). Gradient boosting usually needs more tuning of learning rate, number and depth of trees, chosen with [[cross-validation|cross-validation]] ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]). For stacking, the base predictions used to train the higher-level model must come from data the base models were not trained on (Wolpert, 1992).
 
 ### Key takeaway
 
@@ -130,7 +130,7 @@ Mehrere Basismodelle werden trainiert, entweder unabhängig voneinander auf neu 
 
 #### 1. Bagging
 
-Bagging (Bootstrap Aggregating) trainiert mehrere Versionen eines Prädiktors auf Bootstrap-Replikaten der Trainingsmenge, also auf Stichproben mit Zurücklegen, und fasst sie bei Regression durch Mittelung und bei Klassifikation durch Mehrheitsentscheid zusammen (Breiman, 1996). Am meisten hilft es, wenn das Basisverfahren instabil ist, kleine Änderungen der Trainingsdaten den Prädiktor also stark verändern, wie bei [[decision-trees|Entscheidungsbäumen]].
+Bagging (Bootstrap Aggregating) trainiert mehrere Versionen eines Prädiktors auf Bootstrap-Replikaten der Trainingsmenge, also auf Stichproben mit Zurücklegen, und fasst sie bei Regression durch Mittelung und bei [[classification|Klassifikation]] durch Mehrheitsentscheid zusammen (Breiman, 1996). Am meisten hilft es, wenn das Basisverfahren instabil ist, kleine Änderungen der Trainingsdaten den Prädiktor also stark verändern, wie bei [[decision-trees|Entscheidungsbäumen]].
 
 #### 2. Random Forests
 
@@ -182,7 +182,7 @@ Stacking (Wolpert, 1992), Bagging (Breiman, 1996) und AdaBoost (Freund & Schapir
 
 ### In der Praxis
 
-Random Forests funktionieren mit wenig Tuning gut und liefern Out-of-Bag-Fehlerschätzungen (Breiman, 2001). Gradient Boosting braucht meist mehr Abstimmung von Lernrate, Anzahl und Tiefe der Bäume, die per Kreuzvalidierung gewählt werden ([[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]). Beim Stacking müssen die Basisvorhersagen, mit denen das übergeordnete Modell trainiert wird, aus Daten stammen, auf denen die Basismodelle nicht trainiert wurden (Wolpert, 1992).
+Random Forests funktionieren mit wenig Tuning gut und liefern Out-of-Bag-Fehlerschätzungen (Breiman, 2001). Gradient Boosting braucht meist mehr Abstimmung von Lernrate, Anzahl und Tiefe der Bäume, die per [[cross-validation|Kreuzvalidierung]] gewählt werden ([[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]). Beim Stacking müssen die Basisvorhersagen, mit denen das übergeordnete Modell trainiert wird, aus Daten stammen, auf denen die Basismodelle nicht trainiert wurden (Wolpert, 1992).
 
 ### Merksatz
 

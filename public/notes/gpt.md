@@ -36,7 +36,7 @@ A GPT model reads a sequence of tokens and outputs a probability distribution ov
 ```
 
 #### 1. Architecture
-GPT uses a multi-layer Transformer decoder: token and position embeddings, followed by blocks of masked multi-head self-attention and position-wise feed-forward layers, and a softmax over the vocabulary (Radford et al., 2018). The mask lets each position attend only to earlier positions, so the model sees left context only (Vaswani et al., 2017). This is the main difference from [[bert|BERT]], which conditions on left and right context in all layers (Devlin et al., 2018). GPT-1 had 12 layers with 768-dimensional states and 12 attention heads (Radford et al., 2018).
+GPT uses a multi-layer Transformer decoder: token and position [[embeddings|embeddings]], followed by blocks of masked multi-head self-attention and position-wise feed-forward layers, and a softmax over the vocabulary (Radford et al., 2018). The mask lets each position attend only to earlier positions, so the model sees left context only (Vaswani et al., 2017). This is the main difference from [[bert|BERT]], which conditions on left and right context in all layers (Devlin et al., 2018). GPT-1 had 12 layers with 768-dimensional states and 12 attention heads (Radford et al., 2018).
 
 #### 2. Generative pre-training
 The model is trained to maximise the likelihood of each token given the preceding tokens, a standard language modelling objective that needs no labels (Radford et al., 2018). GPT-1 was pre-trained on BooksCorpus, over 7,000 unpublished books; GPT-2 on WebText, about 8 million documents (40 GB of text) from outbound Reddit links with at least 3 karma (Radford et al., 2018; Radford et al., 2019). GPT-2 uses byte-level [[tokenization|byte pair encoding]] with a vocabulary of 50,257 tokens and a context of 1,024 tokens (Radford et al., 2019).
@@ -80,7 +80,7 @@ GPT-1 (Radford et al., 2018) combined generative pre-training of a Transformer w
 | Approach | How it differs | Suited for |
 |----------|---------------|------------|
 | GPT (decoder-only) | Left-to-right context, trained on next-token prediction; generates text (Radford et al., 2018) | Generation, prompting, assistants |
-| [[bert\|BERT]] (encoder-only) | Left and right context in all layers, masked language modelling; does not generate text (Devlin et al., 2018) | Classification, extraction, embeddings for search |
+| [[bert\|BERT]] (encoder-only) | Left and right context in all layers, masked language modelling; does not generate text (Devlin et al., 2018) | [[classification\|Classification]], extraction, embeddings for search |
 | Encoder-decoder Transformer | Encoder reads the input, decoder generates the output while attending to it (Vaswani et al., 2017) | Translation and other sequence-to-sequence tasks |
 | Instruction-tuned GPT (InstructGPT) | Additionally trained on demonstrations and human preference rankings (Ouyang et al., 2022) | Following instructions in dialogue |
 
@@ -163,7 +163,7 @@ GPT-1 (Radford et al., 2018) verband generatives Vortraining eines Transformers 
 | Ansatz | Unterschied | Geeignet für |
 |--------|-------------|--------------|
 | GPT (Decoder-only) | Kontext von links nach rechts, trainiert auf Next-Token-Prediction; erzeugt Text (Radford et al., 2018) | Generierung, Prompting, Assistenten |
-| [[bert\|BERT]] (Encoder-only) | Linker und rechter Kontext in allen Schichten, Masked Language Modelling; erzeugt keinen Text (Devlin et al., 2018) | Klassifikation, Extraktion, Embeddings für die Suche |
+| [[bert\|BERT]] (Encoder-only) | Linker und rechter Kontext in allen Schichten, Masked Language Modelling; erzeugt keinen Text (Devlin et al., 2018) | [[classification\|Klassifikation]], Extraktion, [[embeddings\|Embeddings]] für die Suche |
 | Encoder-Decoder-Transformer | Der Encoder liest die Eingabe, der Decoder erzeugt die Ausgabe mit Attention auf sie (Vaswani et al., 2017) | Übersetzung und andere Sequence-to-Sequence-Aufgaben |
 | Instruction-getuntes GPT (InstructGPT) | Zusätzlich auf Demonstrationen und menschlichen Präferenz-Rangfolgen trainiert (Ouyang et al., 2022) | Anweisungen im Dialog befolgen |
 

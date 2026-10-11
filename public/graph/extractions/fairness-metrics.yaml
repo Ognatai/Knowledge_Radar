@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 704d0977a3bc5f33b0360b8ba66af92dcda99117431272a9c62145c0a1715263
+note_sha256: 247e82849f37eb353940c4e3e34c30df435c04b47601770708488e7936c61b34
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - individual-fairness

@@ -52,7 +52,7 @@ Rudin (2018) argues that explaining black-box models in high-stakes decisions, f
 
 #### 3. Local surrogate models (LIME)
 
-LIME (Ribeiro et al., 2016) explains the prediction of any classifier by learning an interpretable model locally around that prediction. To give an overview of a model, it selects representative individual predictions and their explanations in a non-redundant way. The authors applied it to text and image classifiers, such as random forests and neural networks.
+LIME (Ribeiro et al., 2016) explains the prediction of any classifier by learning an interpretable model locally around that prediction. To give an overview of a model, it selects representative individual predictions and their explanations in a non-redundant way. The authors applied it to text and image classifiers, such as random forests and [[neural-networks|neural networks]].
 
 #### 4. Feature attributions (SHAP, Integrated Gradients)
 
@@ -158,7 +158,7 @@ Rudin (2018) argumentiert, dass das Erklären von Black-Box-Modellen bei folgenr
 
 #### 3. Lokale Surrogatmodelle (LIME)
 
-LIME (Ribeiro et al., 2016) erklärt die Vorhersage eines beliebigen Klassifikators, indem es lokal um diese Vorhersage ein interpretierbares Modell lernt. Für einen Überblick über ein Modell wählt es repräsentative Einzelvorhersagen samt Erklärungen ohne Redundanz aus. Die Autoren wandten es auf Text- und Bildklassifikatoren an, etwa Random Forests und neuronale Netze.
+LIME (Ribeiro et al., 2016) erklärt die Vorhersage eines beliebigen Klassifikators, indem es lokal um diese Vorhersage ein interpretierbares Modell lernt. Für einen Überblick über ein Modell wählt es repräsentative Einzelvorhersagen samt Erklärungen ohne Redundanz aus. Die Autoren wandten es auf Text- und Bildklassifikatoren an, etwa Random Forests und [[neural-networks|neuronale Netze]].
 
 #### 4. Merkmalsattributionen (SHAP, Integrated Gradients)
 

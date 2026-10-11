@@ -39,7 +39,7 @@ The training loop repeats four steps: compute predictions for a batch (forward p
 
 #### 1. Loss functions
 
-The loss measures how far predictions are from the targets and is chosen together with the output layer: cross-entropy for classification with a softmax output, mean squared error for regression (Goodfellow et al., 2016). Training minimises the average loss over the training data.
+The loss measures how far predictions are from the targets and is chosen together with the output layer: cross-entropy for [[classification|classification]] with a softmax output, mean squared error for regression (Goodfellow et al., 2016). Training minimises the average loss over the training data.
 
 #### 2. Back-propagation
 
@@ -136,7 +136,7 @@ Die Trainingsschleife wiederholt vier Schritte: Vorhersagen für einen Batch ber
 
 #### 1. Verlustfunktionen
 
-Die Verlustfunktion misst, wie weit die Vorhersagen von den Zielwerten entfernt sind, und wird zusammen mit der Ausgabeschicht gewählt: Kreuzentropie für Klassifikation mit Softmax-Ausgabe, mittlerer quadratischer Fehler für Regression (Goodfellow et al., 2016). Das Training minimiert den durchschnittlichen Verlust über die Trainingsdaten.
+Die Verlustfunktion misst, wie weit die Vorhersagen von den Zielwerten entfernt sind, und wird zusammen mit der Ausgabeschicht gewählt: Kreuzentropie für [[classification|Klassifikation]] mit Softmax-Ausgabe, mittlerer quadratischer Fehler für Regression (Goodfellow et al., 2016). Das Training minimiert den durchschnittlichen Verlust über die Trainingsdaten.
 
 #### 2. Backpropagation
 

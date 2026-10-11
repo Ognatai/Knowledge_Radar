@@ -87,7 +87,7 @@ Target encoding for high-cardinality categories (Micci-Barreca, 2001), the syste
 
 ### In practice
 
-Every feature is checked for whether it would be available at prediction time, and all fitted transformations live inside a pipeline that is refitted in each cross-validation fold (Kaufman et al., 2012; Pedregosa et al., 2011). In regulated settings, features derived from personal data must also respect data protection requirements ([[gdpr|GDPR]]).
+Every feature is checked for whether it would be available at prediction time, and all fitted transformations live inside a pipeline that is refitted in each [[cross-validation|cross-validation]] fold (Kaufman et al., 2012; Pedregosa et al., 2011). In regulated settings, features derived from personal data must also respect data protection requirements ([[gdpr|GDPR]]).
 
 ### Key takeaway
 

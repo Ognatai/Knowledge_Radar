@@ -17,7 +17,7 @@ sources:
 > **Note:** LLM-generated summary based on the listed sources; it may be incomplete, outdated or wrong.
 
 ### TL;DR
-Model compression makes trained neural networks smaller and faster so that they can run on devices with little memory or under strict latency requirements, ideally without a significant loss of accuracy (Cheng et al., 2017). The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation (Cheng et al., 2017); the idea goes back to compressing large ensembles of classifiers into one small, fast model (Buciluǎ et al., 2006).
+Model compression makes trained [[neural-networks|neural networks]] smaller and faster so that they can run on devices with little memory or under strict latency requirements, ideally without a significant loss of accuracy (Cheng et al., 2017). The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation (Cheng et al., 2017); the idea goes back to compressing large ensembles of classifiers into one small, fast model (Buciluǎ et al., 2006).
 
 ### How it works
 
@@ -85,7 +85,7 @@ Most trained networks contain many redundant parameters; pruning, quantization, 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Basis der angegebenen Quellen; sie kann unvollständig, veraltet oder fehlerhaft sein.
 
 ### TL;DR
-Model Compression macht trainierte neuronale Netze kleiner und schneller, damit sie auf Geräten mit wenig Speicher oder unter strengen Latenzanforderungen laufen können, idealerweise ohne nennenswerten Genauigkeitsverlust (Cheng et al., 2017). Die wichtigsten Verfahrensfamilien sind Pruning und Quantisierung, Low-Rank-Faktorisierung, kompakte Faltungsfilter und Knowledge Distillation (Cheng et al., 2017); die Idee geht darauf zurück, große Ensembles von Klassifikatoren zu einem kleinen, schnellen Modell zu verdichten (Buciluǎ et al., 2006).
+Model Compression macht trainierte [[neural-networks|neuronale Netze]] kleiner und schneller, damit sie auf Geräten mit wenig Speicher oder unter strengen Latenzanforderungen laufen können, idealerweise ohne nennenswerten Genauigkeitsverlust (Cheng et al., 2017). Die wichtigsten Verfahrensfamilien sind Pruning und Quantisierung, Low-Rank-Faktorisierung, kompakte Faltungsfilter und Knowledge Distillation (Cheng et al., 2017); die Idee geht darauf zurück, große Ensembles von Klassifikatoren zu einem kleinen, schnellen Modell zu verdichten (Buciluǎ et al., 2006).
 
 ### Funktionsweise
 

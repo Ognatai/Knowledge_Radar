@@ -51,7 +51,7 @@ The lasso minimises the residual sum of squares subject to the sum of the absolu
 
 #### 4. Dropout
 
-Dropout randomly drops units, together with their connections, from a neural network during training, which prevents units from co-adapting too much (Srivastava et al., 2014). At test time, a single network with scaled-down weights approximates the average of the many thinned networks seen during training. Dropout reduced overfitting and improved results on benchmarks in vision, speech recognition, document classification and computational biology ([[neural-network-training|Neural Network Training]]).
+Dropout randomly drops units, together with their connections, from a neural network during training, which prevents units from co-adapting too much (Srivastava et al., 2014). At test time, a single network with scaled-down weights approximates the average of the many thinned networks seen during training. Dropout reduced overfitting and improved results on benchmarks in vision, speech recognition, document [[classification|classification]] and computational biology ([[neural-network-training|Neural Network Training]]).
 
 #### 5. Early stopping
 
@@ -90,7 +90,7 @@ Ridge regression (Hoerl & Kennard, 1970) and the lasso (Tibshirani, 1996) come f
 |----------|----------------|------------|
 | L2 (ridge) | Shrinks all coefficients; none become zero (Hoerl & Kennard, 1970) | Correlated predictors |
 | L1 (lasso) | Sets some coefficients exactly to zero (Tibshirani, 1996) | Feature selection, sparse models |
-| Dropout | Randomly removes units during training (Srivastava et al., 2014) | Neural networks |
+| Dropout | Randomly removes units during training (Srivastava et al., 2014) | [[neural-networks\|Neural networks]] |
 | Early stopping | Stops when validation error rises (Prechelt, 1998) | Iteratively trained models |
 | Random search / Bayesian optimisation | Random or model-guided choice of trials (Bergstra & Bengio, 2012; Snoek et al., 2012) | Tuning several hyperparameters |
 
@@ -190,7 +190,7 @@ Ridge-Regression (Hoerl & Kennard, 1970) und Lasso (Tibshirani, 1996) stammen au
 |----------|----------------|------------|
 | L2 (Ridge) | Schrumpft alle Koeffizienten; keiner wird null (Hoerl & Kennard, 1970) | Korrelierte Prädiktoren |
 | L1 (Lasso) | Setzt manche Koeffizienten exakt auf null (Tibshirani, 1996) | Merkmalsauswahl, dünnbesetzte Modelle |
-| Dropout | Entfernt während des Trainings zufällig Einheiten (Srivastava et al., 2014) | Neuronale Netze |
+| Dropout | Entfernt während des Trainings zufällig Einheiten (Srivastava et al., 2014) | [[neural-networks\|Neuronale Netze]] |
 | Early Stopping | Bricht ab, wenn der Validierungsfehler steigt (Prechelt, 1998) | Iterativ trainierte Modelle |
 | Random Search / Bayes'sche Optimierung | Zufällige oder modellgesteuerte Wahl der Versuche (Bergstra & Bengio, 2012; Snoek et al., 2012) | Abstimmung mehrerer Hyperparameter |
 

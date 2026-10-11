@@ -45,7 +45,7 @@ BERTScore (Zhang et al., 2019) computes a similarity score for each token in the
 
 #### 4. Sentence embeddings with cosine similarity
 
-[[bert|BERT]] can score sentence pairs well, but both sentences have to be fed into the network together. Finding the most similar pair in a collection of 10,000 sentences therefore needs about 50 million inference computations, roughly 65 hours (Reimers & Gurevych, 2019). Sentence-BERT modifies BERT with siamese and triplet network structures so that each sentence is encoded once into an embedding, and embeddings are compared with cosine similarity. This reduces the search from 65 hours to about 5 seconds while maintaining BERT's accuracy, and makes semantic similarity search and clustering practical ([[vector-databases|Vector Databases]]).
+[[bert|BERT]] can score sentence pairs well, but both sentences have to be fed into the network together. Finding the most similar pair in a collection of 10,000 sentences therefore needs about 50 million inference computations, roughly 65 hours (Reimers & Gurevych, 2019). Sentence-BERT modifies BERT with siamese and triplet network structures so that each sentence is encoded once into an embedding, and embeddings are compared with cosine similarity. This reduces the search from 65 hours to about 5 seconds while maintaining BERT's accuracy, and makes semantic similarity search and [[clustering|clustering]] practical ([[vector-databases|Vector Databases]]).
 
 #### Origin and variants
 
@@ -81,7 +81,7 @@ BLEU (Papineni et al., 2002) was developed for machine translation and ROUGE (Li
 
 ### In practice
 
-Metric scores are usually reported as averages over a test set and are compared with human judgements before being trusted for a new task (Papineni et al., 2002; Zhang et al., 2019). For RAG answers and other generated text, lexical and embedding-based metrics are complemented by task-specific checks such as faithfulness to the retrieved context ([[rag-generation-evaluation|RAG: Generation Evaluation]]) or by LLM judges ([[llm-as-a-judge|LLM-as-a-Judge]]). For retrieval and clustering, sentence embeddings are computed once and stored, so that comparisons reduce to cheap cosine similarities (Reimers & Gurevych, 2019).
+Metric scores are usually reported as averages over a test set and are compared with human judgements before being trusted for a new task (Papineni et al., 2002; Zhang et al., 2019). For [[retrieval-augmented-generation|RAG]] answers and other generated text, lexical and embedding-based metrics are complemented by task-specific checks such as faithfulness to the retrieved context ([[rag-generation-evaluation|RAG: Generation Evaluation]]) or by LLM judges ([[llm-as-a-judge|LLM-as-a-Judge]]). For retrieval and clustering, sentence embeddings are computed once and stored, so that comparisons reduce to cheap cosine similarities (Reimers & Gurevych, 2019).
 
 ### Key takeaway
 
@@ -130,7 +130,7 @@ BERTScore (Zhang et al., 2019) berechnet für jedes Token im Kandidaten einen Ä
 
 #### 4. Satz-Embeddings mit Kosinusähnlichkeit
 
-[[bert|BERT]] kann Satzpaare gut bewerten, aber beide Sätze müssen gemeinsam in das Netz eingegeben werden. Das Finden des ähnlichsten Paares in einer Sammlung von 10.000 Sätzen benötigt daher etwa 50 Millionen Inferenzberechnungen, also ungefähr 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT erweitert BERT um siamesische und Triplet-Netzstrukturen, sodass jeder Satz nur einmal in ein Embedding kodiert wird und die Embeddings mit Kosinusähnlichkeit verglichen werden. Dies reduziert die Suche von 65 Stunden auf etwa 5 Sekunden, während die Genauigkeit von BERT beibehalten wird, und macht semantische Ähnlichkeitssuche und Clustering praktikabel ([[vector-databases|Vektordatenbanken]]).
+[[bert|BERT]] kann Satzpaare gut bewerten, aber beide Sätze müssen gemeinsam in das Netz eingegeben werden. Das Finden des ähnlichsten Paares in einer Sammlung von 10.000 Sätzen benötigt daher etwa 50 Millionen Inferenzberechnungen, also ungefähr 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT erweitert BERT um siamesische und Triplet-Netzstrukturen, sodass jeder Satz nur einmal in ein Embedding kodiert wird und die Embeddings mit Kosinusähnlichkeit verglichen werden. Dies reduziert die Suche von 65 Stunden auf etwa 5 Sekunden, während die Genauigkeit von BERT beibehalten wird, und macht semantische Ähnlichkeitssuche und [[clustering|Clustering]] praktikabel ([[vector-databases|Vektordatenbanken]]).
 
 #### Ursprung und Varianten
 

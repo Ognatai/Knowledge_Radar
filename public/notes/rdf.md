@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-RDF (Resource Description Framework) is the W3C data model for knowledge graphs: every statement is a triple of subject, predicate and object, and resources are named with globally unique IRIs, so data from different sources can be merged (W3C RDF 1.1 Concepts). RDF graphs are written in formats such as Turtle, JSON-LD or N-Triples (W3C Turtle; W3C JSON-LD 1.1; W3C RDF 1.1 Primer), described with vocabularies from RDF Schema and OWL (W3C RDF Schema 1.1; W3C OWL 2 Primer), and queried with SPARQL ([[sparql|SPARQL]]).
+RDF (Resource Description Framework) is the W3C data model for [[knowledge-graphs|knowledge graphs]]: every statement is a triple of subject, predicate and object, and resources are named with globally unique IRIs, so data from different sources can be merged (W3C RDF 1.1 Concepts). RDF graphs are written in formats such as Turtle, JSON-LD or N-Triples (W3C Turtle; W3C JSON-LD 1.1; W3C RDF 1.1 Primer), described with vocabularies from RDF Schema and OWL (W3C RDF Schema 1.1; W3C OWL 2 Primer), and queried with SPARQL ([[sparql|SPARQL]]).
 
 ### Core concepts
 
@@ -70,7 +70,7 @@ The same data in JSON-LD uses a @context that maps JSON keys to IRIs, with @id f
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
 | Turtle | Compact, human-readable triples (W3C Turtle) | Writing and reading RDF by hand |
-| JSON-LD | JSON with a context that maps keys to IRIs (W3C JSON-LD 1.1) | Web APIs and structured data on websites |
+| JSON-LD | JSON with a context that maps keys to IRIs (W3C JSON-LD 1.1) | Web [[apis\|APIs]] and structured data on websites |
 | N-Triples / N-Quads | One statement per line (W3C RDF 1.1 Primer) | Bulk loading and streaming |
 | Property graphs | Nodes and relationships with key-value properties ([[graph-databases|Graph Databases]]) | Database-internal graph applications |
 
@@ -97,7 +97,7 @@ RDF expresses knowledge as triples with global identifiers, which makes graphs f
 
 ### TL;DR
 
-RDF (Resource Description Framework) ist das W3C-Datenmodell für Wissensgraphen: Jede Aussage ist ein Tripel aus Subjekt, Prädikat und Objekt, und Ressourcen werden mit global eindeutigen IRIs benannt, sodass sich Daten aus verschiedenen Quellen zusammenführen lassen (W3C RDF 1.1 Concepts). RDF-Graphen werden in Formaten wie Turtle, JSON-LD oder N-Triples geschrieben (W3C Turtle; W3C JSON-LD 1.1; W3C RDF 1.1 Primer), mit Vokabularen aus RDF Schema und OWL beschrieben (W3C RDF Schema 1.1; W3C OWL 2 Primer) und mit SPARQL abgefragt ([[sparql|SPARQL]]).
+RDF (Resource Description Framework) ist das W3C-Datenmodell für [[knowledge-graphs|Wissensgraphen]]: Jede Aussage ist ein Tripel aus Subjekt, Prädikat und Objekt, und Ressourcen werden mit global eindeutigen IRIs benannt, sodass sich Daten aus verschiedenen Quellen zusammenführen lassen (W3C RDF 1.1 Concepts). RDF-Graphen werden in Formaten wie Turtle, JSON-LD oder N-Triples geschrieben (W3C Turtle; W3C JSON-LD 1.1; W3C RDF 1.1 Primer), mit Vokabularen aus RDF Schema und OWL beschrieben (W3C RDF Schema 1.1; W3C OWL 2 Primer) und mit SPARQL abgefragt ([[sparql|SPARQL]]).
 
 ### Kernkonzepte
 

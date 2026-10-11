@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5a88309578a3258b43e99a4fbf07bbe1204b3fc2792b5835376f01d0a4e8a5ae
+note_sha256: 3abf7c38e1a06d538b1ee9b6a22f4d73b09ba0d4e61acbf3f51461c85ed5084c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - tokenization

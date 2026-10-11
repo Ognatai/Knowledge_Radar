@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 76ba37893984a2a204011898eaffb1d45fdd90bd36a0f53a88bcb8585b17b734
+note_sha256: 1174cb5e4da3272facd3b661d848ca5b704df295e1db99e79dffb7a8e2b7ec3a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - gliner

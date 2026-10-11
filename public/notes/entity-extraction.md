@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Entity extraction, also called named entity recognition (NER), finds the spans in a text that name entities such as persons, locations and organisations and assigns each span a type (Tjong Kim Sang & De Meulder, 2003). Approaches have moved from hand-crafted features to neural sequence labelling (Lample et al., 2016), fine-tuned pretrained encoders (Devlin et al., 2018) and, more recently, extraction of arbitrary entity types with compact encoders or large language models (Zaratiana et al., 2023; Wang et al., 2023). Extracted entities are the building blocks of [[information-extraction|Information Extraction]] and [[knowledge-graphs|Knowledge Graphs]].
+Entity extraction, also called named entity recognition (NER), finds the spans in a text that name entities such as persons, locations and organisations and assigns each span a type (Tjong Kim Sang & De Meulder, 2003). Approaches have moved from hand-crafted features to neural sequence labelling (Lample et al., 2016), fine-tuned pretrained encoders (Devlin et al., 2018) and, more recently, extraction of arbitrary entity types with compact encoders or [[large-language-models|large language models]] (Zaratiana et al., 2023; Wang et al., 2023). Extracted entities are the building blocks of [[information-extraction|Information Extraction]] and [[knowledge-graphs|Knowledge Graphs]].
 
 ### How it works
 
@@ -47,7 +47,7 @@ Earlier NER systems relied heavily on hand-crafted features and domain-specific 
 
 #### 3. Fine-tuned pretrained encoders
 
-[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations on unlabeled text and is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. For NER this means that a classification layer on top of the pretrained encoder predicts an entity label for each token, and the whole model is trained on the annotated data. This pretrain-then-fine-tune pattern replaced task-specific architectures for many NLP tasks ([[natural-language-processing|Natural Language Processing]]).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations on unlabeled text and is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. For NER this means that a [[classification|classification]] layer on top of the pretrained encoder predicts an entity label for each token, and the whole model is trained on the annotated data. This pretrain-then-fine-tune pattern replaced task-specific architectures for many NLP tasks ([[natural-language-processing|Natural Language Processing]]).
 
 #### 4. Arbitrary entity types with a compact encoder
 
@@ -80,7 +80,7 @@ CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) set a common benchmark. Neural ar
 
 **Limitations**
 - Classical models only recognise the entity types they were trained on (Zaratiana et al., 2023).
-- Large language models are costly to run, especially via APIs, which makes them impractical in resource-limited scenarios (Zaratiana et al., 2023).
+- Large language models are costly to run, especially via [[apis|APIs]], which makes them impractical in resource-limited scenarios (Zaratiana et al., 2023).
 - LLMs tend to label inputs without entities over-confidently as entities and need extra verification (Wang et al., 2023).
 - NER does not link different mentions of the same person; that requires coreference resolution (Urchs, 2025).
 
@@ -179,7 +179,7 @@ CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) schuf einen gemeinsamen Benchmark
 
 **Einschränkungen**
 - Klassische Modelle erkennen nur die Entitätstypen, mit denen sie trainiert wurden (Zaratiana et al., 2023).
-- Große Sprachmodelle sind im Betrieb teuer, besonders über APIs, und daher in ressourcenbeschränkten Szenarien unpraktisch (Zaratiana et al., 2023).
+- Große Sprachmodelle sind im Betrieb teuer, besonders über [[apis|APIs]], und daher in ressourcenbeschränkten Szenarien unpraktisch (Zaratiana et al., 2023).
 - LLMs neigen dazu, Eingaben ohne Entitäten übermäßig selbstsicher als Entitäten zu labeln, und brauchen eine zusätzliche Prüfung (Wang et al., 2023).
 - NER verknüpft verschiedene Erwähnungen derselben Person nicht; dafür ist Koreferenzauflösung nötig (Urchs, 2025).
 

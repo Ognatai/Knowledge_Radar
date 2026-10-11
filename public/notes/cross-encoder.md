@@ -70,7 +70,7 @@ Humeau et al. (2019) compared the two common architectures for scoring pairs, cr
 | Approach | How it differs | Suited for |
 |----------|---------------|------------|
 | Cross-encoder | Query and text together, full attention over the pair; accurate, slow (Humeau et al., 2019) | Re-ranking a short candidate list |
-| Bi-encoder (e.g. Sentence-BERT) | Each text encoded separately, compared by cosine similarity; embeddings can be stored (Reimers & Gurevych, 2019) | First-stage retrieval, clustering, [[vector-databases\|vector databases]] |
+| Bi-encoder (e.g. Sentence-BERT) | Each text encoded separately, compared by cosine similarity; embeddings can be stored (Reimers & Gurevych, 2019) | First-stage retrieval, [[clustering\|clustering]], [[vector-databases\|vector databases]] |
 | Poly-encoder | Candidates encoded separately, input represented by several attention codes; between the two in speed and accuracy (Humeau et al., 2019) | Scoring many candidates with better accuracy than a bi-encoder |
 | Late interaction (ColBERT) | Token-level comparison of separately encoded query and document; competitive with BERT re-rankers, two orders of magnitude faster (Khattab & Zaharia, 2020) | Re-ranking or retrieval at scale |
 | [[bm25\|BM25]] | Lexical term matching, no model (Thakur et al., 2021) | Fast first stage |
@@ -145,7 +145,7 @@ Humeau et al. (2019) verglichen die beiden verbreiteten Architekturen zur Bewert
 | Ansatz | Unterschied | Geeignet für |
 |--------|-------------|--------------|
 | Cross-Encoder | Anfrage und Text gemeinsam, volle Attention über das Paar; genau, langsam (Humeau et al., 2019) | Re-Ranking einer kurzen Kandidatenliste |
-| Bi-Encoder (z. B. [[sentence-bert\|Sentence-BERT]]) | Jeder Text einzeln kodiert, Vergleich per Kosinus-Ähnlichkeit; Embeddings lassen sich speichern (Reimers & Gurevych, 2019) | Retrieval in der ersten Stufe, Clustering, [[vector-databases\|Vektordatenbanken]] |
+| Bi-Encoder (z. B. [[sentence-bert\|Sentence-BERT]]) | Jeder Text einzeln kodiert, Vergleich per Kosinus-Ähnlichkeit; Embeddings lassen sich speichern (Reimers & Gurevych, 2019) | Retrieval in der ersten Stufe, [[clustering\|Clustering]], [[vector-databases\|Vektordatenbanken]] |
 | Poly-Encoder | Kandidaten getrennt kodiert, Eingabe durch mehrere Attention-Codes repräsentiert; bei Geschwindigkeit und Genauigkeit zwischen beiden (Humeau et al., 2019) | Bewertung vieler Kandidaten, genauer als ein Bi-Encoder |
 | Late Interaction (ColBERT) | Vergleich auf Token-Ebene zwischen getrennt kodierter Anfrage und Dokument; mit BERT-Re-Rankern konkurrenzfähig, zwei Größenordnungen schneller (Khattab & Zaharia, 2020) | Re-Ranking oder Retrieval im großen Maßstab |
 | [[bm25\|BM25]] | Lexikalischer Termabgleich, kein Modell (Thakur et al., 2021) | Schnelle erste Stufe |

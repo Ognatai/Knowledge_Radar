@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-k-nearest neighbours (k-NN) predicts for a new point by looking at the k closest training points and taking a majority vote for classification or an average for regression (Hastie et al., 2009). It needs no training beyond storing the data, and even the simplest version has an error of at most twice the Bayes error in large samples (Cover & Hart, 1967). Its results depend on feature scaling and the choice of k, and nearest neighbours become less meaningful in high dimensions (Beyer et al., 1999).
+k-nearest neighbours (k-NN) predicts for a new point by looking at the k closest training points and taking a majority vote for [[classification|classification]] or an average for regression (Hastie et al., 2009). It needs no training beyond storing the data, and even the simplest version has an error of at most twice the Bayes error in large samples (Cover & Hart, 1967). Its results depend on feature scaling and the choice of k, and nearest neighbours become less meaningful in high dimensions (Beyer et al., 1999).
 
 ### How it works
 
@@ -51,7 +51,7 @@ Beyer et al. (1999) showed that under broad conditions, as dimensionality increa
 
 #### 5. Implementation
 
-k-NN is available in common libraries such as [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011). The same idea of finding the nearest points underlies similarity search over embeddings ([[vector-databases|Vector Databases]]).
+k-NN is available in common libraries such as [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011). The same idea of finding the nearest points underlies similarity search over [[embeddings|embeddings]] ([[vector-databases|Vector Databases]]).
 
 #### Origin and variants
 
@@ -85,7 +85,7 @@ The nearest neighbour rule and its error bound go back to Cover & Hart (1967). B
 
 ### In practice
 
-Features are standardised and k is chosen by cross-validation (Hastie et al., 2009). For high-dimensional data, the dimensionality is often reduced first, for example with [[principal-component-analysis|Principal Component Analysis]], because nearest neighbours lose meaning otherwise (Beyer et al., 1999).
+Features are standardised and k is chosen by [[cross-validation|cross-validation]] (Hastie et al., 2009). For high-dimensional data, the dimensionality is often reduced first, for example with [[principal-component-analysis|Principal Component Analysis]], because nearest neighbours lose meaning otherwise (Beyer et al., 1999).
 
 ### Key takeaway
 
@@ -104,7 +104,7 @@ k-NN predicts from the k closest training points; it is simple and assumption-fr
 
 ### TL;DR
 
-k-Nearest Neighbors (k-NN) sagt für einen neuen Punkt etwas voraus, indem es die k nächstgelegenen Trainingspunkte betrachtet und bei Klassifikation per Mehrheitsentscheid, bei Regression per Mittelwert entscheidet (Hastie et al., 2009). Es braucht kein Training außer dem Speichern der Daten, und schon die einfachste Variante hat bei großen Stichproben höchstens den doppelten Bayes-Fehler (Cover & Hart, 1967). Die Ergebnisse hängen von der Skalierung der Merkmale und der Wahl von k ab, und in hohen Dimensionen verlieren nächste Nachbarn an Aussagekraft (Beyer et al., 1999).
+k-Nearest Neighbors (k-NN) sagt für einen neuen Punkt etwas voraus, indem es die k nächstgelegenen Trainingspunkte betrachtet und bei [[classification|Klassifikation]] per Mehrheitsentscheid, bei Regression per Mittelwert entscheidet (Hastie et al., 2009). Es braucht kein Training außer dem Speichern der Daten, und schon die einfachste Variante hat bei großen Stichproben höchstens den doppelten Bayes-Fehler (Cover & Hart, 1967). Die Ergebnisse hängen von der Skalierung der Merkmale und der Wahl von k ab, und in hohen Dimensionen verlieren nächste Nachbarn an Aussagekraft (Beyer et al., 1999).
 
 ### Funktionsweise
 
@@ -140,7 +140,7 @@ Beyer et al. (1999) zeigten, dass sich unter breiten Bedingungen mit wachsender 
 
 #### 5. Implementierung
 
-k-NN ist in gängigen Bibliotheken wie [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011). Dieselbe Idee, die nächstgelegenen Punkte zu finden, liegt der Ähnlichkeitssuche über Embeddings zugrunde ([[vector-databases|Vektordatenbanken]]).
+k-NN ist in gängigen Bibliotheken wie [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011). Dieselbe Idee, die nächstgelegenen Punkte zu finden, liegt der Ähnlichkeitssuche über [[embeddings|Embeddings]] zugrunde ([[vector-databases|Vektordatenbanken]]).
 
 #### Ursprung und Varianten
 
@@ -174,7 +174,7 @@ Die Nächster-Nachbar-Regel und ihre Fehlerschranke gehen auf Cover & Hart (1967
 
 ### In der Praxis
 
-Die Merkmale werden standardisiert, und k wird per Kreuzvalidierung gewählt (Hastie et al., 2009). Bei hochdimensionalen Daten wird die Dimension oft vorher reduziert, etwa mit der [[principal-component-analysis|Hauptkomponentenanalyse (PCA)]], weil nächste Nachbarn sonst an Aussagekraft verlieren (Beyer et al., 1999).
+Die Merkmale werden standardisiert, und k wird per [[cross-validation|Kreuzvalidierung]] gewählt (Hastie et al., 2009). Bei hochdimensionalen Daten wird die Dimension oft vorher reduziert, etwa mit der [[principal-component-analysis|Hauptkomponentenanalyse (PCA)]], weil nächste Nachbarn sonst an Aussagekraft verlieren (Beyer et al., 1999).
 
 ### Merksatz
 

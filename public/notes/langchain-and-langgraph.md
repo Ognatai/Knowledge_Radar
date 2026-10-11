@@ -64,7 +64,7 @@ graph.add_edge("generate", END)
 app = graph.compile()
 ```
 
-The first example is a tool-calling agent with LangChain; the second a fixed RAG workflow in LangGraph, in which each step is a node and the edges fix the order (LangChain docs; LangGraph docs). The model identifier in the first example is illustrative.
+The first example is a tool-calling agent with LangChain; the second a fixed [[retrieval-augmented-generation|RAG]] workflow in LangGraph, in which each step is a node and the edges fix the order (LangChain docs; LangGraph docs). The model identifier in the first example is illustrative.
 
 ### When to use it
 

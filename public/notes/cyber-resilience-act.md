@@ -387,7 +387,7 @@ Provides for entry into force on the twentieth day after publication and applica
 - **Remote processing**: cloud backends without which a product cannot perform a function count as remote data processing and are part of the product (Art. 3(2)); pure software as a service is not covered as such.
 - **Secure by design**: the essential requirements of Annex I, such as protection against unauthorised access, data minimisation, resilience and logging, apply to AI features as to any other function; the risk assessment must cover them (Art. 13(2)–(3)).
 - **Components and open source** (Art. 13(5)–(6)): manufacturers must exercise due diligence when integrating third-party components, including open-source models and libraries, and report vulnerabilities found in them to their maintainers.
-- **Vulnerability reporting** (Art. 14): actively exploited vulnerabilities in AI features, for example prompt injection leading to code execution, must be reported within 24 hours.
+- **Vulnerability reporting** (Art. 14): actively exploited vulnerabilities in AI features, for example [[prompt-injection|prompt injection]] leading to code execution, must be reported within 24 hours.
 
 ### Official sources
 
@@ -764,7 +764,7 @@ Regelt das Inkrafttreten am zwanzigsten Tag nach der Veröffentlichung und die G
 - **Datenfernverarbeitung**: Cloud-Backends, ohne die ein Produkt eine Funktion nicht erfüllen kann, gelten als Datenfernverarbeitung und gehören zum Produkt (Art. 3 Nr. 2); reines Software as a Service ist als solches nicht erfasst.
 - **Security by Design**: Die grundlegenden Anforderungen des Anhangs I, etwa Schutz vor unbefugtem Zugriff, Datenminimierung, Resilienz und Protokollierung, gelten für KI-Funktionen wie für jede andere Funktion; die Risikobewertung muss sie einbeziehen (Art. 13 Abs. 2–3).
 - **Komponenten und Open Source** (Art. 13 Abs. 5–6): Hersteller müssen bei der Integration von Komponenten Dritter, auch quelloffener Modelle und Bibliotheken, Sorgfalt walten lassen und dort gefundene Schwachstellen den Verantwortlichen melden.
-- **Meldung von Schwachstellen** (Art. 14): Aktiv ausgenutzte Schwachstellen in KI-Funktionen, etwa Prompt Injection mit Codeausführung, sind binnen 24 Stunden zu melden.
+- **Meldung von Schwachstellen** (Art. 14): Aktiv ausgenutzte Schwachstellen in KI-Funktionen, etwa [[prompt-injection|Prompt Injection]] mit Codeausführung, sind binnen 24 Stunden zu melden.
 
 ### Amtliche Quellen
 

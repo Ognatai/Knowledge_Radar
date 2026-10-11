@@ -1,5 +1,5 @@
 version: 1
-note_sha256: dfd2ba9d038e04b84ac9198335e189867f6fa9c576819e357b02df927f38fd61
+note_sha256: bfb5a2f030357ad829ec19772a3abb9f00ce0a12df8e798194bc3e0ec76fbabd
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - latent-diffusion

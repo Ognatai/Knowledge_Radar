@@ -39,11 +39,11 @@ ID3 (Quinlan, 1986) builds a decision tree top-down: at each node it chooses the
 
 #### 2. Recursive binary splitting (CART)
 
-In the CART approach, the feature space is split recursively into two parts at a time (Hastie et al., 2009). For classification, the quality of a split is measured with a node impurity measure such as the Gini index or cross-entropy; for regression, with the squared error. The split that reduces impurity most is chosen.
+In the CART approach, the feature space is split recursively into two parts at a time (Hastie et al., 2009). For [[classification|classification]], the quality of a split is measured with a node impurity measure such as the Gini index or cross-entropy; for regression, with the squared error. The split that reduces impurity most is chosen.
 
 #### 3. Pruning
 
-A tree grown until its leaves are pure fits the training data too closely. CART therefore grows a large tree and prunes it back by cost-complexity pruning, which trades off tree size against fit; the pruning strength is chosen by cross-validation (Hastie et al., 2009).
+A tree grown until its leaves are pure fits the training data too closely. CART therefore grows a large tree and prunes it back by cost-complexity pruning, which trades off tree size against fit; the pruning strength is chosen by [[cross-validation|cross-validation]] (Hastie et al., 2009).
 
 #### 4. Interpretability and variance
 
@@ -128,11 +128,11 @@ ID3 (Quinlan, 1986) baut einen Entscheidungsbaum von oben nach unten auf: An jed
 
 #### 2. Rekursive binäre Aufteilung (CART)
 
-Beim CART-Ansatz wird der Merkmalsraum rekursiv in jeweils zwei Teile zerlegt (Hastie et al., 2009). Bei der Klassifikation wird die Güte einer Aufteilung mit einem Unreinheitsmaß wie dem Gini-Index oder der Kreuzentropie gemessen, bei der Regression mit dem quadratischen Fehler. Gewählt wird die Aufteilung, die die Unreinheit am stärksten verringert.
+Beim CART-Ansatz wird der Merkmalsraum rekursiv in jeweils zwei Teile zerlegt (Hastie et al., 2009). Bei der [[classification|Klassifikation]] wird die Güte einer Aufteilung mit einem Unreinheitsmaß wie dem Gini-Index oder der Kreuzentropie gemessen, bei der Regression mit dem quadratischen Fehler. Gewählt wird die Aufteilung, die die Unreinheit am stärksten verringert.
 
 #### 3. Pruning
 
-Ein Baum, der wächst, bis seine Blätter rein sind, passt sich den Trainingsdaten zu eng an. CART lässt daher einen großen Baum wachsen und beschneidet ihn per Cost-Complexity-Pruning, das Baumgröße gegen Anpassungsgüte abwägt; die Stärke des Prunings wird per Kreuzvalidierung bestimmt (Hastie et al., 2009).
+Ein Baum, der wächst, bis seine Blätter rein sind, passt sich den Trainingsdaten zu eng an. CART lässt daher einen großen Baum wachsen und beschneidet ihn per Cost-Complexity-Pruning, das Baumgröße gegen Anpassungsgüte abwägt; die Stärke des Prunings wird per [[cross-validation|Kreuzvalidierung]] bestimmt (Hastie et al., 2009).
 
 #### 4. Interpretierbarkeit und Varianz
 

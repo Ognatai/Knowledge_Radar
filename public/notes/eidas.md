@@ -33,7 +33,7 @@ The eIDAS Regulation sets EU-wide rules for electronic identification and trust 
 | Adopted | 23 July 2014 |
 | Entry into force | 17 September 2014 |
 | Application | 1 July 2016, with exceptions (Art. 52) |
-| Main amendment | Regulation (EU) 2024/1183 ("eIDAS 2.0", European Digital Identity Wallet), in force since 20 May 2024; also Directive (EU) 2022/2555 (NIS2) |
+| Main amendment | Regulation (EU) 2024/1183 ("eIDAS 2.0", European Digital Identity Wallet), in force since 20 May 2024; also Directive (EU) 2022/2555 ([[nis2-directive\|NIS2]]) |
 | Competent authorities | national supervisory bodies for wallets and trust services (Art. 46a, 46b); European Digital Identity Cooperation Group (Art. 46e) |
 | Version summarised | consolidated text of 18 October 2024 |
 
@@ -859,7 +859,7 @@ Regelt den Zeitpunkt des Inkrafttretens der Verordnung und die unterschiedliche 
 | 17. September 2014 | Inkrafttreten |
 | 1. Juli 2016 | Geltungsbeginn; die Signaturrichtlinie 1999/93/EG wird aufgehoben (Art. 50) |
 | 20. Mai 2024 | Inkrafttreten der Verordnung (EU) 2024/1183 (eIDAS 2.0) |
-| 18. Oktober 2024 | Sicherheits- und Meldepflichten der Vertrauensdiensteanbieter gehen in die NIS-2-Richtlinie über |
+| 18. Oktober 2024 | Sicherheits- und Meldepflichten der Vertrauensdiensteanbieter gehen in die [[nis2-directive\|NIS-2-Richtlinie]] über |
 | 28. November 2024 | Die Kommission erlässt die ersten Durchführungsrechtsakte zur europäischen Brieftasche für die Digitale Identität |
 | 21. Mai 2026 | Bericht der Kommission über die Anwendung der Verordnung (Art. 49) |
 | Ende 2026 | Die Mitgliedstaaten müssen innerhalb von 24 Monaten nach Inkrafttreten der Durchführungsrechtsakte mindestens eine Brieftasche bereitstellen (Art. 5a Abs. 1) |

@@ -363,7 +363,7 @@ Enters into force twenty days after its publication in the Official Journal of t
 
 ### Relevance for AI development
 
-- **AI services are ICT services**: AI models, platforms and APIs provided to financial entities are ICT services (Art. 3(21)); their providers are ICT third-party service providers subject to due diligence, the register of information and mandatory contract terms (Art. 28, 30).
+- **AI services are ICT services**: AI models, platforms and [[apis|APIs]] provided to financial entities are ICT services (Art. 3(21)); their providers are ICT third-party service providers subject to due diligence, the register of information and mandatory contract terms (Art. 28, 30).
 - **Contract terms for AI providers** (Art. 30): service descriptions, data locations, data protection, incident assistance, audit rights and exit strategies must be agreed, which also applies to foundation model APIs used in critical or important functions.
 - **Concentration risk** (Art. 29): dependence on a few large cloud and AI providers must be assessed before contracting.
 - **Oversight of critical providers** (Art. 31): large cloud and AI infrastructure providers can be designated as critical and overseen directly at EU level.

@@ -52,7 +52,7 @@ Questions such as "which documents cite a norm that amends this regulation" foll
 
 #### 5. Choosing a database model
 
-Relational databases suit stable schemas and tabular, transactional data ([[sql|SQL]]); graph databases suit connected data with traversal-heavy queries and evolving relationships (Angles & Gutierrez, 2008); vector databases suit similarity search over embeddings ([[vector-databases|Vector Databases]]). Applications such as GraphRAG combine graph and vector stores ([[graphrag|GraphRAG]]).
+Relational databases suit stable schemas and tabular, transactional data ([[sql|SQL]]); graph databases suit connected data with traversal-heavy queries and evolving relationships (Angles & Gutierrez, 2008); vector databases suit similarity search over [[embeddings|embeddings]] ([[vector-databases|Vector Databases]]). Applications such as GraphRAG combine graph and vector stores ([[graphrag|GraphRAG]]).
 
 #### Origin and variants
 
@@ -87,7 +87,7 @@ Graph database models date back to the 1980s (Angles & Gutierrez, 2008). Propert
 
 ### In practice
 
-A simple legal knowledge graph in Cypher might create nodes for norms and decisions and connect them: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 GDPR"}), and later query MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 GDPR"}) RETURN d (Neo4j Cypher Manual). Data modelling starts from the queries the graph must answer ([[ontology-design|Ontology Design]]).
+A simple legal knowledge graph in Cypher might create nodes for norms and decisions and connect them: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|GDPR]]"}), and later query MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 GDPR"}) RETURN d (Neo4j Cypher Manual). Data modelling starts from the queries the graph must answer ([[ontology-design|Ontology Design]]).
 
 ### Key takeaway
 
@@ -143,7 +143,7 @@ Fragen wie „Welche Dokumente zitieren eine Norm, die diese Verordnung ändert?
 
 #### 5. Wahl des Datenbankmodells
 
-Relationale Datenbanken passen zu stabilen Schemata und tabellarischen Transaktionsdaten ([[sql|SQL]]); Graphdatenbanken passen zu vernetzten Daten mit vielen Traversierungen und sich entwickelnden Beziehungen (Angles & Gutierrez, 2008); Vektordatenbanken passen zur Ähnlichkeitssuche über Embeddings ([[vector-databases|Vektordatenbanken]]). Anwendungen wie GraphRAG kombinieren Graph- und Vektorspeicher ([[graphrag|GraphRAG]]).
+Relationale Datenbanken passen zu stabilen Schemata und tabellarischen Transaktionsdaten ([[sql|SQL]]); Graphdatenbanken passen zu vernetzten Daten mit vielen Traversierungen und sich entwickelnden Beziehungen (Angles & Gutierrez, 2008); Vektordatenbanken passen zur Ähnlichkeitssuche über [[embeddings|Embeddings]] ([[vector-databases|Vektordatenbanken]]). Anwendungen wie GraphRAG kombinieren Graph- und Vektorspeicher ([[graphrag|GraphRAG]]).
 
 #### Ursprung und Varianten
 
@@ -178,7 +178,7 @@ Graphdatenbankmodelle reichen bis in die 1980er-Jahre zurück (Angles & Gutierre
 
 ### In der Praxis
 
-Ein einfacher juristischer Wissensgraph in Cypher könnte Knoten für Normen und Entscheidungen anlegen und verbinden: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}), und später abfragen: MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}) RETURN d (Neo4j Cypher Manual). Die Datenmodellierung beginnt mit den Abfragen, die der Graph beantworten soll ([[ontology-design|Ontologie-Design]]).
+Ein einfacher juristischer Wissensgraph in Cypher könnte Knoten für Normen und Entscheidungen anlegen und verbinden: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|DSGVO]]"}), und später abfragen: MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}) RETURN d (Neo4j Cypher Manual). Die Datenmodellierung beginnt mit den Abfragen, die der Graph beantworten soll ([[ontology-design|Ontologie-Design]]).
 
 ### Merksatz
 

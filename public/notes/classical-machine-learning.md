@@ -48,7 +48,7 @@ The prediction error of a model is framed through the bias-variance trade-off: f
 
 #### 4. Common tooling
 
-[[scikit-learn|scikit-learn]] is a Python module that integrates a wide range of machine learning algorithms for medium-scale supervised and unsupervised problems, with an emphasis on ease of use, performance, documentation and API consistency (Pedregosa et al., 2011). Its consistent interface makes it easy to try several classical methods on the same data.
+[[scikit-learn|scikit-learn]] is a [[python|Python]] module that integrates a wide range of machine learning algorithms for medium-scale supervised and unsupervised problems, with an emphasis on ease of use, performance, documentation and API consistency (Pedregosa et al., 2011). Its consistent interface makes it easy to try several classical methods on the same data.
 
 #### 5. Classical methods versus deep learning on tabular data
 

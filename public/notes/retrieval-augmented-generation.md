@@ -290,7 +290,7 @@ Der Begriff geht auf Lewis et al. (2020) zurück. Ihr Modell verbindet ein *Para
 | RAG | den Kontext zur Laufzeit | aktuelles, zitierbares, häufig wechselndes Wissen |
 | Fine-Tuning | die Modellgewichte | Verhalten, Stil, Aufgabenformat |
 | Long-Context-Prompting | den Kontext, ohne Retrieval | kleine, feste Dokumentmengen |
-| [[graphrag\|GraphRAG]] | Retrieval über einen Wissensgraphen | Fragen über Beziehungen zwischen Entitäten |
+| [[graphrag\|GraphRAG]] | Retrieval über einen [[knowledge-graphs\|Wissensgraphen]] | Fragen über Beziehungen zwischen Entitäten |
 
 Für das Einbringen von Faktenwissen stellten Ovadia et al. (2023) fest, dass RAG unüberwachtes Fine-Tuning durchgängig übertraf, sowohl bei Wissen aus dem Pretraining als auch bei völlig neuem Wissen. Beide Ansätze lassen sich kombinieren; siehe [[rag-vs-fine-tuning|RAG vs. Fine-Tuning]].
 

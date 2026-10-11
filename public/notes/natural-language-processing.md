@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Natural language processing (NLP) builds systems that analyse, understand and generate human language, for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and machine translation (Jurafsky & Martin (SLP3)). Modern NLP represents text as tokens and learned vectors and models it with neural networks, today mostly Transformer-based pretrained language models that are fine-tuned or prompted for a task ([[large-language-models|Large Language Models]]).
+Natural language processing (NLP) builds systems that analyse, understand and generate human language, for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and machine translation (Jurafsky & Martin (SLP3)). Modern NLP represents text as tokens and learned vectors and models it with [[neural-networks|neural networks]], today mostly Transformer-based pretrained language models that are fine-tuned or prompted for a task ([[large-language-models|Large Language Models]]).
 
 ### How it works
 
@@ -81,7 +81,7 @@ Jurafsky & Martin (SLP3) give a textbook overview of both classical and neural m
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
 | Word vectors | One static vector per word, learned from large corpora (Mikolov et al., 2013) | Word similarity and lightweight features |
-| Pretrained encoder with fine-tuning | Bidirectional context, one additional output layer per task (Devlin et al., 2018) | Classification, labelling and extractive question answering with labelled data |
+| Pretrained encoder with fine-tuning | Bidirectional context, one additional output layer per task (Devlin et al., 2018) | [[classification\|Classification]], labelling and extractive question answering with labelled data |
 | Large autoregressive model with few-shot prompting | Task and examples given as text, no gradient updates (Brown et al., 2020) | Tasks with little labelled data and generation tasks |
 
 ### In practice
@@ -171,7 +171,7 @@ Jurafsky & Martin (SLP3) geben einen Lehrbuchüberblick über klassische und neu
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
 | Wortvektoren | Ein statischer Vektor pro Wort, gelernt aus großen Korpora (Mikolov et al., 2013) | Wortähnlichkeit und einfache Merkmale |
-| Vortrainierter Encoder mit Fine-Tuning | Bidirektionaler Kontext, eine zusätzliche Ausgabeschicht pro Aufgabe (Devlin et al., 2018) | Klassifikation, Sequenz-Labeling und extraktive Fragebeantwortung mit annotierten Daten |
+| Vortrainierter Encoder mit Fine-Tuning | Bidirektionaler Kontext, eine zusätzliche Ausgabeschicht pro Aufgabe (Devlin et al., 2018) | [[classification\|Klassifikation]], Sequenz-Labeling und extraktive Fragebeantwortung mit annotierten Daten |
 | Großes autoregressives Modell mit Few-Shot-Prompting | Aufgabe und Beispiele als Text, keine Gradienten-Updates (Brown et al., 2020) | Aufgaben mit wenig annotierten Daten und Generierungsaufgaben |
 
 ### In der Praxis

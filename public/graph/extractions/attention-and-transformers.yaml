@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "7e896c6b2103299421103a428882b7d6cb781bc6f8ab22b23c5c8c2853cce9de"
+note_sha256: "a3a506439bb7f79040806e1e348f91c123a23aae2b552d010f9a20db3f4af3de"
 extracted_by: claude (hand-labelled gold standard)
 discusses: [sequence-to-sequence, recurrent-neural-networks, bert, t5, gpt, masked-language-modelling, vision-transformer, flashattention]
 relations:

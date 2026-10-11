@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 66d47a47ff96d46efd2eb87309a14a22835ca1ac6b883f1891d2e2879b5ece06
+note_sha256: c85acf66d8be7aa5e74e7035f986cb8e7a5aa77ad00cfae066f49b7592d80e0e
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - intermediary-service

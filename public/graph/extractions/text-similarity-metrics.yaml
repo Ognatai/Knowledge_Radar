@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c8d23b7d03b2e39bd807edc0ebced00a40a03e987da8fd7d3f86b93bf3128831
+note_sha256: e0463f25121438e8fa93ee3beaddb0973410fd4bf841a9c03b915d74102a5206
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bleu

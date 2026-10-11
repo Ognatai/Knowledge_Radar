@@ -20,7 +20,7 @@ sources:
 > **Note:** LLM-generated summary based on the listed sources; it may be incomplete, outdated or wrong.
 
 ### TL;DR
-BERT (Bidirectional Encoder Representations from Transformers) is a language model built from the encoder of the [[attention-and-transformers|Transformer]]. It is pre-trained on unlabelled text by predicting masked tokens from their left and right context, and then fine-tuned for a task with one additional output layer (Devlin et al., 2018). BERT set new results on eleven NLP tasks and became the standard starting point for classification, extraction and, through variants such as [[sentence-bert|Sentence-BERT]], for embeddings in search (Devlin et al., 2018; Reimers & Gurevych, 2019).
+BERT (Bidirectional Encoder Representations from Transformers) is a language model built from the encoder of the [[attention-and-transformers|Transformer]]. It is pre-trained on unlabelled text by predicting masked tokens from their left and right context, and then fine-tuned for a task with one additional output layer (Devlin et al., 2018). BERT set new results on eleven NLP tasks and became the standard starting point for [[classification|classification]], extraction and, through variants such as [[sentence-bert|Sentence-BERT]], for embeddings in search (Devlin et al., 2018; Reimers & Gurevych, 2019).
 
 ### How it works
 
@@ -106,7 +106,7 @@ BERT learns to understand text by filling in masked words from both sides; it is
 > **Hinweis:** LLM-generierte Zusammenfassung auf Basis der angegebenen Quellen; sie kann unvollständig, veraltet oder fehlerhaft sein.
 
 ### TL;DR
-BERT (Bidirectional Encoder Representations from Transformers) ist ein Sprachmodell, das auf dem Encoder des [[attention-and-transformers|Transformers]] aufbaut. Es wird auf ungelabeltem Text vortrainiert, indem es maskierte Tokens aus ihrem linken und rechten Kontext vorhersagt, und dann mit einer zusätzlichen Ausgabeschicht für eine Aufgabe feinjustiert (Devlin et al., 2018). BERT erzielte neue Bestwerte in elf NLP-Aufgaben und wurde zum üblichen Ausgangspunkt für Klassifikation, Extraktion und, über Varianten wie [[sentence-bert|Sentence-BERT]], für Embeddings in der Suche (Devlin et al., 2018; Reimers & Gurevych, 2019).
+BERT (Bidirectional Encoder Representations from Transformers) ist ein Sprachmodell, das auf dem Encoder des [[attention-and-transformers|Transformers]] aufbaut. Es wird auf ungelabeltem Text vortrainiert, indem es maskierte Tokens aus ihrem linken und rechten Kontext vorhersagt, und dann mit einer zusätzlichen Ausgabeschicht für eine Aufgabe feinjustiert (Devlin et al., 2018). BERT erzielte neue Bestwerte in elf NLP-Aufgaben und wurde zum üblichen Ausgangspunkt für [[classification|Klassifikation]], Extraktion und, über Varianten wie [[sentence-bert|Sentence-BERT]], für Embeddings in der Suche (Devlin et al., 2018; Reimers & Gurevych, 2019).
 
 ### Funktionsweise
 
@@ -168,7 +168,7 @@ BERT (Devlin et al., 2018) folgte auf GPT-1 (Radford et al., 2018), das einen Tr
 |--------|-------------|--------------|
 | BERT (Encoder-only) | Bidirektionaler Kontext, Masked Language Modelling, pro Aufgabe feinjustiert (Devlin et al., 2018) | Klassifikation, Tagging, extraktives QA |
 | [[gpt\|GPT]] (Decoder-only) | Kontext von links nach rechts, Next-Token-Prediction; erzeugt Text (Radford et al., 2018) | Generierung und Prompting |
-| Sentence-BERT (Bi-Encoder) | Bettet jeden Satz einzeln ein, Vergleich per Kosinus-Ähnlichkeit; etwa 5 Sekunden statt 65 Stunden im Beispiel mit 10.000 Sätzen (Reimers & Gurevych, 2019) | Semantische Suche, Clustering |
+| Sentence-BERT (Bi-Encoder) | Bettet jeden Satz einzeln ein, Vergleich per Kosinus-Ähnlichkeit; etwa 5 Sekunden statt 65 Stunden im Beispiel mit 10.000 Sätzen (Reimers & Gurevych, 2019) | Semantische Suche, [[clustering\|Clustering]] |
 | BERT-Re-Ranker ([[cross-encoder\|Cross-Encoder]]) | Liest Anfrage und Passage gemeinsam; genauer, aber ein Modelldurchlauf pro Paar (Nogueira & Cho, 2019) | Re-Ranking einer kurzen Kandidatenliste |
 
 ### In der Praxis

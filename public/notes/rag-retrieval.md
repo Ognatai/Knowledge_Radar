@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Retrieval in RAG selects relevant context passages from a knowledge base for a language model. It solves the problem that language models lack access to external information beyond their training data, which is critical for generating accurate responses to queries requiring up-to-date or domain-specific knowledge.
+Retrieval in [[retrieval-augmented-generation|RAG]] selects relevant context passages from a knowledge base for a language model. It solves the problem that language models lack access to external information beyond their training data, which is critical for generating accurate responses to queries requiring up-to-date or domain-specific knowledge.
 
 ### How it works
 
@@ -52,7 +52,7 @@ Vector indexing for approximate nearest neighbor (ANN) search replaces exhaustiv
 
 #### 4. Hybrid Search Fusion (RRF)
 
-Hybrid Search Fusion (RRF) combines parallel sparse (e.g., [[information-retrieval|Information Retrieval]]) and dense retrieval (using [[embeddings|Embeddings]]) results. Inputs are two ranked document lists from each method. Instead of fusing incommensurate scores (e.g., BM25 scores vs. cosine similarities), RRF uses ranks: for a document ranked `r_s` in sparse and `r_d` in dense, the score is `1/(k + r_s) + 1/(k + r_d)` with `k = 60` (Cormack et al., 2009). This avoids score normalization and leverages relative ordering within each method. The output is a single fused list sorted by total score. Design choices prioritize efficiency: ranks require no scale adjustment, and fixed `k=60` balances top-result influence. Trade-offs include losing score magnitude details (only rank order matters) but enabling robust fusion without cross-validation. RRF outperformed Condorcet Fuse and CombMNZ (Cormack et al., 2009) by effectively combining complementary retrieval signals.
+Hybrid Search Fusion (RRF) combines parallel sparse (e.g., [[information-retrieval|Information Retrieval]]) and dense retrieval (using [[embeddings|Embeddings]]) results. Inputs are two ranked document lists from each method. Instead of fusing incommensurate scores (e.g., BM25 scores vs. cosine similarities), RRF uses ranks: for a document ranked `r_s` in sparse and `r_d` in dense, the score is `1/(k + r_s) + 1/(k + r_d)` with `k = 60` (Cormack et al., 2009). This avoids score normalization and leverages relative ordering within each method. The output is a single fused list sorted by total score. Design choices prioritize efficiency: ranks require no scale adjustment, and fixed `k=60` balances top-result influence. Trade-offs include losing score magnitude details (only rank order matters) but enabling robust fusion without [[cross-validation|cross-validation]]. RRF outperformed Condorcet Fuse and CombMNZ (Cormack et al., 2009) by effectively combining complementary retrieval signals.
 
 #### 5. Reranking with Cross-Encoders
 
@@ -126,7 +126,7 @@ Retrieval in RAG balances the lexical precision and computational efficiency of 
 
 ### TL;DR
 
-Retrieval in RAG wählt relevante Kontextpassagen aus einer Wissensbasis für ein Sprachmodell aus. Es löst das Problem, dass Sprachmodelle keinen Zugriff auf externe Informationen haben, die über ihre Trainingsdaten hinausgehen, was für das Generieren präziser Antworten auf Abfragen entscheidend ist, die aktuelle oder domain-spezifische Kenntnisse erfordern.
+Retrieval in [[retrieval-augmented-generation|RAG]] wählt relevante Kontextpassagen aus einer Wissensbasis für ein Sprachmodell aus. Es löst das Problem, dass Sprachmodelle keinen Zugriff auf externe Informationen haben, die über ihre Trainingsdaten hinausgehen, was für das Generieren präziser Antworten auf Abfragen entscheidend ist, die aktuelle oder domain-spezifische Kenntnisse erfordern.
 
 ### Funktionsweise
 

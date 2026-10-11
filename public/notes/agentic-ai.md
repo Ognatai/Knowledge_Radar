@@ -91,7 +91,7 @@ LLM-based autonomous agents grew quickly after models acquired broad knowledge f
 
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
-| Single LLM call | One prompt, one answer | Classification, extraction, simple Q&A |
+| Single LLM call | One prompt, one answer | [[classification\|Classification]], extraction, simple Q&A |
 | Workflow | LLM calls in predefined code paths (Anthropic, 2024a) | Well-defined, repeatable tasks |
 | RAG | Retrieve, then generate ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) | Questions over a document collection |
 | Agent | LLM chooses tools and steps in a loop (Anthropic, 2025a) | Open-ended tasks with verifiable results |
@@ -194,7 +194,7 @@ LLM-basierte autonome Agenten verbreiteten sich schnell, nachdem Modelle breites
 
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
-| Einzelner LLM-Aufruf | Ein Prompt, eine Antwort | Klassifikation, Extraktion, einfache Fragen |
+| Einzelner LLM-Aufruf | Ein Prompt, eine Antwort | [[classification\|Klassifikation]], Extraktion, einfache Fragen |
 | Workflow | LLM-Aufrufe in vorgegebenen Codepfaden (Anthropic, 2024a) | Klar umrissene, wiederkehrende Aufgaben |
 | RAG | Erst abrufen, dann generieren ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) | Fragen über eine Dokumentsammlung |
 | Agent | LLM wählt Werkzeuge und Schritte in einer Schleife (Anthropic, 2025a) | Offene Aufgaben mit überprüfbaren Ergebnissen |

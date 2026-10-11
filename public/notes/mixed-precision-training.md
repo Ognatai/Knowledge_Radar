@@ -47,7 +47,7 @@ Because FP16 has a limited range, small gradient values can underflow to zero. S
 
 #### 4. BF16 without loss scaling
 
-Kalamkar et al. (2019) studied BF16 for training across image classification, speech recognition, language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no hyperparameter tuning was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
+Kalamkar et al. (2019) studied BF16 for training across image [[classification|classification]], speech recognition, language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no hyperparameter tuning was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
 
 #### 5. Reducing optimizer memory
 
@@ -86,7 +86,7 @@ Mixed precision with master weights and loss scaling was introduced by Micikevic
 
 ### In practice
 
-Frameworks provide automatic mixed precision, which handles casting and loss scaling, so it can be enabled with little code; training curves are compared with an FP32 run to check that accuracy is preserved (Micikevicius et al., 2017; [[keras-and-tensorflow|Keras and TensorFlow]]). For fine-tuning large language models, mixed precision is combined with quantization and parameter-efficient methods ([[lora|LoRA]]).
+Frameworks provide automatic mixed precision, which handles casting and loss scaling, so it can be enabled with little code; training curves are compared with an FP32 run to check that accuracy is preserved (Micikevicius et al., 2017; [[keras-and-tensorflow|Keras and TensorFlow]]). For fine-tuning [[large-language-models|large language models]], mixed precision is combined with quantization and parameter-efficient methods ([[lora|LoRA]]).
 
 ### Key takeaway
 

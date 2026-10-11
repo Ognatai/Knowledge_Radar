@@ -31,7 +31,7 @@ The Telecommunications Digital Services Data Protection Act (Telekommunikation-D
 | Type and jurisdiction | German federal law |
 | Enacted | 23 June 2021, as Telekommunikation-Telemedien-Datenschutz-Gesetz (TTDSG) |
 | Entry into force | 1 December 2021 |
-| Renamed | 14 May 2024 by the Digital Services Act implementation law (Digitale-Dienste-Gesetz); "telemedia" became "digital services" |
+| Renamed | 14 May 2024 by the [[digital-services-act\|Digital Services Act]] implementation law (Digitale-Dienste-Gesetz); "telemedia" became "digital services" |
 | Competent authorities | Federal Commissioner for Data Protection and Freedom of Information (BfDI) for telecommunications (§ 29); Federal Network Agency for Part 2 where the BfDI is not responsible (§ 30); state data protection authorities for digital services (§ 1(1) no. 8) |
 | Version summarised | consolidated text, last amended by Article 3 of the Act of 10 March 2026 |
 
@@ -199,7 +199,7 @@ Anyone who stores or reads information on terminal equipment, in particular oper
 
 - Record all cookies, SDKs, local storage entries and fingerprinting techniques of a website or app, and note for each whether it is strictly necessary.
 - Collect usage data from devices for training recommendation or personalisation models only after consent.
-- For on-device AI, check whether storing models, embeddings or profiles on the device is strictly necessary for the requested service.
+- For on-device AI, check whether storing models, [[embeddings|embeddings]] or profiles on the device is strictly necessary for the requested service.
 - Define a legal basis under the GDPR for any further processing of the data.
 
 ##### When does it apply?
@@ -446,7 +446,7 @@ Alle, die Informationen in Endeinrichtungen speichern oder auslesen, insbesonder
 
 - Alle Cookies, SDKs, Local-Storage-Einträge und Fingerprinting-Techniken einer Website oder App erfassen und jeweils festhalten, ob sie unbedingt erforderlich sind.
 - Nutzungsdaten für das Training von Empfehlungs- oder Personalisierungsmodellen nur nach Einwilligung auf dem Endgerät erheben.
-- Bei On-Device-KI prüfen, ob das Speichern von Modellen, Embeddings oder Profilen auf dem Gerät für den gewünschten Dienst unbedingt erforderlich ist.
+- Bei On-Device-KI prüfen, ob das Speichern von Modellen, [[embeddings|Embeddings]] oder Profilen auf dem Gerät für den gewünschten Dienst unbedingt erforderlich ist.
 - Für die weitere Verarbeitung der Daten zusätzlich eine Rechtsgrundlage nach der DSGVO festlegen.
 
 ##### Ab wann gilt die Vorschrift?
@@ -481,7 +481,7 @@ Regelt die Zuständigkeit der Bundesnetzagentur als Aufsichtsbehörde für die E
 | --- | --- |
 | 23. Juni 2021 | Ausfertigung als TTDSG; es führt die Datenschutzregeln aus dem Telekommunikationsgesetz (TKG) und dem Telemediengesetz (TMG) zusammen |
 | 1. Dezember 2021 | Inkrafttreten |
-| 14. Mai 2024 | Umbenennung in TDDDG durch das Digitale-Dienste-Gesetz, das den EU Digital Services Act durchführt |
+| 14. Mai 2024 | Umbenennung in TDDDG durch das Digitale-Dienste-Gesetz, das den EU [[digital-services-act\|Digital Services Act]] durchführt |
 | 2025 | Die Einwilligungsverwaltungsverordnung über anerkannte Dienste zur Einwilligungsverwaltung nach § 26 tritt in Kraft |
 
 ### Durchsetzung und Sanktionen

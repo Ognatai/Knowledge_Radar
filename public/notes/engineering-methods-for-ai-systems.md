@@ -42,7 +42,7 @@ The order is not a ranking; depending on the problem, the most effective lever i
 
 #### 2. The disciplines
 
-- **[[prompt-engineering|Prompt Engineering]]:** wording a single instruction, with zero- or few-shot examples, chain of thought and structured output formats.
+- **[[prompt-engineering|Prompt Engineering]]:** wording a single instruction, with zero- or few-shot examples, [[chain-of-thought-prompting|chain of thought]] and structured output formats.
 - **[[context-engineering|Context Engineering]]:** curating everything that enters the limited context window, including system prompt, tools, retrieved data and message history; as the context grows, recall decreases, so the goal is the smallest set of high-signal tokens (Anthropic, 2025a).
 - **[[agent-skills|Agent Skills]]:** packaged procedural knowledge that is fully loaded only when needed.
 - **[[mcp-and-related-protocols|MCP and Related Protocols]]:** standardised connection of tools, data and prompt templates.
@@ -156,7 +156,7 @@ Die Reihenfolge ist keine Rangfolge; je nach Problem liegt der wirksamste Hebel 
 
 #### 2. Die Disziplinen
 
-- **[[prompt-engineering|Prompt Engineering]]:** Formulierung einer einzelnen Anweisung, mit Zero- oder Few-Shot-Beispielen, Chain of Thought und strukturierten Ausgabeformaten.
+- **[[prompt-engineering|Prompt Engineering]]:** Formulierung einer einzelnen Anweisung, mit Zero- oder Few-Shot-Beispielen, [[chain-of-thought-prompting|Chain of Thought]] und strukturierten Ausgabeformaten.
 - **[[context-engineering|Context Engineering]]:** Auswahl von allem, was in das begrenzte Kontextfenster gelangt, einschließlich Systemprompt, Werkzeugen, abgerufenen Daten und Verlauf; mit wachsendem Kontext sinkt die Erinnerungsleistung, Ziel ist daher die kleinste Menge aussagekräftiger Token (Anthropic, 2025a).
 - **[[agent-skills|Agent Skills]]:** verpacktes Verfahrenswissen, das erst bei Bedarf vollständig geladen wird.
 - **[[mcp-and-related-protocols|MCP und ähnliche Protokolle]]:** standardisierte Anbindung von Werkzeugen, Daten und Prompt-Vorlagen.

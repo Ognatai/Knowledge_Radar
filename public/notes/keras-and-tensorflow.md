@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-TensorFlow is a system for expressing machine learning computations and executing them on hardware ranging from phones to large GPU clusters (Abadi et al., 2016). Keras is a high-level API for building and training neural networks: models are defined as a sequence of layers or as a graph of layers, configured with compile() and trained with fit() (Keras Sequential guide; Keras Functional API guide; Keras training guide). PyTorch is the main alternative, with an imperative, Pythonic style (Paszke et al., 2019).
+TensorFlow is a system for expressing machine learning computations and executing them on hardware ranging from phones to large GPU clusters (Abadi et al., 2016). Keras is a high-level API for building and training [[neural-networks|neural networks]]: models are defined as a sequence of layers or as a graph of layers, configured with compile() and trained with fit() (Keras Sequential guide; Keras Functional API guide; Keras training guide). PyTorch is the main alternative, with an imperative, Pythonic style (Paszke et al., 2019).
 
 ### Core concepts
 
@@ -46,9 +46,9 @@ model.fit(x_train, y_train, epochs=5, batch_size=32, validation_split=0.1)
 
 ### When to use it
 
-- When standard architectures should be built and trained with little code, Keras's Sequential and functional APIs fit (Keras Sequential guide; Keras Functional API guide).
+- When standard architectures should be built and trained with little code, Keras's Sequential and functional [[apis|APIs]] fit (Keras Sequential guide; Keras Functional API guide).
 - When models must be deployed across devices, from mobile to distributed systems, the TensorFlow ecosystem helps (Abadi et al., 2016).
-- When research code needs full control in plain Python and easy debugging, PyTorch is a common alternative (Paszke et al., 2019).
+- When research code needs full control in plain [[python|Python]] and easy debugging, PyTorch is a common alternative (Paszke et al., 2019).
 
 ### Strengths and limitations
 
@@ -125,7 +125,7 @@ model.fit(x_train, y_train, epochs=5, batch_size=32, validation_split=0.1)
 
 - Wenn Standardarchitekturen mit wenig Code aufgebaut und trainiert werden sollen, passen die Sequential- und die Functional-API von Keras (Keras Sequential guide; Keras Functional API guide).
 - Wenn Modelle auf verschiedenen Geräten bis hin zu verteilten Systemen eingesetzt werden müssen, hilft das TensorFlow-Ökosystem (Abadi et al., 2016).
-- Wenn Forschungscode volle Kontrolle in reinem Python und einfaches Debugging braucht, ist PyTorch eine verbreitete Alternative (Paszke et al., 2019).
+- Wenn Forschungscode volle Kontrolle in reinem [[python|Python]] und einfaches Debugging braucht, ist PyTorch eine verbreitete Alternative (Paszke et al., 2019).
 
 ### Stärken und Grenzen
 
@@ -154,7 +154,7 @@ Trainingsläufe protokollieren ihre Konfiguration und Metriken ([[experiment-tra
 
 ### Merksatz
 
-Keras baut und trainiert neuronale Netze mit wenigen High-Level-Aufrufen auf Backends wie TensorFlow; die Functional API deckt Modelle ab, die mehr sind als ein einfacher Schichtstapel.
+Keras baut und trainiert [[neural-networks|neuronale Netze]] mit wenigen High-Level-Aufrufen auf Backends wie TensorFlow; die Functional API deckt Modelle ab, die mehr sind als ein einfacher Schichtstapel.
 
 ### Quellen
 

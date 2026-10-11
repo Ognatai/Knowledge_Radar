@@ -59,11 +59,11 @@ Knowledge distillation compresses the knowledge of a large model or an ensemble 
 
 #### 6. Mixed precision and quantization
 
-Mixed precision training stores weights, activations and gradients in half-precision floating point, keeps a single-precision master copy of the weights that accumulates the updates, and scales the loss so that small gradient values do not underflow; this nearly halves the memory requirements without losing model accuracy (Micikevicius et al., 2017). Quantization stores weights in even fewer bits ([[quantization|Quantization]]), as in QLoRA's 4-bit base model, which is what makes fine-tuning very large models on a single GPU possible (Dettmers et al., 2023).
+[[mixed-precision-training|Mixed precision training]] stores weights, activations and gradients in half-precision floating point, keeps a single-precision master copy of the weights that accumulates the updates, and scales the loss so that small gradient values do not underflow; this nearly halves the memory requirements without losing model accuracy (Micikevicius et al., 2017). Quantization stores weights in even fewer bits ([[quantization|Quantization]]), as in QLoRA's 4-bit base model, which is what makes fine-tuning very large models on a single GPU possible (Dettmers et al., 2023).
 
 #### Origin and variants
 
-Knowledge distillation (Hinton et al., 2015) and mixed precision training (Micikevicius et al., 2017) predate large language models. Retrieval augmentation (Lewis et al., 2020), instruction tuning (Wei et al., 2021) and LoRA (Hu et al., 2021) were proposed for pretrained Transformers; QLoRA (Dettmers et al., 2023) combined LoRA with 4-bit quantization of the base model.
+Knowledge distillation (Hinton et al., 2015) and mixed precision training (Micikevicius et al., 2017) predate [[large-language-models|large language models]]. Retrieval augmentation (Lewis et al., 2020), instruction tuning (Wei et al., 2021) and LoRA (Hu et al., 2021) were proposed for pretrained Transformers; QLoRA (Dettmers et al., 2023) combined LoRA with 4-bit quantization of the base model.
 
 ### When to use it
 
@@ -162,7 +162,7 @@ Mixed-Precision-Training speichert Gewichte, Aktivierungen und Gradienten als Gl
 
 #### Ursprung und Varianten
 
-Knowledge distillation (Hinton et al., 2015) und mixed precision training (Micikevicius et al., 2017) sind älter als große Sprachmodelle. Retrieval augmentation (Lewis et al., 2020), instruction tuning (Wei et al., 2021) und LoRA (Hu et al., 2021) wurden für vortrainierte Transformers vorgeschlagen; QLoRA (Dettmers et al., 2023) kombinierte LoRA mit 4-Bit-Quantisierung des Basismodells.
+Knowledge distillation (Hinton et al., 2015) und [[mixed-precision-training|mixed precision training]] (Micikevicius et al., 2017) sind älter als große Sprachmodelle. Retrieval augmentation (Lewis et al., 2020), instruction tuning (Wei et al., 2021) und LoRA (Hu et al., 2021) wurden für vortrainierte Transformers vorgeschlagen; QLoRA (Dettmers et al., 2023) kombinierte LoRA mit 4-Bit-Quantisierung des Basismodells.
 
 ### Wann einsetzen
 

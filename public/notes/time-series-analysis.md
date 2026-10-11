@@ -88,7 +88,7 @@ Unit-root testing (Dickey & Fuller, 1979), LSTM networks (Hochreiter & Schmidhub
 |----------|----------------|------------|
 | Exponential smoothing (ETS) | Weighted averages of past observations with trend and seasonality (Hyndman & Athanasopoulos, 2021) | Series with clear trend and seasonality |
 | ARIMA | Models autocorrelation of a stationary (differenced) series (Hyndman & Athanasopoulos, 2021) | Series with autocorrelation structure |
-| Hybrid statistical-neural methods | Combine statistical models and neural networks (Makridakis et al., 2018) | Large collections of series |
+| Hybrid statistical-neural methods | Combine statistical models and [[neural-networks\|neural networks]] (Makridakis et al., 2018) | Large collections of series |
 | LSTM | Recurrent network with gated memory cells (Hochreiter & Schmidhuber, 1997) | Long-range dependencies, large data |
 
 ### In practice
@@ -185,7 +185,7 @@ Tests auf Einheitswurzeln (Dickey & Fuller, 1979), LSTM-Netze (Hochreiter & Schm
 |----------|----------------|------------|
 | Exponentielle Glättung (ETS) | Gewichtete Mittel vergangener Beobachtungen mit Trend und Saisonalität (Hyndman & Athanasopoulos, 2021) | Reihen mit klarem Trend und klarer Saisonalität |
 | ARIMA | Modelliert die Autokorrelation einer stationären (differenzierten) Reihe (Hyndman & Athanasopoulos, 2021) | Reihen mit Autokorrelationsstruktur |
-| Hybride statistisch-neuronale Verfahren | Kombinieren statistische Modelle und neuronale Netze (Makridakis et al., 2018) | Große Sammlungen von Reihen |
+| Hybride statistisch-neuronale Verfahren | Kombinieren statistische Modelle und [[neural-networks\|neuronale Netze]] (Makridakis et al., 2018) | Große Sammlungen von Reihen |
 | LSTM | Rekurrentes Netz mit gesteuerten Speicherzellen (Hochreiter & Schmidhuber, 1997) | Weitreichende Abhängigkeiten, große Datenmengen |
 
 ### In der Praxis

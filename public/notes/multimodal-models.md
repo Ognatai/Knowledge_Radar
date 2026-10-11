@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Multimodal models process more than one kind of data, most often images and text. Contrastive models such as CLIP learn a shared embedding space in which matching images and captions lie close together, enabling zero-shot image classification (Radford et al., 2021). Vision-language models connect a vision encoder to a large language model, so that they can answer questions about images and follow visual instructions (Alayrac et al., 2022; Li et al., 2023; Liu et al., 2023), and diffusion models generate images from text (Rombach et al., 2021).
+Multimodal models process more than one kind of data, most often images and text. Contrastive models such as CLIP learn a shared embedding space in which matching images and captions lie close together, enabling zero-shot image [[classification|classification]] (Radford et al., 2021). Vision-language models connect a vision encoder to a large language model, so that they can answer questions about images and follow visual instructions (Alayrac et al., 2022; Li et al., 2023; Liu et al., 2023), and diffusion models generate images from text (Rombach et al., 2021).
 
 ### How it works
 

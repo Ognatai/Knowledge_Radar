@@ -52,7 +52,7 @@ Uniformly sampled negative triples are often trivially false and contribute litt
 
 #### 5. Comparison with earlier models
 
-TransE cannot model symmetric relations well, DistMult only symmetric ones, and ComplEx covers symmetry, antisymmetry and inversion but not composition (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). RotatE covers all four patterns, is scalable, and significantly outperformed existing state-of-the-art models on link prediction across several benchmark knowledge graphs (Sun et al., 2019).
+TransE cannot model symmetric relations well, [[distmult|DistMult]] only symmetric ones, and [[complex|ComplEx]] covers symmetry, antisymmetry and inversion but not composition (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). RotatE covers all four patterns, is scalable, and significantly outperformed existing state-of-the-art models on link prediction across several benchmark [[knowledge-graphs|knowledge graphs]] (Sun et al., 2019).
 
 #### Origin and variants
 
@@ -107,7 +107,7 @@ RotatE treats each relation as a rotation in complex space, which lets one model
 
 ### TL;DR
 
-RotatE modelliert jede Beziehung eines Wissensgraphen als Drehung im komplexen Vektorraum: Das Schwanz-Embedding soll dem elementweise um die Beziehung gedrehten Kopf-Embedding entsprechen (Sun et al., 2019). So kann ein Modell die wichtigsten Beziehungsmuster darstellen und erschließen, nämlich Symmetrie und Antisymmetrie, Inversion und Komposition, die frühere Modelle nur teilweise abdecken (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Mit selbstadversarialem Negative Sampling trainiert, übertraf es frühere Modelle auf Benchmarks für Link Prediction.
+RotatE modelliert jede Beziehung eines [[knowledge-graphs|Wissensgraphen]] als Drehung im komplexen Vektorraum: Das Schwanz-Embedding soll dem elementweise um die Beziehung gedrehten Kopf-Embedding entsprechen (Sun et al., 2019). So kann ein Modell die wichtigsten Beziehungsmuster darstellen und erschließen, nämlich Symmetrie und Antisymmetrie, Inversion und Komposition, die frühere Modelle nur teilweise abdecken (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Mit selbstadversarialem Negative Sampling trainiert, übertraf es frühere Modelle auf Benchmarks für Link Prediction.
 
 ### Funktionsweise
 
@@ -143,7 +143,7 @@ Gleichverteilt gezogene negative Tripel sind oft offensichtlich falsch und trage
 
 #### 5. Vergleich mit früheren Modellen
 
-TransE kann symmetrische Beziehungen schlecht modellieren, DistMult nur symmetrische, und ComplEx deckt Symmetrie, Antisymmetrie und Inversion ab, aber keine Komposition (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). RotatE deckt alle vier Muster ab, skaliert und übertraf bei Link Prediction auf mehreren Benchmark-Wissensgraphen die bis dahin besten Modelle deutlich (Sun et al., 2019).
+TransE kann symmetrische Beziehungen schlecht modellieren, [[distmult|DistMult]] nur symmetrische, und [[complex|ComplEx]] deckt Symmetrie, Antisymmetrie und Inversion ab, aber keine Komposition (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). RotatE deckt alle vier Muster ab, skaliert und übertraf bei Link Prediction auf mehreren Benchmark-Wissensgraphen die bis dahin besten Modelle deutlich (Sun et al., 2019).
 
 #### Ursprung und Varianten
 

@@ -220,7 +220,7 @@ Requires providers of very large online platforms and search engines using recom
 
 #### Article 39 — Additional online advertising transparency
 
-Requires providers of very large online platforms or search engines to compile and publicly make available a repository containing specified advertising information through searchable tools and APIs, ensuring it does not include personal data and is accurate and complete.
+Requires providers of very large online platforms or search engines to compile and publicly make available a repository containing specified advertising information through searchable tools and [[apis|APIs]], ensuring it does not include personal data and is accurate and complete.
 
 #### Article 40 — Data access and scrutiny
 

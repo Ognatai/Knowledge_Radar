@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 42fb1ec5c5c1b0003a8e6da3ccf8ab4e4f859b7000c3da7fa83d6441f0285f1b
+note_sha256: bc19e9643583b83e63c3aab0ef2e212f06196683fdb5638a8fb4fe76d5cda7ac
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - transe

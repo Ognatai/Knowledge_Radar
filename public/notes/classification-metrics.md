@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Classification metrics measure how well a classifier's predictions match the true labels. Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score (Sokolova & Lapalme, 2009). Threshold-free views such as ROC and precision-recall curves summarise performance over all decision thresholds (Fawcett, 2006; Davis & Goadrich, 2006). On imbalanced data, accuracy and even F1 can be misleading, and precision-recall curves or the Matthews correlation coefficient are more informative (Saito & Rehmsmeier, 2015; Chicco & Jurman, 2020).
+[[classification|Classification]] metrics measure how well a classifier's predictions match the true labels. Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score (Sokolova & Lapalme, 2009). Threshold-free views such as ROC and precision-recall curves summarise performance over all decision thresholds (Fawcett, 2006; Davis & Goadrich, 2006). On imbalanced data, accuracy and even F1 can be misleading, and precision-recall curves or the Matthews correlation coefficient are more informative (Saito & Rehmsmeier, 2015; Chicco & Jurman, 2020).
 
 ### How it works
 
@@ -138,7 +138,7 @@ Vorhersagen werden mit den tatsächlichen Labels verglichen und in einer Konfusi
 
 #### 1. Konfusionsmatrix
 
-Bei einem binären Klassifikator ist jede Vorhersage richtig positiv (TP), falsch positiv (FP), richtig negativ (TN) oder falsch negativ (FN). Diese vier Zählwerte bilden die Konfusionsmatrix, aus der die meisten Klassifikationsmetriken berechnet werden; dieselbe Idee lässt sich auf Mehrklassen-, Multi-Label- und hierarchische Klassifikation übertragen (Sokolova & Lapalme, 2009).
+Bei einem binären Klassifikator ist jede Vorhersage richtig positiv (TP), falsch positiv (FP), richtig negativ (TN) oder falsch negativ (FN). Diese vier Zählwerte bilden die Konfusionsmatrix, aus der die meisten Klassifikationsmetriken berechnet werden; dieselbe Idee lässt sich auf Mehrklassen-, Multi-Label- und hierarchische [[classification|Klassifikation]] übertragen (Sokolova & Lapalme, 2009).
 
 #### 2. Precision, Recall, Spezifität und Accuracy
 

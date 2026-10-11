@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "f4dc5272a2398577a56a8dd782f130b62495379cbf67275f8d6ea9567893d8a3"
+note_sha256: "3ddf37f64540b8e162bc754a27d44e5089f8a216f5a43418e25edb2a87345086"
 extracted_by: manual
 discusses: [w3c, rdf, sql, cypher]
 relations:

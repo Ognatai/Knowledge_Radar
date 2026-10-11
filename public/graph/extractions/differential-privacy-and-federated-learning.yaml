@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2f6918f2a444d37db55da899aca7e84da781825f0718f1cbfebbeb6658311746
+note_sha256: d33735ef29da8a0db2e7e7479c8ccaaad45c206d4b9ee7272709ea33639f6b87
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - privacy-preserving-ml

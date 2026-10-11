@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Recurrent neural networks (RNNs) process sequences step by step and carry a hidden state that summarises what they have seen so far, sharing the same weights at every time step (Goodfellow et al., 2016). They are trained with back-propagation through time, but long-term dependencies are hard to learn because gradients vanish or explode over many steps (Bengio et al., 1994). Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this and powered sequence-to-sequence models for translation (Sutskever et al., 2014), before Transformers largely replaced them in language processing.
+Recurrent [[neural-networks|neural networks]] (RNNs) process sequences step by step and carry a hidden state that summarises what they have seen so far, sharing the same weights at every time step (Goodfellow et al., 2016). They are trained with back-propagation through time, but long-term dependencies are hard to learn because gradients vanish or explode over many steps (Bengio et al., 1994). Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this and powered sequence-to-sequence models for translation (Sutskever et al., 2014), before Transformers largely replaced them in language processing.
 
 ### How it works
 
@@ -59,7 +59,7 @@ In an encoder-decoder, one RNN encodes an input sequence into a fixed-length vec
 
 #### 6. RNNs for time series
 
-RNNs also model numerical time series, since they process observations in order and keep a state of the past (Goodfellow et al., 2016). For forecasting, neural networks compete with classical statistical models such as exponential smoothing and ARIMA, and forecasts must be evaluated on later data with time series cross-validation (Hyndman & Athanasopoulos, 2021; [[time-series-analysis|Time Series Analysis]]).
+RNNs also model numerical time series, since they process observations in order and keep a state of the past (Goodfellow et al., 2016). For forecasting, neural networks compete with classical statistical models such as exponential smoothing and ARIMA, and forecasts must be evaluated on later data with time series [[cross-validation|cross-validation]] (Hyndman & Athanasopoulos, 2021; [[time-series-analysis|Time Series Analysis]]).
 
 #### Origin and variants
 
@@ -115,7 +115,7 @@ RNNs process sequences step by step with a shared state; gated units such as the
 
 ### TL;DR
 
-Rekurrente neuronale Netze (RNNs) verarbeiten Sequenzen Schritt für Schritt und führen einen verborgenen Zustand mit, der das bisher Gesehene zusammenfasst; dabei nutzen sie in jedem Zeitschritt dieselben Gewichte (Goodfellow et al., 2016). Sie werden mit Backpropagation Through Time trainiert, doch weitreichende Abhängigkeiten sind schwer zu lernen, weil Gradienten über viele Schritte verschwinden oder explodieren (Bengio et al., 1994). Gesteuerte Varianten wie das LSTM (Hochreiter & Schmidhuber, 1997) und die GRU (Cho et al., 2014) lösen das und trugen Sequence-to-Sequence-Modelle für Übersetzung (Sutskever et al., 2014), bevor Transformer sie in der Sprachverarbeitung weitgehend ablösten.
+Rekurrente [[neural-networks|neuronale Netze]] (RNNs) verarbeiten Sequenzen Schritt für Schritt und führen einen verborgenen Zustand mit, der das bisher Gesehene zusammenfasst; dabei nutzen sie in jedem Zeitschritt dieselben Gewichte (Goodfellow et al., 2016). Sie werden mit Backpropagation Through Time trainiert, doch weitreichende Abhängigkeiten sind schwer zu lernen, weil Gradienten über viele Schritte verschwinden oder explodieren (Bengio et al., 1994). Gesteuerte Varianten wie das LSTM (Hochreiter & Schmidhuber, 1997) und die GRU (Cho et al., 2014) lösen das und trugen Sequence-to-Sequence-Modelle für Übersetzung (Sutskever et al., 2014), bevor Transformer sie in der Sprachverarbeitung weitgehend ablösten.
 
 ### Funktionsweise
 

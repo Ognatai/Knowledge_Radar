@@ -509,7 +509,7 @@ The article does not specify the exact nature or form of "appropriate safeguards
 
 **Possible implementation – not a legally prescribed checklist:**
 
-- Before using AI services or APIs hosted outside the EU, check whether personal data are transferred and whether an adequacy decision exists.
+- Before using AI services or [[apis|APIs]] hosted outside the EU, check whether personal data are transferred and whether an adequacy decision exists.
 - Without an adequacy decision, use one of the safeguards of paragraph 2, typically the Commission's standard data protection clauses, and keep them up to date.
 - Check whether the recipient's commitments make data subject rights enforceable in practice.
 
@@ -1339,7 +1339,7 @@ Verantwortliche und Auftragsverarbeiter, die Daten in Drittländer oder an inter
 
 **Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:**
 
-- Vor der Nutzung von KI-Diensten oder APIs, die außerhalb der EU betrieben werden, prüfen, ob personenbezogene Daten übermittelt werden und ob ein Angemessenheitsbeschluss besteht.
+- Vor der Nutzung von KI-Diensten oder [[apis|APIs]], die außerhalb der EU betrieben werden, prüfen, ob personenbezogene Daten übermittelt werden und ob ein Angemessenheitsbeschluss besteht.
 - Ohne Angemessenheitsbeschluss eine Garantie nach Absatz 2 nutzen, typischerweise die Standarddatenschutzklauseln der Kommission, und sie aktuell halten.
 - Prüfen, ob die Zusagen des Empfängers die Rechte der betroffenen Personen tatsächlich durchsetzbar machen.
 

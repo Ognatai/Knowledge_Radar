@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3dd504ca8246701a7f07b5fb1ff1f9c3b7955641ec4ecf4e7d81ac3f64bad8cd
+note_sha256: 478fc8a1447b3f8554acde62e0cf461db832db4038e62779ff1e96b84a5f7585
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - scikit-learn

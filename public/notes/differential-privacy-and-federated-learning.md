@@ -41,7 +41,7 @@ Dwork et al. (2006) introduced the definition now known as ε-differential priva
 
 #### 2. Differentially private deep learning
 
-Abadi et al. (2016) developed algorithmic techniques for learning and a refined analysis of privacy costs within the framework of differential privacy. They showed that deep neural networks with non-convex objectives can be trained under a modest privacy budget, at a manageable cost in software complexity, training efficiency and model quality.
+Abadi et al. (2016) developed algorithmic techniques for learning and a refined analysis of privacy costs within the framework of differential privacy. They showed that deep [[neural-networks|neural networks]] with non-convex objectives can be trained under a modest privacy budget, at a manageable cost in software complexity, training efficiency and model quality.
 
 #### 3. Federated learning
 
@@ -133,7 +133,7 @@ Dwork et al. (2006) führten die heute als ε-Differential-Privacy bekannte Defi
 
 #### 2. Deep Learning mit Differential Privacy
 
-Abadi et al. (2016) entwickelten algorithmische Lernverfahren und eine verfeinerte Analyse der Privatsphärekosten im Rahmen von Differential Privacy. Sie zeigten, dass sich tiefe neuronale Netze mit nichtkonvexen Zielfunktionen bei moderatem Privacy-Budget trainieren lassen, zu vertretbaren Kosten bei Softwarekomplexität, Trainingseffizienz und Modellqualität.
+Abadi et al. (2016) entwickelten algorithmische Lernverfahren und eine verfeinerte Analyse der Privatsphärekosten im Rahmen von Differential Privacy. Sie zeigten, dass sich tiefe [[neural-networks|neuronale Netze]] mit nichtkonvexen Zielfunktionen bei moderatem Privacy-Budget trainieren lassen, zu vertretbaren Kosten bei Softwarekomplexität, Trainingseffizienz und Modellqualität.
 
 #### 3. Federated Learning
 

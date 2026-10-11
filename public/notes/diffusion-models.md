@@ -45,7 +45,7 @@ Ho et al. (2020) obtained high-quality image synthesis by training on a weighted
 
 #### 3. Continuous-time view
 
-Song et al. (2020) describe the noising as a stochastic differential equation that slowly turns data into a known prior distribution, and generation as the corresponding reverse-time equation, which depends only on the score, the gradient of the log density of the perturbed data. Neural networks estimate this score, and numerical solvers generate samples. The framework unifies earlier score-based and diffusion models, adds an equivalent ODE that allows exact likelihood computation, and reached an Inception score of 9.89 and FID of 2.20 on CIFAR-10.
+Song et al. (2020) describe the noising as a stochastic differential equation that slowly turns data into a known prior distribution, and generation as the corresponding reverse-time equation, which depends only on the score, the gradient of the log density of the perturbed data. [[neural-networks|Neural networks]] estimate this score, and numerical solvers generate samples. The framework unifies earlier score-based and diffusion models, adds an equivalent ODE that allows exact likelihood computation, and reached an Inception score of 9.89 and FID of 2.20 on CIFAR-10.
 
 #### 4. Latent diffusion
 
@@ -137,7 +137,7 @@ Ho et al. (2020) erzielten hochwertige Bildsynthese, indem sie auf einer gewicht
 
 #### 3. Zeitkontinuierliche Sicht
 
-Song et al. (2020) beschreiben das Verrauschen als stochastische Differentialgleichung, die Daten langsam in eine bekannte Prior-Verteilung überführt, und das Erzeugen als die zugehörige zeitlich rückwärts laufende Gleichung, die nur vom Score abhängt, dem Gradienten der logarithmierten Dichte der verrauschten Daten. Neuronale Netze schätzen diesen Score, und numerische Löser erzeugen die Beispiele. Der Ansatz vereint frühere score-basierte und Diffusionsmodelle, ergänzt eine gleichwertige gewöhnliche Differentialgleichung, die eine exakte Likelihood-Berechnung erlaubt, und erreichte auf CIFAR-10 einen Inception Score von 9,89 und einen FID von 2,20.
+Song et al. (2020) beschreiben das Verrauschen als stochastische Differentialgleichung, die Daten langsam in eine bekannte Prior-Verteilung überführt, und das Erzeugen als die zugehörige zeitlich rückwärts laufende Gleichung, die nur vom Score abhängt, dem Gradienten der logarithmierten Dichte der verrauschten Daten. [[neural-networks|Neuronale Netze]] schätzen diesen Score, und numerische Löser erzeugen die Beispiele. Der Ansatz vereint frühere score-basierte und Diffusionsmodelle, ergänzt eine gleichwertige gewöhnliche Differentialgleichung, die eine exakte Likelihood-Berechnung erlaubt, und erreichte auf CIFAR-10 einen Inception Score von 9,89 und einen FID von 2,20.
 
 #### 4. Latent Diffusion
 

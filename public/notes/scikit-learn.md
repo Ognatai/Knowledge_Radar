@@ -53,7 +53,7 @@ Because the scaler is part of the pipeline, it is fitted on the training folds o
 
 ### When to use it
 - Classical machine learning on tabular data: [[classification|classification]], regression, [[clustering|clustering]], [[decision-trees|decision trees]], [[k-nearest-neighbors|k-nearest neighbors]] ([[classical-machine-learning|Classical Machine Learning]]).
-- Preprocessing, feature engineering and dimensionality reduction as reusable steps ([[ml-preprocessing|ML Preprocessing]]; Buitinck et al., 2013).
+- Preprocessing, [[feature-engineering|feature engineering]] and dimensionality reduction as reusable steps ([[ml-preprocessing|ML Preprocessing]]; Buitinck et al., 2013).
 - Model selection and evaluation with cross-validation and hyperparameter search (Buitinck et al., 2013; [[regularization-and-hyperparameters|Regularization and Hyperparameters]]).
 - In teaching and for non-specialists: the library aims to bring machine learning to non-specialists in a general-purpose language (Pedregosa et al., 2011).
 
@@ -66,7 +66,7 @@ Because the scaler is part of the pipeline, it is fitted on the training folds o
 - Code quality is enforced with unit tests and style guidelines (Pedregosa et al., 2011; Buitinck et al., 2013).
 
 **Limitations**
-- In 2013 the authors listed neural networks, bagging and subsampling ensembles, and missing-value completion as not yet supported; structured prediction and reinforcement learning were out of scope, because they need different data representations and APIs (Buitinck et al., 2013). For deep learning, frameworks such as [[keras-and-tensorflow|Keras and TensorFlow]] are used.
+- In 2013 the authors listed [[neural-networks|neural networks]], bagging and subsampling ensembles, and missing-value completion as not yet supported; structured prediction and reinforcement learning were out of scope, because they need different data representations and APIs (Buitinck et al., 2013). For deep learning, frameworks such as [[keras-and-tensorflow|Keras and TensorFlow]] are used.
 - Data must fit the array model: inputs are NumPy arrays or SciPy sparse matrices (Buitinck et al., 2013).
 
 ### Comparison
@@ -130,7 +130,7 @@ Weil der Scaler Teil der Pipeline ist, wird er nur auf den Trainings-Folds angep
 
 ### Wann einsetzen
 - Klassisches maschinelles Lernen auf tabellarischen Daten: [[classification|Klassifikation]], Regression, [[clustering|Clustering]], [[decision-trees|Entscheidungsbäume]], [[k-nearest-neighbors|k-Nächste-Nachbarn]] ([[classical-machine-learning|Klassisches Machine Learning]]).
-- Vorverarbeitung, Feature Engineering und Dimensionsreduktion als wiederverwendbare Schritte ([[ml-preprocessing|ML-Vorverarbeitung]]; Buitinck et al., 2013).
+- Vorverarbeitung, [[feature-engineering|Feature Engineering]] und Dimensionsreduktion als wiederverwendbare Schritte ([[ml-preprocessing|ML-Vorverarbeitung]]; Buitinck et al., 2013).
 - Modellauswahl und Evaluation mit Kreuzvalidierung und Hyperparameter-Suche (Buitinck et al., 2013; [[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]).
 - In der Lehre und für Nicht-Fachleute: Die Bibliothek soll maschinelles Lernen in einer allgemeinen Programmiersprache für Nicht-Fachleute zugänglich machen (Pedregosa et al., 2011).
 
@@ -143,7 +143,7 @@ Weil der Scaler Teil der Pipeline ist, wird er nur auf den Trainings-Folds angep
 - Codequalität wird mit Unit-Tests und Stilrichtlinien gesichert (Pedregosa et al., 2011; Buitinck et al., 2013).
 
 **Grenzen**
-- 2013 nannten die Autoren neuronale Netze, Bagging- und Subsampling-Ensembles sowie das Auffüllen fehlender Werte als noch nicht unterstützt; strukturierte Vorhersage und Reinforcement Learning lagen außerhalb des Projektumfangs, weil sie andere Datenrepräsentationen und APIs erfordern (Buitinck et al., 2013). Für Deep Learning werden Frameworks wie [[keras-and-tensorflow|Keras und TensorFlow]] verwendet.
+- 2013 nannten die Autoren [[neural-networks|neuronale Netze]], Bagging- und Subsampling-Ensembles sowie das Auffüllen fehlender Werte als noch nicht unterstützt; strukturierte Vorhersage und Reinforcement Learning lagen außerhalb des Projektumfangs, weil sie andere Datenrepräsentationen und APIs erfordern (Buitinck et al., 2013). Für Deep Learning werden Frameworks wie [[keras-and-tensorflow|Keras und TensorFlow]] verwendet.
 - Die Daten müssen ins Array-Modell passen: Eingaben sind NumPy-Arrays oder dünnbesetzte SciPy-Matrizen (Buitinck et al., 2013).
 
 ### Vergleich

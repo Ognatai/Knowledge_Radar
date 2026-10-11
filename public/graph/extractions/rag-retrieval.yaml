@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 77243cd72f4122c88f2140792a7a8c14b4983adbaac839a0d9fffb1170efbd6d
+note_sha256: 8b378ed41dd6203bf3a3a46d1139e6ad1b3c6c251dbd0534bf7b65d882465981
 extracted_by: claude
 discusses:
 - sparse-retrieval

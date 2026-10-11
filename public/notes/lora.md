@@ -53,7 +53,7 @@ After training, BA can be added to W, so the adapted model computes exactly as m
 
 #### 5. QLoRA
 
-QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double quantization, which also quantizes the quantization constants, and paged optimizers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
+QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantization|quantization]], which also quantizes the quantization constants, and paged optimizers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
 
 #### 6. DoRA
 

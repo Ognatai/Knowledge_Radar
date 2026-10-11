@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5998dfe4d829264c9f3e7f57ad4de2858ca7e1738f35bc99ea9445b770a2c642
+note_sha256: d67029768d9e5be7bb77070acf190aec8d093de5f6a23a775bb54d43a7da46a1
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bagging

@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Legal AI is the use of AI systems in law: legal research, document and contract analysis, summarisation, compliance checks and question answering over legal sources. Large language models make these tasks far more accessible, but errors in law have direct legal or financial consequences, and studies find that general LLMs hallucinate on 58 to 88% of verifiable questions about US federal court cases (Dahl et al., 2024), while even commercial RAG-based legal research tools hallucinate on 17 to 33% of queries (Magesh et al., 2024). Grounding, verifiable citations and human review are therefore central.
+Legal AI is the use of AI systems in law: legal research, document and contract analysis, summarisation, compliance checks and question answering over legal sources. [[large-language-models|Large language models]] make these tasks far more accessible, but errors in law have direct legal or financial consequences, and studies find that general LLMs hallucinate on 58 to 88% of verifiable questions about US federal court cases (Dahl et al., 2024), while even commercial RAG-based legal research tools hallucinate on 17 to 33% of queries (Magesh et al., 2024). Grounding, verifiable citations and human review are therefore central.
 
 ### How it works
 
@@ -75,7 +75,7 @@ Legal NLP long relied on task-specific models and datasets such as those collect
 | General LLM chatbot | Answers from model knowledge without retrieval; high hallucination rates on legal questions (Dahl et al., 2024) | Brainstorming, not legal research |
 | RAG-based legal research tool | Retrieves legal sources and cites them; fewer, but still frequent hallucinations (Magesh et al., 2024) | Research with verification of every citation |
 | GraphRAG | Adds a knowledge graph and community summaries for corpus-wide questions (Edge et al., 2024) | Questions across many interlinked norms |
-| Specialised extraction models | Trained for fixed tasks such as clause or entity extraction ([[contract-intelligence|Contract Intelligence]]) | High-volume document review |
+| Specialised extraction models | Trained for fixed tasks such as clause or [[entity-extraction\|entity extraction]] ([[contract-intelligence|Contract Intelligence]]) | High-volume document review |
 
 ### In practice
 
@@ -162,7 +162,7 @@ Juristische Sprachverarbeitung stützte sich lange auf aufgabenspezifische Model
 | Allgemeiner LLM-Chatbot | Antwortet aus dem Modellwissen ohne Retrieval; hohe Halluzinationsraten bei Rechtsfragen (Dahl et al., 2024) | Ideensammlung, nicht juristische Recherche |
 | RAG-basiertes juristisches Recherchewerkzeug | Ruft Rechtsquellen ab und zitiert sie; weniger, aber weiterhin häufige Halluzinationen (Magesh et al., 2024) | Recherche mit Prüfung jedes Zitats |
 | GraphRAG | Ergänzt einen Wissensgraphen und Zusammenfassungen von Entitätsgruppen für korpusweite Fragen (Edge et al., 2024) | Fragen über viele verknüpfte Normen |
-| Spezialisierte Extraktionsmodelle | Für feste Aufgaben wie Klausel- oder Entitätsextraktion trainiert ([[contract-intelligence|Contract Intelligence]]) | Prüfung großer Dokumentmengen |
+| Spezialisierte Extraktionsmodelle | Für feste Aufgaben wie Klausel- oder [[entity-extraction\|Entitätsextraktion]] trainiert ([[contract-intelligence|Contract Intelligence]]) | Prüfung großer Dokumentmengen |
 
 ### In der Praxis
 

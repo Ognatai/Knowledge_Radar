@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a7a486346be5c02d81f48d3f3d39a7c2b93a9e2bd279b0da18f66c2f98bcd58b
+note_sha256: c37c3e152c4d18db7407e17dc2bc0def50b11b3309f34a2fbe8d2357c2cc5ece
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - w3c

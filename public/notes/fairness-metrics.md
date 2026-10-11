@@ -104,7 +104,7 @@ Fairness through awareness (Dwork et al., 2012) defined individual fairness, equ
 
 ### In practice
 
-Before measuring, the team decides which notion of equality matters and whether a bias-preserving or bias-transforming goal is pursued (Urchs, 2025). Metrics are reported per group and, where several attributes matter, per subgroup (Kearns et al., 2018). For language technology, the same questions arise in text: [[bias-in-nlp|Bias in NLP]] covers how stereotypes are measured in embeddings and language models, and in the EU high-risk AI systems must be examined for possible biases ([[eu-ai-act|EU AI Act]]).
+Before measuring, the team decides which notion of equality matters and whether a bias-preserving or bias-transforming goal is pursued (Urchs, 2025). Metrics are reported per group and, where several attributes matter, per subgroup (Kearns et al., 2018). For language technology, the same questions arise in text: [[bias-in-nlp|Bias in NLP]] covers how stereotypes are measured in [[embeddings|embeddings]] and language models, and in the EU high-risk AI systems must be examined for possible biases ([[eu-ai-act|EU AI Act]]).
 
 ### Key takeaway
 
@@ -212,7 +212,7 @@ Fairness through Awareness (Dwork et al., 2012) definierte individuelle Fairness
 
 ### In der Praxis
 
-Vor der Messung legt das Team fest, welcher Gleichheitsbegriff zählt und ob ein bias-erhaltendes oder ein bias-transformierendes Ziel verfolgt wird (Urchs, 2025). Metriken werden je Gruppe und, wenn mehrere Merkmale relevant sind, je Teilgruppe berichtet (Kearns et al., 2018). Für Sprachtechnologie stellen sich dieselben Fragen im Text: [[bias-in-nlp|Bias in NLP]] behandelt, wie Stereotype in Embeddings und Sprachmodellen gemessen werden, und in der EU müssen Hochrisiko-KI-Systeme auf mögliche Verzerrungen untersucht werden ([[eu-ai-act|KI-Verordnung]]).
+Vor der Messung legt das Team fest, welcher Gleichheitsbegriff zählt und ob ein bias-erhaltendes oder ein bias-transformierendes Ziel verfolgt wird (Urchs, 2025). Metriken werden je Gruppe und, wenn mehrere Merkmale relevant sind, je Teilgruppe berichtet (Kearns et al., 2018). Für Sprachtechnologie stellen sich dieselben Fragen im Text: [[bias-in-nlp|Bias in NLP]] behandelt, wie Stereotype in [[embeddings|Embeddings]] und Sprachmodellen gemessen werden, und in der EU müssen Hochrisiko-KI-Systeme auf mögliche Verzerrungen untersucht werden ([[eu-ai-act|KI-Verordnung]]).
 
 ### Merksatz
 

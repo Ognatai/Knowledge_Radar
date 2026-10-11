@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Knowledge graph engineering is the practice of building and operating knowledge graphs as reliable data products: pipelines create and enrich the graph, entity resolution merges duplicate descriptions, validation checks the data against shapes, refinement completes and corrects it, and provenance records where each fact came from (Hogan et al., 2020). Key tools are SHACL for validation (W3C SHACL), entity resolution workflows (Christophides et al., 2019), quality dimensions and metrics (Zaveri et al., 2016) and PROV-O for provenance (W3C PROV-O).
+Knowledge [[graph-engineering|graph engineering]] is the practice of building and operating [[knowledge-graphs|knowledge graphs]] as reliable data products: pipelines create and enrich the graph, entity resolution merges duplicate descriptions, validation checks the data against shapes, refinement completes and corrects it, and provenance records where each fact came from (Hogan et al., 2020). Key tools are SHACL for validation (W3C SHACL), entity resolution workflows (Christophides et al., 2019), quality dimensions and metrics (Zaveri et al., 2016) and PROV-O for provenance (W3C PROV-O).
 
 ### How it works
 
@@ -43,11 +43,11 @@ Hogan et al. (2020) summarise the life cycle of knowledge graphs: creation from 
 
 #### 2. Entity resolution
 
-Entity resolution identifies different descriptions that refer to the same real-world entity and is one of the most important tasks for data quality (Christophides et al., 2019). Modern workflows handle loosely structured, diverse, fast-changing and large collections of entity descriptions through blocking or indexing, which limits the candidate pairs, followed by matching and clustering; the database, semantic web and machine learning communities have proposed different methods for these steps.
+Entity resolution identifies different descriptions that refer to the same real-world entity and is one of the most important tasks for data quality (Christophides et al., 2019). Modern workflows handle loosely structured, diverse, fast-changing and large collections of entity descriptions through blocking or indexing, which limits the candidate pairs, followed by matching and [[clustering|clustering]]; the database, semantic web and machine learning communities have proposed different methods for these steps.
 
 #### 3. Validation with shapes
 
-SHACL validates RDF graphs against shapes, which state for targeted nodes which properties are required, how often they may occur, which datatypes or classes their values must have and which patterns they must follow (W3C SHACL). A SHACL processor produces a validation report listing every violation, so validation can run automatically after each pipeline run. Unlike OWL reasoning, SHACL checks the data as it is, under a closed-world view.
+SHACL validates [[rdf|RDF]] graphs against shapes, which state for targeted nodes which properties are required, how often they may occur, which datatypes or classes their values must have and which patterns they must follow (W3C SHACL). A SHACL processor produces a validation report listing every violation, so validation can run automatically after each pipeline run. Unlike OWL reasoning, SHACL checks the data as it is, under a closed-world view.
 
 #### 4. Quality assessment
 
@@ -115,7 +115,7 @@ Knowledge graph engineering keeps a graph trustworthy over time through repeatab
 
 ### TL;DR
 
-Knowledge Graph Engineering bedeutet, Wissensgraphen als verlässliche Datenprodukte aufzubauen und zu betreiben: Pipelines erzeugen und reichern den Graphen an, Entity Resolution führt doppelte Beschreibungen zusammen, Validierung prüft die Daten gegen Shapes, Verfeinerung ergänzt und korrigiert sie, und Provenienzangaben halten fest, woher jeder Fakt stammt (Hogan et al., 2020). Wichtige Werkzeuge sind SHACL für die Validierung (W3C SHACL), Workflows für Entity Resolution (Christophides et al., 2019), Qualitätsdimensionen und -metriken (Zaveri et al., 2016) und PROV-O für Provenienz (W3C PROV-O).
+Knowledge [[graph-engineering|Graph Engineering]] bedeutet, [[knowledge-graphs|Wissensgraphen]] als verlässliche Datenprodukte aufzubauen und zu betreiben: Pipelines erzeugen und reichern den Graphen an, Entity Resolution führt doppelte Beschreibungen zusammen, Validierung prüft die Daten gegen Shapes, Verfeinerung ergänzt und korrigiert sie, und Provenienzangaben halten fest, woher jeder Fakt stammt (Hogan et al., 2020). Wichtige Werkzeuge sind SHACL für die Validierung (W3C SHACL), Workflows für Entity Resolution (Christophides et al., 2019), Qualitätsdimensionen und -metriken (Zaveri et al., 2016) und PROV-O für Provenienz (W3C PROV-O).
 
 ### Funktionsweise
 
@@ -141,7 +141,7 @@ Hogan et al. (2020) fassen den Lebenszyklus von Wissensgraphen zusammen: Aufbau 
 
 #### 2. Entity Resolution
 
-Entity Resolution erkennt unterschiedliche Beschreibungen, die sich auf dieselbe reale Entität beziehen, und ist eine der wichtigsten Aufgaben für die Datenqualität (Christophides et al., 2019). Moderne Workflows verarbeiten locker strukturierte, vielfältige, sich schnell ändernde und große Sammlungen von Entitätsbeschreibungen mit Blocking oder Indexierung, die die Kandidatenpaare begrenzen, gefolgt von Abgleich und Clustering; Datenbank-, Semantic-Web- und Machine-Learning-Community haben dafür unterschiedliche Verfahren vorgeschlagen.
+Entity Resolution erkennt unterschiedliche Beschreibungen, die sich auf dieselbe reale Entität beziehen, und ist eine der wichtigsten Aufgaben für die Datenqualität (Christophides et al., 2019). Moderne Workflows verarbeiten locker strukturierte, vielfältige, sich schnell ändernde und große Sammlungen von Entitätsbeschreibungen mit Blocking oder Indexierung, die die Kandidatenpaare begrenzen, gefolgt von Abgleich und [[clustering|Clustering]]; Datenbank-, Semantic-Web- und Machine-Learning-Community haben dafür unterschiedliche Verfahren vorgeschlagen.
 
 #### 3. Validierung mit Shapes
 

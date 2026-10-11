@@ -16,7 +16,7 @@ sources:
 > **Note:** LLM-generated summary based on the listed sources; it may be incomplete, outdated or wrong.
 
 ### TL;DR
-Sentence-BERT (SBERT) fine-tunes [[bert|BERT]] (Devlin et al., 2018) in a siamese network so that every sentence gets its own fixed-size embedding, and the similarity of two sentences is the cosine similarity of their embeddings (Reimers & Gurevych, 2019). This makes semantic search and clustering feasible: finding the most similar pair among 10,000 sentences took about 65 hours with BERT reading every pair and about 5 seconds with SBERT, with comparable accuracy.
+Sentence-BERT (SBERT) fine-tunes [[bert|BERT]] (Devlin et al., 2018) in a siamese network so that every sentence gets its own fixed-size embedding, and the similarity of two sentences is the cosine similarity of their embeddings (Reimers & Gurevych, 2019). This makes semantic search and [[clustering|clustering]] feasible: finding the most similar pair among 10,000 sentences took about 65 hours with BERT reading every pair and about 5 seconds with SBERT, with comparable accuracy.
 
 ### How it works
 
@@ -31,7 +31,7 @@ Both sentences pass through the same BERT network with tied weights. A pooling l
 
 #### 2. Training objectives
 The network is fine-tuned with one of three objectives (Reimers & Gurevych, 2019):
-- **Classification:** u, v and the element-wise difference |u − v| are concatenated and fed to a softmax classifier. SBERT was trained this way on natural language inference data, SNLI (570,000 sentence pairs) and MultiNLI (430,000), labelled contradiction, entailment or neutral.
+- **[[classification|Classification]]:** u, v and the element-wise difference |u − v| are concatenated and fed to a softmax classifier. SBERT was trained this way on natural language inference data, SNLI (570,000 sentence pairs) and MultiNLI (430,000), labelled contradiction, entailment or neutral.
 - **Regression:** the cosine similarity of u and v is trained against a similarity score with mean squared error, as on the STS benchmark.
 - **Triplet:** an anchor sentence must be closer to a positive than to a negative sentence by a margin, measured with Euclidean distance.
 
@@ -83,7 +83,7 @@ Sentence-BERT turns BERT into an encoder that gives every sentence its own vecto
 > **Hinweis:** LLM-generierte Zusammenfassung auf Basis der angegebenen Quellen; sie kann unvollständig, veraltet oder fehlerhaft sein.
 
 ### TL;DR
-Sentence-BERT (SBERT) justiert [[bert|BERT]] (Devlin et al., 2018) in einem siamesischen Netz so nach, dass jeder Satz ein eigenes Embedding fester Größe erhält; die Ähnlichkeit zweier Sätze ist die Kosinus-Ähnlichkeit ihrer Embeddings (Reimers & Gurevych, 2019). Damit werden semantische Suche und Clustering praktikabel: Das ähnlichste Paar unter 10.000 Sätzen zu finden, dauerte mit BERT, das jedes Paar liest, etwa 65 Stunden, mit SBERT etwa 5 Sekunden, bei vergleichbarer Genauigkeit.
+Sentence-BERT (SBERT) justiert [[bert|BERT]] (Devlin et al., 2018) in einem siamesischen Netz so nach, dass jeder Satz ein eigenes Embedding fester Größe erhält; die Ähnlichkeit zweier Sätze ist die Kosinus-Ähnlichkeit ihrer Embeddings (Reimers & Gurevych, 2019). Damit werden semantische Suche und [[clustering|Clustering]] praktikabel: Das ähnlichste Paar unter 10.000 Sätzen zu finden, dauerte mit BERT, das jedes Paar liest, etwa 65 Stunden, mit SBERT etwa 5 Sekunden, bei vergleichbarer Genauigkeit.
 
 ### Funktionsweise
 
@@ -98,7 +98,7 @@ Beide Sätze laufen durch dasselbe BERT-Netz mit geteilten Gewichten. Eine Pooli
 
 #### 2. Trainingsziele
 Das Netz wird mit einem von drei Zielen feinjustiert (Reimers & Gurevych, 2019):
-- **Klassifikation:** u, v und die elementweise Differenz |u − v| werden verbunden und in einen Softmax-Klassifikator gegeben. So wurde SBERT auf Daten zur natürlichsprachlichen Inferenz trainiert, SNLI (570.000 Satzpaare) und MultiNLI (430.000), gelabelt als Widerspruch, Folgerung oder neutral.
+- **[[classification|Klassifikation]]:** u, v und die elementweise Differenz |u − v| werden verbunden und in einen Softmax-Klassifikator gegeben. So wurde SBERT auf Daten zur natürlichsprachlichen Inferenz trainiert, SNLI (570.000 Satzpaare) und MultiNLI (430.000), gelabelt als Widerspruch, Folgerung oder neutral.
 - **Regression:** Die Kosinus-Ähnlichkeit von u und v wird mit mittlerem quadratischem Fehler gegen einen Ähnlichkeitswert trainiert, etwa auf dem STS-Benchmark.
 - **Triplet:** Ein Ankersatz muss einem positiven Satz um einen Mindestabstand näher sein als einem negativen, gemessen mit euklidischer Distanz.
 

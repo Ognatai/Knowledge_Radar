@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Large language models (LLMs) are Transformer-based neural networks ([[attention-and-transformers|Attention and Transformers]]) trained on large text corpora to predict the next token. At sufficient scale they can perform many tasks from instructions or a few examples in the prompt, without task-specific fine-tuning ([[prompt-engineering|Prompt Engineering]]), and instruction tuning with human feedback aligns their outputs with user intent (Brown et al., 2020; Ouyang et al., 2022).
+Large language models (LLMs) are Transformer-based [[neural-networks|neural networks]] ([[attention-and-transformers|Attention and Transformers]]) trained on large text corpora to predict the next token. At sufficient scale they can perform many tasks from instructions or a few examples in the prompt, without task-specific fine-tuning ([[prompt-engineering|Prompt Engineering]]), and instruction tuning with human feedback aligns their outputs with user intent (Brown et al., 2020; Ouyang et al., 2022).
 
 ### How it works
 
@@ -49,7 +49,7 @@ Text is split into subword units so that rare and unknown words can be represent
 
 #### 2. Transformer architecture
 
-The Transformer replaces recurrence and convolutions with attention (Vaswani et al., 2017). Self-attention computes, for every token, a weighted combination of all tokens in the sequence using query, key and value vectors: `attention = softmax(Q K^T / sqrt(d_k)) V`. Multi-head attention runs several attention computations with different learned projections in parallel, and position-wise feed-forward layers follow; because attention itself ignores word order, positional encodings are added to the token embeddings. Without recurrence, all positions of a training sequence can be processed in parallel, which makes training on large data sets much faster than with recurrent networks (Vaswani et al., 2017).
+The Transformer replaces recurrence and convolutions with attention (Vaswani et al., 2017). Self-attention computes, for every token, a weighted combination of all tokens in the sequence using query, key and value vectors: `attention = softmax(Q K^T / sqrt(d_k)) V`. Multi-head attention runs several attention computations with different learned projections in parallel, and position-wise feed-forward layers follow; because attention itself ignores word order, positional encodings are added to the token [[embeddings|embeddings]]. Without recurrence, all positions of a training sequence can be processed in parallel, which makes training on large data sets much faster than with recurrent networks (Vaswani et al., 2017).
 
 #### 3. Autoregressive next-token prediction
 
@@ -129,7 +129,7 @@ LLMs generate text by repeatedly predicting the next token with a Transformer; t
 
 ### TL;DR
 
-Große Sprachmodelle (LLMs) sind Transformer-basierte neuronale Netze ([[attention-and-transformers|Attention and Transformers]]), die auf großen Textkorpora darauf trainiert werden, das nächste Token vorherzusagen. Bei ausreichender Größe können sie viele Aufgaben aus Anweisungen oder einigen Beispielen im Prompt ausführen, ohne eine task-spezifische Feinabstimmung ([[prompt-engineering|Prompt Engineering]]), und Instruction Tuning mit menschlichem Feedback richtet ihre Ausgaben an der Absicht der Nutzer aus (Brown et al., 2020; Ouyang et al., 2022).
+Große Sprachmodelle (LLMs) sind Transformer-basierte [[neural-networks|neuronale Netze]] ([[attention-and-transformers|Attention and Transformers]]), die auf großen Textkorpora darauf trainiert werden, das nächste Token vorherzusagen. Bei ausreichender Größe können sie viele Aufgaben aus Anweisungen oder einigen Beispielen im Prompt ausführen, ohne eine task-spezifische Feinabstimmung ([[prompt-engineering|Prompt Engineering]]), und Instruction Tuning mit menschlichem Feedback richtet ihre Ausgaben an der Absicht der Nutzer aus (Brown et al., 2020; Ouyang et al., 2022).
 
 ### Funktionsweise
 

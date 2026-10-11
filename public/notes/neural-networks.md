@@ -49,7 +49,7 @@ Without non-linear activation functions, a stack of layers would collapse into a
 
 #### 4. Forward pass and output layer
 
-The forward pass computes the output from the input layer by layer (Goodfellow et al., 2016). The output layer and the loss are chosen together: for classification, a softmax output turns scores into class probabilities and is trained with cross-entropy; for regression, a linear output with squared error is common.
+The forward pass computes the output from the input layer by layer (Goodfellow et al., 2016). The output layer and the loss are chosen together: for [[classification|classification]], a softmax output turns scores into class probabilities and is trained with cross-entropy; for regression, a linear output with squared error is common.
 
 #### 5. Learning the weights
 
@@ -144,7 +144,7 @@ Ohne nichtlineare Aktivierungsfunktionen fiele ein Stapel von Schichten in eine 
 
 #### 4. Vorwärtsdurchlauf und Ausgabeschicht
 
-Der Vorwärtsdurchlauf berechnet die Ausgabe aus der Eingabe Schicht für Schicht (Goodfellow et al., 2016). Ausgabeschicht und Verlustfunktion werden zusammen gewählt: Bei Klassifikation macht eine Softmax-Ausgabe aus Werten Klassenwahrscheinlichkeiten und wird mit Kreuzentropie trainiert; bei Regression ist eine lineare Ausgabe mit quadratischem Fehler üblich.
+Der Vorwärtsdurchlauf berechnet die Ausgabe aus der Eingabe Schicht für Schicht (Goodfellow et al., 2016). Ausgabeschicht und Verlustfunktion werden zusammen gewählt: Bei [[classification|Klassifikation]] macht eine Softmax-Ausgabe aus Werten Klassenwahrscheinlichkeiten und wird mit Kreuzentropie trainiert; bei Regression ist eine lineare Ausgabe mit quadratischem Fehler üblich.
 
 #### 5. Lernen der Gewichte
 

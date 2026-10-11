@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6139a855294fbafcbae3f18203add1250adacb1870a1c8bf139367573beca872
+note_sha256: fef7d5c9fc36ef0e7fd34e6d658e585eef89bfedcebbe10e0cbdd882b6c8dd1b
 extracted_by: claude
 discusses:
 - quantization

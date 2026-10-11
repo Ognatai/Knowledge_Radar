@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 88476a4eaa248fed786fe78f7750b525a0b1968aff08196b340f32006b1313c9
+note_sha256: 26b0254a8a83a96ca70a2cd426817cde973ff145de57653b70b4056bd1cb8bf1
 extracted_by: claude
 discusses:
 - fixed-size-chunking

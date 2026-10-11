@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 319dfd9d0af6ca34c1b0188e0437265ded2df452c6e22d4d852c834713e2bdb3
+note_sha256: 78ee9a2e887390bea58d00e8d23d718431c607fd94ba23a53f06ecdb70d53d23
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - logistic-regression

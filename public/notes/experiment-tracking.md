@@ -95,7 +95,7 @@ Results were long recorded in notebooks and spreadsheets. MLflow was introduced 
 
 ### In practice
 
-Each training script logs parameters, the Git commit, the data version and metrics automatically, and seeds are logged together with the results. Before conclusions are drawn, the best configurations are re-run with several seeds and the spread is reported (Bouthillier et al., 2021); the reproducibility checklist from NeurIPS is a useful guide (Pineau et al., 2020). For LLM and RAG systems, prompt versions, retrieval settings and evaluation scores are tracked in the same way, linking experiments to [[quality-control|Quality Control]] and [[regression-testing|Regression Testing]], for example in [[legal-ai|Legal AI]] and [[contract-intelligence|Contract Intelligence]].
+Each training script logs parameters, the Git commit, the data version and metrics automatically, and seeds are logged together with the results. Before conclusions are drawn, the best configurations are re-run with several seeds and the spread is reported (Bouthillier et al., 2021); the reproducibility checklist from NeurIPS is a useful guide (Pineau et al., 2020). For LLM and [[retrieval-augmented-generation|RAG]] systems, prompt versions, retrieval settings and evaluation scores are tracked in the same way, linking experiments to [[quality-control|Quality Control]] and [[regression-testing|Regression Testing]], for example in [[legal-ai|Legal AI]] and [[contract-intelligence|Contract Intelligence]].
 
 ### Key takeaway
 

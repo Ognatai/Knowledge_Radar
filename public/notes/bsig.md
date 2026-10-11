@@ -143,7 +143,7 @@ Allows the Federal Office to process personal data to perform its tasks, and reg
 
 #### § 21 — Restrictions of the Rights of the Data Subject
 
-Adds further restrictions to the exceptions in the GDPR for the rights of data subjects towards the Federal Office, with the BDSG applying in addition.
+Adds further restrictions to the exceptions in the GDPR for the rights of data subjects towards the Federal Office, with the [[bdsg|BDSG]] applying in addition.
 
 #### § 22 — Duty to Inform When Collecting Personal Data
 

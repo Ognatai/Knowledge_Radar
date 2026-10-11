@@ -52,7 +52,7 @@ DistilBERT applies distillation during pretraining rather than for one task, wit
 
 #### 5. Kinds of knowledge and schemes
 
-Knowledge distillation has become a representative technique of model compression and acceleration for deploying deep models on devices with limited resources (Gou et al., 2020). The survey organises the field by the kind of knowledge transferred, the distillation scheme and the teacher-student architecture.
+Knowledge distillation has become a representative technique of [[model-compression|model compression]] and acceleration for deploying deep models on devices with limited resources (Gou et al., 2020). The survey organises the field by the kind of knowledge transferred, the distillation scheme and the teacher-student architecture.
 
 #### Origin and variants
 

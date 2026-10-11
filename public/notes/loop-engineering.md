@@ -93,7 +93,7 @@ Iterating with feedback is an old idea in agents (Yao et al., 2022; Shinn et al.
 
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
-| Prompt engineering | Designs a single request | One-off tasks |
+| [[prompt-engineering\|Prompt engineering]] | Designs a single request | One-off tasks |
 | Reflection loop | Model critiques and refines its own output (Madaan et al., 2023) | Improving a single result |
 | Agent loop | Model chooses actions until a stop condition (Anthropic, 2024a) | Open-ended tasks |
 | Outer loop (loop engineering) | System schedules, distributes and verifies agent work (Osmani, 2026b) | Recurring, autonomous work |
@@ -198,7 +198,7 @@ Iteration mit Rückmeldung ist bei Agenten eine alte Idee (Yao et al., 2022; Shi
 
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
-| Prompt Engineering | Gestaltet eine einzelne Anfrage | Einmalige Aufgaben |
+| [[prompt-engineering\|Prompt Engineering]] | Gestaltet eine einzelne Anfrage | Einmalige Aufgaben |
 | Reflexionsschleife | Modell kritisiert und überarbeitet die eigene Ausgabe (Madaan et al., 2023) | Verbesserung eines einzelnen Ergebnisses |
 | Agentenschleife | Modell wählt Aktionen bis zu einer Abbruchbedingung (Anthropic, 2024a) | Offene Aufgaben |
 | Äußere Schleife (Loop Engineering) | System plant, verteilt und prüft Agentenarbeit (Osmani, 2026b) | Wiederkehrende, autonome Arbeit |

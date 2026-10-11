@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4be679e9febe2b5b81934ed9b582141fb4cb906816c190a3fd634aee708a62ef
+note_sha256: 4b8a5df98959d3b84e26919b1917259632e6bf4d6013fdbf91d331f6d1347e8f
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - enisa

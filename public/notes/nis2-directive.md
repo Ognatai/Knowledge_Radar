@@ -290,7 +290,7 @@ Addresses the Member States.
 - **Research organisations** (Annex II): organisations whose primary goal is applied research or experimental development for commercial exploitation are covered; educational institutions are not (Art. 6(41)), though Member States may include them (Art. 2(5)).
 - **Supply chain security** (Art. 21(2)(d), (3)): entities must assess the security of their direct suppliers and their secure development procedures, which also applies to providers of AI models, AI services and machine learning libraries.
 - **Secure development** (Art. 21(2)(e)): security in acquisition, development and maintenance, including vulnerability handling, applies to AI systems built or bought by covered entities.
-- **Incident reporting** (Art. 23): attacks on AI systems such as data poisoning, model theft or prompt injection leading to data leaks can be significant incidents with a 24-hour early warning.
+- **Incident reporting** (Art. 23): attacks on AI systems such as data poisoning, model theft or [[prompt-injection|prompt injection]] leading to data leaks can be significant incidents with a 24-hour early warning.
 - **Information sharing** (Art. 29): voluntary exchange of indicators of compromise and attack techniques can cover AI-specific threats.
 
 ### Official sources
@@ -570,7 +570,7 @@ Regelt, dass die Richtlinie an die Mitgliedstaaten gerichtet ist.
 - **Forschungseinrichtungen** (Anhang II): Einrichtungen, deren Hauptziel angewandte Forschung oder experimentelle Entwicklung zur kommerziellen Verwertung ist, sind erfasst; Bildungseinrichtungen nicht (Art. 6 Nr. 41), die Mitgliedstaaten können sie aber einbeziehen (Art. 2 Abs. 5).
 - **Sicherheit der Lieferkette** (Art. 21 Abs. 2 Buchst. d, Abs. 3): Einrichtungen müssen die Sicherheit ihrer direkten Anbieter und deren sichere Entwicklungsprozesse bewerten; das gilt auch für Anbieter von KI-Modellen, KI-Diensten und Bibliotheken für maschinelles Lernen.
 - **Sichere Entwicklung** (Art. 21 Abs. 2 Buchst. e): Sicherheit bei Erwerb, Entwicklung und Wartung einschließlich Schwachstellenmanagement gilt auch für KI-Systeme, die erfasste Einrichtungen entwickeln oder einkaufen.
-- **Meldung von Sicherheitsvorfällen** (Art. 23): Angriffe auf KI-Systeme wie Data Poisoning, Modelldiebstahl oder Prompt Injection mit Datenabfluss können erhebliche Sicherheitsvorfälle sein, für die binnen 24 Stunden eine Frühwarnung fällig ist.
+- **Meldung von Sicherheitsvorfällen** (Art. 23): Angriffe auf KI-Systeme wie Data Poisoning, Modelldiebstahl oder [[prompt-injection|Prompt Injection]] mit Datenabfluss können erhebliche Sicherheitsvorfälle sein, für die binnen 24 Stunden eine Frühwarnung fällig ist.
 - **Informationsaustausch** (Art. 29): Der freiwillige Austausch von Kompromittierungsindikatoren und Angriffstechniken kann auch KI-spezifische Bedrohungen umfassen.
 
 ### Amtliche Quellen

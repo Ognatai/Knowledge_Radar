@@ -68,7 +68,7 @@ Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings practical for 
 ### When to use it
 
 - When queries and relevant documents use different wording, as in natural-language questions (Karpukhin et al., 2020).
-- When retrieval feeds a RAG system and must find passages by meaning ([[rag-retrieval|RAG: Retrieval]]).
+- When retrieval feeds a [[retrieval-augmented-generation|RAG]] system and must find passages by meaning ([[rag-retrieval|RAG: Retrieval]]).
 - When exact terms matter or the domain differs strongly from the training data, semantic retrieval should be combined with BM25 (Thakur et al., 2021).
 
 ### Strengths and limitations

@@ -15,11 +15,11 @@ sources:
 
 ### TL;DR
 
-RAG retrieval evaluation employs metrics including Recall@k, Precision@k, and nDCG to quantify the relevance and ranking quality of retrieved context for the retrieval component [[rag-retrieval|retrieval component]]. This addresses the challenge of measuring how effectively the retriever identifies and ranks relevant information, directly impacting the quality of generated responses in retrieval-augmented systems.
+[[retrieval-augmented-generation|RAG]] retrieval evaluation employs metrics including Recall@k, Precision@k, and nDCG to quantify the relevance and ranking quality of retrieved context for the retrieval component [[rag-retrieval|retrieval component]]. This addresses the challenge of measuring how effectively the retriever identifies and ranks relevant information, directly impacting the quality of generated responses in retrieval-augmented systems.
 
 ### How it works
 
-Retrieval evaluation compares the ranked list a retriever returns for each test query with relevance judgments, i.e. the known relevant documents for that query. From this comparison, standard information retrieval metrics are computed: Recall@k for coverage, Precision@k for the share of relevant results, MRR for the position of the first relevant result and nDCG for the quality of the whole ranking with graded relevance (Manning et al., 2008; Järvelin & Kekäläinen, 2002). It is one half of [[rag-evaluation|RAG evaluation]].
+Retrieval evaluation compares the ranked list a retriever returns for each test query with relevance judgments, i.e. the known relevant documents for that query. From this comparison, standard [[information-retrieval|information retrieval]] metrics are computed: Recall@k for coverage, Precision@k for the share of relevant results, MRR for the position of the first relevant result and nDCG for the quality of the whole ranking with graded relevance (Manning et al., 2008; Järvelin & Kekäläinen, 2002). It is one half of [[rag-evaluation|RAG evaluation]].
 
 ```text
 test queries + relevance judgments
@@ -58,7 +58,7 @@ The BEIR benchmark (Thakur et al. (2021)) standardizes retrieval evaluation acro
 ### When to use it
 
 - Choosing between retrieval set-ups (embedding model, chunking, hybrid search, reranker) on the system's own test queries.
-- Regression testing: re-running the same queries after every change to the index or the models.
+- [[regression-testing|Regression testing]]: re-running the same queries after every change to the index or the models.
 - Checking whether a retriever generalises to new domains, e.g. with a heterogeneous benchmark such as BEIR (Thakur et al., 2021).
 - Locating failures: if the relevant passage is not in the top k, the problem lies in retrieval, not in generation.
 
@@ -148,7 +148,7 @@ Der BEIR-Benchmark (Thakur et al. (2021)) standardisiert die Bewertung von Retri
 ### Wann einsetzen
 
 - Die Wahl zwischen Retrieval-Set-ups (Embedding-Modell, Chunking, hybride Suche, Reranker) anhand der eigenen Testabfragen des Systems.
-- Regressionstests: Wiederholen der gleichen Abfragen nach jedem Änderung am Index oder den Modellen.
+- [[regression-testing|Regressionstests]]: Wiederholen der gleichen Abfragen nach jedem Änderung am Index oder den Modellen.
 - Prüfen, ob ein Retriever auf neue Domänen generalisiert, z. B. mit einem heterogenen Benchmark wie BEIR (Thakur et al., 2021).
 - Lokalisieren von Fehlern: Wenn der relevante Absatz nicht in den Top-k liegt, liegt das Problem im Retrieval und nicht in der Generierung.
 
@@ -157,7 +157,7 @@ Der BEIR-Benchmark (Thakur et al. (2021)) standardisiert die Bewertung von Retri
 **Stärken**
 - Der BEIR-Benchmark (Thakur et al. (2021)) ermöglicht eine standardisierte Bewertung über 18 heterogene Datensätze, wodurch sich zeigt, dass Re-Ranking-Modelle ([[cross-encoder|Cross-Encoder]]) die beste Zero-Shot-Leistung erzielen, obwohl sie mit hohen Rechenkosten verbunden sind.
 - nDCG (Järvelin & Kekäläinen (2002)) berücksichtigt die graduelle Relevanz und die Positionsgewichtung, wodurch eine präzisere Bewertung als bei binären Metriken wie Recall@k möglich ist.
-- Metriken wie Precision@k und Recall@k sind rechenleicht und etabliert in der Information Retrieval (Manning et al. (2008)), was eine skalierbare Bereitstellung ermöglicht.
+- Metriken wie Precision@k und Recall@k sind rechenleicht und etabliert in der [[information-retrieval|Information Retrieval]] (Manning et al. (2008)), was eine skalierbare Bereitstellung ermöglicht.
 
 **Einschränkungen**
 - Die Bewertung erfasst nicht den Einfluss der Retrieval-Operation auf die Qualität der nachfolgenden Generierung, weshalb eine separate [[rag-generation-evaluation|Generierungsbewertung]] erforderlich ist.
@@ -172,7 +172,7 @@ Der BEIR-Benchmark (Thakur et al. (2021)) standardisiert die Bewertung von Retri
 | Recall@k und Precision@k | Liefern komplementäre Maße für Abdeckung (Recall@k) und Qualität (Precision@k); die Verwendung nur eines davon kann den Kompromiss zwischen Recall und Precision nicht erfassen. | Wenn die Abdeckung aller relevanten Informationen (Recall@k) mit der Minimierung der irrelevanten Top-k-Ergebnisse (Precision@k) ausgewogen werden soll. |
 | MRR | Nur die Reihenfolge des ersten relevanten Ergebnisses zählt. | Aufgaben, bei denen ein relevanter Absatz ausreicht, z. B. Faktenfragen. |
 
-Für RAG ist Recall@k an der tatsächlich an das Modell übergebenen k in der Regel die wichtigste Zahl; nDCG fügt Empfindlichkeit für die Reihenfolge innerhalb der Top-k hinzu, was BEIR (Thakur et al., 2021) als seine Hauptmetrik berichtet (nDCG@10).
+Für [[retrieval-augmented-generation|RAG]] ist Recall@k an der tatsächlich an das Modell übergebenen k in der Regel die wichtigste Zahl; nDCG fügt Empfindlichkeit für die Reihenfolge innerhalb der Top-k hinzu, was BEIR (Thakur et al., 2021) als seine Hauptmetrik berichtet (nDCG@10).
 
 ### In der Praxis
 
