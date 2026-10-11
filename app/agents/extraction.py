@@ -797,7 +797,8 @@ def resolve_new_entities(
     for new_id, known_id in resolution.merged.items():
         log(f"  resolved: {new_id} -> {known_id}")
     for known_id, names in resolution.aliases.items():
-        owner = graph.entities[known_id].note
+        # A private entity is not in the public graph; its aliases go to the private registry.
+        owner = graph.entities[known_id].note if known_id in graph.entities else None
         if owner:
             log(f"  alias for the note {owner} (add to its frontmatter by hand): {', '.join(names)}")
 
