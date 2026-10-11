@@ -1,0 +1,207 @@
+# Subject areas of the public notes, in display order. Every note belongs to exactly
+# one area; the site groups its note list by them. New notes are added here when
+# they are published.
+version: 1
+areas:
+  - id: language-models
+    name_en: Language Models & NLP
+    name_de: Sprachmodelle & NLP
+    notes:
+      - attention-and-transformers
+      - large-language-models
+      - gpt
+      - bert
+      - natural-language-processing
+      - tokenization
+      - embeddings
+      - multimodal-models
+      - information-extraction
+      - entity-extraction
+      - text-similarity-metrics
+    also:
+      - bias-in-nlp
+      - legal-ai
+  - id: llm-adaptation
+    name_en: Adapting & Running LLMs
+    name_de: LLMs anpassen & betreiben
+    notes:
+      - llm-adaptation
+      - rag-vs-fine-tuning
+      - lora
+      - knowledge-distillation
+      - model-compression
+      - quantization
+      - mixed-precision-training
+      - llm-cost-optimization
+  - id: agents
+    name_en: Agents, Prompting & AI Engineering
+    name_de: Agenten, Prompting & AI Engineering
+    notes:
+      - agentic-ai
+      - agent-skills
+      - mcp-and-related-protocols
+      - langchain-and-langgraph
+      - prompt-engineering
+      - prompt-comparison
+      - context-engineering
+      - structured-context-construction
+      - prompt-injection
+      - engineering-methods-for-ai-systems
+      - harness-engineering
+      - loop-engineering
+      - graph-engineering
+      - vibe-coding
+  - id: retrieval
+    name_en: Retrieval & RAG
+    name_de: Retrieval & RAG
+    notes:
+      - information-retrieval
+      - bm25
+      - semantic-retrieval
+      - vector-databases
+      - cross-encoder
+      - retrieval-augmented-generation
+      - rag-chunking
+      - rag-retrieval
+      - graphrag
+      - rag-evaluation
+      - rag-retrieval-evaluation
+      - rag-generation-evaluation
+      - rag-failure-modes
+    also:
+      - embeddings
+      - rag-vs-fine-tuning
+  - id: evaluation
+    name_en: Evaluation & Trustworthy AI
+    name_de: Evaluation & vertrauenswürdige KI
+    notes:
+      - llm-evaluation
+      - llm-as-a-judge
+      - hallucination-detection
+      - regression-testing
+      - quality-control
+      - llm-observability-and-tracing
+      - fairness-metrics
+      - bias-in-nlp
+      - explainable-ai
+      - differential-privacy-and-federated-learning
+    also:
+      - prompt-injection
+      - text-similarity-metrics
+      - rag-evaluation
+  - id: classical-ml
+    name_en: Classical ML & Statistics
+    name_de: Klassisches ML & Statistik
+    notes:
+      - classical-machine-learning
+      - statistics-fundamentals
+      - ml-preprocessing
+      - feature-engineering
+      - classification
+      - classification-metrics
+      - decision-trees
+      - ensemble-methods
+      - k-nearest-neighbors
+      - support-vector-machines
+      - clustering
+      - principal-component-analysis
+      - regularization-and-hyperparameters
+      - cross-validation
+      - model-comparison
+      - causal-inference
+      - time-series-analysis
+  - id: deep-learning
+    name_en: Neural Networks & Deep Learning
+    name_de: Neuronale Netze & Deep Learning
+    notes:
+      - neural-networks
+      - neural-network-training
+      - neural-network-evaluation
+      - convolutional-neural-networks
+      - recurrent-neural-networks
+      - autoencoders-and-gans
+      - diffusion-models
+      - reinforcement-learning
+      - keras-and-tensorflow
+    also:
+      - attention-and-transformers
+  - id: knowledge-graphs
+    name_en: Knowledge Graphs
+    name_de: Wissensgraphen
+    notes:
+      - knowledge-graphs
+      - knowledge-graph-engineering
+      - ontology-design
+      - rdf
+      - sparql
+      - graph-databases
+      - transe
+      - distmult
+      - complex
+      - rotate
+    also:
+      - graphrag
+      - information-extraction
+  - id: software
+    name_en: Software & MLOps
+    name_de: Software & MLOps
+    notes:
+      - python
+      - sql
+      - apis
+      - git
+      - docker
+      - kubernetes
+      - clean-code
+      - confluence
+      - mlops-and-deployment
+      - experiment-tracking
+    also:
+      - langchain-and-langgraph
+      - regression-testing
+      - quality-control
+      - llm-observability-and-tracing
+      - graph-databases
+  - id: eu-law
+    name_en: EU Law & Legal AI
+    name_de: EU-Recht & Legal AI
+    notes:
+      - eu-ai-act
+      - gdpr
+      - eprivacy-directive
+      - data-act
+      - data-governance-act
+      - digital-services-act
+      - digital-markets-act
+      - eidas
+      - eecc
+      - cyber-resilience-act
+      - cybersecurity-act
+      - nis2-directive
+      - cer-directive
+      - ai-liability-law
+      - copyright-and-ai-training-data
+      - legal-ai
+      - contract-intelligence
+    also:
+      - dora
+  - id: german-law
+    name_en: German Law
+    name_de: Deutsches Recht
+    notes:
+      - bdsg
+      - tdddg
+      - bsig
+      - bsi-kritisv
+      - geschgehg
+  - id: financial-regulation
+    name_en: Financial Supervision
+    name_de: Finanzaufsicht
+    notes:
+      - crr-and-crd
+      - kwg
+      - marisk
+      - dora
+      - eba-governance-and-outsourcing-guidelines
+      - bcbs-239-and-ecb-rdarr-guide
+      - information-security-in-banking

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import {
+  areaName,
   buildSearchIndex,
   contextSnippet,
   entityName,
@@ -11,6 +12,7 @@ import {
   noteTitle,
   renderWikilinks,
   wikilinkResolver,
+  type Area,
   type EntityNode,
   type GraphNode,
   type Note,
@@ -305,7 +307,16 @@ function App() {
           </>
         )}
 
-        {data && (screen.kind === "notes" || screen.kind === "search") && (
+        {data && screen.kind === "notes" && (data.areas?.length ?? 0) > 0 && (
+          <NoteAreas
+            data={data}
+            language={language}
+            notesBySlug={notesBySlug}
+            openNote={(slug) => navigate({ kind: "note", slug })}
+          />
+        )}
+
+        {data && (screen.kind === "search" || (screen.kind === "notes" && !data.areas?.length)) && (
           <NoteResults
             changePage={(page) => navigate({ ...screen, page })}
             language={language}
@@ -427,6 +438,84 @@ function NoteResults({ language, notes, openNote, page, changePage }: NoteResult
         </>
       )}
     </section>
+  );
+}
+
+interface NoteAreasProps {
+  data: SiteData;
+  language: Language;
+  notesBySlug: Map<string, Note>;
+  openNote: (slug: string) => void;
+}
+
+/** The note list grouped by subject area, with the latest additions and updates first. */
+function NoteAreas({ data, language, notesBySlug, openNote }: NoteAreasProps) {
+  const { t } = useTranslation();
+  const areas = data.areas ?? [];
+  const news = (data.news ?? []).filter((item) => notesBySlug.has(item.slug));
+  const mainArea = new Map(areas.flatMap((area) => area.notes.map((slug) => [slug, area] as const)));
+  const formatDate = (date: string) =>
+    new Date(`${date}T00:00:00`).toLocaleDateString(language === "en" ? "en-GB" : "de-DE", { day: "numeric", month: "short", year: "numeric" });
+
+  return (
+    <>
+      {news.length > 0 && (
+        <section className="content-card" aria-labelledby="news-title">
+          <h2 className="area-section-title" id="news-title">{t("newAndUpdated")}</h2>
+          <ul className="news-list">
+            {news.map((item) => {
+              const note = notesBySlug.get(item.slug)!;
+              const updateTitle = language === "en" ? item.title_en : item.title_de;
+              return (
+                <li key={`${item.kind}:${item.slug}:${item.date}`}>
+                  <button className="news-item" onClick={() => openNote(item.slug)} type="button">
+                    <span className="news-meta">
+                      <span className={`news-badge news-badge-${item.kind}`}>{t(item.kind === "new" ? "newNote" : "updatedNote")}</span>
+                      <time dateTime={item.date}>{formatDate(item.date)}</time>
+                    </span>
+                    <span className="note-title">{noteTitle(note, language)}</span>
+                    {item.kind === "update" && updateTitle && <span className="news-detail">{updateTitle}</span>}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      <section className="content-card" aria-labelledby="areas-title">
+        <h2 className="area-section-title" id="areas-title">{t("byArea")}</h2>
+        <p className="results-count">{t("notesCount", { count: data.notes.length })}</p>
+        {areas.map((area) => {
+          const entries = [
+            ...area.notes.map((slug) => ({ slug, from: undefined as Area | undefined })),
+            ...area.also.map((slug) => ({ slug, from: mainArea.get(slug) })),
+          ].filter((entry) => notesBySlug.has(entry.slug));
+          return (
+            <details className="area" key={area.id}>
+              <summary>
+                <span className="area-name">{areaName(area, language)}</span>
+                <span className="area-count" aria-label={t("areaCount", { count: area.notes.length })}>{area.notes.length}</span>
+              </summary>
+              <ul className="result-list area-notes">
+                {entries.map(({ slug, from }) => {
+                  const note = notesBySlug.get(slug)!;
+                  return (
+                    <li key={slug}>
+                      <button className={`result-card${from ? " result-card-secondary" : ""}`} onClick={() => openNote(slug)} type="button">
+                        <span className="note-type">{note.entity_type}</span>
+                        <span className="note-title">{noteTitle(note, language)}</span>
+                        {from && <span className="also-from">{t("alsoFrom", { area: areaName(from, language) })}</span>}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
+          );
+        })}
+      </section>
+    </>
   );
 }
 

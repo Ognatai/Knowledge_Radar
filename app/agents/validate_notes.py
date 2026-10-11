@@ -11,6 +11,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from app.backend.knowledge_radar.areas import AreaError, areas_path, load_areas
 from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, GraphError, load_graph
 from app.backend.knowledge_radar.notes import (
     NoteRepositoryError,
@@ -52,6 +53,14 @@ def main() -> int:
                 print(f"  - {problem}", file=sys.stderr)
     if failed:
         return 1
+
+    areas_file = areas_path(args.notes_dir)
+    if areas_file.is_file():
+        try:
+            load_areas({note.slug for note in notes}, areas_file)
+        except AreaError as exc:
+            print(f"Validation failed: {exc}", file=sys.stderr)
+            return 1
 
     try:
         graph = load_graph(args.graph_dir, notes, args.notes_dir)

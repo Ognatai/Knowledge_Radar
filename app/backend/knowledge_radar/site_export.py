@@ -3,7 +3,8 @@
 The export reads only `public/`: the notes and the versioned graph files in
 `public/graph/` (see `graph.py`). It needs no database and no LLM, so it runs in
 the cloud build. It produces the two-layer graph model: `Note` nodes, `Entity`
-nodes, `DISCUSSES` and `RELATED_TO` edges, and entity-to-entity relations.
+nodes, `DISCUSSES` and `RELATED_TO` edges, and entity-to-entity relations, plus
+the subject areas of `public/areas.yaml` and the "new and updated" list (`areas`).
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from app.backend.knowledge_radar.areas import Area, added_dates, areas_path, load_areas, news
 from app.backend.knowledge_radar.graph import (
     DEFAULT_GRAPH_DIRECTORY,
     GraphError,
@@ -33,7 +35,12 @@ OUTPUT_FILE_NAME = "site-data.json"
 EXPORT_FORMAT_VERSION = 1
 
 
-def build_site_data(notes: list[NoteDetail], graph_directory: Path | None) -> dict[str, Any]:
+def build_site_data(
+    notes: list[NoteDetail],
+    graph_directory: Path | None,
+    areas: list[Area] | None = None,
+    news: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     graph = load_graph(graph_directory, notes)
     nodes: list[dict[str, Any]] = [
         {
@@ -75,11 +82,16 @@ def build_site_data(notes: list[NoteDetail], graph_directory: Path | None) -> di
         "version": EXPORT_FORMAT_VERSION,
         "notes": [note.model_dump() for note in notes],
         "graph": {"nodes": nodes, "edges": edges},
+        "areas": [area.to_json() for area in areas or []],
+        "news": news or [],
     }
 
 
 def export_site_data(notes_directory: Path, graph_directory: Path | None, output_directory: Path) -> Path:
-    data = build_site_data(load_notes(notes_directory), graph_directory)
+    notes = load_notes(notes_directory)
+    areas_file = areas_path(notes_directory)
+    areas = load_areas({note.slug for note in notes}, areas_file) if areas_file.is_file() else []
+    data = build_site_data(notes, graph_directory, areas, news(notes, added_dates(notes_directory)))
     output_directory.mkdir(parents=True, exist_ok=True)
     output_path = output_directory / OUTPUT_FILE_NAME
     output_path.write_text(

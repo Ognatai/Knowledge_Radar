@@ -41,11 +41,34 @@ export interface GraphEdge {
   undirected?: boolean;
 }
 
+/** A subject area: `notes` have it as their main area, `also` are listed there too. */
+export interface Area {
+  id: string;
+  name_en: string;
+  name_de: string;
+  notes: string[];
+  also: string[];
+}
+
+/** A note added after the initial migration, or a dated update entry of a note. */
+export interface NewsItem {
+  kind: "new" | "update";
+  slug: string;
+  date: string;
+  title_en?: string;
+  title_de?: string;
+}
+
 export interface SiteData {
   version: number;
   notes: Note[];
   graph: { nodes: GraphNode[]; edges: GraphEdge[] };
+  areas?: Area[];
+  news?: NewsItem[];
 }
+
+export const areaName = (area: Area, language: Language) =>
+  language === "en" ? area.name_en : area.name_de;
 
 export async function loadSiteData(): Promise<SiteData> {
   const response = await fetch(`${import.meta.env.BASE_URL}data/site-data.json`);
