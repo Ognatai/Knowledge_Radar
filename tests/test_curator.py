@@ -113,6 +113,24 @@ def test_new_note_drafts_follow_the_technical_template():
     assert "- Lovelace, A. et al. (2026). *Blocking at the Boundary.*" in english_part(text)
 
 
+def test_technology_drafts_follow_the_technology_template():
+    text, outline = draft_new_note(
+        "scikit-learn",
+        [finding()],
+        [source()],
+        [],
+        set(),
+        embed,
+        generate=fake_generate,
+        entity_type="Technology",
+    )
+
+    assert check_template(text) == []
+    assert outline["entity_type"] == "Technology"
+    assert "### Core concepts" in text and "### Common usage" in text and "### Kernkonzepte" in text
+    assert "### How it works" not in text
+
+
 def test_update_drafts_append_a_dated_entry_with_a_link():
     def generate(prompt, json_schema=None, **options):
         if prompt.startswith("Translate"):
