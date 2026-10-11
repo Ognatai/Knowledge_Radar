@@ -25,6 +25,7 @@ model then checks it once, with reasoning, against the notes with the most simil
 titles. Updates and new topics are proposals; at most `max_proposals_per_week`
 (sources.yaml) are kept, ranked by importance, then tier, source kind and upvotes.
 Recurring new topics outside the arXiv search phrases suggest new search phrases.
+The room left under the cap goes to promotions of registry entities (`promotion`).
 
     python -m app.agents.monitoring.relevance                    # latest source run
     python -m app.agents.monitoring.relevance --run <findings.jsonl> --limit 10
@@ -449,6 +450,7 @@ def latest_run(directory: Path = RUNS_DIRECTORY) -> Path:
 
 
 def main() -> int:
+    from app.agents.monitoring import promotion
     from app.backend.knowledge_radar.index import Neo4jStore, connect
 
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -487,9 +489,18 @@ def main() -> int:
     updates = [decision for decision in decisions if decision.decision == "update"]
     proposals = select_proposals(updates + topics, config.max_proposals_per_week)
     suggestions = suggest_search_phrases(decisions, config.arxiv.queries, embeddings.embed)
+    declined = promotion.load_declined()
+    promotions = promotion.select_promotions(
+        promotion.promotion_candidates(promotion.load_graph(promotion.GRAPH_DIRECTORY, notes)),
+        [(note.slug, note.title_en) for note in notes],
+        min(config.promotions_per_week, config.max_proposals_per_week - len(proposals)),
+        declined,
+        embeddings.embed,
+    )
+    promotion.save_declined(declined)
     report = {
         "findings_file": str(run_path),
-        "proposals": [decision.to_json() for decision in proposals],
+        "proposals": [decision.to_json() for decision in proposals] + promotions,
         "search_phrase_suggestions": suggestions,
         "errors": errors,
         "decisions": [decision.to_json() for decision in decisions],
@@ -504,6 +515,8 @@ def main() -> int:
         target = decision.note or "new note"
         label = decision.finding.title if decision.decision == "update" else f"{decision.topic} ({decision.reason})"
         print(f"  {decision.importance}  {decision.decision:9} {target:35} {label[:90]}")
+    for proposal in promotions:
+        print(f"     promotion {proposal['entity']['id']:35} {proposal['reason']}")
     for suggestion in suggestions:
         print(f"Suggested search phrase: {suggestion['phrase']!r} ({suggestion['occurrences']} findings)")
     for error in errors:

@@ -15,6 +15,10 @@
 # agent prioritises within it.
 max_proposals_per_week: 10
 
+# Registry entities discussed by more than 3 notes get a note of their own; at most
+# this many per week, taken from the room left under max_proposals_per_week.
+promotions_per_week: 3
+
 # The most upvoted papers of each day on Hugging Face Daily Papers: a community
 # selection that finds new work without our search phrases.
 huggingface_daily_papers:

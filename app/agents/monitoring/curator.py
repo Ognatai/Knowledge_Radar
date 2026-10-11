@@ -4,6 +4,9 @@
 - `new_topic`: a new note in the technical template, written section by section
   from the full texts of the topic's findings; each section sees only the source
   passages most relevant to it.
+- `promotion`: a registry entity discussed by more than 3 notes (`promotion`),
+  drafted like a new topic from foundational sources alone; the note keeps the
+  entity's id as slug and its names, and the discussing notes are offered as links.
 
 Drafts never go to `public/` directly. Each lands in
 `.knowledge-radar/monitoring/drafts/<run>/` with a review report (template
@@ -13,6 +16,7 @@ authentic text of the act, which needs its own workflow.
 
     python -m app.agents.monitoring.curator                 # proposals of the latest relevance run
     python -m app.agents.monitoring.curator --only prompt-injection
+    python -m app.agents.monitoring.curator --run .knowledge-radar/monitoring/runs/promotion-<stamp>.json
 """
 
 from __future__ import annotations
@@ -44,6 +48,8 @@ from app.backend.knowledge_radar.templates import check_template
 DRAFTS_DIRECTORY = RUNS_DIRECTORY.parent / "drafts"
 MAX_SOURCES = 10
 FOUNDATIONAL_SOURCES = 3
+# A promotion has no findings of the week; its note rests on foundational sources alone.
+PROMOTION_SOURCES = 5
 PASSAGES_PER_SECTION = 8
 PASSAGES_PER_SOURCE = 3
 MAX_TRANSLATION_RATIO = 1.6
@@ -407,6 +413,21 @@ def review_report(draft: Draft) -> str:
     return "\n".join(lines) + "\n"
 
 
+def with_entity_names(text: str, entity: dict[str, Any]) -> str:
+    """A promoted entity keeps the names and type it has in the registry, so that the
+    extractions that already discuss it stay valid."""
+    _, frontmatter, body = text.split("---\n", 2)
+    data = yaml.safe_load(frontmatter)
+    data.update(title_en=entity["name_en"], title_de=entity["name_de"], entity_type=entity["type"])
+    aliases = list(dict.fromkeys([*entity.get("aliases", []), *data.get("aliases", [])]))
+    data.pop("aliases", None)
+    ordered = {key: data[key] for key in ("title_en", "title_de", "entity_type")}
+    if aliases:
+        ordered["aliases"] = aliases
+    ordered.update((key, value) for key, value in data.items() if key not in ordered)
+    return f"---\n{yaml.safe_dump(ordered, sort_keys=False, allow_unicode=True)}---\n{body}"
+
+
 def english_part(text: str) -> str:
     match = re.search(r"^## EN\n(.*?)^## DE\n", text, re.MULTILINE | re.DOTALL)
     return match.group(1) if match else text
@@ -431,7 +452,7 @@ def main() -> int:
 
     report_path = args.run or latest_relevance_run()
     report = json.loads(report_path.read_text(encoding="utf-8"))
-    findings_by_id = {d["finding"]["id"]: finding_from_json(d["finding"]) for d in report["decisions"]}
+    findings_by_id = {d["finding"]["id"]: finding_from_json(d["finding"]) for d in report.get("decisions", [])}
     notes_directory = configured_notes_directory()
     notes = {note.slug: note for note in load_notes(notes_directory)}
     known = set(notes)
@@ -441,11 +462,19 @@ def main() -> int:
 
     failures = 0
     for proposal in report["proposals"]:
-        finding = finding_from_json(proposal["finding"])
-        if finding.category == "regulatory":
-            print(f"Skipped (regulatory, needs the legal workflow): {finding.title[:70]}")
-            continue
-        slug = proposal["note"] if proposal["decision"] == "update" else slugify(proposal["topic"])
+        entity = proposal.get("entity")
+        if entity:
+            finding = None
+            slug = entity["id"]
+            if entity["type"] == "Regulation":
+                print(f"Skipped (regulatory, needs the legal workflow): {entity['name_en']}")
+                continue
+        else:
+            finding = finding_from_json(proposal["finding"])
+            if finding.category == "regulatory":
+                print(f"Skipped (regulatory, needs the legal workflow): {finding.title[:70]}")
+                continue
+            slug = proposal["note"] if proposal["decision"] == "update" else slugify(proposal["topic"])
         if args.only and args.only != slug:
             continue
         if proposal["decision"] != "update" and slug in known:
@@ -466,17 +495,24 @@ def main() -> int:
                 draft = Draft(slug, "update", text, [source])
             else:
                 try:
-                    foundations = foundational_findings(proposal["topic"], FOUNDATIONAL_SOURCES)
+                    foundations = foundational_findings(proposal["topic"], PROMOTION_SOURCES if entity else FOUNDATIONAL_SOURCES)
                 except Exception as exc:  # OpenAlex unreachable: draft from the findings alone
                     print(f"No foundational sources for {slug}: {exc}", file=sys.stderr)
                     foundations = []
-                week = [finding] + [findings_by_id[i] for i in proposal.get("related", []) if i in findings_by_id]
+                week = [finding] if finding else []
+                week += [findings_by_id[i] for i in proposal.get("related", []) if i in findings_by_id]
                 members = list({member.id: member for member in foundations + week}.values())[:MAX_SOURCES]
+                if not members:
+                    raise KeyError(f"no sources for {slug}")
                 sources = [source_text(member) for member in members]
                 links = [(c["note"], c["title"]) for c in proposal.get("candidates", [])]
                 text, outline = draft_new_note(proposal["topic"], members, sources, links, known, embeddings.embed)
+                warnings = outline.get("warnings", [])
+                if entity:
+                    text = with_entity_names(text, entity)
+                    warnings.append(f"on publication, remove '{slug}' from public/graph/entities.yaml")
                 english = english_part(text)
-                draft = Draft(slug, "new_topic", text, sources, warnings=outline.get("warnings", []))
+                draft = Draft(slug, proposal["decision"], text, sources, warnings=warnings)
             print(f"Checking {slug} ...")
             run_gates(draft, english, embeddings.embed)
         except (llm.LLMError, embeddings.EmbeddingError, json.JSONDecodeError, KeyError) as exc:
