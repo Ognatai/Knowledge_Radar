@@ -12,6 +12,7 @@ dependencies = [
     "defusedxml>=0.7,<0.8",
     "fastapi>=0.110,<1.0",
     "keyring>=25,<26",
+    "mcp>=2.3,<3",
     "neo4j>=5.28,<7",
     "PyYAML>=6.0,<7.0",
     "uvicorn[standard]>=0.27,<1.0",
