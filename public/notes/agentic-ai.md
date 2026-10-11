@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Agentic AI describes systems in which a language model does not only answer a single input but pursues a goal over several steps: it plans, calls tools, observes the results and decides what to do next. A useful distinction separates workflows, in which LLMs and tools follow predefined code paths, from agents, in which the LLM dynamically directs its own process and tool use (Anthropic, 2024a); in the simplest definition, agents are LLMs autonomously using tools in a loop (Anthropic, 2025a). Agents can solve open-ended tasks, but they cost more, compound errors and open new attack surfaces such as indirect prompt injection (Greshake et al., 2023).
+Agentic AI describes systems in which a language model does not only answer a single input but pursues a goal over several steps: it plans, calls tools, observes the results and decides what to do next. A useful distinction separates workflows, in which LLMs and tools follow predefined code paths, from agents, in which the LLM dynamically directs its own process and tool use (Anthropic, 2024a); in the simplest definition, agents are LLMs autonomously using tools in a loop (Anthropic, 2025a). Agents can solve open-ended tasks, but they cost more, compound errors and open new attack surfaces such as [[prompt-injection|indirect prompt injection]] (Greshake et al., 2023).
 
 ### How it works
 
@@ -124,7 +124,7 @@ An agent is an LLM that uses tools in a loop and decides its own next step; it p
 
 ### TL;DR
 
-Agentic AI bezeichnet Systeme, in denen ein Sprachmodell nicht nur auf eine einzelne Eingabe antwortet, sondern ein Ziel über mehrere Schritte verfolgt: Es plant, ruft Werkzeuge auf, beobachtet die Ergebnisse und entscheidet über den nächsten Schritt. Eine hilfreiche Unterscheidung trennt Workflows, in denen LLMs und Werkzeuge vorgegebenen Codepfaden folgen, von Agenten, in denen das LLM seinen Ablauf und die Werkzeugnutzung selbst steuert (Anthropic, 2024a); in der einfachsten Definition sind Agenten LLMs, die Werkzeuge selbstständig in einer Schleife nutzen (Anthropic, 2025a). Agenten können offene Aufgaben lösen, kosten aber mehr, häufen Fehler an und öffnen neue Angriffsflächen wie indirekte Prompt Injection (Greshake et al., 2023).
+Agentic AI bezeichnet Systeme, in denen ein Sprachmodell nicht nur auf eine einzelne Eingabe antwortet, sondern ein Ziel über mehrere Schritte verfolgt: Es plant, ruft Werkzeuge auf, beobachtet die Ergebnisse und entscheidet über den nächsten Schritt. Eine hilfreiche Unterscheidung trennt Workflows, in denen LLMs und Werkzeuge vorgegebenen Codepfaden folgen, von Agenten, in denen das LLM seinen Ablauf und die Werkzeugnutzung selbst steuert (Anthropic, 2024a); in der einfachsten Definition sind Agenten LLMs, die Werkzeuge selbstständig in einer Schleife nutzen (Anthropic, 2025a). Agenten können offene Aufgaben lösen, kosten aber mehr, häufen Fehler an und öffnen neue Angriffsflächen wie [[prompt-injection|indirekte Prompt Injection]] (Greshake et al., 2023).
 
 ### Funktionsweise
 

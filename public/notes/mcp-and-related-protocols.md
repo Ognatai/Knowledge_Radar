@@ -74,7 +74,7 @@ Function calling remains the basis; MCP standardises how tool definitions and re
 MCP servers are third-party code inside the harness, and their tool descriptions reach the model as text:
 
 - **Human in the loop:** there should always be a human who can deny tool invocations; clients should show tool inputs before calling a server, validate results before passing them to the model and log tool use; tool annotations from untrusted servers are themselves untrusted (MCP tools specification).
-- **Prompt injection via tools and data:** retrieved content and tool descriptions blur the line between data and instructions (Greshake et al., 2023).
+- **[[prompt-injection|Prompt injection]] via tools and data:** retrieved content and tool descriptions blur the line between data and instructions (Greshake et al., 2023).
 - **Local server compromise:** local servers run on the user's machine with direct system access; malicious startup commands can execute arbitrary code, exfiltrate data or destroy it, so clients must show the exact command and require explicit approval (MCP security best practices).
 - **Authorisation:** token passthrough is forbidden, broad token scopes increase the impact of a compromise, and MCP proxy servers can create confused-deputy vulnerabilities (MCP security best practices).
 
@@ -195,7 +195,7 @@ Function Calling bleibt die Grundlage; MCP standardisiert, wie Werkzeugdefinitio
 MCP-Server sind Fremdcode im Harness, und ihre Werkzeugbeschreibungen erreichen das Modell als Text:
 
 - **Mensch im Prozess:** Es sollte immer einen Menschen geben, der Werkzeugaufrufe ablehnen kann; Clients sollten Werkzeugeingaben vor dem Aufruf eines Servers anzeigen, Ergebnisse vor der Weitergabe an das Modell prüfen und die Werkzeugnutzung protokollieren; Annotationen von nicht vertrauenswürdigen Servern gelten selbst als nicht vertrauenswürdig (MCP tools specification).
-- **Prompt Injection über Werkzeuge und Daten:** Abgerufene Inhalte und Werkzeugbeschreibungen verwischen die Grenze zwischen Daten und Anweisungen (Greshake et al., 2023).
+- **[[prompt-injection|Prompt Injection]] über Werkzeuge und Daten:** Abgerufene Inhalte und Werkzeugbeschreibungen verwischen die Grenze zwischen Daten und Anweisungen (Greshake et al., 2023).
 - **Kompromittierte lokale Server:** Lokale Server laufen auf dem Rechner der Nutzenden mit direktem Systemzugriff; bösartige Startbefehle können beliebigen Code ausführen, Daten abfließen lassen oder zerstören, daher müssen Clients den genauen Befehl anzeigen und eine ausdrückliche Zustimmung verlangen (MCP security best practices).
 - **Autorisierung:** Token-Passthrough ist verboten, weit gefasste Token-Berechtigungen vergrößern den Schaden einer Kompromittierung, und MCP-Proxy-Server können Confused-Deputy-Schwachstellen erzeugen (MCP security best practices).
 
