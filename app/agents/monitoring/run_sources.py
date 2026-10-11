@@ -20,6 +20,7 @@ from datetime import date, datetime, timedelta
 from app.agents.monitoring import feeds, semantic_scholar
 from app.agents.monitoring.config import ConfigError, FeedConfig, SourcesConfig, load_sources_config
 from app.agents.monitoring.findings import Finding, SeenStore, write_run
+from app.backend.knowledge_radar.watchlist import gap_topics
 
 
 @dataclass(frozen=True)
@@ -54,25 +55,28 @@ def collect_findings(
     fetch_feed: Callable[[FeedConfig], list[Finding]] = feeds.fetch_feed,
     fetch_daily_papers: Callable[[date, int], list[Finding]] = feeds.fetch_daily_papers,
     fetch_scholar: Callable[[semantic_scholar.ScholarQuery], list[Finding]] = semantic_scholar.fetch_papers,
+    watchlist: list[str] | None = None,
 ) -> CollectResult:
     """New findings published since `since`. Items without a date count as new,
     except on the first fetch of their source (see `CollectResult.baseline`).
     Semantic Scholar looks back further (`lookback_days`), since it indexes late;
     it comes first, so that a paper found there and on arXiv counts as peer-reviewed."""
     today = today or date.today()
+    # Knowledge gaps from interview retros search like the curated phrases (watchlist.py).
+    phrases = list(dict.fromkeys([*config.arxiv.queries, *(watchlist or [])]))
     # (source, findings, include_keywords, exclude_keywords, earliest publication date)
     batches: list[tuple[str, list[Finding], list[str], list[str], date]] = []
     errors: list[str] = []
     scholar = config.semantic_scholar
     if scholar.venues:
         scholar_since = min(since, today - timedelta(days=scholar.lookback_days))
-        for phrase in config.arxiv.queries:
+        for phrase in phrases:
             query = semantic_scholar.ScholarQuery(phrase, scholar.venues, scholar_since, scholar.max_results_per_query)
             try:
                 batches.append((semantic_scholar.SOURCE_NAME, fetch_scholar(query), [], [], scholar_since))
             except Exception as exc:
                 errors.append(f"Semantic Scholar ({phrase}): {exc}")
-    for phrase in config.arxiv.queries:
+    for phrase in phrases:
         query = feeds.ArxivQuery(phrase, config.arxiv.categories, config.arxiv.max_results_per_query)
         try:
             batches.append(("arXiv", fetch_arxiv(query), [], [], since))
@@ -113,6 +117,21 @@ def collect_findings(
     )
 
 
+def local_config():
+    from app.backend.knowledge_radar.config import load_local_config
+
+    return load_local_config()
+
+
+def public_entities():
+    """The public graph's entities: gap topics may only be named by public entity names."""
+    from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, load_graph
+    from app.backend.knowledge_radar.notes import configured_notes_directory, load_notes
+
+    notes_directory = configured_notes_directory()
+    return load_graph(DEFAULT_GRAPH_DIRECTORY, load_notes(notes_directory), notes_directory).entities
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--days", type=int, default=7, help="look back this many days (default 7)")
@@ -126,7 +145,10 @@ def main() -> int:
         return 1
     now = datetime.now().astimezone()
     seen = SeenStore()
-    result = collect_findings(config, seen, since=now.date() - timedelta(days=args.days))
+    watchlist = gap_topics(local_config().private_repo_path, public_entities())
+    if watchlist:
+        print(f"Watchlist from interview retros: {', '.join(watchlist)}")
+    result = collect_findings(config, seen, since=now.date() - timedelta(days=args.days), watchlist=watchlist)
     if not args.dry_run:
         path = write_run(result.findings, now)
         seen.add(result.findings + result.baseline, now)
