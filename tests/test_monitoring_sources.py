@@ -349,3 +349,33 @@ def test_exclude_keywords_drop_items(tmp_path):
     )
 
     assert [f.id for f in result.findings] == ["rss:act"]
+
+
+YOUTUBE = """<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <entry>
+  <id>yt:video:abc123</id>
+  <title>Building AI Assistants with On-Device Memory</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=abc123"/>
+  <published>2026-10-07T15:15:01+00:00</published>
+  <media:group>
+   <media:title>Building AI Assistants with On-Device Memory</media:title>
+   <media:description>How agents keep memory on the device.</media:description>
+  </media:group>
+ </entry>
+</feed>"""
+
+
+def test_youtube_channel_feeds_give_the_video_description():
+    (video,) = parse_feed(
+        YOUTUBE,
+        feed_name="DeepLearning.AI (YouTube)",
+        category="video",
+        source_kind="secondary_commentary",
+        tier=None,
+        fetched_at=NOW,
+    )
+
+    assert video.url == "https://www.youtube.com/watch?v=abc123"
+    assert video.summary == "How agents keep memory on the device."
+    assert video.category == "video" and video.published == date(2026, 10, 7)

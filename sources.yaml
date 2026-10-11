@@ -107,6 +107,45 @@ rss:
     category: lab_blog
     source_kind: primary_research
 
+  # YouTube channels (official channel feeds: title and description only, no
+  # download or transcription). Experts are commentary, company channels with
+  # keynotes are primary research; broad developer channels are filtered to AI.
+  - name: DeepLearning.AI (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCcIXc5mJsHVYTZR1maL5l9w
+    category: video
+    source_kind: secondary_commentary
+  - name: Andrej Karpathy (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ
+    category: video
+    source_kind: secondary_commentary
+  - name: OpenAI (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A
+    category: video
+    source_kind: primary_research
+  - name: Anthropic (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
+    category: video
+    source_kind: primary_research
+  - name: Google DeepMind (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A
+    category: video
+    source_kind: primary_research
+  - name: Google for Developers (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UC_x5XG1OV2P6uZZ5FSM9Ttw
+    category: video
+    source_kind: primary_research
+    include_keywords: [AI, KI, LLM*, agent*, Gemini, model*, machine learning, neural, inference, RAG, generative]
+  - name: Microsoft Developer (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
+    category: video
+    source_kind: primary_research
+    include_keywords: [AI, KI, LLM*, agent*, Gemini, model*, machine learning, neural, inference, RAG, generative]
+  - name: NVIDIA Developer (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCBHcMCGaiJhv-ESTcWGJPcw
+    category: video
+    source_kind: primary_research
+    include_keywords: [AI, KI, LLM*, agent*, Gemini, model*, machine learning, neural, inference, RAG, generative]
+
   # Conferences and journals.
   - name: PMLR
     url: https://proceedings.mlr.press/feed.xml

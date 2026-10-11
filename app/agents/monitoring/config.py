@@ -11,7 +11,7 @@ from app.agents.monitoring.findings import SOURCE_KINDS, TIERS
 from app.backend.knowledge_radar.notes import REPOSITORY_ROOT
 
 SOURCES_PATH = REPOSITORY_ROOT / "sources.yaml"
-FEED_CATEGORIES = frozenset({"conference", "newsletter", "regulatory", "lab_blog"})
+FEED_CATEGORIES = frozenset({"conference", "newsletter", "regulatory", "lab_blog", "video"})
 
 
 class ConfigError(ValueError):

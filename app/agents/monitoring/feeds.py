@@ -1,5 +1,9 @@
 """Source agents for arXiv and RSS/Atom feeds: pure fetching and parsing, no LLM.
 
+YouTube channels come in through their official Atom feeds (title and
+description); videos are not downloaded or transcribed, since downloading
+violates YouTube's terms of service.
+
 arXiv is searched with the curated phrases from `sources.yaml` (title or abstract,
 within the configured categories), spaced as arXiv's API guidelines ask. Feeds may
 be RSS 2.0, Atom or RSS 1.0 (RDF). XML is parsed with defusedxml, since feed
@@ -35,6 +39,7 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 RSS1 = "{http://purl.org/rss/1.0/}"
 DC = "{http://purl.org/dc/elements/1.1/}"
 RDF = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}"
+MEDIA = "{http://search.yahoo.com/mrss/}"
 ARXIV_ID = re.compile(r"arxiv\.org/abs/(.+?)(?:v\d+)?$")
 _last_arxiv_request = 0.0
 
@@ -161,7 +166,10 @@ def _items(root: Element) -> list[dict[str, str | None]]:
                 "link": _atom_link(entry),
                 "guid": entry.findtext(f"{ATOM}id"),
                 "date": entry.findtext(f"{ATOM}published") or entry.findtext(f"{ATOM}updated"),
-                "summary": entry.findtext(f"{ATOM}summary") or entry.findtext(f"{ATOM}content"),
+                # YouTube channel feeds carry the video description as media:description.
+                "summary": entry.findtext(f"{ATOM}summary")
+                or entry.findtext(f"{ATOM}content")
+                or entry.findtext(f"{MEDIA}group/{MEDIA}description"),
             }
         )
     for item in root.iter(f"{RSS1}item"):  # RSS 1.0 (RDF)
