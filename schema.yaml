@@ -45,19 +45,20 @@ node_types:
     properties: [title, url, date, type, tier, source_kind]
   Company:
     visibility: private
-    properties: []
+    properties: [name, industry, aliases]
   JobPosting:
     visibility: private
-    properties: []
+    properties: [title, text, date, url]
   Requirement:
     visibility: private
-    properties: []
+    properties: [text, category]
   InterviewRound:
+    # What was scheduled; what happened is the InterviewRetro.
     visibility: private
-    properties: []
+    properties: [round_number, date]
   InterviewRetro:
     visibility: private
-    properties: []
+    properties: [date, questions_asked, struggled_with, personal_improvement, kb_gaps_identified]
 
 relation_types:
   BASED_ON:
@@ -133,9 +134,11 @@ relation_types:
     from: [Note]
     to: [Note]
   IDENTIFIED_GAP_IN:
+    # A topic the retro found the knowledge base lacking; feeds the monitoring
+    # run's priority watchlist.
     visibility: private
     from: [InterviewRetro]
-    to: [Requirement]
+    to: [Method, Concept, Technology, Regulation, Dataset]
   RETRO_OF:
     visibility: private
     from: [InterviewRetro]
@@ -144,3 +147,21 @@ relation_types:
     visibility: private
     from: [InterviewRound]
     to: [Person, Company]
+  FOR_POSTING:
+    visibility: private
+    from: [InterviewRound]
+    to: [JobPosting]
+  POSTED_BY:
+    visibility: private
+    from: [JobPosting]
+    to: [Company]
+  REQUIRES:
+    visibility: private
+    from: [JobPosting]
+    to: [Requirement]
+  MATCHES:
+    # A requirement of a posting and the knowledge-base topic that covers it; the
+    # hard core of /prep.
+    visibility: private
+    from: [Requirement]
+    to: [Method, Concept, Technology, Regulation, Dataset]
