@@ -17,7 +17,9 @@ cannot separate them. It only names candidate notes; findings below
 
 The model answers narrow questions (kind of item, scope, which note has the topic
 as its main subject, landmark or not) and the decision follows from them; asked
-for a decision directly, it called nearly every new paper an update.
+for a decision directly, it called nearly every new paper an update. A finding
+on a covered topic is an update if it is a landmark, or if it is peer-reviewed
+and of importance 4 or more; otherwise it is a duplicate.
 
 New topics are proposed per topic, not per finding: a topic qualifies when a
 finding was judged new or when it recurs in several substantive findings, and the
@@ -198,7 +200,15 @@ Answer these questions about the item:
 Answer with JSON only."""
 
 
-def derive_decision(answer: dict[str, Any], candidate_slugs: set[str]) -> tuple[str, str | None]:
+# A peer-reviewed paper this important updates the note it belongs to even if it is
+# not a landmark: with landmarks only, no peer-reviewed paper of the first Semantic
+# Scholar run (86 papers, 28 of importance 4) became an update.
+PEER_REVIEWED_UPDATE_IMPORTANCE = 4
+
+
+def derive_decision(
+    answer: dict[str, Any], candidate_slugs: set[str], peer_reviewed: bool = False
+) -> tuple[str, str | None]:
     """The decision follows from the model's answers to the narrower questions."""
     covered_by = str(answer.get("covered_by") or "").strip("[] ") or None
     if covered_by not in candidate_slugs:
@@ -206,7 +216,8 @@ def derive_decision(answer: dict[str, Any], candidate_slugs: set[str]) -> tuple[
     if not answer.get("in_scope") or answer.get("kind") in NOT_SUBSTANTIVE:
         return "irrelevant", None
     if covered_by:
-        return ("update" if answer.get("landmark") else "duplicate"), covered_by
+        important = peer_reviewed and int(answer.get("importance") or 0) >= PEER_REVIEWED_UPDATE_IMPORTANCE
+        return ("update" if answer.get("landmark") or important else "duplicate"), covered_by
     return ("new_topic" if answer.get("established_topic") else "irrelevant"), None
 
 
@@ -220,7 +231,9 @@ def classify(
     answer = json.loads(generate(build_prompt(finding, candidates), json_schema=decision_schema(slugs), temperature=0.0, think=think))
     if answer.get("kind") not in ITEM_KINDS:
         raise llm.LLMError(f"unknown item kind {answer.get('kind')!r}")
-    decision, note = derive_decision(answer, {candidate.note for candidate in candidates})
+    decision, note = derive_decision(
+        answer, {candidate.note for candidate in candidates}, peer_reviewed=finding.tier == "peer_reviewed"
+    )
     return Decision(
         finding=finding,
         decision=decision,

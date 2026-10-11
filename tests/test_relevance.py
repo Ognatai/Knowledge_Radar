@@ -75,6 +75,16 @@ def test_decision_follows_from_the_answers(overrides, expected):
     assert derive_decision(answer(**overrides), {"lora", "llm-adaptation"}) == expected
 
 
+@pytest.mark.parametrize(
+    "importance, peer_reviewed, expected",
+    [(4, True, "update"), (5, True, "update"), (3, True, "duplicate"), (4, False, "duplicate")],
+)
+def test_important_peer_reviewed_papers_update_their_note(importance, peer_reviewed, expected):
+    decision, note = derive_decision(answer(importance=importance), {"lora"}, peer_reviewed=peer_reviewed)
+
+    assert (decision, note) == (expected, "lora")
+
+
 def test_classify_offers_only_candidate_notes_and_records_the_kind():
     seen = {}
 
