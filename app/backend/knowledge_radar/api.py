@@ -1,13 +1,21 @@
-"""Read-only FastAPI endpoints for public notes."""
+"""FastAPI endpoints of the local app: read-only public notes and the chat over both indices.
+
+The app runs only on localhost (ThinkPad, Docker); the chat is the one place where the
+public and the private index are read together (see chat.py).
+"""
 
 from __future__ import annotations
 
+import threading
+from collections.abc import Callable
 from pathlib import Path
+from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.backend.knowledge_radar.models import NoteDetail, NoteSearchResults, NoteSummary
+from app.backend.knowledge_radar import chat
+from app.backend.knowledge_radar.models import ChatRequest, ChatResponse, ChatSource, NoteDetail, NoteSearchResults, NoteSummary
 from app.backend.knowledge_radar.notes import (
     NoteRepositoryError,
     configured_notes_directory,
@@ -15,11 +23,49 @@ from app.backend.knowledge_radar.notes import (
 )
 
 
-def create_app(notes_directory: Path | None = None) -> FastAPI:
+class Indices:
+    """One Neo4j driver per index, opened on first use and kept; an index that cannot be
+    reached is tried again on the next question."""
+
+    def __init__(self, connectors: dict[str, Callable[[], Any]]) -> None:
+        self.connectors = connectors
+        self.drivers: dict[str, Any] = {}
+        self.lock = threading.Lock()
+
+    def store(self, name: str) -> chat.SearchableStore:
+        from app.backend.knowledge_radar.index import Neo4jStore
+
+        with self.lock:
+            if name not in self.drivers:
+                self.drivers[name] = self.connectors[name]()
+            return Neo4jStore(self.drivers[name], visibility=name)
+
+    def factories(self, scope: str) -> dict[str, Callable[[], chat.SearchableStore]]:
+        names = [name for name in self.connectors if scope in ("all", name)]
+        return {name: (lambda name=name: self.store(name)) for name in names}
+
+    def close(self) -> None:
+        for driver in self.drivers.values():
+            driver.close()
+        self.drivers.clear()
+
+
+def default_indices() -> Indices:
+    from app.backend.knowledge_radar.index import connect
+    from app.backend.knowledge_radar.private_index import connect_private
+
+    return Indices({"public": connect, "private": connect_private})
+
+
+def create_app(
+    notes_directory: Path | None = None,
+    indices: Indices | None = None,
+    ask: Callable[..., chat.ChatAnswer] = chat.ask,
+) -> FastAPI:
     app = FastAPI(
         title="Knowledge Radar API",
-        description="Read-only search and access to the public Markdown notes.",
-        version="0.1.0",
+        description="Public notes (read-only) and the local chat over the public and the private index.",
+        version="0.2.0",
     )
     app.add_middleware(
         CORSMiddleware,
@@ -28,7 +74,7 @@ def create_app(notes_directory: Path | None = None) -> FastAPI:
             "http://127.0.0.1:5173",
         ],
         allow_credentials=False,
-        allow_methods=["GET"],
+        allow_methods=["GET", "POST"],
         allow_headers=["*"],
     )
     public_notes_directory = notes_directory or configured_notes_directory()
@@ -42,6 +88,23 @@ def create_app(notes_directory: Path | None = None) -> FastAPI:
     @app.get("/api/health")
     def health() -> dict[str, str]:
         return {"status": "ok"}
+
+    chat_indices = indices or default_indices()
+    app.router.on_shutdown.append(chat_indices.close)
+
+    @app.post("/api/chat", response_model=ChatResponse)
+    def ask_question(request: ChatRequest) -> ChatResponse:
+        try:
+            history = [chat.Turn(turn.role, turn.content) for turn in request.history]
+            result = ask(request.question, chat_indices.factories(request.scope), language=request.language, history=history)
+        except Exception as exc:  # noqa: BLE001 - the model or the embedding server is down
+            raise HTTPException(status_code=503, detail=f"The local model is not available: {exc}") from exc
+        return ChatResponse(
+            answer=result.answer,
+            sources=[ChatSource(**vars(source)) for source in result.sources],
+            facts=result.facts,
+            unavailable=result.unavailable,
+        )
 
     @app.get("/api/notes", response_model=list[NoteSummary])
     def list_notes() -> list[NoteDetail]:

@@ -396,15 +396,32 @@ class Neo4jStore:
         )
 
     def search(self, vector: list[float], limit: int = 5) -> list[dict[str, Any]]:
-        """Nearest passages with their note and the entities that note discusses."""
+        """Nearest passages with their note and the entities that note discusses; none while
+        nothing is embedded (the private index before the first private document)."""
+        if not self._run("SHOW VECTOR INDEXES YIELD name WHERE name = $name RETURN name", name=VECTOR_INDEX_NAME):
+            return []
         records = self._run(
             f"CALL db.index.vector.queryNodes('{VECTOR_INDEX_NAME}', $limit, $vector) YIELD node, score "
             "MATCH (node)-[:PART_OF]->(n:Note) "
             "OPTIONAL MATCH (n)-[:DISCUSSES]->(e:Entity) WHERE e.id <> n.slug "
-            "RETURN n.slug AS note, node.language AS language, node.heading AS heading, node.text AS text, "
+            "RETURN n.slug AS note, n.title_en AS title_en, n.title_de AS title_de, n.visibility AS visibility, "
+            "node.language AS language, node.heading AS heading, node.text AS text, "
             "score, collect(e.name_en) AS entities ORDER BY score DESC",
             limit=limit,
             vector=vector,
+        )
+        return [dict(record) for record in records]
+
+    def facts(self, slugs: list[str], limit: int = 30) -> list[dict[str, Any]]:
+        """Relations of the entities these notes describe (their own entity, not every one they
+        mention): the graph around the passages found."""
+        records = self._run(
+            "MATCH (n:Note)-[:DISCUSSES]->(e:Entity)-[r]-(o:Entity) "
+            "WHERE n.slug IN $slugs AND (e.id = n.slug OR e.note = n.slug) "
+            "WITH DISTINCT startNode(r) AS a, r, endNode(r) AS b "
+            "RETURN a.name_en AS source, type(r) AS relation, b.name_en AS target LIMIT $limit",
+            slugs=slugs,
+            limit=limit,
         )
         return [dict(record) for record in records]
 
