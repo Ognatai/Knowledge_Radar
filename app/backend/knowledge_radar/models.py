@@ -34,6 +34,48 @@ class NoteSearchResults(BaseModel):
     limit: int
 
 
+class InterviewerIn(BaseModel):
+    name: str = Field(min_length=1, max_length=200)
+    role: str = Field(default="", max_length=200)
+    focus: str = Field(default="", max_length=500)
+
+
+class NewApplication(BaseModel):
+    company_name: str = Field(min_length=1, max_length=200)
+    industry: str = Field(default="", max_length=200)
+    role_title: str = Field(min_length=1, max_length=200)
+    posting_text: str = Field(min_length=1, max_length=50000)
+    posting_date: str | None = None
+    posting_url: str = Field(default="", max_length=1000)
+    round_date: str | None = None
+    round_notes: str = Field(default="", max_length=20000)
+    interviewers: list[InterviewerIn] = Field(default_factory=list, max_length=20)
+
+
+class NewRound(BaseModel):
+    company: str
+    role: str
+    round_date: str | None = None
+    round_notes: str = Field(default="", max_length=20000)
+    interviewers: list[InterviewerIn] = Field(default_factory=list, max_length=20)
+
+
+class RetroDraftRequest(BaseModel):
+    date: str | None = None
+    questions_asked: str = Field(default="", max_length=20000)
+    struggled_with: str = Field(default="", max_length=20000)
+    personal_improvement: str = Field(default="", max_length=20000)
+    kb_gaps_identified: str = Field(default="", max_length=20000)
+    reflection: str = Field(default="", max_length=50000)
+
+
+class RetroIn(BaseModel):
+    company: str
+    role: str
+    round: int = Field(ge=1)
+    text: str = Field(min_length=1, max_length=100000)
+
+
 class ChatTurn(BaseModel):
     role: Literal["user", "assistant"]
     content: str = Field(max_length=20000)

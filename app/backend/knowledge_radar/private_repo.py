@@ -135,12 +135,57 @@ def document_slug(document: PrivateDocument) -> str:
     return "private-" + slugify(document.id)
 
 
-def as_note(document: PrivateDocument) -> NoteDetail:
+KIND_LABELS = {"company": "Company", "job_posting": "Job posting", "round": "Interview round", "interviewers": "Interviewers",
+               "prep": "Preparation", "retro": "Retro", "round_note": "Round note", "note": "Note"}
+FIELD_LABELS = {"questions_asked": "Questions asked", "struggled_with": "Struggled with",
+                "personal_improvement": "Personal improvement", "kb_gaps_identified": "Knowledge-base gaps",
+                "round_number": "Round", "url": "URL"}
+
+
+def document_text(document: PrivateDocument) -> str:
+    """The body with the frontmatter's facts in front: a retro's questions and gaps, a
+    round's date, are what the chat is asked about."""
+    lines: list[str] = []
+    for key, value in document.frontmatter.items():
+        if key in ("title", "name"):
+            continue
+        label = FIELD_LABELS.get(key, key.replace("_", " ").capitalize())
+        if isinstance(value, list):
+            if value:
+                lines += [f"{label}:", *(f"- {item}" for item in value)]
+        elif value not in (None, ""):
+            lines.append(f"{label}: {_iso(value)}")
+    if document.body:
+        lines += ["", document.body] if lines else [document.body]
+    return "\n".join(lines)
+
+
+def document_titles(documents: list[PrivateDocument]) -> dict[str, str]:
+    """Readable titles: "Retro: ACME GmbH – ML Engineer – round 1"."""
+    companies = {d.company: str(d.frontmatter.get("name") or d.company) for d in documents if d.kind == "company"}
+    roles = {(d.company, d.role): str(d.frontmatter.get("title") or d.role) for d in documents if d.kind == "job_posting"}
+    titles: dict[str, str] = {}
+    for document in documents:
+        own = str(document.frontmatter.get("title") or document.frontmatter.get("name") or "")
+        if document.company is None:
+            titles[document.id] = own or document.id
+            continue
+        parts = [companies.get(document.company, document.company)]
+        if document.role:
+            parts.append(roles.get((document.company, document.role), document.role))
+        if document.round:
+            parts.append(f"round {document.round}")
+        title = f"{KIND_LABELS.get(document.kind, document.kind)}: {' – '.join(parts)}"
+        titles[document.id] = f"{title}: {own}" if document.kind == "round_note" and own else title
+    return titles
+
+
+def as_note(document: PrivateDocument, title: str | None = None) -> NoteDetail:
     """The document in the shape the extraction agent and the index read."""
-    title = str(document.frontmatter.get("title") or document.frontmatter.get("name") or document.id)
+    title = title or str(document.frontmatter.get("title") or document.frontmatter.get("name") or document.id)
     return NoteDetail.model_construct(
         slug=document_slug(document), title_en=title, title_de=title, entity_type="Concept",
-        aliases=[], content_en=document.body, content_de="", sources=[], links=[],
+        aliases=[], content_en=document_text(document), content_de="", sources=[], links=[],
     )
 
 

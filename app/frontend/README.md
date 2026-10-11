@@ -7,6 +7,9 @@ in `app/site/`.
 
 - **Chat** over the public and the private index (`POST /api/chat`), with the
   sources of every answer. The conversation lives in the browser tab only.
+- **Interview commands** `/new-application`, `/new-round`, `/retro`: guided
+  dialogues that write the private repository (`app/backend/knowledge_radar/interviews.py`)
+  and refresh the private index afterwards (`app/agents/private_refresh.py`).
 - **Review Dashboard** for the weekly proposal branches: planned.
 
 Development: `npm install`, then `npm run dev` (port 5173; `/api` is proxied to

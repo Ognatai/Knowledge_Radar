@@ -4,6 +4,8 @@ WORKDIR /workspace
 COPY pyproject.toml README.md schema.yaml ./
 COPY app ./app
 COPY public/notes ./public/notes
+# The extraction agent's guidelines, for the private refresh after the interview commands.
+COPY docs/extraction-guidelines.md docs/extraction-examples.yaml ./docs/
 RUN pip install --no-cache-dir .
 
 EXPOSE 8000

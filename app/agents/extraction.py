@@ -777,8 +777,12 @@ def resolve_new_entities(
     generate: Generate = llm.generate,
     model: str | None = None,
     log: Callable[[str], None] = print,
+    suggest_public_aliases: bool = True,
 ) -> None:
-    """Merge new entities that the model confirms as known ones under another name."""
+    """Merge new entities that the model confirms as known ones under another name.
+
+    Private documents pass `suggest_public_aliases=False`: their wording must not be
+    proposed for a public note's frontmatter."""
     resolution = entity_resolution.resolve(
         extraction.new_entities,
         plain_text(note.content_en),
@@ -799,7 +803,7 @@ def resolve_new_entities(
     for known_id, names in resolution.aliases.items():
         # A private entity is not in the public graph; its aliases go to the private registry.
         owner = graph.entities[known_id].note if known_id in graph.entities else None
-        if owner:
+        if owner and suggest_public_aliases:
             log(f"  alias for the note {owner} (add to its frontmatter by hand): {', '.join(names)}")
 
 

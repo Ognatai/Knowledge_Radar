@@ -34,6 +34,11 @@ MAX_SOURCES = 6
 # One long note would otherwise fill every source slot (seen 2026-10-11: four sections
 # of the prompt-injection note, none of the MCP note, for a question about both).
 MAX_PASSAGES_PER_NOTE = 2
+# The documents of one interview round belong together: a hit on the round or its
+# interviewers brings the round's retro and notes along (seen 2026-10-11: "what did they
+# ask me?" found the round, while the retro with the questions came seventh).
+ROUND_PREFIX = re.compile(r"^(private-companies-.+-round-\d+)-")
+MAX_ROUND_PASSAGES = 3
 MAX_HISTORY_TURNS = 6
 MAX_HISTORY_CHARACTERS = 1200
 MAX_FACTS = 30
@@ -46,6 +51,7 @@ THINKING = re.compile(r"<think>.*?</think>", re.DOTALL)
 class SearchableStore(Protocol):
     def search(self, vector: list[float], limit: int = 5) -> list[dict[str, Any]]: ...
     def facts(self, slugs: list[str], limit: int = 30) -> list[dict[str, Any]]: ...
+    def passages_with_prefix(self, prefixes: list[str], exclude: list[str], limit: int = 3) -> list[dict[str, Any]]: ...
 
 
 def chat_model() -> str:
@@ -125,6 +131,22 @@ def merge_hits(hits: dict[str, list[dict[str, Any]]], language: str, limit: int 
     return sources
 
 
+def round_documents(store: SearchableStore, sources: list[Source], language: str) -> list[Source]:
+    """The other documents of the interview rounds among the private sources."""
+    prefixes = sorted({match.group(1) + "-" for s in sources if s.visibility == "private" and (match := ROUND_PREFIX.match(s.note))})
+    if not prefixes:
+        return []
+    try:
+        found = store.passages_with_prefix(prefixes, [s.note for s in sources], MAX_ROUND_PASSAGES)
+    except Exception:  # noqa: BLE001 - a bonus like the facts; the sources found still answer
+        return []
+    return [
+        Source(number=len(sources) + offset, note=hit["note"], title=_title(hit, language), heading=hit.get("heading") or "",
+               visibility="private", text=(hit.get("text") or "")[:MAX_PASSAGE_CHARACTERS], score=0.0)
+        for offset, hit in enumerate(found, start=1)
+    ]
+
+
 def fact_lines(facts: list[dict[str, Any]], limit: int = MAX_FACTS) -> list[str]:
     lines: list[str] = []
     for fact in facts:
@@ -155,6 +177,8 @@ def retrieve(
         except Exception:  # noqa: BLE001 - any connection or query failure means "not available"
             unavailable.append(name)
     sources = merge_hits(hits, language)
+    if "private" in opened:
+        sources += round_documents(opened["private"], sources, language)
     raw_facts: list[dict[str, Any]] = []
     for name, store in opened.items():
         slugs = [source.note for source in sources if source.visibility == name]

@@ -56,3 +56,15 @@ a { color: var(--green); }
 .ask { position: sticky; bottom: 0; display: flex; gap: 8px; margin-top: 20px; padding: 12px 0; background: #f4f1ea; }
 .ask textarea { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); resize: vertical; }
 .ask button { padding: 0 20px; border: 0; border-radius: 8px; color: white; background: var(--green); font-weight: 600; }
+
+.message.command { border-style: dashed; }
+.message.user.command { border-style: solid; }
+.choices { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.choices button { min-height: 36px; padding: 6px 12px; border: 1px solid #cfe1d8; border-radius: 6px; color: #0b5e4d; background: #e5efe9; font-size: 14px; text-align: left; }
+.choices button:hover:not(:disabled) { background: #d5e8de; }
+.draft textarea { width: 100%; margin-top: 8px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fbfaf5; color: var(--ink); font: 13px/1.5 Consolas, "Courier New", monospace; resize: vertical; }
+.empty ul { margin: 6px 0 0; padding-left: 20px; }
+.ask { flex-wrap: wrap; }
+.suggestions { flex-basis: 100%; margin: 0; padding: 4px; list-style: none; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
+.suggestions button { width: 100%; padding: 6px 8px; border: 0; border-radius: 5px; color: var(--ink); background: transparent; text-align: left; font-size: 14px; }
+.suggestions button:hover { background: #e5efe9; }

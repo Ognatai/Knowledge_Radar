@@ -8,14 +8,28 @@ from __future__ import annotations
 
 import threading
 from collections.abc import Callable
+from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.backend.knowledge_radar import chat
-from app.backend.knowledge_radar.models import ChatRequest, ChatResponse, ChatSource, NoteDetail, NoteSearchResults, NoteSummary
+from app.backend.knowledge_radar import chat, interviews
+from app.backend.knowledge_radar.config import LocalConfigError, load_local_config
+from app.backend.knowledge_radar.models import (
+    ChatRequest,
+    ChatResponse,
+    ChatSource,
+    NewApplication,
+    NewRound,
+    NoteDetail,
+    NoteSearchResults,
+    NoteSummary,
+    RetroDraftRequest,
+    RetroIn,
+)
+from app.backend.knowledge_radar.private_repo import PrivateRepoError
 from app.backend.knowledge_radar.notes import (
     NoteRepositoryError,
     configured_notes_directory,
@@ -57,10 +71,28 @@ def default_indices() -> Indices:
     return Indices({"public": connect, "private": connect_private})
 
 
+def configured_private_root() -> Path | None:
+    try:
+        return load_local_config().private_repo_path
+    except LocalConfigError:
+        return None
+
+
+def default_refresher(root: Path | None):
+    """Structure, local extraction and private index after each write (app/agents/private_refresh.py)."""
+    from app.agents.private_refresh import Refresher, refresh
+    from app.backend.knowledge_radar.private_index import connect_private
+
+    return Refresher(lambda log: refresh(root, connect_private, model=chat.chat_model(), log=log)) if root else None
+
+
 def create_app(
     notes_directory: Path | None = None,
     indices: Indices | None = None,
     ask: Callable[..., chat.ChatAnswer] = chat.ask,
+    private_root: Path | None | str = "configured",
+    refresher: Any = "default",
+    generate: Callable[..., str] | None = None,
 ) -> FastAPI:
     app = FastAPI(
         title="Knowledge Radar API",
@@ -105,6 +137,65 @@ def create_app(
             facts=result.facts,
             unavailable=result.unavailable,
         )
+
+    root = configured_private_root() if private_root == "configured" else private_root
+    refresh_job = default_refresher(root) if refresher == "default" else refresher
+
+    def private() -> Path:
+        if root is None:
+            raise HTTPException(status_code=409, detail="No private repository is configured (private_repo_path).")
+        return root
+
+    def written(files: list[str]) -> dict[str, Any]:
+        if refresh_job is not None:
+            refresh_job.request()
+        return {"files": files, "refresh": asdict(refresh_job.status) if refresh_job else None}
+
+    def interview_errors(action: Callable[[], list[str]]) -> dict[str, Any]:
+        try:
+            return written(action())
+        except (interviews.InterviewError, PrivateRepoError) as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    @app.get("/api/private/applications")
+    def list_applications() -> dict[str, Any]:
+        if root is None:
+            return {"configured": False, "applications": []}
+        return {"configured": True, "applications": [asdict(a) for a in interviews.applications(root)]}
+
+    @app.post("/api/private/applications")
+    def new_application(request: NewApplication) -> dict[str, Any]:
+        people = [interviews.Interviewer(**person.model_dump()) for person in request.interviewers]
+        fields = request.model_dump(exclude={"interviewers"})
+        return interview_errors(lambda: interviews.create_application(private(), **fields, interviewers=people))
+
+    @app.post("/api/private/rounds")
+    def new_round(request: NewRound) -> dict[str, Any]:
+        people = [interviews.Interviewer(**person.model_dump()) for person in request.interviewers]
+        fields = request.model_dump(exclude={"interviewers"})
+        return interview_errors(lambda: interviews.create_round(private(), **fields, interviewers=people))
+
+    @app.post("/api/private/retro/draft")
+    def retro_draft(request: RetroDraftRequest) -> dict[str, str]:
+        private()
+        answers = request.model_dump(exclude={"date"})
+        try:
+            options = {"generate": generate} if generate else {}
+            text = interviews.draft_retro(answers, date=request.date, model=chat.chat_model(), **options)
+        except interviews.InterviewError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except Exception as exc:  # noqa: BLE001 - the local model is down or answered no JSON
+            raise HTTPException(status_code=503, detail=f"The local model could not draft the retro: {exc}") from exc
+        return {"text": text}
+
+    @app.post("/api/private/retro")
+    def save_retro(request: RetroIn) -> dict[str, Any]:
+        return interview_errors(lambda: interviews.write_retro(private(), company=request.company, role=request.role,
+                                                              round_number=request.round, text=request.text))
+
+    @app.get("/api/private/refresh")
+    def refresh_status() -> dict[str, Any] | None:
+        return asdict(refresh_job.status) if refresh_job else None
 
     @app.get("/api/notes", response_model=list[NoteSummary])
     def list_notes() -> list[NoteDetail]:

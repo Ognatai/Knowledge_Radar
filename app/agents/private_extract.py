@@ -105,7 +105,8 @@ def extract_free_text(
         if embed is not None and extraction.new_entities and public_graph is not None:
             if index is None:
                 index = entity_resolution.NameIndex(known, embed)
-            resolve_new_entities(note, extraction, public_graph, public_notes or {}, index, generate=generate, model=model, log=log)
+            resolve_new_entities(note, extraction, public_graph, public_notes or {}, index, generate=generate, model=model, log=log,
+                                 suggest_public_aliases=False)
         write_extraction(graph_directory, document.path, note, extraction, extracted_by=model or llm.model_name())
         known.update({entity.id: entity for entity in extraction.new_entities})
         results[document.id] = extraction
@@ -219,11 +220,25 @@ def requirements_graph(
     model: str | None = None,
     log: Callable[[str], None] = print,
 ) -> Path:
-    """graph/requirements.yaml: Requirement entities with REQUIRES and MATCHES."""
+    """graph/requirements.yaml: Requirement entities with REQUIRES and MATCHES.
+
+    A posting whose text is unchanged since the last run keeps its requirements and
+    matches; only new or edited postings go to the model."""
+    path = private_graph_directory(root) / "requirements.yaml"
+    previous = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}) if path.is_file() else {}
+    previous_hashes = previous.get("postings") or {}
     entities: list[dict[str, Any]] = []
     relations: list[dict[str, str]] = []
+    hashes: dict[str, str] = {}
     for posting in postings:
         posting_id = f"posting-{posting.company}-{posting.role}"
+        prefix = f"req-{posting.company}-{posting.role}-"
+        hashes[posting.id] = note_sha256(posting.path)
+        if previous_hashes.get(posting.id) == hashes[posting.id]:
+            entities += [e for e in previous.get("entities") or [] if e["id"].startswith(prefix)]
+            relations += [r for r in previous.get("relations") or [] if r.get("source") == posting.id]
+            log(f"{posting.id}: unchanged")
+            continue
         for number, requirement in enumerate(extract_requirements(posting, generate, model), start=1):
             requirement_id = f"req-{posting.company}-{posting.role}-{number}"
             entities.append({"id": requirement_id, "type": "Requirement", "name_en": requirement["text"],
@@ -231,14 +246,43 @@ def requirements_graph(
             relations.append({"from": posting_id, "type": "REQUIRES", "to": requirement_id, "source": posting.id})
             for slug in match_requirement(requirement["text"], topics.nearest(requirement["text"], embed), generate, model):
                 relations.append({"from": requirement_id, "type": "MATCHES", "to": slug, "source": posting.id})
-        log(f"{posting.id}: {sum(1 for e in entities if e['id'].startswith(f'req-{posting.company}-{posting.role}-'))} requirements")
-    path = private_graph_directory(root) / "requirements.yaml"
+        log(f"{posting.id}: {sum(1 for e in entities if e['id'].startswith(prefix))} requirements")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
-        yaml.safe_dump({"version": 1, "entities": entities, "relations": relations}, sort_keys=False, allow_unicode=True, width=1000),
+        yaml.safe_dump({"version": 1, "postings": hashes, "entities": entities, "relations": relations},
+                       sort_keys=False, allow_unicode=True, width=1000),
         encoding="utf-8",
     )
     return path
+
+
+def known_entities(root: Path, public_entities: dict[str, Entity]) -> dict[str, Entity]:
+    """Public entities, the private registry and the structural graph's entities."""
+    structure_path = root / "graph" / "structure.yaml"
+    structural = (yaml.safe_load(structure_path.read_text(encoding="utf-8")) or {}).get("entities", []) if structure_path.is_file() else []
+    known = {**public_entities, **private_registry(root)}
+    known.update({e["id"]: Entity(e["id"], e["type"], e["name_en"], e.get("name_de", e["name_en"])) for e in structural})
+    return known
+
+
+def extract_all(
+    root: Path,
+    documents: list[PrivateDocument],
+    public_graph,
+    notes: dict[str, NoteDetail],
+    *,
+    requirements_only: bool = False,
+    model: str | None = None,
+    log: Callable[[str], None] = print,
+) -> None:
+    """Free text (unless `requirements_only`), then the postings' requirements."""
+    if not requirements_only:
+        known = known_entities(root, public_graph.entities)
+        extract_free_text(root, documents, known, public_graph=public_graph, public_notes=notes, model=model, log=log)
+    postings = [d for d in documents if d.kind == "job_posting"]
+    if postings:
+        path = requirements_graph(root, postings, TopicIndex.build(notes, embeddings.embed), embed=embeddings.embed, model=model, log=log)
+        log(f"Requirements -> {path}")
 
 
 def main() -> int:
@@ -260,17 +304,7 @@ def main() -> int:
     notes = {note.slug: note for note in load_notes(notes_directory)}
     public = load_graph(DEFAULT_GRAPH_DIRECTORY, list(notes.values()), notes_directory)
     try:
-        documents = load_documents(root)
-        structure_path = root / "graph" / "structure.yaml"
-        structural = (yaml.safe_load(structure_path.read_text(encoding="utf-8")) or {}).get("entities", []) if structure_path.is_file() else []
-        known = {**public.entities, **private_registry(root)}
-        known.update({e["id"]: Entity(e["id"], e["type"], e["name_en"], e.get("name_de", e["name_en"])) for e in structural})
-        if not args.requirements:
-            extract_free_text(root, documents, known, public_graph=public, public_notes=notes, model=args.model)
-        postings = [d for d in documents if d.kind == "job_posting"]
-        if postings:
-            path = requirements_graph(root, postings, TopicIndex.build(notes, embeddings.embed), embed=embeddings.embed, model=args.model)
-            print(f"Requirements -> {path}")
+        extract_all(root, load_documents(root), public, notes, requirements_only=args.requirements, model=args.model)
     except (PrivateRepoError, llm.LLMError, embeddings.EmbeddingError) as exc:
         print(f"Extraction failed: {exc}", file=sys.stderr)
         return 1

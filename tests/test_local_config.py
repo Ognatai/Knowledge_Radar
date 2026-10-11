@@ -57,3 +57,17 @@ def test_rejects_relative_or_missing_paths(tmp_path, value):
 
     with pytest.raises(LocalConfigError):
         load_local_config(path, repository_root=tmp_path / "repo")
+
+
+def test_the_environment_names_the_mounted_private_repo(tmp_path, monkeypatch):
+    public_repo, mounted = tmp_path / "workspace", tmp_path / "private"
+    public_repo.mkdir()
+    mounted.mkdir()
+    monkeypatch.setenv("KNOWLEDGE_RADAR_PRIVATE_REPO", str(mounted))
+
+    assert load_local_config(tmp_path / "missing.yaml", repository_root=public_repo).private_repo_path == mounted.resolve()
+
+    monkeypatch.setenv("KNOWLEDGE_RADAR_PRIVATE_REPO", str(public_repo / "nested"))
+    (public_repo / "nested").mkdir()
+    with pytest.raises(LocalConfigError, match="sibling"):
+        load_local_config(tmp_path / "missing.yaml", repository_root=public_repo)

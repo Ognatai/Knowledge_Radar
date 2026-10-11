@@ -1,6 +1,7 @@
 # Local app (ThinkPad deployment). Ports are bound to localhost only.
-# Start everything with scripts/start-app.ps1: it starts both indices and passes
-# their passwords from the Windows Credential Manager to this process only.
+# Start everything with scripts/start-app.ps1: it starts both indices, passes their
+# passwords from the Windows Credential Manager to this process only and mounts the
+# private repository (docker-compose.app-private.yml) when one is configured.
 # The public site (app/site/) is static and deployed to GitHub Pages instead.
 services:
   # Chat UI (app/frontend/) on http://127.0.0.1:8080; nginx forwards /api to the api.
@@ -20,6 +21,7 @@ services:
       - "127.0.0.1:8000:8000"
     volumes:
       - ./public/notes:/workspace/public/notes:ro
+      - ./public/graph:/workspace/public/graph:ro
     environment:
       KNOWLEDGE_RADAR_NOTES_DIR: /workspace/public/notes
       # Ollama stays a host installation; the container reaches it via the host gateway.

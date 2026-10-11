@@ -29,7 +29,15 @@ from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, Entity, K
 from app.backend.knowledge_radar.index import KEYRING_SERVICE, Neo4jStore, update_index
 from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import configured_notes_directory, load_notes
-from app.backend.knowledge_radar.private_repo import PrivateDocument, PrivateRepoError, as_note, document_slug, load_documents
+from app.backend.knowledge_radar.private_repo import (
+    PrivateDocument,
+    PrivateRepoError,
+    as_note,
+    document_slug,
+    document_text,
+    document_titles,
+    load_documents,
+)
 
 PRIVATE_URI = "bolt://127.0.0.1:7688"
 KEYRING_USER = "neo4j-private"
@@ -105,9 +113,21 @@ def private_graph(root: Path, documents: list[PrivateDocument], public_entities:
 
 
 def private_notes(documents: list[PrivateDocument]) -> tuple[list[NoteDetail], dict[str, Path]]:
-    """Documents with text, as notes, and the file behind each."""
-    with_text = [document for document in documents if document.body.strip()]
-    return [as_note(document) for document in with_text], {document_slug(d): d.path for d in with_text}
+    """Documents with text (body or frontmatter facts), as notes with readable titles, and the file behind each."""
+    titles = document_titles(documents)
+    with_text = [document for document in documents if document_text(document).strip()]
+    return [as_note(d, titles[d.id]) for d in with_text], {document_slug(d): d.path for d in with_text}
+
+
+def update_private_index(store: Neo4jStore, root: Path, public_entities: dict[str, Entity], *, rebuild: bool = False,
+                         progress: Callable[[str], None] = print):
+    """Embed what changed in the private repository and sync its graph."""
+    documents = load_documents(root)
+    notes, paths = private_notes(documents)
+    return update_index(
+        store, notes, private_graph(root, documents, public_entities), root,
+        embed=embeddings.embed, model=embeddings.model_name(), rebuild=rebuild, progress=progress, paths=paths,
+    )
 
 
 def main() -> int:
@@ -138,20 +158,13 @@ def main() -> int:
             for hit in store.search(embeddings.embed([embeddings.query_text(args.query)])[0], args.limit):
                 print(f"{hit['score']:.3f}  {hit['note']} {hit['heading']}\n       {hit['text'][:160].replace(chr(10), ' ')}")
             return 0
-        root = config.private_repo_path
+        notes_directory = configured_notes_directory()
+        public = load_graph(DEFAULT_GRAPH_DIRECTORY, load_notes(notes_directory), notes_directory)
         try:
-            documents = load_documents(root)
+            result = update_private_index(store, config.private_repo_path, public.entities, rebuild=args.command == "rebuild")
         except PrivateRepoError as exc:
             print(f"Private index update failed: {exc}", file=sys.stderr)
             return 1
-        notes_directory = configured_notes_directory()
-        public = load_graph(DEFAULT_GRAPH_DIRECTORY, load_notes(notes_directory), notes_directory)
-        notes, paths = private_notes(documents)
-        result = update_index(
-            store, notes, private_graph(root, documents, public.entities), root,
-            embed=embeddings.embed, model=embeddings.model_name(),
-            rebuild=args.command == "rebuild", progress=print, paths=paths,
-        )
     print(f"{'Rebuilt' if result.full_rebuild else 'Updated'} private index: {len(result.embedded)} documents embedded, {len(result.deleted)} removed.")
     return 0
 

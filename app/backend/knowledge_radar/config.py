@@ -17,6 +17,8 @@ from app.backend.knowledge_radar.notes import REPOSITORY_ROOT
 
 DEFAULT_CONFIG_PATH = REPOSITORY_ROOT / "local-config.yaml"
 CONFIG_PATH_ENVIRONMENT_VARIABLE = "KNOWLEDGE_RADAR_CONFIG"
+# Overrides private_repo_path, e.g. the private checkout mounted into the app container.
+PRIVATE_REPO_ENVIRONMENT_VARIABLE = "KNOWLEDGE_RADAR_PRIVATE_REPO"
 
 
 class LocalConfigError(ValueError):
@@ -42,16 +44,20 @@ def load_local_config(
     repository_root: Path = REPOSITORY_ROOT,
 ) -> LocalConfig:
     """Load the local config; a missing file means "public repo only"."""
-    path = config_path or configured_config_path()
-    if not path.is_file():
-        return LocalConfig()
-
-    try:
-        raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    except (OSError, yaml.YAMLError) as exc:
-        raise LocalConfigError(f"{path}: could not read local config: {exc}") from exc
-    if not isinstance(raw, dict):
-        raise LocalConfigError(f"{path}: local config must be a YAML mapping.")
+    override = os.environ.get(PRIVATE_REPO_ENVIRONMENT_VARIABLE)
+    if override:
+        path = Path(f"${PRIVATE_REPO_ENVIRONMENT_VARIABLE}")
+        raw: dict = {"private_repo_path": override}
+    else:
+        path = config_path or configured_config_path()
+        if not path.is_file():
+            return LocalConfig()
+        try:
+            raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        except (OSError, yaml.YAMLError) as exc:
+            raise LocalConfigError(f"{path}: could not read local config: {exc}") from exc
+        if not isinstance(raw, dict):
+            raise LocalConfigError(f"{path}: local config must be a YAML mapping.")
 
     private_repo = _directory(raw, "private_repo_path", path)
     if private_repo is None:

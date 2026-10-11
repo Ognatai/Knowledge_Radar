@@ -116,3 +116,18 @@ def test_nothing_is_written_into_the_public_repository(tmp_path):
     public = tmp_path / "public-repo"
     with pytest.raises(PrivateRepoError, match="public repository"):
         write_structure(public / "private-inside", StructuralGraph(), public_root=public)
+
+
+def test_a_retro_is_indexed_with_its_lists_and_a_readable_title(repo):
+    from app.backend.knowledge_radar.private_index import private_notes
+
+    notes, _ = private_notes(load_documents(repo))
+    retro = next(note for note in notes if note.slug.endswith("round-1-retro"))
+
+    assert retro.title_en == "Retro: ACME GmbH – ML Engineer – round 1"
+    assert retro.content_en == (
+        "Date: 2026-10-20\nQuestions asked:\n- How to evaluate RAG?\n"
+        "Knowledge-base gaps:\n- model calibration\n- quantum annealing\n\nOk."
+    )
+    titles = {note.title_en for note in notes}
+    assert "STAR stories" in titles and "Round note: ACME GmbH – ML Engineer – round 1" in titles

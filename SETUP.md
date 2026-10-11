@@ -80,6 +80,13 @@ containers reach it via `host.docker.internal`. The chat model is
 `KNOWLEDGE_RADAR_CHAT_MODEL` (default `qwen3:4b-instruct`). The chat remembers the
 current conversation in the browser tab only; the server stores nothing.
 
+With a private repository (section 8), the chat also takes the interview commands
+`/new-application`, `/new-round` and `/retro`: the app asks step by step and writes
+the files in the private repository's formats (`docker-compose.app-private.yml`
+mounts the checkout from `local-config.yaml`). After each write it updates the
+private side in the background: structural graph, extraction with the local chat
+model, private index. Commit the new files in the private repository yourself.
+
 For development without Docker:
 
 ```powershell

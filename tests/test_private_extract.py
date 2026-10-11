@@ -101,6 +101,28 @@ def test_requirements_graph_links_postings_requirements_and_topics(repo):
     }
 
 
+def test_an_unchanged_posting_keeps_its_requirements_without_the_model(repo):
+    notes = {"rag": NoteDetail.model_construct(slug="rag", title_en="RAG", content_en="### TL;DR\nRetrieval.\n")}
+
+    def embed(texts):
+        return [[1.0] for _ in texts]
+
+    def generate(prompt, json_schema=None, **options):
+        if "requirements" in json_schema["properties"]:
+            return json.dumps({"requirements": [{"text": "RAG", "category": "skill"}]})
+        return json.dumps({"matches": ["rag"]})
+
+    def must_not_run(prompt, **options):
+        raise AssertionError("an unchanged posting went to the model again")
+
+    postings = [d for d in load_documents(repo) if d.kind == "job_posting"]
+    topics = TopicIndex.build(notes, embed)
+    first = yaml.safe_load(requirements_graph(repo, postings, topics, embed=embed, generate=generate, log=lambda line: None).read_text(encoding="utf-8"))
+    again = yaml.safe_load(requirements_graph(repo, postings, topics, embed=embed, generate=must_not_run, log=lambda line: None).read_text(encoding="utf-8"))
+
+    assert again == first
+
+
 def test_private_results_never_go_into_the_public_repository(tmp_path):
     with pytest.raises(PrivateRepoError, match="public repository"):
         private_graph_directory(tmp_path / "inside", public_root=tmp_path)

@@ -1,0 +1,10 @@
+# The private repository in the app container, for /new-application, /new-round and
+# /retro, which write into it, and for the refresh of the private index after them.
+# Added by scripts/start-app.ps1 when local-config.yaml names a private checkout;
+# KNOWLEDGE_RADAR_PRIVATE_REPO_HOST is that checkout's path on the host.
+services:
+  api:
+    volumes:
+      - ${KNOWLEDGE_RADAR_PRIVATE_REPO_HOST:?Set by scripts/start-app.ps1 from local-config.yaml}:/private
+    environment:
+      KNOWLEDGE_RADAR_PRIVATE_REPO: /private

@@ -30,20 +30,66 @@ export function publicNoteUrl(slug: string): string {
   return `${PUBLIC_SITE}?view=note&slug=${encodeURIComponent(slug)}`;
 }
 
-export async function ask(question: string, history: Turn[], scope: Scope, language: Language): Promise<ChatAnswer> {
-  const response = await fetch("/api/chat", {
+export interface Interviewer {
+  name: string;
+  role: string;
+  focus: string;
+}
+
+export interface RoundInfo {
+  number: number;
+  date: string | null;
+  has_retro: boolean;
+  has_prep: boolean;
+}
+
+export interface Application {
+  company: string;
+  company_name: string;
+  role: string;
+  role_title: string;
+  rounds: RoundInfo[];
+}
+
+export interface RefreshStatus {
+  state: "idle" | "running" | "done" | "failed";
+  message: string;
+  log: string[];
+}
+
+export interface Written {
+  files: string[];
+  refresh: RefreshStatus | null;
+}
+
+async function call<T>(path: string, body?: unknown): Promise<T> {
+  const response = await fetch(path, body === undefined ? undefined : {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question, history, scope, language }),
+    body: JSON.stringify(body),
   });
   if (!response.ok) {
     let detail = `${response.status} ${response.statusText}`;
     try {
-      detail = (await response.json()).detail ?? detail;
+      const data = await response.json();
+      detail = typeof data.detail === "string" ? data.detail : JSON.stringify(data.detail ?? data);
     } catch {
-      // not JSON (e.g. nginx error page); keep the status line
+      // not JSON; keep the status line
     }
-    throw new Error(String(detail));
+    throw new Error(detail);
   }
   return response.json();
+}
+
+export const privateApi = {
+  applications: () => call<{ configured: boolean; applications: Application[] }>("/api/private/applications"),
+  newApplication: (body: unknown) => call<Written>("/api/private/applications", body),
+  newRound: (body: unknown) => call<Written>("/api/private/rounds", body),
+  draftRetro: (body: unknown) => call<{ text: string }>("/api/private/retro/draft", body),
+  saveRetro: (body: unknown) => call<Written>("/api/private/retro", body),
+  refresh: () => call<RefreshStatus | null>("/api/private/refresh"),
+};
+
+export function ask(question: string, history: Turn[], scope: Scope, language: Language): Promise<ChatAnswer> {
+  return call<ChatAnswer>("/api/chat", { question, history, scope, language });
 }

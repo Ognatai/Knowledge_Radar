@@ -412,6 +412,21 @@ class Neo4jStore:
         )
         return [dict(record) for record in records]
 
+    def passages_with_prefix(self, prefixes: list[str], exclude: list[str], limit: int = 3) -> list[dict[str, Any]]:
+        """Passages of the notes whose slug starts with one of `prefixes` (the documents of
+        one interview round in the private index), except the notes in `exclude`."""
+        records = self._run(
+            "MATCH (node:Chunk)-[:PART_OF]->(n:Note) "
+            "WHERE any(prefix IN $prefixes WHERE n.slug STARTS WITH prefix) AND NOT n.slug IN $exclude "
+            "RETURN n.slug AS note, n.title_en AS title_en, n.title_de AS title_de, n.visibility AS visibility, "
+            "node.language AS language, node.heading AS heading, node.text AS text, 0.0 AS score "
+            "ORDER BY n.slug, node.id LIMIT $limit",
+            prefixes=prefixes,
+            exclude=exclude,
+            limit=limit,
+        )
+        return [dict(record) for record in records]
+
     def facts(self, slugs: list[str], limit: int = 30) -> list[dict[str, Any]]:
         """Relations of the entities these notes describe (their own entity, not every one they
         mention): the graph around the passages found."""
