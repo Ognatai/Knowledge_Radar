@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "547566a6ce33af31b2ff7d9ea09930b43d589f1c300c3ea4ca01f3b9a500def1"
+note_sha256: "9edec3868c20a3d78dd924a92228fd0f903fa43bc30ca2c4eee53f24ae1ac307"
 extracted_by: claude (hand-labelled gold standard)
 discusses: [lime, shap, integrated-gradients, counterfactual-explanations, interpretable-models, decision-trees, attention-and-transformers, chain-of-thought-prompting, gdpr, eu-ai-act]
 relations:

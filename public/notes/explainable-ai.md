@@ -2,6 +2,8 @@
 title_en: Explainable AI (XAI)
 title_de: Erklärbare KI (XAI)
 entity_type: Concept
+aliases:
+- XAI
 sources:
 - https://arxiv.org/abs/1702.08608
 - https://arxiv.org/abs/1811.10154

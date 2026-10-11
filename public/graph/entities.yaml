@@ -1609,7 +1609,6 @@ entities:
   name_de: Dense Passage Retrieval (DPR)
   aliases:
   - DPR
-  - dense retrieval
 - id: probabilistic-relevance-framework
   type: Concept
   name_en: Probabilistic relevance framework
@@ -2569,6 +2568,8 @@ entities:
   type: Method
   name_en: Exponential smoothing (ETS)
   name_de: Exponentielle Glättung (ETS)
+  aliases:
+  - ETS
 - id: arima
   type: Method
   name_en: ARIMA

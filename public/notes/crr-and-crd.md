@@ -10,12 +10,9 @@ consolidated_version: 2026-07-11
 aliases:
 - CRR
 - CRD
-- CRR III
-- CRD VI
 - Capital Requirements Regulation
 - Capital Requirements Directive
 - Eigenkapitalrichtlinie
-- Basel III
 sources:
 - https://eur-lex.europa.eu/eli/reg/2013/575/oj/eng
 - https://eur-lex.europa.eu/eli/reg/2013/575/oj/deu

@@ -9,9 +9,7 @@ official_reference: Regulation (EU) No 910/2014
 consolidated_version: 2024-10-18
 aliases:
 - eIDAS
-- eIDAS 2.0
 - eIDAS-Verordnung
-- European Digital Identity Wallet
 sources:
 - https://eur-lex.europa.eu/eli/reg/2014/910/oj/eng
 - https://eur-lex.europa.eu/eli/reg/2014/910/oj/deu

@@ -113,21 +113,46 @@ def public_relation_types(schema_path: Path = SCHEMA_PATH) -> dict[str, Relation
 
 
 def normalize_name(name: str) -> str:
-    """Comparable form of a name: lowercase letters and digits only."""
-    return re.sub(r"[^0-9a-z]", "", name.casefold())
+    """Comparable form of a name: lowercase letters and digits only; "+" is kept as
+    "plus" so that "k-means++" stays apart from "k-means"."""
+    return re.sub(r"[^0-9a-z]", "", name.casefold().replace("+", "plus"))
 
 
 ACRONYM_IN_PARENTHESES = re.compile(r"\(([A-Z0-9][A-Z0-9-]{1,11})\)\s*$")
 
 
+def abbreviates(acronym: str, long_form: str) -> bool:
+    """Whether `acronym` abbreviates `long_form`: its letters occur in order in the long
+    form, starting with its first letter ("DSGVO", "W3C"), or at least half of them begin
+    a word of it ("UWG" for "Gesetz gegen den unlauteren Wettbewerb"). A context in
+    parentheses does neither: "Gatekeeper (DMA)", "Reification (RDF)"."""
+    letters = [c for c in acronym.casefold() if c.isalpha()]
+    text = long_form.casefold()
+    if not letters or not text:
+        return False
+    if text[0] == letters[0]:
+        position = 0
+        for letter in letters:
+            position = text.find(letter, position) + 1
+            if not position:
+                break
+        else:
+            return True
+    initials = {word[0] for word in re.split(r"[\s\-/]+", text) if word}
+    return sum(letter in initials for letter in letters) * 2 >= len(letters)
+
+
 def name_parts(name: str) -> list[str]:
-    """A name and, if it ends in an acronym in parentheses, the long form and the
-    acronym: "World Wide Web Consortium (W3C)" also yields "World Wide Web Consortium"
-    and "W3C". Other parentheses qualify the name ("Space (Confluence)") and are kept."""
+    """A name and, if it ends in an acronym of itself in parentheses, the long form and
+    the acronym: "World Wide Web Consortium (W3C)" also yields "World Wide Web Consortium"
+    and "W3C". Other parentheses qualify the name ("Space (Confluence)", "Gatekeeper
+    (DMA)") and are kept."""
     parts = [name]
     for acronym in ACRONYM_IN_PARENTHESES.findall(name):
-        parts.append(acronym)
-        parts.append(name.replace(f"({acronym})", ""))
+        long_form = name.replace(f"({acronym})", "").strip()
+        if abbreviates(acronym, long_form):
+            parts.append(acronym)
+            parts.append(long_form)
     return [part.strip() for part in parts if part.strip()]
 
 
@@ -295,6 +320,21 @@ def _load_extraction(
         )
 
 
+def _check_name_collisions(entities: dict[str, Entity]) -> None:
+    """Two entities of one type must not share a name, alias or acronym: resolving a
+    new entity by name would merge it into whichever came first. Across types a name
+    may repeat (the regulation DORA, the method DoRA)."""
+    owners: dict[tuple[str, str], str] = {}
+    for entity in entities.values():
+        for key in sorted(entity_keys(entity)):
+            other = owners.setdefault((entity.type, key), entity.id)
+            if other != entity.id:
+                raise GraphError(
+                    f"the {entity.type} entities '{other}' and '{entity.id}' share the name '{key}'; "
+                    "if they are the same, merge them, otherwise drop the shared alias."
+                )
+
+
 def load_graph(
     graph_directory: Path | None,
     notes: list[NoteDetail],
@@ -325,6 +365,7 @@ def load_graph(
         return graph
 
     _load_registry(graph_directory / REGISTRY_FILE_NAME, graph.entities)
+    _check_name_collisions(graph.entities)
     notes_by_slug = {note.slug: note for note in notes}
     extractions_directory = graph_directory / EXTRACTIONS_DIRECTORY_NAME
     paths = sorted(extractions_directory.rglob("*.yaml")) if extractions_directory.is_dir() else []

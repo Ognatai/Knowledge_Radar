@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9bed586b1aa35b5ddbd7d63c84cdeacab89bc0d144f39b6f997bb0acd09b954f
+note_sha256: 641357d90a7d8e9bf7201a49c276bb15b3ef30bfbd496734b6f3c7567bd46abf
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - eidas-2

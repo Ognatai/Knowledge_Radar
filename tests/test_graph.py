@@ -308,3 +308,51 @@ def test_only_a_trailing_acronym_in_parentheses_is_a_name():
         "GDPR",
         "General Data Protection Regulation",
     ]
+
+
+def test_a_parenthesised_context_is_not_an_acronym():
+    from app.backend.knowledge_radar.graph import name_parts
+
+    for name in ["Gatekeeper (DMA)", "Window functions (SQL)", "Reification (RDF)", "Systemic risk (DSA)", "Essential and important entities (NIS2)"]:
+        assert name_parts(name) == [name]
+    for name, acronym in [
+        ("World Wide Web Consortium (W3C)", "W3C"),
+        ("Datenschutz-Grundverordnung (DSGVO)", "DSGVO"),
+        ("Gesetz gegen den unlauteren Wettbewerb (UWG)", "UWG"),
+        ("Sentence-BERT (SBERT)", "SBERT"),
+    ]:
+        assert acronym in name_parts(name)
+
+
+def test_plus_signs_keep_names_apart():
+    from app.backend.knowledge_radar.graph import normalize_name
+
+    assert normalize_name("k-means++") != normalize_name("k-means")
+
+
+def test_entities_of_one_type_must_not_share_a_name(tmp_path):
+    registry = REGISTRY + """  - id: msr
+    type: Organization
+    name_en: MSR
+    name_de: MSR
+    aliases: [Microsoft Research]
+"""
+    notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
+
+    with pytest.raises(GraphError, match="'microsoft' and 'msr'.*microsoftresearch"):
+        load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+
+def test_entities_of_different_types_may_share_a_name(tmp_path):
+    registry = REGISTRY + """  - id: dora-method
+    type: Method
+    name_en: DoRA
+    name_de: DoRA
+  - id: dora-act
+    type: Concept
+    name_en: DORA
+    name_de: DORA
+"""
+    notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
+
+    assert {"dora-method", "dora-act"} <= set(load_graph(graph_dir, load_notes(notes_dir), notes_dir).entities)
