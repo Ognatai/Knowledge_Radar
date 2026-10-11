@@ -16,11 +16,14 @@ import {
   Wizard,
 } from "./commands";
 
-interface RetroDraft {
+interface Draft {
+  kind: "retro" | "prep";
   text: string;
   company: string;
   role: string;
   round: number;
+  // A prep.md exists already: saving replaces it.
+  exists?: boolean;
   state: "editing" | "saving" | "saved" | "cancelled";
 }
 
@@ -35,7 +38,7 @@ interface Message {
   unavailable?: string[];
   error?: boolean;
   choices?: Choice[];
-  draft?: RetroDraft;
+  draft?: Draft;
   refresh?: RefreshStatus;
 }
 
@@ -67,7 +70,11 @@ const TEXT = {
     pickChoice: "Bitte wähle eine der Möglichkeiten oben (Klick oder Nummer).",
     saved: (files: string[]) => `Gespeichert im privaten Repository:\n${files.map((f) => `- \`${f}\``).join("\n")}\n\nDie Dateien sind noch nicht committet.`,
     draftIntro: "Entwurf der Retro. Prüfe und ändere ihn bei Bedarf, dann speichern:",
+    prepIntro: "Entwurf der Vorbereitung. Prüfe ihn, vor allem die Kurzvorstellung (Platzhalter in [eckigen Klammern] füllst du selbst):",
     saveDraft: "Retro speichern",
+    savePrep: "Vorbereitung speichern",
+    replacePrep: "Vorhandene Vorbereitung überschreiben",
+    preparing: "Erstellt die Vorbereitung (Anforderungen, frühere Runden, Kurzvorstellung, Fragen) …",
     refreshing: "Aktualisiere den privaten Index (Struktur, lokale Extraktion, Embeddings) …",
     refreshed: "Privater Index aktualisiert. Die neuen Daten sind im Chat verfügbar.",
     refreshFailed: (message: string) => `Aktualisierung fehlgeschlagen: ${message}`,
@@ -99,7 +106,11 @@ const TEXT = {
     pickChoice: "Please pick one of the options above (click or number).",
     saved: (files: string[]) => `Saved in the private repository:\n${files.map((f) => `- \`${f}\``).join("\n")}\n\nThe files are not committed yet.`,
     draftIntro: "Draft of the retro. Check it, change what you like, then save:",
+    prepIntro: "Draft of the preparation. Check it, above all the self-introduction (fill in the [placeholders] yourself):",
     saveDraft: "Save retro",
+    savePrep: "Save preparation",
+    replacePrep: "Replace the existing preparation",
+    preparing: "Writing the preparation (requirements, earlier rounds, introduction, questions) …",
     refreshing: "Updating the private index (structure, local extraction, embeddings) …",
     refreshed: "Private index updated. The new data is available in the chat.",
     refreshFailed: (message: string) => `Update failed: ${message}`,
@@ -156,6 +167,7 @@ export default function App() {
   const [busy, setBusy] = useState<"" | "chat" | "command">("");
   const [wizard, setWizard] = useState<Wizard | null>(null);
   const [applications, setApplications] = useState<Application[]>([]);
+  const [preparing, setPreparing] = useState(false);
   const end = useRef<HTMLDivElement>(null);
   const t = TEXT[language];
 
@@ -206,11 +218,12 @@ export default function App() {
   async function finish(done: Wizard) {
     setWizard(null);
     const a = done.answers;
-    if (done.command !== "/retro" && !confirmed(done)) {
+    if (done.command !== "/retro" && done.command !== "/prep" && !confirmed(done)) {
       add({ role: "assistant", content: t.cancelled, command: true });
       return;
     }
     setBusy("command");
+    setPreparing(done.command === "/prep");
     try {
       const round = { round_date: value(a, "round_date") || null, round_notes: value(a, "round_notes"), interviewers: parseInterviewers(a.interviewers ?? SKIP) };
       if (done.command === "/new-application") {
@@ -220,6 +233,13 @@ export default function App() {
             posting_text: a.posting_text, posting_url: value(a, "posting_url"), ...round,
           }),
         );
+      } else if (done.command === "/prep") {
+        const [company, role, number] = a.round.split("/");
+        const draft = await privateApi.draftPrep({ company, role, round: Number(number), language });
+        add({
+          role: "assistant", content: t.prepIntro, command: true,
+          draft: { kind: "prep", text: draft.text, company, role, round: Number(number), exists: draft.exists, state: "editing" },
+        });
       } else if (done.command === "/new-round") {
         const [company, role] = a.application.split("/");
         reportWritten(await privateApi.newRound({ company, role, ...round }));
@@ -231,12 +251,13 @@ export default function App() {
           personal_improvement: value(a, "personal_improvement"), kb_gaps_identified: value(a, "kb_gaps_identified"),
           reflection: value(a, "reflection"),
         });
-        add({ role: "assistant", content: t.draftIntro, command: true, draft: { text: draft.text, company, role, round: Number(number), state: "editing" } });
+        add({ role: "assistant", content: t.draftIntro, command: true, draft: { kind: "retro", text: draft.text, company, role, round: Number(number), state: "editing" } });
       }
     } catch (error) {
       add({ role: "assistant", content: (error as Error).message, command: true, error: true });
     } finally {
       setBusy("");
+      setPreparing(false);
     }
   }
 
@@ -244,7 +265,8 @@ export default function App() {
     const draft = message.draft!;
     update(message.id, { draft: { ...draft, state: "saving" } });
     try {
-      const result = await privateApi.saveRetro({ company: draft.company, role: draft.role, round: draft.round, text: draft.text });
+      const place = { company: draft.company, role: draft.role, round: draft.round, text: draft.text };
+      const result = draft.kind === "prep" ? await privateApi.savePrep({ ...place, replace: !!draft.exists }) : await privateApi.saveRetro(place);
       update(message.id, { draft: { ...draft, state: "saved" } });
       reportWritten(result);
     } catch (error) {
@@ -451,7 +473,9 @@ export default function App() {
                       />
                       {message.draft.state === "editing" && (
                         <div className="choices">
-                          <button onClick={() => void saveDraft(message)}>{t.saveDraft}</button>
+                          <button onClick={() => void saveDraft(message)}>
+                            {message.draft.kind === "retro" ? t.saveDraft : message.draft.exists ? t.replacePrep : t.savePrep}
+                          </button>
                           <button
                             onClick={() => {
                               update(message.id, { draft: { ...message.draft!, state: "cancelled" } });
@@ -470,7 +494,7 @@ export default function App() {
               )}
             </article>
           ))}
-          {busy && <p className="thinking">{busy === "chat" ? t.thinking : t.working}</p>}
+          {busy && <p className="thinking">{busy === "chat" ? t.thinking : wizard === null && preparing ? t.preparing : t.working}</p>}
           <div ref={end} />
         </section>
 

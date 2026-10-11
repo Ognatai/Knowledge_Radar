@@ -81,7 +81,7 @@ containers reach it via `host.docker.internal`. The chat model is
 current conversation in the browser tab only; the server stores nothing.
 
 With a private repository (section 8), the chat also takes the interview commands
-`/new-application`, `/new-round` and `/retro`: the app asks step by step and writes
+`/new-application`, `/new-round`, `/retro` and `/prep`: the app asks step by step and writes
 the files in the private repository's formats (`docker-compose.app-private.yml`
 mounts the checkout from `local-config.yaml`). After each write it updates the
 private side in the background: structural graph, extraction with the local chat

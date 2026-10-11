@@ -171,7 +171,7 @@ def test_an_unchanged_follow_up_is_searched_with_the_previous_question():
     assert searched == "Was ist Prompt Injection? Und wie schützt man sich?"
 
 
-def test_a_hit_on_a_round_brings_the_rounds_retro_along():
+def test_a_hit_on_a_round_brings_the_applications_retro_along():
     round_slug = "private-companies-acme-gmbh-ml-engineer-round-1-round"
     retro = hit("private-companies-acme-gmbh-ml-engineer-round-1-retro", 0.0, text="Questions asked: RAG", visibility="private")
     private = FakeStore([hit(round_slug, 0.85, visibility="private"), hit("private-notes-star-stories", 0.8, visibility="private")],
@@ -179,5 +179,5 @@ def test_a_hit_on_a_round_brings_the_rounds_retro_along():
 
     retrieval = chat.retrieve("Was wurde ich gefragt?", {"private": lambda: private}, embed=fake_embed)
 
-    assert private.prefix_requests == [(["private-companies-acme-gmbh-ml-engineer-round-1-"], [round_slug, "private-notes-star-stories"])]
+    assert private.prefix_requests == [(["private-companies-acme-gmbh-ml-engineer-"], [round_slug, "private-notes-star-stories"])]
     assert [(s.number, s.note) for s in retrieval.sources][-1] == (3, retro["note"])

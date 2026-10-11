@@ -87,6 +87,8 @@ export const privateApi = {
   newRound: (body: unknown) => call<Written>("/api/private/rounds", body),
   draftRetro: (body: unknown) => call<{ text: string }>("/api/private/retro/draft", body),
   saveRetro: (body: unknown) => call<Written>("/api/private/retro", body),
+  draftPrep: (body: unknown) => call<{ text: string; exists: boolean }>("/api/private/prep/draft", body),
+  savePrep: (body: unknown) => call<Written>("/api/private/prep", body),
   refresh: () => call<RefreshStatus | null>("/api/private/refresh"),
 };
 

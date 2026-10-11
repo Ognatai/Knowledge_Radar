@@ -10,6 +10,8 @@ in `app/site/`.
 - **Interview commands** `/new-application`, `/new-round`, `/retro`: guided
   dialogues that write the private repository (`app/backend/knowledge_radar/interviews.py`)
   and refresh the private index afterwards (`app/agents/private_refresh.py`).
+- **`/prep`**: a briefing for one round, saved as `prep.md` after editing
+  (`app/backend/knowledge_radar/prep.py`).
 - **Review Dashboard** for the weekly proposal branches: planned.
 
 Development: `npm install`, then `npm run dev` (port 5173; `/api` is proxied to

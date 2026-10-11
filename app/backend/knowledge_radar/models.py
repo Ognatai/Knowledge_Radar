@@ -76,6 +76,22 @@ class RetroIn(BaseModel):
     text: str = Field(min_length=1, max_length=100000)
 
 
+class PrepRequest(BaseModel):
+    company: str
+    role: str
+    round: int = Field(ge=1)
+    language: Literal["de", "en"] = "de"
+
+
+class PrepIn(BaseModel):
+    company: str
+    role: str
+    round: int = Field(ge=1)
+    text: str = Field(min_length=1, max_length=200000)
+    # An existing prep.md is replaced only when the user confirmed it.
+    replace: bool = False
+
+
 class ChatTurn(BaseModel):
     role: Literal["user", "assistant"]
     content: str = Field(max_length=20000)

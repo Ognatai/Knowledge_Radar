@@ -414,13 +414,13 @@ class Neo4jStore:
 
     def passages_with_prefix(self, prefixes: list[str], exclude: list[str], limit: int = 3) -> list[dict[str, Any]]:
         """Passages of the notes whose slug starts with one of `prefixes` (the documents of
-        one interview round in the private index), except the notes in `exclude`."""
+        one application in the private index), except the notes in `exclude`; retros first."""
         records = self._run(
             "MATCH (node:Chunk)-[:PART_OF]->(n:Note) "
             "WHERE any(prefix IN $prefixes WHERE n.slug STARTS WITH prefix) AND NOT n.slug IN $exclude "
             "RETURN n.slug AS note, n.title_en AS title_en, n.title_de AS title_de, n.visibility AS visibility, "
             "node.language AS language, node.heading AS heading, node.text AS text, 0.0 AS score "
-            "ORDER BY n.slug, node.id LIMIT $limit",
+            "ORDER BY CASE WHEN n.slug ENDS WITH '-retro' THEN 0 ELSE 1 END, n.slug DESC, node.id LIMIT $limit",
             prefixes=prefixes,
             exclude=exclude,
             limit=limit,

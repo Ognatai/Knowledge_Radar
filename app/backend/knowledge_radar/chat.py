@@ -34,10 +34,11 @@ MAX_SOURCES = 6
 # One long note would otherwise fill every source slot (seen 2026-10-11: four sections
 # of the prompt-injection note, none of the MCP note, for a question about both).
 MAX_PASSAGES_PER_NOTE = 2
-# The documents of one interview round belong together: a hit on the round or its
-# interviewers brings the round's retro and notes along (seen 2026-10-11: "what did they
-# ask me?" found the round, while the retro with the questions came seventh).
-ROUND_PREFIX = re.compile(r"^(private-companies-.+-round-\d+)-")
+# The documents of one application belong together: a hit on a round, its interviewers
+# or the posting brings the application's other documents along, retros first (seen
+# 2026-10-11: "what did they ask me?" found the rounds, while the retro with the
+# questions came seventh).
+APPLICATION_PREFIX = re.compile(r"^(private-companies-.+?)-(?:round-\d+-|job-posting$)")
 MAX_ROUND_PASSAGES = 3
 MAX_HISTORY_TURNS = 6
 MAX_HISTORY_CHARACTERS = 1200
@@ -132,8 +133,8 @@ def merge_hits(hits: dict[str, list[dict[str, Any]]], language: str, limit: int 
 
 
 def round_documents(store: SearchableStore, sources: list[Source], language: str) -> list[Source]:
-    """The other documents of the interview rounds among the private sources."""
-    prefixes = sorted({match.group(1) + "-" for s in sources if s.visibility == "private" and (match := ROUND_PREFIX.match(s.note))})
+    """The other documents of the applications among the private sources."""
+    prefixes = sorted({match.group(1) + "-" for s in sources if s.visibility == "private" and (match := APPLICATION_PREFIX.match(s.note))})
     if not prefixes:
         return []
     try:

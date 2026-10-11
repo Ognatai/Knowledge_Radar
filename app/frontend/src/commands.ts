@@ -2,12 +2,13 @@
 // the app asks step by step for what it needs (architecture-private-repo.md).
 import { Application, Interviewer, Language } from "./api";
 
-export type CommandName = "/new-application" | "/new-round" | "/retro";
+export type CommandName = "/new-application" | "/new-round" | "/retro" | "/prep";
 
 export const COMMANDS: Record<CommandName, Record<Language, string>> = {
   "/new-application": { de: "neue Bewerbung: Firma, Stelle, erste Runde", en: "new application: company, role, first round" },
   "/new-round": { de: "weitere Runde einer bestehenden Bewerbung", en: "further round of an existing application" },
   "/retro": { de: "Nachbereitung eines Gesprächs", en: "debrief after an interview" },
+  "/prep": { de: "Vorbereitung auf eine Runde (prep.md)", en: "preparation for a round (prep.md)" },
 };
 
 export interface Choice {
@@ -115,8 +116,40 @@ function roundChoices(applications: Application[], language: Language): Choice[]
   );
 }
 
+function prepChoices(applications: Application[], language: Language): Choice[] {
+  return applications.flatMap((a) =>
+    a.rounds.map((r) => ({
+      label: `${a.company_name} – ${a.role_title} – ${language === "de" ? "Runde" : "round"} ${r.number}${r.date ? ` (${r.date})` : ""}${
+        r.has_prep ? (language === "de" ? " · Vorbereitung vorhanden" : " · prep exists") : ""
+      }`,
+      value: `${a.company}/${a.role}/${r.number}`,
+    })),
+  );
+}
+
 /** The wizard for a command, or the reason it cannot start. */
 export function startWizard(command: CommandName, applications: Application[], language: Language): Wizard | string {
+  if (command === "/prep") {
+    const rounds = prepChoices(applications, language);
+    if (!rounds.length) {
+      return language === "de" ? "Es gibt noch keine Runde. Lege eine Bewerbung mit /new-application an." : "There is no round yet. Start an application with /new-application.";
+    }
+    return {
+      command,
+      index: 0,
+      answers: {},
+      steps: [
+        {
+          key: "round",
+          prompt: {
+            de: "Für welche Runde? Das lokale Modell braucht etwa eine Minute.",
+            en: "For which round? The local model needs about a minute.",
+          },
+          choices: rounds,
+        },
+      ],
+    };
+  }
   if (command === "/new-application") {
     return {
       command,

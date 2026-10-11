@@ -15,7 +15,7 @@ from typing import Any
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.backend.knowledge_radar import chat, interviews
+from app.backend.knowledge_radar import chat, interviews, prep
 from app.backend.knowledge_radar.config import LocalConfigError, load_local_config
 from app.backend.knowledge_radar.models import (
     ChatRequest,
@@ -26,6 +26,8 @@ from app.backend.knowledge_radar.models import (
     NoteDetail,
     NoteSearchResults,
     NoteSummary,
+    PrepIn,
+    PrepRequest,
     RetroDraftRequest,
     RetroIn,
 )
@@ -192,6 +194,26 @@ def create_app(
     def save_retro(request: RetroIn) -> dict[str, Any]:
         return interview_errors(lambda: interviews.write_retro(private(), company=request.company, role=request.role,
                                                               round_number=request.round, text=request.text))
+
+    @app.post("/api/private/prep/draft")
+    def prep_draft(request: PrepRequest) -> dict[str, Any]:
+        root_path = private()
+        notes = {note.slug: note for note in read_notes()}
+        try:
+            options = {"generate": generate} if generate else {}
+            text = prep.draft_prep(root_path, request.company, request.role, request.round, notes=notes,
+                                   stores=chat_indices.factories("all"), language=request.language, **options)
+        except interviews.InterviewError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except Exception as exc:  # noqa: BLE001 - the local model or an index is down
+            raise HTTPException(status_code=503, detail=f"The prep could not be drafted: {exc}") from exc
+        exists = (root_path / "companies" / request.company / request.role / f"round-{request.round}" / "prep.md").is_file()
+        return {"text": text, "exists": exists}
+
+    @app.post("/api/private/prep")
+    def save_prep(request: PrepIn) -> dict[str, Any]:
+        return interview_errors(lambda: prep.write_prep(private(), company=request.company, role=request.role,
+                                                        round_number=request.round, text=request.text, replace=request.replace))
 
     @app.get("/api/private/refresh")
     def refresh_status() -> dict[str, Any] | None:
