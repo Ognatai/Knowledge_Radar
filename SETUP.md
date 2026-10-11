@@ -84,7 +84,7 @@ For development without Docker:
 
 ```powershell
 uvicorn app.backend.knowledge_radar.api:app --reload   # API on :8000, docs at /docs
-cd approntend; npm install; npm run dev                 # UI on :5173, /api proxied to :8000
+cd approntend; npm install; npm run dev            # UI on :5173, /api proxied to :8000
 ```
 
 ## 6. Ollama
