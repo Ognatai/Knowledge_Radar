@@ -49,7 +49,7 @@ Flamingo bridges pretrained vision-only and language-only models, handles arbitr
 
 #### 4. Visual instruction tuning
 
-LLaVA used language-only GPT-4 to generate multimodal instruction-following data and instruction-tuned a model that connects a vision encoder with a large language model (Liu et al., 2023). It showed multimodal chat abilities, reached an 85.1% relative score compared with GPT-4 on a synthetic multimodal instruction-following dataset, and, combined with GPT-4, a new state-of-the-art accuracy of 92.53% on Science QA.
+LLaVA used language-only [[gpt|GPT-4]] to generate multimodal instruction-following data and instruction-tuned a model that connects a vision encoder with a large language model (Liu et al., 2023). It showed multimodal chat abilities, reached an 85.1% relative score compared with GPT-4 on a synthetic multimodal instruction-following dataset, and, combined with GPT-4, a new state-of-the-art accuracy of 92.53% on Science QA.
 
 #### 5. Generating images from text
 
@@ -141,7 +141,7 @@ Flamingo verbindet vortrainierte reine Bild- und reine Sprachmodelle, verarbeite
 
 #### 4. Visual Instruction Tuning
 
-LLaVA nutzte das rein sprachliche GPT-4, um multimodale Daten zum Befolgen von Anweisungen zu erzeugen, und stimmte damit ein Modell ab, das einen Bild-Encoder mit einem großen Sprachmodell verbindet (Liu et al., 2023). Es zeigte multimodale Chat-Fähigkeiten, erreichte auf einem synthetischen multimodalen Datensatz zum Befolgen von Anweisungen 85,1 % der Bewertung von GPT-4 und zusammen mit GPT-4 eine neue Bestgenauigkeit von 92,53 % auf Science QA.
+LLaVA nutzte das rein sprachliche [[gpt|GPT-4]], um multimodale Daten zum Befolgen von Anweisungen zu erzeugen, und stimmte damit ein Modell ab, das einen Bild-Encoder mit einem großen Sprachmodell verbindet (Liu et al., 2023). Es zeigte multimodale Chat-Fähigkeiten, erreichte auf einem synthetischen multimodalen Datensatz zum Befolgen von Anweisungen 85,1 % der Bewertung von GPT-4 und zusammen mit GPT-4 eine neue Bestgenauigkeit von 92,53 % auf Science QA.
 
 #### 5. Bilder aus Text erzeugen
 

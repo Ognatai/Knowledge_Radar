@@ -65,7 +65,7 @@ Optimal margin classifiers (Boser et al., 1992) were extended to support-vector 
 - The soft margin handles overlapping classes (Cortes & Vapnik, 1995).
 
 **Limitations**
-- The cost parameter C and the kernel must be chosen, usually by cross-validation (Hastie et al., 2009).
+- The cost parameter C and the kernel must be chosen, usually by [[cross-validation|cross-validation]] (Hastie et al., 2009).
 - SVMs output decision scores rather than probabilities; if probabilities are needed, they have to be calibrated separately ([[classification|Classification]]).
 - The optimisation is a quadratic programme, which becomes expensive for very large datasets (Smola & Schölkopf, 2004).
 
@@ -149,7 +149,7 @@ Klassifikatoren mit optimalem Margin (Boser et al., 1992) wurden zu Support-Vect
 - Der Soft Margin kommt mit überlappenden Klassen zurecht (Cortes & Vapnik, 1995).
 
 **Einschränkungen**
-- Kostenparameter C und Kernel müssen gewählt werden, meist per Kreuzvalidierung (Hastie et al., 2009).
+- Kostenparameter C und Kernel müssen gewählt werden, meist per [[cross-validation|Kreuzvalidierung]] (Hastie et al., 2009).
 - SVMs liefern Entscheidungswerte statt Wahrscheinlichkeiten; werden Wahrscheinlichkeiten gebraucht, müssen sie gesondert kalibriert werden ([[classification|Klassifikation]]).
 - Die Optimierung ist ein quadratisches Programm und wird bei sehr großen Datensätzen aufwendig (Smola & Schölkopf, 2004).
 

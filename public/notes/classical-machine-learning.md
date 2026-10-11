@@ -44,7 +44,7 @@ The standard textbooks cover linear methods for regression and classification, [
 
 #### 3. Model assessment and the bias-variance trade-off
 
-The prediction error of a model is framed through the bias-variance trade-off: flexible models fit the training data closely but vary strongly with the sample, rigid models are stable but may miss structure (Hastie et al., 2009). Models are therefore assessed and selected on data not used for fitting, with cross-validation and the bootstrap ([[ml-preprocessing|ML Preprocessing]]).
+The prediction error of a model is framed through the bias-variance trade-off: flexible models fit the training data closely but vary strongly with the sample, rigid models are stable but may miss structure (Hastie et al., 2009). Models are therefore assessed and selected on data not used for fitting, with [[cross-validation|cross-validation]] and the bootstrap ([[ml-preprocessing|ML Preprocessing]]).
 
 #### 4. Common tooling
 
@@ -135,7 +135,7 @@ Die Standardlehrbücher behandeln für überwachtes Lernen lineare Verfahren fü
 
 #### 3. Modellbewertung und Bias-Varianz-Abwägung
 
-Der Vorhersagefehler eines Modells wird über die Bias-Varianz-Abwägung beschrieben: Flexible Modelle passen sich den Trainingsdaten eng an, schwanken aber stark mit der Stichprobe; starre Modelle sind stabil, übersehen aber womöglich Strukturen (Hastie et al., 2009). Modelle werden daher auf Daten bewertet und ausgewählt, die nicht zur Anpassung dienten, mit Kreuzvalidierung und Bootstrap ([[ml-preprocessing|Preprocessing für Machine Learning]]).
+Der Vorhersagefehler eines Modells wird über die Bias-Varianz-Abwägung beschrieben: Flexible Modelle passen sich den Trainingsdaten eng an, schwanken aber stark mit der Stichprobe; starre Modelle sind stabil, übersehen aber womöglich Strukturen (Hastie et al., 2009). Modelle werden daher auf Daten bewertet und ausgewählt, die nicht zur Anpassung dienten, mit [[cross-validation|Kreuzvalidierung]] und Bootstrap ([[ml-preprocessing|Preprocessing für Machine Learning]]).
 
 #### 4. Gängige Werkzeuge
 

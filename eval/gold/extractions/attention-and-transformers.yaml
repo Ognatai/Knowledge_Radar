@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "35601e9b10d6ad486c175f1c7a22ef8ed43bfab6f3418e5aee10a92acba83bc3"
+note_sha256: "7e896c6b2103299421103a428882b7d6cb781bc6f8ab22b23c5c8c2853cce9de"
 extracted_by: manual
 discusses: [sequence-to-sequence, recurrent-neural-networks, bert, t5, gpt, masked-language-modelling, vision-transformer, flashattention]
 relations:

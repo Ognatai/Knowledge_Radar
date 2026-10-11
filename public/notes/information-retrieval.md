@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Information retrieval (IR) finds the documents in a large collection that are relevant to a query and ranks them (Manning et al., 2008). Classical systems use an inverted index and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic BM25 function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information retrieval (IR) finds the documents in a large collection that are relevant to a query and ranks them (Manning et al., 2008). Classical systems use an inverted index and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### How it works
 
@@ -126,7 +126,7 @@ Information retrieval ranks documents for a query, classically with an inverted 
 
 ### TL;DR
 
-Information Retrieval (IR) findet die Dokumente einer großen Sammlung, die für eine Anfrage relevant sind, und bringt sie in eine Rangfolge (Manning et al., 2008). Klassische Systeme nutzen einen invertierten Index und ranken Dokumente mit Termgewichten wie tf-idf (Salton & Buckley, 1988) oder mit der probabilistischen Funktion BM25 (Robertson & Zaragoza, 2009). Dense Retrieval vergleicht stattdessen gelernte [[embeddings|Embeddings]] von Anfrage und Passage und übertraf BM25 bei Open-Domain-Fragebeantwortung (Karpukhin et al., 2020). IR ist der Retrieval-Schritt von [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information Retrieval (IR) findet die Dokumente einer großen Sammlung, die für eine Anfrage relevant sind, und bringt sie in eine Rangfolge (Manning et al., 2008). Klassische Systeme nutzen einen invertierten Index und ranken Dokumente mit Termgewichten wie tf-idf (Salton & Buckley, 1988) oder mit der probabilistischen Funktion [[bm25|BM25]] (Robertson & Zaragoza, 2009). Dense Retrieval vergleicht stattdessen gelernte [[embeddings|Embeddings]] von Anfrage und Passage und übertraf BM25 bei Open-Domain-Fragebeantwortung (Karpukhin et al., 2020). IR ist der Retrieval-Schritt von [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### Funktionsweise
 

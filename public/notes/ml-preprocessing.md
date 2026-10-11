@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Preprocessing prepares data for training and fair evaluation. Features are scaled, data is split into training, validation and test sets, and models are compared with cross-validation, for which ten-fold stratified cross-validation is a robust default (Kohavi, 1995). Imbalanced classes require suitable metrics and, if needed, resampling such as SMOTE (He & Garcia, 2009; Chawla et al., 2002), and predicted probabilities are often calibrated (Niculescu-Mizil & Caruana, 2005; Guo et al., 2017).
+Preprocessing prepares data for training and fair evaluation. Features are scaled, data is split into training, validation and test sets, and models are compared with [[cross-validation|cross-validation]], for which ten-fold stratified cross-validation is a robust default (Kohavi, 1995). Imbalanced classes require suitable metrics and, if needed, resampling such as SMOTE (He & Garcia, 2009; Chawla et al., 2002), and predicted probabilities are often calibrated (Niculescu-Mizil & Caruana, 2005; Guo et al., 2017).
 
 ### How it works
 
@@ -109,7 +109,7 @@ Good preprocessing keeps evaluation honest: split first, fit transformations on 
 
 ### TL;DR
 
-Preprocessing bereitet Daten für Training und faire Evaluation vor. Merkmale werden skaliert, Daten in Trainings-, Validierungs- und Testmengen aufgeteilt, und Modelle werden per Kreuzvalidierung verglichen, wofür zehnfache stratifizierte Kreuzvalidierung ein robuster Standard ist (Kohavi, 1995). Unausgewogene Klassen erfordern geeignete Metriken und bei Bedarf Resampling wie SMOTE (He & Garcia, 2009; Chawla et al., 2002), und vorhergesagte Wahrscheinlichkeiten werden oft kalibriert (Niculescu-Mizil & Caruana, 2005; Guo et al., 2017).
+Preprocessing bereitet Daten für Training und faire Evaluation vor. Merkmale werden skaliert, Daten in Trainings-, Validierungs- und Testmengen aufgeteilt, und Modelle werden per [[cross-validation|Kreuzvalidierung]] verglichen, wofür zehnfache stratifizierte Kreuzvalidierung ein robuster Standard ist (Kohavi, 1995). Unausgewogene Klassen erfordern geeignete Metriken und bei Bedarf Resampling wie SMOTE (He & Garcia, 2009; Chawla et al., 2002), und vorhergesagte Wahrscheinlichkeiten werden oft kalibriert (Niculescu-Mizil & Caruana, 2005; Guo et al., 2017).
 
 ### Funktionsweise
 

@@ -96,7 +96,7 @@ Ridge regression (Hoerl & Kennard, 1970) and the lasso (Tibshirani, 1996) come f
 
 ### In practice
 
-Hyperparameters are tuned with cross-validation or a separate validation set, and the test set is used only for the final evaluation ([[ml-preprocessing|ML Preprocessing]]). Logging all tried configurations and their results makes tuning reproducible ([[experiment-tracking|Experiment Tracking]]).
+Hyperparameters are tuned with [[cross-validation|cross-validation]] or a separate validation set, and the test set is used only for the final evaluation ([[ml-preprocessing|ML Preprocessing]]). Logging all tried configurations and their results makes tuning reproducible ([[experiment-tracking|Experiment Tracking]]).
 
 ### Key takeaway
 
@@ -196,7 +196,7 @@ Ridge-Regression (Hoerl & Kennard, 1970) und Lasso (Tibshirani, 1996) stammen au
 
 ### In der Praxis
 
-Hyperparameter werden per Kreuzvalidierung oder auf einer separaten Validierungsmenge abgestimmt, und die Testmenge dient nur der abschließenden Evaluation ([[ml-preprocessing|Preprocessing für Machine Learning]]). Wer alle ausprobierten Konfigurationen und ihre Ergebnisse protokolliert, macht das Tuning reproduzierbar ([[experiment-tracking|Experiment Tracking]]).
+Hyperparameter werden per [[cross-validation|Kreuzvalidierung]] oder auf einer separaten Validierungsmenge abgestimmt, und die Testmenge dient nur der abschließenden Evaluation ([[ml-preprocessing|Preprocessing für Machine Learning]]). Wer alle ausprobierten Konfigurationen und ihre Ergebnisse protokolliert, macht das Tuning reproduzierbar ([[experiment-tracking|Experiment Tracking]]).
 
 ### Merksatz
 

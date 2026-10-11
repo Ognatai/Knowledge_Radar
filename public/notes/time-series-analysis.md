@@ -54,7 +54,7 @@ Exponential smoothing (ETS) and ARIMA models, including seasonal ARIMA, are the 
 
 #### 5. Forecast evaluation
 
-Forecasts are evaluated on test data from after the training period and with time series cross-validation, never on randomly shuffled data (Hyndman & Athanasopoulos, 2021). Hyndman & Koehler (2006) showed that many accuracy measures can be infinite, undefined or misleading, for example percentage errors when actual values are zero or close to zero, and proposed the mean absolute scaled error (MASE), which scales errors by the in-sample mean absolute error of a naive forecast.
+Forecasts are evaluated on test data from after the training period and with time series [[cross-validation|cross-validation]], never on randomly shuffled data (Hyndman & Athanasopoulos, 2021). Hyndman & Koehler (2006) showed that many accuracy measures can be infinite, undefined or misleading, for example percentage errors when actual values are zero or close to zero, and proposed the mean absolute scaled error (MASE), which scales errors by the in-sample mean absolute error of a naive forecast.
 
 #### 6. Neural sequence models
 
@@ -151,7 +151,7 @@ Exponentielle Glättung (ETS) und ARIMA-Modelle, einschließlich saisonaler ARIM
 
 #### 5. Bewertung von Prognosen
 
-Prognosen werden auf Testdaten aus der Zeit nach dem Trainingszeitraum und mit Zeitreihen-Kreuzvalidierung bewertet, nie auf zufällig gemischten Daten (Hyndman & Athanasopoulos, 2021). Hyndman & Koehler (2006) zeigten, dass viele Genauigkeitsmaße unendlich, undefiniert oder irreführend sein können, etwa prozentuale Fehler bei tatsächlichen Werten von null oder nahe null, und schlugen den Mean Absolute Scaled Error (MASE) vor, der Fehler durch den mittleren absoluten Fehler einer naiven Prognose im Trainingszeitraum skaliert.
+Prognosen werden auf Testdaten aus der Zeit nach dem Trainingszeitraum und mit Zeitreihen-[[cross-validation|Kreuzvalidierung]] bewertet, nie auf zufällig gemischten Daten (Hyndman & Athanasopoulos, 2021). Hyndman & Koehler (2006) zeigten, dass viele Genauigkeitsmaße unendlich, undefiniert oder irreführend sein können, etwa prozentuale Fehler bei tatsächlichen Werten von null oder nahe null, und schlugen den Mean Absolute Scaled Error (MASE) vor, der Fehler durch den mittleren absoluten Fehler einer naiven Prognose im Trainingszeitraum skaliert.
 
 #### 6. Neuronale Sequenzmodelle
 

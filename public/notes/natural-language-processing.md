@@ -48,11 +48,11 @@ The Transformer (Vaswani et al., 2017) is a sequence model based solely on atten
 
 #### 4. Pretraining and fine-tuning
 
-BERT (Devlin et al., 2018) pretrains deep bidirectional representations from unlabeled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a GLUE score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabeled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a GLUE score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
 
 #### 5. Few-shot learning with large language models
 
-GPT-3 (Brown et al., 2020) is an autoregressive language model with 175 billion parameters. Tasks and a few demonstrations are given purely as text, without any gradient updates or fine-tuning. Scaling up language models greatly improved such task-agnostic few-shot performance, sometimes reaching the level of earlier fine-tuned state-of-the-art approaches. The authors also identified datasets on which GPT-3's few-shot learning still struggles and datasets with methodological issues related to training on large web corpora (Brown et al., 2020). How to prompt such models is covered in [[prompt-engineering|Prompt Engineering]].
+[[gpt|GPT-3]] (Brown et al., 2020) is an autoregressive language model with 175 billion parameters. Tasks and a few demonstrations are given purely as text, without any gradient updates or fine-tuning. Scaling up language models greatly improved such task-agnostic few-shot performance, sometimes reaching the level of earlier fine-tuned state-of-the-art approaches. The authors also identified datasets on which GPT-3's few-shot learning still struggles and datasets with methodological issues related to training on large web corpora (Brown et al., 2020). How to prompt such models is covered in [[prompt-engineering|Prompt Engineering]].
 
 #### Origin and variants
 
@@ -138,11 +138,11 @@ Der Transformer (Vaswani et al., 2017) ist ein Sequenzmodell, das ausschließlic
 
 #### 4. Vortraining und Fine-Tuning
 
-BERT (Devlin et al., 2018) trainiert tiefe bidirektionale Repräsentationen auf nicht annotiertem Text vor, indem es in allen Schichten sowohl den linken als auch den rechten Kontext berücksichtigt. Das vortrainierte Modell wird dann mit nur einer zusätzlichen Ausgabeschicht feinabgestimmt, ohne wesentliche aufgabenspezifische Änderungen der Architektur. Das ergab neue Bestwerte bei elf NLP-Aufgaben, darunter einen GLUE-Score von 80,5 % (7,7 Punkte absolute Verbesserung) und einen Test-F1-Wert von 93,2 bei der Fragebeantwortung auf SQuAD v1.1 (Devlin et al., 2018).
+[[bert|BERT]] (Devlin et al., 2018) trainiert tiefe bidirektionale Repräsentationen auf nicht annotiertem Text vor, indem es in allen Schichten sowohl den linken als auch den rechten Kontext berücksichtigt. Das vortrainierte Modell wird dann mit nur einer zusätzlichen Ausgabeschicht feinabgestimmt, ohne wesentliche aufgabenspezifische Änderungen der Architektur. Das ergab neue Bestwerte bei elf NLP-Aufgaben, darunter einen GLUE-Score von 80,5 % (7,7 Punkte absolute Verbesserung) und einen Test-F1-Wert von 93,2 bei der Fragebeantwortung auf SQuAD v1.1 (Devlin et al., 2018).
 
 #### 5. Few-Shot-Learning mit großen Sprachmodellen
 
-GPT-3 (Brown et al., 2020) ist ein autoregressives Sprachmodell mit 175 Milliarden Parametern. Aufgaben und einige Demonstrationsbeispiele werden rein als Text übergeben, ohne Gradienten-Updates oder Fine-Tuning. Das Skalieren von Sprachmodellen verbesserte diese aufgabenunabhängige Few-Shot-Leistung erheblich und erreichte teils das Niveau früherer feinabgestimmter Spitzenansätze. Die Autoren fanden auch Datensätze, bei denen das Few-Shot-Learning von GPT-3 weiterhin Schwierigkeiten hat, sowie Datensätze mit methodischen Problemen, die mit dem Training auf großen Web-Korpora zusammenhängen (Brown et al., 2020). Wie man solche Modelle promptet, behandelt [[prompt-engineering|Prompt Engineering]].
+[[gpt|GPT-3]] (Brown et al., 2020) ist ein autoregressives Sprachmodell mit 175 Milliarden Parametern. Aufgaben und einige Demonstrationsbeispiele werden rein als Text übergeben, ohne Gradienten-Updates oder Fine-Tuning. Das Skalieren von Sprachmodellen verbesserte diese aufgabenunabhängige Few-Shot-Leistung erheblich und erreichte teils das Niveau früherer feinabgestimmter Spitzenansätze. Die Autoren fanden auch Datensätze, bei denen das Few-Shot-Learning von GPT-3 weiterhin Schwierigkeiten hat, sowie Datensätze mit methodischen Problemen, die mit dem Training auf großen Web-Korpora zusammenhängen (Brown et al., 2020). Wie man solche Modelle promptet, behandelt [[prompt-engineering|Prompt Engineering]].
 
 #### Ursprung und Varianten
 

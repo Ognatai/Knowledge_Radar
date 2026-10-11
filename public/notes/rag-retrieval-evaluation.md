@@ -65,7 +65,7 @@ The BEIR benchmark (Thakur et al. (2021)) standardizes retrieval evaluation acro
 ### Strengths and limitations
 
 **Strengths**
-- The BEIR benchmark (Thakur et al. (2021)) enables standardized evaluation across 18 heterogeneous datasets, revealing re-ranking models achieve the best zero-shot performance despite high computational costs.
+- The BEIR benchmark (Thakur et al. (2021)) enables standardized evaluation across 18 heterogeneous datasets, revealing re-ranking models ([[cross-encoder|cross-encoders]]) achieve the best zero-shot performance despite high computational costs.
 - nDCG (Järvelin & Kekäläinen (2002)) accounts for graded relevance and position weighting, providing a more nuanced assessment than binary metrics like Recall@k.
 - Metrics like Precision@k and Recall@k are computationally efficient and well-established in information retrieval (Manning et al. (2008)), supporting scalable deployment.
 
@@ -86,7 +86,7 @@ For RAG, Recall@k at the k actually passed to the model is usually the most impo
 
 ### In practice
 
-In practice, retrieval evaluation should leverage heterogeneous benchmarks like BEIR (Thakur et al., 2021) to assess generalization across diverse tasks, with BM25 serving as a robust baseline while re-ranking models achieve higher zero-shot performance at increased computational cost. Typical failure modes include poor out-of-distribution generalization (dense and sparse models often underperform, Thakur et al., 2021) and the recall-precision trade-off; see [[rag-failure-modes|failure modes]] for further details. Parameter choices for `k` must be empirically optimized, as larger `k` values increase recall but typically reduce precision.
+In practice, retrieval evaluation should leverage heterogeneous benchmarks like BEIR (Thakur et al., 2021) to assess generalization across diverse tasks, with [[bm25|BM25]] serving as a robust baseline while re-ranking models achieve higher zero-shot performance at increased computational cost. Typical failure modes include poor out-of-distribution generalization (dense and sparse models often underperform, Thakur et al., 2021) and the recall-precision trade-off; see [[rag-failure-modes|failure modes]] for further details. Parameter choices for `k` must be empirically optimized, as larger `k` values increase recall but typically reduce precision.
 
 ### Key takeaway
 
@@ -155,7 +155,7 @@ Der BEIR-Benchmark (Thakur et al. (2021)) standardisiert die Bewertung von Retri
 ### Stärken und Grenzen
 
 **Stärken**
-- Der BEIR-Benchmark (Thakur et al. (2021)) ermöglicht eine standardisierte Bewertung über 18 heterogene Datensätze, wodurch sich zeigt, dass Re-Ranking-Modelle die beste Zero-Shot-Leistung erzielen, obwohl sie mit hohen Rechenkosten verbunden sind.
+- Der BEIR-Benchmark (Thakur et al. (2021)) ermöglicht eine standardisierte Bewertung über 18 heterogene Datensätze, wodurch sich zeigt, dass Re-Ranking-Modelle ([[cross-encoder|Cross-Encoder]]) die beste Zero-Shot-Leistung erzielen, obwohl sie mit hohen Rechenkosten verbunden sind.
 - nDCG (Järvelin & Kekäläinen (2002)) berücksichtigt die graduelle Relevanz und die Positionsgewichtung, wodurch eine präzisere Bewertung als bei binären Metriken wie Recall@k möglich ist.
 - Metriken wie Precision@k und Recall@k sind rechenleicht und etabliert in der Information Retrieval (Manning et al. (2008)), was eine skalierbare Bereitstellung ermöglicht.
 
@@ -176,7 +176,7 @@ Für RAG ist Recall@k an der tatsächlich an das Modell übergebenen k in der Re
 
 ### In der Praxis
 
-In der Praxis sollte die Retrieval-Evaluation heterogene Benchmarks wie BEIR (Thakur et al., 2021) nutzen, um die Generalisierung über verschiedene Aufgaben zu bewerten, wobei BM25 als robuster Baseline dient, während Re-Ranking-Modelle eine höhere zero-shot-Leistung bei erhöhtem Rechenaufwand erzielen. Typische Fehlmodi umfassen eine schlechte Generalisierung außerhalb der Verteilung (dichte und sparse Modelle leisten oft schlechter, Thakur et al., 2021) und den Recall-Precision-Trade-off; siehe [[rag-failure-modes|Fehlmodi]] für weitere Details. Die Parameterwahl für `k` muss empirisch optimiert werden, da höhere `k`-Werte den Recall erhöhen, aber typischerweise die Precision verringern.
+In der Praxis sollte die Retrieval-Evaluation heterogene Benchmarks wie BEIR (Thakur et al., 2021) nutzen, um die Generalisierung über verschiedene Aufgaben zu bewerten, wobei [[bm25|BM25]] als robuster Baseline dient, während Re-Ranking-Modelle eine höhere zero-shot-Leistung bei erhöhtem Rechenaufwand erzielen. Typische Fehlmodi umfassen eine schlechte Generalisierung außerhalb der Verteilung (dichte und sparse Modelle leisten oft schlechter, Thakur et al., 2021) und den Recall-Precision-Trade-off; siehe [[rag-failure-modes|Fehlmodi]] für weitere Details. Die Parameterwahl für `k` muss empirisch optimiert werden, da höhere `k`-Werte den Recall erhöhen, aber typischerweise die Precision verringern.
 
 ### Merksatz
 

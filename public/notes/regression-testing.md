@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Regression tests check that a system has not become worse after a change. For LLM and RAG systems they matter whenever prompts, retrievers, chunking or models change, because small changes can shift behaviour unpredictably: the same commercial LLM service changed substantially within three months, with GPT-4's accuracy on identifying prime numbers dropping from 84% to 51% (Chen et al., 2023). A regression test does not ask "does the change work?" but "did the change break something that worked before?", including individual cases that a new model gets wrong although the old one got them right (Yan et al., 2020).
+Regression tests check that a system has not become worse after a change. For LLM and RAG systems they matter whenever prompts, retrievers, chunking or models change, because small changes can shift behaviour unpredictably: the same commercial LLM service changed substantially within three months, with [[gpt|GPT-4]]'s accuracy on identifying prime numbers dropping from 84% to 51% (Chen et al., 2023). A regression test does not ask "does the change work?" but "did the change break something that worked before?", including individual cases that a new model gets wrong although the old one got them right (Yan et al., 2020).
 
 ### How it works
 
@@ -116,7 +116,7 @@ Regression tests run a fixed, growing test set against every new version and com
 
 ### TL;DR
 
-Regressionstests prüfen, ob ein System nach einer Änderung nicht schlechter geworden ist. Bei LLM- und RAG-Systemen sind sie wichtig, sobald sich Prompts, Retriever, Chunking oder Modelle ändern, denn kleine Änderungen können das Verhalten unvorhersehbar verschieben: Derselbe kommerzielle LLM-Dienst veränderte sich innerhalb von drei Monaten erheblich, und die Genauigkeit von GPT-4 beim Erkennen von Primzahlen fiel von 84 % auf 51 % (Chen et al., 2023). Ein Regressionstest fragt nicht „Funktioniert die Änderung?", sondern „Hat die Änderung etwas kaputt gemacht, das vorher funktioniert hat?", einschließlich einzelner Fälle, die ein neues Modell falsch löst, obwohl das alte sie richtig gelöst hat (Yan et al., 2020).
+Regressionstests prüfen, ob ein System nach einer Änderung nicht schlechter geworden ist. Bei LLM- und RAG-Systemen sind sie wichtig, sobald sich Prompts, Retriever, Chunking oder Modelle ändern, denn kleine Änderungen können das Verhalten unvorhersehbar verschieben: Derselbe kommerzielle LLM-Dienst veränderte sich innerhalb von drei Monaten erheblich, und die Genauigkeit von [[gpt|GPT-4]] beim Erkennen von Primzahlen fiel von 84 % auf 51 % (Chen et al., 2023). Ein Regressionstest fragt nicht „Funktioniert die Änderung?", sondern „Hat die Änderung etwas kaputt gemacht, das vorher funktioniert hat?", einschließlich einzelner Fälle, die ein neues Modell falsch löst, obwohl das alte sie richtig gelöst hat (Yan et al., 2020).
 
 ### Funktionsweise
 

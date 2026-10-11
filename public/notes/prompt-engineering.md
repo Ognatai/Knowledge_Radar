@@ -40,7 +40,7 @@ A zero-shot prompt contains only the task instruction and the input. Kojima et a
 
 #### 2. Few-shot prompting
 
-A few-shot prompt adds a small number of input-output demonstrations before the new input, and the model infers the task from them in context, without gradient updates or fine-tuning (Brown et al., 2020). GPT-3 with 175 billion parameters achieved strong performance this way on many NLP tasks, including translation and question answering, but still struggled on some data sets (Brown et al., 2020). Which and how many demonstrations are used is part of the prompt design.
+A few-shot prompt adds a small number of input-output demonstrations before the new input, and the model infers the task from them in context, without gradient updates or fine-tuning (Brown et al., 2020). [[gpt|GPT-3]] with 175 billion parameters achieved strong performance this way on many NLP tasks, including translation and question answering, but still struggled on some data sets (Brown et al., 2020). Which and how many demonstrations are used is part of the prompt design.
 
 #### 3. Chain-of-thought prompting
 
@@ -131,7 +131,7 @@ Ein Zero-Shot-Prompt enthält nur die Aufgabenanweisung und die Eingabe. Kojima 
 
 #### 2. Few-Shot-Prompting
 
-Ein Few-Shot-Prompt fügt vor der neuen Eingabe einige wenige Eingabe-Ausgabe-Beispiele hinzu, und das Modell schließt aus diesen Beispielen im Kontext die Aufgabe, ohne Gradienten-Updates oder Fine-Tuning (Brown et al., 2020). GPT-3 mit 175 Milliarden Parametern erzielte auf diese Weise starke Leistungen bei vielen NLP-Aufgaben, einschließlich Übersetzung und Fragebeantwortung, stieß jedoch immer noch auf Schwierigkeiten bei einigen Datensätzen (Brown et al., 2020). Welche und wie viele Beispiele verwendet werden, ist Teil des Prompt-Designs.
+Ein Few-Shot-Prompt fügt vor der neuen Eingabe einige wenige Eingabe-Ausgabe-Beispiele hinzu, und das Modell schließt aus diesen Beispielen im Kontext die Aufgabe, ohne Gradienten-Updates oder Fine-Tuning (Brown et al., 2020). [[gpt|GPT-3]] mit 175 Milliarden Parametern erzielte auf diese Weise starke Leistungen bei vielen NLP-Aufgaben, einschließlich Übersetzung und Fragebeantwortung, stieß jedoch immer noch auf Schwierigkeiten bei einigen Datensätzen (Brown et al., 2020). Welche und wie viele Beispiele verwendet werden, ist Teil des Prompt-Designs.
 
 #### 3. Chain-of-Thought-Prompting
 

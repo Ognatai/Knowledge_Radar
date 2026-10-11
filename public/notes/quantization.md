@@ -55,7 +55,7 @@ Large language models contain highly systematic emergent outlier features that d
 
 #### 5. Low-bit weight quantization for LLMs
 
-GPTQ is a one-shot weight quantization method based on approximate second-order information; it quantized GPT models with 175 billion parameters in about four GPU hours to 3 or 4 bits per weight with negligible accuracy loss, allowing such a model to run on a single GPU, with inference speedups over FP16 of around 3.25× on A100 GPUs (Frantar et al., 2022). AWQ observes that not all weights are equally important: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantization error, and scaling these channels avoids hardware-unfriendly mixed precision (Lin et al., 2023).
+GPTQ is a one-shot weight quantization method based on approximate second-order information; it quantized [[gpt|GPT]] models with 175 billion parameters in about four GPU hours to 3 or 4 bits per weight with negligible accuracy loss, allowing such a model to run on a single GPU, with inference speedups over FP16 of around 3.25× on A100 GPUs (Frantar et al., 2022). AWQ observes that not all weights are equally important: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantization error, and scaling these channels avoids hardware-unfriendly mixed precision (Lin et al., 2023).
 
 #### 6. Fine-tuning quantized models
 
@@ -154,7 +154,7 @@ Große Sprachmodelle enthalten sehr systematische emergente Ausreißermerkmale, 
 
 #### 5. Gewichtsquantisierung mit wenigen Bits für LLMs
 
-GPTQ ist ein einstufiges Verfahren zur Gewichtsquantisierung auf Basis näherungsweiser Information zweiter Ordnung; es quantisierte GPT-Modelle mit 175 Milliarden Parametern in etwa vier GPU-Stunden auf 3 oder 4 Bit je Gewicht bei vernachlässigbarem Genauigkeitsverlust, sodass ein solches Modell auf einer einzigen GPU läuft, mit einer Inferenzbeschleunigung gegenüber FP16 von etwa 3,25-fach auf A100-GPUs (Frantar et al., 2022). AWQ geht davon aus, dass nicht alle Gewichte gleich wichtig sind: Werden nur 1 % der hervorstechenden Gewichtskanäle geschützt, die anhand von Aktivierungsstatistiken bestimmt werden, sinkt der Quantisierungsfehler stark, und das Skalieren dieser Kanäle vermeidet hardwareunfreundliche gemischte Genauigkeit (Lin et al., 2023).
+GPTQ ist ein einstufiges Verfahren zur Gewichtsquantisierung auf Basis näherungsweiser Information zweiter Ordnung; es quantisierte [[gpt|GPT]]-Modelle mit 175 Milliarden Parametern in etwa vier GPU-Stunden auf 3 oder 4 Bit je Gewicht bei vernachlässigbarem Genauigkeitsverlust, sodass ein solches Modell auf einer einzigen GPU läuft, mit einer Inferenzbeschleunigung gegenüber FP16 von etwa 3,25-fach auf A100-GPUs (Frantar et al., 2022). AWQ geht davon aus, dass nicht alle Gewichte gleich wichtig sind: Werden nur 1 % der hervorstechenden Gewichtskanäle geschützt, die anhand von Aktivierungsstatistiken bestimmt werden, sinkt der Quantisierungsfehler stark, und das Skalieren dieser Kanäle vermeidet hardwareunfreundliche gemischte Genauigkeit (Lin et al., 2023).
 
 #### 6. Fine-Tuning quantisierter Modelle
 

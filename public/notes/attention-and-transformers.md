@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Attention lets a model weigh all positions of an input when computing each output, instead of squeezing the input into one fixed-length vector (Bahdanau et al., 2014). The Transformer builds a whole architecture on attention alone, without recurrence or convolution, which makes it faster to train and better at translation (Vaswani et al., 2017). Its encoder, decoder or both underlie BERT, T5 and the GPT family (Urchs, 2025) and, applied to image patches, Vision Transformers (Dosovitskiy et al., 2020); self-attention's quadratic cost in sequence length is reduced in practice by IO-aware implementations (Dao et al., 2022).
+Attention lets a model weigh all positions of an input when computing each output, instead of squeezing the input into one fixed-length vector (Bahdanau et al., 2014). The Transformer builds a whole architecture on attention alone, without recurrence or convolution, which makes it faster to train and better at translation (Vaswani et al., 2017). Its encoder, decoder or both underlie [[bert|BERT]], T5 and the [[gpt|GPT]] family (Urchs, 2025) and, applied to image patches, Vision Transformers (Dosovitskiy et al., 2020); self-attention's quadratic cost in sequence length is reduced in practice by IO-aware implementations (Dao et al., 2022).
 
 ### How it works
 
@@ -118,7 +118,7 @@ Attention lets every position draw information from every other position; the Tr
 
 ### TL;DR
 
-Attention erlaubt einem Modell, bei der Berechnung jeder Ausgabe alle Positionen einer Eingabe zu gewichten, statt die Eingabe in einen einzigen Vektor fester Länge zu pressen (Bahdanau et al., 2014). Der Transformer baut eine ganze Architektur allein auf Attention auf, ohne Rekurrenz oder Faltung; dadurch trainiert er schneller und übersetzt besser (Vaswani et al., 2017). Sein Encoder, sein Decoder oder beide liegen BERT, T5 und der GPT-Familie zugrunde (Urchs, 2025), auf Bildausschnitte angewendet den Vision Transformern (Dosovitskiy et al., 2020); die quadratischen Kosten der Self-Attention in der Sequenzlänge verringern in der Praxis speicherzugriffsbewusste Implementierungen (Dao et al., 2022).
+Attention erlaubt einem Modell, bei der Berechnung jeder Ausgabe alle Positionen einer Eingabe zu gewichten, statt die Eingabe in einen einzigen Vektor fester Länge zu pressen (Bahdanau et al., 2014). Der Transformer baut eine ganze Architektur allein auf Attention auf, ohne Rekurrenz oder Faltung; dadurch trainiert er schneller und übersetzt besser (Vaswani et al., 2017). Sein Encoder, sein Decoder oder beide liegen [[bert|BERT]], T5 und der [[gpt|GPT]]-Familie zugrunde (Urchs, 2025), auf Bildausschnitte angewendet den Vision Transformern (Dosovitskiy et al., 2020); die quadratischen Kosten der Self-Attention in der Sequenzlänge verringern in der Praxis speicherzugriffsbewusste Implementierungen (Dao et al., 2022).
 
 ### Funktionsweise
 
@@ -192,7 +192,7 @@ Attention für neuronale maschinelle Übersetzung (Bahdanau et al., 2014) erweit
 | RNN mit Attention | Decoder achtet auf alle Encoder-Zustände (Bahdanau et al., 2014) | Übersetzung mit rekurrenten Modellen |
 | Transformer | Nur Attention, parallel über die Positionen (Vaswani et al., 2017) | Sprache und viele weitere Modalitäten |
 | Reiner Encoder (BERT) | Bidirektionaler Kontext, je Aufgabe feinabgestimmt (Devlin et al., 2018) | Klassifikation, NER, extraktive Fragebeantwortung |
-| Reiner Decoder (GPT) | Autoregressive Vorhersage des nächsten Tokens (Urchs, 2025) | Textgenerierung, Prompting |
+| Reiner Decoder ([[gpt\|GPT]]) | Autoregressive Vorhersage des nächsten Tokens (Urchs, 2025) | Textgenerierung, Prompting |
 
 ### In der Praxis
 

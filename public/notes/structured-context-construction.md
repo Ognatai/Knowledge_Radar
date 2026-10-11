@@ -49,7 +49,7 @@ Meaning-preserving formatting choices can change results substantially: in few-s
 
 #### 4. Structured data in the prompt
 
-Tables and records can be serialised into the prompt, but how well LLMs understand them depends on the input choices. In a benchmark of structural understanding tasks such as cell lookup and row retrieval, GPT-3.5 and GPT-4 performed differently depending on table format, content order, role prompting and partition marks; structural prompting combined with careful input choices improved results on several table tasks (Sui et al., 2023).
+Tables and records can be serialised into the prompt, but how well LLMs understand them depends on the input choices. In a benchmark of structural understanding tasks such as cell lookup and row retrieval, [[gpt|GPT-3.5]] and GPT-4 performed differently depending on table format, content order, role prompting and partition marks; structural prompting combined with careful input choices improved results on several table tasks (Sui et al., 2023).
 
 #### 5. Hierarchical and graph-based context
 
@@ -141,7 +141,7 @@ Bedeutungserhaltende Formatierungsentscheidungen können Ergebnisse erheblich ve
 
 #### 4. Strukturierte Daten im Prompt
 
-Tabellen und Datensätze lassen sich in den Prompt serialisieren, doch wie gut LLMs sie verstehen, hängt von den Eingabeentscheidungen ab. In einem Benchmark mit Aufgaben zum Strukturverständnis wie dem Nachschlagen von Zellen und dem Abrufen von Zeilen schnitten GPT-3.5 und GPT-4 je nach Tabellenformat, Reihenfolge der Inhalte, Rollenvorgabe und Trennzeichen unterschiedlich ab; strukturelles Prompting zusammen mit sorgfältig gewählten Eingaben verbesserte die Ergebnisse bei mehreren Tabellenaufgaben (Sui et al., 2023).
+Tabellen und Datensätze lassen sich in den Prompt serialisieren, doch wie gut LLMs sie verstehen, hängt von den Eingabeentscheidungen ab. In einem Benchmark mit Aufgaben zum Strukturverständnis wie dem Nachschlagen von Zellen und dem Abrufen von Zeilen schnitten [[gpt|GPT-3.5]] und GPT-4 je nach Tabellenformat, Reihenfolge der Inhalte, Rollenvorgabe und Trennzeichen unterschiedlich ab; strukturelles Prompting zusammen mit sorgfältig gewählten Eingaben verbesserte die Ergebnisse bei mehreren Tabellenaufgaben (Sui et al., 2023).
 
 #### 5. Hierarchischer und graphbasierter Kontext
 

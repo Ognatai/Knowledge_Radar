@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 43a3d8dd541c567f75b2ae02d2e094f82cd970889e1483dbff5b7192c6018d46
+note_sha256: 673d1715c61118ba4e8eb779e3ceb9d24dc24b04f51baecd1af39072ce03ae85
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bootstrap

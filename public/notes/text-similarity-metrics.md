@@ -45,7 +45,7 @@ BERTScore (Zhang et al., 2019) computes a similarity score for each token in the
 
 #### 4. Sentence embeddings with cosine similarity
 
-BERT can score sentence pairs well, but both sentences have to be fed into the network together. Finding the most similar pair in a collection of 10,000 sentences therefore needs about 50 million inference computations, roughly 65 hours (Reimers & Gurevych, 2019). Sentence-BERT modifies BERT with siamese and triplet network structures so that each sentence is encoded once into an embedding, and embeddings are compared with cosine similarity. This reduces the search from 65 hours to about 5 seconds while maintaining BERT's accuracy, and makes semantic similarity search and clustering practical ([[vector-databases|Vector Databases]]).
+[[bert|BERT]] can score sentence pairs well, but both sentences have to be fed into the network together. Finding the most similar pair in a collection of 10,000 sentences therefore needs about 50 million inference computations, roughly 65 hours (Reimers & Gurevych, 2019). Sentence-BERT modifies BERT with siamese and triplet network structures so that each sentence is encoded once into an embedding, and embeddings are compared with cosine similarity. This reduces the search from 65 hours to about 5 seconds while maintaining BERT's accuracy, and makes semantic similarity search and clustering practical ([[vector-databases|Vector Databases]]).
 
 #### Origin and variants
 
@@ -130,7 +130,7 @@ BERTScore (Zhang et al., 2019) berechnet für jedes Token im Kandidaten einen Ä
 
 #### 4. Satz-Embeddings mit Kosinusähnlichkeit
 
-BERT kann Satzpaare gut bewerten, aber beide Sätze müssen gemeinsam in das Netz eingegeben werden. Das Finden des ähnlichsten Paares in einer Sammlung von 10.000 Sätzen benötigt daher etwa 50 Millionen Inferenzberechnungen, also ungefähr 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT erweitert BERT um siamesische und Triplet-Netzstrukturen, sodass jeder Satz nur einmal in ein Embedding kodiert wird und die Embeddings mit Kosinusähnlichkeit verglichen werden. Dies reduziert die Suche von 65 Stunden auf etwa 5 Sekunden, während die Genauigkeit von BERT beibehalten wird, und macht semantische Ähnlichkeitssuche und Clustering praktikabel ([[vector-databases|Vektordatenbanken]]).
+[[bert|BERT]] kann Satzpaare gut bewerten, aber beide Sätze müssen gemeinsam in das Netz eingegeben werden. Das Finden des ähnlichsten Paares in einer Sammlung von 10.000 Sätzen benötigt daher etwa 50 Millionen Inferenzberechnungen, also ungefähr 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT erweitert BERT um siamesische und Triplet-Netzstrukturen, sodass jeder Satz nur einmal in ein Embedding kodiert wird und die Embeddings mit Kosinusähnlichkeit verglichen werden. Dies reduziert die Suche von 65 Stunden auf etwa 5 Sekunden, während die Genauigkeit von BERT beibehalten wird, und macht semantische Ähnlichkeitssuche und Clustering praktikabel ([[vector-databases|Vektordatenbanken]]).
 
 #### Ursprung und Varianten
 

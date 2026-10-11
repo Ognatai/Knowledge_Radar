@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e36284065936faf1ffeb582666c164a3aaa4bf1212f6b858d751d0ed9cb98c4a
+note_sha256: 7b671d7f36acb229d0e2639ff3e367027a798f44ca36c2626ac548cf5460ebe1
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - retrieval-augmented-generation

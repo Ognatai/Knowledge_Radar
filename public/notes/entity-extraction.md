@@ -47,7 +47,7 @@ Earlier NER systems relied heavily on hand-crafted features and domain-specific 
 
 #### 3. Fine-tuned pretrained encoders
 
-BERT (Devlin et al., 2018) pretrains deep bidirectional representations on unlabeled text and is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. For NER this means that a classification layer on top of the pretrained encoder predicts an entity label for each token, and the whole model is trained on the annotated data. This pretrain-then-fine-tune pattern replaced task-specific architectures for many NLP tasks ([[natural-language-processing|Natural Language Processing]]).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations on unlabeled text and is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. For NER this means that a classification layer on top of the pretrained encoder predicts an entity label for each token, and the whole model is trained on the annotated data. This pretrain-then-fine-tune pattern replaced task-specific architectures for many NLP tasks ([[natural-language-processing|Natural Language Processing]]).
 
 #### 4. Arbitrary entity types with a compact encoder
 
@@ -146,7 +146,7 @@ Frühere NER-Systeme stützten sich stark auf handgefertigte Merkmale und Domän
 
 #### 3. Feinabgestimmte vortrainierte Encoder
 
-BERT (Devlin et al., 2018) trainiert tiefe bidirektionale Repräsentationen auf nicht annotiertem Text vor und wird dann mit nur einer zusätzlichen Ausgabeschicht feinabgestimmt, ohne wesentliche aufgabenspezifische Änderungen der Architektur. Für NER heißt das: Eine Klassifikationsschicht auf dem vortrainierten Encoder sagt für jedes Token ein Entitätslabel voraus, und das ganze Modell wird auf den annotierten Daten trainiert. Dieses Muster aus Vortraining und Fine-Tuning löste bei vielen NLP-Aufgaben aufgabenspezifische Architekturen ab ([[natural-language-processing|Natural Language Processing]]).
+[[bert|BERT]] (Devlin et al., 2018) trainiert tiefe bidirektionale Repräsentationen auf nicht annotiertem Text vor und wird dann mit nur einer zusätzlichen Ausgabeschicht feinabgestimmt, ohne wesentliche aufgabenspezifische Änderungen der Architektur. Für NER heißt das: Eine Klassifikationsschicht auf dem vortrainierten Encoder sagt für jedes Token ein Entitätslabel voraus, und das ganze Modell wird auf den annotierten Daten trainiert. Dieses Muster aus Vortraining und Fine-Tuning löste bei vielen NLP-Aufgaben aufgabenspezifische Architekturen ab ([[natural-language-processing|Natural Language Processing]]).
 
 #### 4. Beliebige Entitätstypen mit einem kompakten Encoder
 

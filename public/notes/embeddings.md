@@ -36,7 +36,7 @@ training: pairs or triplets of similar and dissimilar texts
 
 #### 1. Tokenization
 
-Tokenization processes input text into a sequence of subword tokens using a fixed vocabulary, commonly implemented via WordPiece (Devlin et al., 2018). The algorithm greedily segments words into the longest possible subword units present in the vocabulary, decomposing unknown words into sequences of known subwords (e.g., "unhappiness" → ["un", "happ", "iness"]). A typical vocabulary size is 30,000 tokens (as used in BERT), balancing coverage of common words against computational efficiency. This design minimizes out-of-vocabulary (OOV) tokens compared to word-level tokenization, though it may fragment frequent words. The trade-off involves memory usage and segmentation accuracy: larger vocabularies reduce OOV but increase memory overhead and model size, while smaller vocabularies risk OOV and suboptimal segmentation. The fixed vocabulary structure enables consistent token-to-index mapping during inference, critical for efficient embedding model processing and integration with [[vector-databases|Vector Databases]].
+Tokenization processes input text into a sequence of subword tokens using a fixed vocabulary, commonly implemented via WordPiece (Devlin et al., 2018). The algorithm greedily segments words into the longest possible subword units present in the vocabulary, decomposing unknown words into sequences of known subwords (e.g., "unhappiness" → ["un", "happ", "iness"]). A typical vocabulary size is 30,000 tokens (as used in [[bert|BERT]]), balancing coverage of common words against computational efficiency. This design minimizes out-of-vocabulary (OOV) tokens compared to word-level tokenization, though it may fragment frequent words. The trade-off involves memory usage and segmentation accuracy: larger vocabularies reduce OOV but increase memory overhead and model size, while smaller vocabularies risk OOV and suboptimal segmentation. The fixed vocabulary structure enables consistent token-to-index mapping during inference, critical for efficient embedding model processing and integration with [[vector-databases|Vector Databases]].
 
 #### 2. Transformer Encoding
 
@@ -82,7 +82,7 @@ Static word embeddings, including word2vec (Mikolov et al. 2013) and GloVe (Penn
 
 **Limitations**
 - One vector per text compresses its meaning; long or multi-topic texts lose detail, and exact terms such as identifiers are matched less reliably than by lexical search.
-- Off-the-shelf BERT used as a cross-encoder is unsuitable for similarity search and clustering because it must process every pair jointly; dedicated sentence-embedding training is needed (Reimers & Gurevych, 2019).
+- Off-the-shelf BERT used as a [[cross-encoder|cross-encoder]] is unsuitable for similarity search and clustering because it must process every pair jointly; dedicated sentence-embedding training is needed (Reimers & Gurevych, 2019).
 - No single embedding method dominates all tasks, necessitating task-specific evaluation (Muennighoff et al., 2022).
 
 ### Comparison
@@ -138,7 +138,7 @@ training: pairs or triplets of similar and dissimilar texts
 
 #### 1. Tokenisierung
 
-Die Tokenisierung verwandelt den Eingabetext in eine Sequenz von Unterworts-Token mithilfe eines festen Vokabulars, was häufig über WordPiece implementiert wird (Devlin et al., 2018). Der Algorithmus segmentiert die Wörter gierig in die längsten möglichen Unterworts-Einheiten, die im Vokabular vorhanden sind, und zerlegt unbekannte Wörter in Sequenzen bekannter Unterwörter (z. B. „unhappiness“ → [„un“, „happ“, „iness“]). Eine typische Vokabulargröße beträgt 30.000 Token (wie bei BERT verwendet), was eine Balance zwischen der Abdeckung häufiger Wörter und der Rechenleistung ermöglicht. Dieses Design minimiert verglichen mit der Tokenisierung auf Wortebene die Anzahl der out-of-vocabulary (OOV) Token, obwohl es häufige Wörter fragmentieren kann. Der Kompromiss besteht in der Speicherung und der Segmentierungsgenauigkeit: größere Vokabulare reduzieren OOV, erhöhen aber den Speicherbedarf und die Modellgröße, während kleinere Vokabulare das Risiko von OOV und einer suboptimalen Segmentierung erhöhen. Die feste Vokabularstruktur ermöglicht eine konsistente Zuordnung von Token zu Index während der Inferenz, was für die effiziente Verarbeitung durch Embedding-Modelle und die Integration mit [[vector-databases|Vektordatenbanken]] entscheidend ist.
+Die Tokenisierung verwandelt den Eingabetext in eine Sequenz von Unterworts-Token mithilfe eines festen Vokabulars, was häufig über WordPiece implementiert wird (Devlin et al., 2018). Der Algorithmus segmentiert die Wörter gierig in die längsten möglichen Unterworts-Einheiten, die im Vokabular vorhanden sind, und zerlegt unbekannte Wörter in Sequenzen bekannter Unterwörter (z. B. „unhappiness“ → [„un“, „happ“, „iness“]). Eine typische Vokabulargröße beträgt 30.000 Token (wie bei [[bert|BERT]] verwendet), was eine Balance zwischen der Abdeckung häufiger Wörter und der Rechenleistung ermöglicht. Dieses Design minimiert verglichen mit der Tokenisierung auf Wortebene die Anzahl der out-of-vocabulary (OOV) Token, obwohl es häufige Wörter fragmentieren kann. Der Kompromiss besteht in der Speicherung und der Segmentierungsgenauigkeit: größere Vokabulare reduzieren OOV, erhöhen aber den Speicherbedarf und die Modellgröße, während kleinere Vokabulare das Risiko von OOV und einer suboptimalen Segmentierung erhöhen. Die feste Vokabularstruktur ermöglicht eine konsistente Zuordnung von Token zu Index während der Inferenz, was für die effiziente Verarbeitung durch Embedding-Modelle und die Integration mit [[vector-databases|Vektordatenbanken]] entscheidend ist.
 
 #### 2. Transformer-Encoding
 
@@ -184,7 +184,7 @@ Statische Wortembeddings, einschließlich word2vec (Mikolov et al. 2013) und Glo
 
 **Einschränkungen**
 - Ein Vektor pro Text komprimiert seine Bedeutung; lange oder mehrthemenbehaftete Texte verlieren Details, und exakte Begriffe wie Identifikatoren werden weniger zuverlässig als durch lexikalische Suche abgeglichen.
-- Ein BERT-Modell, das als Cross-Encoder verwendet wird, ist für Ähnlichkeitsuche und Clustering ungeeignet, da es jedes Paar gemeinsam verarbeiten muss; eine spezifische Ausrichtung auf Satz-Embeddings ist erforderlich (Reimers & Gurevych, 2019).
+- Ein BERT-Modell, das als [[cross-encoder|Cross-Encoder]] verwendet wird, ist für Ähnlichkeitsuche und Clustering ungeeignet, da es jedes Paar gemeinsam verarbeiten muss; eine spezifische Ausrichtung auf Satz-Embeddings ist erforderlich (Reimers & Gurevych, 2019).
 - Keine einzelne Embedding-Methode dominiert alle Aufgaben, was eine Aufgaben-spezifische Evaluierung erfordert (Muennighoff et al., 2022).
 
 ### Vergleich

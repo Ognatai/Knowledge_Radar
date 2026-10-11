@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 0c9b2ed9ae99427b4c26f273cb7ea6bf5792074830541938bbdab0baa2f266ed
+note_sha256: 1b87915b5714557c762fe28a0d8ff3adb4dbcbb13e168313085df9cdf7ee2c8c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - mcnemars-test

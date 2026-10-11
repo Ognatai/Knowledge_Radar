@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "4cc2fed50796c8d72af2b9e05aa7a3063836fd993272f4ec8ff1ef964a565f50"
+note_sha256: "6bebecbb846b81713688f786f25b3ef9b5a2726153ad4e66d7e8fbfbaf788c83"
 extracted_by: manual
 discusses: [fitnets, distilbert, tinybert, bert, llm-adaptation, quantization]
 relations:

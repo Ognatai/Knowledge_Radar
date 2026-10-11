@@ -45,7 +45,7 @@ Mizrahi et al. (2023) analysed the brittleness of single-prompt evaluations acro
 
 #### 4. Scoring the variants
 
-For open-ended outputs, strong LLMs can serve as judges ([[llm-as-a-judge|LLM-as-a-Judge]]): GPT-4 as judge agreed with both controlled and crowdsourced human preferences in over 80% of cases, the same level of agreement as between humans (Zheng et al., 2023). Judges show known biases, namely position bias, verbosity bias and self-enhancement bias, the tendency to favour answers from the judge's own model, and limited reasoning ability; Zheng et al. (2023) propose solutions to mitigate some of them. When prompt variants lead to answers of different length or style, these biases can affect the comparison.
+For open-ended outputs, strong LLMs can serve as judges ([[llm-as-a-judge|LLM-as-a-Judge]]): [[gpt|GPT-4]] as judge agreed with both controlled and crowdsourced human preferences in over 80% of cases, the same level of agreement as between humans (Zheng et al., 2023). Judges show known biases, namely position bias, verbosity bias and self-enhancement bias, the tendency to favour answers from the judge's own model, and limited reasoning ability; Zheng et al. (2023) propose solutions to mitigate some of them. When prompt variants lead to answers of different length or style, these biases can affect the comparison.
 
 #### Origin and variants
 
@@ -128,7 +128,7 @@ Mizrahi et al. (2023) analysierten die Fragilität von Evaluierungen mit einzeln
 
 #### 4. Bewertung der Varianten
 
-Für offene Ausgaben können starke LLMs als Judge dienen ([[llm-as-a-judge|LLM-as-a-Judge]]): GPT-4 als Judge stimmte in über 80 % der Fälle sowohl mit kontrolliert erhobenen als auch mit per Crowdsourcing gesammelten menschlichen Präferenzen überein, ein Grad der Übereinstimmung, der dem zwischen Menschen entspricht (Zheng et al., 2023). Judges zeigen bekannte Verzerrungen, nämlich Position Bias, Verbosity Bias (Bevorzugung längerer Antworten) und Self-Enhancement Bias, also die Tendenz, Antworten des eigenen Modells zu bevorzugen, sowie begrenzte Fähigkeiten zum Schließen; Zheng et al. (2023) schlagen Lösungen vor, um einige dieser Verzerrungen zu verringern. Wenn Prompt-Varianten zu Antworten unterschiedlicher Länge oder unterschiedlichen Stils führen, können diese Verzerrungen den Vergleich beeinflussen.
+Für offene Ausgaben können starke LLMs als Judge dienen ([[llm-as-a-judge|LLM-as-a-Judge]]): [[gpt|GPT-4]] als Judge stimmte in über 80 % der Fälle sowohl mit kontrolliert erhobenen als auch mit per Crowdsourcing gesammelten menschlichen Präferenzen überein, ein Grad der Übereinstimmung, der dem zwischen Menschen entspricht (Zheng et al., 2023). Judges zeigen bekannte Verzerrungen, nämlich Position Bias, Verbosity Bias (Bevorzugung längerer Antworten) und Self-Enhancement Bias, also die Tendenz, Antworten des eigenen Modells zu bevorzugen, sowie begrenzte Fähigkeiten zum Schließen; Zheng et al. (2023) schlagen Lösungen vor, um einige dieser Verzerrungen zu verringern. Wenn Prompt-Varianten zu Antworten unterschiedlicher Länge oder unterschiedlichen Stils führen, können diese Verzerrungen den Vergleich beeinflussen.
 
 #### Ursprung und Varianten
 

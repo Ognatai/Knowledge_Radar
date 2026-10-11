@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Semantic retrieval finds documents by meaning rather than by shared words: queries and documents are encoded as vectors, and documents whose vectors are close to the query vector are returned (Reimers & Gurevych, 2019; Karpukhin et al., 2020). Dense retrievers outperformed BM25 on open-domain question answering, late-interaction models and cross-encoder re-rankers add precision (Khattab & Zaharia, 2020; Nogueira & Cho, 2019), and hypothetical document embeddings work without relevance labels (Gao et al., 2022). On diverse benchmarks, however, BM25 remains a robust baseline, so semantic and lexical retrieval are often combined (Thakur et al., 2021).
+Semantic retrieval finds documents by meaning rather than by shared words: queries and documents are encoded as vectors, and documents whose vectors are close to the query vector are returned (Reimers & Gurevych, 2019; Karpukhin et al., 2020). Dense retrievers outperformed [[bm25|BM25]] on open-domain question answering, late-interaction models and [[cross-encoder|cross-encoder]] re-rankers add precision (Khattab & Zaharia, 2020; Nogueira & Cho, 2019), and hypothetical document embeddings work without relevance labels (Gao et al., 2022). On diverse benchmarks, however, BM25 remains a robust baseline, so semantic and lexical retrieval are often combined (Thakur et al., 2021).
 
 ### How it works
 
@@ -43,7 +43,7 @@ Lexical retrieval with BM25 or tf-idf matches the words of the query ([[informat
 
 #### 2. Bi-encoders and sentence embeddings
 
-Scoring every query-document pair jointly with BERT is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). Sentence-BERT encodes each text separately into an embedding compared with cosine similarity, which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
+Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). Sentence-BERT encodes each text separately into an embedding compared with cosine similarity, which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
 
 #### 3. Dense passage retrieval
 
@@ -116,7 +116,7 @@ Semantic retrieval compares meaning through embeddings, which finds differently 
 
 ### TL;DR
 
-Semantisches Retrieval findet Dokumente nach ihrer Bedeutung statt nach gemeinsamen Wörtern: Anfragen und Dokumente werden als Vektoren kodiert, und Dokumente, deren Vektoren nahe am Anfragevektor liegen, werden zurückgegeben (Reimers & Gurevych, 2019; Karpukhin et al., 2020). Dense Retriever übertrafen BM25 bei Open-Domain-Fragebeantwortung, Late-Interaction-Modelle und Cross-Encoder-Reranker erhöhen die Präzision (Khattab & Zaharia, 2020; Nogueira & Cho, 2019), und hypothetische Dokument-Embeddings funktionieren ohne Relevanzlabels (Gao et al., 2022). Auf vielfältigen Benchmarks bleibt BM25 aber eine robuste Baseline, weshalb semantisches und lexikalisches Retrieval oft kombiniert werden (Thakur et al., 2021).
+Semantisches Retrieval findet Dokumente nach ihrer Bedeutung statt nach gemeinsamen Wörtern: Anfragen und Dokumente werden als Vektoren kodiert, und Dokumente, deren Vektoren nahe am Anfragevektor liegen, werden zurückgegeben (Reimers & Gurevych, 2019; Karpukhin et al., 2020). Dense Retriever übertrafen [[bm25|BM25]] bei Open-Domain-Fragebeantwortung, Late-Interaction-Modelle und Cross-Encoder-Reranker erhöhen die Präzision (Khattab & Zaharia, 2020; Nogueira & Cho, 2019), und hypothetische Dokument-Embeddings funktionieren ohne Relevanzlabels (Gao et al., 2022). Auf vielfältigen Benchmarks bleibt BM25 aber eine robuste Baseline, weshalb semantisches und lexikalisches Retrieval oft kombiniert werden (Thakur et al., 2021).
 
 ### Funktionsweise
 
@@ -142,7 +142,7 @@ Lexikalisches Retrieval mit BM25 oder tf-idf gleicht die Wörter der Anfrage ab 
 
 #### 2. Bi-Encoder und Satz-Embeddings
 
-Jedes Paar aus Anfrage und Dokument gemeinsam mit BERT zu bewerten ist für die Suche zu teuer: Das ähnlichste Paar unter 10.000 Sätzen zu finden dauert etwa 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT kodiert jeden Text einzeln in ein Embedding, das mit Kosinusähnlichkeit verglichen wird; das senkt den Aufwand auf etwa 5 Sekunden bei gleicher Genauigkeit wie BERT, und Dokument-Embeddings lassen sich einmal berechnen und in einem Vektorindex speichern ([[vector-databases|Vektordatenbanken]]).
+Jedes Paar aus Anfrage und Dokument gemeinsam mit [[bert|BERT]] zu bewerten ist für die Suche zu teuer: Das ähnlichste Paar unter 10.000 Sätzen zu finden dauert etwa 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT kodiert jeden Text einzeln in ein Embedding, das mit Kosinusähnlichkeit verglichen wird; das senkt den Aufwand auf etwa 5 Sekunden bei gleicher Genauigkeit wie BERT, und Dokument-Embeddings lassen sich einmal berechnen und in einem Vektorindex speichern ([[vector-databases|Vektordatenbanken]]).
 
 #### 3. Dense Passage Retrieval
 
@@ -194,7 +194,7 @@ Sentence-BERT (Reimers & Gurevych, 2019) machte Satz-Embeddings für die Suche p
 
 ### In der Praxis
 
-Eine verbreitete Pipeline kombiniert BM25 und Dense Retrieval (Hybrid Search) und bringt die besten Kandidaten dann mit einem Cross-Encoder in eine neue Rangfolge (Thakur et al., 2021; Nogueira & Cho, 2019). Die Retrieval-Qualität wird an Anfragen aus der Zieldomäne mit Recall@k und nDCG gemessen ([[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]]).
+Eine verbreitete Pipeline kombiniert BM25 und Dense Retrieval (Hybrid Search) und bringt die besten Kandidaten dann mit einem [[cross-encoder|Cross-Encoder]] in eine neue Rangfolge (Thakur et al., 2021; Nogueira & Cho, 2019). Die Retrieval-Qualität wird an Anfragen aus der Zieldomäne mit Recall@k und nDCG gemessen ([[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]]).
 
 ### Merksatz
 

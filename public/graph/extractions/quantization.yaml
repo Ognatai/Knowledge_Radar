@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7a6789cfa44261caa42063908488e6e5503e86c538721dff63bafa0a2daee279
+note_sha256: 9fdcc6782cabccf32a56a72971c0076d6f7619dcef48fca0745265e30f7dae80
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - post-training-quantization
