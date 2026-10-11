@@ -25,6 +25,8 @@ from collections.abc import Callable
 from dataclasses import dataclass, replace
 from pathlib import Path
 
+import yaml
+
 from app.backend.knowledge_radar import embeddings
 from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import configured_notes_directory, load_notes
@@ -37,6 +39,7 @@ MIN_NAME_LENGTH = 3
 SOURCE_HEADINGS = {"Sources", "Quellen", "Official sources", "Amtliche Quellen"}
 PROTECTED = re.compile(r"\[\[[^\]]*\]\]|\[[^\]]*\]\([^)]*\)|`[^`]*`|https?://\S+")
 SENTENCE_END = re.compile(r"(?<!\bvs\.)(?<!\bal\.)(?<!e\.g\.)(?<!i\.e\.)(?<!z\.\sB\.)(?<=[.!?])\s+(?=[A-ZÄÖÜ\[])")
+EXCLUSIONS_FILE = "link-exclusions.yaml"
 LINK_INSTRUCTION = "Given a sentence that mentions a term, retrieve the encyclopedia article about that term"
 
 
@@ -88,6 +91,19 @@ def find_mentions(texts: dict[str, str], notes: dict[str, NoteDetail], targets: 
         if targets is None or slug in targets
         for language in ("EN", "DE")
     }
+    # A name inside the longer name of another note is not a mention: "Graph
+    # Engineering" in "Knowledge Graph Engineering".
+    all_names = {(slug, language): target_names(note, language) for slug, note in notes.items() for language in ("EN", "DE")}
+    blockers = {
+        key: [
+            name_pattern(longer)
+            for (other, language), others in all_names.items()
+            if other != key[0] and language == key[1]
+            for longer in others
+            if any(name.casefold() in longer.casefold() and len(longer) > len(name) for name in all_names[key])
+        ]
+        for key in patterns
+    }
     mentions: list[Mention] = []
     for source, text in texts.items():
         lines = text.split("\n")
@@ -102,7 +118,7 @@ def find_mentions(texts: dict[str, str], notes: dict[str, NoteDetail], targets: 
             start, end = sections[language]
             if _links_to("\n".join(lines[start:end]), slug):
                 continue
-            mention = _first_mention(lines, start, end, pats)
+            mention = _first_mention(lines, start, end, pats, blockers[(slug, language)])
             if mention:
                 line, match_start, match_end = mention
                 mentions.append(
@@ -111,7 +127,13 @@ def find_mentions(texts: dict[str, str], notes: dict[str, NoteDetail], targets: 
     return mentions
 
 
-def _first_mention(lines: list[str], start: int, end: int, patterns: list[re.Pattern[str]]) -> tuple[int, int, int] | None:
+def _first_mention(
+    lines: list[str],
+    start: int,
+    end: int,
+    patterns: list[re.Pattern[str]],
+    blockers: list[re.Pattern[str]] = (),
+) -> tuple[int, int, int] | None:
     in_code = in_sources = False
     for index in range(start + 1, end):
         line = lines[index]
@@ -124,6 +146,7 @@ def _first_mention(lines: list[str], start: int, end: int, patterns: list[re.Pat
         if in_code or in_sources or line.startswith("#") or line.startswith(">") or not line.strip():
             continue
         protected = [match.span() for match in PROTECTED.finditer(line)]
+        protected += [match.span() for blocker in blockers for match in blocker.finditer(line)]
         best = None
         for pattern in patterns:
             for match in pattern.finditer(line):
@@ -170,6 +193,15 @@ def apply_mentions(text: str, mentions: list[Mention]) -> str:
     return "\n".join(lines)
 
 
+def load_exclusions(notes_directory: Path) -> set[tuple[str, str]]:
+    """(source, target) pairs reviewed as other meanings, from public/link-exclusions.yaml."""
+    path = notes_directory.parent / EXCLUSIONS_FILE
+    if not path.is_file():
+        return set()
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {(source, target) for source, targets in (data.get("exclusions") or {}).items() for target in targets or {}}
+
+
 def suggest(
     notes_directory: Path,
     targets: set[str] | None = None,
@@ -179,7 +211,9 @@ def suggest(
     """(accepted, rejected) suggestions for all notes."""
     notes = {note.slug: note for note in load_notes(notes_directory)}
     texts = {slug: (notes_directory / f"{slug}.md").read_text(encoding="utf-8") for slug in notes}
-    scored = score_mentions(find_mentions(texts, notes, targets), notes, embed)
+    excluded = load_exclusions(notes_directory)
+    mentions = [m for m in find_mentions(texts, notes, targets) if (m.source, m.target) not in excluded]
+    scored = score_mentions(mentions, notes, embed)
     accepted = [mention for mention in scored if mention.score is not None and mention.score >= min_score]
     rejected = [mention for mention in scored if mention not in accepted]
     return accepted, rejected
@@ -192,7 +226,7 @@ def main() -> int:
     parser.add_argument("--min-score", type=float, default=MIN_SCORE)
     parser.add_argument(
         "--exclude", action="append", default=[], metavar="SOURCE:TARGET",
-        help="skip a suggestion that names something else (repeatable), e.g. clustering:quantization",
+        help="skip a suggestion once (repeatable); lasting ones go to public/link-exclusions.yaml",
     )
     parser.add_argument("--notes-dir", type=Path, default=configured_notes_directory())
     args = parser.parse_args()

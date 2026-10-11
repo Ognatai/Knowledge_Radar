@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Embeddings are dense vector representations of text that encode semantic similarity, enabling retrieval systems to find relevant documents based on contextual meaning rather than exact keyword matches. This approach overcomes the limitations of lexical search by mapping semantically similar text to nearby points in a high-dimensional space, as fundamental to modern information retrieval [[information-retrieval|Information Retrieval]].
+Embeddings are dense vector representations of text that encode semantic similarity, enabling retrieval systems to find relevant documents based on contextual meaning rather than exact keyword matches. This approach overcomes the limitations of lexical search by mapping semantically similar text to nearby points in a high-dimensional space, as fundamental to modern [[information-retrieval|information retrieval]].
 
 ### How it works
 
@@ -119,7 +119,7 @@ Embeddings provide dense semantic representations for text but require balancing
 
 ### TL;DR
 
-Embeddings sind dichte Vektorrepräsentationen von Text, die semantische Ähnlichkeit kodieren und Retrieval-Systemen ermöglichen, relevante Dokumente anhand des kontextuellen Sinnes zu finden, statt durch exakte Schlüsselwortübereinstimmungen. Dieser Ansatz überwindet die Grenzen der lexikalischen Suche, indem semantisch ähnlicher Text in der Nähe von Punkten in einem hochdimensionalen Raum abgebildet wird, was grundlegend für moderne Information Retrieval [[information-retrieval|Information Retrieval]] ist.
+Embeddings sind dichte Vektorrepräsentationen von Text, die semantische Ähnlichkeit kodieren und Retrieval-Systemen ermöglichen, relevante Dokumente anhand des kontextuellen Sinnes zu finden, statt durch exakte Schlüsselwortübereinstimmungen. Dieser Ansatz überwindet die Grenzen der lexikalischen Suche, indem semantisch ähnlicher Text in der Nähe von Punkten in einem hochdimensionalen Raum abgebildet wird, was grundlegend für modernes [[information-retrieval|Information Retrieval]] ist.
 
 ### Funktionsweise
 

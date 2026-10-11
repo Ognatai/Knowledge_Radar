@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Knowledge [[graph-engineering|graph engineering]] is the practice of building and operating [[knowledge-graphs|knowledge graphs]] as reliable data products: pipelines create and enrich the graph, entity resolution merges duplicate descriptions, validation checks the data against shapes, refinement completes and corrects it, and provenance records where each fact came from (Hogan et al., 2020). Key tools are SHACL for validation (W3C SHACL), entity resolution workflows (Christophides et al., 2019), quality dimensions and metrics (Zaveri et al., 2016) and PROV-O for provenance (W3C PROV-O).
+Knowledge graph engineering is the practice of building and operating [[knowledge-graphs|knowledge graphs]] as reliable data products: pipelines create and enrich the graph, entity resolution merges duplicate descriptions, validation checks the data against shapes, refinement completes and corrects it, and provenance records where each fact came from (Hogan et al., 2020). Key tools are SHACL for validation (W3C SHACL), entity resolution workflows (Christophides et al., 2019), quality dimensions and metrics (Zaveri et al., 2016) and PROV-O for provenance (W3C PROV-O).
 
 ### How it works
 
@@ -115,7 +115,7 @@ Knowledge graph engineering keeps a graph trustworthy over time through repeatab
 
 ### TL;DR
 
-Knowledge [[graph-engineering|Graph Engineering]] bedeutet, [[knowledge-graphs|Wissensgraphen]] als verlässliche Datenprodukte aufzubauen und zu betreiben: Pipelines erzeugen und reichern den Graphen an, Entity Resolution führt doppelte Beschreibungen zusammen, Validierung prüft die Daten gegen Shapes, Verfeinerung ergänzt und korrigiert sie, und Provenienzangaben halten fest, woher jeder Fakt stammt (Hogan et al., 2020). Wichtige Werkzeuge sind SHACL für die Validierung (W3C SHACL), Workflows für Entity Resolution (Christophides et al., 2019), Qualitätsdimensionen und -metriken (Zaveri et al., 2016) und PROV-O für Provenienz (W3C PROV-O).
+Knowledge Graph Engineering bedeutet, [[knowledge-graphs|Wissensgraphen]] als verlässliche Datenprodukte aufzubauen und zu betreiben: Pipelines erzeugen und reichern den Graphen an, Entity Resolution führt doppelte Beschreibungen zusammen, Validierung prüft die Daten gegen Shapes, Verfeinerung ergänzt und korrigiert sie, und Provenienzangaben halten fest, woher jeder Fakt stammt (Hogan et al., 2020). Wichtige Werkzeuge sind SHACL für die Validierung (W3C SHACL), Workflows für Entity Resolution (Christophides et al., 2019), Qualitätsdimensionen und -metriken (Zaveri et al., 2016) und PROV-O für Provenienz (W3C PROV-O).
 
 ### Funktionsweise
 

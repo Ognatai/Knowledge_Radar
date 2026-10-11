@@ -81,7 +81,7 @@ RAG, formalized by Lewis et al. (2020), integrates parametric memory (a pre-trai
 | Fine-tuning | Modifies model weights via training on task-specific data, embedding knowledge directly into the model parameters. | Adapting model behavior for specific tasks, domain-specific styles, or static knowledge bases. |
 | RAG + fine-tuning (e.g. RAFT) | Fine-tunes the model to answer from retrieved documents and to ignore distractors. | Domain-specific question answering with a stable domain and changing documents. |
 
-RAG excels at integrating new factual information without retraining (Ovadia et al., 2023), while fine-tuning is more efficient for static domain adaptation [[llm-adaptation|LLM Adaptation]].
+RAG excels at integrating new factual information without retraining (Ovadia et al., 2023), while fine-tuning is more efficient for static domain adaptation ([[llm-adaptation|LLM Adaptation]]).
 
 ### In practice
 
@@ -170,7 +170,7 @@ RAG, formalisiert von Lewis et al. (2020), integriert parametrisches Gedächtnis
 | Fine-Tuning | Ändert die Modellgewichte durch das Training auf datenspezifischen Aufgaben, wodurch das Wissen direkt in die Modellparameter eingebettet wird. | Anpassen des Modellverhaltens für spezifische Aufgaben, domänenspezifische Stile oder statische Wissensdatenbanken. |
 | RAG + Fine-Tuning (z. B. RAFT) | Fine-Tuning des Modells, um auf die aus den Dokumenten abgerufenen Informationen zu antworten und Störfaktoren zu ignorieren. | Domänenspezifisches Fragebeantworten mit stabiler Domäne und sich ändernden Dokumenten. |
 
-RAG ist hervorragend darin, neue fakтиsche Informationen zu integrieren, ohne Neutraining durchzuführen (Ovadia et al., 2023), während Fine-Tuning effizienter für die Anpassung an statische Domänen ist [[llm-adaptation|LLM-Anpassung]].
+RAG ist hervorragend darin, neue fakтиsche Informationen zu integrieren, ohne Neutraining durchzuführen (Ovadia et al., 2023), während Fine-Tuning effizienter für die Anpassung an statische Domänen ist ([[llm-adaptation|LLM-Anpassung]]).
 
 ### In der Praxis
 

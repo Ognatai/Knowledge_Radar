@@ -1,0 +1,17 @@
+# Mentions the linking agent (app/agents/linking.py) must not link, because the
+# words name something other than the target note. One entry per source note:
+# the target notes it must not link to, with the reason.
+version: 1
+exclusions:
+  clustering:
+    quantization: Lloyd's algorithm was derived for the quantization of signals, not of model weights.
+  complex:
+    embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
+  distmult:
+    embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
+  knowledge-graphs:
+    embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
+  rotate:
+    embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
+  transe:
+    embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.

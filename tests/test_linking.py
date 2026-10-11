@@ -99,3 +99,16 @@ def test_sentence_is_the_one_containing_the_mention():
     line = "First sentence here. Second with clustering, e.g. k-means. Third one."
 
     assert _sentence(line, line.index("clustering")) == "Second with clustering, e.g. k-means."
+
+
+def test_a_name_inside_another_note_title_is_not_a_mention():
+    notes = {
+        "graph-engineering": note("graph-engineering", "Graph Engineering"),
+        "knowledge-graph-engineering": note("knowledge-graph-engineering", "Knowledge Graph Engineering"),
+    }
+    line = "Knowledge Graph Engineering differs from Graph Engineering."
+    text = f"## EN\n\n{line}\n"
+
+    (mention,) = find_mentions({"other": text}, notes, targets={"graph-engineering"})
+
+    assert mention.start == line.index("Graph Engineering.")
