@@ -32,13 +32,13 @@ def test_the_run_executes_every_step_and_summarises_proposals_and_drafts(tmp_pat
     runs.mkdir()
     run_step, called = fake_steps({}, runs, drafts)
 
-    summary = run(run_step=run_step, log=lambda line: None, now=lambda: NOW, runs=runs, drafts=drafts)
+    summary = run(run_step=run_step, log=lambda line: None, now=lambda: NOW, runs=runs, drafts=drafts, propose=lambda d, r: f"proposals/{r}")
 
     assert called == [step.name for step in STEPS]
     assert summary.findings == 2
     assert summary.proposals == {"new_topic": 1, "promotion": 1, "update": 1}
     assert summary.drafts == ["bm25", "gpt"]
-    assert summary.line() == "2 new findings; proposals: 1 new_topic, 1 promotion, 1 update; 2 drafts to review."
+    assert summary.line() == "2 new findings; proposals: 1 new_topic, 1 promotion, 1 update; 2 drafts to review on branch proposals/2026-10-18_020000."
     assert json.loads((runs / "weekly-2026-10-18_020000.json").read_text(encoding="utf-8"))["findings"] == 2
 
 
@@ -47,7 +47,7 @@ def test_a_failing_required_step_stops_the_run(tmp_path):
     runs.mkdir()
     run_step, called = fake_steps({"update index": 1}, runs, drafts)
 
-    summary = run(run_step=run_step, log=lambda line: None, now=lambda: NOW, runs=runs, drafts=drafts)
+    summary = run(run_step=run_step, log=lambda line: None, now=lambda: NOW, runs=runs, drafts=drafts, propose=lambda d, r: f"proposals/{r}")
 
     assert called == ["validate notes", "update index"]
     assert summary.failed_step == "update index"
@@ -59,7 +59,7 @@ def test_a_failing_curator_does_not_fail_the_run(tmp_path):
     runs.mkdir()
     run_step, _ = fake_steps({"write drafts": 1}, runs, drafts)
 
-    summary = run(run_step=run_step, log=lambda line: None, now=lambda: NOW, runs=runs, drafts=drafts)
+    summary = run(run_step=run_step, log=lambda line: None, now=lambda: NOW, runs=runs, drafts=drafts, propose=lambda d, r: f"proposals/{r}")
 
     assert summary.failed_step is None and summary.steps["write drafts"] == 1
 

@@ -16,10 +16,12 @@ python -m venv .venv
 python -m pip install -e ".[dev]"
 ```
 
-## 2. Enable the pre-commit hook
+## 2. Enable the git hooks
 
-The hook blocks commits that contain absolute local paths, paths into the
-private repository, symlinks, or private-data patterns:
+The pre-commit hook blocks commits that contain absolute local paths, paths into
+the private repository, symlinks, or private-data patterns. The pre-push hook
+refuses to push the weekly run's `proposals/*` branches, which hold unreviewed
+drafts and would be public on GitHub:
 
 ```powershell
 git config core.hooksPath .githooks

@@ -5,6 +5,7 @@
 3. source agents: new findings of the last 7 days
 4. relevance agent: proposals, including promotions
 5. curator: drafts and review reports for the proposals
+6. the drafts on a local branch `proposals/<run>` (propose.py), never pushed
 
 Each step runs as its own process, so that its output lands in the log as it
 happens and a crash in one step is reported instead of killing the run. Steps 1
@@ -29,6 +30,7 @@ from datetime import datetime
 from pathlib import Path
 
 from app.agents.monitoring.findings import RUNS_DIRECTORY
+from app.agents.monitoring.propose import create_proposal_branch
 
 DRAFTS_DIRECTORY = RUNS_DIRECTORY.parent / "drafts"
 
@@ -58,6 +60,9 @@ class Summary:
     proposals: dict[str, int] = field(default_factory=dict)
     drafts: list[str] = field(default_factory=list)
     drafts_directory: str | None = None
+    # The local branch with the drafts (propose.py); never pushed.
+    branch: str | None = None
+    branch_error: str | None = None
     failed_step: str | None = None
 
     def line(self) -> str:
@@ -66,7 +71,8 @@ class Summary:
         if not self.proposals:
             return f"{self.findings or 0} new findings, no proposals this week."
         kinds = ", ".join(f"{count} {kind}" for kind, count in sorted(self.proposals.items()))
-        return f"{self.findings} new findings; proposals: {kinds}; {len(self.drafts)} drafts to review."
+        where = f" on branch {self.branch}" if self.branch else ""
+        return f"{self.findings} new findings; proposals: {kinds}; {len(self.drafts)} drafts to review{where}."
 
 
 def run_module(step: Step, log: Callable[[str], None]) -> int:
@@ -113,6 +119,7 @@ def run(
     now: Callable[[], datetime] = lambda: datetime.now().astimezone(),
     runs: Path = RUNS_DIRECTORY,
     drafts: Path = DRAFTS_DIRECTORY,
+    propose: Callable[[Path, str], str | None] = create_proposal_branch,
 ) -> Summary:
     start = now()
     # Files written by the steps are recognised by their modification time.
@@ -128,6 +135,14 @@ def run(
                 summary.failed_step = step.name
                 break
     summarise(summary, started_at, runs, drafts)
+    if summary.drafts and summary.drafts_directory:
+        directory = Path(summary.drafts_directory)
+        try:
+            summary.branch = propose(directory, directory.name)
+            log(f"=== drafts on local branch {summary.branch} ===")
+        except Exception as exc:  # the drafts stay in the drafts directory either way
+            summary.branch_error = str(exc)
+            log(f"=== could not create the proposal branch: {exc} ===")
     runs.mkdir(parents=True, exist_ok=True)
     (runs / f"weekly-{start:%Y-%m-%d_%H%M%S}.json").write_text(json.dumps(asdict(summary), indent=1), encoding="utf-8")
     return summary

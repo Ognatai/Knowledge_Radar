@@ -1,0 +1,13 @@
+#!/bin/sh
+# Refuse to push the weekly run's proposal branches: they hold unreviewed drafts of
+# the local model, and a branch of this public repository is public on GitHub.
+# git passes "<local ref> <local sha> <remote ref> <remote sha>" per line on stdin.
+while read local_ref local_sha remote_ref remote_sha; do
+    case "$remote_ref" in
+        refs/heads/proposals/*)
+            echo "pre-push: refusing to push $remote_ref (unreviewed drafts stay local)." >&2
+            exit 1
+            ;;
+    esac
+done
+exit 0
