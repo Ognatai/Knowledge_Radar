@@ -42,6 +42,7 @@ from app.backend.knowledge_radar.notes import (
     NoteRepositoryError,
     configured_notes_directory,
     load_notes,
+    all_entity_types,
     public_entity_types,
 )
 
@@ -199,8 +200,11 @@ def update_index(
     model: str,
     rebuild: bool = False,
     progress: Callable[[str], None] = lambda message: None,
+    paths: dict[str, Path] | None = None,
 ) -> UpdateResult:
-    hashes = {note.slug: note_sha256(notes_directory / f"{note.slug}.md") for note in notes}
+    """`paths` maps slugs to files that are not `<notes_directory>/<slug>.md` (private documents)."""
+    paths = paths or {}
+    hashes = {note.slug: note_sha256(paths.get(note.slug, notes_directory / f"{note.slug}.md")) for note in notes}
     state = store.read_state()
     plan = plan_update(hashes, state, model=model, rebuild=rebuild)
     if plan.full_rebuild:
@@ -244,7 +248,9 @@ def neo4j_password(keyring_lookup: Callable[[str, str], str | None] | None = Non
 class Neo4jStore:
     """The local index in Neo4j Community: graph nodes and edges plus `Chunk` nodes with embeddings."""
 
-    def __init__(self, driver: Any, database: str | None = None) -> None:
+    def __init__(self, driver: Any, database: str | None = None, visibility: str = "public") -> None:
+        # "private" only for the separate private index (private_index.py).
+        self.visibility = visibility
         self.driver = driver
         self.database = database
 
@@ -308,8 +314,9 @@ class Neo4jStore:
             tx.run(
                 "UNWIND $rows AS row MERGE (n:Note {slug: row.slug}) "
                 "SET n.title_en = row.title_en, n.title_de = row.title_de, "
-                "n.entity_type = row.entity_type, n.visibility = 'public'",
+                "n.entity_type = row.entity_type, n.visibility = $visibility",
                 rows=note_rows,
+                visibility=self.visibility,
             )
             tx.run(
                 "MATCH (n:Note) WHERE NOT n.slug IN $slugs "
@@ -324,7 +331,7 @@ class Neo4jStore:
             )
             tx.run("MATCH (e:Entity) WHERE NOT e.id IN $ids DETACH DELETE e", ids=[row["id"] for row in entity_rows])
             # The entity type is also a label (MATCH (d:Dataset)); labels cannot be parameters.
-            type_labels = sorted(public_entity_types())
+            type_labels = sorted(public_entity_types() if self.visibility == "public" else all_entity_types())
             if not all(ENTITY_TYPE_PATTERN.match(label) for label in type_labels):
                 raise GraphError(f"Unexpected entity type in {type_labels}.")
             tx.run(f"MATCH (e:Entity) REMOVE e:{':'.join(type_labels)}")

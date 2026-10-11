@@ -40,6 +40,12 @@ def configured_notes_directory() -> Path:
 
 
 @cache
+def all_entity_types(schema_path: Path = SCHEMA_PATH) -> frozenset[str]:
+    """Public and private entity types, for the private index; `Note` is no entity type."""
+    schema = yaml.safe_load(schema_path.read_text(encoding="utf-8"))
+    return frozenset(name for name in schema.get("node_types", {}) if name != "Note")
+
+
 def public_entity_types(schema_path: Path = SCHEMA_PATH) -> frozenset[str]:
     """Entity types a public note may describe: public node types except `Note` itself."""
     try:

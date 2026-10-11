@@ -39,7 +39,13 @@ from app.backend.knowledge_radar.config import LocalConfigError, load_local_conf
 from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, Entity, load_graph, note_sha256, plain_text
 from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import REPOSITORY_ROOT, configured_notes_directory, load_notes
-from app.backend.knowledge_radar.private_repo import PrivateDocument, PrivateRepoError, load_documents, slugify
+from app.backend.knowledge_radar.private_repo import (
+    PrivateDocument,
+    PrivateRepoError,
+    as_note,
+    document_slug,
+    load_documents,
+)
 
 FREE_TEXT_KINDS = ("note", "round_note", "retro", "job_posting")
 REQUIREMENT_CATEGORIES = ["skill", "experience", "education", "language", "soft_skill", "other"]
@@ -53,19 +59,6 @@ def private_graph_directory(root: Path, public_root: Path = REPOSITORY_ROOT) -> 
     if path.is_relative_to(public_root.resolve()):
         raise PrivateRepoError(f"Refusing to write private data into the public repository: {path}")
     return path
-
-
-def document_slug(document: PrivateDocument) -> str:
-    return "private-" + slugify(document.id)
-
-
-def as_note(document: PrivateDocument) -> NoteDetail:
-    """The document in the shape the extraction agent reads."""
-    title = str(document.frontmatter.get("title") or document.id)
-    return NoteDetail.model_construct(
-        slug=document_slug(document), title_en=title, title_de=title, entity_type="Concept",
-        aliases=[], content_en=document.body, content_de="", sources=[], links=[],
-    )
 
 
 def extraction_current(graph_directory: Path, document: PrivateDocument) -> bool:

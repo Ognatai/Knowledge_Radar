@@ -28,6 +28,7 @@ from typing import Any
 import yaml
 
 from app.backend.knowledge_radar.graph import Entity, entity_keys, normalize_name
+from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import FRONTMATTER_PATTERN
 
 ROUND_FOLDER = re.compile(r"^round-(\d+)$")
@@ -128,6 +129,19 @@ def parse_interviewers(body: str) -> list[dict[str, str]]:
 
 def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.casefold()).strip("-")
+
+
+def document_slug(document: PrivateDocument) -> str:
+    return "private-" + slugify(document.id)
+
+
+def as_note(document: PrivateDocument) -> NoteDetail:
+    """The document in the shape the extraction agent and the index read."""
+    title = str(document.frontmatter.get("title") or document.frontmatter.get("name") or document.id)
+    return NoteDetail.model_construct(
+        slug=document_slug(document), title_en=title, title_de=title, entity_type="Concept",
+        aliases=[], content_en=document.body, content_de="", sources=[], links=[],
+    )
 
 
 @dataclass
