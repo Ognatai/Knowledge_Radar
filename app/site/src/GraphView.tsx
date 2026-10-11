@@ -27,9 +27,10 @@ const RELATION_COLOR = "rgba(92, 111, 104, 0.3)";
 const ACTIVE_EDGE = "#3f4d48";
 const DIMMED_EDGE = "rgba(92, 111, 104, 0.07)";
 const DIMMED_NODE_ALPHA = 0.15;
-// A label is drawn when degree × zoom reaches this, so hubs are named first and
-// the rest appear while zooming in; highlighted nodes are always named.
-const LABEL_THRESHOLD = 6;
+// A label is drawn once the zoom reaches LABEL_ZOOM / √degree: hubs are named first
+// and the rest appear while zooming in, nodes with a single edge from zoom 2 (with
+// degree × zoom ≥ 6 they needed zoom 6). Highlighted nodes are always named.
+const LABEL_ZOOM = 2;
 // The best-connected nodes are named at any zoom level.
 const ALWAYS_LABELLED = 15;
 // Weak pull to the centre, so that small separate clusters do not drift away and
@@ -249,7 +250,7 @@ export function GraphView({ nodes, edges, language, openNode, filter, clearFilte
                 context.strokeStyle = "#202b28";
                 context.stroke();
               }
-              if (isHighlighted || hubs.has(id) || degree(id) * scale >= LABEL_THRESHOLD) {
+              if (isHighlighted || hubs.has(id) || scale * Math.sqrt(Math.max(degree(id), 1)) >= LABEL_ZOOM) {
                 const fontSize = Math.max(11 / scale, 2.5);
                 context.font = `${node.kind === "entity" ? 600 : 400} ${fontSize}px "Segoe UI", Arial, sans-serif`;
                 context.textAlign = "center";

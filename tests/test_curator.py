@@ -145,6 +145,15 @@ def test_update_drafts_append_a_dated_entry_with_a_link():
     assert check_template(text) == []
 
 
+def test_update_links_are_labelled_by_their_target_and_citations_follow_the_notes():
+    from app.agents.monitoring.curator import in_text_citation, link_label
+
+    assert link_label("https://doi.org/10.18653/v1/2026.acl-long.2058") == "DOI"
+    assert link_label("https://arxiv.org/abs/2610.05163") == "arXiv"
+    assert link_label("https://example.org/post") == "Link"
+    assert in_text_citation("Jin et al. (2026)") == "Jin et al., 2026"
+
+
 def test_review_report_lists_problems_for_the_reviewer():
     draft = Draft("prompt-injection", "new_topic", "", [source()])
     draft.template_problems = ["EN: missing sections: Comparison."]
