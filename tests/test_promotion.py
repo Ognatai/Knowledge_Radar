@@ -2,14 +2,19 @@ import datetime as dt
 import json
 
 from app.agents.monitoring.curator import with_entity_names
+from app.agents.monitoring.foundations import work_by_url
 from app.agents.monitoring.promotion import (
     PromotionCandidate,
+    cited_findings,
+    cited_works,
+    mentions,
     promotion_candidates,
     select_promotions,
     verify_promotion,
 )
 from app.agents.monitoring.relevance import TopicVerdict
 from app.backend.knowledge_radar.graph import Entity, KnowledgeGraph
+from app.backend.knowledge_radar.models import NoteDetail
 
 NOTES = [("bert-note", "Transformers"), ("evaluation", "Retrieval evaluation"), ("rag", "RAG")]
 
@@ -123,3 +128,65 @@ def test_promoted_notes_keep_the_registry_names_and_type():
         "---\ntitle_en: BM25\ntitle_de: BM25\nentity_type: Method\naliases:\n- Okapi BM25\n- Okapi\nsources:\n- https://x\n---\n"
     )
     assert text.endswith("\n## EN\n")
+
+
+def note(slug, content):
+    return NoteDetail.model_construct(slug=slug, content_en=content)
+
+
+BM25 = Entity("bm25", "Method", "BM25", "BM25", aliases=["Okapi BM25"])
+SOURCES = """
+### Sources
+
+- Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* FnTIR. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
+- Karpukhin, V. et al. (2020). *Dense Passage Retrieval.* EMNLP 2020. [arXiv:2004.04906](https://arxiv.org/abs/2004.04906)
+- Lewis, P. et al. (2020). *Retrieval-Augmented Generation.* NeurIPS 2020. [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
+- Anthropic (2024). *Contextual retrieval.* [anthropic.com](https://www.anthropic.com/news/contextual-retrieval)
+"""
+
+
+def test_mentions_are_the_sentences_naming_the_entity():
+    text = "Lexical search ranks by term weights. Okapi BM25 is the usual baseline (Robertson & Zaragoza, 2009). Dense retrieval differs."
+
+    assert mentions(text, BM25) == ["Okapi BM25 is the usual baseline (Robertson & Zaragoza, 2009)."]
+
+
+def test_cited_works_are_the_works_cited_where_notes_name_the_entity():
+    a = note("a", "BM25 scores terms (Robertson & Zaragoza, 2009). RAG retrieves passages (Lewis et al., 2020)." + SOURCES)
+    b = note("b", "Karpukhin et al. (2020) beat BM25 with dense vectors; BM25 (Robertson & Zaragoza, 2009) stays strong (Anthropic, 2024)." + SOURCES)
+
+    assert cited_works(BM25, [a, b]) == ["https://doi.org/10.1561/1500000019", "https://arxiv.org/abs/2004.04906"]
+
+
+def test_cited_findings_skip_works_that_cannot_be_looked_up():
+    a = note("a", "BM25 (Robertson & Zaragoza, 2009) vs. DPR (Karpukhin et al., 2020)." + SOURCES)
+
+    def lookup(url):
+        if "doi.org" in url:
+            raise OSError("offline")
+        return url
+
+    assert cited_findings(BM25, [a], lookup=lookup) == ["https://arxiv.org/abs/2004.04906"]
+
+
+def test_work_by_url_reads_doi_works_from_openalex():
+    body = json.dumps({
+        "id": "https://openalex.org/W1",
+        "title": "The Probabilistic  Relevance Framework",
+        "publication_year": 2009,
+        "authorships": [{"author": {"display_name": "Stephen Robertson"}}],
+        "abstract_inverted_index": {"BM25": [0], "explained": [1]},
+    })
+    fetched = []
+
+    def fetch(url):
+        fetched.append(url)
+        return body
+
+    work = work_by_url("https://doi.org/10.1561/1500000019", fetch=fetch)
+
+    assert fetched == ["https://api.openalex.org/works/doi:10.1561/1500000019"]
+    assert (work.id, work.title, work.summary, work.authors) == (
+        "openalex:W1", "The Probabilistic Relevance Framework", "BM25 explained", ["Stephen Robertson"]
+    )
+    assert work_by_url("https://www.anthropic.com/news", fetch=fetch) is None

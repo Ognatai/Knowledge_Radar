@@ -496,6 +496,7 @@ def main() -> int:
         min(config.promotions_per_week, config.max_proposals_per_week - len(proposals)),
         declined,
         embeddings.embed,
+        find_sources=promotion.notes_sources(notes),
     )
     promotion.save_declined(declined)
     report = {

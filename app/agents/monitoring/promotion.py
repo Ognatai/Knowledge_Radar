@@ -6,6 +6,11 @@ most-discussed first. Organisations and persons stay registry entries: the
 knowledge base explains methods, concepts, technologies and laws, not who works
 on them.
 
+A promoted note rests on the works the discussing notes cite where they mention the
+entity (BM25: Robertson & Zaragoza, 2009): a title search for the name found
+unrelated papers ("cross-encoder" -> gaze estimation). Only when no note cites a
+work for it does the curator fall back to the most cited works on OpenAlex.
+
 Each candidate is checked once by the local model, with reasoning, against the
 notes with the most similar titles: a dedicated note may already explain it under
 another name (e.g. "precision" in an evaluation note), or it may not be worth an
@@ -33,16 +38,28 @@ from pathlib import Path
 from typing import Any
 
 from app.agents import llm
-from app.agents.monitoring.findings import RUNS_DIRECTORY, STATE_DIRECTORY
+from app.agents.monitoring.findings import RUNS_DIRECTORY, STATE_DIRECTORY, Finding
+from app.agents.monitoring.foundations import work_by_url
 from app.agents.monitoring.relevance import SCOPE, TOPIC_CHECK_NOTES, TopicVerdict, _similarity, topic_verdict_schema
 from app.backend.knowledge_radar import embeddings
 from app.backend.knowledge_radar.graph import Entity, KnowledgeGraph, load_graph
+from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import REPOSITORY_ROOT, configured_notes_directory, load_notes
 
 GRAPH_DIRECTORY = REPOSITORY_ROOT / "public" / "graph"
 DECLINED_PATH = STATE_DIRECTORY / "promotions-declined.json"
 MIN_DISCUSSING_NOTES = 4  # "more than 3 notes"
 NOT_PROMOTED_TYPES = frozenset({"Organization", "Person"})
+CITED_SOURCES = 6
+# "- Robertson, S. & Zaragoza, H. (2009). *The Probabilistic ...* ... [doi:...](https://doi.org/...)"
+SOURCE_LINE = re.compile(
+    r"^- (?P<authors>[^(\n]+?) \((?P<year>\d{4})[a-z]?\)\..*?\]\((?P<url>https://(?:arxiv\.org/abs|doi\.org)/[^)\s]+)\)",
+    re.MULTILINE,
+)
+# A sentence ends at . ! ? before a capital, but not after "vs.", "e.g.", "i.e." or "et al.".
+SENTENCE_END = re.compile(r"(?<!\bvs\.)(?<!\bal\.)(?<!e\.g\.)(?<!i\.e\.)(?<=[.!?])\s+(?=[A-Z\[])")
+# "Robertson & Zaragoza, 2009", "Nogueira and Cho (2019)", "Devlin et al., 2019"
+IN_TEXT_CITATION = re.compile(r"([A-Z][\w'\-]+)(?: et al\.)?(?: (?:&|and) [A-Z][\w'\-]+)?,? \(?(\d{4})[a-z]?\b")
 
 
 @dataclass(frozen=True)
@@ -67,6 +84,56 @@ def promotion_candidates(graph: KnowledgeGraph) -> list[PromotionCandidate]:
         notes = sorted(note for note, discussed in graph.discusses if discussed == entity_id)
         candidates.append(PromotionCandidate(entity, notes))
     return sorted(candidates, key=lambda candidate: (-len(candidate.notes), candidate.entity.id))
+
+
+def mentions(text: str, entity: Entity) -> list[str]:
+    """Sentences and table rows of `text` that name the entity."""
+    names = {entity.name_en, entity.name_de, *entity.aliases, entity.id.replace("-", " ")}
+    names |= {re.sub(r"\s*\([^)]*\)", "", name).strip() for name in names}
+    alternatives = "|".join(re.escape(name) for name in sorted(names, key=len, reverse=True) if name)
+    pattern = re.compile(rf"(?<![\w-])(?:{alternatives})(?!\w)", re.IGNORECASE)
+    units = [unit for line in text.splitlines() for unit in re.split(SENTENCE_END, line)]
+    return [unit for unit in units if pattern.search(unit)]
+
+
+def cited_works(entity: Entity, notes: list[NoteDetail]) -> list[str]:
+    """Links of the arXiv/DOI works the notes cite where they name the entity, the most
+    citing notes first, then the oldest (the work that introduced it)."""
+    counts: Counter[str] = Counter()
+    years: dict[str, int] = {}
+    for note in notes:
+        sources = {}
+        for match in SOURCE_LINE.finditer(note.content_en):
+            surname = match.group("authors").split(",")[0].split()[-1].casefold()
+            sources[(surname, match.group("year"))] = match.group("url")
+        cited = set()
+        for unit in mentions(note.content_en, entity):
+            for surname, year in IN_TEXT_CITATION.findall(unit):
+                url = sources.get((surname.casefold(), year))
+                if url:
+                    cited.add(url)
+                    years[url] = int(year)
+        counts.update(cited)
+    return sorted(counts, key=lambda url: (-counts[url], years[url], url))
+
+
+def cited_findings(
+    entity: Entity,
+    notes: list[NoteDetail],
+    limit: int = CITED_SOURCES,
+    lookup: Callable[[str], Finding | None] = work_by_url,
+) -> list[Finding]:
+    findings = []
+    for url in cited_works(entity, notes):
+        try:
+            finding = lookup(url)
+        except Exception:  # arXiv or OpenAlex unreachable: the next work still serves
+            finding = None
+        if finding:
+            findings.append(finding)
+        if len(findings) == limit:
+            break
+    return findings
 
 
 def build_promotion_prompt(candidate: PromotionCandidate, titles: dict[str, str], similar: list[tuple[str, str]]) -> str:
@@ -133,6 +200,7 @@ def select_promotions(
     embed: Callable[[list[str]], list[list[float]]],
     verify: Callable[[PromotionCandidate, dict[str, str], list[tuple[str, str]]], TopicVerdict] = verify_promotion,
     today: dt.date | None = None,
+    find_sources: Callable[[Entity, list[str]], list[Finding]] | None = None,
 ) -> list[dict[str, Any]]:
     """Up to `limit` verified promotions as curator proposals; newly declined candidates
     are added to `declined`."""
@@ -160,21 +228,28 @@ def select_promotions(
                 "checked": (today or dt.date.today()).isoformat(),
             }
             continue
-        proposals.append(promotion_proposal(candidate, titles))
+        sources = find_sources(candidate.entity, candidate.notes) if find_sources else []
+        proposals.append(promotion_proposal(candidate, titles, sources))
         if len(proposals) == limit:
             break
     return proposals
 
 
-def promotion_proposal(candidate: PromotionCandidate, titles: dict[str, str]) -> dict[str, Any]:
+def promotion_proposal(candidate: PromotionCandidate, titles: dict[str, str], sources: list[Finding]) -> dict[str, Any]:
     entity = candidate.entity
     return {
+        "sources": [finding.to_json() for finding in sources],
         "decision": "promotion",
         "entity": asdict(entity),
         "topic": candidate.search_name,
         "reason": f"registry entity discussed by {len(candidate.notes)} notes",
         "candidates": [{"note": slug, "title": titles.get(slug, slug)} for slug in candidate.notes],
     }
+
+
+def notes_sources(notes: list[NoteDetail]) -> Callable[[Entity, list[str]], list[Finding]]:
+    by_slug = {note.slug: note for note in notes}
+    return lambda entity, slugs: cited_findings(entity, [by_slug[slug] for slug in slugs if slug in by_slug])
 
 
 def main() -> int:
@@ -193,7 +268,9 @@ def main() -> int:
         return 0
 
     note_titles = [(note.slug, note.title_en) for note in notes]
-    proposals = select_promotions(candidates, note_titles, args.limit, declined, embeddings.embed)
+    proposals = select_promotions(
+        candidates, note_titles, args.limit, declined, embeddings.embed, find_sources=notes_sources(notes)
+    )
     save_declined(declined)
     report_path = RUNS_DIRECTORY / f"promotion-{dt.datetime.now():%Y-%m-%d_%H%M%S}.json"
     report_path.parent.mkdir(parents=True, exist_ok=True)

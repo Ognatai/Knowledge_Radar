@@ -5,7 +5,7 @@
   from the full texts of the topic's findings; each section sees only the source
   passages most relevant to it.
 - `promotion`: a registry entity discussed by more than 3 notes (`promotion`),
-  drafted like a new topic from foundational sources alone; the note keeps the
+  drafted like a new topic from the works those notes cite for it; the note keeps the
   entity's id as slug and its names, and the discussing notes are offered as links.
 
 Drafts never go to `public/` directly. Each lands in
@@ -48,7 +48,7 @@ from app.backend.knowledge_radar.templates import check_template
 DRAFTS_DIRECTORY = RUNS_DIRECTORY.parent / "drafts"
 MAX_SOURCES = 10
 FOUNDATIONAL_SOURCES = 3
-# A promotion has no findings of the week; its note rests on foundational sources alone.
+# A promotion that no note cites a work for falls back to this many works from OpenAlex.
 PROMOTION_SOURCES = 5
 PASSAGES_PER_SECTION = 8
 PASSAGES_PER_SOURCE = 3
@@ -286,7 +286,14 @@ def draft_new_note(
     def nearest(query: str, count: int = PASSAGES_PER_SECTION) -> list[str]:
         return _nearest(query, pool, vectors, embed, count)
 
-    outline = json.loads(generate(outline_prompt(topic, nearest(topic, 10)), json_schema=OUTLINE_SCHEMA, temperature=0.0))
+    prompt = outline_prompt(topic, nearest(topic, 10))
+    for attempt in range(2):  # the outline once came back as cut-off JSON
+        try:
+            outline = json.loads(generate(prompt, json_schema=OUTLINE_SCHEMA, temperature=0.0, max_tokens=1000))
+            break
+        except (llm.LLMError, json.JSONDecodeError):
+            if attempt:
+                raise
     warnings: list[str] = []
 
     def write(heading: str, purpose: str, query: str) -> str:
@@ -494,11 +501,12 @@ def main() -> int:
                 )
                 draft = Draft(slug, "update", text, [source])
             else:
+                foundations = [finding_from_json(source) for source in proposal.get("sources", [])]
                 try:
-                    foundations = foundational_findings(proposal["topic"], PROMOTION_SOURCES if entity else FOUNDATIONAL_SOURCES)
+                    if not foundations:
+                        foundations = foundational_findings(proposal["topic"], PROMOTION_SOURCES if entity else FOUNDATIONAL_SOURCES)
                 except Exception as exc:  # OpenAlex unreachable: draft from the findings alone
                     print(f"No foundational sources for {slug}: {exc}", file=sys.stderr)
-                    foundations = []
                 week = [finding] if finding else []
                 week += [findings_by_id[i] for i in proposal.get("related", []) if i in findings_by_id]
                 members = list({member.id: member for member in foundations + week}.values())[:MAX_SOURCES]

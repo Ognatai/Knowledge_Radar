@@ -14,6 +14,7 @@ import json
 import re
 import urllib.parse
 from collections.abc import Callable
+from dataclasses import replace
 from datetime import date, datetime
 
 from app.agents.monitoring import feeds
@@ -68,6 +69,35 @@ def arxiv_id_for_title(
             continue
         return finding.id.removeprefix("arxiv:")
     return None
+
+
+def work_by_url(url: str, fetch: Callable[[str], str] = feeds.fetch) -> Finding | None:
+    """Title, authors and abstract of a work cited by its arXiv or DOI link: from the arXiv
+    API for arXiv papers, from OpenAlex for DOIs."""
+    fetched_at = datetime.now().astimezone()
+    arxiv = re.search(r"arxiv\.org/abs/([^\s/?#]+)", url)
+    if arxiv:
+        query = urllib.parse.urlencode({"id_list": re.sub(r"v\d+$", "", arxiv.group(1))})
+        found = feeds.parse_arxiv(fetch(f"{feeds.ARXIV_API}?{query}"), query=url, fetched_at=fetched_at)
+        return replace(found[0], query=None) if found else None
+    doi = re.search(r"doi\.org/(10\.\S+)", url)
+    if not doi:
+        return None
+    work = json.loads(fetch(f"{OPENALEX_WORKS}/doi:{doi.group(1)}"))
+    year = work.get("publication_year")
+    return Finding(
+        id=f"openalex:{work['id'].rsplit('/', 1)[-1]}",
+        source=SOURCE_NAME,
+        category="foundation",
+        url=url,
+        title=re.sub(r"\s+", " ", work.get("title") or "").strip(),
+        summary=abstract_text(work.get("abstract_inverted_index")),
+        published=date(year, 1, 1) if year else None,
+        authors=[a["author"]["display_name"] for a in work.get("authorships", []) if a.get("author")],
+        tier=None,
+        source_kind="primary_research",
+        fetched_at=fetched_at,
+    )
 
 
 def parse_works(body: str, limit: int, fetched_at: datetime) -> list[dict]:
