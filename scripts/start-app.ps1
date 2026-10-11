@@ -58,6 +58,13 @@ $composeFiles = @("-f", (Join-Path $repository "docker-compose.yml"))
 $env:NEO4J_PASSWORD = Get-Secret "neo4j"
 if (-not $NoPrivate) {
     $env:NEO4J_PRIVATE_PASSWORD = Get-Secret "neo4j-private"
+    # The GitLab token for the private inbox in the Review Dashboard; optional.
+    $gitlabToken = & $python -m keyring get knowledge-radar gitlab
+    if ($gitlabToken) {
+        $env:GITLAB_TOKEN = $gitlabToken
+    } else {
+        Write-Warning "No GitLab token (python -m keyring set knowledge-radar gitlab): the private inbox in the Review Dashboard is off."
+    }
     # The private checkout from local-config.yaml, mounted for the interview commands.
     Push-Location $repository
     try {
@@ -88,6 +95,7 @@ finally {
     Remove-Item Env:NEO4J_PASSWORD -ErrorAction SilentlyContinue
     Remove-Item Env:NEO4J_PRIVATE_PASSWORD -ErrorAction SilentlyContinue
     Remove-Item Env:KNOWLEDGE_RADAR_PRIVATE_REPO_HOST -ErrorAction SilentlyContinue
+    Remove-Item Env:GITLAB_TOKEN -ErrorAction SilentlyContinue
 }
 
 $deadline = (Get-Date).AddSeconds(90)

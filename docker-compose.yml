@@ -22,6 +22,9 @@ services:
     volumes:
       - ./public/notes:/workspace/public/notes:ro
       - ./public/graph:/workspace/public/graph:ro
+      # Review Dashboard: the local proposal branches and the decisions on them.
+      - ./.git:/workspace/.git
+      - ./.knowledge-radar/monitoring:/workspace/.knowledge-radar/monitoring
     environment:
       KNOWLEDGE_RADAR_NOTES_DIR: /workspace/public/notes
       # Ollama stays a host installation; the container reaches it via the host gateway.
@@ -33,6 +36,8 @@ services:
       NEO4J_PASSWORD: ${NEO4J_PASSWORD:?Start the app with scripts/start-app.ps1 or set NEO4J_PASSWORD}
       NEO4J_PRIVATE_URI: bolt://host.docker.internal:7688
       NEO4J_PRIVATE_PASSWORD: ${NEO4J_PRIVATE_PASSWORD:-}
+      # Fetch, merge and delete the private inbox branches on GitLab (optional).
+      GITLAB_TOKEN: ${GITLAB_TOKEN:-}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:

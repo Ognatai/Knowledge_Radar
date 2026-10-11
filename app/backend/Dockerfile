@@ -1,5 +1,11 @@
 FROM python:3.12-slim
 
+# git for the Review Dashboard: the proposal branches (mounted .git) and the private
+# inbox branches; the mounts belong to the host user, hence safe.directory.
+RUN apt-get update && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/* \
+    && git config --system --add safe.directory '*'
+
 WORKDIR /workspace
 COPY pyproject.toml README.md schema.yaml ./
 COPY app ./app

@@ -95,3 +95,39 @@ export const privateApi = {
 export function ask(question: string, history: Turn[], scope: Scope, language: Language): Promise<ChatAnswer> {
   return call<ChatAnswer>("/api/chat", { question, history, scope, language });
 }
+
+export type DraftStatus = "open" | "wanted" | "discarded";
+
+export interface DraftSummary {
+  slug: string;
+  kind: string;
+  new_note: boolean;
+  verdicts: string;
+  status: DraftStatus;
+}
+
+export interface ProposalRun {
+  run: string;
+  branch: string;
+  created: string;
+  drafts: DraftSummary[];
+}
+
+export interface InboxBranch {
+  branch: string;
+  files: { path: string; title: string; text: string }[];
+}
+
+export interface ReviewOverview {
+  public: { available: boolean; runs: ProposalRun[] };
+  private: { configured: boolean; branches: InboxBranch[]; error: string | null };
+}
+
+export const reviewApi = {
+  overview: () => call<ReviewOverview>("/api/review"),
+  draft: (run: string, slug: string) => call<{ review: string; diff: string; draft: string }>(`/api/review/public/${run}/${slug}`),
+  decide: (run: string, slug: string, status: DraftStatus) => call<{ status: string }>(`/api/review/public/${run}/${slug}`, { status }),
+  removeRun: (run: string) => call<{ removed: string }>(`/api/review/public/${run}`, {}),
+  accept: (branch: string) => call<Written>("/api/review/private/accept", { branch }),
+  discard: (branch: string) => call<{ discarded: string }>("/api/review/private/discard", { branch }),
+};

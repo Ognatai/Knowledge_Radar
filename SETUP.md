@@ -94,6 +94,24 @@ uvicorn app.backend.knowledge_radar.api:app --reload   # API on :8000, docs at /
 cd app\frontend; npm install; npm run dev                # UI on :5173, /api proxied to :8000
 ```
 
+The **Review** tab shows what the weekly run proposed:
+
+- Public drafts (local `proposals/<run>` branches, so only on the machine that ran
+  the job) with their review report and diff. A draft can be marked as wanted or
+  discarded; nothing is published from here, publishing follows Claude's review
+  against the sources. A discarded promotion is not proposed again until more notes
+  discuss the entity.
+- The private inbox: branches `inbox/<run>` in the private GitLab repository with
+  news on the knowledge gaps from your retros. Accepting merges the notes into `main`
+  (pushed to GitLab) and adds them to `notes/` in your checkout, leaving your other
+  files untouched; the checkout must be on `main` and not behind GitLab. This needs a
+  GitLab project access token with the role Maintainer (to push `main`) and the scope
+  `write_repository`:
+
+  ```powershell
+  python -m keyring set knowledge-radar gitlab
+  ```
+
 ## 6. Ollama
 
 Install Ollama on the host (it is not containerized). Models:
@@ -183,6 +201,10 @@ The task runs Sundays at 02:00 (or at the next opportunity if the machine was
 off) as the logged-on user, which is required for toast notifications and for
 reading secrets from the Windows Credential Manager. Every run writes a log to
 `.knowledge-radar/logs/` and shows a toast on success and on failure.
+
+With a private repository whose retros name knowledge gaps, the run also pushes the
+findings on those gaps as a branch `inbox/<run>` to GitLab (with the GitLab token
+from section 5, else over the checkout's own remote).
 
 ## 10. GitHub repository settings
 

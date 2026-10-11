@@ -15,12 +15,14 @@ from typing import Any
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.backend.knowledge_radar import chat, interviews, prep
+from app.backend.knowledge_radar import chat, interviews, prep, review
 from app.backend.knowledge_radar.config import LocalConfigError, load_local_config
 from app.backend.knowledge_radar.models import (
     ChatRequest,
     ChatResponse,
     ChatSource,
+    DraftDecision,
+    InboxAction,
     NewApplication,
     NewRound,
     NoteDetail,
@@ -88,6 +90,29 @@ def default_refresher(root: Path | None):
     return Refresher(lambda log: refresh(root, connect_private, model=chat.chat_model(), log=log)) if root else None
 
 
+def default_proposals() -> review.PublicProposals:
+    """The Desktop's local proposal branches; on the ThinkPad there are none."""
+    from app.agents.monitoring.findings import STATE_DIRECTORY
+    from app.backend.knowledge_radar.notes import REPOSITORY_ROOT
+
+    def discussing_notes(slug: str) -> int:
+        from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, load_graph
+        from app.backend.knowledge_radar.notes import configured_notes_directory, load_notes
+
+        notes_directory = configured_notes_directory()
+        graph = load_graph(DEFAULT_GRAPH_DIRECTORY, load_notes(notes_directory), notes_directory)
+        return sum(1 for note, entity in graph.discusses if entity == slug and note != slug)
+
+    return review.PublicProposals(REPOSITORY_ROOT / ".git", STATE_DIRECTORY / "review-decisions.json",
+                                  STATE_DIRECTORY / "promotions-declined.json", discussing_notes)
+
+
+def default_inbox(root: Path | None) -> review.PrivateInbox | None:
+    from app.backend.knowledge_radar.private_git import PrivateRepo, gitlab_token
+
+    return review.PrivateInbox(PrivateRepo(root, gitlab_token())) if root else None
+
+
 def create_app(
     notes_directory: Path | None = None,
     indices: Indices | None = None,
@@ -95,6 +120,8 @@ def create_app(
     private_root: Path | None | str = "configured",
     refresher: Any = "default",
     generate: Callable[..., str] | None = None,
+    proposals: Any = "default",
+    inbox: Any = "default",
 ) -> FastAPI:
     app = FastAPI(
         title="Knowledge Radar API",
@@ -214,6 +241,66 @@ def create_app(
     def save_prep(request: PrepIn) -> dict[str, Any]:
         return interview_errors(lambda: prep.write_prep(private(), company=request.company, role=request.role,
                                                         round_number=request.round, text=request.text, replace=request.replace))
+
+    public_proposals = default_proposals() if proposals == "default" else proposals
+    private_inbox = default_inbox(root) if inbox == "default" else inbox
+
+    def review_errors(action: Callable[[], Any]) -> Any:
+        try:
+            return action()
+        except HTTPException:
+            raise
+        except review.ReviewError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except Exception as exc:  # noqa: BLE001 - git or GitLab failed; the message says why
+            raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    @app.get("/api/review")
+    def review_overview() -> dict[str, Any]:
+        overview: dict[str, Any] = {"public": {"available": False, "runs": []}, "private": {"configured": private_inbox is not None, "branches": [], "error": None}}
+        if public_proposals is not None and public_proposals.available():
+            overview["public"] = {"available": True, "runs": review.as_dict(review_errors(public_proposals.runs))}
+        if private_inbox is not None:
+            try:
+                overview["private"]["branches"] = review.as_dict(private_inbox.branches())
+            except Exception as exc:  # noqa: BLE001 - offline or no token: show the public part anyway
+                hint = "" if private_inbox.repo.token else "No GitLab token (python -m keyring set knowledge-radar gitlab, then restart the app). "
+                overview["private"]["error"] = f"{hint}{exc}"
+        return overview
+
+    def proposals_or_404() -> review.PublicProposals:
+        if public_proposals is None or not public_proposals.available():
+            raise HTTPException(status_code=404, detail="No proposal branches on this machine (they live on the Desktop).")
+        return public_proposals
+
+    @app.get("/api/review/public/{run}/{slug}")
+    def draft_detail(run: str, slug: str) -> dict[str, str]:
+        return review_errors(lambda: proposals_or_404().detail(run, slug))
+
+    @app.post("/api/review/public/{run}/{slug}")
+    def decide_draft(run: str, slug: str, decision: DraftDecision) -> dict[str, str]:
+        review_errors(lambda: proposals_or_404().decide(run, slug, decision.status))
+        return {"status": decision.status}
+
+    @app.post("/api/review/public/{run}")
+    def remove_run(run: str) -> dict[str, str]:
+        review_errors(lambda: proposals_or_404().remove(run))
+        return {"removed": run}
+
+    def inbox_or_409() -> review.PrivateInbox:
+        if private_inbox is None:
+            raise HTTPException(status_code=409, detail="No private repository is configured (private_repo_path).")
+        return private_inbox
+
+    @app.post("/api/review/private/accept")
+    def accept_inbox(action: InboxAction) -> dict[str, Any]:
+        files = review_errors(lambda: inbox_or_409().accept(action.branch))
+        return written(files)
+
+    @app.post("/api/review/private/discard")
+    def discard_inbox(action: InboxAction) -> dict[str, str]:
+        review_errors(lambda: inbox_or_409().discard(action.branch))
+        return {"discarded": action.branch}
 
     @app.get("/api/private/refresh")
     def refresh_status() -> dict[str, Any] | None:

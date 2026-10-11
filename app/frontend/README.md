@@ -12,7 +12,9 @@ in `app/site/`.
   and refresh the private index afterwards (`app/agents/private_refresh.py`).
 - **`/prep`**: a briefing for one round, saved as `prep.md` after editing
   (`app/backend/knowledge_radar/prep.py`).
-- **Review Dashboard** for the weekly proposal branches: planned.
+- **Review Dashboard** (`src/Review.tsx`, `app/backend/knowledge_radar/review.py`):
+  the weekly run's public drafts (mark or discard; publishing follows Claude's review)
+  and the private inbox branches on GitLab (accept or discard).
 
 Development: `npm install`, then `npm run dev` (port 5173; `/api` is proxied to
 the API on port 8000).

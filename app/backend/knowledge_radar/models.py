@@ -92,6 +92,14 @@ class PrepIn(BaseModel):
     replace: bool = False
 
 
+class DraftDecision(BaseModel):
+    status: Literal["open", "wanted", "discarded"]
+
+
+class InboxAction(BaseModel):
+    branch: str = Field(min_length=1, max_length=200)
+
+
 class ChatTurn(BaseModel):
     role: Literal["user", "assistant"]
     content: str = Field(max_length=20000)

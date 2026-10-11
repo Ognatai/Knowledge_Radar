@@ -68,3 +68,25 @@ a { color: var(--green); }
 .suggestions { flex-basis: 100%; margin: 0; padding: 4px; list-style: none; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
 .suggestions button { width: 100%; padding: 6px 8px; border: 0; border-radius: 5px; color: var(--ink); background: transparent; text-align: left; font-size: 14px; }
 .suggestions button:hover { background: #e5efe9; }
+
+.review h2 { margin: 28px 0 4px; font-size: 20px; letter-spacing: -0.02em; }
+.review h3 { margin: 0; font-size: 16px; }
+.run-card { margin: 12px 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.draft-list { margin: 10px 0 0; padding: 0; list-style: none; }
+.draft-row { padding: 10px 0; border-top: 1px solid var(--line); }
+.draft-row.status-discarded { opacity: .6; }
+.draft-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; justify-content: space-between; }
+.draft-head strong { margin-right: auto; }
+.kind { color: var(--muted); font-size: 13px; }
+.badge-status { padding: 1px 8px; border-radius: 10px; font-size: 12px; background: #eae9e1; color: var(--muted); }
+.badge-status.wanted { background: #e5efe9; color: #0b5e4d; }
+.badge-status.discarded { background: #fbefea; color: #8a3b1e; }
+.verdicts { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.draft-detail { margin-top: 10px; }
+.draft-detail summary, .run-card details summary { cursor: pointer; color: var(--green); font-weight: 600; }
+.report { padding: 4px 12px; border-left: 3px solid var(--line); font-size: 14px; overflow-wrap: anywhere; }
+.diff { max-height: 480px; overflow: auto; padding: 10px; border-radius: 8px; background: #fbfaf5; border: 1px solid var(--line); font: 12px/1.45 Consolas, "Courier New", monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.diff .add { color: #0b5e4d; background: #e5efe9; }
+.diff .del { color: #8a3b1e; background: #fbefea; }
+.diff .hunk { color: var(--muted); }
+.success { margin: 8px 0 0; padding: 6px 10px; border-radius: 6px; background: #e5efe9; color: #0b5e4d; font-size: 13px; }

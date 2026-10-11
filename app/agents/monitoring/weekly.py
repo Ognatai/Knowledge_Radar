@@ -5,12 +5,14 @@
 3. source agents: new findings of the last 7 days
 4. relevance agent: proposals, including promotions
 5. curator: drafts and review reports for the proposals
-6. the drafts on a local branch `proposals/<run>` (propose.py), never pushed
+6. inbox: findings on gaps from interview retros, as a branch `inbox/<run>` in the
+   private GitLab repository (inbox.py)
+7. the drafts on a local branch `proposals/<run>` (propose.py), never pushed
 
 Each step runs as its own process, so that its output lands in the log as it
 happens and a crash in one step is reported instead of killing the run. Steps 1
 to 4 must succeed; the curator may fail on single proposals (they are retried
-next week) and still count as done. The summary is written to
+next week) and still count as done, and a failed inbox does not fail the run. The summary is written to
 `.knowledge-radar/monitoring/runs/weekly-<time>.json` and printed as one line
 for the notification.
 
@@ -49,6 +51,8 @@ STEPS = [
     Step("fetch sources", "app.agents.monitoring.run_sources"),
     Step("assess relevance", "app.agents.monitoring.relevance"),
     Step("write drafts", "app.agents.monitoring.curator", required=False),
+    # Findings on gaps from interview retros, as a branch in the private GitLab repo.
+    Step("propose inbox", "app.agents.monitoring.inbox", required=False),
 ]
 
 

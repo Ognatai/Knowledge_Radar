@@ -1,6 +1,7 @@
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Review from "./Review";
 import { Application, ask, ChatSource, Language, privateApi, publicNoteUrl, RefreshStatus, Scope, Turn, Written } from "./api";
 import {
   Choice,
@@ -47,7 +48,6 @@ const TEXT = {
     subtitle: "Lokaler Chat über die öffentliche und die private Wissensbasis. Alles bleibt auf diesem Rechner.",
     chat: "Chat",
     review: "Review",
-    soon: "folgt",
     scope: "Suchen in",
     scopes: { all: "Beiden", public: "Öffentlich", private: "Privat" } as Record<Scope, string>,
     placeholder: "Frage stellen oder / für Befehle … (Enter sendet, Umschalt+Enter für neue Zeile)",
@@ -83,7 +83,6 @@ const TEXT = {
     subtitle: "Local chat over the public and the private knowledge base. Everything stays on this machine.",
     chat: "Chat",
     review: "Review",
-    soon: "coming",
     scope: "Search in",
     scopes: { all: "Both", public: "Public", private: "Private" } as Record<Scope, string>,
     placeholder: "Ask a question or type / for commands … (Enter sends, Shift+Enter for a new line)",
@@ -168,6 +167,7 @@ export default function App() {
   const [wizard, setWizard] = useState<Wizard | null>(null);
   const [applications, setApplications] = useState<Application[]>([]);
   const [preparing, setPreparing] = useState(false);
+  const [view, setView] = useState<"chat" | "review">("chat");
   const end = useRef<HTMLDivElement>(null);
   const t = TEXT[language];
 
@@ -387,9 +387,11 @@ export default function App() {
           <span className="brand-mark" aria-hidden="true">◎</span> Knowledge Radar <span className="local">lokal</span>
         </span>
         <nav className="primary-nav" aria-label="Main">
-          <button aria-current="page">{t.chat}</button>
-          <button disabled title={t.soon}>
-            {t.review} <small>({t.soon})</small>
+          <button aria-current={view === "chat" ? "page" : undefined} onClick={() => setView("chat")}>
+            {t.chat}
+          </button>
+          <button aria-current={view === "review" ? "page" : undefined} onClick={() => setView("review")}>
+            {t.review}
           </button>
         </nav>
         <div className="language-toggle" role="group" aria-label="Language">
@@ -401,7 +403,12 @@ export default function App() {
         </div>
       </header>
 
-      <main className="chat">
+      {view === "review" && (
+        <main className="chat">
+          <Review language={language} />
+        </main>
+      )}
+      <main className="chat" hidden={view !== "chat"}>
         <p className="subtitle">{t.subtitle}</p>
         <div className="toolbar">
           <div className="scope" role="group" aria-label={t.scope}>
