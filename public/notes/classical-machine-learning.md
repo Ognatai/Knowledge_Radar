@@ -48,7 +48,7 @@ The prediction error of a model is framed through the bias-variance trade-off: f
 
 #### 4. Common tooling
 
-scikit-learn is a Python module that integrates a wide range of machine learning algorithms for medium-scale supervised and unsupervised problems, with an emphasis on ease of use, performance, documentation and API consistency (Pedregosa et al., 2011). Its consistent interface makes it easy to try several classical methods on the same data.
+[[scikit-learn|scikit-learn]] is a Python module that integrates a wide range of machine learning algorithms for medium-scale supervised and unsupervised problems, with an emphasis on ease of use, performance, documentation and API consistency (Pedregosa et al., 2011). Its consistent interface makes it easy to try several classical methods on the same data.
 
 #### 5. Classical methods versus deep learning on tabular data
 
@@ -139,7 +139,7 @@ Der Vorhersagefehler eines Modells wird über die Bias-Varianz-Abwägung beschri
 
 #### 4. Gängige Werkzeuge
 
-scikit-learn ist ein Python-Modul, das viele Verfahren des maschinellen Lernens für überwachte und unüberwachte Probleme mittlerer Größe bündelt, mit Schwerpunkt auf Benutzerfreundlichkeit, Leistung, Dokumentation und einer konsistenten API (Pedregosa et al., 2011). Die einheitliche Schnittstelle erleichtert es, mehrere klassische Verfahren auf denselben Daten zu erproben.
+[[scikit-learn|scikit-learn]] ist ein Python-Modul, das viele Verfahren des maschinellen Lernens für überwachte und unüberwachte Probleme mittlerer Größe bündelt, mit Schwerpunkt auf Benutzerfreundlichkeit, Leistung, Dokumentation und einer konsistenten API (Pedregosa et al., 2011). Die einheitliche Schnittstelle erleichtert es, mehrere klassische Verfahren auf denselben Daten zu erproben.
 
 #### 5. Klassische Verfahren und Deep Learning auf tabellarischen Daten
 

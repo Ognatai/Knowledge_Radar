@@ -95,10 +95,6 @@ entities:
     type: Method
     name_en: Random forest
     name_de: Random Forest
-  - id: scikit-learn
-    type: Technology
-    name_en: scikit-learn
-    name_de: scikit-learn
   - id: fitnets
     type: Method
     name_en: FitNets
@@ -115,10 +111,6 @@ entities:
     type: Method
     name_en: G-Eval
     name_de: G-Eval
-  - id: chain-of-thought-prompting
-    type: Method
-    name_en: Chain-of-thought prompting
-    name_de: Chain-of-Thought-Prompting
   - id: prometheus
     type: Method
     name_en: Prometheus (evaluator model)

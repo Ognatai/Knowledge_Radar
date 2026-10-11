@@ -51,7 +51,7 @@ Trees are interpretable, because each prediction can be traced as a path of simp
 
 #### 5. Implementation
 
-Decision trees and random forests are available in common libraries such as scikit-learn (Pedregosa et al., 2011).
+Decision trees and random forests are available in common libraries such as [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011).
 
 #### Origin and variants
 
@@ -140,7 +140,7 @@ Bäume sind interpretierbar, weil sich jede Vorhersage als Pfad einfacher Tests 
 
 #### 5. Implementierung
 
-Entscheidungsbäume und Random Forests sind in gängigen Bibliotheken wie scikit-learn verfügbar (Pedregosa et al., 2011).
+Entscheidungsbäume und Random Forests sind in gängigen Bibliotheken wie [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011).
 
 #### Ursprung und Varianten
 

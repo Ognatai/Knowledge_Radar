@@ -8,6 +8,7 @@ sources:
 - https://arxiv.org/abs/2305.14627
 - https://arxiv.org/abs/2306.05685
 - https://arxiv.org/abs/2311.09476
+- https://doi.org/10.1145/3805712.3808490
 ---
 
 ## EN
@@ -103,6 +104,11 @@ RAG generation evaluation enables scalable reference-free assessment of faithful
 - Zheng, L. et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.* [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
 - Saad-Falcon, J. et al. (2023). *ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems.* [arXiv:2311.09476](https://arxiv.org/abs/2311.09476)
 
+### Updates
+
+#### 2026-10-11 — When passages must be quoted verbatim
+In regulated domains some retrieved passages may not be paraphrased. Policy-guided RAG attaches sensitivity metadata to retrieved segments, lets a router choose between verbatim, combined and synthesis modes, and audits the final answer for unquoted sensitive content. The combined mode substantially reduced verbatim exposure compared with standard RAG, but near-verbatim wording could persist when sensitive and other evidence were mixed, and the strict verbatim mode cost coverage through abstentions (Asadi et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3808490](https://doi.org/10.1145/3805712.3808490)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -195,3 +201,8 @@ RAG-Generierungsbewertung ermöglicht eine skalierbare, referenzfreie Bewertung 
 - Gao, T. et al. (2023). *Enabling Large Language Models to Generate Text with Citations.* [arXiv:2305.14627](https://arxiv.org/abs/2305.14627)
 - Zheng, L. et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.* [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
 - Saad-Falcon, J. et al. (2023). *ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems.* [arXiv:2311.09476](https://arxiv.org/abs/2311.09476)
+
+### Aktualisierungen
+
+#### 2026-10-11 — Wenn Passagen wörtlich zitiert werden müssen
+In regulierten Bereichen dürfen manche abgerufenen Passagen nicht umschrieben werden. Policy-guided RAG versieht abgerufene Abschnitte mit Metadaten zu ihrer Sensibilität, lässt einen Router zwischen wörtlichem, kombiniertem und frei formulierendem Modus wählen und prüft die fertige Antwort auf nicht zitierte sensible Inhalte. Der kombinierte Modus verringerte die wörtliche Offenlegung gegenüber Standard-RAG deutlich, doch fast wörtliche Formulierungen konnten bleiben, wenn sensible und andere Belege gemischt waren, und der streng wörtliche Modus kostete Abdeckung durch Antwortverweigerungen (Asadi et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3808490](https://doi.org/10.1145/3805712.3808490)).

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a673e5efaa809da5a59a971afdeee4ffbc6b247182b88bfccec0ee117dc765cd
+note_sha256: 837817a431ac87edbe88b74ce2e2eb78601fd5da15393242d0375d4be37744d9
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - llm-as-a-judge

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "1e77ebc9677cc0fbacb13a32b07c248b8b9c5eeeaa53608d01489ac308c4a428"
+note_sha256: "5e43e306287ecc9bdab59e6717447d730c6c98415509f0efd71dd145f3cfb3d3"
 extracted_by: claude (hand-labelled gold standard)
 discusses:
   - retrieval-augmented-generation

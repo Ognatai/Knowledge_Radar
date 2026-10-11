@@ -17,6 +17,7 @@ sources:
   - https://arxiv.org/abs/2309.15217
   - https://arxiv.org/abs/2312.05934
   - https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng
+  - https://doi.org/10.1145/3805712.3809666
 ---
 
 ## EN
@@ -65,7 +66,7 @@ Each chunk keeps metadata (document, section, page, date, access rights) that is
 
 #### 2. Embedding
 
-An [[embeddings|embedding model]] maps each chunk to a vector of fixed dimension (typically a few hundred to a few thousand numbers), such that passages with similar meaning lie close together. RAG uses **bi-encoders**: query and passage are encoded independently by the same model. This is what makes retrieval over large collections feasible: all passage vectors are computed once in advance, and a query needs a single encoder call plus a vector comparison. Reimers & Gurevych (2019) illustrate the difference: finding the most similar pair among 10,000 sentences takes about 65 hours when every pair is fed through [[bert|BERT]] jointly, and about 5 seconds with precomputed sentence embeddings (SBERT). Query and passages must be embedded with the same model, otherwise their vectors are not comparable.
+An [[embeddings|embedding model]] maps each chunk to a vector of fixed dimension (typically a few hundred to a few thousand numbers), such that passages with similar meaning lie close together. RAG uses **bi-encoders**: query and passage are encoded independently by the same model. This is what makes retrieval over large collections feasible: all passage vectors are computed once in advance, and a query needs a single encoder call plus a vector comparison. Reimers & Gurevych (2019) illustrate the difference: finding the most similar pair among 10,000 sentences takes about 65 hours when every pair is fed through [[bert|BERT]] jointly, and about 5 seconds with precomputed sentence embeddings ([[sentence-bert|SBERT]]). Query and passages must be embedded with the same model, otherwise their vectors are not comparable.
 
 #### 3. Indexing
 
@@ -168,6 +169,11 @@ RAG gives a language model access to an external, updatable knowledge base at qu
 - Ovadia, O. et al. (2023). *Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs.* [arXiv:2312.05934](https://arxiv.org/abs/2312.05934)
 - Regulation (EU) 2016/679 (GDPR), Art. 17. [EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
 
+### Updates
+
+#### 2026-10-11 — Separating planning from execution in deep search
+HiRA addresses complex search tasks that a single model handles poorly when it has to plan and execute at once: a planner splits the task into subtasks, each subtask goes to a domain-specific agent with its own tools, and the results are integrated. On four cross-modal deep search benchmarks it outperformed state-of-the-art RAG and agent-based systems (Jin et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809666](https://doi.org/10.1145/3805712.3809666)); see [[agentic-ai|Agentic AI]].
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -214,7 +220,7 @@ Jeder Chunk behält Metadaten (Dokument, Abschnitt, Seite, Datum, Zugriffsrechte
 
 #### 2. Embedding
 
-Ein [[embeddings|Embedding-Modell]] bildet jeden Chunk auf einen Vektor fester Länge ab (typischerweise einige hundert bis einige tausend Zahlen), sodass bedeutungsähnliche Passagen nah beieinander liegen. RAG nutzt **Bi-Encoder**: Query und Passage werden unabhängig voneinander vom selben Modell kodiert. Erst das macht die Suche in großen Sammlungen praktikabel: Alle Passagenvektoren werden einmal im Voraus berechnet, und eine Query braucht nur einen Encoder-Aufruf plus einen Vektorvergleich. Reimers & Gurevych (2019) veranschaulichen den Unterschied: Das ähnlichste Paar unter 10.000 Sätzen zu finden, dauert etwa 65 Stunden, wenn jedes Paar gemeinsam durch [[bert|BERT]] geschickt wird, und etwa 5 Sekunden mit vorab berechneten Satz-Embeddings (SBERT). Query und Passagen müssen mit demselben Modell eingebettet werden, sonst sind ihre Vektoren nicht vergleichbar.
+Ein [[embeddings|Embedding-Modell]] bildet jeden Chunk auf einen Vektor fester Länge ab (typischerweise einige hundert bis einige tausend Zahlen), sodass bedeutungsähnliche Passagen nah beieinander liegen. RAG nutzt **Bi-Encoder**: Query und Passage werden unabhängig voneinander vom selben Modell kodiert. Erst das macht die Suche in großen Sammlungen praktikabel: Alle Passagenvektoren werden einmal im Voraus berechnet, und eine Query braucht nur einen Encoder-Aufruf plus einen Vektorvergleich. Reimers & Gurevych (2019) veranschaulichen den Unterschied: Das ähnlichste Paar unter 10.000 Sätzen zu finden, dauert etwa 65 Stunden, wenn jedes Paar gemeinsam durch [[bert|BERT]] geschickt wird, und etwa 5 Sekunden mit vorab berechneten Satz-Embeddings ([[sentence-bert|SBERT]]). Query und Passagen müssen mit demselben Modell eingebettet werden, sonst sind ihre Vektoren nicht vergleichbar.
 
 #### 3. Indexierung
 
@@ -316,3 +322,8 @@ RAG gibt einem Sprachmodell zur Laufzeit Zugriff auf eine externe, aktualisierba
 - Es, S. et al. (2023). *Ragas: Automated Evaluation of Retrieval Augmented Generation.* [arXiv:2309.15217](https://arxiv.org/abs/2309.15217)
 - Ovadia, O. et al. (2023). *Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs.* [arXiv:2312.05934](https://arxiv.org/abs/2312.05934)
 - Verordnung (EU) 2016/679 (DSGVO), Art. 17. [EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/deu)
+
+### Aktualisierungen
+
+#### 2026-10-11 — Planung und Ausführung bei der Deep Search trennen
+HiRA richtet sich an komplexe Suchaufgaben, die ein einzelnes Modell schlecht bewältigt, wenn es zugleich planen und ausführen muss: Ein Planer zerlegt die Aufgabe in Teilaufgaben, jede geht an einen domänenspezifischen Agenten mit eigenen Werkzeugen, und die Ergebnisse werden zusammengeführt. Auf vier crossmodalen Deep-Search-Benchmarks übertraf es aktuelle RAG- und agentenbasierte Systeme (Jin et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809666](https://doi.org/10.1145/3805712.3809666)); siehe [[agentic-ai|Agentic AI]].

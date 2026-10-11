@@ -1,0 +1,34 @@
+version: 1
+note_sha256: 6184e3e256ab12aa6b51570f746e1ac3e34bed412945748cd26467b8c73ab164
+extracted_by: claude
+discusses:
+- numpy
+- python
+- cross-validation
+- grid-search
+- random-search
+- support-vector-machines
+- classical-machine-learning
+- ml-preprocessing
+- classification
+- clustering
+- decision-trees
+- k-nearest-neighbors
+- keras-and-tensorflow
+- regularization-and-hyperparameters
+- model-comparison
+- experiment-tracking
+- logistic-regression
+relations:
+- from: scikit-learn
+  type: BASED_ON
+  to: numpy
+  evidence: built on NumPy and SciPy
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: cross-validation
+  evidence: steps can be chained into pipelines and tuned with cross-validation
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: support-vector-machines
+  evidence: LibSVM and LibLinear for support vector machines and linear models

@@ -21,6 +21,7 @@ areas:
     also:
       - bias-in-nlp
       - legal-ai
+      - sentence-bert
   - id: llm-adaptation
     name_en: Adapting & Running LLMs
     name_de: LLMs anpassen & betreiben
@@ -43,6 +44,7 @@ areas:
       - langchain-and-langgraph
       - prompt-engineering
       - prompt-comparison
+      - chain-of-thought-prompting
       - context-engineering
       - structured-context-construction
       - prompt-injection
@@ -58,6 +60,7 @@ areas:
       - information-retrieval
       - bm25
       - semantic-retrieval
+      - sentence-bert
       - vector-databases
       - cross-encoder
       - retrieval-augmented-generation
@@ -107,6 +110,7 @@ areas:
       - principal-component-analysis
       - regularization-and-hyperparameters
       - cross-validation
+      - scikit-learn
       - model-comparison
       - causal-inference
       - time-series-analysis
@@ -157,6 +161,7 @@ areas:
       - mlops-and-deployment
       - experiment-tracking
     also:
+      - scikit-learn
       - langchain-and-langgraph
       - regression-testing
       - quality-control

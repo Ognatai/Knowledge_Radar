@@ -43,7 +43,7 @@ Lexical retrieval with BM25 or tf-idf matches the words of the query ([[informat
 
 #### 2. Bi-encoders and sentence embeddings
 
-Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). Sentence-BERT encodes each text separately into an embedding compared with cosine similarity, which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
+Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). [[sentence-bert|Sentence-BERT]] encodes each text separately into an embedding compared with cosine similarity, which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
 
 #### 3. Dense passage retrieval
 
@@ -142,7 +142,7 @@ Lexikalisches Retrieval mit BM25 oder tf-idf gleicht die Wörter der Anfrage ab 
 
 #### 2. Bi-Encoder und Satz-Embeddings
 
-Jedes Paar aus Anfrage und Dokument gemeinsam mit [[bert|BERT]] zu bewerten ist für die Suche zu teuer: Das ähnlichste Paar unter 10.000 Sätzen zu finden dauert etwa 65 Stunden (Reimers & Gurevych, 2019). Sentence-BERT kodiert jeden Text einzeln in ein Embedding, das mit Kosinusähnlichkeit verglichen wird; das senkt den Aufwand auf etwa 5 Sekunden bei gleicher Genauigkeit wie BERT, und Dokument-Embeddings lassen sich einmal berechnen und in einem Vektorindex speichern ([[vector-databases|Vektordatenbanken]]).
+Jedes Paar aus Anfrage und Dokument gemeinsam mit [[bert|BERT]] zu bewerten ist für die Suche zu teuer: Das ähnlichste Paar unter 10.000 Sätzen zu finden dauert etwa 65 Stunden (Reimers & Gurevych, 2019). [[sentence-bert|Sentence-BERT]] kodiert jeden Text einzeln in ein Embedding, das mit Kosinusähnlichkeit verglichen wird; das senkt den Aufwand auf etwa 5 Sekunden bei gleicher Genauigkeit wie BERT, und Dokument-Embeddings lassen sich einmal berechnen und in einem Vektorindex speichern ([[vector-databases|Vektordatenbanken]]).
 
 #### 3. Dense Passage Retrieval
 

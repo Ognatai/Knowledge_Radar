@@ -51,7 +51,7 @@ Beyer et al. (1999) showed that under broad conditions, as dimensionality increa
 
 #### 5. Implementation
 
-k-NN is available in common libraries such as scikit-learn (Pedregosa et al., 2011). The same idea of finding the nearest points underlies similarity search over embeddings ([[vector-databases|Vector Databases]]).
+k-NN is available in common libraries such as [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011). The same idea of finding the nearest points underlies similarity search over embeddings ([[vector-databases|Vector Databases]]).
 
 #### Origin and variants
 
@@ -140,7 +140,7 @@ Beyer et al. (1999) zeigten, dass sich unter breiten Bedingungen mit wachsender 
 
 #### 5. Implementierung
 
-k-NN ist in gängigen Bibliotheken wie scikit-learn verfügbar (Pedregosa et al., 2011). Dieselbe Idee, die nächstgelegenen Punkte zu finden, liegt der Ähnlichkeitssuche über Embeddings zugrunde ([[vector-databases|Vektordatenbanken]]).
+k-NN ist in gängigen Bibliotheken wie [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011). Dieselbe Idee, die nächstgelegenen Punkte zu finden, liegt der Ähnlichkeitssuche über Embeddings zugrunde ([[vector-databases|Vektordatenbanken]]).
 
 #### Ursprung und Varianten
 

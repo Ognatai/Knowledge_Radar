@@ -50,7 +50,7 @@ except ValueError as error:
     print(f"not a number: {error}")
 ```
 
-A project typically starts with python -m venv .venv, activates the environment and installs packages with pip (Python venv docs). For data science, NumPy provides vectorised array operations, broadcasting and indexing on which libraries such as pandas and scikit-learn build (Harris et al., 2020; [[classical-machine-learning|Classical Machine Learning Methods]]).
+A project typically starts with python -m venv .venv, activates the environment and installs packages with pip (Python venv docs). For data science, NumPy provides vectorised array operations, broadcasting and indexing on which libraries such as pandas and [[scikit-learn|scikit-learn]] build (Harris et al., 2020; [[classical-machine-learning|Classical Machine Learning Methods]]).
 
 ### When to use it
 
@@ -134,7 +134,7 @@ except ValueError as error:
     print(f"keine Zahl: {error}")
 ```
 
-Ein Projekt beginnt typischerweise mit python -m venv .venv, aktiviert die Umgebung und installiert Pakete mit pip (Python venv docs). Für Data Science stellt NumPy vektorisierte Array-Operationen, Broadcasting und Indexierung bereit, auf denen Bibliotheken wie pandas und scikit-learn aufbauen (Harris et al., 2020; [[classical-machine-learning|Klassische ML-Verfahren]]).
+Ein Projekt beginnt typischerweise mit python -m venv .venv, aktiviert die Umgebung und installiert Pakete mit pip (Python venv docs). Für Data Science stellt NumPy vektorisierte Array-Operationen, Broadcasting und Indexierung bereit, auf denen Bibliotheken wie pandas und [[scikit-learn|scikit-learn]] aufbauen (Harris et al., 2020; [[classical-machine-learning|Klassische ML-Verfahren]]).
 
 ### Wann einsetzen
 

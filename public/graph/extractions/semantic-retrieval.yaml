@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 384e4b9048c250ef05c78676b7114cccc1103086736391980c04930f46b00e63
+note_sha256: 911eccdf85425f54ed2b51ba26acd02cdfc3d2bdb8aaed364cf56baf6129d3e6
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bm25

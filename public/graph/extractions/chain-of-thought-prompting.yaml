@@ -1,0 +1,33 @@
+version: 1
+note_sha256: 2985452960140ddacabfd3e698bc7e22aeb349ee8d34d8f5c8d6c3179d9d8d50
+extracted_by: claude
+discusses:
+- prompt-engineering
+- few-shot-prompting
+- zero-shot-chain-of-thought
+- self-consistency
+- g-eval
+- llm-as-a-judge
+- causal-inference
+- explainable-ai
+- hallucination-detection
+- prompt-comparison
+- llm-cost-optimization
+- instructgpt
+relations:
+- from: chain-of-thought-prompting
+  type: IS_EXAMPLE_OF
+  to: prompt-engineering
+  evidence: Chain-of-thought prompting is one of the techniques of prompt engineering
+- from: zero-shot-chain-of-thought
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: Kojima et al. (2022) showed the zero-shot variant
+- from: self-consistency
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: Wang et al. (2022) added self-consistency
+- from: g-eval
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: the judge G-Eval first generates evaluation steps with chain-of-thought prompting

@@ -41,7 +41,7 @@ Nogueira & Cho (2019) used BERT-Large as a binary classifier: the [CLS] vector g
 A first stage, such as [[bm25|BM25]] or a dense retriever, retrieves candidates from the whole collection, for example a thousand documents; the cross-encoder then re-scores each query–candidate pair and the list is sorted by the new scores (Nogueira & Cho, 2019). Only the candidates are scored, since a cross-encoder cannot pre-compute anything for the collection.
 
 #### 4. Why it is slow
-A bi-encoder can encode all candidates once, cache them and compare them with each new input. A cross-encoder must recompute the encoding for every input and candidate, which makes it prohibitively slow for scoring large numbers of candidates (Humeau et al., 2019). Finding the most similar pair among 10,000 sentences with a BERT cross-encoder takes about 50 million inference computations, roughly 65 hours on a V100 GPU, against about 5 seconds with Sentence-BERT embeddings (Reimers & Gurevych, 2019).
+A bi-encoder can encode all candidates once, cache them and compare them with each new input. A cross-encoder must recompute the encoding for every input and candidate, which makes it prohibitively slow for scoring large numbers of candidates (Humeau et al., 2019). Finding the most similar pair among 10,000 sentences with a BERT cross-encoder takes about 50 million inference computations, roughly 65 hours on a V100 GPU, against about 5 seconds with [[sentence-bert|Sentence-BERT]] embeddings (Reimers & Gurevych, 2019).
 
 #### Origin and variants
 Humeau et al. (2019) compared the two common architectures for scoring pairs, cross-encoders and bi-encoders, and proposed the poly-encoder in between, which is faster than a cross-encoder and more accurate than a bi-encoder. Nogueira & Cho (2019) applied BERT as a passage re-ranker. ColBERT (Khattab & Zaharia, 2020) delays the interaction: query and documents are encoded separately and compared token by token, so document representations can be pre-computed; see [[semantic-retrieval|Semantic Retrieval]].
@@ -145,7 +145,7 @@ Humeau et al. (2019) verglichen die beiden verbreiteten Architekturen zur Bewert
 | Ansatz | Unterschied | Geeignet für |
 |--------|-------------|--------------|
 | Cross-Encoder | Anfrage und Text gemeinsam, volle Attention über das Paar; genau, langsam (Humeau et al., 2019) | Re-Ranking einer kurzen Kandidatenliste |
-| Bi-Encoder (z. B. Sentence-BERT) | Jeder Text einzeln kodiert, Vergleich per Kosinus-Ähnlichkeit; Embeddings lassen sich speichern (Reimers & Gurevych, 2019) | Retrieval in der ersten Stufe, Clustering, [[vector-databases\|Vektordatenbanken]] |
+| Bi-Encoder (z. B. [[sentence-bert\|Sentence-BERT]]) | Jeder Text einzeln kodiert, Vergleich per Kosinus-Ähnlichkeit; Embeddings lassen sich speichern (Reimers & Gurevych, 2019) | Retrieval in der ersten Stufe, Clustering, [[vector-databases\|Vektordatenbanken]] |
 | Poly-Encoder | Kandidaten getrennt kodiert, Eingabe durch mehrere Attention-Codes repräsentiert; bei Geschwindigkeit und Genauigkeit zwischen beiden (Humeau et al., 2019) | Bewertung vieler Kandidaten, genauer als ein Bi-Encoder |
 | Late Interaction (ColBERT) | Vergleich auf Token-Ebene zwischen getrennt kodierter Anfrage und Dokument; mit BERT-Re-Rankern konkurrenzfähig, zwei Größenordnungen schneller (Khattab & Zaharia, 2020) | Re-Ranking oder Retrieval im großen Maßstab |
 | [[bm25\|BM25]] | Lexikalischer Termabgleich, kein Modell (Thakur et al., 2021) | Schnelle erste Stufe |

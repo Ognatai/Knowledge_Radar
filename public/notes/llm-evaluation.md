@@ -8,6 +8,7 @@ sources:
 - https://arxiv.org/abs/2109.07958
 - https://arxiv.org/abs/2306.05685
 - https://arxiv.org/abs/2403.04132
+- https://doi.org/10.18653/v1/2026.acl-long.2058
 ---
 
 ## EN
@@ -103,6 +104,11 @@ No single benchmark captures what an LLM can do; reliable evaluation combines re
 - Zheng, L. et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.* NeurIPS 2023. [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
 - Chiang, W. et al. (2024). *Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference.* ICML 2024. [arXiv:2403.04132](https://arxiv.org/abs/2403.04132)
 
+### Updates
+
+#### 2026-10-11 — Agents fall short in de-idealised environments
+Most agent benchmarks offer pre-packaged tools and clean, fully specified inputs. AgentGym2 instead tests end-to-end procedures from real work: agents must discover tools by exploration, combine them for unseen tasks and cope with noisy and underspecified information. Across 15 proprietary and open models, even state-of-the-art systems such as Gemini and GPT-5 struggled, showing a substantial gap to the demands of real applications (Xi et al., 2026; ACL 2026; [doi:10.18653/v1/2026.acl-long.2058](https://doi.org/10.18653/v1/2026.acl-long.2058)); see [[agentic-ai|Agentic AI]].
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -195,3 +201,8 @@ Kein einzelner Benchmark erfasst, was ein LLM kann; eine zuverlässige Evaluatio
 - Lin, S. et al. (2021). *TruthfulQA: Measuring How Models Mimic Human Falsehoods.* ACL 2022. [arXiv:2109.07958](https://arxiv.org/abs/2109.07958)
 - Zheng, L. et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.* NeurIPS 2023. [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
 - Chiang, W. et al. (2024). *Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference.* ICML 2024. [arXiv:2403.04132](https://arxiv.org/abs/2403.04132)
+
+### Aktualisierungen
+
+#### 2026-10-11 — Agenten scheitern in nicht idealisierten Umgebungen
+Die meisten Agenten-Benchmarks bieten fertig verpackte Werkzeuge und saubere, vollständig spezifizierte Eingaben. AgentGym2 testet stattdessen durchgängige Abläufe aus echter Arbeit: Agenten müssen Werkzeuge durch Erkundung finden, sie für unbekannte Aufgaben kombinieren und mit verrauschten und unvollständigen Informationen umgehen. Über 15 proprietäre und offene Modelle hinweg taten sich selbst aktuelle Systeme wie Gemini und GPT-5 schwer, was eine deutliche Lücke zu den Anforderungen realer Anwendungen zeigt (Xi et al., 2026; ACL 2026; [doi:10.18653/v1/2026.acl-long.2058](https://doi.org/10.18653/v1/2026.acl-long.2058)); siehe [[agentic-ai|Agentic AI]].

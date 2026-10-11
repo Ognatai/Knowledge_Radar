@@ -7,6 +7,7 @@ sources:
 - https://arxiv.org/abs/2311.09476
 - https://arxiv.org/abs/2405.07437
 - https://arxiv.org/abs/2312.10997
+- https://doi.org/10.1145/3805712.3809651
 ---
 
 ## EN
@@ -98,6 +99,11 @@ RAG evaluation enables comprehensive multi-dimensional assessment of retrieval a
 - Yu, H. et al. (2024). *Evaluation of Retrieval-Augmented Generation: A Survey.* [arXiv:2405.07437](https://arxiv.org/abs/2405.07437)
 - Gao, Y. et al. (2023). *Retrieval-Augmented Generation for Large Language Models: A Survey.* [arXiv:2312.10997](https://arxiv.org/abs/2312.10997)
 
+### Updates
+
+#### 2026-10-11 — RAG can amplify political bias
+An analysis of 16,254 C4 documents and 24,300 generated responses found a left-leaning and supportive stance bias that propagated from retrieval into generation. FAIR-RAG counters it with persona-based annotation by several LLMs, stance metadata in the vector database and a fairness step for each RAG stage; it improved rank fairness while context precision and faithfulness stayed at 0.97 and 0.99 or higher (You et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809651](https://doi.org/10.1145/3805712.3809651)); see [[bias-in-nlp|Bias in NLP]].
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -186,3 +192,8 @@ RAG-Bewertung ermöglicht eine umfassende mehrdimensionale Bewertung der Retriev
 - Saad-Falcon, J. et al. (2023). *ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems.* [arXiv:2311.09476](https://arxiv.org/abs/2311.09476)
 - Yu, H. et al. (2024). *Evaluation of Retrieval-Augmented Generation: A Survey.* [arXiv:2405.07437](https://arxiv.org/abs/2405.07437)
 - Gao, Y. et al. (2023). *Retrieval-Augmented Generation for Large Language Models: A Survey.* [arXiv:2312.10997](https://arxiv.org/abs/2312.10997)
+
+### Aktualisierungen
+
+#### 2026-10-11 — RAG kann politischen Bias verstärken
+Eine Analyse von 16.254 C4-Dokumenten und 24.300 erzeugten Antworten fand einen links geneigten und zustimmenden Bias, der sich vom Retrieval in die Generierung fortsetzte. FAIR-RAG begegnet dem mit Persona-basierter Annotation durch mehrere LLMs, Metadaten zur Haltung in der Vektordatenbank und einem Fairness-Schritt für jede RAG-Stufe; es verbesserte die Fairness der Rangfolge, während Context Precision und Faithfulness bei 0,97 bzw. 0,99 oder höher blieben (You et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809651](https://doi.org/10.1145/3805712.3809651)); siehe [[bias-in-nlp|Bias in NLP]].

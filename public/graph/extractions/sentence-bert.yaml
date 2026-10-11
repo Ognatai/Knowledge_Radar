@@ -1,0 +1,33 @@
+version: 1
+note_sha256: f731ff187fc8123b0d51b5c5e58afb4c7d215e82c0e0948e1dec88b1e08ca55b
+extracted_by: claude
+discusses:
+- bert
+- bi-encoder
+- cross-encoder
+- dense-passage-retrieval
+- cosine-similarity
+- glove
+- embeddings
+- semantic-retrieval
+- vector-databases
+- rag-retrieval
+- rag-retrieval-evaluation
+- text-similarity-metrics
+relations:
+- from: sentence-bert
+  type: BASED_ON
+  to: bert
+  evidence: Sentence-BERT (SBERT) fine-tunes BERT (Devlin et al., 2018) in a siamese network
+- from: sentence-bert
+  type: IS_EXAMPLE_OF
+  to: bi-encoder
+  evidence: The same separate-encoding idea is called a bi-encoder
+- from: dense-passage-retrieval
+  type: IS_EXAMPLE_OF
+  to: bi-encoder
+  evidence: Dense Passage Retrieval uses it with two BERT encoders
+- from: cross-encoder
+  type: COMPLEMENTS
+  to: sentence-bert
+  evidence: retrieves the nearest neighbours of a query and re-ranks them with a cross-encoder

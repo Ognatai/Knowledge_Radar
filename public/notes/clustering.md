@@ -52,7 +52,7 @@ DBSCAN (Ester et al., 1996) relies on a density-based notion of clusters: cluste
 
 #### 5. Implementation
 
-k-means, hierarchical clustering and DBSCAN are available in scikit-learn (Pedregosa et al., 2011). Because all three rely on distances, features should be scaled to comparable ranges first ([[ml-preprocessing|ML Preprocessing]]).
+k-means, hierarchical clustering and DBSCAN are available in [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011). Because all three rely on distances, features should be scaled to comparable ranges first ([[ml-preprocessing|ML Preprocessing]]).
 
 #### Origin and variants
 
@@ -142,7 +142,7 @@ DBSCAN (Ester et al., 1996) beruht auf einem dichtebasierten Clusterbegriff: Clu
 
 #### 5. Implementierung
 
-k-Means, hierarchisches Clustering und DBSCAN sind in scikit-learn verfügbar (Pedregosa et al., 2011). Da alle drei auf Abständen beruhen, sollten die Merkmale vorher auf vergleichbare Bereiche skaliert werden ([[ml-preprocessing|Preprocessing für Machine Learning]]).
+k-Means, hierarchisches Clustering und DBSCAN sind in [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011). Da alle drei auf Abständen beruhen, sollten die Merkmale vorher auf vergleichbare Bereiche skaliert werden ([[ml-preprocessing|Preprocessing für Machine Learning]]).
 
 #### Ursprung und Varianten
 

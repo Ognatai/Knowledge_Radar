@@ -10,6 +10,7 @@ sources:
 - https://arxiv.org/abs/2610.10971
 - https://arxiv.org/abs/2610.08026
 - https://arxiv.org/abs/2610.11389
+- https://doi.org/10.18653/v1/2026.findings-acl.1477
 ---
 
 ## EN
@@ -89,6 +90,11 @@ A hallucination detector is only as good as its evidence and its labels: it need
 - Valjakka, J. et al. (2026). *The Labeling Problem in Hallucination Detection Benchmarks: An Empirical Evaluation.* [arXiv:2610.08026](https://arxiv.org/abs/2610.08026)
 - Obeysekara, N. & Jayatilleke, N. (2026). *Fact over Fiction: Detection of Pathological Hallucinations in Sinhala-to-English Neural Machine Translation.* [arXiv:2610.11389](https://arxiv.org/abs/2610.11389)
 
+### Updates
+
+#### 2026-10-11 — Checking entities against retrieved evidence
+Instead of relying on the model's internal signals, whose knowledge may be outdated, EAEV detects hallucinated entities by retrieving evidence and checking how well each generated entity aligns with it along three dimensions; a counterfactual stability analysis tests whether the alignment holds when the evidence is perturbed. It reached 87.89% AUROC on LLaMA2-13B (Jia et al., 2026; Findings of ACL 2026; [doi:10.18653/v1/2026.findings-acl.1477](https://doi.org/10.18653/v1/2026.findings-acl.1477)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Basis der angegebenen Quellen; sie kann unvollständig, veraltet oder fehlerhaft sein.
@@ -165,3 +171,8 @@ Ein Halluzinationsdetektor ist nur so gut wie seine Evidenz und seine Labels: Er
 - Demir, M. M. & Canbaz, M. A. (2026). *When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection.* ICAIL 2026. [arXiv:2610.10971](https://arxiv.org/abs/2610.10971)
 - Valjakka, J. et al. (2026). *The Labeling Problem in Hallucination Detection Benchmarks: An Empirical Evaluation.* [arXiv:2610.08026](https://arxiv.org/abs/2610.08026)
 - Obeysekara, N. & Jayatilleke, N. (2026). *Fact over Fiction: Detection of Pathological Hallucinations in Sinhala-to-English Neural Machine Translation.* [arXiv:2610.11389](https://arxiv.org/abs/2610.11389)
+
+### Aktualisierungen
+
+#### 2026-10-11 — Entitäten gegen abgerufene Belege prüfen
+Statt sich auf interne Signale des Modells zu verlassen, dessen Wissen veraltet sein kann, erkennt EAEV halluzinierte Entitäten, indem es Belege abruft und prüft, wie gut jede erzeugte Entität in drei Dimensionen zu ihnen passt; eine kontrafaktische Stabilitätsanalyse testet, ob die Übereinstimmung bei veränderten Belegen bestehen bleibt. Auf LLaMA2-13B erreichte es 87,89 % AUROC (Jia et al., 2026; Findings of ACL 2026; [doi:10.18653/v1/2026.findings-acl.1477](https://doi.org/10.18653/v1/2026.findings-acl.1477)).

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 427e7f7dcf771fb44c601409ee5af6fa6fcaf22472b10f750a95338816fec1e2
+note_sha256: 2890c133df48711029dcd583eab4a78ce839a93cbdec67f98663edff4954dd72
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - propensity-score

@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-Text similarity metrics score how close a candidate text is to a reference or to another text. Lexical metrics such as BLEU (Papineni et al., 2002) and ROUGE (Lin, 2004) count overlapping n-grams. Embedding-based methods compare learned representations instead: BERTScore matches tokens via contextual embeddings (Zhang et al., 2019), and Sentence-BERT compares whole sentences by the cosine similarity of their [[embeddings|Embeddings]] (Reimers & Gurevych, 2019).
+Text similarity metrics score how close a candidate text is to a reference or to another text. Lexical metrics such as BLEU (Papineni et al., 2002) and ROUGE (Lin, 2004) count overlapping n-grams. Embedding-based methods compare learned representations instead: BERTScore matches tokens via contextual embeddings (Zhang et al., 2019), and [[sentence-bert|Sentence-BERT]] compares whole sentences by the cosine similarity of their [[embeddings|Embeddings]] (Reimers & Gurevych, 2019).
 
 ### How it works
 
@@ -100,7 +100,7 @@ Lexical metrics such as BLEU and ROUGE measure word overlap cheaply, while embed
 
 ### TL;DR
 
-Textähnlichkeitsmetriken bewerten, wie nahe ein Kandidatentext an einem Referenztext oder an einem anderen Text liegt. Lexikalische Metriken wie BLEU (Papineni et al., 2002) und ROUGE (Lin, 2004) zählen übereinstimmende n-Gramme. Embedding-basierte Methoden vergleichen stattdessen gelernte Repräsentationen: BERTScore ordnet Token über kontextuelle Embeddings einander zu (Zhang et al., 2019), und Sentence-BERT vergleicht ganze Sätze über die Kosinusähnlichkeit ihrer [[embeddings|Embeddings]] (Reimers & Gurevych, 2019).
+Textähnlichkeitsmetriken bewerten, wie nahe ein Kandidatentext an einem Referenztext oder an einem anderen Text liegt. Lexikalische Metriken wie BLEU (Papineni et al., 2002) und ROUGE (Lin, 2004) zählen übereinstimmende n-Gramme. Embedding-basierte Methoden vergleichen stattdessen gelernte Repräsentationen: BERTScore ordnet Token über kontextuelle Embeddings einander zu (Zhang et al., 2019), und [[sentence-bert|Sentence-BERT]] vergleicht ganze Sätze über die Kosinusähnlichkeit ihrer [[embeddings|Embeddings]] (Reimers & Gurevych, 2019).
 
 ### Funktionsweise
 

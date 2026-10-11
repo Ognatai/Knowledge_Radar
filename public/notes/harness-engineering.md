@@ -8,6 +8,7 @@ sources:
 - https://www.anthropic.com/engineering/building-effective-agents
 - https://arxiv.org/abs/2302.12173
 - https://modelcontextprotocol.io/specification/latest/server/tools
+- https://doi.org/10.18653/v1/2026.acl-industry.114
 ---
 
 ## EN
@@ -112,6 +113,11 @@ The prompt tells the model what it should do; the harness determines what it can
 - Greshake, K. et al. (2023). *Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection.* AISec 2023. [arXiv:2302.12173](https://arxiv.org/abs/2302.12173)
 - Model Context Protocol. *Specification: Tools.* modelcontextprotocol.io. [modelcontextprotocol.io](https://modelcontextprotocol.io/specification/latest/server/tools)
 
+### Updates
+
+#### 2026-10-11 — A deterministic boundary in a production pricing system
+A pricing system for a tourism operator draws a strict line: the LLM only extracts structured data from orders and selects among policies and paths, while every price is computed deterministically. Policies are compiled into interpretable condition trees that expose auditable artefacts for human control. Deployed at 7 sites with more than 1,000 active policies, it processed 3,960 orders in six months and cut handling time per order from 10 to under 2 minutes (Zhang et al., 2026; ACL 2026 Industry Track; [doi:10.18653/v1/2026.acl-industry.114](https://doi.org/10.18653/v1/2026.acl-industry.114)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -213,3 +219,8 @@ Der Prompt sagt dem Modell, was es tun soll; der Harness bestimmt, was es tun ka
 - Erik S. & Zhang, B. (2024). *Building effective agents.* Anthropic Engineering, 19 December 2024. [anthropic.com](https://www.anthropic.com/engineering/building-effective-agents)
 - Greshake, K. et al. (2023). *Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection.* AISec 2023. [arXiv:2302.12173](https://arxiv.org/abs/2302.12173)
 - Model Context Protocol. *Specification: Tools.* modelcontextprotocol.io. [modelcontextprotocol.io](https://modelcontextprotocol.io/specification/latest/server/tools)
+
+### Aktualisierungen
+
+#### 2026-10-11 — Eine deterministische Grenze in einem produktiven Preissystem
+Ein Preissystem für einen Tourismusbetrieb zieht eine strikte Grenze: Das LLM extrahiert nur strukturierte Daten aus Bestellungen und wählt zwischen Regeln und Pfaden, während jeder Preis deterministisch berechnet wird. Die Regeln werden in interpretierbare Bedingungsbäume übersetzt, die prüfbare Artefakte für die menschliche Kontrolle liefern. Im Einsatz an 7 Standorten mit über 1.000 aktiven Regeln verarbeitete es in sechs Monaten 3.960 Bestellungen und senkte die Bearbeitungszeit pro Bestellung von 10 auf unter 2 Minuten (Zhang et al., 2026; ACL 2026 Industry Track; [doi:10.18653/v1/2026.acl-industry.114](https://doi.org/10.18653/v1/2026.acl-industry.114)).

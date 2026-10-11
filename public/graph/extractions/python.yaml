@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8b93c8c518522a9b6ba05af57e62bb8146caa1995b3d5fca62f68ae1db909cba
+note_sha256: cf787fc45a1ae4aaefdcde563669d8fa1384f6582fbef4fe67f4f2cd4512ea68
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - numpy
