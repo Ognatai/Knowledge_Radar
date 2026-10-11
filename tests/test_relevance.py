@@ -134,6 +134,14 @@ def test_proposals_are_capped_and_ranked_by_importance_then_tier():
     assert [d.finding.id for d in proposals] == ["important", "reviewed", "preprint"]
 
 
+def test_at_most_one_update_per_note_is_proposed():
+    first = Decision(finding(identifier="a"), "update", "rag", "topic", 5, "", [])
+    second = Decision(finding(identifier="b"), "update", "rag", "topic", 4, "", [])
+    other = Decision(finding(identifier="c"), "update", "lora", "topic", 3, "", [])
+
+    assert [d.finding.id for d in select_proposals([first, second, other], limit=5)] == ["a", "c"]
+
+
 def test_upvotes_break_ties():
     decisions = [decision("update", 3, identifier="few", upvotes=5), decision("update", 3, identifier="many", upvotes=90)]
 

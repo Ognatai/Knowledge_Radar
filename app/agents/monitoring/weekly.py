@@ -19,6 +19,7 @@ for the notification.
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import time
@@ -76,6 +77,8 @@ def run_module(step: Step, log: Callable[[str], None]) -> int:
         text=True,
         encoding="utf-8",
         errors="replace",
+        # Feed titles contain emoji; the Windows default code page cannot print them.
+        env={**os.environ, "PYTHONIOENCODING": "utf-8"},
     )
     assert process.stdout is not None
     for line in process.stdout:

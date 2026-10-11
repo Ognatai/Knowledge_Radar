@@ -25,7 +25,8 @@ New topics are proposed per topic, not per finding: a topic qualifies when a
 finding was judged new or when it recurs in several substantive findings, and the
 model then checks it once, with reasoning, against the notes with the most similar
 titles. Updates and new topics are proposals; at most `max_proposals_per_week`
-(sources.yaml) are kept, ranked by importance, then tier, source kind and upvotes.
+(sources.yaml) minus the slots reserved for promotions are kept, ranked by
+importance, then tier, source kind and upvotes, and at most one update per note.
 Recurring new topics outside the arXiv search phrases suggest new search phrases.
 The room left under the cap goes to promotions of registry entities (`promotion`).
 
@@ -253,9 +254,24 @@ def priority(decision: Decision) -> tuple[float, ...]:
     return (decision.importance, tier, kind, finding.upvotes or 0)
 
 
+# One update per note and run: several in one week crowded a few notes (three for
+# RAG in the first run with peer-reviewed updates) and soon trigger their rewrite.
+MAX_UPDATES_PER_NOTE = 1
+
+
 def select_proposals(decisions: list[Decision], limit: int) -> list[Decision]:
-    proposals = [decision for decision in decisions if decision.is_proposal]
-    return sorted(proposals, key=priority, reverse=True)[:limit]
+    """The highest-priority proposals, at most `limit`, at most one update per note."""
+    selected: list[Decision] = []
+    per_note: dict[str, int] = {}
+    for decision in sorted((d for d in decisions if d.is_proposal), key=priority, reverse=True):
+        if decision.decision == "update" and decision.note:
+            if per_note.get(decision.note, 0) >= MAX_UPDATES_PER_NOTE:
+                continue
+            per_note[decision.note] = per_note.get(decision.note, 0) + 1
+        selected.append(decision)
+        if len(selected) == limit:
+            break
+    return selected
 
 
 def _similarity(a: list[float], b: list[float]) -> float:
@@ -500,7 +516,9 @@ def main() -> int:
 
     topics = topic_proposals(decisions, [(note.slug, note.title_en) for note in notes], embeddings.embed)
     updates = [decision for decision in decisions if decision.decision == "update"]
-    proposals = select_proposals(updates + topics, config.max_proposals_per_week)
+    # The promotion slots are kept free: otherwise a week with many updates crowds them out.
+    reserved = min(config.promotions_per_week, config.max_proposals_per_week)
+    proposals = select_proposals(updates + topics, config.max_proposals_per_week - reserved)
     suggestions = suggest_search_phrases(decisions, config.arxiv.queries, embeddings.embed)
     declined = promotion.load_declined()
     promotions = promotion.select_promotions(
