@@ -63,15 +63,29 @@ Every push to `main` publishes the site: the workflow
 **GitHub Actions**). It can also be started by hand via **Actions → Deploy
 public site → Run workflow**. Check changes locally before they reach `main`.
 
-## 5. Local app API
+## 5. Local app (chat)
+
+The local app is a chat over the public and, if set up, the private knowledge
+base (section 8), answered by the local Ollama model. It runs in Docker, bound to
+`localhost` only, next to the public index:
 
 ```powershell
-uvicorn app.backend.knowledge_radar.api:app --reload
+scripts\start-app.ps1          # both indices, API and chat UI; opens http://127.0.0.1:8080
+scripts\start-app.ps1 -NoPrivate
 ```
 
-The API listens on `http://127.0.0.1:8000` (documentation at `/docs`). With
-Docker Desktop running, `docker compose up --build` starts the same API, bound
-to `localhost` only. The chat and Review Dashboard UI are not implemented yet.
+The script reads both Neo4j passwords from the Credential Manager and passes them
+to Docker Compose for that process only. Ollama must run on the host; the
+containers reach it via `host.docker.internal`. The chat model is
+`KNOWLEDGE_RADAR_CHAT_MODEL` (default `qwen3:4b-instruct`). The chat remembers the
+current conversation in the browser tab only; the server stores nothing.
+
+For development without Docker:
+
+```powershell
+uvicorn app.backend.knowledge_radar.api:app --reload   # API on :8000, docs at /docs
+cd approntend; npm install; npm run dev                 # UI on :5173, /api proxied to :8000
+```
 
 ## 6. Ollama
 
@@ -79,7 +93,7 @@ Install Ollama on the host (it is not containerized). Models:
 
 | Use | Model | Machine in this project's deployment |
 | --- | --- | --- |
-| Chat (local app) | `ollama pull qwen3.5:4b` | ThinkPad (CUDA) |
+| Chat (local app) | `ollama pull qwen3:4b-instruct` | ThinkPad (CUDA) |
 | Agent pipeline (extraction) | `ollama pull qwen3:30b-a3b` | Desktop (AMD, Vulkan) |
 
 On a single machine, pull whichever fits your GPU. In VS Code, **Knowledge
