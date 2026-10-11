@@ -14,6 +14,10 @@ Algorithmic, no generative model (architecture, step 4):
     python -m app.agents.linking                         # report the suggestions
     python -m app.agents.linking --target gpt            # only links to one note
     python -m app.agents.linking --target gpt --apply    # write them into the notes
+    python -m app.agents.linking --source gpt --apply    # links inside a new note to the others
+
+For a new note, run it with --target and with --source; lasting rejections go to
+public/link-exclusions.yaml.
 """
 
 from __future__ import annotations
@@ -84,6 +88,7 @@ def _sentence(line: str, start: int) -> str:
 
 
 def find_mentions(texts: dict[str, str], notes: dict[str, NoteDetail], targets: set[str] | None = None) -> list[Mention]:
+    """`texts` are the notes to search (all, or only new ones); `notes` are all link targets."""
     """First unlinked mention of each target per note and language section."""
     patterns = {
         (slug, language): [name_pattern(name) for name in target_names(note, language)]
@@ -207,10 +212,15 @@ def suggest(
     targets: set[str] | None = None,
     min_score: float = MIN_SCORE,
     embed: Callable[[list[str]], list[list[float]]] = embeddings.embed,
+    sources: set[str] | None = None,
 ) -> tuple[list[Mention], list[Mention]]:
-    """(accepted, rejected) suggestions for all notes."""
+    """(accepted, rejected) suggestions in `sources` (default: all notes) to `targets`."""
     notes = {note.slug: note for note in load_notes(notes_directory)}
-    texts = {slug: (notes_directory / f"{slug}.md").read_text(encoding="utf-8") for slug in notes}
+    texts = {
+        slug: (notes_directory / f"{slug}.md").read_text(encoding="utf-8")
+        for slug in notes
+        if sources is None or slug in sources
+    }
     excluded = load_exclusions(notes_directory)
     mentions = [m for m in find_mentions(texts, notes, targets) if (m.source, m.target) not in excluded]
     scored = score_mentions(mentions, notes, embed)
@@ -222,6 +232,7 @@ def suggest(
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--target", action="append", help="only links to this note slug (repeatable)")
+    parser.add_argument("--source", action="append", help="only links inside this note (repeatable)")
     parser.add_argument("--apply", action="store_true", help="write the accepted links into the notes")
     parser.add_argument("--min-score", type=float, default=MIN_SCORE)
     parser.add_argument(
@@ -234,7 +245,12 @@ def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
     try:
-        accepted, rejected = suggest(args.notes_dir, set(args.target) if args.target else None, args.min_score)
+        accepted, rejected = suggest(
+            args.notes_dir,
+            set(args.target) if args.target else None,
+            args.min_score,
+            sources=set(args.source) if args.source else None,
+        )
     except embeddings.EmbeddingError as exc:
         print(exc, file=sys.stderr)
         return 1
