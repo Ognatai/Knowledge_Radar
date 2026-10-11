@@ -44,3 +44,35 @@ def test_embeddings_can_be_kept_on_the_cpu(monkeypatch):
     embeddings.embed(["a"])
 
     assert bodies[0]["options"] == {"num_gpu": 0}
+
+
+def test_a_rejected_request_is_retried_and_its_reason_reported(monkeypatch):
+    import io
+    import urllib.error
+
+    import pytest
+
+    calls = []
+
+    def urlopen(request, timeout):
+        calls.append(1)
+        if len(calls) < 3:
+            raise urllib.error.HTTPError("url", 400, "Bad Request", {}, io.BytesIO(b'{"error":"model busy"}'))
+        return Response(1)
+
+    monkeypatch.setattr(embeddings.urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr(embeddings.time, "sleep", lambda seconds: None)
+
+    assert embeddings.embed(["x"]) == [[1.0]]
+    assert len(calls) == 3
+
+    # A request that keeps failing reports Ollama's reason.
+    monkeypatch.setattr(
+        embeddings.urllib.request,
+        "urlopen",
+        lambda request, timeout: (_ for _ in ()).throw(
+            urllib.error.HTTPError("url", 400, "Bad Request", {}, io.BytesIO(b'{"error":"model busy"}'))
+        ),
+    )
+    with pytest.raises(embeddings.EmbeddingError, match="model busy"):
+        embeddings.embed(["x"])

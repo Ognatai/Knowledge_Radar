@@ -20,7 +20,7 @@ from typing import Any, Callable
 
 import yaml
 
-from app.agents import llm
+from app.agents import entity_resolution, llm
 from app.backend.knowledge_radar.graph import (
     DEFAULT_GRAPH_DIRECTORY,
     ENTITY_ID_PATTERN,
@@ -39,6 +39,7 @@ from app.backend.knowledge_radar.graph import (
     public_relation_types,
     relation_problem,
 )
+from app.backend.knowledge_radar import embeddings
 from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import (
     REPOSITORY_ROOT,
@@ -76,6 +77,8 @@ class NoteExtraction:
     new_entities: list[Entity] = field(default_factory=list)
     # Problems with output the model did not correct; the items were left out.
     dropped: list[str] = field(default_factory=list)
+    # Known entity id -> new names confirmed as aliases by entity resolution.
+    aliases: dict[str, list[str]] = field(default_factory=dict)
 
 
 def reading_text(markdown: str) -> str:
@@ -724,6 +727,10 @@ def write_extraction(
         registry = yaml.safe_load(registry_path.read_text(encoding="utf-8")) or registry
         registry["entities"] = registry.get("entities") or []
     registered = {entry["id"] for entry in registry["entities"]}
+    for entry in registry["entities"]:
+        for alias in extraction.aliases.get(entry["id"], []):
+            if alias not in entry.setdefault("aliases", []):
+                entry["aliases"].append(alias)
     for entity in extraction.new_entities:
         if entity.id not in registered:
             registry["entities"].append(
@@ -745,6 +752,56 @@ def write_extraction(
     return path
 
 
+def describe_entity(entity: Entity, graph, notes_by_slug: dict[str, NoteDetail]) -> str:
+    """How the knowledge base uses an entity: a note's opening, or a sentence of a note
+    that discusses it."""
+    if entity.note and entity.note in notes_by_slug:
+        return reading_text(notes_by_slug[entity.note].content_en)[:300].replace("\n", " ")
+    for slug, discussed in sorted(graph.discusses):
+        if discussed == entity.id and slug in notes_by_slug:
+            sentence = entity_resolution.mention(
+                plain_text(notes_by_slug[slug].content_en), entity_resolution.entity_names(entity)
+            )
+            if sentence:
+                return sentence
+    return ""
+
+
+def resolve_new_entities(
+    note: NoteDetail,
+    extraction: NoteExtraction,
+    graph,
+    notes_by_slug: dict[str, NoteDetail],
+    index: "entity_resolution.NameIndex",
+    *,
+    generate: Generate = llm.generate,
+    model: str | None = None,
+    log: Callable[[str], None] = print,
+) -> None:
+    """Merge new entities that the model confirms as known ones under another name."""
+    resolution = entity_resolution.resolve(
+        extraction.new_entities,
+        plain_text(note.content_en),
+        index,
+        lambda entity: describe_entity(entity, graph, notes_by_slug),
+        generate=generate,
+        model=model,
+    )
+    if not resolution.merged:
+        return
+    extraction.discusses, extraction.relations = entity_resolution.apply(
+        resolution, extraction.discusses, extraction.relations, note.slug
+    )
+    extraction.new_entities = [entity for entity in extraction.new_entities if entity.id not in resolution.merged]
+    extraction.aliases = resolution.aliases
+    for new_id, known_id in resolution.merged.items():
+        log(f"  resolved: {new_id} -> {known_id}")
+    for known_id, names in resolution.aliases.items():
+        owner = graph.entities[known_id].note
+        if owner:
+            log(f"  alias for the note {owner} (add to its frontmatter by hand): {', '.join(names)}")
+
+
 def extract_notes(
     slugs: list[str] | None,
     notes_directory: Path,
@@ -755,16 +812,21 @@ def extract_notes(
     relation_think: bool | None = None,
     classify: bool = True,
     generate: Generate = llm.generate,
+    embed: entity_resolution.Embed | None = None,
     log: Callable[[str], None] = lambda line: print(line, flush=True),
 ) -> dict[str, NoteExtraction]:
     """Extract the given notes (all if None) into `graph_directory`, one after another,
-    so that entities registered for one note are known for the next."""
+    so that entities registered for one note are known for the next.
+
+    With `embed`, new entities are resolved against the known ones first
+    (`entity_resolution`); without it, only exact names and aliases are matched."""
     notes = load_notes(notes_directory)
     by_slug = {note.slug: note for note in notes}
     unknown = sorted(set(slugs or []) - set(by_slug))
     if unknown:
         raise NoteRepositoryError(f"Unknown notes: {', '.join(unknown)}")
     results: dict[str, NoteExtraction] = {}
+    index = None
     for slug in slugs or sorted(by_slug):
         note = by_slug[slug]
         graph = load_graph(graph_directory, notes, notes_directory)
@@ -777,6 +839,10 @@ def extract_notes(
             relation_think=relation_think,
             classify=classify,
         )
+        if embed is not None and extraction.new_entities:
+            if index is None:
+                index = entity_resolution.NameIndex(known_entities(graph), embed)
+            resolve_new_entities(note, extraction, graph, by_slug, index, generate=generate, model=model, log=log)
         write_extraction(
             graph_directory,
             notes_directory / f"{slug}.md",
@@ -819,6 +885,12 @@ def main() -> int:
         action="store_false",
         help="Skip the type-and-direction classifier (much faster; for output that is reviewed anyway).",
     )
+    parser.add_argument(
+        "--no-resolve",
+        dest="resolve",
+        action="store_false",
+        help="Match new entities only by exact name and alias, without the embedding shortlist and model check.",
+    )
     args = parser.parse_args()
     try:
         extract_notes(
@@ -829,8 +901,9 @@ def main() -> int:
             think=args.think,
             relation_think=args.relation_think,
             classify=args.classify,
+            embed=embeddings.embed if args.resolve else None,
         )
-    except (NoteRepositoryError, GraphError, llm.LLMError) as exc:
+    except (NoteRepositoryError, GraphError, llm.LLMError, embeddings.EmbeddingError) as exc:
         print(f"Extraction failed: {exc}", file=sys.stderr)
         return 1
     return 0

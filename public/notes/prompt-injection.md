@@ -2,8 +2,6 @@
 title_en: Prompt Injection
 title_de: Prompt Injection
 entity_type: Concept
-aliases:
-- Indirect prompt injection
 sources:
 - https://arxiv.org/abs/2302.12173
 - https://arxiv.org/abs/2306.05499

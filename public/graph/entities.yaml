@@ -683,7 +683,6 @@ entities:
   name_de: Precision-Recall-Kurve
   aliases:
   - PR curve
-  - PR AUC
 - id: exact-match
   type: Concept
   name_en: Exact match
@@ -732,7 +731,6 @@ entities:
   name_de: Hierarchisches Clustering
   aliases:
   - agglomerative clustering
-  - Ward's method
 - id: dbscan
   type: Method
   name_en: DBSCAN

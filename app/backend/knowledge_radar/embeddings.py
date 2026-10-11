@@ -10,12 +10,17 @@ from __future__ import annotations
 
 import json
 import os
+import time
+import urllib.error
 import urllib.request
 
 DEFAULT_BASE_URL = "http://127.0.0.1:11434"
 DEFAULT_MODEL = "qwen3-embedding:0.6b"
 QUERY_INSTRUCTION = "Given a question, retrieve passages from a knowledge base that answer it"
 BATCH_SIZE = 16
+# Ollama sporadically rejected an embedding request with HTTP 400 that succeeded
+# when sent again (2026-10-11, with the chat model loaded next to it).
+RETRIES = 2
 
 
 class EmbeddingError(RuntimeError):
@@ -50,11 +55,18 @@ def embed(texts: list[str], *, model: str | None = None, timeout: float = 600) -
             data=json.dumps(body).encode("utf-8"),
             headers={"Content-Type": "application/json"},
         )
-        try:
-            with urllib.request.urlopen(request, timeout=timeout) as response:
-                result = json.loads(response.read())["embeddings"]
-        except (OSError, KeyError, json.JSONDecodeError) as exc:
-            raise EmbeddingError(f"Ollama embedding request to {base_url} failed: {exc}") from exc
+        for attempt in range(RETRIES + 1):
+            try:
+                with urllib.request.urlopen(request, timeout=timeout) as response:
+                    result = json.loads(response.read())["embeddings"]
+                break
+            except urllib.error.HTTPError as exc:
+                reason = exc.read().decode("utf-8", "replace")[:300]
+                if attempt == RETRIES:
+                    raise EmbeddingError(f"Ollama embedding request to {base_url} failed: {exc} {reason}") from exc
+                time.sleep(2 * (attempt + 1))
+            except (OSError, KeyError, json.JSONDecodeError) as exc:
+                raise EmbeddingError(f"Ollama embedding request to {base_url} failed: {exc}") from exc
         if len(result) != len(batch):
             raise EmbeddingError(f"Expected {len(batch)} embeddings, got {len(result)}.")
         vectors.extend(result)
