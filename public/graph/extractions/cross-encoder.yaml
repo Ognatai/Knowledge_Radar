@@ -1,0 +1,36 @@
+version: 1
+note_sha256: ea2c75366804873ec0311f282b570ddae371e366add8d18f78e2dfb8c959fdde
+extracted_by: claude
+discusses:
+- bert
+- bi-encoder
+- poly-encoder
+- colbert
+- sentence-bert
+- bm25
+- beir
+- ms-marco
+- retrieval-augmented-generation
+- rag-retrieval
+- rag-failure-modes
+- rag-retrieval-evaluation
+- semantic-retrieval
+- vector-databases
+- embeddings
+relations:
+- from: cross-encoder
+  type: BASED_ON
+  to: bert
+  evidence: passed through a pre-trained Transformer such as BERT
+- from: ms-marco
+  type: EVALUATES
+  to: cross-encoder
+  evidence: A BERT re-ranker outperformed the previous state of the art on MS MARCO passage retrieval
+- from: beir
+  type: EVALUATES
+  to: cross-encoder
+  evidence: On BEIR, re-ranking BM25's top candidates with a cross-encoder (BM25+CE) gave the best zero-shot results
+- from: bm25
+  type: COMPLEMENTS
+  to: cross-encoder
+  evidence: A first stage, such as BM25 or a dense retriever, retrieves candidates from the whole collection

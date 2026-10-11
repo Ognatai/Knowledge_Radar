@@ -1,0 +1,45 @@
+version: 1
+note_sha256: ac59cac21098ad34cafd3482d2c324f18a76fb83482311b202c53c33aa3f71ed
+extracted_by: claude
+discusses:
+- attention-and-transformers
+- bert
+- openai
+- tokenization
+- byte-pair-encoding
+- few-shot-prompting
+- zero-shot-prompting
+- prompt-engineering
+- instructgpt
+- rlhf
+- reinforcement-learning
+- multimodal-models
+- large-language-models
+- llm-adaptation
+- chatgpt
+- bias-in-nlp
+- hallucination-detection
+- llm-as-a-judge
+- quantization
+- prompt-comparison
+relations:
+- from: gpt
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: GPT uses a multi-layer Transformer decoder
+- from: gpt
+  type: DEVELOPED_BY
+  to: openai
+  evidence: GPT (Generative Pre-trained Transformer) is OpenAI's family of language models
+- from: gpt
+  type: BASED_ON
+  to: byte-pair-encoding
+  evidence: GPT-2 uses byte-level byte pair encoding with a vocabulary of 50,257 tokens
+- from: instructgpt
+  type: BASED_ON
+  to: gpt
+  evidence: InstructGPT fine-tunes GPT-3 in three steps
+- from: instructgpt
+  type: BASED_ON
+  to: rlhf
+  evidence: optimising the model against that reward model with PPO (reinforcement learning from human feedback)

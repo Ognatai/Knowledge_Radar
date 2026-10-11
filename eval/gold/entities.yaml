@@ -62,19 +62,10 @@ entities:
     name_en: Sequence-to-sequence model
     name_de: Sequence-to-Sequence-Modell
     aliases: [seq2seq]
-  - id: bert
-    type: Method
-    name_en: BERT
-    name_de: BERT
   - id: t5
     type: Method
     name_en: T5
     name_de: T5
-  - id: gpt
-    type: Method
-    name_en: GPT
-    name_de: GPT
-    aliases: [GPT family, GPT models]
   - id: masked-language-modelling
     type: Method
     name_en: Masked language modelling

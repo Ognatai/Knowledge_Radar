@@ -1,0 +1,62 @@
+version: 1
+note_sha256: c1e1809e439d62c616af0daafbbe6b496e649f1435de47d0bd096b551be5fa87
+extracted_by: claude
+discusses:
+- attention-and-transformers
+- gpt
+- wordpiece
+- tokenization
+- masked-language-modelling
+- next-sentence-prediction
+- entity-extraction
+- sentence-bert
+- cross-encoder
+- dense-passage-retrieval
+- distilbert
+- tinybert
+- knowledge-distillation
+- glue
+- embeddings
+- semantic-retrieval
+- retrieval-augmented-generation
+- rag-retrieval
+- vector-databases
+- text-similarity-metrics
+- bias-in-nlp
+relations:
+- from: bert
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: is a language model built from the encoder of the Transformer
+- from: bert
+  type: BASED_ON
+  to: masked-language-modelling
+  evidence: 'Masked language modelling (MLM): 15% of the tokens are chosen for prediction'
+- from: bert
+  type: BASED_ON
+  to: next-sentence-prediction
+  evidence: 'Next sentence prediction (NSP): for sentences A and B, B is the actual next sentence half of the time'
+- from: bert
+  type: BASED_ON
+  to: wordpiece
+  evidence: Text is split into WordPiece tokens with a 30,000-token vocabulary
+- from: sentence-bert
+  type: BASED_ON
+  to: bert
+  evidence: Sentence-BERT fine-tunes BERT in a siamese network
+- from: dense-passage-retrieval
+  type: BASED_ON
+  to: bert
+  evidence: Dense Passage Retrieval uses two independent BERT encoders for questions and passages
+- from: distilbert
+  type: BASED_ON
+  to: knowledge-distillation
+  evidence: DistilBERT and TinyBERT are smaller BERT models trained by knowledge distillation
+- from: tinybert
+  type: BASED_ON
+  to: knowledge-distillation
+  evidence: DistilBERT and TinyBERT are smaller BERT models trained by knowledge distillation
+- from: glue
+  type: EVALUATES
+  to: tinybert
+  evidence: TinyBERT with 4 layers reaches over 96.8% of BERT-Base on GLUE

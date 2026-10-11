@@ -1,0 +1,35 @@
+version: 1
+note_sha256: 65fa6d0a12d8585d2213d130a933a91a916f48eb77e2ee9e14ea74b5a14e24ae
+extracted_by: claude
+discusses:
+- probabilistic-relevance-framework
+- tf-idf
+- bm25f
+- information-retrieval
+- cross-encoder
+- dense-passage-retrieval
+- dense-retrieval
+- beir
+- hybrid-retrieval
+- rag-retrieval
+- semantic-retrieval
+- rag-retrieval-evaluation
+- retrieval-augmented-generation
+- rag-failure-modes
+relations:
+- from: bm25
+  type: BASED_ON
+  to: probabilistic-relevance-framework
+  evidence: BM25 grew out of the probabilistic relevance framework
+- from: bm25f
+  type: BASED_ON
+  to: bm25
+  evidence: BM25F extends it to documents with several fields
+- from: beir
+  type: EVALUATES
+  to: bm25
+  evidence: on the BEIR benchmark of 18 datasets, BM25 was a strong zero-shot baseline
+- from: bm25
+  type: COMPLEMENTS
+  to: dense-retrieval
+  evidence: it is often combined with dense retrieval, since each finds documents the other misses

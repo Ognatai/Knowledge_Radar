@@ -69,21 +69,10 @@ entities:
   name_de: Sequence-to-Sequence-Modell
   aliases:
   - seq2seq
-- id: bert
-  type: Method
-  name_en: BERT
-  name_de: BERT
 - id: t5
   type: Method
   name_en: T5
   name_de: T5
-- id: gpt
-  type: Method
-  name_en: GPT
-  name_de: GPT
-  aliases:
-  - GPT family
-  - GPT models
 - id: masked-language-modelling
   type: Method
   name_en: Masked language modelling
@@ -602,10 +591,6 @@ entities:
   type: Concept
   name_en: Bias-variance trade-off
   name_de: Bias-Varianz-Dilemma
-- id: cross-validation
-  type: Method
-  name_en: Cross-validation
-  name_de: Kreuzvalidierung
 - id: xgboost
   type: Method
   name_en: XGBoost
@@ -1275,10 +1260,6 @@ entities:
   type: Concept
   name_en: Cosine similarity
   name_de: Cosine Similarity
-- id: cross-encoder
-  type: Method
-  name_en: Cross-encoder
-  name_de: Cross-Encoder
 - id: bagging
   type: Method
   name_en: Bagging (bootstrap aggregating)
@@ -1608,12 +1589,6 @@ entities:
   type: Method
   name_en: BART
   name_de: BART
-- id: bm25
-  type: Method
-  name_en: BM25
-  name_de: BM25
-  aliases:
-  - Okapi BM25
 - id: tf-idf
   type: Method
   name_en: tf-idf
@@ -2804,3 +2779,19 @@ entities:
   type: Dataset
   name_en: PARCEL
   name_de: PARCEL
+- id: next-sentence-prediction
+  type: Method
+  name_en: Next sentence prediction (NSP)
+  name_de: Next Sentence Prediction (NSP)
+- id: bm25f
+  type: Method
+  name_en: BM25F
+  name_de: BM25F
+- id: poly-encoder
+  type: Method
+  name_en: Poly-encoder
+  name_de: Poly-Encoder
+- id: nested-cross-validation
+  type: Method
+  name_en: Nested cross-validation
+  name_de: Verschachtelte Kreuzvalidierung

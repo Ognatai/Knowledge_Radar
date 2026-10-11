@@ -1,0 +1,24 @@
+version: 1
+note_sha256: 5d6f1c6219f180f1474ee4455cf6ef06db60e2231007eee3adf0416e1cfd2d1c
+extracted_by: claude
+discusses:
+- nested-cross-validation
+- bootstrap
+- five-two-cv-test
+- support-vector-machines
+- regularization-and-hyperparameters
+- statistics-fundamentals
+- model-comparison
+- time-series-analysis
+- ml-preprocessing
+- classification-metrics
+- classical-machine-learning
+relations:
+- from: nested-cross-validation
+  type: BASED_ON
+  to: cross-validation
+  evidence: Nested cross-validation adds a loop
+- from: five-two-cv-test
+  type: BASED_ON
+  to: cross-validation
+  evidence: studied statistical tests built on cross-validation and proposed the 5×2 cv test
