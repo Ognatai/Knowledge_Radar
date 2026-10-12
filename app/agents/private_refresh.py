@@ -2,7 +2,8 @@
 
 /new-application, /new-round and /retro end with this refresh, so that the new data is
 available to the chat and /prep right away (architecture: "triggers a reindex"):
-structural graph, local extraction of what changed (free text and the postings'
+company and interviewer research with Claude for what has none yet (research.py; only
+with an API key), structural graph, local extraction of what changed (free text and the postings'
 requirements, local Ollama only), then the private index. Each step skips what is
 unchanged, so a refresh after one new retro is quick.
 
@@ -27,7 +28,10 @@ from app.backend.knowledge_radar.private_index import update_private_index
 from app.backend.knowledge_radar.private_repo import load_documents
 
 
-def refresh(root: Path, connect: Callable[[], Any], *, model: str | None = None, log: Callable[[str], None] = print) -> None:
+def refresh(root: Path, connect: Callable[[], Any], *, model: str | None = None, log: Callable[[str], None] = print,
+            research: Callable[[Path, Callable[[str], None]], None] | None = None) -> None:
+    if research is not None:
+        research(root, log)
     notes_directory = configured_notes_directory()
     notes = {note.slug: note for note in load_notes(notes_directory)}
     public = load_graph(DEFAULT_GRAPH_DIRECTORY, list(notes.values()), notes_directory)

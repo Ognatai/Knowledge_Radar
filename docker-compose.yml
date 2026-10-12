@@ -38,6 +38,8 @@ services:
       NEO4J_PRIVATE_PASSWORD: ${NEO4J_PRIVATE_PASSWORD:-}
       # Fetch, merge and delete the private inbox branches on GitLab (optional).
       GITLAB_TOKEN: ${GITLAB_TOKEN:-}
+      # Company and interviewer research with Claude (optional; only names are sent).
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:

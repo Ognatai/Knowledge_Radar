@@ -83,11 +83,15 @@ def configured_private_root() -> Path | None:
 
 
 def default_refresher(root: Path | None):
-    """Structure, local extraction and private index after each write (app/agents/private_refresh.py)."""
+    """Research, structure, local extraction and private index after each write (app/agents/private_refresh.py)."""
     from app.agents.private_refresh import Refresher, refresh
     from app.backend.knowledge_radar.private_index import connect_private
+    from app.backend.knowledge_radar.research import default_research
 
-    return Refresher(lambda log: refresh(root, connect_private, model=chat.chat_model(), log=log)) if root else None
+    if not root:
+        return None
+    research = default_research()
+    return Refresher(lambda log: refresh(root, connect_private, model=chat.chat_model(), log=log, research=research))
 
 
 def default_proposals() -> review.PublicProposals:

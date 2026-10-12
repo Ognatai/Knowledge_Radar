@@ -63,6 +63,12 @@ export function parseInterviewers(answer: string): Interviewer[] {
     .map(([name, role = "", focus = ""]) => ({ name, role, focus }));
 }
 
+// Company and interviewer research runs in the refresh after saving (research.py).
+const RESEARCH = {
+  de: "Danach recherchiert Claude öffentliche, berufliche Informationen zu Firma und Personen, die noch nicht recherchiert sind. Dafür verlassen nur die Namen den Rechner (ohne API-Schlüssel entfällt der Schritt; Budget 3 €/Monat).",
+  en: "Claude then looks up public, professional information on the company and on people not researched yet. Only the names leave this machine (skipped without an API key; budget 3 € a month).",
+};
+
 const confirm = (summary: (answers: Answers, language: Language) => string): Step => ({
   key: "confirm",
   prompt: (answers, language) =>
@@ -167,8 +173,8 @@ export function startWizard(command: CommandName, applications: Application[], l
         ...roundSteps(),
         confirm((answers, language) =>
           language === "de"
-            ? `**${answers.company_name}** – ${answers.role_title}\nErste Runde: ${value(answers, "round_date") || "Datum offen"}; Gesprächspartner: ${interviewerSummary(answers, language)}.\nDie Anforderungen der Anzeige liest danach das lokale Modell aus. Eine Recherche zu Firma und Personen gibt es noch nicht.`
-            : `**${answers.company_name}** – ${answers.role_title}\nFirst round: ${value(answers, "round_date") || "date open"}; interviewers: ${interviewerSummary(answers, language)}.\nThe local model then extracts the posting's requirements. Company and interviewer research is not available yet.`,
+            ? `**${answers.company_name}** – ${answers.role_title}\nErste Runde: ${value(answers, "round_date") || "Datum offen"}; Gesprächspartner: ${interviewerSummary(answers, language)}.\nDie Anforderungen der Anzeige liest danach das lokale Modell aus. ${RESEARCH.de}`
+            : `**${answers.company_name}** – ${answers.role_title}\nFirst round: ${value(answers, "round_date") || "date open"}; interviewers: ${interviewerSummary(answers, language)}.\nThe local model then extracts the posting's requirements. ${RESEARCH.en}`,
         ),
       ],
     };
@@ -188,8 +194,8 @@ export function startWizard(command: CommandName, applications: Application[], l
           const chosen = applications.find((a) => `${a.company}/${a.role}` === answers.application);
           const next = (chosen?.rounds.length ?? 0) + 1;
           return language === "de"
-            ? `**${chosen?.company_name} – ${chosen?.role_title}**, Runde ${next}: ${value(answers, "round_date") || "Datum offen"}; Gesprächspartner: ${interviewerSummary(answers, language)}.`
-            : `**${chosen?.company_name} – ${chosen?.role_title}**, round ${next}: ${value(answers, "round_date") || "date open"}; interviewers: ${interviewerSummary(answers, language)}.`;
+            ? `**${chosen?.company_name} – ${chosen?.role_title}**, Runde ${next}: ${value(answers, "round_date") || "Datum offen"}; Gesprächspartner: ${interviewerSummary(answers, language)}.\n${RESEARCH.de}`
+            : `**${chosen?.company_name} – ${chosen?.role_title}**, round ${next}: ${value(answers, "round_date") || "date open"}; interviewers: ${interviewerSummary(answers, language)}.\n${RESEARCH.en}`;
         }),
       ],
     };

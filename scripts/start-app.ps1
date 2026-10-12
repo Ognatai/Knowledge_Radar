@@ -65,6 +65,13 @@ if (-not $NoPrivate) {
     } else {
         Write-Warning "No GitLab token (python -m keyring set knowledge-radar gitlab): the private inbox in the Review Dashboard is off."
     }
+    # The Claude API key for company and interviewer research; optional.
+    $anthropicKey = & $python -m keyring get knowledge-radar anthropic
+    if ($anthropicKey) {
+        $env:ANTHROPIC_API_KEY = $anthropicKey
+    } else {
+        Write-Host "No Claude API key (python -m keyring set knowledge-radar anthropic): company and interviewer research is off."
+    }
     # The private checkout from local-config.yaml, mounted for the interview commands.
     Push-Location $repository
     try {
@@ -96,6 +103,7 @@ finally {
     Remove-Item Env:NEO4J_PRIVATE_PASSWORD -ErrorAction SilentlyContinue
     Remove-Item Env:KNOWLEDGE_RADAR_PRIVATE_REPO_HOST -ErrorAction SilentlyContinue
     Remove-Item Env:GITLAB_TOKEN -ErrorAction SilentlyContinue
+    Remove-Item Env:ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
 }
 
 $deadline = (Get-Date).AddSeconds(90)

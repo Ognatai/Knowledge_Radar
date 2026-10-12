@@ -6,6 +6,7 @@ Markdown-with-frontmatter formats read here:
 
     notes/*.md
     companies/<company>/company.md
+    companies/<company>/_research/*.md        (research.py: company and interviewers)
     companies/<company>/<role>/job_posting.md
     companies/<company>/<role>/round-<n>/{round,interviewers,prep,retro}.md
     companies/<company>/<role>/round-<n>/notes/*.md
@@ -32,6 +33,8 @@ from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.notes import FRONTMATTER_PATTERN
 
 ROUND_FOLDER = re.compile(r"^round-(\d+)$")
+# Written by research.py; not a slug, so never a role folder.
+RESEARCH_FOLDER = "_research"
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ROUND_FILES = {"round.md": "round", "interviewers.md": "interviewers", "prep.md": "prep", "retro.md": "retro"}
 REQUIRED = {"company": ["name"], "job_posting": ["title"], "round": ["round_number"]}
@@ -47,7 +50,7 @@ class PrivateRepoError(ValueError):
 @dataclass(frozen=True)
 class PrivateDocument:
     id: str  # the path without .md, relative to the private repository
-    kind: str  # note, company, job_posting, round, interviewers, prep, retro, round_note
+    kind: str  # note, company, research, job_posting, round, interviewers, prep, retro, round_note
     path: Path
     frontmatter: dict[str, Any]
     body: str
@@ -96,7 +99,9 @@ def load_documents(root: Path) -> list[PrivateDocument]:
         if not (company_dir / "company.md").is_file():
             raise PrivateRepoError(f"{company_dir}: company.md is missing.")
         documents.append(read_document(company_dir / "company.md", root, "company", company=company))
-        for role_dir in sorted(p for p in company_dir.iterdir() if p.is_dir()):
+        for path in sorted((company_dir / RESEARCH_FOLDER).glob("*.md")):
+            documents.append(read_document(path, root, "research", company=company))
+        for role_dir in sorted(p for p in company_dir.iterdir() if p.is_dir() and p.name != RESEARCH_FOLDER):
             role = _slug(role_dir)
             if (role_dir / "job_posting.md").is_file():
                 documents.append(read_document(role_dir / "job_posting.md", root, "job_posting", company=company, role=role))
@@ -135,7 +140,7 @@ def document_slug(document: PrivateDocument) -> str:
     return "private-" + slugify(document.id)
 
 
-KIND_LABELS = {"company": "Company", "job_posting": "Job posting", "round": "Interview round", "interviewers": "Interviewers",
+KIND_LABELS = {"company": "Company", "research": "Research", "job_posting": "Job posting", "round": "Interview round", "interviewers": "Interviewers",
                "prep": "Preparation", "retro": "Retro", "round_note": "Round note", "note": "Note"}
 FIELD_LABELS = {"questions_asked": "Questions asked", "struggled_with": "Struggled with",
                 "personal_improvement": "Personal improvement", "kb_gaps_identified": "Knowledge-base gaps",
@@ -176,7 +181,7 @@ def document_titles(documents: list[PrivateDocument]) -> dict[str, str]:
         if document.round:
             parts.append(f"round {document.round}")
         title = f"{KIND_LABELS.get(document.kind, document.kind)}: {' – '.join(parts)}"
-        titles[document.id] = f"{title}: {own}" if document.kind == "round_note" and own else title
+        titles[document.id] = f"{title}: {own}" if document.kind in ("round_note", "research") and own else title
     return titles
 
 

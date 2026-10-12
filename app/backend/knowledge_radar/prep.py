@@ -29,18 +29,21 @@ from app.agents import llm
 from app.backend.knowledge_radar import chat
 from app.backend.knowledge_radar.interviews import InterviewError, Writer, _frontmatter, _iso
 from app.backend.knowledge_radar.models import NoteDetail
-from app.backend.knowledge_radar.private_repo import FRONTMATTER_PATTERN, RETRO_LISTS, parse_interviewers
+from app.backend.knowledge_radar.private_repo import FRONTMATTER_PATTERN, RESEARCH_FOLDER, RETRO_LISTS, parse_interviewers, slugify
+from app.backend.knowledge_radar.research import NO_ANSWER
 
 PUBLIC_SITE = "https://ognatai.github.io/Knowledge_Radar/"
 WIKILINK = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
 MIN_EVIDENCE_CHARACTERS = 12
 MAX_POSTING_CHARACTERS = 6000
+# Claude's research (research.py) on the company and on each interviewer.
+MAX_RESEARCH_CHARACTERS = 2500
 MAX_BACKGROUND_SOURCES = 5
 
 LABELS = {
     "de": {
         "title": "Vorbereitung", "round": "Runde", "date_open": "Datum offen", "interviewers": "Gesprächspartner",
-        "none_known": "Noch niemand bekannt.", "requirements": "Anforderungen und passende Notizen",
+        "none_known": "Noch niemand bekannt.", "researched": "recherchiert", "requirements": "Anforderungen und passende Notizen",
         "no_requirements": "Die Anforderungen der Anzeige sind noch nicht ausgelesen (die Aktualisierung nach /new-application läuft noch oder ist fehlgeschlagen).",
         "no_match": "Keine passende Notiz in der Wissensbasis – eine Lücke?", "earlier": "Aus früheren Runden",
         "asked": "Gefragt", "struggled": "Schwierig", "improve": "Vorgenommen", "gaps": "Lücken", "no_retro": "Keine Retro.",
@@ -50,7 +53,7 @@ LABELS = {
     },
     "en": {
         "title": "Preparation", "round": "round", "date_open": "date open", "interviewers": "Interviewers",
-        "none_known": "Nobody known yet.", "requirements": "Requirements and matching notes",
+        "none_known": "Nobody known yet.", "researched": "researched", "requirements": "Requirements and matching notes",
         "no_requirements": "The posting's requirements have not been extracted yet (the update after /new-application is still running or failed).",
         "no_match": "No matching note in the knowledge base – a gap?", "earlier": "From earlier rounds",
         "asked": "Asked", "struggled": "Struggled with", "improve": "To improve", "gaps": "Gaps", "no_retro": "No retro.",
@@ -82,6 +85,7 @@ class PrepContext:
     round_number: int
     company_name: str
     company_notes: str
+    company_research: str
     role_title: str
     posting: str
     round_date: str | None
@@ -97,6 +101,12 @@ def _body(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     match = FRONTMATTER_PATTERN.match(text)
     return (text[match.end():] if match else text).strip()
+
+
+def _research(path: Path) -> str:
+    """A research file's text; empty when there is none or Claude gave no answer."""
+    text = _body(path)
+    return "" if NO_ANSWER in text else text[:MAX_RESEARCH_CHARACTERS]
 
 
 def read_requirements(root: Path, company: str, role: str) -> list[Requirement] | None:
@@ -126,6 +136,12 @@ def gather(root: Path, company: str, role: str, round_number: int) -> PrepContex
     posting_info = _frontmatter(role_dir / "job_posting.md") if (role_dir / "job_posting.md").is_file() else {}
     round_info = _frontmatter(round_dir / "round.md")
     interviewers_file = round_dir / "interviewers.md"
+    research_dir = role_dir.parent / RESEARCH_FOLDER
+    interviewers = parse_interviewers(interviewers_file.read_text(encoding="utf-8")) if interviewers_file.is_file() else []
+    for person in interviewers:
+        background = _research(research_dir / f"{slugify(person['name'])}.md")
+        if background:
+            person["background"] = background
     earlier = []
     for number in range(1, round_number):
         directory = role_dir / f"round-{number}"
@@ -138,9 +154,10 @@ def gather(root: Path, company: str, role: str, round_number: int) -> PrepContex
     return PrepContext(
         company=company, role=role, round_number=round_number,
         company_name=str(company_info.get("name") or company), company_notes=_body(role_dir.parent / "company.md"),
+        company_research=_research(research_dir / "company.md"),
         role_title=str(posting_info.get("title") or role), posting=_body(role_dir / "job_posting.md"),
         round_date=_iso(round_info.get("date")), round_notes=_body(round_dir / "round.md"),
-        interviewers=parse_interviewers(interviewers_file.read_text(encoding="utf-8")) if interviewers_file.is_file() else [],
+        interviewers=interviewers,
         requirements=read_requirements(root, company, role), earlier=earlier,
     )
 
@@ -192,13 +209,17 @@ def _language(language: str) -> str:
 
 
 def _context_block(context: PrepContext) -> str:
-    people = "\n".join(f"- {person_line(p)}" for p in context.interviewers) or "(none known)"
+    people = "\n".join(
+        f"- {person_line(p)}" + (f"\n  <research>\n{p['background']}\n  </research>" if p.get("background") else "")
+        for p in context.interviewers
+    ) or "(none known)"
     requirements = "\n".join(f"- {r.text} ({r.category})" for r in context.requirements or []) or "(not extracted)"
     earlier = "\n".join(
         f"- round {e.number}: asked {e.retro['questions_asked']}" for e in context.earlier if e.retro and e.retro["questions_asked"]
     ) or "(none)"
     return (
         f"<company>{context.company_name}\n{context.company_notes}</company>\n"
+        f"<company_research>{context.company_research or '(none)'}</company_research>\n"
         f"<posting title=\"{context.role_title}\">\n{context.posting[:MAX_POSTING_CHARACTERS]}\n</posting>\n"
         f"<requirements>\n{requirements}\n</requirements>\n"
         f"<interviewers round=\"{context.round_number}\">\n{people}\n</interviewers>\n"
@@ -275,7 +296,8 @@ def render(context: PrepContext, notes: dict[str, NoteDetail], pitch: dict[str, 
     lines = ["---", f"round_number: {context.round_number}", f"generated: {today.isoformat()}", "---",
              f"# {t['title']}: {context.company_name} – {context.role_title}, {t['round']} {context.round_number} ({when})", "",
              f"_{t['generated']}_", "", f"## {t['interviewers']}"]
-    lines += [f"- {person_line(p)}" for p in context.interviewers] or [t["none_known"]]
+    lines += [f"- {person_line(p)}" + (f" ({t['researched']})" if p.get("background") else "")
+              for p in context.interviewers] or [t["none_known"]]
 
     lines += ["", f"## {t['requirements']}"]
     if context.requirements is None:

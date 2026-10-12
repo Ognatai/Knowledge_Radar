@@ -27,6 +27,7 @@ import yaml
 from app.agents import llm
 from app.backend.knowledge_radar.private_repo import (
     FRONTMATTER_PATTERN,
+    RESEARCH_FOLDER,
     RETRO_LISTS,
     PrivateRepoError,
     read_document,
@@ -121,7 +122,7 @@ def applications(root: Path) -> list[Application]:
     for company_dir in sorted(p for p in companies.iterdir() if p.is_dir()) if companies.is_dir() else []:
         company_file = company_dir / "company.md"
         company_name = str(_frontmatter(company_file).get("name") or company_dir.name) if company_file.is_file() else company_dir.name
-        for role_dir in sorted(p for p in company_dir.iterdir() if p.is_dir()):
+        for role_dir in sorted(p for p in company_dir.iterdir() if p.is_dir() and p.name != RESEARCH_FOLDER):
             posting = role_dir / "job_posting.md"
             title = str(_frontmatter(posting).get("title") or role_dir.name) if posting.is_file() else role_dir.name
             rounds = []

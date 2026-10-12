@@ -8,6 +8,14 @@ public notes only.
 Requirements: Python 3.11+, Node.js 20.19+ (or 22.12+), Git. Optional: Ollama,
 Docker Desktop.
 
+A machine that only runs the local app with a private repository (sections 1, 2,
+5, 7 and 8; in this project the ThinkPad) can be set up in one go from a fresh
+clone; the script checks the prerequisites and can be run again after any stop:
+
+```powershell
+scripts\setup-local-app.ps1 -PrivateRepoUrl <clone URL of the private repository>
+```
+
 ## 1. Python environment
 
 ```powershell
@@ -86,6 +94,19 @@ the files in the private repository's formats (`docker-compose.app-private.yml`
 mounts the checkout from `local-config.yaml`). After each write it updates the
 private side in the background: structural graph, extraction with the local chat
 model, private index. Commit the new files in the private repository yourself.
+
+Optional, and outside the free default path: with a Claude API key, that refresh
+first looks up public, professional information on each company and interviewer
+not researched yet (Claude with web search; only the company name, or a person's
+name plus the company name, is sent). The results land in
+`companies/<company>/_research/` and feed `/prep`. A monthly cap (default 3 US
+dollars at list price, `KNOWLEDGE_RADAR_RESEARCH_CAP`) is kept in
+`claude-spend.yaml` in the private repository; a lookup that would not fit is
+skipped until next month. Without a key the step is skipped.
+
+```powershell
+python -m keyring set knowledge-radar anthropic
+```
 
 For development without Docker:
 
