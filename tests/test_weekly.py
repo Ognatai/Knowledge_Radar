@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timezone
 
-from app.agents.monitoring.weekly import STEPS, Step, Summary, run
+from app.agents.monitoring.weekly import STEPS, Step, Summary, diagram, run
 
 NOW = datetime(2026, 10, 18, 2, 0, tzinfo=timezone.utc)
 
@@ -66,3 +66,11 @@ def test_a_failing_curator_does_not_fail_the_run(tmp_path):
 
 def test_a_week_without_proposals_says_so():
     assert Summary(started="x", findings=4).line() == "4 new findings, no proposals this week."
+
+
+def test_the_run_is_a_graph_that_skips_to_the_summary_after_a_required_step():
+    mermaid = diagram()
+    assert "validate_notes -.-> summarise;" in mermaid and "validate_notes -.-> update_index;" in mermaid
+    # Optional steps always go on.
+    assert "write_drafts --> propose_inbox;" in mermaid
+    assert "\\20" not in mermaid
