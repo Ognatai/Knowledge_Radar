@@ -25,6 +25,8 @@ claude = [
     "anthropic>=1.13,<2",
 ]
 dev = [
+    # The research tests run against a fake client but need the SDK's error types.
+    "anthropic>=1.13,<2",
     "httpx>=0.27,<1.0",
     "pytest>=8.0,<9.0",
 ]
