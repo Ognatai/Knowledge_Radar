@@ -134,8 +134,10 @@ def test_a_paused_search_is_resumed_and_citations_become_sources():
     assert [tool["type"] for tool in client.requests[0]["tools"]] == ["web_search_20260209"]
 
 
-def test_without_a_key_there_is_no_research(monkeypatch):
-    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+def test_only_the_own_key_switches_research_on(monkeypatch):
+    monkeypatch.delenv(research.KEY_VARIABLE, raising=False)
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "another tool's key")
     assert research.api_key(lambda service, user: None) is None
-    monkeypatch.setenv("ANTHROPIC_API_KEY", "key")
+    assert research.api_key(lambda service, user: "stored") == "stored"
+    monkeypatch.setenv(research.KEY_VARIABLE, "key")
     assert research.api_key(lambda service, user: None) == "key"

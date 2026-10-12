@@ -68,8 +68,9 @@ if (-not $NoPrivate) {
     # The Claude API key for company and interviewer research; optional.
     $anthropicKey = & $python -m keyring get knowledge-radar anthropic
     if ($anthropicKey) {
-        $env:ANTHROPIC_API_KEY = $anthropicKey
+        $env:KNOWLEDGE_RADAR_ANTHROPIC_API_KEY = $anthropicKey
     } else {
+        Remove-Item Env:KNOWLEDGE_RADAR_ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
         Write-Host "No Claude API key (python -m keyring set knowledge-radar anthropic): company and interviewer research is off."
     }
     # The private checkout from local-config.yaml, mounted for the interview commands.
@@ -103,7 +104,7 @@ finally {
     Remove-Item Env:NEO4J_PRIVATE_PASSWORD -ErrorAction SilentlyContinue
     Remove-Item Env:KNOWLEDGE_RADAR_PRIVATE_REPO_HOST -ErrorAction SilentlyContinue
     Remove-Item Env:GITLAB_TOKEN -ErrorAction SilentlyContinue
-    Remove-Item Env:ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
+    Remove-Item Env:KNOWLEDGE_RADAR_ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
 }
 
 $deadline = (Get-Date).AddSeconds(90)

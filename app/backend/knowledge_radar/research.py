@@ -37,6 +37,7 @@ from app.backend.knowledge_radar.private_repo import FRONTMATTER_PATTERN, RESEAR
 SPEND_FILE = "claude-spend.yaml"
 KEYRING_SERVICE = "knowledge-radar"
 KEYRING_USER = "anthropic"
+KEY_VARIABLE = "KNOWLEDGE_RADAR_ANTHROPIC_API_KEY"
 DEFAULT_MODEL = "claude-opus-5-5"
 DEFAULT_MONTHLY_CAP = 3.0
 # Enough for one lookup with five searches; a lookup that would not fit is not started.
@@ -261,8 +262,10 @@ class Research:
 
 
 def api_key(keyring_lookup: Callable[[str, str], str | None] | None = None) -> str | None:
-    """ANTHROPIC_API_KEY (set for the Docker container), else the Windows Credential Manager."""
-    key = os.environ.get("ANTHROPIC_API_KEY")
+    """KNOWLEDGE_RADAR_ANTHROPIC_API_KEY (set for the Docker container), else the Windows
+    Credential Manager. Never ANTHROPIC_API_KEY: a key another tool keeps in the
+    environment must not switch on paid lookups (it did on 2026-10-12)."""
+    key = os.environ.get(KEY_VARIABLE)
     if key:
         return key
     try:
