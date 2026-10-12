@@ -2876,3 +2876,29 @@ entities:
   name_de: Jaccard-Koeffizient
   aliases:
   - Jaccard similarity
+- id: direct-preference-optimization
+  type: Method
+  name_en: Direct Preference Optimization (DPO)
+  name_de: Direct Preference Optimization (DPO)
+  aliases:
+  - DPO
+- id: constitutional-ai
+  type: Method
+  name_en: Constitutional AI
+  name_de: Constitutional AI
+  aliases:
+  - RLAIF
+- id: rlvr
+  type: Method
+  name_en: Reinforcement learning with verifiable rewards (RLVR)
+  name_de: Reinforcement Learning mit überprüfbaren Belohnungen (RLVR)
+  aliases:
+  - RLVR
+- id: bradley-terry-model
+  type: Concept
+  name_en: Bradley-Terry model
+  name_de: Bradley-Terry-Modell
+- id: deepseek-r1
+  type: Technology
+  name_en: DeepSeek-R1
+  name_de: DeepSeek-R1

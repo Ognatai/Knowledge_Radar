@@ -43,7 +43,7 @@ Prompting steers a model through instructions or examples in the input and relie
 
 #### 2. Full fine-tuning and instruction tuning
 
-Full fine-tuning updates all parameters on task-specific data, so every task needs its own copy of the full model. Instruction tuning fine-tunes a model on a collection of tasks phrased as natural-language instructions so that it generalises to unseen tasks (Wei et al., 2021). Instruction tuning a 137B-parameter model on more than 60 NLP tasks (FLAN) substantially improved its zero-shot performance over the unmodified model, surpassed zero-shot 175B GPT-3 on 20 of 25 evaluated data sets and outperformed few-shot GPT-3 by a large margin on data sets such as ANLI, RTE, BoolQ and OpenbookQA (Wei et al., 2021).
+Full fine-tuning updates all parameters on task-specific data, so every task needs its own copy of the full model. Instruction tuning fine-tunes a model on a collection of tasks phrased as natural-language instructions so that it generalises to unseen tasks (Wei et al., 2021). Instruction tuning a 137B-parameter model on more than 60 NLP tasks (FLAN) substantially improved its zero-shot performance over the unmodified model, surpassed zero-shot 175B GPT-3 on 20 of 25 evaluated data sets and outperformed few-shot GPT-3 by a large margin on data sets such as ANLI, RTE, BoolQ and OpenbookQA (Wei et al., 2021). Preference alignment after instruction tuning, with RLHF or DPO, is covered in [[llm-alignment|LLM Alignment]].
 
 #### 3. Parameter-efficient fine-tuning with LoRA
 
@@ -142,7 +142,7 @@ Prompting leitet ein Modell durch Anweisungen oder Beispiele in der Eingabe und 
 
 #### 2. Vollständiges Fine-Tuning und Instruction Tuning
 
-Vollständiges Fine-Tuning aktualisiert alle Parameter anhand aufgabenspezifischer Daten, sodass jede Aufgabe ihre eigene Kopie des vollständigen Modells benötigt. Instruction Tuning stimmt ein Modell anhand einer Sammlung von Aufgaben fein, die als natürlichsprachliche Anweisungen formuliert sind, sodass es sich auf unbekannte Aufgaben verallgemeinern kann (Wei et al., 2021). Instruction Tuning eines Modells mit 137 Milliarden Parametern auf mehr als 60 NLP-Aufgaben (FLAN) verbesserte seine Zero-Shot-Leistung erheblich im Vergleich zum unveränderten Modell, übertraf die Zero-Shot-Leistung von GPT-3 mit 175 Milliarden Parametern bei 20 von 25 bewerteten Datensätzen und erzielte bei Datensätzen wie ANLI, RTE, BoolQ und OpenbookQA deutlich bessere Ergebnisse als das Few-Shot-GPT-3 (Wei et al., 2021).
+Vollständiges Fine-Tuning aktualisiert alle Parameter anhand aufgabenspezifischer Daten, sodass jede Aufgabe ihre eigene Kopie des vollständigen Modells benötigt. Instruction Tuning stimmt ein Modell anhand einer Sammlung von Aufgaben fein, die als natürlichsprachliche Anweisungen formuliert sind, sodass es sich auf unbekannte Aufgaben verallgemeinern kann (Wei et al., 2021). Instruction Tuning eines Modells mit 137 Milliarden Parametern auf mehr als 60 NLP-Aufgaben (FLAN) verbesserte seine Zero-Shot-Leistung erheblich im Vergleich zum unveränderten Modell, übertraf die Zero-Shot-Leistung von GPT-3 mit 175 Milliarden Parametern bei 20 von 25 bewerteten Datensätzen und erzielte bei Datensätzen wie ANLI, RTE, BoolQ und OpenbookQA deutlich bessere Ergebnisse als das Few-Shot-GPT-3 (Wei et al., 2021). Präferenz-Alignment nach dem Instruction Tuning, mit RLHF oder DPO, behandelt [[llm-alignment|LLM-Alignment]].
 
 #### 3. Parameter-effizientes Fine-Tuning mit LoRA
 

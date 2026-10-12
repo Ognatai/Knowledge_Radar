@@ -1,0 +1,56 @@
+version: 1
+note_sha256: 578050830589a9455a300e8966e20ae69881894c21ce988bd3ecd6ae6cdde563
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- instruction-tuning
+- rlhf
+- direct-preference-optimization
+- constitutional-ai
+- rlvr
+- bradley-terry-model
+- instructgpt
+- deepseek-r1
+- reinforcement-learning
+- lora
+- large-language-models
+- llm-as-a-judge
+- llm-evaluation
+- hallucination-detection
+- llm-adaptation
+relations:
+- from: instruction-tuning
+  type: IS_EXAMPLE_OF
+  to: llm-alignment
+  evidence: instruction tuning (supervised fine-tuning, SFT) on instructions with responses
+- from: rlhf
+  type: IS_EXAMPLE_OF
+  to: llm-alignment
+  evidence: either RLHF with a reward model and reinforcement learning
+- from: direct-preference-optimization
+  type: IS_EXAMPLE_OF
+  to: llm-alignment
+  evidence: or Direct Preference Optimization (DPO) directly on preference pairs
+- from: constitutional-ai
+  type: IS_EXAMPLE_OF
+  to: llm-alignment
+  evidence: Constitutional AI trains a harmless assistant without human labels of harmful outputs
+- from: rlhf
+  type: BASED_ON
+  to: reinforcement-learning
+  evidence: RLHF with a reward model and reinforcement learning
+- from: rlhf
+  type: BASED_ON
+  to: bradley-terry-model
+  evidence: The Bradley-Terry model turns preferences into probabilities
+- from: instructgpt
+  type: BASED_ON
+  to: rlhf
+  evidence: InstructGPT used this three-step recipe
+- from: deepseek-r1
+  type: BASED_ON
+  to: rlvr
+  evidence: DeepSeek-R1 showed that pure RL can incentivise reasoning
+- from: lora
+  type: COMPLEMENTS
+  to: instruction-tuning
+  evidence: often done with parameter-efficient methods such as LoRA
