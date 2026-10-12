@@ -48,7 +48,7 @@ The order is not a ranking; depending on the problem, the most effective lever i
 - **[[mcp-and-related-protocols|MCP and Related Protocols]]:** standardised connection of tools, data and prompt templates.
 - **[[loop-engineering|Loop Engineering]]:** designing the system that prompts the agent, with schedules, verifiers and memory (Osmani, 2026b).
 - **[[graph-engineering|Graph Engineering]]:** an emerging and inconsistently used term for organising several agents or loops.
-- **[[harness-engineering|Harness Engineering]]:** everything around the model, such as tools, permissions, sandboxes, hooks and observability; Agent = Model + Harness (Osmani, 2026a).
+- **[[harness-engineering|Harness Engineering]]:** everything around the model, such as tools, permissions, sandboxes, hooks and [[monitoring-and-alerting|observability]]; Agent = Model + Harness (Osmani, 2026a).
 - **[[vibe-coding|Vibe Coding]]:** building software with an LLM without reviewing the code it writes (Willison, 2025).
 
 Two topics cut across all layers: [[llm-cost-optimization|LLM Cost Optimization]] and [[llm-observability-and-tracing|LLM Observability and Tracing]].
@@ -162,7 +162,7 @@ Die Reihenfolge ist keine Rangfolge; je nach Problem liegt der wirksamste Hebel 
 - **[[mcp-and-related-protocols|MCP und ähnliche Protokolle]]:** standardisierte Anbindung von Werkzeugen, Daten und Prompt-Vorlagen.
 - **[[loop-engineering|Loop Engineering]]:** Gestaltung des Systems, das den Agenten anstößt, mit Zeitplänen, prüfenden Agenten und Gedächtnis (Osmani, 2026b).
 - **[[graph-engineering|Graph Engineering]]:** ein aufkommender, uneinheitlich verwendeter Begriff für die Organisation mehrerer Agenten oder Loops.
-- **[[harness-engineering|Harness Engineering]]:** alles rund um das Modell, etwa Werkzeuge, Berechtigungen, Sandboxes, Hooks und Observability; Agent = Modell + Harness (Osmani, 2026a).
+- **[[harness-engineering|Harness Engineering]]:** alles rund um das Modell, etwa Werkzeuge, Berechtigungen, Sandboxes, Hooks und [[monitoring-and-alerting|Observability]]; Agent = Modell + Harness (Osmani, 2026a).
 - **[[vibe-coding|Vibe Coding]]:** Software mit einem LLM bauen, ohne den erzeugten Code zu prüfen (Willison, 2025).
 
 Zwei Themen liegen quer zu allen Ebenen: [[llm-cost-optimization|LLM-Kostenoptimierung]] und [[llm-observability-and-tracing|LLM-Observability und Tracing]].

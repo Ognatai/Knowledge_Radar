@@ -1,0 +1,21 @@
+version: 1
+note_sha256: 5ecc1356a947d9a42f09bb1d9c9e77132e86b5dd7c19411762857ac7a5a9a935
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- apache-airflow
+- apache-kafka
+- dataflow-model
+- apis
+- knowledge-graphs
+- mlops-and-deployment
+- retrieval-augmented-generation
+- knowledge-graph-engineering
+relations:
+- from: apache-airflow
+  type: IMPLEMENTS
+  to: data-pipelines
+  evidence: In Apache Airflow, a workflow is a DAG (directed acyclic graph) of tasks
+- from: apache-kafka
+  type: IMPLEMENTS
+  to: data-pipelines
+  evidence: Streaming pipelines process events continuously

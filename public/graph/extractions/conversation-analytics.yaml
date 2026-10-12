@@ -1,0 +1,21 @@
+version: 1
+note_sha256: aaa482452429a4f8f05028e3b324eed205fe2f87a93e994a76a63157bf08d06c
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- conversational-ai
+- voice-agents
+- amazon-lex
+- dialogflow-cx
+- paradise-framework
+- natural-language-understanding
+- llm-observability-and-tracing
+- llm-evaluation
+relations:
+- from: paradise-framework
+  type: EVALUATES
+  to: conversational-ai
+  evidence: The PARADISE framework separates what the task requires from how the agent behaves
+- from: amazon-lex
+  type: IMPLEMENTS
+  to: conversation-analytics
+  evidence: Amazon Lex counts a conversation as a success when its final intent was fulfilled

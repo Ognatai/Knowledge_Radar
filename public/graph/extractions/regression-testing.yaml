@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d9abb5710ad36f85118aaa5abdf8695a95b3a9aec3615615cec2136289f066cc
+note_sha256: "cb5a9e0698f9fe09cc50ec5d560dba0c3fbe41f8cfb6319ec9d044e5f78eb87c"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - checklist-nlp

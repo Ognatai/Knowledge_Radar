@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-A knowledge graph represents knowledge as a graph of entities connected by typed relationships, so that facts from diverse, large-scale and changing sources can be integrated, queried and reasoned over (Hogan et al., 2020). Two data models dominate: RDF, where every fact is a subject-predicate-object triple with globally unique identifiers (W3C RDF 1.1 Concepts), and property graphs, where nodes and relationships carry key-value properties (Neo4j Cypher Manual). Ontologies add formal meaning (W3C OWL 2 Primer), and knowledge graphs increasingly complement [[large-language-models|large language models]], for example in GraphRAG (Pan et al., 2023; Edge et al., 2024).
+A knowledge graph represents knowledge as a graph of entities connected by typed relationships, so that facts from diverse, large-scale and changing sources can be integrated, queried and reasoned over (Hogan et al., 2020). Two data models dominate: RDF, where every fact is a subject-predicate-object triple with globally unique identifiers (W3C RDF 1.1 Concepts), and property graphs, where nodes and relationships carry key-value properties ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologies add formal meaning (W3C OWL 2 Primer), and knowledge graphs increasingly complement [[large-language-models|large language models]], for example in GraphRAG (Pan et al., 2023; Edge et al., 2024).
 
 ### How it works
 
@@ -117,7 +117,7 @@ Knowledge graphs store facts as entities and typed relations, which makes knowle
 
 ### TL;DR
 
-Ein Wissensgraph stellt Wissen als Graph aus Entitäten dar, die durch typisierte Beziehungen verbunden sind, sodass sich Fakten aus vielfältigen, großen und sich ändernden Quellen zusammenführen, abfragen und für Schlussfolgerungen nutzen lassen (Hogan et al., 2020). Zwei Datenmodelle dominieren: RDF, in dem jeder Fakt ein Tripel aus Subjekt, Prädikat und Objekt mit global eindeutigen Bezeichnern ist (W3C RDF 1.1 Concepts), und Property Graphs, in denen Knoten und Kanten Schlüssel-Wert-Eigenschaften tragen (Neo4j Cypher Manual). Ontologien fügen formale Bedeutung hinzu (W3C OWL 2 Primer), und Wissensgraphen ergänzen zunehmend große Sprachmodelle, etwa in GraphRAG (Pan et al., 2023; Edge et al., 2024).
+Ein Wissensgraph stellt Wissen als Graph aus Entitäten dar, die durch typisierte Beziehungen verbunden sind, sodass sich Fakten aus vielfältigen, großen und sich ändernden Quellen zusammenführen, abfragen und für Schlussfolgerungen nutzen lassen (Hogan et al., 2020). Zwei Datenmodelle dominieren: RDF, in dem jeder Fakt ein Tripel aus Subjekt, Prädikat und Objekt mit global eindeutigen Bezeichnern ist (W3C RDF 1.1 Concepts), und Property Graphs, in denen Knoten und Kanten Schlüssel-Wert-Eigenschaften tragen ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologien fügen formale Bedeutung hinzu (W3C OWL 2 Primer), und Wissensgraphen ergänzen zunehmend große Sprachmodelle, etwa in GraphRAG (Pan et al., 2023; Edge et al., 2024).
 
 ### Funktionsweise
 

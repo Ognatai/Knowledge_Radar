@@ -146,14 +146,6 @@ entities:
     type: Concept
     name_en: Open-world assumption
     name_de: Open-World-Annahme
-  - id: neo4j
-    type: Technology
-    name_en: Neo4j
-    name_de: Neo4j
-  - id: cypher
-    type: Technology
-    name_en: Cypher
-    name_de: Cypher
   - id: knowledge-graph-embeddings
     type: Method
     name_en: Knowledge graph embeddings

@@ -1,0 +1,14 @@
+version: 1
+note_sha256: e01415a691eed070a2ee822e6ca8a937fb08a4e74c7bcade66937661075fbb94
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- opentelemetry
+- google
+- llm-observability-and-tracing
+- conversation-analytics
+- mlops-and-deployment
+relations:
+- from: opentelemetry
+  type: IMPLEMENTS
+  to: monitoring-and-alerting
+  evidence: OpenTelemetry collects, processes and exports signals

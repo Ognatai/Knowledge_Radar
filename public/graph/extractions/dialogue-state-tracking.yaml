@@ -1,0 +1,19 @@
+version: 1
+note_sha256: 487492c7e8727b487aed2dc7dece19dad677c994af1b1aafffe6f5fe2b6d73e2
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- conversational-ai
+- natural-language-understanding
+- multiwoz
+- neural-belief-tracker
+- automatic-speech-recognition
+- conversation-analytics
+relations:
+- from: multiwoz
+  type: EVALUATES
+  to: dialogue-state-tracking
+  evidence: it provides baselines for belief tracking
+- from: neural-belief-tracker
+  type: IS_EXAMPLE_OF
+  to: dialogue-state-tracking
+  evidence: The Neural Belief Tracker composes pretrained word vectors

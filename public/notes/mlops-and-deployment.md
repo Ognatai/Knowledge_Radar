@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-MLOps transfers DevOps principles such as automation, versioning, continuous integration and monitoring to the lifecycle of ML models, with the goal of bringing ML products into production and operating them reliably (Kreuzberger et al., 2022). Unlike classical software, an ML system depends not only on code but also on data and trained weights, which change independently; real-world ML systems therefore incur massive ongoing maintenance costs (Sculley et al., 2015), and practitioners face issues at every stage of deployment (Paleyes et al., 2020). A model that was evaluated well once does not stay good: data and user behaviour change, and ML systems tend to fail silently (Rabanser et al., 2018).
+MLOps transfers DevOps principles such as automation, versioning, continuous integration and [[monitoring-and-alerting|monitoring]] to the lifecycle of ML models, with the goal of bringing ML products into production and operating them reliably (Kreuzberger et al., 2022). Unlike classical software, an ML system depends not only on code but also on data and trained weights, which change independently; real-world ML systems therefore incur massive ongoing maintenance costs (Sculley et al., 2015), and practitioners face issues at every stage of deployment (Paleyes et al., 2020). A model that was evaluated well once does not stay good: data and user behaviour change, and ML systems tend to fail silently (Rabanser et al., 2018).
 
 ### How it works
 
@@ -116,7 +116,7 @@ MLOps keeps ML systems reliable after the first deployment: code, data and model
 
 ### TL;DR
 
-MLOps überträgt DevOps-Prinzipien wie Automatisierung, Versionierung, kontinuierliche Integration und Monitoring auf den Lebenszyklus von ML-Modellen, mit dem Ziel, ML-Produkte in den Betrieb zu bringen und zuverlässig zu betreiben (Kreuzberger et al., 2022). Anders als klassische Software hängt ein ML-System nicht nur vom Code ab, sondern auch von Daten und trainierten Gewichten, die sich unabhängig voneinander ändern; reale ML-Systeme verursachen deshalb hohe laufende Wartungskosten (Sculley et al., 2015), und in jeder Phase des Deployments treten Probleme auf (Paleyes et al., 2020). Ein einmal gut evaluiertes Modell bleibt nicht gut: Daten und Nutzungsverhalten ändern sich, und ML-Systeme scheitern oft unbemerkt (Rabanser et al., 2018).
+MLOps überträgt DevOps-Prinzipien wie Automatisierung, Versionierung, kontinuierliche Integration und [[monitoring-and-alerting|Monitoring]] auf den Lebenszyklus von ML-Modellen, mit dem Ziel, ML-Produkte in den Betrieb zu bringen und zuverlässig zu betreiben (Kreuzberger et al., 2022). Anders als klassische Software hängt ein ML-System nicht nur vom Code ab, sondern auch von Daten und trainierten Gewichten, die sich unabhängig voneinander ändern; reale ML-Systeme verursachen deshalb hohe laufende Wartungskosten (Sculley et al., 2015), und in jeder Phase des Deployments treten Probleme auf (Paleyes et al., 2020). Ein einmal gut evaluiertes Modell bleibt nicht gut: Daten und Nutzungsverhalten ändern sich, und ML-Systeme scheitern oft unbemerkt (Rabanser et al., 2018).
 
 ### Funktionsweise
 

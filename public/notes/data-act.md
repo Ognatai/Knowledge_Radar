@@ -300,7 +300,7 @@ Sets out the entry into force of this Regulation on the twentieth day following 
 
 - **Access to device data** (Art. 4-5): users of connected products can obtain the data their products generate and have them shared with third parties, which opens up new sources of training data for predictive maintenance, mobility or energy services.
 - **Limits on use** (Art. 4, 6): the data may not be used to develop a competing connected product, and third parties may use them only for the purposes agreed with the user.
-- **Design obligations** (Art. 3): products placed on the market from 12 September 2026 must make data accessible by default, which affects how data pipelines and device interfaces are designed.
+- **Design obligations** (Art. 3): products placed on the market from 12 September 2026 must make data accessible by default, which affects how [[data-pipelines|data pipelines]] and device interfaces are designed.
 - **Cloud switching** (Chapter VI): customers can switch between data processing services, including those used to train and host models; from 12 January 2027 no switching charges may be imposed (Art. 29).
 - **Interoperability** (Art. 33-36): requirements for data spaces and for smart contracts used to execute data sharing agreements.
 - **Personal data**: where device data relate to identifiable persons, training on them still needs a legal basis under the GDPR.
@@ -593,7 +593,7 @@ Regelt das Inkrafttreten am zwanzigsten Tag nach der Veröffentlichung und den G
 
 - **Zugang zu Gerätedaten** (Art. 4–5): Nutzer vernetzter Produkte können die von ihren Produkten erzeugten Daten erhalten und an Dritte weitergeben lassen; das erschließt neue Quellen für Trainingsdaten, etwa für Predictive Maintenance, Mobilitäts- oder Energiedienste.
 - **Nutzungsgrenzen** (Art. 4, 6): Die Daten dürfen nicht zur Entwicklung eines konkurrierenden vernetzten Produkts genutzt werden, und Dritte dürfen sie nur für die mit dem Nutzer vereinbarten Zwecke verwenden.
-- **Pflichten beim Design** (Art. 3): Produkte, die ab dem 12. September 2026 in Verkehr gebracht werden, müssen Daten standardmäßig zugänglich machen; das betrifft das Design von Datenpipelines und Geräteschnittstellen.
+- **Pflichten beim Design** (Art. 3): Produkte, die ab dem 12. September 2026 in Verkehr gebracht werden, müssen Daten standardmäßig zugänglich machen; das betrifft das Design von [[data-pipelines|Datenpipelines]] und Geräteschnittstellen.
 - **Cloud-Wechsel** (Kapitel VI): Kunden können zwischen Datenverarbeitungsdiensten wechseln, auch solchen für Training und Hosting von Modellen; ab dem 12. Januar 2027 dürfen keine Wechselentgelte mehr erhoben werden (Art. 29).
 - **Interoperabilität** (Art. 33–36): Anforderungen an Datenräume und an Smart Contracts, mit denen Vereinbarungen über die Datenweitergabe ausgeführt werden.
 - **Personenbezogene Daten**: Beziehen sich Gerätedaten auf identifizierbare Personen, braucht das Training damit weiterhin eine Rechtsgrundlage nach der DSGVO.

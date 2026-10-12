@@ -158,14 +158,6 @@ entities:
   type: Concept
   name_en: Open-world assumption
   name_de: Open-World-Annahme
-- id: neo4j
-  type: Technology
-  name_en: Neo4j
-  name_de: Neo4j
-- id: cypher
-  type: Technology
-  name_en: Cypher
-  name_de: Cypher
 - id: knowledge-graph-embeddings
   type: Method
   name_en: Knowledge graph embeddings
@@ -2780,3 +2772,101 @@ entities:
   type: Method
   name_en: Nested cross-validation
   name_de: Verschachtelte Kreuzvalidierung
+- id: whisper
+  type: Method
+  name_en: Whisper
+  name_de: Whisper
+- id: wav2vec-2-0
+  type: Method
+  name_en: wav2vec 2.0
+  name_de: wav2vec 2.0
+- id: connectionist-temporal-classification
+  type: Method
+  name_en: Connectionist Temporal Classification (CTC)
+  name_de: Connectionist Temporal Classification (CTC)
+  aliases:
+  - CTC
+- id: vall-e
+  type: Method
+  name_en: VALL-E
+  name_de: VALL-E
+- id: ssml
+  type: Technology
+  name_en: Speech Synthesis Markup Language (SSML)
+  name_de: Speech Synthesis Markup Language (SSML)
+  aliases:
+  - SSML
+- id: silero-vad
+  type: Technology
+  name_en: Silero VAD
+  name_de: Silero VAD
+- id: dialogflow-cx
+  type: Technology
+  name_en: Dialogflow CX
+  name_de: Dialogflow CX
+- id: amazon-lex
+  type: Technology
+  name_en: Amazon Lex
+  name_de: Amazon Lex
+- id: multiwoz
+  type: Dataset
+  name_en: MultiWOZ
+  name_de: MultiWOZ
+- id: neural-belief-tracker
+  type: Method
+  name_en: Neural Belief Tracker
+  name_de: Neural Belief Tracker
+- id: paradise-framework
+  type: Method
+  name_en: PARADISE (dialogue evaluation framework)
+  name_de: PARADISE (Framework zur Dialogevaluation)
+- id: apache-kafka
+  type: Technology
+  name_en: Apache Kafka
+  name_de: Apache Kafka
+  aliases:
+  - Kafka
+- id: apache-airflow
+  type: Technology
+  name_en: Apache Airflow
+  name_de: Apache Airflow
+  aliases:
+  - Airflow
+- id: dataflow-model
+  type: Method
+  name_en: Dataflow Model
+  name_de: Dataflow-Modell
+- id: oauth-2-0
+  type: Technology
+  name_en: OAuth 2.0
+  name_de: OAuth 2.0
+  aliases:
+  - OAuth
+- id: json-web-token
+  type: Technology
+  name_en: JSON Web Token (JWT)
+  name_de: JSON Web Token (JWT)
+  aliases:
+  - JWT
+- id: pkce
+  type: Method
+  name_en: Proof Key for Code Exchange (PKCE)
+  name_de: Proof Key for Code Exchange (PKCE)
+  aliases:
+  - PKCE
+- id: owasp
+  type: Organization
+  name_en: OWASP
+  name_de: OWASP
+  aliases:
+  - Open Worldwide Application Security Project
+- id: sql-pgq
+  type: Technology
+  name_en: SQL/PGQ
+  name_de: SQL/PGQ
+- id: neo4j-graph-data-science
+  type: Technology
+  name_en: Neo4j Graph Data Science (GDS)
+  name_de: Neo4j Graph Data Science (GDS)
+  aliases:
+  - GDS

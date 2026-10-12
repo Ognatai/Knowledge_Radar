@@ -1,0 +1,15 @@
+version: 1
+note_sha256: a22d1d4eddf833eefb7cedd9be8082dd129cd631ca4f07bdb8a266edb171233b
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- apis
+- http
+- rest
+- microsoft
+- data-pipelines
+- api-authentication
+relations:
+- from: asynchronous-apis
+  type: BASED_ON
+  to: http
+  evidence: typically with HTTP 202 Accepted and a status URL

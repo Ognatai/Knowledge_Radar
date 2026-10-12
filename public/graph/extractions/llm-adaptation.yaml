@@ -1,5 +1,5 @@
 version: 1
-note_sha256: ef88ee683c30d200bbca413162f5083ca29b9f345be7dd8d19900d963cf7b172
+note_sha256: "5e1ad65baee565b85133a10b0a2028f56e015cb35d756fbcc4e8f120bf9bc5cf"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering

@@ -1,0 +1,23 @@
+version: 1
+note_sha256: e20e3ac5b110556a62a0cb6f7f52e4eb4722e97ba12df49eb402fa706dd3241d
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- natural-language-understanding
+- dialogue-state-tracking
+- automatic-speech-recognition
+- text-to-speech
+- dialogflow-cx
+- large-language-models
+- agentic-ai
+- voice-agents
+- conversation-analytics
+- hallucination-detection
+relations:
+- from: conversational-ai
+  type: COMPLEMENTS
+  to: natural-language-understanding
+  evidence: natural language understanding extracts three things from each utterance
+- from: dialogflow-cx
+  type: IMPLEMENTS
+  to: conversational-ai
+  evidence: In Dialogflow CX, every flow has handlers for the built-in events no-match

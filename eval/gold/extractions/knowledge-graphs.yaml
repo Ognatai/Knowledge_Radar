@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "aca1a82c8ce76f27e8d990c89f4bb53bd9b32387e499318af3ffc7c760731891"
+note_sha256: "7550dfd2a0441ada57f66cd56e4dbccdfce0f264c49f09ed320b0b31b94efcd3"
 extracted_by: manual
 discusses: [rdf, property-graph, ontology, owl, open-world-assumption, neo4j, graph-databases, cypher, sparql, knowledge-graph-embeddings, large-language-models, graphrag, information-extraction, w3c]
 relations:

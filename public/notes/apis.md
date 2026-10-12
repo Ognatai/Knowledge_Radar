@@ -2,6 +2,12 @@
 title_en: APIs
 title_de: APIs (Programmierschnittstellen)
 entity_type: Concept
+aliases:
+- REST API
+- REST APIs
+- Web API
+- API design
+- API integration
 sources:
 - https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
 - https://www.rfc-editor.org/rfc/rfc9110.html

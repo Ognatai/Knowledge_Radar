@@ -15,6 +15,11 @@ areas:
       - tokenization
       - embeddings
       - multimodal-models
+      - natural-language-understanding
+      - dialogue-state-tracking
+      - automatic-speech-recognition
+      - text-to-speech
+      - voice-activity-detection
       - information-extraction
       - entity-extraction
       - text-similarity-metrics
@@ -39,6 +44,8 @@ areas:
     name_de: Agenten, Prompting & AI Engineering
     notes:
       - agentic-ai
+      - conversational-ai
+      - voice-agents
       - agent-skills
       - mcp-and-related-protocols
       - langchain-and-langgraph
@@ -84,6 +91,7 @@ areas:
       - regression-testing
       - quality-control
       - llm-observability-and-tracing
+      - conversation-analytics
       - fairness-metrics
       - bias-in-nlp
       - explainable-ai
@@ -139,6 +147,9 @@ areas:
       - rdf
       - sparql
       - graph-databases
+      - neo4j
+      - cypher
+      - gql
       - transe
       - distmult
       - complex
@@ -160,6 +171,10 @@ areas:
       - confluence
       - mlops-and-deployment
       - experiment-tracking
+      - data-pipelines
+      - api-authentication
+      - asynchronous-apis
+      - monitoring-and-alerting
     also:
       - scikit-learn
       - langchain-and-langgraph

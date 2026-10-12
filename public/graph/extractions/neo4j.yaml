@@ -1,0 +1,30 @@
+version: 1
+note_sha256: ae90c7ada32b7d3505ee0cac73b839a6294f614fa48421a6f5c500513e7518a1
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- property-graph
+- cypher
+- neo4j-graph-data-science
+- hnsw
+- approximate-nearest-neighbour-search
+- graph-databases
+- knowledge-graphs
+- graphrag
+- vector-databases
+- rdf
+- sparql
+- sql
+- docker
+relations:
+- from: neo4j
+  type: IMPLEMENTS
+  to: property-graph
+  evidence: Neo4j is a native property graph database
+- from: neo4j
+  type: IMPLEMENTS
+  to: hnsw
+  evidence: approximate nearest neighbour search with HNSW graphs
+- from: neo4j-graph-data-science
+  type: COMPLEMENTS
+  to: neo4j
+  evidence: a Graph Data Science library with graph algorithms

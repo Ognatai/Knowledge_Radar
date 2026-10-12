@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 41765e0bd3b1e1bcf1064c7ac24ef1069a4a0ce007d49ad5ebdcd19b49542517
+note_sha256: "ffa2df3acb100d350d6ecd28a9d8fc9fb8c71a405fae726999aaebf200fedbc9"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - fp16

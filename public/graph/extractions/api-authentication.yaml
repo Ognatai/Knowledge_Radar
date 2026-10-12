@@ -1,0 +1,23 @@
+version: 1
+note_sha256: 8d76551811cfe6b40e020384fe1e61e0115219b235f9895cda6767465ad31c9d
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- oauth-2-0
+- json-web-token
+- pkce
+- owasp
+- apis
+- http
+relations:
+- from: oauth-2-0
+  type: IMPLEMENTS
+  to: api-authentication
+  evidence: The dominant standard is OAuth 2.0
+- from: json-web-token
+  type: COMPLEMENTS
+  to: oauth-2-0
+  evidence: Tokens are often JSON Web Tokens
+- from: pkce
+  type: COMPLEMENTS
+  to: oauth-2-0
+  evidence: requires PKCE for public clients

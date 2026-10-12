@@ -1,0 +1,17 @@
+version: 1
+note_sha256: 5576cc261bd948479bc4c110158c043356488d02329f38a170de688b1609772c
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- silero-vad
+- whisper
+- automatic-speech-recognition
+- voice-agents
+relations:
+- from: silero-vad
+  type: IMPLEMENTS
+  to: voice-activity-detection
+  evidence: Silero VAD, an open pre-trained detector
+- from: whisper
+  type: COMPLEMENTS
+  to: voice-activity-detection
+  evidence: Whisper is a multitask model that also performs voice activity detection

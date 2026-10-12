@@ -80,7 +80,7 @@ NULL represents missing values and is tested with IS NULL rather than with an eq
 | GROUP BY aggregate | Collapses rows into one row per group (PostgreSQL SQL tutorial) | Summaries per group |
 | Window function | Computes across related rows, keeps each row (PostgreSQL window functions) | Rankings, running totals, shares |
 | CTE | Named intermediate result for one query (PostgreSQL CTEs) | Readable multi-step queries, recursion |
-| SPARQL / Cypher | Graph pattern matching ([[sparql|SPARQL]]) | Highly connected data |
+| SPARQL / [[cypher\|Cypher]] | Graph pattern matching ([[sparql|SPARQL]]) | Highly connected data |
 
 ### In practice
 
@@ -168,7 +168,7 @@ NULL steht für fehlende Werte und wird mit IS NULL statt mit einem Gleichheitsz
 | Aggregat mit GROUP BY | Fasst Zeilen zu einer Zeile je Gruppe zusammen (PostgreSQL SQL tutorial) | Zusammenfassungen je Gruppe |
 | Fensterfunktion | Rechnet über zusammengehörige Zeilen, behält jede Zeile (PostgreSQL window functions) | Rangfolgen, laufende Summen, Anteile |
 | CTE | Benanntes Zwischenergebnis für eine Abfrage (PostgreSQL CTEs) | Lesbare mehrstufige Abfragen, Rekursion |
-| SPARQL / Cypher | Abgleich von Graphmustern ([[sparql|SPARQL]]) | Stark vernetzte Daten |
+| SPARQL / [[cypher\|Cypher]] | Abgleich von Graphmustern ([[sparql|SPARQL]]) | Stark vernetzte Daten |
 
 ### In der Praxis
 

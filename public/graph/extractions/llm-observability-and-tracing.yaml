@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 57e7c01f0e3ae25d3290a73d7dc4e1f1e51c44f586bedab9e4980aa57a397779
+note_sha256: "3def557fe3c2a8165928a9670ef8152c48fa1d11ecc73f385d9d9b0c816e6e1d"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - langfuse

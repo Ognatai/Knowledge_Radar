@@ -15,3 +15,15 @@ exclusions:
     embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
   transe:
     embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
+  eu-ai-act:
+    monitoring-and-alerting: market monitoring by authorities, not the monitoring of software systems.
+  experiment-tracking:
+    monitoring-and-alerting: watching a single training run, not monitoring a service in production.
+  legal-ai:
+    monitoring-and-alerting: compliance monitoring of processes, not the monitoring of software systems.
+  neural-network-evaluation:
+    monitoring-and-alerting: watching the validation error during training, not monitoring a service in production.
+  text-to-speech:
+    embeddings: audio codec embeddings, not the text embeddings of the embeddings note.
+  voice-activity-detection:
+    embeddings: speaker embeddings for diarisation, not the text embeddings of the embeddings note.

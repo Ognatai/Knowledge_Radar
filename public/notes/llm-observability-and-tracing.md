@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-LLM observability extends classical application monitoring to the particularities of LLM and agent systems: non-deterministic behaviour, multi-step call chains and costs that depend on tokens. Its core is application tracing, structured logs of every request with the exact prompt, the model's response, token usage, latency and all tool or retrieval steps in between (Langfuse docs). A classical log entry shows that an error occurred; an LLM trace also shows which prompt, which context and which intermediate steps led to the result. Without that, non-deterministic behaviour can hardly be debugged, and production traces also feed evaluations (Langfuse docs).
+LLM [[monitoring-and-alerting|observability]] extends classical application monitoring to the particularities of LLM and agent systems: non-deterministic behaviour, multi-step call chains and costs that depend on tokens. Its core is application tracing, structured logs of every request with the exact prompt, the model's response, token usage, latency and all tool or retrieval steps in between (Langfuse docs). A classical log entry shows that an error occurred; an LLM trace also shows which prompt, which context and which intermediate steps led to the result. Without that, non-deterministic behaviour can hardly be debugged, and production traces also feed evaluations (Langfuse docs).
 
 ### How it works
 
@@ -216,7 +216,7 @@ Verteiltes Tracing macht den gesamten Weg einer Anfrage sichtbar, ob die Anwendu
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
 | Klassisches Logging | Erfasst Ereignisse, keine Prompts, Kontexte oder Token | Infrastrukturfehler |
-| Klassisches Monitoring | Aggregierte Metriken wie Latenz und Fehlerraten ([[mlops-and-deployment|MLOps und Deployment]]) | Zustand von Diensten |
+| Klassisches [[monitoring-and-alerting\|Monitoring]] | Aggregierte Metriken wie Latenz und Fehlerraten ([[mlops-and-deployment|MLOps und Deployment]]) | Zustand von Diensten |
 | Spezialisiertes LLM-Tracing | Prompts, Antworten, Token, Kosten und Werkzeugaufrufe pro Span (Langfuse docs) | Debugging und Evaluation von LLM-Anwendungen |
 | OpenTelemetry | Offener Standard, fügt sich in bestehende Infrastruktur ein (OpenTelemetry traces docs) | Systeme mit bestehendem Observability-Stack |
 

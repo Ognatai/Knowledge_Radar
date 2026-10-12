@@ -65,7 +65,7 @@ As in CI/CD pipelines, the regression run is a precondition for deployment, not 
 
 #### Origin and variants
 
-Regression testing is a core practice of software engineering. For ML, it was extended to data, model quality on important slices and monitoring (Breck et al., 2017), to behavioural test suites (Ribeiro et al., 2020) and to model updates without negative flips (Yan et al., 2020). Drift in hosted LLM services (Chen et al., 2023) made continuous re-testing necessary even without changes on one's own side.
+Regression testing is a core practice of software engineering. For ML, it was extended to data, model quality on important slices and [[monitoring-and-alerting|monitoring]] (Breck et al., 2017), to behavioural test suites (Ribeiro et al., 2020) and to model updates without negative flips (Yan et al., 2020). Drift in hosted LLM services (Chen et al., 2023) made continuous re-testing necessary even without changes on one's own side.
 
 ### When to use it
 
@@ -165,7 +165,7 @@ Wie in CI/CD-Pipelines ist der Regressionslauf Voraussetzung für das Deployment
 
 #### Ursprung und Varianten
 
-Regressionstests sind eine Kernpraxis der Softwareentwicklung. Für ML wurden sie auf Daten, Modellqualität auf wichtigen Ausschnitten und Monitoring (Breck et al., 2017), auf Verhaltenstest-Suiten (Ribeiro et al., 2020) und auf Modellaktualisierungen ohne Negative Flips (Yan et al., 2020) erweitert. Drift bei gehosteten LLM-Diensten (Chen et al., 2023) macht laufendes erneutes Testen auch ohne eigene Änderungen nötig.
+Regressionstests sind eine Kernpraxis der Softwareentwicklung. Für ML wurden sie auf Daten, Modellqualität auf wichtigen Ausschnitten und [[monitoring-and-alerting|Monitoring]] (Breck et al., 2017), auf Verhaltenstest-Suiten (Ribeiro et al., 2020) und auf Modellaktualisierungen ohne Negative Flips (Yan et al., 2020) erweitert. Drift bei gehosteten LLM-Diensten (Chen et al., 2023) macht laufendes erneutes Testen auch ohne eigene Änderungen nötig.
 
 ### Wann einsetzen
 

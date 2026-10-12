@@ -47,7 +47,7 @@ Because FP16 has a limited range, small gradient values can underflow to zero. S
 
 #### 4. BF16 without loss scaling
 
-Kalamkar et al. (2019) studied BF16 for training across image [[classification|classification]], speech recognition, language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no hyperparameter tuning was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
+Kalamkar et al. (2019) studied BF16 for training across image [[classification|classification]], [[automatic-speech-recognition|speech recognition]], language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no hyperparameter tuning was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
 
 #### 5. Reducing optimizer memory
 

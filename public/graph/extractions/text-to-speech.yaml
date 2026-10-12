@@ -1,0 +1,23 @@
+version: 1
+note_sha256: 4130157781d244d779fe3de067b089118974e0263aa3f9ede6a63b614ede732e
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- vall-e
+- ssml
+- w3c
+- automatic-speech-recognition
+- voice-agents
+- conversational-ai
+relations:
+- from: vall-e
+  type: IS_EXAMPLE_OF
+  to: text-to-speech
+  evidence: as in VALL-E
+- from: ssml
+  type: DEVELOPED_BY
+  to: w3c
+  evidence: The Speech Synthesis Markup Language, a W3C Recommendation
+- from: ssml
+  type: COMPLEMENTS
+  to: text-to-speech
+  evidence: Applications steer pronunciation, pauses and prosody with the W3C markup language SSML

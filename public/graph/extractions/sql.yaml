@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3744b3cd8769939a4a6ad0f79c3d7769c375ad80bfbc2d1149e323df2581fe3a
+note_sha256: "06d76394cf654c9a97e5b15558c723611a03167aa205277bb917d51fd15073b1"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - relational-model

@@ -1,0 +1,19 @@
+version: 1
+note_sha256: f35538cec98d4f0ba36c992bf869501ede8af79b6265b716dacd6c42f8f85c6a
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- neo4j
+- property-graph
+- gql
+- sparql
+- sql
+- graph-databases
+relations:
+- from: cypher
+  type: IS_EXAMPLE_OF
+  to: property-graph
+  evidence: Cypher is a declarative query language for property graphs
+- from: gql
+  type: BASED_ON
+  to: cypher
+  evidence: the ISO standard GQL adopted much of its query construction

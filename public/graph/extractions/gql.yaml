@@ -1,0 +1,20 @@
+version: 1
+note_sha256: f87be54fe0fce269dab656072ee31481cd7b0ecdfbdf5dd96871e54c0c143e7d
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- cypher
+- sql-pgq
+- property-graph
+- neo4j
+- sparql
+- graph-databases
+- knowledge-graphs
+relations:
+- from: gql
+  type: BASED_ON
+  to: cypher
+  evidence: GQL adopted much of Cypher's query construction semantics
+- from: gql
+  type: COMPLEMENTS
+  to: sql-pgq
+  evidence: shares its graph pattern matching core with SQL/PGQ

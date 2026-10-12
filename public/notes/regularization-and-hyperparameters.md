@@ -51,7 +51,7 @@ The lasso minimises the residual sum of squares subject to the sum of the absolu
 
 #### 4. Dropout
 
-Dropout randomly drops units, together with their connections, from a neural network during training, which prevents units from co-adapting too much (Srivastava et al., 2014). At test time, a single network with scaled-down weights approximates the average of the many thinned networks seen during training. Dropout reduced overfitting and improved results on benchmarks in vision, speech recognition, document [[classification|classification]] and computational biology ([[neural-network-training|Neural Network Training]]).
+Dropout randomly drops units, together with their connections, from a neural network during training, which prevents units from co-adapting too much (Srivastava et al., 2014). At test time, a single network with scaled-down weights approximates the average of the many thinned networks seen during training. Dropout reduced overfitting and improved results on benchmarks in vision, [[automatic-speech-recognition|speech recognition]], document [[classification|classification]] and computational biology ([[neural-network-training|Neural Network Training]]).
 
 #### 5. Early stopping
 

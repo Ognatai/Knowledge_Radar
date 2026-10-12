@@ -1,0 +1,17 @@
+version: 1
+note_sha256: 464d78a4c22072492c3646bd52b9c59950c32192b815419fe59de41094927291
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- conversational-ai
+- dialogue-state-tracking
+- bert
+- dialogflow-cx
+- entity-extraction
+- information-extraction
+- automatic-speech-recognition
+- conversation-analytics
+relations:
+- from: natural-language-understanding
+  type: BASED_ON
+  to: bert
+  evidence: proposed joint intent classification and slot filling on BERT

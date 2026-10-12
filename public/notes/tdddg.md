@@ -503,7 +503,7 @@ Regelt die Zuständigkeit der Bundesnetzagentur als Aufsichtsbehörde für die E
 - **On-Device-KI**: Auch das Speichern von Modellen, Embeddings oder Nutzerprofilen auf dem Endgerät oder das Auslesen von dort fällt unter § 25; die Ausnahme für unbedingt erforderliche Speicherung deckt nur, was der gewünschte Dienst braucht.
 - **Fernmeldegeheimnis** (§ 3): Die Auswertung von Nachrichten- oder Gesprächsinhalten mit KI, etwa zur Spam- oder Betrugserkennung, ist für Anbieter von Telekommunikationsdiensten eingeschränkt, auch für Messaging-Dienste.
 - **Verkehrs- und Standortdaten** (§§ 9, 13): Verkehrsdaten dürfen nur für die in § 9 genannten Zwecke verarbeitet werden, etwa Verbindungsaufbau und Abrechnung; Standortdaten nur anonymisiert oder mit Einwilligung für Dienste mit Zusatznutzen. Das begrenzt Analysen und Modelltraining mit Telekommunikations-Metadaten.
-- **Einwilligungsverwaltung** (§ 26): Anerkannte Dienste zur Einwilligungsverwaltung sollen Einwilligungsbanner reduzieren; sie betreffen Datenpipelines, die auf Einwilligungen angewiesen sind.
+- **Einwilligungsverwaltung** (§ 26): Anerkannte Dienste zur Einwilligungsverwaltung sollen Einwilligungsbanner reduzieren; sie betreffen [[data-pipelines|Datenpipelines]], die auf Einwilligungen angewiesen sind.
 
 ### Amtliche Quellen
 

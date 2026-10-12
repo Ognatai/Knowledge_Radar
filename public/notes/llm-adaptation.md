@@ -55,7 +55,7 @@ QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained mode
 
 #### 5. Knowledge distillation
 
-Knowledge distillation compresses the knowledge of a large model or an ensemble of models into a single smaller model by training it on the soft output probabilities of the large one ([[knowledge-distillation|Knowledge Distillation]]). Hinton et al. (2015) reported surprising results on MNIST and showed that distilling an ensemble into a single model significantly improved the acoustic model of a heavily used commercial speech recognition system, making deployment cheaper than running the full ensemble.
+Knowledge distillation compresses the knowledge of a large model or an ensemble of models into a single smaller model by training it on the soft output probabilities of the large one ([[knowledge-distillation|Knowledge Distillation]]). Hinton et al. (2015) reported surprising results on MNIST and showed that distilling an ensemble into a single model significantly improved the acoustic model of a heavily used commercial [[automatic-speech-recognition|speech recognition]] system, making deployment cheaper than running the full ensemble.
 
 #### 6. Mixed precision and quantization
 

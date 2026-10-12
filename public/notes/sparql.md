@@ -72,7 +72,7 @@ The examples follow the legal knowledge graph modelled in [[knowledge-graphs|Kno
 **Limitations**
 - Evaluating general SPARQL patterns is PSPACE-complete; patterns that are not well designed, particularly with nested OPTIONAL, can be expensive (Pérez et al., 2009).
 - OPTIONAL and negation are easy to misuse, giving unexpected results (W3C SPARQL 1.1).
-- Only applicable to RDF data; property [[graph-databases|graph databases]] use other languages such as Cypher (Neo4j Cypher Manual).
+- Only applicable to RDF data; property [[graph-databases|graph databases]] use other languages such as [[cypher|Cypher]] ([[neo4j|Neo4j]] Cypher Manual).
 
 ### Comparison
 
@@ -160,7 +160,7 @@ Die Beispiele folgen dem juristischen Wissensgraphen aus [[knowledge-graphs|Wiss
 **Einschränkungen**
 - Die Auswertung allgemeiner SPARQL-Muster ist PSPACE-vollständig; nicht wohlgeformte Muster, besonders mit verschachteltem OPTIONAL, können teuer sein (Pérez et al., 2009).
 - OPTIONAL und Negation werden leicht falsch eingesetzt und liefern dann unerwartete Ergebnisse (W3C SPARQL 1.1).
-- Nur auf RDF-Daten anwendbar; Property-Graph-Datenbanken nutzen andere Sprachen wie Cypher (Neo4j Cypher Manual).
+- Nur auf RDF-Daten anwendbar; Property-Graph-Datenbanken nutzen andere Sprachen wie [[cypher|Cypher]] ([[neo4j|Neo4j]] Cypher Manual).
 
 ### Vergleich
 

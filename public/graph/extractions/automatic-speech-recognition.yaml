@@ -1,0 +1,25 @@
+version: 1
+note_sha256: bc1e758bfa14545c5d3c2d792dfe5e0997bad094ff4a8f9345d4d23ebea3959b
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- whisper
+- wav2vec-2-0
+- connectionist-temporal-classification
+- openai
+- voice-agents
+- conversational-ai
+- natural-language-understanding
+- dialogue-state-tracking
+relations:
+- from: whisper
+  type: IS_EXAMPLE_OF
+  to: automatic-speech-recognition
+  evidence: Whisper uses this architecture
+- from: wav2vec-2-0
+  type: IS_EXAMPLE_OF
+  to: automatic-speech-recognition
+  evidence: wav2vec 2.0 learns speech representations from unlabelled raw audio
+- from: wav2vec-2-0
+  type: COMPLEMENTS
+  to: connectionist-temporal-classification
+  evidence: Such encoders are decoded with CTC

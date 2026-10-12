@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Quality control is the systematic checking and assurance of quality in data, models, retrieval and generation across the whole lifecycle of an ML or LLM system, not a one-off test before launch. Real-world ML systems incur large ongoing maintenance costs because they depend on data and on the world around them (Sculley et al., 2015), so quality control combines tests for data, models and infrastructure with monitoring in production (Breck et al., 2017), documentation of models and datasets (Mitchell et al., 2018; Gebru et al., 2018) and behavioural tests beyond aggregate accuracy (Ribeiro et al., 2020).
+Quality control is the systematic checking and assurance of quality in data, models, retrieval and generation across the whole lifecycle of an ML or LLM system, not a one-off test before launch. Real-world ML systems incur large ongoing maintenance costs because they depend on data and on the world around them (Sculley et al., 2015), so quality control combines tests for data, models and infrastructure with [[monitoring-and-alerting|monitoring]] in production (Breck et al., 2017), documentation of models and datasets (Mitchell et al., 2018; Gebru et al., 2018) and behavioural tests beyond aggregate accuracy (Ribeiro et al., 2020).
 
 ### How it works
 
@@ -105,7 +105,7 @@ Quality control for ML and LLM systems is a continuous process: tests for data, 
 
 ### TL;DR
 
-Qualitätskontrolle ist die systematische Prüfung und Sicherung der Qualität von Daten, Modellen, Retrieval und Generierung über den gesamten Lebenszyklus eines ML- oder LLM-Systems, kein einmaliger Test vor dem Start. Reale ML-Systeme verursachen hohe laufende Wartungskosten, weil sie von Daten und ihrer Umgebung abhängen (Sculley et al., 2015); Qualitätskontrolle verbindet deshalb Tests für Daten, Modelle und Infrastruktur mit Monitoring im Betrieb (Breck et al., 2017), Dokumentation von Modellen und Datensätzen (Mitchell et al., 2018; Gebru et al., 2018) und Verhaltenstests jenseits aggregierter Genauigkeit (Ribeiro et al., 2020).
+Qualitätskontrolle ist die systematische Prüfung und Sicherung der Qualität von Daten, Modellen, Retrieval und Generierung über den gesamten Lebenszyklus eines ML- oder LLM-Systems, kein einmaliger Test vor dem Start. Reale ML-Systeme verursachen hohe laufende Wartungskosten, weil sie von Daten und ihrer Umgebung abhängen (Sculley et al., 2015); Qualitätskontrolle verbindet deshalb Tests für Daten, Modelle und Infrastruktur mit [[monitoring-and-alerting|Monitoring]] im Betrieb (Breck et al., 2017), Dokumentation von Modellen und Datensätzen (Mitchell et al., 2018; Gebru et al., 2018) und Verhaltenstests jenseits aggregierter Genauigkeit (Ribeiro et al., 2020).
 
 ### Funktionsweise
 

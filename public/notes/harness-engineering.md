@@ -41,7 +41,7 @@ Harness engineering is the design of everything around a language model that tur
 - **Output validation:** model outputs are checked against a schema before they are executed as actions.
 - **Hooks and middleware:** deterministic steps such as compaction, continuation or lint checks (Osmani, 2026a).
 - **Durable state:** the file system and [[git|Git]] give the agent a workspace, versioning and the ability to roll back (Osmani, 2026a).
-- **Observability:** logs, traces and cost metering for every tool call ([[llm-observability-and-tracing|LLM Observability and Tracing]]).
+- **[[monitoring-and-alerting|Observability]]:** logs, traces and cost metering for every tool call ([[llm-observability-and-tracing|LLM Observability and Tracing]]).
 
 #### 3. The harness as line of defence
 
@@ -148,7 +148,7 @@ Harness Engineering ist die Gestaltung von allem rund um ein Sprachmodell, das e
 - **Ausgabevalidierung:** Modellausgaben werden gegen ein Schema geprüft, bevor sie als Aktion ausgeführt werden.
 - **Hooks und Middleware:** deterministische Schritte wie Kompaktierung, Fortsetzung oder Lint-Prüfungen (Osmani, 2026a).
 - **Dauerhafter Zustand:** Dateisystem und [[git|Git]] geben dem Agenten einen Arbeitsbereich, Versionierung und die Möglichkeit zurückzurollen (Osmani, 2026a).
-- **Observability:** Logs, Traces und Kostenmessung für jeden Werkzeugaufruf ([[llm-observability-and-tracing|LLM-Observability und Tracing]]).
+- **[[monitoring-and-alerting|Observability]]:** Logs, Traces und Kostenmessung für jeden Werkzeugaufruf ([[llm-observability-and-tracing|LLM-Observability und Tracing]]).
 
 #### 3. Der Harness als Verteidigungslinie
 

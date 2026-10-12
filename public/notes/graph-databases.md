@@ -2,6 +2,9 @@
 title_en: Graph Databases
 title_de: Graphdatenbanken
 entity_type: Concept
+aliases:
+- Graph database
+- Graph technologies
 sources:
 - https://doi.org/10.1145/1322432.1322433
 - https://doi.org/10.1145/3183713.3190657
@@ -16,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Graph databases store data as nodes and edges and express queries as graph patterns and traversals, which suits data whose value lies in its connections (Angles & Gutierrez, 2008). The two main models are property graphs, queried with languages such as Cypher (Francis et al., 2018), and RDF triple stores, queried with SPARQL (W3C SPARQL 1.1). They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search.
+Graph databases store data as nodes and edges and express queries as graph patterns and traversals, which suits data whose value lies in its connections (Angles & Gutierrez, 2008). The two main models are property graphs, queried with languages such as [[cypher|Cypher]] (Francis et al., 2018), and RDF triple stores, queried with SPARQL (W3C SPARQL 1.1). They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search.
 
 ### How it works
 
@@ -40,7 +43,7 @@ In graph database models, the data structures for schema and instances are model
 
 #### 2. Property graphs and Cypher
 
-A property graph consists of nodes with labels and relationships with exactly one type and a direction; both can carry properties as key-value pairs (Neo4j Cypher Manual). Cypher, originally designed for the Neo4j graph database and now governed by the openCypher project, expresses subgraphs of interest with an ASCII-art pattern syntax, for example MATCH (a:Person)-[:KNOWS]->(b:Person) RETURN b (Francis et al., 2018; Neo4j Cypher Manual).
+A property graph consists of nodes with labels and relationships with exactly one type and a direction; both can carry properties as key-value pairs ([[neo4j|Neo4j]] Cypher Manual). Cypher, originally designed for the Neo4j graph database and now governed by the openCypher project, expresses subgraphs of interest with an ASCII-art pattern syntax, for example MATCH (a:Person)-[:KNOWS]->(b:Person) RETURN b (Francis et al., 2018; Neo4j Cypher Manual).
 
 #### 3. RDF triple stores and SPARQL
 
@@ -107,7 +110,7 @@ Graph databases store data as nodes and edges and query it as patterns, which ma
 
 ### TL;DR
 
-Graphdatenbanken speichern Daten als Knoten und Kanten und formulieren Abfragen als Graphmuster und Traversierungen; das passt zu Daten, deren Wert in ihren Verbindungen liegt (Angles & Gutierrez, 2008). Die beiden Hauptmodelle sind Property Graphs, die mit Sprachen wie Cypher abgefragt werden (Francis et al., 2018), und RDF-Triplestores, die mit SPARQL abgefragt werden (W3C SPARQL 1.1). Sie ergänzen relationale Datenbanken, die feste Schemata bevorzugen, und Vektordatenbanken, die auf Ähnlichkeitssuche ausgelegt sind.
+Graphdatenbanken speichern Daten als Knoten und Kanten und formulieren Abfragen als Graphmuster und Traversierungen; das passt zu Daten, deren Wert in ihren Verbindungen liegt (Angles & Gutierrez, 2008). Die beiden Hauptmodelle sind Property Graphs, die mit Sprachen wie [[cypher|Cypher]] abgefragt werden (Francis et al., 2018), und RDF-Triplestores, die mit SPARQL abgefragt werden (W3C SPARQL 1.1). Sie ergänzen relationale Datenbanken, die feste Schemata bevorzugen, und Vektordatenbanken, die auf Ähnlichkeitssuche ausgelegt sind.
 
 ### Funktionsweise
 
@@ -131,7 +134,7 @@ In Graphdatenbankmodellen werden die Datenstrukturen für Schema und Instanzen a
 
 #### 2. Property Graphs und Cypher
 
-Ein Property Graph besteht aus Knoten mit Labels und Beziehungen mit genau einem Typ und einer Richtung; beide können Eigenschaften als Schlüssel-Wert-Paare tragen (Neo4j Cypher Manual). Cypher, ursprünglich für die Graphdatenbank Neo4j entworfen und heute vom openCypher-Projekt betreut, beschreibt gesuchte Teilgraphen mit einer ASCII-Art-Mustersyntax, etwa MATCH (a:Person)-[:KNOWS]->(b:Person) RETURN b (Francis et al., 2018; Neo4j Cypher Manual).
+Ein Property Graph besteht aus Knoten mit Labels und Beziehungen mit genau einem Typ und einer Richtung; beide können Eigenschaften als Schlüssel-Wert-Paare tragen ([[neo4j|Neo4j]] Cypher Manual). Cypher, ursprünglich für die Graphdatenbank Neo4j entworfen und heute vom openCypher-Projekt betreut, beschreibt gesuchte Teilgraphen mit einer ASCII-Art-Mustersyntax, etwa MATCH (a:Person)-[:KNOWS]->(b:Person) RETURN b (Francis et al., 2018; Neo4j Cypher Manual).
 
 #### 3. RDF-Triplestores und SPARQL
 

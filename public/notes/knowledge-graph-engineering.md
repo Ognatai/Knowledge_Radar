@@ -39,7 +39,7 @@ Source data passes through extraction and mapping into the graph, duplicate enti
 
 #### 1. From modelling to pipeline
 
-Hogan et al. (2020) summarise the life cycle of knowledge graphs: creation from text, structured data and other sources, enrichment, quality assessment, refinement and publication. A schema or ontology governs which types and relations are allowed ([[ontology-design|Ontology Design]]), and the pipeline that populates the graph is treated like any other data pipeline, with automated, repeatable steps.
+Hogan et al. (2020) summarise the life cycle of knowledge graphs: creation from text, structured data and other sources, enrichment, quality assessment, refinement and publication. A schema or ontology governs which types and relations are allowed ([[ontology-design|Ontology Design]]), and the pipeline that populates the graph is treated like any other [[data-pipelines|data pipeline]], with automated, repeatable steps.
 
 #### 2. Entity resolution
 

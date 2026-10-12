@@ -171,7 +171,7 @@ Describes the guide as a building block of the ECB's 2023–25 work programme on
 ### Relevance for AI development
 
 - **Data quality as a precondition**: accurate, complete and timely risk data (Principles 3–6) are also a precondition for reliable machine learning models in banking; the ECB guide explicitly includes models in the scope of the data architecture.
-- **Automation** (Principle 3): risk data should be aggregated on a largely automated basis to minimise errors, which favours automated data pipelines with documented controls.
+- **Automation** (Principle 3): risk data should be aggregated on a largely automated basis to minimise errors, which favours automated [[data-pipelines|data pipelines]] with documented controls.
 - **Data lineage and metadata** (ECB guide Sections 3.2 and 3.4): data taxonomies, a business glossary, a metadata repository and coverage of the whole data lifecycle support traceability, which is also needed for training and input data of AI systems.
 - **Ad hoc analyses** (Principle 6): the ability to produce aggregated risk data on demand, including in a crisis, is a use case for AI-based analytics, but results must meet the same accuracy and validation standards.
 - **Reporting** (Principles 7–11): AI-generated risk reports must be accurate, reconciled and validated, clear and tailored to their recipients.
@@ -333,7 +333,7 @@ Beschreibt den Leitfaden als Baustein des Arbeitsprogramms der EZB für 2023–2
 ### Bedeutung für die KI-Entwicklung
 
 - **Datenqualität als Voraussetzung**: Genaue, vollständige und aktuelle Risikodaten (Grundsätze 3–6) sind auch Voraussetzung für verlässliche Modelle des maschinellen Lernens im Bankbetrieb; der EZB-Leitfaden bezieht Modelle ausdrücklich in den Anwendungsbereich der Datenarchitektur ein.
-- **Automatisierung** (Grundsatz 3): Risikodaten sollen weitgehend automatisiert aggregiert werden, um Fehler zu vermeiden; das spricht für automatisierte Datenpipelines mit dokumentierten Kontrollen.
+- **Automatisierung** (Grundsatz 3): Risikodaten sollen weitgehend automatisiert aggregiert werden, um Fehler zu vermeiden; das spricht für automatisierte [[data-pipelines|Datenpipelines]] mit dokumentierten Kontrollen.
 - **Datenherkunft und Metadaten** (EZB-Leitfaden Abschnitte 3.2 und 3.4): Datentaxonomien, ein Verzeichnis fachlicher Begriffe, ein Metadaten-Repository und die Abdeckung des gesamten Datenlebenszyklus unterstützen die Nachvollziehbarkeit, die auch für Trainings- und Eingabedaten von KI-Systemen nötig ist.
 - **Ad-hoc-Auswertungen** (Grundsatz 6): Die Fähigkeit, aggregierte Risikodaten auf Abruf und auch in Krisen zu liefern, ist ein Anwendungsfall für KI-gestützte Analysen; die Ergebnisse müssen aber dieselben Anforderungen an Genauigkeit und Validierung erfüllen.
 - **Berichterstattung** (Grundsätze 7–11): KI-erstellte Risikoberichte müssen genau, abgestimmt und validiert, klar und auf ihre Empfänger zugeschnitten sein.

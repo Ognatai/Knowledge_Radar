@@ -1,0 +1,23 @@
+version: 1
+note_sha256: d0e62e7351f65827b69402d2cf7779af13fec21ed18b32ad3a83be48c5de17ce
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- automatic-speech-recognition
+- text-to-speech
+- voice-activity-detection
+- conversational-ai
+- dialogue-state-tracking
+- dialogflow-cx
+- silero-vad
+- apis
+- asynchronous-apis
+- conversation-analytics
+relations:
+- from: voice-agents
+  type: BASED_ON
+  to: automatic-speech-recognition
+  evidence: It is built either as a pipeline of speech-to-text, a language model and text-to-speech
+- from: voice-agents
+  type: BASED_ON
+  to: voice-activity-detection
+  evidence: voice activity detection and turn detection decide when the user has finished
