@@ -121,17 +121,28 @@ def response(stop_reason, content):
 
 def test_a_paused_search_is_resumed_and_citations_become_sources():
     citation = SimpleNamespace(url="https://acme.example", title="ACME")
-    paused = response("pause_turn", [SimpleNamespace(type="server_tool_use")])
+    results = SimpleNamespace(type="web_search_tool_result", content=[
+        SimpleNamespace(url="https://acme.example", title="ACME"), SimpleNamespace(url="https://news.example", title="News")])
+    paused = response("pause_turn", [SimpleNamespace(type="text", text="I'll search.", citations=None),
+                                     SimpleNamespace(type="server_tool_use"), results])
     done = response("end_turn", [SimpleNamespace(type="text", text="ACME builds ", citations=[citation]),
                                  SimpleNamespace(type="text", text="robots.", citations=[citation])])
     client = FakeClient([paused, done])
     result = research.ask_claude(research.Lookup("company", "acme-gmbh", "ACME GmbH"), client=client)
     assert result.text == "ACME builds robots."
     assert result.sources == [{"title": "ACME", "url": "https://acme.example"}]
+    assert result.consulted == [{"title": "News", "url": "https://news.example"}]
     assert result.searches == 2
     assert client.requests[1]["messages"][1] == {"role": "assistant", "content": paused.content}
     assert client.requests[0]["messages"] == [{"role": "user", "content": "Company: ACME GmbH"}]
-    assert [tool["type"] for tool in client.requests[0]["tools"]] == ["web_search_20260209"]
+    assert client.requests[0]["tools"] == [{"type": "web_search_20260209", "name": "web_search", "max_uses": 4,
+                                            "allowed_callers": ["direct"]}]
+
+
+def test_a_search_error_is_not_a_source():
+    error = SimpleNamespace(type="web_search_tool_result", content=SimpleNamespace(error_code="max_uses_exceeded"))
+    text, cited, found = research.answer([error, SimpleNamespace(type="text", text="Nothing reliable.", citations=None)])
+    assert (text, cited, found) == ("Nothing reliable.", [], [])
 
 
 def test_only_the_own_key_switches_research_on(monkeypatch):

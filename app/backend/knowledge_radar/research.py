@@ -42,7 +42,7 @@ DEFAULT_MODEL = "claude-opus-5-5"
 DEFAULT_MONTHLY_CAP = 3.0
 # Enough for one lookup with five searches; a lookup that would not fit is not started.
 RESERVE_PER_LOOKUP = 0.75
-MAX_SEARCHES = 5
+MAX_SEARCHES = 4
 MAX_CONTINUATIONS = 2
 # US dollars per million tokens (input, output, cache write, cache read); a model not
 # listed (a refusal fallback) is priced like the most expensive one listed.
@@ -100,11 +100,12 @@ class Lookup:
 @dataclass
 class Finding:
     text: str
-    sources: list[dict[str, str]]
+    sources: list[dict[str, str]]  # pages the answer cites
     cost: float
     model: str
     searches: int = 0
     refused: bool = False
+    consulted: list[dict[str, str]] = field(default_factory=list)  # search results not cited
 
 
 def _frontmatter(path: Path) -> dict[str, Any]:
@@ -171,16 +172,27 @@ def searches(usage: Any) -> int:
     return int(getattr(server, "web_search_requests", 0) or 0)
 
 
-def answer(content: list[Any]) -> tuple[str, list[dict[str, str]]]:
-    """The answer text and the web pages it cites, each once."""
-    text = "".join(block.text for block in content if block.type == "text").strip()
-    sources: dict[str, dict[str, str]] = {}
+SEARCH_BLOCKS = {"server_tool_use", "web_search_tool_result"}
+
+
+def answer(content: list[Any]) -> tuple[str, list[dict[str, str]], list[dict[str, str]]]:
+    """The answer text (after the last search), the pages it cites, and the other pages found."""
+    last_search = max((i for i, block in enumerate(content) if block.type in SEARCH_BLOCKS), default=-1)
+    text = "".join(block.text for block in content[last_search + 1:] if block.type == "text").strip()
+    cited: dict[str, dict[str, str]] = {}
+    found: dict[str, dict[str, str]] = {}
     for block in content:
-        for citation in (getattr(block, "citations", None) or []) if block.type == "text" else []:
-            url = getattr(citation, "url", None)
-            if url and url not in sources:
-                sources[url] = {"title": str(getattr(citation, "title", "") or url), "url": url}
-    return text, list(sources.values())
+        if block.type == "text":
+            for citation in getattr(block, "citations", None) or []:
+                url = getattr(citation, "url", None)
+                if url:
+                    cited.setdefault(url, {"title": str(getattr(citation, "title", "") or url), "url": url})
+        elif block.type == "web_search_tool_result" and isinstance(block.content, list):
+            for result in block.content:
+                url = getattr(result, "url", None)
+                if url:
+                    found.setdefault(url, {"title": str(getattr(result, "title", "") or url), "url": url})
+    return text, list(cited.values()), [page for url, page in found.items() if url not in cited]
 
 
 def ask_claude(lookup: Lookup, *, client: Any, model: str = DEFAULT_MODEL) -> Finding:
@@ -189,6 +201,9 @@ def ask_claude(lookup: Lookup, *, client: Any, model: str = DEFAULT_MODEL) -> Fi
 
     messages: list[dict[str, Any]] = [{"role": "user", "content": lookup.query}]
     total, searched, content = 0.0, 0, []
+    # Direct calls, not dynamic filtering through code execution: filtered results came
+    # back without citations, and one filtering run used up all searches (2026-10-12).
+    tool = {"type": "web_search_20260209", "name": "web_search", "max_uses": MAX_SEARCHES, "allowed_callers": ["direct"]}
     for _ in range(MAX_CONTINUATIONS + 1):
         try:
             response = client.beta.messages.create(
@@ -196,7 +211,7 @@ def ask_claude(lookup: Lookup, *, client: Any, model: str = DEFAULT_MODEL) -> Fi
                 max_tokens=8000,
                 system=SYSTEM_PROMPT,
                 messages=messages,
-                tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": MAX_SEARCHES}],
+                tools=[tool],
                 output_config={"effort": "medium"},
                 # A request the model declines is answered by a fallback model instead.
                 betas=["server-side-fallback-2026-07-01"],
@@ -206,21 +221,21 @@ def ask_claude(lookup: Lookup, *, client: Any, model: str = DEFAULT_MODEL) -> Fi
             raise ResearchError(f"Claude API: {exc}") from exc
         total += cost(response.usage, response.model)
         searched += searches(response.usage)
-        content = list(response.content)
+        content += list(response.content)
         if response.stop_reason == "refusal":
             return Finding("", [], total, response.model, searched, refused=True)
         if response.stop_reason != "pause_turn":
             break
-        # The server's search loop paused; sending its turn back resumes it.
-        messages = [messages[0], {"role": "assistant", "content": response.content}]
-    text, sources = answer(content)
-    return Finding(text, sources, total, response.model, searched)
+        # The server's search loop paused; sending the turn so far back resumes it.
+        messages = [messages[0], {"role": "assistant", "content": list(content)}]
+    text, sources, consulted = answer(content)
+    return Finding(text, sources, total, response.model, searched, consulted=consulted)
 
 
 def research_markdown(lookup: Lookup, finding: Finding, date: dt.date) -> str:
     frontmatter: dict[str, Any] = {"name": lookup.person} if lookup.kind == "person" else {}
     frontmatter |= {"company": lookup.company_name, "researched": date, "model": finding.model,
-                    "sources": finding.sources}
+                    "sources": finding.sources, "also_found": finding.consulted}
     header = yaml.safe_dump(frontmatter, sort_keys=False, allow_unicode=True, width=1000).strip()
     note = "Researched by Claude with web search from the name alone; check before relying on it."
     return f"---\n{header}\n---\n_{note}_\n\n{finding.text}\n"
