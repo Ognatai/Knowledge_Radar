@@ -23,6 +23,7 @@ graph TD;
 	__start__([<p>__start__</p>]):::first
 	validate_notes(validate notes)
 	update_index(update index)
+	update_private_repo(update private repo)
 	fetch_sources(fetch sources)
 	assess_relevance(assess relevance)
 	write_drafts(write drafts)
@@ -40,8 +41,9 @@ graph TD;
 	propose_inbox --> summarise;
 	summarise -.-> propose_branch;
 	summarise -.-> save_summary;
-	update_index -.-> fetch_sources;
 	update_index -.-> summarise;
+	update_index -.-> update_private_repo;
+	update_private_repo --> fetch_sources;
 	validate_notes -.-> summarise;
 	validate_notes -.-> update_index;
 	write_drafts --> propose_inbox;
@@ -49,5 +51,4 @@ graph TD;
 	classDef default fill:#f2f0ff,line-height:1.2
 	classDef first fill-opacity:0
 	classDef last fill:#bfb6fc
-
 ```
