@@ -1,0 +1,13 @@
+version: 1
+note_sha256: "94ffaba43bc16e1480329794a7864c43c951da08d2b911b73a00d7a3d2a0957f"
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- feature-selection
+- classification
+- query-likelihood-model
+- k-nearest-neighbors
+relations:
+- from: feature-selection
+  type: COMPLEMENTS
+  to: naive-bayes
+  evidence: Feature selection with mutual information or χ² removes noise terms

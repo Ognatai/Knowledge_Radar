@@ -70,7 +70,7 @@ Static word embeddings, including word2vec (Mikolov et al. 2013) and GloVe (Penn
 
 - For efficient semantic similarity search in large collections (e.g., 10,000 sentences), SBERT reduces inference time from ~65 hours (BERT) to ~5 seconds while maintaining accuracy, typically implemented with [[vector-databases|Vector Databases]] (Reimers & Gurevych, 2019).
 - When memory or latency budgets vary, Matryoshka embeddings can be truncated to fewer dimensions with little loss (Kusupati et al., 2022).
-- For clustering, deduplication or classification of texts by meaning, using the same vectors as for search.
+- For clustering, [[near-duplicate-detection|deduplication]] or classification of texts by meaning, using the same vectors as for search.
 - Static word vectors (Mikolov et al., 2013) only where word-level similarity is enough and resources are very limited; contextual models are the standard today.
 
 ### Strengths and limitations

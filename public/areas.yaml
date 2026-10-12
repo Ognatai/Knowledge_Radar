@@ -65,7 +65,14 @@ areas:
     name_de: Retrieval & RAG
     notes:
       - information-retrieval
+      - inverted-index
       - bm25
+      - query-likelihood-model
+      - query-expansion
+      - latent-semantic-indexing
+      - pagerank
+      - web-crawling
+      - near-duplicate-detection
       - semantic-retrieval
       - sentence-bert
       - vector-databases
@@ -109,6 +116,7 @@ areas:
       - ml-preprocessing
       - feature-engineering
       - classification
+      - naive-bayes
       - classification-metrics
       - decision-trees
       - ensemble-methods

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f6b809823c435687ac58067e9667b4f088c84f10c35dce4fe45a3b14d8e1c665
+note_sha256: "ce044ce527d55ec58cf6cfe05bfba73ac62889b3048a3780b094fa87b1ab695c"
 extracted_by: claude
 discusses:
 - probabilistic-relevance-framework

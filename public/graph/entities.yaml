@@ -579,10 +579,6 @@ entities:
   type: Method
   name_en: XGBoost
   name_de: XGBoost
-- id: naive-bayes
-  type: Method
-  name_en: Naive Bayes
-  name_de: Naive Bayes
 - id: discriminant-analysis
   type: Method
   name_en: Discriminant analysis
@@ -1571,10 +1567,6 @@ entities:
   name_de: tf-idf
   aliases:
   - TF-IDF
-- id: inverted-index
-  type: Concept
-  name_en: Inverted index
-  name_de: Invertierter Index
 - id: vector-space-model
   type: Method
   name_en: Vector space model
@@ -2266,10 +2258,6 @@ entities:
   type: Method
   name_en: Reciprocal rank fusion
   name_de: Reciprocal Rank Fusion
-- id: query-expansion
-  type: Method
-  name_en: Query expansion
-  name_de: Query Expansion
 - id: natural-language-inference
   type: Method
   name_en: Natural language inference (NLI)
@@ -2870,3 +2858,21 @@ entities:
   name_de: Neo4j Graph Data Science (GDS)
   aliases:
   - GDS
+- id: mapreduce
+  type: Method
+  name_en: MapReduce
+  name_de: MapReduce
+- id: singular-value-decomposition
+  type: Method
+  name_en: Singular value decomposition (SVD)
+  name_de: Singulärwertzerlegung (SVD)
+- id: markov-chain
+  type: Concept
+  name_en: Markov chain
+  name_de: Markov-Kette
+- id: jaccard-coefficient
+  type: Concept
+  name_en: Jaccard coefficient
+  name_de: Jaccard-Koeffizient
+  aliases:
+  - Jaccard similarity

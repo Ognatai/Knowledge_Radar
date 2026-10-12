@@ -1,0 +1,18 @@
+version: 1
+note_sha256: "f21bf5560fcabe1d6813423fceb3e097fb8d84d19c06023537e324b4ff5046e0"
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- information-retrieval
+- bm25
+- mapreduce
+- rag-retrieval
+- vector-databases
+relations:
+- from: bm25
+  type: BASED_ON
+  to: inverted-index
+  evidence: It is the core data structure of lexical search such as BM25
+- from: inverted-index
+  type: BASED_ON
+  to: mapreduce
+  evidence: For web-scale collections, MapReduce distributes the work

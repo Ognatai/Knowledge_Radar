@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Classification predicts a discrete class from input features. Classical methods are logistic regression (Cox, 1958), naive Bayes and discriminant analysis (Fisher, 1936; Hastie et al., 2009). Discriminative models such as logistic regression model the class probability directly, while generative models such as naive Bayes model how the features are distributed in each class (Ng & Jordan, 2001). Predicted probabilities are often distorted and need calibration (Niculescu-Mizil & Caruana, 2005).
+Classification predicts a discrete class from input features. Classical methods are logistic regression (Cox, 1958), [[naive-bayes|naive Bayes]] and discriminant analysis (Fisher, 1936; Hastie et al., 2009). Discriminative models such as logistic regression model the class probability directly, while generative models such as naive Bayes model how the features are distributed in each class (Ng & Jordan, 2001). Predicted probabilities are often distorted and need calibration (Niculescu-Mizil & Caruana, 2005).
 
 ### How it works
 
@@ -101,7 +101,7 @@ Classification predicts classes either by modelling the class probability direct
 
 ### TL;DR
 
-Klassifikation sagt aus Eingabemerkmalen eine diskrete Klasse vorher. Klassische Verfahren sind die logistische Regression (Cox, 1958), Naive Bayes und die Diskriminanzanalyse (Fisher, 1936; Hastie et al., 2009). Diskriminative Modelle wie die logistische Regression modellieren die Klassenwahrscheinlichkeit direkt, generative Modelle wie Naive Bayes modellieren, wie die Merkmale in jeder Klasse verteilt sind (Ng & Jordan, 2001). Vorhergesagte Wahrscheinlichkeiten sind oft verzerrt und müssen kalibriert werden (Niculescu-Mizil & Caruana, 2005).
+Klassifikation sagt aus Eingabemerkmalen eine diskrete Klasse vorher. Klassische Verfahren sind die logistische Regression (Cox, 1958), [[naive-bayes|Naive Bayes]] und die Diskriminanzanalyse (Fisher, 1936; Hastie et al., 2009). Diskriminative Modelle wie die logistische Regression modellieren die Klassenwahrscheinlichkeit direkt, generative Modelle wie Naive Bayes modellieren, wie die Merkmale in jeder Klasse verteilt sind (Ng & Jordan, 2001). Vorhergesagte Wahrscheinlichkeiten sind oft verzerrt und müssen kalibriert werden (Niculescu-Mizil & Caruana, 2005).
 
 ### Funktionsweise
 

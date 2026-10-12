@@ -45,7 +45,7 @@ To estimate how well a model generalises, its accuracy must be measured on data 
 
 #### 3. Cross-validation and stratification
 
-Kohavi (1995) compared cross-validation and the bootstrap for estimating accuracy in a large-scale experiment with over half a million runs of C4.5 and naive Bayes on real-world datasets, varying the number of folds and whether the folds were stratified, i.e. kept the class proportions. For datasets like these, the recommended method for model selection was ten-fold stratified cross-validation, even when computation would allow more folds.
+Kohavi (1995) compared cross-validation and the bootstrap for estimating accuracy in a large-scale experiment with over half a million runs of C4.5 and [[naive-bayes|naive Bayes]] on real-world datasets, varying the number of folds and whether the folds were stratified, i.e. kept the class proportions. For datasets like these, the recommended method for model selection was ten-fold stratified cross-validation, even when computation would allow more folds.
 
 #### 4. Imbalanced classes
 
@@ -137,7 +137,7 @@ Um abzuschätzen, wie gut ein Modell generalisiert, muss seine Genauigkeit auf D
 
 #### 3. Kreuzvalidierung und Stratifizierung
 
-Kohavi (1995) verglich Kreuzvalidierung und Bootstrap zur Genauigkeitsschätzung in einem groß angelegten Experiment mit über einer halben Million Läufen von C4.5 und Naive Bayes auf realen Datensätzen und variierte dabei die Zahl der Folds und ob diese stratifiziert waren, also die Klassenanteile beibehielten. Für Datensätze dieser Art war die empfohlene Methode zur Modellauswahl die zehnfache stratifizierte Kreuzvalidierung, selbst wenn die Rechenleistung mehr Folds erlauben würde.
+Kohavi (1995) verglich Kreuzvalidierung und Bootstrap zur Genauigkeitsschätzung in einem groß angelegten Experiment mit über einer halben Million Läufen von C4.5 und [[naive-bayes|Naive Bayes]] auf realen Datensätzen und variierte dabei die Zahl der Folds und ob diese stratifiziert waren, also die Klassenanteile beibehielten. Für Datensätze dieser Art war die empfohlene Methode zur Modellauswahl die zehnfache stratifizierte Kreuzvalidierung, selbst wenn die Rechenleistung mehr Folds erlauben würde.
 
 #### 4. Unausgewogene Klassen
 

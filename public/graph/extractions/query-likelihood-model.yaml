@@ -1,0 +1,15 @@
+version: 1
+note_sha256: "628efb2a16fb4dab76a1e2c117b0c6155ad886c1a29faf4d3676ff1c2d7fbf7b"
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- naive-bayes
+- tf-idf
+- bm25
+- inverted-index
+- information-retrieval
+- large-language-models
+relations:
+- from: query-likelihood-model
+  type: BASED_ON
+  to: naive-bayes
+  evidence: equivalent to a multinomial Naive Bayes model

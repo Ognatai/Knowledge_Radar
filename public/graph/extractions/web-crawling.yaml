@@ -1,0 +1,13 @@
+version: 1
+note_sha256: "21da5f4dae8d6a488b7316719a70fb6d299dbc5f5e78078003aa819813db6d2a"
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- inverted-index
+- pagerank
+- near-duplicate-detection
+- data-pipelines
+relations:
+- from: web-crawling
+  type: COMPLEMENTS
+  to: near-duplicate-detection
+  evidence: shingles detect near-duplicates

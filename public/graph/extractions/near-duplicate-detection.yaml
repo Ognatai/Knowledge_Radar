@@ -1,0 +1,13 @@
+version: 1
+note_sha256: "1231a8c6df26c9dfd2e38acf903750e3de6fe014f52fee1eb175d7ed481c76da"
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- jaccard-coefficient
+- web-crawling
+- clustering
+- large-language-models
+relations:
+- from: near-duplicate-detection
+  type: BASED_ON
+  to: jaccard-coefficient
+  evidence: the Jaccard overlap of two shingle sets measures their similarity

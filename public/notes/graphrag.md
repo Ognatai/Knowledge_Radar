@@ -52,7 +52,7 @@ Edge et al. (2024) group closely related entities into communities and pregenera
 
 #### 4. Graph-guided retrieval
 
-HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized PageRank algorithm (Gutiérrez et al., 2024). On multi-hop question answering it outperformed state-of-the-art methods by up to 20%, and single-step retrieval with HippoRAG matched or beat iterative retrieval such as IRCoT while being 10 to 30 times cheaper and 6 to 13 times faster.
+HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized [[pagerank|PageRank]] algorithm (Gutiérrez et al., 2024). On multi-hop question answering it outperformed state-of-the-art methods by up to 20%, and single-step retrieval with HippoRAG matched or beat iterative retrieval such as IRCoT while being 10 to 30 times cheaper and 6 to 13 times faster.
 
 #### 5. Combining graphs and vectors
 
@@ -193,7 +193,7 @@ RAG (Lewis et al., 2020) rief Textpassagen ab; GraphRAG (Edge et al., 2024) füh
 |----------|----------------|------------|
 | Herkömmliches RAG | Ruft ähnliche Textabschnitte ab (Lewis et al., 2020) | Lokale Faktenfragen |
 | GraphRAG mit Gemeinschaftszusammenfassungen | Entitätengraph plus vorab erzeugte Zusammenfassungen (Edge et al., 2024) | Globale Sensemaking-Fragen |
-| HippoRAG | Wissensgraph plus Personalized PageRank (Gutiérrez et al., 2024) | Multi-Hop-Fragen |
+| HippoRAG | Wissensgraph plus Personalized [[pagerank\|PageRank]] (Gutiérrez et al., 2024) | Multi-Hop-Fragen |
 | LightRAG | Zweistufiges Graph- und Vektor-Retrieval mit inkrementellen Aktualisierungen (Guo et al., 2024) | Sich ändernde Korpora |
 
 ### In der Praxis

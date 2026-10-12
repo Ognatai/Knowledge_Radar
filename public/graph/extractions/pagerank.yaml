@@ -1,0 +1,16 @@
+version: 1
+note_sha256: "269f185f3b1d0445ec1c5e1a81acfc5f0185448c52349c1e3d2845e5a314e4fb"
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- markov-chain
+- personalized-pagerank
+- web-crawling
+relations:
+- from: pagerank
+  type: BASED_ON
+  to: markov-chain
+  evidence: it is the steady state of a Markov chain
+- from: personalized-pagerank
+  type: BASED_ON
+  to: pagerank
+  evidence: gets a personalized PageRank that is the linear combination

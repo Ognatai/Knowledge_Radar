@@ -75,7 +75,7 @@ The vectors are stored in a [[vector-databases|vector database]] or a vector ind
 - **HNSW** (Malkov & Yashunin, 2016) builds a hierarchy of proximity graphs. Each vector is inserted into the bottom layer and, with exponentially decreasing probability, into higher layers. A search starts in the sparse top layer, moves greedily towards the query and descends layer by layer; search effort grows roughly logarithmically with collection size.
 - **Inverted-file and quantisation methods**, as implemented in FAISS (Johnson et al., 2017), partition the vector space into clusters and compress vectors (product quantisation), so that only a few clusters are searched and billions of vectors fit into memory.
 
-For lexical search, the chunks are additionally tokenised into an **inverted index** that maps each term to the chunks containing it.
+For lexical search, the chunks are additionally tokenised into an **[[inverted-index|inverted index]]** that maps each term to the chunks containing it.
 
 #### 4. Query processing
 

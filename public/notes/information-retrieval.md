@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Information retrieval (IR) finds the documents in a large collection that are relevant to a query and ranks them (Manning et al., 2008). Classical systems use an inverted index and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information retrieval (IR) finds the documents in a large collection that are relevant to a query and ranks them (Manning et al., 2008). Classical systems use an [[inverted-index|inverted index]] and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### How it works
 
@@ -150,7 +150,7 @@ Dokumente werden vorab indexiert. Zur Anfragezeit sucht das System Kandidatendok
 
 #### 1. Invertierter Index
 
-Ein invertierter Index ordnet jedem Term die Liste der Dokumente zu, die ihn enthalten (Manning et al., 2008). Um eine Anfrage zu beantworten, liest das System nur die Listen der Anfrageterme, statt die ganze Sammlung zu durchsuchen. Der Index unterstützt boolesches Retrieval, bei dem Dokumente eine Termkombination erfüllen oder nicht, und Ranked Retrieval, bei dem die gefundenen Dokumente bewertet werden.
+Ein [[inverted-index|invertierter Index]] ordnet jedem Term die Liste der Dokumente zu, die ihn enthalten (Manning et al., 2008). Um eine Anfrage zu beantworten, liest das System nur die Listen der Anfrageterme, statt die ganze Sammlung zu durchsuchen. Der Index unterstützt boolesches Retrieval, bei dem Dokumente eine Termkombination erfüllen oder nicht, und Ranked Retrieval, bei dem die gefundenen Dokumente bewertet werden.
 
 #### 2. Vektorraummodell
 
