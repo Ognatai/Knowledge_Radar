@@ -60,8 +60,15 @@ def _note_text(note: NoteDetail, chapters: set[str]) -> str:
     """The note's German text (English if none) for a chapter: banner and sources removed,
     headings one level down, wikilinks to other chapters as links, others as plain text."""
     content = note.content_de or note.content_en
-    lines, skipping = [], False
+    lines, skipping, in_code = [], False, False
     for line in content.splitlines():
+        if line.lstrip().startswith("```"):
+            in_code = not in_code
+        if in_code or line.lstrip().startswith("```"):
+            # "# comment" in a code block is no heading.
+            if not skipping:
+                lines.append(line)
+            continue
         if line.startswith("> **"):
             continue
         heading = HEADING.match(line)

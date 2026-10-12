@@ -13,7 +13,8 @@ POSTING_ID = "companies/acme-gmbh/graph-engineer/job_posting"
 NOTES = {
     "rdf": NoteDetail.model_construct(
         slug="rdf", title_en="RDF", title_de="RDF", sources=["https://www.w3.org/TR/rdf11-concepts/"], content_en="",
-        content_de="> **Hinweis:** LLM-generiert.\n\n### TL;DR\n\nTripel für [[knowledge-graphs|Wissensgraphen]].\n\n### Quellen\n\n- W3C"),
+        content_de="> **Hinweis:** LLM-generiert.\n\n### TL;DR\n\nTripel für [[knowledge-graphs|Wissensgraphen]].\n\n"
+                   "```sparql\n# alle Tripel\nSELECT * WHERE { ?s ?p ?o }\n```\n\n### Quellen\n\n- W3C"),
     "python": NoteDetail.model_construct(slug="python", title_en="Python", title_de="Python", sources=[], content_en="### TL;DR\n\nA language.",
                                          content_de=""),
 }
@@ -42,6 +43,7 @@ def test_parts_follow_the_areas_and_chapters_carry_the_posting_and_the_note(tmp_
     assert text.index("## Teil 1: Software") < text.index("### 1 Python") < text.index("## Teil 2: Wissensgraphen") < text.index("### 2 RDF")
     assert "_In der Anzeige: „RDF“_" in text and "Tripel für Wissensgraphen." in text
     assert "#### TL;DR" in text and "Hinweis" not in text and "#### Quellen" not in text
+    assert "\n# alle Tripel\n" in text  # a comment in a code block stays as it is
     assert "**Quellen:** <https://www.w3.org/TR/rdf11-concepts/>" in text
     assert "A language." in text  # English when there is no German text
     assert "](#teil-1-software)" in text and "](#2-rdf)" in text
