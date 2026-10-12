@@ -12,8 +12,10 @@ from app.backend.knowledge_radar.models import NoteDetail
 from app.backend.knowledge_radar.private_repo import load_documents
 
 POSTING = "Erste Erfahrung mit Knowledge Graphen in RDF oder Neo4j. Gute Python-Kenntnisse. Teamgeist."
-NOTES = {slug: NoteDetail.model_construct(slug=slug, title_en=title, title_de=title, content_en="", content_de="")
-         for slug, title in [("rdf", "RDF"), ("python", "Python"), ("knowledge-graphs", "Knowledge graphs")]}
+NOTES = {slug: NoteDetail.model_construct(slug=slug, title_en=title, title_de=title, aliases=[], content_en=tldr, content_de="")
+         for slug, title, tldr in [("rdf", "RDF", ""), ("python", "Python", ""),
+                                   ("knowledge-graphs", "Knowledge graphs", "### TL;DR\n\nKnowledge graphs link entities.\n"),
+                                   ("graph-databases", "Graph databases", "### TL;DR\n\nStores such as Neo4j.\n")]}
 ENTITIES = {
     "rdf": Entity("rdf", "Technology", "Resource Description Framework", "RDF", ["RDF"], note="rdf"),
     "python": Entity("python", "Technology", "Python", "Python", note="python"),
@@ -30,7 +32,9 @@ def model(calls):
                 {"name": "Python", "phrase": "Python-Kenntnisse"}, {"name": "Knowledge Graphs", "phrase": "Knowledge Graphen"},
                 {"name": "Kubernetes", "phrase": "Kubernetes-Cluster"},  # not in the posting
             ]})
-        return json.dumps({"article": "knowledge-graphs" if "Knowledge Graphs" in prompt else "none"})
+        if "Knowledge Graphs" in prompt:
+            return json.dumps({"article": "knowledge-graphs"})
+        return json.dumps({"article": "python"})  # an eager pick that names no such topic
     return generate
 
 
