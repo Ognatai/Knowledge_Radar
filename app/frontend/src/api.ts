@@ -55,6 +55,9 @@ export interface RefreshStatus {
   state: "idle" | "running" | "done" | "failed";
   message: string;
   log: string[];
+  started: string | null;
+  // The chat and /prep have the new data; the rest runs on in the background.
+  ready: boolean;
 }
 
 export interface Written {

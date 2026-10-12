@@ -15,6 +15,7 @@ from typing import Any
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.agents.private_refresh import FOREGROUND
 from app.backend.knowledge_radar import chat, interviews, prep, review
 from app.backend.knowledge_radar.config import LocalConfigError, load_local_config
 from app.backend.knowledge_radar.models import (
@@ -161,7 +162,8 @@ def create_app(
     def ask_question(request: ChatRequest) -> ChatResponse:
         try:
             history = [chat.Turn(turn.role, turn.content) for turn in request.history]
-            result = ask(request.question, chat_indices.factories(request.scope), language=request.language, history=history)
+            with FOREGROUND:
+                result = ask(request.question, chat_indices.factories(request.scope), language=request.language, history=history)
         except Exception as exc:  # noqa: BLE001 - the model or the embedding server is down
             raise HTTPException(status_code=503, detail=f"The local model is not available: {exc}") from exc
         return ChatResponse(
@@ -214,7 +216,8 @@ def create_app(
         answers = request.model_dump(exclude={"date"})
         try:
             options = {"generate": generate} if generate else {}
-            text = interviews.draft_retro(answers, date=request.date, model=chat.chat_model(), **options)
+            with FOREGROUND:  # the background refresh waits for the local model meanwhile
+                text = interviews.draft_retro(answers, date=request.date, model=chat.chat_model(), **options)
         except interviews.InterviewError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except Exception as exc:  # noqa: BLE001 - the local model is down or answered no JSON
@@ -232,8 +235,9 @@ def create_app(
         notes = {note.slug: note for note in read_notes()}
         try:
             options = {"generate": generate} if generate else {}
-            text = prep.draft_prep(root_path, request.company, request.role, request.round, notes=notes,
-                                   stores=chat_indices.factories("all"), language=request.language, **options)
+            with FOREGROUND:
+                text = prep.draft_prep(root_path, request.company, request.role, request.round, notes=notes,
+                                       stores=chat_indices.factories("all"), language=request.language, **options)
         except interviews.InterviewError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except Exception as exc:  # noqa: BLE001 - the local model or an index is down

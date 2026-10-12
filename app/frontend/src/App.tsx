@@ -43,6 +43,31 @@ interface Message {
   refresh?: RefreshStatus;
 }
 
+// The refresh's log lines (app/agents/private_refresh.py) in words for the user.
+const PROGRESS: { pattern: RegExp; de: (m: RegExpMatchArray) => string; en: (m: RegExpMatchArray) => string }[] = [
+  { pattern: /^Structure:/, de: () => "Struktur aktualisiert", en: () => "Structure updated" },
+  { pattern: /^Private index:/, de: () => "Index aktualisiert", en: () => "Index updated" },
+  { pattern: /reading the requirements$/, de: () => "Anforderungen der Anzeige lesen", en: () => "Reading the posting's requirements" },
+  { pattern: /matching requirement (\d+)\/(\d+)$/, de: (m) => `Anforderung ${m[1]} von ${m[2]} mit den Notizen abgleichen`, en: (m) => `Matching requirement ${m[1]} of ${m[2]} with the notes` },
+  { pattern: /^Extraction (\d+)\/(\d+):/, de: (m) => `Text ${m[1]} von ${m[2]} auswerten`, en: (m) => `Analysing text ${m[1]} of ${m[2]}` },
+  { pattern: /^Research: (.+)$/, de: (m) => `Recherche: ${m[1]}`, en: (m) => `Research: ${m[1]}` },
+];
+
+function progressLine(line: string | undefined, language: Language): string {
+  if (!line) return "";
+  for (const step of PROGRESS) {
+    const match = line.match(step.pattern);
+    if (match) return step[language](match);
+  }
+  return line;
+}
+
+function elapsed(started: string | null): string {
+  if (!started) return "";
+  const seconds = Math.max(0, Math.round((Date.now() - new Date(started).getTime()) / 1000));
+  return seconds < 60 ? `${seconds} s` : `${Math.floor(seconds / 60)} min ${seconds % 60} s`;
+}
+
 const TEXT = {
   de: {
     subtitle: "Lokaler Chat über die öffentliche und die private Wissensbasis. Alles bleibt auf diesem Rechner.",
@@ -75,8 +100,9 @@ const TEXT = {
     savePrep: "Vorbereitung speichern",
     replacePrep: "Vorhandene Vorbereitung überschreiben",
     preparing: "Erstellt die Vorbereitung (Anforderungen, frühere Runden, Kurzvorstellung, Fragen) …",
-    refreshing: "Aktualisiere den privaten Index (Struktur, lokale Extraktion, Embeddings) …",
-    refreshed: "Privater Index aktualisiert. Die neuen Daten sind im Chat verfügbar.",
+    refreshing: "Die neuen Daten werden eingelesen. Du kannst währenddessen weiterarbeiten; deine Anfragen haben Vorrang.",
+    refreshReady: "Chat und /prep kennen die neuen Daten. Im Hintergrund läuft noch die genauere Auswertung.",
+    refreshed: "Alles eingelesen. Die neuen Daten sind im Chat und in /prep verfügbar.",
     refreshFailed: (message: string) => `Aktualisierung fehlgeschlagen: ${message}`,
   },
   en: {
@@ -110,8 +136,9 @@ const TEXT = {
     savePrep: "Save preparation",
     replacePrep: "Replace the existing preparation",
     preparing: "Writing the preparation (requirements, earlier rounds, introduction, questions) …",
-    refreshing: "Updating the private index (structure, local extraction, embeddings) …",
-    refreshed: "Private index updated. The new data is available in the chat.",
+    refreshing: "Reading in the new data. You can keep working; your requests go first.",
+    refreshReady: "The chat and /prep know the new data. The detailed analysis runs on in the background.",
+    refreshed: "All read in. The new data is available in the chat and in /prep.",
     refreshFailed: (message: string) => `Update failed: ${message}`,
   },
 };
@@ -200,7 +227,11 @@ export default function App() {
     const poll = window.setInterval(async () => {
       try {
         const current = await privateApi.refresh();
-        if (!current || current.state === "running") return;
+        if (!current) return;
+        if (current.state === "running") {
+          update(id, { content: current.ready ? t.refreshReady : t.refreshing, refresh: current });
+          return;
+        }
         window.clearInterval(poll);
         update(id, { content: current.state === "done" ? t.refreshed : t.refreshFailed(current.message), refresh: current, error: current.state === "failed" });
       } catch (error) {
@@ -459,7 +490,12 @@ export default function App() {
                       </ul>
                     </details>
                   )}
-                  {message.refresh?.state === "running" && <p className="thinking">{message.refresh.log[message.refresh.log.length - 1] ?? ""}</p>}
+                  {message.refresh?.state === "running" && (
+                    <p className="thinking">
+                      {progressLine(message.refresh.log[message.refresh.log.length - 1], language)}
+                      {message.refresh.started ? ` · ${elapsed(message.refresh.started)}` : ""}
+                    </p>
+                  )}
                   {message.choices && wizard && (
                     <div className="choices">
                       {message.choices.map((choice, index) => (

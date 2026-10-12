@@ -87,17 +87,17 @@ def extract_free_text(
     embed: Embed | None = embeddings.embed,
     model: str | None = None,
     log: Callable[[str], None] = print,
+    pause: Callable[[], None] = lambda: None,
 ) -> dict[str, NoteExtraction]:
+    """`pause` is called before each document; the app waits there while the user is served."""
     graph_directory = private_graph_directory(root)
     results: dict[str, NoteExtraction] = {}
     index = None
     known = dict(known)
-    for document in documents:
-        if document.kind not in FREE_TEXT_KINDS or not document.body.strip():
-            continue
-        if extraction_current(graph_directory, document):
-            log(f"{document.id}: unchanged")
-            continue
+    todo = [d for d in documents if d.kind in FREE_TEXT_KINDS and d.body.strip() and not extraction_current(graph_directory, d)]
+    for number, document in enumerate(todo, start=1):
+        pause()
+        log(f"Extraction {number}/{len(todo)}: {document.id}")
         note = as_note(document)
         stand_in = Entity(note.slug, "Concept", note.title_en, note.title_de)
         extraction = extract_note(note, {**known, note.slug: stand_in}, generate=generate, model=model)
@@ -213,17 +213,19 @@ class TopicIndex:
 def requirements_graph(
     root: Path,
     postings: list[PrivateDocument],
-    topics: TopicIndex,
+    topics: TopicIndex | Callable[[], TopicIndex],
     *,
     embed: Embed,
     generate: Generate = llm.generate,
     model: str | None = None,
     log: Callable[[str], None] = print,
+    pause: Callable[[], None] = lambda: None,
 ) -> Path:
     """graph/requirements.yaml: Requirement entities with REQUIRES and MATCHES.
 
     A posting whose text is unchanged since the last run keeps its requirements and
-    matches; only new or edited postings go to the model."""
+    matches; only new or edited postings go to the model. `topics` may be a function
+    that builds the index, so that it is only built when a posting changed."""
     path = private_graph_directory(root) / "requirements.yaml"
     previous = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}) if path.is_file() else {}
     previous_hashes = previous.get("postings") or {}
@@ -239,7 +241,14 @@ def requirements_graph(
             relations += [r for r in previous.get("relations") or [] if r.get("source") == posting.id]
             log(f"{posting.id}: unchanged")
             continue
-        for number, requirement in enumerate(extract_requirements(posting, generate, model), start=1):
+        if callable(topics):
+            topics = topics()
+        pause()
+        log(f"{posting.id}: reading the requirements")
+        requirements = extract_requirements(posting, generate, model)
+        for number, requirement in enumerate(requirements, start=1):
+            pause()
+            log(f"{posting.id}: matching requirement {number}/{len(requirements)}")
             requirement_id = f"req-{posting.company}-{posting.role}-{number}"
             entities.append({"id": requirement_id, "type": "Requirement", "name_en": requirement["text"],
                              "name_de": requirement["text"], "category": requirement["category"]})
@@ -265,6 +274,17 @@ def known_entities(root: Path, public_entities: dict[str, Entity]) -> dict[str, 
     return known
 
 
+def extract_requirements_all(root: Path, documents: list[PrivateDocument], notes: dict[str, NoteDetail], *,
+                             model: str | None = None, log: Callable[[str], None] = print,
+                             pause: Callable[[], None] = lambda: None) -> None:
+    """The postings' requirements and their matching notes."""
+    postings = [d for d in documents if d.kind == "job_posting"]
+    if postings:
+        path = requirements_graph(root, postings, lambda: TopicIndex.build(notes, embeddings.embed), embed=embeddings.embed,
+                                  model=model, log=log, pause=pause)
+        log(f"Requirements -> {path}")
+
+
 def extract_all(
     root: Path,
     documents: list[PrivateDocument],
@@ -279,10 +299,7 @@ def extract_all(
     if not requirements_only:
         known = known_entities(root, public_graph.entities)
         extract_free_text(root, documents, known, public_graph=public_graph, public_notes=notes, model=model, log=log)
-    postings = [d for d in documents if d.kind == "job_posting"]
-    if postings:
-        path = requirements_graph(root, postings, TopicIndex.build(notes, embeddings.embed), embed=embeddings.embed, model=model, log=log)
-        log(f"Requirements -> {path}")
+    extract_requirements_all(root, documents, notes, model=model, log=log)
 
 
 def main() -> int:
