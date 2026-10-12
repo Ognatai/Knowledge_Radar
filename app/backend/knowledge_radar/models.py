@@ -50,6 +50,8 @@ class NewApplication(BaseModel):
     round_date: str | None = None
     round_notes: str = Field(default="", max_length=20000)
     interviewers: list[InterviewerIn] = Field(default_factory=list, max_length=20)
+    # The CV sent with this application; evidence for the self-introduction in /prep.
+    cv_text: str = Field(default="", max_length=50000)
 
 
 class NewRound(BaseModel):
@@ -63,6 +65,8 @@ class NewRound(BaseModel):
 class RetroDraftRequest(BaseModel):
     date: str | None = None
     questions_asked: str = Field(default="", max_length=20000)
+    # What the company said about itself, the team and the role; kept verbatim.
+    company_told: str = Field(default="", max_length=20000)
     struggled_with: str = Field(default="", max_length=20000)
     personal_improvement: str = Field(default="", max_length=20000)
     kb_gaps_identified: str = Field(default="", max_length=20000)
@@ -81,6 +85,8 @@ class PrepRequest(BaseModel):
     role: str
     round: int = Field(ge=1)
     language: Literal["de", "en"] = "de"
+    # Practice questions only on request: they take another model call.
+    practice: bool = False
 
 
 class PrepIn(BaseModel):

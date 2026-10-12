@@ -239,7 +239,8 @@ def create_app(
             options = {"generate": generate} if generate else {}
             with FOREGROUND:
                 text = prep.draft_prep(root_path, request.company, request.role, request.round, notes=notes,
-                                       stores=chat_indices.factories("all"), language=request.language, **options)
+                                       stores=chat_indices.factories("all"), language=request.language,
+                                       practice=request.practice, **options)
         except interviews.InterviewError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except Exception as exc:  # noqa: BLE001 - the local model or an index is down

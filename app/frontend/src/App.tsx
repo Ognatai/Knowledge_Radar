@@ -10,6 +10,7 @@ import {
   CommandName,
   COMMANDS,
   confirmed,
+  nextStep,
   parseInterviewers,
   retroDate,
   SKIP,
@@ -298,12 +299,12 @@ export default function App() {
         reportWritten(
           await privateApi.newApplication({
             company_name: a.company_name, industry: value(a, "industry"), role_title: a.role_title,
-            posting_text: a.posting_text, posting_url: value(a, "posting_url"), ...round,
+            posting_text: a.posting_text, posting_url: value(a, "posting_url"), cv_text: value(a, "cv_text"), ...round,
           }),
         );
       } else if (done.command === "/prep") {
         const [company, role, number] = a.round.split("/");
-        const draft = await privateApi.draftPrep({ company, role, round: Number(number), language });
+        const draft = await privateApi.draftPrep({ company, role, round: Number(number), language, practice: a.practice === "yes" });
         add({
           role: "assistant", content: t.prepIntro, command: true,
           draft: { kind: "prep", text: draft.text, company, role, round: Number(number), exists: draft.exists, state: "editing" },
@@ -315,7 +316,7 @@ export default function App() {
         const [company, role, number] = a.round.split("/");
         const draft = await privateApi.draftRetro({
           date: retroDate(done, applications),
-          questions_asked: value(a, "questions_asked"), struggled_with: value(a, "struggled_with"),
+          questions_asked: value(a, "questions_asked"), company_told: value(a, "company_told"), struggled_with: value(a, "struggled_with"),
           personal_improvement: value(a, "personal_improvement"), kb_gaps_identified: value(a, "kb_gaps_identified"),
           reflection: value(a, "reflection"),
         });
@@ -373,7 +374,8 @@ export default function App() {
       ask_step(current);
       return;
     }
-    const next = { ...current, index: current.index + 1, answers: { ...current.answers, [step.key]: given } };
+    const answered = { ...current, answers: { ...current.answers, [step.key]: given } };
+    const next = { ...answered, index: nextStep(answered, current.index + 1) };
     if (next.index < next.steps.length) {
       setWizard(next);
       ask_step(next);

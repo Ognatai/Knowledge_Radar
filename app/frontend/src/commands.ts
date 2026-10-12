@@ -25,6 +25,20 @@ export interface Step {
   optional?: boolean;
   choices?: Choice[];
   validate?: (answer: string) => Record<Language, string> | null;
+  // Asked only when this returns true for the answers so far.
+  when?: (answers: Answers) => boolean;
+}
+
+const YES_NO: Choice[] = [
+  { label: "Ja / Yes", value: "yes" },
+  { label: "Nein / No", value: "no" },
+];
+
+/** The index of the next step to ask at or after `index`, skipping steps whose condition fails. */
+export function nextStep(wizard: Wizard, index: number): number {
+  let next = index;
+  while (next < wizard.steps.length && wizard.steps[next].when && !wizard.steps[next].when!(wizard.answers)) next += 1;
+  return next;
 }
 
 export interface Wizard {
@@ -87,17 +101,27 @@ const roundSteps = (): Step[] => [
     validate: validDate,
   },
   {
+    key: "round_known",
+    prompt: {
+      de: "Weißt du schon etwas über die Runde, etwa wer das Gespräch führt oder wie es abläuft?",
+      en: "Do you know anything about the round yet, such as who interviews or the format?",
+    },
+    choices: YES_NO,
+  },
+  {
     key: "interviewers",
     prompt: {
       de: "Wer führt das Gespräch? Eine Person pro Zeile: „Name – Rolle – Schwerpunkt“ (Rolle und Schwerpunkt optional). Nur, was du schon weißt; - wenn niemand bekannt ist.",
       en: "Who interviews? One person per line: “Name – role – focus” (role and focus optional). Only what you know now; - if nobody is known.",
     },
     optional: true,
+    when: (answers) => answers.round_known === "yes",
   },
   {
     key: "round_notes",
     prompt: { de: "Was ist zur Runde schon bekannt (Format, Ort, Dauer …)? - zum Überspringen.", en: "Anything known about the round (format, place, length …)? - to skip." },
     optional: true,
+    when: (answers) => answers.round_known === "yes",
   },
 ];
 
@@ -153,6 +177,14 @@ export function startWizard(command: CommandName, applications: Application[], l
           },
           choices: rounds,
         },
+        {
+          key: "practice",
+          prompt: {
+            de: "Sollen zusätzlich Übungsfragen erstellt werden, die dir im Gespräch gestellt werden könnten? (dauert etwas länger)",
+            en: "Also write practice questions you might be asked in the interview? (takes a little longer)",
+          },
+          choices: YES_NO,
+        },
       ],
     };
   }
@@ -170,6 +202,14 @@ export function startWizard(command: CommandName, applications: Application[], l
           prompt: { de: "Füge bitte den Text der Stellenanzeige ein.", en: "Please paste the text of the job posting." },
         },
         { key: "posting_url", prompt: { de: "Link zur Anzeige? (- zum Überspringen)", en: "Link to the posting? (- to skip)" }, optional: true },
+        {
+          key: "cv_text",
+          prompt: {
+            de: "Füge den Lebenslauf ein, mit dem du dich beworben hast (als Text). /prep stützt die Kurzvorstellung darauf. - zum Überspringen.",
+            en: "Paste the CV you applied with (as text). /prep backs the self-introduction with it. - to skip.",
+          },
+          optional: true,
+        },
         ...roundSteps(),
         confirm((answers, language) =>
           language === "de"
@@ -201,6 +241,9 @@ export function startWizard(command: CommandName, applications: Application[], l
     };
   }
   const rounds = roundChoices(applications, language);
+  const scheduled: Record<string, boolean> = Object.fromEntries(
+    applications.flatMap((a) => a.rounds.map((r) => [`${a.company}/${a.role}/${r.number}`, !!r.date])),
+  );
   if (!rounds.length) {
     return language === "de" ? "Es gibt keine Runde ohne Retro. Neue Runden legst du mit /new-round an." : "There is no round without a retro. Add rounds with /new-round.";
   }
@@ -212,11 +255,28 @@ export function startWizard(command: CommandName, applications: Application[], l
       { key: "round", prompt: { de: "Zu welchem Gespräch?", en: "Which interview?" }, choices: rounds },
       {
         key: "date",
-        prompt: { de: "Wann war es? (- für das geplante Datum)", en: "When was it? (- for the scheduled date)" },
+        prompt: { de: "Wann war es? (- für heute)", en: "When was it? (- for today)" },
         optional: true,
         validate: validDate,
+        // A round with a scheduled date keeps it; the draft can still be edited.
+        when: (answers) => !scheduled[answers.round],
       },
-      { key: "questions_asked", prompt: { de: "Welche Fragen wurden gestellt? Schreib einfach drauflos.", en: "Which questions were asked? Just write freely." } },
+      {
+        key: "questions_asked",
+        prompt: {
+          de: "Welche Fragen wurden dir gestellt, fachlich wie persönlich? Schreib einfach drauflos; - wenn es keine gab.",
+          en: "Which questions were you asked, technical or personal? Just write freely; - if there were none.",
+        },
+        optional: true,
+      },
+      {
+        key: "company_told",
+        prompt: {
+          de: "Was hat die Firma über sich, das Team und die Stelle erzählt? Wird wörtlich übernommen und in der Firmennotiz ergänzt. - zum Überspringen.",
+          en: "What did the company tell about itself, the team and the role? Kept verbatim and added to the company note. - to skip.",
+        },
+        optional: true,
+      },
       { key: "struggled_with", prompt: { de: "Wobei bist du ins Schwimmen gekommen?", en: "What did you struggle with?" }, optional: true },
       { key: "personal_improvement", prompt: { de: "Was willst du beim nächsten Mal besser machen?", en: "What do you want to do better next time?" }, optional: true },
       {

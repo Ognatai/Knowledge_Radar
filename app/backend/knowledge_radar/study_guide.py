@@ -204,6 +204,9 @@ def _appendix(root: Path, company_dir: Path, round_dir: Path, round_number: int)
     hint = "Noch keine gespeicherte Vorbereitung: /prep erzeugt sie."
     sections.append(("Kurzvorstellung", pitch or hint))
     sections.append(("Eigene Fragen", questions or hint))
+    practice = _section(prep_text, "Übungsfragen")
+    if practice:
+        sections.append(("Übungsfragen", practice))
 
     stories = _star_stories(root)
     sections.append(("STAR-Geschichten", "\n\n".join(f"#### {title}\n\n{text}" for title, text in stories) or

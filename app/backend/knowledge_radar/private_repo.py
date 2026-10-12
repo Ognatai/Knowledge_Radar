@@ -8,6 +8,7 @@ Markdown-with-frontmatter formats read here:
     companies/<company>/company.md
     companies/<company>/_research/*.md        (research.py: company and interviewers)
     companies/<company>/<role>/job_posting.md
+    companies/<company>/<role>/cv.md             (the CV sent with the application)
     companies/<company>/<role>/round-<n>/{round,interviewers,prep,retro}.md
     companies/<company>/<role>/round-<n>/notes/*.md
 
@@ -105,6 +106,8 @@ def load_documents(root: Path) -> list[PrivateDocument]:
             role = _slug(role_dir)
             if (role_dir / "job_posting.md").is_file():
                 documents.append(read_document(role_dir / "job_posting.md", root, "job_posting", company=company, role=role))
+            if (role_dir / "cv.md").is_file():
+                documents.append(read_document(role_dir / "cv.md", root, "cv", company=company, role=role))
             for round_dir in sorted(p for p in role_dir.iterdir() if p.is_dir()):
                 number = ROUND_FOLDER.match(round_dir.name)
                 if not number:
@@ -140,7 +143,7 @@ def document_slug(document: PrivateDocument) -> str:
     return "private-" + slugify(document.id)
 
 
-KIND_LABELS = {"company": "Company", "research": "Research", "job_posting": "Job posting", "round": "Interview round", "interviewers": "Interviewers",
+KIND_LABELS = {"company": "Company", "research": "Research", "cv": "CV", "job_posting": "Job posting", "round": "Interview round", "interviewers": "Interviewers",
                "prep": "Preparation", "retro": "Retro", "round_note": "Round note", "note": "Note"}
 FIELD_LABELS = {"questions_asked": "Questions asked", "struggled_with": "Struggled with",
                 "personal_improvement": "Personal improvement", "kb_gaps_identified": "Knowledge-base gaps",
