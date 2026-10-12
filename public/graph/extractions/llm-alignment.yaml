@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 578050830589a9455a300e8966e20ae69881894c21ce988bd3ecd6ae6cdde563
+note_sha256: b5f1e3df1465c1cacaf6ea042be9ce46079cd71fb30ab39eb7f3a0602959d5eb
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - instruction-tuning
@@ -17,6 +17,7 @@ discusses:
 - llm-evaluation
 - hallucination-detection
 - llm-adaptation
+- chatgpt
 relations:
 - from: instruction-tuning
   type: IS_EXAMPLE_OF

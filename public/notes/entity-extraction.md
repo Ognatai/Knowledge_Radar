@@ -43,7 +43,7 @@ The CoNLL-2003 shared task (Tjong Kim Sang & De Meulder, 2003) defined NER for E
 
 #### 2. Neural sequence labelling
 
-Earlier NER systems relied heavily on hand-crafted features and domain-specific knowledge. Lample et al. (2016) introduced two neural architectures: a bidirectional LSTM combined with a conditional random field (CRF), which labels each token while taking the neighbouring labels into account, and a transition-based model inspired by shift-reduce parsers that constructs and labels segments. Both use character-based word representations learned from the annotated corpus and word representations learned without supervision from unannotated text. They reached state-of-the-art performance in four languages without language-specific resources such as gazetteers (Lample et al., 2016).
+Earlier NER systems relied heavily on hand-crafted features and domain-specific knowledge. Lample et al. (2016) introduced two neural architectures: a bidirectional LSTM combined with a [[part-of-speech-tagging|conditional random field]] (CRF), which labels each token while taking the neighbouring labels into account, and a transition-based model inspired by shift-reduce parsers that constructs and labels segments. Both use character-based word representations learned from the annotated corpus and word representations learned without supervision from unannotated text. They reached state-of-the-art performance in four languages without language-specific resources such as gazetteers (Lample et al., 2016).
 
 #### 3. Fine-tuned pretrained encoders
 
@@ -142,7 +142,7 @@ Der Shared Task CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) definierte NER f�
 
 #### 2. Neuronales Sequenz-Labeling
 
-Frühere NER-Systeme stützten sich stark auf handgefertigte Merkmale und Domänenwissen. Lample et al. (2016) stellten zwei neuronale Architekturen vor: ein bidirektionales LSTM mit Conditional Random Field (CRF), das jedes Token unter Berücksichtigung der benachbarten Labels klassifiziert, und ein transitionsbasiertes Modell nach dem Vorbild von Shift-Reduce-Parsern, das Segmente bildet und labelt. Beide nutzen zeichenbasierte Wortrepräsentationen, die aus dem annotierten Korpus gelernt werden, sowie Wortrepräsentationen, die unüberwacht aus nicht annotiertem Text gelernt werden. Sie erreichten den Stand der Technik in vier Sprachen, ohne sprachspezifische Ressourcen wie Gazetteers (Lample et al., 2016).
+Frühere NER-Systeme stützten sich stark auf handgefertigte Merkmale und Domänenwissen. Lample et al. (2016) stellten zwei neuronale Architekturen vor: ein bidirektionales LSTM mit [[part-of-speech-tagging|Conditional Random Field]] (CRF), das jedes Token unter Berücksichtigung der benachbarten Labels klassifiziert, und ein transitionsbasiertes Modell nach dem Vorbild von Shift-Reduce-Parsern, das Segmente bildet und labelt. Beide nutzen zeichenbasierte Wortrepräsentationen, die aus dem annotierten Korpus gelernt werden, sowie Wortrepräsentationen, die unüberwacht aus nicht annotiertem Text gelernt werden. Sie erreichten den Stand der Technik in vier Sprachen, ohne sprachspezifische Ressourcen wie Gazetteers (Lample et al., 2016).
 
 #### 3. Feinabgestimmte vortrainierte Encoder
 

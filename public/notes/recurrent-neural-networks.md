@@ -63,7 +63,7 @@ RNNs also model numerical time series, since they process observations in order 
 
 #### Origin and variants
 
-Bengio et al. (1994) analysed why long-term dependencies are hard to learn, the LSTM (Hochreiter & Schmidhuber, 1997) addressed the problem, and the GRU-based encoder-decoder (Cho et al., 2014) and sequence-to-sequence LSTMs (Sutskever et al., 2014) made RNNs the standard for machine translation until attention-based Transformers took over.
+Bengio et al. (1994) analysed why long-term dependencies are hard to learn, the LSTM (Hochreiter & Schmidhuber, 1997) addressed the problem, and the GRU-based encoder-decoder (Cho et al., 2014) and sequence-to-sequence LSTMs (Sutskever et al., 2014) made RNNs the standard for [[machine-translation|machine translation]] until attention-based Transformers took over.
 
 ### When to use it
 

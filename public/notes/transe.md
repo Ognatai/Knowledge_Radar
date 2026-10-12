@@ -47,7 +47,7 @@ Knowledge graphs contain only true facts, so training creates negative examples 
 
 #### 4. Link prediction
 
-To predict a missing tail for (h, r, ?), all entities are ranked by their distance to h + r. TransE outperformed earlier methods on link prediction on WordNet and Freebase (Bordes et al., 2013). Yang et al. (2014) later showed in a unified framework that a simple bilinear model reached a top-10 accuracy of 73.2% on Freebase, compared with 54.7% for TransE.
+To predict a missing tail for (h, r, ?), all entities are ranked by their distance to h + r. TransE outperformed earlier methods on link prediction on [[word-sense-disambiguation|WordNet]] and Freebase (Bordes et al., 2013). Yang et al. (2014) later showed in a unified framework that a simple bilinear model reached a top-10 accuracy of 73.2% on Freebase, compared with 54.7% for TransE.
 
 #### 5. Limitations and extensions
 
@@ -136,7 +136,7 @@ Wissensgraphen enthalten nur wahre Fakten; das Training erzeugt daher negative B
 
 #### 4. Link Prediction
 
-Um einen fehlenden Schwanz für (h, r, ?) vorherzusagen, werden alle Entitäten nach ihrem Abstand zu h + r gerankt. TransE übertraf bei Link Prediction auf WordNet und Freebase frühere Verfahren (Bordes et al., 2013). Yang et al. (2014) zeigten später in einem gemeinsamen Rahmen, dass ein einfaches bilineares Modell auf Freebase eine Top-10-Genauigkeit von 73,2 % erreichte, TransE 54,7 %.
+Um einen fehlenden Schwanz für (h, r, ?) vorherzusagen, werden alle Entitäten nach ihrem Abstand zu h + r gerankt. TransE übertraf bei Link Prediction auf [[word-sense-disambiguation|WordNet]] und Freebase frühere Verfahren (Bordes et al., 2013). Yang et al. (2014) zeigten später in einem gemeinsamen Rahmen, dass ein einfaches bilineares Modell auf Freebase eine Top-10-Genauigkeit von 73,2 % erreichte, TransE 54,7 %.
 
 #### 5. Grenzen und Erweiterungen
 

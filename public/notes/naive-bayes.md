@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Naive Bayes assigns a document to the class c that maximises P(c)·Π P(t_k | c): the prior of the class times the probability of each of its terms in that class, estimated from counts in labelled training documents with add-one smoothing (Manning et al., 2008, ch. 13). Its independence assumptions are naive for language, so its probability estimates are poor, but its decisions are often good; it trains and classifies in one pass over the data, which makes it a common baseline. Feature selection with mutual information or χ² removes noise terms (Manning et al., 2008, ch. 13). For the general picture of classifiers, see [[classification|Classification]].
+Naive Bayes assigns a document to the class c that maximises P(c)·Π P(t_k | c): the prior of the class times the probability of each of its terms in that class, estimated from counts in labelled training documents with [[n-gram-language-models|add-one smoothing]] (Manning et al., 2008, ch. 13). Its independence assumptions are naive for language, so its probability estimates are poor, but its decisions are often good; it trains and classifies in one pass over the data, which makes it a common baseline. Feature selection with mutual information or χ² removes noise terms (Manning et al., 2008, ch. 13). For the general picture of classifiers, see [[classification|Classification]].
 
 ### How it works
 

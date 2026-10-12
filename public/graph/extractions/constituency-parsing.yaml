@@ -1,0 +1,13 @@
+version: 1
+note_sha256: bd3119a610787a0deed3095bf14f0ac068d3b183ff0bb5623868c605e14761b7
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- part-of-speech-tagging
+- penn-treebank
+- bert
+- dependency-parsing
+relations:
+- from: constituency-parsing
+  type: BASED_ON
+  to: part-of-speech-tagging
+  evidence: Parsing builds on Part-of-Speech Tagging

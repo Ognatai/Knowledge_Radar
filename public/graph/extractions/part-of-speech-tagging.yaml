@@ -1,0 +1,12 @@
+version: 1
+note_sha256: 7cd166783d09fd27375d07b402d02cb62a163f3d14d7478dee74068eeadbca6d
+extracted_by: claude (hand-labelled, 2026-10-12)
+discusses:
+- hidden-markov-models
+- penn-treebank
+- bert
+- entity-extraction
+- natural-language-processing
+- constituency-parsing
+- dependency-parsing
+relations: []

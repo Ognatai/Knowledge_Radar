@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Natural language processing (NLP) builds systems that analyse, understand and generate human language, for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and machine translation (Jurafsky & Martin (SLP3)). Modern NLP represents text as tokens and learned vectors and models it with [[neural-networks|neural networks]], today mostly Transformer-based pretrained language models that are fine-tuned or prompted for a task ([[large-language-models|Large Language Models]]).
+Natural language processing (NLP) builds systems that analyse, understand and generate human language, for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and [[machine-translation|machine translation]] (Jurafsky & Martin (SLP3)). Modern NLP represents text as tokens and learned vectors and models it with [[neural-networks|neural networks]], today mostly Transformer-based pretrained language models that are fine-tuned or prompted for a task ([[large-language-models|Large Language Models]]).
 
 ### How it works
 
@@ -106,7 +106,7 @@ Modern NLP turns text into tokens and learned vectors and models it with Transfo
 
 ### TL;DR
 
-Natural Language Processing (NLP) entwickelt Systeme, die menschliche Sprache analysieren, verstehen und erzeugen, etwa für Wortartenerkennung (Part-of-Speech-Tagging), Named Entity Recognition, Parsing, Informationsextraktion, Fragebeantwortung und maschinelle Übersetzung (Jurafsky & Martin (SLP3)). Modernes NLP stellt Text als Token und gelernte Vektoren dar und modelliert ihn mit neuronalen Netzen, heute meist mit vortrainierten Sprachmodellen auf Transformer-Basis, die für eine Aufgabe feinabgestimmt oder gepromptet werden ([[large-language-models|Large Language Models]]).
+Natural Language Processing (NLP) entwickelt Systeme, die menschliche Sprache analysieren, verstehen und erzeugen, etwa für Wortartenerkennung (Part-of-Speech-Tagging), Named Entity Recognition, Parsing, Informationsextraktion, Fragebeantwortung und [[machine-translation|maschinelle Übersetzung]] (Jurafsky & Martin (SLP3)). Modernes NLP stellt Text als Token und gelernte Vektoren dar und modelliert ihn mit neuronalen Netzen, heute meist mit vortrainierten Sprachmodellen auf Transformer-Basis, die für eine Aufgabe feinabgestimmt oder gepromptet werden ([[large-language-models|Large Language Models]]).
 
 ### Funktionsweise
 

@@ -64,7 +64,7 @@ A pure Transformer applied to sequences of image patches, the Vision Transformer
 
 #### Origin and variants
 
-Attention for neural machine translation (Bahdanau et al., 2014) extended sequence-to-sequence models (Sutskever et al., 2014), the Transformer (Vaswani et al., 2017) removed recurrence altogether, and BERT (Devlin et al., 2018), T5 and GPT models (Urchs, 2025), Vision Transformers (Dosovitskiy et al., 2020) and efficient attention kernels (Dao et al., 2022) followed.
+Attention for [[machine-translation|neural machine translation]] (Bahdanau et al., 2014) extended sequence-to-sequence models (Sutskever et al., 2014), the Transformer (Vaswani et al., 2017) removed recurrence altogether, and BERT (Devlin et al., 2018), T5 and GPT models (Urchs, 2025), Vision Transformers (Dosovitskiy et al., 2020) and efficient attention kernels (Dao et al., 2022) followed.
 
 ### When to use it
 
@@ -164,7 +164,7 @@ Ein reiner Transformer, angewendet auf Folgen von Bildausschnitten (Patches), de
 
 #### Ursprung und Varianten
 
-Attention für neuronale maschinelle Übersetzung (Bahdanau et al., 2014) erweiterte Sequence-to-Sequence-Modelle (Sutskever et al., 2014), der Transformer (Vaswani et al., 2017) verzichtete ganz auf Rekurrenz, und es folgten BERT (Devlin et al., 2018), T5 und GPT-Modelle (Urchs, 2025), Vision Transformer (Dosovitskiy et al., 2020) und effiziente Attention-Kernel (Dao et al., 2022).
+Attention für neuronale [[machine-translation|maschinelle Übersetzung]] (Bahdanau et al., 2014) erweiterte Sequence-to-Sequence-Modelle (Sutskever et al., 2014), der Transformer (Vaswani et al., 2017) verzichtete ganz auf Rekurrenz, und es folgten BERT (Devlin et al., 2018), T5 und GPT-Modelle (Urchs, 2025), Vision Transformer (Dosovitskiy et al., 2020) und effiziente Attention-Kernel (Dao et al., 2022).
 
 ### Wann einsetzen
 

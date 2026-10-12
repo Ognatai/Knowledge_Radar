@@ -43,7 +43,7 @@ Sennrich et al. (2015) adapted the byte pair encoding compression algorithm to w
 
 #### 3. Wordpieces
 
-Google's neural machine translation system (GNMT) divides words into a limited set of common sub-word units, called wordpieces, for both input and output (Wu et al., 2016). According to the authors, this gives a good balance between the flexibility of character-delimited models and the efficiency of word-delimited models, naturally handles the translation of rare words, and improves the overall accuracy of the system.
+Google's [[machine-translation|neural machine translation]] system (GNMT) divides words into a limited set of common sub-word units, called wordpieces, for both input and output (Wu et al., 2016). According to the authors, this gives a good balance between the flexibility of character-delimited models and the efficiency of word-delimited models, naturally handles the translation of rare words, and improves the overall accuracy of the system.
 
 #### 4. Unigram language model and subword regularization
 
@@ -145,7 +145,7 @@ SentencePiece (Kudo & Richardson, 2018) ist ein sprachunabhängiger Subword-Toke
 
 #### Ursprung und Varianten
 
-BPE wurde von Sennrich et al. (2015) für die neuronale maschinelle Übersetzung eingeführt. GNMT verwendete Wordpieces (Wu et al., 2016). Kudo (2018) ergänzte das Unigram-Sprachmodell und die Subword-Regularisierung, und SentencePiece (Kudo & Richardson, 2018) machte das Subword-Training zu einem sprachunabhängigen Werkzeug, das auf Rohtext arbeitet.
+BPE wurde von Sennrich et al. (2015) für die neuronale [[machine-translation|maschinelle Übersetzung]] eingeführt. GNMT verwendete Wordpieces (Wu et al., 2016). Kudo (2018) ergänzte das Unigram-Sprachmodell und die Subword-Regularisierung, und SentencePiece (Kudo & Richardson, 2018) machte das Subword-Training zu einem sprachunabhängigen Werkzeug, das auf Rohtext arbeitet.
 
 ### Wann einsetzen
 

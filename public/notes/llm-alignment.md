@@ -13,6 +13,7 @@ sources:
 - https://arxiv.org/abs/2307.15217
 - https://arxiv.org/abs/2501.12948
 - https://arxiv.org/abs/1909.08593
+- https://edoc.ub.uni-muenchen.de/36297/
 ---
 
 ## EN
@@ -82,6 +83,7 @@ Initialising reward models from pretrained LLMs goes back to Ziegler et al. (201
 **Limitations**
 - The reward model is only a noisy surrogate for what people actually want (Jurafsky & Martin, 2026).
 - Aligned models still make simple mistakes (Ouyang et al., 2022).
+- In German and English ChatGPT responses, naming a gender in the prompt seemingly triggered a template about gender equality and diversity that ignored other aspects, possibly because RLHF "over-corrects" (Urchs, 2025).
 - RLHF has open problems and fundamental limitations, and relatively little public work has systematised its flaws; Casper et al. (2023) call for auditing and disclosure standards and a multi-faceted approach to safety.
 
 ### Comparison
@@ -111,6 +113,7 @@ LLM alignment post-trains a pretrained model with instructions and then with pre
 - Casper, S. et al. (2023). *Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback.* arXiv:2307.15217. [arxiv.org](https://arxiv.org/abs/2307.15217)
 - Ziegler, D. M. et al. (2019). *Fine-Tuning Language Models from Human Preferences.* arXiv:1909.08593. [arxiv.org](https://arxiv.org/abs/1909.08593)
 - DeepSeek-AI (2025). *DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.* Nature 645. [arxiv.org](https://arxiv.org/abs/2501.12948)
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 
 ## DE
 
@@ -179,6 +182,7 @@ Reward Models aus vortrainierten LLMs zu initialisieren geht auf Ziegler et al. 
 **Grenzen**
 - Das Reward Model ist nur ein verrauschter Ersatz für das, was Menschen tatsächlich wollen (Jurafsky & Martin, 2026).
 - Ausgerichtete Modelle machen weiterhin einfache Fehler (Ouyang et al., 2022).
+- In deutschen und englischen ChatGPT-Antworten löste die Nennung eines Geschlechts im Prompt offenbar eine Schablone zu Gleichstellung und Diversität aus, die andere Aspekte ausblendete, möglicherweise weil RLHF „überkorrigiert“ (Urchs, 2025).
 - RLHF hat offene Probleme und grundsätzliche Grenzen, und vergleichsweise wenig öffentliche Arbeit hat seine Schwächen systematisiert; Casper et al. (2023) fordern Standards für Audits und Offenlegung und einen vielschichtigen Ansatz für Sicherheit.
 
 ### Vergleich
@@ -208,3 +212,4 @@ LLM-Alignment trainiert ein vortrainiertes Modell mit Anweisungen und dann mit P
 - Casper, S. et al. (2023). *Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback.* arXiv:2307.15217. [arxiv.org](https://arxiv.org/abs/2307.15217)
 - Ziegler, D. M. et al. (2019). *Fine-Tuning Language Models from Human Preferences.* arXiv:1909.08593. [arxiv.org](https://arxiv.org/abs/1909.08593)
 - DeepSeek-AI (2025). *DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.* Nature 645. [arxiv.org](https://arxiv.org/abs/2501.12948)
+- Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)

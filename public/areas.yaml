@@ -12,6 +12,14 @@ areas:
       - gpt
       - bert
       - natural-language-processing
+      - n-gram-language-models
+      - hidden-markov-models
+      - part-of-speech-tagging
+      - constituency-parsing
+      - dependency-parsing
+      - word-sense-disambiguation
+      - collocations
+      - machine-translation
       - tokenization
       - embeddings
       - multimodal-models

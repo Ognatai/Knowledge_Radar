@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d03b41de2a2f46352ae18fd744da88904ae8283bb3a4b3a790121147db9d5673
+note_sha256: 7432e135006dd3729b902cb70cf342902804615dc4379917f61d39fcd5afd53c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - byte-pair-encoding

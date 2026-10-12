@@ -41,7 +41,7 @@ ROUGE (Lin, 2004) evaluates summaries by their overlap with reference summaries 
 
 #### 3. BERTScore
 
-BERTScore (Zhang et al., 2019) computes a similarity score for each token in the candidate with each token in the reference, but instead of exact matches it uses contextual embeddings, so different words with similar meaning in context can still match. Evaluated on the outputs of 363 machine translation and image captioning systems, BERTScore correlated better with human judgements and gave stronger model selection than existing metrics, and on an adversarial paraphrase detection task it was more robust to challenging examples (Zhang et al., 2019).
+BERTScore (Zhang et al., 2019) computes a similarity score for each token in the candidate with each token in the reference, but instead of exact matches it uses contextual embeddings, so different words with similar meaning in context can still match. Evaluated on the outputs of 363 [[machine-translation|machine translation]] and image captioning systems, BERTScore correlated better with human judgements and gave stronger model selection than existing metrics, and on an adversarial paraphrase detection task it was more robust to challenging examples (Zhang et al., 2019).
 
 #### 4. Sentence embeddings with cosine similarity
 
@@ -126,7 +126,7 @@ ROUGE (Lin, 2004) bewertet Zusammenfassungen anhand ihrer Überlappung mit Refer
 
 #### 3. BERTScore
 
-BERTScore (Zhang et al., 2019) berechnet für jedes Token im Kandidaten einen Ähnlichkeitswert mit jedem Token in der Referenz, verwendet jedoch anstelle von exakten Übereinstimmungen kontextuelle Embeddings, sodass verschiedene Wörter mit ähnlicher Bedeutung im Kontext dennoch übereinstimmen können. In einer Evaluation mit den Ausgaben von 363 Systemen für maschinelle Übersetzung und Bildbeschreibung korrelierte BERTScore besser mit menschlichen Urteilen und eignete sich besser zur Modellauswahl als bestehende Metriken. Bei einer adversarialen Aufgabe zur Paraphrasenerkennung war BERTScore robuster gegenüber herausfordernden Beispielen (Zhang et al., 2019).
+BERTScore (Zhang et al., 2019) berechnet für jedes Token im Kandidaten einen Ähnlichkeitswert mit jedem Token in der Referenz, verwendet jedoch anstelle von exakten Übereinstimmungen kontextuelle Embeddings, sodass verschiedene Wörter mit ähnlicher Bedeutung im Kontext dennoch übereinstimmen können. In einer Evaluation mit den Ausgaben von 363 Systemen für [[machine-translation|maschinelle Übersetzung]] und Bildbeschreibung korrelierte BERTScore besser mit menschlichen Urteilen und eignete sich besser zur Modellauswahl als bestehende Metriken. Bei einer adversarialen Aufgabe zur Paraphrasenerkennung war BERTScore robuster gegenüber herausfordernden Beispielen (Zhang et al., 2019).
 
 #### 4. Satz-Embeddings mit Kosinusähnlichkeit
 

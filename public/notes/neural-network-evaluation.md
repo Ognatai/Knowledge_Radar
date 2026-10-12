@@ -90,7 +90,7 @@ Goodfellow et al. (2016) describe the classical view of generalisation and pract
 | Classification metrics | Count correct and incorrect class decisions (Goodfellow et al., 2016) | Classification tasks |
 | MAE / RMSE | Absolute or squared deviations in the target's units (Hyndman & Koehler, 2006) | Regression on one scale |
 | MASE | Errors scaled by a naive forecast (Hyndman & Koehler, 2006) | Comparing across scales |
-| BLEU | n-gram overlap with references (Papineni et al., 2002) | Machine translation |
+| BLEU | n-gram overlap with references (Papineni et al., 2002) | [[machine-translation\|Machine translation]] |
 | Calibration measures | Agreement of confidence with accuracy (Guo et al., 2017) | Probabilities used for decisions |
 
 ### In practice
@@ -189,7 +189,7 @@ Goodfellow et al. (2016) beschreiben die klassische Sicht auf Generalisierung un
 | Klassifikationsmetriken | Zählen richtige und falsche Klassenentscheidungen (Goodfellow et al., 2016) | Klassifikationsaufgaben |
 | MAE / RMSE | Absolute oder quadrierte Abweichungen in den Einheiten der Zielgröße (Hyndman & Koehler, 2006) | Regression auf einer Skala |
 | MASE | Fehler skaliert durch eine naive Prognose (Hyndman & Koehler, 2006) | Vergleich über Skalen hinweg |
-| BLEU | n-Gramm-Überlappung mit Referenzen (Papineni et al., 2002) | Maschinelle Übersetzung |
+| BLEU | n-Gramm-Überlappung mit Referenzen (Papineni et al., 2002) | [[machine-translation\|Maschinelle Übersetzung]] |
 | Kalibrierungsmaße | Übereinstimmung von Konfidenz und Trefferquote (Guo et al., 2017) | Wahrscheinlichkeiten für Entscheidungen |
 
 ### In der Praxis

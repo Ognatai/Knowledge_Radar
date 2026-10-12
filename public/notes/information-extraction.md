@@ -37,7 +37,7 @@ Entities are identified first, because they are the arguments that relations con
 
 #### 1. Entities as building blocks
 
-Relations connect entities, so entity recognition is usually the first step ([[entity-extraction|Entity Extraction]]). Lample et al. (2016) showed that neural architectures, a bidirectional LSTM with a conditional random field and a transition-based model, reach state-of-the-art entity recognition in four languages without hand-crafted features or gazetteers, using character-based word representations and word representations learned from unannotated text.
+Relations connect entities, so entity recognition is usually the first step ([[entity-extraction|Entity Extraction]]). Lample et al. (2016) showed that neural architectures, a bidirectional LSTM with a [[part-of-speech-tagging|conditional random field]] and a transition-based model, reach state-of-the-art entity recognition in four languages without hand-crafted features or gazetteers, using character-based word representations and word representations learned from unannotated text.
 
 #### 2. Open information extraction
 
@@ -53,7 +53,7 @@ Generative large language models have strong text understanding and generation c
 
 #### 5. IE pipelines for discourse analysis
 
-IE steps can be chained into pipelines that answer questions beyond single facts. Urchs (2025) describes named entity recognition, syntactic processing (dependency parsing to find who does what to whom), coreference resolution (grouping a full name, a title and a pronoun that refer to the same person), semantic role labelling and cross-document coreference resolution, and notes that errors in early steps propagate to later ones. Urchs et al. (2024) combine such steps to partly automate linguistic discourse analysis: the pipeline identifies each person mentioned in a text (actor) and all forms it is referred to (nomination), and the characteristics ascribed to it (predication). Scaled to more than 1.8 million German newspaper articles, it reports per gender how often actors are mentioned, how they are described and with which sentiment, and, for German, whether the generic masculine or gender-neutral language is used (Urchs, 2025; [[bias-in-nlp|Bias in NLP]]).
+IE steps can be chained into pipelines that answer questions beyond single facts. Urchs (2025) describes named entity recognition, syntactic processing ([[dependency-parsing|dependency parsing]] to find who does what to whom), coreference resolution (grouping a full name, a title and a pronoun that refer to the same person), semantic role labelling and cross-document coreference resolution, and notes that errors in early steps propagate to later ones. Urchs et al. (2024) combine such steps to partly automate linguistic discourse analysis: the pipeline identifies each person mentioned in a text (actor) and all forms it is referred to (nomination), and the characteristics ascribed to it (predication). Scaled to more than 1.8 million German newspaper articles, it reports per gender how often actors are mentioned, how they are described and with which sentiment, and, for German, whether the generic masculine or gender-neutral language is used (Urchs, 2025; [[bias-in-nlp|Bias in NLP]]).
 
 #### Origin and variants
 
@@ -132,7 +132,7 @@ Zuerst werden Entitäten erkannt, denn sie sind die Argumente, die Relationen ve
 
 #### 1. Entitäten als Bausteine
 
-Relationen verbinden Entitäten, daher ist die Entitätserkennung meist der erste Schritt ([[entity-extraction|Entitätsextraktion]]). Lample et al. (2016) zeigten, dass neuronale Architekturen, ein bidirektionales LSTM mit Conditional Random Field und ein transitionsbasiertes Modell, in vier Sprachen den Stand der Technik bei der Entitätserkennung erreichen, ohne handgefertigte Merkmale oder Gazetteers. Sie nutzen zeichenbasierte Wortrepräsentationen und Wortrepräsentationen, die aus nicht annotiertem Text gelernt wurden.
+Relationen verbinden Entitäten, daher ist die Entitätserkennung meist der erste Schritt ([[entity-extraction|Entitätsextraktion]]). Lample et al. (2016) zeigten, dass neuronale Architekturen, ein bidirektionales LSTM mit [[part-of-speech-tagging|Conditional Random Field]] und ein transitionsbasiertes Modell, in vier Sprachen den Stand der Technik bei der Entitätserkennung erreichen, ohne handgefertigte Merkmale oder Gazetteers. Sie nutzen zeichenbasierte Wortrepräsentationen und Wortrepräsentationen, die aus nicht annotiertem Text gelernt wurden.
 
 #### 2. Offene Informationsextraktion
 
@@ -148,7 +148,7 @@ Generative große Sprachmodelle verfügen über ausgeprägte Fähigkeiten im Ver
 
 #### 5. IE-Pipelines für die Diskursanalyse
 
-IE-Schritte lassen sich zu Pipelines verketten, die Fragen jenseits einzelner Fakten beantworten. Urchs (2025) beschreibt Named Entity Recognition, syntaktische Verarbeitung (Dependenzparsing, um zu erkennen, wer was mit wem tut), Koreferenzauflösung (Zusammenführen von vollem Namen, Titel und Pronomen, die dieselbe Person bezeichnen), semantische Rollenzuweisung und dokumentübergreifende Koreferenzauflösung und weist darauf hin, dass sich Fehler früher Schritte in spätere fortpflanzen. Urchs et al. (2024) kombinieren solche Schritte, um die linguistische Diskursanalyse teilweise zu automatisieren: Die Pipeline erkennt jede in einem Text genannte Person (Akteur:in) und alle Formen, mit denen sie bezeichnet wird (Nomination), sowie die ihr zugeschriebenen Eigenschaften (Prädikation). Auf mehr als 1,8 Millionen deutschsprachige Zeitungsartikel skaliert, berichtet sie je Geschlecht, wie oft Akteur:innen erwähnt werden, wie und mit welchem Sentiment sie beschrieben werden und, für das Deutsche, ob das generische Maskulinum oder geschlechtergerechte Sprache verwendet wird (Urchs, 2025; [[bias-in-nlp|Bias in NLP]]).
+IE-Schritte lassen sich zu Pipelines verketten, die Fragen jenseits einzelner Fakten beantworten. Urchs (2025) beschreibt Named Entity Recognition, syntaktische Verarbeitung ([[dependency-parsing|Dependenzparsing]], um zu erkennen, wer was mit wem tut), Koreferenzauflösung (Zusammenführen von vollem Namen, Titel und Pronomen, die dieselbe Person bezeichnen), semantische Rollenzuweisung und dokumentübergreifende Koreferenzauflösung und weist darauf hin, dass sich Fehler früher Schritte in spätere fortpflanzen. Urchs et al. (2024) kombinieren solche Schritte, um die linguistische Diskursanalyse teilweise zu automatisieren: Die Pipeline erkennt jede in einem Text genannte Person (Akteur:in) und alle Formen, mit denen sie bezeichnet wird (Nomination), sowie die ihr zugeschriebenen Eigenschaften (Prädikation). Auf mehr als 1,8 Millionen deutschsprachige Zeitungsartikel skaliert, berichtet sie je Geschlecht, wie oft Akteur:innen erwähnt werden, wie und mit welchem Sentiment sie beschrieben werden und, für das Deutsche, ob das generische Maskulinum oder geschlechtergerechte Sprache verwendet wird (Urchs, 2025; [[bias-in-nlp|Bias in NLP]]).
 
 #### Ursprung und Varianten
 

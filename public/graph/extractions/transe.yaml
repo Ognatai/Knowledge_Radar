@@ -1,5 +1,5 @@
 version: 1
-note_sha256: ff21ed4302819d0756cb571a29a52019eddde13eca8814a1bab195bf20812acd
+note_sha256: 20e4beded69330d0aa91ae25baf44aa16716bb760d30b4d3a5658f2b57bd59b5
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - knowledge-graphs

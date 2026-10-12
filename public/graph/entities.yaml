@@ -2902,3 +2902,19 @@ entities:
   type: Technology
   name_en: DeepSeek-R1
   name_de: DeepSeek-R1
+- id: perplexity
+  type: Concept
+  name_en: Perplexity
+  name_de: Perplexität
+- id: penn-treebank
+  type: Dataset
+  name_en: Penn Treebank
+  name_de: Penn Treebank
+- id: semcor
+  type: Dataset
+  name_en: SemCor
+  name_de: SemCor
+- id: spacy
+  type: Technology
+  name_en: spaCy
+  name_de: spaCy
