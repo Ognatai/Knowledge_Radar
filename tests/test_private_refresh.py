@@ -12,12 +12,13 @@ def test_index_and_requirements_come_before_the_extraction(monkeypatch, tmp_path
     monkeypatch.setattr(private_refresh, "configured_notes_directory", lambda: tmp_path)
     monkeypatch.setattr(private_refresh, "load_notes", lambda directory: [])
     monkeypatch.setattr(private_refresh, "load_graph", lambda *args: SimpleNamespace(entities={}))
-    monkeypatch.setattr(private_refresh, "load_documents", lambda root: [])
+    monkeypatch.setattr(private_refresh, "load_documents", lambda root: [SimpleNamespace(kind="job_posting")])
     monkeypatch.setattr(private_refresh, "known_entities", lambda root, entities: {})
     monkeypatch.setattr(private_refresh, "ingest", lambda root, entities: steps.append("structure") or (SimpleNamespace(entities=[], relations=[]), None))
     monkeypatch.setattr(private_refresh, "update_private_index",
                         lambda *args, **kwargs: steps.append("index") or SimpleNamespace(embedded=[], deleted=[]))
     monkeypatch.setattr(private_refresh, "extract_requirements_all", lambda *args, **kwargs: steps.append("requirements"))
+    monkeypatch.setattr(private_refresh, "topics_graph", lambda *args, **kwargs: steps.append("topics"))
     monkeypatch.setattr(private_refresh, "extract_free_text", lambda *args, **kwargs: steps.append("extraction"))
     monkeypatch.setattr(private_refresh, "Neo4jStore", lambda driver, visibility: None)
 
@@ -28,7 +29,7 @@ def test_index_and_requirements_come_before_the_extraction(monkeypatch, tmp_path
     private_refresh.refresh(tmp_path, lambda: SimpleNamespace(close=lambda: None), log=log.append, research=research,
                             pause=lambda: None)
     local = [step for step in steps if step != "research"]
-    assert local == ["structure", "index", "requirements", "extraction", "index"]
+    assert local == ["structure", "index", "requirements", "topics", "extraction", "index"]
     assert "research" in steps and READY in log
     assert steps.index("research") < len(steps) - 1  # indexed in the last step
 

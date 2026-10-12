@@ -74,18 +74,21 @@ def test_the_draft_renders_requirements_earlier_rounds_pitch_and_questions(root)
     private = FakeStore([hit("private-notes-my-projects", 0.8, text="I built a RAG evaluation at Foo.", visibility="private")])
     public = FakeStore([hit("bm25", 0.7)])
 
+    topics = {"topics": {"companies/acme-gmbh/ml-engineer/job_posting": [
+        {"name": "RAG", "phrase": "RAG", "note": "retrieval-augmented-generation"}, {"name": "Rust", "phrase": "Rust", "note": None}]}}
+    (root / "graph" / "topics.yaml").write_text(yaml.safe_dump(topics), encoding="utf-8")
+
     text = prep.draft_prep(root, "acme-gmbh", "ml-engineer", 2, notes=NOTES, stores={"public": lambda: public, "private": lambda: private},
                            generate=model(prompts), embed=fake_embed, today=TODAY)
 
     assert text.startswith("---\nround_number: 2\ngenerated: 2026-10-25\n---\n# Vorbereitung: ACME GmbH – ML Engineer, Runde 2 (2026-11-03)")
-    assert "- [Retrieval-Augmented Generation](https://ognatai.github.io/Knowledge_Radar/?view=note&slug=retrieval-augmented-generation): RAG ruft Passagen ab und lässt das Modell antworten." in text
-    assert "### Rust (skill)\n- Keine passende Notiz in der Wissensbasis – eine Lücke?" in text
+    assert "**Mit Notiz:** [Retrieval-Augmented Generation](https://ognatai.github.io/Knowledge_Radar/?view=note&slug=retrieval-augmented-generation)" in text
+    assert "**Noch ohne Notiz:** Rust" in text and "Lernunterlage im Tab „Unterlagen“" in text
     assert "- **Gefragt:** How to evaluate RAG?" in text and "- **Schwierig:** calibration" in text
     assert "**Für John Roe:** Architektur betonen." in text and "Somebody Else" not in text
     assert ("Ich habe eine RAG-Evaluation gebaut. Ich spreche fließend Japanisch. **[prüfen: nicht aus deinen Notizen belegt]** "
             "Bei [Projekt X] habe ich gelernt.") in text
     assert "- Wie wird evaluiert? _(alle: Reife)_" in text
-    assert "## Weitere passende Notizen\n- [BM25]" in text
     # The pitch is built from the candidate's own notes only.
     assert "I built a RAG evaluation at Foo." in prompts[0] and "Use ONLY facts" in prompts[0]
 

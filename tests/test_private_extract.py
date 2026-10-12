@@ -101,6 +101,23 @@ def test_requirements_graph_links_postings_requirements_and_topics(repo):
     }
 
 
+def test_without_matching_only_the_requirements_go_to_the_model(repo):
+    """The app's refresh matches the posting's topics instead (posting_topics.py)."""
+    calls = []
+
+    def generate(prompt, json_schema=None, **options):
+        calls.append(prompt)
+        return json.dumps({"requirements": [{"text": "RAG", "category": "skill"}]})
+
+    def no_index():
+        raise AssertionError("the topic index is built although nothing is matched")
+
+    postings = [d for d in load_documents(repo) if d.kind == "job_posting"]
+    path = requirements_graph(repo, postings, no_index, embed=lambda texts: [], generate=generate, log=lambda line: None, match=False)
+    assert len(calls) == 1
+    assert {r["type"] for r in yaml.safe_load(path.read_text(encoding="utf-8"))["relations"]} == {"REQUIRES"}
+
+
 def test_an_unchanged_posting_keeps_its_requirements_without_the_model(repo):
     notes = {"rag": NoteDetail.model_construct(slug="rag", title_en="RAG", content_en="### TL;DR\nRetrieval.\n")}
 

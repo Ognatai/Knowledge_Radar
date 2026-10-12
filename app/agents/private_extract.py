@@ -220,8 +220,12 @@ def requirements_graph(
     model: str | None = None,
     log: Callable[[str], None] = print,
     pause: Callable[[], None] = lambda: None,
+    match: bool = True,
 ) -> Path:
     """graph/requirements.yaml: Requirement entities with REQUIRES and MATCHES.
+
+    `match=False` skips the MATCHES (one model call per requirement): the app's refresh
+    matches the posting's topics instead (posting_topics.py), which the study guide uses.
 
     A posting whose text is unchanged since the last run keeps its requirements and
     matches; only new or edited postings go to the model. `topics` may be a function
@@ -241,20 +245,22 @@ def requirements_graph(
             relations += [r for r in previous.get("relations") or [] if r.get("source") == posting.id]
             log(f"{posting.id}: unchanged")
             continue
-        if callable(topics):
+        if match and callable(topics):
             topics = topics()
         pause()
         log(f"{posting.id}: reading the requirements")
         requirements = extract_requirements(posting, generate, model)
         for number, requirement in enumerate(requirements, start=1):
-            pause()
-            log(f"{posting.id}: matching requirement {number}/{len(requirements)}")
+            if match:
+                pause()
+                log(f"{posting.id}: matching requirement {number}/{len(requirements)}")
             requirement_id = f"req-{posting.company}-{posting.role}-{number}"
             entities.append({"id": requirement_id, "type": "Requirement", "name_en": requirement["text"],
                              "name_de": requirement["text"], "category": requirement["category"]})
             relations.append({"from": posting_id, "type": "REQUIRES", "to": requirement_id, "source": posting.id})
-            for slug in match_requirement(requirement["text"], topics.nearest(requirement["text"], embed), generate, model):
-                relations.append({"from": requirement_id, "type": "MATCHES", "to": slug, "source": posting.id})
+            if match:
+                for slug in match_requirement(requirement["text"], topics.nearest(requirement["text"], embed), generate, model):
+                    relations.append({"from": requirement_id, "type": "MATCHES", "to": slug, "source": posting.id})
         log(f"{posting.id}: {sum(1 for e in entities if e['id'].startswith(prefix))} requirements")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
@@ -276,12 +282,12 @@ def known_entities(root: Path, public_entities: dict[str, Entity]) -> dict[str, 
 
 def extract_requirements_all(root: Path, documents: list[PrivateDocument], notes: dict[str, NoteDetail], *,
                              model: str | None = None, log: Callable[[str], None] = print,
-                             pause: Callable[[], None] = lambda: None) -> None:
-    """The postings' requirements and their matching notes."""
+                             pause: Callable[[], None] = lambda: None, match: bool = True) -> None:
+    """The postings' requirements, with their matching notes unless `match` is False."""
     postings = [d for d in documents if d.kind == "job_posting"]
     if postings:
         path = requirements_graph(root, postings, lambda: TopicIndex.build(notes, embeddings.embed), embed=embeddings.embed,
-                                  model=model, log=log, pause=pause)
+                                  model=model, log=log, pause=pause, match=match)
         log(f"Requirements -> {path}")
 
 

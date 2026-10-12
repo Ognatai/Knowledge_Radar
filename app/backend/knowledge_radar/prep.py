@@ -26,6 +26,7 @@ from typing import Any
 import yaml
 
 from app.agents import llm
+from app.agents.posting_topics import read_topics
 from app.backend.knowledge_radar import chat
 from app.backend.knowledge_radar.interviews import InterviewError, Writer, _frontmatter, _iso
 from app.backend.knowledge_radar.models import NoteDetail
@@ -43,22 +44,24 @@ MAX_BACKGROUND_SOURCES = 5
 LABELS = {
     "de": {
         "title": "Vorbereitung", "round": "Runde", "date_open": "Datum offen", "interviewers": "Gesprächspartner",
-        "none_known": "Noch niemand bekannt.", "researched": "recherchiert", "requirements": "Anforderungen und passende Notizen",
-        "no_requirements": "Die Anforderungen der Anzeige sind noch nicht ausgelesen (die Aktualisierung nach /new-application läuft noch oder ist fehlgeschlagen).",
-        "no_match": "Keine passende Notiz in der Wissensbasis – eine Lücke?", "earlier": "Aus früheren Runden",
+        "none_known": "Noch niemand bekannt.", "researched": "recherchiert", "requirements": "Lernthemen aus der Anzeige",
+        "no_requirements": "Die Themen der Anzeige sind noch nicht ausgelesen (die Aktualisierung nach /new-application läuft noch oder ist fehlgeschlagen).",
+        "covered": "Mit Notiz", "missing": "Noch ohne Notiz",
+        "guide": "Alle Themen ausführlich: Lernunterlage im Tab „Unterlagen“ (auch als PDF).", "earlier": "Aus früheren Runden",
         "asked": "Gefragt", "struggled": "Schwierig", "improve": "Vorgenommen", "gaps": "Lücken", "no_retro": "Keine Retro.",
         "pitch": "Kurzvorstellung", "for": "Für", "questions": "Fragen an die Gesprächspartner", "to_all": "alle",
-        "more": "Weitere passende Notizen", "generated": "Erstellt vom lokalen Modell; vor dem Gespräch prüfen.",
+        "generated": "Erstellt vom lokalen Modell; vor dem Gespräch prüfen.",
         "unsupported": "**[prüfen: nicht aus deinen Notizen belegt]**",
     },
     "en": {
         "title": "Preparation", "round": "round", "date_open": "date open", "interviewers": "Interviewers",
-        "none_known": "Nobody known yet.", "researched": "researched", "requirements": "Requirements and matching notes",
-        "no_requirements": "The posting's requirements have not been extracted yet (the update after /new-application is still running or failed).",
-        "no_match": "No matching note in the knowledge base – a gap?", "earlier": "From earlier rounds",
+        "none_known": "Nobody known yet.", "researched": "researched", "requirements": "Topics from the posting",
+        "no_requirements": "The posting's topics have not been extracted yet (the update after /new-application is still running or failed).",
+        "covered": "With a note", "missing": "No note yet",
+        "guide": "All topics in full: the study guide in the “Documents” tab (also as PDF).", "earlier": "From earlier rounds",
         "asked": "Asked", "struggled": "Struggled with", "improve": "To improve", "gaps": "Gaps", "no_retro": "No retro.",
         "pitch": "Self-introduction", "for": "For", "questions": "Questions to ask", "to_all": "everyone",
-        "more": "More matching notes", "generated": "Written by the local model; check before the interview.",
+        "generated": "Written by the local model; check before the interview.",
         "unsupported": "**[check: not backed by your notes]**",
     },
 }
@@ -93,6 +96,7 @@ class PrepContext:
     interviewers: list[dict[str, str]]
     requirements: list[Requirement] | None  # None: not extracted yet
     earlier: list[EarlierRound]
+    topics: list[dict[str, Any]] | None = None  # posting_topics.py; None: not extracted yet
 
 
 def _body(path: Path) -> str:
@@ -159,6 +163,7 @@ def gather(root: Path, company: str, role: str, round_number: int) -> PrepContex
         round_date=_iso(round_info.get("date")), round_notes=_body(round_dir / "round.md"),
         interviewers=interviewers,
         requirements=read_requirements(root, company, role), earlier=earlier,
+        topics=read_topics(root, f"companies/{company}/{role}/job_posting"),
     )
 
 
@@ -299,13 +304,17 @@ def render(context: PrepContext, notes: dict[str, NoteDetail], pitch: dict[str, 
     lines += [f"- {person_line(p)}" + (f" ({t['researched']})" if p.get("background") else "")
               for p in context.interviewers] or [t["none_known"]]
 
-    lines += ["", f"## {t['requirements']}"]
-    if context.requirements is None:
+    lines += ["", f"## {t['requirements']}", ""]
+    if context.topics is None:
         lines.append(t["no_requirements"])
-    for requirement in context.requirements or []:
-        lines += ["", f"### {requirement.text} ({requirement.category})"]
-        matched = [notes[slug] for slug in requirement.notes if slug in notes]
-        lines += [f"- {note_link(n, language)}: {tldr(n, language)}" for n in matched] or [f"- {t['no_match']}"]
+    else:
+        covered = list(dict.fromkeys(topic["note"] for topic in context.topics if topic.get("note") in notes))
+        missing = [topic["name"] for topic in context.topics if topic.get("note") not in notes]
+        if covered:
+            lines.append(f"**{t['covered']}:** " + " · ".join(note_link(notes[slug], language) for slug in covered))
+        if missing:
+            lines += ["", f"**{t['missing']}:** " + " · ".join(missing)]
+        lines += ["", f"_{t['guide']}_"]
 
     if context.earlier:
         lines += ["", f"## {t['earlier']}"]
@@ -330,12 +339,6 @@ def render(context: PrepContext, notes: dict[str, NoteDetail], pitch: dict[str, 
         target = question.get("for", "").strip()
         target = target if target.casefold() in names else t["to_all"]
         lines.append(f"- {question['question'].strip()} _({target}: {question.get('why', '').strip()})_")
-
-    matched_slugs = {slug for r in context.requirements or [] for slug in r.notes}
-    extra = [s for s in more if s.visibility == "public" and s.note not in matched_slugs and s.note in notes]
-    if extra:
-        lines += ["", f"## {t['more']}"]
-        lines += [f"- {note_link(notes[s.note], language)}" for s in {s.note: s for s in extra}.values()]
     return "\n".join(lines).rstrip() + "\n"
 
 

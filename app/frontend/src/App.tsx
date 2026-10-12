@@ -1,6 +1,8 @@
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Documents from "./Documents";
+import Markdown from "./Markdown";
 import Review from "./Review";
 import { Application, ask, ChatSource, Language, privateApi, publicNoteUrl, RefreshStatus, Scope, Turn, Written } from "./api";
 import {
@@ -26,6 +28,35 @@ interface Draft {
   // A prep.md exists already: saving replaces it.
   exists?: boolean;
   state: "editing" | "saving" | "saved" | "cancelled";
+  // Shown as Markdown source to edit; otherwise rendered.
+  raw?: boolean;
+}
+
+const RETRO_LABELS: Record<Language, Record<string, string>> = {
+  de: { date: "Datum", questions_asked: "Gestellte Fragen", struggled_with: "Schwierig war", personal_improvement: "Nächstes Mal besser",
+        kb_gaps_identified: "Lücken für die Wissensbasis" },
+  en: { date: "Date", questions_asked: "Questions asked", struggled_with: "Struggled with", personal_improvement: "Do better next time",
+        kb_gaps_identified: "Gaps for the knowledge base" },
+};
+
+/** A draft for reading: the frontmatter as headed lists (retro) or left out (prep). */
+function draftMarkdown(draft: Draft, language: Language): string {
+  const match = draft.text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  if (!match) return draft.text;
+  const [, header, body] = match;
+  if (draft.kind === "prep") return body;
+  const lines: string[] = [];
+  for (const line of header.split("\n")) {
+    const key = line.match(/^(\w+):\s*(.*)$/);
+    if (key) {
+      const label = RETRO_LABELS[language][key[1]] ?? key[1];
+      const value = key[2] === "[]" ? "–" : key[2].replace(/^'|'$/g, "");
+      lines.push("", value ? `**${label}:** ${value}` : `**${label}**`);
+    } else if (line.trim().startsWith("- ")) {
+      lines.push(line.trim());
+    }
+  }
+  return [...lines, "", body].join("\n").trim();
 }
 
 interface Message {
@@ -73,6 +104,7 @@ const TEXT = {
     subtitle: "Lokaler Chat über die öffentliche und die private Wissensbasis. Alles bleibt auf diesem Rechner.",
     chat: "Chat",
     review: "Review",
+    documents: "Unterlagen",
     scope: "Suchen in",
     scopes: { all: "Beiden", public: "Öffentlich", private: "Privat" } as Record<Scope, string>,
     placeholder: "Frage stellen oder / für Befehle … (Enter sendet, Umschalt+Enter für neue Zeile)",
@@ -95,6 +127,8 @@ const TEXT = {
     pickChoice: "Bitte wähle eine der Möglichkeiten oben (Klick oder Nummer).",
     saved: (files: string[]) => `Gespeichert im privaten Repository:\n${files.map((f) => `- \`${f}\``).join("\n")}\n\nDie Dateien sind noch nicht committet.`,
     draftIntro: "Entwurf der Retro. Prüfe und ändere ihn bei Bedarf, dann speichern:",
+    editDraft: "Bearbeiten",
+    showRendered: "Ansicht",
     prepIntro: "Entwurf der Vorbereitung. Prüfe ihn, vor allem die Kurzvorstellung (Platzhalter in [eckigen Klammern] füllst du selbst):",
     saveDraft: "Retro speichern",
     savePrep: "Vorbereitung speichern",
@@ -109,6 +143,7 @@ const TEXT = {
     subtitle: "Local chat over the public and the private knowledge base. Everything stays on this machine.",
     chat: "Chat",
     review: "Review",
+    documents: "Documents",
     scope: "Search in",
     scopes: { all: "Both", public: "Public", private: "Private" } as Record<Scope, string>,
     placeholder: "Ask a question or type / for commands … (Enter sends, Shift+Enter for a new line)",
@@ -131,6 +166,8 @@ const TEXT = {
     pickChoice: "Please pick one of the options above (click or number).",
     saved: (files: string[]) => `Saved in the private repository:\n${files.map((f) => `- \`${f}\``).join("\n")}\n\nThe files are not committed yet.`,
     draftIntro: "Draft of the retro. Check it, change what you like, then save:",
+    editDraft: "Edit",
+    showRendered: "View",
     prepIntro: "Draft of the preparation. Check it, above all the self-introduction (fill in the [placeholders] yourself):",
     saveDraft: "Save retro",
     savePrep: "Save preparation",
@@ -194,7 +231,7 @@ export default function App() {
   const [wizard, setWizard] = useState<Wizard | null>(null);
   const [applications, setApplications] = useState<Application[]>([]);
   const [preparing, setPreparing] = useState(false);
-  const [view, setView] = useState<"chat" | "review">("chat");
+  const [view, setView] = useState<"chat" | "documents" | "review">("chat");
   const end = useRef<HTMLDivElement>(null);
   const t = TEXT[language];
 
@@ -421,6 +458,9 @@ export default function App() {
           <button aria-current={view === "chat" ? "page" : undefined} onClick={() => setView("chat")}>
             {t.chat}
           </button>
+          <button aria-current={view === "documents" ? "page" : undefined} onClick={() => setView("documents")}>
+            {t.documents}
+          </button>
           <button aria-current={view === "review" ? "page" : undefined} onClick={() => setView("review")}>
             {t.review}
           </button>
@@ -434,6 +474,11 @@ export default function App() {
         </div>
       </header>
 
+      {view === "documents" && (
+        <main className="chat">
+          <Documents language={language} />
+        </main>
+      )}
       {view === "review" && (
         <main className="chat">
           <Review language={language} />
@@ -508,12 +553,23 @@ export default function App() {
                   )}
                   {message.draft && (
                     <div className="draft">
-                      <textarea
-                        value={message.draft.text}
-                        readOnly={message.draft.state !== "editing"}
-                        onChange={(event) => update(message.id, { draft: { ...message.draft!, text: event.target.value } })}
-                        rows={Math.min(24, message.draft.text.split("\n").length + 2)}
-                      />
+                      {message.draft.raw ? (
+                        <textarea
+                          value={message.draft.text}
+                          readOnly={message.draft.state !== "editing"}
+                          onChange={(event) => update(message.id, { draft: { ...message.draft!, text: event.target.value } })}
+                          rows={Math.min(24, message.draft.text.split("\n").length + 2)}
+                        />
+                      ) : (
+                        <div className="rendered">
+                          <Markdown text={draftMarkdown(message.draft, language)} />
+                        </div>
+                      )}
+                      {message.draft.state === "editing" && (
+                        <button className="text-link draft-toggle" onClick={() => update(message.id, { draft: { ...message.draft!, raw: !message.draft!.raw } })}>
+                          {message.draft.raw ? t.showRendered : t.editDraft}
+                        </button>
+                      )}
                       {message.draft.state === "editing" && (
                         <div className="choices">
                           <button onClick={() => void saveDraft(message)}>

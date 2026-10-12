@@ -6,6 +6,7 @@ public and the private index are read together (see chat.py).
 
 from __future__ import annotations
 
+import re
 import threading
 from collections.abc import Callable
 from dataclasses import asdict
@@ -16,7 +17,8 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.agents.private_refresh import FOREGROUND
-from app.backend.knowledge_radar import chat, interviews, prep, review
+from app.backend.knowledge_radar import chat, interviews, prep, review, study_guide
+from app.backend.knowledge_radar.areas import areas_path, load_areas
 from app.backend.knowledge_radar.config import LocalConfigError, load_local_config
 from app.backend.knowledge_radar.models import (
     ChatRequest,
@@ -249,6 +251,31 @@ def create_app(
     def save_prep(request: PrepIn) -> dict[str, Any]:
         return interview_errors(lambda: prep.write_prep(private(), company=request.company, role=request.role,
                                                         round_number=request.round, text=request.text, replace=request.replace))
+
+    # The documents tab: the saved preparation and the study guide of a round, built fresh
+    # from the files each time, so that notes added later show up.
+    def round_dir(company: str, role: str, round_number: int) -> Path:
+        for part in (company, role):
+            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", part):
+                raise HTTPException(status_code=400, detail="Invalid company or role.")
+        directory = private() / "companies" / company / role / f"round-{round_number}"
+        if not (directory / "round.md").is_file():
+            raise HTTPException(status_code=404, detail="Unknown round.")
+        return directory
+
+    @app.get("/api/private/documents/{company}/{role}/{round_number}/prep")
+    def saved_prep(company: str, role: str, round_number: int) -> dict[str, str]:
+        path = round_dir(company, role, round_number) / "prep.md"
+        if not path.is_file():
+            raise HTTPException(status_code=404, detail="No preparation saved for this round.")
+        return {"markdown": prep._body(path)}
+
+    @app.get("/api/private/documents/{company}/{role}/{round_number}/study-guide")
+    def study_guide_document(company: str, role: str, round_number: int) -> dict[str, str]:
+        round_dir(company, role, round_number)
+        notes = {note.slug: note for note in read_notes()}
+        areas = load_areas(set(notes), areas_path(public_notes_directory))
+        return {"markdown": study_guide.build(private(), company, role, round_number, notes, areas)}
 
     public_proposals = default_proposals() if proposals == "default" else proposals
     private_inbox = default_inbox(root) if inbox == "default" else inbox

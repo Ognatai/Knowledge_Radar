@@ -93,6 +93,8 @@ export const privateApi = {
   draftPrep: (body: unknown) => call<{ text: string; exists: boolean }>("/api/private/prep/draft", body),
   savePrep: (body: unknown) => call<Written>("/api/private/prep", body),
   refresh: () => call<RefreshStatus | null>("/api/private/refresh"),
+  document: (company: string, role: string, round: number, kind: "prep" | "study-guide") =>
+    call<{ markdown: string }>(`/api/private/documents/${encodeURIComponent(company)}/${encodeURIComponent(role)}/${round}/${kind}`),
 };
 
 export function ask(question: string, history: Turn[], scope: Scope, language: Language): Promise<ChatAnswer> {

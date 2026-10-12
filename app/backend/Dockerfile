@@ -10,6 +10,8 @@ WORKDIR /workspace
 COPY pyproject.toml README.md schema.yaml ./
 COPY app ./app
 COPY public/notes ./public/notes
+# The subject areas: the parts of the study guide.
+COPY public/areas.yaml ./public/areas.yaml
 # The extraction agent's guidelines, for the private refresh after the interview commands.
 COPY docs/extraction-guidelines.md docs/extraction-examples.yaml ./docs/
 RUN pip install --no-cache-dir ".[claude]"

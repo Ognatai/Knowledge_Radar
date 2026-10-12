@@ -5,7 +5,8 @@ available to the chat and /prep right away (architecture: "triggers a reindex").
 the user needs first comes first:
 
 1. structural graph, then the private index: the chat finds the new files
-2. the postings' requirements and matching notes: what /prep needs
+2. the postings' requirements, and the topics to study with the note on each
+   (posting_topics.py): what /prep and the study guide need
    -> the run reports READY: chat and /prep have the new data
 3. local extraction of the free text (entities and relations; local Ollama only)
 4. the private index again, with the extracted graph
@@ -29,7 +30,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from app.agents.private_extract import extract_free_text, extract_requirements_all, known_entities
+from app.agents.posting_topics import topics_graph
+from app.agents.private_extract import TopicIndex, extract_free_text, extract_requirements_all, known_entities
+from app.backend.knowledge_radar import embeddings
 from app.agents.private_ingest import ingest
 from app.backend.knowledge_radar.graph import DEFAULT_GRAPH_DIRECTORY, load_graph
 from app.backend.knowledge_radar.index import Neo4jStore
@@ -88,7 +91,12 @@ def refresh(root: Path, connect: Callable[[], Any], *, model: str | None = None,
     structure, _ = ingest(root, public.entities)
     log(f"Structure: {len(structure.entities)} entities, {len(structure.relations)} relations")
     index()
-    extract_requirements_all(root, load_documents(root), notes, model=model, log=log, pause=pause)
+    documents = load_documents(root)
+    extract_requirements_all(root, documents, notes, model=model, log=log, pause=pause, match=False)
+    postings = [d for d in documents if d.kind == "job_posting"]
+    if postings:
+        topics_graph(root, postings, public.entities, notes, lambda: TopicIndex.build(notes, embeddings.embed),
+                     embed=embeddings.embed, model=model, log=log, pause=pause)
     log(READY)
     extract_free_text(root, load_documents(root), known_entities(root, public.entities), public_graph=public,
                       public_notes=notes, model=model, log=log, pause=pause)
