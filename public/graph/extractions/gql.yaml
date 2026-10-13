@@ -4,10 +4,9 @@ extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - cypher
 - sql-pgq
-- property-graph
+- graph-databases
 - neo4j
 - sparql
-- graph-databases
 - knowledge-graphs
 relations:
 - from: gql

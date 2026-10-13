@@ -116,32 +116,10 @@ entities:
     name_en: Prometheus (evaluator model)
     name_de: Prometheus (Evaluator-Modell)
     aliases: [Prometheus]
-  - id: position-bias
-    type: Concept
-    name_en: Position bias
-    name_de: Position Bias
-  - id: verbosity-bias
-    type: Concept
-    name_en: Verbosity bias
-    name_de: Verbosity Bias
-  - id: self-enhancement-bias
-    type: Concept
-    name_en: Self-enhancement bias
-    name_de: Self-Enhancement Bias
-    aliases: [self-preference]
-  - id: property-graph
-    type: Concept
-    name_en: Property graph
-    name_de: Property Graph
   - id: ontology
     type: Concept
     name_en: Ontology
     name_de: Ontologie
-  - id: owl
-    type: Technology
-    name_en: OWL (Web Ontology Language)
-    name_de: OWL (Web Ontology Language)
-    aliases: [OWL, OWL 2]
   - id: open-world-assumption
     type: Concept
     name_en: Open-world assumption

@@ -1,10 +1,9 @@
 version: 1
-note_sha256: b0d0213a4b808e6f12c97c31a4d24a72e6efffbde52ded9b84feee9a61f9c98e
+note_sha256: eb08cbcb2efc5a913b72d42dd7dce89c3ec29f91fe85cd7d897ef8bc6e23d592
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - ontology
 - rdf-schema
-- owl
 - skos
 - prov-o
 - w3c
@@ -18,10 +17,6 @@ relations:
   evidence: is expressed in standards such as RDF Schema, OWL and SKOS
 - from: ontology-design
   type: BASED_ON
-  to: owl
-  evidence: is expressed in standards such as RDF Schema, OWL and SKOS
-- from: ontology-design
-  type: BASED_ON
   to: skos
   evidence: is expressed in standards such as RDF Schema, OWL and SKOS
 - from: ontology-design
@@ -32,7 +27,7 @@ relations:
   type: DEVELOPED_BY
   to: w3c
   evidence: RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) and SKOS (W3C SKOS) are the W3C standards for vocabularies
-- from: owl
+- from: ontology-design
   type: DEVELOPED_BY
   to: w3c
   evidence: RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) and SKOS (W3C SKOS) are the W3C standards for vocabularies
@@ -40,7 +35,7 @@ relations:
   type: DEVELOPED_BY
   to: w3c
   evidence: RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) and SKOS (W3C SKOS) are the W3C standards for vocabularies
-- from: owl
+- from: ontology-design
   type: BASED_ON
   to: open-world-assumption
   evidence: which lets reasoners infer implicit facts under the open-world assumption

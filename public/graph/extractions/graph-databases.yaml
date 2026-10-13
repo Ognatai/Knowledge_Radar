@@ -1,21 +1,27 @@
 version: 1
-note_sha256: "5837a46b7106c7cab5044d12164655bf57b644d6330d107b7d983d6e1d368605"
+note_sha256: 6cdaccf22df0588d149fc8422b0e29c76ffa12ed78f7b6c1f6377233da6781f0
 extracted_by: claude (hand-labelled gold standard)
-discusses: [property-graph, cypher, neo4j, rdf, sparql, vector-databases, graphrag]
+discusses:
+- cypher
+- neo4j
+- rdf
+- sparql
+- vector-databases
+- graphrag
 relations:
-  - from: neo4j
-    type: IS_EXAMPLE_OF
-    to: graph-databases
-    evidence: Property graph databases such as Neo4j with Cypher
-  - from: graphrag
-    type: BASED_ON
-    to: graph-databases
-    evidence: Applications such as GraphRAG combine graph and vector stores
-  - from: graphrag
-    type: BASED_ON
-    to: vector-databases
-    evidence: Applications such as GraphRAG combine graph and vector stores
-  - from: graph-databases
-    type: COMPLEMENTS
-    to: vector-databases
-    evidence: They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search
+- from: neo4j
+  type: IS_EXAMPLE_OF
+  to: graph-databases
+  evidence: Property graph databases such as Neo4j with Cypher
+- from: graphrag
+  type: BASED_ON
+  to: graph-databases
+  evidence: Applications such as GraphRAG combine graph and vector stores
+- from: graphrag
+  type: BASED_ON
+  to: vector-databases
+  evidence: Applications such as GraphRAG combine graph and vector stores
+- from: graph-databases
+  type: COMPLEMENTS
+  to: vector-databases
+  evidence: They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search

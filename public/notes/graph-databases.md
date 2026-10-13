@@ -5,6 +5,7 @@ entity_type: Concept
 aliases:
 - Graph database
 - Graph technologies
+- Property graph
 sources:
 - https://doi.org/10.1145/1322432.1322433
 - https://doi.org/10.1145/3183713.3190657

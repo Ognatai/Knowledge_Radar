@@ -2,12 +2,11 @@ version: 1
 note_sha256: 5b6995c14c8b699937618a6da2af3f4d41baa5d92ea5f5cdcd7d2f9f636b6e6d
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
-- property-graph
+- graph-databases
 - cypher
 - neo4j-graph-data-science
 - hnsw
 - vector-databases
-- graph-databases
 - knowledge-graphs
 - graphrag
 - rdf
@@ -17,7 +16,7 @@ discusses:
 relations:
 - from: neo4j
   type: IMPLEMENTS
-  to: property-graph
+  to: graph-databases
   evidence: Neo4j is a native property graph database
 - from: neo4j
   type: IMPLEMENTS

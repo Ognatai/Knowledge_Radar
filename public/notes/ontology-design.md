@@ -2,6 +2,10 @@
 title_en: Ontology Design
 title_de: Ontologie-Design
 entity_type: Method
+aliases:
+- OWL (Web Ontology Language)
+- OWL
+- OWL 2
 sources:
 - https://protege.stanford.edu/publications/ontology_development/ontology101.pdf
 - https://www.w3.org/TR/owl2-primer/

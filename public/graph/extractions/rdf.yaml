@@ -7,11 +7,11 @@ discusses:
 - json-ld
 - n-triples
 - rdf-schema
-- owl
+- ontology-design
 - skos
 - sparql
 - reification
-- property-graph
+- graph-databases
 - open-world-assumption
 relations:
 - from: rdf

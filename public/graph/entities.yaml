@@ -125,21 +125,10 @@ entities:
   name_de: Prometheus (Evaluator-Modell)
   aliases:
   - Prometheus
-- id: property-graph
-  type: Concept
-  name_en: Property graph
-  name_de: Property Graph
 - id: ontology
   type: Concept
   name_en: Ontology
   name_de: Ontologie
-- id: owl
-  type: Technology
-  name_en: OWL (Web Ontology Language)
-  name_de: OWL (Web Ontology Language)
-  aliases:
-  - OWL
-  - OWL 2
 - id: open-world-assumption
   type: Concept
   name_en: Open-world assumption
