@@ -225,13 +225,6 @@ entities:
   aliases:
   - Basel Committee
   - BCBS
-- id: ecb
-  type: Organisation
-  name_en: European Central Bank (ECB)
-  name_de: Europäische Zentralbank (EZB)
-  aliases:
-  - ECB
-  - EZB
 - id: risk-data-aggregation
   type: Concept
   name_en: Risk data aggregation and risk reporting (RDARR)
@@ -770,24 +763,12 @@ entities:
   aliases:
   - CRR III
   - CRD VI
-- id: bafin
-  type: Organisation
-  name_en: Federal Financial Supervisory Authority (BaFin)
-  name_de: Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)
-  aliases:
-  - BaFin
 - id: deutsche-bundesbank
   type: Organisation
   name_en: Deutsche Bundesbank
   name_de: Deutsche Bundesbank
   aliases:
   - Bundesbank
-- id: eba
-  type: Organisation
-  name_en: European Banking Authority (EBA)
-  name_de: Europäische Bankenaufsichtsbehörde (EBA)
-  aliases:
-  - EBA
 - id: esrb
   type: Organisation
   name_en: European Systemic Risk Board (ESRB)

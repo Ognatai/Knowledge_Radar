@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3959b0fb798182f3a0bd4606adb482700c06dfc4a240dfb5f46e129b4b64525e
+note_sha256: 01ccf0530a9769f1f29313c9ab7070fc249b5ec707e122e25112861ca852aa06
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - crr-and-crd

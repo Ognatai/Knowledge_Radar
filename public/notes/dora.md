@@ -34,7 +34,7 @@ The Digital Operational Resilience Act (DORA) sets uniform EU rules on how banks
 | Entry into force | 16 January 2023 |
 | Application | 17 January 2025 (Art. 64) |
 | Amendments | none |
-| Competent authorities | the financial supervisors under the sectoral acts (Art. 46), for significant credit institutions the ECB, in Germany the Federal Financial Supervisory Authority (BaFin); for critical ICT third-party service providers a Lead Overseer from among EBA, ESMA and EIOPA (Art. 31) |
+| Competent authorities | the financial supervisors under the sectoral acts (Art. 46), for significant credit institutions the [[ecb\|ECB]], in Germany the [[bafin\|Federal Financial Supervisory Authority (BaFin)]]; for critical ICT third-party service providers a Lead Overseer from among [[eba\|EBA]], ESMA and EIOPA (Art. 31) |
 | Version summarised | text as published in the Official Journal |
 
 ### Scope
@@ -392,7 +392,7 @@ Die Verordnung über die digitale operationale Resilienz im Finanzsektor (Digita
 | Inkrafttreten | 16. Januar 2023 |
 | Geltungsbeginn | 17. Januar 2025 (Art. 64) |
 | Änderungen | keine |
-| Zuständige Behörden | die Finanzaufsichtsbehörden nach den Sektorrechtsakten (Art. 46), für bedeutende Kreditinstitute die EZB, in Deutschland die Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin); für kritische IKT-Drittdienstleister eine federführende Überwachungsbehörde aus EBA, ESMA und EIOPA (Art. 31) |
+| Zuständige Behörden | die Finanzaufsichtsbehörden nach den Sektorrechtsakten (Art. 46), für bedeutende Kreditinstitute die [[ecb\|EZB]], in Deutschland die [[bafin\|Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)]]; für kritische IKT-Drittdienstleister eine federführende Überwachungsbehörde aus [[eba\|EBA]], ESMA und EIOPA (Art. 31) |
 | Zusammengefasste Fassung | im Amtsblatt veröffentlichter Text |
 
 ### Anwendungsbereich

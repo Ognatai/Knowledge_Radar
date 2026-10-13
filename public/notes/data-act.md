@@ -123,7 +123,7 @@ Leaves other obligations to make data available unaffected and excludes activiti
 
 #### Article 17 — Requests for data to be made available
 
-Requires public sector bodies, the Commission, the European Central Bank or Union bodies requesting data pursuant to Article 14 to specify the data required, demonstrate exceptional need, explain the purpose, and meet other conditions set out in the provision.
+Requires public sector bodies, the Commission, the [[ecb|European Central Bank]] or Union bodies requesting data pursuant to Article 14 to specify the data required, demonstrate exceptional need, explain the purpose, and meet other conditions set out in the provision.
 
 #### Article 18 — Compliance with requests for data
 
@@ -416,7 +416,7 @@ Lässt andere Pflichten zur Bereitstellung von Daten unberührt und nimmt Tätig
 
 #### Artikel 17 – Datenbereitstellungsverlangen
 
-Regelt die Pflicht öffentlicher Stellen, die Kommission, die Europäische Zentralbank oder Einrichtungen der Union, bei Datenverlangen nach Artikel 14 bestimmte Angaben zu machen.
+Regelt die Pflicht öffentlicher Stellen, die Kommission, die [[ecb|Europäische Zentralbank]] oder Einrichtungen der Union, bei Datenverlangen nach Artikel 14 bestimmte Angaben zu machen.
 
 #### Artikel 18 – Erfüllung von Datenverlangen
 

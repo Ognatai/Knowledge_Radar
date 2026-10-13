@@ -25,7 +25,7 @@ sources:
 
 ### TL;DR
 
-The EBA Guidelines on internal governance (EBA/GL/2021/05) and on outsourcing arrangements (EBA/GL/2019/02) specify how banks must organise their governance under the [[crr-and-crd|CRD]]. The governance guidelines cover the role of the management body and its committees, the organisational structure ("know your structure"), risk culture and conflicts of interest, the internal control framework with the risk management, compliance and internal audit functions, new product approval and business continuity. The outsourcing guidelines cover when an arrangement counts as outsourcing, how to identify critical or important functions, the outsourcing policy, the register of outsourcing arrangements, pre-outsourcing analysis and due diligence, minimum contract content, monitoring and exit strategies. Since [[dora|DORA]] applies, ICT third-party risk is governed by DORA; the EBA adopted new guidelines on third-party risk for non-ICT services in September 2026 that will replace the outsourcing guidelines.
+The EBA Guidelines on internal governance (EBA/GL/2021/05) and on outsourcing arrangements (EBA/GL/2019/02) specify how banks must organise their governance under the [[crr-and-crd|CRD]]. The governance guidelines cover the role of the management body and its committees, the organisational structure ("know your structure"), risk culture and conflicts of interest, the internal control framework with the risk management, compliance and internal audit functions, new product approval and business continuity. The outsourcing guidelines cover when an arrangement counts as outsourcing, how to identify critical or important functions, the outsourcing policy, the register of outsourcing arrangements, pre-outsourcing analysis and due diligence, minimum contract content, monitoring and exit strategies. Since [[dora|DORA]] applies, ICT third-party risk is governed by DORA; the [[eba|EBA]] adopted new guidelines on third-party risk for non-ICT services in September 2026 that will replace the outsourcing guidelines.
 
 ### Key facts
 
@@ -34,7 +34,7 @@ The EBA Guidelines on internal governance (EBA/GL/2021/05) and on outsourcing ar
 | Official reference | EBA/GL/2021/05 of 2 July 2021 (internal governance); EBA/GL/2019/02 of 25 February 2019 (outsourcing) |
 | Type and jurisdiction | guidelines of the European Banking Authority under Article 16 of Regulation (EU) No 1093/2010; competent authorities and institutions must make every effort to comply, and competent authorities state whether they comply ("comply or explain") |
 | Application | internal governance from 31 December 2021; outsourcing from 30 September 2019 |
-| Competent authorities | the national supervisors and the ECB apply the guidelines in their supervision; in Germany, BaFin implements them mainly through [[marisk|MaRisk]] |
+| Competent authorities | the national supervisors and the [[ecb\|ECB]] apply the guidelines in their supervision; in Germany, [[bafin\|BaFin]] implements them mainly through [[marisk|MaRisk]] |
 | Version summarised | guidelines as published by the EBA |
 
 ### Scope
@@ -274,7 +274,7 @@ Requires competent authorities to assess whether outsourcing changes the conditi
 
 ### TL;DR
 
-Die EBA-Leitlinien zur internen Governance (EBA/GL/2021/05) und zu Auslagerungen (EBA/GL/2019/02) konkretisieren, wie Banken ihre Unternehmensführung nach der [[crr-and-crd|CRD]] organisieren müssen. Die Governance-Leitlinien behandeln Rolle und Ausschüsse des Leitungsorgans, die Organisationsstruktur („know your structure“), Risikokultur und Interessenkonflikte, den internen Kontrollrahmen mit Risikomanagement-, Compliance-Funktion und Interner Revision, die Genehmigung neuer Produkte und die Aufrechterhaltung des Geschäftsbetriebs. Die Auslagerungs-Leitlinien regeln, wann eine Auslagerung vorliegt, wie kritische oder wesentliche Funktionen bestimmt werden, die Auslagerungsrichtlinien, das Auslagerungsregister, die Analyse und Due-Diligence-Prüfung vor der Auslagerung, Mindestinhalte der Verträge, die Überwachung und Ausstiegsstrategien. Seit [[dora|DORA]] gilt, richtet sich das IKT-Drittparteienrisiko nach DORA; im September 2026 hat die EBA neue Leitlinien zum Drittparteienrisiko bei Nicht-IKT-Dienstleistungen verabschiedet, die die Auslagerungs-Leitlinien ablösen werden.
+Die EBA-Leitlinien zur internen Governance (EBA/GL/2021/05) und zu Auslagerungen (EBA/GL/2019/02) konkretisieren, wie Banken ihre Unternehmensführung nach der [[crr-and-crd|CRD]] organisieren müssen. Die Governance-Leitlinien behandeln Rolle und Ausschüsse des Leitungsorgans, die Organisationsstruktur („know your structure“), Risikokultur und Interessenkonflikte, den internen Kontrollrahmen mit Risikomanagement-, Compliance-Funktion und Interner Revision, die Genehmigung neuer Produkte und die Aufrechterhaltung des Geschäftsbetriebs. Die Auslagerungs-Leitlinien regeln, wann eine Auslagerung vorliegt, wie kritische oder wesentliche Funktionen bestimmt werden, die Auslagerungsrichtlinien, das Auslagerungsregister, die Analyse und Due-Diligence-Prüfung vor der Auslagerung, Mindestinhalte der Verträge, die Überwachung und Ausstiegsstrategien. Seit [[dora|DORA]] gilt, richtet sich das IKT-Drittparteienrisiko nach DORA; im September 2026 hat die [[eba|EBA]] neue Leitlinien zum Drittparteienrisiko bei Nicht-IKT-Dienstleistungen verabschiedet, die die Auslagerungs-Leitlinien ablösen werden.
 
 ### Eckdaten
 
@@ -283,7 +283,7 @@ Die EBA-Leitlinien zur internen Governance (EBA/GL/2021/05) und zu Auslagerungen
 | Fundstelle | EBA/GL/2021/05 vom 2. Juli 2021 (interne Governance); EBA/GL/2019/02 vom 25. Februar 2019 (Auslagerungen) |
 | Art und Geltung | Leitlinien der Europäischen Bankenaufsichtsbehörde nach Artikel 16 der Verordnung (EU) Nr. 1093/2010; zuständige Behörden und Institute müssen alle erforderlichen Anstrengungen unternehmen, ihnen nachzukommen, und die Behörden erklären, ob sie ihnen nachkommen („comply or explain“) |
 | Geltungsbeginn | interne Governance ab 31. Dezember 2021; Auslagerungen ab 30. September 2019 |
-| Zuständige Behörden | die nationalen Aufsichtsbehörden und die EZB wenden die Leitlinien in ihrer Aufsicht an; in Deutschland setzt die BaFin sie vor allem durch die [[marisk|MaRisk]] um |
+| Zuständige Behörden | die nationalen Aufsichtsbehörden und die [[ecb\|EZB]] wenden die Leitlinien in ihrer Aufsicht an; in Deutschland setzt die [[bafin\|BaFin]] sie vor allem durch die [[marisk|MaRisk]] um |
 | Zusammengefasste Fassung | Leitlinien in der von der EBA veröffentlichten Fassung |
 
 ### Anwendungsbereich

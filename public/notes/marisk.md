@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-The Minimum Requirements for Risk Management (Mindestanforderungen an das Risikomanagement, MaRisk) are a BaFin circular that specifies the duty to maintain a proper business organisation under section 25a of the [[kwg|KWG]]. They govern how banks manage their risks: risk-bearing capacity, strategies, an internal control system with risk control and compliance functions and internal audit, stress tests, models, staff and IT resources, contingency management, outsourcing, and special requirements for lending, trading and real estate business, for individual risk types and for risk reporting. The 9th amendment of 30 June 2026 contains, for the first time, explicit requirements for artificial intelligence in models (AT 4.3.4) and separates outsourcing from ICT third-party services under [[dora|DORA]]. MaRisk follow the principle of proportionality: requirements depend on the nature, scale, complexity and riskiness of the business.
+The Minimum Requirements for Risk Management (Mindestanforderungen an das Risikomanagement, MaRisk) are a [[bafin|BaFin]] circular that specifies the duty to maintain a proper business organisation under section 25a of the [[kwg|KWG]]. They govern how banks manage their risks: risk-bearing capacity, strategies, an internal control system with risk control and compliance functions and internal audit, stress tests, models, staff and IT resources, contingency management, outsourcing, and special requirements for lending, trading and real estate business, for individual risk types and for risk reporting. The 9th amendment of 30 June 2026 contains, for the first time, explicit requirements for artificial intelligence in models (AT 4.3.4) and separates outsourcing from ICT third-party services under [[dora|DORA]]. MaRisk follow the principle of proportionality: requirements depend on the nature, scale, complexity and riskiness of the business.
 
 ### Key facts
 
@@ -35,11 +35,11 @@ The Minimum Requirements for Risk Management (Mindestanforderungen an das Risiko
 
 ### Scope
 
-**Who** (AT 2.1): institutions under section 1(1b) and section 53(1) KWG that are not significant institutions directly supervised by the ECB, as well as CRD third-country branches and foreign branches of German institutions. Branches of undertakings from other EEA states under section 53b KWG are not covered.
+**Who** (AT 2.1): institutions under section 1(1b) and section 53(1) KWG that are not significant institutions directly supervised by the [[ecb|ECB]], as well as CRD third-country branches and foreign branches of German institutions. Branches of undertakings from other EEA states under section 53b KWG are not covered.
 
 **Proportionality**: requirements depend on size, business focus and risk situation; small institutions can implement many requirements in a simplified way, for instance on segregation of functions or internal audit.
 
-**EBA guidelines** (AT 1): MaRisk implement, among others, the EBA guidelines on stress testing, non-performing and forborne exposures, outsourcing, loan origination and monitoring, internal governance, interest rate risk in the banking book and ESG risks.
+**[[eba|EBA]] guidelines** (AT 1): MaRisk implement, among others, the EBA guidelines on stress testing, non-performing and forborne exposures, outsourcing, loan origination and monitoring, internal governance, interest rate risk in the banking book and ESG risks.
 
 **Structure**: a general part (AT 1 to AT 9) with principles for all institutions and a special part with requirements for the internal control system (BT 1), for organisational structure and processes in lending, trading and real estate business (BTO), for risk management and risk control processes for individual risk types (BTR) and for risk reporting (BT 2). Many requirements are supplemented by BaFin explanations.
 
@@ -235,7 +235,7 @@ Requires regular, comprehensible and meaningful risk reports to management based
 
 ### TL;DR
 
-Die Mindestanforderungen an das Risikomanagement (MaRisk) sind ein Rundschreiben der BaFin, das die Pflicht zu einer ordnungsgemäßen Geschäftsorganisation nach § 25a [[kwg|KWG]] konkretisiert. Sie regeln, wie Banken ihre Risiken steuern: Risikotragfähigkeit, Strategien, internes Kontrollsystem mit Risikocontrolling-, Compliance-Funktion und Interner Revision, Stresstests, Modelle, Personal und IT-Ausstattung, Notfallmanagement, Auslagerungen sowie besondere Anforderungen an Kredit-, Handels- und Immobiliengeschäft, an einzelne Risikoarten und an die Risikoberichterstattung. Die 9. Novelle vom 30. Juni 2026 enthält erstmals ausdrückliche Anforderungen an künstliche Intelligenz in Modellen (AT 4.3.4) und grenzt Auslagerungen von den IKT-Drittdienstleistungen nach [[dora|DORA]] ab. Die MaRisk folgen dem Grundsatz der Proportionalität: Die Anforderungen richten sich nach Art, Umfang, Komplexität und Risikogehalt der Geschäfte.
+Die Mindestanforderungen an das Risikomanagement (MaRisk) sind ein Rundschreiben der [[bafin|BaFin]], das die Pflicht zu einer ordnungsgemäßen Geschäftsorganisation nach § 25a [[kwg|KWG]] konkretisiert. Sie regeln, wie Banken ihre Risiken steuern: Risikotragfähigkeit, Strategien, internes Kontrollsystem mit Risikocontrolling-, Compliance-Funktion und Interner Revision, Stresstests, Modelle, Personal und IT-Ausstattung, Notfallmanagement, Auslagerungen sowie besondere Anforderungen an Kredit-, Handels- und Immobiliengeschäft, an einzelne Risikoarten und an die Risikoberichterstattung. Die 9. Novelle vom 30. Juni 2026 enthält erstmals ausdrückliche Anforderungen an künstliche Intelligenz in Modellen (AT 4.3.4) und grenzt Auslagerungen von den IKT-Drittdienstleistungen nach [[dora|DORA]] ab. Die MaRisk folgen dem Grundsatz der Proportionalität: Die Anforderungen richten sich nach Art, Umfang, Komplexität und Risikogehalt der Geschäfte.
 
 ### Eckdaten
 
@@ -249,7 +249,7 @@ Die Mindestanforderungen an das Risikomanagement (MaRisk) sind ein Rundschreiben
 
 ### Anwendungsbereich
 
-**Wer** (AT 2.1): Institute nach § 1 Abs. 1b und § 53 Abs. 1 KWG, die nicht als bedeutende Institute direkt von der EZB beaufsichtigt werden, außerdem CRD-Drittstaatenzweigstellen und ausländische Zweigniederlassungen deutscher Institute. Zweigniederlassungen von Unternehmen aus anderen EWR-Staaten nach § 53b KWG sind nicht erfasst.
+**Wer** (AT 2.1): Institute nach § 1 Abs. 1b und § 53 Abs. 1 KWG, die nicht als bedeutende Institute direkt von der [[ecb|EZB]] beaufsichtigt werden, außerdem CRD-Drittstaatenzweigstellen und ausländische Zweigniederlassungen deutscher Institute. Zweigniederlassungen von Unternehmen aus anderen EWR-Staaten nach § 53b KWG sind nicht erfasst.
 
 **Proportionalität**: Die Anforderungen richten sich nach Größe, Geschäftsschwerpunkten und Risikosituation; kleine Institute können viele Anforderungen vereinfacht umsetzen, etwa bei der Funktionstrennung oder der Internen Revision.
 

@@ -211,11 +211,6 @@ entities:
     name_en: Basel Committee on Banking Supervision
     name_de: Basler Ausschuss für Bankenaufsicht
     aliases: [Basel Committee, BCBS]
-  - id: ecb
-    type: Organisation
-    name_en: European Central Bank (ECB)
-    name_de: Europäische Zentralbank (EZB)
-    aliases: [ECB, EZB]
   - id: risk-data-aggregation
     type: Concept
     name_en: Risk data aggregation and risk reporting (RDARR)

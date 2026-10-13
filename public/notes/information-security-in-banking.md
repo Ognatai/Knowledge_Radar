@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-German banks organise information security and internal control on the basis of § 25a of the [[kwg|KWG]], which requires a proper business organisation with an internal control system and internal audit. [[marisk|MaRisk]] specifies the internal control system, and the three lines of defence separate business lines, independent control functions and internal audit. For IT and information security, the BaFin circular BAIT used to set the details; since 17 January 2025, [[dora|DORA]] governs ICT risk management for institutions within its scope, and the BAIT will be repealed at the end of 2026.
+German banks organise information security and internal control on the basis of § 25a of the [[kwg|KWG]], which requires a proper business organisation with an internal control system and internal audit. [[marisk|MaRisk]] specifies the internal control system, and the three lines of defence separate business lines, independent control functions and internal audit. For IT and information security, the [[bafin|BaFin]] circular BAIT used to set the details; since 17 January 2025, [[dora|DORA]] governs ICT risk management for institutions within its scope, and the BAIT will be repealed at the end of 2026.
 
 ### How it works
 
@@ -36,7 +36,7 @@ Several layers of rules build on each other: the statutory duty of a proper busi
 
 #### 1. Legal basis: proper business organisation
 
-§ 25a KWG requires institutions to have a proper business organisation that ensures compliance with legal requirements, including appropriate and effective risk management with strategies, procedures to ensure risk-bearing capacity, internal control procedures with an internal control system and an internal audit function, and contingency management, in particular for IT systems (§ 25a KWG). The BaFin circular MaRisk specifies these requirements for institutions that are not directly supervised by the European Central Bank (MaRisk (2026)). § 25a KWG is also the legal basis of the BAIT, the circular with IT requirements for banks (Bundesbank, BAIT / DORA).
+§ 25a KWG requires institutions to have a proper business organisation that ensures compliance with legal requirements, including appropriate and effective risk management with strategies, procedures to ensure risk-bearing capacity, internal control procedures with an internal control system and an internal audit function, and contingency management, in particular for IT systems (§ 25a KWG). The BaFin circular MaRisk specifies these requirements for institutions that are not directly supervised by the [[ecb|European Central Bank]] (MaRisk (2026)). § 25a KWG is also the legal basis of the BAIT, the circular with IT requirements for banks (Bundesbank, BAIT / DORA).
 
 #### 2. The internal control system
 
@@ -44,7 +44,7 @@ Under MaRisk, the internal control system comprises rules on organisational stru
 
 #### 3. Three lines of defence
 
-The EBA guidelines on internal governance follow the three lines of defence model: the business lines take and manage the risks they incur (first line), the risk management and compliance functions monitor them independently (second line), and the internal audit function reviews the whole system independently (third line) (EBA internal governance guidelines (2021)). Internal control functions must be independent of the business they control, adequately resourced and led by heads who can address the management body in its supervisory function; internal audit must not be combined with another control function. DORA applies the same principle to ICT risk: financial entities other than microenterprises must ensure appropriate segregation and independence of ICT risk management, control and internal audit functions according to the three lines of defence model or an internal risk management and control model (Art. 6(4), DORA (2022)).
+The [[eba|EBA]] guidelines on internal governance follow the three lines of defence model: the business lines take and manage the risks they incur (first line), the risk management and compliance functions monitor them independently (second line), and the internal audit function reviews the whole system independently (third line) (EBA internal governance guidelines (2021)). Internal control functions must be independent of the business they control, adequately resourced and led by heads who can address the management body in its supervisory function; internal audit must not be combined with another control function. DORA applies the same principle to ICT risk: financial entities other than microenterprises must ensure appropriate segregation and independence of ICT risk management, control and internal audit functions according to the three lines of defence model or an internal risk management and control model (Art. 6(4), DORA (2022)).
 
 #### 4. ICT risk management under DORA
 
@@ -146,7 +146,7 @@ Im Rahmen des IKT-Risikomanagements entwickeln und dokumentieren Finanzunternehm
 
 #### Ursprung und Varianten
 
-Die BAIT (BaFin-Rundschreiben 10/2017 (BA)) konkretisierten die Anforderungen an IT und Informationssicherheit von Banken nach § 25a KWG (Bundesbank, BAIT / DORA). Seit DORA ab dem 17. Januar 2025 gilt, sind alle Institute, die ein IKT-Risikomanagement nach den Artikeln 5 bis 15 oder Artikel 16 DORA betreiben müssen, aus dem Anwenderkreis der BAIT ausgenommen, und die BAIT werden mit Ablauf des 31. Dezember 2026 vollständig aufgehoben. Die entsprechenden Rundschreiben für Zahlungsinstitute, Versicherer und Kapitalverwaltungsgesellschaften (ZAIT, VAIT und KAIT) hat die BaFin am 17. Januar 2025 aufgehoben. Die MaRisk in der Fassung von 2026 enthalten Anforderungen an Modelle, ausdrücklich auch an künstliche Intelligenz, die validiert und hinreichend erklärbar sein müssen (AT 4.3.4), und nehmen IKT-Dienstleistungen, die dem IKT-Drittparteienrisikomanagement nach DORA unterliegen, von ihren Auslagerungsregeln aus (AT 9) (MaRisk (2026)).
+Die BAIT (BaFin-Rundschreiben 10/2017 (BA)) konkretisierten die Anforderungen an IT und Informationssicherheit von Banken nach § 25a KWG (Bundesbank, BAIT / DORA). Seit DORA ab dem 17. Januar 2025 gilt, sind alle Institute, die ein IKT-Risikomanagement nach den Artikeln 5 bis 15 oder Artikel 16 DORA betreiben müssen, aus dem Anwenderkreis der BAIT ausgenommen, und die BAIT werden mit Ablauf des 31. Dezember 2026 vollständig aufgehoben. Die entsprechenden Rundschreiben für Zahlungsinstitute, Versicherer und Kapitalverwaltungsgesellschaften (ZAIT, VAIT und KAIT) hat die [[bafin|BaFin]] am 17. Januar 2025 aufgehoben. Die MaRisk in der Fassung von 2026 enthalten Anforderungen an Modelle, ausdrücklich auch an künstliche Intelligenz, die validiert und hinreichend erklärbar sein müssen (AT 4.3.4), und nehmen IKT-Dienstleistungen, die dem IKT-Drittparteienrisikomanagement nach DORA unterliegen, von ihren Auslagerungsregeln aus (AT 9) (MaRisk (2026)).
 
 ### Wann einsetzen
 
@@ -163,7 +163,7 @@ Die BAIT (BaFin-Rundschreiben 10/2017 (BA)) konkretisierten die Anforderungen an
 
 **Einschränkungen**
 - Bis Ende 2026 unterliegen Institute außerhalb des IKT-Risikomanagements nach DORA weiter den BAIT, sodass während des Übergangs zwei Regime nebeneinander bestehen (Bundesbank, BAIT / DORA).
-- Die MaRisk gelten nur für Institute, die nicht direkt von der EZB beaufsichtigt werden (MaRisk (2026)).
+- Die MaRisk gelten nur für Institute, die nicht direkt von der [[ecb|EZB]] beaufsichtigt werden (MaRisk (2026)).
 - Die Regeln setzen organisatorische Anforderungen und Grundsätze; wie Zugriffsbeschränkung, Funktionstrennung und Kontrollfunktionen technisch umgesetzt werden, bleibt dem Institut überlassen.
 
 ### Vergleich

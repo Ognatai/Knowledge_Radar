@@ -35,7 +35,7 @@ The KRITIS Umbrella Act (KRITIS-Dachgesetz, KRITISDachG) is Germany's cross-sect
 | Signed | 11 March 2026 |
 | Entry into force | 17 March 2026; § 14(3) to (5) on 1 January 2030 |
 | Single point of contact | Federal Office of Civil Protection and Disaster Assistance (BBK) (§ 3(1)) |
-| Competent authorities | Sector authorities, among them the Federal Network Agency, the BSI and BaFin, and authorities of the Länder (§ 3(2) and (6)) |
+| Competent authorities | Sector authorities, among them the Federal Network Agency, the BSI and [[bafin\|BaFin]], and authorities of the Länder (§ 3(2) and (6)) |
 | Consolidated text | as amended by Article 8 of the Act of 21 July 2026 (BGBl. 2026 I Nr. 221), in force since 29 July 2026 |
 
 ### Scope
@@ -214,7 +214,7 @@ Das KRITIS-Dachgesetz (KRITISDachG) ist das sektorenübergreifende deutsche Dach
 | Ausgefertigt | 11. März 2026 |
 | Inkrafttreten | 17. März 2026; § 14 Abs. 3 bis 5 am 1. Januar 2030 |
 | Zentrale Anlaufstelle | Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) (§ 3 Abs. 1) |
-| Zuständige Behörden | Fachbehörden, darunter Bundesnetzagentur, BSI und BaFin, sowie Behörden der Länder (§ 3 Abs. 2 und 6) |
+| Zuständige Behörden | Fachbehörden, darunter Bundesnetzagentur, BSI und [[bafin\|BaFin]], sowie Behörden der Länder (§ 3 Abs. 2 und 6) |
 | Zusammengefasste Fassung | in der Fassung von Artikel 8 des Gesetzes vom 21. Juli 2026 (BGBl. 2026 I Nr. 221), in Kraft seit 29. Juli 2026 |
 
 ### Anwendungsbereich

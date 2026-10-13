@@ -25,7 +25,7 @@ sources:
 
 ### TL;DR
 
-BCBS 239 is the Basel Committee's set of 14 principles for effective risk data aggregation and risk reporting (RDARR), published in January 2013 in response to the financial crisis, when many banks could not aggregate their risk exposures quickly and accurately. The principles cover governance and IT infrastructure, the accuracy, completeness, timeliness and adaptability of risk data, the quality of risk reports, and supervisory review. The ECB Guide on effective risk data aggregation and risk reporting of May 2024 sets out the ECB's minimum supervisory expectations for the banks it supervises directly, with a focus on management body responsibility, scope of application, data governance, an integrated data architecture, data quality management, timely reporting and implementation programmes.
+BCBS 239 is the Basel Committee's set of 14 principles for effective risk data aggregation and risk reporting (RDARR), published in January 2013 in response to the financial crisis, when many banks could not aggregate their risk exposures quickly and accurately. The principles cover governance and IT infrastructure, the accuracy, completeness, timeliness and adaptability of risk data, the quality of risk reports, and supervisory review. The [[ecb|ECB]] Guide on effective risk data aggregation and risk reporting of May 2024 sets out the ECB's minimum supervisory expectations for the banks it supervises directly, with a focus on management body responsibility, scope of application, data governance, an integrated data architecture, data quality management, timely reporting and implementation programmes.
 
 ### Key facts
 
@@ -164,7 +164,7 @@ Describes the guide as a building block of the ECB's 2023–25 work programme on
 ### Relationship to other acts
 
 - **[[crr-and-crd|CRR and CRD]]**: the RDARR expectations build on the CRD requirements for robust governance arrangements and risk management.
-- **[[eba-governance-and-outsourcing-guidelines|EBA guidelines on internal governance]]**: the ECB guide refers to Title II of the EBA guidelines for the responsibilities of the management body.
+- **[[eba-governance-and-outsourcing-guidelines|EBA guidelines on internal governance]]**: the ECB guide refers to Title II of the [[eba|EBA]] guidelines for the responsibilities of the management body.
 - **[[marisk|MaRisk]]**: for less significant institutions in Germany, the requirements on data quality (AT 7.2) and risk reporting (BT 2) of MaRisk reflect the same principles.
 - **[[dora|DORA]]**: data architecture and IT infrastructure supporting risk data aggregation are also subject to DORA's ICT risk management requirements.
 
@@ -187,7 +187,7 @@ Describes the guide as a building block of the ECB's 2023–25 work programme on
 
 ### TL;DR
 
-BCBS 239 sind die 14 Grundsätze des Basler Ausschusses für die effektive Aggregation von Risikodaten und die Risikoberichterstattung (RDARR), veröffentlicht im Januar 2013 als Reaktion auf die Finanzkrise, in der viele Banken ihre Risikopositionen nicht schnell und genau zusammenführen konnten. Die Grundsätze betreffen Governance und IT-Infrastruktur, Genauigkeit, Vollständigkeit, Aktualität und Anpassungsfähigkeit der Risikodaten, die Qualität der Risikoberichte und die aufsichtliche Überprüfung. Der EZB-Leitfaden zur effektiven Aggregation von Risikodaten und Risikoberichterstattung vom Mai 2024 legt die Mindesterwartungen der EZB an die direkt beaufsichtigten Banken fest, mit Schwerpunkten auf der Verantwortung des Leitungsorgans, dem Anwendungsbereich, der Data Governance, einer integrierten Datenarchitektur, dem Datenqualitätsmanagement, zeitnaher Berichterstattung und Umsetzungsprogrammen.
+BCBS 239 sind die 14 Grundsätze des Basler Ausschusses für die effektive Aggregation von Risikodaten und die Risikoberichterstattung (RDARR), veröffentlicht im Januar 2013 als Reaktion auf die Finanzkrise, in der viele Banken ihre Risikopositionen nicht schnell und genau zusammenführen konnten. Die Grundsätze betreffen Governance und IT-Infrastruktur, Genauigkeit, Vollständigkeit, Aktualität und Anpassungsfähigkeit der Risikodaten, die Qualität der Risikoberichte und die aufsichtliche Überprüfung. Der EZB-Leitfaden zur effektiven Aggregation von Risikodaten und Risikoberichterstattung vom Mai 2024 legt die Mindesterwartungen der [[ecb|EZB]] an die direkt beaufsichtigten Banken fest, mit Schwerpunkten auf der Verantwortung des Leitungsorgans, dem Anwendungsbereich, der Data Governance, einer integrierten Datenarchitektur, dem Datenqualitätsmanagement, zeitnaher Berichterstattung und Umsetzungsprogrammen.
 
 ### Eckdaten
 
