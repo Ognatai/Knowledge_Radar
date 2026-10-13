@@ -1,34 +1,50 @@
 version: 1
-note_sha256: 12453423145e6736333056af953153c0c779d57b21a99acc02fa2e0c3ffd2fe7
-extracted_by: claude
+note_sha256: c03153e7cd44ab411418ab4e3ebcad049c4c27fb04fd0b524ac425f5ddc73664
+extracted_by: claude (hand-labelled, 2026-10-13)
 discusses:
-- recall-at-k
+- information-retrieval
+- precision
+- recall
+- f1-score
 - precision-at-k
+- recall-at-k
+- r-precision
+- mean-average-precision
 - mean-reciprocal-rank
 - ndcg
-- bm25
-- cross-encoder
-- information-retrieval
+- precision-recall-curve
+- relevance-pooling
+- kappa-statistic
 - ms-marco
 - beir
+- bm25
+- cross-encoder
 relations:
 - from: rag-retrieval-evaluation
   type: BASED_ON
-  to: recall-at-k
-  evidence: Recall@k quantifies the proportion of relevant documents retrieved within the top-k ranked results
+  to: information-retrieval
+  evidence: It follows the test-collection method of information retrieval
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: relevance-pooling
+  evidence: For large collections, relevance is judged only on a pool
 - from: rag-retrieval-evaluation
   type: BASED_ON
   to: precision-at-k
-  evidence: Precision@k quantifies the proportion of relevant items within the top-k retrieved results for a query
+  evidence: Precision@k, such as Precision at 10, needs no estimate of how many documents are relevant
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: recall-at-k
+  evidence: Recall@k at that k shows whether the needed information reaches the model
+- from: rag-retrieval-evaluation
+  type: BASED_ON
+  to: mean-average-precision
+  evidence: Mean Average Precision (MAP) averages, for each query, the precision after each relevant document is retrieved
 - from: rag-retrieval-evaluation
   type: BASED_ON
   to: mean-reciprocal-rank
-  evidence: Mean Reciprocal Rank (MRR) evaluates retrieval quality by measuring the position of the first relevant result across multiple queries
+  evidence: Mean Reciprocal Rank (MRR) averages 1/rank of the first relevant result
 - from: rag-retrieval-evaluation
   type: BASED_ON
   to: ndcg
-  evidence: nDCG@k evaluates ranking quality by incorporating graded relevance scores and position
-- from: rag-retrieval-evaluation
-  type: BASED_ON
-  to: information-retrieval
-  evidence: From this comparison, standard information retrieval metrics are computed
+  evidence: Normalised discounted cumulative gain is designed for graded relevance

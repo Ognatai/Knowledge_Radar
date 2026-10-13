@@ -3,10 +3,10 @@ title_en: 'RAG: Retrieval Evaluation'
 title_de: 'RAG: Evaluation des Retrievals'
 entity_type: Method
 sources:
+- https://nlp.stanford.edu/IR-book/pdf/08eval.pdf
 - https://arxiv.org/abs/2104.08663
 - https://arxiv.org/abs/1611.09268
 - https://doi.org/10.1145/582415.582418
-- https://nlp.stanford.edu/IR-book/
 ---
 
 ## EN
@@ -15,89 +15,101 @@ sources:
 
 ### TL;DR
 
-[[retrieval-augmented-generation|RAG]] retrieval evaluation employs metrics including Recall@k, Precision@k, and nDCG to quantify the relevance and ranking quality of retrieved context for the retrieval component [[rag-retrieval|retrieval component]]. This addresses the challenge of measuring how effectively the retriever identifies and ranks relevant information, directly impacting the quality of generated responses in retrieval-augmented systems.
+Retrieval evaluation measures how well the [[rag-retrieval|retrieval component]] of a [[retrieval-augmented-generation|RAG]] system finds and ranks the passages a query needs. It follows the test-collection method of [[information-retrieval|information retrieval]]: a document collection, a set of information needs expressed as queries, and relevance judgments for query-document pairs (Manning et al., 2008, ch. 8). Set-based measures (precision, recall, F) and ranked measures (Precision@k, Recall@k, MAP, R-precision, MRR, nDCG) summarise the comparison; BEIR reports nDCG@10 because it handles binary and graded relevance (Thakur et al., 2021). Relevance judgments are almost always incomplete, which can penalise retrievers that differ from those used to build the judgments (Thakur et al., 2021).
 
 ### How it works
 
-Retrieval evaluation compares the ranked list a retriever returns for each test query with relevance judgments, i.e. the known relevant documents for that query. From this comparison, standard [[information-retrieval|information retrieval]] metrics are computed: Recall@k for coverage, Precision@k for the share of relevant results, MRR for the position of the first relevant result and nDCG for the quality of the whole ranking with graded relevance (Manning et al., 2008; Järvelin & Kekäläinen, 2002). It is one half of [[rag-evaluation|RAG evaluation]].
-
 ```text
-test queries + relevance judgments
+document collection + information needs (≥ 50) + relevance judgments (pooled, binary or graded)
  ▼
-retriever ─▶ ranked list per query (top k)
+retriever ─▶ ranked list per query
  ▼
-per query: Recall@k, Precision@k, reciprocal rank, nDCG@k
+per query: Precision@k · Recall@k · average precision · reciprocal rank · nDCG@k
  ▼
-average over all queries ─▶ system scores
+mean over queries ─▶ system score (tune on a development set, report on the test set)
 ```
 
-#### 1. Relevance judgment data
+#### 1. Test collections and relevance judgments
 
-Retrieval evaluation needs relevance judgments: for each test query, the documents or passages that are relevant. They come from human annotation, from existing benchmarks or, for a RAG system's own corpus, from a curated test set. A large public example is MS MARCO (Bajaj et al. 2016), built from real Bing questions, where annotators marked the passages they used to write the answer. The dataset structure consists of question-passage pairs, with each question (1,010,916 from Bing logs) associated with multiple passages (8,841,823 extracted from web documents) and a human-annotated answer. Inputs are question-passage pairs; outputs are binary relevance labels (true if passage contains answer). This design uses answerability as the sole relevance criterion, prioritizing scalability and real-world applicability over graded relevance assessment. Trade-offs include omitting contextual relevance nuances (e.g., partial relevance) and potentially mislabeling passages that support answers indirectly but lack exact text matches. The large-scale, query-log origin enables robust evaluation but limits relevance granularity. This structure directly supports metrics like Recall@k by providing ground-truth relevance for passage ranking, forming the basis for evaluating the [[rag-retrieval|retrieval]] component's effectiveness.
+A test collection consists of documents, a test suite of information needs and relevance judgments, usually binary. Relevance is judged against the information need, not the query: a document is relevant if it addresses the need, not because it contains all query words. Results vary strongly across information needs, so about 50 needs are a usual minimum. Parameters must be tuned on a separate development test collection; tuning on the test collection overstates performance (Manning et al., 2008, ch. 8).
 
-#### 2. Recall@k calculation
+For large collections, relevance is judged only on a pool: the top k documents returned by several systems, plus other sources such as Boolean searches (Manning et al., 2008, ch. 8). MS MARCO, built from 1,010,916 questions sampled from Bing's query logs and 8,841,823 passages from 3,563,535 web documents, marks as relevant the passages that editors used to compose an answer; its authors note that this annotation is incomplete, so other passages may also contain the answer (Bajaj et al., 2016).
 
-Recall@k quantifies the proportion of relevant documents retrieved within the top-k ranked results. Inputs consist of the ranked list of retrieved documents (typically from a vector database or retrieval system [[rag-retrieval|retrieval component]]) and ground-truth relevance labels identifying all relevant documents for a query. The output is a scalar value computed as `Recall@k = (relevant in top-k) / (total relevant)`, where `relevant in top-k` counts relevant documents within the top-k results, and `total relevant` is the total number of relevant documents for the query. The algorithm processes the ranked list, counts relevant documents in the top-k segment, and divides by the total relevant count. Design choices center on selecting k: a larger k increases recall but raises computational cost and may include irrelevant documents, while a smaller k reduces cost but risks omitting relevant items. This trade-off necessitates empirical tuning based on system constraints (e.g., token limits for downstream generation). The metric is standardized in information retrieval evaluation (Manning et al., 2008), enabling consistent assessment of retrieval coverage across systems.
+Judges disagree. Agreement is measured with the kappa statistic, which corrects observed agreement for chance; in TREC it was normally "fair" (0.67–0.8). The choice of judge changes absolute scores considerably but has little impact on the relative ranking of systems (Manning et al., 2008, ch. 8).
 
-#### 3. Precision@k calculation
+#### 2. Set-based measures
 
-Precision@k quantifies the proportion of relevant items within the top-k retrieved results for a query. Inputs consist of the ranked list of top-k results (e.g., document chunks) and binary relevance judgments for each item (indicating whether it pertains to the query). The output is a scalar value calculated as `Precision@k = (relevant in top-k) / k`, ranging from 0 to 1. The computation involves iterating through the top-k list, counting relevant items, and dividing by k. Design choices center on selecting k: a smaller k emphasizes precision (reducing irrelevant results but risking missed relevant items), while a larger k improves recall at the cost of lower precision. This metric is computationally efficient and widely adopted due to its simplicity, though it treats relevance as binary and ignores ranking position of relevant items beyond the top-k window. Manning et al. (2008) establish this as a standard metric in ranked retrieval evaluation. It complements Recall@k by focusing on the quality of the retrieved subset rather than coverage of all relevant items, directly informing retrieval component optimization for RAG systems [[rag-retrieval|retrieval component]].
+Precision is the fraction of retrieved documents that are relevant, recall the fraction of relevant documents that are retrieved. Accuracy is unsuitable, because usually over 99.9% of documents are nonrelevant, so returning nothing scores well. The two trade off: returning every document gives recall 1. Web searchers want high precision on the first page, while professional searchers such as paralegals want high recall. The F measure is the weighted harmonic mean of precision and recall; the harmonic mean stays close to the smaller value, so a system cannot score well by maximising only one of them (Manning et al., 2008, ch. 8). The same measures are used for classifiers ([[classification-metrics|Classification Metrics]]).
 
-#### 4. MRR calculation
+#### 3. Ranked measures
 
-Mean Reciprocal Rank (MRR) evaluates retrieval quality by measuring the position of the first relevant result across multiple queries. Inputs consist of ranked result lists for each query, where each result is labeled as relevant or not. For each query, the reciprocal rank is computed as `1 / rank`, where `rank` is the position of the first relevant document; if no relevant document is retrieved, the reciprocal rank is 0. The output is the arithmetic mean of these values across all queries, expressed as `MRR = average(1 / rank of first relevant)`. This metric prioritizes early retrieval of relevant content, making it ideal for scenarios where a single relevant result suffices (e.g., question answering). However, it discards all information about subsequent relevant results, a trade-off that simplifies computation but limits its ability to assess full ranking quality. MRR became a standard measure in question-answering evaluation, where usually one correct passage suffices.
+For ranked results, the top k documents form the retrieved set. Precision@k, such as Precision at 10, needs no estimate of how many documents are relevant, but it is the least stable common measure and averages poorly, because the number of relevant documents per query strongly influences it. R-precision is the precision of the top |Rel| results, where |Rel| is the number of relevant documents; it equals the break-even point of precision and recall and correlates highly with MAP. Precision-recall curves have a saw-tooth shape and are usually smoothed with interpolated precision, the highest precision at any recall level at or above the given one; the early TREC evaluations averaged it at 11 recall levels (Manning et al., 2008, ch. 8).
 
-#### 5. nDCG calculation
+Mean Average Precision (MAP) averages, for each query, the precision after each relevant document is retrieved (0 for relevant documents not retrieved) and then averages over queries. It weights every information need equally and has especially good discrimination and stability; within one system it can vary between 0.1 and 0.7 across information needs (Manning et al., 2008, ch. 8). Mean Reciprocal Rank (MRR) averages 1/rank of the first relevant result. Like MAP it is rank-aware but binary, so neither can evaluate graded relevance judgments (Thakur et al., 2021).
 
-nDCG@k evaluates ranking quality by incorporating graded relevance scores and position. It is defined as `nDCG@k = DCG@k / IDCG@k`, where `DCG@k` is the discounted cumulative gain for the top k results and `IDCG@k` is the ideal DCG for the optimal ranking. Inputs include a ranked list of retrieved items with per-item relevance scores (e.g., 0–3 for non-relevant to highly relevant) and a cutoff `k`. A widely used formulation computes DCG@k as the sum of `(2^rel_i - 1) / log2(i + 1)` over positions 1 to k, with `rel_i` as the relevance score at position i; the original definition by Järvelin & Kekäläinen (2002) adds the gain `rel_i` itself and discounts it by `log_b(i)` from rank b onwards. The IDCG@k is derived by sorting all relevance scores in descending order and computing DCG for that list. Normalization ensures nDCG@k ranges from 0 (worst) to 1 (perfect). The logarithmic discount factor (`log2(i+1)`) models diminishing user attention for lower-ranked items, while the exponential gain (`2^rel_i - 1`) of the common formulation amplifies the impact of highly relevant items. This approach provides a more nuanced assessment than metrics like MRR (which only considers the first relevant item) but requires graded relevance labels and incurs higher computational overhead than Recall@k or Precision@k. Cumulated gain measures, including DCG and nDCG, were introduced by Järvelin & Kekäläinen (2002).
+#### 4. nDCG
+
+Normalised discounted cumulative gain is designed for graded relevance and evaluated over the top k results. A common form sums (2^rel − 1) / log2(1 + rank) over the top k and normalises by the score of a perfect ranking, so a perfect ranking scores 1 (Manning et al., 2008, ch. 8). Järvelin and Kekäläinen (2002) introduced cumulated gain: their original definition adds the graded relevance itself and discounts it by log_b(rank) from rank b onwards. BEIR argues that precision and recall are rank-unaware and MRR and MAP binary, and uses nDCG@10 as a single metric comparable across tasks with binary and graded judgments (Thakur et al., 2021).
+
+#### 5. Annotation selection bias
+
+Because unjudged documents are assumed to be nonrelevant, a new system that retrieves different documents than the systems that formed the pool is penalised. Many BEIR datasets have a lexical bias: candidates for annotation were retrieved with TF-IDF or BM25. On TREC-COVID, the share of unjudged documents in the top 10 (Hole@10) was 6.4% for [[bm25|BM25]] but 14.4% for the dense retriever ANCE and 31.8% for TAS-B. After annotating these holes, ANCE rose from 0.654 to 0.735 nDCG@10, 6.7 points above BM25, while lexical systems barely changed (Thakur et al., 2021).
+
+#### 6. Beyond relevance
+
+Standard judgments treat each document's relevance as independent, but a highly relevant document can be redundant with documents already seen; marginal relevance rewards diversity and novelty, and duplicates are very common on the web ([[near-duplicate-detection|Near-Duplicate Detection]]). Relevance is only a proxy for user utility, which user studies, rates of return or, in deployed systems, A/B tests with clickthrough analysis measure more directly (Manning et al., 2008, ch. 8).
 
 #### Origin and variants
 
-The BEIR benchmark (Thakur et al. (2021)) standardizes retrieval evaluation across 18 heterogeneous datasets spanning diverse text retrieval tasks and domains, addressing limitations of prior homogeneous benchmarks in assessing out-of-distribution generalization. It adopts standard metrics including nDCG, Recall@k, and Precision@k. Inputs comprise query-document pairs with ground-truth relevance judgments; outputs are system-level scores (e.g., nDCG@10) computed per dataset by applying the metrics to ranked results. The benchmark structures evaluations as ranked document lists per query, using relevance labels to compute scores. A key design trade-off involves dataset diversity: the 18 heterogeneous datasets enhance robustness for cross-domain generalization but increase computational overhead compared to single-dataset evaluations. This enables comprehensive assessment of model generalization capabilities while maintaining compatibility with established evaluation practices.
+Recall and precision were first used by Kent et al. (1955), and the F measure was introduced by van Rijsbergen (1979). The Cranfield collection of the late 1950s, with 1,398 abstracts, 225 queries and exhaustive judgments, enabled the first precise quantitative measurements; NIST has run TREC since 1992, and NTCIR and CLEF focus on Asian, European and cross-language retrieval (Manning et al., 2008, ch. 8). BEIR combines 18 English datasets from 9 retrieval tasks for zero-shot evaluation (Thakur et al., 2021).
 
 ### When to use it
 
-- Choosing between retrieval set-ups (embedding model, chunking, hybrid search, reranker) on the system's own test queries.
+- Choosing between retrieval set-ups (embedding model, chunking, hybrid search, re-ranker) on a system's own test queries, with parameters tuned on a separate development set (Manning et al., 2008, ch. 8).
 - [[regression-testing|Regression testing]]: re-running the same queries after every change to the index or the models.
-- Checking whether a retriever generalises to new domains, e.g. with a heterogeneous benchmark such as BEIR (Thakur et al., 2021).
-- Locating failures: if the relevant passage is not in the top k, the problem lies in retrieval, not in generation.
+- Checking whether a retriever generalises to new domains with a heterogeneous benchmark such as BEIR (Thakur et al., 2021).
+- Locating failures: if the relevant passage is not in the top k, the problem lies in retrieval, not in generation ([[rag-failure-modes|RAG: Failure Modes]]).
 
 ### Strengths and limitations
 
 **Strengths**
-- The BEIR benchmark (Thakur et al. (2021)) enables standardized evaluation across 18 heterogeneous datasets, revealing re-ranking models ([[cross-encoder|cross-encoders]]) achieve the best zero-shot performance despite high computational costs.
-- nDCG (Järvelin & Kekäläinen (2002)) accounts for graded relevance and position weighting, providing a more nuanced assessment than binary metrics like Recall@k.
-- Metrics like Precision@k and Recall@k are computationally efficient and well-established in information retrieval (Manning et al. (2008)), supporting scalable deployment.
+- A fixed test collection allows cheap, repeatable comparisons and clearer diagnosis than user studies (Manning et al., 2008, ch. 8).
+- Relative system rankings stay largely stable even though judges disagree (Manning et al., 2008, ch. 8).
+- nDCG handles both binary and graded judgments (Thakur et al., 2021).
 
 **Limitations**
-- Evaluation does not capture retrieval's impact on downstream generation quality, requiring separate [[rag-generation-evaluation|generation evaluation]].
-- Labeled relevance data for metrics (e.g., Recall@k) is expensive to obtain, as evidenced by MS MARCO’s scale (Bajaj et al. (2016)).
-- High-performing models (e.g., re-ranking) incur significant computational overhead (Thakur et al. (2021)), limiting real-time applicability.
+- Relevance judgments are expensive, and for large collections they cover only a pool; unjudged documents count as nonrelevant, which biases results toward the systems that built the pool (Manning et al., 2008, ch. 8; Thakur et al., 2021).
+- Judgments are subjective, mostly binary and treat documents as independent, ignoring redundancy (Manning et al., 2008, ch. 8).
+- Results depend heavily on the collection, queries and judgments and may not transfer to other domains or user groups (Manning et al., 2008, ch. 8).
+- Retrieval scores do not show how the retrieved passages affect the generated answer ([[rag-generation-evaluation|RAG: Generation Evaluation]]).
 
 ### Comparison
 
-| Approach | How it differs | Suited for |
-|----------|----------------|------------|
-| nDCG | Incorporates relevance of all documents in top-k, whereas MRR considers only the first relevant document. | When multiple relevant documents exist and their relative ranking is critical, such as in RAG systems requiring multiple context chunks. |
-| Recall@k and Precision@k | Provide complementary measures of coverage (Recall@k) and quality (Precision@k); using only one fails to capture the recall-precision trade-off. | When balancing retrieval of all relevant information (Recall@k) with minimization of irrelevant top-k results (Precision@k). |
-| MRR | Only the rank of the first relevant result counts. | Tasks where one relevant passage is enough, e.g. factoid questions. |
+| Metric | Measures | Note |
+|--------|----------|------|
+| Precision@k | Share of relevant results in the top k | Least stable; depends on number of relevant documents |
+| Recall@k | Share of relevant documents in the top k | Needs all relevant documents to be known |
+| R-precision | Precision at rank \|Rel\| | Equals break-even point; correlates with MAP |
+| MAP | Precision across all recall levels | Good discrimination and stability; binary |
+| MRR | Rank of the first relevant result | Binary |
+| nDCG@k | Graded gain discounted by rank | Binary and graded judgments |
 
-For RAG, Recall@k at the k actually passed to the model is usually the most important number; nDCG adds sensitivity to the order within the top k, which BEIR (Thakur et al., 2021) reports as its main metric (nDCG@10).
+Sources: Manning et al. (2008, ch. 8); Thakur et al. (2021).
 
 ### In practice
 
-In practice, retrieval evaluation should leverage heterogeneous benchmarks like BEIR (Thakur et al., 2021) to assess generalization across diverse tasks, with [[bm25|BM25]] serving as a robust baseline while re-ranking models achieve higher zero-shot performance at increased computational cost. Typical failure modes include poor out-of-distribution generalization (dense and sparse models often underperform, Thakur et al., 2021) and the recall-precision trade-off; see [[rag-failure-modes|failure modes]] for further details. Parameter choices for `k` must be empirically optimized, as larger `k` values increase recall but typically reduce precision.
+A RAG generator only sees the passages passed to it, so Recall@k at that k shows whether the needed information reaches the model, and nDCG@k shows how well it is ordered. Because judgments are incomplete, unjudged passages in a new retriever's top results should be checked before concluding that it is worse than [[bm25|BM25]] (Thakur et al., 2021). Retrieval evaluation is one half of [[rag-evaluation|RAG evaluation]]; re-rankers such as [[cross-encoder|cross-encoders]] are evaluated with the same measures (Thakur et al., 2021).
 
 ### Key takeaway
 
-Retrieval evaluation needs relevance judgments and complementary metrics: Recall@k shows whether the needed passages are retrieved at all, Precision@k, MRR and nDCG how well they are ranked.
+Retrieval evaluation compares ranked results with relevance judgments for information needs; nDCG@10, MAP and Recall@k summarise ranking quality, but incomplete, pooled judgments can make new retrievers look worse than they are.
 
 ### Sources
 
-- Thakur, N. et al. (2021). *BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models.* [arXiv:2104.08663](https://arxiv.org/abs/2104.08663)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Evaluation in information retrieval.* Introduction to Information Retrieval, Chapter 8. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/08eval.pdf)
+- Thakur, N. et al. (2021). *BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models.* NeurIPS 2021 Datasets and Benchmarks. [arXiv:2104.08663](https://arxiv.org/abs/2104.08663)
 - Bajaj, P. et al. (2016). *MS MARCO: A Human Generated MAchine Reading COmprehension Dataset.* [arXiv:1611.09268](https://arxiv.org/abs/1611.09268)
 - Järvelin, K. & Kekäläinen, J. (2002). *Cumulated gain-based evaluation of IR techniques.* ACM Transactions on Information Systems 20(4). [doi:10.1145/582415.582418](https://doi.org/10.1145/582415.582418)
-- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press. [online edition](https://nlp.stanford.edu/IR-book/)
 
 ## DE
 
@@ -105,86 +117,98 @@ Retrieval evaluation needs relevance judgments and complementary metrics: Recall
 
 ### TL;DR
 
-Die RAG-Rückgewinnungsbewertung verwendet Metriken wie Recall@k, Precision@k und nDCG, um die Relevanz und die Qualität der Rangierung des zurückgewonnenen Kontextes für den Rückgewinnungskomponenten [[rag-retrieval|Rückgewinnungskomponente]] zu quantifizieren. Dies adressiert die Herausforderung, zu messen, wie effektiv der Rückgewinner relevante Informationen identifiziert und rangiert, was direkt die Qualität der generierten Antworten in systemen mit erweiterter Rückgewinnung beeinflusst.
+Die Evaluation des Retrievals misst, wie gut die [[rag-retrieval|Retrieval-Komponente]] eines [[retrieval-augmented-generation|RAG]]-Systems die Passagen findet und ordnet, die eine Anfrage braucht. Sie folgt der Testkollektions-Methode des [[information-retrieval|Information Retrieval]]: eine Dokumentsammlung, eine Menge von Informationsbedürfnissen, als Anfragen formuliert, und Relevanzurteile für Anfrage-Dokument-Paare (Manning et al., 2008, Kap. 8). Mengenbasierte Maße (Precision, Recall, F) und Ranglistenmaße (Precision@k, Recall@k, MAP, R-Precision, MRR, nDCG) fassen den Vergleich zusammen; BEIR berichtet nDCG@10, weil es binäre und abgestufte Relevanz abdeckt (Thakur et al., 2021). Relevanzurteile sind fast immer unvollständig, was Retriever benachteiligen kann, die sich von denen unterscheiden, mit denen die Urteile erstellt wurden (Thakur et al., 2021).
 
 ### Funktionsweise
 
-Retrieval-Bewertung vergleicht die nach Rang geordnete Liste, die ein Retrieval-System für jede Test-Abfrage zurückgibt, mit Relevanzurteilen, also den als relevant bekannten Dokumenten für diese Abfrage. Aus diesem Vergleich werden Standard-Metriken des Information Retrievals berechnet: Recall@k für die Abdeckung, Precision@k für den Anteil der relevanten Ergebnisse, MRR für die Position des ersten relevanten Ergebnisses und nDCG für die Qualität der gesamten Rangliste mit differenzierten Relevanzstufen (Manning et al., 2008; Järvelin & Kekäläinen, 2002). Es ist der eine Teil von [[rag-evaluation|RAG-Bewertung]].
-
 ```text
-Test-Abfragen + Relevanzurteile
+Dokumentsammlung + Informationsbedürfnisse (≥ 50) + Relevanzurteile (gepoolt, binär oder abgestuft)
  ▼
-Retrieval-System ─▶ nach Rang geordnete Liste pro Abfrage (Top k)
+Retriever ─▶ Rangliste pro Anfrage
  ▼
-pro Abfrage: Recall@k, Precision@k, reziproke Rang, nDCG@k
+pro Anfrage: Precision@k · Recall@k · Average Precision · reziproker Rang · nDCG@k
  ▼
-Durchschnitt über alle Abfragen ─▶ Systembewertungen
+Mittel über die Anfragen ─▶ Systemwert (auf Entwicklungsmenge abstimmen, auf Testmenge berichten)
 ```
 
-#### 1. Relevanzurteilsdaten
+#### 1. Testkollektionen und Relevanzurteile
 
-Die Retrieval-Bewertung benötigt Relevanzurteile: für jede Testabfrage die Dokumente oder Abschnitte, die relevant sind. Sie stammen aus menschlicher Annotation, aus bestehenden Benchmarks oder, bei einem RAG-System eigenen Corpus, aus einem kurierten Testdatensatz. Ein großes öffentliches Beispiel ist MS MARCO (Bajaj et al. 2016), das aus echten Bing-Fragen erstellt wurde, wobei die Annotatoren die Abschnitte markierten, die sie zur Antworterstellung verwendet haben. Die Datensatzstruktur besteht aus Frage-Abschnitt-Paaren, wobei jede Frage (1.010.916 aus Bing-Protokollen) mit mehreren Abschnitten (8.841.823 aus Webdokumenten) und einer von Menschen annotierten Antwort verbunden ist. Die Eingaben sind Frage-Abschnitt-Paare; die Ausgaben sind binäre Relevanzlabels (wahr, wenn der Abschnitt die Antwort enthält). Dieses Design verwendet die Beantwortbarkeit als einzigen Relevanzkriterium, wobei Skalierbarkeit und reale Anwendbarkeit gegenüber einer bewerteten Relevanzanalyse priorisiert werden. Kompromisse umfassen das Auslassen von Kontextrelevanznuancen (z. B. partielle Relevanz) und das potenzielle Fehlzuordnen von Abschnitten, die Antworten indirekt unterstützen, aber keine exakten Textübereinstimmungen aufweisen. Die großskalige, aus Abfragen-Protokollen stammende Herkunft ermöglicht eine robuste Bewertung, beschränkt jedoch die Relevanzgranularität. Diese Struktur unterstützt direkt Metriken wie Recall@k, indem sie die tatsächliche Relevanz für die Abschnittrangierung bereitstellt und bildet die Grundlage für die Bewertung der [[rag-retrieval|Retrieval]]-Komponente.
+Eine Testkollektion besteht aus Dokumenten, einer Menge von Informationsbedürfnissen und Relevanzurteilen, meist binär. Relevanz wird am Informationsbedürfnis gemessen, nicht an der Anfrage: Ein Dokument ist relevant, wenn es das Bedürfnis bedient, nicht weil es alle Anfragewörter enthält. Die Ergebnisse schwanken stark zwischen Informationsbedürfnissen, daher gelten etwa 50 als übliches Minimum. Parameter müssen auf einer getrennten Entwicklungs-Testkollektion abgestimmt werden; Abstimmen auf der Testkollektion überschätzt die Leistung (Manning et al., 2008, Kap. 8).
 
-#### 2. Recall@k-Berechnung
+Bei großen Sammlungen wird Relevanz nur auf einem Pool beurteilt: den Top-k-Dokumenten mehrerer Systeme, ergänzt um weitere Quellen wie boolesche Suchen (Manning et al., 2008, Kap. 8). MS MARCO, aufgebaut aus 1.010.916 Fragen aus den Suchprotokollen von Bing und 8.841.823 Passagen aus 3.563.535 Webdokumenten, markiert die Passagen als relevant, die Redakteurinnen und Redakteure für eine Antwort verwendet haben; die Autoren weisen darauf hin, dass diese Annotation unvollständig ist und weitere Passagen die Antwort enthalten können (Bajaj et al., 2016).
 
-Recall@k quantifiziert den Anteil der relevanten Dokumente, die innerhalb der top-k rangierten Ergebnisse abgerufen wurden. Die Eingaben bestehen aus der rangierten Liste der abgerufenen Dokumente (typischerweise aus einer Vektordatenbank oder einem Retrieval-System [[rag-retrieval|Retrieval-Komponente]]) und den Ground-Truth-Relevanzlabels, die alle relevanten Dokumente für eine Abfrage identifizieren. Das Ergebnis ist ein skalares Wert, der als `Recall@k = (relevant in top-k) / (total relevant)` berechnet wird, wobei `relevant in top-k` die Anzahl der relevanten Dokumente innerhalb der top-k Ergebnisse zählt und `total relevant` die Gesamtzahl der relevanten Dokumente für die Abfrage ist. Der Algorithmus verarbeitet die rangierte Liste, zählt die relevanten Dokumente im top-k-Abschnitt und teilt diese durch die Gesamtzahl der relevanten Dokumente. Die Gestaltungswahl konzentriert sich auf die Auswahl von k: ein größeres k erhöht Recall, erhöht aber auch die Rechenkosten und kann irrelevanten Dokumenten beinhalten, während ein kleineres k die Kosten reduziert, aber das Risiko besteht, relevante Elemente zu übersehen. Dieser Kompromiss erfordert empirische Anpassung basierend auf Systembeschränkungen (z. B. Token-Limits für die nachfolgende Generierung). Der Metric ist in der Information Retrieval-Bewertung standardisiert (Manning et al., 2008), was eine konsistente Bewertung der Retrieval-Abdeckung über Systeme ermöglicht.
+Beurteilende sind sich uneinig. Übereinstimmung wird mit der Kappa-Statistik gemessen, die die beobachtete Übereinstimmung um Zufallsübereinstimmung bereinigt; bei TREC lag sie meist im „ordentlichen“ Bereich (0,67–0,8). Die Wahl der beurteilenden Person verändert absolute Werte deutlich, die relative Rangfolge der Systeme aber kaum (Manning et al., 2008, Kap. 8).
 
-#### 3. Precision@k-Berechnung
+#### 2. Mengenbasierte Maße
 
-Precision@k quantifiziert den Anteil der relevanten Elemente innerhalb der top-k-Ergebnisse, die für eine Abfrage abgerufen wurden. Die Eingaben bestehen aus der nach Rang geordneten Liste der top-k-Ergebnisse (z. B. Dokumentabschnitte) und binären Relevanzurteilen für jedes Element (die angeben, ob es sich auf die Abfrage bezieht). Das Ergebnis ist ein skalares Wert, der nach der Formel `Precision@k = (relevant in top-k) / k` berechnet wird und sich zwischen 0 und 1 bewegt. Die Berechnung erfolgt durch Iterieren durch die Liste der top-k-Ergebnisse, Zählen der relevanten Elemente und Dividieren durch k. Die Gestaltung entscheidet sich hauptsächlich für die Wahl von k: ein kleineres k betont die Präzision (indem irrelevanten Ergebnisse reduziert werden, aber das Risiko besteht, relevante Elemente zu verpassen), während ein größeres k die Erinnerung verbessert, allerdings auf Kosten der Präzision. Dieser Metrik kommt aufgrund ihrer Einfachheit eine hohe Relevanz zu und sie ist computationally effizient sowie weit verbreitet. Dennoch behandelt sie Relevanz als binär und ignoriert die Reihenfolge der relevanten Elemente außerhalb des top-k-Fensters. Manning et al. (2008) etablieren dies als Standardmetrik bei der Bewertung von ranked Retrieval. Sie ergänzt Recall@k, da sie sich auf die Qualität des abgerufenen Unterteils konzentriert, anstatt auf die Abdeckung aller relevanten Elemente, und informiert direkt die Optimierung von Retrieval-Komponenten für RAG-Systeme [[rag-retrieval|retrieval-Komponente]].
+Precision ist der Anteil relevanter Dokumente unter den gefundenen, Recall der Anteil gefundener Dokumente unter den relevanten. Accuracy eignet sich nicht, weil meist über 99,9 % der Dokumente nicht relevant sind und ein leeres Ergebnis daher gut abschneiden würde. Beide Maße stehen im Zielkonflikt: Wer alle Dokumente zurückgibt, erreicht Recall 1. Websuchende wollen hohe Precision auf der ersten Seite, professionell Suchende wie Rechtsanwaltsfachangestellte hohen Recall. Das F-Maß ist das gewichtete harmonische Mittel aus Precision und Recall; das harmonische Mittel bleibt nahe am kleineren Wert, sodass ein System nicht gut abschneidet, wenn es nur eines von beiden maximiert (Manning et al., 2008, Kap. 8). Dieselben Maße dienen auch für Klassifikatoren ([[classification-metrics|Klassifikationsmetriken]]).
 
-#### 4. MRR-Berechnung
+#### 3. Ranglistenmaße
 
-Der Mittelwert des Reziproken Rangs (MRR) bewertet die Qualität der Retrieval-Operation, indem er die Position des ersten relevanten Ergebnisses über mehrere Abfragen hinweg misst. Die Eingaben bestehen aus rangierten Ergebnislisten für jede Abfrage, wobei jedes Ergebnis als relevant oder nicht relevant gekennzeichnet ist. Für jede Abfrage wird der Reziproke Rang als `1 / rank` berechnet, wobei `rank` die Position des ersten relevanten Dokuments ist; wenn kein relevantes Dokument abgerufen wird, ist der Reziproke Rang 0. Das Ergebnis ist der arithmetische Mittelwert dieser Werte über alle Abfragen, ausgedrückt als `MRR = average(1 / rank of first relevant)`. Dieser Metrik liegt der Vorrang des frühen Abrufens relevanter Inhalte zugrunde, wodurch sie ideal für Szenarien geeignet ist, bei denen ein einzelnes relevantes Ergebnis ausreicht (z. B. bei Frage-Antwort-Systemen). Allerdings wird dabei jede Information über nachfolgende relevante Ergebnisse verworfen, ein Kompromiss, der die Berechnung vereinfacht, aber die Fähigkeit zur Bewertung der gesamten Rangliste begrenzt. MRR wurde zu einem Standardmaß in der Evaluierung von Frage-Antwort-Systemen, bei denen in der Regel ein korrekter Abschnitt ausreicht.
+Bei Ranglisten bilden die Top-k-Dokumente die gefundene Menge. Precision@k, etwa Precision at 10, braucht keine Schätzung, wie viele Dokumente relevant sind, ist aber das am wenigsten stabile gängige Maß und lässt sich schlecht mitteln, weil die Zahl relevanter Dokumente pro Anfrage es stark beeinflusst. R-Precision ist die Precision der Top-|Rel|-Ergebnisse, wobei |Rel| die Zahl der relevanten Dokumente ist; sie entspricht dem Break-even-Punkt von Precision und Recall und korreliert stark mit MAP. Precision-Recall-Kurven verlaufen sägezahnförmig und werden meist mit interpolierter Precision geglättet, der höchsten Precision auf einem beliebigen Recall-Niveau ab dem gegebenen; die frühen TREC-Evaluationen mittelten sie über 11 Recall-Niveaus (Manning et al., 2008, Kap. 8).
 
-#### 5. nDCG-Berechnung
+Mean Average Precision (MAP) mittelt für jede Anfrage die Precision nach jedem gefundenen relevanten Dokument (0 für nicht gefundene relevante Dokumente) und dann über die Anfragen. Sie gewichtet jedes Informationsbedürfnis gleich und unterscheidet besonders gut und stabil; innerhalb eines Systems kann sie zwischen Informationsbedürfnissen von 0,1 bis 0,7 schwanken (Manning et al., 2008, Kap. 8). Mean Reciprocal Rank (MRR) mittelt 1/Rang des ersten relevanten Ergebnisses. Wie MAP berücksichtigt er die Reihenfolge, ist aber binär, daher können beide keine abgestuften Relevanzurteile auswerten (Thakur et al., 2021).
 
-nDCG@k bewertet die Qualität einer Sortierung, indem es bewertete Relevanzwerte und Positionen berücksichtigt. Es wird definiert als `nDCG@k = DCG@k / IDCG@k`, wobei `DCG@k` der abgezinsten kumulierten Gewinn für die Top-k-Ergebnisse und `IDCG@k` der ideale DCG für die optimale Sortierung ist. Die Eingaben umfassen eine sortierte Liste der abgerufenen Elemente mit pro-Element-Relevanzwerten (z. B. 0–3 für nicht relevant bis sehr relevant) und einen Schwellenwert `k`. Eine weit verbreitete Formulierung berechnet DCG@k als die Summe von `(2^rel_i - 1) / log2(i + 1)` über die Positionen 1 bis k, wobei `rel_i` der Relevanzwert an Position i ist; die ursprüngliche Definition von Järvelin & Kekäläinen (2002) fügt den Gewinn `rel_i` selbst hinzu und diskontiert ihn ab Rang b mit `log_b(i)`. Der IDCG@k wird durch Sortieren aller Relevanzwerte in absteigender Reihenfolge und Berechnen des DCG für diese Liste abgeleitet. Die Normalisierung stellt sicher, dass nDCG@k einen Wert zwischen 0 (schlechtest) und 1 (perfekt) annimmt. Der logarithmische Abzinsungsfaktor (`log2(i+1)`) modelliert den abnehmenden Aufmerksamkeitsgrad des Nutzers für weniger gut platzierte Elemente, während der exponentielle Gewinn (`2^rel_i - 1`) der üblichen Formulierung den Einfluss sehr relevanter Elemente verstärkt. Dieser Ansatz bietet eine präzisere Bewertung als Metriken wie MRR (die nur das erste relevante Element berücksichtigen), erfordert jedoch bewertete Relevanzlabels und verursacht höhere rechnerische Aufwände als Recall@k oder Precision@k. Kumulierte Gewinnmaße, einschließlich DCG und nDCG, wurden von Järvelin & Kekäläinen (2002) eingeführt.
+#### 4. nDCG
 
-#### Ursprung und Varianten
+Normalised Discounted Cumulative Gain ist für abgestufte Relevanz gedacht und wird über die Top-k-Ergebnisse berechnet. Eine gängige Form summiert (2^rel − 1) / log2(1 + Rang) über die Top k und normiert mit dem Wert einer perfekten Rangfolge, sodass diese 1 erreicht (Manning et al., 2008, Kap. 8). Järvelin und Kekäläinen (2002) führten den kumulierten Gewinn ein: Ihre ursprüngliche Definition addiert die abgestufte Relevanz selbst und dämpft sie ab Rang b mit log_b(Rang). BEIR argumentiert, dass Precision und Recall die Reihenfolge nicht berücksichtigen und MRR und MAP binär sind, und verwendet nDCG@10 als einheitliche Metrik, die über Aufgaben mit binären und abgestuften Urteilen vergleichbar ist (Thakur et al., 2021).
 
-Der BEIR-Benchmark (Thakur et al. (2021)) standardisiert die Bewertung von Retrieval-Systemen über 18 heterogene Datensätze, die sich auf verschiedene Text-Retrieval-Aufgaben und -Domainen erstrecken, und adressiert dadurch die Einschränkungen früherer homogener Benchmarks bei der Bewertung der Generalisierungsfähigkeit außerhalb der Trainingsdatenverteilung. Er verwendet standardisierte Metriken wie nDCG, Recall@k und Precision@k. Die Eingaben bestehen aus Abfrage-Dokument-Paaren mit tatsächlichen Relevanzurteilen; die Ausgaben sind systemweite Scores (z. B. nDCG@10), die pro Datensatz berechnet werden, indem die Metriken auf die rangierten Ergebnisse angewendet werden. Der Benchmark strukturiert die Evaluierungen als rangierte Dokumentlisten pro Abfrage und verwendet Relevanzlabels, um die Scores zu berechnen. Ein zentraler Design-Kompromiss besteht in der Datensatzdiversität: die 18 heterogenen Datensätze erhöhen die Robustheit bei der Generalisierung über verschiedene Domänen, erhöhen aber im Vergleich zu Evaluierungen mit einem einzigen Datensatz den rechnerischen Aufwand. Dies ermöglicht eine umfassende Bewertung der Generalisierungsfähigkeit von Modellen, während die Kompatibilität mit etablierten Bewertungspraktiken gewahrt bleibt.
+#### 5. Verzerrung durch die Auswahl der Annotationen
+
+Weil nicht beurteilte Dokumente als nicht relevant gelten, wird ein neues System benachteiligt, das andere Dokumente findet als die Systeme, aus denen der Pool stammt. Viele BEIR-Datensätze haben eine lexikalische Verzerrung: Die Kandidaten für die Annotation wurden mit TF-IDF oder BM25 gesucht. Auf TREC-COVID lag der Anteil nicht beurteilter Dokumente in den Top 10 (Hole@10) bei 6,4 % für [[bm25|BM25]], aber bei 14,4 % für den Dense Retriever ANCE und 31,8 % für TAS-B. Nach der Annotation dieser Lücken stieg ANCE von 0,654 auf 0,735 nDCG@10, 6,7 Punkte über BM25, während sich lexikalische Systeme kaum veränderten (Thakur et al., 2021).
+
+#### 6. Über Relevanz hinaus
+
+Übliche Urteile behandeln die Relevanz jedes Dokuments als unabhängig, doch ein sehr relevantes Dokument kann gegenüber bereits gesehenen redundant sein; marginale Relevanz belohnt Vielfalt und Neuheit, und Duplikate sind im Web sehr häufig ([[near-duplicate-detection|Erkennung von Beinahe-Duplikaten]]). Relevanz ist nur ein Stellvertreter für den Nutzen für die Nutzenden, den Nutzerstudien, Wiederkehrraten oder bei laufenden Systemen A/B-Tests mit Klickanalyse direkter messen (Manning et al., 2008, Kap. 8).
+
+#### Herkunft und Varianten
+
+Recall und Precision verwendeten zuerst Kent et al. (1955), das F-Maß führte van Rijsbergen (1979) ein. Die Cranfield-Kollektion der späten 1950er-Jahre mit 1.398 Abstracts, 225 Anfragen und vollständigen Urteilen ermöglichte die ersten genauen quantitativen Messungen; NIST veranstaltet TREC seit 1992, NTCIR und CLEF konzentrieren sich auf asiatische, europäische und sprachübergreifende Suche (Manning et al., 2008, Kap. 8). BEIR vereint 18 englische Datensätze aus 9 Retrieval-Aufgaben für die Zero-Shot-Evaluation (Thakur et al., 2021).
 
 ### Wann einsetzen
 
-- Die Wahl zwischen Retrieval-Set-ups (Embedding-Modell, Chunking, hybride Suche, Reranker) anhand der eigenen Testabfragen des Systems.
-- [[regression-testing|Regressionstests]]: Wiederholen der gleichen Abfragen nach jedem Änderung am Index oder den Modellen.
-- Prüfen, ob ein Retriever auf neue Domänen generalisiert, z. B. mit einem heterogenen Benchmark wie BEIR (Thakur et al., 2021).
-- Lokalisieren von Fehlern: Wenn der relevante Absatz nicht in den Top-k liegt, liegt das Problem im Retrieval und nicht in der Generierung.
+- Auswahl zwischen Retrieval-Varianten (Embedding-Modell, Chunking, hybride Suche, Re-Ranker) anhand der eigenen Testanfragen, mit auf einer getrennten Entwicklungsmenge abgestimmten Parametern (Manning et al., 2008, Kap. 8).
+- [[regression-testing|Regressionstests]]: dieselben Anfragen nach jeder Änderung am Index oder an den Modellen erneut ausführen.
+- Prüfen, ob ein Retriever auf neue Domänen verallgemeinert, mit einem heterogenen Benchmark wie BEIR (Thakur et al., 2021).
+- Fehler eingrenzen: Liegt die relevante Passage nicht in den Top k, liegt das Problem im Retrieval, nicht in der Generierung ([[rag-failure-modes|RAG: Fehlermuster]]).
 
 ### Stärken und Grenzen
 
 **Stärken**
-- Der BEIR-Benchmark (Thakur et al. (2021)) ermöglicht eine standardisierte Bewertung über 18 heterogene Datensätze, wodurch sich zeigt, dass Re-Ranking-Modelle ([[cross-encoder|Cross-Encoder]]) die beste Zero-Shot-Leistung erzielen, obwohl sie mit hohen Rechenkosten verbunden sind.
-- nDCG (Järvelin & Kekäläinen (2002)) berücksichtigt die graduelle Relevanz und die Positionsgewichtung, wodurch eine präzisere Bewertung als bei binären Metriken wie Recall@k möglich ist.
-- Metriken wie Precision@k und Recall@k sind rechenleicht und etabliert in der [[information-retrieval|Information Retrieval]] (Manning et al. (2008)), was eine skalierbare Bereitstellung ermöglicht.
+- Eine feste Testkollektion erlaubt günstige, wiederholbare Vergleiche und eine klarere Diagnose als Nutzerstudien (Manning et al., 2008, Kap. 8).
+- Die relative Rangfolge von Systemen bleibt weitgehend stabil, obwohl Beurteilende uneinig sind (Manning et al., 2008, Kap. 8).
+- nDCG kommt mit binären und abgestuften Urteilen zurecht (Thakur et al., 2021).
 
-**Einschränkungen**
-- Die Bewertung erfasst nicht den Einfluss der Retrieval-Operation auf die Qualität der nachfolgenden Generierung, weshalb eine separate [[rag-generation-evaluation|Generierungsbewertung]] erforderlich ist.
-- Etikettierte Relevanzdaten für Metriken (z. B. Recall@k) sind aufwendig zu erlangen, wie es beispielsweise bei der Skalierung von MS MARCO gezeigt wird (Bajaj et al. (2016)).
-- Hochleistungsfähige Modelle (z. B. Re-Ranking) verursachen erhebliche Rechenkosten (Thakur et al. (2021)), was die Echtzeitanwendbarkeit einschränkt.
+**Grenzen**
+- Relevanzurteile sind teuer und decken bei großen Sammlungen nur einen Pool ab; nicht beurteilte Dokumente zählen als nicht relevant, was die Ergebnisse zugunsten der Systeme verzerrt, aus denen der Pool stammt (Manning et al., 2008, Kap. 8; Thakur et al., 2021).
+- Urteile sind subjektiv, meist binär und behandeln Dokumente als unabhängig, ohne Redundanz zu berücksichtigen (Manning et al., 2008, Kap. 8).
+- Ergebnisse hängen stark von Sammlung, Anfragen und Urteilen ab und übertragen sich nicht unbedingt auf andere Domänen oder Nutzergruppen (Manning et al., 2008, Kap. 8).
+- Retrieval-Werte zeigen nicht, wie die gefundenen Passagen die erzeugte Antwort beeinflussen ([[rag-generation-evaluation|RAG: Evaluation der Generierung]]).
 
 ### Vergleich
 
-| Ansatz | Unterschiede | Geeignet für |
-|----------|----------------|------------|
-| nDCG | Berücksichtigt die Relevanz aller Dokumente in den Top-k, während MRR nur das erste relevante Dokument berücksichtigt. | Wenn mehrere relevante Dokumente vorhanden sind und deren relative Reihenfolge kritisch ist, wie z. B. in RAG-Systemen, die mehrere Kontextabschnitte benötigen. |
-| Recall@k und Precision@k | Liefern komplementäre Maße für Abdeckung (Recall@k) und Qualität (Precision@k); die Verwendung nur eines davon kann den Kompromiss zwischen Recall und Precision nicht erfassen. | Wenn die Abdeckung aller relevanten Informationen (Recall@k) mit der Minimierung der irrelevanten Top-k-Ergebnisse (Precision@k) ausgewogen werden soll. |
-| MRR | Nur die Reihenfolge des ersten relevanten Ergebnisses zählt. | Aufgaben, bei denen ein relevanter Absatz ausreicht, z. B. Faktenfragen. |
+| Metrik | Misst | Hinweis |
+|--------|-------|---------|
+| Precision@k | Anteil relevanter Ergebnisse in den Top k | Am wenigsten stabil; abhängig von der Zahl relevanter Dokumente |
+| Recall@k | Anteil der relevanten Dokumente in den Top k | Alle relevanten Dokumente müssen bekannt sein |
+| R-Precision | Precision auf Rang \|Rel\| | Entspricht dem Break-even-Punkt; korreliert mit MAP |
+| MAP | Precision über alle Recall-Niveaus | Gute Trennschärfe und Stabilität; binär |
+| MRR | Rang des ersten relevanten Ergebnisses | Binär |
+| nDCG@k | Abgestufter Gewinn, nach Rang gedämpft | Binäre und abgestufte Urteile |
 
-Für [[retrieval-augmented-generation|RAG]] ist Recall@k an der tatsächlich an das Modell übergebenen k in der Regel die wichtigste Zahl; nDCG fügt Empfindlichkeit für die Reihenfolge innerhalb der Top-k hinzu, was BEIR (Thakur et al., 2021) als seine Hauptmetrik berichtet (nDCG@10).
+Quellen: Manning et al. (2008, Kap. 8); Thakur et al. (2021).
 
 ### In der Praxis
 
-In der Praxis sollte die Retrieval-Evaluation heterogene Benchmarks wie BEIR (Thakur et al., 2021) nutzen, um die Generalisierung über verschiedene Aufgaben zu bewerten, wobei [[bm25|BM25]] als robuster Baseline dient, während Re-Ranking-Modelle eine höhere zero-shot-Leistung bei erhöhtem Rechenaufwand erzielen. Typische Fehlmodi umfassen eine schlechte Generalisierung außerhalb der Verteilung (dichte und sparse Modelle leisten oft schlechter, Thakur et al., 2021) und den Recall-Precision-Trade-off; siehe [[rag-failure-modes|Fehlmodi]] für weitere Details. Die Parameterwahl für `k` muss empirisch optimiert werden, da höhere `k`-Werte den Recall erhöhen, aber typischerweise die Precision verringern.
+Ein RAG-Generator sieht nur die Passagen, die er erhält; Recall@k bei diesem k zeigt daher, ob die nötige Information beim Modell ankommt, und nDCG@k, wie gut sie geordnet ist. Weil Urteile unvollständig sind, sollten nicht beurteilte Passagen in den Top-Ergebnissen eines neuen Retrievers geprüft werden, bevor man schließt, dass er schlechter ist als [[bm25|BM25]] (Thakur et al., 2021). Die Retrieval-Evaluation ist eine Hälfte der [[rag-evaluation|RAG-Evaluation]]; Re-Ranker wie [[cross-encoder|Cross-Encoder]] werden mit denselben Maßen bewertet (Thakur et al., 2021).
 
 ### Merksatz
 
-Die Retrieval-Evaluation benötigt Relevanzurteile und ergänzende Metriken: Recall@k zeigt, ob die benötigten Abschnitte überhaupt abgerufen werden, Precision@k, MRR und nDCG, wie gut sie rangiert sind.
+Die Evaluation des Retrievals vergleicht Ranglisten mit Relevanzurteilen zu Informationsbedürfnissen; nDCG@10, MAP und Recall@k fassen die Rangqualität zusammen, doch unvollständige, gepoolte Urteile können neue Retriever schlechter aussehen lassen, als sie sind.
 
 ### Quellen
 
-- Thakur, N. et al. (2021). *BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models.* [arXiv:2104.08663](https://arxiv.org/abs/2104.08663)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Evaluation in information retrieval.* Introduction to Information Retrieval, Chapter 8. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/08eval.pdf)
+- Thakur, N. et al. (2021). *BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models.* NeurIPS 2021 Datasets and Benchmarks. [arXiv:2104.08663](https://arxiv.org/abs/2104.08663)
 - Bajaj, P. et al. (2016). *MS MARCO: A Human Generated MAchine Reading COmprehension Dataset.* [arXiv:1611.09268](https://arxiv.org/abs/1611.09268)
 - Järvelin, K. & Kekäläinen, J. (2002). *Cumulated gain-based evaluation of IR techniques.* ACM Transactions on Information Systems 20(4). [doi:10.1145/582415.582418](https://doi.org/10.1145/582415.582418)
-- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press. [online edition](https://nlp.stanford.edu/IR-book/)

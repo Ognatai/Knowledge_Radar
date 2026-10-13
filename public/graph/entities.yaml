@@ -2918,3 +2918,21 @@ entities:
   type: Technology
   name_en: spaCy
   name_de: spaCy
+- id: mean-average-precision
+  type: Method
+  name_en: Mean Average Precision (MAP)
+  name_de: Mean Average Precision (MAP)
+  aliases:
+  - MAP
+- id: r-precision
+  type: Method
+  name_en: R-precision
+  name_de: R-Precision
+- id: relevance-pooling
+  type: Method
+  name_en: Pooling (relevance assessment)
+  name_de: Pooling (Relevanzbeurteilung)
+- id: kappa-statistic
+  type: Method
+  name_en: Kappa statistic
+  name_de: Kappa-Statistik
