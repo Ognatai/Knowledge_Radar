@@ -206,11 +206,6 @@ entities:
     type: Concept
     name_en: Critical facility
     name_de: Kritische Anlage
-  - id: kritis-dachgesetz
-    type: Regulation
-    name_en: KRITIS Umbrella Act (KRITIS-Dachgesetz)
-    name_de: KRITIS-Dachgesetz (KRITISDachG)
-    aliases: [KRITIS Umbrella Act, KRITISDachG]
   - id: basel-committee
     type: Organisation
     name_en: Basel Committee on Banking Supervision

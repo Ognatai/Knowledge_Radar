@@ -35,7 +35,7 @@ The Critical Entities Resilience Directive (CER Directive) obliges Member States
 | Entry into force | 16 January 2023 |
 | Transposition | by 17 October 2024; national measures apply from 18 October 2024 (Art. 26) |
 | Amendments | none |
-| Competent authorities | national competent authorities and a single point of contact per Member State (Art. 9); in Germany, the Federal Office of Civil Protection and Disaster Assistance (BBK) is the single point of contact under the KRITIS Umbrella Act |
+| Competent authorities | national competent authorities and a single point of contact per Member State (Art. 9); in Germany, the Federal Office of Civil Protection and Disaster Assistance (BBK) is the single point of contact under the [[kritis-dachgesetz\|KRITIS Umbrella Act]] |
 | Version summarised | text as published in the Official Journal |
 
 ### Scope
@@ -240,7 +240,7 @@ Die Richtlinie über die Resilienz kritischer Einrichtungen (CER-Richtlinie) ver
 | Inkrafttreten | 16. Januar 2023 |
 | Umsetzung | bis 17. Oktober 2024; Anwendung der nationalen Vorschriften ab 18. Oktober 2024 (Art. 26) |
 | Änderungen | keine |
-| Zuständige Behörden | nationale zuständige Behörden und je Mitgliedstaat eine zentrale Anlaufstelle (Art. 9); in Deutschland ist das Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) zentrale Anlaufstelle nach dem KRITIS-Dachgesetz |
+| Zuständige Behörden | nationale zuständige Behörden und je Mitgliedstaat eine zentrale Anlaufstelle (Art. 9); in Deutschland ist das Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) zentrale Anlaufstelle nach dem [[kritis-dachgesetz\|KRITIS-Dachgesetz]] |
 | Zusammengefasste Fassung | im Amtsblatt veröffentlichter Text |
 
 ### Anwendungsbereich

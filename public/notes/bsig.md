@@ -61,7 +61,7 @@ Establishes the Federal Office for Information Security as a higher federal auth
 
 #### § 2 — Definitions
 
-Defines the terms of the Act, including security incident, significant security incident, near miss, cyber threat, vulnerability and managed service provider; critical facility and critical service follow the KRITIS Umbrella Act.
+Defines the terms of the Act, including security incident, significant security incident, near miss, cyber threat, vulnerability and managed service provider; critical facility and critical service follow the [[kritis-dachgesetz|KRITIS Umbrella Act]].
 
 ### Part 2 — The Federal Office
 
@@ -435,7 +435,7 @@ Bestimmt das Bundesamt für Sicherheit in der Informationstechnik als Bundesober
 
 #### § 2 – Begriffsbestimmungen
 
-Definiert die Begriffe des Gesetzes, darunter Sicherheitsvorfall, erheblicher Sicherheitsvorfall, Beinahevorfall, Cyberbedrohung, Schwachstelle und Managed Service Provider; kritische Anlage und kritische Dienstleistung bestimmen sich nach dem KRITIS-Dachgesetz.
+Definiert die Begriffe des Gesetzes, darunter Sicherheitsvorfall, erheblicher Sicherheitsvorfall, Beinahevorfall, Cyberbedrohung, Schwachstelle und Managed Service Provider; kritische Anlage und kritische Dienstleistung bestimmen sich nach dem [[kritis-dachgesetz|KRITIS-Dachgesetz]].
 
 ### Teil 2 – Das Bundesamt
 

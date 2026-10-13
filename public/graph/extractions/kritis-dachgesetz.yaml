@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 680ab855c2f4d8d54de94a73eca36d853b899a63834fc4e2ac3898adfcff8418
+extracted_by: claude (hand-labelled, 2026-10-13)
+discusses:
+- cer-directive
+- bsig
+- bsi-kritisv
+- dora
+- eu-ai-act
+- bbk
+- bsi
+- bafin
+- federal-network-agency
+- federal-ministry-of-the-interior
+- critical-facility
+relations:
+- from: kritis-dachgesetz
+  type: IMPLEMENTS
+  to: cer-directive
+  evidence: the Act transposes Directive (EU) 2022/2557
+- from: kritis-dachgesetz
+  type: COMPLEMENTS
+  to: bsig
+  evidence: the BSI Act covers IT security, the KRITIS Umbrella Act physical resilience
+- from: kritis-dachgesetz
+  type: REGULATES
+  to: critical-facility
+  evidence: physical resilience of critical facilities, meaning their ability to prevent

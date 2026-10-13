@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-The BSI Critical Infrastructure Ordinance (BSI-Kritisverordnung, BSI-KritisV) determines which facilities in Germany count as critical facilities. For nine sectors, from energy and water to health, finance and municipal waste disposal, it defines the critical services and refers to annexes with facility categories and thresholds. Anyone operating a facility that reaches a threshold is an operator of a critical facility and therefore a particularly important entity under the [[bsig|BSI Act]], with the strictest obligations. The Ordinance is a transitional solution: it ceases to have effect once the ordinance under the KRITIS Umbrella Act enters into force.
+The BSI Critical Infrastructure Ordinance (BSI-Kritisverordnung, BSI-KritisV) determines which facilities in Germany count as critical facilities. For nine sectors, from energy and water to health, finance and municipal waste disposal, it defines the critical services and refers to annexes with facility categories and thresholds. Anyone operating a facility that reaches a threshold is an operator of a critical facility and therefore a particularly important entity under the [[bsig|BSI Act]], with the strictest obligations. The Ordinance is a transitional solution: it ceases to have effect once the ordinance under the [[kritis-dachgesetz|KRITIS Umbrella Act]] enters into force.
 
 ### Key facts
 
@@ -135,7 +135,7 @@ Provides that the Ordinance ceases to have effect when the ordinance under § 4(
 
 ### TL;DR
 
-Die BSI-Kritisverordnung (BSI-KritisV) legt fest, welche Anlagen in Deutschland als kritische Anlagen gelten. Für neun Sektoren, von Energie und Wasser über Gesundheit und Finanzwesen bis zur Siedlungsabfallentsorgung, bestimmt sie die kritischen Dienstleistungen und verweist auf Anhänge mit Anlagenkategorien und Schwellenwerten. Wer eine Anlage betreibt, die einen Schwellenwert erreicht, ist Betreiber einer kritischen Anlage und damit besonders wichtige Einrichtung nach dem [[bsig|BSI-Gesetz]], mit den strengsten Pflichten. Die Verordnung ist eine Übergangslösung: Sie tritt außer Kraft, sobald die Verordnung nach dem KRITIS-Dachgesetz in Kraft tritt.
+Die BSI-Kritisverordnung (BSI-KritisV) legt fest, welche Anlagen in Deutschland als kritische Anlagen gelten. Für neun Sektoren, von Energie und Wasser über Gesundheit und Finanzwesen bis zur Siedlungsabfallentsorgung, bestimmt sie die kritischen Dienstleistungen und verweist auf Anhänge mit Anlagenkategorien und Schwellenwerten. Wer eine Anlage betreibt, die einen Schwellenwert erreicht, ist Betreiber einer kritischen Anlage und damit besonders wichtige Einrichtung nach dem [[bsig|BSI-Gesetz]], mit den strengsten Pflichten. Die Verordnung ist eine Übergangslösung: Sie tritt außer Kraft, sobald die Verordnung nach dem [[kritis-dachgesetz|KRITIS-Dachgesetz]] in Kraft tritt.
 
 ### Eckdaten
 
