@@ -1,7 +1,8 @@
 # Note templates
 
-Every public note follows one of two templates, chosen by area:
-**regulatory** for legal topics, **technical** for methods, concepts, and technologies. Both share the
+Every public note follows one of three templates, chosen by area:
+**regulatory** for legal topics, **technical** for methods, concepts, and technologies,
+**organisation** for standards bodies and supervisory authorities. All three share the
 repository's note format: YAML frontmatter, a `## EN` and a `## DE` section
 with identical structure, and an optional `## Original Source Text (DE)`.
 Sub-sections use `###`, details `####`.
@@ -10,7 +11,8 @@ The rules below are enforced by `python -m app.agents.validate_notes` (also run
 in CI): required frontmatter, the LLM notice, TL;DR first, required sections in
 order, no manual table of contents or "related topics" list, identical EN/DE
 outline, and every frontmatter source cited in the text. The template defaults
-to *regulatory* for `entity_type: Regulation` and *technical* otherwise; a
+to *regulatory* for `entity_type: Regulation`, *organisation* for
+`entity_type: Organisation` and *technical* otherwise; a
 `template:` frontmatter key overrides it (e.g. legal concepts such as
 copyright and AI training data use the regulatory template).
 
@@ -146,6 +148,34 @@ levels:
 
 Long acts therefore exceed the length guideline of the technical template;
 that is intended.
+
+---
+
+## Organisation template
+
+For standards bodies, supervisory authorities and similar institutions
+(`entity_type: Organisation`). Frontmatter adds `jurisdiction` (`EU`, `DE`
+or `International`). Primary sources are the organisation's own founding
+documents, statutes or official website; for German authorities the German
+sources come first.
+
+```markdown
+## EN
+> **Note:** LLM-generated summary …
+### TL;DR
+### Key facts            (seat, founded, legal basis, membership)
+### Mandate and tasks
+### Structure and working methods
+### Key outputs          (standards, guidelines, decisions)
+### Relationship to other bodies (optional)
+### In practice (optional)
+### Relevance for AI development
+### Sources
+## DE
+(TL;DR · Eckdaten · Auftrag und Aufgaben · Aufbau und Arbeitsweise ·
+Wichtige Ergebnisse · Verhältnis zu anderen Stellen · In der Praxis ·
+Bedeutung für die KI-Entwicklung · Quellen)
+```
 
 ---
 

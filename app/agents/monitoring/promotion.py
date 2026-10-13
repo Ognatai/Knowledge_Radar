@@ -49,7 +49,7 @@ from app.backend.knowledge_radar.notes import REPOSITORY_ROOT, configured_notes_
 GRAPH_DIRECTORY = REPOSITORY_ROOT / "public" / "graph"
 DECLINED_PATH = STATE_DIRECTORY / "promotions-declined.json"
 MIN_DISCUSSING_NOTES = 4  # "more than 3 notes"
-NOT_PROMOTED_TYPES = frozenset({"Organization", "Person"})
+NOT_PROMOTED_TYPES = frozenset({"Organisation", "Person"})
 CITED_SOURCES = 6
 # "- Robertson, S. & Zaragoza, H. (2009). *The Probabilistic ...* ... [doi:...](https://doi.org/...)"
 SOURCE_LINE = re.compile(

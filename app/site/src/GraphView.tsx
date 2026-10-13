@@ -9,7 +9,7 @@ const ENTITY_COLORS: Record<string, string> = {
   Method: "#177d66",
   Regulation: "#a3552a",
   Person: "#6a4c9c",
-  Organization: "#2f6aa3",
+  Organisation: "#2f6aa3",
   Conference: "#9c7a1c",
   Concept: "#b0466b",
   Technology: "#3d7f8f",

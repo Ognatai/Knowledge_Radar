@@ -51,7 +51,7 @@ def test_candidates_are_discussed_by_more_than_three_notes_most_discussed_first(
 
 
 def test_organisations_and_persons_stay_registry_entries():
-    found = promotion_candidates(graph({"ecb": 6, "someone": 5, "bm25": 4}, {"ecb": "Organization", "someone": "Person"}))
+    found = promotion_candidates(graph({"ecb": 6, "someone": 5, "bm25": 4}, {"ecb": "Organisation", "someone": "Person"}))
 
     assert [c.entity.id for c in found] == ["bm25"]
 

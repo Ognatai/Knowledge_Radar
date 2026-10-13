@@ -53,6 +53,8 @@ MAX_CHUNK_CHARACTERS = 2000
 SKIPPED_HEADINGS = frozenset({"sources", "quellen"})
 HEADING_PATTERN = re.compile(r"^(#{3,6})\s+(.+?)\s*$")
 VECTOR_INDEX_NAME = "chunk_embedding"
+# Entity type labels that no longer exist in schema.yaml but may remain in an index.
+RETIRED_TYPE_LABELS = ("Organization",)
 RELATION_TYPE_PATTERN = re.compile(r"^[A-Z][A-Z_]*$")
 ENTITY_TYPE_PATTERN = re.compile(r"^[A-Z][A-Za-z]*$")
 KEYRING_SERVICE = "knowledge-radar"
@@ -334,7 +336,8 @@ class Neo4jStore:
             type_labels = sorted(public_entity_types() if self.visibility == "public" else all_entity_types())
             if not all(ENTITY_TYPE_PATTERN.match(label) for label in type_labels):
                 raise GraphError(f"Unexpected entity type in {type_labels}.")
-            tx.run(f"MATCH (e:Entity) REMOVE e:{':'.join(type_labels)}")
+            # Former type labels are removed too (Organization became Organisation).
+            tx.run(f"MATCH (e:Entity) REMOVE e:{':'.join(type_labels + list(RETIRED_TYPE_LABELS))}")
             for label in type_labels:
                 tx.run(f"MATCH (e:Entity {{type: $type}}) SET e:{label}", type=label)
             tx.run("MATCH (:Note)-[r:DISCUSSES|RELATED_TO]->() DELETE r")

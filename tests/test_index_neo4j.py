@@ -51,7 +51,7 @@ def test_index_round_trip(tmp_path, store):
     assert count(store, "MATCH (n:Note) RETURN count(n)") == 2
     assert count(store, "MATCH (:Note {slug: 'alpha'})-[:DISCUSSES]->(e:Entity) RETURN count(e)") == 3
     assert count(store, "MATCH (:Note {slug: 'alpha'})-[:RELATED_TO]->(:Note {slug: 'beta'}) RETURN count(*)") == 1
-    assert count(store, "MATCH (:Entity {id: 'alpha'})-[r:DEVELOPED_BY]->(:Organization {id: 'microsoft'}) RETURN count(r)") == 1
+    assert count(store, "MATCH (:Entity {id: 'alpha'})-[r:DEVELOPED_BY]->(:Organisation {id: 'microsoft'}) RETURN count(r)") == 1
     assert count(store, "MATCH (c:Chunk)-[:PART_OF]->(:Note) RETURN count(c)") == 4
     hits = store.search([1.0, 1.0, 0.5], limit=2)
     assert len(hits) == 2 and hits[0]["note"] in {"alpha", "beta"}

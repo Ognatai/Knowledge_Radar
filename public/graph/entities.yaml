@@ -22,7 +22,7 @@ entities:
   name_en: IRCoT
   name_de: IRCoT
 - id: microsoft
-  type: Organization
+  type: Organisation
   name_en: Microsoft
   name_de: Microsoft
 - id: trade-secret
@@ -149,7 +149,7 @@ entities:
   name_en: Knowledge graph embeddings
   name_de: Knowledge Graph Embeddings
 - id: w3c
-  type: Organization
+  type: Organisation
   name_en: World Wide Web Consortium (W3C)
   name_de: World Wide Web Consortium (W3C)
   aliases:
@@ -179,7 +179,7 @@ entities:
   name_en: Multi-agent system
   name_de: Multi-Agenten-System
 - id: anthropic
-  type: Organization
+  type: Organisation
   name_en: Anthropic
   name_de: Anthropic
 - id: json-rpc
@@ -257,14 +257,14 @@ entities:
   - KRITIS Umbrella Act
   - KRITISDachG
 - id: basel-committee
-  type: Organization
+  type: Organisation
   name_en: Basel Committee on Banking Supervision
   name_de: Basler Ausschuss für Bankenaufsicht
   aliases:
   - Basel Committee
   - BCBS
 - id: ecb
-  type: Organization
+  type: Organisation
   name_en: European Central Bank (ECB)
   name_de: Europäische Zentralbank (EZB)
   aliases:
@@ -285,13 +285,13 @@ entities:
   name_en: Consent for cookies and device access
   name_de: Einwilligung für Cookies und Endgerätezugriff
 - id: bfdi
-  type: Organization
+  type: Organisation
   name_en: Federal Commissioner for Data Protection and Freedom of Information (BfDI)
   name_de: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
   aliases:
   - BfDI
 - id: federal-network-agency
-  type: Organization
+  type: Organisation
   name_en: Federal Network Agency
   name_de: Bundesnetzagentur
 - id: digitale-dienste-gesetz
@@ -317,7 +317,7 @@ entities:
   name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
   name_de: Einwilligungsverwaltungsverordnung (EinwV)
 - id: federal-ministry-of-the-interior
-  type: Organization
+  type: Organisation
   name_en: Federal Ministry of the Interior
   name_de: Bundesministerium des Innern
 - id: claude-code
@@ -471,7 +471,7 @@ entities:
   name_en: Actor-level corpus analysis
   name_de: Akteursbasierte Korpusanalyse
 - id: bsi
-  type: Organization
+  type: Organisation
   name_en: Federal Office for Information Security (BSI)
   name_de: Bundesamt für Sicherheit in der Informationstechnik (BSI)
   aliases:
@@ -526,7 +526,7 @@ entities:
   name_en: Simpson's paradox
   name_de: Simpson-Paradoxon
 - id: bbk
-  type: Organization
+  type: Organisation
   name_en: Federal Office of Civil Protection and Disaster Assistance (BBK)
   name_de: Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)
   aliases:
@@ -692,7 +692,7 @@ entities:
   name_en: Link prediction
   name_de: Link Prediction
 - id: atlassian
-  type: Organization
+  type: Organisation
   name_en: Atlassian
   name_de: Atlassian
 - id: confluence-space
@@ -792,19 +792,19 @@ entities:
   aliases:
   - memorization
 - id: laion
-  type: Organization
+  type: Organisation
   name_en: LAION
   name_de: LAION
 - id: gema
-  type: Organization
+  type: Organisation
   name_en: GEMA
   name_de: GEMA
 - id: openai
-  type: Organization
+  type: Organisation
   name_en: OpenAI
   name_de: OpenAI
 - id: ai-office
-  type: Organization
+  type: Organisation
   name_en: AI Office (European Commission)
   name_de: KI-Büro (Europäische Kommission)
   aliases:
@@ -821,25 +821,25 @@ entities:
   - CRR III
   - CRD VI
 - id: bafin
-  type: Organization
+  type: Organisation
   name_en: Federal Financial Supervisory Authority (BaFin)
   name_de: Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)
   aliases:
   - BaFin
 - id: deutsche-bundesbank
-  type: Organization
+  type: Organisation
   name_en: Deutsche Bundesbank
   name_de: Deutsche Bundesbank
   aliases:
   - Bundesbank
 - id: eba
-  type: Organization
+  type: Organisation
   name_en: European Banking Authority (EBA)
   name_de: Europäische Bankenaufsichtsbehörde (EBA)
   aliases:
   - EBA
 - id: esrb
-  type: Organization
+  type: Organisation
   name_en: European Systemic Risk Board (ESRB)
   name_de: Europäischer Ausschuss für Systemrisiken (ESRB)
   aliases:
@@ -869,7 +869,7 @@ entities:
   aliases:
   - SREP
 - id: enisa
-  type: Organization
+  type: Organisation
   name_en: European Union Agency for Cybersecurity (ENISA)
   name_de: Agentur der Europäischen Union für Cybersicherheit (ENISA)
   aliases:
@@ -892,7 +892,7 @@ entities:
   name_en: Product with digital elements
   name_de: Produkt mit digitalen Elementen
 - id: european-ombudsman
-  type: Organization
+  type: Organisation
   name_en: European Ombudsman
   name_de: Europäische Bürgerbeauftragte
 - id: enisa-regulation-2013
@@ -916,7 +916,7 @@ entities:
   name_en: European cybersecurity certification
   name_de: Europäische Cybersicherheitszertifizierung
 - id: edib
-  type: Organization
+  type: Organisation
   name_en: European Data Innovation Board (EDIB)
   name_de: Europäischer Dateninnovationsrat (EDIB)
   aliases:
@@ -1003,7 +1003,7 @@ entities:
   name_en: Core platform service
   name_de: Zentraler Plattformdienst
 - id: european-commission
-  type: Organization
+  type: Organisation
   name_en: European Commission
   name_de: Europäische Kommission
 - id: whistleblower-directive
@@ -1032,11 +1032,11 @@ entities:
   - VLOSE
   - very large online platform
 - id: european-board-for-digital-services
-  type: Organization
+  type: Organisation
   name_en: European Board for Digital Services
   name_de: Europäisches Gremium für digitale Dienste
 - id: cjeu
-  type: Organization
+  type: Organisation
   name_en: Court of Justice of the European Union (CJEU)
   name_de: Gerichtshof der Europäischen Union (EuGH)
   aliases:
@@ -1128,7 +1128,7 @@ entities:
   name_en: Internal governance (banks)
   name_de: Interne Governance (Banken)
 - id: berec
-  type: Organization
+  type: Organisation
   name_en: Body of European Regulators for Electronic Communications (BEREC)
   name_de: Gremium Europäischer Regulierungsstellen für elektronische Kommunikation (GEREK)
   aliases:
@@ -1173,7 +1173,7 @@ entities:
   name_en: Electronic signature
   name_de: Elektronische Signatur
 - id: eudi-cooperation-group
-  type: Organization
+  type: Organisation
   name_en: European Digital Identity Cooperation Group
   name_de: Kooperationsgruppe für die europäische digitale Identität
 - id: word2vec
@@ -1306,7 +1306,7 @@ entities:
   - Digital Omnibus on AI
   - Regulation (EU) 2026/1744
 - id: edps
-  type: Organization
+  type: Organisation
   name_en: European Data Protection Supervisor (EDPS)
   name_de: Europäischer Datenschutzbeauftragter (EDSB)
   aliases:
@@ -1412,7 +1412,7 @@ entities:
   aliases:
   - Directive 95/46/EC
 - id: edpb
-  type: Organization
+  type: Organisation
   name_en: European Data Protection Board (EDPB)
   name_de: Europäischer Datenschutzausschuss (EDSA)
   aliases:
@@ -1586,7 +1586,7 @@ entities:
   name_en: Knowledge graph refinement
   name_de: Knowledge Graph Refinement
 - id: google
-  type: Organization
+  type: Organisation
   name_en: Google
   name_de: Google
 - id: helm
@@ -1683,17 +1683,17 @@ entities:
   name_en: DeepSeek LLM
   name_de: DeepSeek LLM
 - id: google-deepmind
-  type: Organization
+  type: Organisation
   name_en: Google DeepMind
   name_de: Google DeepMind
 - id: mistral-ai
-  type: Organization
+  type: Organisation
   name_en: Mistral AI
   name_de: Mistral AI
   aliases:
   - Mistral
 - id: amazon
-  type: Organization
+  type: Organisation
   name_en: Amazon
   name_de: Amazon
 - id: flan
@@ -1975,7 +1975,7 @@ entities:
   - NIS1
   - Directive (EU) 2016/1148
 - id: eu-cyclone
-  type: Organization
+  type: Organisation
   name_en: EU-CyCLONe (European cyber crisis liaison organisation network)
   name_de: EU-CyCLONe
   aliases:
@@ -2415,7 +2415,7 @@ entities:
   name_en: Bayesian inference
   name_de: Bayessche Inferenz
 - id: american-statistical-association
-  type: Organization
+  type: Organisation
   name_en: American Statistical Association (ASA)
   name_de: American Statistical Association (ASA)
 - id: raptor
@@ -2765,7 +2765,7 @@ entities:
   aliases:
   - PKCE
 - id: owasp
-  type: Organization
+  type: Organisation
   name_en: OWASP
   name_de: OWASP
   aliases:

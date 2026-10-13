@@ -179,3 +179,55 @@ def test_code_blocks_are_not_headings():
     note = technical().replace("#### 1. Step\nText.\n", "#### 1. Step\n```text\n### not a heading\n```\n")
 
     assert check_template(note) == []
+
+
+ORGANISATION_EN = ["TL;DR", "Key facts", "Mandate and tasks", "Structure and working methods",
+                   "Key outputs", "Relevance for AI development", "Sources"]
+ORGANISATION_DE = ["TL;DR", "Eckdaten", "Auftrag und Aufgaben", "Aufbau und Arbeitsweise",
+                   "Wichtige Ergebnisse", "Bedeutung für die KI-Entwicklung", "Quellen"]
+
+
+def organisation(sections_en=None, sections_de=None, jurisdiction="International"):
+    body_en = "".join(f"### {title}\nText.\n\n" for title in (sections_en or ORGANISATION_EN))
+    body_de = "".join(f"### {title}\nText.\n\n" for title in (sections_de or ORGANISATION_DE))
+    extra = f"jurisdiction: {jurisdiction}\n" if jurisdiction else ""
+    return f"""---
+title_en: World Wide Web Consortium (W3C)
+title_de: World Wide Web Consortium (W3C)
+entity_type: Organisation
+{extra}sources:
+  - {SOURCE}
+---
+
+## EN
+
+> **Note:** LLM-generated summary.
+
+{body_en}[Website]({SOURCE})
+
+## DE
+
+> **Hinweis:** LLM-generierte Zusammenfassung.
+
+{body_de}[Website]({SOURCE})
+"""
+
+
+def test_organisation_notes_use_the_organisation_template():
+    assert check_template(organisation()) == []
+
+
+def test_organisation_sections_are_required():
+    problems = check_template(organisation(sections_en=[s for s in ORGANISATION_EN if s != "Key outputs"]))
+    assert any("missing sections: Key outputs" in p for p in problems)
+
+
+def test_organisation_jurisdiction_is_required():
+    problems = check_template(organisation(jurisdiction=None))
+    assert any("jurisdiction" in p for p in problems)
+
+
+def test_organisation_allows_relationship_section():
+    en = ORGANISATION_EN[:-1] + ["Relationship to other bodies", "Sources"]
+    de = ORGANISATION_DE[:-1] + ["Verhältnis zu anderen Stellen", "Quellen"]
+    assert check_template(organisation(sections_en=en, sections_de=de)) == []

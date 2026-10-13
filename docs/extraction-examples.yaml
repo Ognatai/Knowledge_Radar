@@ -50,7 +50,7 @@ examples:
       applications as charts (Helm docs).
     answer:
       new_entities:
-        - {id: google, type: Organization, name_en: Google, name_de: Google}
+        - {id: google, type: Organisation, name_en: Google, name_de: Google}
         - {id: helm, type: Technology, name_en: Helm, name_de: Helm}
       discusses: [google, helm]
       relations:

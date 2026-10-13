@@ -30,7 +30,7 @@ def extraction_model(prompt, json_schema=None, **options):
         slug = found.group(0) if found else "private-document"
         return json.dumps(
             {
-                "new_entities": [{"id": "acme-labs", "type": "Organization", "name_en": "ACME Labs", "name_de": "ACME Labs"}],
+                "new_entities": [{"id": "acme-labs", "type": "Organisation", "name_en": "ACME Labs", "name_de": "ACME Labs"}],
                 "discusses": ["acme-labs", "retrieval-augmented-generation"],
                 "relations": [{"from": slug, "type": "BASED_ON", "to": "retrieval-augmented-generation", "evidence": "x"}],
             }

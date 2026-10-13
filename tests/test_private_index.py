@@ -26,7 +26,7 @@ def test_the_private_graph_combines_the_private_files_and_referenced_public_enti
     documents = load_documents(repo)
     note = next(d for d in documents if d.kind == "round_note")
     graph = repo / "graph"
-    write_yaml(graph / "entities.yaml", {"entities": [{"id": "acme-labs", "type": "Organization", "name_en": "ACME Labs"}]})
+    write_yaml(graph / "entities.yaml", {"entities": [{"id": "acme-labs", "type": "Organisation", "name_en": "ACME Labs"}]})
     write_yaml(graph / "structure.yaml", {"entities": [{"id": "company-acme-gmbh", "type": "Company", "name_en": "ACME GmbH"}], "relations": []})
     write_yaml(
         graph / "requirements.yaml",

@@ -3,7 +3,7 @@ cases:
 - kind: distinct
   entity: edps
   name: European Data Protection Supervisor (EDPS)
-  type: Organization
+  type: Organisation
   near: edpb
   expected: null
   split: dev
@@ -61,7 +61,7 @@ cases:
 - kind: alias
   entity: basel-committee
   name: BCBS
-  type: Organization
+  type: Organisation
   expected: basel-committee
   split: test
 - kind: distinct
@@ -348,7 +348,7 @@ cases:
 - kind: distinct
   entity: ecb
   name: European Central Bank (ECB)
-  type: Organization
+  type: Organisation
   near: eba
   expected: null
   split: test

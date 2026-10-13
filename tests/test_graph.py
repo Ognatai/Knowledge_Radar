@@ -7,7 +7,7 @@ from tests.test_notes_api import write_note
 REGISTRY = """version: 1
 entities:
   - id: microsoft
-    type: Organization
+    type: Organisation
     name_en: Microsoft
     name_de: Microsoft
     aliases: [Microsoft Research]
@@ -110,7 +110,7 @@ def test_relation_types_follow_schema(tmp_path):
 """
     write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), relations))
 
-    with pytest.raises(GraphError, match="BASED_ON.*Organization"):
+    with pytest.raises(GraphError, match="BASED_ON.*Organisation"):
         load_graph(graph_dir, load_notes(notes_dir), notes_dir)
 
 
@@ -206,7 +206,7 @@ def test_registry_ids_must_not_shadow_note_entities(tmp_path):
 
 @pytest.mark.parametrize("entity_type", ["Note", "Company", "Unknown"])
 def test_registry_types_must_be_public_entity_types(tmp_path, entity_type):
-    registry = REGISTRY.replace("type: Organization", f"type: {entity_type}")
+    registry = REGISTRY.replace("type: Organisation", f"type: {entity_type}")
     notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
 
     with pytest.raises(GraphError, match=entity_type):
@@ -272,7 +272,7 @@ def test_note_entities_carry_frontmatter_aliases(tmp_path):
 def test_entity_keys_cover_names_aliases_and_parentheses():
     from app.backend.knowledge_radar.graph import Entity, entity_keys
 
-    entity = Entity(id="w3c", type="Organization", name_en="World Wide Web Consortium (W3C)", name_de="W3C", aliases=["Web Consortium"])
+    entity = Entity(id="w3c", type="Organisation", name_en="World Wide Web Consortium (W3C)", name_de="W3C", aliases=["Web Consortium"])
 
     assert {"w3c", "worldwidewebconsortium", "webconsortium"} <= entity_keys(entity)
 
@@ -332,7 +332,7 @@ def test_plus_signs_keep_names_apart():
 
 def test_entities_of_one_type_must_not_share_a_name(tmp_path):
     registry = REGISTRY + """  - id: msr
-    type: Organization
+    type: Organisation
     name_en: MSR
     name_de: MSR
     aliases: [Microsoft Research]

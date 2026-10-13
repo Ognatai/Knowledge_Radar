@@ -19,7 +19,7 @@ entities:
     name_en: IRCoT
     name_de: IRCoT
   - id: microsoft
-    type: Organization
+    type: Organisation
     name_en: Microsoft
     name_de: Microsoft
   - id: trade-secret
@@ -151,7 +151,7 @@ entities:
     name_en: Knowledge graph embeddings
     name_de: Knowledge Graph Embeddings
   - id: w3c
-    type: Organization
+    type: Organisation
     name_en: World Wide Web Consortium (W3C)
     name_de: World Wide Web Consortium (W3C)
     aliases: [W3C]
@@ -180,7 +180,7 @@ entities:
     name_en: Multi-agent system
     name_de: Multi-Agenten-System
   - id: anthropic
-    type: Organization
+    type: Organisation
     name_en: Anthropic
     name_de: Anthropic
   - id: json-rpc
@@ -252,12 +252,12 @@ entities:
     name_de: KRITIS-Dachgesetz (KRITISDachG)
     aliases: [KRITIS Umbrella Act, KRITISDachG]
   - id: basel-committee
-    type: Organization
+    type: Organisation
     name_en: Basel Committee on Banking Supervision
     name_de: Basler Ausschuss für Bankenaufsicht
     aliases: [Basel Committee, BCBS]
   - id: ecb
-    type: Organization
+    type: Organisation
     name_en: European Central Bank (ECB)
     name_de: Europäische Zentralbank (EZB)
     aliases: [ECB, EZB]
@@ -275,12 +275,12 @@ entities:
     name_en: Consent for cookies and device access
     name_de: Einwilligung für Cookies und Endgerätezugriff
   - id: bfdi
-    type: Organization
+    type: Organisation
     name_en: Federal Commissioner for Data Protection and Freedom of Information (BfDI)
     name_de: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
     aliases: [BfDI]
   - id: federal-network-agency
-    type: Organization
+    type: Organisation
     name_en: Federal Network Agency
     name_de: Bundesnetzagentur
   - id: digitale-dienste-gesetz
@@ -303,7 +303,7 @@ entities:
     name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
     name_de: Einwilligungsverwaltungsverordnung (EinwV)
   - id: federal-ministry-of-the-interior
-    type: Organization
+    type: Organisation
     name_en: Federal Ministry of the Interior
     name_de: Bundesministerium des Innern
   - id: mt-bench

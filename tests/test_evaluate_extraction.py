@@ -29,13 +29,13 @@ def test_entities_align_by_id_name_or_alias():
     gold = {
         "alpha": ALPHA,
         "hipporag": entity("hipporag", "HippoRAG"),
-        "w3c": entity("w3c", "World Wide Web Consortium (W3C)", "Organization", aliases=["W3C"]),
+        "w3c": entity("w3c", "World Wide Web Consortium (W3C)", "Organisation", aliases=["W3C"]),
     }
     predicted = {
         "alpha": ALPHA,
         "hippo-rag": entity("hippo-rag", "Hippo RAG"),
-        "world-wide-web-consortium": entity("world-wide-web-consortium", "W3C", "Organization"),
-        "openai": entity("openai", "OpenAI", "Organization"),
+        "world-wide-web-consortium": entity("world-wide-web-consortium", "W3C", "Organisation"),
+        "openai": entity("openai", "OpenAI", "Organisation"),
     }
 
     assert align_entities(predicted, gold) == {

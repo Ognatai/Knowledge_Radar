@@ -16,7 +16,7 @@ def entity(identifier, name, type_="Method", aliases=()):
 KNOWN = {
     "bm25": entity("bm25", "BM25", aliases=["Okapi BM25"]),
     "bm25f": entity("bm25f", "BM25F"),
-    "ecb": entity("ecb", "European Central Bank", "Organization"),
+    "ecb": entity("ecb", "European Central Bank", "Organisation"),
 }
 
 
@@ -129,9 +129,9 @@ def test_confirmed_aliases_are_written_to_the_registry(tmp_path):
 
 
 def test_an_acronym_shortlists_the_entities_it_abbreviates():
-    known = {**KNOWN, "dga": entity("data-governance-act", "Data Governance Act", "Organization")}
+    known = {**KNOWN, "dga": entity("data-governance-act", "Data Governance Act", "Organisation")}
     index = NameIndex(known, fake_embed)
 
-    nearest = index.nearest(entity("dga-new", "DGA", "Organization"))
+    nearest = index.nearest(entity("dga-new", "DGA", "Organisation"))
 
     assert nearest[0].id == "data-governance-act"

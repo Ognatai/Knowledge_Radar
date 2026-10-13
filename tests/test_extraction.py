@@ -82,7 +82,7 @@ def test_extract_note_accepts_valid_output_and_registers_new_entities(tmp_path):
     llm = fake_llm(
         {
             "new_entities": [
-                {"id": "openai", "type": "Organization", "name_en": "OpenAI", "name_de": "OpenAI"}
+                {"id": "openai", "type": "Organisation", "name_en": "OpenAI", "name_de": "OpenAI"}
             ],
             "discusses": ["microsoft", "beta"],
             "relations": [
@@ -103,7 +103,7 @@ def test_extract_note_accepts_valid_output_and_registers_new_entities(tmp_path):
     assert result.new_entities == []
     assert result.dropped == []
     assert "Alpha was developed by **Microsoft**" in llm.prompts[0]
-    assert "microsoft | Organization | Microsoft" in llm.prompts[0]
+    assert "microsoft | Organisation | Microsoft" in llm.prompts[0]
 
 
 def test_extract_note_asks_for_corrections_and_drops_what_stays_invalid(tmp_path):
@@ -140,7 +140,7 @@ def test_new_entity_with_a_known_id_refers_to_the_known_entity(tmp_path):
     *_, graph, alpha = load(tmp_path)
     llm = fake_llm(
         {
-            "new_entities": [{"id": "microsoft", "type": "Organization", "name_en": "MS", "name_de": "MS"}],
+            "new_entities": [{"id": "microsoft", "type": "Organisation", "name_en": "MS", "name_de": "MS"}],
             "discusses": ["microsoft"],
             "relations": [],
         }
@@ -155,7 +155,7 @@ def test_write_extraction_produces_a_valid_graph(tmp_path):
     notes_dir, graph_dir, notes, graph, alpha = load(tmp_path)
     llm = fake_llm(
         {
-            "new_entities": [{"id": "openai", "type": "Organization", "name_en": "OpenAI", "name_de": "OpenAI"}],
+            "new_entities": [{"id": "openai", "type": "Organisation", "name_en": "OpenAI", "name_de": "OpenAI"}],
             "discusses": ["openai", "microsoft"],
             "relations": [{"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft", "evidence": "Alpha was developed by Microsoft"}],
         }
@@ -193,7 +193,7 @@ def test_new_entity_without_german_name_uses_the_english_name(tmp_path):
     *_, graph, alpha = load(tmp_path)
     llm_answer = fake_llm(
         {
-            "new_entities": [{"id": "openai", "type": "Organization", "name_en": "OpenAI", "name_de": ""}],
+            "new_entities": [{"id": "openai", "type": "Organisation", "name_en": "OpenAI", "name_de": ""}],
             "discusses": ["openai"],
             "relations": [],
         }
@@ -212,7 +212,7 @@ def test_prompt_lists_only_entities_mentioned_in_the_chunk(tmp_path):
     extract_note(alpha, known_entities(graph), generate=llm_answer, classify=False)
 
     table = llm_answer.prompts[0].split("<known_entities>")[1].split("</known_entities>")[0]
-    assert "microsoft | Organization" in table  # named in the text
+    assert "microsoft | Organisation" in table  # named in the text
     assert "beta | Method" in table  # linked from the text
     assert "knowledge-graph |" not in table  # not mentioned
 
@@ -221,7 +221,7 @@ def test_new_entity_matching_a_known_name_is_resolved_to_it(tmp_path):
     *_, graph, alpha = load(tmp_path)
     llm_answer = fake_llm(
         {
-            "new_entities": [{"id": "microsoft-research", "type": "Organization", "name_en": "Microsoft Research", "name_de": ""}],
+            "new_entities": [{"id": "microsoft-research", "type": "Organisation", "name_en": "Microsoft Research", "name_de": ""}],
             "discusses": ["microsoft-research"],
             "relations": [
                 {"from": "alpha", "type": "DEVELOPED_BY", "to": "microsoft-research", "evidence": "Alpha was developed by Microsoft"}
@@ -306,7 +306,7 @@ def test_relation_pass_finds_relations_the_entity_pass_missed(tmp_path):
 
     assert [(r["from"], r["type"], r["to"]) for r in result.relations] == [("alpha", "DEVELOPED_BY", "microsoft")]
     assert "find every relation" in llm_answer.prompts[1]
-    assert "microsoft | Organization" in llm_answer.prompts[1]
+    assert "microsoft | Organisation" in llm_answer.prompts[1]
 
 
 def test_entities_only_referenced_by_a_link_in_parentheses_are_not_discussed(tmp_path):
@@ -338,7 +338,7 @@ def test_relation_pass_may_register_entities_the_first_pass_missed(tmp_path):
     llm_answer = fake_llm(
         {"new_entities": [], "discusses": [], "relations": []},
         {
-            "new_entities": [{"id": "gamma-lab", "type": "Organization", "name_en": "Gamma Lab", "name_de": ""}],
+            "new_entities": [{"id": "gamma-lab", "type": "Organisation", "name_en": "Gamma Lab", "name_de": ""}],
             "discusses": [],
             "relations": [{"from": "alpha", "type": "DEVELOPED_BY", "to": "gamma-lab", "evidence": "Alpha was created by the Gamma Lab"}],
         },
@@ -434,7 +434,7 @@ def test_parenthetical_qualifiers_are_not_names_of_their_own():
     from app.backend.knowledge_radar.graph import Entity
 
     space = Entity(id="confluence-space", type="Concept", name_en="Space (Confluence)", name_de="Bereich (Confluence)")
-    w3c = Entity(id="w3c", type="Organization", name_en="World Wide Web Consortium (W3C)", name_de="W3C")
+    w3c = Entity(id="w3c", type="Organisation", name_en="World Wide Web Consortium (W3C)", name_de="W3C")
     entities = {"confluence-space": space, "w3c": w3c}
 
     assert mentioned_entities("Confluence is a wiki in vector spaces.", entities) == {}

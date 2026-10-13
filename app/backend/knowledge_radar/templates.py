@@ -17,7 +17,7 @@ import yaml
 
 from app.backend.knowledge_radar.notes import FRONTMATTER_PATTERN, SECTION_PATTERN
 
-TEMPLATES = ("regulatory", "technical")
+TEMPLATES = ("regulatory", "technical", "organisation")
 
 # (EN heading, DE heading); required sections must appear in this order.
 REGULATORY_REQUIRED = [
@@ -43,6 +43,20 @@ TECHNICAL_OPTIONAL = [
     ("In practice", "In der Praxis"),
     ("Regulatory context", "Regulatorischer Kontext"),
 ]
+# Organisations (standards bodies, supervisory authorities).
+ORGANISATION_REQUIRED = [
+    ("TL;DR", "TL;DR"),
+    ("Key facts", "Eckdaten"),
+    ("Mandate and tasks", "Auftrag und Aufgaben"),
+    ("Structure and working methods", "Aufbau und Arbeitsweise"),
+    ("Key outputs", "Wichtige Ergebnisse"),
+    ("Relevance for AI development", "Bedeutung für die KI-Entwicklung"),
+    ("Sources", "Quellen"),
+]
+ORGANISATION_OPTIONAL = [
+    ("Relationship to other bodies", "Verhältnis zu anderen Stellen"),
+    ("In practice", "In der Praxis"),
+]
 # Dated update entries (note_updates.py); always the last section.
 UPDATES = ("Updates", "Aktualisierungen")
 # Technology notes replace "How it works" with these two sections.
@@ -66,7 +80,11 @@ URL = re.compile(r"https?://[^\s)>\]]+")
 
 
 def default_template(entity_type: str) -> str:
-    return "regulatory" if entity_type == "Regulation" else "technical"
+    if entity_type == "Regulation":
+        return "regulatory"
+    if entity_type == "Organisation":
+        return "organisation"
+    return "technical"
 
 
 def _headings(markdown: str) -> list[tuple[int, str]]:
@@ -96,7 +114,7 @@ def _check_frontmatter(frontmatter: dict, template: str) -> list[str]:
             problems.append("'official_reference' is required (e.g. \"Regulation (EU) 2024/1689\").")
         if not isinstance(frontmatter.get("consolidated_version"), dt.date):
             problems.append("'consolidated_version' must be a date (YYYY-MM-DD).")
-    elif template == "regulatory":
+    elif template in ("regulatory", "organisation"):
         if frontmatter.get("jurisdiction") not in REGULATION_FIELDS["jurisdiction"]:
             problems.append(f"'jurisdiction' must be one of {sorted(REGULATION_FIELDS['jurisdiction'])}.")
     return problems
@@ -119,6 +137,9 @@ def _check_language(text: str, lang: str, template: str, entity_type: str) -> li
     if template == "regulatory":
         required = [pair[index] for pair in REGULATORY_REQUIRED]
         allowed = None  # chapters, recitals and annexes are free-form
+    elif template == "organisation":
+        required = [pair[index] for pair in ORGANISATION_REQUIRED]
+        allowed = set(required) | {pair[index] for pair in ORGANISATION_OPTIONAL} | {UPDATES[index]}
     else:
         pairs = TECHNICAL_REQUIRED
         if entity_type == "Technology":
