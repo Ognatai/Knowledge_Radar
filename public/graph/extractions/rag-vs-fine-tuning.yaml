@@ -7,7 +7,6 @@ discusses:
 - lora
 - raft
 - vector-databases
-- approximate-nearest-neighbour-search
 - faiss
 - chain-of-thought-prompting
 relations:

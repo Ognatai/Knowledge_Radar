@@ -1,19 +1,17 @@
 version: 1
-note_sha256: 282c56d384226e8b94df9d57a0cab9dbfb0a05a13606bc54da75552a7388ac7a
+note_sha256: 4f89cccb62320347ea4f42395167a90ebff383fcd786f2ceba05b513f65d86ea
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bm25
 - embeddings
-- bi-encoder
 - sentence-bert
-- dense-retrieval
 - dense-passage-retrieval
 - colbert
 - cross-encoder
 - bert
 - hyde
 - contriever
-- hybrid-retrieval
+- rag-retrieval
 - rag-retrieval-evaluation
 - beir
 - ms-marco
@@ -22,21 +20,13 @@ relations:
   type: BASED_ON
   to: embeddings
   evidence: queries and documents are encoded as vectors, and documents whose vectors are close to the query vector are returned
-- from: semantic-retrieval
-  type: BASED_ON
-  to: bi-encoder
-  evidence: Sentence-BERT encodes each text separately into an embedding compared with cosine similarity
 - from: sentence-bert
   type: IS_EXAMPLE_OF
-  to: bi-encoder
-  evidence: Sentence-BERT encodes each text separately into an embedding compared with cosine similarity
-- from: dense-retrieval
-  type: IS_EXAMPLE_OF
   to: semantic-retrieval
-  evidence: Dense retrievers outperformed BM25 on open-domain question answering
+  evidence: Sentence-BERT encodes each text separately into an embedding compared with cosine similarity
 - from: dense-passage-retrieval
   type: IS_EXAMPLE_OF
-  to: dense-retrieval
+  to: semantic-retrieval
   evidence: retrieval for open-domain question answering can be implemented with dense representations alone, learned from a small number of questions and passages by a dual-encoder framework
 - from: colbert
   type: IS_EXAMPLE_OF

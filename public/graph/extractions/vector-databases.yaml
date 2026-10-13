@@ -1,8 +1,7 @@
 version: 1
-note_sha256: 43a7e69939c6d04d9f41eca89a8e77983366f1a57bcb9d3b2cd9c3cd94538490
+note_sha256: 55c7428c0d96bc5c5e93517f5dbcb02ccf39cbb326c28582906cd51bd6729959
 extracted_by: claude
 discusses:
-- approximate-nearest-neighbour-search
 - hnsw
 - inverted-file-index
 - product-quantisation
@@ -20,10 +19,6 @@ discusses:
 relations:
 - from: vector-databases
   type: BASED_ON
-  to: approximate-nearest-neighbour-search
-  evidence: Vector databases provide scalable approximate nearest neighbour search for high-dimensional vector embeddings
-- from: vector-databases
-  type: BASED_ON
   to: metadata-filtering
   evidence: supporting metadata filtering for context-aware retrieval
 - from: vector-databases
@@ -32,11 +27,11 @@ relations:
   evidence: Vector database management systems (VDBMSs) evolved from similarity search libraries (e.g., FAISS)
 - from: hnsw
   type: IS_EXAMPLE_OF
-  to: approximate-nearest-neighbour-search
+  to: vector-databases
   evidence: Hierarchical Graph Construction in HNSW incrementally builds a multi-layer graph
 - from: inverted-file-index
   type: IS_EXAMPLE_OF
-  to: approximate-nearest-neighbour-search
+  to: vector-databases
   evidence: IVF (Inverted File Index), which partitions vectors into clusters to reduce search space
 - from: inverted-file-index
   type: BASED_ON

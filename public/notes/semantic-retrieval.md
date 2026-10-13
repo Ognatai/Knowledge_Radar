@@ -2,6 +2,9 @@
 title_en: Semantic Retrieval
 title_de: Semantisches Retrieval
 entity_type: Method
+aliases:
+- Dense retrieval
+- Bi-encoder
 sources:
 - https://arxiv.org/abs/1908.10084
 - https://arxiv.org/abs/2004.04906

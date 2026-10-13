@@ -6,11 +6,10 @@ discusses:
 - cypher
 - neo4j-graph-data-science
 - hnsw
-- approximate-nearest-neighbour-search
+- vector-databases
 - graph-databases
 - knowledge-graphs
 - graphrag
-- vector-databases
 - rdf
 - sparql
 - sql

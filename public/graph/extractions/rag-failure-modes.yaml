@@ -8,7 +8,7 @@ discusses:
 - grounding-hallucination
 - lost-in-the-middle
 - cross-encoder
-- hybrid-retrieval
+- rag-retrieval
 - reciprocal-rank-fusion
 - bm25
 - query-expansion
@@ -23,11 +23,11 @@ relations:
   type: BASED_ON
   to: retrieval-augmented-generation
   evidence: RAG failure modes define the distinct failure points within the RAG pipeline
-- from: hybrid-retrieval
+- from: rag-retrieval
   type: BASED_ON
   to: bm25
   evidence: a weighted sum such as `score = w1 * bm25_score + w2 * embedding_score`
-- from: hybrid-retrieval
+- from: rag-retrieval
   type: BASED_ON
   to: reciprocal-rank-fusion
   evidence: Hybrid retrieval fuses sparse and dense results, either by rank (reciprocal rank fusion)

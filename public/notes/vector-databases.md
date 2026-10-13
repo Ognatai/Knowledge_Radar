@@ -2,6 +2,10 @@
 title_en: Vector Databases
 title_de: Vektordatenbanken
 entity_type: Concept
+aliases:
+- Approximate nearest neighbour (ANN) search
+- Approximate nearest neighbour search
+- ANN search
 sources:
 - https://arxiv.org/abs/1603.09320
 - https://arxiv.org/abs/1702.08734

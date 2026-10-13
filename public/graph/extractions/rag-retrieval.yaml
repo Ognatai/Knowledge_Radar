@@ -1,17 +1,15 @@
 version: 1
-note_sha256: 82c4f7a516d16666747bfc3c605a66f62b4388875fe7d335292cc8698f261338
+note_sha256: 78ab826e5a3ed072a2fc341cb1144cef066c4380bafd32c2b86d7df09ddd1021
 extracted_by: claude
 discusses:
 - sparse-retrieval
-- dense-retrieval
-- bi-encoder
+- semantic-retrieval
 - dense-passage-retrieval
 - bm25
 - inverted-index
 - sentence-bert
-- approximate-nearest-neighbour-search
+- vector-databases
 - hnsw
-- hybrid-retrieval
 - reciprocal-rank-fusion
 - cross-encoder
 - bert
@@ -29,7 +27,7 @@ relations:
   evidence: 'RAG retrieval employs a multi-stage process: sparse retrieval using BM25'
 - from: rag-retrieval
   type: BASED_ON
-  to: dense-retrieval
+  to: semantic-retrieval
   evidence: while dense retrieval with bi-encoders generates semantic embeddings
 - from: rag-retrieval
   type: BASED_ON
@@ -43,39 +41,27 @@ relations:
   type: BASED_ON
   to: inverted-index
   evidence: Lexical term matching over an inverted index; no embedding model
-- from: dense-retrieval
-  type: BASED_ON
-  to: bi-encoder
-  evidence: Dense retrieval with bi-encoders encodes queries and passages independently into embeddings
-- from: dense-retrieval
+- from: semantic-retrieval
   type: BASED_ON
   to: embeddings
   evidence: Dense retrieval with bi-encoders encodes queries and passages independently into embeddings
-- from: dense-retrieval
+- from: semantic-retrieval
   type: BASED_ON
-  to: approximate-nearest-neighbour-search
+  to: vector-databases
   evidence: Independent embeddings, nearest-neighbour search; matches meaning without shared words
 - from: dense-passage-retrieval
   type: IS_EXAMPLE_OF
-  to: bi-encoder
+  to: semantic-retrieval
   evidence: either with two separate encoders (as in the dual-encoder of Karpukhin et al., 2020)
 - from: sentence-bert
   type: IS_EXAMPLE_OF
-  to: bi-encoder
+  to: semantic-retrieval
   evidence: with one shared encoder trained in a siamese set-up (as in Sentence-BERT)
 - from: hnsw
   type: IS_EXAMPLE_OF
-  to: approximate-nearest-neighbour-search
+  to: vector-databases
   evidence: The HNSW (Hierarchical NSW) algorithm, introduced by Malkov & Yashunin (2016), constructs a multi-layer graph
-- from: hybrid-retrieval
-  type: BASED_ON
-  to: sparse-retrieval
-  evidence: Hybrid Search Fusion (RRF) combines parallel sparse
-- from: hybrid-retrieval
-  type: BASED_ON
-  to: dense-retrieval
-  evidence: Runs both and fuses the ranked lists by rank
-- from: hybrid-retrieval
+- from: rag-retrieval
   type: BASED_ON
   to: reciprocal-rank-fusion
   evidence: hybrid fusion combines sparse and dense results using Reciprocal Rank Fusion (RRF)
@@ -89,7 +75,7 @@ relations:
   evidence: independently encodes queries and documents into token-level embeddings using BERT
 - from: hyde
   type: IS_EXAMPLE_OF
-  to: dense-retrieval
+  to: semantic-retrieval
   evidence: Zero-Shot Dense Retrieval via Hypothetical Document Embeddings (HyDE) generates a hypothetical document from a query
 - from: hyde
   type: BASED_ON
