@@ -2956,3 +2956,15 @@ entities:
   name_de: Normalisierte Mutual Information (NMI)
   aliases:
   - NMI
+- id: stemming
+  type: Method
+  name_en: Stemming
+  name_de: Stemming
+- id: boolean-retrieval
+  type: Method
+  name_en: Boolean retrieval
+  name_de: Boolesches Retrieval
+- id: compound-splitting
+  type: Method
+  name_en: Compound splitting
+  name_de: Kompositazerlegung

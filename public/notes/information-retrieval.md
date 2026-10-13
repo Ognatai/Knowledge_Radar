@@ -5,6 +5,9 @@ entity_type: Concept
 sources:
 - https://edoc.ub.uni-muenchen.de/36297/
 - https://nlp.stanford.edu/IR-book/
+- https://nlp.stanford.edu/IR-book/pdf/01bool.pdf
+- https://nlp.stanford.edu/IR-book/pdf/02voc.pdf
+- https://nlp.stanford.edu/IR-book/pdf/06vect.pdf
 - https://doi.org/10.1561/1500000019
 - https://doi.org/10.1145/361219.361220
 - https://doi.org/10.1016/0306-4573%2888%2990021-0
@@ -17,7 +20,7 @@ sources:
 
 ### TL;DR
 
-Information retrieval (IR) finds the documents in a large collection that are relevant to a query and ranks them (Manning et al., 2008). Classical systems use an [[inverted-index|inverted index]] and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information retrieval (IR) is finding material, usually text documents, of an unstructured nature that satisfies an information need from within large collections (Manning et al., 2008, ch. 1); systems find the documents relevant to a query and rank them (Manning et al., 2008). Classical systems use an [[inverted-index|inverted index]] and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### How it works
 
@@ -43,13 +46,17 @@ Documents are indexed in advance. At query time, the system looks up candidate d
 
 An inverted index maps each term to the list of documents that contain it (Manning et al., 2008). To answer a query, the system only reads the lists of the query terms instead of scanning the whole collection. The index supports Boolean retrieval, where documents either match a combination of terms or not, and ranked retrieval, where the matching documents are scored.
 
+Before indexing, text is split into tokens and normalised. Stop lists have shrunk over time from 200–300 terms to none, and web search engines generally do not use them, since term weighting already gives very common words little impact. Stemming, for example with the Porter stemmer, increases recall but harms precision and does not improve English retrieval much in aggregate: it maps *operating*, *operative* and *operational* all to *oper*. German writes compounds without spaces, so German retrieval benefits greatly from a compound splitter (Manning et al., 2008, ch. 2).
+
+Boolean queries remain common among professional searchers: in 2005 the legal search service Westlaw still used Boolean search by default. Yet AND queries tend to give high precision but low recall and OR queries the reverse, and on a Westlaw collection free-text queries produced better results than Boolean queries written by Westlaw's own reference librarians for most information needs (Turtle, 1994, in Manning et al., 2008, ch. 1).
+
 #### 2. Vector space model
 
 The vector space model (Salton et al., 1975) represents documents and queries as vectors of term weights in a common space, with one dimension per term. Documents are ranked by their similarity to the query vector; a common measure is the cosine similarity, the cosine of the angle between the two vectors, which does not depend on vector length (Manning et al., 2008).
 
 #### 3. Term weighting with tf-idf
 
-Not all terms are equally informative. Salton & Buckley (1988) systematically compared term-weighting schemes that combine term frequency (how often a term occurs in a document), inverse document frequency (how rare the term is in the collection) and length normalisation. Schemes based on term frequency times inverse document frequency, with normalisation, performed well. As a result, terms that are frequent in a document but rare overall get the highest weights.
+Not all terms are equally informative. Salton & Buckley (1988) systematically compared term-weighting schemes that combine term frequency (how often a term occurs in a document), inverse document frequency (how rare the term is in the collection) and length normalisation. Schemes based on term frequency times inverse document frequency, with normalisation, performed well. As a result, terms that are frequent in a document but rare overall get the highest weights. In the standard form, idf_t = log(N / df_t) for a collection of N documents, of which df_t contain the term, and the tf-idf weight is tf_t,d × idf_t; since twenty occurrences hardly carry twenty times the significance of one, sublinear scaling replaces tf by 1 + log tf (Manning et al., 2008, ch. 6).
 
 #### 4. BM25
 
@@ -70,6 +77,16 @@ Retrieval systems are evaluated against relevance judgements with precision (the
 #### 7. Fairness of retrieval results
 
 Retrieval systems decide who and what becomes visible. Urchs (2025) introduces a bias-preserving definition of algorithmic gender fairness, which asks whether algorithmic outputs reflect real-world gender distributions without introducing or amplifying disparities, and applies it to professors at German universities and universities of applied sciences: completeness of their metadata, retrieval of their publications in academic databases and their visibility in Google search results. No overt algorithmic discrimination was found, but male professors were associated with more search results and more aligned publication records, while female professors showed higher variability in digital visibility, reflecting the interplay of platform algorithms, institutional curation and self-presentation ([[fairness-metrics|Fairness Metrics]]).
+
+#### 8. Further topics
+
+Manning et al. (2008) treat these further topics in their own chapters:
+
+- **Relevance feedback and query expansion** add terms from relevant documents or a thesaurus to the query ([[query-expansion|Query Expansion and Relevance Feedback]]).
+- **Language models** rank documents by the probability that their language model generates the query ([[query-likelihood-model|Query Likelihood Model]]).
+- **Latent semantic indexing** maps terms and documents into a low-rank concept space ([[latent-semantic-indexing|Latent Semantic Indexing]]).
+- **Web search** adds crawling, link analysis and duplicate detection ([[web-crawling|Web Crawling]], [[pagerank|PageRank and Link Analysis]], [[near-duplicate-detection|Near-Duplicate Detection]]).
+- **Classification and clustering** sort documents into known classes or find groups without labels, for example for standing queries or search result clustering ([[classification|Classification]], [[naive-bayes|Naive Bayes]], [[clustering|Clustering]]).
 
 #### Origin and variants
 
@@ -115,6 +132,9 @@ Information retrieval ranks documents for a query, classically with an inverted 
 
 - Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 - Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press. [online edition](https://nlp.stanford.edu/IR-book/)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Boolean retrieval.* Introduction to Information Retrieval, Chapter 1. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/01bool.pdf)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *The term vocabulary and postings lists.* Introduction to Information Retrieval, Chapter 2. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/02voc.pdf)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Scoring, term weighting and the vector space model.* Introduction to Information Retrieval, Chapter 6. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/06vect.pdf)
 - Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
 - Salton, G., Wong, A. & Yang, C. S. (1975). *A Vector Space Model for Automatic Indexing.* Communications of the ACM 18(11). [doi:10.1145/361219.361220](https://doi.org/10.1145/361219.361220)
 - Salton, G. & Buckley, C. (1988). *Term-weighting approaches in automatic text retrieval.* Information Processing & Management 24(5). [doi:10.1016/0306-4573(88)90021-0](https://doi.org/10.1016/0306-4573%2888%2990021-0)
@@ -126,7 +146,7 @@ Information retrieval ranks documents for a query, classically with an inverted 
 
 ### TL;DR
 
-Information Retrieval (IR) findet die Dokumente einer großen Sammlung, die für eine Anfrage relevant sind, und bringt sie in eine Rangfolge (Manning et al., 2008). Klassische Systeme nutzen einen invertierten Index und ranken Dokumente mit Termgewichten wie tf-idf (Salton & Buckley, 1988) oder mit der probabilistischen Funktion [[bm25|BM25]] (Robertson & Zaragoza, 2009). Dense Retrieval vergleicht stattdessen gelernte [[embeddings|Embeddings]] von Anfrage und Passage und übertraf BM25 bei Open-Domain-Fragebeantwortung (Karpukhin et al., 2020). IR ist der Retrieval-Schritt von [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information Retrieval (IR) bedeutet, unstrukturiertes Material, meist Textdokumente, zu finden, das ein Informationsbedürfnis in großen Sammlungen erfüllt (Manning et al., 2008, Kap. 1); Systeme finden die für eine Anfrage relevanten Dokumente und bringen sie in eine Rangfolge (Manning et al., 2008). Klassische Systeme nutzen einen invertierten Index und ranken Dokumente mit Termgewichten wie tf-idf (Salton & Buckley, 1988) oder mit der probabilistischen Funktion [[bm25|BM25]] (Robertson & Zaragoza, 2009). Dense Retrieval vergleicht stattdessen gelernte [[embeddings|Embeddings]] von Anfrage und Passage und übertraf BM25 bei Open-Domain-Fragebeantwortung (Karpukhin et al., 2020). IR ist der Retrieval-Schritt von [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### Funktionsweise
 
@@ -152,13 +172,17 @@ Dokumente werden vorab indexiert. Zur Anfragezeit sucht das System Kandidatendok
 
 Ein [[inverted-index|invertierter Index]] ordnet jedem Term die Liste der Dokumente zu, die ihn enthalten (Manning et al., 2008). Um eine Anfrage zu beantworten, liest das System nur die Listen der Anfrageterme, statt die ganze Sammlung zu durchsuchen. Der Index unterstützt boolesches Retrieval, bei dem Dokumente eine Termkombination erfüllen oder nicht, und Ranked Retrieval, bei dem die gefundenen Dokumente bewertet werden.
 
+Vor dem Indexieren wird Text in Token zerlegt und normalisiert. Stoppwortlisten sind im Lauf der Zeit von 200–300 Termen auf gar keine geschrumpft, und Websuchmaschinen verwenden meist keine, da die Termgewichtung sehr häufigen Wörtern ohnehin wenig Einfluss gibt. Stemming, etwa mit dem Porter-Stemmer, erhöht den Recall, schadet aber der Precision und verbessert englisches Retrieval insgesamt kaum: Es bildet *operating*, *operative* und *operational* alle auf *oper* ab. Das Deutsche schreibt Komposita ohne Leerzeichen, daher profitiert deutsches Retrieval stark von einem Kompositazerleger (Manning et al., 2008, Kap. 2).
+
+Boolesche Anfragen sind bei professionell Suchenden weiter verbreitet: 2005 nutzte der juristische Suchdienst Westlaw standardmäßig noch boolesche Suche. Doch UND-Anfragen liefern meist hohe Precision bei geringem Recall, ODER-Anfragen das Gegenteil, und auf einer Westlaw-Sammlung lieferten Freitextanfragen für die meisten Informationsbedürfnisse bessere Ergebnisse als boolesche Anfragen der Westlaw-eigenen Rechercheure (Turtle, 1994, in Manning et al., 2008, Kap. 1).
+
 #### 2. Vektorraummodell
 
 Das Vektorraummodell (Salton et al., 1975) stellt Dokumente und Anfragen als Vektoren von Termgewichten in einem gemeinsamen Raum dar, mit einer Dimension je Term. Dokumente werden nach ihrer Ähnlichkeit zum Anfragevektor gerankt; ein gängiges Maß ist die Kosinusähnlichkeit, der Kosinus des Winkels zwischen den beiden Vektoren, der nicht von der Vektorlänge abhängt (Manning et al., 2008).
 
 #### 3. Termgewichtung mit tf-idf
 
-Nicht alle Terme sind gleich aussagekräftig. Salton & Buckley (1988) verglichen systematisch Gewichtungsschemata, die Termhäufigkeit (wie oft ein Term in einem Dokument vorkommt), inverse Dokumenthäufigkeit (wie selten der Term in der Sammlung ist) und Längennormalisierung kombinieren. Schemata auf Basis von Termhäufigkeit mal inverser Dokumenthäufigkeit mit Normalisierung schnitten gut ab. Die höchsten Gewichte erhalten damit Terme, die in einem Dokument häufig, in der Sammlung insgesamt aber selten sind.
+Nicht alle Terme sind gleich aussagekräftig. Salton & Buckley (1988) verglichen systematisch Gewichtungsschemata, die Termhäufigkeit (wie oft ein Term in einem Dokument vorkommt), inverse Dokumenthäufigkeit (wie selten der Term in der Sammlung ist) und Längennormalisierung kombinieren. Schemata auf Basis von Termhäufigkeit mal inverser Dokumenthäufigkeit mit Normalisierung schnitten gut ab. Die höchsten Gewichte erhalten damit Terme, die in einem Dokument häufig, in der Sammlung insgesamt aber selten sind. In der Standardform gilt idf_t = log(N / df_t) für eine Sammlung von N Dokumenten, von denen df_t den Term enthalten, und das tf-idf-Gewicht ist tf_t,d × idf_t; da zwanzig Vorkommen kaum die zwanzigfache Bedeutung eines einzelnen haben, ersetzt sublineare Skalierung tf durch 1 + log tf (Manning et al., 2008, Kap. 6).
 
 #### 4. BM25
 
@@ -179,6 +203,16 @@ Retrieval-Systeme werden gegen Relevanzurteile mit Precision (Anteil der gefunde
 #### 7. Fairness von Suchergebnissen
 
 Retrieval-Systeme entscheiden mit darüber, wer und was sichtbar wird. Urchs (2025) führt eine bias-erhaltende Definition algorithmischer Geschlechterfairness ein, die fragt, ob algorithmische Ausgaben die realen Geschlechterverhältnisse abbilden, ohne Ungleichheiten einzuführen oder zu verstärken, und wendet sie auf Professor:innen an deutschen Universitäten und Hochschulen für angewandte Wissenschaften an: auf die Vollständigkeit ihrer Metadaten, das Auffinden ihrer Publikationen in wissenschaftlichen Datenbanken und ihre Sichtbarkeit in den Suchergebnissen von Google. Offene algorithmische Diskriminierung zeigte sich nicht, doch Professoren waren mit mehr Suchergebnissen und stimmigeren Publikationsnachweisen verbunden, während die digitale Sichtbarkeit von Professorinnen stärker schwankte; darin spiegelt sich das Zusammenspiel von Plattformalgorithmen, institutioneller Pflege und Selbstdarstellung ([[fairness-metrics|Fairness-Metriken]]).
+
+#### 8. Weitere Themen
+
+Manning et al. (2008) behandeln diese weiteren Themen in eigenen Kapiteln:
+
+- **Relevance Feedback und Query Expansion** ergänzen die Anfrage um Terme aus relevanten Dokumenten oder einem Thesaurus ([[query-expansion|Query Expansion und Relevance Feedback]]).
+- **Sprachmodelle** ranken Dokumente nach der Wahrscheinlichkeit, dass ihr Sprachmodell die Anfrage erzeugt ([[query-likelihood-model|Query-Likelihood-Modell]]).
+- **Latent Semantic Indexing** bildet Terme und Dokumente in einen niedrigrangigen Konzeptraum ab ([[latent-semantic-indexing|Latent Semantic Indexing]]).
+- **Websuche** ergänzt Crawling, Linkanalyse und Duplikaterkennung ([[web-crawling|Web-Crawling]], [[pagerank|PageRank und Linkanalyse]], [[near-duplicate-detection|Erkennung von Beinahe-Duplikaten]]).
+- **Klassifikation und Clustering** ordnen Dokumente bekannten Klassen zu oder finden Gruppen ohne Labels, etwa für dauerhafte Suchanfragen oder das Clustern von Suchergebnissen ([[classification|Klassifikation]], [[naive-bayes|Naive Bayes]], [[clustering|Clustering]]).
 
 #### Ursprung und Varianten
 
@@ -224,6 +258,9 @@ Information Retrieval bringt Dokumente für eine Anfrage in eine Rangfolge, klas
 
 - Urchs, S. (2025). *Detecting Gender Discrimination in Natural Language Processing.* Dissertation, Ludwig-Maximilians-Universität München. [LMU edoc](https://edoc.ub.uni-muenchen.de/36297/)
 - Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Introduction to Information Retrieval.* Cambridge University Press. [online edition](https://nlp.stanford.edu/IR-book/)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Boolean retrieval.* Introduction to Information Retrieval, Chapter 1. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/01bool.pdf)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *The term vocabulary and postings lists.* Introduction to Information Retrieval, Chapter 2. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/02voc.pdf)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Scoring, term weighting and the vector space model.* Introduction to Information Retrieval, Chapter 6. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/06vect.pdf)
 - Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
 - Salton, G., Wong, A. & Yang, C. S. (1975). *A Vector Space Model for Automatic Indexing.* Communications of the ACM 18(11). [doi:10.1145/361219.361220](https://doi.org/10.1145/361219.361220)
 - Salton, G. & Buckley, C. (1988). *Term-weighting approaches in automatic text retrieval.* Information Processing & Management 24(5). [doi:10.1016/0306-4573(88)90021-0](https://doi.org/10.1016/0306-4573%2888%2990021-0)

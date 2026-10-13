@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "473abe67e1b393058aa0770aa562cb78c1141b23253f990f3801a7a62c454e5a"
+note_sha256: 3793699eeee584341f87741e684b7fddbf2deeae4b8ddedfb71769070062ee15
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - retrieval-augmented-generation
@@ -14,6 +14,18 @@ discusses:
 - bias-preserving-gender-fairness
 - precision
 - recall
+- boolean-retrieval
+- stemming
+- compound-splitting
+- query-expansion
+- query-likelihood-model
+- latent-semantic-indexing
+- web-crawling
+- pagerank
+- near-duplicate-detection
+- classification
+- naive-bayes
+- clustering
 relations:
 - from: retrieval-augmented-generation
   type: BASED_ON
