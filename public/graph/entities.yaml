@@ -431,10 +431,6 @@ entities:
   type: Method
   name_en: Geometric debiasing of word embeddings
   name_de: Geometrisches Debiasing von Word Embeddings
-- id: chatgpt
-  type: Technology
-  name_en: ChatGPT
-  name_de: ChatGPT
 - id: actor-level-corpus-analysis
   type: Method
   name_en: Actor-level corpus analysis

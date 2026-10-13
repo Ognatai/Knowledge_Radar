@@ -51,7 +51,7 @@ LoRA freezes the pretrained weights and injects trainable rank-decomposition mat
 
 #### 4. QLoRA
 
-QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It introduces 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double quantisation, which also quantises the quantisation constants, and paged optimisers to handle memory spikes. This reduces memory enough to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark after 24 hours of fine-tuning on one GPU (Dettmers et al., 2023).
+QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It introduces 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double quantisation, which also quantises the quantisation constants, and paged optimisers to handle memory spikes. This reduces memory enough to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of [[chatgpt|ChatGPT]]'s performance on the Vicuna benchmark after 24 hours of fine-tuning on one GPU (Dettmers et al., 2023).
 
 #### 5. Knowledge distillation
 
@@ -150,7 +150,7 @@ LoRA friert die vortrainierten Gewichte ein und injiziert in jede Schicht des Tr
 
 #### 4. QLoRA
 
-QLoRA propagiert Gradienten durch ein gefrorenes, 4-Bit-quantisiertes vortrainiertes Modell in LoRA-Adapter (Dettmers et al., 2023). Es führt 4-Bit NormalFloat (NF4) ein, einen Datentyp, der informationstheoretisch optimal für normalverteilte Gewichte ist, eine Doppelquantisierung, die auch die Quantisierungs-Konstanten quantisiert, und Paged Optimizers, um Speicherspitzen abzufangen. Dies reduziert den Speicherbedarf genug, um ein Modell mit 65 B Parametern auf einer einzigen 48-GB-GPU feinabzustimmen, während die volle 16-Bit-Feinabstimmungsleistung erhalten bleibt; die entstandenen Guanaco-Modelle erreichten nach 24 Stunden Feinabstimmung auf einer GPU 99,3 % der Leistung von ChatGPT auf dem Vicuna-Benchmark (Dettmers et al., 2023).
+QLoRA propagiert Gradienten durch ein gefrorenes, 4-Bit-quantisiertes vortrainiertes Modell in LoRA-Adapter (Dettmers et al., 2023). Es führt 4-Bit NormalFloat (NF4) ein, einen Datentyp, der informationstheoretisch optimal für normalverteilte Gewichte ist, eine Doppelquantisierung, die auch die Quantisierungs-Konstanten quantisiert, und Paged Optimizers, um Speicherspitzen abzufangen. Dies reduziert den Speicherbedarf genug, um ein Modell mit 65 B Parametern auf einer einzigen 48-GB-GPU feinabzustimmen, während die volle 16-Bit-Feinabstimmungsleistung erhalten bleibt; die entstandenen Guanaco-Modelle erreichten nach 24 Stunden Feinabstimmung auf einer GPU 99,3 % der Leistung von [[chatgpt|ChatGPT]] auf dem Vicuna-Benchmark (Dettmers et al., 2023).
 
 #### 5. Knowledge Distillation
 

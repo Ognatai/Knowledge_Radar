@@ -10,6 +10,7 @@ areas:
       - attention-and-transformers
       - large-language-models
       - gpt
+      - chatgpt
       - bert
       - natural-language-processing
       - n-gram-language-models

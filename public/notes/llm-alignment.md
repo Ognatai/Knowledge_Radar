@@ -87,7 +87,7 @@ Initialising reward models from pretrained LLMs goes back to Ziegler et al. (201
 **Limitations**
 - The reward model is only a noisy surrogate for what people actually want (Jurafsky & Martin, 2026).
 - Aligned models still make simple mistakes (Ouyang et al., 2022).
-- In German and English ChatGPT responses, naming a gender in the prompt seemingly triggered a template about gender equality and diversity that ignored other aspects, possibly because RLHF "over-corrects" (Urchs, 2025).
+- In German and English [[chatgpt|ChatGPT]] responses, naming a gender in the prompt seemingly triggered a template about gender equality and diversity that ignored other aspects, possibly because RLHF "over-corrects" (Urchs, 2025).
 - RLHF has open problems and fundamental limitations, and relatively little public work has systematised its flaws; Casper et al. (2023) call for auditing and disclosure standards and a multi-faceted approach to safety.
 
 ### Comparison

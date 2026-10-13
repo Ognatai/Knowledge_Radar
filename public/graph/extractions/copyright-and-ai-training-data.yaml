@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 83e6b9911298849e4afd78c30f2fa34d88f6f10dbcb7917a2ed4bae5a72a4ee7
+note_sha256: 1e7989720779a150aec80dde92ee74d50a64a1ae63ad817a58a9660916f4dff4
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - eu-ai-act

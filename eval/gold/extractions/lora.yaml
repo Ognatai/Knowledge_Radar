@@ -1,5 +1,5 @@
 version: 1
-note_sha256: cc50209981cd56199b7ac1bc61a77c596b80c2a1fa3069119604e1e273f68098
+note_sha256: 4dcae794f6c4098bd2573f0871359d95f4f54946e8524920cc2976acf82f89a3
 extracted_by: manual
 discusses:
 - llm-adaptation

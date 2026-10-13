@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e7c38163b3f4b46277819c4f90a252c855281b8ce219f46f427f48d3918d4abc
+note_sha256: b82ce575d3f629392f39775ab367ee340160c0ceadfdf2fa834b0b4b533ddb30
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - attention-and-transformers

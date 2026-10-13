@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 308f1c91b1e6ef5a9d5f8c95799f240be4333e9233613a7ec1e827cd155c6067
+note_sha256: b041acfb12d7b7ba149a32dfb51c38d3b0979c0e24b98bba80249d344933eb1f
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - direct-preference-optimization

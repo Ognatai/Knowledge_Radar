@@ -51,7 +51,7 @@ G-Eval (Liu et al., 2023) lets the judge first generate detailed evaluation step
 
 #### 3. Position bias and calibration
 
-Wang et al. (2023) showed that the ranking of candidate answers can be manipulated simply by changing their order in the prompt: with ChatGPT as judge, Vicuna-13B appeared better than ChatGPT on 66 of 80 queries. They propose three calibration strategies: multiple evidence calibration, in which the judge generates evaluation evidence before giving scores; balanced position calibration, which aggregates the results over both orders of the answers; and human-in-the-loop calibration, which uses a diversity measure to identify difficult examples and asks humans to judge them.
+Wang et al. (2023) showed that the ranking of candidate answers can be manipulated simply by changing their order in the prompt: with [[chatgpt|ChatGPT]] as judge, Vicuna-13B appeared better than ChatGPT on 66 of 80 queries. They propose three calibration strategies: multiple evidence calibration, in which the judge generates evaluation evidence before giving scores; balanced position calibration, which aggregates the results over both orders of the answers; and human-in-the-loop calibration, which uses a diversity measure to identify difficult examples and asks humans to judge them.
 
 #### 4. Other biases
 
@@ -148,7 +148,7 @@ G-Eval (Liu et al., 2023) lässt den Judge zunächst mit [[chain-of-thought-prom
 
 #### 3. Position Bias und Kalibrierung
 
-Wang et al. (2023) zeigten, dass sich die Rangfolge der Kandidatenantworten allein durch Vertauschen ihrer Reihenfolge im Prompt manipulieren lässt: Mit ChatGPT als Judge schnitt Vicuna-13B bei 66 von 80 Anfragen besser ab als ChatGPT. Sie schlagen drei Kalibrierungsstrategien vor: Multiple Evidence Calibration, bei der der Judge vor der Punktvergabe Begründungen erzeugt; Balanced Position Calibration, die die Ergebnisse über beide Antwortreihenfolgen zusammenführt; und Human-in-the-Loop Calibration, die mit einem Diversitätsmaß schwierige Beispiele identifiziert und diese von Menschen bewerten lässt.
+Wang et al. (2023) zeigten, dass sich die Rangfolge der Kandidatenantworten allein durch Vertauschen ihrer Reihenfolge im Prompt manipulieren lässt: Mit [[chatgpt|ChatGPT]] als Judge schnitt Vicuna-13B bei 66 von 80 Anfragen besser ab als ChatGPT. Sie schlagen drei Kalibrierungsstrategien vor: Multiple Evidence Calibration, bei der der Judge vor der Punktvergabe Begründungen erzeugt; Balanced Position Calibration, die die Ergebnisse über beide Antwortreihenfolgen zusammenführt; und Human-in-the-Loop Calibration, die mit einem Diversitätsmaß schwierige Beispiele identifiziert und diese von Menschen bewerten lässt.
 
 #### 4. Weitere Verzerrungen
 

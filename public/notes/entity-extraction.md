@@ -51,7 +51,7 @@ Earlier NER systems relied heavily on hand-crafted features and domain-specific 
 
 #### 4. Arbitrary entity types with a compact encoder
 
-Traditional NER models are limited to the entity types they were trained on. Large language models can extract arbitrary types from natural language instructions, but their size and cost make them impractical in resource-limited scenarios (Zaratiana et al., 2023). GLiNER is a compact NER model built on a bidirectional transformer encoder and trained to identify any type of entity. It extracts entities in parallel rather than by slow sequential token generation, and in zero-shot evaluations on various NER benchmarks it outperformed both ChatGPT and fine-tuned LLMs (Zaratiana et al., 2023).
+Traditional NER models are limited to the entity types they were trained on. Large language models can extract arbitrary types from natural language instructions, but their size and cost make them impractical in resource-limited scenarios (Zaratiana et al., 2023). GLiNER is a compact NER model built on a bidirectional transformer encoder and trained to identify any type of entity. It extracts entities in parallel rather than by slow sequential token generation, and in zero-shot evaluations on various NER benchmarks it outperformed both [[chatgpt|ChatGPT]] and fine-tuned LLMs (Zaratiana et al., 2023).
 
 #### 5. NER with large language models
 
@@ -150,7 +150,7 @@ Frühere NER-Systeme stützten sich stark auf handgefertigte Merkmale und Domän
 
 #### 4. Beliebige Entitätstypen mit einem kompakten Encoder
 
-Klassische NER-Modelle sind auf die Entitätstypen beschränkt, mit denen sie trainiert wurden. Große Sprachmodelle können beliebige Typen anhand von Anweisungen in natürlicher Sprache extrahieren, sind aber wegen ihrer Größe und Kosten in ressourcenbeschränkten Szenarien unpraktisch (Zaratiana et al., 2023). GLiNER ist ein kompaktes NER-Modell auf Basis eines bidirektionalen Transformer-Encoders, das darauf trainiert ist, Entitäten beliebigen Typs zu erkennen. Es extrahiert Entitäten parallel statt durch langsame sequenzielle Token-Generierung und übertraf in Zero-Shot-Evaluationen auf verschiedenen NER-Benchmarks sowohl ChatGPT als auch feinabgestimmte LLMs (Zaratiana et al., 2023).
+Klassische NER-Modelle sind auf die Entitätstypen beschränkt, mit denen sie trainiert wurden. Große Sprachmodelle können beliebige Typen anhand von Anweisungen in natürlicher Sprache extrahieren, sind aber wegen ihrer Größe und Kosten in ressourcenbeschränkten Szenarien unpraktisch (Zaratiana et al., 2023). GLiNER ist ein kompaktes NER-Modell auf Basis eines bidirektionalen Transformer-Encoders, das darauf trainiert ist, Entitäten beliebigen Typs zu erkennen. Es extrahiert Entitäten parallel statt durch langsame sequenzielle Token-Generierung und übertraf in Zero-Shot-Evaluationen auf verschiedenen NER-Benchmarks sowohl [[chatgpt|ChatGPT]] als auch feinabgestimmte LLMs (Zaratiana et al., 2023).
 
 #### 5. NER mit großen Sprachmodellen
 

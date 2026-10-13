@@ -72,7 +72,7 @@ GPT-1 (Radford et al., 2018) combined generative pre-training of a Transformer w
 - GPT-3's long texts sometimes repeat themselves, lose coherence, contradict themselves or contain non-sequiturs (Brown et al., 2020).
 - Web-scale training data can contain test sets; Brown et al. (2020) found data contamination that could inflate results on a few datasets.
 - Generated news articles of the 175B model were barely distinguishable from human-written ones (about 52% detection accuracy, 50% being chance), which enables misuse (Brown et al., 2020).
-- The models reproduce biases relating to gender, race and religion (Brown et al., 2020). In ChatGPT, identical prompts gave varying answers in English and German, and post-hoc fairness interventions led to overcorrection (Urchs et al., 2023; [[bias-in-nlp|Bias in NLP]]).
+- The models reproduce biases relating to gender, race and religion (Brown et al., 2020). In [[chatgpt|ChatGPT]], identical prompts gave varying answers in English and German, and post-hoc fairness interventions led to overcorrection (Urchs et al., 2023; [[bias-in-nlp|Bias in NLP]]).
 - InstructGPT still makes simple mistakes, such as accepting false premises or hedging on simple questions, and fine-tuning on human preferences lowered performance on some public NLP datasets, an "alignment tax" (Ouyang et al., 2022).
 - Since GPT-4, architecture and training data are not disclosed (OpenAI, 2023).
 
@@ -155,7 +155,7 @@ GPT-1 (Radford et al., 2018) verband generatives Vortraining eines Transformers 
 - Lange Texte von GPT-3 wiederholen sich mitunter, verlieren den Zusammenhang, widersprechen sich oder enthalten zusammenhanglose Sätze (Brown et al., 2020).
 - Trainingsdaten aus dem Web können Testdatensätze enthalten; Brown et al. (2020) fanden Datenkontamination, die die Ergebnisse auf einigen Datensätzen überhöhen könnte.
 - Vom 175B-Modell erzeugte Nachrichtenartikel waren kaum von menschlich geschriebenen zu unterscheiden (etwa 52 % Erkennungsgenauigkeit bei 50 % Zufallsniveau), was Missbrauch ermöglicht (Brown et al., 2020).
-- Die Modelle reproduzieren Bias bezüglich Geschlecht, Herkunft und Religion (Brown et al., 2020). Bei ChatGPT lieferten identische Prompts auf Englisch und Deutsch unterschiedliche Antworten, und nachträgliche Fairness-Eingriffe führten zu Überkorrekturen (Urchs et al., 2023; [[bias-in-nlp|Bias in NLP]]).
+- Die Modelle reproduzieren Bias bezüglich Geschlecht, Herkunft und Religion (Brown et al., 2020). Bei [[chatgpt|ChatGPT]] lieferten identische Prompts auf Englisch und Deutsch unterschiedliche Antworten, und nachträgliche Fairness-Eingriffe führten zu Überkorrekturen (Urchs et al., 2023; [[bias-in-nlp|Bias in NLP]]).
 - InstructGPT macht weiterhin einfache Fehler, etwa falsche Prämissen zu übernehmen oder bei einfachen Fragen auszuweichen, und das Fine-Tuning auf menschlichen Präferenzen senkte die Leistung auf einigen öffentlichen NLP-Datensätzen, eine „Alignment Tax“ (Ouyang et al., 2022).
 - Seit GPT-4 werden Architektur und Trainingsdaten nicht offengelegt (OpenAI, 2023).
 

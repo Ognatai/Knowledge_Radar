@@ -63,7 +63,7 @@ Blodgett et al. (2020) surveyed 146 papers that analyse "bias" in NLP systems. T
 
 #### 6. Bias in generative language models
 
-Urchs et al. (2023) prompted ChatGPT in English and German to answer from a female, male or neutral perspective and repeated identical prompts to see how responses vary. ChatGPT helped non-IT users draft texts, but its responses had to be checked for biases as well as grammatical mistakes. Overt discrimination was rare, but post-hoc fairness interventions led to overcorrection: neutral prompts produced an over-representation of female personas, and gendered prompts an exaggerated emphasis on diversity. Urchs (2025) concludes that such downstream mitigation after training is not enough and that mitigation should start upstream, in the training data ([[large-language-models|Large Language Models]]).
+Urchs et al. (2023) prompted [[chatgpt|ChatGPT]] in English and German to answer from a female, male or neutral perspective and repeated identical prompts to see how responses vary. ChatGPT helped non-IT users draft texts, but its responses had to be checked for biases as well as grammatical mistakes. Overt discrimination was rare, but post-hoc fairness interventions led to overcorrection: neutral prompts produced an over-representation of female personas, and gendered prompts an exaggerated emphasis on diversity. Urchs (2025) concludes that such downstream mitigation after training is not enough and that mitigation should start upstream, in the training data ([[large-language-models|Large Language Models]]).
 
 #### 7. Detecting discrimination in training data
 
@@ -177,7 +177,7 @@ Blodgett et al. (2020) werteten 146 Arbeiten aus, die „Bias“ in NLP-Systemen
 
 #### 6. Bias in generativen Sprachmodellen
 
-Urchs et al. (2023) ließen ChatGPT auf Englisch und Deutsch aus weiblicher, männlicher oder neutraler Perspektive antworten und wiederholten identische Prompts, um zu sehen, wie stark die Antworten schwanken. ChatGPT half Personen ohne IT-Hintergrund beim Entwerfen von Texten, die Antworten mussten aber auf Bias ebenso wie auf grammatische Fehler geprüft werden. Offene Diskriminierung war selten, doch nachträgliche Fairness-Eingriffe führten zu Überkorrekturen: Neutrale Prompts erzeugten überproportional viele weibliche Personen, geschlechtsbezogene Prompts eine übertriebene Betonung von Diversität. Urchs (2025) folgert, dass eine solche nachgelagerte Korrektur nach dem Training nicht ausreicht und die Minderung bereits vorher, bei den Trainingsdaten, ansetzen sollte ([[large-language-models|Large Language Models]]).
+Urchs et al. (2023) ließen [[chatgpt|ChatGPT]] auf Englisch und Deutsch aus weiblicher, männlicher oder neutraler Perspektive antworten und wiederholten identische Prompts, um zu sehen, wie stark die Antworten schwanken. ChatGPT half Personen ohne IT-Hintergrund beim Entwerfen von Texten, die Antworten mussten aber auf Bias ebenso wie auf grammatische Fehler geprüft werden. Offene Diskriminierung war selten, doch nachträgliche Fairness-Eingriffe führten zu Überkorrekturen: Neutrale Prompts erzeugten überproportional viele weibliche Personen, geschlechtsbezogene Prompts eine übertriebene Betonung von Diversität. Urchs (2025) folgert, dass eine solche nachgelagerte Korrektur nach dem Training nicht ausreicht und die Minderung bereits vorher, bei den Trainingsdaten, ansetzen sollte ([[large-language-models|Large Language Models]]).
 
 #### 7. Diskriminierung in Trainingsdaten erkennen
 

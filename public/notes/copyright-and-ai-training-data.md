@@ -53,7 +53,7 @@ Providers of general-purpose AI models must put in place a policy to comply with
 
 #### 5. Memorisation and output as a separate risk
 
-The Regional Court of Munich I ruled in a case brought by the collecting society GEMA against two OpenAI companies over nine German song lyrics that ChatGPT could reproduce exactly or almost exactly (LG München I (2025)). It found that the lyrics were memorised in the model parameters, which it treated as a reproduction (§ 16 UrhG), and that outputting them was a making available to the public (§ 19a UrhG). The TDM exception of § 44b UrhG did not cover the memorisation, and the court granted an injunction, information and damages. The judgment is not final. It illustrates that lawful training copies do not make everything a model stores or outputs lawful; output risk has to be assessed separately.
+The Regional Court of Munich I ruled in a case brought by the collecting society GEMA against two OpenAI companies over nine German song lyrics that [[chatgpt|ChatGPT]] could reproduce exactly or almost exactly (LG München I (2025)). It found that the lyrics were memorised in the model parameters, which it treated as a reproduction (§ 16 UrhG), and that outputting them was a making available to the public (§ 19a UrhG). The TDM exception of § 44b UrhG did not cover the memorisation, and the court granted an injunction, information and damages. The judgment is not final. It illustrates that lawful training copies do not make everything a model stores or outputs lawful; output risk has to be assessed separately.
 
 #### Origin and variants
 
@@ -145,7 +145,7 @@ Anbieter von KI-Modellen mit allgemeinem Verwendungszweck müssen eine Strategie
 
 #### 5. Memorisierung und Ausgaben als eigenes Risiko
 
-Das Landgericht München I entschied in einem Verfahren der Verwertungsgesellschaft GEMA gegen zwei OpenAI-Gesellschaften über neun deutsche Liedtexte, die ChatGPT wörtlich oder nahezu wörtlich wiedergeben konnte (LG München I (2025)). Es sah die Liedtexte als in den Modellparametern memorisiert an, wertete dies als Vervielfältigung (§ 16 UrhG) und ihre Ausgabe als öffentliche Zugänglichmachung (§ 19a UrhG). Die TDM-Schranke des § 44b UrhG deckte die Memorisierung nicht; das Gericht sprach Unterlassung, Auskunft und Schadensersatz zu. Das Urteil ist nicht rechtskräftig. Es zeigt, dass rechtmäßige Trainingskopien nicht alles rechtmäßig machen, was ein Modell speichert oder ausgibt; das Ausgaberisiko ist gesondert zu bewerten.
+Das Landgericht München I entschied in einem Verfahren der Verwertungsgesellschaft GEMA gegen zwei OpenAI-Gesellschaften über neun deutsche Liedtexte, die [[chatgpt|ChatGPT]] wörtlich oder nahezu wörtlich wiedergeben konnte (LG München I (2025)). Es sah die Liedtexte als in den Modellparametern memorisiert an, wertete dies als Vervielfältigung (§ 16 UrhG) und ihre Ausgabe als öffentliche Zugänglichmachung (§ 19a UrhG). Die TDM-Schranke des § 44b UrhG deckte die Memorisierung nicht; das Gericht sprach Unterlassung, Auskunft und Schadensersatz zu. Das Urteil ist nicht rechtskräftig. Es zeigt, dass rechtmäßige Trainingskopien nicht alles rechtmäßig machen, was ein Modell speichert oder ausgibt; das Ausgaberisiko ist gesondert zu bewerten.
 
 #### Ursprung und Varianten
 

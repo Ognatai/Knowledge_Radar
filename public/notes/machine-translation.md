@@ -56,7 +56,7 @@ Human raters score adequacy (fidelity to the source meaning) and fluency, rank c
 
 #### 7. Bias
 
-When translating from gender-neutral Hungarian *ő* into English, MT systems chose *she* for a nurse and *he* for a CEO, amplifying stereotypes beyond labour statistics; WinoMT shows worse performance for non-stereotypical gender roles. Because MT is used in medical and legal settings, systems need confidence values so they can abstain (Jurafsky & Martin, 2026). LLMs show related problems: ChatGPT translated the gender-neutral English *they* into German as third person plural, producing an incorrect sentence with a possibly different meaning (Urchs, 2025).
+When translating from gender-neutral Hungarian *ő* into English, MT systems chose *she* for a nurse and *he* for a CEO, amplifying stereotypes beyond labour statistics; WinoMT shows worse performance for non-stereotypical gender roles. Because MT is used in medical and legal settings, systems need confidence values so they can abstain (Jurafsky & Martin, 2026). LLMs show related problems: [[chatgpt|ChatGPT]] translated the gender-neutral English *they* into German as third person plural, producing an incorrect sentence with a possibly different meaning (Urchs, 2025).
 
 #### Origin and variants
 
@@ -148,7 +148,7 @@ Menschliche Bewertende beurteilen Adäquatheit (Treue zur Bedeutung der Quelle) 
 
 #### 7. Bias
 
-Beim Übersetzen des geschlechtsneutralen ungarischen *ő* ins Englische wählten MT-Systeme *she* für eine Pflegekraft und *he* für einen CEO und verstärkten Stereotype über die Arbeitsmarktstatistik hinaus; WinoMT zeigt schlechtere Leistung bei nicht-stereotypen Geschlechterrollen. Weil MT im medizinischen und juristischen Bereich eingesetzt wird, brauchen Systeme Konfidenzwerte, um sich enthalten zu können (Jurafsky & Martin, 2026). LLMs zeigen verwandte Probleme: ChatGPT übersetzte das geschlechtsneutrale englische *they* ins Deutsche mit der dritten Person Plural und erzeugte so einen falschen Satz mit womöglich anderer Bedeutung (Urchs, 2025).
+Beim Übersetzen des geschlechtsneutralen ungarischen *ő* ins Englische wählten MT-Systeme *she* für eine Pflegekraft und *he* für einen CEO und verstärkten Stereotype über die Arbeitsmarktstatistik hinaus; WinoMT zeigt schlechtere Leistung bei nicht-stereotypen Geschlechterrollen. Weil MT im medizinischen und juristischen Bereich eingesetzt wird, brauchen Systeme Konfidenzwerte, um sich enthalten zu können (Jurafsky & Martin, 2026). LLMs zeigen verwandte Probleme: [[chatgpt|ChatGPT]] übersetzte das geschlechtsneutrale englische *they* ins Deutsche mit der dritten Person Plural und erzeugte so einen falschen Satz mit womöglich anderer Bedeutung (Urchs, 2025).
 
 #### Herkunft und Varianten
 

@@ -53,7 +53,7 @@ After training, BA can be added to W, so the adapted model computes exactly as m
 
 #### 5. QLoRA
 
-QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantisation|quantisation]], which also quantises the quantisation constants, and paged optimisers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
+QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantisation|quantisation]], which also quantises the quantisation constants, and paged optimisers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of [[chatgpt|ChatGPT]]'s performance on the Vicuna benchmark (Dettmers et al., 2023).
 
 #### 6. DoRA
 
@@ -150,7 +150,7 @@ Nach dem Training kann BA zu W addiert werden, sodass das angepasste Modell gena
 
 #### 5. QLoRA
 
-QLoRA propagiert Gradienten durch ein eingefrorenes, auf 4 Bit quantisiertes vortrainiertes Modell in LoRA-Adapter (Dettmers et al., 2023). Es verwendet 4-Bit NormalFloat (NF4), einen Datentyp, der informationstheoretisch optimal für normalverteilte Gewichte ist, eine Doppelquantisierung, die auch die Quantisierungs-Konstanten quantisiert, und Paged Optimizers, um Speicherspitzen abzufangen. Damit ließ sich ein Modell mit 65 Milliarden Parametern auf einer einzelnen 48-GB-GPU feinabstimmen, während die volle 16-Bit-Feinabstimmungsleistung bewahrt blieb; die entstandenen Guanaco-Modelle erreichten auf dem Vicuna-Benchmark 99,3 % der Leistung von ChatGPT (Dettmers et al., 2023).
+QLoRA propagiert Gradienten durch ein eingefrorenes, auf 4 Bit quantisiertes vortrainiertes Modell in LoRA-Adapter (Dettmers et al., 2023). Es verwendet 4-Bit NormalFloat (NF4), einen Datentyp, der informationstheoretisch optimal für normalverteilte Gewichte ist, eine Doppelquantisierung, die auch die Quantisierungs-Konstanten quantisiert, und Paged Optimizers, um Speicherspitzen abzufangen. Damit ließ sich ein Modell mit 65 Milliarden Parametern auf einer einzelnen 48-GB-GPU feinabstimmen, während die volle 16-Bit-Feinabstimmungsleistung bewahrt blieb; die entstandenen Guanaco-Modelle erreichten auf dem Vicuna-Benchmark 99,3 % der Leistung von [[chatgpt|ChatGPT]] (Dettmers et al., 2023).
 
 #### 6. DoRA
 
