@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-TransE embeds the entities and relations of a knowledge graph as vectors and models each relation as a translation: for a true triple (head, relation, tail), the head vector plus the relation vector should lie close to the tail vector (Bordes et al., 2013). It is simple, has few parameters and scales to large graphs, which made it a standard baseline for link prediction ([[knowledge-graphs|Knowledge Graphs]]). It struggles with one-to-many, many-to-one and many-to-many relations and cannot model symmetric relations well, which later models address (Wang et al., 2017; Sun et al., 2019).
+TransE embeds the entities and relations of a knowledge graph as vectors and models each relation as a translation: for a true triple (head, relation, tail), the head vector plus the relation vector should lie close to the tail vector (Bordes et al., 2013). It is simple, has few parameters and scales to large graphs, which made it a standard baseline for [[knowledge-graph-embeddings|link prediction]] ([[knowledge-graphs|Knowledge Graphs]]). It struggles with one-to-many, many-to-one and many-to-many relations and cannot model symmetric relations well, which later models address (Wang et al., 2017; Sun et al., 2019).
 
 ### How it works
 
@@ -104,7 +104,7 @@ TransE models a relation as a vector that translates the head entity to the tail
 
 ### TL;DR
 
-TransE bettet Entitäten und Beziehungen eines Wissensgraphen als Vektoren ein und modelliert jede Beziehung als Verschiebung (Translation): Für ein wahres Tripel (Kopf, Beziehung, Schwanz) soll der Kopfvektor plus der Beziehungsvektor nahe am Schwanzvektor liegen (Bordes et al., 2013). Es ist einfach, hat wenige Parameter und skaliert auf große Graphen, was es zu einer Standard-Baseline für Link Prediction machte ([[knowledge-graphs|Wissensgraphen]]). Schwierigkeiten hat es mit 1:n-, n:1- und n:m-Beziehungen und mit symmetrischen Beziehungen, die spätere Modelle angehen (Wang et al., 2017; Sun et al., 2019).
+TransE bettet Entitäten und Beziehungen eines Wissensgraphen als Vektoren ein und modelliert jede Beziehung als Verschiebung (Translation): Für ein wahres Tripel (Kopf, Beziehung, Schwanz) soll der Kopfvektor plus der Beziehungsvektor nahe am Schwanzvektor liegen (Bordes et al., 2013). Es ist einfach, hat wenige Parameter und skaliert auf große Graphen, was es zu einer Standard-Baseline für [[knowledge-graph-embeddings|Link Prediction]] machte ([[knowledge-graphs|Wissensgraphen]]). Schwierigkeiten hat es mit 1:n-, n:1- und n:m-Beziehungen und mit symmetrischen Beziehungen, die spätere Modelle angehen (Wang et al., 2017; Sun et al., 2019).
 
 ### Funktionsweise
 

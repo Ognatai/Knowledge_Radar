@@ -124,15 +124,6 @@ entities:
     type: Concept
     name_en: Open-world assumption
     name_de: Open-World-Annahme
-  - id: knowledge-graph-embeddings
-    type: Method
-    name_en: Knowledge graph embeddings
-    name_de: Knowledge Graph Embeddings
-  - id: w3c
-    type: Organisation
-    name_en: World Wide Web Consortium (W3C)
-    name_de: World Wide Web Consortium (W3C)
-    aliases: [W3C]
   - id: toolformer
     type: Method
     name_en: Toolformer

@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-An ontology is an explicit formal specification of the terms in a domain and the relations among them; it gives people and software a shared vocabulary and makes domain assumptions explicit (Noy & McGuinness, 2001). Ontology design proceeds iteratively from the questions the ontology must answer to classes, properties and instances, and is expressed in standards such as [[rdf|RDF]] Schema, OWL and SKOS (W3C RDF Schema 1.1; W3C OWL 2 Primer; W3C SKOS). It provides the schema layer of a knowledge graph (Hogan et al., 2020).
+An ontology is an explicit formal specification of the terms in a domain and the relations among them; it gives people and software a shared vocabulary and makes domain assumptions explicit (Noy & McGuinness, 2001). Ontology design proceeds iteratively from the questions the ontology must answer to classes, properties and instances, and is expressed in standards such as [[rdf|RDF]] Schema, OWL and SKOS ([[w3c|W3C]] RDF Schema 1.1; W3C OWL 2 Primer; W3C SKOS). It provides the schema layer of a knowledge graph (Hogan et al., 2020).
 
 ### How it works
 
@@ -110,7 +110,7 @@ Ontology design turns the vocabulary of a domain into explicit classes, properti
 
 ### TL;DR
 
-Eine Ontologie ist eine ausdrückliche, formale Spezifikation der Begriffe eines Fachgebiets und ihrer Beziehungen; sie gibt Menschen und Software ein gemeinsames Vokabular und macht Annahmen über das Fachgebiet ausdrücklich (Noy & McGuinness, 2001). Ontologie-Design geht schrittweise von den Fragen, die die Ontologie beantworten soll, zu Klassen, Eigenschaften und Instanzen vor und wird in Standards wie [[rdf|RDF]] Schema, OWL und SKOS ausgedrückt (W3C RDF Schema 1.1; W3C OWL 2 Primer; W3C SKOS). Es liefert die Schemaebene eines Wissensgraphen (Hogan et al., 2020).
+Eine Ontologie ist eine ausdrückliche, formale Spezifikation der Begriffe eines Fachgebiets und ihrer Beziehungen; sie gibt Menschen und Software ein gemeinsames Vokabular und macht Annahmen über das Fachgebiet ausdrücklich (Noy & McGuinness, 2001). Ontologie-Design geht schrittweise von den Fragen, die die Ontologie beantworten soll, zu Klassen, Eigenschaften und Instanzen vor und wird in Standards wie [[rdf|RDF]] Schema, OWL und SKOS ausgedrückt ([[w3c|W3C]] RDF Schema 1.1; W3C OWL 2 Primer; W3C SKOS). Es liefert die Schemaebene eines Wissensgraphen (Hogan et al., 2020).
 
 ### Funktionsweise
 

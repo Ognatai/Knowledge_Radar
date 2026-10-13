@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-A knowledge graph represents knowledge as a graph of entities connected by typed relationships, so that facts from diverse, large-scale and changing sources can be integrated, queried and reasoned over (Hogan et al., 2020). Two data models dominate: RDF, where every fact is a subject-predicate-object triple with globally unique identifiers (W3C RDF 1.1 Concepts), and property graphs, where nodes and relationships carry key-value properties ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologies add formal meaning (W3C OWL 2 Primer), and knowledge graphs increasingly complement [[large-language-models|large language models]], for example in GraphRAG (Pan et al., 2023; Edge et al., 2024).
+A knowledge graph represents knowledge as a graph of entities connected by typed relationships, so that facts from diverse, large-scale and changing sources can be integrated, queried and reasoned over (Hogan et al., 2020). Two data models dominate: RDF, where every fact is a subject-predicate-object triple with globally unique identifiers ([[w3c|W3C]] RDF 1.1 Concepts), and property graphs, where nodes and relationships carry key-value properties ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologies add formal meaning (W3C OWL 2 Primer), and knowledge graphs increasingly complement [[large-language-models|large language models]], for example in GraphRAG (Pan et al., 2023; Edge et al., 2024).
 
 ### How it works
 
@@ -56,7 +56,7 @@ Knowledge is represented and extracted with a combination of deductive technique
 
 #### 5. Querying and reasoning
 
-Graph query languages match patterns of nodes and edges: Cypher, for example, writes patterns in an ASCII-art-like syntax such as (a:Person)-[:KNOWS]->(b:Person) (Neo4j Cypher Manual), and SPARQL matches triple patterns in RDF ([[sparql|SPARQL]]). Knowledge graph embeddings represent entities and relations as vectors for tasks such as predicting missing links, and knowledge acquisition and completion are core research topics (Ji et al., 2020; [[transe|TransE]]).
+Graph query languages match patterns of nodes and edges: Cypher, for example, writes patterns in an ASCII-art-like syntax such as (a:Person)-[:KNOWS]->(b:Person) (Neo4j Cypher Manual), and SPARQL matches triple patterns in RDF ([[sparql|SPARQL]]). [[knowledge-graph-embeddings|Knowledge graph embeddings]] represent entities and relations as vectors for tasks such as predicting missing links, and knowledge acquisition and completion are core research topics (Ji et al., 2020; [[transe|TransE]]).
 
 #### 6. Knowledge graphs and language models
 
@@ -117,7 +117,7 @@ Knowledge graphs store facts as entities and typed relations, which makes knowle
 
 ### TL;DR
 
-Ein Wissensgraph stellt Wissen als Graph aus Entitäten dar, die durch typisierte Beziehungen verbunden sind, sodass sich Fakten aus vielfältigen, großen und sich ändernden Quellen zusammenführen, abfragen und für Schlussfolgerungen nutzen lassen (Hogan et al., 2020). Zwei Datenmodelle dominieren: RDF, in dem jeder Fakt ein Tripel aus Subjekt, Prädikat und Objekt mit global eindeutigen Bezeichnern ist (W3C RDF 1.1 Concepts), und Property Graphs, in denen Knoten und Kanten Schlüssel-Wert-Eigenschaften tragen ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologien fügen formale Bedeutung hinzu (W3C OWL 2 Primer), und Wissensgraphen ergänzen zunehmend große Sprachmodelle, etwa in GraphRAG (Pan et al., 2023; Edge et al., 2024).
+Ein Wissensgraph stellt Wissen als Graph aus Entitäten dar, die durch typisierte Beziehungen verbunden sind, sodass sich Fakten aus vielfältigen, großen und sich ändernden Quellen zusammenführen, abfragen und für Schlussfolgerungen nutzen lassen (Hogan et al., 2020). Zwei Datenmodelle dominieren: RDF, in dem jeder Fakt ein Tripel aus Subjekt, Prädikat und Objekt mit global eindeutigen Bezeichnern ist ([[w3c|W3C]] RDF 1.1 Concepts), und Property Graphs, in denen Knoten und Kanten Schlüssel-Wert-Eigenschaften tragen ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologien fügen formale Bedeutung hinzu (W3C OWL 2 Primer), und Wissensgraphen ergänzen zunehmend große Sprachmodelle, etwa in GraphRAG (Pan et al., 2023; Edge et al., 2024).
 
 ### Funktionsweise
 
@@ -155,7 +155,7 @@ Wissen wird mit einer Kombination aus deduktiven Techniken wie Regeln und Schlus
 
 #### 5. Abfragen und Schlussfolgern
 
-Graph-Abfragesprachen suchen nach Mustern aus Knoten und Kanten: Cypher schreibt Muster etwa in einer ASCII-Art-ähnlichen Syntax wie (a:Person)-[:KNOWS]->(b:Person) (Neo4j Cypher Manual), und SPARQL sucht Tripelmuster in RDF ([[sparql|SPARQL]]). Knowledge Graph Embeddings stellen Entitäten und Beziehungen als Vektoren dar, etwa um fehlende Verbindungen vorherzusagen, und Wissenserwerb und -vervollständigung sind zentrale Forschungsthemen (Ji et al., 2020; [[transe|TransE]]).
+Graph-Abfragesprachen suchen nach Mustern aus Knoten und Kanten: Cypher schreibt Muster etwa in einer ASCII-Art-ähnlichen Syntax wie (a:Person)-[:KNOWS]->(b:Person) (Neo4j Cypher Manual), und SPARQL sucht Tripelmuster in RDF ([[sparql|SPARQL]]). [[knowledge-graph-embeddings|Knowledge Graph Embeddings]] stellen Entitäten und Beziehungen als Vektoren dar, etwa um fehlende Verbindungen vorherzusagen, und Wissenserwerb und -vervollständigung sind zentrale Forschungsthemen (Ji et al., 2020; [[transe|TransE]]).
 
 #### 6. Wissensgraphen und Sprachmodelle
 

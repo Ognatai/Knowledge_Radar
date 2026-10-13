@@ -88,7 +88,7 @@ The examples come from the Neo4j movie dataset (Neo4j Cypher Manual: Basic queri
 |----------|------------|-------|
 | Cypher | Property graph, ASCII-art patterns (Francis et al., 2018) | Neo4j and openCypher implementations |
 | [[gql\|GQL]] | Property graph, ISO standard (Neo4j Cypher Manual: GQL conformance) | Adopted much of Cypher's query construction |
-| [[sparql\|SPARQL]] | RDF triples | W3C standard for linked data |
+| [[sparql\|SPARQL]] | RDF triples | [[w3c\|W3C]] standard for linked data |
 | [[sql\|SQL]] | Tables | Joins instead of patterns |
 
 ### In practice

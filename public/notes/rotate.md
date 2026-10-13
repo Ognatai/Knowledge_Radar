@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-RotatE models each relation of a knowledge graph as a rotation in complex vector space: the tail embedding should equal the head embedding rotated element-wise by the relation (Sun et al., 2019). This lets one model represent and infer the main relation patterns, symmetry and antisymmetry, inversion and composition, which earlier models cover only partly (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Trained with self-adversarial negative sampling, it outperformed earlier models on link prediction benchmarks.
+RotatE models each relation of a knowledge graph as a rotation in complex vector space: the tail embedding should equal the head embedding rotated element-wise by the relation (Sun et al., 2019). This lets one model represent and infer the main relation patterns, symmetry and antisymmetry, inversion and composition, which earlier models cover only partly (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Trained with self-adversarial negative sampling, it outperformed earlier models on [[knowledge-graph-embeddings|link prediction]] benchmarks.
 
 ### How it works
 
@@ -107,7 +107,7 @@ RotatE treats each relation as a rotation in complex space, which lets one model
 
 ### TL;DR
 
-RotatE modelliert jede Beziehung eines [[knowledge-graphs|Wissensgraphen]] als Drehung im komplexen Vektorraum: Das Schwanz-Embedding soll dem elementweise um die Beziehung gedrehten Kopf-Embedding entsprechen (Sun et al., 2019). So kann ein Modell die wichtigsten Beziehungsmuster darstellen und erschließen, nämlich Symmetrie und Antisymmetrie, Inversion und Komposition, die frühere Modelle nur teilweise abdecken (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Mit selbstadversarialem Negative Sampling trainiert, übertraf es frühere Modelle auf Benchmarks für Link Prediction.
+RotatE modelliert jede Beziehung eines [[knowledge-graphs|Wissensgraphen]] als Drehung im komplexen Vektorraum: Das Schwanz-Embedding soll dem elementweise um die Beziehung gedrehten Kopf-Embedding entsprechen (Sun et al., 2019). So kann ein Modell die wichtigsten Beziehungsmuster darstellen und erschließen, nämlich Symmetrie und Antisymmetrie, Inversion und Komposition, die frühere Modelle nur teilweise abdecken (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Mit selbstadversarialem Negative Sampling trainiert, übertraf es frühere Modelle auf Benchmarks für [[knowledge-graph-embeddings|Link Prediction]].
 
 ### Funktionsweise
 

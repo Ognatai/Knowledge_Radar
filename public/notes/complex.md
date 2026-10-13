@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-ComplEx embeds entities and relations of a knowledge graph as complex-valued vectors and scores triples with the Hermitian dot product, the complex counterpart of the ordinary dot product (Trouillon et al., 2016). Because the Hermitian product uses the complex conjugate of the tail, the score of (h, r, t) can differ from that of (t, r, h), so ComplEx handles both symmetric and antisymmetric relations, which DistMult cannot (Yang et al., 2014). It stays linear in space and time and outperformed more complex models on standard link prediction benchmarks.
+ComplEx embeds entities and relations of a knowledge graph as complex-valued vectors and scores triples with the Hermitian dot product, the complex counterpart of the ordinary dot product (Trouillon et al., 2016). Because the Hermitian product uses the complex conjugate of the tail, the score of (h, r, t) can differ from that of (t, r, h), so ComplEx handles both symmetric and antisymmetric relations, which DistMult cannot (Yang et al., 2014). It stays linear in space and time and outperformed more complex models on standard [[knowledge-graph-embeddings|link prediction]] benchmarks.
 
 ### How it works
 
@@ -104,7 +104,7 @@ ComplEx uses complex-valued embeddings and the Hermitian dot product so that one
 
 ### TL;DR
 
-ComplEx bettet Entitäten und Beziehungen eines Wissensgraphen als komplexwertige Vektoren ein und bewertet Tripel mit dem hermiteschen Skalarprodukt, dem komplexen Gegenstück zum gewöhnlichen Skalarprodukt (Trouillon et al., 2016). Da das hermitesche Produkt das komplex Konjugierte des Schwanzes nutzt, kann sich die Bewertung von (h, r, t) von der von (t, r, h) unterscheiden; so bildet ComplEx symmetrische und antisymmetrische Beziehungen ab, was DistMult nicht kann (Yang et al., 2014). Es bleibt linear in Speicher und Zeit und übertraf aufwendigere Modelle auf Standard-Benchmarks für Link Prediction.
+ComplEx bettet Entitäten und Beziehungen eines Wissensgraphen als komplexwertige Vektoren ein und bewertet Tripel mit dem hermiteschen Skalarprodukt, dem komplexen Gegenstück zum gewöhnlichen Skalarprodukt (Trouillon et al., 2016). Da das hermitesche Produkt das komplex Konjugierte des Schwanzes nutzt, kann sich die Bewertung von (h, r, t) von der von (t, r, h) unterscheiden; so bildet ComplEx symmetrische und antisymmetrische Beziehungen ab, was DistMult nicht kann (Yang et al., 2014). Es bleibt linear in Speicher und Zeit und übertraf aufwendigere Modelle auf Standard-Benchmarks für [[knowledge-graph-embeddings|Link Prediction]].
 
 ### Funktionsweise
 

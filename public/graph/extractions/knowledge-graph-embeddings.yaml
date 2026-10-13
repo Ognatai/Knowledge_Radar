@@ -1,0 +1,51 @@
+version: 1
+note_sha256: b720ad0593582c0affe28ffeead6596a4a98a7aa6f7016fb014de59fa0a76d2c
+extracted_by: claude (hand-labelled, 2026-10-13)
+discusses:
+- transe
+- transh
+- transr
+- rotate
+- distmult
+- complex
+- rescal
+- tucker
+- conve
+- rdf2vec
+- word2vec
+- glove
+- pykeen
+- fb15k-237
+- wn18rr
+- knowledge-graphs
+- graph-databases
+- rag-retrieval-evaluation
+relations:
+- from: transe
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: TransE learns vectors such that e_s + r_p is as close as possible to e_o
+- from: rotate
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: RotatE translates in complex space
+- from: distmult
+  type: IS_EXAMPLE_OF
+  to: knowledge-graph-embeddings
+  evidence: DistMult scores an edge as the sum of the element-wise product
+- from: complex
+  type: BASED_ON
+  to: distmult
+  evidence: ComplEx uses complex-valued vectors to break DistMult's symmetry
+- from: rotate
+  type: BASED_ON
+  to: transe
+  evidence: TransH and TransR project entities into relation-specific hyperplanes or spaces before the translation; RotatE translates in complex space
+- from: rdf2vec
+  type: BASED_ON
+  to: word2vec
+  evidence: RDF2Vec feeds random walks over the graph as "sentences" into word2vec
+- from: pykeen
+  type: IMPLEMENTS
+  to: knowledge-graph-embeddings
+  evidence: re-implemented 21 models in the PyKEEN library

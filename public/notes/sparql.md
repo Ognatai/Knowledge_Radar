@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-SPARQL is the W3C query language for RDF knowledge graphs: a query describes triple patterns with variables, and the engine returns all ways in which they match the graph (W3C SPARQL 1.1). Patterns are combined with FILTER, OPTIONAL and UNION, results are grouped, aggregated and sorted, property paths follow chains of relations, and besides SELECT there are CONSTRUCT, ASK and DESCRIBE. Its semantics and complexity are formally well studied (Pérez et al., 2009).
+SPARQL is the [[w3c|W3C]] query language for RDF knowledge graphs: a query describes triple patterns with variables, and the engine returns all ways in which they match the graph (W3C SPARQL 1.1). Patterns are combined with FILTER, OPTIONAL and UNION, results are grouped, aggregated and sorted, property paths follow chains of relations, and besides SELECT there are CONSTRUCT, ASK and DESCRIBE. Its semantics and complexity are formally well studied (Pérez et al., 2009).
 
 ### Core concepts
 
@@ -104,7 +104,7 @@ SPARQL queries RDF graphs by matching triple patterns with variables; FILTER, OP
 
 ### TL;DR
 
-SPARQL ist die W3C-Abfragesprache für RDF-Wissensgraphen: Eine Abfrage beschreibt Tripelmuster mit Variablen, und die Engine liefert alle Möglichkeiten, wie diese auf den Graphen passen (W3C SPARQL 1.1). Muster werden mit FILTER, OPTIONAL und UNION verbunden, Ergebnisse gruppiert, aggregiert und sortiert, Property Paths folgen Ketten von Beziehungen, und neben SELECT gibt es CONSTRUCT, ASK und DESCRIBE. Semantik und Komplexität sind formal gut untersucht (Pérez et al., 2009).
+SPARQL ist die W3C-Abfragesprache für RDF-Wissensgraphen: Eine Abfrage beschreibt Tripelmuster mit Variablen, und die Engine liefert alle Möglichkeiten, wie diese auf den Graphen passen ([[w3c|W3C]] SPARQL 1.1). Muster werden mit FILTER, OPTIONAL und UNION verbunden, Ergebnisse gruppiert, aggregiert und sortiert, Property Paths folgen Ketten von Beziehungen, und neben SELECT gibt es CONSTRUCT, ASK und DESCRIBE. Semantik und Komplexität sind formal gut untersucht (Pérez et al., 2009).
 
 ### Kernkonzepte
 

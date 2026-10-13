@@ -1,12 +1,11 @@
 version: 1
-note_sha256: afb2e3203c5a660531f2bf03cd2a7297e394e95afb5ef9dfd9241fdaa5452949
+note_sha256: 1f4e7e7b3a883d5aa29dcb7dcd138b2f0b70d5985b66979b62be42001af2230c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - transe
 - distmult
 - complex
 - knowledge-graph-embeddings
-- link-prediction
 - self-adversarial-negative-sampling
 - rag-retrieval-evaluation
 - knowledge-graphs

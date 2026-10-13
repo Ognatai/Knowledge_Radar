@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Text-to-speech (TTS) generates a speech waveform for a given text in a desired voice (Jurafsky & Martin, 2026). Modern systems treat TTS as conditional language modelling: a neural audio codec turns speech into discrete tokens, and a language model generates the tokens of the new utterance from the text and a few seconds of the target voice, as in VALL-E (Jurafsky & Martin, 2026; Wang et al., 2023). Applications steer pronunciation, pauses and prosody with the W3C markup language SSML (W3C SSML 1.1); quality is judged by listeners as a mean opinion score (Jurafsky & Martin, 2026).
+Text-to-speech (TTS) generates a speech waveform for a given text in a desired voice (Jurafsky & Martin, 2026). Modern systems treat TTS as conditional language modelling: a neural audio codec turns speech into discrete tokens, and a language model generates the tokens of the new utterance from the text and a few seconds of the target voice, as in VALL-E (Jurafsky & Martin, 2026; Wang et al., 2023). Applications steer pronunciation, pauses and prosody with the [[w3c|W3C]] markup language SSML (W3C SSML 1.1); quality is judged by listeners as a mean opinion score (Jurafsky & Martin, 2026).
 
 ### How it works
 
@@ -97,7 +97,7 @@ Modern TTS generates discrete audio tokens with a language model conditioned on 
 
 ### TL;DR
 
-Sprachsynthese (Text-to-Speech, TTS) erzeugt zu einem gegebenen Text eine Sprach-Wellenform in einer gewünschten Stimme (Jurafsky & Martin, 2026). Moderne Systeme behandeln TTS als bedingte Sprachmodellierung: Ein neuronaler Audio-Codec macht aus Sprache diskrete Token, und ein Sprachmodell erzeugt die Token der neuen Äußerung aus dem Text und wenigen Sekunden der Zielstimme, wie bei VALL-E (Jurafsky & Martin, 2026; Wang et al., 2023). Anwendungen steuern Aussprache, Pausen und Prosodie mit der W3C-Auszeichnungssprache SSML (W3C SSML 1.1); die Qualität beurteilen Hörende als Mean Opinion Score (Jurafsky & Martin, 2026).
+Sprachsynthese (Text-to-Speech, TTS) erzeugt zu einem gegebenen Text eine Sprach-Wellenform in einer gewünschten Stimme (Jurafsky & Martin, 2026). Moderne Systeme behandeln TTS als bedingte Sprachmodellierung: Ein neuronaler Audio-Codec macht aus Sprache diskrete Token, und ein Sprachmodell erzeugt die Token der neuen Äußerung aus dem Text und wenigen Sekunden der Zielstimme, wie bei VALL-E (Jurafsky & Martin, 2026; Wang et al., 2023). Anwendungen steuern Aussprache, Pausen und Prosodie mit der W3C-Auszeichnungssprache SSML ([[w3c|W3C]] SSML 1.1); die Qualität beurteilen Hörende als Mean Opinion Score (Jurafsky & Martin, 2026).
 
 ### Funktionsweise
 

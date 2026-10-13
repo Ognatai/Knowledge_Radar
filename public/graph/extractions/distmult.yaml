@@ -1,11 +1,10 @@
 version: 1
-note_sha256: 6f777adad36b4a1e0e87012b60d357c96c00d9694ed86079f3376e03e22853a6
+note_sha256: 86329707cda43b1ffe9cc74f52194faebbc6fc3d4d6dd7dd4cfa660a493ea421
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - knowledge-graph-embeddings
 - semantic-matching-model
 - rule-mining
-- link-prediction
 - transe
 - complex
 - rotate

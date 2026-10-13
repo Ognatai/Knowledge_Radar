@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 62c31808ce424d18036459066f8b2371b93b6299a7262e29f54fbaeea55cc3c2
+note_sha256: f98351e8b20e982556a62ebabaf25adb2db4e91bcbebd318f9830bfc0b3c67c0
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - distmult
@@ -7,7 +7,6 @@ discusses:
 - knowledge-graph-embeddings
 - knowledge-graphs
 - hermitian-dot-product
-- link-prediction
 - transe
 relations:
 - from: complex

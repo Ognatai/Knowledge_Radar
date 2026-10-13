@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-Graph databases store data as nodes and edges and express queries as graph patterns and traversals, which suits data whose value lies in its connections (Angles & Gutierrez, 2008). The two main models are property graphs, queried with languages such as [[cypher|Cypher]] (Francis et al., 2018), and RDF triple stores, queried with SPARQL (W3C SPARQL 1.1). They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search.
+Graph databases store data as nodes and edges and express queries as graph patterns and traversals, which suits data whose value lies in its connections (Angles & Gutierrez, 2008). The two main models are property graphs, queried with languages such as [[cypher|Cypher]] (Francis et al., 2018), and RDF triple stores, queried with SPARQL ([[w3c|W3C]] SPARQL 1.1). They complement relational databases, which favour fixed schemas, and vector databases, which favour similarity search.
 
 ### How it works
 
@@ -111,7 +111,7 @@ Graph databases store data as nodes and edges and query it as patterns, which ma
 
 ### TL;DR
 
-Graphdatenbanken speichern Daten als Knoten und Kanten und formulieren Abfragen als Graphmuster und Traversierungen; das passt zu Daten, deren Wert in ihren Verbindungen liegt (Angles & Gutierrez, 2008). Die beiden Hauptmodelle sind Property Graphs, die mit Sprachen wie [[cypher|Cypher]] abgefragt werden (Francis et al., 2018), und RDF-Triplestores, die mit SPARQL abgefragt werden (W3C SPARQL 1.1). Sie ergänzen relationale Datenbanken, die feste Schemata bevorzugen, und Vektordatenbanken, die auf Ähnlichkeitssuche ausgelegt sind.
+Graphdatenbanken speichern Daten als Knoten und Kanten und formulieren Abfragen als Graphmuster und Traversierungen; das passt zu Daten, deren Wert in ihren Verbindungen liegt (Angles & Gutierrez, 2008). Die beiden Hauptmodelle sind Property Graphs, die mit Sprachen wie [[cypher|Cypher]] abgefragt werden (Francis et al., 2018), und RDF-Triplestores, die mit SPARQL abgefragt werden ([[w3c|W3C]] SPARQL 1.1). Sie ergänzen relationale Datenbanken, die feste Schemata bevorzugen, und Vektordatenbanken, die auf Ähnlichkeitssuche ausgelegt sind.
 
 ### Funktionsweise
 

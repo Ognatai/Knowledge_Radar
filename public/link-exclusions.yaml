@@ -38,3 +38,7 @@ exclusions:
     classification-metrics: BLEU's modified n-gram precision, not the classification metric.
   automatic-speech-recognition:
     classification: Connectionist Temporal Classification is a decoding method, not classification.
+  knowledge-graph-embeddings:
+    embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
+  w3c:
+    graph-databases: knowledge graph technologies in general, not graph databases.

@@ -1,10 +1,9 @@
 version: 1
-note_sha256: 20e4beded69330d0aa91ae25baf44aa16716bb760d30b4d3a5658f2b57bd59b5
+note_sha256: 169441957f714c29681d56f8a0889784993f4939f72c2fd7e14ff082e3e02a31
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - knowledge-graphs
 - knowledge-graph-embeddings
-- link-prediction
 - distmult
 - rotate
 - transh

@@ -171,6 +171,8 @@ areas:
       - distmult
       - complex
       - rotate
+      - knowledge-graph-embeddings
+      - w3c
     also:
       - graphrag
       - information-extraction

@@ -133,16 +133,6 @@ entities:
   type: Concept
   name_en: Open-world assumption
   name_de: Open-World-Annahme
-- id: knowledge-graph-embeddings
-  type: Method
-  name_en: Knowledge graph embeddings
-  name_de: Knowledge Graph Embeddings
-- id: w3c
-  type: Organisation
-  name_en: World Wide Web Consortium (W3C)
-  name_de: World Wide Web Consortium (W3C)
-  aliases:
-  - W3C
 - id: toolformer
   type: Method
   name_en: Toolformer
@@ -676,10 +666,6 @@ entities:
   type: Concept
   name_en: Hermitian dot product
   name_de: Hermitesches Skalarprodukt
-- id: link-prediction
-  type: Concept
-  name_en: Link prediction
-  name_de: Link Prediction
 - id: atlassian
   type: Organisation
   name_en: Atlassian
@@ -2860,3 +2846,35 @@ entities:
   type: Method
   name_en: Compound splitting
   name_de: Kompositazerlegung
+- id: rescal
+  type: Method
+  name_en: RESCAL
+  name_de: RESCAL
+- id: tucker
+  type: Method
+  name_en: TuckER
+  name_de: TuckER
+- id: conve
+  type: Method
+  name_en: ConvE
+  name_de: ConvE
+- id: rdf2vec
+  type: Method
+  name_en: RDF2Vec
+  name_de: RDF2Vec
+- id: pykeen
+  type: Technology
+  name_en: PyKEEN
+  name_de: PyKEEN
+- id: fb15k-237
+  type: Dataset
+  name_en: FB15K-237
+  name_de: FB15K-237
+- id: wn18rr
+  type: Dataset
+  name_en: WN18RR
+  name_de: WN18RR
+- id: tim-berners-lee
+  type: Person
+  name_en: Tim Berners-Lee
+  name_de: Tim Berners-Lee

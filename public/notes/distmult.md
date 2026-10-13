@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-DistMult is a knowledge graph embedding model that scores a triple with a bilinear product of the head and tail vectors and a diagonal relation matrix, i.e. a weighted element-wise product (Yang et al., 2014). In a unified framework of embedding models, this simple bilinear formulation achieved a top-10 link prediction accuracy of 73.2% on Freebase, compared with 54.7% for TransE. Because the score is symmetric in head and tail, DistMult cannot distinguish a relation from its reverse, which ComplEx later fixes (Wang et al., 2017; Trouillon et al., 2016).
+DistMult is a [[knowledge-graph-embeddings|knowledge graph embedding]] model that scores a triple with a bilinear product of the head and tail vectors and a diagonal relation matrix, i.e. a weighted element-wise product (Yang et al., 2014). In a unified framework of embedding models, this simple bilinear formulation achieved a top-10 link prediction accuracy of 73.2% on Freebase, compared with 54.7% for TransE. Because the score is symmetric in head and tail, DistMult cannot distinguish a relation from its reverse, which ComplEx later fixes (Wang et al., 2017; Trouillon et al., 2016).
 
 ### How it works
 
@@ -104,7 +104,7 @@ DistMult scores triples with a simple element-wise product of three vectors, whi
 
 ### TL;DR
 
-DistMult ist ein Modell für Knowledge Graph Embeddings, das ein Tripel mit einem bilinearen Produkt aus Kopf- und Schwanzvektor und einer diagonalen Beziehungsmatrix bewertet, also mit einem gewichteten elementweisen Produkt (Yang et al., 2014). In einem gemeinsamen Rahmen für Embedding-Modelle erreichte diese einfache bilineare Formulierung bei Link Prediction auf Freebase eine Top-10-Genauigkeit von 73,2 %, TransE 54,7 %. Da die Bewertung in Kopf und Schwanz symmetrisch ist, kann DistMult eine Beziehung nicht von ihrer Umkehrung unterscheiden, was ComplEx später behebt (Wang et al., 2017; Trouillon et al., 2016).
+DistMult ist ein Modell für [[knowledge-graph-embeddings|Knowledge Graph Embeddings]], das ein Tripel mit einem bilinearen Produkt aus Kopf- und Schwanzvektor und einer diagonalen Beziehungsmatrix bewertet, also mit einem gewichteten elementweisen Produkt (Yang et al., 2014). In einem gemeinsamen Rahmen für Embedding-Modelle erreichte diese einfache bilineare Formulierung bei Link Prediction auf Freebase eine Top-10-Genauigkeit von 73,2 %, TransE 54,7 %. Da die Bewertung in Kopf und Schwanz symmetrisch ist, kann DistMult eine Beziehung nicht von ihrer Umkehrung unterscheiden, was ComplEx später behebt (Wang et al., 2017; Trouillon et al., 2016).
 
 ### Funktionsweise
 

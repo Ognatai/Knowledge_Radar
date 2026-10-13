@@ -65,7 +65,7 @@ This query is valid both in GQL and in Cypher: GQL adopted much of Cypher's quer
 | GQL | ISO/IEC 39075:2024 (GQL Standards) | Property graphs |
 | SQL/PGQ | Part of the SQL standard (Deutsch et al., 2021) | Graph views over relational tables |
 | [[cypher\|Cypher]] | openCypher, Neo4j (Francis et al., 2018) | Property graphs |
-| [[sparql\|SPARQL]] | W3C Recommendation | [[rdf\|RDF]] triples |
+| [[sparql\|SPARQL]] | [[w3c\|W3C]] Recommendation | [[rdf\|RDF]] triples |
 
 ### In practice
 
