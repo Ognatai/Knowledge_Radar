@@ -69,7 +69,7 @@ Weaver (1949) observed that a word's meaning can be decided if one sees enough w
 ### Strengths and limitations
 
 **Strengths**
-- WordNet relations support tasks such as textual entailment and question answering (*leukemia* is a type of *cancer*) (Jurafsky & Martin, 2026).
+- WordNet relations support tasks such as [[natural-language-inference|textual entailment]] and question answering (*leukemia* is a type of *cancer*) (Jurafsky & Martin, 2026).
 - Knowledge-based methods work in languages or domains with dictionaries but no sense-labelled corpora (Jurafsky & Martin, 2026).
 
 **Limitations**
@@ -157,7 +157,7 @@ Weaver (1949) bemerkte, dass sich die Bedeutung eines Wortes bestimmen lässt, w
 ### Stärken und Grenzen
 
 **Stärken**
-- WordNet-Relationen unterstützen Aufgaben wie Textual Entailment und Question Answering (*leukemia* ist eine Art *cancer*) (Jurafsky & Martin, 2026).
+- WordNet-Relationen unterstützen Aufgaben wie [[natural-language-inference|Textual Entailment]] und Question Answering (*leukemia* ist eine Art *cancer*) (Jurafsky & Martin, 2026).
 - Wissensbasierte Verfahren funktionieren in Sprachen oder Domänen mit Wörterbüchern, aber ohne sinnannotierte Korpora (Jurafsky & Martin, 2026).
 
 **Grenzen**

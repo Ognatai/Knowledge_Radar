@@ -2129,12 +2129,6 @@ entities:
   type: Method
   name_en: Reciprocal rank fusion
   name_de: Reciprocal Rank Fusion
-- id: natural-language-inference
-  type: Method
-  name_en: Natural language inference (NLI)
-  name_de: Natural Language Inference (NLI)
-  aliases:
-  - NLI
 - id: claim-level-grounding-check
   type: Method
   name_en: Claim-level grounding check
@@ -2864,3 +2858,22 @@ entities:
   type: Person
   name_en: Tim Berners-Lee
   name_de: Tim Berners-Lee
+- id: snli
+  type: Dataset
+  name_en: SNLI (Stanford Natural Language Inference corpus)
+  name_de: SNLI (Stanford Natural Language Inference Corpus)
+  aliases:
+  - SNLI
+  - Stanford Natural Language Inference corpus
+- id: multinli
+  type: Dataset
+  name_en: MultiNLI (Multi-Genre NLI corpus)
+  name_de: MultiNLI (Multi-Genre NLI Corpus)
+  aliases:
+  - MultiNLI
+  - MNLI
+  - Multi-Genre Natural Language Inference corpus
+- id: summac
+  type: Method
+  name_en: SummaC
+  name_de: SummaC

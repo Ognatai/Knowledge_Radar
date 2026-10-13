@@ -42,7 +42,7 @@ Clause extraction assigns whole passages to predefined clause types, such as ter
 
 #### 4. Checking statements against a contract
 
-ContractNLI turns contract review into document-level natural language inference: given a hypothesis such as "Some obligations of Agreement may survive termination" and a contract, a system decides whether the contract entails, contradicts or does not mention it and identifies the evidence spans (Koreeda & Manning, 2021). Existing models failed badly; a stronger baseline treats evidence identification as multi-label classification over spans and segments long documents more carefully, and linguistic features of contracts such as negations by exceptions make the task hard (Koreeda & Manning, 2021).
+ContractNLI turns contract review into document-level [[natural-language-inference|natural language inference]]: given a hypothesis such as "Some obligations of Agreement may survive termination" and a contract, a system decides whether the contract entails, contradicts or does not mention it and identifies the evidence spans (Koreeda & Manning, 2021). Existing models failed badly; a stronger baseline treats evidence identification as multi-label classification over spans and segments long documents more carefully, and linguistic features of contracts such as negations by exceptions make the task hard (Koreeda & Manning, 2021).
 
 #### 5. Attribute extraction and normalisation
 
@@ -137,7 +137,7 @@ Die Klausel-Extraktion ordnet ganze Textabschnitte vordefinierten Klauseltypen z
 
 #### 4. Aussagen gegen einen Vertrag prüfen
 
-ContractNLI fasst die Vertragsprüfung als Natural Language Inference auf Dokumentebene: Zu einer Hypothese wie „Some obligations of Agreement may survive termination." und einem Vertrag entscheidet ein System, ob der Vertrag sie stützt, ihr widerspricht oder sie nicht erwähnt, und benennt die Belegstellen (Koreeda & Manning, 2021). Bestehende Modelle scheiterten deutlich; eine stärkere Baseline behandelt die Belegsuche als Multi-Label-Klassifikation über Textabschnitte und segmentiert lange Dokumente sorgfältiger, und sprachliche Eigenheiten von Verträgen wie Verneinungen durch Ausnahmen erschweren die Aufgabe (Koreeda & Manning, 2021).
+ContractNLI fasst die Vertragsprüfung als [[natural-language-inference|Natural Language Inference]] auf Dokumentebene: Zu einer Hypothese wie „Some obligations of Agreement may survive termination." und einem Vertrag entscheidet ein System, ob der Vertrag sie stützt, ihr widerspricht oder sie nicht erwähnt, und benennt die Belegstellen (Koreeda & Manning, 2021). Bestehende Modelle scheiterten deutlich; eine stärkere Baseline behandelt die Belegsuche als Multi-Label-Klassifikation über Textabschnitte und segmentiert lange Dokumente sorgfältiger, und sprachliche Eigenheiten von Verträgen wie Verneinungen durch Ausnahmen erschweren die Aufgabe (Koreeda & Manning, 2021).
 
 #### 5. Attribut-Extraktion und Normalisierung
 

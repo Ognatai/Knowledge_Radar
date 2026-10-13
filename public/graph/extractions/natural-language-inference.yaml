@@ -1,0 +1,32 @@
+version: 1
+note_sha256: c28cba37779f19c67b572bc3c4ed3bc4f38cd8a2fc6fe831bd65bbf1be833e5d
+extracted_by: claude (hand-labelled, 2026-10-13)
+discusses:
+- snli
+- multinli
+- summac
+- t5
+- sentence-bert
+- hallucination-detection
+- rag-generation-evaluation
+- classification
+- recurrent-neural-networks
+- information-retrieval
+- llm-as-a-judge
+relations:
+- from: snli
+  type: EVALUATES
+  to: natural-language-inference
+  evidence: made it possible to train neural models on the task
+- from: multinli
+  type: EVALUATES
+  to: natural-language-inference
+  evidence: so the matched test set measures performance within the training domains and the mismatched test set performance on unseen genres
+- from: natural-language-inference
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: judges the relationship between their meanings by picking a label from a small set
+- from: summac
+  type: BASED_ON
+  to: natural-language-inference
+  evidence: the NLI-based summarisation metric SummaC

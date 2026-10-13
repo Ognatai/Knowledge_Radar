@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5f18313ce2ed4c866c7067856f80fc88cb26fcb4d5efa36b9ec2b37efe6b46c5
+note_sha256: 0c98e295316092c82e200e507ad5b9dbae3425defa60c72c87a018820f8f2e08
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - information-extraction

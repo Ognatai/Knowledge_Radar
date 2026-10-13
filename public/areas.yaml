@@ -24,6 +24,7 @@ areas:
       - embeddings
       - multimodal-models
       - natural-language-understanding
+      - natural-language-inference
       - dialogue-state-tracking
       - automatic-speech-recognition
       - text-to-speech
@@ -116,6 +117,7 @@ areas:
       - prompt-injection
       - text-similarity-metrics
       - rag-evaluation
+      - natural-language-inference
   - id: classical-ml
     name_en: Classical ML & Statistics
     name_de: Klassisches ML & Statistik

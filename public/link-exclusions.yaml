@@ -42,3 +42,5 @@ exclusions:
     embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
   w3c:
     graph-databases: knowledge graph technologies in general, not graph databases.
+  llm-adaptation:
+    natural-language-inference: RTE names a benchmark data set in a list of FLAN results.

@@ -31,7 +31,7 @@ Both sentences pass through the same BERT network with tied weights. A pooling l
 
 #### 2. Training objectives
 The network is fine-tuned with one of three objectives (Reimers & Gurevych, 2019):
-- **[[classification|Classification]]:** u, v and the element-wise difference |u − v| are concatenated and fed to a softmax classifier. SBERT was trained this way on natural language inference data, SNLI (570,000 sentence pairs) and MultiNLI (430,000), labelled contradiction, entailment or neutral.
+- **[[classification|Classification]]:** u, v and the element-wise difference |u − v| are concatenated and fed to a softmax classifier. SBERT was trained this way on [[natural-language-inference|natural language inference]] data, SNLI (570,000 sentence pairs) and MultiNLI (430,000), labelled contradiction, entailment or neutral.
 - **Regression:** the cosine similarity of u and v is trained against a similarity score with mean squared error, as on the STS benchmark.
 - **Triplet:** an anchor sentence must be closer to a positive than to a negative sentence by a margin, measured with Euclidean distance.
 
