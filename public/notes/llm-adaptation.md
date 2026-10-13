@@ -39,7 +39,7 @@ The methods differ in what they change: the input, all parameters, a small numbe
 
 #### 1. Adaptation without changing weights
 
-Prompting steers a model through instructions or examples in the input and relies on what the model already knows ([[prompt-engineering|Prompt Engineering]]). Retrieval-augmented generation combines the parametric memory of a pretrained sequence-to-sequence model with a non-parametric memory, a dense vector index of Wikipedia accessed by a neural retriever; the model conditions either on the same retrieved passages for the whole output or on different passages per token (Lewis et al., 2020). Because knowledge sits in the index, it can be updated without retraining, and RAG models set the state of the art on three open-domain question answering tasks (Lewis et al., 2020).
+Prompting steers a model through instructions or examples in the input and relies on what the model already knows ([[prompt-engineering|Prompt Engineering]]). Retrieval-augmented generation combines the parametric memory of a pretrained [[attention-and-transformers|sequence-to-sequence model]] with a non-parametric memory, a dense vector index of Wikipedia accessed by a neural retriever; the model conditions either on the same retrieved passages for the whole output or on different passages per token (Lewis et al., 2020). Because knowledge sits in the index, it can be updated without retraining, and RAG models set the state of the art on three open-domain question answering tasks (Lewis et al., 2020).
 
 #### 2. Full fine-tuning and instruction tuning
 

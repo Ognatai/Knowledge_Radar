@@ -103,7 +103,7 @@ The language model generates the answer from the prompt. Optionally, a post-proc
 
 #### Origin and variants
 
-The term goes back to Lewis et al. (2020). Their model combines a *parametric memory* (a pre-trained sequence-to-sequence model) with a *non-parametric memory* (a dense vector index of Wikipedia), trains retriever and generator jointly, and comes in two variants: **RAG-Sequence** uses the same retrieved passages for the whole output, **RAG-Token** may draw on different passages for each generated token. Today, RAG mostly denotes the pipeline above around an unchanged LLM. Gao et al. (2023) describe three stages of development: **Naive RAG** (index, retrieve, generate), **Advanced RAG** (added query processing, reranking and context compression) and **Modular RAG** (interchangeable modules and flexible control flows, e.g. iterative or agent-driven retrieval, see [[agentic-ai|Agentic AI]]).
+The term goes back to Lewis et al. (2020). Their model combines a *parametric memory* (a pre-trained [[attention-and-transformers|sequence-to-sequence model]]) with a *non-parametric memory* (a dense vector index of Wikipedia), trains retriever and generator jointly, and comes in two variants: **RAG-Sequence** uses the same retrieved passages for the whole output, **RAG-Token** may draw on different passages for each generated token. Today, RAG mostly denotes the pipeline above around an unchanged LLM. Gao et al. (2023) describe three stages of development: **Naive RAG** (index, retrieve, generate), **Advanced RAG** (added query processing, reranking and context compression) and **Modular RAG** (interchangeable modules and flexible control flows, e.g. iterative or agent-driven retrieval, see [[agentic-ai|Agentic AI]]).
 
 ### When to use it
 

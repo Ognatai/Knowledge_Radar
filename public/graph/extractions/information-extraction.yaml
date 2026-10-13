@@ -8,7 +8,7 @@ discusses:
 - relation-extraction
 - rebel
 - bart
-- sequence-to-sequence
+- attention-and-transformers
 - large-language-models
 - coreference-resolution
 - actor-level-corpus-analysis
@@ -40,7 +40,7 @@ relations:
   evidence: REBEL (Huguet Cabot & Navigli, 2021) treats relation extraction as sequence-to-sequence generation
 - from: rebel
   type: BASED_ON
-  to: sequence-to-sequence
+  to: attention-and-transformers
   evidence: REBEL (Huguet Cabot & Navigli, 2021) treats relation extraction as sequence-to-sequence generation
 - from: rebel
   type: BASED_ON

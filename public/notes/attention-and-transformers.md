@@ -2,6 +2,9 @@
 title_en: Attention and Transformers
 title_de: Attention und Transformer
 entity_type: Method
+aliases:
+- Sequence-to-sequence model
+- seq2seq
 sources:
 - https://arxiv.org/abs/1409.3215
 - https://arxiv.org/abs/1409.0473

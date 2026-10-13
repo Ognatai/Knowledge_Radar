@@ -42,7 +42,7 @@ Mei et al. (2025) define context engineering as a formal discipline for the syst
 
 #### 2. Retrieval of external knowledge
 
-Retrieval adds knowledge that is not stored in the model's parameters. Lewis et al. (2020) combined a pretrained sequence-to-sequence model with a dense vector index of Wikipedia accessed through a neural retriever ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Because the knowledge lives in the index, it can be updated without retraining, and these models set the state of the art on three open-domain question answering tasks (Lewis et al., 2020).
+Retrieval adds knowledge that is not stored in the model's parameters. Lewis et al. (2020) combined a pretrained [[attention-and-transformers|sequence-to-sequence model]] with a dense vector index of Wikipedia accessed through a neural retriever ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Because the knowledge lives in the index, it can be updated without retraining, and these models set the state of the art on three open-domain question answering tasks (Lewis et al., 2020).
 
 #### 3. Position in the context
 

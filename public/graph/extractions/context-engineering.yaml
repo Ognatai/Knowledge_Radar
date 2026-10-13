@@ -1,10 +1,10 @@
 version: 1
-note_sha256: 3ac666a5ca245fdd4ce09d437a6d56fdbf42c63d8443509405ddcd23637d107d
+note_sha256: 1c1db77d3e9ea904986cd18be3aea9c0cf13b27f5a828bdff6cf87ee4ed3a6c0
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
 - retrieval-augmented-generation
-- sequence-to-sequence
+- attention-and-transformers
 - llmlingua
 - memgpt
 - multi-agent-systems
@@ -19,7 +19,7 @@ relations:
   evidence: shows how they are combined in system implementations such as retrieval-augmented generation
 - from: retrieval-augmented-generation
   type: BASED_ON
-  to: sequence-to-sequence
+  to: attention-and-transformers
   evidence: Lewis et al. (2020) combined a pretrained sequence-to-sequence model with a dense vector index of Wikipedia
 - from: llmlingua
   type: IS_EXAMPLE_OF

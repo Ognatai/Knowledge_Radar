@@ -2,7 +2,6 @@ version: 1
 note_sha256: ca2f8b70c24fcee8cf040215be24f155115194dc542d62b930a5c33893650301
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
-- sequence-to-sequence
 - attention-and-transformers
 - tokenisation
 - word-sense-disambiguation

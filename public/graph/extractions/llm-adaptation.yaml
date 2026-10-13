@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 79b692fa84df712a52de1bf9022d6d192650f744aa7aedc13caad7ce957893dc
+note_sha256: 3abe6ef91efdd900fff15c7b1d82b6faa605dc6c1caf83cd1388e79bf40d2bd1
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -9,7 +9,6 @@ discusses:
 - lora
 - qlora
 - knowledge-distillation
-- sequence-to-sequence
 - attention-and-transformers
 - quantisation
 - mixed-precision-training
@@ -40,7 +39,7 @@ relations:
   evidence: to transferring knowledge into a smaller model (distillation)
 - from: retrieval-augmented-generation
   type: BASED_ON
-  to: sequence-to-sequence
+  to: attention-and-transformers
   evidence: Retrieval-augmented generation combines the parametric memory of a pretrained sequence-to-sequence model with a non-parametric memory
 - from: lora
   type: BASED_ON
