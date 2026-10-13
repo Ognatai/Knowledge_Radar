@@ -51,7 +51,7 @@ HMMs make it hard to add features for unknown words, such as capitalisation or t
 
 #### 5. Named entities as sequence labelling
 
-Named entity recognition finds and types spans such as PER, ORG, LOC and GPE. BIO tagging (begin, inside, outside) turns span finding into one tag per word, so the same sequence labellers apply; NER is evaluated per entity with precision, recall and F1, POS tagging with accuracy (Jurafsky & Martin, 2026). Details are in [[entity-extraction|Entity Extraction]].
+Named entity recognition finds and types spans such as PER, ORG, LOC and GPE. BIO tagging (begin, inside, outside) turns span finding into one tag per word, so the same sequence labellers apply; NER is evaluated per entity with [[classification-metrics|precision]], recall and F1, POS tagging with accuracy (Jurafsky & Martin, 2026). Details are in [[entity-extraction|Entity Extraction]].
 
 #### Origin and variants
 
@@ -135,7 +135,7 @@ HMMs erschweren Merkmale für unbekannte Wörter, etwa Großschreibung oder das 
 
 #### 5. Named Entities als Sequenzmarkierung
 
-Named Entity Recognition findet und typisiert Spannen wie PER, ORG, LOC und GPE. BIO-Tagging (begin, inside, outside) macht aus der Spannensuche ein Tag pro Wort, sodass dieselben Sequenzmarkierer greifen; NER wird pro Entität mit Precision, Recall und F1 bewertet, Wortart-Tagging mit Accuracy (Jurafsky & Martin, 2026). Details stehen in [[entity-extraction|Entitätsextraktion]].
+Named Entity Recognition findet und typisiert Spannen wie PER, ORG, LOC und GPE. BIO-Tagging (begin, inside, outside) macht aus der Spannensuche ein Tag pro Wort, sodass dieselben Sequenzmarkierer greifen; NER wird pro Entität mit [[classification-metrics|Precision]], Recall und F1 bewertet, Wortart-Tagging mit Accuracy (Jurafsky & Martin, 2026). Details stehen in [[entity-extraction|Entitätsextraktion]].
 
 #### Herkunft und Varianten
 

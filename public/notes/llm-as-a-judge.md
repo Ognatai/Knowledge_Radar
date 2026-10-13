@@ -2,6 +2,11 @@
 title_en: LLM-as-a-Judge
 title_de: LLM-as-a-Judge
 entity_type: Method
+aliases:
+- Position bias
+- Verbosity bias
+- Self-enhancement bias
+- self-preference
 sources:
 - https://arxiv.org/abs/2306.05685
 - https://arxiv.org/abs/2303.16634

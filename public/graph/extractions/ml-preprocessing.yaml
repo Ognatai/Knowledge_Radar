@@ -1,12 +1,12 @@
 version: 1
-note_sha256: "23e3686f3a5d53a9752fd0e0f34a81b39b171e65bba947141c99bf69686690d6"
+note_sha256: 823f0fff0089b407644bf3a002539fa4cb35a5e2fc36b65b8e25d6dc0d2a11a3
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - scikit-learn
 - cross-validation
 - naive-bayes
 - smote
-- probability-calibration
+- classification
 - platt-scaling
 - isotonic-regression
 - temperature-scaling
@@ -25,15 +25,15 @@ relations:
   evidence: Imbalanced classes require suitable metrics and, if needed, resampling such as SMOTE
 - from: platt-scaling
   type: IS_EXAMPLE_OF
-  to: probability-calibration
+  to: classification
   evidence: Platt scaling and isotonic regression correct these distortions
 - from: isotonic-regression
   type: IS_EXAMPLE_OF
-  to: probability-calibration
+  to: classification
   evidence: Platt scaling and isotonic regression correct these distortions
 - from: temperature-scaling
   type: IS_EXAMPLE_OF
-  to: probability-calibration
+  to: classification
   evidence: Modern neural networks are also poorly calibrated; on most datasets, temperature scaling
 - from: temperature-scaling
   type: IS_EXAMPLE_OF

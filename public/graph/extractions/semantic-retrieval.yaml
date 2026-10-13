@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 0bf1ca1acba993b9d6dacd930c88041acbc3119b5e7d7e08b9e81fc4d8affdf4
+note_sha256: 282c56d384226e8b94df9d57a0cab9dbfb0a05a13606bc54da75552a7388ac7a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bm25
@@ -14,8 +14,7 @@ discusses:
 - hyde
 - contriever
 - hybrid-retrieval
-- recall-at-k
-- ndcg
+- rag-retrieval-evaluation
 - beir
 - ms-marco
 relations:

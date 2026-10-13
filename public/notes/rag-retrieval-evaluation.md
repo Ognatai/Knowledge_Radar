@@ -2,6 +2,13 @@
 title_en: 'RAG: Retrieval Evaluation'
 title_de: 'RAG: Evaluation des Retrievals'
 entity_type: Method
+aliases:
+- Precision@k
+- Recall@k
+- Normalized discounted cumulative gain (nDCG)
+- nDCG
+- Mean reciprocal rank (MRR)
+- MRR
 sources:
 - https://nlp.stanford.edu/IR-book/pdf/08eval.pdf
 - https://arxiv.org/abs/2104.08663

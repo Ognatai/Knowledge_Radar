@@ -57,7 +57,7 @@ QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained mode
 
 #### 6. DoRA
 
-DoRA (Weight-Decomposed Low-Rank Adaptation) decomposes each pretrained weight matrix into a magnitude and a direction component and fine-tunes both, using LoRA for the direction to keep the number of trainable parameters small (Liu et al., 2024). The aim is to come closer to the learning behaviour of full fine-tuning and to close the accuracy gap that remains between LoRA and full fine-tuning, without additional inference cost. DoRA consistently outperformed LoRA when fine-tuning LLaMA, LLaVA and VL-BART on tasks such as commonsense reasoning, visual instruction tuning and image or video-text understanding (Liu et al., 2024).
+DoRA (Weight-Decomposed Low-Rank Adaptation) decomposes each pretrained weight matrix into a magnitude and a direction component and fine-tunes both, using LoRA for the direction to keep the number of trainable parameters small (Liu et al., 2024). The aim is to come closer to the learning behaviour of full fine-tuning and to close the accuracy gap that remains between LoRA and full fine-tuning, without additional inference cost. DoRA consistently outperformed LoRA when fine-tuning LLaMA, LLaVA and VL-BART on tasks such as commonsense reasoning, visual [[llm-alignment|instruction tuning]] and image or video-text understanding (Liu et al., 2024).
 
 #### Origin and variants
 
@@ -154,7 +154,7 @@ QLoRA propagiert Gradienten durch ein eingefrorenes, auf 4 Bit quantisiertes vor
 
 #### 6. DoRA
 
-DoRA (Weight-Decomposed Low-Rank Adaptation) zerlegt jede vortrainierte Gewichtsmatrix in eine Betrags- und eine Richtungskomponente und stimmt beide fein ab, wobei LoRA für die Richtung verwendet wird, um die Anzahl der trainierbaren Parameter klein zu halten (Liu et al., 2024). Das Ziel besteht darin, dem Lernverhalten einer vollständigen Feinabstimmung näher zu kommen und den Genauigkeitsabstand zwischen LoRA und vollständigem Fine-Tuning zu verringern, ohne zusätzliche Inferenzkosten. DoRA übertraf LoRA konsistent bei der Feinabstimmung von LLaMA, LLaVA und VL-BART bei Aufgaben wie Commonsense Reasoning, Visual Instruction Tuning und Bild- oder Video-Text-Verstehen (Liu et al., 2024).
+DoRA (Weight-Decomposed Low-Rank Adaptation) zerlegt jede vortrainierte Gewichtsmatrix in eine Betrags- und eine Richtungskomponente und stimmt beide fein ab, wobei LoRA für die Richtung verwendet wird, um die Anzahl der trainierbaren Parameter klein zu halten (Liu et al., 2024). Das Ziel besteht darin, dem Lernverhalten einer vollständigen Feinabstimmung näher zu kommen und den Genauigkeitsabstand zwischen LoRA und vollständigem Fine-Tuning zu verringern, ohne zusätzliche Inferenzkosten. DoRA übertraf LoRA konsistent bei der Feinabstimmung von LLaMA, LLaVA und VL-BART bei Aufgaben wie Commonsense Reasoning, Visual [[llm-alignment|Instruction Tuning]] und Bild- oder Video-Text-Verstehen (Liu et al., 2024).
 
 #### Ursprung und Varianten
 

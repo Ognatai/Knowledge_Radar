@@ -91,7 +91,7 @@ Open IE (Banko et al., 2007) extracted relation tuples from the web without a fi
 
 ### In practice
 
-Extraction quality is measured with precision, recall and F1 against annotated data, separately for entities and relations. The target structure should be defined first, for example as an ontology ([[ontology-design|Ontology Design]]), so that extracted entities and relations can be linked and stored consistently ([[knowledge-graphs|Knowledge Graphs]]). With LLMs, the output format and the allowed types are given in the prompt and the output is validated against the schema before it is stored.
+Extraction quality is measured with [[classification-metrics|precision]], recall and F1 against annotated data, separately for entities and relations. The target structure should be defined first, for example as an ontology ([[ontology-design|Ontology Design]]), so that extracted entities and relations can be linked and stored consistently ([[knowledge-graphs|Knowledge Graphs]]). With LLMs, the output format and the allowed types are given in the prompt and the output is validated against the schema before it is stored.
 
 ### Key takeaway
 
@@ -186,7 +186,7 @@ Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes 
 
 ### In der Praxis
 
-Die Extraktionsqualität wird mit Precision, Recall und F1 gegen annotierte Daten gemessen, getrennt für Entitäten und Relationen. Die Zielstruktur sollte vorab festgelegt werden, etwa als Ontologie ([[ontology-design|Ontologie-Design]]), damit extrahierte Entitäten und Relationen konsistent verknüpft und gespeichert werden können ([[knowledge-graphs|Wissensgraphen]]). Bei LLMs werden Ausgabeformat und zulässige Typen im Prompt vorgegeben, und die Ausgabe wird vor dem Speichern gegen das Schema validiert.
+Die Extraktionsqualität wird mit [[classification-metrics|Precision]], Recall und F1 gegen annotierte Daten gemessen, getrennt für Entitäten und Relationen. Die Zielstruktur sollte vorab festgelegt werden, etwa als Ontologie ([[ontology-design|Ontologie-Design]]), damit extrahierte Entitäten und Relationen konsistent verknüpft und gespeichert werden können ([[knowledge-graphs|Wissensgraphen]]). Bei LLMs werden Ausgabeformat und zulässige Typen im Prompt vorgegeben, und die Ausgabe wird vor dem Speichern gegen das Schema validiert.
 
 ### Merksatz
 

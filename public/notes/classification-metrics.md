@@ -2,6 +2,9 @@
 title_en: Classification Metrics
 title_de: Klassifikationsmetriken
 entity_type: Concept
+aliases:
+- Precision
+- Recall
 sources:
 - https://doi.org/10.1016/j.ipm.2009.03.002
 - https://doi.org/10.1016/j.patrec.2005.10.010

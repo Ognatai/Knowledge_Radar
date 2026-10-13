@@ -39,7 +39,7 @@ The SVD factors the term-document matrix C into U Σ Vᵀ, where Σ holds the si
 
 #### 3. Mapping queries and new documents
 
-A query vector q is mapped into the k-dimensional space as q_k = Σ_k⁻¹ U_kᵀ q, and cosine similarity then compares queries, documents or terms. The same formula folds new documents into an existing LSI space without recomputing the SVD, but folded-in documents add neither their co-occurrences nor new terms, so quality degrades and the SVD must eventually be recomputed (Manning et al., 2008, ch. 18).
+A query vector q is mapped into the k-dimensional space as q_k = Σ_k⁻¹ U_kᵀ q, and [[text-similarity-metrics|cosine similarity]] then compares queries, documents or terms. The same formula folds new documents into an existing LSI space without recomputing the SVD, but folded-in documents add neither their co-occurrences nor new terms, so quality degrades and the SVD must eventually be recomputed (Manning et al., 2008, ch. 18).
 
 #### 4. Why it can help
 
@@ -118,7 +118,7 @@ Die SVD zerlegt die Term-Dokument-Matrix C in U Σ Vᵀ, wobei Σ die Singulärw
 
 #### 3. Anfragen und neue Dokumente abbilden
 
-Ein Anfragevektor q wird als q_k = Σ_k⁻¹ U_kᵀ q in den k-dimensionalen Raum abgebildet, und Cosine Similarity vergleicht dann Anfragen, Dokumente oder Terme. Mit derselben Formel lassen sich neue Dokumente ohne neue SVD in einen bestehenden LSI-Raum einfügen („Folding-in“), doch eingefügte Dokumente tragen weder ihre Kookkurrenzen noch neue Terme bei, sodass die Qualität sinkt und die SVD irgendwann neu berechnet werden muss (Manning et al., 2008, Kap. 18).
+Ein Anfragevektor q wird als q_k = Σ_k⁻¹ U_kᵀ q in den k-dimensionalen Raum abgebildet, und [[text-similarity-metrics|Cosine Similarity]] vergleicht dann Anfragen, Dokumente oder Terme. Mit derselben Formel lassen sich neue Dokumente ohne neue SVD in einen bestehenden LSI-Raum einfügen („Folding-in“), doch eingefügte Dokumente tragen weder ihre Kookkurrenzen noch neue Terme bei, sodass die Qualität sinkt und die SVD irgendwann neu berechnet werden muss (Manning et al., 2008, Kap. 18).
 
 #### 4. Warum es helfen kann
 

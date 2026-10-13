@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2985452960140ddacabfd3e698bc7e22aeb349ee8d34d8f5c8d6c3179d9d8d50
+note_sha256: ea8784efd4c0ca07f9376c6ddc2b0300d417c25f49b654236f5ce087417a4022
 extracted_by: claude
 discusses:
 - prompt-engineering
@@ -13,7 +13,7 @@ discusses:
 - hallucination-detection
 - prompt-comparison
 - llm-cost-optimization
-- instructgpt
+- llm-alignment
 relations:
 - from: chain-of-thought-prompting
   type: IS_EXAMPLE_OF

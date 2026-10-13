@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 78c5207eefa23c7a84122b1d23e654690d6b5acf40c4a253b4802d771e79abe6
+note_sha256: ccff66aa2dac1b7a4e9223f233f4cf2593340a163f641d4cba9765b384892b5d
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - q-learning
@@ -8,9 +8,8 @@ discusses:
 - exploration-exploitation-tradeoff
 - epsilon-greedy
 - convolutional-neural-networks
-- rlhf
+- llm-alignment
 - gpt
-- instructgpt
 - llm-adaptation
 relations:
 - from: reinforcement-learning
@@ -37,15 +36,11 @@ relations:
   type: IS_EXAMPLE_OF
   to: exploration-exploitation-tradeoff
   evidence: This exploration-exploitation trade-off is handled, for example, with epsilon-greedy action selection
-- from: rlhf
+- from: llm-alignment
   type: BASED_ON
   to: reinforcement-learning
   evidence: The same idea, reinforcement learning from human feedback, was used to fine-tune GPT-3 into InstructGPT
-- from: instructgpt
-  type: BASED_ON
-  to: rlhf
-  evidence: The same idea, reinforcement learning from human feedback, was used to fine-tune GPT-3 into InstructGPT
-- from: instructgpt
+- from: llm-alignment
   type: BASED_ON
   to: gpt
   evidence: was used to fine-tune GPT-3 into InstructGPT

@@ -1,13 +1,11 @@
 version: 1
-note_sha256: e741454e3aa31d918d5247fd8782e82d3ee5c0c91cbcf2062ca1a568a35c6342
+note_sha256: c65ab764aa36cc9476d1a77637e5b09aa3c5f792107b3c335e1533f278e8c8d8
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - attention-and-transformers
 - tokenization
-- byte-pair-encoding
 - gpt
-- instructgpt
-- rlhf
+- llm-alignment
 - reinforcement-learning
 - chatgpt
 - chinchilla
@@ -35,23 +33,15 @@ relations:
   type: BASED_ON
   to: tokenization
   evidence: Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces
-- from: byte-pair-encoding
-  type: IS_EXAMPLE_OF
-  to: tokenization
-  evidence: Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols
 - from: gpt
   type: IS_EXAMPLE_OF
   to: large-language-models
   evidence: GPT-3 (Brown et al., 2020) showed that scaling a Transformer language model to 175 billion parameters enables few-shot learning from prompts
-- from: instructgpt
+- from: llm-alignment
   type: BASED_ON
   to: gpt
   evidence: InstructGPT therefore fine-tuned GPT-3 on demonstrations written by labellers
-- from: instructgpt
-  type: BASED_ON
-  to: rlhf
-  evidence: InstructGPT (Ouyang et al., 2022) added instruction tuning and reinforcement learning from human feedback
-- from: rlhf
+- from: llm-alignment
   type: BASED_ON
   to: reinforcement-learning
   evidence: then applied reinforcement learning from human feedback (Reinforcement Learning Fundamentals) using rankings of model outputs

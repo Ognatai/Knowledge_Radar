@@ -148,7 +148,7 @@ Wo relevante Informationen auftauchen, spielt eine Rolle. Liu et al. (2023) fand
 
 #### 4. Kompression
 
-Die Kompression hält den Kontext innerhalb des Budgets. LLMLingua (Jiang et al., 2023) komprimiert Prompts mit einem Budget-Controller, der die semantische Integrität unter hohen Komprimierungsverhältnissen bewahrt, einem iterativen Komprimierungsalgorithmus auf Token-Ebene, der die Abhängigkeiten des komprimierten Inhalts modelliert, und einer auf Instruction Tuning basierenden Angleichung der Verteilungen zwischen dem kleinen Modell, das für die Komprimierung verwendet wird, und dem Zielmodell. Auf Datensätzen einschließlich GSM8K, BBH, ShareGPT und Arxiv-March23 ermöglichte es bis zu 20-fache Kompression mit geringem Leistungsverlust (Jiang et al., 2023).
+Die Kompression hält den Kontext innerhalb des Budgets. LLMLingua (Jiang et al., 2023) komprimiert Prompts mit einem Budget-Controller, der die semantische Integrität unter hohen Komprimierungsverhältnissen bewahrt, einem iterativen Komprimierungsalgorithmus auf Token-Ebene, der die Abhängigkeiten des komprimierten Inhalts modelliert, und einer auf [[llm-alignment|Instruction Tuning]] basierenden Angleichung der Verteilungen zwischen dem kleinen Modell, das für die Komprimierung verwendet wird, und dem Zielmodell. Auf Datensätzen einschließlich GSM8K, BBH, ShareGPT und Arxiv-March23 ermöglichte es bis zu 20-fache Kompression mit geringem Leistungsverlust (Jiang et al., 2023).
 
 #### 5. Gedächtnis über das Kontextfenster hinaus
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "6fb11ea57c1a13fc06f94051bb838415c02190acccaa83ea0d7250bf24604e83"
+note_sha256: "4b631db4abd9e92e782c3fbf32140c7fa1629a2fac083c186167e4aa318a0aed"
 extracted_by: claude (hand-labelled gold standard)
 discusses: [llm-adaptation, intrinsic-dimension, qlora, weight-decomposed-low-rank-adaptation, quantization, adapter-layers]
 relations:

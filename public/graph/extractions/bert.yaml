@@ -4,7 +4,6 @@ extracted_by: claude
 discusses:
 - attention-and-transformers
 - gpt
-- wordpiece
 - tokenization
 - masked-language-modelling
 - next-sentence-prediction
@@ -38,7 +37,7 @@ relations:
   evidence: 'Next sentence prediction (NSP): for sentences A and B, B is the actual next sentence half of the time'
 - from: bert
   type: BASED_ON
-  to: wordpiece
+  to: tokenization
   evidence: Text is split into WordPiece tokens with a 30,000-token vocabulary
 - from: sentence-bert
   type: BASED_ON

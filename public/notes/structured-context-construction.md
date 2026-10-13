@@ -45,7 +45,7 @@ Liu et al. (2023) found that performance on multi-document question answering an
 
 #### 3. Formatting choices
 
-Meaning-preserving formatting choices can change results substantially: in few-shot settings, performance of LLaMA-2-13B differed by up to 76 accuracy points across prompt formats, and the sensitivity persisted with larger models, more examples and instruction tuning (Sclar et al., 2023; [[prompt-comparison|Prompt Comparison]]). A consistent format should therefore be chosen and tested rather than assumed to be neutral.
+Meaning-preserving formatting choices can change results substantially: in few-shot settings, performance of LLaMA-2-13B differed by up to 76 accuracy points across prompt formats, and the sensitivity persisted with larger models, more examples and [[llm-alignment|instruction tuning]] (Sclar et al., 2023; [[prompt-comparison|Prompt Comparison]]). A consistent format should therefore be chosen and tested rather than assumed to be neutral.
 
 #### 4. Structured data in the prompt
 
@@ -137,7 +137,7 @@ Liu et al. (2023) fanden, dass die Leistung bei Fragebeantwortung über mehrere 
 
 #### 3. Formatierungsentscheidungen
 
-Bedeutungserhaltende Formatierungsentscheidungen können Ergebnisse erheblich verändern: Bei Few-Shot-Aufgaben unterschied sich die Leistung von LLaMA-2-13B je nach Prompt-Format um bis zu 76 Prozentpunkte, und die Empfindlichkeit blieb bei größeren Modellen, mehr Beispielen und Instruction Tuning bestehen (Sclar et al., 2023; [[prompt-comparison|Prompt-Vergleiche]]). Ein einheitliches Format sollte daher gewählt und getestet werden, statt es für neutral zu halten.
+Bedeutungserhaltende Formatierungsentscheidungen können Ergebnisse erheblich verändern: Bei Few-Shot-Aufgaben unterschied sich die Leistung von LLaMA-2-13B je nach Prompt-Format um bis zu 76 Prozentpunkte, und die Empfindlichkeit blieb bei größeren Modellen, mehr Beispielen und [[llm-alignment|Instruction Tuning]] bestehen (Sclar et al., 2023; [[prompt-comparison|Prompt-Vergleiche]]). Ein einheitliches Format sollte daher gewählt und getestet werden, statt es für neutral zu halten.
 
 #### 4. Strukturierte Daten im Prompt
 

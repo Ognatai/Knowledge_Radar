@@ -2,6 +2,9 @@
 title_en: Information Retrieval
 title_de: Information Retrieval
 entity_type: Concept
+aliases:
+- tf-idf
+- Vector space model
 sources:
 - https://edoc.ub.uni-muenchen.de/36297/
 - https://nlp.stanford.edu/IR-book/
@@ -52,7 +55,7 @@ Boolean queries remain common among professional searchers: in 2005 the legal se
 
 #### 2. Vector space model
 
-The vector space model (Salton et al., 1975) represents documents and queries as vectors of term weights in a common space, with one dimension per term. Documents are ranked by their similarity to the query vector; a common measure is the cosine similarity, the cosine of the angle between the two vectors, which does not depend on vector length (Manning et al., 2008).
+The vector space model (Salton et al., 1975) represents documents and queries as vectors of term weights in a common space, with one dimension per term. Documents are ranked by their similarity to the query vector; a common measure is the [[text-similarity-metrics|cosine similarity]], the cosine of the angle between the two vectors, which does not depend on vector length (Manning et al., 2008).
 
 #### 3. Term weighting with tf-idf
 

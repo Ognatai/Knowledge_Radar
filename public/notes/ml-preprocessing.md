@@ -21,7 +21,7 @@ Preprocessing prepares data for training and fair evaluation. Features are scale
 
 ### How it works
 
-The data is split before any model sees it. Transformations such as scaling are fitted on the training data only, models are compared with cross-validation, and the test set is used once at the end. Class imbalance and probability calibration are handled as part of the same pipeline.
+The data is split before any model sees it. Transformations such as scaling are fitted on the training data only, models are compared with cross-validation, and the test set is used once at the end. Class imbalance and [[classification|probability calibration]] are handled as part of the same pipeline.
 
 ```text
 1. Scaling and pipelines

@@ -1,13 +1,8 @@
 version: 1
-note_sha256: b71453df15c3b958cef813b631d7d46fae02e15f42662ac89ce84a17b1e20d87
+note_sha256: f5e7c9be880afc831986d7a43e26cbe49e7f41a92e84e97db3b070ea33e1d008
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
-- markov-chain
 - part-of-speech-tagging
 - n-gram-language-models
 - automatic-speech-recognition
-relations:
-- from: hidden-markov-models
-  type: BASED_ON
-  to: markov-chain
-  evidence: 'A first-order HMM adds two assumptions: a state depends only on the previous state'
+relations: []

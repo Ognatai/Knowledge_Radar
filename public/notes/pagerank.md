@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Link analysis treats a hyperlink from one page to another as an endorsement, much as citation analysis treats citations among scholarly articles (Manning et al., 2008, ch. 21). PageRank gives every page a score between 0 and 1: the fraction of time a random surfer spends on it while following links and occasionally teleporting to a random page; it is the steady state of a Markov chain and is computed by power iteration. HITS instead computes, for each query, hub scores (pages that point to good authorities) and authority scores (pages pointed to by good hubs) (Manning et al., 2008, ch. 21).
+Link analysis treats a hyperlink from one page to another as an endorsement, much as citation analysis treats citations among scholarly articles (Manning et al., 2008, ch. 21). PageRank gives every page a score between 0 and 1: the fraction of time a random surfer spends on it while following links and occasionally teleporting to a random page; it is the steady state of a [[hidden-markov-models|Markov chain]] and is computed by power iteration. HITS instead computes, for each query, hub scores (pages that point to good authorities) and authority scores (pages pointed to by good hubs) (Manning et al., 2008, ch. 21).
 
 ### How it works
 
@@ -60,7 +60,7 @@ Link analysis has its roots in citation analysis and bibliometrics (Manning et a
 
 ### When to use it
 
-- As a query-independent quality signal in web search, combined with hundreds of other features such as cosine similarity and term proximity into one ranking score (Manning et al., 2008, ch. 21).
+- As a query-independent quality signal in web search, combined with hundreds of other features such as [[text-similarity-metrics|cosine similarity]] and term proximity into one ranking score (Manning et al., 2008, ch. 21).
 - To prioritise which pages a crawler fetches next ([[web-crawling|Web Crawling]]; Manning et al., 2008, ch. 21).
 - HITS for broad informational topics, where authoritative pages may not even contain the query terms (Manning et al., 2008, ch. 21).
 
@@ -145,7 +145,7 @@ Linkanalyse hat ihre Wurzeln in der Zitationsanalyse und Bibliometrie (Manning e
 
 ### Wann einsetzen
 
-- Als anfrageunabhängiges Qualitätssignal in der Websuche, kombiniert mit Hunderten anderer Merkmale wie Cosine Similarity und Termnähe zu einem Ranking-Wert (Manning et al., 2008, Kap. 21).
+- Als anfrageunabhängiges Qualitätssignal in der Websuche, kombiniert mit Hunderten anderer Merkmale wie [[text-similarity-metrics|Cosine Similarity]] und Termnähe zu einem Ranking-Wert (Manning et al., 2008, Kap. 21).
 - Um zu priorisieren, welche Seiten ein Crawler als Nächstes holt ([[web-crawling|Web-Crawling]]; Manning et al., 2008, Kap. 21).
 - HITS für breite Informationsthemen, bei denen maßgebliche Seiten die Anfrageterme vielleicht gar nicht enthalten (Manning et al., 2008, Kap. 21).
 

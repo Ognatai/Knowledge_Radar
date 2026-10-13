@@ -6,14 +6,13 @@ discusses:
 - bi-encoder
 - cross-encoder
 - dense-passage-retrieval
-- cosine-similarity
+- text-similarity-metrics
 - glove
 - embeddings
 - semantic-retrieval
 - vector-databases
 - rag-retrieval
 - rag-retrieval-evaluation
-- text-similarity-metrics
 relations:
 - from: sentence-bert
   type: BASED_ON

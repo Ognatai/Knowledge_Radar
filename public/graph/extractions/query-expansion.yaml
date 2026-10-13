@@ -1,12 +1,12 @@
 version: 1
-note_sha256: "02cb14362d624f0bbf30c33f3b82cf7829fd2b0dd62f76981993e2ef26c6a6bb"
+note_sha256: defea32a24e0a413656342ee43ed0d8b40bd66ad3e05870984f96f2a57e787d3
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
-- vector-space-model
+- information-retrieval
 - bm25
 - latent-semantic-indexing
 relations:
 - from: query-expansion
   type: BASED_ON
-  to: vector-space-model
+  to: information-retrieval
   evidence: In the vector space model, the query that best separates relevant from non-relevant documents is the difference between their centroids

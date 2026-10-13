@@ -87,7 +87,7 @@ RotatE (Sun et al., 2019) builds on translational models (Bordes et al., 2013), 
 
 ### In practice
 
-RotatE is evaluated with ranking metrics such as mean reciprocal rank and hits@k on standard link prediction benchmarks, and compared with TransE, DistMult and ComplEx on the same data (Sun et al., 2019; Ji et al., 2020). Predicted links are candidates that should be checked before they are added to a production graph ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
+RotatE is evaluated with ranking metrics such as [[rag-retrieval-evaluation|mean reciprocal rank]] and hits@k on standard link prediction benchmarks, and compared with TransE, DistMult and ComplEx on the same data (Sun et al., 2019; Ji et al., 2020). Predicted links are candidates that should be checked before they are added to a production graph ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
 
 ### Key takeaway
 
@@ -178,7 +178,7 @@ RotatE (Sun et al., 2019) baut auf translationalen Modellen (Bordes et al., 2013
 
 ### In der Praxis
 
-RotatE wird mit Ranking-Metriken wie Mean Reciprocal Rank und Hits@k auf Standard-Benchmarks für Link Prediction bewertet und auf denselben Daten mit TransE, DistMult und ComplEx verglichen (Sun et al., 2019; Ji et al., 2020). Vorhergesagte Verbindungen sind Kandidaten, die geprüft werden sollten, bevor sie in einen produktiven Graphen übernommen werden ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
+RotatE wird mit Ranking-Metriken wie [[rag-retrieval-evaluation|Mean Reciprocal Rank]] und Hits@k auf Standard-Benchmarks für Link Prediction bewertet und auf denselben Daten mit TransE, DistMult und ComplEx verglichen (Sun et al., 2019; Ji et al., 2020). Vorhergesagte Verbindungen sind Kandidaten, die geprüft werden sollten, bevor sie in einen produktiven Graphen übernommen werden ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
 
 ### Merksatz
 

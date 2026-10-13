@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "60ccf203ef7dae21e8e5745524c8ad27aea8961b5a91cd80453a28bb81418967"
+note_sha256: 445c12a24a614646d3496d401d966f48307d293b72702cd67668b472f173b7da
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - word2vec
@@ -7,11 +7,10 @@ discusses:
 - bert
 - sentence-bert
 - matryoshka-representation-learning
-- wordpiece
 - tokenization
 - faiss
 - vector-databases
-- cosine-similarity
+- text-similarity-metrics
 - cross-encoder
 - information-retrieval
 - attention-and-transformers
@@ -42,10 +41,6 @@ relations:
   type: IS_EXAMPLE_OF
   to: embeddings
   evidence: Matryoshka Representation Learning (MRL; Kusupati et al., 2022) addresses this by designing nested embeddings
-- from: wordpiece
-  type: IS_EXAMPLE_OF
-  to: tokenization
-  evidence: Tokenization processes input text into a sequence of subword tokens using a fixed vocabulary, commonly implemented via WordPiece
 - from: word2vec
   type: BASED_ON
   to: neural-networks

@@ -1,9 +1,7 @@
 version: 1
-note_sha256: 7432e135006dd3729b902cb70cf342902804615dc4379917f61d39fcd5afd53c
+note_sha256: dcdad37d381d709fba2715ab63fa5cea083c34c661fad17d14b1682bdf823c92
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
-- byte-pair-encoding
-- wordpiece
 - unigram-language-model-tokenization
 - subword-regularization
 - sentencepiece
@@ -13,14 +11,6 @@ discusses:
 - python
 - natural-language-processing
 relations:
-- from: byte-pair-encoding
-  type: IS_EXAMPLE_OF
-  to: tokenization
-  evidence: Sennrich et al. (2015) adapted the byte pair encoding compression algorithm to word segmentation
-- from: wordpiece
-  type: IS_EXAMPLE_OF
-  to: tokenization
-  evidence: divides words into a limited set of common sub-word units, called wordpieces, for both input and output
 - from: unigram-language-model-tokenization
   type: IS_EXAMPLE_OF
   to: tokenization
@@ -35,15 +25,11 @@ relations:
   evidence: SentencePiece (Kudo & Richardson, 2018) is a language-independent subword tokenizer and detokenizer
 - from: sentencepiece
   type: IMPLEMENTS
-  to: byte-pair-encoding
-  evidence: The main algorithms are byte pair encoding (BPE), wordpieces and the unigram language model, implemented for example in SentencePiece
-- from: sentencepiece
-  type: IMPLEMENTS
   to: unigram-language-model-tokenization
   evidence: The main algorithms are byte pair encoding (BPE), wordpieces and the unigram language model, implemented for example in SentencePiece
 - from: gnmt
   type: BASED_ON
-  to: wordpiece
+  to: tokenization
   evidence: Google's neural machine translation system (GNMT) divides words into a limited set of common sub-word units, called wordpieces
 - from: gnmt
   type: DEVELOPED_BY

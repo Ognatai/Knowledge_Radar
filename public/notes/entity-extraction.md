@@ -39,7 +39,7 @@ A model reads a text and marks each entity span together with its type. Classica
 
 #### 1. Task and evaluation
 
-The CoNLL-2003 shared task (Tjong Kim Sang & De Meulder, 2003) defined NER for English and German with four entity types: persons, locations, organisations and miscellaneous names. Systems were evaluated with precision, recall and F1 on exact entity matches, so a prediction only counts if both the span and the type are correct. The data set became a standard NER benchmark.
+The CoNLL-2003 shared task (Tjong Kim Sang & De Meulder, 2003) defined NER for English and German with four entity types: persons, locations, organisations and miscellaneous names. Systems were evaluated with [[classification-metrics|precision]], recall and F1 on exact entity matches, so a prediction only counts if both the span and the type are correct. The data set became a standard NER benchmark.
 
 #### 2. Neural sequence labelling
 
@@ -138,7 +138,7 @@ Ein Modell liest einen Text und markiert jede Entität mit ihrem Typ. Klassische
 
 #### 1. Aufgabe und Evaluation
 
-Der Shared Task CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) definierte NER für Englisch und Deutsch mit vier Entitätstypen: Personen, Orte, Organisationen und sonstige Namen. Systeme wurden mit Precision, Recall und F1 auf exakten Entitätstreffern bewertet; eine Vorhersage zählt also nur, wenn Textspanne und Typ stimmen. Der Datensatz wurde zu einem Standard-Benchmark für NER.
+Der Shared Task CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) definierte NER für Englisch und Deutsch mit vier Entitätstypen: Personen, Orte, Organisationen und sonstige Namen. Systeme wurden mit [[classification-metrics|Precision]], Recall und F1 auf exakten Entitätstreffern bewertet; eine Vorhersage zählt also nur, wenn Textspanne und Typ stimmen. Der Datensatz wurde zu einem Standard-Benchmark für NER.
 
 #### 2. Neuronales Sequenz-Labeling
 

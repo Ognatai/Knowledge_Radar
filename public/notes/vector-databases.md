@@ -91,7 +91,7 @@ Vector databases become necessary when scalability and metadata management are r
 
 ### In practice
 
-Evaluation compares the recall of the approximate index against exact search together with latency and memory; ann-benchmarks is a public benchmark for this, and retrieval quality for the application is measured separately, see [[rag-retrieval-evaluation|retrieval evaluation]]. Typical failure modes include using unnormalized embeddings with cosine similarity (distorting ranking) and selecting top-k values exceeding context window limits (increasing token costs). Key HNSW parameters are the number of connections per node and the size of the candidate lists during construction and search (Malkov & Yashunin 2016), while product quantization requires sub-vector count and codebook size (Jégou et al. 2011).
+Evaluation compares the recall of the approximate index against exact search together with latency and memory; ann-benchmarks is a public benchmark for this, and retrieval quality for the application is measured separately, see [[rag-retrieval-evaluation|retrieval evaluation]]. Typical failure modes include using unnormalized embeddings with [[text-similarity-metrics|cosine similarity]] (distorting ranking) and selecting top-k values exceeding context window limits (increasing token costs). Key HNSW parameters are the number of connections per node and the size of the candidate lists during construction and search (Malkov & Yashunin 2016), while product quantization requires sub-vector count and codebook size (Jégou et al. 2011).
 
 ### Key takeaway
 

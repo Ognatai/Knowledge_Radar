@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6a20ceaa473a21c5227ced34a847941763cd9f8d7c7671ad0c7fb9df32b6ac59
+note_sha256: 67dada1ccb06ffebd60795b8182486c731843ca70ecddb6c2f854e8e34da0bf2
 extracted_by: claude
 discusses:
 - retrieval-augmented-generation
@@ -14,9 +14,7 @@ discusses:
 - query-expansion
 - natural-language-inference
 - claim-level-grounding-check
-- recall-at-k
-- mean-reciprocal-rank
-- ndcg
+- rag-retrieval-evaluation
 - llm-as-a-judge
 - embeddings
 - alce

@@ -16,6 +16,7 @@ exclusions:
   transe:
     embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
   eu-ai-act:
+    classification: classification of natural persons in the legal sense, not the ML task.
     monitoring-and-alerting: market monitoring by authorities, not the monitoring of software systems.
   experiment-tracking:
     monitoring-and-alerting: watching a single training run, not monitoring a service in production.
@@ -33,3 +34,7 @@ exclusions:
     llm-alignment: post-training quantization of weights, not post-training for alignment.
   llm-alignment:
     classification: DPO's loss is a classification loss, not the classification task of the classification note.
+  text-similarity-metrics:
+    classification-metrics: BLEU's modified n-gram precision, not the classification metric.
+  automatic-speech-recognition:
+    classification: Connectionist Temporal Classification is a decoding method, not classification.

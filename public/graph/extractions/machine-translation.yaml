@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b0579bbd6b5f83514baa25d2b4db3703ee1df6bffa499db3d2a93a1ebb4b8287
+note_sha256: efdc4135a1095378b5a98a037beec7bbfd905065e953f0d4b30ff9edc8040c04
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - sequence-to-sequence

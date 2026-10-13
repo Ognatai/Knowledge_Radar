@@ -5,9 +5,6 @@ discusses:
 - llm-as-a-judge
 - helm-framework
 - crowdsourced-pairwise-comparison
-- position-bias
-- verbosity-bias
-- self-enhancement-bias
 - mmlu
 - truthfulqa
 - mt-bench

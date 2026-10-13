@@ -13,9 +13,6 @@ discusses:
 - llm-as-a-judge
 - natural-language-inference
 - prediction-powered-inference
-- position-bias
-- verbosity-bias
-- self-enhancement-bias
 - gpt
 - chatgpt
 relations:

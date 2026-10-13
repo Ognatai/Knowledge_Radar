@@ -116,7 +116,7 @@ Ward (1963) proposed hierarchical grouping by an objective function, Lloyd (1982
 
 ### In practice
 
-Without labels, quality is checked with external criteria against gold-standard classes or, most directly, in the application (Manning et al., 2008, ch. 16). For documents, topic similarity is approximated by cosine similarity or Euclidean distance on length-normalised vectors; stop words can be ignored for topics but distinguish languages (Manning et al., 2008, ch. 16). Clustering also underlies [[near-duplicate-detection|Near-Duplicate Detection]], and latent semantic indexing can be seen as a soft clustering ([[latent-semantic-indexing|Latent Semantic Indexing]]) (Manning et al., 2008, ch. 16). Classification, by contrast, learns given classes from labelled data ([[classification|Classification]]).
+Without labels, quality is checked with external criteria against gold-standard classes or, most directly, in the application (Manning et al., 2008, ch. 16). For documents, topic similarity is approximated by [[text-similarity-metrics|cosine similarity]] or Euclidean distance on length-normalised vectors; stop words can be ignored for topics but distinguish languages (Manning et al., 2008, ch. 16). Clustering also underlies [[near-duplicate-detection|Near-Duplicate Detection]], and latent semantic indexing can be seen as a soft clustering ([[latent-semantic-indexing|Latent Semantic Indexing]]) (Manning et al., 2008, ch. 16). Classification, by contrast, learns given classes from labelled data ([[classification|Classification]]).
 
 ### Key takeaway
 

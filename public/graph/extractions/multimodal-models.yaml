@@ -11,7 +11,7 @@ discusses:
 - attention-and-transformers
 - resnet
 - gpt
-- instruction-tuning
+- llm-alignment
 - latent-diffusion
 - diffusion-models
 - embeddings
@@ -38,7 +38,7 @@ relations:
   evidence: instruction-tuned a model that connects a vision encoder with a large language model
 - from: llava
   type: BASED_ON
-  to: instruction-tuning
+  to: llm-alignment
   evidence: LLaVA used language-only GPT-4 to generate multimodal instruction-following data and instruction-tuned a model
 - from: multimodal-models
   type: BASED_ON

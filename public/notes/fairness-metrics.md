@@ -54,7 +54,7 @@ Group fairness compares aggregate statistics between groups defined by the prote
 - **Demographic parity:** P(Ŷ = 1 | A = a) = P(Ŷ = 1 | A = a′), equal rates of favourable predictions regardless of qualification.
 - **Equalised odds:** P(Ŷ = 1 | Y = y, A = a) = P(Ŷ = 1 | Y = y, A = a′) for y ∈ {0, 1}, equal true positive and false positive rates.
 - **Equal opportunity:** only equal true positive rates, i.e. qualified individuals have the same chance in every group (Hardt et al., 2016).
-- **Predictive parity:** equal precision, P(Y = 1 | Ŷ = 1, A = a) = P(Y = 1 | Ŷ = 1, A = a′).
+- **Predictive parity:** equal [[classification-metrics|precision]], P(Y = 1 | Ŷ = 1, A = a) = P(Y = 1 | Ŷ = 1, A = a′).
 
 Further criteria include conditional statistical parity, treatment equality (equal ratio of false negatives to false positives), false positive and false negative rate balance and overall accuracy equality (Urchs, 2025). Hardt et al. (2016) show how any learned predictor can be optimally adjusted to satisfy equal opportunity, and note that such criteria are oblivious: they depend only on the joint statistics of prediction, target and attribute.
 
@@ -162,7 +162,7 @@ Gruppenfairness vergleicht aggregierte Kennzahlen zwischen Gruppen, die durch da
 - **Demographic Parity:** P(Ŷ = 1 | A = a) = P(Ŷ = 1 | A = a′), gleiche Raten günstiger Vorhersagen unabhängig von der Qualifikation.
 - **Equalised Odds:** P(Ŷ = 1 | Y = y, A = a) = P(Ŷ = 1 | Y = y, A = a′) für y ∈ {0, 1}, gleiche Richtig-positiv- und Falsch-positiv-Raten.
 - **Equal Opportunity:** nur gleiche Richtig-positiv-Raten, qualifizierte Personen haben also in jeder Gruppe dieselbe Chance (Hardt et al., 2016).
-- **Predictive Parity:** gleiche Precision, P(Y = 1 | Ŷ = 1, A = a) = P(Y = 1 | Ŷ = 1, A = a′).
+- **Predictive Parity:** gleiche [[classification-metrics|Precision]], P(Y = 1 | Ŷ = 1, A = a) = P(Y = 1 | Ŷ = 1, A = a′).
 
 Weitere Kriterien sind Conditional Statistical Parity, Treatment Equality (gleiches Verhältnis von falsch negativen zu falsch positiven Entscheidungen), ausgeglichene Falsch-positiv- und Falsch-negativ-Raten sowie gleiche Gesamtgenauigkeit (Urchs, 2025). Hardt et al. (2016) zeigen, wie sich jeder gelernte Prädiktor optimal so anpassen lässt, dass er Equal Opportunity erfüllt, und weisen darauf hin, dass solche Kriterien „oblivious“ sind: Sie hängen nur von der gemeinsamen Verteilung von Vorhersage, Zielgröße und Merkmal ab.
 

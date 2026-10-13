@@ -125,20 +125,6 @@ entities:
   name_de: Prometheus (Evaluator-Modell)
   aliases:
   - Prometheus
-- id: position-bias
-  type: Concept
-  name_en: Position bias
-  name_de: Position Bias
-- id: verbosity-bias
-  type: Concept
-  name_en: Verbosity bias
-  name_de: Verbosity Bias
-- id: self-enhancement-bias
-  type: Concept
-  name_en: Self-enhancement bias
-  name_de: Self-Enhancement Bias
-  aliases:
-  - self-preference
 - id: property-graph
   type: Concept
   name_en: Property graph
@@ -559,10 +545,6 @@ entities:
   type: Method
   name_en: Linear regression
   name_de: Lineare Regression
-- id: logistic-regression
-  type: Method
-  name_en: Logistic regression
-  name_de: Logistische Regression
 - id: supervised-learning
   type: Concept
   name_en: Supervised learning
@@ -603,10 +585,6 @@ entities:
   type: Concept
   name_en: Generative model
   name_de: Generatives Modell
-- id: probability-calibration
-  type: Concept
-  name_en: Probability calibration
-  name_de: Kalibrierung von Wahrscheinlichkeiten
 - id: platt-scaling
   type: Method
   name_en: Platt scaling
@@ -619,16 +597,6 @@ entities:
   type: Concept
   name_en: Confusion matrix
   name_de: Konfusionsmatrix
-- id: precision
-  type: Concept
-  name_en: Precision
-  name_de: Precision
-- id: recall
-  type: Concept
-  name_en: Recall (sensitivity)
-  name_de: Recall (Sensitivität)
-  aliases:
-  - sensitivity
 - id: specificity
   type: Concept
   name_en: Specificity
@@ -1220,18 +1188,10 @@ entities:
   - MRL
   - Matryoshka representations
   - Matryoshka embeddings
-- id: wordpiece
-  type: Method
-  name_en: WordPiece
-  name_de: WordPiece
 - id: faiss
   type: Technology
   name_en: FAISS
   name_de: FAISS
-- id: cosine-similarity
-  type: Concept
-  name_en: Cosine similarity
-  name_de: Cosine Similarity
 - id: bagging
   type: Method
   name_en: Bagging (bootstrap aggregating)
@@ -1561,16 +1521,6 @@ entities:
   type: Method
   name_en: BART
   name_de: BART
-- id: tf-idf
-  type: Method
-  name_en: tf-idf
-  name_de: tf-idf
-  aliases:
-  - TF-IDF
-- id: vector-space-model
-  type: Method
-  name_en: Vector space model
-  name_de: Vektorraummodell
 - id: dense-passage-retrieval
   type: Method
   name_en: Dense passage retrieval (DPR)
@@ -1682,22 +1632,6 @@ entities:
   type: Concept
   name_en: Creditworthiness assessment
   name_de: Kreditwürdigkeitsprüfung
-- id: byte-pair-encoding
-  type: Method
-  name_en: Byte pair encoding (BPE)
-  name_de: Byte Pair Encoding (BPE)
-  aliases:
-  - BPE
-- id: instructgpt
-  type: Method
-  name_en: InstructGPT
-  name_de: InstructGPT
-- id: rlhf
-  type: Method
-  name_en: Reinforcement learning from human feedback (RLHF)
-  name_de: Reinforcement Learning from Human Feedback (RLHF)
-  aliases:
-  - RLHF
 - id: chinchilla
   type: Method
   name_en: Chinchilla
@@ -1762,10 +1696,6 @@ entities:
   type: Organization
   name_en: Amazon
   name_de: Amazon
-- id: instruction-tuning
-  type: Method
-  name_en: Instruction tuning
-  name_de: Instruction Tuning
 - id: flan
   type: Method
   name_en: FLAN
@@ -2218,26 +2148,6 @@ entities:
   name_de: Prediction-Powered Inference (PPI)
   aliases:
   - PPI
-- id: recall-at-k
-  type: Method
-  name_en: Recall@k
-  name_de: Recall@k
-- id: precision-at-k
-  type: Method
-  name_en: Precision@k
-  name_de: Precision@k
-- id: mean-reciprocal-rank
-  type: Method
-  name_en: Mean reciprocal rank (MRR)
-  name_de: Mean Reciprocal Rank (MRR)
-  aliases:
-  - MRR
-- id: ndcg
-  type: Method
-  name_en: Normalized discounted cumulative gain (nDCG)
-  name_de: Normalized Discounted Cumulative Gain (nDCG)
-  aliases:
-  - nDCG
 - id: context-pollution
   type: Concept
   name_en: Context pollution
@@ -2866,10 +2776,6 @@ entities:
   type: Method
   name_en: Singular value decomposition (SVD)
   name_de: Singulärwertzerlegung (SVD)
-- id: markov-chain
-  type: Concept
-  name_en: Markov chain
-  name_de: Markov-Kette
 - id: jaccard-coefficient
   type: Concept
   name_en: Jaccard coefficient

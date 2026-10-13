@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Large language models (LLMs) are Transformer-based [[neural-networks|neural networks]] ([[attention-and-transformers|Attention and Transformers]]) trained on large text corpora to predict the next token. At sufficient scale they can perform many tasks from instructions or a few examples in the prompt, without task-specific fine-tuning ([[prompt-engineering|Prompt Engineering]]), and instruction tuning with human feedback aligns their outputs with user intent (Brown et al., 2020; Ouyang et al., 2022).
+Large language models (LLMs) are Transformer-based [[neural-networks|neural networks]] ([[attention-and-transformers|Attention and Transformers]]) trained on large text corpora to predict the next token. At sufficient scale they can perform many tasks from instructions or a few examples in the prompt, without task-specific fine-tuning ([[prompt-engineering|Prompt Engineering]]), and [[llm-alignment|instruction tuning]] with human feedback aligns their outputs with user intent (Brown et al., 2020; Ouyang et al., 2022).
 
 ### How it works
 
@@ -129,7 +129,7 @@ LLMs generate text by repeatedly predicting the next token with a Transformer; t
 
 ### TL;DR
 
-Große Sprachmodelle (LLMs) sind Transformer-basierte [[neural-networks|neuronale Netze]] ([[attention-and-transformers|Attention and Transformers]]), die auf großen Textkorpora darauf trainiert werden, das nächste Token vorherzusagen. Bei ausreichender Größe können sie viele Aufgaben aus Anweisungen oder einigen Beispielen im Prompt ausführen, ohne eine task-spezifische Feinabstimmung ([[prompt-engineering|Prompt Engineering]]), und Instruction Tuning mit menschlichem Feedback richtet ihre Ausgaben an der Absicht der Nutzer aus (Brown et al., 2020; Ouyang et al., 2022).
+Große Sprachmodelle (LLMs) sind Transformer-basierte [[neural-networks|neuronale Netze]] ([[attention-and-transformers|Attention and Transformers]]), die auf großen Textkorpora darauf trainiert werden, das nächste Token vorherzusagen. Bei ausreichender Größe können sie viele Aufgaben aus Anweisungen oder einigen Beispielen im Prompt ausführen, ohne eine task-spezifische Feinabstimmung ([[prompt-engineering|Prompt Engineering]]), und [[llm-alignment|Instruction Tuning]] mit menschlichem Feedback richtet ihre Ausgaben an der Absicht der Nutzer aus (Brown et al., 2020; Ouyang et al., 2022).
 
 ### Funktionsweise
 

@@ -35,7 +35,7 @@ The user issues a short query, the system returns results, the user marks some d
 
 #### 2. The Rocchio algorithm
 
-In the vector space model, the query that best separates relevant from non-relevant documents is the difference between their centroids, but the relevant set is unknown. Rocchio's algorithm, popularised by Salton's SMART system around 1970, therefore moves the original query towards the centroid of the known relevant documents and away from the known non-relevant ones: `q_m = α·q_0 + β·centroid(D_r) − γ·centroid(D_nr)`, setting negative term weights to zero. Positive feedback is worth much more than negative, so systems choose γ < β; reasonable values are α = 1, β = 0.75 and γ = 0.15, and many systems use only positive feedback (γ = 0) (Manning et al., 2008, ch. 9).
+In the [[information-retrieval|vector space model]], the query that best separates relevant from non-relevant documents is the difference between their centroids, but the relevant set is unknown. Rocchio's algorithm, popularised by Salton's SMART system around 1970, therefore moves the original query towards the centroid of the known relevant documents and away from the known non-relevant ones: `q_m = α·q_0 + β·centroid(D_r) − γ·centroid(D_nr)`, setting negative term weights to zero. Positive feedback is worth much more than negative, so systems choose γ < β; reasonable values are α = 1, β = 0.75 and γ = 0.15, and many systems use only positive feedback (γ = 0) (Manning et al., 2008, ch. 9).
 
 #### 3. Pseudo relevance feedback
 

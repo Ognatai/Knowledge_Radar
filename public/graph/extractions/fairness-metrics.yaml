@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 247e82849f37eb353940c4e3e34c30df435c04b47601770708488e7936c61b34
+note_sha256: 775afd53ec3ee54f384892e9dc5ad00dc250bfc796d2f1e833e925118f744d4e
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - individual-fairness
@@ -14,7 +14,7 @@ discusses:
 - predictive-parity
 - fairness-gerrymandering
 - causal-inference
-- precision
+- classification-metrics
 relations:
 - from: counterfactual-fairness
   type: BASED_ON
@@ -22,7 +22,7 @@ relations:
   evidence: Counterfactual fairness (Kusner et al., 2017) uses a causal model
 - from: predictive-parity
   type: BASED_ON
-  to: precision
+  to: classification-metrics
   evidence: 'Predictive parity: equal precision'
 - from: subgroup-fairness
   type: BASED_ON

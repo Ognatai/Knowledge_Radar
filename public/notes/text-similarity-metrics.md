@@ -2,6 +2,8 @@
 title_en: Text Similarity Metrics
 title_de: Textähnlichkeitsmetriken
 entity_type: Concept
+aliases:
+- Cosine similarity
 sources:
 - https://aclanthology.org/P02-1040/
 - https://aclanthology.org/W04-1013/

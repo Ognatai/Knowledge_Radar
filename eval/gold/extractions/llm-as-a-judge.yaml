@@ -1,25 +1,31 @@
 version: 1
-note_sha256: "d2f94883d5c65939bd5d3cca978cf4ed87da1334470b06406d8ff2c8347758a3"
+note_sha256: 4e958ccd2f77ab442c25dc35e9d2d90f35aff4223b6f847d6482dade14b41316
 extracted_by: manual
-discusses: [large-language-models, g-eval, chain-of-thought-prompting, prometheus, position-bias, verbosity-bias, self-enhancement-bias, mt-bench, chatbot-arena]
+discusses:
+- large-language-models
+- g-eval
+- chain-of-thought-prompting
+- prometheus
+- mt-bench
+- chatbot-arena
 relations:
-  - from: llm-as-a-judge
-    type: BASED_ON
-    to: large-language-models
-    evidence: LLM-as-a-judge uses a strong language model to evaluate the answers of other models
-  - from: g-eval
-    type: IS_EXAMPLE_OF
-    to: llm-as-a-judge
-    evidence: G-Eval (Liu et al., 2023) lets the judge first generate detailed evaluation steps
-  - from: g-eval
-    type: BASED_ON
-    to: chain-of-thought-prompting
-    evidence: lets the judge first generate detailed evaluation steps with chain-of-thought prompting
-  - from: prometheus
-    type: IS_EXAMPLE_OF
-    to: llm-as-a-judge
-    evidence: Prometheus (Kim et al., 2023) is an open 13B evaluator model
-  - from: mt-bench
-    type: EVALUATES
-    to: llm-as-a-judge
-    evidence: Strong LLMs as judges were systematically studied with MT-bench and Chatbot Arena
+- from: llm-as-a-judge
+  type: BASED_ON
+  to: large-language-models
+  evidence: LLM-as-a-judge uses a strong language model to evaluate the answers of other models
+- from: g-eval
+  type: IS_EXAMPLE_OF
+  to: llm-as-a-judge
+  evidence: G-Eval (Liu et al., 2023) lets the judge first generate detailed evaluation steps
+- from: g-eval
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: lets the judge first generate detailed evaluation steps with chain-of-thought prompting
+- from: prometheus
+  type: IS_EXAMPLE_OF
+  to: llm-as-a-judge
+  evidence: Prometheus (Kim et al., 2023) is an open 13B evaluator model
+- from: mt-bench
+  type: EVALUATES
+  to: llm-as-a-judge
+  evidence: Strong LLMs as judges were systematically studied with MT-bench and Chatbot Arena

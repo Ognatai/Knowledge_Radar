@@ -1,16 +1,12 @@
 version: 1
-note_sha256: a25c84e1332ed78a44f0840f96f4d315e078d24940965a90f11f4955acc353e3
+note_sha256: ecdaa25c0994b3f63e151f1502e55a69623e7f0749a25fae675df8236ca1394d
 extracted_by: claude
 discusses:
 - ragas
 - ares
 - prediction-powered-inference
-- recall-at-k
-- precision-at-k
-- mean-reciprocal-rank
-- ndcg
-- exact-match
 - rag-retrieval-evaluation
+- exact-match
 - rag-generation-evaluation
 - llm-as-a-judge
 - retrieval-augmented-generation

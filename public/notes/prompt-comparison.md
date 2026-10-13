@@ -37,7 +37,7 @@ A prompt combines several components, such as instructions, demonstrations, outp
 
 #### 2. Sensitivity to formatting
 
-Sclar et al. (2023) found that several widely used open models are extremely sensitive to subtle, meaning-preserving changes in prompt formatting in few-shot settings, with performance differences of up to 76 accuracy points for LLaMA-2-13B. Sensitivity remained when model size, the number of few-shot examples or instruction tuning changed. Their method FormatSpread quickly evaluates a sampled set of plausible prompt formats for a task and reports the interval of expected performance, without access to model weights (Sclar et al., 2023).
+Sclar et al. (2023) found that several widely used open models are extremely sensitive to subtle, meaning-preserving changes in prompt formatting in few-shot settings, with performance differences of up to 76 accuracy points for LLaMA-2-13B. Sensitivity remained when model size, the number of few-shot examples or [[llm-alignment|instruction tuning]] changed. Their method FormatSpread quickly evaluates a sampled set of plausible prompt formats for a task and reports the interval of expected performance, without access to model weights (Sclar et al., 2023).
 
 #### 3. Several instruction paraphrases
 
@@ -120,7 +120,7 @@ Ein Prompt kombiniert mehrere Komponenten, wie Anweisungen, Demonstrationsbeispi
 
 #### 2. Empfindlichkeit gegenüber Formatierung
 
-Sclar et al. (2023) fanden heraus, dass mehrere weit verbreitete offene Modelle extrem empfindlich auf subtile, bedeutungserhaltende Änderungen der Prompt-Formatierung in Few-Shot-Szenarien reagieren, wobei Leistungsunterschiede von bis zu 76 Genauigkeitspunkten für LLaMA-2-13B auftreten. Die Empfindlichkeit blieb bestehen, wenn die Modellgröße, die Anzahl der Few-Shot-Beispiele oder das Instruction Tuning verändert wurden. Ihr Verfahren FormatSpread bewertet schnell eine Stichprobe plausibler Prompt-Formate für eine Aufgabe und berichtet das Intervall der erwarteten Leistung, ohne Zugriff auf die Modellgewichte (Sclar et al., 2023).
+Sclar et al. (2023) fanden heraus, dass mehrere weit verbreitete offene Modelle extrem empfindlich auf subtile, bedeutungserhaltende Änderungen der Prompt-Formatierung in Few-Shot-Szenarien reagieren, wobei Leistungsunterschiede von bis zu 76 Genauigkeitspunkten für LLaMA-2-13B auftreten. Die Empfindlichkeit blieb bestehen, wenn die Modellgröße, die Anzahl der Few-Shot-Beispiele oder das [[llm-alignment|Instruction Tuning]] verändert wurden. Ihr Verfahren FormatSpread bewertet schnell eine Stichprobe plausibler Prompt-Formate für eine Aufgabe und berichtet das Intervall der erwarteten Leistung, ohne Zugriff auf die Modellgewichte (Sclar et al., 2023).
 
 #### 3. Mehrere Anweisungsparaphrasen
 

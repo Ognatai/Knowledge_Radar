@@ -1,13 +1,12 @@
 version: 1
-note_sha256: "fa4154ecf4c705c4b9d844b0bd82d94f43e791ebb6e3bf4fbd12c5ba07cb3c68"
+note_sha256: d74119de54da86b8d1a4863739d1c4046416f960faae42368aac18fdb62a415e
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - singular-value-decomposition
-- vector-space-model
-- cosine-similarity
+- information-retrieval
+- text-similarity-metrics
 - embeddings
 - clustering
-- information-retrieval
 relations:
 - from: latent-semantic-indexing
   type: BASED_ON

@@ -1,10 +1,10 @@
 version: 1
-note_sha256: "b3b22a3f2ffc2002a1455daa1727c6ea363175fba3fde2dc06c5b96c10885f9f"
+note_sha256: b3b22a3f2ffc2002a1455daa1727c6ea363175fba3fde2dc06c5b96c10885f9f
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
 - retrieval-augmented-generation
-- instruction-tuning
+- llm-alignment
 - flan
 - lora
 - qlora
@@ -22,7 +22,7 @@ relations:
   type: IS_EXAMPLE_OF
   to: llm-adaptation
   evidence: The options range from leaving the weights unchanged (prompting, Retrieval-Augmented Generation)
-- from: instruction-tuning
+- from: llm-alignment
   type: IS_EXAMPLE_OF
   to: llm-adaptation
   evidence: through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA)
@@ -56,5 +56,5 @@ relations:
   evidence: QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters
 - from: flan
   type: IS_EXAMPLE_OF
-  to: instruction-tuning
+  to: llm-alignment
   evidence: Instruction tuning a 137B-parameter model on more than 60 NLP tasks (FLAN) substantially improved its zero-shot performance

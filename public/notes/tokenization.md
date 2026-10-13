@@ -2,6 +2,10 @@
 title_en: Tokenization
 title_de: Tokenisierung
 entity_type: Method
+aliases:
+- Byte pair encoding (BPE)
+- BPE
+- WordPiece
 sources:
 - https://arxiv.org/abs/1508.07909
 - https://arxiv.org/abs/1609.08144

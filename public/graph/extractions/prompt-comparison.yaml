@@ -1,16 +1,13 @@
 version: 1
-note_sha256: d1c0dcda5db28d392a15eb6302f9c3b1fc39cdf8ab6a2e7ae00bc595cc0cbaf1
+note_sha256: 1cd80b8dcff7185a9fe48279a2b4a547de85931ace127989963eff5367b7a54c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - formatspread
 - multi-prompt-evaluation
 - llm-as-a-judge
-- position-bias
-- verbosity-bias
-- self-enhancement-bias
 - llama
 - gpt
-- instruction-tuning
+- llm-alignment
 relations:
 - from: formatspread
   type: IS_EXAMPLE_OF

@@ -2,6 +2,9 @@
 title_en: Classification
 title_de: Klassifikation
 entity_type: Concept
+aliases:
+- Logistic regression
+- Probability calibration
 sources:
 - https://doi.org/10.1111/j.2517-6161.1958.tb00292.x
 - https://doi.org/10.1111/j.1469-1809.1936.tb02137.x

@@ -5,8 +5,6 @@ discusses:
 - neural-networks
 - classification-metrics
 - accuracy
-- precision
-- recall
 - mean-absolute-error
 - root-mean-squared-error
 - mean-absolute-scaled-error
@@ -15,7 +13,7 @@ discusses:
 - underfitting
 - double-descent
 - bias-variance-tradeoff
-- probability-calibration
+- classification
 - temperature-scaling
 - platt-scaling
 relations:
@@ -41,5 +39,5 @@ relations:
   evidence: temperature scaling, a single-parameter variant of Platt scaling
 - from: temperature-scaling
   type: IS_EXAMPLE_OF
-  to: probability-calibration
+  to: classification
   evidence: a single-parameter variant of Platt scaling, was surprisingly effective at correcting it

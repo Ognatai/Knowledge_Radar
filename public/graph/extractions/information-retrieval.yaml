@@ -1,19 +1,16 @@
 version: 1
-note_sha256: 3793699eeee584341f87741e684b7fddbf2deeae4b8ddedfb71769070062ee15
+note_sha256: ea4f165e7bd87a1fbdf10ec94f10ca2ff1e70fe2aa27b449bfd3fdf524febc4d
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - retrieval-augmented-generation
 - bm25
-- tf-idf
 - inverted-index
-- vector-space-model
-- cosine-similarity
+- text-similarity-metrics
 - dense-passage-retrieval
 - embeddings
 - probabilistic-relevance-framework
 - bias-preserving-gender-fairness
-- precision
-- recall
+- classification-metrics
 - boolean-retrieval
 - stemming
 - compound-splitting
@@ -35,10 +32,6 @@ relations:
   type: BASED_ON
   to: inverted-index
   evidence: Classical systems use an inverted index
-- from: tf-idf
-  type: IS_EXAMPLE_OF
-  to: information-retrieval
-  evidence: rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic BM25 function
 - from: bm25
   type: IS_EXAMPLE_OF
   to: information-retrieval
@@ -47,13 +40,9 @@ relations:
   type: BASED_ON
   to: probabilistic-relevance-framework
   evidence: BM25 is a ranking function derived from the probabilistic relevance framework
-- from: vector-space-model
-  type: IS_EXAMPLE_OF
-  to: information-retrieval
-  evidence: The vector space model (Salton et al., 1975) and the comparison of term-weighting schemes (Salton & Buckley, 1988) shaped classical ranked retrieval
-- from: vector-space-model
+- from: information-retrieval
   type: BASED_ON
-  to: cosine-similarity
+  to: text-similarity-metrics
   evidence: a common measure is the cosine similarity, the cosine of the angle between the two vectors
 - from: dense-passage-retrieval
   type: IS_EXAMPLE_OF

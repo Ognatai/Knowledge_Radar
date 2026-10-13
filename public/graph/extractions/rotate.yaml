@@ -1,5 +1,5 @@
 version: 1
-note_sha256: bc19e9643583b83e63c3aab0ef2e212f06196683fdb5638a8fb4fe76d5cda7ac
+note_sha256: afb2e3203c5a660531f2bf03cd2a7297e394e95afb5ef9dfd9241fdaa5452949
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - transe
@@ -8,7 +8,7 @@ discusses:
 - knowledge-graph-embeddings
 - link-prediction
 - self-adversarial-negative-sampling
-- mean-reciprocal-rank
+- rag-retrieval-evaluation
 - knowledge-graphs
 relations:
 - from: rotate

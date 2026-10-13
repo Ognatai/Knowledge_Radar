@@ -43,7 +43,7 @@ Lexical retrieval with BM25 or tf-idf matches the words of the query ([[informat
 
 #### 2. Bi-encoders and sentence embeddings
 
-Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). [[sentence-bert|Sentence-BERT]] encodes each text separately into an embedding compared with cosine similarity, which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
+Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). [[sentence-bert|Sentence-BERT]] encodes each text separately into an embedding compared with [[text-similarity-metrics|cosine similarity]], which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
 
 #### 3. Dense passage retrieval
 

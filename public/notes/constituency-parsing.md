@@ -61,7 +61,7 @@ Neural CKY trains a classifier to score each labelled span s(i,j,l): words are e
 
 #### 7. Evaluation and heads
 
-PARSEVAL counts a hypothesis constituent as correct if a reference constituent has the same start, end and label, and reports labelled precision, recall, F1 and crossing brackets; evalb is the standard implementation. Each constituent has a lexical head (N for NP, V for VP), found with hand-written head rules (Collins, Magerman); heads map constituency to dependency structure (Jurafsky & Martin, 2026, ch. 19).
+PARSEVAL counts a hypothesis constituent as correct if a reference constituent has the same start, end and label, and reports labelled [[classification-metrics|precision]], recall, F1 and crossing brackets; evalb is the standard implementation. Each constituent has a lexical head (N for NP, V for VP), found with hand-written head rules (Collins, Magerman); heads map constituency to dependency structure (Jurafsky & Martin, 2026, ch. 19).
 
 #### Origin and variants
 
@@ -153,7 +153,7 @@ Neuronales CKY trainiert einen Klassifikator, der jede gelabelte Spanne s(i,j,l)
 
 #### 7. Evaluation und Köpfe
 
-PARSEVAL zählt eine Konstituente der Hypothese als korrekt, wenn eine Referenzkonstituente denselben Anfang, dasselbe Ende und dasselbe Label hat, und berichtet gelabelte Precision, Recall, F1 und Crossing Brackets; evalb ist die Standardimplementierung. Jede Konstituente hat einen lexikalischen Kopf (N für NP, V für VP), der mit handgeschriebenen Kopfregeln (Collins, Magerman) bestimmt wird; Köpfe übersetzen Konstituenten- in Dependenzstruktur (Jurafsky & Martin, 2026, Kap. 19).
+PARSEVAL zählt eine Konstituente der Hypothese als korrekt, wenn eine Referenzkonstituente denselben Anfang, dasselbe Ende und dasselbe Label hat, und berichtet gelabelte [[classification-metrics|Precision]], Recall, F1 und Crossing Brackets; evalb ist die Standardimplementierung. Jede Konstituente hat einen lexikalischen Kopf (N für NP, V für VP), der mit handgeschriebenen Kopfregeln (Collins, Magerman) bestimmt wird; Köpfe übersetzen Konstituenten- in Dependenzstruktur (Jurafsky & Martin, 2026, Kap. 19).
 
 #### Herkunft und Varianten
 

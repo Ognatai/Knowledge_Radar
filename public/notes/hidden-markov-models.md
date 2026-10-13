@@ -9,6 +9,7 @@ aliases:
 - Forward algorithm
 - Forward-backward algorithm
 - Baum-Welch algorithm
+- Markov chain
 sources:
 - https://web.stanford.edu/~jurafsky/slp3/A.pdf
 - https://web.stanford.edu/~jurafsky/slp3/18.pdf

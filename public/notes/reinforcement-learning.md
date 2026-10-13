@@ -52,7 +52,7 @@ Mnih et al. (2013) presented the first deep learning model that learned control 
 
 #### 5. Learning from human preferences
 
-For complex tasks, a reward function is hard to specify. Christiano et al. (2017) defined goals through non-expert human preferences between pairs of trajectory segments and solved complex RL tasks without access to the reward function, with feedback on less than one percent of the agent's interactions. The same idea, reinforcement learning from human feedback, was used to fine-tune [[gpt|GPT-3]] into InstructGPT, which human evaluators preferred to the much larger original model (Ouyang et al., 2022; [[llm-adaptation|LLM Adaptation]]).
+For complex tasks, a reward function is hard to specify. Christiano et al. (2017) defined goals through non-expert human preferences between pairs of trajectory segments and solved complex RL tasks without access to the reward function, with feedback on less than one percent of the agent's interactions. The same idea, [[llm-alignment|reinforcement learning from human feedback]], was used to fine-tune [[gpt|GPT-3]] into InstructGPT, which human evaluators preferred to the much larger original model (Ouyang et al., 2022; [[llm-adaptation|LLM Adaptation]]).
 
 #### Origin and variants
 
@@ -142,7 +142,7 @@ Mnih et al. (2013) stellten das erste Deep-Learning-Modell vor, das mit Reinforc
 
 #### 5. Lernen aus menschlichen Präferenzen
 
-Für komplexe Aufgaben ist eine Belohnungsfunktion schwer anzugeben. Christiano et al. (2017) definierten Ziele über Präferenzen von Laien zwischen Paaren von Trajektorienabschnitten und lösten komplexe RL-Aufgaben ohne Zugang zur Belohnungsfunktion, mit Feedback zu weniger als einem Prozent der Interaktionen des Agenten. Dieselbe Idee, Reinforcement Learning from Human Feedback, wurde genutzt, um [[gpt|GPT-3]] zu InstructGPT feinabzustimmen, das menschliche Bewertende dem viel größeren Ausgangsmodell vorzogen (Ouyang et al., 2022; [[llm-adaptation|LLM-Anpassung]]).
+Für komplexe Aufgaben ist eine Belohnungsfunktion schwer anzugeben. Christiano et al. (2017) definierten Ziele über Präferenzen von Laien zwischen Paaren von Trajektorienabschnitten und lösten komplexe RL-Aufgaben ohne Zugang zur Belohnungsfunktion, mit Feedback zu weniger als einem Prozent der Interaktionen des Agenten. Dieselbe Idee, [[llm-alignment|Reinforcement Learning from Human Feedback]], wurde genutzt, um [[gpt|GPT-3]] zu InstructGPT feinabzustimmen, das menschliche Bewertende dem viel größeren Ausgangsmodell vorzogen (Ouyang et al., 2022; [[llm-adaptation|LLM-Anpassung]]).
 
 #### Ursprung und Varianten
 

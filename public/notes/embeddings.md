@@ -21,7 +21,7 @@ Embeddings are dense vector representations of text that encode semantic similar
 
 ### How it works
 
-A text embedding model turns a text into one dense vector: the text is tokenized, encoded into contextual token vectors by a Transformer, and pooled into a single vector. The model is trained so that texts with similar meaning get similar vectors (Reimers & Gurevych, 2019); at search time, vectors are compared by cosine similarity or inner product, usually in a [[vector-databases|vector database]]. Dimensionality (e.g. Matryoshka representations, Kusupati et al., 2022) and evaluation on benchmarks such as MTEB (Muennighoff et al., 2022) determine cost and fitness for a task.
+A text embedding model turns a text into one dense vector: the text is tokenized, encoded into contextual token vectors by a Transformer, and pooled into a single vector. The model is trained so that texts with similar meaning get similar vectors (Reimers & Gurevych, 2019); at search time, vectors are compared by [[text-similarity-metrics|cosine similarity]] or inner product, usually in a [[vector-databases|vector database]]. Dimensionality (e.g. Matryoshka representations, Kusupati et al., 2022) and evaluation on benchmarks such as MTEB (Muennighoff et al., 2022) determine cost and fitness for a task.
 
 ```text
 text ─▶ tokenizer ─▶ Transformer encoder ─▶ token vectors

@@ -1,17 +1,12 @@
 version: 1
-note_sha256: c03153e7cd44ab411418ab4e3ebcad049c4c27fb04fd0b524ac425f5ddc73664
+note_sha256: 87f03758337fd671b6fcc4ec0e6fea4b45ff055e796faa9cf952b3c3d8ef6b43
 extracted_by: claude (hand-labelled, 2026-10-13)
 discusses:
 - information-retrieval
-- precision
-- recall
+- classification-metrics
 - f1-score
-- precision-at-k
-- recall-at-k
 - r-precision
 - mean-average-precision
-- mean-reciprocal-rank
-- ndcg
 - precision-recall-curve
 - relevance-pooling
 - kappa-statistic
@@ -30,21 +25,5 @@ relations:
   evidence: For large collections, relevance is judged only on a pool
 - from: rag-retrieval-evaluation
   type: BASED_ON
-  to: precision-at-k
-  evidence: Precision@k, such as Precision at 10, needs no estimate of how many documents are relevant
-- from: rag-retrieval-evaluation
-  type: BASED_ON
-  to: recall-at-k
-  evidence: Recall@k at that k shows whether the needed information reaches the model
-- from: rag-retrieval-evaluation
-  type: BASED_ON
   to: mean-average-precision
   evidence: Mean Average Precision (MAP) averages, for each query, the precision after each relevant document is retrieved
-- from: rag-retrieval-evaluation
-  type: BASED_ON
-  to: mean-reciprocal-rank
-  evidence: Mean Reciprocal Rank (MRR) averages 1/rank of the first relevant result
-- from: rag-retrieval-evaluation
-  type: BASED_ON
-  to: ndcg
-  evidence: Normalised discounted cumulative gain is designed for graded relevance

@@ -55,7 +55,7 @@ Graph-based parsers score entire trees as the sum of their edge scores (edge-fac
 
 #### 6. Evaluation
 
-Exact sentence match is too pessimistic. The labelled attachment score (LAS) is the percentage of words with the correct head and relation, the unlabelled attachment score (UAS) ignores the relation, and precision and recall can be computed per relation type such as NSUBJ (Jurafsky & Martin, 2026).
+Exact sentence match is too pessimistic. The labelled attachment score (LAS) is the percentage of words with the correct head and relation, the unlabelled attachment score (UAS) ignores the relation, and [[classification-metrics|precision]] and recall can be computed per relation type such as NSUBJ (Jurafsky & Martin, 2026).
 
 #### Origin and variants
 
@@ -144,7 +144,7 @@ Graphbasierte Parser bewerten ganze Bäume als Summe ihrer Kanten-Scores (edge-f
 
 #### 6. Evaluation
 
-Exakte Übereinstimmung ganzer Sätze ist zu pessimistisch. Der Labeled Attachment Score (LAS) ist der Anteil der Wörter mit korrektem Kopf und korrekter Relation, der Unlabeled Attachment Score (UAS) ignoriert die Relation, und Precision und Recall lassen sich pro Relationstyp wie NSUBJ berechnen (Jurafsky & Martin, 2026).
+Exakte Übereinstimmung ganzer Sätze ist zu pessimistisch. Der Labeled Attachment Score (LAS) ist der Anteil der Wörter mit korrektem Kopf und korrekter Relation, der Unlabeled Attachment Score (UAS) ignoriert die Relation, und [[classification-metrics|Precision]] und Recall lassen sich pro Relationstyp wie NSUBJ berechnen (Jurafsky & Martin, 2026).
 
 #### Herkunft und Varianten
 

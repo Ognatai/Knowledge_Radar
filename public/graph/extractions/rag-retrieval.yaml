@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "5ff63d2ed3d4f814a47691820276bd330a6caf39031010b1b27802b8a7f50184"
+note_sha256: 34a2e36ccbf71ae09a058c3c38fe5081b32783002b35dae402311a6becd09805
 extracted_by: claude
 discusses:
 - sparse-retrieval
@@ -18,7 +18,7 @@ discusses:
 - colbert
 - hyde
 - contriever
-- instructgpt
+- llm-alignment
 - embeddings
 - large-language-models
 - context-pollution

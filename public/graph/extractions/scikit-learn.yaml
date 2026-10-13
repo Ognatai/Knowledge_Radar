@@ -18,7 +18,6 @@ discusses:
 - regularization-and-hyperparameters
 - model-comparison
 - experiment-tracking
-- logistic-regression
 relations:
 - from: scikit-learn
   type: BASED_ON

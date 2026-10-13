@@ -1,17 +1,15 @@
 version: 1
-note_sha256: 76ffda089535a4c6abbf9fa5b7b14614b5b02c17043118a80c74f6492ee97f66
+note_sha256: f932453c8950998d0eae138b9d298bcabef4c907afd71a8ad3a6a6a6853f072b
 extracted_by: claude
 discusses:
 - attention-and-transformers
 - bert
 - openai
 - tokenization
-- byte-pair-encoding
 - few-shot-prompting
 - zero-shot-prompting
 - prompt-engineering
-- instructgpt
-- rlhf
+- llm-alignment
 - reinforcement-learning
 - multimodal-models
 - large-language-models
@@ -33,13 +31,9 @@ relations:
   evidence: GPT (Generative Pre-trained Transformer) is OpenAI's family of language models
 - from: gpt
   type: BASED_ON
-  to: byte-pair-encoding
+  to: tokenization
   evidence: GPT-2 uses byte-level byte pair encoding with a vocabulary of 50,257 tokens
-- from: instructgpt
+- from: llm-alignment
   type: BASED_ON
   to: gpt
   evidence: InstructGPT fine-tunes GPT-3 in three steps
-- from: instructgpt
-  type: BASED_ON
-  to: rlhf
-  evidence: optimising the model against that reward model with PPO (reinforcement learning from human feedback)

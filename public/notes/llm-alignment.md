@@ -5,6 +5,10 @@ entity_type: Method
 aliases:
 - Preference alignment
 - Post-training
+- Reinforcement learning from human feedback (RLHF)
+- RLHF
+- Instruction tuning
+- InstructGPT
 sources:
 - https://web.stanford.edu/~jurafsky/slp3/8.pdf
 - https://arxiv.org/abs/2203.02155

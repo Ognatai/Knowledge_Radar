@@ -10,10 +10,9 @@ discusses:
 - clustering
 - principal-component-analysis
 - linear-regression
-- logistic-regression
+- classification
 - supervised-learning
 - unsupervised-learning
-- classification
 - bias-variance-tradeoff
 - cross-validation
 - scikit-learn
@@ -49,7 +48,7 @@ relations:
   type: IS_EXAMPLE_OF
   to: classical-machine-learning
   evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression
-- from: logistic-regression
+- from: classification
   type: IS_EXAMPLE_OF
   to: classical-machine-learning
   evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression

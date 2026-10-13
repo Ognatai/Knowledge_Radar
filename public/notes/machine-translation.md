@@ -52,7 +52,7 @@ Backtranslation trains a reverse system on a small bitext, translates monolingua
 
 #### 6. Evaluation
 
-Human raters score adequacy (fidelity to the source meaning) and fluency, rank candidates or post-edit outputs. chrF averages character n-gram precision and recall and weights recall twice (β = 2); it is simple, robust and correlates well with human judgments. BLEU is a word-based n-gram precision with a brevity penalty, sensitive to tokenisation; SacreBLEU standardises it. Overlap metrics are local and best for comparing changes to one system, with paired bootstrap tests for significance. COMET and BLEURT are trained on human ratings, BERTScore matches tokens by embedding similarity (Jurafsky & Martin, 2026).
+Human raters score adequacy (fidelity to the source meaning) and fluency, rank candidates or post-edit outputs. chrF averages character n-gram [[classification-metrics|precision]] and recall and weights recall twice (β = 2); it is simple, robust and correlates well with human judgments. BLEU is a word-based n-gram precision with a brevity penalty, sensitive to tokenisation; SacreBLEU standardises it. Overlap metrics are local and best for comparing changes to one system, with paired bootstrap tests for significance. COMET and BLEURT are trained on human ratings, BERTScore matches tokens by embedding similarity (Jurafsky & Martin, 2026).
 
 #### 7. Bias
 
@@ -144,7 +144,7 @@ Backtranslation trainiert ein System in Gegenrichtung auf einem kleinen Bitext, 
 
 #### 6. Evaluation
 
-Menschliche Bewertende beurteilen Adäquatheit (Treue zur Bedeutung der Quelle) und Flüssigkeit, ranken Kandidaten oder bearbeiten Ausgaben nach. chrF mittelt Precision und Recall von Zeichen-N-Grammen und gewichtet den Recall doppelt (β = 2); es ist einfach, robust und korreliert gut mit menschlichen Urteilen. BLEU ist eine wortbasierte N-Gramm-Precision mit Kürzestrafe und empfindlich gegenüber der Tokenisierung; SacreBLEU standardisiert sie. Überlappungsmetriken sind lokal und eignen sich am besten für Änderungen an einem System, mit gepaarten Bootstrap-Tests für die Signifikanz. COMET und BLEURT sind auf menschlichen Bewertungen trainiert, BERTScore gleicht Token über Embedding-Ähnlichkeit ab (Jurafsky & Martin, 2026).
+Menschliche Bewertende beurteilen Adäquatheit (Treue zur Bedeutung der Quelle) und Flüssigkeit, ranken Kandidaten oder bearbeiten Ausgaben nach. chrF mittelt [[classification-metrics|Precision]] und Recall von Zeichen-N-Grammen und gewichtet den Recall doppelt (β = 2); es ist einfach, robust und korreliert gut mit menschlichen Urteilen. BLEU ist eine wortbasierte N-Gramm-Precision mit Kürzestrafe und empfindlich gegenüber der Tokenisierung; SacreBLEU standardisiert sie. Überlappungsmetriken sind lokal und eignen sich am besten für Änderungen an einem System, mit gepaarten Bootstrap-Tests für die Signifikanz. COMET und BLEURT sind auf menschlichen Bewertungen trainiert, BERTScore gleicht Token über Embedding-Ähnlichkeit ab (Jurafsky & Martin, 2026).
 
 #### 7. Bias
 
