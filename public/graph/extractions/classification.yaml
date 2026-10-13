@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "5bbca072945aa9be06cba540e87b87c372b852a99de4c8a17f89302ae845411c"
+note_sha256: 3a9cf7c06627efc3662436f3e9a206133cba86867ace782d3d44f448ab2ade61
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - logistic-regression
@@ -15,6 +15,7 @@ discusses:
 - ensemble-methods
 - support-vector-machines
 - neural-networks
+- k-nearest-neighbors
 relations:
 - from: logistic-regression
   type: IS_EXAMPLE_OF
