@@ -65,7 +65,7 @@ The earliest documented use found was a blog post in early July 2026; the term s
 **Limitations**
 - The term is used inconsistently and is partly driven by hype, including fabricated claims (Ghelbur, 2026).
 - Multi-agent graphs add failure modes: the failure of an intermediate agent cascades to downstream nodes, and missing edges keep information from where it is needed.
-- Fan-out and retries can multiply costs ([[llm-cost-optimization|LLM Cost Optimization]]).
+- Fan-out and retries can multiply costs ([[llm-cost-optimization|LLM Cost Optimisation]]).
 - Of the three readings, only graph-structured knowledge has a long research history and reproducible benchmarks; the other two rest mostly on practitioner reports (Ghelbur, 2026).
 
 ### Comparison

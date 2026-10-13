@@ -1,11 +1,12 @@
 ---
-title_en: Tokenization
+title_en: Tokenisation
 title_de: Tokenisierung
 entity_type: Method
 aliases:
 - Byte pair encoding (BPE)
 - BPE
 - WordPiece
+- Tokenization
 sources:
 - https://arxiv.org/abs/1508.07909
 - https://arxiv.org/abs/1609.08144
@@ -19,7 +20,7 @@ sources:
 
 ### TL;DR
 
-Tokenization splits text into the units a model processes. Modern neural models use subword units: the vocabulary stays fixed and manageable, while rare and unknown words are represented as sequences of smaller pieces, which solves the open-vocabulary problem (Sennrich et al., 2015). The main algorithms are byte pair encoding (BPE), wordpieces and the unigram language model, implemented for example in SentencePiece ([[natural-language-processing|Natural Language Processing]]).
+Tokenisation splits text into the units a model processes. Modern neural models use subword units: the vocabulary stays fixed and manageable, while rare and unknown words are represented as sequences of smaller pieces, which solves the open-vocabulary problem (Sennrich et al., 2015). The main algorithms are byte pair encoding (BPE), wordpieces and the unigram language model, implemented for example in SentencePiece ([[natural-language-processing|Natural Language Processing]]).
 
 ### How it works
 
@@ -49,23 +50,23 @@ Sennrich et al. (2015) adapted the byte pair encoding compression algorithm to w
 
 Google's [[machine-translation|neural machine translation]] system (GNMT) divides words into a limited set of common sub-word units, called wordpieces, for both input and output (Wu et al., 2016). According to the authors, this gives a good balance between the flexibility of character-delimited models and the efficiency of word-delimited models, naturally handles the translation of rare words, and improves the overall accuracy of the system.
 
-#### 4. Unigram language model and subword regularization
+#### 4. Unigram language model and subword regularisation
 
-Subword segmentation is ambiguous: even with the same vocabulary, a sentence can usually be segmented in several ways. Kudo (2018) uses this ambiguity as noise to make translation models more robust. Subword regularization trains the model on multiple segmentations sampled probabilistically during training, and for better sampling the paper proposes a new segmentation algorithm based on a unigram language model. The method gave consistent improvements, especially in low-resource and out-of-domain settings (Kudo, 2018).
+Subword segmentation is ambiguous: even with the same vocabulary, a sentence can usually be segmented in several ways. Kudo (2018) uses this ambiguity as noise to make translation models more robust. Subword regularisation trains the model on multiple segmentations sampled probabilistically during training, and for better sampling the paper proposes a new segmentation algorithm based on a unigram language model. The method gave consistent improvements, especially in low-resource and out-of-domain settings (Kudo, 2018).
 
 #### 5. SentencePiece
 
-SentencePiece (Kudo & Richardson, 2018) is a language-independent subword tokenizer and detokenizer with open-source C++ and Python implementations. Existing subword tools assume that the input has already been split into words; SentencePiece trains subword models directly from raw sentences, which makes a purely end-to-end and language-independent system possible. In an English-Japanese translation experiment, training directly from raw sentences achieved accuracy comparable to subword training on pre-tokenized input.
+SentencePiece (Kudo & Richardson, 2018) is a language-independent subword tokeniser and detokeniser with open-source C++ and Python implementations. Existing subword tools assume that the input has already been split into words; SentencePiece trains subword models directly from raw sentences, which makes a purely end-to-end and language-independent system possible. In an English-Japanese translation experiment, training directly from raw sentences achieved accuracy comparable to subword training on pre-tokenised input.
 
 #### Origin and variants
 
-BPE was introduced for neural machine translation by Sennrich et al. (2015). GNMT used wordpieces (Wu et al., 2016). Kudo (2018) added the unigram language model and subword regularization, and SentencePiece (Kudo & Richardson, 2018) packaged subword training as a language-independent toolkit that works on raw text.
+BPE was introduced for neural machine translation by Sennrich et al. (2015). GNMT used wordpieces (Wu et al., 2016). Kudo (2018) added the unigram language model and subword regularisation, and SentencePiece (Kudo & Richardson, 2018) packaged subword training as a language-independent toolkit that works on raw text.
 
 ### When to use it
 
 - When a neural model must handle an open vocabulary, such as names, compounds and rare words, without a dictionary fallback (Sennrich et al., 2015).
-- When training data is scarce or the target domain differs from the training domain, subword regularization can make models more robust (Kudo, 2018).
-- When text comes in languages or scripts where splitting into words is not straightforward, a tokenizer that works on raw sentences avoids language-specific pre-tokenization (Kudo & Richardson, 2018).
+- When training data is scarce or the target domain differs from the training domain, subword regularisation can make models more robust (Kudo, 2018).
+- When text comes in languages or scripts where splitting into words is not straightforward, a tokeniser that works on raw sentences avoids language-specific pre-tokenisation (Kudo & Richardson, 2018).
 
 ### Strengths and limitations
 
@@ -77,7 +78,7 @@ BPE was introduced for neural machine translation by Sennrich et al. (2015). GNM
 **Limitations**
 - Segmentation is ambiguous, since several segmentations are possible with the same vocabulary (Kudo, 2018).
 - Rare words are split into several pieces, so they take up more tokens than frequent words (Sennrich et al., 2015).
-- Most tools assume pre-tokenized input, which ties them to language-specific word splitting (Kudo & Richardson, 2018).
+- Most tools assume pre-tokenised input, which ties them to language-specific word splitting (Kudo & Richardson, 2018).
 
 ### Comparison
 
@@ -90,11 +91,11 @@ BPE was introduced for neural machine translation by Sennrich et al. (2015). GNM
 
 ### In practice
 
-The effect of a tokenizer is usually measured through the downstream task, for example BLEU in machine translation (Sennrich et al., 2015; [[text-similarity-metrics|Text Similarity Metrics]]). Vocabulary size is the central parameter: in BPE it is set through the number of merge operations (Sennrich et al., 2015). Specialised terms that were rare in the training data, such as legal citations, are split into many pieces, which matters for retrieval and is one reason why lexical search still complements semantic search ([[information-retrieval|Information Retrieval]]). SentencePiece (Kudo & Richardson, 2018) is a common choice when one tokenizer must work across languages.
+The effect of a tokeniser is usually measured through the downstream task, for example BLEU in machine translation (Sennrich et al., 2015; [[text-similarity-metrics|Text Similarity Metrics]]). Vocabulary size is the central parameter: in BPE it is set through the number of merge operations (Sennrich et al., 2015). Specialised terms that were rare in the training data, such as legal citations, are split into many pieces, which matters for retrieval and is one reason why lexical search still complements semantic search ([[information-retrieval|Information Retrieval]]). SentencePiece (Kudo & Richardson, 2018) is a common choice when one tokeniser must work across languages.
 
 ### Key takeaway
 
-Subword tokenization gives a model a fixed, manageable vocabulary while still representing every word, by splitting rare words into smaller pieces.
+Subword tokenisation gives a model a fixed, manageable vocabulary while still representing every word, by splitting rare words into smaller pieces.
 
 ### Sources
 

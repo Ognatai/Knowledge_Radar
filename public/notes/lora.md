@@ -41,7 +41,7 @@ Aghajanyan et al. (2020) showed that fine-tuning has a low intrinsic dimension: 
 
 #### 2. Low-rank decomposition of the weight update
 
-For a pretrained weight matrix W of size d×k, LoRA represents the update as ΔW = BA, where B has size d×r, A has size r×k and the rank r is much smaller than d and k (Hu et al., 2021). The number of trainable parameters per matrix falls from d·k to r·(d+k); for d = k = 4096 and r = 8, for example, from about 16.8 million to about 65,500. The rank r is a hyperparameter ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]).
+For a pretrained weight matrix W of size d×k, LoRA represents the update as ΔW = BA, where B has size d×r, A has size r×k and the rank r is much smaller than d and k (Hu et al., 2021). The number of trainable parameters per matrix falls from d·k to r·(d+k); for d = k = 4096 and r = 8, for example, from about 16.8 million to about 65,500. The rank r is a hyperparameter ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
 
 #### 3. Training with frozen weights
 
@@ -53,7 +53,7 @@ After training, BA can be added to W, so the adapted model computes exactly as m
 
 #### 5. QLoRA
 
-QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantization|quantization]], which also quantizes the quantization constants, and paged optimizers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
+QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantization|quantisation]], which also quantises the quantisation constants, and paged optimisers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
 
 #### 6. DoRA
 
@@ -61,7 +61,7 @@ DoRA (Weight-Decomposed Low-Rank Adaptation) decomposes each pretrained weight m
 
 #### Origin and variants
 
-LoRA was proposed by Hu et al. (2021), who evaluated it on RoBERTa, DeBERTa, GPT-2 and GPT-3 175B. The motivation from intrinsic dimensionality comes from Aghajanyan et al. (2020). QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantized base model, and DoRA (Liu et al., 2024) separates magnitude and direction of the weights.
+LoRA was proposed by Hu et al. (2021), who evaluated it on RoBERTa, DeBERTa, GPT-2 and GPT-3 175B. The motivation from intrinsic dimensionality comes from Aghajanyan et al. (2020). QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantised base model, and DoRA (Liu et al., 2024) separates magnitude and direction of the weights.
 
 ### When to use it
 
@@ -88,7 +88,7 @@ LoRA was proposed by Hu et al. (2021), who evaluated it on RoBERTa, DeBERTa, GPT
 |----------|----------------|------------|
 | Full fine-tuning | Updates all weights; one full model copy per task (Hu et al., 2021) | Settings with ample compute and storage |
 | Adapter layers | Add extra layers to the network, which increases inference latency (Hu et al., 2021) | Modular adaptation when latency matters less |
-| QLoRA | LoRA on a frozen 4-bit quantized base model (Dettmers et al., 2023) | Fine-tuning very large models on limited GPU memory |
+| QLoRA | LoRA on a frozen 4-bit quantised base model (Dettmers et al., 2023) | Fine-tuning very large models on limited GPU memory |
 | DoRA | Fine-tunes magnitude and direction separately, with LoRA for the direction (Liu et al., 2024) | Closing the accuracy gap to full fine-tuning without inference overhead |
 
 ### In practice

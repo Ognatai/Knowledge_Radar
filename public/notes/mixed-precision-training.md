@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-Mixed precision training stores and computes most tensors in 16-bit floating point instead of 32-bit, which nearly halves memory use and speeds up training on hardware with half-precision units (Micikevicius et al., 2017). Two measures preserve accuracy: a 32-bit master copy of the weights and loss scaling to keep small gradients representable. The bfloat16 format keeps the range of 32-bit floats and trains without hyperparameter changes (Kalamkar et al., 2019); 8-bit optimizer states reduce memory further (Dettmers et al., 2021).
+Mixed precision training stores and computes most tensors in 16-bit floating point instead of 32-bit, which nearly halves memory use and speeds up training on hardware with half-precision units (Micikevicius et al., 2017). Two measures preserve accuracy: a 32-bit master copy of the weights and loss scaling to keep small gradients representable. The bfloat16 format keeps the range of 32-bit floats and trains without hyperparameter changes (Kalamkar et al., 2019); 8-bit optimiser states reduce memory further (Dettmers et al., 2021).
 
 ### How it works
 
@@ -39,7 +39,7 @@ Single precision (FP32) is the default number format for training. IEEE half pre
 
 #### 2. Master weights in single precision
 
-Micikevicius et al. (2017) store weights, activations and gradients in FP16, but keep a single-precision copy of the weights that accumulates the gradients after each optimizer step and is rounded to half precision for the next forward and backward pass. This prevents small updates from being lost when they are added to much larger weights.
+Micikevicius et al. (2017) store weights, activations and gradients in FP16, but keep a single-precision copy of the weights that accumulates the gradients after each optimiser step and is rounded to half precision for the next forward and backward pass. This prevents small updates from being lost when they are added to much larger weights.
 
 #### 3. Loss scaling
 
@@ -49,13 +49,13 @@ Because FP16 has a limited range, small gradient values can underflow to zero. S
 
 Kalamkar et al. (2019) studied BF16 for training across image [[classification|classification]], [[automatic-speech-recognition|speech recognition]], language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no hyperparameter tuning was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
 
-#### 5. Reducing optimizer memory
+#### 5. Reducing optimiser memory
 
-Stateful optimizers such as Adam keep statistics of past gradients, which use memory that could otherwise hold model parameters (Dettmers et al., 2021). Block-wise dynamic quantization stores these statistics in 8 bits while maintaining the performance of 32-bit optimizer states, without changing optimizer hyperparameters, on tasks from language modelling to ImageNet classification ([[quantization|Quantization]]).
+Stateful optimisers such as Adam keep statistics of past gradients, which use memory that could otherwise hold model parameters (Dettmers et al., 2021). Block-wise dynamic quantisation stores these statistics in 8 bits while maintaining the performance of 32-bit optimiser states, without changing optimiser hyperparameters, on tasks from language modelling to ImageNet classification ([[quantization|Quantisation]]).
 
 #### Origin and variants
 
-Mixed precision with master weights and loss scaling was introduced by Micikevicius et al. (2017), BF16 training was validated by Kalamkar et al. (2019), and 8-bit optimizers (Dettmers et al., 2021) extended low precision to optimizer states. IO-aware kernels such as FlashAttention further reduce memory traffic during training (Dao et al., 2022).
+Mixed precision with master weights and loss scaling was introduced by Micikevicius et al. (2017), BF16 training was validated by Kalamkar et al. (2019), and 8-bit optimisers (Dettmers et al., 2021) extended low precision to optimiser states. IO-aware kernels such as FlashAttention further reduce memory traffic during training (Dao et al., 2022).
 
 ### When to use it
 
@@ -68,7 +68,7 @@ Mixed precision with master weights and loss scaling was introduced by Micikevic
 **Strengths**
 - Nearly halves memory consumption (Micikevicius et al., 2017).
 - BF16 matches FP32 results without hyperparameter changes (Kalamkar et al., 2019).
-- 8-bit optimizer states keep 32-bit performance with a fraction of the memory (Dettmers et al., 2021).
+- 8-bit optimiser states keep 32-bit performance with a fraction of the memory (Dettmers et al., 2021).
 
 **Limitations**
 - FP16 has a limited range and needs loss scaling to avoid underflow (Micikevicius et al., 2017).
@@ -82,11 +82,11 @@ Mixed precision with master weights and loss scaling was introduced by Micikevic
 | FP32 training | Full single precision everywhere | Baseline, numerically sensitive cases |
 | FP16 mixed precision | Half precision with FP32 master weights and loss scaling (Micikevicius et al., 2017) | GPUs with FP16 units |
 | BF16 mixed precision | FP32 range in 16 bits, no loss scaling needed (Kalamkar et al., 2019) | Hardware with BF16 support |
-| 8-bit optimizers | Optimizer states quantized block-wise to 8 bits (Dettmers et al., 2021) | Very large models with memory-heavy optimizers |
+| 8-bit optimisers | Optimiser states quantised block-wise to 8 bits (Dettmers et al., 2021) | Very large models with memory-heavy optimisers |
 
 ### In practice
 
-Frameworks provide automatic mixed precision, which handles casting and loss scaling, so it can be enabled with little code; training curves are compared with an FP32 run to check that accuracy is preserved (Micikevicius et al., 2017; [[keras-and-tensorflow|Keras and TensorFlow]]). For fine-tuning [[large-language-models|large language models]], mixed precision is combined with quantization and parameter-efficient methods ([[lora|LoRA]]).
+Frameworks provide automatic mixed precision, which handles casting and loss scaling, so it can be enabled with little code; training curves are compared with an FP32 run to check that accuracy is preserved (Micikevicius et al., 2017; [[keras-and-tensorflow|Keras and TensorFlow]]). For fine-tuning [[large-language-models|large language models]], mixed precision is combined with quantisation and parameter-efficient methods ([[lora|LoRA]]).
 
 ### Key takeaway
 

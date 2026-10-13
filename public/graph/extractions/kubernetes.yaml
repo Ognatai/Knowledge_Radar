@@ -1,5 +1,5 @@
 version: 1
-note_sha256: dfc8d5464d4d3610d743bbdfcf344a04ef9ef7297e54a7f5bc4872149f22ba6c
+note_sha256: f1c3639bc113bb864456b6c2c227ee4f41e78dd6f2c049c5dc909b15aa402ff3
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - google
@@ -21,7 +21,7 @@ relations:
 - from: kubernetes
   type: BASED_ON
   to: container
-  evidence: Kubernetes is an open-source platform for managing containerized workloads and services
+  evidence: Kubernetes is an open-source platform for managing containerised workloads and services
 - from: helm
   type: BASED_ON
   to: kubernetes

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7afa3d3489a3df89a309e68d36680d1417d5b63f8365c4c46ea1ee91410ab176
+note_sha256: 0cadc6708f5991ad4fccbf2c1ffcf761add02a2904d25bdcbd290c4cf9fe83cb
 extracted_by: qwen3:30b-a3b, reviewed by claude; extended by claude 2026-10-13
 discusses:
 - k-means

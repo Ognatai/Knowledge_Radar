@@ -133,7 +133,7 @@ Allows the Commission to conduct market investigations to assess whether new ser
 
 #### Article 20 — Opening of proceedings
 
-Authorizes the Commission to initiate proceedings when considering decisions under specific articles and permits the use of investigative powers prior to such initiation.
+Authorises the Commission to initiate proceedings when considering decisions under specific articles and permits the use of investigative powers prior to such initiation.
 
 #### Article 21 — Requests for information
 
@@ -141,7 +141,7 @@ Allows the Commission to require undertakings to provide all necessary informati
 
 #### Article 22 — Power to carry out interviews and take statements
 
-Authorizes the Commission to interview consenting natural or legal persons and record interviews for the purpose of collecting information relating to an investigation.
+Authorises the Commission to interview consenting natural or legal persons and record interviews for the purpose of collecting information relating to an investigation.
 
 #### Article 23 — Powers to conduct inspections
 

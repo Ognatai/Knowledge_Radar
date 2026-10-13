@@ -52,9 +52,9 @@ print(search.best_params_, search.score(X_test, y_test))
 Because the scaler is part of the pipeline, it is fitted on the training folds only, which keeps information from the validation folds out of the model ([[ml-preprocessing|ML Preprocessing]]; [[cross-validation|Cross-validation]]). The library wraps compiled code where speed matters, for example LibSVM and LibLinear for [[support-vector-machines|support vector machines]] and linear models (Pedregosa et al., 2011).
 
 ### When to use it
-- Classical machine learning on tabular data: [[classification|classification]], regression, [[clustering|clustering]], [[decision-trees|decision trees]], [[k-nearest-neighbors|k-nearest neighbors]] ([[classical-machine-learning|Classical Machine Learning]]).
+- Classical machine learning on tabular data: [[classification|classification]], regression, [[clustering|clustering]], [[decision-trees|decision trees]], [[k-nearest-neighbors|k-nearest neighbours]] ([[classical-machine-learning|Classical Machine Learning]]).
 - Preprocessing, [[feature-engineering|feature engineering]] and dimensionality reduction as reusable steps ([[ml-preprocessing|ML Preprocessing]]; Buitinck et al., 2013).
-- Model selection and evaluation with cross-validation and hyperparameter search (Buitinck et al., 2013; [[regularization-and-hyperparameters|Regularization and Hyperparameters]]).
+- Model selection and evaluation with cross-validation and hyperparameter search (Buitinck et al., 2013; [[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
 - In teaching and for non-specialists: the library aims to bring machine learning to non-specialists in a general-purpose language (Pedregosa et al., 2011).
 
 ### Strengths and limitations

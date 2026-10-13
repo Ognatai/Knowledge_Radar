@@ -7,6 +7,7 @@ aliases:
 - Language modeling approach to IR
 - Jelinek-Mercer smoothing
 - Bayesian smoothing
+- Language modelling approach to IR
 sources:
 - https://nlp.stanford.edu/IR-book/pdf/12lmodel.pdf
 ---

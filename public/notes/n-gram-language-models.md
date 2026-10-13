@@ -92,7 +92,7 @@ Source: Jurafsky & Martin (2026).
 
 ### In practice
 
-Language models today are mostly computed over subword tokens, so a test set never contains unseen tokens ([[tokenization|Tokenization]]) (Jurafsky & Martin, 2026, ch. 3). Laplace smoothing is a practical choice for text classification such as [[naive-bayes|Naive Bayes]] (Jurafsky & Martin, 2026, ch. 3). Large language models are trained on the same next-word objective ([[large-language-models|Large Language Models]]), and n-gram models were long a component of [[automatic-speech-recognition|Automatic Speech Recognition]] (Jurafsky & Martin, 2026, ch. 3).
+Language models today are mostly computed over subword tokens, so a test set never contains unseen tokens ([[tokenization|Tokenisation]]) (Jurafsky & Martin, 2026, ch. 3). Laplace smoothing is a practical choice for text classification such as [[naive-bayes|Naive Bayes]] (Jurafsky & Martin, 2026, ch. 3). Large language models are trained on the same next-word objective ([[large-language-models|Large Language Models]]), and n-gram models were long a component of [[automatic-speech-recognition|Automatic Speech Recognition]] (Jurafsky & Martin, 2026, ch. 3).
 
 ### Key takeaway
 

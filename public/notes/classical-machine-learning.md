@@ -40,7 +40,7 @@ In supervised learning each observation comes with a response, and the model lea
 
 #### 2. Families of methods
 
-The standard textbooks cover linear methods for regression and classification, [[decision-trees|Decision Trees]], boosting and random forests ([[ensemble-methods|Ensemble Methods]]), [[support-vector-machines|Support Vector Machines]] and [[k-nearest-neighbors|k-Nearest Neighbors]] for supervised learning, and clustering and principal components for unsupervised learning (Hastie et al., 2009; James et al., 2021). They also include neural networks, which share the same framework of models, losses and error estimation.
+The standard textbooks cover linear methods for regression and classification, [[decision-trees|Decision Trees]], boosting and random forests ([[ensemble-methods|Ensemble Methods]]), [[support-vector-machines|Support Vector Machines]] and [[k-nearest-neighbors|k-Nearest Neighbours]] for supervised learning, and clustering and principal components for unsupervised learning (Hastie et al., 2009; James et al., 2021). They also include neural networks, which share the same framework of models, losses and error estimation.
 
 #### 3. Model assessment and the bias-variance trade-off
 

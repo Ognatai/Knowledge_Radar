@@ -93,7 +93,7 @@ Source: Jurafsky & Martin (2026).
 
 ### In practice
 
-MT relies on [[attention-and-transformers|Attention and Transformers]] and subword [[tokenization|Tokenization]]; sense ambiguities connect it to [[word-sense-disambiguation|Word Sense Disambiguation]], and n-gram overlap metrics are related to [[text-similarity-metrics|Text Similarity Metrics]] (Jurafsky & Martin, 2026). Gender bias in translation is one case of [[bias-in-nlp|Bias in NLP]] (Jurafsky & Martin, 2026; Urchs, 2025).
+MT relies on [[attention-and-transformers|Attention and Transformers]] and subword [[tokenization|Tokenisation]]; sense ambiguities connect it to [[word-sense-disambiguation|Word Sense Disambiguation]], and n-gram overlap metrics are related to [[text-similarity-metrics|Text Similarity Metrics]] (Jurafsky & Martin, 2026). Gender bias in translation is one case of [[bias-in-nlp|Bias in NLP]] (Jurafsky & Martin, 2026; Urchs, 2025).
 
 ### Key takeaway
 

@@ -46,9 +46,9 @@ The surfer is a Markov chain with one state per page. The transition matrix P is
 
 Power iteration starts from any distribution x and multiplies it by P repeatedly; for large t, x·P^t settles into the steady state, independently of the start, and the iteration stops when the change falls below a threshold. Any other method for the principal eigenvector also works (Manning et al., 2008, ch. 21).
 
-#### 5. Topic-specific and personalized PageRank
+#### 5. Topic-specific and personalised PageRank
 
-If the surfer teleports only to pages on one topic, such as a set of sports pages from a directory, the steady state is a topic-specific PageRank. A user with mixed interests, say 60 % sports and 40 % politics, gets a personalized PageRank that is the linear combination 0.6·π_sports + 0.4·π_politics of the topic-specific vectors, so no separate computation per user is needed (Manning et al., 2008, ch. 21).
+If the surfer teleports only to pages on one topic, such as a set of sports pages from a directory, the steady state is a topic-specific PageRank. A user with mixed interests, say 60 % sports and 40 % politics, gets a personalised PageRank that is the linear combination 0.6·π_sports + 0.4·π_politics of the topic-specific vectors, so no separate computation per user is needed (Manning et al., 2008, ch. 21).
 
 #### 6. HITS: hubs and authorities
 

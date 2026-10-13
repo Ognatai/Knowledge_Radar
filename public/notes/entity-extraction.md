@@ -47,7 +47,7 @@ Earlier NER systems relied heavily on hand-crafted features and domain-specific 
 
 #### 3. Fine-tuned pretrained encoders
 
-[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations on unlabeled text and is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. For NER this means that a [[classification|classification]] layer on top of the pretrained encoder predicts an entity label for each token, and the whole model is trained on the annotated data. This pretrain-then-fine-tune pattern replaced task-specific architectures for many NLP tasks ([[natural-language-processing|Natural Language Processing]]).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations on unlabelled text and is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. For NER this means that a [[classification|classification]] layer on top of the pretrained encoder predicts an entity label for each token, and the whole model is trained on the annotated data. This pretrain-then-fine-tune pattern replaced task-specific architectures for many NLP tasks ([[natural-language-processing|Natural Language Processing]]).
 
 #### 4. Arbitrary entity types with a compact encoder
 

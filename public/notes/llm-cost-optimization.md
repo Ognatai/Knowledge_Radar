@@ -1,7 +1,9 @@
 ---
-title_en: LLM Cost Optimization
+title_en: LLM Cost Optimisation
 title_de: LLM-Kostenoptimierung
 entity_type: Method
+aliases:
+- LLM Cost Optimization
 sources:
 - https://arxiv.org/abs/2305.05176
 - https://arxiv.org/abs/2406.18665
@@ -64,7 +66,7 @@ The same prioritisation is described from a quality perspective in [[context-eng
 
 #### 6. Smaller and compressed models
 
-For self-hosted models, [[quantization|Quantization]] reduces memory and compute, and [[knowledge-distillation|Knowledge Distillation]] transfers capabilities of a large model to a smaller one; both lower the cost per request structurally.
+For self-hosted models, [[quantization|Quantisation]] reduces memory and compute, and [[knowledge-distillation|Knowledge Distillation]] transfers capabilities of a large model to a smaller one; both lower the cost per request structurally.
 
 #### Origin and variants
 
@@ -97,7 +99,7 @@ With the spread of paid LLM APIs, systematic cost strategies emerged: prompt ada
 | Model routing | High for requests of mixed difficulty (Ong et al., 2024) | Medium: build and test a router |
 | Limiting context | Medium to high (Jiang et al., 2023) | Low to medium |
 | Batching | High, only for non-urgent tasks (Batch processing docs) | Low |
-| Quantization or distillation | Structurally high | High: own model infrastructure |
+| Quantisation or distillation | Structurally high | High: own model infrastructure |
 
 ### In practice
 

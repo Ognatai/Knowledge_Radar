@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 78e3568183d346c4d39b7a640bd0b11be8909509bc550cba540050026862c859
+note_sha256: 6319441a2a5870b52ba6f74cccf50b460f85fdad92745decf7d618d5b79bf231
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - andrej-karpathy

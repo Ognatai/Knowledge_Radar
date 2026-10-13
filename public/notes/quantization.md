@@ -1,7 +1,9 @@
 ---
-title_en: Quantization
+title_en: Quantisation
 title_de: Quantisierung
 entity_type: Method
+aliases:
+- Quantization
 sources:
 - https://arxiv.org/abs/2106.08295
 - https://arxiv.org/abs/1712.05877
@@ -17,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Quantization stores a network's weights, and often its activations, with fewer bits, for example 8-bit integers instead of 32-bit floats, which reduces memory, power and latency at the cost of some added noise (Nagel et al., 2021). Post-training quantization works without retraining and usually suffices for 8 bits; quantization-aware training enables lower bit widths (Nagel et al., 2021; Jacob et al., 2017). For [[large-language-models|large language models]], methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights to 8, 4 or 3 bits with little loss, and QLoRA fine-tunes on a 4-bit base model (Dettmers et al., 2023).
+Quantisation stores a network's weights, and often its activations, with fewer bits, for example 8-bit integers instead of 32-bit floats, which reduces memory, power and latency at the cost of some added noise (Nagel et al., 2021). Post-training quantisation works without retraining and usually suffices for 8 bits; quantisation-aware training enables lower bit widths (Nagel et al., 2021; Jacob et al., 2017). For [[large-language-models|large language models]], methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantise weights to 8, 4 or 3 bits with little loss, and QLoRA fine-tunes on a 4-bit base model (Dettmers et al., 2023).
 
 ### How it works
 
@@ -37,69 +39,69 @@ Floating-point values are mapped to a small set of integer levels using a scale 
 6. Fine-tuning quantized models
 ```
 
-#### 1. Why quantize
+#### 1. Why quantise
 
-Reducing the power and latency of neural network inference is key for edge devices with strict power and compute limits, and quantization is one of the most effective ways to achieve it, although the noise it introduces can reduce accuracy (Nagel et al., 2021). Jacob et al. (2017) proposed a scheme in which inference uses integer-only arithmetic, which runs more efficiently than floating point on common integer hardware and improved the trade-off between accuracy and on-device latency even for efficient MobileNets.
+Reducing the power and latency of neural network inference is key for edge devices with strict power and compute limits, and quantisation is one of the most effective ways to achieve it, although the noise it introduces can reduce accuracy (Nagel et al., 2021). Jacob et al. (2017) proposed a scheme in which inference uses integer-only arithmetic, which runs more efficiently than floating point on common integer hardware and improved the trade-off between accuracy and on-device latency even for efficient MobileNets.
 
-#### 2. Post-training quantization
+#### 2. Post-training quantisation
 
-Post-training quantization (PTQ) converts a trained model without retraining or labelled data, a lightweight push-button approach; in most cases it suffices for 8-bit quantization with close to floating-point accuracy (Nagel et al., 2021).
+Post-training quantisation (PTQ) converts a trained model without retraining or labelled data, a lightweight push-button approach; in most cases it suffices for 8-bit quantisation with close to floating-point accuracy (Nagel et al., 2021).
 
-#### 3. Quantization-aware training
+#### 3. Quantisation-aware training
 
-Quantization-aware training (QAT) simulates quantization during training or fine-tuning so that the model adapts to it; it needs labelled training data but enables lower bit widths with competitive results (Nagel et al., 2021). Jacob et al. (2017) co-designed such a training procedure with their integer-only inference scheme to preserve end-to-end accuracy.
+Quantisation-aware training (QAT) simulates quantisation during training or fine-tuning so that the model adapts to it; it needs labelled training data but enables lower bit widths with competitive results (Nagel et al., 2021). Jacob et al. (2017) co-designed such a training procedure with their integer-only inference scheme to preserve end-to-end accuracy.
 
 #### 4. Outliers in large language models
 
-Large language models contain highly systematic emergent outlier features that dominate attention and predictive performance and break simple 8-bit schemes (Dettmers et al., 2022). LLM.int8() quantizes most features with vector-wise scaling and isolates the outlier dimensions in a 16-bit matrix multiplication, while more than 99.9% of values are still multiplied in 8 bits. This halves the memory for inference and allowed models with up to 175 billion parameters to be used without performance degradation.
+Large language models contain highly systematic emergent outlier features that dominate attention and predictive performance and break simple 8-bit schemes (Dettmers et al., 2022). LLM.int8() quantises most features with vector-wise scaling and isolates the outlier dimensions in a 16-bit matrix multiplication, while more than 99.9% of values are still multiplied in 8 bits. This halves the memory for inference and allowed models with up to 175 billion parameters to be used without performance degradation.
 
-#### 5. Low-bit weight quantization for LLMs
+#### 5. Low-bit weight quantisation for LLMs
 
-GPTQ is a one-shot weight quantization method based on approximate second-order information; it quantized [[gpt|GPT]] models with 175 billion parameters in about four GPU hours to 3 or 4 bits per weight with negligible accuracy loss, allowing such a model to run on a single GPU, with inference speedups over FP16 of around 3.25× on A100 GPUs (Frantar et al., 2022). AWQ observes that not all weights are equally important: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantization error, and scaling these channels avoids hardware-unfriendly mixed precision (Lin et al., 2023).
+GPTQ is a one-shot weight quantisation method based on approximate second-order information; it quantised [[gpt|GPT]] models with 175 billion parameters in about four GPU hours to 3 or 4 bits per weight with negligible accuracy loss, allowing such a model to run on a single GPU, with inference speedups over FP16 of around 3.25× on A100 GPUs (Frantar et al., 2022). AWQ observes that not all weights are equally important: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantisation error, and scaling these channels avoids hardware-unfriendly mixed precision (Lin et al., 2023).
 
-#### 6. Fine-tuning quantized models
+#### 6. Fine-tuning quantised models
 
-QLoRA back-propagates gradients through a frozen, 4-bit quantized pretrained language model into low-rank adapters, which reduced memory enough to fine-tune a 65-billion-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance (Dettmers et al., 2023; [[lora|LoRA]]).
+QLoRA back-propagates gradients through a frozen, 4-bit quantised pretrained language model into low-rank adapters, which reduced memory enough to fine-tune a 65-billion-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance (Dettmers et al., 2023; [[lora|LoRA]]).
 
 #### Origin and variants
 
-Integer-only inference with quantization-aware training (Jacob et al., 2017) and the systematic treatment of PTQ and QAT (Nagel et al., 2021) established quantization for efficient inference. LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) adapted it to large language models, and QLoRA (Dettmers et al., 2023) combined it with parameter-efficient fine-tuning.
+Integer-only inference with quantisation-aware training (Jacob et al., 2017) and the systematic treatment of PTQ and QAT (Nagel et al., 2021) established quantisation for efficient inference. LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) adapted it to large language models, and QLoRA (Dettmers et al., 2023) combined it with parameter-efficient fine-tuning.
 
 ### When to use it
 
 - When a model must run on edge devices or with limited memory and latency budgets (Nagel et al., 2021; Jacob et al., 2017).
-- When a large language model should run on fewer or smaller GPUs, low-bit weight quantization fits (Frantar et al., 2022; Lin et al., 2023).
+- When a large language model should run on fewer or smaller GPUs, low-bit weight quantisation fits (Frantar et al., 2022; Lin et al., 2023).
 - When a large model must be fine-tuned on limited hardware, QLoRA fits (Dettmers et al., 2023).
 
 ### Strengths and limitations
 
 **Strengths**
-- 8-bit post-training quantization is usually close to floating-point accuracy without retraining (Nagel et al., 2021).
+- 8-bit post-training quantisation is usually close to floating-point accuracy without retraining (Nagel et al., 2021).
 - LLM.int8() halves inference memory without performance degradation up to 175 billion parameters (Dettmers et al., 2022).
-- 3- to 4-bit weight quantization lets very large models run on a single GPU (Frantar et al., 2022).
+- 3- to 4-bit weight quantisation lets very large models run on a single GPU (Frantar et al., 2022).
 
 **Limitations**
-- Quantization noise can reduce accuracy, especially at low bit widths (Nagel et al., 2021).
-- Lower bit widths often require quantization-aware training with labelled data (Nagel et al., 2021).
-- Outlier features in LLMs break naive quantization schemes (Dettmers et al., 2022).
+- Quantisation noise can reduce accuracy, especially at low bit widths (Nagel et al., 2021).
+- Lower bit widths often require quantisation-aware training with labelled data (Nagel et al., 2021).
+- Outlier features in LLMs break naive quantisation schemes (Dettmers et al., 2022).
 
 ### Comparison
 
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
-| Post-training quantization | No retraining, no labels (Nagel et al., 2021) | 8-bit deployment |
-| Quantization-aware training | Simulates quantization during training (Nagel et al., 2021; Jacob et al., 2017) | Lower bit widths |
+| Post-training quantisation | No retraining, no labels (Nagel et al., 2021) | 8-bit deployment |
+| Quantisation-aware training | Simulates quantisation during training (Nagel et al., 2021; Jacob et al., 2017) | Lower bit widths |
 | LLM.int8() | 8-bit with 16-bit handling of outlier features (Dettmers et al., 2022) | Large LLM inference without accuracy loss |
-| GPTQ / AWQ | 3- to 4-bit weight-only quantization using second-order or activation information (Frantar et al., 2022; Lin et al., 2023) | Running large LLMs on few GPUs |
+| GPTQ / AWQ | 3- to 4-bit weight-only quantisation using second-order or activation information (Frantar et al., 2022; Lin et al., 2023) | Running large LLMs on few GPUs |
 | QLoRA | Fine-tuning adapters on a frozen 4-bit model (Dettmers et al., 2023) | Fine-tuning on limited hardware |
 
 ### In practice
 
-Quantized models are evaluated on the target task against the full-precision model, since average benchmarks can hide degradations ([[llm-evaluation|LLM Evaluation]]). Calibration data for PTQ should resemble the deployment data, and the bit width is chosen as a trade-off between memory, speed and accuracy (Nagel et al., 2021). Quantization complements distillation and parameter-efficient fine-tuning in the toolbox for adapting LLMs ([[llm-adaptation|LLM Adaptation]]).
+Quantised models are evaluated on the target task against the full-precision model, since average benchmarks can hide degradations ([[llm-evaluation|LLM Evaluation]]). Calibration data for PTQ should resemble the deployment data, and the bit width is chosen as a trade-off between memory, speed and accuracy (Nagel et al., 2021). Quantisation complements distillation and parameter-efficient fine-tuning in the toolbox for adapting LLMs ([[llm-adaptation|LLM Adaptation]]).
 
 ### Key takeaway
 
-Quantization stores models with fewer bits to save memory and time; post-training methods suffice for 8 bits, while LLM-specific methods reach 3 to 4 bits by protecting sensitive values.
+Quantisation stores models with fewer bits to save memory and time; post-training methods suffice for 8 bits, while LLM-specific methods reach 3 to 4 bits by protecting sensitive values.
 
 ### Sources
 

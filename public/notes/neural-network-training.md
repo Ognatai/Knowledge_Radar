@@ -59,7 +59,7 @@ Glorot & Bengio (2010) showed why deep networks trained from standard random ini
 
 #### 6. Learning rate and regularisation
 
-The learning rate is the most important hyperparameter: too high and training diverges, too low and it progresses slowly (Goodfellow et al., 2016). Validation error is monitored to detect overfitting, which is countered with regularisation such as weight decay, dropout and early stopping ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]).
+The learning rate is the most important hyperparameter: too high and training diverges, too low and it progresses slowly (Goodfellow et al., 2016). Validation error is monitored to detect overfitting, which is countered with regularisation such as weight decay, dropout and early stopping ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
 
 #### Origin and variants
 

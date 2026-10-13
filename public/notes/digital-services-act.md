@@ -348,7 +348,7 @@ Allows the Commission to require providers of very large online platforms and se
 
 #### Article 68 — Power to take interviews and statements
 
-Authorizes the Commission to interview individuals or entities willing to provide information related to suspected infringements and permits recording such interviews.
+Authorises the Commission to interview individuals or entities willing to provide information related to suspected infringements and permits recording such interviews.
 
 #### Article 69 — Power to conduct inspections
 

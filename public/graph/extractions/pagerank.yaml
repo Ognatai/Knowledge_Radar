@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8b2f1ebe5f78b9f6963cd8e5091acc3dd810150457fe876ead95b4453ce22477
+note_sha256: a09f978e10e6c3bf9dcad10c584435f2d0c09d8d1f94eac4f5ca0cddd26ccb06
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - hidden-markov-models
@@ -13,4 +13,4 @@ relations:
 - from: personalized-pagerank
   type: BASED_ON
   to: pagerank
-  evidence: gets a personalized PageRank that is the linear combination
+  evidence: gets a personalised PageRank that is the linear combination

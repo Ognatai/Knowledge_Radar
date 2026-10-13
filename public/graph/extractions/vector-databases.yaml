@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a8e0859f30681b98bed609d7b956f3502089aaf86011c72704d6874c69347281
+note_sha256: 43a7e69939c6d04d9f41eca89a8e77983366f1a57bcb9d3b2cd9c3cd94538490
 extracted_by: claude
 discusses:
 - approximate-nearest-neighbour-search
@@ -21,7 +21,7 @@ relations:
 - from: vector-databases
   type: BASED_ON
   to: approximate-nearest-neighbour-search
-  evidence: Vector databases provide scalable approximate nearest neighbor search for high-dimensional vector embeddings
+  evidence: Vector databases provide scalable approximate nearest neighbour search for high-dimensional vector embeddings
 - from: vector-databases
   type: BASED_ON
   to: metadata-filtering
@@ -41,7 +41,7 @@ relations:
 - from: inverted-file-index
   type: BASED_ON
   to: k-means
-  evidence: clusters the vector space using a coarse quantizer, such as k-means
+  evidence: clusters the vector space using a coarse quantiser, such as k-means
 - from: product-quantization
   type: BASED_ON
   to: k-means
@@ -49,11 +49,11 @@ relations:
 - from: ivf-pq
   type: BASED_ON
   to: inverted-file-index
-  evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantization, see below), which is known as IVF-PQ
+  evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantisation, see below), which is known as IVF-PQ
 - from: ivf-pq
   type: BASED_ON
   to: product-quantization
-  evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantization, see below), which is known as IVF-PQ
+  evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantisation, see below), which is known as IVF-PQ
 - from: faiss
   type: IMPLEMENTS
   to: inverted-file-index
@@ -61,7 +61,7 @@ relations:
 - from: anisotropic-quantization
   type: IS_EXAMPLE_OF
   to: maximum-inner-product-search
-  evidence: Anisotropic quantization for maximum inner product search (MIPS) modifies the quantization loss
+  evidence: Anisotropic quantisation for maximum inner product search (MIPS) modifies the quantisation loss
 - from: scann
   type: IMPLEMENTS
   to: anisotropic-quantization

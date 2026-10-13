@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a8b146eff3b667eaffef0a68fbe9c943adb24698f9257a1644092a26b378455a
+note_sha256: 200379fa8193ee6afa872244f56e8696aa638916f6b79f03492e01361f2821a6
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - pytorch

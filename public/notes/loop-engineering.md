@@ -101,7 +101,7 @@ Iterating with feedback is an old idea in agents (Yao et al., 2022; Shinn et al.
 
 ### In practice
 
-A cron job runs a fixed script, while a loop runs a model that reads the current state and chooses its next action (Janakiram MSV, 2026). A practical start is a single scheduled triage task with a verifier sub-agent, cost limits and a progress file. Loop quality is measured by task success over the whole loop, by efficiency (steps, cost, time) and by robustness to slightly changed starting conditions ([[llm-evaluation|LLM Evaluation]]); every iteration is traced and costs are attributed per run ([[llm-observability-and-tracing|LLM Observability and Tracing]]; [[llm-cost-optimization|LLM Cost Optimization]]). The loop runs inside a harness that provides tools and permissions, and it is one of the layers in [[engineering-methods-for-ai-systems|Engineering Methods for AI Systems]].
+A cron job runs a fixed script, while a loop runs a model that reads the current state and chooses its next action (Janakiram MSV, 2026). A practical start is a single scheduled triage task with a verifier sub-agent, cost limits and a progress file. Loop quality is measured by task success over the whole loop, by efficiency (steps, cost, time) and by robustness to slightly changed starting conditions ([[llm-evaluation|LLM Evaluation]]); every iteration is traced and costs are attributed per run ([[llm-observability-and-tracing|LLM Observability and Tracing]]; [[llm-cost-optimization|LLM Cost Optimisation]]). The loop runs inside a harness that provides tools and permissions, and it is one of the layers in [[engineering-methods-for-ai-systems|Engineering Methods for AI Systems]].
 
 ### Key takeaway
 

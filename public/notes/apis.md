@@ -115,7 +115,7 @@ REST was described in 2000 as an architectural style for distributed hypermedia 
 
 ### In practice
 
-APIs are designed contract-first with an OpenAPI description, checked in reviews like code and tested against the contract ([[clean-code|Clean Code]]). Every endpoint that receives an object ID checks whether the caller may access that object, and tokens are validated (OWASP API Top 10 (2023)). API services are often deployed as containers and scaled on clusters ([[docker|Docker]]; [[kubernetes|Kubernetes]]); Python frameworks are a common way to build them ([[python|Python]]). LLM agents use APIs as tools, so tool descriptions, permissions and rate limits matter ([[agentic-ai|Agentic AI]]; [[harness-engineering|Harness Engineering]]), and the APIs of model providers are billed per token ([[llm-cost-optimization|LLM Cost Optimization]]).
+APIs are designed contract-first with an OpenAPI description, checked in reviews like code and tested against the contract ([[clean-code|Clean Code]]). Every endpoint that receives an object ID checks whether the caller may access that object, and tokens are validated (OWASP API Top 10 (2023)). API services are often deployed as containers and scaled on clusters ([[docker|Docker]]; [[kubernetes|Kubernetes]]); Python frameworks are a common way to build them ([[python|Python]]). LLM agents use APIs as tools, so tool descriptions, permissions and rate limits matter ([[agentic-ai|Agentic AI]]; [[harness-engineering|Harness Engineering]]), and the APIs of model providers are billed per token ([[llm-cost-optimization|LLM Cost Optimisation]]).
 
 ### Key takeaway
 

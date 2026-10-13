@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Kubernetes is an open-source platform for managing containerized workloads and services through declarative configuration and automation (Kubernetes overview). Users describe the desired state, for example three replicas of an API, and controllers continuously move the actual state towards it, restarting failed containers, rolling out new versions and rolling them back (Kubernetes Deployments docs). Its design grew out of a decade of container management at Google (Burns et al., 2016), and Helm packages Kubernetes applications as charts (Helm docs).
+Kubernetes is an open-source platform for managing containerised workloads and services through declarative configuration and automation (Kubernetes overview). Users describe the desired state, for example three replicas of an API, and controllers continuously move the actual state towards it, restarting failed containers, rolling out new versions and rolling them back (Kubernetes Deployments docs). Its design grew out of a decade of container management at Google (Burns et al., 2016), and Helm packages Kubernetes applications as charts (Helm docs).
 
 ### Core concepts
 

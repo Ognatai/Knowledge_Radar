@@ -89,7 +89,7 @@ Stacking (Wolpert, 1992), bagging (Breiman, 1996) and AdaBoost (Freund & Schapir
 
 ### In practice
 
-Random forests work well with little tuning and provide out-of-bag error estimates (Breiman, 2001). Gradient boosting usually needs more tuning of learning rate, number and depth of trees, chosen with [[cross-validation|cross-validation]] ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]). For stacking, the base predictions used to train the higher-level model must come from data the base models were not trained on (Wolpert, 1992).
+Random forests work well with little tuning and provide out-of-bag error estimates (Breiman, 2001). Gradient boosting usually needs more tuning of learning rate, number and depth of trees, chosen with [[cross-validation|cross-validation]] ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]). For stacking, the base predictions used to train the higher-level model must come from data the base models were not trained on (Wolpert, 1992).
 
 ### Key takeaway
 

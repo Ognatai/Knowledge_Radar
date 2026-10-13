@@ -67,7 +67,7 @@ Wei et al. (2022) introduced chain-of-thought prompting with worked exemplars; K
 - There is no guarantee that the reasoning path is correct, and generated chains of thought are not always factual (Wei et al., 2022).
 - Small models do not benefit: the gains appeared only with models of around 100B parameters, which makes the method costly to serve (Wei et al., 2022).
 - Explanations can be unfaithful: when models were biased towards an answer, for instance by reordering answer options, their chains of thought rationalised it without mentioning the bias, and accuracy dropped by up to 36% on 13 BIG-Bench Hard tasks (Turpin et al., 2023; [[explainable-ai|Explainable AI]]).
-- Longer outputs and, with self-consistency, several samples per question increase cost and latency ([[llm-cost-optimization|LLM Cost Optimization]]).
+- Longer outputs and, with self-consistency, several samples per question increase cost and latency ([[llm-cost-optimization|LLM Cost Optimisation]]).
 
 ### Comparison
 | Approach | How it differs | Suited for |

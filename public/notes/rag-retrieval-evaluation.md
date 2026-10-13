@@ -9,6 +9,7 @@ aliases:
 - nDCG
 - Mean reciprocal rank (MRR)
 - MRR
+- Normalised discounted cumulative gain (nDCG)
 sources:
 - https://nlp.stanford.edu/IR-book/pdf/08eval.pdf
 - https://arxiv.org/abs/2104.08663
@@ -85,7 +86,7 @@ Recall and precision were first used by Kent et al. (1955), and the F measure wa
 - nDCG handles both binary and graded judgments (Thakur et al., 2021).
 
 **Limitations**
-- Relevance judgments are expensive, and for large collections they cover only a pool; unjudged documents count as nonrelevant, which biases results toward the systems that built the pool (Manning et al., 2008, ch. 8; Thakur et al., 2021).
+- Relevance judgments are expensive, and for large collections they cover only a pool; unjudged documents count as nonrelevant, which biases results towards the systems that built the pool (Manning et al., 2008, ch. 8; Thakur et al., 2021).
 - Judgments are subjective, mostly binary and treat documents as independent, ignoring redundancy (Manning et al., 2008, ch. 8).
 - Results depend heavily on the collection, queries and judgments and may not transfer to other domains or user groups (Manning et al., 2008, ch. 8).
 - Retrieval scores do not show how the retrieved passages affect the generated answer ([[rag-generation-evaluation|RAG: Generation Evaluation]]).

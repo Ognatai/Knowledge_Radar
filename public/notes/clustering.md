@@ -71,7 +71,7 @@ Internal criteria reward high similarity within and low similarity between clust
 
 #### 8. Clustering in information retrieval
 
-The cluster hypothesis states that documents in the same cluster behave similarly with respect to relevance. Applications are search result clustering, which groups results by sense (*jaguar* as car, animal or operating system), Scatter-Gather browsing, collection clustering such as news aggregation, cluster-based language models and cluster-based retrieval, which searches only the clusters closest to the query (Manning et al., 2008, ch. 16). Clusters shown to users need labels: differential labeling compares term distributions with mutual information or χ², cluster-internal labeling uses, for example, the title of the document closest to the centroid (Manning et al., 2008, ch. 17).
+The cluster hypothesis states that documents in the same cluster behave similarly with respect to relevance. Applications are search result clustering, which groups results by sense (*jaguar* as car, animal or operating system), Scatter-Gather browsing, collection clustering such as news aggregation, cluster-based language models and cluster-based retrieval, which searches only the clusters closest to the query (Manning et al., 2008, ch. 16). Clusters shown to users need labels: differential labelling compares term distributions with mutual information or χ², cluster-internal labelling uses, for example, the title of the document closest to the centroid (Manning et al., 2008, ch. 17).
 
 #### 9. Implementation
 

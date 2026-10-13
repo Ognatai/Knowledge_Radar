@@ -51,7 +51,7 @@ For generated text, such as translations, outputs are compared with reference te
 
 #### 4. Underfitting and overfitting
 
-A model underfits when its training error is too high, and overfits when the gap between training error and test error is too large (Goodfellow et al., 2016). Both relate to the model's capacity: too little capacity leads to underfitting, too much to overfitting. Monitoring the validation error during training reveals overfitting and allows early stopping ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]).
+A model underfits when its training error is too high, and overfits when the gap between training error and test error is too large (Goodfellow et al., 2016). Both relate to the model's capacity: too little capacity leads to underfitting, too much to overfitting. Monitoring the validation error during training reveals overfitting and allows early stopping ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
 
 #### 5. Generalisation of large networks
 

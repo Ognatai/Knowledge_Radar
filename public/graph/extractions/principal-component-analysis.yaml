@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4876dfa05a71359ac0102149d6190ec877226210e51287cd1843e4b5a340772e
+note_sha256: 63b1fbd34811ee53cf06e18a16ad05c8f10c498ee00d8c1c824f2d356401bd46
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - dimensionality-reduction

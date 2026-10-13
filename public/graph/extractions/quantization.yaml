@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b51ed777be5ef6ac3753a79c97a206486ed920d79447fa261a754b20283776f1
+note_sha256: fc2798865009663144447d75b856fdd90a0dd7d129180c29b8dd546f6517ef1f
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - post-training-quantization
@@ -17,32 +17,32 @@ relations:
 - from: post-training-quantization
   type: IS_EXAMPLE_OF
   to: quantization
-  evidence: Post-training quantization (PTQ) converts a trained model without retraining or labelled data
+  evidence: Post-training quantisation (PTQ) converts a trained model without retraining or labelled data
 - from: quantization-aware-training
   type: IS_EXAMPLE_OF
   to: quantization
-  evidence: Quantization-aware training (QAT) simulates quantization during training or fine-tuning so that the model adapts to it
+  evidence: Quantisation-aware training (QAT) simulates quantisation during training or fine-tuning so that the model adapts to it
 - from: llm-int8
   type: IS_EXAMPLE_OF
   to: quantization
-  evidence: LLM.int8() quantizes most features with vector-wise scaling and isolates the outlier dimensions in a 16-bit matrix multiplication
+  evidence: LLM.int8() quantises most features with vector-wise scaling and isolates the outlier dimensions in a 16-bit matrix multiplication
 - from: gptq
   type: IS_EXAMPLE_OF
   to: quantization
-  evidence: GPTQ is a one-shot weight quantization method based on approximate second-order information
+  evidence: GPTQ is a one-shot weight quantisation method based on approximate second-order information
 - from: awq
   type: IS_EXAMPLE_OF
   to: quantization
-  evidence: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantization error
+  evidence: protecting only 1% of salient weight channels, identified from activation statistics, greatly reduces quantisation error
 - from: qlora
   type: BASED_ON
   to: quantization
-  evidence: QLoRA back-propagates gradients through a frozen, 4-bit quantized pretrained language model into low-rank adapters
+  evidence: QLoRA back-propagates gradients through a frozen, 4-bit quantised pretrained language model into low-rank adapters
 - from: qlora
   type: BASED_ON
   to: lora
-  evidence: QLoRA back-propagates gradients through a frozen, 4-bit quantized pretrained language model into low-rank adapters
+  evidence: QLoRA back-propagates gradients through a frozen, 4-bit quantised pretrained language model into low-rank adapters
 - from: knowledge-distillation
   type: COMPLEMENTS
   to: quantization
-  evidence: Quantization complements distillation and parameter-efficient fine-tuning in the toolbox for adapting LLMs
+  evidence: Quantisation complements distillation and parameter-efficient fine-tuning in the toolbox for adapting LLMs

@@ -37,7 +37,7 @@ The data is split before any model sees it. Transformations such as scaling are 
 
 #### 1. Scaling and pipelines
 
-Scalers bring features to comparable ranges, which matters for distance-based and gradient-based methods ([[k-nearest-neighbors|k-Nearest Neighbors]]). In [[scikit-learn|scikit-learn]], preprocessing steps and models share a consistent API (Pedregosa et al., 2011), so they can be combined and fitted on the training data only, which avoids leaking information from validation or test data ([[feature-engineering|Feature Engineering]]).
+Scalers bring features to comparable ranges, which matters for distance-based and gradient-based methods ([[k-nearest-neighbors|k-Nearest Neighbours]]). In [[scikit-learn|scikit-learn]], preprocessing steps and models share a consistent API (Pedregosa et al., 2011), so they can be combined and fitted on the training data only, which avoids leaking information from validation or test data ([[feature-engineering|Feature Engineering]]).
 
 #### 2. Train, validation and test splits
 
@@ -53,7 +53,7 @@ Data is imbalanced when classes are not approximately equally represented, and m
 
 #### 5. Probability calibration
 
-Some models produce distorted probabilities: boosted trees push them away from 0 and 1, naive Bayes toward 0 and 1, and Platt scaling and isotonic regression correct these distortions (Niculescu-Mizil & Caruana, 2005). Modern [[neural-networks|neural networks]] are also poorly calibrated; on most datasets, temperature scaling, a single-parameter variant of Platt scaling, was surprisingly effective (Guo et al., 2017).
+Some models produce distorted probabilities: boosted trees push them away from 0 and 1, naive Bayes towards 0 and 1, and Platt scaling and isotonic regression correct these distortions (Niculescu-Mizil & Caruana, 2005). Modern [[neural-networks|neural networks]] are also poorly calibrated; on most datasets, temperature scaling, a single-parameter variant of Platt scaling, was surprisingly effective (Guo et al., 2017).
 
 #### Origin and variants
 

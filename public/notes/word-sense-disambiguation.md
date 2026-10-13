@@ -91,7 +91,7 @@ Source: Jurafsky & Martin (2026).
 
 ### In practice
 
-Static [[embeddings|Embeddings]] do not divide into discrete senses, while contextual models such as [[bert|BERT]] represent a word in its context and underlie modern WSD (Jurafsky & Martin, 2026). The contextual method is a nearest-neighbour classifier ([[k-nearest-neighbors|k-Nearest Neighbors]]), feature-based WSD uses collocation features ([[collocations|Collocations]]), and word sense induction relies on [[clustering|Clustering]] (Jurafsky & Martin, 2026).
+Static [[embeddings|Embeddings]] do not divide into discrete senses, while contextual models such as [[bert|BERT]] represent a word in its context and underlie modern WSD (Jurafsky & Martin, 2026). The contextual method is a nearest-neighbour classifier ([[k-nearest-neighbors|k-Nearest Neighbours]]), feature-based WSD uses collocation features ([[collocations|Collocations]]), and word sense induction relies on [[clustering|Clustering]] (Jurafsky & Martin, 2026).
 
 ### Key takeaway
 

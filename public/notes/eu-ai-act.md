@@ -774,7 +774,7 @@ Distributors verify specified conformity indicators before making a system avail
 
 ##### What is it about?
 
-Article 25 outlines the responsibilities of various actors along the AI value chain, particularly in cases where a high-risk AI system is modified, rebranded, or integrated into a product. It clarifies under what circumstances third parties become legally responsible as providers and what obligations they must fulfill. The article also addresses the responsibilities of suppliers and product manufacturers in relation to high-risk AI systems.
+Article 25 outlines the responsibilities of various actors along the AI value chain, particularly in cases where a high-risk AI system is modified, rebranded, or integrated into a product. It clarifies under what circumstances third parties become legally responsible as providers and what obligations they must fulfil. The article also addresses the responsibilities of suppliers and product manufacturers in relation to high-risk AI systems.
 
 ##### What does the article require?
 

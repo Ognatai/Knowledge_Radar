@@ -56,7 +56,7 @@ The Transformer (Vaswani et al., 2017) is based solely on attention mechanisms a
 
 #### 5. Encoder, decoder and encoder-decoder models
 
-Three families build on the architecture (Urchs, 2025). Encoder-only BERT conditions each token on its left and right context in all layers and is pretrained with masked language modelling, in which 15% of tokens are masked, and next sentence prediction; it is fine-tuned with one additional output layer and set new results on eleven NLP tasks (Devlin et al., 2018). The encoder-decoder T5 casts every task as text-to-text with a task prefix such as "summarize:". Decoder-only GPT models predict the next token autoregressively; GPT-3 with 175 billion parameters showed few-shot learning from prompts ([[large-language-models|Large Language Models]]).
+Three families build on the architecture (Urchs, 2025). Encoder-only BERT conditions each token on its left and right context in all layers and is pretrained with masked language modelling, in which 15% of tokens are masked, and next sentence prediction; it is fine-tuned with one additional output layer and set new results on eleven NLP tasks (Devlin et al., 2018). The encoder-decoder T5 casts every task as text-to-text with a task prefix such as "summarise:". Decoder-only GPT models predict the next token autoregressively; GPT-3 with 175 billion parameters showed few-shot learning from prompts ([[large-language-models|Large Language Models]]).
 
 #### 6. Beyond text and efficiency
 
@@ -96,7 +96,7 @@ Attention for [[machine-translation|neural machine translation]] (Bahdanau et al
 
 ### In practice
 
-Pretrained Transformer models are fine-tuned or prompted rather than trained from scratch ([[llm-adaptation|LLM Adaptation]]). Context length and attention implementation determine memory use (Dao et al., 2022), and inputs are tokenised into subwords before they reach the model ([[tokenization|Tokenization]]).
+Pretrained Transformer models are fine-tuned or prompted rather than trained from scratch ([[llm-adaptation|LLM Adaptation]]). Context length and attention implementation determine memory use (Dao et al., 2022), and inputs are tokenised into subwords before they reach the model ([[tokenization|Tokenisation]]).
 
 ### Key takeaway
 

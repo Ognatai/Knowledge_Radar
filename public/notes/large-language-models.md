@@ -43,9 +43,9 @@ Text is split into subword tokens, a Transformer computes a contextual represent
 7. Proprietary and open models
 ```
 
-#### 1. Subword tokenization
+#### 1. Subword tokenisation
 
-Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces ([[tokenization|Tokenization]]). Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols in the training corpus, so that frequent words become single tokens while rare words are composed of several subwords (Sennrich et al., 2015). The vocabulary is fixed before training, and context length is measured in tokens rather than characters or words. In [[machine-translation|neural machine translation]], subword units improved over a back-off dictionary baseline by up to 1.1 BLEU (English-German) and 1.3 BLEU (English-Russian) (Sennrich et al., 2015).
+Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces ([[tokenization|Tokenisation]]). Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols in the training corpus, so that frequent words become single tokens while rare words are composed of several subwords (Sennrich et al., 2015). The vocabulary is fixed before training, and context length is measured in tokens rather than characters or words. In [[machine-translation|neural machine translation]], subword units improved over a back-off dictionary baseline by up to 1.1 BLEU (English-German) and 1.3 BLEU (English-Russian) (Sennrich et al., 2015).
 
 #### 2. Transformer architecture
 

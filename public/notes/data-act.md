@@ -95,7 +95,7 @@ Provides access to certified dispute settlement bodies for users, data holders a
 
 #### Article 11 — Technical protection measures on the unauthorised use or disclosure of data
 
-Allows data holders to apply technical protection measures, including encryption, to prevent unauthorized access to data while ensuring users' rights to access and use data remain unaffected.
+Allows data holders to apply technical protection measures, including encryption, to prevent unauthorised access to data while ensuring users' rights to access and use data remain unaffected.
 
 #### Article 12 — Scope of obligations for data holders obliged pursuant to Union law to make data available
 

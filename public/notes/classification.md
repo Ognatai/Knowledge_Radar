@@ -52,7 +52,7 @@ Fisher (1936) introduced the linear discriminant function, a linear combination 
 
 #### 4. Calibrated probabilities
 
-Predicted probabilities do not always match true probabilities. Niculescu-Mizil & Caruana (2005) showed that boosted trees and stumps push predicted probabilities away from 0 and 1, naive Bayes pushes them toward 0 and 1, and neural nets and bagged trees are well calibrated. Platt scaling and isotonic regression correct these distortions; after calibration, boosted trees, random forests and SVMs predicted the best probabilities.
+Predicted probabilities do not always match true probabilities. Niculescu-Mizil & Caruana (2005) showed that boosted trees and stumps push predicted probabilities away from 0 and 1, naive Bayes pushes them towards 0 and 1, and neural nets and bagged trees are well calibrated. Platt scaling and isotonic regression correct these distortions; after calibration, boosted trees, random forests and SVMs predicted the best probabilities.
 
 #### 5. Text classification: rules or learning
 
@@ -91,7 +91,7 @@ Fisher (1936) introduced the linear discriminant and Cox (1958) the regression a
 - Linear classifiers have low variance and are hard to beat on limited, noisy data (Manning et al., 2008, ch. 14).
 
 **Limitations**
-- Naive Bayes rests on an unrealistic independence assumption and pushes probabilities toward 0 and 1 (Niculescu-Mizil & Caruana, 2005).
+- Naive Bayes rests on an unrealistic independence assumption and pushes probabilities towards 0 and 1 (Niculescu-Mizil & Caruana, 2005).
 - With more data, generative models end up with a higher asymptotic error than discriminative ones (Ng & Jordan, 2001).
 - QDA needs a covariance matrix per class and therefore more data (Hastie et al., 2009).
 - Obtaining enough labelled data is often the biggest practical challenge; many problems need hundreds or thousands of examples per class (Manning et al., 2008, ch. 15).

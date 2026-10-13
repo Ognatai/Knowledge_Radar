@@ -1,5 +1,5 @@
 ---
-title_en: k-Nearest Neighbors
+title_en: k-Nearest Neighbours
 title_de: k-Nearest Neighbors
 entity_type: Method
 sources:

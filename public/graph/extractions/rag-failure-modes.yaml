@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 67dada1ccb06ffebd60795b8182486c731843ca70ecddb6c2f854e8e34da0bf2
+note_sha256: 76a60de809e60655989bb83f8cd44f9a5444ffb6e5c9dc07069eaecec5e895a1
 extracted_by: claude
 discusses:
 - retrieval-augmented-generation
@@ -42,4 +42,4 @@ relations:
 - from: alce
   type: EVALUATES
   to: citation-hallucination
-  evidence: First, ALCE benchmark validation uses a standardized dataset of diverse questions and retrieval corpora to assess citation correctness
+  evidence: First, ALCE benchmark validation uses a standardised dataset of diverse questions and retrieval corpora to assess citation correctness

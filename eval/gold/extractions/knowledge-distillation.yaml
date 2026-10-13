@@ -1,33 +1,39 @@
 version: 1
-note_sha256: "771532b44328a62f007e8194cea26eb825ca3d6c4c88791fa1e5194fde70bdb3"
+note_sha256: c47a0771ed44db9227002d8d4273c164f7c5333be1664933e62859f07b4c50d4
 extracted_by: manual
-discusses: [fitnets, distilbert, tinybert, bert, llm-adaptation, quantization]
+discusses:
+- fitnets
+- distilbert
+- tinybert
+- bert
+- llm-adaptation
+- quantization
 relations:
-  - from: fitnets
-    type: BASED_ON
-    to: knowledge-distillation
-    evidence: FitNets extend distillation so that a student can be deeper and thinner than its teacher
-  - from: distilbert
-    type: BASED_ON
-    to: knowledge-distillation
-    evidence: DistilBERT applies distillation during pretraining rather than for one task
-  - from: distilbert
-    type: BASED_ON
-    to: bert
-    evidence: it reduced BERT's size by 40% while retaining 97% of its language understanding
-  - from: tinybert
-    type: BASED_ON
-    to: knowledge-distillation
-    evidence: TinyBERT designs a distillation method for Transformer layers
-  - from: tinybert
-    type: BASED_ON
-    to: bert
-    evidence: TinyBERT reached over 96.8% of BERT-base with a model 7.5 times smaller
-  - from: knowledge-distillation
-    type: IS_EXAMPLE_OF
-    to: llm-adaptation
-    evidence: Distillation is one of several options for adapting and shrinking language models
-  - from: knowledge-distillation
-    type: COMPLEMENTS
-    to: quantization
-    evidence: When combined with quantization for further compression
+- from: fitnets
+  type: BASED_ON
+  to: knowledge-distillation
+  evidence: FitNets extend distillation so that a student can be deeper and thinner than its teacher
+- from: distilbert
+  type: BASED_ON
+  to: knowledge-distillation
+  evidence: DistilBERT applies distillation during pretraining rather than for one task
+- from: distilbert
+  type: BASED_ON
+  to: bert
+  evidence: it reduced BERT's size by 40% while retaining 97% of its language understanding
+- from: tinybert
+  type: BASED_ON
+  to: knowledge-distillation
+  evidence: TinyBERT designs a distillation method for Transformer layers
+- from: tinybert
+  type: BASED_ON
+  to: bert
+  evidence: TinyBERT reached over 96.8% of BERT-base with a model 7.5 times smaller
+- from: knowledge-distillation
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: Distillation is one of several options for adapting and shrinking language models
+- from: knowledge-distillation
+  type: COMPLEMENTS
+  to: quantization
+  evidence: When combined with quantisation for further compression

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: dcdad37d381d709fba2715ab63fa5cea083c34c661fad17d14b1682bdf823c92
+note_sha256: 8f903d7e7ac0809c3741b35c0cd3eb246cea3ef4cff80c6c156765993c27d946
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - unigram-language-model-tokenization
@@ -22,7 +22,7 @@ relations:
 - from: sentencepiece
   type: IMPLEMENTS
   to: tokenization
-  evidence: SentencePiece (Kudo & Richardson, 2018) is a language-independent subword tokenizer and detokenizer
+  evidence: SentencePiece (Kudo & Richardson, 2018) is a language-independent subword tokeniser and detokeniser
 - from: sentencepiece
   type: IMPLEMENTS
   to: unigram-language-model-tokenization

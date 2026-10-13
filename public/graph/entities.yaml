@@ -1799,8 +1799,10 @@ entities:
   name_de: Loss Scaling
 - id: eight-bit-optimizers
   type: Method
-  name_en: 8-bit optimizers
+  name_en: 8-bit optimisers
   name_de: 8-Bit-Optimierer
+  aliases:
+  - 8-bit optimizers
 - id: adam-optimizer
   type: Method
   name_en: Adam
@@ -2074,16 +2076,18 @@ entities:
   name_de: Datasheets for Datasets
 - id: post-training-quantization
   type: Method
-  name_en: Post-training quantization (PTQ)
+  name_en: Post-training quantisation (PTQ)
   name_de: Post-Training-Quantisierung (PTQ)
   aliases:
   - PTQ
+  - Post-training quantization (PTQ)
 - id: quantization-aware-training
   type: Method
-  name_en: Quantization-aware training (QAT)
+  name_en: Quantisation-aware training (QAT)
   name_de: Quantization-Aware Training (QAT)
   aliases:
   - QAT
+  - Quantization-aware training (QAT)
 - id: llm-int8
   type: Method
   name_en: LLM.int8()
@@ -2254,16 +2258,20 @@ entities:
   - IVF
 - id: product-quantization
   type: Method
-  name_en: Product quantization (PQ)
+  name_en: Product quantisation (PQ)
   name_de: Produktquantisierung (PQ)
+  aliases:
+  - Product quantization (PQ)
 - id: ivf-pq
   type: Method
   name_en: IVF-PQ
   name_de: IVF-PQ
 - id: anisotropic-quantization
   type: Method
-  name_en: Anisotropic quantization
+  name_en: Anisotropic quantisation
   name_de: Anisotrope Quantisierung
+  aliases:
+  - Anisotropic quantization
 - id: maximum-inner-product-search
   type: Method
   name_en: Maximum inner product search (MIPS)
@@ -2462,12 +2470,16 @@ entities:
   name_de: Dickey-Fuller-Test
 - id: unigram-language-model-tokenization
   type: Method
-  name_en: Unigram language model (tokenization)
+  name_en: Unigram language model (tokenisation)
   name_de: Unigram-Sprachmodell (Tokenisierung)
+  aliases:
+  - Unigram language model (tokenization)
 - id: subword-regularization
   type: Method
-  name_en: Subword regularization
+  name_en: Subword regularisation
   name_de: Subword-Regularisierung
+  aliases:
+  - Subword regularization
 - id: sentencepiece
   type: Technology
   name_en: SentencePiece
@@ -2858,10 +2870,11 @@ entities:
   name_de: Rand-Index
 - id: normalized-mutual-information
   type: Method
-  name_en: Normalized mutual information (NMI)
+  name_en: Normalised mutual information (NMI)
   name_de: Normalisierte Mutual Information (NMI)
   aliases:
   - NMI
+  - Normalized mutual information (NMI)
 - id: stemming
   type: Method
   name_en: Stemming

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 445c12a24a614646d3496d401d966f48307d293b72702cd67668b472f173b7da
+note_sha256: 987da5a20fe56441ca8b77a7c02a91f4e84c56addbc18a720a81bef3e51305ad
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - word2vec

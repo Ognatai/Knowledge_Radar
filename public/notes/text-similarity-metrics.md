@@ -51,7 +51,7 @@ BERTScore (Zhang et al., 2019) computes a similarity score for each token in the
 
 #### Origin and variants
 
-BLEU (Papineni et al., 2002) was developed for machine translation and ROUGE (Lin, 2004) for summarization. In 2019, BERTScore (Zhang et al., 2019) brought contextual embeddings into evaluation metrics, and Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings efficient enough for similarity search over large collections.
+BLEU (Papineni et al., 2002) was developed for machine translation and ROUGE (Lin, 2004) for summarisation. In 2019, BERTScore (Zhang et al., 2019) brought contextual embeddings into evaluation metrics, and Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings efficient enough for similarity search over large collections.
 
 ### When to use it
 
@@ -77,7 +77,7 @@ BLEU (Papineni et al., 2002) was developed for machine translation and ROUGE (Li
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
 | BLEU | Clipped n-gram precision up to length four with brevity penalty (Papineni et al., 2002) | Machine translation at corpus level |
-| ROUGE | Recall-oriented overlap of n-grams, subsequences or skip-bigrams (Lin, 2004) | Summarization |
+| ROUGE | Recall-oriented overlap of n-grams, subsequences or skip-bigrams (Lin, 2004) | Summarisation |
 | BERTScore | Token similarity via contextual embeddings instead of exact matches (Zhang et al., 2019) | Evaluating generated text with paraphrases |
 | Sentence-BERT | One embedding per sentence, compared with cosine similarity (Reimers & Gurevych, 2019) | Semantic search, clustering, sentence similarity |
 

@@ -62,7 +62,7 @@ Distillation of ensembles and large networks with soft targets (Hinton et al., 2
 
 - When a large model or ensemble is too expensive to deploy, a distilled student reduces cost and latency (Hinton et al., 2015).
 - When a language model must run on devices or with tight inference budgets (Sanh et al., 2019; Jiao et al., 2019).
-- When combined with quantization for further compression ([[quantization|Quantization]]).
+- When combined with quantisation for further compression ([[quantization|Quantisation]]).
 
 ### Strengths and limitations
 
@@ -87,7 +87,7 @@ Distillation of ensembles and large networks with soft targets (Hinton et al., 2
 
 ### In practice
 
-The student is evaluated against the teacher on the target task, and the temperature and the weighting of the soft and hard losses are tuned on validation data (Hinton et al., 2015). Distillation is one of several options for adapting and shrinking language models, alongside quantization and parameter-efficient fine-tuning ([[llm-adaptation|LLM Adaptation]]).
+The student is evaluated against the teacher on the target task, and the temperature and the weighting of the soft and hard losses are tuned on validation data (Hinton et al., 2015). Distillation is one of several options for adapting and shrinking language models, alongside quantisation and parameter-efficient fine-tuning ([[llm-adaptation|LLM Adaptation]]).
 
 ### Key takeaway
 

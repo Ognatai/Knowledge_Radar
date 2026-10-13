@@ -9,6 +9,7 @@ aliases:
 - Conditional random field
 - CRF
 - Linear-chain CRF
+- Sequence labelling
 sources:
 - https://web.stanford.edu/~jurafsky/slp3/18.pdf
 ---

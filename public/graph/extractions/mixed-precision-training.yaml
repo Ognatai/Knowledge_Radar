@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "ffa2df3acb100d350d6ecd28a9d8fc9fb8c71a405fae726999aaebf200fedbc9"
+note_sha256: 7b6c012422407a1c538615450c43f86d232cb07ed14ae6d3df844a2e0b61d328
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - fp16
@@ -22,8 +22,8 @@ relations:
 - from: mixed-precision-training
   type: COMPLEMENTS
   to: quantization
-  evidence: For fine-tuning large language models, mixed precision is combined with quantization and parameter-efficient methods
+  evidence: For fine-tuning large language models, mixed precision is combined with quantisation and parameter-efficient methods
 - from: eight-bit-optimizers
   type: BASED_ON
   to: quantization
-  evidence: Block-wise dynamic quantization stores these statistics in 8 bits while maintaining the performance of 32-bit optimizer states
+  evidence: Block-wise dynamic quantisation stores these statistics in 8 bits while maintaining the performance of 32-bit optimiser states

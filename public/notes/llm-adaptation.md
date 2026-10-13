@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-LLM adaptation covers the ways a pretrained language model is made to perform a specific task or use specific knowledge. The options range from leaving the weights unchanged (prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA), to transferring knowledge into a smaller model (distillation). Mixed precision and quantization reduce the memory and compute these methods need.
+LLM adaptation covers the ways a pretrained language model is made to perform a specific task or use specific knowledge. The options range from leaving the weights unchanged (prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA), to transferring knowledge into a smaller model (distillation). Mixed precision and quantisation reduce the memory and compute these methods need.
 
 ### How it works
 
@@ -51,19 +51,19 @@ LoRA freezes the pretrained weights and injects trainable rank-decomposition mat
 
 #### 4. QLoRA
 
-QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained model into LoRA adapters (Dettmers et al., 2023). It introduces 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double quantization, which also quantizes the quantization constants, and paged optimizers to handle memory spikes. This reduces memory enough to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark after 24 hours of fine-tuning on one GPU (Dettmers et al., 2023).
+QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It introduces 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double quantisation, which also quantises the quantisation constants, and paged optimisers to handle memory spikes. This reduces memory enough to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark after 24 hours of fine-tuning on one GPU (Dettmers et al., 2023).
 
 #### 5. Knowledge distillation
 
 Knowledge distillation compresses the knowledge of a large model or an ensemble of models into a single smaller model by training it on the soft output probabilities of the large one ([[knowledge-distillation|Knowledge Distillation]]). Hinton et al. (2015) reported surprising results on MNIST and showed that distilling an ensemble into a single model significantly improved the acoustic model of a heavily used commercial [[automatic-speech-recognition|speech recognition]] system, making deployment cheaper than running the full ensemble.
 
-#### 6. Mixed precision and quantization
+#### 6. Mixed precision and quantisation
 
-[[mixed-precision-training|Mixed precision training]] stores weights, activations and gradients in half-precision floating point, keeps a single-precision master copy of the weights that accumulates the updates, and scales the loss so that small gradient values do not underflow; this nearly halves the memory requirements without losing model accuracy (Micikevicius et al., 2017). Quantization stores weights in even fewer bits ([[quantization|Quantization]]), as in QLoRA's 4-bit base model, which is what makes fine-tuning very large models on a single GPU possible (Dettmers et al., 2023).
+[[mixed-precision-training|Mixed precision training]] stores weights, activations and gradients in half-precision floating point, keeps a single-precision master copy of the weights that accumulates the updates, and scales the loss so that small gradient values do not underflow; this nearly halves the memory requirements without losing model accuracy (Micikevicius et al., 2017). Quantisation stores weights in even fewer bits ([[quantization|Quantisation]]), as in QLoRA's 4-bit base model, which is what makes fine-tuning very large models on a single GPU possible (Dettmers et al., 2023).
 
 #### Origin and variants
 
-Knowledge distillation (Hinton et al., 2015) and mixed precision training (Micikevicius et al., 2017) predate [[large-language-models|large language models]]. Retrieval augmentation (Lewis et al., 2020), instruction tuning (Wei et al., 2021) and LoRA (Hu et al., 2021) were proposed for pretrained Transformers; QLoRA (Dettmers et al., 2023) combined LoRA with 4-bit quantization of the base model.
+Knowledge distillation (Hinton et al., 2015) and mixed precision training (Micikevicius et al., 2017) predate [[large-language-models|large language models]]. Retrieval augmentation (Lewis et al., 2020), instruction tuning (Wei et al., 2021) and LoRA (Hu et al., 2021) were proposed for pretrained Transformers; QLoRA (Dettmers et al., 2023) combined LoRA with 4-bit quantisation of the base model.
 
 ### When to use it
 

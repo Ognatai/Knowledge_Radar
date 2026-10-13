@@ -50,7 +50,7 @@ Kohavi (1995) compared cross-validation with the bootstrap and gave the widely u
 
 ### When to use it
 - Estimating the performance of a model when data is too scarce to set aside a large test set (Kohavi, 1995).
-- Selecting between models or hyperparameter settings, for example the cost parameter and kernel of [[support-vector-machines|support vector machines]] ([[regularization-and-hyperparameters|Regularization and Hyperparameters]]).
+- Selecting between models or hyperparameter settings, for example the cost parameter and kernel of [[support-vector-machines|support vector machines]] ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
 - Reporting the error of a tuned model, with nested cross-validation (Varma & Simon, 2006).
 - Comparing two learning algorithms with a statistical test, such as the 5×2 cv test (Dietterich, 1998; [[statistics-fundamentals|Statistics Fundamentals]]).
 - Evaluating forecasts on a rolling origin (Hyndman & Athanasopoulos, 2021).

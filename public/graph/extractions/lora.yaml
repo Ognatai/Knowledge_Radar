@@ -1,25 +1,31 @@
 version: 1
-note_sha256: "4b631db4abd9e92e782c3fbf32140c7fa1629a2fac083c186167e4aa318a0aed"
+note_sha256: 66169772262de8c1b202cf69d07d96ae843d33034df5fd3535f9b00a0adb562e
 extracted_by: claude (hand-labelled gold standard)
-discusses: [llm-adaptation, intrinsic-dimension, qlora, weight-decomposed-low-rank-adaptation, quantization, adapter-layers]
+discusses:
+- llm-adaptation
+- intrinsic-dimension
+- qlora
+- weight-decomposed-low-rank-adaptation
+- quantization
+- adapter-layers
 relations:
-  - from: lora
-    type: IS_EXAMPLE_OF
-    to: llm-adaptation
-    evidence: LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning method (LLM Adaptation)
-  - from: lora
-    type: BASED_ON
-    to: intrinsic-dimension
-    evidence: The motivation from intrinsic dimensionality comes from Aghajanyan et al. (2020)
-  - from: qlora
-    type: BASED_ON
-    to: lora
-    evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantized base model
-  - from: qlora
-    type: BASED_ON
-    to: quantization
-    evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantized base model
-  - from: weight-decomposed-low-rank-adaptation
-    type: BASED_ON
-    to: lora
-    evidence: using LoRA for the direction to keep the number of trainable parameters small
+- from: lora
+  type: IS_EXAMPLE_OF
+  to: llm-adaptation
+  evidence: LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning method (LLM Adaptation)
+- from: lora
+  type: BASED_ON
+  to: intrinsic-dimension
+  evidence: The motivation from intrinsic dimensionality comes from Aghajanyan et al. (2020)
+- from: qlora
+  type: BASED_ON
+  to: lora
+  evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantised base model
+- from: qlora
+  type: BASED_ON
+  to: quantization
+  evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantised base model
+- from: weight-decomposed-low-rank-adaptation
+  type: BASED_ON
+  to: lora
+  evidence: using LoRA for the direction to keep the number of trainable parameters small

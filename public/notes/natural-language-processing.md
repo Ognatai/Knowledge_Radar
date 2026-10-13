@@ -34,9 +34,9 @@ Text is first normalised and split into tokens. Tokens are mapped to learned vec
 5. Few-shot learning with large language models
 ```
 
-#### 1. Text normalisation and tokenization
+#### 1. Text normalisation and tokenisation
 
-Before any modelling, text is normalised and split into tokens, the units that later steps operate on (Jurafsky & Martin (SLP3)). Modern systems mostly use subword tokens, which keep the vocabulary small while still representing rare words ([[tokenization|Tokenization]]). On top of tokens, the field addresses tasks such as part-of-speech tagging, named entity recognition ([[entity-extraction|Entity Extraction]]), parsing, information extraction ([[information-extraction|Information Extraction]]), question answering and machine translation (Jurafsky & Martin (SLP3)).
+Before any modelling, text is normalised and split into tokens, the units that later steps operate on (Jurafsky & Martin (SLP3)). Modern systems mostly use subword tokens, which keep the vocabulary small while still representing rare words ([[tokenization|Tokenisation]]). On top of tokens, the field addresses tasks such as part-of-speech tagging, named entity recognition ([[entity-extraction|Entity Extraction]]), parsing, information extraction ([[information-extraction|Information Extraction]]), question answering and machine translation (Jurafsky & Martin (SLP3)).
 
 #### 2. Word vectors
 
@@ -44,11 +44,11 @@ Mikolov et al. (2013) proposed two model architectures (word2vec) that learn con
 
 #### 3. Transformer architecture
 
-The Transformer (Vaswani et al., 2017) is a sequence model based solely on attention mechanisms, dispensing with recurrence and convolutions. This makes it more parallelizable and faster to train than the recurrent and convolutional models it replaced. On machine translation it reached 28.4 BLEU on WMT 2014 English-to-German, more than 2 BLEU above the previous best results including ensembles, and 41.8 BLEU on English-to-French as a single model after 3.5 days of training on eight GPUs. The Transformer is the basis of today's pretrained language models.
+The Transformer (Vaswani et al., 2017) is a sequence model based solely on attention mechanisms, dispensing with recurrence and convolutions. This makes it more parallelisable and faster to train than the recurrent and convolutional models it replaced. On machine translation it reached 28.4 BLEU on WMT 2014 English-to-German, more than 2 BLEU above the previous best results including ensembles, and 41.8 BLEU on English-to-French as a single model after 3.5 days of training on eight GPUs. The Transformer is the basis of today's pretrained language models.
 
 #### 4. Pretraining and fine-tuning
 
-[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabeled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a GLUE score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabelled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a GLUE score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
 
 #### 5. Few-shot learning with large language models
 

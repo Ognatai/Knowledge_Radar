@@ -64,7 +64,7 @@ Since release 2026.01, vector indexes are queried with the SEARCH clause; the ol
 
 **Limitations**
 - Clustering, online backup and role-based access control need the Enterprise Edition (Neo4j Operations Manual).
-- The Community edition of GDS limits concurrency to four CPU cores and the model catalog to three models (Neo4j GDS Manual).
+- The Community edition of GDS limits concurrency to four CPU cores and the model catalogue to three models (Neo4j GDS Manual).
 - Vector search is approximate: results are not guaranteed to be the exact nearest neighbours (Neo4j Cypher Manual: Vector indexes).
 
 ### Comparison

@@ -1,7 +1,9 @@
 ---
-title_en: Regularization and Hyperparameters
+title_en: Regularisation and Hyperparameters
 title_de: Regularisierung und Hyperparameter
 entity_type: Method
+aliases:
+- Regularization and Hyperparameters
 sources:
 - https://doi.org/10.1080/00401706.1970.10488634
 - https://doi.org/10.1111/j.2517-6161.1996.tb02080.x

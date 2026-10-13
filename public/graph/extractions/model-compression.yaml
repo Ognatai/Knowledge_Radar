@@ -1,5 +1,5 @@
 version: 1
-note_sha256: fef7d5c9fc36ef0e7fd34e6d658e585eef89bfedcebbe10e0cbdd882b6c8dd1b
+note_sha256: 01828c4ae693137a7145496c3ba271dd2eda43393294c5eac56ffea70f4bf3c4
 extracted_by: claude
 discusses:
 - quantization
@@ -11,16 +11,16 @@ relations:
 - from: pruning
   type: IS_EXAMPLE_OF
   to: model-compression
-  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+  evidence: The main families are parameter pruning and quantisation, low-rank factorisation, compact convolutional filters and knowledge distillation
 - from: quantization
   type: IS_EXAMPLE_OF
   to: model-compression
-  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+  evidence: The main families are parameter pruning and quantisation, low-rank factorisation, compact convolutional filters and knowledge distillation
 - from: low-rank-factorisation
   type: IS_EXAMPLE_OF
   to: model-compression
-  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+  evidence: The main families are parameter pruning and quantisation, low-rank factorisation, compact convolutional filters and knowledge distillation
 - from: knowledge-distillation
   type: IS_EXAMPLE_OF
   to: model-compression
-  evidence: The main families are parameter pruning and quantization, low-rank factorisation, compact convolutional filters and knowledge distillation
+  evidence: The main families are parameter pruning and quantisation, low-rank factorisation, compact convolutional filters and knowledge distillation

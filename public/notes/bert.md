@@ -38,7 +38,7 @@ BERT reads the whole input at once: every token attends to all other tokens, bef
 ```
 
 #### 1. Input representation
-Text is split into WordPiece tokens with a 30,000-token vocabulary ([[tokenization|Tokenization]]). Every sequence starts with [CLS]; a pair of sentences is separated by [SEP], and a learned segment embedding marks whether a token belongs to sentence A or B. The input of each token is the sum of its token, segment and position embeddings (Devlin et al., 2018).
+Text is split into WordPiece tokens with a 30,000-token vocabulary ([[tokenization|Tokenisation]]). Every sequence starts with [CLS]; a pair of sentences is separated by [SEP], and a learned segment embedding marks whether a token belongs to sentence A or B. The input of each token is the sum of its token, segment and position embeddings (Devlin et al., 2018).
 
 #### 2. Pre-training
 BERT is pre-trained on BooksCorpus (800M words) and English Wikipedia (2,500M words) with two tasks (Devlin et al., 2018):

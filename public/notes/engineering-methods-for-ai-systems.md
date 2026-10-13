@@ -51,7 +51,7 @@ The order is not a ranking; depending on the problem, the most effective lever i
 - **[[harness-engineering|Harness Engineering]]:** everything around the model, such as tools, permissions, sandboxes, hooks and [[monitoring-and-alerting|observability]]; Agent = Model + Harness (Osmani, 2026a).
 - **[[vibe-coding|Vibe Coding]]:** building software with an LLM without reviewing the code it writes (Willison, 2025).
 
-Two topics cut across all layers: [[llm-cost-optimization|LLM Cost Optimization]] and [[llm-observability-and-tracing|LLM Observability and Tracing]].
+Two topics cut across all layers: [[llm-cost-optimization|LLM Cost Optimisation]] and [[llm-observability-and-tracing|LLM Observability and Tracing]].
 
 #### 3. Example: a coding agent
 

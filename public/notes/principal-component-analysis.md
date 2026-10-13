@@ -60,7 +60,7 @@ PCA goes back to Pearson (1901). Jolliffe & Cadima (2016) review the method and 
 ### When to use it
 
 - When many correlated variables should be summarised by a few uncorrelated ones (Jolliffe & Cadima, 2016).
-- When data should be visualised or prepared for distance-based methods such as clustering or k-NN ([[clustering|Clustering]], [[k-nearest-neighbors|k-Nearest Neighbors]]).
+- When data should be visualised or prepared for distance-based methods such as clustering or k-NN ([[clustering|Clustering]], [[k-nearest-neighbors|k-Nearest Neighbours]]).
 - When structure in the data is strongly non-linear, an autoencoder may be the better choice (Hinton & Salakhutdinov, 2006).
 
 ### Strengths and limitations

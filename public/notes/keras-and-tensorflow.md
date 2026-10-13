@@ -28,7 +28,7 @@ TensorFlow is a system for expressing machine learning computations and executin
 
 ### Common usage
 
-A simple classifier is defined as a Sequential model of Dense layers, compiled with an optimizer, a loss and an accuracy metric, and trained with fit() on training data while validation data is held out (Keras Sequential guide; Keras training guide). For sequence data, recurrent layers such as LSTM are stacked in the same way ([[recurrent-neural-networks|Recurrent Neural Networks and Time Series]]); for images, convolution and pooling layers are combined ([[convolutional-neural-networks|Convolutional Neural Networks (CNN)]]). Models with several inputs, outputs or skip connections use the functional API (Keras Functional API guide). Callbacks such as early stopping and model checkpoints hook into fit() (Keras training guide).
+A simple classifier is defined as a Sequential model of Dense layers, compiled with an optimiser, a loss and an accuracy metric, and trained with fit() on training data while validation data is held out (Keras Sequential guide; Keras training guide). For sequence data, recurrent layers such as LSTM are stacked in the same way ([[recurrent-neural-networks|Recurrent Neural Networks and Time Series]]); for images, convolution and pooling layers are combined ([[convolutional-neural-networks|Convolutional Neural Networks (CNN)]]). Models with several inputs, outputs or skip connections use the functional API (Keras Functional API guide). Callbacks such as early stopping and model checkpoints hook into fit() (Keras training guide).
 
 ```python
 import keras

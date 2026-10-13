@@ -105,7 +105,7 @@ Requires financial entities to develop and document backup policies, restoration
 
 #### Article 13 — Learning and evolving
 
-Requires financial entities to establish capabilities and staff to gather and analyze information on vulnerabilities, cyber threats, and ICT-related incidents, including cyber-attacks, to assess their impact on digital operational resilience.
+Requires financial entities to establish capabilities and staff to gather and analyse information on vulnerabilities, cyber threats, and ICT-related incidents, including cyber-attacks, to assess their impact on digital operational resilience.
 
 #### Article 14 — Communication
 

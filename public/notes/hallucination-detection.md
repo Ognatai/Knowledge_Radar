@@ -76,7 +76,7 @@ Limitations:
 | Claim-level NLI | Check each claim against its cited source as Supported, Refuted or Not Found (Demir & Canbaz, 2026) | Legal and other citation-heavy texts |
 
 ### In practice
-How a benchmark labels its data shapes the results. Many benchmarks generate answers to open-domain questions and label them automatically against short reference answers; Valjakka et al. (2026) compared such labels with 900 human-labelled answers and found substantial disagreement between labeling strategies and with the human labels. For most combinations of judge and generator, asking an [[llm-as-a-judge|LLM judge]] for factual correctness instead of faithfulness to the reference improved agreement with human annotations. The label source should therefore be made explicit, validated and matched to the benchmark's goal.
+How a benchmark labels its data shapes the results. Many benchmarks generate answers to open-domain questions and label them automatically against short reference answers; Valjakka et al. (2026) compared such labels with 900 human-labelled answers and found substantial disagreement between labelling strategies and with the human labels. For most combinations of judge and generator, asking an [[llm-as-a-judge|LLM judge]] for factual correctness instead of faithfulness to the reference improved agreement with human annotations. The label source should therefore be made explicit, validated and matched to the benchmark's goal.
 
 ### Key takeaway
 A hallucination detector is only as good as its evidence and its labels: it needs a source, other samples or model states to compare against, and benchmarks must state clearly what counts as a hallucination.

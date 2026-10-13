@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-API authentication establishes who calls an API and on whose behalf. The dominant standard is OAuth 2.0: an authorization server issues access tokens to a client, which presents them to the resource server, usually as bearer tokens in the Authorization header over TLS (RFC 6749; RFC 6750). Tokens are often JSON Web Tokens whose claims, such as issuer, audience and expiry, must be validated (RFC 7519). Current best practice drops the implicit and password grants, requires PKCE for public clients and restricts tokens to their audience (RFC 9700); broken authentication is the second-most critical API security risk in the OWASP API Top 10 2023 (OWASP API2:2023).
+API authentication establishes who calls an API and on whose behalf. The dominant standard is OAuth 2.0: an authorisation server issues access tokens to a client, which presents them to the resource server, usually as bearer tokens in the Authorization header over TLS (RFC 6749; RFC 6750). Tokens are often JSON Web Tokens whose claims, such as issuer, audience and expiry, must be validated (RFC 7519). Current best practice drops the implicit and password grants, requires PKCE for public clients and restricts tokens to their audience (RFC 9700); broken authentication is the second-most critical API security risk in the OWASP API Top 10 2023 (OWASP API2:2023).
 
 ### How it works
 
@@ -32,11 +32,11 @@ client ──(3) GET /contracts  Authorization: Bearer <token> ─────�
 
 #### 1. Roles
 
-OAuth 2.0 distinguishes four roles: the resource owner, who can grant access to a protected resource; the resource server, which hosts the protected resources; the client, an application that makes requests on behalf of the resource owner and with its authorisation; and the authorization server, which issues access tokens to the client after authenticating the resource owner (RFC 6749).
+OAuth 2.0 distinguishes four roles: the resource owner, who can grant access to a protected resource; the resource server, which hosts the protected resources; the client, an application that makes requests on behalf of the resource owner and with its authorisation; and the authorisation server, which issues access tokens to the client after authenticating the resource owner (RFC 6749).
 
 #### 2. Grants
 
-A grant is how the client obtains a token. The authorization code grant uses the authorization server as an intermediary between client and resource owner; the client credentials grant lets a client obtain access on its own behalf, for example for server-to-server calls; RFC 6749 also defined the implicit grant for browser clients and the resource owner password credentials grant (RFC 6749). The current Best Current Practice says clients should not use the implicit grant and must not use the password grant; public clients must use PKCE to protect the authorization code, and PKCE is recommended for confidential clients (RFC 9700).
+A grant is how the client obtains a token. The authorisation code grant uses the authorisation server as an intermediary between client and resource owner; the client credentials grant lets a client obtain access on its own behalf, for example for server-to-server calls; RFC 6749 also defined the implicit grant for browser clients and the resource owner password credentials grant (RFC 6749). The current Best Current Practice says clients should not use the implicit grant and must not use the password grant; public clients must use PKCE to protect the authorisation code, and PKCE is recommended for confidential clients (RFC 9700).
 
 #### 3. Tokens
 
@@ -57,7 +57,7 @@ OAuth 2.0 was published as RFC 6749 with bearer token usage in RFC 6750; JWT fol
 ### When to use it
 
 - Client credentials when a client accesses resources on its own behalf, such as back-end services calling each other (RFC 6749).
-- Authorization code with PKCE when an application acts on behalf of a user (RFC 9700).
+- Authorisation code with PKCE when an application acts on behalf of a user (RFC 9700).
 - JWT access tokens when resource servers should validate tokens themselves from their claims and signature (RFC 7519).
 
 ### Strengths and limitations
@@ -78,7 +78,7 @@ OAuth 2.0 was published as RFC 6749 with bearer token usage in RFC 6750; JWT fol
 |-----------|------------|-------|
 | API key | The calling application | Not for user authentication (OWASP API2:2023) |
 | OAuth 2.0 client credentials | A client acting on its own behalf (RFC 6749) | Server-to-server |
-| OAuth 2.0 authorization code + PKCE | A client acting for a user (RFC 9700) | User-facing apps |
+| OAuth 2.0 authorisation code + PKCE | A client acting for a user (RFC 9700) | User-facing apps |
 | JWT access token | Claims about a subject, signed (RFC 7519) | Validated by the resource server |
 
 ### In practice
