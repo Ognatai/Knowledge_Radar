@@ -458,7 +458,7 @@ function NoteResults({ language, notes, openNote, page, changePage }: NoteResult
             {visible.map((note) => (
               <li key={note.slug}>
                 <button className="result-card" onClick={() => openNote(note.slug)} type="button">
-                  <span className="note-type">{note.entity_type}</span>
+                  <span className="note-type">{t(`entityTypes.${note.entity_type}`, { defaultValue: note.entity_type })}</span>
                   <span className="note-title">{noteTitle(note, language)}</span>
                 </button>
               </li>
@@ -512,7 +512,7 @@ function SearchResultsByArea({ areas, language, notes, openNote }: SearchResults
                 {group.hits.map((note) => (
                   <li key={note.slug}>
                     <button className="result-card" onClick={() => openNote(note.slug)} type="button">
-                      <span className="note-type">{note.entity_type}</span>
+                      <span className="note-type">{t(`entityTypes.${note.entity_type}`, { defaultValue: note.entity_type })}</span>
                       <span className="note-title">{noteTitle(note, language)}</span>
                     </button>
                   </li>
@@ -608,7 +608,7 @@ function NoteAreas({ data, language, notesBySlug, openNote }: NoteAreasProps) {
                   return (
                     <li key={slug}>
                       <button className={`result-card${from ? " result-card-secondary" : ""}`} onClick={() => openNote(slug)} type="button">
-                        <span className="note-type">{note.entity_type}</span>
+                        <span className="note-type">{t(`entityTypes.${note.entity_type}`, { defaultValue: note.entity_type })}</span>
                         <span className="note-title">{noteTitle(note, language)}</span>
                         {from && <span className="also-from">{t("alsoFrom", { area: areaName(from, language) })}</span>}
                       </button>
@@ -679,7 +679,7 @@ function NoteArticle({ data, language, navigate, note, notesBySlug, openNode, re
   return (
     <article className="content-card note-detail" aria-labelledby="note-title">
       <div className="article-meta">
-        <span className="note-type">{note.entity_type}</span>
+        <span className="note-type">{t(`entityTypes.${note.entity_type}`, { defaultValue: note.entity_type })}</span>
       </div>
       <h2 id="note-title">{noteTitle(note, language)}</h2>
       {/* react-markdown never renders raw HTML, so note content cannot inject markup. */}
@@ -802,7 +802,7 @@ function EntityStub({ data, entity, language, navigate, notesBySlug }: EntityStu
   return (
     <article className="content-card note-detail" aria-labelledby="entity-title">
       <div className="article-meta">
-        <span className="note-type">{entity.entity_type}</span>
+        <span className="note-type">{t(`entityTypes.${entity.entity_type}`, { defaultValue: entity.entity_type })}</span>
         <span className="draft-label">{t("stubLabel")}</span>
       </div>
       <h2 id="entity-title">{entityName(entity, language)}</h2>

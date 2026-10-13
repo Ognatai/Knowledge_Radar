@@ -212,7 +212,7 @@ export function GraphView({ nodes, edges, language, openNode, filter, clearFilte
             <label className="type-chip" key={type}>
               <input checked={!hiddenTypes.has(type)} onChange={() => toggleType(type)} type="checkbox" />
               <span className="type-swatch" style={{ background: ENTITY_COLORS[type] ?? NOTE_COLOR }} />
-              {type}
+              {t(`entityTypes.${type}`, { defaultValue: type })}
             </label>
           ))}
         </fieldset>
