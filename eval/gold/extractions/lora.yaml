@@ -1,12 +1,12 @@
 version: 1
-note_sha256: 66169772262de8c1b202cf69d07d96ae843d33034df5fd3535f9b00a0adb562e
+note_sha256: cc50209981cd56199b7ac1bc61a77c596b80c2a1fa3069119604e1e273f68098
 extracted_by: manual
 discusses:
 - llm-adaptation
 - intrinsic-dimension
 - qlora
 - weight-decomposed-low-rank-adaptation
-- quantization
+- quantisation
 - adapter-layers
 relations:
 - from: lora
@@ -23,7 +23,7 @@ relations:
   evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantised base model
 - from: qlora
   type: BASED_ON
-  to: quantization
+  to: quantisation
   evidence: QLoRA (Dettmers et al., 2023) applies LoRA to a 4-bit quantised base model
 - from: weight-decomposed-low-rank-adaptation
   type: BASED_ON

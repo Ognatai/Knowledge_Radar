@@ -1,10 +1,10 @@
 version: 1
-note_sha256: ba1ec71a6f548566f9c793e9018944e550b96781b5a94c71337e659212dd7671
+note_sha256: 4fe610a99a52f8fc077d61f1683916562db685d6fa7a214dcbc0b0b03c5973f5
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - hidden-markov-models
 - perplexity
-- tokenization
+- tokenisation
 - naive-bayes
 - large-language-models
 - automatic-speech-recognition

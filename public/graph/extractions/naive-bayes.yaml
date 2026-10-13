@@ -1,11 +1,11 @@
 version: 1
-note_sha256: "ef7d679e6b90470d2d2ca6f70a8e8b97e6af10d614366112f77e35bed8f4d52a"
+note_sha256: "01d19f485d9ce748df627c86b7e05c0efc2d14c52efa9f3932ddb66a4d14bc6a"
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - feature-selection
 - classification
 - query-likelihood-model
-- k-nearest-neighbors
+- k-nearest-neighbours
 relations:
 - from: feature-selection
   type: COMPLEMENTS

@@ -37,7 +37,7 @@ The data is split before any model sees it. Transformations such as scaling are 
 
 #### 1. Scaling and pipelines
 
-Scalers bring features to comparable ranges, which matters for distance-based and gradient-based methods ([[k-nearest-neighbors|k-Nearest Neighbours]]). In [[scikit-learn|scikit-learn]], preprocessing steps and models share a consistent API (Pedregosa et al., 2011), so they can be combined and fitted on the training data only, which avoids leaking information from validation or test data ([[feature-engineering|Feature Engineering]]).
+Scalers bring features to comparable ranges, which matters for distance-based and gradient-based methods ([[k-nearest-neighbours|k-Nearest Neighbours]]). In [[scikit-learn|scikit-learn]], preprocessing steps and models share a consistent API (Pedregosa et al., 2011), so they can be combined and fitted on the training data only, which avoids leaking information from validation or test data ([[feature-engineering|Feature Engineering]]).
 
 #### 2. Train, validation and test splits
 
@@ -129,7 +129,7 @@ Die Daten werden aufgeteilt, bevor ein Modell sie sieht. Transformationen wie Sk
 
 #### 1. Skalierung und Pipelines
 
-Scaler bringen Merkmale auf vergleichbare Bereiche, was für abstands- und gradientenbasierte Verfahren wichtig ist ([[k-nearest-neighbors|k-Nearest Neighbors]]). In [[scikit-learn|scikit-learn]] teilen Vorverarbeitungsschritte und Modelle eine konsistente API (Pedregosa et al., 2011), sodass sie kombiniert und nur auf den Trainingsdaten angepasst werden können; das verhindert, dass Informationen aus Validierungs- oder Testdaten einfließen ([[feature-engineering|Feature Engineering]]).
+Scaler bringen Merkmale auf vergleichbare Bereiche, was für abstands- und gradientenbasierte Verfahren wichtig ist ([[k-nearest-neighbours|k-Nearest Neighbors]]). In [[scikit-learn|scikit-learn]] teilen Vorverarbeitungsschritte und Modelle eine konsistente API (Pedregosa et al., 2011), sodass sie kombiniert und nur auf den Trainingsdaten angepasst werden können; das verhindert, dass Informationen aus Validierungs- oder Testdaten einfließen ([[feature-engineering|Feature Engineering]]).
 
 #### 2. Trainings-, Validierungs- und Testmenge
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d6a4035768eb573d1b69d6b3a540c06ac5f633d801d384a31a26e9c6be657517
+note_sha256: c0ed25a51910559f9a9b2acddefba14c1b9203824396e06ab42522d950fc3d88
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - frugalgpt
@@ -10,7 +10,7 @@ discusses:
 - semantic-caching
 - request-batching
 - llmlingua
-- quantization
+- quantisation
 - knowledge-distillation
 - classification
 - embeddings
@@ -19,7 +19,7 @@ discusses:
 relations:
 - from: frugalgpt
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: FrugalGPT, for example, matched the best single model with up to 98% lower cost
 - from: frugalgpt
   type: BASED_ON
@@ -27,7 +27,7 @@ relations:
   evidence: FrugalGPT combines prompt adaptation, LLM approximation and LLM cascades
 - from: model-routing
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: The main levers are caching, routing requests to smaller models, batching
 - from: model-routing
   type: BASED_ON
@@ -39,11 +39,11 @@ relations:
   evidence: RouteLLM trains routers on human preference data that choose between a strong and a weak model
 - from: prompt-caching
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: the provider caches a prompt prefix up to a breakpoint and reuses it in later requests with the same prefix, which reduces processing time and cost
 - from: semantic-caching
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: similar, not only identical, requests are answered from the cache using embeddings
 - from: semantic-caching
   type: BASED_ON
@@ -51,17 +51,17 @@ relations:
   evidence: similar, not only identical, requests are answered from the cache using embeddings
 - from: request-batching
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: batch APIs reduce costs by 50%
 - from: llmlingua
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: 'Prompt compression: LLMLingua compresses prompts by up to 20 times with little loss in performance'
-- from: quantization
+- from: quantisation
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: both lower the cost per request structurally
 - from: knowledge-distillation
   type: IS_EXAMPLE_OF
-  to: llm-cost-optimization
+  to: llm-cost-optimisation
   evidence: both lower the cost per request structurally

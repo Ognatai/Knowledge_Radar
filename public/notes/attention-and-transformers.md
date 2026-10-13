@@ -96,7 +96,7 @@ Attention for [[machine-translation|neural machine translation]] (Bahdanau et al
 
 ### In practice
 
-Pretrained Transformer models are fine-tuned or prompted rather than trained from scratch ([[llm-adaptation|LLM Adaptation]]). Context length and attention implementation determine memory use (Dao et al., 2022), and inputs are tokenised into subwords before they reach the model ([[tokenization|Tokenisation]]).
+Pretrained Transformer models are fine-tuned or prompted rather than trained from scratch ([[llm-adaptation|LLM Adaptation]]). Context length and attention implementation determine memory use (Dao et al., 2022), and inputs are tokenised into subwords before they reach the model ([[tokenisation|Tokenisation]]).
 
 ### Key takeaway
 
@@ -196,7 +196,7 @@ Attention für neuronale [[machine-translation|maschinelle Übersetzung]] (Bahda
 
 ### In der Praxis
 
-Vortrainierte Transformer-Modelle werden feinabgestimmt oder gepromptet statt von Grund auf trainiert ([[llm-adaptation|LLM-Anpassung]]). Kontextlänge und Attention-Implementierung bestimmen den Speicherbedarf (Dao et al., 2022), und Eingaben werden vor dem Modell in Subwords tokenisiert ([[tokenization|Tokenisierung]]).
+Vortrainierte Transformer-Modelle werden feinabgestimmt oder gepromptet statt von Grund auf trainiert ([[llm-adaptation|LLM-Anpassung]]). Kontextlänge und Attention-Implementierung bestimmen den Speicherbedarf (Dao et al., 2022), und Eingaben werden vor dem Modell in Subwords tokenisiert ([[tokenisation|Tokenisierung]]).
 
 ### Merksatz
 

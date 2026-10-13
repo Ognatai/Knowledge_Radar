@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7b5f110f082ad2dfa639f24e199dec03059d6119a9c764beaa76ca58d3f9e871
+note_sha256: 0fa1b21b937992ced4520cd3ead943fe908a3af10c5a4b990d78f889a8a87866
 extracted_by: claude
 discusses:
 - numpy
@@ -13,9 +13,9 @@ discusses:
 - classification
 - clustering
 - decision-trees
-- k-nearest-neighbors
+- k-nearest-neighbours
 - keras-and-tensorflow
-- regularization-and-hyperparameters
+- regularisation-and-hyperparameters
 - model-comparison
 - experiment-tracking
 relations:

@@ -180,7 +180,7 @@ Quelle: Jurafsky & Martin (2026).
 
 ### In der Praxis
 
-Dependenz-Treebanks entstehen direkt durch Annotierende, durch Korrektur von Parser-Ausgaben oder durch Umwandlung von Konstituenten-Treebanks mit Kopfregeln ([[constituency-parsing|Konstituentenparsing]]) (Jurafsky & Martin, 2026). Dependenzanalysen fließen in die [[information-extraction|Informationsextraktion]] ein (Jurafsky & Martin, 2026). Eine akteurszentrierte Pipeline zur Erkennung von Gender-Diskriminierung in Nachrichten nutzt [[tokenization|Tokenisierung]], [[part-of-speech-tagging|Wortart-Tagging]], Dependenzparsing und Named Entity Recognition von spaCy, um die Akteure zu finden, und verfolgt, ob sie in Subjekt- oder Objektposition stehen, weil Subjekte typischerweise handeln und Objekte Handlungen erfahren (Urchs, 2025).
+Dependenz-Treebanks entstehen direkt durch Annotierende, durch Korrektur von Parser-Ausgaben oder durch Umwandlung von Konstituenten-Treebanks mit Kopfregeln ([[constituency-parsing|Konstituentenparsing]]) (Jurafsky & Martin, 2026). Dependenzanalysen fließen in die [[information-extraction|Informationsextraktion]] ein (Jurafsky & Martin, 2026). Eine akteurszentrierte Pipeline zur Erkennung von Gender-Diskriminierung in Nachrichten nutzt [[tokenisation|Tokenisierung]], [[part-of-speech-tagging|Wortart-Tagging]], Dependenzparsing und Named Entity Recognition von spaCy, um die Akteure zu finden, und verfolgt, ob sie in Subjekt- oder Objektposition stehen, weil Subjekte typischerweise handeln und Objekte Handlungen erfahren (Urchs, 2025).
 
 ### Merksatz
 

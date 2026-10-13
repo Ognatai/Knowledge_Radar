@@ -51,7 +51,7 @@ Kalamkar et al. (2019) studied BF16 for training across image [[classification|c
 
 #### 5. Reducing optimiser memory
 
-Stateful optimisers such as Adam keep statistics of past gradients, which use memory that could otherwise hold model parameters (Dettmers et al., 2021). Block-wise dynamic quantisation stores these statistics in 8 bits while maintaining the performance of 32-bit optimiser states, without changing optimiser hyperparameters, on tasks from language modelling to ImageNet classification ([[quantization|Quantisation]]).
+Stateful optimisers such as Adam keep statistics of past gradients, which use memory that could otherwise hold model parameters (Dettmers et al., 2021). Block-wise dynamic quantisation stores these statistics in 8 bits while maintaining the performance of 32-bit optimiser states, without changing optimiser hyperparameters, on tasks from language modelling to ImageNet classification ([[quantisation|Quantisation]]).
 
 #### Origin and variants
 
@@ -141,7 +141,7 @@ Kalamkar et al. (2019) untersuchten BF16 für das Training in Bildklassifikation
 
 #### 5. Speicher des Optimierers verringern
 
-Zustandsbehaftete Optimierer wie Adam führen Statistiken früherer Gradienten mit, die Speicher belegen, der sonst Modellparameter aufnehmen könnte (Dettmers et al., 2021). Blockweise dynamische Quantisierung speichert diese Statistiken in 8 Bit und hält dabei die Leistung von 32-Bit-Optimiererzuständen, ohne die Hyperparameter des Optimierers zu ändern, bei Aufgaben von Sprachmodellierung bis ImageNet-Klassifikation ([[quantization|Quantisierung]]).
+Zustandsbehaftete Optimierer wie Adam führen Statistiken früherer Gradienten mit, die Speicher belegen, der sonst Modellparameter aufnehmen könnte (Dettmers et al., 2021). Blockweise dynamische Quantisierung speichert diese Statistiken in 8 Bit und hält dabei die Leistung von 32-Bit-Optimiererzuständen, ohne die Hyperparameter des Optimierers zu ändern, bei Aufgaben von Sprachmodellierung bis ImageNet-Klassifikation ([[quantisation|Quantisierung]]).
 
 #### Ursprung und Varianten
 

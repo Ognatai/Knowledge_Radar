@@ -5,7 +5,7 @@
 # tests/test_extraction.py checks that every example is valid.
 version: 1
 examples:
-  - note: quantization
+  - note: quantisation
     note_type: Method
     note_name: Quantization
     known: []
@@ -21,16 +21,16 @@ examples:
       little loss.
     answer:
       new_entities:
-        - {id: post-training-quantization, type: Method, name_en: Post-training quantization, name_de: Post-Training Quantization}
-        - {id: quantization-aware-training, type: Method, name_en: Quantization-aware training, name_de: Quantization-Aware Training}
+        - {id: post-training-quantisation, type: Method, name_en: Post-training quantization, name_de: Post-Training Quantization}
+        - {id: quantisation-aware-training, type: Method, name_en: Quantization-aware training, name_de: Quantization-Aware Training}
         - {id: llm-int8, type: Method, name_en: LLM.int8(), name_de: LLM.int8()}
         - {id: gptq, type: Method, name_en: GPTQ, name_de: GPTQ}
         - {id: awq, type: Method, name_en: AWQ, name_de: AWQ}
-      discusses: [post-training-quantization, quantization-aware-training, llm-int8, gptq, awq]
+      discusses: [post-training-quantisation, quantisation-aware-training, llm-int8, gptq, awq]
       relations:
-        - {from: llm-int8, type: IS_EXAMPLE_OF, to: quantization, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
-        - {from: gptq, type: IS_EXAMPLE_OF, to: quantization, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
-        - {from: awq, type: IS_EXAMPLE_OF, to: quantization, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
+        - {from: llm-int8, type: IS_EXAMPLE_OF, to: quantisation, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
+        - {from: gptq, type: IS_EXAMPLE_OF, to: quantisation, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
+        - {from: awq, type: IS_EXAMPLE_OF, to: quantisation, evidence: "methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantize weights"}
     why: >-
       The listed methods are the subjects of IS_EXAMPLE_OF; the topic is not
       BASED_ON them. Post-training quantization and quantization-aware training

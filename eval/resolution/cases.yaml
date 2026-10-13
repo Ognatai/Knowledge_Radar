@@ -490,10 +490,10 @@ cases:
   expected: dp-deep-learning
   split: dev
 - kind: distinct
-  entity: quantization
+  entity: quantisation
   name: Quantization
   type: Method
-  near: product-quantization
+  near: product-quantisation
   expected: null
   split: test
 - kind: alias

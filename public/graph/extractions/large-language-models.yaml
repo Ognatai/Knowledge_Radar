@@ -1,9 +1,9 @@
 version: 1
-note_sha256: d145e84a91dfa5c1f921f8cba0769da5d9bb99a7c6dbc8d30aae2a6b3588c208
+note_sha256: e7c38163b3f4b46277819c4f90a252c855281b8ce219f46f427f48d3918d4abc
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - attention-and-transformers
-- tokenization
+- tokenisation
 - gpt
 - llm-alignment
 - reinforcement-learning
@@ -31,7 +31,7 @@ relations:
   evidence: Large language models (LLMs) are Transformer-based neural networks
 - from: large-language-models
   type: BASED_ON
-  to: tokenization
+  to: tokenisation
   evidence: Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces
 - from: gpt
   type: IS_EXAMPLE_OF

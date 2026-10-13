@@ -4,7 +4,7 @@
 version: 1
 exclusions:
   clustering:
-    quantization: Lloyd's algorithm was derived for the quantization of signals, not of model weights.
+    quantisation: Lloyd's algorithm was derived for the quantization of signals, not of model weights.
   complex:
     embeddings: knowledge graph embeddings, not the text embeddings of the embeddings note.
   distmult:
@@ -30,7 +30,7 @@ exclusions:
     embeddings: speaker embeddings for diarisation, not the text embeddings of the embeddings note.
   vector-databases:
     inverted-index: building an HNSW vector index, not an inverted index.
-  quantization:
+  quantisation:
     llm-alignment: post-training quantization of weights, not post-training for alignment.
   llm-alignment:
     classification: DPO's loss is a classification loss, not the classification task of the classification note.

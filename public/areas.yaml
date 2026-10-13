@@ -20,7 +20,7 @@ areas:
       - word-sense-disambiguation
       - collocations
       - machine-translation
-      - tokenization
+      - tokenisation
       - embeddings
       - multimodal-models
       - natural-language-understanding
@@ -45,9 +45,9 @@ areas:
       - lora
       - knowledge-distillation
       - model-compression
-      - quantization
+      - quantisation
       - mixed-precision-training
-      - llm-cost-optimization
+      - llm-cost-optimisation
   - id: agents
     name_en: Agents, Prompting & AI Engineering
     name_de: Agenten, Prompting & AI Engineering
@@ -129,11 +129,11 @@ areas:
       - classification-metrics
       - decision-trees
       - ensemble-methods
-      - k-nearest-neighbors
+      - k-nearest-neighbours
       - support-vector-machines
       - clustering
       - principal-component-analysis
-      - regularization-and-hyperparameters
+      - regularisation-and-hyperparameters
       - cross-validation
       - scikit-learn
       - model-comparison

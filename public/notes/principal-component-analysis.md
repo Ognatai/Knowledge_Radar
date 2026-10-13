@@ -60,7 +60,7 @@ PCA goes back to Pearson (1901). Jolliffe & Cadima (2016) review the method and 
 ### When to use it
 
 - When many correlated variables should be summarised by a few uncorrelated ones (Jolliffe & Cadima, 2016).
-- When data should be visualised or prepared for distance-based methods such as clustering or k-NN ([[clustering|Clustering]], [[k-nearest-neighbors|k-Nearest Neighbours]]).
+- When data should be visualised or prepared for distance-based methods such as clustering or k-NN ([[clustering|Clustering]], [[k-nearest-neighbours|k-Nearest Neighbours]]).
 - When structure in the data is strongly non-linear, an autoencoder may be the better choice (Hinton & Salakhutdinov, 2006).
 
 ### Strengths and limitations
@@ -149,7 +149,7 @@ PCA geht auf Pearson (1901) zurück. Jolliffe & Cadima (2016) geben einen Überb
 ### Wann einsetzen
 
 - Wenn viele korrelierte Variablen durch wenige unkorrelierte zusammengefasst werden sollen (Jolliffe & Cadima, 2016).
-- Wenn Daten visualisiert oder für abstandsbasierte Verfahren wie Clustering oder k-NN vorbereitet werden sollen ([[clustering|Clustering]], [[k-nearest-neighbors|k-Nearest Neighbors]]).
+- Wenn Daten visualisiert oder für abstandsbasierte Verfahren wie Clustering oder k-NN vorbereitet werden sollen ([[clustering|Clustering]], [[k-nearest-neighbours|k-Nearest Neighbors]]).
 - Wenn die Struktur der Daten stark nichtlinear ist, kann ein Autoencoder die bessere Wahl sein (Hinton & Salakhutdinov, 2006).
 
 ### Stärken und Grenzen

@@ -67,7 +67,7 @@ Wei et al. (2022) introduced chain-of-thought prompting with worked exemplars; K
 - There is no guarantee that the reasoning path is correct, and generated chains of thought are not always factual (Wei et al., 2022).
 - Small models do not benefit: the gains appeared only with models of around 100B parameters, which makes the method costly to serve (Wei et al., 2022).
 - Explanations can be unfaithful: when models were biased towards an answer, for instance by reordering answer options, their chains of thought rationalised it without mentioning the bias, and accuracy dropped by up to 36% on 13 BIG-Bench Hard tasks (Turpin et al., 2023; [[explainable-ai|Explainable AI]]).
-- Longer outputs and, with self-consistency, several samples per question increase cost and latency ([[llm-cost-optimization|LLM Cost Optimisation]]).
+- Longer outputs and, with self-consistency, several samples per question increase cost and latency ([[llm-cost-optimisation|LLM Cost Optimisation]]).
 
 ### Comparison
 | Approach | How it differs | Suited for |
@@ -144,7 +144,7 @@ Wei et al. (2022) führten Chain-of-Thought-Prompting mit durchgerechneten Beisp
 - Es gibt keine Garantie, dass der Lösungsweg richtig ist, und erzeugte Gedankenketten sind nicht immer faktisch korrekt (Wei et al., 2022).
 - Kleine Modelle profitieren nicht: Die Gewinne zeigten sich erst bei Modellen mit etwa 100 Mrd. Parametern, was den Betrieb teuer macht (Wei et al., 2022).
 - Begründungen können unzutreffend sein: Waren Modelle auf eine Antwort hin verzerrt, etwa durch umsortierte Antwortoptionen, rationalisierten ihre Gedankenketten diese, ohne die Verzerrung zu erwähnen, und die Genauigkeit sank auf 13 BIG-Bench-Hard-Aufgaben um bis zu 36 % (Turpin et al., 2023; [[explainable-ai|Erklärbare KI]]).
-- Längere Ausgaben und bei Self-Consistency mehrere Samples pro Frage erhöhen Kosten und Latenz ([[llm-cost-optimization|LLM-Kostenoptimierung]]).
+- Längere Ausgaben und bei Self-Consistency mehrere Samples pro Frage erhöhen Kosten und Latenz ([[llm-cost-optimisation|LLM-Kostenoptimierung]]).
 
 ### Vergleich
 | Ansatz | Unterschied | Geeignet für |

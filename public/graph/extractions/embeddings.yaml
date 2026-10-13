@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 987da5a20fe56441ca8b77a7c02a91f4e84c56addbc18a720a81bef3e51305ad
+note_sha256: 3fcd13f6e570924f91b999522ec394363b2cad1563e75606f303d42c1755e7a5
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - word2vec
@@ -7,7 +7,7 @@ discusses:
 - bert
 - sentence-bert
 - matryoshka-representation-learning
-- tokenization
+- tokenisation
 - faiss
 - vector-databases
 - text-similarity-metrics

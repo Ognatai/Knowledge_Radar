@@ -36,7 +36,7 @@ Text is first normalised and split into tokens. Tokens are mapped to learned vec
 
 #### 1. Text normalisation and tokenisation
 
-Before any modelling, text is normalised and split into tokens, the units that later steps operate on (Jurafsky & Martin (SLP3)). Modern systems mostly use subword tokens, which keep the vocabulary small while still representing rare words ([[tokenization|Tokenisation]]). On top of tokens, the field addresses tasks such as part-of-speech tagging, named entity recognition ([[entity-extraction|Entity Extraction]]), parsing, information extraction ([[information-extraction|Information Extraction]]), question answering and machine translation (Jurafsky & Martin (SLP3)).
+Before any modelling, text is normalised and split into tokens, the units that later steps operate on (Jurafsky & Martin (SLP3)). Modern systems mostly use subword tokens, which keep the vocabulary small while still representing rare words ([[tokenisation|Tokenisation]]). On top of tokens, the field addresses tasks such as part-of-speech tagging, named entity recognition ([[entity-extraction|Entity Extraction]]), parsing, information extraction ([[information-extraction|Information Extraction]]), question answering and machine translation (Jurafsky & Martin (SLP3)).
 
 #### 2. Word vectors
 
@@ -126,7 +126,7 @@ Der Text wird zunächst normalisiert und in Token aufgeteilt. Token werden auf g
 
 #### 1. Textnormalisierung und Tokenisierung
 
-Vor jeder Modellierung wird der Text normalisiert und in Token zerlegt, die Einheiten, mit denen die folgenden Schritte arbeiten (Jurafsky & Martin (SLP3)). Moderne Systeme verwenden meist Subword-Token, die das Vokabular klein halten und trotzdem seltene Wörter darstellen können ([[tokenization|Tokenisierung]]). Auf Basis der Token bearbeitet das Fachgebiet Aufgaben wie Wortartenerkennung, Named Entity Recognition ([[entity-extraction|Entitätsextraktion]]), Parsing, Informationsextraktion ([[information-extraction|Informationsextraktion]]), Fragebeantwortung und maschineller Übersetzung (Jurafsky & Martin (SLP3)).
+Vor jeder Modellierung wird der Text normalisiert und in Token zerlegt, die Einheiten, mit denen die folgenden Schritte arbeiten (Jurafsky & Martin (SLP3)). Moderne Systeme verwenden meist Subword-Token, die das Vokabular klein halten und trotzdem seltene Wörter darstellen können ([[tokenisation|Tokenisierung]]). Auf Basis der Token bearbeitet das Fachgebiet Aufgaben wie Wortartenerkennung, Named Entity Recognition ([[entity-extraction|Entitätsextraktion]]), Parsing, Informationsextraktion ([[information-extraction|Informationsextraktion]]), Fragebeantwortung und maschineller Übersetzung (Jurafsky & Martin (SLP3)).
 
 #### 2. Wortvektoren
 

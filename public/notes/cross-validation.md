@@ -50,7 +50,7 @@ Kohavi (1995) compared cross-validation with the bootstrap and gave the widely u
 
 ### When to use it
 - Estimating the performance of a model when data is too scarce to set aside a large test set (Kohavi, 1995).
-- Selecting between models or hyperparameter settings, for example the cost parameter and kernel of [[support-vector-machines|support vector machines]] ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
+- Selecting between models or hyperparameter settings, for example the cost parameter and kernel of [[support-vector-machines|support vector machines]] ([[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
 - Reporting the error of a tuned model, with nested cross-validation (Varma & Simon, 2006).
 - Comparing two learning algorithms with a statistical test, such as the 5×2 cv test (Dietterich, 1998; [[statistics-fundamentals|Statistics Fundamentals]]).
 - Evaluating forecasts on a rolling origin (Hyndman & Athanasopoulos, 2021).
@@ -129,7 +129,7 @@ Kohavi (1995) verglich Kreuzvalidierung mit dem Bootstrap und gab die verbreitet
 
 ### Wann einsetzen
 - Die Leistung eines Modells schätzen, wenn zu wenige Daten vorliegen, um eine große Testmenge zurückzuhalten (Kohavi, 1995).
-- Zwischen Modellen oder Hyperparameter-Einstellungen wählen, etwa Kostenparameter und Kernel von [[support-vector-machines|Support Vector Machines]] ([[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]).
+- Zwischen Modellen oder Hyperparameter-Einstellungen wählen, etwa Kostenparameter und Kernel von [[support-vector-machines|Support Vector Machines]] ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]).
 - Den Fehler eines abgestimmten Modells berichten, mit verschachtelter Kreuzvalidierung (Varma & Simon, 2006).
 - Zwei Lernverfahren mit einem statistischen Test vergleichen, etwa dem 5×2-cv-Test (Dietterich, 1998; [[statistics-fundamentals|Statistische Grundlagen]]).
 - Prognosen mit rollierendem Ursprung evaluieren (Hyndman & Athanasopoulos, 2021).

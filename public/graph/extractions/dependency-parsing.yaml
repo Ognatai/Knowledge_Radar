@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a369504ce0ba2b56a7b825fa11596ea029e265c5943e278b3387d2268cec82d2
+note_sha256: 49a31f5bc1a2a6ec0ef8f12bfd4175996a8570dcb0b1269ca0cf570362e3be17
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - constituency-parsing

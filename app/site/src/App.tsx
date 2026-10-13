@@ -139,6 +139,24 @@ function App() {
     if (screen.kind === "search") setQuery(screen.query);
   }, [screen]);
 
+  // Renamed notes and entities: replace an old address with the current one.
+  useEffect(() => {
+    const redirects = data?.redirects;
+    if (!redirects) return;
+    let next: Screen | null = null;
+    if (screen.kind === "note" && redirects.notes[screen.slug]) {
+      next = { kind: "note", slug: redirects.notes[screen.slug] };
+    } else if (screen.kind === "entity") {
+      const bare = screen.id.replace(/^entity:/, "");
+      const target = redirects.entities[bare];
+      if (target) next = { kind: "entity", id: screen.id.startsWith("entity:") ? `entity:${target}` : target };
+    }
+    if (next) {
+      window.history.replaceState(null, "", screenUrl(next));
+      setScreen(next);
+    }
+  }, [data, screen]);
+
   const notes = data?.notes ?? [];
   const notesBySlug = useMemo(() => new Map(notes.map((note) => [note.slug, note])), [notes]);
   const nodesById = useMemo(

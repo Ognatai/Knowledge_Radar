@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "f9fb06072222002722389089c7fc5e2ed52e294e5c9abeb4f520f2dddc158df1"
+note_sha256: "15c395256b6e5fe85096a23a24fcd7ac6be1d3b608a2d07321b1d41b6683b2da"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - langfuse
@@ -7,7 +7,7 @@ discusses:
 - opentelemetry
 - distributed-tracing
 - engineering-methods-for-ai-systems
-- llm-cost-optimization
+- llm-cost-optimisation
 - gdpr
 relations:
 - from: llm-observability-and-tracing

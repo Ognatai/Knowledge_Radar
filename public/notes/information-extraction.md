@@ -173,7 +173,7 @@ Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes 
 - Relationsphrasen aus Open IE werden keinem Schema zugeordnet, sodass dieselbe Relation unter verschiedenen Phrasen auftreten kann (Banko et al., 2007).
 - Typisierte Relationsextraktion findet nur Relationen aus ihrem Inventar (Huguet Cabot & Navigli, 2021).
 - LLM-basierte IE ist ein aktives Forschungsfeld mit offenen Problemen, die die Übersichtsarbeit benennt (Xu et al., 2023).
-- In mehrstufigen Pipelines pflanzen sich Fehler früher Schritte wie [[tokenization|Tokenisierung]] oder Parsing in spätere fort (Urchs, 2025).
+- In mehrstufigen Pipelines pflanzen sich Fehler früher Schritte wie [[tokenisation|Tokenisierung]] oder Parsing in spätere fort (Urchs, 2025).
 
 ### Vergleich
 

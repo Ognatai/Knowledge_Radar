@@ -2,8 +2,8 @@ version: 1
 note_sha256: 8f903d7e7ac0809c3741b35c0cd3eb246cea3ef4cff80c6c156765993c27d946
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
-- unigram-language-model-tokenization
-- subword-regularization
+- unigram-language-model-tokenisation
+- subword-regularisation
 - sentencepiece
 - gnmt
 - google
@@ -11,25 +11,25 @@ discusses:
 - python
 - natural-language-processing
 relations:
-- from: unigram-language-model-tokenization
+- from: unigram-language-model-tokenisation
   type: IS_EXAMPLE_OF
-  to: tokenization
+  to: tokenisation
   evidence: the paper proposes a new segmentation algorithm based on a unigram language model
-- from: subword-regularization
+- from: subword-regularisation
   type: BASED_ON
-  to: unigram-language-model-tokenization
+  to: unigram-language-model-tokenisation
   evidence: for better sampling the paper proposes a new segmentation algorithm based on a unigram language model
 - from: sentencepiece
   type: IMPLEMENTS
-  to: tokenization
+  to: tokenisation
   evidence: SentencePiece (Kudo & Richardson, 2018) is a language-independent subword tokeniser and detokeniser
 - from: sentencepiece
   type: IMPLEMENTS
-  to: unigram-language-model-tokenization
+  to: unigram-language-model-tokenisation
   evidence: The main algorithms are byte pair encoding (BPE), wordpieces and the unigram language model, implemented for example in SentencePiece
 - from: gnmt
   type: BASED_ON
-  to: tokenization
+  to: tokenisation
   evidence: Google's neural machine translation system (GNMT) divides words into a limited set of common sub-word units, called wordpieces
 - from: gnmt
   type: DEVELOPED_BY

@@ -1,12 +1,12 @@
 version: 1
-note_sha256: 3c7e472aec1723875230411e8e2c80e3f3e5229a980cedfdb2772a35ab13b7e2
+note_sha256: a68ee4974b625ff257c479c65b1a70168301107bad695b4ce59184460d508be7
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - decision-trees
 - ensemble-methods
 - random-forest
 - support-vector-machines
-- k-nearest-neighbors
+- k-nearest-neighbours
 - clustering
 - principal-component-analysis
 - linear-regression
@@ -32,7 +32,7 @@ relations:
   type: IS_EXAMPLE_OF
   to: classical-machine-learning
   evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis
-- from: k-nearest-neighbors
+- from: k-nearest-neighbours
   type: IS_EXAMPLE_OF
   to: classical-machine-learning
   evidence: Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis

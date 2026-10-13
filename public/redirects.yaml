@@ -1,0 +1,18 @@
+# Renamed notes (slugs) and graph entities (ids), old -> new. The site keeps old
+# addresses working by redirecting to the new name. Targets must exist.
+notes:
+  k-nearest-neighbors: k-nearest-neighbours
+  llm-cost-optimization: llm-cost-optimisation
+  quantization: quantisation
+  regularization-and-hyperparameters: regularisation-and-hyperparameters
+  tokenization: tokenisation
+entities:
+  adam-optimizer: adam-optimiser
+  anisotropic-quantization: anisotropic-quantisation
+  eight-bit-optimizers: eight-bit-optimisers
+  normalized-mutual-information: normalised-mutual-information
+  post-training-quantization: post-training-quantisation
+  product-quantization: product-quantisation
+  quantization-aware-training: quantisation-aware-training
+  subword-regularization: subword-regularisation
+  unigram-language-model-tokenization: unigram-language-model-tokenisation

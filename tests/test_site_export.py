@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from app.backend.knowledge_radar.site_export import export_site_data
 from tests.test_graph import ALPHA_RELATIONS, extraction, note_hash, setup_repo, write_extraction
 
@@ -65,3 +67,33 @@ def test_symmetric_relations_are_exported_as_undirected(tmp_path):
         "undirected": True,
     }
     assert "undirected" not in edges["BASED_ON"]
+
+
+def test_redirects_are_exported(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), ALPHA_RELATIONS))
+    (notes_dir.parent / "redirects.yaml").write_text(
+        "notes:\n  old-alpha: alpha\nentities:\n  old-microsoft: microsoft\n", encoding="utf-8"
+    )
+
+    data = json.loads(export_site_data(notes_dir, graph_dir, tmp_path / "out").read_text(encoding="utf-8"))
+
+    assert data["redirects"] == {"notes": {"old-alpha": "alpha"}, "entities": {"old-microsoft": "microsoft"}}
+
+
+def test_redirect_to_unknown_target_is_rejected(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), ALPHA_RELATIONS))
+    (notes_dir.parent / "redirects.yaml").write_text("notes:\n  old: missing\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="target does not exist"):
+        export_site_data(notes_dir, graph_dir, tmp_path / "out")
+
+
+def test_redirect_from_existing_name_is_rejected(tmp_path):
+    notes_dir, graph_dir, alpha = setup_repo(tmp_path)
+    write_extraction(graph_dir, "alpha", extraction(note_hash(alpha), ALPHA_RELATIONS))
+    (notes_dir.parent / "redirects.yaml").write_text("notes:\n  beta: alpha\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="old name still exists"):
+        export_site_data(notes_dir, graph_dir, tmp_path / "out")

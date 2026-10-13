@@ -15,6 +15,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from app.backend.knowledge_radar.areas import Area, added_dates, areas_path, load_areas, news
 from app.backend.knowledge_radar.graph import (
     DEFAULT_GRAPH_DIRECTORY,
@@ -32,7 +34,17 @@ from app.backend.knowledge_radar.notes import (
 
 DEFAULT_OUTPUT_DIRECTORY = REPOSITORY_ROOT / "app" / "site" / "public" / "data"
 OUTPUT_FILE_NAME = "site-data.json"
+REDIRECTS_FILE_NAME = "redirects.yaml"
 EXPORT_FORMAT_VERSION = 1
+
+
+def load_redirects(notes_directory: Path) -> dict[str, dict[str, str]]:
+    """Old note slugs and entity ids mapped to their new names (`public/redirects.yaml`)."""
+    path = notes_directory.parent / REDIRECTS_FILE_NAME
+    if not path.is_file():
+        return {"notes": {}, "entities": {}}
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {kind: {str(k): str(v) for k, v in (raw.get(kind) or {}).items()} for kind in ("notes", "entities")}
 
 
 def build_site_data(
@@ -40,6 +52,7 @@ def build_site_data(
     graph_directory: Path | None,
     areas: list[Area] | None = None,
     news: list[dict[str, Any]] | None = None,
+    redirects: dict[str, dict[str, str]] | None = None,
 ) -> dict[str, Any]:
     graph = load_graph(graph_directory, notes)
     nodes: list[dict[str, Any]] = [
@@ -84,14 +97,32 @@ def build_site_data(
         "graph": {"nodes": nodes, "edges": edges},
         "areas": [area.to_json() for area in areas or []],
         "news": news or [],
+        "redirects": _checked_redirects(redirects or {}, {note.slug for note in notes}, set(graph.entities)),
     }
+
+
+def _checked_redirects(redirects: dict[str, dict[str, str]], slugs: set[str], entity_ids: set[str]) -> dict[str, dict[str, str]]:
+    """Every redirect must point to an existing note or entity, and old names must be gone."""
+    for kind, known in (("notes", slugs), ("entities", entity_ids)):
+        for old, new in (redirects.get(kind) or {}).items():
+            if new not in known:
+                raise ValueError(f"redirect {kind} {old} -> {new}: target does not exist")
+            if old in known:
+                raise ValueError(f"redirect {kind} {old} -> {new}: the old name still exists")
+    return {kind: dict(sorted((redirects.get(kind) or {}).items())) for kind in ("notes", "entities")}
 
 
 def export_site_data(notes_directory: Path, graph_directory: Path | None, output_directory: Path) -> Path:
     notes = load_notes(notes_directory)
     areas_file = areas_path(notes_directory)
     areas = load_areas({note.slug for note in notes}, areas_file) if areas_file.is_file() else []
-    data = build_site_data(notes, graph_directory, areas, news(notes, added_dates(notes_directory)))
+    redirects = load_redirects(notes_directory)
+    dates = added_dates(notes_directory)
+    # A renamed note keeps the date its old file was added.
+    for old, new in redirects["notes"].items():
+        if old in dates:
+            dates[new] = min(dates[old], dates.get(new, dates[old]))
+    data = build_site_data(notes, graph_directory, areas, news(notes, dates), redirects)
     output_directory.mkdir(parents=True, exist_ok=True)
     output_path = output_directory / OUTPUT_FILE_NAME
     output_path.write_text(

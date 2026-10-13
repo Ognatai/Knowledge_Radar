@@ -59,7 +59,7 @@ Knowledge distillation compresses the knowledge of a large model or an ensemble 
 
 #### 6. Mixed precision and quantisation
 
-[[mixed-precision-training|Mixed precision training]] stores weights, activations and gradients in half-precision floating point, keeps a single-precision master copy of the weights that accumulates the updates, and scales the loss so that small gradient values do not underflow; this nearly halves the memory requirements without losing model accuracy (Micikevicius et al., 2017). Quantisation stores weights in even fewer bits ([[quantization|Quantisation]]), as in QLoRA's 4-bit base model, which is what makes fine-tuning very large models on a single GPU possible (Dettmers et al., 2023).
+[[mixed-precision-training|Mixed precision training]] stores weights, activations and gradients in half-precision floating point, keeps a single-precision master copy of the weights that accumulates the updates, and scales the loss so that small gradient values do not underflow; this nearly halves the memory requirements without losing model accuracy (Micikevicius et al., 2017). Quantisation stores weights in even fewer bits ([[quantisation|Quantisation]]), as in QLoRA's 4-bit base model, which is what makes fine-tuning very large models on a single GPU possible (Dettmers et al., 2023).
 
 #### Origin and variants
 
@@ -158,7 +158,7 @@ Knowledge Distillation komprimiert das Wissen eines großen Modells oder einer G
 
 #### 6. Mixed Precision und Quantisierung
 
-Mixed-Precision-Training speichert Gewichte, Aktivierungen und Gradienten als Gleitkommazahlen in halber Genauigkeit, behält eine Masterkopie der Gewichte in einfacher Genauigkeit, die die Updates sammelt, und skaliert den Verlust, damit kleine Gradientenwerte nicht unterlaufen; dies reduziert die Speicheranforderungen fast um die Hälfte, ohne die Modellgenauigkeit zu verlieren (Micikevicius et al., 2017). Quantisierung speichert Gewichte in noch weniger Bits ([[quantization|Quantisierung]]), wie beim 4-Bit-Basismodell von QLoRA, was das Fine-Tuning sehr großer Modelle auf einer einzigen GPU ermöglicht (Dettmers et al., 2023).
+Mixed-Precision-Training speichert Gewichte, Aktivierungen und Gradienten als Gleitkommazahlen in halber Genauigkeit, behält eine Masterkopie der Gewichte in einfacher Genauigkeit, die die Updates sammelt, und skaliert den Verlust, damit kleine Gradientenwerte nicht unterlaufen; dies reduziert die Speicheranforderungen fast um die Hälfte, ohne die Modellgenauigkeit zu verlieren (Micikevicius et al., 2017). Quantisierung speichert Gewichte in noch weniger Bits ([[quantisation|Quantisierung]]), wie beim 4-Bit-Basismodell von QLoRA, was das Fine-Tuning sehr großer Modelle auf einer einzigen GPU ermöglicht (Dettmers et al., 2023).
 
 #### Ursprung und Varianten
 

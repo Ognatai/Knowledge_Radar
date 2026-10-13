@@ -1797,13 +1797,13 @@ entities:
   type: Method
   name_en: Loss scaling
   name_de: Loss Scaling
-- id: eight-bit-optimizers
+- id: eight-bit-optimisers
   type: Method
   name_en: 8-bit optimisers
   name_de: 8-Bit-Optimierer
   aliases:
   - 8-bit optimizers
-- id: adam-optimizer
+- id: adam-optimiser
   type: Method
   name_en: Adam
   name_de: Adam
@@ -2074,14 +2074,14 @@ entities:
   type: Method
   name_en: Datasheets for datasets
   name_de: Datasheets for Datasets
-- id: post-training-quantization
+- id: post-training-quantisation
   type: Method
   name_en: Post-training quantisation (PTQ)
   name_de: Post-Training-Quantisierung (PTQ)
   aliases:
   - PTQ
   - Post-training quantization (PTQ)
-- id: quantization-aware-training
+- id: quantisation-aware-training
   type: Method
   name_en: Quantisation-aware training (QAT)
   name_de: Quantization-Aware Training (QAT)
@@ -2256,7 +2256,7 @@ entities:
   name_de: Inverted File Index (IVF)
   aliases:
   - IVF
-- id: product-quantization
+- id: product-quantisation
   type: Method
   name_en: Product quantisation (PQ)
   name_de: Produktquantisierung (PQ)
@@ -2266,7 +2266,7 @@ entities:
   type: Method
   name_en: IVF-PQ
   name_de: IVF-PQ
-- id: anisotropic-quantization
+- id: anisotropic-quantisation
   type: Method
   name_en: Anisotropic quantisation
   name_de: Anisotrope Quantisierung
@@ -2468,13 +2468,13 @@ entities:
   type: Method
   name_en: Dickey-Fuller test
   name_de: Dickey-Fuller-Test
-- id: unigram-language-model-tokenization
+- id: unigram-language-model-tokenisation
   type: Method
   name_en: Unigram language model (tokenisation)
   name_de: Unigram-Sprachmodell (Tokenisierung)
   aliases:
   - Unigram language model (tokenization)
-- id: subword-regularization
+- id: subword-regularisation
   type: Method
   name_en: Subword regularisation
   name_de: Subword-Regularisierung
@@ -2868,7 +2868,7 @@ entities:
   type: Method
   name_en: Rand index
   name_de: Rand-Index
-- id: normalized-mutual-information
+- id: normalised-mutual-information
   type: Method
   name_en: Normalised mutual information (NMI)
   name_de: Normalisierte Mutual Information (NMI)

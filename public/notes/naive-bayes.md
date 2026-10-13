@@ -83,7 +83,7 @@ The multinomial model is equivalent to a multinomial unigram language model per 
 |-------|------------------------|------------|
 | Multinomial NB | Token counts (Manning et al., 2008, ch. 13) | Longer documents, many features |
 | Bernoulli NB | Binary presence and absence of each term (Manning et al., 2008, ch. 13) | Short documents, few features |
-| [[k-nearest-neighbors\|k-nearest neighbours]] | Similar training documents | Can be tuned closely to one period, which hurts under drift (Manning et al., 2008, ch. 13) |
+| [[k-nearest-neighbours\|k-nearest neighbours]] | Similar training documents | Can be tuned closely to one period, which hurts under drift (Manning et al., 2008, ch. 13) |
 
 ### In practice
 
@@ -169,7 +169,7 @@ Das multinomiale Modell entspricht einem multinomialen Unigramm-Sprachmodell pro
 |--------|---------------------------|--------------|
 | Multinomiales NB | Tokenzählungen (Manning et al., 2008, Kap. 13) | Längere Dokumente, viele Features |
 | Bernoulli-NB | Binäres Vorkommen und Fehlen jedes Terms (Manning et al., 2008, Kap. 13) | Kurze Dokumente, wenige Features |
-| [[k-nearest-neighbors\|k-nächste Nachbarn]] | Ähnliche Trainingsdokumente | Lässt sich eng auf einen Zeitraum abstimmen, was bei Drift schadet (Manning et al., 2008, Kap. 13) |
+| [[k-nearest-neighbours\|k-nächste Nachbarn]] | Ähnliche Trainingsdokumente | Lässt sich eng auf einen Zeitraum abstimmen, was bei Drift schadet (Manning et al., 2008, Kap. 13) |
 
 ### In der Praxis
 

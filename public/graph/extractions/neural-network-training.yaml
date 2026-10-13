@@ -1,10 +1,10 @@
 version: 1
-note_sha256: 085a661844474c4b2a4e1dd35571cd71f2911341cb467c9354b2b3dc663cac0a
+note_sha256: 05708fb581c66a6b981aa654e1222cc20103ee0d4555f0b9454d25d269c3f6d6
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - back-propagation
 - stochastic-gradient-descent
-- adam-optimizer
+- adam-optimiser
 - adamw
 - batch-normalisation
 - glorot-initialisation
@@ -22,11 +22,11 @@ relations:
   evidence: a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights
 - from: neural-network-training
   type: BASED_ON
-  to: adam-optimizer
+  to: adam-optimiser
   evidence: a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights
 - from: adamw
   type: BASED_ON
-  to: adam-optimizer
+  to: adam-optimiser
   evidence: AdamW | Adam with decoupled weight decay
 - from: adamw
   type: BASED_ON

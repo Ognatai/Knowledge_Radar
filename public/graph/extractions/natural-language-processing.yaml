@@ -1,8 +1,8 @@
 version: 1
-note_sha256: a106a4df87cbb87b8a0402473674dded243e129f306d8cf882301877f22dc198
+note_sha256: fec1779a45700d304205b3341d4e62c7b894fe9bf3f716562916ce07832dc25a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
-- tokenization
+- tokenisation
 - word2vec
 - embeddings
 - attention-and-transformers
@@ -21,7 +21,7 @@ relations:
   evidence: Modern NLP represents text as tokens and learned vectors and models it with neural networks
 - from: natural-language-processing
   type: BASED_ON
-  to: tokenization
+  to: tokenisation
   evidence: Before any modelling, text is normalised and split into tokens, the units that later steps operate on
 - from: large-language-models
   type: BASED_ON

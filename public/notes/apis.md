@@ -115,7 +115,7 @@ REST was described in 2000 as an architectural style for distributed hypermedia 
 
 ### In practice
 
-APIs are designed contract-first with an OpenAPI description, checked in reviews like code and tested against the contract ([[clean-code|Clean Code]]). Every endpoint that receives an object ID checks whether the caller may access that object, and tokens are validated (OWASP API Top 10 (2023)). API services are often deployed as containers and scaled on clusters ([[docker|Docker]]; [[kubernetes|Kubernetes]]); Python frameworks are a common way to build them ([[python|Python]]). LLM agents use APIs as tools, so tool descriptions, permissions and rate limits matter ([[agentic-ai|Agentic AI]]; [[harness-engineering|Harness Engineering]]), and the APIs of model providers are billed per token ([[llm-cost-optimization|LLM Cost Optimisation]]).
+APIs are designed contract-first with an OpenAPI description, checked in reviews like code and tested against the contract ([[clean-code|Clean Code]]). Every endpoint that receives an object ID checks whether the caller may access that object, and tokens are validated (OWASP API Top 10 (2023)). API services are often deployed as containers and scaled on clusters ([[docker|Docker]]; [[kubernetes|Kubernetes]]); Python frameworks are a common way to build them ([[python|Python]]). LLM agents use APIs as tools, so tool descriptions, permissions and rate limits matter ([[agentic-ai|Agentic AI]]; [[harness-engineering|Harness Engineering]]), and the APIs of model providers are billed per token ([[llm-cost-optimisation|LLM Cost Optimisation]]).
 
 ### Key takeaway
 
@@ -228,7 +228,7 @@ REST wurde im Jahr 2000 als Architekturstil für verteilte Hypermedia-Systeme be
 
 ### In der Praxis
 
-APIs werden vertragsorientiert mit einer OpenAPI-Beschreibung entworfen, in Reviews wie Code geprüft und gegen den Vertrag getestet ([[clean-code|Clean Code]]). Jeder Endpunkt, der eine Objekt-ID erhält, prüft, ob der Aufrufer auf dieses Objekt zugreifen darf, und Token werden validiert (OWASP API Top 10 (2023)). API-Dienste werden oft als Container ausgeliefert und auf Clustern skaliert ([[docker|Docker]]; [[kubernetes|Kubernetes]]); Python-Frameworks sind ein verbreiteter Weg, sie zu bauen ([[python|Python]]). LLM-Agenten nutzen APIs als Werkzeuge, daher zählen Werkzeugbeschreibungen, Berechtigungen und Ratenbegrenzungen ([[agentic-ai|Agentic AI]]; [[harness-engineering|Harness Engineering]]), und die APIs von Modellanbietern werden pro Token abgerechnet ([[llm-cost-optimization|LLM-Kostenoptimierung]]).
+APIs werden vertragsorientiert mit einer OpenAPI-Beschreibung entworfen, in Reviews wie Code geprüft und gegen den Vertrag getestet ([[clean-code|Clean Code]]). Jeder Endpunkt, der eine Objekt-ID erhält, prüft, ob der Aufrufer auf dieses Objekt zugreifen darf, und Token werden validiert (OWASP API Top 10 (2023)). API-Dienste werden oft als Container ausgeliefert und auf Clustern skaliert ([[docker|Docker]]; [[kubernetes|Kubernetes]]); Python-Frameworks sind ein verbreiteter Weg, sie zu bauen ([[python|Python]]). LLM-Agenten nutzen APIs als Werkzeuge, daher zählen Werkzeugbeschreibungen, Berechtigungen und Ratenbegrenzungen ([[agentic-ai|Agentic AI]]; [[harness-engineering|Harness Engineering]]), und die APIs von Modellanbietern werden pro Token abgerechnet ([[llm-cost-optimisation|LLM-Kostenoptimierung]]).
 
 ### Merksatz
 

@@ -84,7 +84,7 @@ LLM-based autonomous agents grew quickly after models acquired broad knowledge f
 **Limitations**
 - Poor long-term reasoning, decision-making and instruction following are the main obstacles; open models trailed commercial models considerably on AgentBench (Liu et al., 2023).
 - Realistic tasks remain hard: on SWE-bench, the best model at the time resolved 1.96% of real GitHub issues (Jimenez et al., 2023).
-- Higher costs and compounding errors (Anthropic, 2024a); agents can get stuck in loops ([[llm-cost-optimization|LLM Cost Optimisation]]).
+- Higher costs and compounding errors (Anthropic, 2024a); agents can get stuck in loops ([[llm-cost-optimisation|LLM Cost Optimisation]]).
 - Retrieved content blurs data and instructions: indirect prompt injection lets attackers control an agent through web pages or documents it reads (Greshake et al., 2023).
 
 ### Comparison
@@ -187,7 +187,7 @@ LLM-basierte autonome Agenten verbreiteten sich schnell, nachdem Modelle breites
 **Einschränkungen**
 - Schwaches langfristiges Schlussfolgern, Entscheiden und Befolgen von Anweisungen sind die Haupthindernisse; offene Modelle lagen in AgentBench deutlich hinter kommerziellen Modellen (Liu et al., 2023).
 - Realistische Aufgaben bleiben schwer: In SWE-bench löste das damals beste Modell 1,96 % echter GitHub-Issues (Jimenez et al., 2023).
-- Höhere Kosten und sich aufschaukelnde Fehler (Anthropic, 2024a); Agenten können in Schleifen festhängen ([[llm-cost-optimization|LLM-Kostenoptimierung]]).
+- Höhere Kosten und sich aufschaukelnde Fehler (Anthropic, 2024a); Agenten können in Schleifen festhängen ([[llm-cost-optimisation|LLM-Kostenoptimierung]]).
 - Abgerufene Inhalte verwischen die Grenze zwischen Daten und Anweisungen: Über indirekte Prompt Injection können Angreifende einen Agenten über Webseiten oder Dokumente steuern, die er liest (Greshake et al., 2023).
 
 ### Vergleich

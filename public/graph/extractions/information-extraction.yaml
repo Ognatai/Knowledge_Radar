@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c61c8a3aeada9786feb4437a172f1426f9477f6a5d33608da386e9a2dd67e042
+note_sha256: 05e39b539d1a365461c03bd4975fbadf867f017529050512fd9fa661bbcb33e5
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - entity-extraction

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c47a0771ed44db9227002d8d4273c164f7c5333be1664933e62859f07b4c50d4
+note_sha256: de6a3d3431ecf58d40de094c8f54a7364396ded692870d4fd6bda70d44893a1c
 extracted_by: manual
 discusses:
 - fitnets
@@ -7,7 +7,7 @@ discusses:
 - tinybert
 - bert
 - llm-adaptation
-- quantization
+- quantisation
 relations:
 - from: fitnets
   type: BASED_ON
@@ -35,5 +35,5 @@ relations:
   evidence: Distillation is one of several options for adapting and shrinking language models
 - from: knowledge-distillation
   type: COMPLEMENTS
-  to: quantization
+  to: quantisation
   evidence: When combined with quantisation for further compression

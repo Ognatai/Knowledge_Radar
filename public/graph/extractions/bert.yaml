@@ -1,10 +1,10 @@
 version: 1
-note_sha256: afab2965d8724e740689bd82a580e9fc2bde304111f95b7f7ea4a5c5fb0c9261
+note_sha256: 9b993e7fa45a5dc97400029b55983deb1e4f94294567e149454455c41e9d03b4
 extracted_by: claude
 discusses:
 - attention-and-transformers
 - gpt
-- tokenization
+- tokenisation
 - masked-language-modelling
 - next-sentence-prediction
 - entity-extraction
@@ -37,7 +37,7 @@ relations:
   evidence: 'Next sentence prediction (NSP): for sentences A and B, B is the actual next sentence half of the time'
 - from: bert
   type: BASED_ON
-  to: tokenization
+  to: tokenisation
   evidence: Text is split into WordPiece tokens with a 30,000-token vocabulary
 - from: sentence-bert
   type: BASED_ON

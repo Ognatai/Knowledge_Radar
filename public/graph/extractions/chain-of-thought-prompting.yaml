@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5d6024cfb88eb3518433cf2429eaa7ef002cb384acf80c5cd1e01974e25f7a90
+note_sha256: 51fc997ca4bf8dcb341cd61c09e3d07a0aa6bf85d9b58a5f7711caea4acae030
 extracted_by: claude
 discusses:
 - prompt-engineering
@@ -12,7 +12,7 @@ discusses:
 - explainable-ai
 - hallucination-detection
 - prompt-comparison
-- llm-cost-optimization
+- llm-cost-optimisation
 - llm-alignment
 relations:
 - from: chain-of-thought-prompting

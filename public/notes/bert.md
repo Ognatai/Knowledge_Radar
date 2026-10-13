@@ -38,7 +38,7 @@ BERT reads the whole input at once: every token attends to all other tokens, bef
 ```
 
 #### 1. Input representation
-Text is split into WordPiece tokens with a 30,000-token vocabulary ([[tokenization|Tokenisation]]). Every sequence starts with [CLS]; a pair of sentences is separated by [SEP], and a learned segment embedding marks whether a token belongs to sentence A or B. The input of each token is the sum of its token, segment and position embeddings (Devlin et al., 2018).
+Text is split into WordPiece tokens with a 30,000-token vocabulary ([[tokenisation|Tokenisation]]). Every sequence starts with [CLS]; a pair of sentences is separated by [SEP], and a learned segment embedding marks whether a token belongs to sentence A or B. The input of each token is the sum of its token, segment and position embeddings (Devlin et al., 2018).
 
 #### 2. Pre-training
 BERT is pre-trained on BooksCorpus (800M words) and English Wikipedia (2,500M words) with two tasks (Devlin et al., 2018):
@@ -124,7 +124,7 @@ BERT liest die ganze Eingabe auf einmal: Jedes Token richtet Attention auf alle 
 ```
 
 #### 1. Eingaberepräsentation
-Text wird in WordPiece-Tokens mit einem Vokabular von 30.000 Tokens zerlegt ([[tokenization|Tokenisierung]]). Jede Sequenz beginnt mit [CLS]; ein Satzpaar wird durch [SEP] getrennt, und ein gelerntes Segment-Embedding markiert, ob ein Token zu Satz A oder B gehört. Die Eingabe jedes Tokens ist die Summe aus Token-, Segment- und Positions-Embedding (Devlin et al., 2018).
+Text wird in WordPiece-Tokens mit einem Vokabular von 30.000 Tokens zerlegt ([[tokenisation|Tokenisierung]]). Jede Sequenz beginnt mit [CLS]; ein Satzpaar wird durch [SEP] getrennt, und ein gelerntes Segment-Embedding markiert, ob ein Token zu Satz A oder B gehört. Die Eingabe jedes Tokens ist die Summe aus Token-, Segment- und Positions-Embedding (Devlin et al., 2018).
 
 #### 2. Vortraining
 BERT wird auf BooksCorpus (800 Mio. Wörter) und der englischen Wikipedia (2.500 Mio. Wörter) mit zwei Aufgaben vortrainiert (Devlin et al., 2018):

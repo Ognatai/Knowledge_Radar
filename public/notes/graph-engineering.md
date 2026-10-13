@@ -65,7 +65,7 @@ The earliest documented use found was a blog post in early July 2026; the term s
 **Limitations**
 - The term is used inconsistently and is partly driven by hype, including fabricated claims (Ghelbur, 2026).
 - Multi-agent graphs add failure modes: the failure of an intermediate agent cascades to downstream nodes, and missing edges keep information from where it is needed.
-- Fan-out and retries can multiply costs ([[llm-cost-optimization|LLM Cost Optimisation]]).
+- Fan-out and retries can multiply costs ([[llm-cost-optimisation|LLM Cost Optimisation]]).
 - Of the three readings, only graph-structured knowledge has a long research history and reproducible benchmarks; the other two rest mostly on practitioner reports (Ghelbur, 2026).
 
 ### Comparison
@@ -147,7 +147,7 @@ Die früheste gefundene Verwendung war ein Blogbeitrag Anfang Juli 2026; verbrei
 **Einschränkungen**
 - Der Begriff wird uneinheitlich verwendet und ist teils von Hype getrieben, einschließlich erfundener Behauptungen (Ghelbur, 2026).
 - Multi-Agenten-Graphen bringen neue Fehlerbilder: Der Ausfall eines zwischengeschalteten Agenten wirkt sich kaskadierend auf nachgelagerte Knoten aus, und fehlende Kanten halten Informationen von dort fern, wo sie gebraucht werden.
-- Fan-out und Wiederholungen können die Kosten vervielfachen ([[llm-cost-optimization|LLM-Kostenoptimierung]]).
+- Fan-out und Wiederholungen können die Kosten vervielfachen ([[llm-cost-optimisation|LLM-Kostenoptimierung]]).
 - Von den drei Lesarten hat nur graphstrukturiertes Wissen eine lange Forschungsgeschichte und reproduzierbare Benchmarks; die beiden anderen stützen sich überwiegend auf Praxisberichte (Ghelbur, 2026).
 
 ### Vergleich

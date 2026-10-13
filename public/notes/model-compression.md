@@ -32,7 +32,7 @@ trained model ─▶ prune redundant weights ─▶ quantize remaining weights �
 Pruning removes weights, neurons or whole structures that contribute little. Early methods such as Optimal Brain Damage and Optimal Brain Surgeon chose connections to remove based on the Hessian of the loss function and achieved higher accuracy than pruning by weight magnitude. Later work prunes redundant weights in pre-trained networks, or adds sparsity constraints (l0 or l1 regularisers) during training; group sparsity removes entire filters, channels or layers, which yields structured instead of scattered sparsity (Cheng et al., 2017).
 
 #### 2. Quantisation and binarisation
-[[quantization|Quantisation]] reduces the number of bits used to represent each weight; 8-bit quantisation of the parameters already brings a significant speed-up with minimal loss of accuracy (Cheng et al., 2017). The "deep compression" pipeline combines three stages: it prunes small-weight connections, quantises the remaining weights by weight sharing and then encodes them with Huffman coding. In the extreme case, binary networks use one bit per weight, but their accuracy drops considerably for large networks (Cheng et al., 2017).
+[[quantisation|Quantisation]] reduces the number of bits used to represent each weight; 8-bit quantisation of the parameters already brings a significant speed-up with minimal loss of accuracy (Cheng et al., 2017). The "deep compression" pipeline combines three stages: it prunes small-weight connections, quantises the remaining weights by weight sharing and then encodes them with Huffman coding. In the extreme case, binary networks use one bit per weight, but their accuracy drops considerably for large networks (Cheng et al., 2017).
 
 #### 3. Low-rank factorisation and structured matrices
 Weight matrices of fully connected layers and convolution kernels, viewed as tensors, can be approximated by products of smaller matrices or tensors. Reported results include a 2× speed-up of a single convolutional layer with a 1% drop in accuracy and a 4.5× speed-up with a 1% drop in text recognition. Structured matrices go further by restricting a layer's weight matrix to a form that needs fewer parameters: a circulant matrix stores a d × d layer in O(d) instead of O(d²) memory and, via the fast Fourier transform, computes it in O(d log d) time (Cheng et al., 2017).
@@ -45,7 +45,7 @@ Buciluǎ et al. (2006) introduced the term for compressing large ensembles. Surv
 
 ### When to use it
 - Deployment on devices with little memory, such as smartphones, wearables and embedded systems, or in applications with strict latency requirements (Cheng et al., 2017; Deng et al., 2020; Gao et al., 2026).
-- Serving a model more cheaply and with lower energy use and emissions (Zafar et al., 2026); see also [[llm-cost-optimization|LLM cost optimisation]].
+- Serving a model more cheaply and with lower energy use and emissions (Zafar et al., 2026); see also [[llm-cost-optimisation|LLM cost optimisation]].
 - Replacing a large ensemble or teacher model with a single small model at inference time (Buciluǎ et al., 2006).
 
 ### Strengths and limitations
@@ -62,7 +62,7 @@ Limitations:
 ### Comparison
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
-| Pruning and [[quantization\|quantisation]] | Remove redundant parameters or store them with fewer bits (Cheng et al., 2017) | Pre-trained models as well as training from scratch |
+| Pruning and [[quantisation\|quantisation]] | Remove redundant parameters or store them with fewer bits (Cheng et al., 2017) | Pre-trained models as well as training from scratch |
 | Low-rank factorisation | Approximate weight matrices and kernels by smaller factors (Cheng et al., 2017) | Convolutional and fully connected layers |
 | Compact convolutional filters | Use special filter structures with fewer parameters; depends on the application (Cheng et al., 2017) | New convolutional architectures trained from scratch |
 | [[knowledge-distillation\|Knowledge distillation]] | Train a small model to reproduce a large one; results depend on the application and network structure (Cheng et al., 2017) | Replacing large models or ensembles by small ones |
@@ -100,7 +100,7 @@ trainiertes Modell ─▶ redundante Gewichte prunen ─▶ verbleibende Gewicht
 Pruning entfernt Gewichte, Neuronen oder ganze Strukturen, die wenig beitragen. Frühe Verfahren wie Optimal Brain Damage und Optimal Brain Surgeon wählten die zu entfernenden Verbindungen anhand der Hesse-Matrix der Verlustfunktion und erreichten damit eine höhere Genauigkeit als Pruning nach Gewichtsbetrag. Spätere Arbeiten prunen redundante Gewichte in vortrainierten Netzen oder fügen beim Training Sparsity-Nebenbedingungen hinzu (l0- oder l1-Regularisierer); Group Sparsity entfernt ganze Filter, Kanäle oder Schichten und erzeugt so strukturierte statt verstreuter Sparsity (Cheng et al., 2017).
 
 #### 2. Quantisierung und Binarisierung
-[[quantization|Quantisierung]] verringert die Zahl der Bits, mit denen jedes Gewicht dargestellt wird; schon eine 8-Bit-Quantisierung der Parameter bringt eine deutliche Beschleunigung bei minimalem Genauigkeitsverlust (Cheng et al., 2017). Die Pipeline „Deep Compression“ kombiniert drei Stufen: Sie entfernt Verbindungen mit kleinen Gewichten, quantisiert die verbleibenden Gewichte durch Weight Sharing und kodiert sie anschließend mit Huffman-Kodierung. Im Extremfall verwenden binäre Netze ein Bit pro Gewicht, doch ihre Genauigkeit sinkt bei großen Netzen deutlich (Cheng et al., 2017).
+[[quantisation|Quantisierung]] verringert die Zahl der Bits, mit denen jedes Gewicht dargestellt wird; schon eine 8-Bit-Quantisierung der Parameter bringt eine deutliche Beschleunigung bei minimalem Genauigkeitsverlust (Cheng et al., 2017). Die Pipeline „Deep Compression“ kombiniert drei Stufen: Sie entfernt Verbindungen mit kleinen Gewichten, quantisiert die verbleibenden Gewichte durch Weight Sharing und kodiert sie anschließend mit Huffman-Kodierung. Im Extremfall verwenden binäre Netze ein Bit pro Gewicht, doch ihre Genauigkeit sinkt bei großen Netzen deutlich (Cheng et al., 2017).
 
 #### 3. Low-Rank-Faktorisierung und strukturierte Matrizen
 Gewichtsmatrizen vollständig verbundener Schichten und Faltungskerne, als Tensoren betrachtet, lassen sich durch Produkte kleinerer Matrizen oder Tensoren annähern. Berichtet wurden unter anderem eine 2-fache Beschleunigung einer einzelnen Faltungsschicht bei 1 % Genauigkeitsverlust und eine 4,5-fache Beschleunigung bei 1 % Verlust in der Texterkennung. Strukturierte Matrizen gehen weiter, indem sie die Gewichtsmatrix einer Schicht auf eine Form mit weniger Parametern beschränken: Eine zirkulante Matrix speichert eine d × d-Schicht mit O(d) statt O(d²) Speicher und berechnet sie über die schnelle Fourier-Transformation in O(d log d) Zeit (Cheng et al., 2017).
@@ -113,7 +113,7 @@ Buciluǎ et al. (2006) prägten den Begriff für das Verdichten großer Ensemble
 
 ### Wann einsetzen
 - Einsatz auf Geräten mit wenig Speicher, etwa Smartphones, Wearables und eingebetteten Systemen, oder in Anwendungen mit strengen Latenzanforderungen (Cheng et al., 2017; Deng et al., 2020; Gao et al., 2026).
-- Ein Modell günstiger und mit geringerem Energieverbrauch und geringeren Emissionen betreiben (Zafar et al., 2026); siehe auch [[llm-cost-optimization|LLM-Kostenoptimierung]].
+- Ein Modell günstiger und mit geringerem Energieverbrauch und geringeren Emissionen betreiben (Zafar et al., 2026); siehe auch [[llm-cost-optimisation|LLM-Kostenoptimierung]].
 - Ein großes Ensemble oder Teacher-Modell zur Inferenzzeit durch ein einzelnes kleines Modell ersetzen (Buciluǎ et al., 2006).
 
 ### Stärken und Grenzen
@@ -130,7 +130,7 @@ Grenzen:
 ### Vergleich
 | Ansatz | Unterschied | Geeignet für |
 |--------|-------------|--------------|
-| Pruning und [[quantization\|Quantisierung]] | Redundante Parameter entfernen oder mit weniger Bits speichern (Cheng et al., 2017) | Vortrainierte Modelle ebenso wie Training von Grund auf |
+| Pruning und [[quantisation\|Quantisierung]] | Redundante Parameter entfernen oder mit weniger Bits speichern (Cheng et al., 2017) | Vortrainierte Modelle ebenso wie Training von Grund auf |
 | Low-Rank-Faktorisierung | Gewichtsmatrizen und Kerne durch kleinere Faktoren annähern (Cheng et al., 2017) | Faltungsschichten und vollständig verbundene Schichten |
 | Kompakte Faltungsfilter | Spezielle Filterstrukturen mit weniger Parametern; abhängig von der Anwendung (Cheng et al., 2017) | Neue Faltungsarchitekturen, die von Grund auf trainiert werden |
 | [[knowledge-distillation\|Knowledge Distillation]] | Ein kleines Modell trainieren, das ein großes nachbildet; Ergebnisse hängen von Anwendung und Netzstruktur ab (Cheng et al., 2017) | Große Modelle oder Ensembles durch kleine ersetzen |

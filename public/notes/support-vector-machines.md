@@ -37,7 +37,7 @@ Boser et al. (1992) presented a training algorithm that maximises the margin bet
 
 #### 2. Soft margin
 
-Real data is rarely perfectly separable. Cortes & Vapnik (1995) extended the method to non-separable training data with a soft margin, which allows training errors at a cost. The cost parameter C controls the trade-off between a wide margin and few training errors, and the approach corresponds to fitting a regularised hinge loss (Hastie et al., 2009; [[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
+Real data is rarely perfectly separable. Cortes & Vapnik (1995) extended the method to non-separable training data with a soft margin, which allows training errors at a cost. The cost parameter C controls the trade-off between a wide margin and few training errors, and the approach corresponds to fitting a regularised hinge loss (Hastie et al., 2009; [[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
 
 #### 3. Kernel trick
 
@@ -121,7 +121,7 @@ Boser et al. (1992) stellten einen Trainingsalgorithmus vor, der den Abstand zwi
 
 #### 2. Soft Margin
 
-Echte Daten sind selten perfekt trennbar. Cortes & Vapnik (1995) erweiterten das Verfahren mit einem Soft Margin auf nicht trennbare Trainingsdaten, der Trainingsfehler gegen Kosten zulässt. Der Kostenparameter C steuert die Abwägung zwischen breitem Margin und wenigen Trainingsfehlern, und der Ansatz entspricht der Anpassung eines regularisierten Hinge-Loss (Hastie et al., 2009; [[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]).
+Echte Daten sind selten perfekt trennbar. Cortes & Vapnik (1995) erweiterten das Verfahren mit einem Soft Margin auf nicht trennbare Trainingsdaten, der Trainingsfehler gegen Kosten zulässt. Der Kostenparameter C steuert die Abwägung zwischen breitem Margin und wenigen Trainingsfehlern, und der Ansatz entspricht der Anpassung eines regularisierten Hinge-Loss (Hastie et al., 2009; [[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]).
 
 #### 3. Kernel-Trick
 

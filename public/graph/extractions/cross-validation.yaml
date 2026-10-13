@@ -1,12 +1,12 @@
 version: 1
-note_sha256: e874385c541a3c01aa10d02fe5843c7d060561848b6bb21d5e616d6d49d2e9c6
+note_sha256: 43290277e4d59f51c6f8296f621070b25918248d15da88e46a74f10395bbbba9
 extracted_by: claude
 discusses:
 - nested-cross-validation
 - bootstrap
 - five-two-cv-test
 - support-vector-machines
-- regularization-and-hyperparameters
+- regularisation-and-hyperparameters
 - statistics-fundamentals
 - model-comparison
 - time-series-analysis

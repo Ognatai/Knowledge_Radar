@@ -1,11 +1,11 @@
 version: 1
-note_sha256: 5ecdbba70a448c80568a7f35c99d3ea3a8c234f8779a8a04572d9ada3290eea3
+note_sha256: 9316ea4ff730ed459779a353d42255cfa32bd27ea0d83d229d1d7f00612ef6e1
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - semcor
 - bert
 - embeddings
-- k-nearest-neighbors
+- k-nearest-neighbours
 - collocations
 - clustering
 relations:
@@ -15,5 +15,5 @@ relations:
   evidence: contextual models such as BERT represent a word in its context and underlie modern WSD
 - from: word-sense-disambiguation
   type: BASED_ON
-  to: k-nearest-neighbors
+  to: k-nearest-neighbours
   evidence: The contextual method is a nearest-neighbour classifier

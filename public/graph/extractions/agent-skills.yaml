@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 289998e5cbd5eedecaa32dfbc1b124682e0bf7b3fec5d0194705690f0c535446
+note_sha256: 6f92eaaaeca1cfcf9199f0cd44e6801d421fe1f5721dafe4d966b0001e1a23e2
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - mcp-and-related-protocols

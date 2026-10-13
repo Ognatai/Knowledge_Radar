@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "465b2750b2ac736db860c5ebfe2e3ce3532d4add2d9a1b74ed818699f24c9c4c"
+note_sha256: "27e0ac8737f0561278b5dfa0f399caba1122020e1dd63b08fd72500a27ea8fd6"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -10,7 +10,7 @@ discusses:
 - graph-engineering
 - harness-engineering
 - vibe-coding
-- llm-cost-optimization
+- llm-cost-optimisation
 - llm-observability-and-tracing
 relations:
 - from: prompt-engineering

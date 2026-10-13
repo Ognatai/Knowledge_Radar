@@ -65,6 +65,8 @@ export interface SiteData {
   graph: { nodes: GraphNode[]; edges: GraphEdge[] };
   areas?: Area[];
   news?: NewsItem[];
+  // Old note slugs and entity ids mapped to their current names.
+  redirects?: { notes: Record<string, string>; entities: Record<string, string> };
 }
 
 export const areaName = (area: Area, language: Language) =>

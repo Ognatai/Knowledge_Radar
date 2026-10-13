@@ -91,7 +91,7 @@ Source: Jurafsky & Martin (2026).
 
 ### In practice
 
-Static [[embeddings|Embeddings]] do not divide into discrete senses, while contextual models such as [[bert|BERT]] represent a word in its context and underlie modern WSD (Jurafsky & Martin, 2026). The contextual method is a nearest-neighbour classifier ([[k-nearest-neighbors|k-Nearest Neighbours]]), feature-based WSD uses collocation features ([[collocations|Collocations]]), and word sense induction relies on [[clustering|Clustering]] (Jurafsky & Martin, 2026).
+Static [[embeddings|Embeddings]] do not divide into discrete senses, while contextual models such as [[bert|BERT]] represent a word in its context and underlie modern WSD (Jurafsky & Martin, 2026). The contextual method is a nearest-neighbour classifier ([[k-nearest-neighbours|k-Nearest Neighbours]]), feature-based WSD uses collocation features ([[collocations|Collocations]]), and word sense induction relies on [[clustering|Clustering]] (Jurafsky & Martin, 2026).
 
 ### Key takeaway
 
@@ -179,7 +179,7 @@ Quelle: Jurafsky & Martin (2026).
 
 ### In der Praxis
 
-Statische [[embeddings|Embeddings]] teilen sich nicht in diskrete Sinne, während kontextuelle Modelle wie [[bert|BERT]] ein Wort in seinem Kontext darstellen und modernen WSD-Verfahren zugrunde liegen (Jurafsky & Martin, 2026). Das kontextuelle Verfahren ist ein Nächster-Nachbar-Klassifikator ([[k-nearest-neighbors|k-Nearest Neighbors]]), merkmalsbasierte WSD nutzt Kollokationsmerkmale ([[collocations|Kollokationen]]), und Word Sense Induction beruht auf [[clustering|Clustering]] (Jurafsky & Martin, 2026).
+Statische [[embeddings|Embeddings]] teilen sich nicht in diskrete Sinne, während kontextuelle Modelle wie [[bert|BERT]] ein Wort in seinem Kontext darstellen und modernen WSD-Verfahren zugrunde liegen (Jurafsky & Martin, 2026). Das kontextuelle Verfahren ist ein Nächster-Nachbar-Klassifikator ([[k-nearest-neighbours|k-Nearest Neighbors]]), merkmalsbasierte WSD nutzt Kollokationsmerkmale ([[collocations|Kollokationen]]), und Word Sense Induction beruht auf [[clustering|Clustering]] (Jurafsky & Martin, 2026).
 
 ### Merksatz
 

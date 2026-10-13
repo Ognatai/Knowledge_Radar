@@ -48,7 +48,7 @@ For time series regression, useful predictors include a trend, seasonal dummy va
 
 #### 4. Feature selection
 
-Variable and feature selection aims at better predictive performance, faster and more cost-effective predictors and a better understanding of the underlying process (Guyon & Elisseeff, 2003). Approaches include ranking individual variables, filter methods that select features independently of the model, wrapper methods that evaluate subsets with the model, and embedded methods that select during training, such as the lasso ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]). The selection itself must be validated, since it can overfit too.
+Variable and feature selection aims at better predictive performance, faster and more cost-effective predictors and a better understanding of the underlying process (Guyon & Elisseeff, 2003). Approaches include ranking individual variables, filter methods that select features independently of the model, wrapper methods that evaluate subsets with the model, and embedded methods that select during training, such as the lasso ([[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]). The selection itself must be validated, since it can overfit too.
 
 #### 5. Leakage
 
@@ -139,7 +139,7 @@ Für Regressionsmodelle auf Zeitreihen sind ein Trend, saisonale Dummy-Variablen
 
 #### 4. Merkmalsauswahl
 
-Variablen- und Merkmalsauswahl zielt auf bessere Vorhersageleistung, schnellere und kostengünstigere Prädiktoren und ein besseres Verständnis des zugrunde liegenden Prozesses (Guyon & Elisseeff, 2003). Zu den Ansätzen gehören das Ranking einzelner Variablen, Filterverfahren, die Merkmale unabhängig vom Modell auswählen, Wrapper-Verfahren, die Teilmengen mit dem Modell bewerten, und eingebettete Verfahren, die während des Trainings auswählen, wie das Lasso ([[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]). Die Auswahl selbst muss validiert werden, da auch sie überanpassen kann.
+Variablen- und Merkmalsauswahl zielt auf bessere Vorhersageleistung, schnellere und kostengünstigere Prädiktoren und ein besseres Verständnis des zugrunde liegenden Prozesses (Guyon & Elisseeff, 2003). Zu den Ansätzen gehören das Ranking einzelner Variablen, Filterverfahren, die Merkmale unabhängig vom Modell auswählen, Wrapper-Verfahren, die Teilmengen mit dem Modell bewerten, und eingebettete Verfahren, die während des Trainings auswählen, wie das Lasso ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]). Die Auswahl selbst muss validiert werden, da auch sie überanpassen kann.
 
 #### 5. Leakage
 

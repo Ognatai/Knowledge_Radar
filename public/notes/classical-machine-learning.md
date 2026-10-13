@@ -40,7 +40,7 @@ In supervised learning each observation comes with a response, and the model lea
 
 #### 2. Families of methods
 
-The standard textbooks cover linear methods for regression and classification, [[decision-trees|Decision Trees]], boosting and random forests ([[ensemble-methods|Ensemble Methods]]), [[support-vector-machines|Support Vector Machines]] and [[k-nearest-neighbors|k-Nearest Neighbours]] for supervised learning, and clustering and principal components for unsupervised learning (Hastie et al., 2009; James et al., 2021). They also include neural networks, which share the same framework of models, losses and error estimation.
+The standard textbooks cover linear methods for regression and classification, [[decision-trees|Decision Trees]], boosting and random forests ([[ensemble-methods|Ensemble Methods]]), [[support-vector-machines|Support Vector Machines]] and [[k-nearest-neighbours|k-Nearest Neighbours]] for supervised learning, and clustering and principal components for unsupervised learning (Hastie et al., 2009; James et al., 2021). They also include neural networks, which share the same framework of models, losses and error estimation.
 
 #### 3. Model assessment and the bias-variance trade-off
 
@@ -131,7 +131,7 @@ Beim überwachten Lernen gehört zu jeder Beobachtung eine Zielgröße, und das 
 
 #### 2. Verfahrensfamilien
 
-Die Standardlehrbücher behandeln für überwachtes Lernen lineare Verfahren für Regression und Klassifikation, [[decision-trees|Entscheidungsbäume]], Boosting und Random Forests ([[ensemble-methods|Ensemble-Methoden]]), [[support-vector-machines|Support Vector Machines]] und [[k-nearest-neighbors|k-Nearest Neighbors]], für unüberwachtes Lernen Clustering und Hauptkomponenten (Hastie et al., 2009; James et al., 2021). Auch neuronale Netze gehören dazu; sie teilen denselben Rahmen aus Modellen, Verlustfunktionen und Fehlerschätzung.
+Die Standardlehrbücher behandeln für überwachtes Lernen lineare Verfahren für Regression und Klassifikation, [[decision-trees|Entscheidungsbäume]], Boosting und Random Forests ([[ensemble-methods|Ensemble-Methoden]]), [[support-vector-machines|Support Vector Machines]] und [[k-nearest-neighbours|k-Nearest Neighbors]], für unüberwachtes Lernen Clustering und Hauptkomponenten (Hastie et al., 2009; James et al., 2021). Auch neuronale Netze gehören dazu; sie teilen denselben Rahmen aus Modellen, Verlustfunktionen und Fehlerschätzung.
 
 #### 3. Modellbewertung und Bias-Varianz-Abwägung
 

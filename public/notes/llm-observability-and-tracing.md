@@ -74,7 +74,7 @@ trace total:              0.047 EUR
   └── LLM call 2 (answer): 0.0376 EUR  (80%)   ← main cost driver
 ```
 
-Breaking costs down per span shows which part of a request causes the costs and makes targeted [[llm-cost-optimization|LLM Cost Optimisation]] possible.
+Breaking costs down per span shows which part of a request causes the costs and makes targeted [[llm-cost-optimisation|LLM Cost Optimisation]] possible.
 
 #### Origin and variants
 
@@ -187,7 +187,7 @@ Trace gesamt:             0,047 EUR
   └── LLM-Aufruf 2 (Antwort): 0,0376 EUR  (80 %)   ← größter Kostentreiber
 ```
 
-Die Aufschlüsselung der Kosten pro Span zeigt, welcher Teil einer Anfrage die Kosten verursacht, und macht gezielte [[llm-cost-optimization|LLM-Kostenoptimierung]] möglich.
+Die Aufschlüsselung der Kosten pro Span zeigt, welcher Teil einer Anfrage die Kosten verursacht, und macht gezielte [[llm-cost-optimisation|LLM-Kostenoptimierung]] möglich.
 
 #### Ursprung und Varianten
 

@@ -62,7 +62,7 @@ Distillation of ensembles and large networks with soft targets (Hinton et al., 2
 
 - When a large model or ensemble is too expensive to deploy, a distilled student reduces cost and latency (Hinton et al., 2015).
 - When a language model must run on devices or with tight inference budgets (Sanh et al., 2019; Jiao et al., 2019).
-- When combined with quantisation for further compression ([[quantization|Quantisation]]).
+- When combined with quantisation for further compression ([[quantisation|Quantisation]]).
 
 ### Strengths and limitations
 
@@ -153,7 +153,7 @@ Die Destillation von Ensembles und großen Netzen mit Soft Targets (Hinton et al
 
 - Wenn ein großes Modell oder Ensemble im Einsatz zu teuer ist, senkt ein destillierter Schüler Kosten und Latenz (Hinton et al., 2015).
 - Wenn ein Sprachmodell auf Geräten oder mit knappem Inferenzbudget laufen muss (Sanh et al., 2019; Jiao et al., 2019).
-- In Kombination mit Quantisierung für weitere Kompression ([[quantization|Quantisierung]]).
+- In Kombination mit Quantisierung für weitere Kompression ([[quantisation|Quantisierung]]).
 
 ### Stärken und Grenzen
 

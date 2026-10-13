@@ -41,7 +41,7 @@ Aghajanyan et al. (2020) showed that fine-tuning has a low intrinsic dimension: 
 
 #### 2. Low-rank decomposition of the weight update
 
-For a pretrained weight matrix W of size d×k, LoRA represents the update as ΔW = BA, where B has size d×r, A has size r×k and the rank r is much smaller than d and k (Hu et al., 2021). The number of trainable parameters per matrix falls from d·k to r·(d+k); for d = k = 4096 and r = 8, for example, from about 16.8 million to about 65,500. The rank r is a hyperparameter ([[regularization-and-hyperparameters|Regularisation and Hyperparameters]]).
+For a pretrained weight matrix W of size d×k, LoRA represents the update as ΔW = BA, where B has size d×r, A has size r×k and the rank r is much smaller than d and k (Hu et al., 2021). The number of trainable parameters per matrix falls from d·k to r·(d+k); for d = k = 4096 and r = 8, for example, from about 16.8 million to about 65,500. The rank r is a hyperparameter ([[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
 
 #### 3. Training with frozen weights
 
@@ -53,7 +53,7 @@ After training, BA can be added to W, so the adapted model computes exactly as m
 
 #### 5. QLoRA
 
-QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantization|quantisation]], which also quantises the quantisation constants, and paged optimisers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
+QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters (Dettmers et al., 2023). It uses 4-bit NormalFloat (NF4), a data type that is information-theoretically optimal for normally distributed weights, double [[quantisation|quantisation]], which also quantises the quantisation constants, and paged optimisers to manage memory spikes. This made it possible to fine-tune a 65B-parameter model on a single 48 GB GPU while preserving full 16-bit fine-tuning performance; the resulting Guanaco models reached 99.3% of ChatGPT's performance on the Vicuna benchmark (Dettmers et al., 2023).
 
 #### 6. DoRA
 
@@ -138,7 +138,7 @@ Aghajanyan et al. (2020) zeigten, dass das Fine-Tuning eine niedrige intrinsisch
 
 #### 2. Zerlegung der Gewichtsaktualisierung mit niedrigem Rang
 
-Für eine vortrainierte Gewichtsmatrix W der Größe d×k stellt LoRA die Aktualisierung als ΔW = BA dar, wobei B die Größe d×r hat, A die Größe r×k hat und der Rang r viel kleiner als d und k ist (Hu et al., 2021). Die Anzahl der trainierbaren Parameter pro Matrix sinkt von d·k auf r·(d+k); beispielsweise von etwa 16,8 Millionen auf etwa 65.500 bei d = k = 4096 und r = 8. Der Rang r ist ein Hyperparameter ([[regularization-and-hyperparameters|Regularisierung und Hyperparameter]]).
+Für eine vortrainierte Gewichtsmatrix W der Größe d×k stellt LoRA die Aktualisierung als ΔW = BA dar, wobei B die Größe d×r hat, A die Größe r×k hat und der Rang r viel kleiner als d und k ist (Hu et al., 2021). Die Anzahl der trainierbaren Parameter pro Matrix sinkt von d·k auf r·(d+k); beispielsweise von etwa 16,8 Millionen auf etwa 65.500 bei d = k = 4096 und r = 8. Der Rang r ist ein Hyperparameter ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]).
 
 #### 3. Training mit eingefrorenen Gewichten
 

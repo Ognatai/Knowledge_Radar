@@ -5,9 +5,9 @@ discusses:
 - approximate-nearest-neighbour-search
 - hnsw
 - inverted-file-index
-- product-quantization
+- product-quantisation
 - ivf-pq
-- anisotropic-quantization
+- anisotropic-quantisation
 - maximum-inner-product-search
 - scann
 - google
@@ -42,7 +42,7 @@ relations:
   type: BASED_ON
   to: k-means
   evidence: clusters the vector space using a coarse quantiser, such as k-means
-- from: product-quantization
+- from: product-quantisation
   type: BASED_ON
   to: k-means
   evidence: a small codebook (a set of centroids learned via k-means clustering) is created
@@ -52,19 +52,19 @@ relations:
   evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantisation, see below), which is known as IVF-PQ
 - from: ivf-pq
   type: BASED_ON
-  to: product-quantization
+  to: product-quantisation
   evidence: The vectors inside the lists can additionally be stored as compressed codes (product quantisation, see below), which is known as IVF-PQ
 - from: faiss
   type: IMPLEMENTS
   to: inverted-file-index
   evidence: Their implementation is the FAISS library
-- from: anisotropic-quantization
+- from: anisotropic-quantisation
   type: IS_EXAMPLE_OF
   to: maximum-inner-product-search
   evidence: Anisotropic quantisation for maximum inner product search (MIPS) modifies the quantisation loss
 - from: scann
   type: IMPLEMENTS
-  to: anisotropic-quantization
+  to: anisotropic-quantisation
   evidence: the method is implemented in Google's ScaNN library
 - from: scann
   type: DEVELOPED_BY

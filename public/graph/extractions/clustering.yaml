@@ -9,7 +9,7 @@ discusses:
 - expectation-maximization
 - cluster-hypothesis
 - rand-index
-- normalized-mutual-information
+- normalised-mutual-information
 - scikit-learn
 - near-duplicate-detection
 - latent-semantic-indexing

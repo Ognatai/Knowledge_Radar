@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 205cfadfc98f24f918356ab7698f325b5230563152d0512bfcc1c1d13eb1e7d7
+note_sha256: 7a20d948b01955dc1bcac5cb6a7823eb2991a02cf2db3332b57d167d97ccc5b5
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - target-encoding
@@ -9,7 +9,7 @@ discusses:
 - data-leakage
 - ml-preprocessing
 - time-series-analysis
-- regularization-and-hyperparameters
+- regularisation-and-hyperparameters
 - classical-machine-learning
 relations:
 - from: target-encoding

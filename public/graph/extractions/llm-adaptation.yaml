@@ -1,5 +1,5 @@
 version: 1
-note_sha256: fd317f8dcc877866812149281d95100ead3cd97d316750dd3a981ce0b6d5008d
+note_sha256: 79b692fa84df712a52de1bf9022d6d192650f744aa7aedc13caad7ce957893dc
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -11,7 +11,7 @@ discusses:
 - knowledge-distillation
 - sequence-to-sequence
 - attention-and-transformers
-- quantization
+- quantisation
 - mixed-precision-training
 relations:
 - from: prompt-engineering
@@ -52,7 +52,7 @@ relations:
   evidence: QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters
 - from: qlora
   type: BASED_ON
-  to: quantization
+  to: quantisation
   evidence: QLoRA backpropagates gradients through a frozen, 4-bit quantised pretrained model into LoRA adapters
 - from: flan
   type: IS_EXAMPLE_OF

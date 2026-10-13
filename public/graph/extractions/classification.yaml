@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6ee3821c18b50d2b763047c1e2e23cd6b353669e77faaf3fc5a4049368124cb9
+note_sha256: 5375527ecb1f56c57f66d96eefc53a24796fdbd7ab92de78191e9f46253c376d
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - naive-bayes
@@ -13,7 +13,7 @@ discusses:
 - ensemble-methods
 - support-vector-machines
 - neural-networks
-- k-nearest-neighbors
+- k-nearest-neighbours
 relations:
 - from: naive-bayes
   type: IS_EXAMPLE_OF

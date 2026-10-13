@@ -13,21 +13,21 @@ discusses:
 relations:
 - from: scikit-learn
   type: IMPLEMENTS
-  to: k-nearest-neighbors
+  to: k-nearest-neighbours
   evidence: k-NN is available in common libraries such as scikit-learn
 - from: vector-databases
   type: BASED_ON
-  to: k-nearest-neighbors
+  to: k-nearest-neighbours
   evidence: The same idea of finding the nearest points underlies similarity search over embeddings
-- from: k-nearest-neighbors
+- from: k-nearest-neighbours
   type: IS_EXAMPLE_OF
   to: classification
   evidence: taking a majority vote for classification or an average for regression
-- from: k-nearest-neighbors
+- from: k-nearest-neighbours
   type: BASED_ON
   to: nearest-neighbour-rule
   evidence: k-NN generalises the rule to the k closest training points
-- from: k-nearest-neighbors
+- from: k-nearest-neighbours
   type: IS_EXAMPLE_OF
   to: lazy-learning
   evidence: Because all computation happens at prediction time, the method is called lazy learning

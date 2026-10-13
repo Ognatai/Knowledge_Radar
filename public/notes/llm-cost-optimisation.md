@@ -66,7 +66,7 @@ The same prioritisation is described from a quality perspective in [[context-eng
 
 #### 6. Smaller and compressed models
 
-For self-hosted models, [[quantization|Quantisation]] reduces memory and compute, and [[knowledge-distillation|Knowledge Distillation]] transfers capabilities of a large model to a smaller one; both lower the cost per request structurally.
+For self-hosted models, [[quantisation|Quantisation]] reduces memory and compute, and [[knowledge-distillation|Knowledge Distillation]] transfers capabilities of a large model to a smaller one; both lower the cost per request structurally.
 
 #### Origin and variants
 
@@ -171,7 +171,7 @@ Dieselbe Priorisierung beschreibt [[context-engineering|Context Engineering]] au
 
 #### 6. Kleinere und komprimierte Modelle
 
-Für selbst betriebene Modelle senkt [[quantization|Quantisierung]] Speicher- und Rechenbedarf, und [[knowledge-distillation|Knowledge Distillation]] überträgt Fähigkeiten eines großen Modells auf ein kleineres; beide senken die Kosten pro Anfrage strukturell.
+Für selbst betriebene Modelle senkt [[quantisation|Quantisierung]] Speicher- und Rechenbedarf, und [[knowledge-distillation|Knowledge Distillation]] überträgt Fähigkeiten eines großen Modells auf ein kleineres; beide senken die Kosten pro Anfrage strukturell.
 
 #### Ursprung und Varianten
 
