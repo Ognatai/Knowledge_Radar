@@ -1,14 +1,19 @@
 version: 1
-note_sha256: a241068b58265b80d79354b338b3759ad5dc209414dc5c5f271398ad916998f5
-extracted_by: qwen3:30b-a3b, reviewed by claude
+note_sha256: e85e02d30a414d9ee189959d10796ff95998b077363722a22311b4b41a564c7c
+extracted_by: qwen3:30b-a3b, reviewed by claude; extended by claude 2026-10-13
 discusses:
 - k-means
 - k-means-plus-plus
 - hierarchical-clustering
 - dbscan
+- expectation-maximization
+- cluster-hypothesis
+- rand-index
+- normalized-mutual-information
 - scikit-learn
-- embeddings
-- principal-component-analysis
+- near-duplicate-detection
+- latent-semantic-indexing
+- classification
 relations:
 - from: k-means
   type: IS_EXAMPLE_OF

@@ -3,6 +3,8 @@ title_en: Clustering
 title_de: Clustering
 entity_type: Method
 sources:
+- https://nlp.stanford.edu/IR-book/pdf/16flat.pdf
+- https://nlp.stanford.edu/IR-book/pdf/17hier.pdf
 - https://doi.org/10.1109/TIT.1982.1056489
 - https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf
 - https://doi.org/10.1080/01621459.1963.10500845
@@ -16,84 +18,114 @@ sources:
 
 ### TL;DR
 
-Clustering groups unlabelled data points so that points in the same group are similar to each other. k-means minimises the squared distances between points and their cluster centres (Lloyd, 1982; Arthur & Vassilvitskii, 2007), hierarchical clustering merges groups step by step into a hierarchy (Ward, 1963), and DBSCAN finds dense regions of arbitrary shape and marks isolated points as noise (Ester et al., 1996).
+Clustering groups unlabelled data points so that points in the same cluster are similar and points in different clusters are dissimilar; it is the most common form of unsupervised learning, and the distance measure is its key input (Manning et al., 2008, ch. 16). k-means minimises the squared distances between points and their cluster centres (Lloyd, 1982; Arthur & Vassilvitskii, 2007), hierarchical clustering merges groups step by step into a hierarchy (Ward, 1963; Manning et al., 2008, ch. 17), EM computes soft memberships, and DBSCAN finds dense regions of arbitrary shape and marks isolated points as noise (Ester et al., 1996). Since there are no labels, quality is measured with internal criteria or against gold-standard classes with purity, NMI, the Rand index or F (Manning et al., 2008, ch. 16).
 
 ### How it works
 
-A clustering method takes data points and a notion of distance or density and assigns each point to a cluster, or to noise. The methods differ in what they consider a cluster: points close to a centre, groups that are cheap to merge, or regions of high density.
+A clustering method takes data points and a notion of distance or density and assigns each point to a cluster, or to noise. Flat clustering produces a set of clusters, hierarchical clustering a hierarchy; hard clustering assigns each point to exactly one cluster, soft clustering gives a distribution over clusters (Manning et al., 2008, ch. 16).
 
 ```text
-1. k-means (Lloyd's algorithm)
-▼
-2. Seeding with k-means++
-▼
-3. Hierarchical clustering with Ward's criterion
-▼
-4. Density-based clustering (DBSCAN)
-▼
-5. Implementation
+points + distance measure
+ ├─ flat, hard:   k-means (Lloyd) with k-means++ seeding · choose K (knee, penalty, AIC)
+ ├─ flat, soft:   EM for mixture models
+ ├─ hierarchical: agglomerative (single, complete, group-average, centroid, Ward) · divisive (bisecting)
+ └─ density:      DBSCAN (clusters of arbitrary shape + noise)
+ ▼
+evaluation: internal criterion · external (purity, NMI, Rand index, F) · application (user studies)
 ```
 
 #### 1. k-means (Lloyd's algorithm)
 
-k-means seeks k centres that minimise the sum of squared distances between each point and its closest centre (Arthur & Vassilvitskii, 2007). Lloyd's algorithm, originally derived for optimal quantisation of signals (Lloyd, 1982), alternates two steps: assign each point to the nearest centre, then move each centre to the mean of its assigned points. It is simple and fast but offers no accuracy guarantee (Arthur & Vassilvitskii, 2007).
+k-means seeks k centres that minimise the sum of squared distances between each point and its closest centre (Arthur & Vassilvitskii, 2007), the residual sum of squares (RSS). Lloyd's algorithm, originally derived for optimal quantisation of signals (Lloyd, 1982), alternates two steps: assign each point to the nearest centre, then move each centre to the mean of its assigned points (Lloyd, 1982). RSS decreases in both steps, so the algorithm converges, but only to a local minimum; an outlier chosen as a seed can end up as a singleton cluster. With I iterations, K clusters, N points and M dimensions it runs in Θ(IKNM), linear in all factors and thus more efficient than hierarchical clustering. Ideal k-means clusters are non-overlapping spheres; for sparse document vectors, dense centroids are expensive, and truncating them to the most important terms or using medoids (K-medoids) keeps distance computation fast (Manning et al., 2008, ch. 16).
 
 #### 2. Seeding with k-means++
 
-The result of Lloyd's algorithm depends on the initial centres, which are typically chosen uniformly at random. k-means++ chooses them with a simple randomised seeding technique, which makes the algorithm Theta(log k)-competitive with the optimal clustering; in experiments it improved both speed and accuracy, often considerably (Arthur & Vassilvitskii, 2007).
+The result of Lloyd's algorithm depends on the initial centres, which are typically chosen uniformly at random. k-means++ chooses them with a simple randomised seeding technique, which makes the algorithm Theta(log k)-competitive with the optimal clustering; in experiments it improved both speed and accuracy, often considerably (Arthur & Vassilvitskii, 2007). Other heuristics exclude outliers from the seeds, try several starting points and keep the clustering with the lowest cost, or take seeds from a hierarchical clustering of a small sample (Manning et al., 2008, ch. 16).
 
-#### 3. Hierarchical clustering with Ward's criterion
+#### 3. Choosing the number of clusters
 
-Agglomerative hierarchical clustering starts with every point as its own group and repeatedly merges the pair of groups whose union best preserves an objective function (Ward, 1963). With Ward's criterion, this is the merge with the smallest increase in within-group sum of squares. Repeating this until one group remains yields the complete hierarchy and a measure of the loss at each stage, so the number of clusters can be chosen afterwards.
+The minimal RSS decreases monotonically with K and reaches 0 when every point is its own cluster, so it cannot select K by itself. A heuristic runs several clusterings per K and looks for the knee where further decreases become noticeably smaller; there is seldom a single best K. Alternatively, a penalty λ·K for each cluster is added to RSS; the Akaike Information Criterion (AIC) justifies one choice of λ, but its assumptions hold only approximately for text, and on 1,203 Reuters-RCV1 documents it favoured K = 1 although K = 4 matched the four categories (Manning et al., 2008, ch. 16).
 
-#### 4. Density-based clustering (DBSCAN)
+#### 4. Soft clustering with EM
 
-DBSCAN (Ester et al., 1996) relies on a density-based notion of clusters: clusters are regions where points lie densely, separated by regions of low density. It discovers clusters of arbitrary shape and marks points in low-density regions as noise. It requires only one input parameter and supports the user in choosing it. In the experiments it was more effective than CLARANS at finding clusters of arbitrary shape and more than 100 times faster.
+Model-based clustering assumes that the data were generated by a model, such as a mixture of distributions, and recovers its parameters by maximum likelihood. The Expectation-Maximization (EM) algorithm generalises k-means: the expectation step computes soft assignments of points to clusters, the maximisation step re-estimates the parameters. A document about Chinese cars can then belong half to a China cluster and half to an automobile cluster. Good seeds are even more critical for EM than for k-means; a hard k-means clustering often provides the initial assignment (Manning et al., 2008, ch. 16).
 
-#### 5. Implementation
+#### 5. Hierarchical clustering
 
-k-means, hierarchical clustering and DBSCAN are available in [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011). Because all three rely on distances, features should be scaled to comparable ranges first ([[ml-preprocessing|ML Preprocessing]]).
+Agglomerative hierarchical clustering starts with every point as its own group and repeatedly merges the pair of groups whose union best preserves an objective function (Ward, 1963). With Ward's criterion, this is the merge with the smallest increase in within-group sum of squares (Ward, 1963). Other merge criteria define the similarity of two clusters differently (Manning et al., 2008, ch. 17):
+
+- **Single-link**: the most similar pair of members; local, prone to chaining, where straggling clusters grow along chains of points.
+- **Complete-link**: the most dissimilar pair; prefers compact clusters but is sensitive to outliers.
+- **Group-average (GAAC)**: the average of all pairwise similarities; avoids chaining, outlier sensitivity and inversions and is recommended for most document clustering.
+- **Centroid**: the similarity of the centroids; inversions can occur, where a later merge is more similar than an earlier one.
+
+The result is shown as a dendrogram, which is cut at a similarity level, at the largest gap between successive merges or with a penalty on the number of clusters. The naive algorithm takes Θ(N³), a priority-queue version Θ(N² log N), which is infeasible for a million or more documents; the Buckshot algorithm therefore clusters a sample hierarchically and uses the result as seeds for k-means. Divisive (top-down) clustering splits recursively with a flat algorithm such as k-means; it is linear for a fixed number of top levels and sometimes yields more accurate hierarchies (Manning et al., 2008, ch. 17).
+
+#### 6. Density-based clustering (DBSCAN)
+
+DBSCAN (Ester et al., 1996) relies on a density-based notion of clusters: clusters are regions where points lie densely, separated by regions of low density. It discovers clusters of arbitrary shape and marks points in low-density regions as noise. It requires only one input parameter and supports the user in choosing it. In the experiments it was more effective than CLARANS at finding clusters of arbitrary shape and more than 100 times faster (Ester et al., 1996).
+
+#### 7. Evaluation
+
+Internal criteria reward high similarity within and low similarity between clusters, but good internal scores do not necessarily mean good results in an application; the most direct evaluation, such as measuring how fast users find an answer, is expensive. External criteria compare the clustering with gold-standard classes: purity assigns each cluster its majority class and measures the share of correctly assigned points; it reaches 1 when every point forms its own cluster, so it cannot trade quality against the number of clusters. Normalised mutual information (NMI) can, because the normalisation penalises many clusters. The Rand index is the accuracy of pairwise same-cluster decisions, and the F measure weights false negatives and false positives differently (Manning et al., 2008, ch. 16).
+
+#### 8. Clustering in information retrieval
+
+The cluster hypothesis states that documents in the same cluster behave similarly with respect to relevance. Applications are search result clustering, which groups results by sense (*jaguar* as car, animal or operating system), Scatter-Gather browsing, collection clustering such as news aggregation, cluster-based language models and cluster-based retrieval, which searches only the clusters closest to the query (Manning et al., 2008, ch. 16). Clusters shown to users need labels: differential labeling compares term distributions with mutual information or χ², cluster-internal labeling uses, for example, the title of the document closest to the centroid (Manning et al., 2008, ch. 17).
+
+#### 9. Implementation
+
+k-means, hierarchical clustering and DBSCAN are available in [[scikit-learn|scikit-learn]] (Pedregosa et al., 2011). Because they rely on distances, features should be scaled to comparable ranges first ([[ml-preprocessing|ML Preprocessing]]).
 
 #### Origin and variants
 
-Ward (1963) proposed hierarchical grouping by an objective function, Lloyd (1982) the quantisation algorithm behind k-means, Ester et al. (1996) DBSCAN, and Arthur & Vassilvitskii (2007) the k-means++ seeding.
+Ward (1963) proposed hierarchical grouping by an objective function, Lloyd (1982) the quantisation algorithm behind k-means, first distributed in 1957, Ester et al. (1996) DBSCAN, and Arthur & Vassilvitskii (2007) the k-means++ seeding (Manning et al., 2008, ch. 16). Ball (1965) and MacQueen (1967) are also credited with k-means, the cluster hypothesis is due to Jardine and van Rijsbergen (1971), the Rand index to Rand (1971) and EM to Dempster et al. (1977) (Manning et al., 2008, ch. 16).
 
 ### When to use it
 
 - When roughly spherical groups of similar size are expected and the number of clusters is known, k-means with k-means++ seeding is a fast choice (Arthur & Vassilvitskii, 2007).
-- When the number of clusters is unknown or a hierarchy of groups is of interest, hierarchical clustering helps (Ward, 1963).
+- When the number of clusters is unknown or a hierarchy of groups is of interest, hierarchical clustering helps (Ward, 1963); group-average linkage suits most document collections (Manning et al., 2008, ch. 17).
+- When a point may belong to several topics, soft clustering with EM (Manning et al., 2008, ch. 16).
 - When clusters have arbitrary shapes or the data contains noise, DBSCAN is suitable (Ester et al., 1996).
+- For duplicate or first-story detection, where local structure matters, variants of single-link clustering work well (Manning et al., 2008, ch. 17).
 
 ### Strengths and limitations
 
 **Strengths**
-- k-means is simple and fast; k-means++ adds an accuracy guarantee (Arthur & Vassilvitskii, 2007).
+- k-means is simple, fast and linear in the number of points; k-means++ adds an accuracy guarantee (Arthur & Vassilvitskii, 2007; Manning et al., 2008, ch. 16).
 - Hierarchical clustering yields the whole hierarchy and the cost of each merge (Ward, 1963).
 - DBSCAN finds clusters of arbitrary shape and identifies noise (Ester et al., 1996).
+- Search result clustering improves user experience and search result quality (Manning et al., 2008, ch. 16).
 
 **Limitations**
-- k-means needs the number of clusters in advance and depends on initialisation (Arthur & Vassilvitskii, 2007).
-- Agglomerative clustering compares all pairs of groups at each step, which becomes expensive for large n (Ward, 1963).
-- All three rely on distances, so results depend on the chosen distance and on feature scaling (Lloyd, 1982; Ward, 1963; Ester et al., 1996).
+- k-means needs the number of clusters in advance, depends on initialisation and converges only to a local minimum (Arthur & Vassilvitskii, 2007; Manning et al., 2008, ch. 16).
+- Agglomerative clustering takes at least quadratic time and is infeasible for a million or more documents (Manning et al., 2008, ch. 17).
+- Different distance measures give different clusterings, so results depend on the chosen measure and representation (Manning et al., 2008, ch. 16).
+- There is no consensus that cluster-based retrieval works well consistently across scenarios (Manning et al., 2008, ch. 16).
 
 ### Comparison
 
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
-| k-means | Minimises squared distances to k centres (Lloyd, 1982; Arthur & Vassilvitskii, 2007) | Compact clusters, known k |
+| k-means | Minimises squared distances to k centres (Lloyd, 1982; Arthur & Vassilvitskii, 2007) | Compact clusters, known k, large data |
+| EM (mixture model) | Soft assignments; flexible cluster shapes (Manning et al., 2008, ch. 16) | Points belonging to several topics |
 | Hierarchical (Ward) | Merges groups with the smallest increase in within-group sum of squares (Ward, 1963) | Unknown number of clusters, hierarchies |
+| Hierarchical (group-average) | Average of all pairwise similarities (Manning et al., 2008, ch. 17) | Document clustering |
+| Hierarchical (single-link) | Most similar pair; chaining (Manning et al., 2008, ch. 17) | Duplicate detection |
 | DBSCAN | Density-based, arbitrary shapes, noise points (Ester et al., 1996) | Irregular shapes, noisy data |
 
 ### In practice
 
-Features are scaled before clustering, and the result is checked for plausibility with domain knowledge, since there are no labels to evaluate against. High-dimensional data is often reduced first, for example with [[principal-component-analysis|Principal Component Analysis]]. Clustering of embeddings is used, for example, to group similar documents ([[embeddings|Embeddings]]).
+Without labels, quality is checked with external criteria against gold-standard classes or, most directly, in the application (Manning et al., 2008, ch. 16). For documents, topic similarity is approximated by cosine similarity or Euclidean distance on length-normalised vectors; stop words can be ignored for topics but distinguish languages (Manning et al., 2008, ch. 16). Clustering also underlies [[near-duplicate-detection|Near-Duplicate Detection]], and latent semantic indexing can be seen as a soft clustering ([[latent-semantic-indexing|Latent Semantic Indexing]]) (Manning et al., 2008, ch. 16). Classification, by contrast, learns given classes from labelled data ([[classification|Classification]]).
 
 ### Key takeaway
 
-Clustering finds groups without labels; the right method depends on whether clusters are compact (k-means), hierarchical (Ward) or of arbitrary shape with noise (DBSCAN).
+Clustering finds groups without labels; the right method depends on whether clusters are compact (k-means), soft (EM), hierarchical (group-average or Ward) or of arbitrary shape with noise (DBSCAN), and its quality must be judged with external criteria or in the application.
 
 ### Sources
 
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Flat clustering.* Introduction to Information Retrieval, Chapter 16. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/16flat.pdf)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Hierarchical clustering.* Introduction to Information Retrieval, Chapter 17. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/17hier.pdf)
 - Lloyd, S. P. (1982). *Least Squares Quantization in PCM.* IEEE Transactions on Information Theory 28(2). [doi:10.1109/TIT.1982.1056489](https://doi.org/10.1109/TIT.1982.1056489)
 - Arthur, D. & Vassilvitskii, S. (2007). *k-means++: The Advantages of Careful Seeding.* SODA 2007. [PDF](https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf)
 - Ward, J. H. (1963). *Hierarchical Grouping to Optimize an Objective Function.* Journal of the American Statistical Association 58(301). [doi:10.1080/01621459.1963.10500845](https://doi.org/10.1080/01621459.1963.10500845)
@@ -106,84 +138,114 @@ Clustering finds groups without labels; the right method depends on whether clus
 
 ### TL;DR
 
-Clustering gruppiert nicht gelabelte Datenpunkte so, dass Punkte derselben Gruppe einander ähnlich sind. k-Means minimiert die quadrierten Abstände zwischen Punkten und ihren Clusterzentren (Lloyd, 1982; Arthur & Vassilvitskii, 2007), hierarchisches Clustering fasst Gruppen schrittweise zu einer Hierarchie zusammen (Ward, 1963), und DBSCAN findet dichte Regionen beliebiger Form und markiert vereinzelte Punkte als Rauschen (Ester et al., 1996).
+Clustering gruppiert nicht gelabelte Datenpunkte so, dass Punkte im selben Cluster einander ähnlich und Punkte in verschiedenen Clustern unähnlich sind; es ist die häufigste Form des unüberwachten Lernens, und das Abstandsmaß ist seine wichtigste Eingabe (Manning et al., 2008, Kap. 16). k-Means minimiert die quadrierten Abstände zwischen Punkten und ihren Clusterzentren (Lloyd, 1982; Arthur & Vassilvitskii, 2007), hierarchisches Clustering fasst Gruppen schrittweise zu einer Hierarchie zusammen (Ward, 1963; Manning et al., 2008, Kap. 17), EM berechnet weiche Zugehörigkeiten, und DBSCAN findet dichte Regionen beliebiger Form und markiert vereinzelte Punkte als Rauschen (Ester et al., 1996). Da es keine Labels gibt, wird die Qualität mit internen Kriterien oder gegen Goldstandard-Klassen mit Purity, NMI, Rand-Index oder F gemessen (Manning et al., 2008, Kap. 16).
 
 ### Funktionsweise
 
-Ein Clustering-Verfahren erhält Datenpunkte und einen Abstands- oder Dichtebegriff und ordnet jeden Punkt einem Cluster oder dem Rauschen zu. Die Verfahren unterscheiden sich darin, was sie als Cluster ansehen: Punkte nahe einem Zentrum, Gruppen, die sich günstig zusammenlegen lassen, oder Regionen hoher Dichte.
+Ein Clustering-Verfahren erhält Datenpunkte und einen Abstands- oder Dichtebegriff und ordnet jeden Punkt einem Cluster oder dem Rauschen zu. Flaches Clustering erzeugt eine Menge von Clustern, hierarchisches eine Hierarchie; hartes Clustering ordnet jeden Punkt genau einem Cluster zu, weiches liefert eine Verteilung über Cluster (Manning et al., 2008, Kap. 16).
 
 ```text
-1. k-Means (Lloyd-Algorithmus)
-▼
-2. Initialisierung mit k-Means++
-▼
-3. Hierarchisches Clustering nach Ward
-▼
-4. Dichtebasiertes Clustering (DBSCAN)
-▼
-5. Implementierung
+Punkte + Abstandsmaß
+ ├─ flach, hart:    k-Means (Lloyd) mit k-Means++-Initialisierung · K wählen (Knick, Strafterm, AIC)
+ ├─ flach, weich:   EM für Mischmodelle
+ ├─ hierarchisch:   agglomerativ (Single, Complete, Group-Average, Centroid, Ward) · divisiv (Bisecting)
+ └─ Dichte:         DBSCAN (Cluster beliebiger Form + Rauschen)
+ ▼
+Evaluation: internes Kriterium · extern (Purity, NMI, Rand-Index, F) · Anwendung (Nutzerstudien)
 ```
 
 #### 1. k-Means (Lloyd-Algorithmus)
 
-k-Means sucht k Zentren, die die Summe der quadrierten Abstände zwischen jedem Punkt und seinem nächsten Zentrum minimieren (Arthur & Vassilvitskii, 2007). Der Lloyd-Algorithmus, ursprünglich für die optimale Quantisierung von Signalen hergeleitet (Lloyd, 1982), wechselt zwischen zwei Schritten: jeden Punkt dem nächsten Zentrum zuordnen, dann jedes Zentrum auf den Mittelwert seiner Punkte verschieben. Er ist einfach und schnell, bietet aber keine Genauigkeitsgarantie (Arthur & Vassilvitskii, 2007).
+k-Means sucht k Zentren, die die Summe der quadrierten Abstände zwischen jedem Punkt und seinem nächsten Zentrum minimieren (Arthur & Vassilvitskii, 2007), die Residual Sum of Squares (RSS). Der Lloyd-Algorithmus, ursprünglich für die optimale Quantisierung von Signalen hergeleitet (Lloyd, 1982), wechselt zwischen zwei Schritten: jeden Punkt dem nächsten Zentrum zuordnen, dann jedes Zentrum auf den Mittelwert seiner Punkte verschieben (Lloyd, 1982). Die RSS sinkt in beiden Schritten, daher konvergiert der Algorithmus, aber nur gegen ein lokales Minimum; ein Ausreißer als Startpunkt kann als Ein-Punkt-Cluster enden. Bei I Iterationen, K Clustern, N Punkten und M Dimensionen läuft er in Θ(IKNM), linear in allen Größen und damit effizienter als hierarchisches Clustering. Ideale k-Means-Cluster sind sich nicht überlappende Kugeln; bei dünn besetzten Dokumentvektoren sind dichte Zentroide teuer, und das Kürzen auf die wichtigsten Terme oder Medoide (K-Medoids) hält die Abstandsberechnung schnell (Manning et al., 2008, Kap. 16).
 
 #### 2. Initialisierung mit k-Means++
 
-Das Ergebnis des Lloyd-Algorithmus hängt von den Startzentren ab, die meist gleichverteilt zufällig gewählt werden. k-Means++ wählt sie mit einem einfachen randomisierten Verfahren und ist damit Theta(log k)-kompetitiv zum optimalen Clustering; in Experimenten verbesserte es Geschwindigkeit und Genauigkeit, oft deutlich (Arthur & Vassilvitskii, 2007).
+Das Ergebnis des Lloyd-Algorithmus hängt von den Startzentren ab, die meist gleichverteilt zufällig gewählt werden. k-Means++ wählt sie mit einem einfachen randomisierten Verfahren und ist damit Theta(log k)-kompetitiv zum optimalen Clustering; in Experimenten verbesserte es Geschwindigkeit und Genauigkeit, oft deutlich (Arthur & Vassilvitskii, 2007). Weitere Heuristiken schließen Ausreißer als Startpunkte aus, probieren mehrere Startpunkte und behalten das Clustering mit den geringsten Kosten oder nehmen die Startpunkte aus einem hierarchischen Clustering einer kleinen Stichprobe (Manning et al., 2008, Kap. 16).
 
-#### 3. Hierarchisches Clustering nach Ward
+#### 3. Die Clusterzahl wählen
 
-Agglomeratives hierarchisches Clustering beginnt mit jedem Punkt als eigener Gruppe und legt wiederholt das Gruppenpaar zusammen, dessen Vereinigung eine Zielfunktion am besten erhält (Ward, 1963). Beim Ward-Kriterium ist das die Zusammenlegung mit dem geringsten Anstieg der Quadratsumme innerhalb der Gruppen. Wiederholt man das, bis eine Gruppe übrig bleibt, erhält man die vollständige Hierarchie und ein Maß für den Verlust in jedem Schritt; die Clusterzahl kann dann nachträglich gewählt werden.
+Die minimale RSS sinkt monoton mit K und erreicht 0, wenn jeder Punkt ein eigenes Cluster bildet; sie kann K daher nicht allein bestimmen. Eine Heuristik berechnet mehrere Clusterings je K und sucht den Knick, ab dem weitere Verringerungen deutlich kleiner werden; selten gibt es ein einziges bestes K. Alternativ wird zur RSS ein Strafterm λ·K pro Cluster addiert; das Akaike-Informationskriterium (AIC) begründet eine Wahl von λ, seine Annahmen gelten für Text aber nur näherungsweise, und auf 1.203 Reuters-RCV1-Dokumenten bevorzugte es K = 1, obwohl K = 4 den vier Kategorien entsprach (Manning et al., 2008, Kap. 16).
 
-#### 4. Dichtebasiertes Clustering (DBSCAN)
+#### 4. Weiches Clustering mit EM
 
-DBSCAN (Ester et al., 1996) beruht auf einem dichtebasierten Clusterbegriff: Cluster sind Regionen dicht liegender Punkte, getrennt durch Regionen geringer Dichte. Es findet Cluster beliebiger Form und markiert Punkte in dünn besetzten Regionen als Rauschen. Es benötigt nur einen Eingabeparameter und unterstützt dessen Wahl. In den Experimenten fand es Cluster beliebiger Form zuverlässiger als CLARANS und war mehr als 100-mal schneller.
+Modellbasiertes Clustering nimmt an, dass die Daten von einem Modell erzeugt wurden, etwa einer Mischung von Verteilungen, und schätzt dessen Parameter per Maximum Likelihood. Der Expectation-Maximization-Algorithmus (EM) verallgemeinert k-Means: Der Erwartungsschritt berechnet weiche Zuordnungen der Punkte zu Clustern, der Maximierungsschritt schätzt die Parameter neu. Ein Dokument über chinesische Autos kann dann zur Hälfte zu einem China- und zur Hälfte zu einem Auto-Cluster gehören. Gute Startpunkte sind für EM noch wichtiger als für k-Means; oft liefert ein hartes k-Means-Clustering die Anfangszuordnung (Manning et al., 2008, Kap. 16).
 
-#### 5. Implementierung
+#### 5. Hierarchisches Clustering
 
-k-Means, hierarchisches Clustering und DBSCAN sind in [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011). Da alle drei auf Abständen beruhen, sollten die Merkmale vorher auf vergleichbare Bereiche skaliert werden ([[ml-preprocessing|Preprocessing für Machine Learning]]).
+Agglomeratives hierarchisches Clustering beginnt mit jedem Punkt als eigener Gruppe und legt wiederholt das Gruppenpaar zusammen, dessen Vereinigung eine Zielfunktion am besten erhält (Ward, 1963). Beim Ward-Kriterium ist das die Zusammenlegung mit dem geringsten Anstieg der Quadratsumme innerhalb der Gruppen (Ward, 1963). Andere Kriterien definieren die Ähnlichkeit zweier Cluster anders (Manning et al., 2008, Kap. 17):
+
+- **Single-Link**: das ähnlichste Paar von Elementen; lokal, anfällig für Verkettung (Chaining), bei der lang gezogene Cluster entlang von Punktketten wachsen.
+- **Complete-Link**: das unähnlichste Paar; bevorzugt kompakte Cluster, reagiert aber empfindlich auf Ausreißer.
+- **Group-Average (GAAC)**: der Mittelwert aller paarweisen Ähnlichkeiten; vermeidet Verkettung, Ausreißerempfindlichkeit und Inversionen und wird für die meisten Dokumentclusterings empfohlen.
+- **Centroid**: die Ähnlichkeit der Zentroide; es können Inversionen auftreten, bei denen eine spätere Zusammenlegung ähnlicher ist als eine frühere.
+
+Das Ergebnis wird als Dendrogramm dargestellt, das bei einem Ähnlichkeitsniveau, an der größten Lücke zwischen aufeinanderfolgenden Zusammenlegungen oder mit einem Strafterm für die Clusterzahl geschnitten wird. Der naive Algorithmus braucht Θ(N³), eine Variante mit Prioritätswarteschlangen Θ(N² log N), was für eine Million oder mehr Dokumente nicht machbar ist; der Buckshot-Algorithmus clustert deshalb eine Stichprobe hierarchisch und nutzt das Ergebnis als Startpunkte für k-Means. Divisives Clustering (top-down) teilt rekursiv mit einem flachen Verfahren wie k-Means; es ist für eine feste Zahl oberer Ebenen linear und liefert manchmal genauere Hierarchien (Manning et al., 2008, Kap. 17).
+
+#### 6. Dichtebasiertes Clustering (DBSCAN)
+
+DBSCAN (Ester et al., 1996) beruht auf einem dichtebasierten Clusterbegriff: Cluster sind Regionen dicht liegender Punkte, getrennt durch Regionen geringer Dichte. Es findet Cluster beliebiger Form und markiert Punkte in dünn besetzten Regionen als Rauschen. Es benötigt nur einen Eingabeparameter und unterstützt dessen Wahl. In den Experimenten fand es Cluster beliebiger Form zuverlässiger als CLARANS und war mehr als 100-mal schneller (Ester et al., 1996).
+
+#### 7. Evaluation
+
+Interne Kriterien belohnen hohe Ähnlichkeit innerhalb und geringe Ähnlichkeit zwischen Clustern, doch gute interne Werte bedeuten nicht unbedingt gute Ergebnisse in einer Anwendung; die direkteste Evaluation, etwa zu messen, wie schnell Nutzende eine Antwort finden, ist teuer. Externe Kriterien vergleichen das Clustering mit Goldstandard-Klassen: Purity ordnet jedem Cluster seine Mehrheitsklasse zu und misst den Anteil korrekt zugeordneter Punkte; sie erreicht 1, wenn jeder Punkt ein eigenes Cluster bildet, und kann daher Qualität nicht gegen die Clusterzahl abwägen. Normalised Mutual Information (NMI) kann das, weil die Normierung viele Cluster bestraft. Der Rand-Index ist die Accuracy paarweiser Entscheidungen, ob zwei Punkte im selben Cluster liegen, und das F-Maß gewichtet falsch Negative und falsch Positive unterschiedlich (Manning et al., 2008, Kap. 16).
+
+#### 8. Clustering im Information Retrieval
+
+Die Cluster-Hypothese besagt, dass sich Dokumente im selben Cluster hinsichtlich der Relevanz ähnlich verhalten. Anwendungen sind das Clustern von Suchergebnissen nach Bedeutungen (*jaguar* als Auto, Tier oder Betriebssystem), das Browsen mit Scatter-Gather, das Clustern ganzer Sammlungen wie bei Nachrichtenaggregatoren, clusterbasierte Sprachmodelle und clusterbasiertes Retrieval, das nur die der Anfrage nächsten Cluster durchsucht (Manning et al., 2008, Kap. 16). Cluster, die Nutzenden gezeigt werden, brauchen Bezeichnungen: Differenzielles Labeling vergleicht Termverteilungen mit Mutual Information oder χ², clusterinternes Labeling nutzt etwa den Titel des Dokuments, das dem Zentroid am nächsten liegt (Manning et al., 2008, Kap. 17).
+
+#### 9. Implementierung
+
+k-Means, hierarchisches Clustering und DBSCAN sind in [[scikit-learn|scikit-learn]] verfügbar (Pedregosa et al., 2011). Da sie auf Abständen beruhen, sollten die Merkmale vorher auf vergleichbare Bereiche skaliert werden ([[ml-preprocessing|Preprocessing für Machine Learning]]).
 
 #### Ursprung und Varianten
 
-Ward (1963) schlug hierarchisches Gruppieren nach einer Zielfunktion vor, Lloyd (1982) den Quantisierungsalgorithmus hinter k-Means, Ester et al. (1996) DBSCAN und Arthur & Vassilvitskii (2007) die Initialisierung mit k-Means++.
+Ward (1963) schlug hierarchisches Gruppieren nach einer Zielfunktion vor, Lloyd (1982) den Quantisierungsalgorithmus hinter k-Means, der schon 1957 verbreitet wurde, Ester et al. (1996) DBSCAN und Arthur & Vassilvitskii (2007) die Initialisierung mit k-Means++ (Manning et al., 2008, Kap. 16). Auch Ball (1965) und MacQueen (1967) gelten als Urheber von k-Means, die Cluster-Hypothese stammt von Jardine und van Rijsbergen (1971), der Rand-Index von Rand (1971) und EM von Dempster et al. (1977) (Manning et al., 2008, Kap. 16).
 
 ### Wann einsetzen
 
 - Wenn etwa kugelförmige Gruppen ähnlicher Größe erwartet werden und die Clusterzahl bekannt ist, ist k-Means mit k-Means++-Initialisierung eine schnelle Wahl (Arthur & Vassilvitskii, 2007).
-- Wenn die Clusterzahl unbekannt ist oder eine Hierarchie von Gruppen interessiert, hilft hierarchisches Clustering (Ward, 1963).
+- Wenn die Clusterzahl unbekannt ist oder eine Hierarchie von Gruppen interessiert, hilft hierarchisches Clustering (Ward, 1963); Group-Average-Linkage passt zu den meisten Dokumentsammlungen (Manning et al., 2008, Kap. 17).
+- Wenn ein Punkt zu mehreren Themen gehören kann, weiches Clustering mit EM (Manning et al., 2008, Kap. 16).
 - Wenn Cluster beliebige Formen haben oder die Daten Rauschen enthalten, eignet sich DBSCAN (Ester et al., 1996).
+- Für Duplikat- oder First-Story-Erkennung, bei der lokale Struktur zählt, funktionieren Varianten des Single-Link-Clusterings gut (Manning et al., 2008, Kap. 17).
 
 ### Stärken und Grenzen
 
 **Stärken**
-- k-Means ist einfach und schnell; k-Means++ ergänzt eine Genauigkeitsgarantie (Arthur & Vassilvitskii, 2007).
+- k-Means ist einfach, schnell und linear in der Zahl der Punkte; k-Means++ ergänzt eine Genauigkeitsgarantie (Arthur & Vassilvitskii, 2007; Manning et al., 2008, Kap. 16).
 - Hierarchisches Clustering liefert die gesamte Hierarchie und die Kosten jeder Zusammenlegung (Ward, 1963).
 - DBSCAN findet Cluster beliebiger Form und erkennt Rauschen (Ester et al., 1996).
+- Das Clustern von Suchergebnissen verbessert Nutzungserlebnis und Ergebnisqualität (Manning et al., 2008, Kap. 16).
 
-**Einschränkungen**
-- k-Means braucht die Clusterzahl vorab und hängt von der Initialisierung ab (Arthur & Vassilvitskii, 2007).
-- Agglomeratives Clustering vergleicht in jedem Schritt alle Gruppenpaare, was bei großem n aufwendig wird (Ward, 1963).
-- Alle drei beruhen auf Abständen; die Ergebnisse hängen daher vom gewählten Abstandsmaß und der Skalierung ab (Lloyd, 1982; Ward, 1963; Ester et al., 1996).
+**Grenzen**
+- k-Means braucht die Clusterzahl vorab, hängt von der Initialisierung ab und konvergiert nur gegen ein lokales Minimum (Arthur & Vassilvitskii, 2007; Manning et al., 2008, Kap. 16).
+- Agglomeratives Clustering braucht mindestens quadratische Zeit und ist für eine Million oder mehr Dokumente nicht machbar (Manning et al., 2008, Kap. 17).
+- Verschiedene Abstandsmaße ergeben verschiedene Clusterings; die Ergebnisse hängen daher vom gewählten Maß und von der Repräsentation ab (Manning et al., 2008, Kap. 16).
+- Es gibt keinen Konsens, dass clusterbasiertes Retrieval in allen Szenarien zuverlässig funktioniert (Manning et al., 2008, Kap. 16).
 
 ### Vergleich
 
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
-| k-Means | Minimiert quadrierte Abstände zu k Zentren (Lloyd, 1982; Arthur & Vassilvitskii, 2007) | Kompakte Cluster, bekanntes k |
+| k-Means | Minimiert quadrierte Abstände zu k Zentren (Lloyd, 1982; Arthur & Vassilvitskii, 2007) | Kompakte Cluster, bekanntes k, große Daten |
+| EM (Mischmodell) | Weiche Zuordnungen; flexible Clusterformen (Manning et al., 2008, Kap. 16) | Punkte, die zu mehreren Themen gehören |
 | Hierarchisch (Ward) | Legt Gruppen mit dem geringsten Anstieg der Quadratsumme zusammen (Ward, 1963) | Unbekannte Clusterzahl, Hierarchien |
+| Hierarchisch (Group-Average) | Mittelwert aller paarweisen Ähnlichkeiten (Manning et al., 2008, Kap. 17) | Dokumentclustering |
+| Hierarchisch (Single-Link) | Ähnlichstes Paar; Verkettung (Manning et al., 2008, Kap. 17) | Duplikaterkennung |
 | DBSCAN | Dichtebasiert, beliebige Formen, Rauschpunkte (Ester et al., 1996) | Unregelmäßige Formen, verrauschte Daten |
 
 ### In der Praxis
 
-Die Merkmale werden vor dem Clustering skaliert, und das Ergebnis wird mit Fachwissen auf Plausibilität geprüft, da keine Labels zur Bewertung vorliegen. Hochdimensionale Daten werden oft vorher reduziert, etwa mit der [[principal-component-analysis|Hauptkomponentenanalyse (PCA)]]. Clustering von Embeddings dient zum Beispiel dazu, ähnliche Dokumente zu gruppieren ([[embeddings|Embeddings]]).
+Ohne Labels wird die Qualität mit externen Kriterien gegen Goldstandard-Klassen oder am direktesten in der Anwendung geprüft (Manning et al., 2008, Kap. 16). Für Dokumente wird thematische Ähnlichkeit über Kosinusähnlichkeit oder euklidischen Abstand auf längennormierten Vektoren angenähert; Stoppwörter lassen sich für Themen ignorieren, unterscheiden aber Sprachen (Manning et al., 2008, Kap. 16). Clustering liegt auch der [[near-duplicate-detection|Erkennung von Beinahe-Duplikaten]] zugrunde, und Latent Semantic Indexing lässt sich als weiches Clustering auffassen ([[latent-semantic-indexing|Latent Semantic Indexing]]) (Manning et al., 2008, Kap. 16). Klassifikation lernt dagegen vorgegebene Klassen aus gelabelten Daten ([[classification|Klassifikation]]).
 
 ### Merksatz
 
-Clustering findet Gruppen ohne Labels; welches Verfahren passt, hängt davon ab, ob die Cluster kompakt (k-Means), hierarchisch (Ward) oder beliebig geformt und verrauscht (DBSCAN) sind.
+Clustering findet Gruppen ohne Labels; welches Verfahren passt, hängt davon ab, ob die Cluster kompakt (k-Means), weich (EM), hierarchisch (Group-Average oder Ward) oder beliebig geformt und verrauscht (DBSCAN) sind, und ihre Qualität muss mit externen Kriterien oder in der Anwendung beurteilt werden.
 
 ### Quellen
 
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Flat clustering.* Introduction to Information Retrieval, Chapter 16. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/16flat.pdf)
+- Manning, C. D., Raghavan, P. & Schütze, H. (2008). *Hierarchical clustering.* Introduction to Information Retrieval, Chapter 17. Cambridge University Press. [stanford.edu](https://nlp.stanford.edu/IR-book/pdf/17hier.pdf)
 - Lloyd, S. P. (1982). *Least Squares Quantization in PCM.* IEEE Transactions on Information Theory 28(2). [doi:10.1109/TIT.1982.1056489](https://doi.org/10.1109/TIT.1982.1056489)
 - Arthur, D. & Vassilvitskii, S. (2007). *k-means++: The Advantages of Careful Seeding.* SODA 2007. [PDF](https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf)
 - Ward, J. H. (1963). *Hierarchical Grouping to Optimize an Objective Function.* Journal of the American Statistical Association 58(301). [doi:10.1080/01621459.1963.10500845](https://doi.org/10.1080/01621459.1963.10500845)

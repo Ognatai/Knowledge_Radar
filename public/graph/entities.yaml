@@ -2936,3 +2936,23 @@ entities:
   type: Method
   name_en: Kappa statistic
   name_de: Kappa-Statistik
+- id: expectation-maximization
+  type: Method
+  name_en: Expectation-Maximization (EM) algorithm
+  name_de: Expectation-Maximization-Algorithmus (EM)
+  aliases:
+  - EM algorithm
+- id: cluster-hypothesis
+  type: Concept
+  name_en: Cluster hypothesis
+  name_de: Cluster-Hypothese
+- id: rand-index
+  type: Method
+  name_en: Rand index
+  name_de: Rand-Index
+- id: normalized-mutual-information
+  type: Method
+  name_en: Normalized mutual information (NMI)
+  name_de: Normalisierte Mutual Information (NMI)
+  aliases:
+  - NMI
