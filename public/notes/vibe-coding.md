@@ -74,7 +74,7 @@ Before vibe coding something, consider how much harm bugs or vulnerabilities cou
 - Errors outside the test coverage remain undetected, especially in edge cases.
 - Security: participants with an AI code assistant wrote significantly less secure code but were more likely to believe it was secure (Perry et al., 2022); exposed secrets and data leaks are typical risks (Willison, 2025).
 - Perceived and actual speed can differ: experienced open-source developers took 19% longer with early-2025 AI tools, although they estimated they had been 20% faster (Becker et al., 2025).
-- Technical debt grows unnoticed when nobody keeps a mental model of the code (Janakiram MSV, 2026).
+- [[technical-debt|Technical debt]] grows unnoticed when nobody keeps a mental model of the code (Janakiram MSV, 2026).
 
 ### Comparison
 
@@ -165,7 +165,7 @@ Vor dem Vibe Coding lohnt die Frage, wie viel Schaden Fehler oder Sicherheitslü
 - Fehler außerhalb der Testabdeckung bleiben unentdeckt, besonders in Randfällen.
 - Sicherheit: Teilnehmende mit KI-Code-Assistent schrieben deutlich unsichereren Code, hielten ihn aber eher für sicher (Perry et al., 2022); offengelegte Geheimnisse und Datenabflüsse sind typische Risiken (Willison, 2025).
 - Gefühlte und tatsächliche Geschwindigkeit können auseinanderfallen: Erfahrene Open-Source-Entwickler:innen brauchten mit KI-Werkzeugen von Anfang 2025 19 % länger, schätzten aber, 20 % schneller gewesen zu sein (Becker et al., 2025).
-- Technische Schulden wachsen unbemerkt, wenn niemand ein mentales Modell des Codes behält (Janakiram MSV, 2026).
+- [[technical-debt|Technische Schulden]] wachsen unbemerkt, wenn niemand ein mentales Modell des Codes behält (Janakiram MSV, 2026).
 
 ### Vergleich
 

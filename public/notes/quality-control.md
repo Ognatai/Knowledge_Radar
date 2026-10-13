@@ -53,7 +53,7 @@ Model cards accompany trained models with their intended use and with evaluation
 
 #### Origin and variants
 
-Quality assurance comes from software engineering. For ML, the hidden technical debt of production systems (Sculley et al., 2015), rubrics such as the ML Test Score (Breck et al., 2017) and experience reports from industry (Amershi et al., 2019) defined what has to be tested beyond code; documentation standards (Mitchell et al., 2018; Gebru et al., 2018) and behavioural testing (Ribeiro et al., 2020) extended this to models and data.
+Quality assurance comes from software engineering. For ML, the [[technical-debt|hidden technical debt]] of production systems (Sculley et al., 2015), rubrics such as the ML Test Score (Breck et al., 2017) and experience reports from industry (Amershi et al., 2019) defined what has to be tested beyond code; documentation standards (Mitchell et al., 2018; Gebru et al., 2018) and behavioural testing (Ribeiro et al., 2020) extended this to models and data.
 
 ### When to use it
 

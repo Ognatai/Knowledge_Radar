@@ -190,6 +190,7 @@ areas:
       - docker
       - kubernetes
       - clean-code
+      - technical-debt
       - confluence
       - mlops-and-deployment
       - experiment-tracking

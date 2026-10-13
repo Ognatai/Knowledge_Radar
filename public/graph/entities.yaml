@@ -620,10 +620,6 @@ entities:
   type: Method
   name_en: Refactoring
   name_de: Refactoring
-- id: technical-debt
-  type: Concept
-  name_en: Technical debt
-  name_de: Technische Schulden
 - id: code-review
   type: Method
   name_en: Code review
@@ -2873,3 +2869,11 @@ entities:
   type: Method
   name_en: SummaC
   name_de: SummaC
+- id: ward-cunningham
+  type: Person
+  name_en: Ward Cunningham
+  name_de: Ward Cunningham
+- id: martin-fowler
+  type: Person
+  name_en: Martin Fowler
+  name_de: Martin Fowler

@@ -64,7 +64,7 @@ Code that cannot be understood quickly or invites bugs is too complex; reviewers
 
 #### 6. Code smells, refactoring and technical debt
 
-A code smell, such as a long method or a class with only data and no behaviour, is a surface indication that usually points to a deeper problem, but not always (Fowler, CodeSmell). Refactoring removes such problems in small, behaviour-preserving steps, keeping the system working after each step (Fowler, Refactoring). Unclean code accumulates technical debt: the extra effort for every new feature is the interest; paying it off gradually concentrates clean-up where code changes most often (Fowler, TechnicalDebt).
+A code smell, such as a long method or a class with only data and no behaviour, is a surface indication that usually points to a deeper problem, but not always (Fowler, CodeSmell). Refactoring removes such problems in small, behaviour-preserving steps, keeping the system working after each step (Fowler, Refactoring). Unclean code accumulates [[technical-debt|technical debt]]: the extra effort for every new feature is the interest; paying it off gradually concentrates clean-up where code changes most often (Fowler, TechnicalDebt).
 
 #### 7. Tests
 
@@ -172,7 +172,7 @@ Code, der sich nicht schnell verstehen lässt oder zu Fehlern einlädt, ist zu k
 
 #### 6. Code Smells, Refactoring und technische Schulden
 
-Ein Code Smell, etwa eine lange Methode oder eine Klasse mit nur Daten und ohne Verhalten, ist ein oberflächliches Anzeichen, das meist, aber nicht immer auf ein tieferes Problem hinweist (Fowler, CodeSmell). Refactoring beseitigt solche Probleme in kleinen, verhaltenserhaltenden Schritten, wobei das System nach jedem Schritt funktionsfähig bleibt (Fowler, Refactoring). Unsauberer Code häuft technische Schulden an: Der Mehraufwand für jedes neue Feature sind die Zinsen; schrittweises Tilgen konzentriert das Aufräumen dort, wo Code am häufigsten geändert wird (Fowler, TechnicalDebt).
+Ein Code Smell, etwa eine lange Methode oder eine Klasse mit nur Daten und ohne Verhalten, ist ein oberflächliches Anzeichen, das meist, aber nicht immer auf ein tieferes Problem hinweist (Fowler, CodeSmell). Refactoring beseitigt solche Probleme in kleinen, verhaltenserhaltenden Schritten, wobei das System nach jedem Schritt funktionsfähig bleibt (Fowler, Refactoring). Unsauberer Code häuft [[technical-debt|technische Schulden]] an: Der Mehraufwand für jedes neue Feature sind die Zinsen; schrittweises Tilgen konzentriert das Aufräumen dort, wo Code am häufigsten geändert wird (Fowler, TechnicalDebt).
 
 #### 7. Tests
 

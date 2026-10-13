@@ -64,7 +64,7 @@ The ML-specific steps check data and model quality, not only code ([[regression-
 
 #### Origin and variants
 
-The term MLOps grew out of DevOps and the experience that ML systems accumulate hidden technical debt (Sculley et al., 2015). Rubrics for production readiness (Breck et al., 2017), industry case studies (Amershi et al., 2019; Paleyes et al., 2020) and overviews of principles, components and roles (Kreuzberger et al., 2022) shaped the field; LLM systems add prompts, retrieval indexes and hosted models as further components to version and monitor.
+The term MLOps grew out of DevOps and the experience that ML systems accumulate [[technical-debt|hidden technical debt]] (Sculley et al., 2015). Rubrics for production readiness (Breck et al., 2017), industry case studies (Amershi et al., 2019; Paleyes et al., 2020) and overviews of principles, components and roles (Kreuzberger et al., 2022) shaped the field; LLM systems add prompts, retrieval indexes and hosted models as further components to version and monitor.
 
 ### When to use it
 
@@ -163,7 +163,7 @@ Die ML-spezifischen Schritte prüfen Daten- und Modellqualität, nicht nur Code 
 
 #### Ursprung und Varianten
 
-Der Begriff MLOps entstand aus DevOps und der Erfahrung, dass ML-Systeme versteckte technische Schulden anhäufen (Sculley et al., 2015). Bewertungsraster für die Produktionsreife (Breck et al., 2017), Fallstudien aus der Industrie (Amershi et al., 2019; Paleyes et al., 2020) und Überblicke über Prinzipien, Komponenten und Rollen (Kreuzberger et al., 2022) prägten das Feld; LLM-Systeme fügen Prompts, Retrieval-Indizes und gehostete Modelle als weitere zu versionierende und zu überwachende Komponenten hinzu.
+Der Begriff MLOps entstand aus DevOps und der Erfahrung, dass ML-Systeme versteckte [[technical-debt|technische Schulden]] anhäufen (Sculley et al., 2015). Bewertungsraster für die Produktionsreife (Breck et al., 2017), Fallstudien aus der Industrie (Amershi et al., 2019; Paleyes et al., 2020) und Überblicke über Prinzipien, Komponenten und Rollen (Kreuzberger et al., 2022) prägten das Feld; LLM-Systeme fügen Prompts, Retrieval-Indizes und gehostete Modelle als weitere zu versionierende und zu überwachende Komponenten hinzu.
 
 ### Wann einsetzen
 
