@@ -1,9 +1,8 @@
 version: 1
-note_sha256: 44f4d8355e05bb7f4c244f795839c689c3d56f1c1a2bdb7490c3017681edc76d
+note_sha256: c9bf952b96a86543b92832b5a5dd7d0c7185a987bd2f78312da812a771e368d7
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bagging
-- random-forest
 - adaboost
 - gradient-boosting
 - xgboost
@@ -12,10 +11,6 @@ discusses:
 - classical-machine-learning
 relations:
 - from: bagging
-  type: IS_EXAMPLE_OF
-  to: ensemble-methods
-  evidence: Bagging and random forests average models trained on bootstrap samples to reduce variance
-- from: random-forest
   type: IS_EXAMPLE_OF
   to: ensemble-methods
   evidence: Bagging and random forests average models trained on bootstrap samples to reduce variance
@@ -35,10 +30,6 @@ relations:
   type: IS_EXAMPLE_OF
   to: gradient-boosting
   evidence: XGBoost (Chen & Guestrin, 2016) is a scalable tree boosting system
-- from: random-forest
-  type: BASED_ON
-  to: decision-trees
-  evidence: Random forests grow many decision trees, each on a bootstrap sample
 - from: gradient-boosting
   type: BASED_ON
   to: decision-trees

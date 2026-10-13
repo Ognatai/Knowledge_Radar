@@ -1,9 +1,8 @@
 version: 1
-note_sha256: e94e742db2d2d6b64f71e232a7c58e44ecd0b3c413246b8907db357fce037730
+note_sha256: d22f18ffd78a3a204a0bea77516e65ccb0bc290fa521aa9ad15f61a28dfa11d8
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - retrieval-augmented-generation
-- lost-in-the-middle
 - raptor
 - graphrag
 - llama

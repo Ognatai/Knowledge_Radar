@@ -10,7 +10,7 @@ discusses:
 - context-enrichment
 - chunk-overlap
 - parent-child-retrieval
-- lost-in-the-middle
+- structured-context-construction
 - embeddings
 - vector-databases
 relations:

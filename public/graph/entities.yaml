@@ -93,10 +93,6 @@ entities:
   type: Method
   name_en: Cost-complexity pruning
   name_de: Cost-Complexity Pruning
-- id: random-forest
-  type: Method
-  name_en: Random forest
-  name_de: Random Forest
 - id: fitnets
   type: Method
   name_en: FitNets
@@ -2103,10 +2099,6 @@ entities:
   type: Method
   name_en: Parent-child retrieval
   name_de: Parent-Child-Retrieval
-- id: lost-in-the-middle
-  type: Concept
-  name_en: Lost in the middle
-  name_de: Lost in the Middle
 - id: ragas
   type: Method
   name_en: Ragas

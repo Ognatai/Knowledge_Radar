@@ -2,6 +2,8 @@
 title_en: Structured Context Construction
 title_de: Strukturierte Kontextbildung
 entity_type: Method
+aliases:
+- Lost in the middle
 sources:
 - https://arxiv.org/abs/2307.03172
 - https://arxiv.org/abs/2310.11324

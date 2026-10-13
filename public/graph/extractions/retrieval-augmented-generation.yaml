@@ -17,7 +17,7 @@ discusses:
 - reciprocal-rank-fusion
 - cross-encoder
 - bert
-- lost-in-the-middle
+- structured-context-construction
 - naive-rag
 - advanced-rag
 - modular-rag

@@ -6,7 +6,7 @@ discusses:
 - context-pollution
 - citation-hallucination
 - grounding-hallucination
-- lost-in-the-middle
+- structured-context-construction
 - cross-encoder
 - rag-retrieval
 - reciprocal-rank-fusion

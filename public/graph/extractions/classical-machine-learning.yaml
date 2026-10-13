@@ -4,7 +4,6 @@ extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - decision-trees
 - ensemble-methods
-- random-forest
 - support-vector-machines
 - k-nearest-neighbours
 - clustering
@@ -60,10 +59,6 @@ relations:
   type: IS_EXAMPLE_OF
   to: unsupervised-learning
   evidence: or a lower-dimensional representation (Principal Component Analysis)
-- from: random-forest
-  type: IS_EXAMPLE_OF
-  to: ensemble-methods
-  evidence: Tree ensembles (random forests, boosting)
 - from: scikit-learn
   type: IMPLEMENTS
   to: classical-machine-learning

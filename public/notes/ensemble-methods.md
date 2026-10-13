@@ -2,6 +2,8 @@
 title_en: Ensemble Methods
 title_de: Ensemble-Methoden
 entity_type: Method
+aliases:
+- Random forest
 sources:
 - https://doi.org/10.1007/BF00058655
 - https://doi.org/10.1023/A:1010933404324
