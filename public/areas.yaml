@@ -159,7 +159,7 @@ areas:
       - attention-and-transformers
   - id: knowledge-graphs
     name_en: Knowledge Graphs
-    name_de: Wissensgraphen
+    name_de: Knowledge Graphs
     notes:
       - knowledge-graphs
       - knowledge-graph-engineering

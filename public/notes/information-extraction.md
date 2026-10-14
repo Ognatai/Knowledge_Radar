@@ -112,7 +112,7 @@ Information extraction turns text into entities, relations and events, either op
 
 ### TL;DR
 
-Informationsextraktion (IE) überführt unstrukturierten Text in strukturiertes Wissen wie Entitäten, Relationen und Ereignisse (Xu et al., 2023). Sie reicht von der Extraktion nach einem vorgegebenen Schema bis zur offenen Extraktion beliebiger Relationstupel aus dem Web (Banko et al., 2007) und erfolgt zunehmend, indem die Struktur direkt mit Sequence-to-Sequence-Modellen (Huguet Cabot & Navigli, 2021) oder großen Sprachmodellen (Xu et al., 2023) erzeugt wird. Die Ergebnisse speisen Anwendungen wie [[knowledge-graphs|Wissensgraphen]] und [[contract-intelligence|Contract Intelligence]].
+Informationsextraktion (IE) überführt unstrukturierten Text in strukturiertes Wissen wie Entitäten, Relationen und Ereignisse (Xu et al., 2023). Sie reicht von der Extraktion nach einem vorgegebenen Schema bis zur offenen Extraktion beliebiger Relationstupel aus dem Web (Banko et al., 2007) und erfolgt zunehmend, indem die Struktur direkt mit Sequence-to-Sequence-Modellen (Huguet Cabot & Navigli, 2021) oder großen Sprachmodellen (Xu et al., 2023) erzeugt wird. Die Ergebnisse speisen Anwendungen wie [[knowledge-graphs|Knowledge Graphs]] und [[contract-intelligence|Contract Intelligence]].
 
 ### Funktionsweise
 
@@ -157,7 +157,7 @@ Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes 
 ### Wann einsetzen
 
 - Wenn die relevanten Relationen vorab nicht bekannt sind und ein breiter Überblick über eine große Textsammlung gebraucht wird, erspart Open IE das vorherige Definieren eines Schemas (Banko et al., 2007).
-- Wenn Relationen aus einem festen Inventar benötigt werden, etwa zum Befüllen eines Wissensgraphen, liefert generative Relationsextraktion typisierte Tripel (Huguet Cabot & Navigli, 2021).
+- Wenn Relationen aus einem festen Inventar benötigt werden, etwa zum Befüllen eines Knowledge Graphs, liefert generative Relationsextraktion typisierte Tripel (Huguet Cabot & Navigli, 2021).
 - Wenn sich Extraktionsaufgaben oft ändern oder annotierte Daten knapp sind, lässt sich LLM-basierte generative IE über den Prompt anpassen (Xu et al., 2023).
 - Wenn große Textsammlungen daraufhin untersucht werden, wie Personen benannt und beschrieben werden, kann eine IE-Pipeline mit Koreferenzauflösung Teile der Diskursanalyse automatisieren (Urchs et al., 2024).
 
@@ -180,13 +180,13 @@ Open IE (Banko et al., 2007) extrahierte Relationstupel aus dem Web ohne festes 
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
 | Open IE (TextRunner) | Freie Relationsphrasen, kein Schema, keine annotierten Beispiele pro Relation (Banko et al., 2007) | Breite Exploration großer Textsammlungen |
-| Generative Relationsextraktion (REBEL) | Typisierte Tripel aus einem festen Inventar, erzeugt von einem feinabgestimmten Seq2Seq-Modell (Huguet Cabot & Navigli, 2021) | Befüllen eines Schemas oder Wissensgraphen |
+| Generative Relationsextraktion (REBEL) | Typisierte Tripel aus einem festen Inventar, erzeugt von einem feinabgestimmten Seq2Seq-Modell (Huguet Cabot & Navigli, 2021) | Befüllen eines Schemas oder Knowledge Graphs |
 | LLM-basierte generative IE | Struktur im Prompt beschrieben, viele Teilaufgaben mit einem Modell (Xu et al., 2023) | Wechselnde Aufgaben, wenige annotierte Daten |
 | Mehrstufige IE-Pipeline | NER, Parsing und Koreferenz zu Profilen von Akteur:innen kombiniert (Urchs et al., 2024; Urchs, 2025) | Diskurs- und Repräsentationsanalysen |
 
 ### In der Praxis
 
-Die Extraktionsqualität wird mit [[classification-metrics|Precision]], Recall und F1 gegen annotierte Daten gemessen, getrennt für Entitäten und Relationen. Die Zielstruktur sollte vorab festgelegt werden, etwa als Ontologie ([[ontology-design|Ontologie-Design]]), damit extrahierte Entitäten und Relationen konsistent verknüpft und gespeichert werden können ([[knowledge-graphs|Wissensgraphen]]). Bei LLMs werden Ausgabeformat und zulässige Typen im Prompt vorgegeben, und die Ausgabe wird vor dem Speichern gegen das Schema validiert.
+Die Extraktionsqualität wird mit [[classification-metrics|Precision]], Recall und F1 gegen annotierte Daten gemessen, getrennt für Entitäten und Relationen. Die Zielstruktur sollte vorab festgelegt werden, etwa als Ontologie ([[ontology-design|Ontologie-Design]]), damit extrahierte Entitäten und Relationen konsistent verknüpft und gespeichert werden können ([[knowledge-graphs|Knowledge Graphs]]). Bei LLMs werden Ausgabeformat und zulässige Typen im Prompt vorgegeben, und die Ausgabe wird vor dem Speichern gegen das Schema validiert.
 
 ### Merksatz
 

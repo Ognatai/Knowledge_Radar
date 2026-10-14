@@ -1,6 +1,6 @@
 ---
 title_en: Knowledge Graphs
-title_de: Wissensgraphen
+title_de: Knowledge Graphs
 entity_type: Concept
 sources:
 - https://arxiv.org/abs/2003.02320
@@ -117,7 +117,7 @@ Knowledge graphs store facts as entities and typed relations, which makes knowle
 
 ### TL;DR
 
-Ein Wissensgraph stellt Wissen als Graph aus Entitäten dar, die durch typisierte Beziehungen verbunden sind, sodass sich Fakten aus vielfältigen, großen und sich ändernden Quellen zusammenführen, abfragen und für Schlussfolgerungen nutzen lassen (Hogan et al., 2020). Zwei Datenmodelle dominieren: RDF, in dem jeder Fakt ein Tripel aus Subjekt, Prädikat und Objekt mit global eindeutigen Bezeichnern ist ([[w3c|W3C]] RDF 1.1 Concepts), und Property Graphs, in denen Knoten und Kanten Schlüssel-Wert-Eigenschaften tragen ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologien fügen formale Bedeutung hinzu (W3C OWL 2 Primer), und Wissensgraphen ergänzen zunehmend große Sprachmodelle, etwa in GraphRAG (Pan et al., 2023; Edge et al., 2024).
+Ein Knowledge Graph stellt Wissen als Graph aus Entitäten dar, die durch typisierte Beziehungen verbunden sind, sodass sich Fakten aus vielfältigen, großen und sich ändernden Quellen zusammenführen, abfragen und für Schlussfolgerungen nutzen lassen (Hogan et al., 2020). Zwei Datenmodelle dominieren: RDF, in dem jeder Fakt ein Tripel aus Subjekt, Prädikat und Objekt mit global eindeutigen Bezeichnern ist ([[w3c|W3C]] RDF 1.1 Concepts), und Property Graphs, in denen Knoten und Kanten Schlüssel-Wert-Eigenschaften tragen ([[neo4j|Neo4j]] [[cypher|Cypher]] Manual). Ontologien fügen formale Bedeutung hinzu (W3C OWL 2 Primer), und Knowledge Graphs ergänzen zunehmend große Sprachmodelle, etwa in GraphRAG (Pan et al., 2023; Edge et al., 2024).
 
 ### Funktionsweise
 
@@ -130,16 +130,16 @@ Entitäten werden zu Knoten, Fakten zu Kanten zwischen ihnen. Ein Schema oder ei
 ▼
 3. Schema und Ontologien
 ▼
-4. Aufbau eines Wissensgraphen
+4. Aufbau eines Knowledge Graphs
 ▼
 5. Abfragen und Schlussfolgern
 ▼
-6. Wissensgraphen und Sprachmodelle
+6. Knowledge Graphs und Sprachmodelle
 ```
 
 #### 1. Tripel, Entitäten und Beziehungen
 
-Die Grundeinheit eines Wissensgraphen ist ein Fakt, der zwei Entitäten über eine Beziehung verbindet, etwa (Verordnung, giltFür, Unternehmen) (Hogan et al., 2020). Wissensgraphen werden dort eingesetzt, wo vielfältige, dynamische und große Datensammlungen genutzt werden müssen, und ihre Graphstruktur erlaubt es, neue Entitäten und Beziehungen hinzuzufügen, ohne ein Schema neu zu entwerfen.
+Die Grundeinheit eines Knowledge Graphs ist ein Fakt, der zwei Entitäten über eine Beziehung verbindet, etwa (Verordnung, giltFür, Unternehmen) (Hogan et al., 2020). Knowledge Graphs werden dort eingesetzt, wo vielfältige, dynamische und große Datensammlungen genutzt werden müssen, und ihre Graphstruktur erlaubt es, neue Entitäten und Beziehungen hinzuzufügen, ohne ein Schema neu zu entwerfen.
 
 #### 2. Datenmodelle: RDF und Property Graphs
 
@@ -147,9 +147,9 @@ In RDF ist Information eine Menge von Tripeln aus Subjekt, Prädikat und Objekt;
 
 #### 3. Schema und Ontologien
 
-Hogan et al. (2020) behandeln die Rolle von Schema, Identität und Kontext in Wissensgraphen. Eine Ontologie definiert Klassen, Eigenschaften und ihre Beziehungen mit formaler Bedeutung; mit OWL können Reasoner implizite Fakten ableiten, etwa aus Klassenhierarchien oder transitiven Eigenschaften, und die Konsistenz prüfen, unter der Open-World-Annahme, nach der fehlende Information nicht als falsch gilt (W3C OWL 2 Primer; [[ontology-design|Ontologie-Design]]).
+Hogan et al. (2020) behandeln die Rolle von Schema, Identität und Kontext in Knowledge Graphs. Eine Ontologie definiert Klassen, Eigenschaften und ihre Beziehungen mit formaler Bedeutung; mit OWL können Reasoner implizite Fakten ableiten, etwa aus Klassenhierarchien oder transitiven Eigenschaften, und die Konsistenz prüfen, unter der Open-World-Annahme, nach der fehlende Information nicht als falsch gilt (W3C OWL 2 Primer; [[ontology-design|Ontologie-Design]]).
 
-#### 4. Aufbau eines Wissensgraphen
+#### 4. Aufbau eines Knowledge Graphs
 
 Wissen wird mit einer Kombination aus deduktiven Techniken wie Regeln und Schlussfolgern und induktiven Techniken wie maschinellem Lernen dargestellt und extrahiert (Hogan et al., 2020). Aufbau und Anreicherung nutzen strukturierte Quellen und über Informationsextraktion auch Text ([[information-extraction|Informationsextraktion]]); es folgen Qualitätsbewertung, Verfeinerung und Veröffentlichung ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
 
@@ -157,13 +157,13 @@ Wissen wird mit einer Kombination aus deduktiven Techniken wie Regeln und Schlus
 
 Graph-Abfragesprachen suchen nach Mustern aus Knoten und Kanten: Cypher schreibt Muster etwa in einer ASCII-Art-ähnlichen Syntax wie (a:Person)-[:KNOWS]->(b:Person) (Neo4j Cypher Manual), und SPARQL sucht Tripelmuster in RDF ([[sparql|SPARQL]]). [[knowledge-graph-embeddings|Knowledge Graph Embeddings]] stellen Entitäten und Beziehungen als Vektoren dar, etwa um fehlende Verbindungen vorherzusagen, und Wissenserwerb und -vervollständigung sind zentrale Forschungsthemen (Ji et al., 2020; [[transe|TransE]]).
 
-#### 6. Wissensgraphen und Sprachmodelle
+#### 6. Knowledge Graphs und Sprachmodelle
 
-Große Sprachmodelle sind Black Boxes, die Faktenwissen oft nur unzureichend erfassen und abrufen, während Wissensgraphen Fakten ausdrücklich speichern, aber schwer aufzubauen und aktuell zu halten sind; Pan et al. (2023) skizzieren drei Arten der Kombination: durch Wissensgraphen verbesserte LLMs, durch LLMs erweiterte Wissensgraphen und synergetische Systeme. GraphRAG etwa nutzt ein LLM, um aus Dokumenten einen Entitäten-Wissensgraphen aufzubauen und Fragen darüber zu beantworten (Edge et al., 2024; [[graphrag|GraphRAG]]).
+Große Sprachmodelle sind Black Boxes, die Faktenwissen oft nur unzureichend erfassen und abrufen, während Knowledge Graphs Fakten ausdrücklich speichern, aber schwer aufzubauen und aktuell zu halten sind; Pan et al. (2023) skizzieren drei Arten der Kombination: durch Knowledge Graphs verbesserte LLMs, durch LLMs erweiterte Knowledge Graphs und synergetische Systeme. GraphRAG etwa nutzt ein LLM, um aus Dokumenten einen Entitäten-Knowledge-Graph aufzubauen und Fragen darüber zu beantworten (Edge et al., 2024; [[graphrag|GraphRAG]]).
 
 #### Ursprung und Varianten
 
-Hogan et al. (2020) geben eine umfassende Einführung in Datenmodelle, Abfragesprachen, Schema, deduktives und induktives Wissen und den Lebenszyklus von Wissensgraphen. RDF (W3C RDF 1.1 Concepts) und OWL (W3C OWL 2 Primer) sind W3C-Standards, Property Graphs wurden durch Graphdatenbanken wie Neo4j verbreitet (Neo4j Cypher Manual), und Ji et al. (2020) sowie Pan et al. (2023) geben einen Überblick über Repräsentationslernen und die Kombination mit LLMs.
+Hogan et al. (2020) geben eine umfassende Einführung in Datenmodelle, Abfragesprachen, Schema, deduktives und induktives Wissen und den Lebenszyklus von Knowledge Graphs. RDF (W3C RDF 1.1 Concepts) und OWL (W3C OWL 2 Primer) sind W3C-Standards, Property Graphs wurden durch Graphdatenbanken wie Neo4j verbreitet (Neo4j Cypher Manual), und Ji et al. (2020) sowie Pan et al. (2023) geben einen Überblick über Repräsentationslernen und die Kombination mit LLMs.
 
 ### Wann einsetzen
 
@@ -179,7 +179,7 @@ Hogan et al. (2020) geben eine umfassende Einführung in Datenmodelle, Abfragesp
 - Ergänzen LLMs um Faktenwissen und Nachvollziehbarkeit (Pan et al., 2023).
 
 **Einschränkungen**
-- Wissensgraphen sind schwer aufzubauen und verändern sich laufend (Pan et al., 2023).
+- Knowledge Graphs sind schwer aufzubauen und verändern sich laufend (Pan et al., 2023).
 - Sie sind unvollständig; fehlende Fakten müssen vorhergesagt oder ergänzt werden (Ji et al., 2020).
 - Schema, Identität und Qualität erfordern fortlaufende Pflege (Hogan et al., 2020).
 
@@ -187,18 +187,18 @@ Hogan et al. (2020) geben eine umfassende Einführung in Datenmodelle, Abfragesp
 
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
-| RDF-Wissensgraph | Tripel mit globalen IRIs, W3C-Standards, Schlussfolgern mit Ontologien (W3C RDF 1.1 Concepts; W3C OWL 2 Primer) | Datenintegration und Veröffentlichung über Organisationen hinweg |
+| RDF-Knowledge-Graph | Tripel mit globalen IRIs, W3C-Standards, Schlussfolgern mit Ontologien (W3C RDF 1.1 Concepts; W3C OWL 2 Primer) | Datenintegration und Veröffentlichung über Organisationen hinweg |
 | Property Graph | Knoten mit Labels und typisierte Beziehungen mit Eigenschaften (Neo4j Cypher Manual) | Anwendungsdatenbanken mit vielen Traversierungen |
 | Relationale Datenbank | Feste Tabellen und Joins ([[sql|SQL]]) | Stabile Schemata und Transaktionsdaten |
 | Vektordatenbank | Ähnlichkeitssuche über Embeddings ([[vector-databases|Vektordatenbanken]]) | Semantische Suche ohne ausdrückliche Beziehungen |
 
 ### In der Praxis
 
-Ein Wissensgraph-Projekt beginnt mit den Fragen, die der Graph beantworten soll, und einem Schema oder einer Ontologie und baut dann Pipelines, um den Graphen zu befüllen und zu validieren (Hogan et al., 2020; [[knowledge-graph-engineering|Knowledge Graph Engineering]]). In juristischen Anwendungen werden etwa Normen, Entscheidungen und Beteiligte als Entitäten mit Beziehungen wie „zitiert“ oder „ändert“ modelliert ([[legal-ai|Legal AI]]).
+Ein Knowledge-Graph-Projekt beginnt mit den Fragen, die der Graph beantworten soll, und einem Schema oder einer Ontologie und baut dann Pipelines, um den Graphen zu befüllen und zu validieren (Hogan et al., 2020; [[knowledge-graph-engineering|Knowledge Graph Engineering]]). In juristischen Anwendungen werden etwa Normen, Entscheidungen und Beteiligte als Entitäten mit Beziehungen wie „zitiert“ oder „ändert“ modelliert ([[legal-ai|Legal AI]]).
 
 ### Merksatz
 
-Wissensgraphen speichern Fakten als Entitäten und typisierte Beziehungen und machen Wissen aus vielen Quellen so zusammenführbar, abfragbar und gemeinsam mit Sprachmodellen nutzbar.
+Knowledge Graphs speichern Fakten als Entitäten und typisierte Beziehungen und machen Wissen aus vielen Quellen so zusammenführbar, abfragbar und gemeinsam mit Sprachmodellen nutzbar.
 
 ### Quellen
 

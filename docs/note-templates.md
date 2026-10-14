@@ -32,9 +32,10 @@ Common rules:
 - EN and DE carry the same content; headings are translated.
 - German text keeps established English technical terms instead of translating
   them: *Dense Retrieval*, *Sparse Retrieval*, *Cosine Similarity*, *Recall*,
-  *Inverted Index*, *Approximate Nearest Neighbor Search*, *Faithfulness*.
+  *Inverted Index*, *Approximate Nearest Neighbor Search*, *Faithfulness*,
+  *Knowledge Graph*, *Part-of-Speech-Tagging*.
   Translate only where an established German term exists (e.g. *Vektordatenbank*,
-  *Wissensgraph*); legal terms follow the official German text.
+  *Kollokation*); legal terms follow the official German text.
 - No manual table of contents: the site generates one from the `###`/`####`
   headings and shows it right after the TL;DR.
   Long outlines collapse to the top level.

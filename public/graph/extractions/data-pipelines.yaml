@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5ecc1356a947d9a42f09bb1d9c9e77132e86b5dd7c19411762857ac7a5a9a935
+note_sha256: ddb5fea3b952c9bffbebef3daf9c4d2c5459ab946e1d935996f64295d7eb18b5
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - apache-airflow

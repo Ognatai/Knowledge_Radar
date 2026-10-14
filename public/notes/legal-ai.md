@@ -121,7 +121,7 @@ Legal AI bezeichnet den Einsatz von KI-Systemen im Recht: juristische Recherche,
 
 - **Genauigkeit und Zitation:** Eine flüssige, aber falsche Antwort kann rechtliche Folgen haben, und eine juristische Aussage muss auf eine konkrete Norm oder Fundstelle zurückführbar sein; Zitationskorrektheit bedeutet, dass die zitierte Quelle die Aussage tatsächlich stützt ([[rag-generation-evaluation|RAG: Evaluation der Generierung]]; [[llm-evaluation|LLM-Evaluation]]).
 - **Versioniertes Recht:** Gesetze ändern sich, mehrere Fassungen können für unterschiedliche Zeiträume gelten, und Übergangsregelungen sind üblich; ein System muss daher wissen, welche Fassung zu welchem Zeitpunkt gilt ([[vector-databases|Vektordatenbanken]]).
-- **Verknüpfte Normen:** Rechtsfragen verbinden oft mehrere Normen, Ausnahmen und Rückausnahmen, ein Multi-Hop-Retrieval-Problem ([[graphrag|GraphRAG]]; [[knowledge-graphs|Wissensgraphen]]).
+- **Verknüpfte Normen:** Rechtsfragen verbinden oft mehrere Normen, Ausnahmen und Rückausnahmen, ein Multi-Hop-Retrieval-Problem ([[graphrag|GraphRAG]]; [[knowledge-graphs|Knowledge Graphs]]).
 - **Rechtsordnung:** Recht ist an ein Rechtssystem gebunden, und die Leistung schwankt zwischen Rechtsordnungen, Gerichten, Zeiträumen und Fällen (Dahl et al., 2024).
 
 #### 3. Juristisches Schlussfolgern messen
@@ -130,7 +130,7 @@ Benchmarks machen juristische Fähigkeiten messbar. LexGLUE bündelt Aufgaben zu
 
 #### 4. RAG und GraphRAG im Recht
 
-Liegt das juristische Wissen außerhalb der Modellgewichte, bleibt es aktualisierbar und zitierbar ([[rag-vs-fine-tuning|RAG vs. Fine-Tuning]]). Graphbasierte Ansätze bauen aus den Dokumenten einen Wissensgraphen aus Entitäten und Zusammenfassungen für Gruppen verwandter Entitäten auf, was bei globalen Fragen über einen ganzen Korpus hilft (Edge et al., 2024); ausdrückliche Beziehungen zwischen Normen wie Verweise, Ausnahmen und übergeordnete Regelungen lassen sich in [[knowledge-graphs|Wissensgraphen]] abbilden.
+Liegt das juristische Wissen außerhalb der Modellgewichte, bleibt es aktualisierbar und zitierbar ([[rag-vs-fine-tuning|RAG vs. Fine-Tuning]]). Graphbasierte Ansätze bauen aus den Dokumenten einen Knowledge Graph aus Entitäten und Zusammenfassungen für Gruppen verwandter Entitäten auf, was bei globalen Fragen über einen ganzen Korpus hilft (Edge et al., 2024); ausdrückliche Beziehungen zwischen Normen wie Verweise, Ausnahmen und übergeordnete Regelungen lassen sich in [[knowledge-graphs|Knowledge Graphs]] abbilden.
 
 #### Ursprung und Varianten
 
@@ -161,7 +161,7 @@ Juristische Sprachverarbeitung stützte sich lange auf aufgabenspezifische Model
 |----------|----------------|------------|
 | Allgemeiner LLM-Chatbot | Antwortet aus dem Modellwissen ohne Retrieval; hohe Halluzinationsraten bei Rechtsfragen (Dahl et al., 2024) | Ideensammlung, nicht juristische Recherche |
 | RAG-basiertes juristisches Recherchewerkzeug | Ruft Rechtsquellen ab und zitiert sie; weniger, aber weiterhin häufige Halluzinationen (Magesh et al., 2024) | Recherche mit Prüfung jedes Zitats |
-| GraphRAG | Ergänzt einen Wissensgraphen und Zusammenfassungen von Entitätsgruppen für korpusweite Fragen (Edge et al., 2024) | Fragen über viele verknüpfte Normen |
+| GraphRAG | Ergänzt einen Knowledge Graph und Zusammenfassungen von Entitätsgruppen für korpusweite Fragen (Edge et al., 2024) | Fragen über viele verknüpfte Normen |
 | Spezialisierte Extraktionsmodelle | Für feste Aufgaben wie Klausel- oder [[entity-extraction\|Entitätsextraktion]] trainiert ([[contract-intelligence|Contract Intelligence]]) | Prüfung großer Dokumentmengen |
 
 ### In der Praxis

@@ -139,7 +139,7 @@ Diese Abfrage ist in GQL und in Cypher gültig: GQL hat viel von der Abfragesema
 
 ### In der Praxis
 
-Für [[knowledge-graphs|Wissensgraphen]] im Property-Graph-Modell bleiben Abfragen portabel, wenn sie den Teil von Cypher nutzen, den GQL teilt; der Konformitätsanhang des Cypher-Handbuchs listet, welche GQL-Funktionen unterstützt werden und welche Cypher-Entsprechungen es für die übrigen gibt (Neo4j Cypher Manual: GQL conformance).
+Für [[knowledge-graphs|Knowledge Graphs]] im Property-Graph-Modell bleiben Abfragen portabel, wenn sie den Teil von Cypher nutzen, den GQL teilt; der Konformitätsanhang des Cypher-Handbuchs listet, welche GQL-Funktionen unterstützt werden und welche Cypher-Entsprechungen es für die übrigen gibt (Neo4j Cypher Manual: GQL conformance).
 
 ### Merksatz
 

@@ -57,8 +57,9 @@ SECTION_MAX_TOKENS = 3000
 SECTION_TIMEOUT_SECONDS = 600
 GERMAN_TERMS = (
     "Keep established English technical terms in English (e.g. Prompt Injection, Retrieval, "
-    "Embedding, Fine-Tuning, Benchmark, Recall, Faithfulness); translate only where an established "
-    "German term exists (Wissensgraph, Vektordatenbank)."
+    "Embedding, Fine-Tuning, Benchmark, Recall, Faithfulness, Knowledge Graph, "
+    "Part-of-Speech-Tagging); translate only where an established German term exists "
+    "(Vektordatenbank)."
 )
 NOTICE_EN = "> **Note:** LLM-generated summary based on the listed sources; it may be incomplete, outdated or wrong."
 NOTICE_DE = (

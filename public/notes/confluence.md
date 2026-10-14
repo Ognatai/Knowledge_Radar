@@ -144,7 +144,7 @@ Die Content-REST-API akzeptiert CQL als Abfrageparameter, sodass in CQL formulie
 |----------|----------------|------------|
 | Confluence | Gehostetes Wiki mit Bereichen, Seitenbäumen, Berechtigungen, CQL und REST-API (Confluence spaces docs; Confluence REST API docs) | Teamdokumentation in Organisationen |
 | Markdown-Vault (z. B. Obsidian) | Lokale Markdown-Dateien mit Links, versionierbar mit Git ([[git|Git]]) | Persönliche oder Entwickler-Wissensbasen |
-| Wissensgraph | Ausdrückliche Entitäten und Beziehungen ([[knowledge-graphs|Wissensgraphen]]) | Strukturiertes, abfragbares Fachwissen |
+| Knowledge Graph | Ausdrückliche Entitäten und Beziehungen ([[knowledge-graphs|Knowledge Graphs]]) | Strukturiertes, abfragbares Fachwissen |
 
 ### In der Praxis
 

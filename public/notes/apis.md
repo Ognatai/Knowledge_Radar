@@ -184,7 +184,7 @@ Problem Details transportieren maschinenlesbare Fehlerinformationen im Antwortk�
 
 - **RPC:** Der Client ruft eine entfernte Methode auf, als wäre sie lokal. gRPC definiert Dienste mit Methoden, Parametern und Rückgabetypen, standardmäßig mit Protocol Buffers als Schnittstellenbeschreibungssprache und Nachrichtenformat (gRPC docs); JSON-RPC ist ein schlankes, zustandsloses und transportunabhängiges RPC-Protokoll mit JSON-Nachrichten (JSON-RPC 2.0 specification), das etwa [[mcp-and-related-protocols|MCP und ähnliche Protokolle]] nutzen.
 - **GraphQL:** eine stark typisierte Abfragesprache, in der der Client auf Feldebene festlegt, welche Daten er braucht, statt dass der Server die Form der Antwort pro Endpunkt bestimmt; das Typsystem lässt sich selbst abfragen (GraphQL specification).
-- **Abfrage-Endpunkte für Daten:** [[knowledge-graphs|Wissensgraphen]] bieten SPARQL-Endpunkte, eine Abfrage-API über HTTP ([[sparql|SPARQL]]).
+- **Abfrage-Endpunkte für Daten:** [[knowledge-graphs|Knowledge Graphs]] bieten SPARQL-Endpunkte, eine Abfrage-API über HTTP ([[sparql|SPARQL]]).
 
 #### 6. Beschreibung und Designrichtlinien
 

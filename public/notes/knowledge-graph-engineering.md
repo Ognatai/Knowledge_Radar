@@ -115,7 +115,7 @@ Knowledge graph engineering keeps a graph trustworthy over time through repeatab
 
 ### TL;DR
 
-Knowledge Graph Engineering bedeutet, [[knowledge-graphs|Wissensgraphen]] als verlässliche Datenprodukte aufzubauen und zu betreiben: Pipelines erzeugen und reichern den Graphen an, Entity Resolution führt doppelte Beschreibungen zusammen, Validierung prüft die Daten gegen Shapes, Verfeinerung ergänzt und korrigiert sie, und Provenienzangaben halten fest, woher jeder Fakt stammt (Hogan et al., 2020). Wichtige Werkzeuge sind SHACL für die Validierung ([[w3c|W3C]] SHACL), Workflows für Entity Resolution (Christophides et al., 2019), Qualitätsdimensionen und -metriken (Zaveri et al., 2016) und PROV-O für Provenienz (W3C PROV-O).
+Knowledge Graph Engineering bedeutet, [[knowledge-graphs|Knowledge Graphs]] als verlässliche Datenprodukte aufzubauen und zu betreiben: Pipelines erzeugen und reichern den Graphen an, Entity Resolution führt doppelte Beschreibungen zusammen, Validierung prüft die Daten gegen Shapes, Verfeinerung ergänzt und korrigiert sie, und Provenienzangaben halten fest, woher jeder Fakt stammt (Hogan et al., 2020). Wichtige Werkzeuge sind SHACL für die Validierung ([[w3c|W3C]] SHACL), Workflows für Entity Resolution (Christophides et al., 2019), Qualitätsdimensionen und -metriken (Zaveri et al., 2016) und PROV-O für Provenienz (W3C PROV-O).
 
 ### Funktionsweise
 
@@ -137,7 +137,7 @@ Quelldaten durchlaufen Extraktion und Abbildung in den Graphen, doppelte Entitä
 
 #### 1. Von der Modellierung zur Pipeline
 
-Hogan et al. (2020) fassen den Lebenszyklus von Wissensgraphen zusammen: Aufbau aus Text, strukturierten Daten und anderen Quellen, Anreicherung, Qualitätsbewertung, Verfeinerung und Veröffentlichung. Ein Schema oder eine Ontologie legt fest, welche Typen und Beziehungen zulässig sind ([[ontology-design|Ontologie-Design]]), und die Pipeline, die den Graphen befüllt, wird wie jede andere Datenpipeline mit automatisierten, wiederholbaren Schritten behandelt.
+Hogan et al. (2020) fassen den Lebenszyklus von Knowledge Graphs zusammen: Aufbau aus Text, strukturierten Daten und anderen Quellen, Anreicherung, Qualitätsbewertung, Verfeinerung und Veröffentlichung. Ein Schema oder eine Ontologie legt fest, welche Typen und Beziehungen zulässig sind ([[ontology-design|Ontologie-Design]]), und die Pipeline, die den Graphen befüllt, wird wie jede andere Datenpipeline mit automatisierten, wiederholbaren Schritten behandelt.
 
 #### 2. Entity Resolution
 
@@ -153,7 +153,7 @@ Zaveri et al. (2016) werteten Verfahren zur Qualitätsbewertung von Linked Data 
 
 #### 5. Verfeinerung: Vervollständigung und Fehlererkennung
 
-Wissensgraphen wie DBpedia, YAGO und Freebase sind nie vollständig oder völlig korrekt (Paulheim, 2017). Verfeinerungsverfahren ergänzen entweder fehlendes Wissen, etwa fehlende Typen oder Beziehungen, oder erkennen fehlerhafte Fakten, mithilfe von Information im Graphen selbst oder aus externen Quellen. Ihre Evaluation nutzt partielle Goldstandards, nachträgliche menschliche Bewertung oder den Graphen selbst, und diese Wahl beeinflusst, wie vergleichbar Ergebnisse sind.
+Knowledge Graphs wie DBpedia, YAGO und Freebase sind nie vollständig oder völlig korrekt (Paulheim, 2017). Verfeinerungsverfahren ergänzen entweder fehlendes Wissen, etwa fehlende Typen oder Beziehungen, oder erkennen fehlerhafte Fakten, mithilfe von Information im Graphen selbst oder aus externen Quellen. Ihre Evaluation nutzt partielle Goldstandards, nachträgliche menschliche Bewertung oder den Graphen selbst, und diese Wahl beeinflusst, wie vergleichbar Ergebnisse sind.
 
 #### 6. Provenienz und Versionierung
 
@@ -161,11 +161,11 @@ PROV-O beschreibt Provenienz mit Entitäten, den Aktivitäten, die sie genutzt o
 
 #### Ursprung und Varianten
 
-Hogan et al. (2020) beschreiben den Lebenszyklus von Wissensgraphen; Entity Resolution (Christophides et al., 2019), Qualität von Linked Data (Zaveri et al., 2016) und Verfeinerung (Paulheim, 2017) sind etablierte Forschungsfelder, und SHACL (W3C SHACL) sowie PROV-O (W3C PROV-O) sind die zugehörigen W3C-Standards.
+Hogan et al. (2020) beschreiben den Lebenszyklus von Knowledge Graphs; Entity Resolution (Christophides et al., 2019), Qualität von Linked Data (Zaveri et al., 2016) und Verfeinerung (Paulheim, 2017) sind etablierte Forschungsfelder, und SHACL (W3C SHACL) sowie PROV-O (W3C PROV-O) sind die zugehörigen W3C-Standards.
 
 ### Wann einsetzen
 
-- Wenn ein Wissensgraph produktiv genutzt wird und bei sich ändernden Quellen korrekt bleiben muss (Hogan et al., 2020).
+- Wenn ein Knowledge Graph produktiv genutzt wird und bei sich ändernden Quellen korrekt bleiben muss (Hogan et al., 2020).
 - Wenn Daten aus mehreren Quellen dieselben Entitäten beschreiben und zusammengeführt werden müssen (Christophides et al., 2019).
 - Wenn nachgelagerte Anwendungen wie GraphRAG von der Korrektheit des Graphen abhängen ([[graphrag|GraphRAG]]).
 
@@ -177,7 +177,7 @@ Hogan et al. (2020) beschreiben den Lebenszyklus von Wissensgraphen; Entity Reso
 - Provenienz macht jeden Fakt bis zu seiner Quelle nachvollziehbar (W3C PROV-O).
 
 **Einschränkungen**
-- Wissensgraphen sind nie vollständig oder völlig korrekt (Paulheim, 2017).
+- Knowledge Graphs sind nie vollständig oder völlig korrekt (Paulheim, 2017).
 - Entity Resolution im großen Maßstab muss vielfältige, sich schnell ändernde und locker strukturierte Beschreibungen bewältigen (Christophides et al., 2019).
 - Verfeinerungsverfahren zu evaluieren ist schwierig und hängt vom verwendeten Goldstandard ab (Paulheim, 2017).
 

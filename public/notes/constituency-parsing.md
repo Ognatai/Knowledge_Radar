@@ -189,7 +189,7 @@ Quelle: Jurafsky & Martin (2026, Kap. 19, Anh. E).
 
 ### In der Praxis
 
-Parsing baut auf dem [[part-of-speech-tagging|Wortart-Tagging]] auf, da das Nichtterminal jedes Wortes seine Wortart ist (Jurafsky & Martin, 2026, Kap. 19). Dependenzgrammatiken, die europäische Tradition, behandelt [[dependency-parsing|Dependenzparsing]]; Köpfe verbinden die beiden Darstellungen (Jurafsky & Martin, 2026, Kap. 19).
+Parsing baut auf dem [[part-of-speech-tagging|Part-of-Speech-Tagging]] auf, da das Nichtterminal jedes Wortes sein Part-of-Speech-Tag ist (Jurafsky & Martin, 2026, Kap. 19). Dependenzgrammatiken, die europäische Tradition, behandelt [[dependency-parsing|Dependenzparsing]]; Köpfe verbinden die beiden Darstellungen (Jurafsky & Martin, 2026, Kap. 19).
 
 ### Merksatz
 

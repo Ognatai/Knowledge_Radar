@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 68a32ef465d3dc33c563f7c1a52ad34999177e23a68b46064c34a4def52e8954
+note_sha256: 59b52aa39d56f9aba2c3a15cc9bc314fb068d80e111244c46d6a69844184b597
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - atlassian

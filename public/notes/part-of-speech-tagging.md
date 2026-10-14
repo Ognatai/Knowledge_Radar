@@ -1,6 +1,6 @@
 ---
 title_en: Part-of-Speech Tagging
-title_de: Wortart-Tagging
+title_de: Part-of-Speech-Tagging
 entity_type: Method
 aliases:
 - POS tagging
@@ -104,7 +104,7 @@ POS tagging labels every word with its word class; HMMs and CRFs with Viterbi de
 
 ### TL;DR
 
-Wortart-Tagging (POS-Tagging) weist jedem Wort eines Textes eine Wortart wie NOUN oder VERB zu; es ist eine Disambiguierungsaufgabe, weil viele häufige Wörter mehrere Tags annehmen können (Jurafsky & Martin, 2026). Es ist eine Sequenzmarkierungsaufgabe wie die Named Entity Recognition und wird klassisch mit einem generativen Hidden-Markov-Modell oder einem diskriminativen Conditional Random Field (CRF) gelöst, heute mit neuronalen Modellen. Die Genauigkeit auf Englisch liegt bei HMMs, CRFs und [[bert|BERT]] gleichermaßen bei etwa 97 %, nahe an der Übereinstimmung von Menschen; die Baseline mit dem häufigsten Tag erreicht etwa 92 % (Jurafsky & Martin, 2026).
+Part-of-Speech-Tagging (POS-Tagging) weist jedem Wort eines Textes einen Part-of-Speech-Tag wie NOUN oder VERB zu; es ist eine Disambiguierungsaufgabe, weil viele häufige Wörter mehrere Tags annehmen können (Jurafsky & Martin, 2026). Es ist eine Sequenzmarkierungsaufgabe wie die Named Entity Recognition und wird klassisch mit einem generativen Hidden-Markov-Modell oder einem diskriminativen Conditional Random Field (CRF) gelöst, heute mit neuronalen Modellen. Die Genauigkeit auf Englisch liegt bei HMMs, CRFs und [[bert|BERT]] gleichermaßen bei etwa 97 %, nahe an der Übereinstimmung von Menschen; die Baseline mit dem häufigsten Tag erreicht etwa 92 % (Jurafsky & Martin, 2026).
 
 ### Funktionsweise
 
@@ -118,9 +118,9 @@ CRF:  argmax Σ_i Σ_k w_k f_k(y_i-1, y_i, X, i)          diskriminativ, beliebi
 beide mit dem Viterbi-Algorithmus dekodiert
 ```
 
-#### 1. Wortarten und Tagsets
+#### 1. Parts of Speech und Tagsets
 
-Wortarten gehen auf die acht Wortklassen des Dionysios Thrax zurück. Geschlossene Klassen wie Präpositionen, Determinierer und Pronomen haben einen festen Bestand und sind meist kurze, häufige Funktionswörter; offene Klassen wie Nomen, Verben, Adjektive, Adverbien und Interjektionen wachsen ständig (*iPhone*, *to fax*). Das Tagset von Universal Dependencies hat 17 Tags; das englische Penn-Treebank-Tagset hat 36 Kern-Tags und unterscheidet etwa Tempus und Partizipien von Verben (Jurafsky & Martin, 2026).
+Parts of Speech gehen auf die acht Wortklassen des Dionysios Thrax zurück. Geschlossene Klassen wie Präpositionen, Determinierer und Pronomen haben einen festen Bestand und sind meist kurze, häufige Funktionswörter; offene Klassen wie Nomen, Verben, Adjektive, Adverbien und Interjektionen wachsen ständig (*iPhone*, *to fax*). Das Tagset von Universal Dependencies hat 17 Tags; das englische Penn-Treebank-Tagset hat 36 Kern-Tags und unterscheidet etwa Tempus und Partizipien von Verben (Jurafsky & Martin, 2026).
 
 #### 2. Mehrdeutigkeit und Baseline
 
@@ -136,11 +136,11 @@ HMMs erschweren Merkmale für unbekannte Wörter, etwa Großschreibung oder das 
 
 #### 5. Named Entities als Sequenzmarkierung
 
-Named Entity Recognition findet und typisiert Spannen wie PER, ORG, LOC und GPE. BIO-Tagging (begin, inside, outside) macht aus der Spannensuche ein Tag pro Wort, sodass dieselben Sequenzmarkierer greifen; NER wird pro Entität mit [[classification-metrics|Precision]], Recall und F1 bewertet, Wortart-Tagging mit Accuracy (Jurafsky & Martin, 2026). Details stehen in [[entity-extraction|Entitätsextraktion]].
+Named Entity Recognition findet und typisiert Spannen wie PER, ORG, LOC und GPE. BIO-Tagging (begin, inside, outside) macht aus der Spannensuche ein Tag pro Wort, sodass dieselben Sequenzmarkierer greifen; NER wird pro Entität mit [[classification-metrics|Precision]], Recall und F1 bewertet, Part-of-Speech-Tagging mit Accuracy (Jurafsky & Martin, 2026). Details stehen in [[entity-extraction|Entitätsextraktion]].
 
 #### Herkunft und Varianten
 
-Der früheste Wortart-Tagger war Teil von Zellig Harris' Parser TDAP (1958–1959) mit 14 handgeschriebenen Regeln; TAGGIT taggte 77 % des Brown-Korpus korrekt. Churchs PARTS-Tagger (1988) war wohl der erste implementierte HMM-Tagger; Ratnaparkhi (1996) führte log-lineares Tagging mit Maximum-Entropy-Markov-Modellen ein, einer einfacheren Version des CRF (Lafferty et al., 2001). Aktuelle Tagger nutzen bidirektionale RNNs oder Transformer wie BERT, HMM- und CRF-Tagger liegen vermutlich nur wenig darunter. Morphologisch reiche Sprachen wie Türkisch brauchen Tags aus Folgen morphologischer Merkmale, wodurch Tagsets 4- bis 10-mal größer werden (Jurafsky & Martin, 2026).
+Der früheste Part-of-Speech-Tagger war Teil von Zellig Harris' Parser TDAP (1958–1959) mit 14 handgeschriebenen Regeln; TAGGIT taggte 77 % des Brown-Korpus korrekt. Churchs PARTS-Tagger (1988) war wohl der erste implementierte HMM-Tagger; Ratnaparkhi (1996) führte log-lineares Tagging mit Maximum-Entropy-Markov-Modellen ein, einer einfacheren Version des CRF (Lafferty et al., 2001). Aktuelle Tagger nutzen bidirektionale RNNs oder Transformer wie BERT, HMM- und CRF-Tagger liegen vermutlich nur wenig darunter. Morphologisch reiche Sprachen wie Türkisch brauchen Tags aus Folgen morphologischer Merkmale, wodurch Tagsets 4- bis 10-mal größer werden (Jurafsky & Martin, 2026).
 
 ### Wann einsetzen
 
@@ -172,11 +172,11 @@ Quelle: Jurafsky & Martin (2026).
 
 ### In der Praxis
 
-Wortarten und Named Entities sind nützliche Hinweise auf Satzstruktur und Bedeutung ([[natural-language-processing|Natural Language Processing]]), und kommerzielle NER kombiniert oft Listen und Regeln mit etwas überwachtem Lernen (Jurafsky & Martin, 2026). Parser bauen auf dem Tagging auf: siehe [[constituency-parsing|Konstituentenparsing]] und [[dependency-parsing|Dependenzparsing]].
+Parts of Speech und Named Entities sind nützliche Hinweise auf Satzstruktur und Bedeutung ([[natural-language-processing|Natural Language Processing]]), und kommerzielle NER kombiniert oft Listen und Regeln mit etwas überwachtem Lernen (Jurafsky & Martin, 2026). Parser bauen auf dem Tagging auf: siehe [[constituency-parsing|Konstituentenparsing]] und [[dependency-parsing|Dependenzparsing]].
 
 ### Merksatz
 
-Wortart-Tagging versieht jedes Wort mit seiner Wortklasse; HMMs und CRFs mit Viterbi-Dekodierung erreichen auf Englisch etwa 97 %, nahe an menschlicher Übereinstimmung und nur fünf Punkte über der Baseline mit dem häufigsten Tag.
+Part-of-Speech-Tagging versieht jedes Wort mit seiner Wortklasse; HMMs und CRFs mit Viterbi-Dekodierung erreichen auf Englisch etwa 97 %, nahe an menschlicher Übereinstimmung und nur fünf Punkte über der Baseline mit dem häufigsten Tag.
 
 ### Quellen
 

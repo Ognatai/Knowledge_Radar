@@ -110,7 +110,7 @@ Ontology design turns the vocabulary of a domain into explicit classes, properti
 
 ### TL;DR
 
-Eine Ontologie ist eine ausdrückliche, formale Spezifikation der Begriffe eines Fachgebiets und ihrer Beziehungen; sie gibt Menschen und Software ein gemeinsames Vokabular und macht Annahmen über das Fachgebiet ausdrücklich (Noy & McGuinness, 2001). Ontologie-Design geht schrittweise von den Fragen, die die Ontologie beantworten soll, zu Klassen, Eigenschaften und Instanzen vor und wird in Standards wie [[rdf|RDF]] Schema, OWL und SKOS ausgedrückt ([[w3c|W3C]] RDF Schema 1.1; W3C OWL 2 Primer; W3C SKOS). Es liefert die Schemaebene eines Wissensgraphen (Hogan et al., 2020).
+Eine Ontologie ist eine ausdrückliche, formale Spezifikation der Begriffe eines Fachgebiets und ihrer Beziehungen; sie gibt Menschen und Software ein gemeinsames Vokabular und macht Annahmen über das Fachgebiet ausdrücklich (Noy & McGuinness, 2001). Ontologie-Design geht schrittweise von den Fragen, die die Ontologie beantworten soll, zu Klassen, Eigenschaften und Instanzen vor und wird in Standards wie [[rdf|RDF]] Schema, OWL und SKOS ausgedrückt ([[w3c|W3C]] RDF Schema 1.1; W3C OWL 2 Primer; W3C SKOS). Es liefert die Schemaebene eines Knowledge Graphs (Hogan et al., 2020).
 
 ### Funktionsweise
 
@@ -146,16 +146,16 @@ Eigenschaften (Slots) beschreiben die innere Struktur von Klassen, und Facetten 
 
 #### 5. Instanzen und Standards
 
-Zum Schluss werden einzelne Instanzen der Klassen angelegt (Noy & McGuinness, 2001). Die Ontologie bildet dann neben Identität und Kontext das Schema eines Wissensgraphen (Hogan et al., 2020; [[knowledge-graphs|Wissensgraphen]]); Daten lassen sich mit Shape-Sprachen gegen erforderliche Strukturen validieren ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
+Zum Schluss werden einzelne Instanzen der Klassen angelegt (Noy & McGuinness, 2001). Die Ontologie bildet dann neben Identität und Kontext das Schema eines Knowledge Graphs (Hogan et al., 2020; [[knowledge-graphs|Knowledge Graphs]]); Daten lassen sich mit Shape-Sprachen gegen erforderliche Strukturen validieren ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
 
 #### Ursprung und Varianten
 
-Noy & McGuinness (2001) schrieben den viel genutzten Einführungsleitfaden zur Ontologieentwicklung. RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) und SKOS (W3C SKOS) sind die W3C-Standards für Vokabulare unterschiedlicher Ausdrucksstärke, und Hogan et al. (2020) ordnen Ontologien in Wissensgraphen ein.
+Noy & McGuinness (2001) schrieben den viel genutzten Einführungsleitfaden zur Ontologieentwicklung. RDF Schema (W3C RDF Schema 1.1), OWL 2 (W3C OWL 2 Primer) und SKOS (W3C SKOS) sind die W3C-Standards für Vokabulare unterschiedlicher Ausdrucksstärke, und Hogan et al. (2020) ordnen Ontologien in Knowledge Graphs ein.
 
 ### Wann einsetzen
 
 - Wenn mehrere Teams oder Systeme dasselbe Verständnis fachlicher Begriffe teilen müssen (Noy & McGuinness, 2001).
-- Wenn ein Wissensgraph ein Schema braucht, das Schlussfolgern erlaubt, passt OWL (W3C OWL 2 Primer).
+- Wenn ein Knowledge Graph ein Schema braucht, das Schlussfolgern erlaubt, passt OWL (W3C OWL 2 Primer).
 - Wenn nur ein kontrolliertes Vokabular oder eine Taxonomie gebraucht wird, passt das leichtere SKOS (W3C SKOS).
 
 ### Stärken und Grenzen

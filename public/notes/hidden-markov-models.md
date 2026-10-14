@@ -105,7 +105,7 @@ An HMM explains observations by hidden states with transition and emission proba
 
 ### TL;DR
 
-Ein Hidden-Markov-Modell (HMM) verknüpft eine Folge von Beobachtungen, etwa Wörtern, mit einer Folge verborgener Zustände, etwa Wortarten, die sie verursacht haben sollen (Jurafsky & Martin, 2026, Anh. A). Es besteht aus Übergangswahrscheinlichkeiten zwischen Zuständen (A), Emissionswahrscheinlichkeiten der Beobachtungen gegeben einen Zustand (B) und einer Startverteilung (π). Drei Probleme bestimmen es: die Likelihood einer Beobachtungsfolge berechnen (Forward-Algorithmus), die beste verborgene Zustandsfolge finden (Viterbi-Algorithmus) und A und B aus ungelabelten Daten lernen (Forward-Backward- oder Baum-Welch-Algorithmus) (Jurafsky & Martin, 2026, Anh. A).
+Ein Hidden-Markov-Modell (HMM) verknüpft eine Folge von Beobachtungen, etwa Wörtern, mit einer Folge verborgener Zustände, etwa Part-of-Speech-Tags, die sie verursacht haben sollen (Jurafsky & Martin, 2026, Anh. A). Es besteht aus Übergangswahrscheinlichkeiten zwischen Zuständen (A), Emissionswahrscheinlichkeiten der Beobachtungen gegeben einen Zustand (B) und einer Startverteilung (π). Drei Probleme bestimmen es: die Likelihood einer Beobachtungsfolge berechnen (Forward-Algorithmus), die beste verborgene Zustandsfolge finden (Viterbi-Algorithmus) und A und B aus ungelabelten Daten lernen (Forward-Backward- oder Baum-Welch-Algorithmus) (Jurafsky & Martin, 2026, Anh. A).
 
 ### Funktionsweise
 
@@ -122,7 +122,7 @@ A und B lernen           Forward-Backward      (EM: E-Schritt γ, ξ · M-Schrit
 
 #### 1. Markov-Kette und verborgene Zustände
 
-Eine Markov-Kette weist Zustandsfolgen Wahrscheinlichkeiten zu, unter der Markov-Annahme, dass für die Vorhersage des nächsten Zustands nur der aktuelle zählt; ein Bigramm-Sprachmodell ist eine Markov-Kette über Wörtern. Oft sind die interessierenden Ereignisse verborgen: Man sieht Wörter, nicht ihre Wortarten. Ein HMM erster Ordnung fügt zwei Annahmen hinzu: Ein Zustand hängt nur vom vorherigen ab, und eine Beobachtung hängt nur von dem Zustand ab, der sie erzeugt hat (Ausgabe-Unabhängigkeit) (Jurafsky & Martin, 2026, Anh. A).
+Eine Markov-Kette weist Zustandsfolgen Wahrscheinlichkeiten zu, unter der Markov-Annahme, dass für die Vorhersage des nächsten Zustands nur der aktuelle zählt; ein Bigramm-Sprachmodell ist eine Markov-Kette über Wörtern. Oft sind die interessierenden Ereignisse verborgen: Man sieht Wörter, nicht ihre Part-of-Speech-Tags. Ein HMM erster Ordnung fügt zwei Annahmen hinzu: Ein Zustand hängt nur vom vorherigen ab, und eine Beobachtung hängt nur von dem Zustand ab, der sie erzeugt hat (Ausgabe-Unabhängigkeit) (Jurafsky & Martin, 2026, Anh. A).
 
 #### 2. Likelihood: der Forward-Algorithmus
 
@@ -136,9 +136,9 @@ Dekodierung findet die wahrscheinlichste verborgene Zustandsfolge. Der Viterbi-A
 
 Mit gelabelten Daten werden A und B durch Zählen geschätzt. Ohne Labels iteriert der Forward-Backward- oder Baum-Welch-Algorithmus (Baum, 1972), ein Spezialfall des EM-Algorithmus: Im E-Schritt berechnet er mit Vorwärts- und Rückwärtswahrscheinlichkeiten die erwartete Zustandsbelegung γ und die erwarteten Übergänge ξ; im M-Schritt schätzt er A und B daraus neu. In der Praxis sind die Anfangsbedingungen sehr wichtig; in der HMM-Spracherkennung wird etwa die Struktur von Hand festgelegt und nur die Wahrscheinlichkeiten werden trainiert (Jurafsky & Martin, 2026, Anh. A).
 
-#### 5. Wortart-Tagging mit HMM
+#### 5. Part-of-Speech-Tagging mit HMM
 
-Ein HMM-Tagger schätzt Tag-Übergänge P(t_i | t_i−1) und Emissionen P(w_i | t_i) durch Zählen auf einem getaggten Korpus: Im WSJ-Korpus ist P(VB | MD) = 0,80 und P(will | MD) = 0,31. Die beste Tag-Folge maximiert das Produkt aus Emissions- und Übergangswahrscheinlichkeiten und wird mit Viterbi gefunden (Jurafsky & Martin, 2026, Kap. 18). Details stehen in [[part-of-speech-tagging|Wortart-Tagging]].
+Ein HMM-Tagger schätzt Tag-Übergänge P(t_i | t_i−1) und Emissionen P(w_i | t_i) durch Zählen auf einem getaggten Korpus: Im WSJ-Korpus ist P(VB | MD) = 0,80 und P(will | MD) = 0,31. Die beste Tag-Folge maximiert das Produkt aus Emissions- und Übergangswahrscheinlichkeiten und wird mit Viterbi gefunden (Jurafsky & Martin, 2026, Kap. 18). Details stehen in [[part-of-speech-tagging|Part-of-Speech-Tagging]].
 
 #### Herkunft und Varianten
 
@@ -146,7 +146,7 @@ Markov (1913) nutzte Markov-Ketten auf Buchstaben in *Eugen Onegin*; das HMM ent
 
 ### Wann einsetzen
 
-- Sequenzmarkierung, bei der verborgene Klassen Beobachtungen erklären, etwa Wortart-Tagging (Jurafsky & Martin, 2026, Kap. 18).
+- Sequenzmarkierung, bei der verborgene Klassen Beobachtungen erklären, etwa Part-of-Speech-Tagging (Jurafsky & Martin, 2026, Kap. 18).
 - Spracherkennung, bei der HMM-Strukturen von Hand festgelegt und ihre Wahrscheinlichkeiten trainiert werden (Jurafsky & Martin, 2026, Anh. A).
 - Wenn keine gelabelten Daten vorliegen, kann Forward-Backward die Parameter grundsätzlich unüberwacht lernen (Jurafsky & Martin, 2026, Anh. A).
 

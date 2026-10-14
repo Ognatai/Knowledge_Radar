@@ -133,7 +133,7 @@ Seit Release 2026.01 werden Vektorindizes mit der SEARCH-Klausel abgefragt; die 
 ### Wann einsetzen
 
 - Wenn Fragen Beziehungen über mehrere Schritte folgen, etwa wer über welche Projekte mit wem verbunden ist, und sich das Datenmodell mit der Zeit ändert ([[graph-databases|Graphdatenbanken]]; Neo4j docs: What is Neo4j).
-- Für [[knowledge-graphs|Wissensgraphen]] im Property-Graph-Modell und für [[graphrag|GraphRAG]], wo Graphstruktur und Vektorsuche in einer Datenbank zusammenkommen (Neo4j Cypher Manual: Vector indexes).
+- Für [[knowledge-graphs|Knowledge Graphs]] im Property-Graph-Modell und für [[graphrag|GraphRAG]], wo Graphstruktur und Vektorsuche in einer Datenbank zusammenkommen (Neo4j Cypher Manual: Vector indexes).
 - Für Graphanalysen wie das Finden zentraler Entitäten oder Communities mit GDS (Neo4j GDS Manual).
 - Wenn Daten als Linked Data mit globalen Bezeichnern ausgetauscht werden sollen, passt ein [[rdf|RDF]]-Store mit [[sparql|SPARQL]] besser.
 

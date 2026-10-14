@@ -107,7 +107,7 @@ A data pipeline extracts, loads and transforms data as a graph of steps, in batc
 
 ### TL;DR
 
-Eine Datenpipeline bringt Daten aus Quellen wie Datenbanken, Anwendungen und Sensoren in ein System, in dem sie gespeichert, transformiert und genutzt werden, etwa ein Data Warehouse, einen Suchindex oder einen [[knowledge-graphs|Wissensgraphen]]. Pipelines transformieren entweder vor dem Laden (ETL) oder laden zuerst Rohdaten und transformieren sie im Warehouse (ELT) (dbt: ELT), laufen als geplante Batches, orchestriert als Task-Graphen (Airflow docs: Overview), oder fortlaufend auf Event-Streams (Kafka docs: Introduction), und müssen bei einer Wiederholung eines Schritts dasselbe Ergebnis liefern (Airflow docs: Best practices).
+Eine Datenpipeline bringt Daten aus Quellen wie Datenbanken, Anwendungen und Sensoren in ein System, in dem sie gespeichert, transformiert und genutzt werden, etwa ein Data Warehouse, einen Suchindex oder einen [[knowledge-graphs|Knowledge Graph]]. Pipelines transformieren entweder vor dem Laden (ETL) oder laden zuerst Rohdaten und transformieren sie im Warehouse (ELT) (dbt: ELT), laufen als geplante Batches, orchestriert als Task-Graphen (Airflow docs: Overview), oder fortlaufend auf Event-Streams (Kafka docs: Introduction), und müssen bei einer Wiederholung eines Schritts dasselbe Ergebnis liefern (Airflow docs: Best practices).
 
 ### Funktionsweise
 
@@ -148,7 +148,7 @@ ETL ist älter als ELT, das die Transformation ins Warehouse verlegt hat (dbt: E
 ### Wann einsetzen
 
 - Immer wenn Daten aus mehreren Quellen für Analyse, Reporting oder Machine Learning zusammengeführt werden ([[mlops-and-deployment|MLOps und Deployment]]).
-- Um Retrieval-Systeme zu versorgen: Dokumente werden für [[retrieval-augmented-generation|RAG]] extrahiert, zerlegt und eingebettet, oder Entitäten und Relationen werden in einen [[knowledge-graphs|Wissensgraphen]] extrahiert ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
+- Um Retrieval-Systeme zu versorgen: Dokumente werden für [[retrieval-augmented-generation|RAG]] extrahiert, zerlegt und eingebettet, oder Entitäten und Relationen werden in einen [[knowledge-graphs|Knowledge Graph]] extrahiert ([[knowledge-graph-engineering|Knowledge Graph Engineering]]).
 - Batch mit Orchestrator, wenn Ergebnisse pro Tag oder Stunde reichen; Streaming, wenn Events sofort verarbeitet werden müssen (Airflow docs: Overview; Kafka docs: Introduction).
 
 ### Stärken und Grenzen

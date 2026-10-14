@@ -106,7 +106,7 @@ Modern NLP turns text into tokens and learned vectors and models it with Transfo
 
 ### TL;DR
 
-Natural Language Processing (NLP) entwickelt Systeme, die menschliche Sprache analysieren, verstehen und erzeugen, etwa für Wortartenerkennung (Part-of-Speech-Tagging), Named Entity Recognition, Parsing, Informationsextraktion, Fragebeantwortung und [[machine-translation|maschinelle Übersetzung]] (Jurafsky & Martin (SLP3)). Modernes NLP stellt Text als Token und gelernte Vektoren dar und modelliert ihn mit neuronalen Netzen, heute meist mit vortrainierten Sprachmodellen auf Transformer-Basis, die für eine Aufgabe feinabgestimmt oder gepromptet werden ([[large-language-models|Large Language Models]]).
+Natural Language Processing (NLP) entwickelt Systeme, die menschliche Sprache analysieren, verstehen und erzeugen, etwa für Part-of-Speech-Tagging, Named Entity Recognition, Parsing, Informationsextraktion, Fragebeantwortung und [[machine-translation|maschinelle Übersetzung]] (Jurafsky & Martin (SLP3)). Modernes NLP stellt Text als Token und gelernte Vektoren dar und modelliert ihn mit neuronalen Netzen, heute meist mit vortrainierten Sprachmodellen auf Transformer-Basis, die für eine Aufgabe feinabgestimmt oder gepromptet werden ([[large-language-models|Large Language Models]]).
 
 ### Funktionsweise
 
@@ -126,7 +126,7 @@ Der Text wird zunächst normalisiert und in Token aufgeteilt. Token werden auf g
 
 #### 1. Textnormalisierung und Tokenisierung
 
-Vor jeder Modellierung wird der Text normalisiert und in Token zerlegt, die Einheiten, mit denen die folgenden Schritte arbeiten (Jurafsky & Martin (SLP3)). Moderne Systeme verwenden meist Subword-Token, die das Vokabular klein halten und trotzdem seltene Wörter darstellen können ([[tokenisation|Tokenisierung]]). Auf Basis der Token bearbeitet das Fachgebiet Aufgaben wie Wortartenerkennung, Named Entity Recognition ([[entity-extraction|Entitätsextraktion]]), Parsing, Informationsextraktion ([[information-extraction|Informationsextraktion]]), Fragebeantwortung und maschineller Übersetzung (Jurafsky & Martin (SLP3)).
+Vor jeder Modellierung wird der Text normalisiert und in Token zerlegt, die Einheiten, mit denen die folgenden Schritte arbeiten (Jurafsky & Martin (SLP3)). Moderne Systeme verwenden meist Subword-Token, die das Vokabular klein halten und trotzdem seltene Wörter darstellen können ([[tokenisation|Tokenisierung]]). Auf Basis der Token bearbeitet das Fachgebiet Aufgaben wie Part-of-Speech-Tagging, Named Entity Recognition ([[entity-extraction|Entitätsextraktion]]), Parsing, Informationsextraktion ([[information-extraction|Informationsextraktion]]), Fragebeantwortung und maschineller Übersetzung (Jurafsky & Martin (SLP3)).
 
 #### 2. Wortvektoren
 

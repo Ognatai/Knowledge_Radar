@@ -121,7 +121,7 @@ EAT tackles the cost and the spurious reasoning paths of tightly coupled LLM–g
 
 ### TL;DR
 
-GraphRAG erweitert Retrieval-Augmented Generation ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) um Graphstruktur: Entitäten und Beziehungen werden in einen [[knowledge-graphs|Wissensgraphen]] extrahiert, und das Retrieval folgt dem Graphen, statt nur Textabschnitte abzugleichen (Peng et al., 2024). GraphRAG von Microsoft baut mit einem LLM einen Entitätengraphen auf und erzeugt vorab Zusammenfassungen von Gemeinschaften verwandter Entitäten; damit beantwortet es globale Fragen über ein ganzes Korpus deutlich besser als herkömmliches RAG (Edge et al., 2024). Andere Ansätze nutzen Graphen für Multi-Hop-Retrieval (Gutiérrez et al., 2024) oder kombinieren Graph- und Vektor-Retrieval (Guo et al., 2024).
+GraphRAG erweitert Retrieval-Augmented Generation ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) um Graphstruktur: Entitäten und Beziehungen werden in einen [[knowledge-graphs|Knowledge Graph]] extrahiert, und das Retrieval folgt dem Graphen, statt nur Textabschnitte abzugleichen (Peng et al., 2024). GraphRAG von Microsoft baut mit einem LLM einen Entitätengraphen auf und erzeugt vorab Zusammenfassungen von Gemeinschaften verwandter Entitäten; damit beantwortet es globale Fragen über ein ganzes Korpus deutlich besser als herkömmliches RAG (Edge et al., 2024). Andere Ansätze nutzen Graphen für Multi-Hop-Retrieval (Gutiérrez et al., 2024) oder kombinieren Graph- und Vektor-Retrieval (Guo et al., 2024).
 
 ### Funktionsweise
 
@@ -147,7 +147,7 @@ RAG ruft Passagen aus einer externen Quelle ab, um die Antwort eines Modells zu 
 
 #### 2. Graphbasierte Indexierung
 
-Peng et al. (2024) formalisieren den GraphRAG-Ablauf in drei Stufen: graphbasierte Indexierung, graphgesteuertes Retrieval und graphgestützte Generierung. Für die Indexierung extrahiert ein LLM Entitäten und Beziehungen aus den Quelldokumenten, um einen Entitäten-Wissensgraphen abzuleiten (Edge et al., 2024); doppelte Erwähnungen derselben Entität müssen aufgelöst werden, sonst zerfällt der Graph ([[entity-extraction|Entitätsextraktion]], [[knowledge-graph-engineering|Knowledge Graph Engineering]]).
+Peng et al. (2024) formalisieren den GraphRAG-Ablauf in drei Stufen: graphbasierte Indexierung, graphgesteuertes Retrieval und graphgestützte Generierung. Für die Indexierung extrahiert ein LLM Entitäten und Beziehungen aus den Quelldokumenten, um einen Entitäten-Knowledge-Graph abzuleiten (Edge et al., 2024); doppelte Erwähnungen derselben Entität müssen aufgelöst werden, sonst zerfällt der Graph ([[entity-extraction|Entitätsextraktion]], [[knowledge-graph-engineering|Knowledge Graph Engineering]]).
 
 #### 3. Gemeinschaften und globale Fragen
 
@@ -155,7 +155,7 @@ Edge et al. (2024) fassen eng verwandte Entitäten zu Gemeinschaften (Communitie
 
 #### 4. Graphgesteuertes Retrieval
 
-HippoRAG, angeregt von der Hippocampus-Indexierungstheorie des menschlichen Gedächtnisses, verbindet ein LLM, einen Wissensgraphen und den Personalized-PageRank-Algorithmus (Gutiérrez et al., 2024). Bei Multi-Hop-Fragebeantwortung übertraf es die besten Verfahren um bis zu 20 %, und einstufiges Retrieval mit HippoRAG erreichte oder übertraf iteratives Retrieval wie IRCoT bei 10- bis 30-mal geringeren Kosten und 6- bis 13-mal höherer Geschwindigkeit.
+HippoRAG, angeregt von der Hippocampus-Indexierungstheorie des menschlichen Gedächtnisses, verbindet ein LLM, einen Knowledge Graph und den Personalized-PageRank-Algorithmus (Gutiérrez et al., 2024). Bei Multi-Hop-Fragebeantwortung übertraf es die besten Verfahren um bis zu 20 %, und einstufiges Retrieval mit HippoRAG erreichte oder übertraf iteratives Retrieval wie IRCoT bei 10- bis 30-mal geringeren Kosten und 6- bis 13-mal höherer Geschwindigkeit.
 
 #### 5. Graphen und Vektoren kombinieren
 
@@ -163,11 +163,11 @@ LightRAG bezieht Graphstrukturen in Indexierung und Retrieval von Text ein, mit 
 
 #### 6. Graphgestützte Generierung
 
-Abgerufene Graphelemente, Gemeinschaftszusammenfassungen und die zugrunde liegenden Textpassagen werden für die Generierung in den Prompt eingebaut (Peng et al., 2024; [[structured-context-construction|Strukturierte Kontextbildung]]). Wissensgraphen geben LLMs ausdrückliches externes Wissen für Inferenz und Nachvollziehbarkeit, was Pan et al. (2023) als durch Wissensgraphen verbesserte LLMs beschreiben.
+Abgerufene Graphelemente, Gemeinschaftszusammenfassungen und die zugrunde liegenden Textpassagen werden für die Generierung in den Prompt eingebaut (Peng et al., 2024; [[structured-context-construction|Strukturierte Kontextbildung]]). Knowledge Graphs geben LLMs ausdrückliches externes Wissen für Inferenz und Nachvollziehbarkeit, was Pan et al. (2023) als durch Knowledge Graphs verbesserte LLMs beschreiben.
 
 #### Ursprung und Varianten
 
-RAG (Lewis et al., 2020) rief Textpassagen ab; GraphRAG (Edge et al., 2024) führte Gemeinschaftszusammenfassungen für globale Fragen ein, HippoRAG (Gutiérrez et al., 2024) graphbasiertes Multi-Hop-Retrieval und LightRAG (Guo et al., 2024) zweistufiges Graph-Vektor-Retrieval. Peng et al. (2024) geben einen Überblick über das Gebiet, und Pan et al. (2023) ordnen es in die allgemeinere Verbindung von LLMs und Wissensgraphen ein.
+RAG (Lewis et al., 2020) rief Textpassagen ab; GraphRAG (Edge et al., 2024) führte Gemeinschaftszusammenfassungen für globale Fragen ein, HippoRAG (Gutiérrez et al., 2024) graphbasiertes Multi-Hop-Retrieval und LightRAG (Guo et al., 2024) zweistufiges Graph-Vektor-Retrieval. Peng et al. (2024) geben einen Überblick über das Gebiet, und Pan et al. (2023) ordnen es in die allgemeinere Verbindung von LLMs und Knowledge Graphs ein.
 
 ### Wann einsetzen
 
@@ -193,7 +193,7 @@ RAG (Lewis et al., 2020) rief Textpassagen ab; GraphRAG (Edge et al., 2024) füh
 |----------|----------------|------------|
 | Herkömmliches RAG | Ruft ähnliche Textabschnitte ab (Lewis et al., 2020) | Lokale Faktenfragen |
 | GraphRAG mit Gemeinschaftszusammenfassungen | Entitätengraph plus vorab erzeugte Zusammenfassungen (Edge et al., 2024) | Globale Sensemaking-Fragen |
-| HippoRAG | Wissensgraph plus Personalized [[pagerank\|PageRank]] (Gutiérrez et al., 2024) | Multi-Hop-Fragen |
+| HippoRAG | Knowledge Graph plus Personalized [[pagerank\|PageRank]] (Gutiérrez et al., 2024) | Multi-Hop-Fragen |
 | LightRAG | Zweistufiges Graph- und Vektor-Retrieval mit inkrementellen Aktualisierungen (Guo et al., 2024) | Sich ändernde Korpora |
 
 ### In der Praxis
@@ -215,5 +215,5 @@ GraphRAG macht aus Dokumenten einen Entitätengraphen und ruft entlang dieses Gr
 
 ### Aktualisierungen
 
-#### 2026-10-11 — Reinforcement Learning für das Schließen über Wissensgraphen
+#### 2026-10-11 — Reinforcement Learning für das Schließen über Knowledge Graphs
 EAT geht die Kosten und die irreführenden Schlusspfade eng gekoppelter LLM-Graph-Traversierung an: Ein adaptiver Retrieval-Schritt trennt das Sprachverständnis von der Erkundung des Graphen, und eine vom LLM gesteuerte Belohnung bestraft semantisch widersprüchliche Pfade, wenn der erkundende Agent mit Reinforcement Learning trainiert wird. Auf WebQSP, CWQ und GrailQA erreichte es den Stand der Technik und übertraf mit einem LLM mit 8 Mrd. Parametern die Schlussfähigkeit von GPT-4o (Xia et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809649](https://doi.org/10.1145/3805712.3809649)).

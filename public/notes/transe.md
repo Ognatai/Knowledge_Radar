@@ -104,7 +104,7 @@ TransE models a relation as a vector that translates the head entity to the tail
 
 ### TL;DR
 
-TransE bettet Entitäten und Beziehungen eines Wissensgraphen als Vektoren ein und modelliert jede Beziehung als Verschiebung (Translation): Für ein wahres Tripel (Kopf, Beziehung, Schwanz) soll der Kopfvektor plus der Beziehungsvektor nahe am Schwanzvektor liegen (Bordes et al., 2013). Es ist einfach, hat wenige Parameter und skaliert auf große Graphen, was es zu einer Standard-Baseline für [[knowledge-graph-embeddings|Link Prediction]] machte ([[knowledge-graphs|Wissensgraphen]]). Schwierigkeiten hat es mit 1:n-, n:1- und n:m-Beziehungen und mit symmetrischen Beziehungen, die spätere Modelle angehen (Wang et al., 2017; Sun et al., 2019).
+TransE bettet Entitäten und Beziehungen eines Knowledge Graphs als Vektoren ein und modelliert jede Beziehung als Verschiebung (Translation): Für ein wahres Tripel (Kopf, Beziehung, Schwanz) soll der Kopfvektor plus der Beziehungsvektor nahe am Schwanzvektor liegen (Bordes et al., 2013). Es ist einfach, hat wenige Parameter und skaliert auf große Graphen, was es zu einer Standard-Baseline für [[knowledge-graph-embeddings|Link Prediction]] machte ([[knowledge-graphs|Knowledge Graphs]]). Schwierigkeiten hat es mit 1:n-, n:1- und n:m-Beziehungen und mit symmetrischen Beziehungen, die spätere Modelle angehen (Wang et al., 2017; Sun et al., 2019).
 
 ### Funktionsweise
 
@@ -132,7 +132,7 @@ Die Plausibilität eines Tripels wird über den Abstand zwischen h + r und t gem
 
 #### 3. Training mit negativen Tripeln
 
-Wissensgraphen enthalten nur wahre Fakten; das Training erzeugt daher negative Beispiele, indem beobachtete Tripel verfälscht werden: Kopf oder Schwanz wird durch eine zufällige Entität ersetzt. Ein margenbasierter Ranking-Verlust verlangt, dass beobachtete Tripel um eine Marge besser bewertet werden als verfälschte (Bordes et al., 2013; Wang et al., 2017). Das Modell wurde auf einem Datensatz mit 1 Million Entitäten, 25.000 Beziehungen und mehr als 17 Millionen Trainingstripeln trainiert (Bordes et al., 2013).
+Knowledge Graphs enthalten nur wahre Fakten; das Training erzeugt daher negative Beispiele, indem beobachtete Tripel verfälscht werden: Kopf oder Schwanz wird durch eine zufällige Entität ersetzt. Ein margenbasierter Ranking-Verlust verlangt, dass beobachtete Tripel um eine Marge besser bewertet werden als verfälschte (Bordes et al., 2013; Wang et al., 2017). Das Modell wurde auf einem Datensatz mit 1 Million Entitäten, 25.000 Beziehungen und mehr als 17 Millionen Trainingstripeln trainiert (Bordes et al., 2013).
 
 #### 4. Link Prediction
 
@@ -148,7 +148,7 @@ TransE (Bordes et al., 2013) begründete die Familie translationaler Embedding-M
 
 ### Wann einsetzen
 
-- Als einfache, skalierbare Baseline für Link Prediction auf großen Wissensgraphen (Bordes et al., 2013).
+- Als einfache, skalierbare Baseline für Link Prediction auf großen Knowledge Graphs (Bordes et al., 2013).
 - Wenn Beziehungen überwiegend 1:1 und nicht symmetrisch sind (Wang et al., 2017).
 - Wenn Beziehungsmuster wie Symmetrie oder Komposition wichtig sind, eignen sich neuere Modelle wie RotatE besser (Sun et al., 2019).
 

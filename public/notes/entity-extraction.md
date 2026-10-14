@@ -116,7 +116,7 @@ Entity extraction finds and types the named entities in a text; fine-tuned encod
 
 ### TL;DR
 
-Entitätsextraktion, auch Named Entity Recognition (NER), findet die Textstellen, die Entitäten wie Personen, Orte und Organisationen benennen, und weist jeder Stelle einen Typ zu (Tjong Kim Sang & De Meulder, 2003). Die Ansätze entwickelten sich von handgefertigten Merkmalen über neuronales Sequenz-Labeling (Lample et al., 2016) und feinabgestimmte vortrainierte Encoder (Devlin et al., 2018) bis zur Extraktion beliebiger Entitätstypen mit kompakten Encodern oder großen Sprachmodellen (Zaratiana et al., 2023; Wang et al., 2023). Extrahierte Entitäten sind die Bausteine der [[information-extraction|Informationsextraktion]] und von [[knowledge-graphs|Wissensgraphen]].
+Entitätsextraktion, auch Named Entity Recognition (NER), findet die Textstellen, die Entitäten wie Personen, Orte und Organisationen benennen, und weist jeder Stelle einen Typ zu (Tjong Kim Sang & De Meulder, 2003). Die Ansätze entwickelten sich von handgefertigten Merkmalen über neuronales Sequenz-Labeling (Lample et al., 2016) und feinabgestimmte vortrainierte Encoder (Devlin et al., 2018) bis zur Extraktion beliebiger Entitätstypen mit kompakten Encodern oder großen Sprachmodellen (Zaratiana et al., 2023; Wang et al., 2023). Extrahierte Entitäten sind die Bausteine der [[information-extraction|Informationsextraktion]] und von [[knowledge-graphs|Knowledge Graphs]].
 
 ### Funktionsweise
 
@@ -194,7 +194,7 @@ CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) schuf einen gemeinsamen Benchmark
 
 ### In der Praxis
 
-Systeme werden mit Precision, Recall und F1 auf exakten Entitätstreffern evaluiert (Tjong Kim Sang & De Meulder, 2003), idealerweise auf Daten aus der Zieldomäne, da sich Benchmark-Ergebnisse nicht automatisch auf Fachtexte übertragen. Beim Einsatz von LLMs verringert ein Prüfschritt gegen die Label-Definitionen falsch positive Treffer (Wang et al., 2023). Die Entitätstypen selbst sollten dem Domänenmodell folgen, etwa einer Ontologie ([[ontology-design|Ontologie-Design]]), damit extrahierte Entitäten konsistent verknüpft und gespeichert werden können ([[knowledge-graphs|Wissensgraphen]]).
+Systeme werden mit Precision, Recall und F1 auf exakten Entitätstreffern evaluiert (Tjong Kim Sang & De Meulder, 2003), idealerweise auf Daten aus der Zieldomäne, da sich Benchmark-Ergebnisse nicht automatisch auf Fachtexte übertragen. Beim Einsatz von LLMs verringert ein Prüfschritt gegen die Label-Definitionen falsch positive Treffer (Wang et al., 2023). Die Entitätstypen selbst sollten dem Domänenmodell folgen, etwa einer Ontologie ([[ontology-design|Ontologie-Design]]), damit extrahierte Entitäten konsistent verknüpft und gespeichert werden können ([[knowledge-graphs|Knowledge Graphs]]).
 
 ### Merksatz
 

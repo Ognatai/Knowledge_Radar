@@ -104,7 +104,7 @@ SPARQL queries RDF graphs by matching triple patterns with variables; FILTER, OP
 
 ### TL;DR
 
-SPARQL ist die W3C-Abfragesprache für RDF-Wissensgraphen: Eine Abfrage beschreibt Tripelmuster mit Variablen, und die Engine liefert alle Möglichkeiten, wie diese auf den Graphen passen ([[w3c|W3C]] SPARQL 1.1). Muster werden mit FILTER, OPTIONAL und UNION verbunden, Ergebnisse gruppiert, aggregiert und sortiert, Property Paths folgen Ketten von Beziehungen, und neben SELECT gibt es CONSTRUCT, ASK und DESCRIBE. Semantik und Komplexität sind formal gut untersucht (Pérez et al., 2009).
+SPARQL ist die W3C-Abfragesprache für RDF-Knowledge-Graphs: Eine Abfrage beschreibt Tripelmuster mit Variablen, und die Engine liefert alle Möglichkeiten, wie diese auf den Graphen passen ([[w3c|W3C]] SPARQL 1.1). Muster werden mit FILTER, OPTIONAL und UNION verbunden, Ergebnisse gruppiert, aggregiert und sortiert, Property Paths folgen Ketten von Beziehungen, und neben SELECT gibt es CONSTRUCT, ASK und DESCRIBE. Semantik und Komplexität sind formal gut untersucht (Pérez et al., 2009).
 
 ### Kernkonzepte
 
@@ -142,11 +142,11 @@ HAVING (COUNT(?decision) > 5)
 SELECT ?older WHERE { ex:NormA ex:amends+ ?older }
 ```
 
-Die Beispiele folgen dem juristischen Wissensgraphen aus [[knowledge-graphs|Wissensgraphen]] mit Entscheidungen, Normen und Zitierbeziehungen.
+Die Beispiele folgen dem juristischen Knowledge Graph aus [[knowledge-graphs|Knowledge Graphs]] mit Entscheidungen, Normen und Zitierbeziehungen.
 
 ### Wann einsetzen
 
-- Wenn Daten als RDF vorliegen, etwa in Linked Open Data oder Unternehmenswissensgraphen (W3C SPARQL 1.1).
+- Wenn Daten als RDF vorliegen, etwa in Linked Open Data oder Unternehmens-Knowledge-Graphs (W3C SPARQL 1.1).
 - Wenn Abfragen Ketten von Beziehungen unbekannter Länge folgen (W3C SPARQL 1.1).
 - Wenn Daten in Tabellen mit festem Schema liegen, ist SQL die naheliegende Wahl ([[sql|SQL]]).
 
@@ -166,7 +166,7 @@ Die Beispiele folgen dem juristischen Wissensgraphen aus [[knowledge-graphs|Wiss
 
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
-| SPARQL | Tripelmuster über RDF-Graphen (W3C SPARQL 1.1) | Linked Data, RDF-Wissensgraphen |
+| SPARQL | Tripelmuster über RDF-Graphen (W3C SPARQL 1.1) | Linked Data, RDF-Knowledge-Graphs |
 | SQL | Tabellen, Joins, Aggregate (PostgreSQL SQL tutorial) | Relationale Daten mit festem Schema |
 | Cypher | ASCII-Art-Muster über Property Graphs (Neo4j Cypher Manual) | Property-Graph-Datenbanken |
 

@@ -125,7 +125,7 @@ Eine zweite, abstraktere Lesart verbindet viele Feedback-Schleifen wie Metriken,
 
 #### 4. Graphstrukturiertes Wissen
 
-Die dritte Lesart speichert das Wissen eines Agenten als typisierte Knoten und Kanten, etwa supersedes, depends_on, decided_by oder caused, statt als Sammlung von Dokumenten, die nach Ähnlichkeit durchsucht werden; typisierte Kanten tragen Bedeutung, die untypisierte Verweise nicht haben, und eine Traversierung kann Begründungsketten über mehrere Notizen verfolgen (Ghelbur, 2026). Graphen helfen bei Multi-Hop- und korpusweiten Fragen, wie GraphRAG für globale Fragen zeigt (Edge et al., 2024), unterliegen aber bei einfachen Nachschlagefragen und kosten mehr (Ghelbur, 2026). Diese Lesart steht [[knowledge-graph-engineering|Knowledge Graph Engineering]], [[graphrag|GraphRAG]] und [[knowledge-graphs|Wissensgraphen]] am nächsten; sie sollte nicht mit der Topologie-Bedeutung verwechselt werden, denn Wissensgraphen strukturieren, was ein System weiß, Orchestrierungsgraphen dagegen, wer das System ist (Wang, 2026).
+Die dritte Lesart speichert das Wissen eines Agenten als typisierte Knoten und Kanten, etwa supersedes, depends_on, decided_by oder caused, statt als Sammlung von Dokumenten, die nach Ähnlichkeit durchsucht werden; typisierte Kanten tragen Bedeutung, die untypisierte Verweise nicht haben, und eine Traversierung kann Begründungsketten über mehrere Notizen verfolgen (Ghelbur, 2026). Graphen helfen bei Multi-Hop- und korpusweiten Fragen, wie GraphRAG für globale Fragen zeigt (Edge et al., 2024), unterliegen aber bei einfachen Nachschlagefragen und kosten mehr (Ghelbur, 2026). Diese Lesart steht [[knowledge-graph-engineering|Knowledge Graph Engineering]], [[graphrag|GraphRAG]] und [[knowledge-graphs|Knowledge Graphs]] am nächsten; sie sollte nicht mit der Topologie-Bedeutung verwechselt werden, denn Knowledge Graphs strukturieren, was ein System weiß, Orchestrierungsgraphen dagegen, wer das System ist (Wang, 2026).
 
 #### Ursprung und Varianten
 
@@ -142,7 +142,7 @@ Die früheste gefundene Verwendung war ein Blogbeitrag Anfang Juli 2026; verbrei
 **Stärken**
 - Macht die Struktur von Multi-Agenten-Systemen ausdrücklich, versionierbar und steuerbar (Wang, 2026).
 - Identitäten, Budgets und Traces pro Knoten machen komplexe Läufe nachvollziehbar.
-- Typisierte Wissensgraphen beantworten Multi-Hop-Fragen, die Vektorsuche verfehlt (Ghelbur, 2026).
+- Typisierte Knowledge Graphs beantworten Multi-Hop-Fragen, die Vektorsuche verfehlt (Ghelbur, 2026).
 
 **Einschränkungen**
 - Der Begriff wird uneinheitlich verwendet und ist teils von Hype getrieben, einschließlich erfundener Behauptungen (Ghelbur, 2026).
@@ -156,11 +156,11 @@ Die früheste gefundene Verwendung war ein Blogbeitrag Anfang Juli 2026; verbrei
 |----------|----------------|------------|
 | Orchestrierungsgraphen | Multi-Agenten-Systeme, LangGraph, AutoGen (Wu et al., 2023) | Frameworks und Praxisberichte |
 | Graphen aus Loops | [[quality-control|Qualitätskontrolle]], [[llm-evaluation|LLM-Evaluation]] | Überwiegend konzeptionell (Ghelbur, 2026) |
-| Graphstrukturiertes Wissen | GraphRAG, Wissensgraphen (Edge et al., 2024) | Forschung und Benchmarks |
+| Graphstrukturiertes Wissen | GraphRAG, Knowledge Graphs (Edge et al., 2024) | Forschung und Benchmarks |
 
 ### In der Praxis
 
-Orchestrierungsgraphen werden mit Frameworks wie [[langchain-and-langgraph|LangChain und LangGraph]] gebaut, wobei jeder Knoten getraced und budgetiert wird ([[llm-observability-and-tracing|LLM-Observability und Tracing]]); wiederkehrende Abläufe für Knoten lassen sich als [[agent-skills|Agent Skills]] verpacken. Für Wissen werden typisierte Beziehungen und Gültigkeitsdaten in einem Wissensgraphen modelliert. Der Begriff steht neben den Disziplinen in [[engineering-methods-for-ai-systems|Engineering-Methoden für KI-Systeme]], und seine Wirkung auf die tägliche Arbeit ähnelt der von [[vibe-coding|Vibe Coding]]: Mehr Automatisierung verlangt mehr bewusste Prüfung.
+Orchestrierungsgraphen werden mit Frameworks wie [[langchain-and-langgraph|LangChain und LangGraph]] gebaut, wobei jeder Knoten getraced und budgetiert wird ([[llm-observability-and-tracing|LLM-Observability und Tracing]]); wiederkehrende Abläufe für Knoten lassen sich als [[agent-skills|Agent Skills]] verpacken. Für Wissen werden typisierte Beziehungen und Gültigkeitsdaten in einem Knowledge Graph modelliert. Der Begriff steht neben den Disziplinen in [[engineering-methods-for-ai-systems|Engineering-Methoden für KI-Systeme]], und seine Wirkung auf die tägliche Arbeit ähnelt der von [[vibe-coding|Vibe Coding]]: Mehr Automatisierung verlangt mehr bewusste Prüfung.
 
 ### Merksatz
 

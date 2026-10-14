@@ -107,7 +107,7 @@ RotatE treats each relation as a rotation in complex space, which lets one model
 
 ### TL;DR
 
-RotatE modelliert jede Beziehung eines [[knowledge-graphs|Wissensgraphen]] als Drehung im komplexen Vektorraum: Das Schwanz-Embedding soll dem elementweise um die Beziehung gedrehten Kopf-Embedding entsprechen (Sun et al., 2019). So kann ein Modell die wichtigsten Beziehungsmuster darstellen und erschließen, nämlich Symmetrie und Antisymmetrie, Inversion und Komposition, die frühere Modelle nur teilweise abdecken (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Mit selbstadversarialem Negative Sampling trainiert, übertraf es frühere Modelle auf Benchmarks für [[knowledge-graph-embeddings|Link Prediction]].
+RotatE modelliert jede Beziehung eines [[knowledge-graphs|Knowledge Graphs]] als Drehung im komplexen Vektorraum: Das Schwanz-Embedding soll dem elementweise um die Beziehung gedrehten Kopf-Embedding entsprechen (Sun et al., 2019). So kann ein Modell die wichtigsten Beziehungsmuster darstellen und erschließen, nämlich Symmetrie und Antisymmetrie, Inversion und Komposition, die frühere Modelle nur teilweise abdecken (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). Mit selbstadversarialem Negative Sampling trainiert, übertraf es frühere Modelle auf Benchmarks für [[knowledge-graph-embeddings|Link Prediction]].
 
 ### Funktionsweise
 
@@ -143,7 +143,7 @@ Gleichverteilt gezogene negative Tripel sind oft offensichtlich falsch und trage
 
 #### 5. Vergleich mit früheren Modellen
 
-TransE kann symmetrische Beziehungen schlecht modellieren, [[distmult|DistMult]] nur symmetrische, und [[complex|ComplEx]] deckt Symmetrie, Antisymmetrie und Inversion ab, aber keine Komposition (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). RotatE deckt alle vier Muster ab, skaliert und übertraf bei Link Prediction auf mehreren Benchmark-Wissensgraphen die bis dahin besten Modelle deutlich (Sun et al., 2019).
+TransE kann symmetrische Beziehungen schlecht modellieren, [[distmult|DistMult]] nur symmetrische, und [[complex|ComplEx]] deckt Symmetrie, Antisymmetrie und Inversion ab, aber keine Komposition (Bordes et al., 2013; Yang et al., 2014; Trouillon et al., 2016). RotatE deckt alle vier Muster ab, skaliert und übertraf bei Link Prediction auf mehreren Benchmark-Knowledge-Graphs die bis dahin besten Modelle deutlich (Sun et al., 2019).
 
 #### Ursprung und Varianten
 
@@ -151,7 +151,7 @@ RotatE (Sun et al., 2019) baut auf translationalen Modellen (Bordes et al., 2013
 
 ### Wann einsetzen
 
-- Wenn ein Wissensgraph Beziehungen mit unterschiedlichen Mustern einschließlich Komposition enthält (Sun et al., 2019).
+- Wenn ein Knowledge Graph Beziehungen mit unterschiedlichen Mustern einschließlich Komposition enthält (Sun et al., 2019).
 - Wenn die Qualität der Link Prediction wichtiger ist als die Einfachheit von TransE (Sun et al., 2019).
 - Als starke Baseline beim Vergleich von Knowledge-Graph-Embedding-Modellen (Ji et al., 2020).
 

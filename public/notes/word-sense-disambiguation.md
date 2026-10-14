@@ -129,7 +129,7 @@ Das englische WordNet hat getrennte Datenbanken für Nomen, Verben sowie Adjekti
 
 #### 3. Die WSD-Aufgabe
 
-Das Sinninventar hängt von der Aufgabe ab: WordNet-Sinne, Supersenses, die Übersetzungen eines Wortes in eine andere Sprache oder Thesauruseinträge wie MeSH. Lexical-Sample-Aufgaben disambiguieren wenige Zielwörter; All-Words-Aufgaben jedes Inhaltswort, ähnlich dem [[part-of-speech-tagging|Wortart-Tagging]] mit einem viel größeren Tagset. Überwachte Systeme trainieren auf semantischen Konkordanzen wie SemCor (226.036 Wörter des Brown-Korpus, mit WordNet-Sinnen annotiert) und werden mit F1 evaluiert. Den häufigsten Sinn, also den ersten in WordNet, zu wählen, ist eine überraschend starke Baseline; die Heuristik „ein Sinn pro Diskurs“ gilt am besten für grobe, unverwandte Sinne (Jurafsky & Martin, 2026).
+Das Sinninventar hängt von der Aufgabe ab: WordNet-Sinne, Supersenses, die Übersetzungen eines Wortes in eine andere Sprache oder Thesauruseinträge wie MeSH. Lexical-Sample-Aufgaben disambiguieren wenige Zielwörter; All-Words-Aufgaben jedes Inhaltswort, ähnlich dem [[part-of-speech-tagging|Part-of-Speech-Tagging]] mit einem viel größeren Tagset. Überwachte Systeme trainieren auf semantischen Konkordanzen wie SemCor (226.036 Wörter des Brown-Korpus, mit WordNet-Sinnen annotiert) und werden mit F1 evaluiert. Den häufigsten Sinn, also den ersten in WordNet, zu wählen, ist eine überraschend starke Baseline; die Heuristik „ein Sinn pro Diskurs“ gilt am besten für grobe, unverwandte Sinne (Jurafsky & Martin, 2026).
 
 #### 4. Kontextuelle Embeddings
 
@@ -137,7 +137,7 @@ Jedes sinnannotierte Token in SemCor wird mit einem kontextuellen Modell kodiert
 
 #### 5. Merkmals- und wissensbasierte WSD
 
-Merkmalsbasierte Klassifikatoren wie IMS nutzen eine SVM mit Wortarten und Kollokationsmerkmalen in einem Fenster von 3 Wörtern sowie einem nach Abstand gewichteten Mittel der Embeddings und funktionieren fast genauso gut. Wissensbasierte Verfahren brauchen keine gelabelten Daten: Der Lesk-Algorithmus wählt den Sinn, dessen Glosse und Beispiele die meisten Wörter mit dem Kontext teilen (bei *The bank can guarantee deposits …* überlappen *deposits* und *mortgage* mit Sinn 1); Gewichtung mit IDF oder der Vergleich von Embeddings verbessert ihn (Jurafsky & Martin, 2026).
+Merkmalsbasierte Klassifikatoren wie IMS nutzen eine SVM mit Part-of-Speech-Tags und Kollokationsmerkmalen in einem Fenster von 3 Wörtern sowie einem nach Abstand gewichteten Mittel der Embeddings und funktionieren fast genauso gut. Wissensbasierte Verfahren brauchen keine gelabelten Daten: Der Lesk-Algorithmus wählt den Sinn, dessen Glosse und Beispiele die meisten Wörter mit dem Kontext teilen (bei *The bank can guarantee deposits …* überlappen *deposits* und *mortgage* mit Sinn 1); Gewichtung mit IDF oder der Vergleich von Embeddings verbessert ihn (Jurafsky & Martin, 2026).
 
 #### 6. Verwandte Aufgaben
 

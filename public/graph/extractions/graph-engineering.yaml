@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "058c9982212ccc5977a5ab86d1a132085bcbeda827981520afff2deeea53c991"
+note_sha256: "f6bddd9c29c05b5f03dfb03065f9a6b40e3b0d6583bcb2144ff4a23d23df82de"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - engineering-methods-for-ai-systems

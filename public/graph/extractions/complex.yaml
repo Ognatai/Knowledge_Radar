@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f98351e8b20e982556a62ebabaf25adb2db4e91bcbebd318f9830bfc0b3c67c0
+note_sha256: c295d3cd31b7d00b3a1840366b16c5acf24a78457908baca84c2460fc7089696
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - distmult

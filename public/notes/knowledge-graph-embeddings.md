@@ -106,12 +106,12 @@ Knowledge graph embeddings learn vectors for entities and relations so that a sc
 
 ### TL;DR
 
-Knowledge Graph Embeddings bilden die Entitäten und Relationen eines [[knowledge-graphs|Wissensgraphen]] auf niedrigdimensionale Vektoren ab, die so trainiert werden, dass eine Bewertungsfunktion wahren Kanten eine hohe und verfälschten Kanten eine niedrige Plausibilität gibt (Hogan et al., 2021). Die Embeddings dienen dazu, fehlende Kanten zu ergänzen (Link Prediction), extrahierten Kanten eine Konfidenz zuzuweisen und ähnliche oder doppelte Entitäten zu finden. Die wichtigsten Familien sind translationale Modelle wie TransE und RotatE, Tensorzerlegungsmodelle wie DistMult und ComplEx, neuronale Modelle, Modelle auf Basis von Wort-Embedding-Verfahren und Modelle, die zusätzlich Ontologien oder Regeln nutzen (Hogan et al., 2021). Eine große Reproduktionsstudie ergab, dass Trainingsverfahren, Verlustfunktion und die Modellierung inverser Relationen ebenso viel ausmachen wie die Architektur (Ali et al., 2021).
+Knowledge Graph Embeddings bilden die Entitäten und Relationen eines [[knowledge-graphs|Knowledge Graphs]] auf niedrigdimensionale Vektoren ab, die so trainiert werden, dass eine Bewertungsfunktion wahren Kanten eine hohe und verfälschten Kanten eine niedrige Plausibilität gibt (Hogan et al., 2021). Die Embeddings dienen dazu, fehlende Kanten zu ergänzen (Link Prediction), extrahierten Kanten eine Konfidenz zuzuweisen und ähnliche oder doppelte Entitäten zu finden. Die wichtigsten Familien sind translationale Modelle wie TransE und RotatE, Tensorzerlegungsmodelle wie DistMult und ComplEx, neuronale Modelle, Modelle auf Basis von Wort-Embedding-Verfahren und Modelle, die zusätzlich Ontologien oder Regeln nutzen (Hogan et al., 2021). Eine große Reproduktionsstudie ergab, dass Trainingsverfahren, Verlustfunktion und die Modellierung inverser Relationen ebenso viel ausmachen wie die Architektur (Ali et al., 2021).
 
 ### Funktionsweise
 
 ```text
-Wissensgraph mit Kanten (Subjekt, Relation, Objekt)
+Knowledge Graph mit Kanten (Subjekt, Relation, Objekt)
  ▼
 positive Kanten + negative Kanten (Subjekt oder Objekt ersetzt)
  ▼
@@ -149,7 +149,7 @@ TransE war das erste und einfachste translationale Modell; TransH, TransR, Trans
 
 ### Wann einsetzen
 
-- Einen unvollständigen Wissensgraphen ergänzen, indem fehlende Kanten vorhergesagt werden (Hogan et al., 2021; Ali et al., 2021).
+- Einen unvollständigen Knowledge Graph ergänzen, indem fehlende Kanten vorhergesagt werden (Hogan et al., 2021; Ali et al., 2021).
 - Aus externen Quellen extrahierten Kanten vor dem Hinzufügen eine Konfidenz zuweisen (Hogan et al., 2021).
 - Ähnliche oder doppelte Entitäten finden und Empfehlungen aus Vektorähnlichkeit ableiten (Hogan et al., 2021).
 
@@ -178,7 +178,7 @@ Quelle: Hogan et al. (2021).
 
 ### In der Praxis
 
-Trainingsentscheidungen wie Verlustfunktion, Negative Sampling und die explizite Modellierung inverser Relationen sollten zusammen mit der Architektur abgestimmt und berichtet werden, und Ergebnisse sollten auf FB15K-237 oder WN18RR mit angegebener Rangdefinition verglichen werden (Ali et al., 2021). Die Rangmaße sind dieselben wie im Retrieval ([[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]]); Wissensgraphen selbst lassen sich in einer [[graph-databases|Graphdatenbank]] speichern und abfragen (Hogan et al., 2021).
+Trainingsentscheidungen wie Verlustfunktion, Negative Sampling und die explizite Modellierung inverser Relationen sollten zusammen mit der Architektur abgestimmt und berichtet werden, und Ergebnisse sollten auf FB15K-237 oder WN18RR mit angegebener Rangdefinition verglichen werden (Ali et al., 2021). Die Rangmaße sind dieselben wie im Retrieval ([[rag-retrieval-evaluation|RAG: Evaluation des Retrievals]]); Knowledge Graphs selbst lassen sich in einer [[graph-databases|Graphdatenbank]] speichern und abfragen (Hogan et al., 2021).
 
 ### Merksatz
 

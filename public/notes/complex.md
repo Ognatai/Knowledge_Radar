@@ -104,7 +104,7 @@ ComplEx uses complex-valued embeddings and the Hermitian dot product so that one
 
 ### TL;DR
 
-ComplEx bettet Entitäten und Beziehungen eines Wissensgraphen als komplexwertige Vektoren ein und bewertet Tripel mit dem hermiteschen Skalarprodukt, dem komplexen Gegenstück zum gewöhnlichen Skalarprodukt (Trouillon et al., 2016). Da das hermitesche Produkt das komplex Konjugierte des Schwanzes nutzt, kann sich die Bewertung von (h, r, t) von der von (t, r, h) unterscheiden; so bildet ComplEx symmetrische und antisymmetrische Beziehungen ab, was DistMult nicht kann (Yang et al., 2014). Es bleibt linear in Speicher und Zeit und übertraf aufwendigere Modelle auf Standard-Benchmarks für [[knowledge-graph-embeddings|Link Prediction]].
+ComplEx bettet Entitäten und Beziehungen eines Knowledge Graphs als komplexwertige Vektoren ein und bewertet Tripel mit dem hermiteschen Skalarprodukt, dem komplexen Gegenstück zum gewöhnlichen Skalarprodukt (Trouillon et al., 2016). Da das hermitesche Produkt das komplex Konjugierte des Schwanzes nutzt, kann sich die Bewertung von (h, r, t) von der von (t, r, h) unterscheiden; so bildet ComplEx symmetrische und antisymmetrische Beziehungen ab, was DistMult nicht kann (Yang et al., 2014). Es bleibt linear in Speicher und Zeit und übertraf aufwendigere Modelle auf Standard-Benchmarks für [[knowledge-graph-embeddings|Link Prediction]].
 
 ### Funktionsweise
 
@@ -124,7 +124,7 @@ Jede Entität und Beziehung ist ein Vektor komplexer Zahlen. Die Bewertung eines
 
 #### 1. Link Prediction durch latente Faktorisierung
 
-Link Prediction, also das Erschließen fehlender Fakten in großen Wissensbasen, ist zentral, um deren Struktur zu verstehen; ComplEx geht sie wie frühere Embedding-Modelle über latente Faktorisierung an (Trouillon et al., 2016; [[knowledge-graphs|Wissensgraphen]]). Knowledge Graph Embeddings werden nach Repräsentationsraum, Bewertungsfunktion und Kodierungsmodell geordnet, und ComplEx steht für komplexe Vektorräume (Ji et al., 2020).
+Link Prediction, also das Erschließen fehlender Fakten in großen Wissensbasen, ist zentral, um deren Struktur zu verstehen; ComplEx geht sie wie frühere Embedding-Modelle über latente Faktorisierung an (Trouillon et al., 2016; [[knowledge-graphs|Knowledge Graphs]]). Knowledge Graph Embeddings werden nach Repräsentationsraum, Bewertungsfunktion und Kodierungsmodell geordnet, und ComplEx steht für komplexe Vektorräume (Ji et al., 2020).
 
 #### 2. Warum komplexe Zahlen
 
@@ -148,7 +148,7 @@ ComplEx (Trouillon et al., 2016) erweiterte das bilineare DistMult (Yang et al.,
 
 ### Wann einsetzen
 
-- Wenn ein Wissensgraph sowohl symmetrische als auch gerichtete Beziehungen enthält (Trouillon et al., 2016).
+- Wenn ein Knowledge Graph sowohl symmetrische als auch gerichtete Beziehungen enthält (Trouillon et al., 2016).
 - Wenn ein skalierbares Modell mit linearem Zeit- und Speicherbedarf gebraucht wird (Trouillon et al., 2016).
 - Wenn die Komposition von Beziehungen modelliert werden muss, kann RotatE die bessere Wahl sein (Sun et al., 2019).
 

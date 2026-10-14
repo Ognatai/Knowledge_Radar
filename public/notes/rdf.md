@@ -97,7 +97,7 @@ RDF expresses knowledge as triples with global identifiers, which makes graphs f
 
 ### TL;DR
 
-RDF (Resource Description Framework) ist das W3C-Datenmodell für [[knowledge-graphs|Wissensgraphen]]: Jede Aussage ist ein Tripel aus Subjekt, Prädikat und Objekt, und Ressourcen werden mit global eindeutigen IRIs benannt, sodass sich Daten aus verschiedenen Quellen zusammenführen lassen ([[w3c|W3C]] RDF 1.1 Concepts). RDF-Graphen werden in Formaten wie Turtle, JSON-LD oder N-Triples geschrieben (W3C Turtle; W3C JSON-LD 1.1; W3C RDF 1.1 Primer), mit Vokabularen aus RDF Schema und OWL beschrieben (W3C RDF Schema 1.1; W3C OWL 2 Primer) und mit SPARQL abgefragt ([[sparql|SPARQL]]).
+RDF (Resource Description Framework) ist das W3C-Datenmodell für [[knowledge-graphs|Knowledge Graphs]]: Jede Aussage ist ein Tripel aus Subjekt, Prädikat und Objekt, und Ressourcen werden mit global eindeutigen IRIs benannt, sodass sich Daten aus verschiedenen Quellen zusammenführen lassen ([[w3c|W3C]] RDF 1.1 Concepts). RDF-Graphen werden in Formaten wie Turtle, JSON-LD oder N-Triples geschrieben (W3C Turtle; W3C JSON-LD 1.1; W3C RDF 1.1 Primer), mit Vokabularen aus RDF Schema und OWL beschrieben (W3C RDF Schema 1.1; W3C OWL 2 Primer) und mit SPARQL abgefragt ([[sparql|SPARQL]]).
 
 ### Kernkonzepte
 

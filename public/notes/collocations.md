@@ -114,13 +114,13 @@ Collocations are conventional word combinations whose meaning is not fully predi
 
 ### TL;DR
 
-Eine Kollokation ist ein Ausdruck aus zwei oder mehr Wörtern, der einer konventionellen Ausdrucksweise entspricht, etwa *strong tea*, *weapons of mass destruction* oder *make up*; Kollokationen sind nur teilweise kompositionell (Manning & Schütze, 1999). Sie werden in Korpora gefunden über Häufigkeit mit Wortartfilter, über Mittelwert und Varianz des Abstands zweier Wörter, über Hypothesentests (t-Test, χ²-Test, Likelihood-Quotient) und über Pointwise Mutual Information (PMI) (Manning & Schütze, 1999). PMI vergleicht, wie oft zwei Wörter gemeinsam auftreten, mit der zufällig erwarteten Häufigkeit; positive PMI (PPMI) gewichtet außerdem Wort-Kontext-Matrizen für Wortvektoren (Jurafsky & Martin, 2026).
+Eine Kollokation ist ein Ausdruck aus zwei oder mehr Wörtern, der einer konventionellen Ausdrucksweise entspricht, etwa *strong tea*, *weapons of mass destruction* oder *make up*; Kollokationen sind nur teilweise kompositionell (Manning & Schütze, 1999). Sie werden in Korpora gefunden über Häufigkeit mit Part-of-Speech-Filter, über Mittelwert und Varianz des Abstands zweier Wörter, über Hypothesentests (t-Test, χ²-Test, Likelihood-Quotient) und über Pointwise Mutual Information (PMI) (Manning & Schütze, 1999). PMI vergleicht, wie oft zwei Wörter gemeinsam auftreten, mit der zufällig erwarteten Häufigkeit; positive PMI (PPMI) gewichtet außerdem Wort-Kontext-Matrizen für Wortvektoren (Jurafsky & Martin, 2026).
 
 ### Funktionsweise
 
 ```text
 Korpus ─► Kandidaten-Bigramme (benachbart oder in einem Fenster von 3–4 Wörtern)
-   ├─ Häufigkeit + Wortartfilter (A N, N N, ...)                → feste Wendungen
+   ├─ Häufigkeit + Part-of-Speech-Filter (A N, N N, ...)                → feste Wendungen
    ├─ Mittelwert und Varianz des Abstands zweier Wörter         → flexible Paare (knock … door)
    ├─ Hypothesentest gegen Unabhängigkeit P(w1 w2) = P(w1)·P(w2)
    │     t-Test · χ²-Test · Likelihood-Quotient                  → gerankte Kandidaten
@@ -131,9 +131,9 @@ Korpus ─► Kandidaten-Bigramme (benachbart oder in einem Fenster von 3–4 W�
 
 Kollokationen reichen von Idiomen wie *kick the bucket*, deren Bedeutung nur noch historisch mit den Teilen zusammenhängt, bis zu milderen Fällen wie *strong tea*, in dem *strong* „reich an einem Wirkstoff“ bedeutet. Typische Kriterien sind Nicht-Kompositionalität, Nicht-Ersetzbarkeit (*yellow wine* kann *white wine* nicht ersetzen) und Nicht-Modifizierbarkeit (*to get a frog in one's throat* verträgt kein *ugly frog*). Ein praktischer Test ist die Übersetzung: *make a decision* heißt auf Französisch *prendre une décision*, nicht wörtlich *faire une décision*. Unterklassen sind Funktionsverben (*make a decision*, *do a favor*), Partikelverben (*tell off*), Eigennamen und Fachausdrücke (*hydraulic oil filter*). Wörter, die nur miteinander assoziiert sind, wie *doctor – nurse*, heißen besser Assoziation oder Kookkurrenz (Manning & Schütze, 1999).
 
-#### 2. Häufigkeit mit Wortartfilter
+#### 2. Häufigkeit mit Part-of-Speech-Filter
 
-Die häufigsten Bigramme eines New-York-Times-Korpus mit 14 Millionen Wörtern sind meist Paare von Funktionswörtern (*of the*, *in the*); nur *New York* fällt auf. Ein Wortartfilter, der Muster wie Adjektiv-Nomen oder Nomen-Nomen durchlässt (Justeson & Katz), liefert überraschend gute Ergebnisse: *New York*, *United States*, *Los Angeles*, mit nur wenigen kompositionellen Wendungen wie *last year* (Manning & Schütze, 1999).
+Die häufigsten Bigramme eines New-York-Times-Korpus mit 14 Millionen Wörtern sind meist Paare von Funktionswörtern (*of the*, *in the*); nur *New York* fällt auf. Ein Part-of-Speech-Filter, der Muster wie Adjektiv-Nomen oder Nomen-Nomen durchlässt (Justeson & Katz), liefert überraschend gute Ergebnisse: *New York*, *United States*, *Los Angeles*, mit nur wenigen kompositionellen Wendungen wie *last year* (Manning & Schütze, 1999).
 
 #### 3. Mittelwert und Varianz des Abstands
 
@@ -167,7 +167,7 @@ Die Tradition geht auf Firths Diktum zurück, dass ein Wort durch seine Umgebung
 ### Stärken und Grenzen
 
 **Stärken**
-- Ein einfaches quantitatives Verfahren plus etwas linguistisches Wissen, etwa Wortarten, reicht weit (Manning & Schütze, 1999).
+- Ein einfaches quantitatives Verfahren plus etwas linguistisches Wissen, etwa Parts of Speech, reicht weit (Manning & Schütze, 1999).
 - Hypothesentests ordnen gleich häufige Bigramme danach, welcher Anteil der Vorkommen jedes Wortes in das Bigramm fällt (Manning & Schütze, 1999).
 
 **Grenzen**
@@ -179,7 +179,7 @@ Die Tradition geht auf Firths Diktum zurück, dass ein Wort durch seine Umgebung
 
 | Verfahren | Findet | Vorbehalt |
 |-----------|--------|-----------|
-| Häufigkeit + Wortartfilter | Feste Wendungen, Namen | Nicht für flexible Paare |
+| Häufigkeit + Part-of-Speech-Filter | Feste Wendungen, Namen | Nicht für flexible Paare |
 | Mittelwert und Varianz | Flexible Paare (*knock … door*) | Braucht ein Fenster |
 | t-Test | Gerankte abhängige Bigramme | Setzt Normalverteilung voraus |
 | χ²-Test | Abhängigkeit, Übersetzungspaare | Schwach bei kleinen Zahlen |
@@ -194,7 +194,7 @@ Die statistischen Tests dienen eher dem Ranking der Kandidaten als dem Signifika
 
 ### Merksatz
 
-Kollokationen sind konventionelle Wortverbindungen, deren Bedeutung sich nicht ganz aus den Teilen ergibt; man findet sie über Häufigkeit mit Wortartfilter, Abstandsvarianz, Hypothesentests und PMI, wobei PMI Assoziation misst, seltene Paare aber überschätzt.
+Kollokationen sind konventionelle Wortverbindungen, deren Bedeutung sich nicht ganz aus den Teilen ergibt; man findet sie über Häufigkeit mit Part-of-Speech-Filter, Abstandsvarianz, Hypothesentests und PMI, wobei PMI Assoziation misst, seltene Paare aber überschätzt.
 
 ### Quellen
 

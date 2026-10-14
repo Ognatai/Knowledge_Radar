@@ -143,7 +143,7 @@ RDF-Stores enthalten Tripel aus Subjekt, Prädikat und Objekt. SPARQL gleicht Tr
 
 #### 4. Abfragen mit vielen Traversierungen
 
-Fragen wie „Welche Dokumente zitieren eine Norm, die diese Verordnung ändert?“ folgen mehreren Beziehungen nacheinander. Graph-Abfragesprachen drücken solche Pfade direkt als Muster aus (Francis et al., 2018), und SPARQL-Property-Paths finden Pfade beliebiger Länge (W3C SPARQL 1.1). Hogan et al. (2020) vergleichen die für Wissensgraphen genutzten Graph-Datenmodelle und Abfragesprachen ([[knowledge-graphs|Wissensgraphen]]).
+Fragen wie „Welche Dokumente zitieren eine Norm, die diese Verordnung ändert?“ folgen mehreren Beziehungen nacheinander. Graph-Abfragesprachen drücken solche Pfade direkt als Muster aus (Francis et al., 2018), und SPARQL-Property-Paths finden Pfade beliebiger Länge (W3C SPARQL 1.1). Hogan et al. (2020) vergleichen die für Knowledge Graphs genutzten Graph-Datenmodelle und Abfragesprachen ([[knowledge-graphs|Knowledge Graphs]]).
 
 #### 5. Wahl des Datenbankmodells
 
@@ -151,7 +151,7 @@ Relationale Datenbanken passen zu stabilen Schemata und tabellarischen Transakti
 
 #### Ursprung und Varianten
 
-Graphdatenbankmodelle reichen bis in die 1980er-Jahre zurück (Angles & Gutierrez, 2008). Property-Graph-Datenbanken wie Neo4j mit Cypher (Francis et al., 2018) und RDF-Triplestores mit SPARQL (W3C SPARQL 1.1) sind heute die beiden Hauptfamilien, beide werden für Wissensgraphen genutzt (Hogan et al., 2020).
+Graphdatenbankmodelle reichen bis in die 1980er-Jahre zurück (Angles & Gutierrez, 2008). Property-Graph-Datenbanken wie Neo4j mit Cypher (Francis et al., 2018) und RDF-Triplestores mit SPARQL (W3C SPARQL 1.1) sind heute die beiden Hauptfamilien, beide werden für Knowledge Graphs genutzt (Hogan et al., 2020).
 
 ### Wann einsetzen
 
@@ -182,7 +182,7 @@ Graphdatenbankmodelle reichen bis in die 1980er-Jahre zurück (Angles & Gutierre
 
 ### In der Praxis
 
-Ein einfacher juristischer Wissensgraph in Cypher könnte Knoten für Normen und Entscheidungen anlegen und verbinden: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|DSGVO]]"}), und später abfragen: MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}) RETURN d (Neo4j Cypher Manual). Die Datenmodellierung beginnt mit den Abfragen, die der Graph beantworten soll ([[ontology-design|Ontologie-Design]]).
+Ein einfacher juristischer Knowledge Graph in Cypher könnte Knoten für Normen und Entscheidungen anlegen und verbinden: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|DSGVO]]"}), und später abfragen: MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}) RETURN d (Neo4j Cypher Manual). Die Datenmodellierung beginnt mit den Abfragen, die der Graph beantworten soll ([[ontology-design|Ontologie-Design]]).
 
 ### Merksatz
 

@@ -132,11 +132,11 @@ Aufbauend auf dem Shift-Reduce-Parsing für Programmiersprachen führt ein trans
 
 #### 3. Das Orakel trainieren
 
-Treebanks enthalten Bäume, keine Transitionen, deshalb entstehen Trainingsdaten, indem der Parser auf jedem Referenzbaum simuliert wird: LEFTARC wählen, wenn es eine korrekte Relation erzeugt, RIGHTARC, wenn es das tut und das oberste Wort schon alle Dependenten hat, sonst SHIFT. Das Orakel kann ein merkmalsbasierter Klassifikator sein (Wortformen, Wortarten und Relationen oben auf dem Stack und vorn im Puffer) oder ein neuronaler Klassifikator, der die Kodierungen der beiden obersten Stack-Wörter und des ersten Pufferworts verkettet (Jurafsky & Martin, 2026).
+Treebanks enthalten Bäume, keine Transitionen, deshalb entstehen Trainingsdaten, indem der Parser auf jedem Referenzbaum simuliert wird: LEFTARC wählen, wenn es eine korrekte Relation erzeugt, RIGHTARC, wenn es das tut und das oberste Wort schon alle Dependenten hat, sonst SHIFT. Das Orakel kann ein merkmalsbasierter Klassifikator sein (Wortformen, Part-of-Speech-Tags und Relationen oben auf dem Stack und vorn im Puffer) oder ein neuronaler Klassifikator, der die Kodierungen der beiden obersten Stack-Wörter und des ersten Pufferworts verkettet (Jurafsky & Martin, 2026).
 
 #### 4. Varianten: Arc-Eager und Beam Search
 
-Das Arc-Eager-System hängt Wörter so früh wie möglich an ihre Köpfe und ergänzt einen REDUCE-Operator; andere Transitionssysteme vergeben Wortarten, erzeugen nicht-projektive Bäume oder parsen Text mit Sprachmischung. Beam Search behält mehrere Konfigurationen, bewertet über die Summe ihrer Transitions-Scores, statt einer einzigen gierigen Wahl (Jurafsky & Martin, 2026).
+Das Arc-Eager-System hängt Wörter so früh wie möglich an ihre Köpfe und ergänzt einen REDUCE-Operator; andere Transitionssysteme vergeben Part-of-Speech-Tags, erzeugen nicht-projektive Bäume oder parsen Text mit Sprachmischung. Beam Search behält mehrere Konfigurationen, bewertet über die Summe ihrer Transitions-Scores, statt einer einzigen gierigen Wahl (Jurafsky & Martin, 2026).
 
 #### 5. Graphbasiertes Parsing
 
@@ -180,7 +180,7 @@ Quelle: Jurafsky & Martin (2026).
 
 ### In der Praxis
 
-Dependenz-Treebanks entstehen direkt durch Annotierende, durch Korrektur von Parser-Ausgaben oder durch Umwandlung von Konstituenten-Treebanks mit Kopfregeln ([[constituency-parsing|Konstituentenparsing]]) (Jurafsky & Martin, 2026). Dependenzanalysen fließen in die [[information-extraction|Informationsextraktion]] ein (Jurafsky & Martin, 2026). Eine akteurszentrierte Pipeline zur Erkennung von Gender-Diskriminierung in Nachrichten nutzt [[tokenisation|Tokenisierung]], [[part-of-speech-tagging|Wortart-Tagging]], Dependenzparsing und Named Entity Recognition von spaCy, um die Akteure zu finden, und verfolgt, ob sie in Subjekt- oder Objektposition stehen, weil Subjekte typischerweise handeln und Objekte Handlungen erfahren (Urchs, 2025).
+Dependenz-Treebanks entstehen direkt durch Annotierende, durch Korrektur von Parser-Ausgaben oder durch Umwandlung von Konstituenten-Treebanks mit Kopfregeln ([[constituency-parsing|Konstituentenparsing]]) (Jurafsky & Martin, 2026). Dependenzanalysen fließen in die [[information-extraction|Informationsextraktion]] ein (Jurafsky & Martin, 2026). Eine akteurszentrierte Pipeline zur Erkennung von Gender-Diskriminierung in Nachrichten nutzt [[tokenisation|Tokenisierung]], [[part-of-speech-tagging|Part-of-Speech-Tagging]], Dependenzparsing und Named Entity Recognition von spaCy, um die Akteure zu finden, und verfolgt, ob sie in Subjekt- oder Objektposition stehen, weil Subjekte typischerweise handeln und Objekte Handlungen erfahren (Urchs, 2025).
 
 ### Merksatz
 

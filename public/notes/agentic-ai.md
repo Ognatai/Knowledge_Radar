@@ -157,7 +157,7 @@ Wie diese Schleife mit Abbruch, Zustand und Fehlerbehandlung gestaltet wird, bes
 
 #### 4. Zustand und Gedächtnis
 
-Agenten führen einen Zustand: erledigte Schritte, Werkzeugergebnisse, offene Aufgaben und Fehler. Das Kurzzeitgedächtnis umfasst die aktuelle Aufgabe, das Langzeitgedächtnis Vorlieben, frühere Projekte und Fakten über Sitzungen hinweg, oft gespeichert in [[vector-databases|Vektordatenbanken]] oder [[knowledge-graphs|Wissensgraphen]]. Weil Kontextfenster begrenzt sind, verwaltet MemGPT mehrere Speicherebenen und verschiebt Informationen in den Kontext hinein und heraus, ähnlich einem Betriebssystem (Packer et al., 2023); Kompaktierung und strukturierte Notizen halten lange Aufgaben zusammen ([[context-engineering|Context Engineering]]; Anthropic, 2025a).
+Agenten führen einen Zustand: erledigte Schritte, Werkzeugergebnisse, offene Aufgaben und Fehler. Das Kurzzeitgedächtnis umfasst die aktuelle Aufgabe, das Langzeitgedächtnis Vorlieben, frühere Projekte und Fakten über Sitzungen hinweg, oft gespeichert in [[vector-databases|Vektordatenbanken]] oder [[knowledge-graphs|Knowledge Graphs]]. Weil Kontextfenster begrenzt sind, verwaltet MemGPT mehrere Speicherebenen und verschiebt Informationen in den Kontext hinein und heraus, ähnlich einem Betriebssystem (Packer et al., 2023); Kompaktierung und strukturierte Notizen halten lange Aufgaben zusammen ([[context-engineering|Context Engineering]]; Anthropic, 2025a).
 
 #### 5. Reflexion und Selbstkorrektur
 

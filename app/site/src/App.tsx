@@ -551,14 +551,16 @@ interface NewsSectionProps {
   openNote: (slug: string) => void;
   /** Show at most this many items, with a link to the full list in the notes view. */
   limit?: number;
+  /** Leads to the full list; without it, the section expands in place. */
   showAll?: () => void;
 }
 
 /** Notes added after the initial migration and dated update entries, newest first. */
 function NewsSection({ data, language, notesBySlug, openNote, limit, showAll }: NewsSectionProps) {
   const { t } = useTranslation();
+  const [expanded, setExpanded] = useState(false);
   const all = (data.news ?? []).filter((item) => notesBySlug.has(item.slug));
-  const news = limit ? all.slice(0, limit) : all;
+  const news = limit && !expanded ? all.slice(0, limit) : all;
   if (news.length === 0) return null;
   const formatDate = (date: string) =>
     new Date(`${date}T00:00:00`).toLocaleDateString(language === "en" ? "en-GB" : "de-DE", { day: "numeric", month: "short", year: "numeric" });
@@ -583,9 +585,11 @@ function NewsSection({ data, language, notesBySlug, openNote, limit, showAll }: 
           );
         })}
       </ul>
-      {showAll && all.length > news.length && (
-        <button className="news-more" onClick={showAll} type="button">{t("allNewAndUpdated", { count: all.length })}</button>
-      )}
+      {limit && all.length > limit && (expanded ? (
+        <button className="news-more" onClick={() => setExpanded(false)} type="button">{t("fewerNewAndUpdated")}</button>
+      ) : (
+        <button className="news-more" onClick={showAll ?? (() => setExpanded(true))} type="button">{t("allNewAndUpdated", { count: all.length })}</button>
+      ))}
     </section>
   );
 }
@@ -604,7 +608,7 @@ function NoteAreas({ data, language, notesBySlug, openNote }: NoteAreasProps) {
   const mainArea = new Map(areas.flatMap((area) => area.notes.map((slug) => [slug, area] as const)));
   return (
     <>
-      <NewsSection data={data} language={language} notesBySlug={notesBySlug} openNote={openNote} />
+      <NewsSection data={data} language={language} limit={6} notesBySlug={notesBySlug} openNote={openNote} />
 
       <section className="content-card" aria-labelledby="areas-title">
         <h2 className="area-section-title" id="areas-title">{t("byArea")}</h2>
