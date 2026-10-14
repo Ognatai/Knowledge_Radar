@@ -3,6 +3,8 @@
 # the target notes it must not link to, with the reason.
 version: 1
 exclusions:
+  ragas:
+    classification-metrics: context precision and recall are Ragas retrieval metrics, not classification metrics.
   clustering:
     quantisation: Lloyd's algorithm was derived for the quantization of signals, not of model weights.
   complex:

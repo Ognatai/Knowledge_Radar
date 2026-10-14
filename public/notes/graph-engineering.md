@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-"Graph engineering" is a term that spread rapidly in the AI engineering community in July 2026 as the supposed next step after [[loop-engineering|Loop Engineering]]. It has no single established definition: within 48 hours of its viral spread it had three competing meanings, orchestration graphs of multiple agents, graphs of feedback loops, and graph-structured knowledge and memory for agents (Ghelbur, 2026). The most discussed reading treats the topology of a multi-agent system, which nodes exist and which transitions are allowed, as an engineered artifact (Wang, 2026). Before using the term, it is worth asking which of the three meanings is meant.
+"Graph engineering" is a term that spread rapidly in the AI engineering community in July 2026 as the supposed next step after [[loop-engineering|Loop Engineering]]. It has no single established definition: within 48 hours of its viral spread it had three competing meanings, orchestration graphs of multiple agents, graphs of feedback loops, and graph-structured knowledge and memory for agents (Ghelbur, 2026). The most discussed reading treats the topology of a [[multi-agent-systems|multi-agent system]], which nodes exist and which transitions are allowed, as an engineered artifact (Wang, 2026). Before using the term, it is worth asking which of the three meanings is meant.
 
 ### How it works
 
@@ -154,7 +154,7 @@ Die früheste gefundene Verwendung war ein Blogbeitrag Anfang Juli 2026; verbrei
 
 | Bedeutung | Nächstes etabliertes Thema | Belege |
 |----------|----------------|------------|
-| Orchestrierungsgraphen | Multi-Agenten-Systeme, LangGraph, AutoGen (Wu et al., 2023) | Frameworks und Praxisberichte |
+| Orchestrierungsgraphen | [[multi-agent-systems\|Multi-Agenten-Systeme]], LangGraph, AutoGen (Wu et al., 2023) | Frameworks und Praxisberichte |
 | Graphen aus Loops | [[quality-control|Qualitätskontrolle]], [[llm-evaluation|LLM-Evaluation]] | Überwiegend konzeptionell (Ghelbur, 2026) |
 | Graphstrukturiertes Wissen | GraphRAG, Knowledge Graphs (Edge et al., 2024) | Forschung und Benchmarks |
 

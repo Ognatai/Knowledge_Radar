@@ -1,0 +1,17 @@
+version: 1
+note_sha256: 6ac83417aa21eb60fb66607e136dbeca13146e850a2eb2cf987cc862db78630f
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- agentic-ai
+- context-engineering
+- graph-engineering
+- hallucination-detection
+- llm-as-a-judge
+- anthropic
+- autogen
+relations:
+- from: autogen
+  type: IMPLEMENTS
+  to: multi-agent-systems
+  evidence: frameworks such as autogen, langgraph and crewai provide building blocks

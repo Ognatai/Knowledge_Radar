@@ -45,7 +45,7 @@ Radford et al. (2021) trained image and text encoders on 400 million image-text 
 
 #### 3. Connecting vision encoders to language models
 
-Flamingo bridges pretrained vision-only and language-only models, handles arbitrarily interleaved sequences of images and text, and accepts images or videos as input (Alayrac et al., 2022). Trained on large-scale multimodal web corpora, a single Flamingo model reached new state-of-the-art results with few-shot prompting on many tasks, outperforming models fine-tuned on thousands of times more task-specific data. BLIP-2 keeps both the image encoder and the language model frozen and bridges them with a lightweight Querying Transformer pretrained in two stages; it outperformed Flamingo80B by 8.7% on zero-shot VQAv2 with 54 times fewer trainable parameters (Li et al., 2023).
+Flamingo bridges pretrained vision-only and language-only models, handles arbitrarily interleaved sequences of images and text, and accepts images or videos as input (Alayrac et al., 2022). Trained on large-scale multimodal web corpora, a single Flamingo model reached new state-of-the-art results with [[few-shot-prompting|few-shot prompting]] on many tasks, outperforming models fine-tuned on thousands of times more task-specific data. BLIP-2 keeps both the image encoder and the language model frozen and bridges them with a lightweight Querying Transformer pretrained in two stages; it outperformed Flamingo80B by 8.7% on zero-shot VQAv2 with 54 times fewer trainable parameters (Li et al., 2023).
 
 #### 4. Visual instruction tuning
 
@@ -137,7 +137,7 @@ Radford et al. (2021) trainierten Bild- und Text-Encoder auf 400 Millionen Bild-
 
 #### 3. Bild-Encoder mit Sprachmodellen verbinden
 
-Flamingo verbindet vortrainierte reine Bild- und reine Sprachmodelle, verarbeitet beliebig verschachtelte Folgen von Bildern und Text und nimmt Bilder oder Videos als Eingabe (Alayrac et al., 2022). Auf großen multimodalen Webkorpora trainiert, erzielte ein einziges Flamingo-Modell mit Few-Shot-Prompting bei vielen Aufgaben neue Bestwerte und übertraf Modelle, die mit tausendfach mehr aufgabenspezifischen Daten feinabgestimmt waren. BLIP-2 lässt sowohl den Bild-Encoder als auch das Sprachmodell eingefroren und verbindet sie mit einem leichten Querying Transformer, der in zwei Stufen vortrainiert wird; es übertraf Flamingo80B bei zero-shot VQAv2 um 8,7 % mit 54-mal weniger trainierbaren Parametern (Li et al., 2023).
+Flamingo verbindet vortrainierte reine Bild- und reine Sprachmodelle, verarbeitet beliebig verschachtelte Folgen von Bildern und Text und nimmt Bilder oder Videos als Eingabe (Alayrac et al., 2022). Auf großen multimodalen Webkorpora trainiert, erzielte ein einziges Flamingo-Modell mit [[few-shot-prompting|Few-Shot-Prompting]] bei vielen Aufgaben neue Bestwerte und übertraf Modelle, die mit tausendfach mehr aufgabenspezifischen Daten feinabgestimmt waren. BLIP-2 lässt sowohl den Bild-Encoder als auch das Sprachmodell eingefroren und verbindet sie mit einem leichten Querying Transformer, der in zwei Stufen vortrainiert wird; es übertraf Flamingo80B bei zero-shot VQAv2 um 8,7 % mit 54-mal weniger trainierbaren Parametern (Li et al., 2023).
 
 #### 4. Visual Instruction Tuning
 

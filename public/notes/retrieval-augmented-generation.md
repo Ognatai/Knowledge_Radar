@@ -142,7 +142,7 @@ For injecting factual knowledge, Ovadia et al. (2023) found that RAG consistentl
 
 ### In practice
 
-- **Evaluate retrieval and generation separately** ([[rag-evaluation|RAG evaluation]]). Retrieval is measured with ranking metrics such as Recall@k or nDCG ([[rag-retrieval-evaluation|retrieval evaluation]]); generation with criteria such as faithfulness to the retrieved passages and answer relevance ([[rag-generation-evaluation|generation evaluation]]). Frameworks such as RAGAS (Es et al., 2023) compute such metrics without human reference answers, typically using an [[llm-as-a-judge|LLM as a judge]].
+- **Evaluate retrieval and generation separately** ([[rag-evaluation|RAG evaluation]]). Retrieval is measured with ranking metrics such as Recall@k or nDCG ([[rag-retrieval-evaluation|retrieval evaluation]]); generation with criteria such as faithfulness to the retrieved passages and answer relevance ([[rag-generation-evaluation|generation evaluation]]). Frameworks such as [[ragas|RAGAS]] (Es et al., 2023) compute such metrics without human reference answers, typically using an [[llm-as-a-judge|LLM as a judge]].
 - **Typical failure modes** ([[rag-failure-modes|RAG failure modes]]) map onto the pipeline: the relevant passage was split badly (step 1), not retrieved (step 5), ranked below the cut-off (steps 5–6), crowded out of the context (step 7), or the model cites a source that does not support its statement (step 8).
 
 ### Regulatory context
@@ -296,7 +296,7 @@ Für das Einbringen von Faktenwissen stellten Ovadia et al. (2023) fest, dass RA
 
 ### In der Praxis
 
-- **Retrieval und Generierung getrennt evaluieren** ([[rag-evaluation|RAG-Evaluation]]). Das Retrieval wird mit Ranking-Metriken wie Recall@k oder nDCG gemessen ([[rag-retrieval-evaluation|Evaluation des Retrievals]]), die Generierung mit Kriterien wie Faithfulness gegenüber den abgerufenen Passagen und Answer Relevance ([[rag-generation-evaluation|Evaluation der Generierung]]). Frameworks wie RAGAS (Es et al., 2023) berechnen solche Metriken ohne menschliche Referenzantworten, typischerweise mit einem [[llm-as-a-judge|LLM als Bewerter]].
+- **Retrieval und Generierung getrennt evaluieren** ([[rag-evaluation|RAG-Evaluation]]). Das Retrieval wird mit Ranking-Metriken wie Recall@k oder nDCG gemessen ([[rag-retrieval-evaluation|Evaluation des Retrievals]]), die Generierung mit Kriterien wie Faithfulness gegenüber den abgerufenen Passagen und Answer Relevance ([[rag-generation-evaluation|Evaluation der Generierung]]). Frameworks wie [[ragas|RAGAS]] (Es et al., 2023) berechnen solche Metriken ohne menschliche Referenzantworten, typischerweise mit einem [[llm-as-a-judge|LLM als Bewerter]].
 - **Typische Fehlerarten** ([[rag-failure-modes|RAG-Fehlerarten]]) lassen sich den Pipeline-Schritten zuordnen: Die relevante Passage wurde ungünstig zerlegt (Schritt 1), nicht gefunden (Schritt 5), unterhalb des Schnitts eingeordnet (Schritte 5–6), aus dem Kontext verdrängt (Schritt 7), oder das Modell zitiert eine Quelle, die seine Aussage nicht stützt (Schritt 8).
 
 ### Regulatorischer Kontext

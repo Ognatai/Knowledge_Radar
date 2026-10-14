@@ -1,0 +1,18 @@
+version: 1
+note_sha256: ec4b27a96507ccfdcb6baf84f067619303817a52908ff218cbd02d435b29356e
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- chain-of-thought-prompting
+- classification
+- gpt
+- llm-adaptation
+- prompt-engineering
+relations:
+- from: few-shot-prompting
+  type: IS_EXAMPLE_OF
+  to: prompt-engineering
+  evidence: few-shot prompting gives a language model a few demonstrations of a task in the prompt
+- from: chain-of-thought-prompting
+  type: BASED_ON
+  to: few-shot-prompting
+  evidence: few-shot chain-of-thought prompting adds intermediate reasoning steps to the demonstrations

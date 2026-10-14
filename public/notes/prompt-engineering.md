@@ -56,7 +56,7 @@ The Prompt Report (Schulhoff et al., 2024) assembles a vocabulary of 33 terms an
 
 #### Origin and variants
 
-In-context learning from a few demonstrations was popularised by GPT-3 (Brown et al., 2020). Chain-of-thought prompting (Wei et al., 2022), its zero-shot variant (Kojima et al., 2022) and self-consistency (Wang et al., 2022) followed in 2022, and the Prompt Report (Schulhoff et al., 2024) systematised the field.
+[[few-shot-prompting|In-context learning]] from a few demonstrations was popularised by GPT-3 (Brown et al., 2020). Chain-of-thought prompting (Wei et al., 2022), its zero-shot variant (Kojima et al., 2022) and self-consistency (Wang et al., 2022) followed in 2022, and the Prompt Report (Schulhoff et al., 2024) systematised the field.
 
 ### When to use it
 
@@ -147,7 +147,7 @@ Der Prompt Report (Schulhoff et al., 2024) stellt ein Vokabular von 33 Begriffen
 
 #### Ursprung und Varianten
 
-In-Context Learning mit wenigen Demonstrationsbeispielen wurde durch GPT-3 (Brown et al., 2020) bekannt. Chain-of-Thought-Prompting (Wei et al., 2022), seine Zero-Shot-Variante (Kojima et al., 2022) und Self-Consistency (Wang et al., 2022) folgten 2022, und der Prompt Report (Schulhoff et al., 2024) systematisierte das Feld.
+[[few-shot-prompting|In-Context Learning]] mit wenigen Demonstrationsbeispielen wurde durch GPT-3 (Brown et al., 2020) bekannt. Chain-of-Thought-Prompting (Wei et al., 2022), seine Zero-Shot-Variante (Kojima et al., 2022) und Self-Consistency (Wang et al., 2022) folgten 2022, und der Prompt Report (Schulhoff et al., 2024) systematisierte das Feld.
 
 ### Wann einsetzen
 

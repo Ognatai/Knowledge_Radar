@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-[[retrieval-augmented-generation|RAG]] evaluation assesses retrieval and generation components in RAG systems, addressing the challenge of requiring extensive human annotations for multi-dimensional assessment. Frameworks like Ragas (Es et al. 2023) provide reference-free metrics, while ARES (Saad-Falcon et al. 2023) uses only a few hundred human annotations to enable efficient evaluation.
+[[retrieval-augmented-generation|RAG]] evaluation assesses retrieval and generation components in RAG systems, addressing the challenge of requiring extensive human annotations for multi-dimensional assessment. Frameworks like [[ragas|Ragas]] (Es et al. 2023) provide reference-free metrics, while ARES (Saad-Falcon et al. 2023) uses only a few hundred human annotations to enable efficient evaluation.
 
 ### How it works
 
@@ -110,7 +110,7 @@ An analysis of 16,254 C4 documents and 24,300 generated responses found a left-l
 
 ### TL;DR
 
-RAG-Bewertung bewertet die Retrieval- und GenerierungsKomponenten in RAG-Systemen und befasst sich mit der Herausforderung, umfangreiche menschliche Annotationen für eine mehrdimensionale Bewertung zu benötigen. Frameworks wie Ragas (Es et al. 2023) stellen metrische Ansätze ohne Referenzen bereit, während ARES (Saad-Falcon et al. 2023) nur einige hundert menschliche Annotationen verwendet, um eine effiziente Bewertung zu ermöglichen.
+RAG-Bewertung bewertet die Retrieval- und GenerierungsKomponenten in RAG-Systemen und befasst sich mit der Herausforderung, umfangreiche menschliche Annotationen für eine mehrdimensionale Bewertung zu benötigen. Frameworks wie [[ragas|Ragas]] (Es et al. 2023) stellen metrische Ansätze ohne Referenzen bereit, während ARES (Saad-Falcon et al. 2023) nur einige hundert menschliche Annotationen verwendet, um eine effiziente Bewertung zu ermöglichen.
 
 ### Funktionsweise
 

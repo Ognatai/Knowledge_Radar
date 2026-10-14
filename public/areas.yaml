@@ -78,6 +78,8 @@ areas:
       - loop-engineering
       - graph-engineering
       - vibe-coding
+      - few-shot-prompting
+      - multi-agent-systems
   - id: retrieval
     name_en: Retrieval & RAG
     name_de: Retrieval & RAG
@@ -111,6 +113,7 @@ areas:
       - faiss
       - beir
       - ms-marco
+      - ragas
     also:
       - embeddings
       - rag-vs-fine-tuning
@@ -232,6 +235,7 @@ areas:
       - cloud-ai-platforms
       - requirements-engineering
       - frontend-development
+      - ml-test-score
     also:
       - scikit-learn
       - langchain-and-langgraph

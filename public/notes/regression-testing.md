@@ -61,7 +61,7 @@ change to prompt / model / retriever / chunking
    → no regression: deploy   |   regression: analyse cause, adjust change
 ```
 
-As in [[ci-cd|CI/CD]] pipelines, the regression run is a precondition for deployment, not an optional check afterwards ([[mlops-and-deployment|MLOps and Deployment]]). The ML Test Score likewise lists tests against a simpler baseline, quality checks on important data slices, canary tests before serving and the ability to roll back serving models (Breck et al., 2017).
+As in [[ci-cd|CI/CD]] pipelines, the regression run is a precondition for deployment, not an optional check afterwards ([[mlops-and-deployment|MLOps and Deployment]]). The [[ml-test-score|ML Test Score]] likewise lists tests against a simpler baseline, quality checks on important data slices, canary tests before serving and the ability to roll back serving models (Breck et al., 2017).
 
 #### Origin and variants
 
@@ -161,7 +161,7 @@ Ein aggregierter Score reicht nicht. Positive-Congruent Training nennt ein Beisp
    → keine Regression: ausrollen   |   Regression: Ursache analysieren, Änderung anpassen
 ```
 
-Wie in CI/CD-Pipelines ist der Regressionslauf Voraussetzung für das Deployment, keine optionale Nachprüfung ([[mlops-and-deployment|MLOps und Deployment]]). Auch der ML Test Score nennt Tests gegen eine einfachere Baseline, Qualitätsprüfungen auf wichtigen Datenausschnitten, Canary-Tests vor dem Ausrollen und die Möglichkeit, ausgerollte Modelle zurückzurollen (Breck et al., 2017).
+Wie in CI/CD-Pipelines ist der Regressionslauf Voraussetzung für das Deployment, keine optionale Nachprüfung ([[mlops-and-deployment|MLOps und Deployment]]). Auch der [[ml-test-score|ML Test Score]] nennt Tests gegen eine einfachere Baseline, Qualitätsprüfungen auf wichtigen Datenausschnitten, Canary-Tests vor dem Ausrollen und die Möglichkeit, ausgerollte Modelle zurückzurollen (Breck et al., 2017).
 
 #### Ursprung und Varianten
 

@@ -1,0 +1,22 @@
+version: 1
+note_sha256: f12dff00465d536b4891a3b7b8d1d8c5b51ab7ea5403a69a62a7739fd7b7c654
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bleu
+- chatgpt
+- embeddings
+- gpt
+- hallucination-detection
+- llm-as-a-judge
+- rag-evaluation
+- rag-generation-evaluation
+- rag-retrieval
+- rag-retrieval-evaluation
+- retrieval-augmented-generation
+- sql
+- text-similarity-metrics
+relations:
+- from: ragas
+  type: IMPLEMENTS
+  to: llm-as-a-judge
+  evidence: pipelines with metrics computed by prompting an llm

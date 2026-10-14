@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-[[retrieval-augmented-generation|RAG]] generation evaluation assesses the faithfulness, correctness, and completeness of LLM responses relative to retrieved context without requiring human annotations. It solves the problem of slow and costly human evaluation by enabling automated reference-free assessment through frameworks like Ragas (Es et al. (2023)) and FACTSCORE (Min et al. (2023)).
+[[retrieval-augmented-generation|RAG]] generation evaluation assesses the faithfulness, correctness, and completeness of LLM responses relative to retrieved context without requiring human annotations. It solves the problem of slow and costly human evaluation by enabling automated reference-free assessment through frameworks like [[ragas|Ragas]] (Es et al. (2023)) and FACTSCORE (Min et al. (2023)).
 
 ### How it works
 
@@ -115,7 +115,7 @@ In regulated domains some retrieved passages may not be paraphrased. Policy-guid
 
 ### TL;DR
 
-RAG-Generierungsbewertung bewertet die Zuverlässigkeit, Richtigkeit und Vollständigkeit der LLM-Antworten im Vergleich zum abgerufenen Kontext, ohne menschliche Annotationen zu benötigen. Sie löst das Problem langsamer und kostspieliger menschlicher Bewertung, indem sie eine automatisierte, referenzfreie Bewertung durch Frameworks wie Ragas (Es et al. (2023)) und FACTSCORE (Min et al. (2023)) ermöglicht.
+RAG-Generierungsbewertung bewertet die Zuverlässigkeit, Richtigkeit und Vollständigkeit der LLM-Antworten im Vergleich zum abgerufenen Kontext, ohne menschliche Annotationen zu benötigen. Sie löst das Problem langsamer und kostspieliger menschlicher Bewertung, indem sie eine automatisierte, referenzfreie Bewertung durch Frameworks wie [[ragas|Ragas]] (Es et al. (2023)) und FACTSCORE (Min et al. (2023)) ermöglicht.
 
 ### Funktionsweise
 

@@ -41,7 +41,7 @@ Teams at Microsoft described a nine-stage ML workflow from model requirements, d
 
 #### 3. A rubric for production readiness
 
-The ML Test Score lists 28 tests and monitoring needs in four groups: features and data, model development, ML infrastructure and monitoring, and scores how ready a system is for production (Breck et al., 2017).
+The [[ml-test-score|ML Test Score]] lists 28 tests and monitoring needs in four groups: features and data, model development, ML infrastructure and monitoring, and scores how ready a system is for production (Breck et al., 2017).
 
 #### 4. Behavioural testing
 
@@ -129,7 +129,7 @@ Teams bei Microsoft beschrieben einen neunstufigen ML-Workflow von Modellanforde
 
 #### 3. Ein Bewertungsraster für die Produktionsreife
 
-Der ML Test Score umfasst 28 Tests und Monitoring-Anforderungen in vier Gruppen, Features und Daten, Modellentwicklung, ML-Infrastruktur und Monitoring, und bewertet, wie produktionsreif ein System ist (Breck et al., 2017).
+Der [[ml-test-score|ML Test Score]] umfasst 28 Tests und Monitoring-Anforderungen in vier Gruppen, Features und Daten, Modellentwicklung, ML-Infrastruktur und Monitoring, und bewertet, wie produktionsreif ein System ist (Breck et al., 2017).
 
 #### 4. Verhaltenstests
 

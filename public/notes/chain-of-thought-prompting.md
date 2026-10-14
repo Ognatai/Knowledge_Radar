@@ -72,7 +72,7 @@ Wei et al. (2022) introduced chain-of-thought prompting with worked exemplars; K
 ### Comparison
 | Approach | How it differs | Suited for |
 |----------|---------------|------------|
-| Standard few-shot prompting | Exemplars show only question and answer (Wei et al., 2022) | Tasks without multi-step reasoning |
+| Standard [[few-shot-prompting\|few-shot prompting]] | Exemplars show only question and answer (Wei et al., 2022) | Tasks without multi-step reasoning |
 | Few-shot chain of thought | Exemplars include the reasoning steps (Wei et al., 2022) | Multi-step reasoning with a few hand-written exemplars |
 | Zero-shot chain of thought | One instruction, "Let's think step by step", no exemplars (Kojima et al., 2022) | Quick use across many tasks |
 | Self-consistency | Samples several chains of thought and takes the majority answer (Wang et al., 2022) | Accuracy-critical reasoning when extra calls are affordable |

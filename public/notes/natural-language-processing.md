@@ -56,7 +56,7 @@ The Transformer (Vaswani et al., 2017) is a sequence model based solely on atten
 
 #### Origin and variants
 
-Jurafsky & Martin (SLP3) give a textbook overview of both classical and neural methods. The neural line traced here runs from learned word vectors (Mikolov et al., 2013) to the Transformer (Vaswani et al., 2017), the pretrain-then-fine-tune approach of BERT (Devlin et al., 2018) and few-shot prompting of large models such as GPT-3 (Brown et al., 2020).
+Jurafsky & Martin (SLP3) give a textbook overview of both classical and neural methods. The neural line traced here runs from learned word vectors (Mikolov et al., 2013) to the Transformer (Vaswani et al., 2017), the pretrain-then-fine-tune approach of BERT (Devlin et al., 2018) and [[few-shot-prompting|few-shot prompting]] of large models such as GPT-3 (Brown et al., 2020).
 
 ### When to use it
 
@@ -146,7 +146,7 @@ Der Transformer (Vaswani et al., 2017) ist ein Sequenzmodell, das ausschließlic
 
 #### Ursprung und Varianten
 
-Jurafsky & Martin (SLP3) geben einen Lehrbuchüberblick über klassische und neuronale Methoden. Die hier nachgezeichnete neuronale Entwicklungslinie führt von gelernten Wortvektoren (Mikolov et al., 2013) über den Transformer (Vaswani et al., 2017) und das Vortrainieren mit anschließendem Fine-Tuning bei BERT (Devlin et al., 2018) zum Few-Shot-Prompting großer Modelle wie GPT-3 (Brown et al., 2020).
+Jurafsky & Martin (SLP3) geben einen Lehrbuchüberblick über klassische und neuronale Methoden. Die hier nachgezeichnete neuronale Entwicklungslinie führt von gelernten Wortvektoren (Mikolov et al., 2013) über den Transformer (Vaswani et al., 2017) und das Vortrainieren mit anschließendem Fine-Tuning bei BERT (Devlin et al., 2018) zum [[few-shot-prompting|Few-Shot-Prompting]] großer Modelle wie GPT-3 (Brown et al., 2020).
 
 ### Wann einsetzen
 

@@ -122,10 +122,6 @@ entities:
     type: Method
     name_en: Reflexion
     name_de: Reflexion
-  - id: multi-agent-systems
-    type: Concept
-    name_en: Multi-agent system
-    name_de: Multi-Agenten-System
   - id: anthropic
     type: Organisation
     name_en: Anthropic

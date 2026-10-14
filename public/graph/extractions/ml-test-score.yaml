@@ -1,0 +1,25 @@
+version: 1
+note_sha256: 238ecf5cadf9587ed4b3ee1c81e32f162fc7df33aae61e2727cf5f67beca4a9a
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- ci-cd
+- data-governance
+- data-pipelines
+- fairness-metrics
+- ml-pipelines
+- mlops-and-deployment
+- monitoring-and-alerting
+- quality-control
+- regression-testing
+- software-testing
+- technical-debt
+- google
+relations:
+- from: ml-test-score
+  type: DEVELOPED_BY
+  to: google
+  evidence: the ml test score is a rubric from google
+- from: ml-test-score
+  type: COMPLEMENTS
+  to: software-testing
+  evidence: the rubric complements, but does not replace, general software engineering practice such as unit tests

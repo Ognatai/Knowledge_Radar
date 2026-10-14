@@ -40,7 +40,7 @@ Models are usually packaged as container images and run on orchestration platfor
 
 #### 3. Versioning code, data and model
 
-Code, data and trained weights must be versioned together; otherwise it can no longer be traced which model was trained with which data and which code ([[git|Git]]; [[experiment-tracking|Experiment Tracking]]). The same applies to embedding models and vector indexes in RAG systems ([[embeddings|Embeddings]]; [[vector-databases|Vector Databases]]). The ML Test Score asks for reproducible training and for model specifications that are reviewed and checked into a repository (Breck et al., 2017).
+Code, data and trained weights must be versioned together; otherwise it can no longer be traced which model was trained with which data and which code ([[git|Git]]; [[experiment-tracking|Experiment Tracking]]). The same applies to embedding models and vector indexes in RAG systems ([[embeddings|Embeddings]]; [[vector-databases|Vector Databases]]). The [[ml-test-score|ML Test Score]] asks for reproducible training and for model specifications that are reviewed and checked into a repository (Breck et al., 2017).
 
 #### 4. CI/CD for ML
 
@@ -139,7 +139,7 @@ Modelle werden meist als Container-Images verpackt und auf Orchestrierungsplattf
 
 #### 3. Code, Daten und Modell versionieren
 
-Code, Daten und trainierte Gewichte müssen gemeinsam versioniert werden; sonst lässt sich nicht mehr nachvollziehen, welches Modell mit welchen Daten und welchem Code trainiert wurde ([[git|Git]]; [[experiment-tracking|Experiment Tracking]]). Dasselbe gilt für Embedding-Modelle und Vektorindizes in RAG-Systemen ([[embeddings|Embeddings]]; [[vector-databases|Vektordatenbanken]]). Der ML Test Score verlangt reproduzierbares Training und Modellspezifikationen, die geprüft und in ein Repository eingecheckt werden (Breck et al., 2017).
+Code, Daten und trainierte Gewichte müssen gemeinsam versioniert werden; sonst lässt sich nicht mehr nachvollziehen, welches Modell mit welchen Daten und welchem Code trainiert wurde ([[git|Git]]; [[experiment-tracking|Experiment Tracking]]). Dasselbe gilt für Embedding-Modelle und Vektorindizes in RAG-Systemen ([[embeddings|Embeddings]]; [[vector-databases|Vektordatenbanken]]). Der [[ml-test-score|ML Test Score]] verlangt reproduzierbares Training und Modellspezifikationen, die geprüft und in ein Repository eingecheckt werden (Breck et al., 2017).
 
 #### 4. CI/CD für ML
 

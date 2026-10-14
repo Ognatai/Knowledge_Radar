@@ -49,7 +49,7 @@ The cache hit rate is the key metric: with a 40% hit rate and 0.01 US dollars pe
 
 #### 3. Model routing and cascades
 
-Not every request needs the most capable model. A router, often a small model or a classifier ([[classification|Classification]]), estimates the difficulty and selects the target model; easy and common questions can go to smaller, cheaper models and hard ones to more capable models (Anthropic, 2024a). RouteLLM trains routers on human preference data that choose between a strong and a weak model and reduced costs by more than half in some cases without lowering response quality (Ong et al., 2024). FrugalGPT combines prompt adaptation, LLM approximation and LLM cascades, which learn which combination of models to use for which queries (Chen et al., 2023). The same advisor–worker idea appears in multi-agent systems ([[graph-engineering|Graph Engineering]]).
+Not every request needs the most capable model. A router, often a small model or a classifier ([[classification|Classification]]), estimates the difficulty and selects the target model; easy and common questions can go to smaller, cheaper models and hard ones to more capable models (Anthropic, 2024a). RouteLLM trains routers on human preference data that choose between a strong and a weak model and reduced costs by more than half in some cases without lowering response quality (Ong et al., 2024). FrugalGPT combines prompt adaptation, LLM approximation and LLM cascades, which learn which combination of models to use for which queries (Chen et al., 2023). The same advisor–worker idea appears in [[multi-agent-systems|multi-agent systems]] ([[graph-engineering|Graph Engineering]]).
 
 #### 4. Batching
 

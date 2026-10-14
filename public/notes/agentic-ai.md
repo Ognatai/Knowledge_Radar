@@ -62,7 +62,7 @@ Reflexion agents reflect verbally on feedback and keep these reflections in an e
 
 #### 6. Single-agent and multi-agent systems
 
-A single agent handles all subtasks, which is simple but leads to large prompts. In multi-agent systems, specialised agents take roles such as researcher, analyst or reviewer, coordinated by a supervisor, a router or a planner–executor split. Sub-agents with clean context windows that return condensed summaries help with long tasks (Anthropic, 2025a). The organisation of many agents is discussed as [[graph-engineering|Graph Engineering]].
+A single agent handles all subtasks, which is simple but leads to large prompts. In [[multi-agent-systems|multi-agent systems]], specialised agents take roles such as researcher, analyst or reviewer, coordinated by a supervisor, a router or a planner–executor split. Sub-agents with clean context windows that return condensed summaries help with long tasks (Anthropic, 2025a). The organisation of many agents is discussed as [[graph-engineering|Graph Engineering]].
 
 #### Origin and variants
 
@@ -198,7 +198,7 @@ LLM-basierte autonome Agenten verbreiteten sich schnell, nachdem Modelle breites
 | Workflow | LLM-Aufrufe in vorgegebenen Codepfaden (Anthropic, 2024a) | Klar umrissene, wiederkehrende Aufgaben |
 | RAG | Erst abrufen, dann generieren ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) | Fragen über eine Dokumentsammlung |
 | Agent | LLM wählt Werkzeuge und Schritte in einer Schleife (Anthropic, 2025a) | Offene Aufgaben mit überprüfbaren Ergebnissen |
-| Multi-Agenten-System | Mehrere spezialisierte Agenten, koordiniert durch Supervisor oder Router | Komplexe Aufgaben mit trennbaren Teilaufgaben |
+| [[multi-agent-systems\|Multi-Agenten-System]] | Mehrere spezialisierte Agenten, koordiniert durch Supervisor oder Router | Komplexe Aufgaben mit trennbaren Teilaufgaben |
 
 ### In der Praxis
 

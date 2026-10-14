@@ -130,10 +130,6 @@ entities:
   type: Method
   name_en: Reflexion
   name_de: Reflexion
-- id: multi-agent-systems
-  type: Concept
-  name_en: Multi-agent system
-  name_de: Multi-Agenten-System
 - id: anthropic
   type: Organisation
   name_en: Anthropic
@@ -1714,10 +1710,6 @@ entities:
   type: Method
   name_en: Blue-green deployment
   name_de: Blue-Green Deployment
-- id: ml-test-score
-  type: Method
-  name_en: ML Test Score
-  name_de: ML Test Score
 - id: data-drift
   type: Concept
   name_en: Data drift
@@ -1895,12 +1887,6 @@ entities:
   type: Method
   name_en: Zero-shot chain of thought
   name_de: Zero-Shot Chain of Thought
-- id: few-shot-prompting
-  type: Method
-  name_en: Few-shot prompting
-  name_de: Few-Shot-Prompting
-  aliases:
-  - In-context learning
 - id: self-consistency
   type: Method
   name_en: Self-consistency
@@ -1997,10 +1983,6 @@ entities:
   type: Method
   name_en: Parent-child retrieval
   name_de: Parent-Child-Retrieval
-- id: ragas
-  type: Method
-  name_en: Ragas
-  name_de: Ragas
 - id: ares
   type: Method
   name_en: ARES

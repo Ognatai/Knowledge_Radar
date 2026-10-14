@@ -38,7 +38,7 @@ A model sees only what is in its context window, and how well it uses that infor
 
 #### 1. Components of the context
 
-Mei et al. (2025) define context engineering as a formal discipline for the systematic optimisation of the information payloads given to LLMs. Their taxonomy distinguishes three foundational components, context retrieval and generation, context processing, and context management, and shows how they are combined in system implementations such as retrieval-augmented generation, memory systems, tool-integrated reasoning and multi-agent systems.
+Mei et al. (2025) define context engineering as a formal discipline for the systematic optimisation of the information payloads given to LLMs. Their taxonomy distinguishes three foundational components, context retrieval and generation, context processing, and context management, and shows how they are combined in system implementations such as retrieval-augmented generation, memory systems, tool-integrated reasoning and [[multi-agent-systems|multi-agent systems]].
 
 #### 2. Retrieval of external knowledge
 
