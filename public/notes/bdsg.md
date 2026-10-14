@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-The Federal Data Protection Act (Bundesdatenschutzgesetz, BDSG) is Germany's general data protection law alongside the [[gdpr|GDPR]]. It does not repeat the GDPR. Instead, it fills the GDPR's opening clauses with German rules, for example on employee data, video surveillance, scoring, research and data protection officers. It also implements the EU directive on data protection in criminal law enforcement (Directive (EU) 2016/680) and sets out the federal data protection authority and criminal penalties. Specific federal laws such as the [[tdddg|TDDDG]] take precedence over it.
+The Federal Data Protection Act (Bundesdatenschutzgesetz, BDSG) is Germany's general data protection law alongside the [[gdpr|GDPR]]. It does not repeat the GDPR. Instead, it fills the GDPR's opening clauses with German rules, for example on employee data, video surveillance, scoring, research and data protection officers. It also implements the EU directive on data protection in criminal law enforcement ([[law-enforcement-directive|Directive (EU) 2016/680]]) and sets out the federal data protection authority and criminal penalties. Specific federal laws such as the [[tdddg|TDDDG]] take precedence over it.
 
 ### Key facts
 
@@ -565,7 +565,7 @@ Allows public and non-public bodies to process personal data for state awards an
 
 ### TL;DR
 
-Das Bundesdatenschutzgesetz (BDSG) ist neben der [[gdpr|DSGVO]] das allgemeine Datenschutzgesetz in Deutschland. Es wiederholt die DSGVO nicht, sondern füllt ihre Öffnungsklauseln mit deutschen Regeln, etwa zu Beschäftigtendaten, Videoüberwachung, Scoring, Forschung und Datenschutzbeauftragten. Außerdem setzt es die EU-Richtlinie zum Datenschutz bei Polizei und Justiz (Richtlinie (EU) 2016/680) um und regelt die Bundesdatenschutzbeauftragte sowie Strafvorschriften. Speziellere Bundesgesetze wie das [[tdddg|TDDDG]] gehen ihm vor.
+Das Bundesdatenschutzgesetz (BDSG) ist neben der [[gdpr|DSGVO]] das allgemeine Datenschutzgesetz in Deutschland. Es wiederholt die DSGVO nicht, sondern füllt ihre Öffnungsklauseln mit deutschen Regeln, etwa zu Beschäftigtendaten, Videoüberwachung, Scoring, Forschung und Datenschutzbeauftragten. Außerdem setzt es die EU-Richtlinie zum Datenschutz bei Polizei und Justiz ([[law-enforcement-directive|Richtlinie (EU) 2016/680]]) um und regelt die Bundesdatenschutzbeauftragte sowie Strafvorschriften. Speziellere Bundesgesetze wie das [[tdddg|TDDDG]] gehen ihm vor.
 
 ### Eckdaten
 

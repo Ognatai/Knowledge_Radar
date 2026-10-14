@@ -248,7 +248,7 @@ Article 3 defines key terms used throughout Regulation (EU) 2024/1689. These def
 
 **Paragraph 36** – Defines **biometric verification** as the automated, one-to-one verification, including authentication, of the identity of natural persons by comparing their biometric data to previously provided biometric data.
 
-**Paragraph 37** – Defines **special categories of personal data** as the categories of personal data referred to in Article 9(1) of Regulation (EU) 2016/679, Article 10 of Directive (EU) 2016/680 and Article 10(1) of Regulation (EU) 2018/1725.
+**Paragraph 37** – Defines **special categories of personal data** as the categories of personal data referred to in Article 9(1) of Regulation (EU) 2016/679, Article 10 of [[law-enforcement-directive|Directive (EU) 2016/680]] and Article 10(1) of Regulation (EU) 2018/1725.
 
 **Paragraph 38** – Defines **sensitive operational data** as operational data related to activities of prevention, detection, investigation or prosecution of criminal offences, the disclosure of which could jeopardise the integrity of criminal proceedings.
 
@@ -1913,7 +1913,7 @@ Artikel 3 definiert zahlreiche zentrale Begriffe, die für die Anwendung der Ver
 
 **Paragraph 36** – Der Begriff „biometrische Verifizierung“ bezeichnet die automatisierte Eins-zu-eins-Verifizierung, einschließlich Authentifizierung, der Identität natürlicher Personen durch den Vergleich ihrer biometrischen Daten mit zuvor bereitgestellten biometrischen Daten.
 
-**Paragraph 37** – Der Begriff „besondere Kategorien personenbezogener Daten“ bezeichnet die in Artikel 9 Absatz 1 der Verordnung (EU) 2016/679, Artikel 10 der Richtlinie (EU) 2016/680 und Artikel 10 Absatz 1 der Verordnung (EU) 2018/1725 aufgeführten Kategorien personenbezogener Daten.
+**Paragraph 37** – Der Begriff „besondere Kategorien personenbezogener Daten“ bezeichnet die in Artikel 9 Absatz 1 der Verordnung (EU) 2016/679, Artikel 10 der [[law-enforcement-directive|Richtlinie (EU) 2016/680]] und Artikel 10 Absatz 1 der Verordnung (EU) 2018/1725 aufgeführten Kategorien personenbezogener Daten.
 
 **Paragraph 38** – Der Begriff „sensible operative Daten“ bezeichnet operative Daten im Zusammenhang mit Tätigkeiten zur Verhütung, Aufdeckung, Untersuchung oder Verfolgung von Straftaten, deren Offenlegung die Integrität von Strafverfahren gefährden könnte.
 

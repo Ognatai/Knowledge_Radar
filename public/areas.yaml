@@ -294,6 +294,7 @@ areas:
       - enisa
       - ai-office
       - european-commission
+      - law-enforcement-directive
     also:
       - dora
   - id: german-law

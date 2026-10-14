@@ -1,0 +1,22 @@
+version: 1
+note_sha256: a34c813b7d2ee1ebd457a63e55ac58b8fe2b3396a9a94d9b4b0ed461eeca290f
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bdsg
+- bias-in-nlp
+- data-governance
+- eu-ai-act
+- explainable-ai
+- fairness-metrics
+- federal-network-agency
+- gdpr
+- llm-observability-and-tracing
+relations:
+- from: law-enforcement-directive
+  type: COMPLEMENTS
+  to: gdpr
+  evidence: it is the counterpart to the gdpr for this field
+- from: bdsg
+  type: IMPLEMENTS
+  to: law-enforcement-directive
+  evidence: part 3 (§§ 45–84) transposes the directive for police and criminal justice in germany

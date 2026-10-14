@@ -313,12 +313,6 @@ entities:
   name_de: Wasserstein-GAN
   aliases:
   - WGAN
-- id: law-enforcement-directive
-  type: Regulation
-  name_en: Law Enforcement Directive (EU) 2016/680
-  name_de: Richtlinie (EU) 2016/680 (JI-Richtlinie)
-  aliases:
-  - Directive (EU) 2016/680
 - id: employee-data-protection
   type: Concept
   name_en: Employee data protection

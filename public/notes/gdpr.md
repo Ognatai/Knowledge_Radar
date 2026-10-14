@@ -44,7 +44,7 @@ The General Data Protection Regulation (GDPR) is the EU's central law on the pro
 
 **Territorial scope** (Art. 3): processing in the context of an establishment of a controller or processor in the EU, regardless of where the processing takes place; and processing of data of people in the EU by controllers or processors outside the EU, where it relates to offering goods or services to them or to monitoring their behaviour in the EU.
 
-**Exclusions** (Art. 2(2)): activities outside the scope of Union law, the common foreign and security policy, purely personal or household activities, and processing by competent authorities for criminal law enforcement, which falls under Directive (EU) 2016/680.
+**Exclusions** (Art. 2(2)): activities outside the scope of Union law, the common foreign and security policy, purely personal or household activities, and processing by competent authorities for criminal law enforcement, which falls under [[law-enforcement-directive|Directive (EU) 2016/680]].
 
 **Key roles**: the *controller* decides on the purposes and means of processing; the *processor* processes data on the controller's behalf; the *data subject* is the person the data relates to.
 
@@ -817,7 +817,7 @@ Die Datenschutz-Grundverordnung (DSGVO) ist das zentrale Gesetz der EU für die 
 
 **Räumlicher Anwendungsbereich** (Art. 3): Verarbeitung im Rahmen der Tätigkeiten einer Niederlassung eines Verantwortlichen oder Auftragsverarbeiters in der EU, unabhängig davon, wo die Verarbeitung stattfindet; außerdem Verarbeitung von Daten von Personen in der EU durch Verantwortliche oder Auftragsverarbeiter außerhalb der EU, wenn sie diesen Personen Waren oder Dienstleistungen anbieten oder ihr Verhalten in der EU beobachten.
 
-**Ausnahmen** (Art. 2 Abs. 2): Tätigkeiten außerhalb des Unionsrechts, die Gemeinsame Außen- und Sicherheitspolitik, ausschließlich persönliche oder familiäre Tätigkeiten sowie die Verarbeitung durch zuständige Behörden zur Strafverfolgung, für die die Richtlinie (EU) 2016/680 gilt.
+**Ausnahmen** (Art. 2 Abs. 2): Tätigkeiten außerhalb des Unionsrechts, die Gemeinsame Außen- und Sicherheitspolitik, ausschließlich persönliche oder familiäre Tätigkeiten sowie die Verarbeitung durch zuständige Behörden zur Strafverfolgung, für die die [[law-enforcement-directive|Richtlinie (EU) 2016/680]] gilt.
 
 **Zentrale Rollen**: Der *Verantwortliche* entscheidet über Zwecke und Mittel der Verarbeitung; der *Auftragsverarbeiter* verarbeitet Daten im Auftrag des Verantwortlichen; die *betroffene Person* ist die Person, auf die sich die Daten beziehen.
 

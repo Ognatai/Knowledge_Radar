@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 0d8155d9f3c178860f48d171cee1787789c5da948cf64ad30cd2cf1ed8397388
+note_sha256: 5035a1598dedbd8cc0ea0f1fa3b40f218d320ff3dd9e63ea0c81a92fbe297309
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - data-protection-directive-1995
