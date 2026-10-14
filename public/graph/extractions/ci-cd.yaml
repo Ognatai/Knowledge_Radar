@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6ce97d93d5962321825c3b48ba82f38e26201240f5750de0e81fc389ea47006b
+note_sha256: 2835d3d56bc0dfe2a4ae103557a001769d4d32454a86e77e16635f3c47ee8a80
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - docker

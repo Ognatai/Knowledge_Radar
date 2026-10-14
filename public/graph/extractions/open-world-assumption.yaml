@@ -1,0 +1,16 @@
+version: 1
+note_sha256: 770ddda4bd36822d4fe0b155effeefdec23dbab0b55c85fa16fccb9af42dd53d
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- knowledge-graph-embeddings
+- knowledge-graph-engineering
+- knowledge-graphs
+- ontology-design
+- rdf
+- sparql
+- shacl
+relations:
+- from: shacl
+  type: COMPLEMENTS
+  to: open-world-assumption
+  evidence: validation of what must be present is therefore done with a separate closed-world tool such as shacl

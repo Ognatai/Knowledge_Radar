@@ -41,7 +41,7 @@ host (AI application, e.g. Claude Code or VS Code)
 
 - **Host:** the AI application that coordinates one or several clients.
 - **Client:** maintains a dedicated connection to one server.
-- **Server:** a program that provides context, locally via stdio (typically for one client) or remotely via Streamable HTTP (typically for many clients) (MCP architecture docs).
+- **Server:** a program that provides context, locally via stdio (typically for one client) or remotely via Streamable [[http|HTTP]] (typically for many clients) (MCP architecture docs).
 
 The data layer is based on JSON-RPC 2.0 and covers discovery, server and client features and notifications; the transport layer handles connections, message framing and authorisation, with OAuth recommended for tokens (MCP architecture docs). MCP only defines the protocol for exchanging context; how an application uses LLMs or manages the provided context is up to the application (MCP architecture docs).
 
@@ -162,7 +162,7 @@ Host (KI-Anwendung, z. B. Claude Code oder VS Code)
 
 - **Host:** die KI-Anwendung, die einen oder mehrere Clients koordiniert.
 - **Client:** hält eine eigene Verbindung zu genau einem Server.
-- **Server:** ein Programm, das Kontext bereitstellt, lokal über stdio (meist für einen Client) oder entfernt über Streamable HTTP (meist für viele Clients) (MCP architecture docs).
+- **Server:** ein Programm, das Kontext bereitstellt, lokal über stdio (meist für einen Client) oder entfernt über Streamable [[http|HTTP]] (meist für viele Clients) (MCP architecture docs).
 
 Die Datenschicht beruht auf JSON-RPC 2.0 und umfasst Discovery, Server- und Client-Funktionen sowie Benachrichtigungen; die Transportschicht regelt Verbindungen, Nachrichtenrahmen und Autorisierung, wobei OAuth für Token empfohlen wird (MCP architecture docs). MCP legt nur das Protokoll für den Austausch von Kontext fest; wie eine Anwendung LLMs nutzt oder den bereitgestellten Kontext verwaltet, bleibt der Anwendung überlassen (MCP architecture docs).
 

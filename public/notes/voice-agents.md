@@ -48,7 +48,7 @@ Between hearing and speaking, the agent fills the slots of the task, tracks the 
 
 #### 5. Failure paths
 
-If no input arrives, including empty or unrecognised audio or a no-speech timeout, a no-input event is raised; input that matches nothing raises no-match; and a request to talk to a person ends the flow with a human-escalation event (Dialogflow CX: Handlers). Users who are misunderstood repeat themselves with hyperarticulated speech, which is even harder for recognisers (Jurafsky & Martin, 2026).
+If no input arrives, including empty or unrecognised audio or a no-speech timeout, a no-input event is raised; input that matches nothing raises no-match; and a request to talk to a person ends the flow with a human-escalation event ([[dialogflow-cx|Dialogflow CX]]: Handlers). Users who are misunderstood repeat themselves with hyperarticulated speech, which is even harder for recognisers (Jurafsky & Martin, 2026).
 
 #### 6. Origin and variants
 
@@ -128,7 +128,7 @@ Zwischen Hören und Sprechen füllt der Agent die Slots der Aufgabe, verfolgt de
 
 #### 5. Fehlerpfade
 
-Kommt keine Eingabe, auch leeres oder unerkanntes Audio oder ein Timeout ohne Sprache, wird ein no-input-Ereignis ausgelöst; eine Eingabe, die zu nichts passt, löst no-match aus; und der Wunsch, mit einem Menschen zu sprechen, beendet den Flow mit einem Human-Escalation-Ereignis (Dialogflow CX: Handlers). Falsch verstandene Nutzer wiederholen sich mit überdeutlicher Sprache, die für Erkenner noch schwieriger ist (Jurafsky & Martin, 2026).
+Kommt keine Eingabe, auch leeres oder unerkanntes Audio oder ein Timeout ohne Sprache, wird ein no-input-Ereignis ausgelöst; eine Eingabe, die zu nichts passt, löst no-match aus; und der Wunsch, mit einem Menschen zu sprechen, beendet den Flow mit einem Human-Escalation-Ereignis ([[dialogflow-cx|Dialogflow CX]]: Handlers). Falsch verstandene Nutzer wiederholen sich mit überdeutlicher Sprache, die für Erkenner noch schwieriger ist (Jurafsky & Martin, 2026).
 
 #### 6. Herkunft und Varianten
 

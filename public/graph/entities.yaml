@@ -106,10 +106,6 @@ entities:
   type: Concept
   name_en: Ontology
   name_de: Ontologie
-- id: open-world-assumption
-  type: Concept
-  name_en: Open-world assumption
-  name_de: Open-World-Annahme
 - id: toolformer
   type: Method
   name_en: Toolformer
@@ -301,12 +297,6 @@ entities:
   name_de: Bürgerliches Gesetzbuch (BGB)
   aliases:
   - BGB
-- id: rest
-  type: Concept
-  name_en: REST
-  name_de: REST
-  aliases:
-  - Representational State Transfer
 - id: remote-procedure-call
   type: Concept
   name_en: Remote procedure call (RPC)
@@ -325,12 +315,6 @@ entities:
   type: Technology
   name_en: Protocol Buffers
   name_de: Protocol Buffers
-- id: http
-  type: Technology
-  name_en: HTTP
-  name_de: HTTP
-  aliases:
-  - Hypertext Transfer Protocol
 - id: problem-details
   type: Technology
   name_en: Problem Details for HTTP APIs (RFC 9457)
@@ -396,10 +380,6 @@ entities:
   type: Method
   name_en: Geometric debiasing of word embeddings
   name_de: Geometrisches Debiasing von Word Embeddings
-- id: actor-level-corpus-analysis
-  type: Method
-  name_en: Actor-level corpus analysis
-  name_de: Akteursbasierte Korpusanalyse
 - id: bsi
   type: Organisation
   name_en: Federal Office for Information Security (BSI)
@@ -2503,10 +2483,6 @@ entities:
   type: Technology
   name_en: Silero VAD
   name_de: Silero VAD
-- id: dialogflow-cx
-  type: Technology
-  name_en: Dialogflow CX
-  name_de: Dialogflow CX
 - id: amazon-lex
   type: Technology
   name_en: Amazon Lex
@@ -2918,3 +2894,9 @@ entities:
   type: Person
   name_en: Thomas G. Dietterich
   name_de: Thomas G. Dietterich
+- id: roy-fielding
+  type: Person
+  name_en: Roy T. Fielding
+  name_de: Roy T. Fielding
+  aliases:
+  - Roy Fielding

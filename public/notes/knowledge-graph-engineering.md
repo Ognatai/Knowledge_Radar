@@ -186,7 +186,7 @@ Hogan et al. (2020) beschreiben den Lebenszyklus von Knowledge Graphs; Entity Re
 | Ansatz | Unterschiede | Geeignet für |
 |----------|----------------|------------|
 | SHACL-Validierung | Prüfung der Daten gegen Shapes unter Closed-World-Sicht (W3C SHACL) | Durchsetzen erforderlicher Strukturen |
-| OWL-Schlussfolgern | Ableiten impliziter Fakten unter Open-World-Annahme ([[ontology-design|Ontologie-Design]]) | Wissen ableiten, Konsistenz prüfen |
+| OWL-Schlussfolgern | Ableiten impliziter Fakten unter [[open-world-assumption\|Open-World-Annahme]] ([[ontology-design|Ontologie-Design]]) | Wissen ableiten, Konsistenz prüfen |
 | Entity Resolution | Führt Beschreibungen derselben Entität zusammen (Christophides et al., 2019) | Quellen integrieren |
 | Verfeinerung | Ergänzt fehlende Fakten oder erkennt Fehler (Paulheim, 2017) | Bestehenden Graphen verbessern |
 

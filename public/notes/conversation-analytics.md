@@ -22,7 +22,7 @@ sources:
 
 ### TL;DR
 
-Conversation analytics measures how well a [[conversational-ai|conversational AI]] system or [[voice-agents|voice agent]] performs on real conversations: whether tasks succeed, where users drop off, how often they are handed to a human, and how well intents and slots are understood (Amazon Lex: Key definitions; Dialogflow CX: Analytics). It builds on dialogue evaluation research, which measures task success, slot error rate and efficiency costs (Jurafsky & Martin, 2026) and compares dialogue strategies across tasks (Walker et al., 1997).
+Conversation analytics measures how well a [[conversational-ai|conversational AI]] system or [[voice-agents|voice agent]] performs on real conversations: whether tasks succeed, where users drop off, how often they are handed to a human, and how well intents and slots are understood (Amazon Lex: Key definitions; [[dialogflow-cx|Dialogflow CX]]: Analytics). It builds on dialogue evaluation research, which measures task success, slot error rate and efficiency costs (Jurafsky & Martin, 2026) and compares dialogue strategies across tasks (Walker et al., 1997).
 
 ### How it works
 
@@ -110,7 +110,7 @@ Conversation analytics tracks success, drop-off, escalation and understanding er
 
 ### TL;DR
 
-Conversation Analytics misst, wie gut ein [[conversational-ai|Conversational-AI]]-System oder ein [[voice-agents|Voice Agent]] in echten Gesprächen funktioniert: ob Aufgaben gelingen, wo Nutzer abbrechen, wie oft an einen Menschen übergeben wird und wie gut Intents und Slots verstanden werden (Amazon Lex: Key definitions; Dialogflow CX: Analytics). Sie baut auf der Forschung zur Dialogevaluation auf, die Task Success, Slot Error Rate und Effizienzkosten misst (Jurafsky & Martin, 2026) und Dialogstrategien über Aufgaben hinweg vergleicht (Walker et al., 1997).
+Conversation Analytics misst, wie gut ein [[conversational-ai|Conversational-AI]]-System oder ein [[voice-agents|Voice Agent]] in echten Gesprächen funktioniert: ob Aufgaben gelingen, wo Nutzer abbrechen, wie oft an einen Menschen übergeben wird und wie gut Intents und Slots verstanden werden (Amazon Lex: Key definitions; [[dialogflow-cx|Dialogflow CX]]: Analytics). Sie baut auf der Forschung zur Dialogevaluation auf, die Task Success, Slot Error Rate und Effizienzkosten misst (Jurafsky & Martin, 2026) und Dialogstrategien über Aufgaben hinweg vergleicht (Walker et al., 1997).
 
 ### Funktionsweise
 

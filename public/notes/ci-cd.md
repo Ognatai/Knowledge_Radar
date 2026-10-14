@@ -63,7 +63,7 @@ Both major hosted platforms share the same structure:
 | Concept | GitHub Actions | Azure Pipelines |
 |---|---|---|
 | Definition | YAML workflow in `.github/workflows` | YAML pipeline (or the Classic editor) |
-| Start | event (push, pull request, issue), schedule, REST call, manual | trigger: push, schedule, completion of another build, manual |
+| Start | event (push, pull request, issue), schedule, [[rest\|REST]] call, manual | trigger: push, schedule, completion of another build, manual |
 | Grouping | jobs (parallel unless they declare dependencies) | stages (sequential by default) containing jobs |
 | Smallest unit | step: shell script or reusable action | step: script or prepackaged task |
 | Executor | runner: GitHub-hosted VM or self-hosted | agent: Microsoft-hosted or self-hosted |

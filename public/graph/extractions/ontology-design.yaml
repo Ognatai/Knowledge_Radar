@@ -1,5 +1,5 @@
 version: 1
-note_sha256: da22dcf1b730cd0e73d9a4a5e0e7eeb64e760d111207c8ac7b4b335eac9bb88a
+note_sha256: 03c7f7579bb865dadbf579a491b83a771eebe4b2cc40b4a891b1286b45dbf69a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - ontology

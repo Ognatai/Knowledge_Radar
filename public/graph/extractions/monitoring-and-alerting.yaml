@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e01415a691eed070a2ee822e6ca8a937fb08a4e74c7bcade66937661075fbb94
+note_sha256: 48e89114594565e80b9172086d8e44d21eaadd60e7d2a3c29882fe4cb00e1088
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - opentelemetry

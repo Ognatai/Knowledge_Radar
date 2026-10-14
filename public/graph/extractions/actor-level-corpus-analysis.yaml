@@ -1,0 +1,22 @@
+version: 1
+note_sha256: acbb033d8f304b85ae8cbd3dff171370625da1c6fa1c5578a35deefb4a1353dd
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bias-in-nlp
+- chatgpt
+- collocations
+- dependency-parsing
+- entity-extraction
+- fairness-metrics
+- information-extraction
+- taz2024full
+- spacy
+relations:
+- from: actor-level-corpus-analysis
+  type: BASED_ON
+  to: information-extraction
+  evidence: it partly automates two strategies from linguistic discourse analysis with information extraction
+- from: taz2024full
+  type: EVALUATES
+  to: actor-level-corpus-analysis
+  evidence: applied to the taz2024full corpus of over 1.8 million taz articles from 1980 to 2024

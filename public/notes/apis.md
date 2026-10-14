@@ -27,7 +27,7 @@ sources:
 
 ### TL;DR
 
-An API (application programming interface) is a defined contract through which software components communicate: which operations exist, which inputs they take, what they return and how errors are reported. Web APIs mostly follow one of a few styles: REST over HTTP, which treats data as resources with a uniform interface (Fielding, 2000), remote procedure calls such as gRPC (gRPC docs) or JSON-RPC (JSON-RPC 2.0 specification), or query languages such as GraphQL (GraphQL specification). Good APIs are consistent, documented in a machine-readable form (OpenAPI Specification), secured per object and per user (OWASP API Top 10 (2023)) and evolve without breaking existing clients (Azure REST API guidelines).
+An API (application programming interface) is a defined contract through which software components communicate: which operations exist, which inputs they take, what they return and how errors are reported. Web APIs mostly follow one of a few styles: [[rest|REST]] over [[http|HTTP]], which treats data as resources with a uniform interface (Fielding, 2000), remote procedure calls such as gRPC (gRPC docs) or JSON-RPC (JSON-RPC 2.0 specification), or query languages such as GraphQL (GraphQL specification). Good APIs are consistent, documented in a machine-readable form (OpenAPI Specification), secured per object and per user (OWASP API Top 10 (2023)) and evolve without breaking existing clients (Azure REST API guidelines).
 
 ### How it works
 
@@ -140,7 +140,7 @@ An API is a contract: choose the style that fits, describe it machine-readably, 
 
 ### TL;DR
 
-Eine API (Application Programming Interface, Programmierschnittstelle) ist ein festgelegter Vertrag, über den Softwarekomponenten miteinander kommunizieren: welche Operationen es gibt, welche Eingaben sie erwarten, was sie zurückgeben und wie Fehler gemeldet werden. Web-APIs folgen meist einem von wenigen Stilen: REST über HTTP, das Daten als Ressourcen mit einheitlicher Schnittstelle behandelt (Fielding, 2000), entfernte Prozeduraufrufe wie gRPC (gRPC docs) oder JSON-RPC (JSON-RPC 2.0 specification) oder Abfragesprachen wie GraphQL (GraphQL specification). Gute APIs sind einheitlich, maschinenlesbar beschrieben (OpenAPI Specification), pro Objekt und Nutzer abgesichert (OWASP API Top 10 (2023)) und entwickeln sich weiter, ohne bestehende Clients zu brechen (Azure REST API guidelines).
+Eine API (Application Programming Interface, Programmierschnittstelle) ist ein festgelegter Vertrag, über den Softwarekomponenten miteinander kommunizieren: welche Operationen es gibt, welche Eingaben sie erwarten, was sie zurückgeben und wie Fehler gemeldet werden. Web-APIs folgen meist einem von wenigen Stilen: [[rest|REST]] über [[http|HTTP]], das Daten als Ressourcen mit einheitlicher Schnittstelle behandelt (Fielding, 2000), entfernte Prozeduraufrufe wie gRPC (gRPC docs) oder JSON-RPC (JSON-RPC 2.0 specification) oder Abfragesprachen wie GraphQL (GraphQL specification). Gute APIs sind einheitlich, maschinenlesbar beschrieben (OpenAPI Specification), pro Objekt und Nutzer abgesichert (OWASP API Top 10 (2023)) und entwickeln sich weiter, ohne bestehende Clients zu brechen (Azure REST API guidelines).
 
 ### Funktionsweise
 

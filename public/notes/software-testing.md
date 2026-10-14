@@ -57,7 +57,7 @@ What counts as a unit is flexible: a function, a method or a class. Solitary uni
 
 #### 4. Integration and contract tests
 
-Integration tests check the code's integration with databases, file systems and other services. Narrow integration tests cover one integration point at a time, for example by starting a database, writing through the application and checking the stored data; they belong wherever data is serialised or deserialised, such as REST calls, queues and file I/O (Vocke, 2018). A faked external service can drift away from the real one. Contract tests close this gap: in consumer-driven contract testing, consumers publish tests describing what they need from an interface, and the provider runs them in its own pipeline; Pact is a common tool (Vocke, 2018). Interface design itself is covered in [[apis|APIs]].
+Integration tests check the code's integration with databases, file systems and other services. Narrow integration tests cover one integration point at a time, for example by starting a database, writing through the application and checking the stored data; they belong wherever data is serialised or deserialised, such as [[rest|REST]] calls, queues and file I/O (Vocke, 2018). A faked external service can drift away from the real one. Contract tests close this gap: in consumer-driven contract testing, consumers publish tests describing what they need from an interface, and the provider runs them in its own pipeline; Pact is a common tool (Vocke, 2018). Interface design itself is covered in [[apis|APIs]].
 
 #### 5. UI, end-to-end and acceptance tests
 
@@ -204,7 +204,7 @@ Die Pyramide geht auf Mike Cohn zurück; Vockes Artikel von 2018 auf martinfowle
 | Testart | Umfang | Geschwindigkeit | Typische Werkzeuge |
 |---|---|---|---|
 | Unit-Test | eine Funktion, Methode oder Klasse | Millisekunden | pytest, JUnit |
-| Integrationstest | ein Integrationspunkt (Datenbank, Datei, HTTP) | Sekunden | pytest mit Testdatenbank, WireMock |
+| Integrationstest | ein Integrationspunkt (Datenbank, Datei, [[http\|HTTP]]) | Sekunden | pytest mit Testdatenbank, WireMock |
 | Contract-Test | Schnittstelle zwischen Nutzer und Anbieter | Sekunden | Pact |
 | End-to-End-Test | gesamtes ausgeliefertes System über UI oder API | Minuten | Playwright, Selenium, REST-assured |
 | ML-Tests | Daten, Modell, Pipeline, Monitoring | unterschiedlich | Datenvalidierung, Canary Releases |

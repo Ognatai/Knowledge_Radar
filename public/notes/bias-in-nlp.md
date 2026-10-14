@@ -86,7 +86,7 @@ Bias in word embeddings and its reduction were described by Bolukbasi et al. (20
 - Embedding bias can be measured and partly removed while preserving useful properties such as analogy solving (Bolukbasi et al., 2016).
 - Association tests make biases measurable that are known from psychology (Caliskan et al., 2016).
 - Benchmarks such as StereoSet and BBQ make bias in language models and QA systems comparable (Nadeem et al., 2020; Parrish et al., 2021).
-- Actor-level corpus analysis works without labelled data or external gender databases and scales to millions of texts (Urchs, 2025).
+- [[actor-level-corpus-analysis|Actor-level corpus analysis]] works without labelled data or external gender databases and scales to millions of texts (Urchs, 2025).
 
 **Limitations**
 - Many bias studies do not state what they consider harmful and why, and their measurements are poorly matched to their motivations (Blodgett et al., 2020).

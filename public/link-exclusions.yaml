@@ -3,6 +3,8 @@
 # the target notes it must not link to, with the reason.
 version: 1
 exclusions:
+  open-world-assumption:
+    w3c: W3C appears only as the author name inside citations.
   ragas:
     classification-metrics: context precision and recall are Ragas retrieval metrics, not classification metrics.
   clustering:

@@ -1,0 +1,19 @@
+version: 1
+note_sha256: 58210c5329a808d2db92d62bf1f6d7deebb588c1e69549c4bfb62e81bb0b7576
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- api-authentication
+- apis
+- asynchronous-apis
+- http
+- w3c
+- roy-fielding
+relations:
+- from: rest
+  type: DEVELOPED_BY
+  to: roy-fielding
+  evidence: that roy fielding defined in his 2000 dissertation
+- from: http
+  type: IMPLEMENTS
+  to: rest
+  evidence: http's standardised methods are not resource-specific because uniform interfaces provide better visibility and reuse, and rfc 9110 cites rest for this

@@ -68,7 +68,7 @@ Undo operations differ in how far they reach: restore discards changes in the wo
 |----------|----------------|------------|
 | Merge | Combines histories, keeps the branch structure (Pro Git branching) | Shared branches |
 | Rebase | Replays commits on a new base for a linear history (Pro Git) | Local branches before publishing |
-| HTTPS remote | Authenticates with credentials or tokens | Occasional access |
+| [[http\|HTTPS]] remote | Authenticates with credentials or tokens | Occasional access |
 | SSH remote | Authenticates with a key pair (GitHub SSH docs) | Regular pushes from a trusted machine |
 
 ### In practice

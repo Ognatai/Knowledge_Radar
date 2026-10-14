@@ -1,0 +1,22 @@
+version: 1
+note_sha256: e891bc8aeaa76a46939b2a9c422de59864f4bc7495517208add4154693025d4a
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- asynchronous-apis
+- conversation-analytics
+- conversation-design
+- conversational-ai
+- few-shot-prompting
+- llm-guardrails-and-red-teaming
+- natural-language-understanding
+- voice-agents
+- google
+relations:
+- from: dialogflow-cx
+  type: DEVELOPED_BY
+  to: google
+  evidence: dialogflow cx is google cloud's platform for building chat and voice agents
+- from: dialogflow-cx
+  type: IMPLEMENTS
+  to: few-shot-prompting
+  evidence: example conversations that act as few-shot prompts

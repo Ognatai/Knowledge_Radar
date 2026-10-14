@@ -122,7 +122,7 @@ OpenTelemetry sammelt, verarbeitet und exportiert Signale, die Ausgaben, die die
 
 #### 2. Was messen: die vier Golden Signals
 
-Für Systeme mit Nutzern nennt das Google-SRE-Buch vier Signale: Latenz, die Zeit, eine Anfrage zu bedienen, wobei fehlgeschlagene Anfragen getrennt von erfolgreichen erfasst werden; Traffic, die Last auf dem System in einem systemspezifischen Maß; Fehler, die Rate der Anfragen, die ausdrücklich (etwa HTTP 500), implizit oder per Richtlinie scheitern; und Sättigung, wie „voll“ der Dienst ist, wobei viele Systeme schon vor 100 % Auslastung schlechter werden (Google SRE Book).
+Für Systeme mit Nutzern nennt das Google-SRE-Buch vier Signale: Latenz, die Zeit, eine Anfrage zu bedienen, wobei fehlgeschlagene Anfragen getrennt von erfolgreichen erfasst werden; Traffic, die Last auf dem System in einem systemspezifischen Maß; Fehler, die Rate der Anfragen, die ausdrücklich (etwa [[http|HTTP]] 500), implizit oder per Richtlinie scheitern; und Sättigung, wie „voll“ der Dienst ist, wobei viele Systeme schon vor 100 % Auslastung schlechter werden (Google SRE Book).
 
 #### 3. Verteilungen statt Durchschnitte
 

@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Most API calls answer within about 100 ms over the same connection, but some back-end work takes seconds, minutes or longer, and the caller cannot wait for it (Azure: Asynchronous Request-Reply). Asynchronous APIs therefore acknowledge the request at once, typically with HTTP 202 Accepted and a status URL, and deliver the result later, either through polling of that URL or through a callback such as a webhook, a WebSocket or server-sent events (Azure: Asynchronous Request-Reply). Webhooks need protection against spoofing, replay and server-side request forgery (Standard Webhooks).
+Most API calls answer within about 100 ms over the same connection, but some back-end work takes seconds, minutes or longer, and the caller cannot wait for it (Azure: Asynchronous Request-Reply). Asynchronous APIs therefore acknowledge the request at once, typically with [[http|HTTP]] 202 Accepted and a status URL, and deliver the result later, either through polling of that URL or through a callback such as a webhook, a WebSocket or server-sent events (Azure: Asynchronous Request-Reply). Webhooks need protection against spoofing, replay and server-side request forgery (Standard Webhooks).
 
 ### How it works
 
@@ -106,7 +106,7 @@ An asynchronous API answers 202 with a status URL at once and delivers the resul
 
 ### TL;DR
 
-Die meisten API-Aufrufe antworten innerhalb von etwa 100 ms über dieselbe Verbindung, manche Arbeit im Backend dauert aber Sekunden, Minuten oder länger, und der Aufrufer kann nicht darauf warten (Azure: Asynchronous Request-Reply). Asynchrone APIs bestätigen die Anfrage deshalb sofort, typischerweise mit HTTP 202 Accepted und einer Status-URL, und liefern das Ergebnis später, entweder per Polling dieser URL oder über einen Rückkanal wie einen Webhook, eine WebSocket-Verbindung oder Server-Sent Events (Azure: Asynchronous Request-Reply). Webhooks brauchen Schutz vor Spoofing, Replay und Server-Side Request Forgery (Standard Webhooks).
+Die meisten API-Aufrufe antworten innerhalb von etwa 100 ms über dieselbe Verbindung, manche Arbeit im Backend dauert aber Sekunden, Minuten oder länger, und der Aufrufer kann nicht darauf warten (Azure: Asynchronous Request-Reply). Asynchrone APIs bestätigen die Anfrage deshalb sofort, typischerweise mit [[http|HTTP]] 202 Accepted und einer Status-URL, und liefern das Ergebnis später, entweder per Polling dieser URL oder über einen Rückkanal wie einen Webhook, eine WebSocket-Verbindung oder Server-Sent Events (Azure: Asynchronous Request-Reply). Webhooks brauchen Schutz vor Spoofing, Replay und Server-Side Request Forgery (Standard Webhooks).
 
 ### Funktionsweise
 

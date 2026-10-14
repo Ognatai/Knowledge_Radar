@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Conversational AI covers systems that talk with users over several turns, in text or speech, to help them solve a task such as booking a trip or changing a contract (Jurafsky & Martin, 2026). The classic architecture fills the slots of a task frame: it understands each utterance, tracks the dialogue state, decides on the next dialogue act and generates a response; production platforms add fallbacks for unrecognised or missing input and escalation to a human agent (Jurafsky & Martin, 2026; Dialogflow CX: Handlers). Today, deterministic flows are combined with generative, LLM-based components (Dialogflow CX: Playbooks).
+Conversational AI covers systems that talk with users over several turns, in text or speech, to help them solve a task such as booking a trip or changing a contract (Jurafsky & Martin, 2026). The classic architecture fills the slots of a task frame: it understands each utterance, tracks the dialogue state, decides on the next dialogue act and generates a response; production platforms add fallbacks for unrecognised or missing input and escalation to a human agent (Jurafsky & Martin, 2026; [[dialogflow-cx|Dialogflow CX]]: Handlers). Today, deterministic flows are combined with generative, LLM-based components (Dialogflow CX: Playbooks).
 
 ### How it works
 
@@ -108,7 +108,7 @@ Conversational AI fills a task frame over several turns by understanding, tracki
 
 ### TL;DR
 
-Conversational AI umfasst Systeme, die über mehrere Turns per Text oder Sprache mit Nutzern sprechen, um ihnen bei einer Aufgabe zu helfen, etwa eine Reise zu buchen oder einen Vertrag zu ändern (Jurafsky & Martin, 2026). Die klassische Architektur füllt die Slots eines Aufgaben-Frames: Sie versteht jede Äußerung, verfolgt den Dialogzustand, wählt den nächsten Dialogakt und erzeugt eine Antwort; Produktionsplattformen ergänzen Fallbacks für unerkannte oder fehlende Eingaben und die Eskalation an einen Menschen (Jurafsky & Martin, 2026; Dialogflow CX: Handlers). Heute werden deterministische Flows mit generativen, LLM-basierten Komponenten kombiniert (Dialogflow CX: Playbooks).
+Conversational AI umfasst Systeme, die über mehrere Turns per Text oder Sprache mit Nutzern sprechen, um ihnen bei einer Aufgabe zu helfen, etwa eine Reise zu buchen oder einen Vertrag zu ändern (Jurafsky & Martin, 2026). Die klassische Architektur füllt die Slots eines Aufgaben-Frames: Sie versteht jede Äußerung, verfolgt den Dialogzustand, wählt den nächsten Dialogakt und erzeugt eine Antwort; Produktionsplattformen ergänzen Fallbacks für unerkannte oder fehlende Eingaben und die Eskalation an einen Menschen (Jurafsky & Martin, 2026; [[dialogflow-cx|Dialogflow CX]]: Handlers). Heute werden deterministische Flows mit generativen, LLM-basierten Komponenten kombiniert (Dialogflow CX: Playbooks).
 
 ### Funktionsweise
 

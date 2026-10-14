@@ -48,7 +48,7 @@ In RDF, information is a set of triples of subject, predicate and object; subjec
 
 #### 3. Schema and ontologies
 
-Hogan et al. (2020) discuss the roles of schema, identity and context in knowledge graphs. An ontology defines classes, properties and their relationships with formal meaning; with OWL, reasoners can derive implicit facts, for example from class hierarchies or transitive properties, and check consistency, under an open-world assumption in which missing information is not taken as false (W3C OWL 2 Primer; [[ontology-design|Ontology Design]]).
+Hogan et al. (2020) discuss the roles of schema, identity and context in knowledge graphs. An ontology defines classes, properties and their relationships with formal meaning; with OWL, reasoners can derive implicit facts, for example from class hierarchies or transitive properties, and check consistency, under an [[open-world-assumption|open-world assumption]] in which missing information is not taken as false (W3C OWL 2 Primer; [[ontology-design|Ontology Design]]).
 
 #### 4. Building a knowledge graph
 
@@ -147,7 +147,7 @@ In RDF ist Information eine Menge von Tripeln aus Subjekt, Prädikat und Objekt;
 
 #### 3. Schema und Ontologien
 
-Hogan et al. (2020) behandeln die Rolle von Schema, Identität und Kontext in Knowledge Graphs. Eine Ontologie definiert Klassen, Eigenschaften und ihre Beziehungen mit formaler Bedeutung; mit OWL können Reasoner implizite Fakten ableiten, etwa aus Klassenhierarchien oder transitiven Eigenschaften, und die Konsistenz prüfen, unter der Open-World-Annahme, nach der fehlende Information nicht als falsch gilt (W3C OWL 2 Primer; [[ontology-design|Ontologie-Design]]).
+Hogan et al. (2020) behandeln die Rolle von Schema, Identität und Kontext in Knowledge Graphs. Eine Ontologie definiert Klassen, Eigenschaften und ihre Beziehungen mit formaler Bedeutung; mit OWL können Reasoner implizite Fakten ableiten, etwa aus Klassenhierarchien oder transitiven Eigenschaften, und die Konsistenz prüfen, unter der [[open-world-assumption|Open-World-Annahme]], nach der fehlende Information nicht als falsch gilt (W3C OWL 2 Primer; [[ontology-design|Ontologie-Design]]).
 
 #### 4. Aufbau eines Knowledge Graphs
 

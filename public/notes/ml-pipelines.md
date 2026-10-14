@@ -61,7 +61,7 @@ Metadata management records, for every run, the pipeline and component versions,
 
 #### 6. Triggers and serving
 
-Pipelines run on demand, on a schedule, when new training data arrives, when model performance degrades or when the data distribution shifts (Google Cloud). An optional feature store serves the same feature definitions for training and serving, which prevents training-serving skew (Google Cloud). ZenML can also expose a pipeline as a long-running HTTP service, where each request creates a new run (ZenML). Serving strategies are described in [[mlops-and-deployment|MLOps and deployment]].
+Pipelines run on demand, on a schedule, when new training data arrives, when model performance degrades or when the data distribution shifts (Google Cloud). An optional feature store serves the same feature definitions for training and serving, which prevents training-serving skew (Google Cloud). ZenML can also expose a pipeline as a long-running [[http|HTTP]] service, where each request creates a new run (ZenML). Serving strategies are described in [[mlops-and-deployment|MLOps and deployment]].
 
 #### Origin and variants
 

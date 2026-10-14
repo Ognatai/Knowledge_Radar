@@ -63,7 +63,7 @@ The same data in JSON-LD uses a @context that maps JSON keys to IRIs, with @id f
 **Limitations**
 - Statements about statements need reification or named graphs, which makes data more verbose (W3C RDF Schema 1.1; W3C RDF 1.1 Concepts).
 - Blank nodes have no global name, which complicates merging and comparison (W3C RDF 1.1 Concepts).
-- Formal OWL semantics follow the open-world assumption, which differs from database intuitions (W3C OWL 2 Primer).
+- Formal OWL semantics follow the [[open-world-assumption|open-world assumption]], which differs from database intuitions (W3C OWL 2 Primer).
 
 ### Comparison
 
@@ -143,7 +143,7 @@ Dieselben Daten in JSON-LD nutzen einen @context, der JSON-Schlüssel auf IRIs a
 **Einschränkungen**
 - Aussagen über Aussagen erfordern Reifikation oder Named Graphs, was die Daten umfangreicher macht (W3C RDF Schema 1.1; W3C RDF 1.1 Concepts).
 - Blank Nodes haben keinen globalen Namen, was Zusammenführen und Vergleichen erschwert (W3C RDF 1.1 Concepts).
-- Die formale OWL-Semantik folgt der Open-World-Annahme, die von Datenbank-Intuitionen abweicht (W3C OWL 2 Primer).
+- Die formale OWL-Semantik folgt der [[open-world-assumption|Open-World-Annahme]], die von Datenbank-Intuitionen abweicht (W3C OWL 2 Primer).
 
 ### Vergleich
 

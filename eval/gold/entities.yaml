@@ -98,10 +98,6 @@ entities:
     type: Concept
     name_en: Ontology
     name_de: Ontologie
-  - id: open-world-assumption
-    type: Concept
-    name_en: Open-world assumption
-    name_de: Open-World-Annahme
   - id: toolformer
     type: Method
     name_en: Toolformer

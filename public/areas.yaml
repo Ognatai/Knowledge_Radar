@@ -37,6 +37,7 @@ areas:
       - glove
       - distilbert
       - llama
+      - actor-level-corpus-analysis
     also:
       - bias-in-nlp
       - legal-ai
@@ -80,6 +81,7 @@ areas:
       - vibe-coding
       - few-shot-prompting
       - multi-agent-systems
+      - dialogflow-cx
   - id: retrieval
     name_en: Retrieval & RAG
     name_de: Retrieval & RAG
@@ -206,6 +208,7 @@ areas:
       - rotate
       - knowledge-graph-embeddings
       - w3c
+      - open-world-assumption
     also:
       - graphrag
       - information-extraction
@@ -236,6 +239,8 @@ areas:
       - requirements-engineering
       - frontend-development
       - ml-test-score
+      - rest
+      - http
     also:
       - scikit-learn
       - langchain-and-langgraph

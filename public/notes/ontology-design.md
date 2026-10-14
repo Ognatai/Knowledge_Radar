@@ -52,7 +52,7 @@ Important terms are enumerated and organised into classes and a class hierarchy,
 
 #### 4. Properties and constraints
 
-Properties (slots) describe the internal structure of classes, and facets such as value type and cardinality constrain them (Noy & McGuinness, 2001). In RDF Schema, rdfs:domain and rdfs:range state which classes a property connects (W3C RDF Schema 1.1); OWL properties can be declared transitive, symmetric, inverse or functional, which lets reasoners infer implicit facts under the open-world assumption (W3C OWL 2 Primer).
+Properties (slots) describe the internal structure of classes, and facets such as value type and cardinality constrain them (Noy & McGuinness, 2001). In RDF Schema, rdfs:domain and rdfs:range state which classes a property connects (W3C RDF Schema 1.1); OWL properties can be declared transitive, symmetric, inverse or functional, which lets reasoners infer implicit facts under the [[open-world-assumption|open-world assumption]] (W3C OWL 2 Primer).
 
 #### 5. Instances and standards
 
@@ -142,7 +142,7 @@ Die wichtigen Begriffe werden gesammelt und zu Klassen und einer Klassenhierarch
 
 #### 4. Eigenschaften und Einschränkungen
 
-Eigenschaften (Slots) beschreiben die innere Struktur von Klassen, und Facetten wie Wertetyp und Kardinalität schränken sie ein (Noy & McGuinness, 2001). In RDF Schema legen rdfs:domain und rdfs:range fest, welche Klassen eine Eigenschaft verbindet (W3C RDF Schema 1.1); OWL-Eigenschaften lassen sich als transitiv, symmetrisch, invers oder funktional deklarieren, wodurch Reasoner unter der Open-World-Annahme implizite Fakten ableiten können (W3C OWL 2 Primer).
+Eigenschaften (Slots) beschreiben die innere Struktur von Klassen, und Facetten wie Wertetyp und Kardinalität schränken sie ein (Noy & McGuinness, 2001). In RDF Schema legen rdfs:domain und rdfs:range fest, welche Klassen eine Eigenschaft verbindet (W3C RDF Schema 1.1); OWL-Eigenschaften lassen sich als transitiv, symmetrisch, invers oder funktional deklarieren, wodurch Reasoner unter der [[open-world-assumption|Open-World-Annahme]] implizite Fakten ableiten können (W3C OWL 2 Primer).
 
 #### 5. Instanzen und Standards
 

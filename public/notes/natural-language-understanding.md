@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-In dialogue systems, natural language understanding (NLU) turns a user utterance into a structured representation: the domain, the user's intent and the slots with their values, such as INTENT: SHOW-FLIGHTS, ORIGIN-CITY: Boston (Jurafsky & Martin, 2026). Intent classification and slot filling are usually learned together, for example with a pretrained encoder that tags each token and classifies the whole utterance (Jurafsky & Martin, 2026; Chen et al., 2019); platforms add a confidence threshold below which the input counts as not understood (Dialogflow CX: Intents).
+In dialogue systems, natural language understanding (NLU) turns a user utterance into a structured representation: the domain, the user's intent and the slots with their values, such as INTENT: SHOW-FLIGHTS, ORIGIN-CITY: Boston (Jurafsky & Martin, 2026). Intent classification and slot filling are usually learned together, for example with a pretrained encoder that tags each token and classifies the whole utterance (Jurafsky & Martin, 2026; Chen et al., 2019); platforms add a confidence threshold below which the input counts as not understood ([[dialogflow-cx|Dialogflow CX]]: Intents).
 
 ### How it works
 
@@ -104,7 +104,7 @@ NLU maps each utterance to a domain, an intent and slot values, usually with one
 
 ### TL;DR
 
-In Dialogsystemen macht Natural Language Understanding (NLU) aus einer Nutzeräußerung eine strukturierte Darstellung: die Domäne, den Intent des Nutzers und die Slots mit ihren Werten, etwa INTENT: SHOW-FLIGHTS, ORIGIN-CITY: Boston (Jurafsky & Martin, 2026). Intent-Klassifikation und Slot Filling werden meist gemeinsam gelernt, etwa mit einem vortrainierten Encoder, der jedes Token taggt und die ganze Äußerung klassifiziert (Jurafsky & Martin, 2026; Chen et al., 2019); Plattformen ergänzen eine Konfidenzschwelle, unterhalb derer die Eingabe als nicht verstanden gilt (Dialogflow CX: Intents).
+In Dialogsystemen macht Natural Language Understanding (NLU) aus einer Nutzeräußerung eine strukturierte Darstellung: die Domäne, den Intent des Nutzers und die Slots mit ihren Werten, etwa INTENT: SHOW-FLIGHTS, ORIGIN-CITY: Boston (Jurafsky & Martin, 2026). Intent-Klassifikation und Slot Filling werden meist gemeinsam gelernt, etwa mit einem vortrainierten Encoder, der jedes Token taggt und die ganze Äußerung klassifiziert (Jurafsky & Martin, 2026; Chen et al., 2019); Plattformen ergänzen eine Konfidenzschwelle, unterhalb derer die Eingabe als nicht verstanden gilt ([[dialogflow-cx|Dialogflow CX]]: Intents).
 
 ### Funktionsweise
 
