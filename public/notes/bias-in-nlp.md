@@ -47,7 +47,7 @@ Bolukbasi et al. (2016) showed that even word embeddings trained on Google News 
 
 #### 2. Association tests
 
-Caliskan et al. (2016) showed that standard machine learning on ordinary web text reproduces human-like biases. Using GloVe embeddings, they replicated a spectrum of biases known from the Implicit Association Test and other psychological studies, from morally neutral ones (towards insects or flowers) to problematic ones (towards race or gender) and ones that simply reflect the status quo, such as the distribution of gender across careers. To measure this, they introduced the Word Embedding Association Test (WEAT) and the Word Embedding Factual Association Test (WEFAT), which compare how strongly sets of target words are associated with sets of attribute words in the embedding.
+Caliskan et al. (2016) showed that standard machine learning on ordinary web text reproduces human-like biases. Using [[glove|GloVe]] embeddings, they replicated a spectrum of biases known from the Implicit Association Test and other psychological studies, from morally neutral ones (towards insects or flowers) to problematic ones (towards race or gender) and ones that simply reflect the status quo, such as the distribution of gender across careers. To measure this, they introduced the Word Embedding Association Test (WEAT) and the Word Embedding Factual Association Test (WEFAT), which compare how strongly sets of target words are associated with sets of attribute words in the embedding.
 
 #### 3. Stereotypes in pretrained language models
 

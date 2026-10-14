@@ -44,7 +44,7 @@ Kingma & Welling (2013) addressed learning and inference in probabilistic models
 
 #### 3. Generative adversarial networks
 
-Goodfellow et al. (2014) estimate a generative model through an adversarial process: a generator G captures the data distribution, and a discriminator D estimates the probability that a sample came from the training data rather than from G. G is trained to maximise the probability of D making a mistake, which corresponds to a minimax two-player game; in the space of arbitrary functions, the unique solution has G recovering the training data distribution and D equal to 1/2 everywhere. With multilayer perceptrons, the whole system is trained with back-propagation, without Markov chains or approximate inference networks.
+Goodfellow et al. (2014) estimate a generative model through an adversarial process: a generator G captures the data distribution, and a discriminator D estimates the probability that a sample came from the training data rather than from G. G is trained to maximise the probability of D making a mistake, which corresponds to a minimax two-player game; in the space of arbitrary functions, the unique solution has G recovering the training data distribution and D equal to 1/2 everywhere. With multilayer perceptrons, the whole system is trained with [[back-propagation|back-propagation]], without Markov chains or approximate inference networks.
 
 #### 4. Convolutional GANs
 
@@ -135,7 +135,7 @@ Kingma & Welling (2013) befassten sich mit Lernen und Inferenz in probabilistisc
 
 #### 3. Generative Adversarial Networks
 
-Goodfellow et al. (2014) schätzen ein generatives Modell über einen adversarialen Prozess: Ein Generator G erfasst die Datenverteilung, und ein Diskriminator D schätzt die Wahrscheinlichkeit, dass ein Beispiel aus den Trainingsdaten statt von G stammt. G wird so trainiert, dass D möglichst oft irrt; das entspricht einem Minimax-Spiel zweier Spieler, und im Raum beliebiger Funktionen hat die eindeutige Lösung G, das die Trainingsverteilung reproduziert, und D, das überall 1/2 ausgibt. Mit mehrschichtigen Perzeptrons wird das ganze System mit Backpropagation trainiert, ohne Markov-Ketten oder approximative Inferenznetze.
+Goodfellow et al. (2014) schätzen ein generatives Modell über einen adversarialen Prozess: Ein Generator G erfasst die Datenverteilung, und ein Diskriminator D schätzt die Wahrscheinlichkeit, dass ein Beispiel aus den Trainingsdaten statt von G stammt. G wird so trainiert, dass D möglichst oft irrt; das entspricht einem Minimax-Spiel zweier Spieler, und im Raum beliebiger Funktionen hat die eindeutige Lösung G, das die Trainingsverteilung reproduziert, und D, das überall 1/2 ausgibt. Mit mehrschichtigen Perzeptrons wird das ganze System mit [[back-propagation|Backpropagation]] trainiert, ohne Markov-Ketten oder approximative Inferenznetze.
 
 #### 4. Konvolutionale GANs
 

@@ -48,7 +48,7 @@ A graph can be written as a sparse 3-order tensor of nodes × relations × nodes
 
 #### 4. Neural, language-based and entailment-aware models
 
-Neural models learn non-linear scoring functions: early proposals such as Neural Tensor Networks have many parameters and limited scalability, while convolutional models such as ConvE and HypER share parameters. Language-based models reuse word-embedding methods: RDF2Vec feeds random walks over the graph as "sentences" into word2vec, KGloVe adapts GloVe. Entailment-aware models such as KALE use ontology definitions or rules, for example through t-norm fuzzy logics, to refine the embeddings (Hogan et al., 2021).
+Neural models learn non-linear scoring functions: early proposals such as Neural Tensor Networks have many parameters and limited scalability, while convolutional models such as ConvE and HypER share parameters. Language-based models reuse word-embedding methods: RDF2Vec feeds random walks over the graph as "sentences" into [[word2vec|word2vec]], KGloVe adapts [[glove|GloVe]]. Entailment-aware models such as KALE use ontology definitions or rules, for example through t-norm fuzzy logics, to refine the embeddings (Hogan et al., 2021).
 
 #### 5. Evaluation of link prediction
 
@@ -137,7 +137,7 @@ Ein Graph lässt sich als dünn besetzter Tensor dritter Ordnung aus Knoten × R
 
 #### 4. Neuronale, sprachbasierte und folgerungsbewusste Modelle
 
-Neuronale Modelle lernen nichtlineare Bewertungsfunktionen: Frühe Vorschläge wie Neural Tensor Networks haben viele Parameter und skalieren schlecht, während faltende Modelle wie ConvE und HypER Parameter teilen. Sprachbasierte Modelle nutzen Wort-Embedding-Verfahren: RDF2Vec gibt Zufallspfade über den Graphen als „Sätze“ in word2vec, KGloVe passt GloVe an. Folgerungsbewusste Modelle wie KALE verfeinern die Embeddings mit Ontologie-Definitionen oder Regeln, etwa über t-Norm-Fuzzy-Logiken (Hogan et al., 2021).
+Neuronale Modelle lernen nichtlineare Bewertungsfunktionen: Frühe Vorschläge wie Neural Tensor Networks haben viele Parameter und skalieren schlecht, während faltende Modelle wie ConvE und HypER Parameter teilen. Sprachbasierte Modelle nutzen Wort-Embedding-Verfahren: RDF2Vec gibt Zufallspfade über den Graphen als „Sätze“ in [[word2vec|word2vec]], KGloVe passt [[glove|GloVe]] an. Folgerungsbewusste Modelle wie KALE verfeinern die Embeddings mit Ontologie-Definitionen oder Regeln, etwa über t-Norm-Fuzzy-Logiken (Hogan et al., 2021).
 
 #### 5. Evaluation der Link Prediction
 

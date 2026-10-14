@@ -50,10 +50,6 @@ entities:
   type: Concept
   name_en: Intrinsic dimension
   name_de: Intrinsische Dimension
-- id: qlora
-  type: Method
-  name_en: QLoRA
-  name_de: QLoRA
 - id: weight-decomposed-low-rank-adaptation
   type: Method
   name_en: DoRA (Weight-Decomposed Low-Rank Adaptation)
@@ -72,12 +68,6 @@ entities:
   type: Method
   name_en: Masked language modelling
   name_de: Masked Language Modelling
-- id: vision-transformer
-  type: Method
-  name_en: Vision Transformer
-  name_de: Vision Transformer
-  aliases:
-  - ViT
 - id: flashattention
   type: Method
   name_en: FlashAttention
@@ -98,10 +88,6 @@ entities:
   type: Method
   name_en: FitNets
   name_de: FitNets
-- id: distilbert
-  type: Method
-  name_en: DistilBERT
-  name_de: DistilBERT
 - id: tinybert
   type: Method
   name_en: TinyBERT
@@ -410,10 +396,6 @@ entities:
   name_de: Word Embedding Factual Association Test (WEFAT)
   aliases:
   - WEFAT
-- id: glove
-  type: Method
-  name_en: GloVe
-  name_de: GloVe
 - id: geometric-debiasing
   type: Method
   name_en: Geometric debiasing of word embeddings
@@ -687,13 +669,6 @@ entities:
   type: Method
   name_en: VGG
   name_de: VGG
-- id: resnet
-  type: Method
-  name_en: ResNet (residual network)
-  name_de: ResNet (Residual Network)
-  aliases:
-  - ResNet
-  - residual network
 - id: convolution
   type: Concept
   name_en: Convolution
@@ -1108,10 +1083,6 @@ entities:
   type: Organisation
   name_en: European Digital Identity Cooperation Group
   name_de: Kooperationsgruppe für die europäische digitale Identität
-- id: word2vec
-  type: Method
-  name_en: word2vec
-  name_de: word2vec
 - id: matryoshka-representation-learning
   type: Method
   name_en: Matryoshka Representation Learning (MRL)
@@ -1592,10 +1563,6 @@ entities:
   name_de: Amazon Titan
   aliases:
   - Titan
-- id: llama
-  type: Method
-  name_en: LLaMA
-  name_de: LLaMA
 - id: zephyr
   type: Method
   name_en: Zephyr
@@ -1819,10 +1786,6 @@ entities:
   type: Concept
   name_en: Double descent
   name_de: Double Descent
-- id: bleu
-  type: Method
-  name_en: BLEU
-  name_de: BLEU
 - id: mean-absolute-error
   type: Method
   name_en: Mean absolute error (MAE)
@@ -1835,12 +1798,6 @@ entities:
   type: Method
   name_en: Mean absolute scaled error (MASE)
   name_de: Mittlerer absoluter skalierter Fehler (MASE)
-- id: back-propagation
-  type: Method
-  name_en: Back-propagation
-  name_de: Backpropagation
-  aliases:
-  - Backpropagation
 - id: stochastic-gradient-descent
   type: Method
   name_en: Stochastic gradient descent (SGD)
@@ -2324,10 +2281,6 @@ entities:
   type: Method
   name_en: ROUGE
   name_de: ROUGE
-- id: bertscore
-  type: Method
-  name_en: BERTScore
-  name_de: BERTScore
 - id: exponential-smoothing
   type: Method
   name_en: Exponential smoothing (ETS)
@@ -2981,3 +2934,17 @@ entities:
   name_de: UKP Lab (TU Darmstadt)
   aliases:
   - Ubiquitous Knowledge Processing Lab
+- id: stanford-university
+  type: Organisation
+  name_en: Stanford University
+  name_de: Stanford University
+  aliases:
+  - Stanford
+- id: ibm
+  type: Organisation
+  name_en: IBM
+  name_de: IBM
+- id: hugging-face
+  type: Organisation
+  name_en: Hugging Face
+  name_de: Hugging Face

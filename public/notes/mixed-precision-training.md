@@ -19,7 +19,7 @@ Mixed precision training stores and computes most tensors in 16-bit floating poi
 
 ### How it works
 
-Weights, activations and gradients are held in half precision during the forward and backward pass, while a single-precision copy of the weights accumulates the updates. The loss is multiplied by a scaling factor before back-propagation so that small gradient values do not underflow, and the gradients are unscaled before the update.
+Weights, activations and gradients are held in half precision during the forward and backward pass, while a single-precision copy of the weights accumulates the updates. The loss is multiplied by a scaling factor before [[back-propagation|back-propagation]] so that small gradient values do not underflow, and the gradients are unscaled before the update.
 
 ```text
 1. FP32, FP16 and BF16
@@ -109,7 +109,7 @@ Mixed Precision Training speichert und berechnet die meisten Tensoren in 16-Bit-
 
 ### Funktionsweise
 
-Gewichte, Aktivierungen und Gradienten werden im Vorwärts- und Rückwärtsdurchlauf in halber Genauigkeit gehalten, während eine Kopie der Gewichte in einfacher Genauigkeit die Aktualisierungen aufnimmt. Der Verlust wird vor der Backpropagation mit einem Skalierungsfaktor multipliziert, damit kleine Gradientenwerte nicht unterlaufen, und die Gradienten werden vor der Aktualisierung zurückskaliert.
+Gewichte, Aktivierungen und Gradienten werden im Vorwärts- und Rückwärtsdurchlauf in halber Genauigkeit gehalten, während eine Kopie der Gewichte in einfacher Genauigkeit die Aktualisierungen aufnimmt. Der Verlust wird vor der [[back-propagation|Backpropagation]] mit einem Skalierungsfaktor multipliziert, damit kleine Gradientenwerte nicht unterlaufen, und die Gradienten werden vor der Aktualisierung zurückskaliert.
 
 ```text
 1. FP32, FP16 und BF16

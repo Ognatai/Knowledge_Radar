@@ -1,5 +1,5 @@
 version: 1
-note_sha256: fa814cf0d90885437eb1f4966db9f767b3a15e5ab610688a1d40d8663b977702
+note_sha256: 7120eeb01135c0d2615c689e0919527ee8ed624d75ac165bca0e10d2d46ac6fe
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - variational-autoencoder

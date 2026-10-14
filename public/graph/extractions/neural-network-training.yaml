@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 05708fb581c66a6b981aa654e1222cc20103ee0d4555f0b9454d25d269c3f6d6
+note_sha256: 6d9ed4133e40eeef0683d64b6ba45d742f1cfdc03f3a7193b42da2155cb2c77c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - back-propagation

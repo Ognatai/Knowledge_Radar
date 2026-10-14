@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 99da7dad86df4ab6d6c79625a586166918820980448a61e3b47a2c5d7277fb33
+note_sha256: e58aa459fc3343788d52725ca4ea2f596e944e1019bca558b78ae7faa82c7803
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - embeddings

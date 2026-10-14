@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 774fcb3215205295fc80ba4a6febb4dd3ebb99aa23e47b6b560f0fd5ae603e52
+note_sha256: fa179f21df81d6c927164b8f919ce533f93b8570e1898d8dc9a1f6ce4a8297bd
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - beir

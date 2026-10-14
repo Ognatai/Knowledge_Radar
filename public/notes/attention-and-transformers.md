@@ -55,7 +55,7 @@ The Transformer computes attention as softmax(QKᵀ / √d_k)V: the similarity o
 
 #### 4. The Transformer layer
 
-The Transformer (Vaswani et al., 2017) is based solely on attention mechanisms and dispenses with recurrence and convolutions. Encoder and decoder each consist of N identical layers; an encoder layer contains multi-head self-attention and a position-wise feed-forward network, and a decoder layer adds cross-attention over the encoder outputs; every sub-layer is wrapped in a residual connection and layer normalisation (Urchs, 2025). Because all positions are processed in parallel, training is faster: the Transformer reached 28.4 BLEU on WMT 2014 English-to-German and 41.8 BLEU on English-to-French after 3.5 days on eight GPUs (Vaswani et al., 2017).
+The Transformer (Vaswani et al., 2017) is based solely on attention mechanisms and dispenses with recurrence and convolutions. Encoder and decoder each consist of N identical layers; an encoder layer contains multi-head self-attention and a position-wise feed-forward network, and a decoder layer adds cross-attention over the encoder outputs; every sub-layer is wrapped in a [[resnet|residual connection]] and layer normalisation (Urchs, 2025). Because all positions are processed in parallel, training is faster: the Transformer reached 28.4 [[bleu|BLEU]] on WMT 2014 English-to-German and 41.8 BLEU on English-to-French after 3.5 days on eight GPUs (Vaswani et al., 2017).
 
 #### 5. Encoder, decoder and encoder-decoder models
 
@@ -63,7 +63,7 @@ Three families build on the architecture (Urchs, 2025). Encoder-only BERT condit
 
 #### 6. Beyond text and efficiency
 
-A pure Transformer applied to sequences of image patches, the Vision Transformer, attained excellent [[computer-vision|image classification]] results compared with convolutional networks when pretrained on large data, while requiring substantially fewer computational resources to train (Dosovitskiy et al., 2020; [[multimodal-models|Multimodal Models]]). Self-attention's time and memory grow quadratically with sequence length. FlashAttention computes exact attention with tiling that reduces reads and writes between GPU memory levels, giving for example a 3× training speedup on GPT-2 with sequence length 1K and enabling longer contexts (Dao et al., 2022).
+A pure Transformer applied to sequences of image patches, the [[vision-transformer|Vision Transformer]], attained excellent [[computer-vision|image classification]] results compared with convolutional networks when pretrained on large data, while requiring substantially fewer computational resources to train (Dosovitskiy et al., 2020; [[multimodal-models|Multimodal Models]]). Self-attention's time and memory grow quadratically with sequence length. FlashAttention computes exact attention with tiling that reduces reads and writes between GPU memory levels, giving for example a 3× training speedup on GPT-2 with sequence length 1K and enabling longer contexts (Dao et al., 2022).
 
 #### Origin and variants
 
@@ -155,7 +155,7 @@ Der Transformer berechnet Attention als softmax(QKᵀ / √d_k)V: Die Ähnlichke
 
 #### 4. Die Transformer-Schicht
 
-Der Transformer (Vaswani et al., 2017) beruht ausschließlich auf Attention-Mechanismen und verzichtet auf Rekurrenz und Faltungen. Encoder und Decoder bestehen jeweils aus N gleichartigen Schichten; eine Encoder-Schicht enthält Multi-Head-Self-Attention und ein positionsweises Feedforward-Netz, eine Decoder-Schicht zusätzlich Cross-Attention über die Encoder-Ausgaben; jede Teilschicht ist von einer Residualverbindung und Layer Normalization umgeben (Urchs, 2025). Da alle Positionen parallel verarbeitet werden, trainiert er schneller: Der Transformer erreichte 28,4 BLEU auf WMT 2014 Englisch-Deutsch und 41,8 BLEU auf Englisch-Französisch nach 3,5 Tagen auf acht GPUs (Vaswani et al., 2017).
+Der Transformer (Vaswani et al., 2017) beruht ausschließlich auf Attention-Mechanismen und verzichtet auf Rekurrenz und Faltungen. Encoder und Decoder bestehen jeweils aus N gleichartigen Schichten; eine Encoder-Schicht enthält Multi-Head-Self-Attention und ein positionsweises Feedforward-Netz, eine Decoder-Schicht zusätzlich Cross-Attention über die Encoder-Ausgaben; jede Teilschicht ist von einer Residualverbindung und Layer Normalization umgeben (Urchs, 2025). Da alle Positionen parallel verarbeitet werden, trainiert er schneller: Der Transformer erreichte 28,4 [[bleu|BLEU]] auf WMT 2014 Englisch-Deutsch und 41,8 BLEU auf Englisch-Französisch nach 3,5 Tagen auf acht GPUs (Vaswani et al., 2017).
 
 #### 5. Encoder-, Decoder- und Encoder-Decoder-Modelle
 
@@ -163,7 +163,7 @@ Drei Modellfamilien bauen auf der Architektur auf (Urchs, 2025). Das reine Encod
 
 #### 6. Über Text hinaus und Effizienz
 
-Ein reiner Transformer, angewendet auf Folgen von Bildausschnitten (Patches), der Vision Transformer, erzielte bei großem Vortraining hervorragende Ergebnisse in der Bildklassifikation im Vergleich zu konvolutionalen Netzen und brauchte dabei deutlich weniger Rechenaufwand für das Training (Dosovitskiy et al., 2020; [[multimodal-models|Multimodale Modelle]]). Zeit- und Speicherbedarf der Self-Attention wachsen quadratisch mit der Sequenzlänge. FlashAttention berechnet exakte Attention mit einer Kachelung, die Lese- und Schreibzugriffe zwischen den Speicherebenen der GPU verringert, und erreicht etwa eine dreifache Trainingsbeschleunigung bei GPT-2 mit Sequenzlänge 1K; zudem ermöglicht es längere Kontexte (Dao et al., 2022).
+Ein reiner Transformer, angewendet auf Folgen von Bildausschnitten (Patches), der [[vision-transformer|Vision Transformer]], erzielte bei großem Vortraining hervorragende Ergebnisse in der Bildklassifikation im Vergleich zu konvolutionalen Netzen und brauchte dabei deutlich weniger Rechenaufwand für das Training (Dosovitskiy et al., 2020; [[multimodal-models|Multimodale Modelle]]). Zeit- und Speicherbedarf der Self-Attention wachsen quadratisch mit der Sequenzlänge. FlashAttention berechnet exakte Attention mit einer Kachelung, die Lese- und Schreibzugriffe zwischen den Speicherebenen der GPU verringert, und erreicht etwa eine dreifache Trainingsbeschleunigung bei GPT-2 mit Sequenzlänge 1K; zudem ermöglicht es längere Kontexte (Dao et al., 2022).
 
 #### Ursprung und Varianten
 

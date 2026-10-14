@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Evaluating a neural network means measuring how well it performs on data it was not trained on, with metrics that match the task: [[classification|classification]] metrics, error measures such as MAE and RMSE for regression (Hyndman & Koehler, 2006), and overlap metrics such as BLEU for generated text (Papineni et al., 2002). Comparing training and validation error reveals underfitting and overfitting (Goodfellow et al., 2016), although large networks can fit even random labels and still generalise on real data (Zhang et al., 2016). Predicted probabilities of modern networks are often poorly calibrated (Guo et al., 2017).
+Evaluating a neural network means measuring how well it performs on data it was not trained on, with metrics that match the task: [[classification|classification]] metrics, error measures such as MAE and RMSE for regression (Hyndman & Koehler, 2006), and overlap metrics such as [[bleu|BLEU]] for generated text (Papineni et al., 2002). Comparing training and validation error reveals underfitting and overfitting (Goodfellow et al., 2016), although large networks can fit even random labels and still generalise on real data (Zhang et al., 2016). Predicted probabilities of modern networks are often poorly calibrated (Guo et al., 2017).
 
 ### How it works
 
@@ -116,7 +116,7 @@ Neural networks are evaluated with task-appropriate metrics on held-out data, tr
 
 ### TL;DR
 
-Ein neuronales Netz zu evaluieren heißt zu messen, wie gut es auf Daten abschneidet, mit denen es nicht trainiert wurde, und zwar mit Metriken, die zur Aufgabe passen: Klassifikationsmetriken, Fehlermaße wie MAE und RMSE für Regression (Hyndman & Koehler, 2006) und Überlappungsmetriken wie BLEU für generierten Text (Papineni et al., 2002). Der Vergleich von Trainings- und Validierungsfehler zeigt Underfitting und Overfitting (Goodfellow et al., 2016), wobei große Netze sogar zufällige Labels auswendig lernen und auf echten Daten trotzdem generalisieren können (Zhang et al., 2016). Die vorhergesagten Wahrscheinlichkeiten moderner Netze sind oft schlecht kalibriert (Guo et al., 2017).
+Ein neuronales Netz zu evaluieren heißt zu messen, wie gut es auf Daten abschneidet, mit denen es nicht trainiert wurde, und zwar mit Metriken, die zur Aufgabe passen: Klassifikationsmetriken, Fehlermaße wie MAE und RMSE für Regression (Hyndman & Koehler, 2006) und Überlappungsmetriken wie [[bleu|BLEU]] für generierten Text (Papineni et al., 2002). Der Vergleich von Trainings- und Validierungsfehler zeigt Underfitting und Overfitting (Goodfellow et al., 2016), wobei große Netze sogar zufällige Labels auswendig lernen und auf echten Daten trotzdem generalisieren können (Zhang et al., 2016). Die vorhergesagten Wahrscheinlichkeiten moderner Netze sind oft schlecht kalibriert (Guo et al., 2017).
 
 ### Funktionsweise
 

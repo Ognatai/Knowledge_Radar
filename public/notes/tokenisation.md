@@ -44,7 +44,7 @@ Neural translation models typically work with a fixed vocabulary, but translatio
 
 #### 2. Byte pair encoding (BPE)
 
-Sennrich et al. (2015) adapted the byte pair encoding compression algorithm to word segmentation. Starting from characters, the most frequent adjacent pair of symbols in the training data is repeatedly merged into a new symbol; the number of merge operations determines the final vocabulary size. Frequent words end up as single tokens, rare words as sequences of subwords. Subword models improved over a back-off dictionary baseline by 1.1 BLEU on WMT 15 English-German and 1.3 BLEU on English-Russian (Sennrich et al., 2015).
+Sennrich et al. (2015) adapted the byte pair encoding compression algorithm to word segmentation. Starting from characters, the most frequent adjacent pair of symbols in the training data is repeatedly merged into a new symbol; the number of merge operations determines the final vocabulary size. Frequent words end up as single tokens, rare words as sequences of subwords. Subword models improved over a back-off dictionary baseline by 1.1 [[bleu|BLEU]] on WMT 15 English-German and 1.3 BLEU on English-Russian (Sennrich et al., 2015).
 
 #### 3. Wordpieces
 
@@ -134,7 +134,7 @@ Neuronale Übersetzungsmodelle arbeiten meist mit einem festen Vokabular, Übers
 
 #### 2. Byte Pair Encoding (BPE)
 
-Sennrich et al. (2015) übertrugen den Kompressionsalgorithmus Byte Pair Encoding auf die Wortsegmentierung. Ausgehend von einzelnen Zeichen wird das häufigste benachbarte Symbolpaar in den Trainingsdaten wiederholt zu einem neuen Symbol zusammengeführt; die Anzahl der Merge-Operationen bestimmt die Größe des Vokabulars. Häufige Wörter werden so zu einzelnen Token, seltene Wörter zu Folgen von Subwords. Subword-Modelle übertrafen eine Baseline mit Wörterbuch-Rückgriff um 1,1 BLEU auf WMT 15 Englisch-Deutsch und um 1,3 BLEU auf Englisch-Russisch (Sennrich et al., 2015).
+Sennrich et al. (2015) übertrugen den Kompressionsalgorithmus Byte Pair Encoding auf die Wortsegmentierung. Ausgehend von einzelnen Zeichen wird das häufigste benachbarte Symbolpaar in den Trainingsdaten wiederholt zu einem neuen Symbol zusammengeführt; die Anzahl der Merge-Operationen bestimmt die Größe des Vokabulars. Häufige Wörter werden so zu einzelnen Token, seltene Wörter zu Folgen von Subwords. Subword-Modelle übertrafen eine Baseline mit Wörterbuch-Rückgriff um 1,1 [[bleu|BLEU]] auf WMT 15 Englisch-Deutsch und um 1,3 BLEU auf Englisch-Russisch (Sennrich et al., 2015).
 
 #### 3. Wordpieces
 

@@ -21,7 +21,7 @@ Multimodal models process more than one kind of data, most often images and text
 
 ### How it works
 
-Each modality is first turned into vectors by a suitable encoder, for example a Vision Transformer for images (Dosovitskiy et al., 2020). The vectors are then either aligned in a shared space by contrastive training or fed into a language model through a connecting module, and the model is trained on paired image-text data.
+Each modality is first turned into vectors by a suitable encoder, for example a [[vision-transformer|Vision Transformer]] for images (Dosovitskiy et al., 2020). The vectors are then either aligned in a shared space by contrastive training or fed into a language model through a connecting module, and the model is trained on paired image-text data.
 
 ```text
 1. A shared embedding space
@@ -113,7 +113,7 @@ Multimodale Modelle verarbeiten mehr als eine Art von Daten, meist Bilder und Te
 
 ### Funktionsweise
 
-Jede Modalität wird zunächst von einem passenden Encoder in Vektoren umgewandelt, etwa von einem Vision Transformer für Bilder (Dosovitskiy et al., 2020). Die Vektoren werden dann entweder durch kontrastives Training in einem gemeinsamen Raum ausgerichtet oder über ein Verbindungsmodul in ein Sprachmodell eingespeist, und das Modell wird auf Bild-Text-Paaren trainiert.
+Jede Modalität wird zunächst von einem passenden Encoder in Vektoren umgewandelt, etwa von einem [[vision-transformer|Vision Transformer]] für Bilder (Dosovitskiy et al., 2020). Die Vektoren werden dann entweder durch kontrastives Training in einem gemeinsamen Raum ausgerichtet oder über ein Verbindungsmodul in ein Sprachmodell eingespeist, und das Modell wird auf Bild-Text-Paaren trainiert.
 
 ```text
 1. Ein gemeinsamer Embedding-Raum

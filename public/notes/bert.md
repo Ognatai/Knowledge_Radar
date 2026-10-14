@@ -56,7 +56,7 @@ BERT (Devlin et al., 2018) followed GPT-1 (Radford et al., 2018), which pre-trai
 - **Sentence-BERT** fine-tunes BERT in a siamese network so that each sentence gets its own embedding that can be compared with cosine similarity (Reimers & Gurevych, 2019); see [[embeddings|Embeddings]].
 - **BERT as re-ranker:** query and passage are fed in together, and the [CLS] vector scores relevance (Nogueira & Cho, 2019); see [[cross-encoder|Cross-encoder]].
 - **[[dense-passage-retrieval|Dense Passage Retrieval]]** uses two independent BERT encoders for questions and passages (Karpukhin et al., 2020); see [[semantic-retrieval|Semantic Retrieval]].
-- **DistilBERT** and **TinyBERT** are smaller BERT models trained by [[knowledge-distillation|knowledge distillation]] (Sanh et al., 2019; Jiao et al., 2019).
+- **[[distilbert|DistilBERT]]** and **TinyBERT** are smaller BERT models trained by [[knowledge-distillation|knowledge distillation]] (Sanh et al., 2019; Jiao et al., 2019).
 
 ### When to use it
 - Text classification, such as sentiment or topic, and sentence-pair tasks such as entailment (Devlin et al., 2018).
@@ -74,7 +74,7 @@ BERT (Devlin et al., 2018) followed GPT-1 (Radford et al., 2018), which pre-trai
 **Limitations**
 - BERT does not generate text; for generation, decoder models such as [[gpt|GPT]] are used.
 - The [MASK] token appears in pre-training but not in fine-tuning, a mismatch the 80/10/10 rule only reduces (Devlin et al., 2018).
-- The [CLS] output or the average of BERT's token vectors gives poor sentence embeddings, often worse than averaged GloVe vectors (Reimers & Gurevych, 2019).
+- The [CLS] output or the average of BERT's token vectors gives poor sentence embeddings, often worse than averaged [[glove|GloVe]] vectors (Reimers & Gurevych, 2019).
 - Comparing sentence pairs by feeding both into BERT is slow: finding the most similar pair among 10,000 sentences takes about 50 million inference computations, roughly 65 hours on a V100 GPU (Reimers & Gurevych, 2019).
 
 ### Comparison
@@ -142,7 +142,7 @@ BERT (Devlin et al., 2018) folgte auf GPT-1 (Radford et al., 2018), das einen Tr
 - **Sentence-BERT** justiert BERT in einem siamesischen Netz so nach, dass jeder Satz ein eigenes Embedding erhält, das sich per Kosinus-Ähnlichkeit vergleichen lässt (Reimers & Gurevych, 2019); siehe [[embeddings|Embeddings]].
 - **BERT als Re-Ranker:** Anfrage und Passage werden gemeinsam eingegeben, und der [CLS]-Vektor bewertet die Relevanz (Nogueira & Cho, 2019); siehe [[cross-encoder|Cross-Encoder]].
 - **[[dense-passage-retrieval|Dense Passage Retrieval]]** verwendet zwei unabhängige BERT-Encoder für Fragen und Passagen (Karpukhin et al., 2020); siehe [[semantic-retrieval|Semantisches Retrieval]].
-- **DistilBERT** und **TinyBERT** sind kleinere BERT-Modelle, die per [[knowledge-distillation|Knowledge Distillation]] trainiert wurden (Sanh et al., 2019; Jiao et al., 2019).
+- **[[distilbert|DistilBERT]]** und **TinyBERT** sind kleinere BERT-Modelle, die per [[knowledge-distillation|Knowledge Distillation]] trainiert wurden (Sanh et al., 2019; Jiao et al., 2019).
 
 ### Wann einsetzen
 - Textklassifikation, etwa Sentiment oder Thema, und Aufgaben mit Satzpaaren wie Entailment (Devlin et al., 2018).

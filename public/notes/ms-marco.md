@@ -41,7 +41,7 @@ The release contains six components: the questions, about 10 candidate passages 
 
 #### 3. Tasks
 
-Three tasks were proposed (Bajaj et al., 2016): a novice task (decide whether the passages answer the question and, if so, generate the answer), an intermediate task (generate a well-formed answer that makes sense on its own), and a passage re-ranking task (rank 1,000 BM25-retrieved passages by how likely they contain relevant information). Answer generation was evaluated with ROUGE-L and BLEU ([[text-similarity-metrics|text similarity metrics]]); ranking results are reported with measures such as MRR@10, as in [[colbert|ColBERT]].
+Three tasks were proposed (Bajaj et al., 2016): a novice task (decide whether the passages answer the question and, if so, generate the answer), an intermediate task (generate a well-formed answer that makes sense on its own), and a passage re-ranking task (rank 1,000 BM25-retrieved passages by how likely they contain relevant information). Answer generation was evaluated with ROUGE-L and [[bleu|BLEU]] ([[text-similarity-metrics|text similarity metrics]]); ranking results are reported with measures such as MRR@10, as in [[colbert|ColBERT]].
 
 #### 4. The passage ranking collection
 
@@ -126,7 +126,7 @@ Die Veröffentlichung umfasst sechs Bestandteile: die Fragen, etwa 10 Kandidaten
 
 #### 3. Aufgaben
 
-Vorgeschlagen wurden drei Aufgaben (Bajaj et al., 2016): eine Einsteigeraufgabe (entscheiden, ob die Passagen die Frage beantworten, und gegebenenfalls die Antwort erzeugen), eine mittlere Aufgabe (eine wohlgeformte Antwort erzeugen, die für sich verständlich ist) und eine Aufgabe zum Neuordnen von Passagen (1.000 per BM25 gefundene Passagen danach ordnen, wie wahrscheinlich sie relevante Informationen enthalten). Die Antwortgenerierung wurde mit ROUGE-L und BLEU bewertet ([[text-similarity-metrics|Metriken für Textähnlichkeit]]); Ranking-Ergebnisse werden mit Maßen wie MRR@10 berichtet, etwa bei [[colbert|ColBERT]].
+Vorgeschlagen wurden drei Aufgaben (Bajaj et al., 2016): eine Einsteigeraufgabe (entscheiden, ob die Passagen die Frage beantworten, und gegebenenfalls die Antwort erzeugen), eine mittlere Aufgabe (eine wohlgeformte Antwort erzeugen, die für sich verständlich ist) und eine Aufgabe zum Neuordnen von Passagen (1.000 per BM25 gefundene Passagen danach ordnen, wie wahrscheinlich sie relevante Informationen enthalten). Die Antwortgenerierung wurde mit ROUGE-L und [[bleu|BLEU]] bewertet ([[text-similarity-metrics|Metriken für Textähnlichkeit]]); Ranking-Ergebnisse werden mit Maßen wie MRR@10 berichtet, etwa bei [[colbert|ColBERT]].
 
 #### 4. Die Sammlung für das Passagen-Ranking
 

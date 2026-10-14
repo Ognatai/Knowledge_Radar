@@ -1,0 +1,27 @@
+version: 1
+note_sha256: e94ec80cec38504e81513dac1473fc17c4f3f37b52f95ecd3d88d14c50bc3358
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bertscore
+- classification-metrics
+- embeddings
+- llm-as-a-judge
+- llm-evaluation
+- machine-translation
+- rag-generation-evaluation
+- text-similarity-metrics
+- tokenisation
+- ibm
+relations:
+- from: bleu
+  type: DEVELOPED_BY
+  to: ibm
+  evidence: kishore papineni, salim roukos, todd ward and wei-jing zhu at ibm presented bleu at acl 2002
+- from: bleu
+  type: EVALUATES
+  to: machine-translation
+  evidence: became the dominant metric in machine translation
+- from: bleu
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: scores a machine translation by its n-gram overlap with one or more human reference translations

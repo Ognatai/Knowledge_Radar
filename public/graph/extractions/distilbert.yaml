@@ -1,0 +1,31 @@
+version: 1
+note_sha256: 9dc5a7873d73b1783560156d11e75c2f3050fe6f0cc1179bbb816d3aa40c9cde
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bert
+- classification
+- embeddings
+- knowledge-distillation
+- llm-cost-optimisation
+- model-compression
+- natural-language-inference
+- quantisation
+- hugging-face
+- glue
+relations:
+- from: distilbert
+  type: BASED_ON
+  to: bert
+  evidence: distilbert is a smaller version of bert
+- from: distilbert
+  type: IS_EXAMPLE_OF
+  to: knowledge-distillation
+  evidence: created by knowledge distillation during pre-training
+- from: distilbert
+  type: DEVELOPED_BY
+  to: hugging-face
+  evidence: released by hugging face in 2019
+- from: glue
+  type: EVALUATES
+  to: distilbert
+  evidence: keeps 97% of its language understanding performance on glue

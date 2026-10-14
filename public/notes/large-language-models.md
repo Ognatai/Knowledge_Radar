@@ -45,7 +45,7 @@ Text is split into subword tokens, a Transformer computes a contextual represent
 
 #### 1. Subword tokenisation
 
-Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces ([[tokenisation|Tokenisation]]). Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols in the training corpus, so that frequent words become single tokens while rare words are composed of several subwords (Sennrich et al., 2015). The vocabulary is fixed before training, and context length is measured in tokens rather than characters or words. In [[machine-translation|neural machine translation]], subword units improved over a back-off dictionary baseline by up to 1.1 BLEU (English-German) and 1.3 BLEU (English-Russian) (Sennrich et al., 2015).
+Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces ([[tokenisation|Tokenisation]]). Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols in the training corpus, so that frequent words become single tokens while rare words are composed of several subwords (Sennrich et al., 2015). The vocabulary is fixed before training, and context length is measured in tokens rather than characters or words. In [[machine-translation|neural machine translation]], subword units improved over a back-off dictionary baseline by up to 1.1 [[bleu|BLEU]] (English-German) and 1.3 BLEU (English-Russian) (Sennrich et al., 2015).
 
 #### 2. Transformer architecture
 
@@ -69,7 +69,7 @@ The cross-entropy loss of language models falls as a power law with model size, 
 
 #### 7. Proprietary and open models
 
-Besides the GPT family, proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used; like GPT, they raise concerns about transparency, reproducibility and the opacity of their training data (Urchs, 2025). Open alternatives such as LLaMA, Zephyr and DeepSeek LLM promote reproducibility and equitable access; DeepSeek LLM, for example, was trained from scratch on 2 trillion English and Chinese tokens, is available with 7 and 67 billion parameters under the MIT licence and outperformed LLaMA-2 70B on several benchmarks, especially in reasoning, mathematics and coding. Even for open models, however, transparency about pretraining data and fine-tuning often remains limited (Urchs, 2025).
+Besides the GPT family, proprietary model families such as Anthropic's Claude 3, Google DeepMind's Gemini, Mistral's models and Amazon's Titan are widely used; like GPT, they raise concerns about transparency, reproducibility and the opacity of their training data (Urchs, 2025). Open alternatives such as [[llama|LLaMA]], Zephyr and DeepSeek LLM promote reproducibility and equitable access; DeepSeek LLM, for example, was trained from scratch on 2 trillion English and Chinese tokens, is available with 7 and 67 billion parameters under the MIT licence and outperformed LLaMA-2 70B on several benchmarks, especially in reasoning, mathematics and coding. Even for open models, however, transparency about pretraining data and fine-tuning often remains limited (Urchs, 2025).
 
 #### Origin and variants
 
@@ -153,7 +153,7 @@ Text wird in Subwort-Token aufgeteilt, ein Transformer berechnet eine kontextuel
 
 #### 1. Subwort-Tokenisierung
 
-Text wird in Subwort-Einheiten aufgeteilt, damit seltene und unbekannte Wörter als Sequenzen häufigerer Einheiten dargestellt werden können ([[tokenisation|Tokenisierung]]). Byte Pair Encoding (BPE) erstellt das Vokabular, indem es wiederholt das häufigste Paar benachbarter Symbole im Trainingskorpus zusammenführt, sodass häufige Wörter zu einzelnen Token werden, während seltene Wörter aus mehreren Subwörtern bestehen (Sennrich et al., 2015). Das Vokabular ist vor dem Training festgelegt, und die Länge des Kontexts wird in Token gemessen, nicht in Zeichen oder Wörtern. In der neuronalen maschinellen Übersetzung verbesserten Subwort-Einheiten eine Baseline mit Back-off-Wörterbuch um bis zu 1,1 BLEU (Englisch-Deutsch) und 1,3 BLEU (Englisch-Russisch) (Sennrich et al., 2015).
+Text wird in Subwort-Einheiten aufgeteilt, damit seltene und unbekannte Wörter als Sequenzen häufigerer Einheiten dargestellt werden können ([[tokenisation|Tokenisierung]]). Byte Pair Encoding (BPE) erstellt das Vokabular, indem es wiederholt das häufigste Paar benachbarter Symbole im Trainingskorpus zusammenführt, sodass häufige Wörter zu einzelnen Token werden, während seltene Wörter aus mehreren Subwörtern bestehen (Sennrich et al., 2015). Das Vokabular ist vor dem Training festgelegt, und die Länge des Kontexts wird in Token gemessen, nicht in Zeichen oder Wörtern. In der neuronalen maschinellen Übersetzung verbesserten Subwort-Einheiten eine Baseline mit Back-off-Wörterbuch um bis zu 1,1 [[bleu|BLEU]] (Englisch-Deutsch) und 1,3 BLEU (Englisch-Russisch) (Sennrich et al., 2015).
 
 #### 2. Transformer-Architektur
 
@@ -177,7 +177,7 @@ Die Kreuzentropie-Verlustfunktion von Sprachmodellen nimmt mit der Modellgröße
 
 #### 7. Proprietäre und offene Modelle
 
-Neben der GPT-Familie sind proprietäre Modellfamilien wie Claude 3 von Anthropic, Gemini von Google DeepMind, die Modelle von Mistral und Titan von Amazon verbreitet; wie bei [[gpt|GPT]] bestehen Bedenken hinsichtlich Transparenz, Reproduzierbarkeit und der Undurchsichtigkeit ihrer Trainingsdaten (Urchs, 2025). Offene Alternativen wie LLaMA, Zephyr und DeepSeek LLM fördern Reproduzierbarkeit und gleichberechtigten Zugang; DeepSeek LLM etwa wurde von Grund auf mit 2 Billionen englischen und chinesischen Token trainiert, ist mit 7 und 67 Milliarden Parametern unter der MIT-Lizenz verfügbar und übertraf LLaMA-2 70B auf mehreren Benchmarks, vor allem beim Schließen, in Mathematik und beim Programmieren. Auch bei offenen Modellen bleibt die Transparenz über Vortrainingsdaten und Fine-Tuning aber oft begrenzt (Urchs, 2025).
+Neben der GPT-Familie sind proprietäre Modellfamilien wie Claude 3 von Anthropic, Gemini von Google DeepMind, die Modelle von Mistral und Titan von Amazon verbreitet; wie bei [[gpt|GPT]] bestehen Bedenken hinsichtlich Transparenz, Reproduzierbarkeit und der Undurchsichtigkeit ihrer Trainingsdaten (Urchs, 2025). Offene Alternativen wie [[llama|LLaMA]], Zephyr und DeepSeek LLM fördern Reproduzierbarkeit und gleichberechtigten Zugang; DeepSeek LLM etwa wurde von Grund auf mit 2 Billionen englischen und chinesischen Token trainiert, ist mit 7 und 67 Milliarden Parametern unter der MIT-Lizenz verfügbar und übertraf LLaMA-2 70B auf mehreren Benchmarks, vor allem beim Schließen, in Mathematik und beim Programmieren. Auch bei offenen Modellen bleibt die Transparenz über Vortrainingsdaten und Fine-Tuning aber oft begrenzt (Urchs, 2025).
 
 #### Ursprung und Varianten
 

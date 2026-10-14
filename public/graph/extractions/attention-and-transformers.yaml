@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8adace4424e53d839083627869f77467dd9ed87da8387d022207584c34253026
+note_sha256: 0931937df8d9f4cf79af7bd714d436c7ad11f6878c02329dd02dd5955606eff2
 extracted_by: claude (hand-labelled gold standard)
 discusses:
 - recurrent-neural-networks

@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-LLM adaptation covers the ways a pretrained language model is made to perform a specific task or use specific knowledge. The options range from leaving the weights unchanged (prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, QLoRA), to transferring knowledge into a smaller model (distillation). Mixed precision and quantisation reduce the memory and compute these methods need.
+LLM adaptation covers the ways a pretrained language model is made to perform a specific task or use specific knowledge. The options range from leaving the weights unchanged (prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, [[qlora|QLoRA]]), to transferring knowledge into a smaller model (distillation). Mixed precision and quantisation reduce the memory and compute these methods need.
 
 ### How it works
 
@@ -116,7 +116,7 @@ Adapting an LLM means choosing how much of it to change: the input, a few added 
 
 ### TL;DR
 
-LLM-Anpassung umfasst die Verfahren, mit denen ein vortrainiertes Sprachmodell so angepasst wird, dass es eine bestimmte Aufgabe ausführt oder spezifisches Wissen nutzt. Die Optionen reichen von unveränderten Gewichten (Prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) über das Aktualisieren aller Gewichte (Fine-Tuning, Instruction Tuning) oder nur einiger weniger (LoRA, QLoRA) bis hin zum Übertragen von Wissen in ein kleineres Modell (Distillation). Mixed Precision und Quantisierung verringern den Speicher- und Rechenbedarf dieser Methoden.
+LLM-Anpassung umfasst die Verfahren, mit denen ein vortrainiertes Sprachmodell so angepasst wird, dass es eine bestimmte Aufgabe ausführt oder spezifisches Wissen nutzt. Die Optionen reichen von unveränderten Gewichten (Prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) über das Aktualisieren aller Gewichte (Fine-Tuning, Instruction Tuning) oder nur einiger weniger (LoRA, [[qlora|QLoRA]]) bis hin zum Übertragen von Wissen in ein kleineres Modell (Distillation). Mixed Precision und Quantisierung verringern den Speicher- und Rechenbedarf dieser Methoden.
 
 ### Funktionsweise
 

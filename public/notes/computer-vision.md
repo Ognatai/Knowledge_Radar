@@ -57,7 +57,7 @@ Semantic segmentation assigns a class to every pixel; instance segmentation addi
 
 #### 4. Vision Transformers
 
-The Vision Transformer (ViT) splits an image into 16×16 patches and feeds the sequence of patch embeddings to a standard Transformer without convolutions; pre-trained on large datasets and transferred to ImageNet, CIFAR-100 or VTAB, it matches state-of-the-art CNNs while needing substantially less compute to train (Dosovitskiy et al., 2021). The architecture is the same as in language models, see [[attention-and-transformers|attention and Transformers]].
+The [[vision-transformer|Vision Transformer (ViT)]] splits an image into 16×16 patches and feeds the sequence of patch embeddings to a standard Transformer without convolutions; pre-trained on large datasets and transferred to ImageNet, CIFAR-100 or VTAB, it matches state-of-the-art CNNs while needing substantially less compute to train (Dosovitskiy et al., 2021). The architecture is the same as in language models, see [[attention-and-transformers|attention and Transformers]].
 
 #### 5. Vision and language
 
@@ -124,7 +124,7 @@ Computer vision maps pixels to labels, boxes, masks or text-aligned embeddings w
 
 ### TL;DR
 
-Computer Vision ist das Teilgebiet der KI, das Informationen aus Bildern und Videos gewinnt. Ihre Kernaufgaben sind Bildklassifikation (was ist im Bild), Objekterkennung (wo befinden sich welche Objekte, als Bounding Boxes), Segmentierung (welche Pixel gehören zu welchem Objekt oder welcher Klasse) sowie Keypoint- oder Posenschätzung; weitere Aufgaben sind OCR, Tracking und visuelle Fragebeantwortung. Seit der ImageNet-Challenge dominiert Deep Learning: Convolutional Networks für die [[classification|Klassifikation]], Detektoren mit einem Durchlauf wie YOLO, zweistufige Detektoren mit Maskenzweig wie Mask R-CNN, Encoder-Decoder-Netze wie U-Net für die Segmentierung und Vision Transformer, die Bilder als Folgen von Ausschnitten behandeln (Russakovsky et al., 2015; Redmon et al., 2016; He et al., 2017; Ronneberger et al., 2015; Dosovitskiy et al., 2021). Modelle, die auf Bild-Text-Paaren trainiert sind, wie CLIP, erkennen in natürlicher Sprache benannte Kategorien ohne aufgabenspezifisches Training (Radford et al., 2021).
+Computer Vision ist das Teilgebiet der KI, das Informationen aus Bildern und Videos gewinnt. Ihre Kernaufgaben sind Bildklassifikation (was ist im Bild), Objekterkennung (wo befinden sich welche Objekte, als Bounding Boxes), Segmentierung (welche Pixel gehören zu welchem Objekt oder welcher Klasse) sowie Keypoint- oder Posenschätzung; weitere Aufgaben sind OCR, Tracking und visuelle Fragebeantwortung. Seit der ImageNet-Challenge dominiert Deep Learning: Convolutional Networks für die [[classification|Klassifikation]], Detektoren mit einem Durchlauf wie YOLO, zweistufige Detektoren mit Maskenzweig wie Mask R-CNN, Encoder-Decoder-Netze wie U-Net für die Segmentierung und [[vision-transformer|Vision Transformer]], die Bilder als Folgen von Ausschnitten behandeln (Russakovsky et al., 2015; Redmon et al., 2016; He et al., 2017; Ronneberger et al., 2015; Dosovitskiy et al., 2021). Modelle, die auf Bild-Text-Paaren trainiert sind, wie CLIP, erkennen in natürlicher Sprache benannte Kategorien ohne aufgabenspezifisches Training (Radford et al., 2021).
 
 ### Funktionsweise
 

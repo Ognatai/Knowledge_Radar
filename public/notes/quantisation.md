@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Quantisation stores a network's weights, and often its activations, with fewer bits, for example 8-bit integers instead of 32-bit floats, which reduces memory, power and latency at the cost of some added noise (Nagel et al., 2021). Post-training quantisation works without retraining and usually suffices for 8 bits; quantisation-aware training enables lower bit widths (Nagel et al., 2021; Jacob et al., 2017). For [[large-language-models|large language models]], methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantise weights to 8, 4 or 3 bits with little loss, and QLoRA fine-tunes on a 4-bit base model (Dettmers et al., 2023).
+Quantisation stores a network's weights, and often its activations, with fewer bits, for example 8-bit integers instead of 32-bit floats, which reduces memory, power and latency at the cost of some added noise (Nagel et al., 2021). Post-training quantisation works without retraining and usually suffices for 8 bits; quantisation-aware training enables lower bit widths (Nagel et al., 2021; Jacob et al., 2017). For [[large-language-models|large language models]], methods such as LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) and AWQ (Lin et al., 2023) quantise weights to 8, 4 or 3 bits with little loss, and [[qlora|QLoRA]] fine-tunes on a 4-bit base model (Dettmers et al., 2023).
 
 ### How it works
 
@@ -118,7 +118,7 @@ Quantisation stores models with fewer bits to save memory and time; post-trainin
 
 ### TL;DR
 
-Quantisierung speichert die Gewichte eines Netzes und oft auch seine Aktivierungen mit weniger Bits, etwa als 8-Bit-Ganzzahlen statt 32-Bit-Gleitkommazahlen; das senkt Speicherbedarf, Energieverbrauch und Latenz, fügt aber etwas Rauschen hinzu (Nagel et al., 2021). Post-Training Quantization kommt ohne Neutraining aus und genügt meist für 8 Bit; Quantization-Aware Training ermöglicht geringere Bitbreiten (Nagel et al., 2021; Jacob et al., 2017). Für große Sprachmodelle quantisieren Verfahren wie LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) und AWQ (Lin et al., 2023) die Gewichte mit geringem Verlust auf 8, 4 oder 3 Bit, und QLoRA stimmt auf einem 4-Bit-Basismodell fein ab (Dettmers et al., 2023).
+Quantisierung speichert die Gewichte eines Netzes und oft auch seine Aktivierungen mit weniger Bits, etwa als 8-Bit-Ganzzahlen statt 32-Bit-Gleitkommazahlen; das senkt Speicherbedarf, Energieverbrauch und Latenz, fügt aber etwas Rauschen hinzu (Nagel et al., 2021). Post-Training Quantization kommt ohne Neutraining aus und genügt meist für 8 Bit; Quantization-Aware Training ermöglicht geringere Bitbreiten (Nagel et al., 2021; Jacob et al., 2017). Für große Sprachmodelle quantisieren Verfahren wie LLM.int8() (Dettmers et al., 2022), GPTQ (Frantar et al., 2022) und AWQ (Lin et al., 2023) die Gewichte mit geringem Verlust auf 8, 4 oder 3 Bit, und [[qlora|QLoRA]] stimmt auf einem 4-Bit-Basismodell fein ab (Dettmers et al., 2023).
 
 ### Funktionsweise
 

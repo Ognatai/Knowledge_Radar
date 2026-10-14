@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3bc9d841034322ec3573a81f6832074c6fb99bdb895f2b8431e37a09af169c21
+note_sha256: 1d6dfd1762ae22c8823cadc06db9f36ec8a22d32fc34311d7a8efecad3af0f26
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - clip

@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Knowledge distillation trains a small student model to imitate a large teacher model or an ensemble, so that much of the teacher's performance becomes available at a fraction of the cost (Hinton et al., 2015). The student learns from the teacher's soft output probabilities, which carry more information than hard labels, and can also learn from intermediate representations (Romero et al., 2014). DistilBERT kept 97% of [[bert|BERT]]'s language understanding with 40% fewer parameters (Sanh et al., 2019), and TinyBERT reached over 96.8% of BERT-base with a model 7.5 times smaller (Jiao et al., 2019).
+Knowledge distillation trains a small student model to imitate a large teacher model or an ensemble, so that much of the teacher's performance becomes available at a fraction of the cost (Hinton et al., 2015). The student learns from the teacher's soft output probabilities, which carry more information than hard labels, and can also learn from intermediate representations (Romero et al., 2014). [[distilbert|DistilBERT]] kept 97% of [[bert|BERT]]'s language understanding with 40% fewer parameters (Sanh et al., 2019), and TinyBERT reached over 96.8% of BERT-base with a model 7.5 times smaller (Jiao et al., 2019).
 
 ### How it works
 
@@ -107,7 +107,7 @@ Knowledge distillation trains a small student on a large teacher's soft predicti
 
 ### TL;DR
 
-Knowledge Distillation trainiert ein kleines Schülermodell darauf, ein großes Lehrermodell oder ein Ensemble nachzuahmen, sodass ein Großteil der Leistung des Lehrers zu einem Bruchteil der Kosten verfügbar wird (Hinton et al., 2015). Der Schüler lernt aus den weichen Ausgabewahrscheinlichkeiten des Lehrers, die mehr Information tragen als harte Labels, und kann zusätzlich aus Zwischenrepräsentationen lernen (Romero et al., 2014). DistilBERT behielt 97 % des Sprachverständnisses von [[bert|BERT]] bei 40 % weniger Parametern (Sanh et al., 2019), und TinyBERT erreichte mehr als 96,8 % von BERT-base mit einem 7,5-mal kleineren Modell (Jiao et al., 2019).
+Knowledge Distillation trainiert ein kleines Schülermodell darauf, ein großes Lehrermodell oder ein Ensemble nachzuahmen, sodass ein Großteil der Leistung des Lehrers zu einem Bruchteil der Kosten verfügbar wird (Hinton et al., 2015). Der Schüler lernt aus den weichen Ausgabewahrscheinlichkeiten des Lehrers, die mehr Information tragen als harte Labels, und kann zusätzlich aus Zwischenrepräsentationen lernen (Romero et al., 2014). [[distilbert|DistilBERT]] behielt 97 % des Sprachverständnisses von [[bert|BERT]] bei 40 % weniger Parametern (Sanh et al., 2019), und TinyBERT erreichte mehr als 96,8 % von BERT-base mit einem 7,5-mal kleineren Modell (Jiao et al., 2019).
 
 ### Funktionsweise
 

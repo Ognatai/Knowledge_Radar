@@ -1,0 +1,17 @@
+version: 1
+note_sha256: cfc20c91c1f1269b7a37c212502ae69cf9f8bfb77fdf9e71c6774b81cde8aa14
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- explainable-ai
+- keras-and-tensorflow
+- large-language-models
+- mixed-precision-training
+- neural-network-training
+- neural-networks
+- resnet
+- stochastic-gradient-descent
+relations:
+- from: back-propagation
+  type: COMPLEMENTS
+  to: stochastic-gradient-descent
+  evidence: an optimiser such as stochastic gradient descent then uses them to update the weights

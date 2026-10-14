@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Training a neural network means adjusting its weights to minimise a loss function on training data. Back-propagation computes the gradients, and a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights on small batches of data, pass after pass over the training set (Goodfellow et al., 2016; Kingma & Ba, 2014). Careful initialisation (Glorot & Bengio, 2010; He et al., 2015), normalisation (Ioffe & Szegedy, 2015) and the choice of learning rate decide whether deep networks train well.
+Training a neural network means adjusting its weights to minimise a loss function on training data. [[back-propagation|Back-propagation]] computes the gradients, and a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights on small batches of data, pass after pass over the training set (Goodfellow et al., 2016; Kingma & Ba, 2014). Careful initialisation (Glorot & Bengio, 2010; He et al., 2015), normalisation (Ioffe & Szegedy, 2015) and the choice of learning rate decide whether deep networks train well.
 
 ### How it works
 
@@ -114,7 +114,7 @@ Training repeats forward pass, loss, back-propagation and weight update on small
 
 ### TL;DR
 
-Ein neuronales Netz zu trainieren heißt, seine Gewichte so anzupassen, dass eine Verlustfunktion auf den Trainingsdaten minimal wird. Backpropagation berechnet die Gradienten, und ein gradientenbasierter Optimierer wie stochastischer Gradientenabstieg oder Adam aktualisiert die Gewichte auf kleinen Datenpaketen (Batches), Durchlauf für Durchlauf über die Trainingsmenge (Goodfellow et al., 2016; Kingma & Ba, 2014). Sorgfältige Initialisierung (Glorot & Bengio, 2010; He et al., 2015), Normalisierung (Ioffe & Szegedy, 2015) und die Wahl der Lernrate entscheiden, ob tiefe Netze gut trainieren.
+Ein neuronales Netz zu trainieren heißt, seine Gewichte so anzupassen, dass eine Verlustfunktion auf den Trainingsdaten minimal wird. [[back-propagation|Backpropagation]] berechnet die Gradienten, und ein gradientenbasierter Optimierer wie stochastischer Gradientenabstieg oder Adam aktualisiert die Gewichte auf kleinen Datenpaketen (Batches), Durchlauf für Durchlauf über die Trainingsmenge (Goodfellow et al., 2016; Kingma & Ba, 2014). Sorgfältige Initialisierung (Glorot & Bengio, 2010; He et al., 2015), Normalisierung (Ioffe & Szegedy, 2015) und die Wahl der Lernrate entscheiden, ob tiefe Netze gut trainieren.
 
 ### Funktionsweise
 

@@ -44,10 +44,6 @@ entities:
     type: Concept
     name_en: Intrinsic dimension
     name_de: Intrinsische Dimension
-  - id: qlora
-    type: Method
-    name_en: QLoRA
-    name_de: QLoRA
   - id: weight-decomposed-low-rank-adaptation
     type: Method
     name_en: DoRA (Weight-Decomposed Low-Rank Adaptation)
@@ -65,11 +61,6 @@ entities:
     type: Method
     name_en: Masked language modelling
     name_de: Masked Language Modelling
-  - id: vision-transformer
-    type: Method
-    name_en: Vision Transformer
-    name_de: Vision Transformer
-    aliases: [ViT]
   - id: flashattention
     type: Method
     name_en: FlashAttention
@@ -90,10 +81,6 @@ entities:
     type: Method
     name_en: FitNets
     name_de: FitNets
-  - id: distilbert
-    type: Method
-    name_en: DistilBERT
-    name_de: DistilBERT
   - id: tinybert
     type: Method
     name_en: TinyBERT

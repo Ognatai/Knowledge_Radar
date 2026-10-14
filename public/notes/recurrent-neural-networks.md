@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Recurrent [[neural-networks|neural networks]] (RNNs) process sequences step by step and carry a hidden state that summarises what they have seen so far, sharing the same weights at every time step (Goodfellow et al., 2016). They are trained with back-propagation through time, but long-term dependencies are hard to learn because gradients vanish or explode over many steps (Bengio et al., 1994). Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this and powered sequence-to-sequence models for translation (Sutskever et al., 2014), before Transformers largely replaced them in language processing.
+Recurrent [[neural-networks|neural networks]] (RNNs) process sequences step by step and carry a hidden state that summarises what they have seen so far, sharing the same weights at every time step (Goodfellow et al., 2016). They are trained with [[back-propagation|back-propagation]] through time, but long-term dependencies are hard to learn because gradients vanish or explode over many steps (Bengio et al., 1994). Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this and powered sequence-to-sequence models for translation (Sutskever et al., 2014), before Transformers largely replaced them in language processing.
 
 ### How it works
 
@@ -55,7 +55,7 @@ The long short-term memory (LSTM) introduces memory cells whose content is contr
 
 #### 5. Sequence-to-sequence models
 
-In an encoder-decoder, one RNN encodes an input sequence into a fixed-length vector and another decodes it into an output sequence; both are trained jointly to maximise the probability of the target sequence (Cho et al., 2014). Sutskever et al. (2014) used deep LSTMs this way for English-to-French translation on WMT'14 and reached a BLEU score of 34.8, compared with 33.3 for a phrase-based system; reversing the order of the source words markedly improved performance by introducing short-term dependencies. The fixed-length vector became a bottleneck that attention later removed ([[attention-and-transformers|Attention and Transformers]]).
+In an encoder-decoder, one RNN encodes an input sequence into a fixed-length vector and another decodes it into an output sequence; both are trained jointly to maximise the probability of the target sequence (Cho et al., 2014). Sutskever et al. (2014) used deep LSTMs this way for English-to-French translation on WMT'14 and reached a [[bleu|BLEU score]] of 34.8, compared with 33.3 for a phrase-based system; reversing the order of the source words markedly improved performance by introducing short-term dependencies. The fixed-length vector became a bottleneck that attention later removed ([[attention-and-transformers|Attention and Transformers]]).
 
 #### 6. RNNs for time series
 
@@ -115,7 +115,7 @@ RNNs process sequences step by step with a shared state; gated units such as the
 
 ### TL;DR
 
-Rekurrente [[neural-networks|neuronale Netze]] (RNNs) verarbeiten Sequenzen Schritt für Schritt und führen einen verborgenen Zustand mit, der das bisher Gesehene zusammenfasst; dabei nutzen sie in jedem Zeitschritt dieselben Gewichte (Goodfellow et al., 2016). Sie werden mit Backpropagation Through Time trainiert, doch weitreichende Abhängigkeiten sind schwer zu lernen, weil Gradienten über viele Schritte verschwinden oder explodieren (Bengio et al., 1994). Gesteuerte Varianten wie das LSTM (Hochreiter & Schmidhuber, 1997) und die GRU (Cho et al., 2014) lösen das und trugen Sequence-to-Sequence-Modelle für Übersetzung (Sutskever et al., 2014), bevor Transformer sie in der Sprachverarbeitung weitgehend ablösten.
+Rekurrente [[neural-networks|neuronale Netze]] (RNNs) verarbeiten Sequenzen Schritt für Schritt und führen einen verborgenen Zustand mit, der das bisher Gesehene zusammenfasst; dabei nutzen sie in jedem Zeitschritt dieselben Gewichte (Goodfellow et al., 2016). Sie werden mit [[back-propagation|Backpropagation]] Through Time trainiert, doch weitreichende Abhängigkeiten sind schwer zu lernen, weil Gradienten über viele Schritte verschwinden oder explodieren (Bengio et al., 1994). Gesteuerte Varianten wie das LSTM (Hochreiter & Schmidhuber, 1997) und die GRU (Cho et al., 2014) lösen das und trugen Sequence-to-Sequence-Modelle für Übersetzung (Sutskever et al., 2014), bevor Transformer sie in der Sprachverarbeitung weitgehend ablösten.
 
 ### Funktionsweise
 

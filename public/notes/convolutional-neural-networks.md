@@ -20,7 +20,7 @@ Convolutional [[neural-networks|neural networks]] (CNNs) process grid-like data 
 
 ### How it works
 
-Convolution layers apply a set of filters to the input and produce feature maps, pooling layers summarise neighbouring values, and after several such stages fully connected layers or a global pooling produce the prediction. All filters are learned with back-propagation.
+Convolution layers apply a set of filters to the input and produce feature maps, pooling layers summarise neighbouring values, and after several such stages fully connected layers or a global pooling produce the prediction. All filters are learned with [[back-propagation|back-propagation]].
 
 ```text
 1. The convolution operation
@@ -54,7 +54,7 @@ A typical CNN alternates convolution layers with non-linear activations and pool
 
 #### 5. Going deeper
 
-Simonyan & Zisserman (2014) showed that very small 3×3 filters allow networks of 16 to 19 weight layers that improve markedly on earlier configurations. Deeper networks are harder to train; residual networks reformulate layers to learn residual functions with respect to their inputs, which made networks up to 152 layers deep easier to optimise and more accurate; an ensemble reached 3.57% error on the ImageNet test set and won ILSVRC 2015 (He et al., 2015).
+Simonyan & Zisserman (2014) showed that very small 3×3 filters allow networks of 16 to 19 weight layers that improve markedly on earlier configurations. Deeper networks are harder to train; [[resnet|residual networks]] reformulate layers to learn residual functions with respect to their inputs, which made networks up to 152 layers deep easier to optimise and more accurate; an ensemble reached 3.57% error on the ImageNet test set and won ILSVRC 2015 (He et al., 2015).
 
 #### 6. Transfer learning
 
@@ -116,7 +116,7 @@ Convolutional Neural Networks (CNNs) verarbeiten gitterartige Daten wie Bilder, 
 
 ### Funktionsweise
 
-Faltungsschichten wenden eine Reihe von Filtern auf die Eingabe an und erzeugen Feature Maps, Pooling-Schichten fassen benachbarte Werte zusammen, und nach mehreren solchen Stufen liefern vollständig verbundene Schichten oder ein globales Pooling die Vorhersage. Alle Filter werden mit Backpropagation gelernt.
+Faltungsschichten wenden eine Reihe von Filtern auf die Eingabe an und erzeugen Feature Maps, Pooling-Schichten fassen benachbarte Werte zusammen, und nach mehreren solchen Stufen liefern vollständig verbundene Schichten oder ein globales Pooling die Vorhersage. Alle Filter werden mit [[back-propagation|Backpropagation]] gelernt.
 
 ```text
 1. Die Faltungsoperation
@@ -158,7 +158,7 @@ Auf großen Datensätzen gelernte Repräsentationen lassen sich auf andere Aufga
 
 #### Ursprung und Varianten
 
-Netze im Stil von LeNet (LeCun et al., 1998) etablierten CNNs für die Dokumenterkennung, AlexNet (Krizhevsky et al., 2012) leitete die Deep-Learning-Ära in der [[computer-vision|Bildverarbeitung]] ein, und VGG (Simonyan & Zisserman, 2014) sowie ResNet (He et al., 2015) machten Netze deutlich tiefer. Vision Transformer boten später eine attention-basierte Alternative ([[attention-and-transformers|Attention und Transformer]]).
+Netze im Stil von LeNet (LeCun et al., 1998) etablierten CNNs für die Dokumenterkennung, AlexNet (Krizhevsky et al., 2012) leitete die Deep-Learning-Ära in der [[computer-vision|Bildverarbeitung]] ein, und VGG (Simonyan & Zisserman, 2014) sowie [[resnet|ResNet]] (He et al., 2015) machten Netze deutlich tiefer. [[vision-transformer|Vision Transformer]] boten später eine attention-basierte Alternative ([[attention-and-transformers|Attention und Transformer]]).
 
 ### Wann einsetzen
 

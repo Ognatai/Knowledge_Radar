@@ -1,0 +1,23 @@
+version: 1
+note_sha256: 221c8758495c0a937a36829113bd6a2fc60824914ec79f4f25b025fc0bf50390
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- chatgpt
+- data-governance
+- large-language-models
+- llama
+- llm-adaptation
+- llm-alignment
+- llm-as-a-judge
+- lora
+- quantisation
+- rag-vs-fine-tuning
+relations:
+- from: qlora
+  type: BASED_ON
+  to: lora
+  evidence: training only small lora adapters on top
+- from: qlora
+  type: BASED_ON
+  to: quantisation
+  evidence: keeping the pre-trained weights frozen in 4-bit precision

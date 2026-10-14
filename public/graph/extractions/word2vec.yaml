@@ -1,0 +1,22 @@
+version: 1
+note_sha256: 5a100ce48c7deaa27f93d3f2ace92ef0802631df797805735d9e54570f7aa43e
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- attention-and-transformers
+- bert
+- bias-in-nlp
+- classification
+- clustering
+- embeddings
+- fairness-metrics
+- glove
+- google
+relations:
+- from: word2vec
+  type: DEVELOPED_BY
+  to: google
+  evidence: word2vec is a family of two shallow neural models from google
+- from: word2vec
+  type: IS_EXAMPLE_OF
+  to: embeddings
+  evidence: learn a dense vector for every word from its contexts in a large corpus

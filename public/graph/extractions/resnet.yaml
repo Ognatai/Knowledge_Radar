@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 7fa486e5bc0cb2db5342d4a1d535e984cd58de7df37671eef790c42e1b17ad8a
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- attention-and-transformers
+- back-propagation
+- computer-vision
+- convolutional-neural-networks
+- neural-network-training
+- neural-networks
+- vision-transformer
+- microsoft
+- imagenet
+relations:
+- from: resnet
+  type: DEVELOPED_BY
+  to: microsoft
+  evidence: kaiming he, xiangyu zhang, shaoqing ren and jian sun at microsoft research presented resnet at cvpr 2016
+- from: resnet
+  type: IS_EXAMPLE_OF
+  to: convolutional-neural-networks
+  evidence: for the deeper imagenet models, each two-layer block is replaced by a three-layer bottleneck
+- from: imagenet
+  type: EVALUATES
+  to: resnet
+  evidence: allowed networks of 152 layers on imagenet

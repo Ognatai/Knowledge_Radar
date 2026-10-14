@@ -55,7 +55,7 @@ Wang et al. (2023) showed that the ranking of candidate answers can be manipulat
 
 #### 4. Other biases
 
-Besides position bias, LLM judges show verbosity bias, a preference for longer answers, and self-enhancement bias, a preference for answers produced by their own model (Zheng et al., 2023). Panickssery et al. (2024) found that models such as GPT-4 and Llama 2 can recognise their own outputs and rate them higher than texts that humans rate as equally good, and that after fine-tuning the strength of this self-preference correlates linearly with the ability to recognise one's own outputs. This matters when the same model family produces and judges the answers ([[model-comparison|Model Comparison]]).
+Besides position bias, LLM judges show verbosity bias, a preference for longer answers, and self-enhancement bias, a preference for answers produced by their own model (Zheng et al., 2023). Panickssery et al. (2024) found that models such as GPT-4 and [[llama|Llama 2]] can recognise their own outputs and rate them higher than texts that humans rate as equally good, and that after fine-tuning the strength of this self-preference correlates linearly with the ability to recognise one's own outputs. This matters when the same model family produces and judges the answers ([[model-comparison|Model Comparison]]).
 
 #### 5. Open judge models with rubrics
 
@@ -152,7 +152,7 @@ Wang et al. (2023) zeigten, dass sich die Rangfolge der Kandidatenantworten alle
 
 #### 4. Weitere Verzerrungen
 
-Neben dem Position Bias zeigen LLM-Judges einen Verbosity Bias, also eine Vorliebe für längere Antworten, und einen Self-Enhancement Bias, also eine Vorliebe für Antworten des eigenen Modells (Zheng et al., 2023). Panickssery et al. (2024) fanden, dass Modelle wie GPT-4 und Llama 2 ihre eigenen Ausgaben erkennen und sie höher bewerten als Texte, die Menschen als gleich gut einstufen; durch Fine-Tuning zeigten sie, dass die Stärke dieser Selbstpräferenz linear mit der Fähigkeit korreliert, eigene Ausgaben zu erkennen. Dies ist wichtig, wenn dieselbe Modellfamilie sowohl die Antworten erzeugt als auch sie bewertet ([[model-comparison|Modellvergleich]]).
+Neben dem Position Bias zeigen LLM-Judges einen Verbosity Bias, also eine Vorliebe für längere Antworten, und einen Self-Enhancement Bias, also eine Vorliebe für Antworten des eigenen Modells (Zheng et al., 2023). Panickssery et al. (2024) fanden, dass Modelle wie GPT-4 und [[llama|Llama 2]] ihre eigenen Ausgaben erkennen und sie höher bewerten als Texte, die Menschen als gleich gut einstufen; durch Fine-Tuning zeigten sie, dass die Stärke dieser Selbstpräferenz linear mit der Fähigkeit korreliert, eigene Ausgaben zu erkennen. Dies ist wichtig, wenn dieselbe Modellfamilie sowohl die Antworten erzeugt als auch sie bewertet ([[model-comparison|Modellvergleich]]).
 
 #### 5. Offene Judge-Modelle mit Rubriken
 

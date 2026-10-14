@@ -33,6 +33,10 @@ areas:
       - information-extraction
       - entity-extraction
       - text-similarity-metrics
+      - word2vec
+      - glove
+      - distilbert
+      - llama
     also:
       - bias-in-nlp
       - legal-ai
@@ -50,6 +54,7 @@ areas:
       - quantisation
       - mixed-precision-training
       - llm-cost-optimisation
+      - qlora
   - id: agents
     name_en: Agents, Prompting & AI Engineering
     name_de: Agenten, Prompting & AI Engineering
@@ -126,6 +131,8 @@ areas:
       - differential-privacy-and-federated-learning
       - llm-guardrails-and-red-teaming
       - responsible-ai
+      - bleu
+      - bertscore
     also:
       - prompt-injection
       - text-similarity-metrics
@@ -168,6 +175,9 @@ areas:
       - diffusion-models
       - reinforcement-learning
       - keras-and-tensorflow
+      - back-propagation
+      - resnet
+      - vision-transformer
     also:
       - attention-and-transformers
   - id: knowledge-graphs

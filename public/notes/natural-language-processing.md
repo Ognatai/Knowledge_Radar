@@ -40,11 +40,11 @@ Before any modelling, text is normalised and split into tokens, the units that l
 
 #### 2. Word vectors
 
-Mikolov et al. (2013) proposed two model architectures (word2vec) that learn continuous vector representations of words from very large data sets. The quality of the vectors was measured on word similarity tasks, where they gave large improvements in accuracy at much lower computational cost than earlier neural approaches: high-quality vectors could be learned from a 1.6 billion word data set in less than a day. Such vectors place words with similar meaning close together and are the starting point for [[embeddings|Embeddings]] in general.
+Mikolov et al. (2013) proposed two model architectures ([[word2vec|word2vec]]) that learn continuous vector representations of words from very large data sets. The quality of the vectors was measured on word similarity tasks, where they gave large improvements in accuracy at much lower computational cost than earlier neural approaches: high-quality vectors could be learned from a 1.6 billion word data set in less than a day. Such vectors place words with similar meaning close together and are the starting point for [[embeddings|Embeddings]] in general.
 
 #### 3. Transformer architecture
 
-The Transformer (Vaswani et al., 2017) is a sequence model based solely on attention mechanisms, dispensing with recurrence and convolutions. This makes it more parallelisable and faster to train than the recurrent and convolutional models it replaced. On machine translation it reached 28.4 BLEU on WMT 2014 English-to-German, more than 2 BLEU above the previous best results including ensembles, and 41.8 BLEU on English-to-French as a single model after 3.5 days of training on eight GPUs. The Transformer is the basis of today's pretrained language models.
+The Transformer (Vaswani et al., 2017) is a sequence model based solely on attention mechanisms, dispensing with recurrence and convolutions. This makes it more parallelisable and faster to train than the recurrent and convolutional models it replaced. On machine translation it reached 28.4 [[bleu|BLEU]] on WMT 2014 English-to-German, more than 2 BLEU above the previous best results including ensembles, and 41.8 BLEU on English-to-French as a single model after 3.5 days of training on eight GPUs. The Transformer is the basis of today's pretrained language models.
 
 #### 4. Pretraining and fine-tuning
 
@@ -130,11 +130,11 @@ Vor jeder Modellierung wird der Text normalisiert und in Token zerlegt, die Einh
 
 #### 2. Wortvektoren
 
-Mikolov et al. (2013) schlugen zwei Modellarchitekturen (word2vec) vor, die kontinuierliche Vektorrepräsentationen von Wörtern aus sehr großen Datensätzen lernen. Die Qualität der Vektoren wurde anhand von Aufgaben zur Wortähnlichkeit gemessen, bei denen sie die Genauigkeit gegenüber früheren neuronalen Ansätzen deutlich verbesserten, bei weit geringeren Rechenkosten: Hochwertige Vektoren konnten aus einem Datensatz mit 1,6 Milliarden Wörtern in weniger als einem Tag gelernt werden. Solche Vektoren platzieren Wörter mit ähnlicher Bedeutung nahe beieinander und sind der Ausgangspunkt für [[embeddings|Embeddings]] im Allgemeinen.
+Mikolov et al. (2013) schlugen zwei Modellarchitekturen ([[word2vec|word2vec]]) vor, die kontinuierliche Vektorrepräsentationen von Wörtern aus sehr großen Datensätzen lernen. Die Qualität der Vektoren wurde anhand von Aufgaben zur Wortähnlichkeit gemessen, bei denen sie die Genauigkeit gegenüber früheren neuronalen Ansätzen deutlich verbesserten, bei weit geringeren Rechenkosten: Hochwertige Vektoren konnten aus einem Datensatz mit 1,6 Milliarden Wörtern in weniger als einem Tag gelernt werden. Solche Vektoren platzieren Wörter mit ähnlicher Bedeutung nahe beieinander und sind der Ausgangspunkt für [[embeddings|Embeddings]] im Allgemeinen.
 
 #### 3. Transformer-Architektur
 
-Der Transformer (Vaswani et al., 2017) ist ein Sequenzmodell, das ausschließlich auf Attention-Mechanismen beruht und auf Rekurrenz und Faltungen verzichtet. Dadurch lässt er sich besser parallelisieren und schneller trainieren als die rekurrenten und konvolutionalen Modelle, die er ablöste. In der maschinellen Übersetzung erreichte er 28,4 BLEU auf WMT 2014 Englisch-Deutsch, mehr als 2 BLEU über den bisher besten Ergebnissen einschließlich Ensembles, und 41,8 BLEU bei Englisch-zu-Französisch als Einzelmodell nach 3,5 Tagen Training auf acht GPUs. Der Transformer bildet die Grundlage der heutigen vortrainierten Sprachmodelle.
+Der Transformer (Vaswani et al., 2017) ist ein Sequenzmodell, das ausschließlich auf Attention-Mechanismen beruht und auf Rekurrenz und Faltungen verzichtet. Dadurch lässt er sich besser parallelisieren und schneller trainieren als die rekurrenten und konvolutionalen Modelle, die er ablöste. In der maschinellen Übersetzung erreichte er 28,4 [[bleu|BLEU]] auf WMT 2014 Englisch-Deutsch, mehr als 2 BLEU über den bisher besten Ergebnissen einschließlich Ensembles, und 41,8 BLEU bei Englisch-zu-Französisch als Einzelmodell nach 3,5 Tagen Training auf acht GPUs. Der Transformer bildet die Grundlage der heutigen vortrainierten Sprachmodelle.
 
 #### 4. Vortraining und Fine-Tuning
 

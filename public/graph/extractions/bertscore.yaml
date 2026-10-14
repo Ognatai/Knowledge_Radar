@@ -1,0 +1,23 @@
+version: 1
+note_sha256: d7e14681e44773ce8740ecd6cf5f507c0a0290b248271f96da73321a093ed5a3
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bert
+- bleu
+- classification-metrics
+- embeddings
+- hallucination-detection
+- llm-as-a-judge
+- machine-translation
+- rag-generation-evaluation
+- retrieval-augmented-generation
+- text-similarity-metrics
+relations:
+- from: bertscore
+  type: BASED_ON
+  to: bert
+  evidence: bertscore represents each token with a contextual embedding from a pre-trained model such as bert
+- from: bertscore
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: bertscore evaluates generated text against a reference by matching tokens through their contextual embeddings instead of exact strings

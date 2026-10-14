@@ -1,0 +1,25 @@
+version: 1
+note_sha256: 2cb7bf158858dfd176e81204ac9a0fccd2e236c389068016cf9f763416770918
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bert
+- bias-in-nlp
+- clustering
+- embeddings
+- fairness-metrics
+- latent-semantic-indexing
+- word2vec
+- stanford-university
+relations:
+- from: glove
+  type: DEVELOPED_BY
+  to: stanford-university
+  evidence: jeffrey pennington, richard socher and christopher manning at stanford presented glove at emnlp 2014
+- from: glove
+  type: BASED_ON
+  to: latent-semantic-indexing
+  evidence: it combines the global statistics of matrix-factorisation methods such as latent semantic analysis with the local-window training of word2vec
+- from: glove
+  type: BASED_ON
+  to: word2vec
+  evidence: it combines the global statistics of matrix-factorisation methods such as latent semantic analysis with the local-window training of word2vec

@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 15ff6d3120a73b8e96c4af46c39b693327058a370be458916dae104606e510b1
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- attention-and-transformers
+- bert
+- classification
+- computer-vision
+- convolutional-neural-networks
+- embeddings
+- multimodal-models
+- resnet
+- google
+- imagenet
+relations:
+- from: vision-transformer
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: applies a standard transformer encoder, almost unchanged from nlp, directly to images
+- from: vision-transformer
+  type: DEVELOPED_BY
+  to: google
+  evidence: alexey dosovitskiy and colleagues at google research presented vit at iclr 2021
+- from: imagenet
+  type: EVALUATES
+  to: vision-transformer
+  evidence: vit does worse than comparable resnets when trained on mid-sized datasets such as imagenet

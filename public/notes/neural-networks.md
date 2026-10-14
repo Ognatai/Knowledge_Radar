@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-A neural network is a model built from layers of simple units, each computing a weighted sum of its inputs plus a bias and passing it through a non-linear activation function (Goodfellow et al., 2016). Networks with a hidden layer can approximate any reasonable function given enough units (Hornik et al., 1989), and they learn their weights from data with back-propagation (Rumelhart et al., 1986). Deep networks with many layers learn representations at several levels of abstraction and are the basis of modern image, speech and language processing (LeCun et al., 2015).
+A neural network is a model built from layers of simple units, each computing a weighted sum of its inputs plus a bias and passing it through a non-linear activation function (Goodfellow et al., 2016). Networks with a hidden layer can approximate any reasonable function given enough units (Hornik et al., 1989), and they learn their weights from data with [[back-propagation|back-propagation]] (Rumelhart et al., 1986). Deep networks with many layers learn representations at several levels of abstraction and are the basis of modern image, speech and language processing (LeCun et al., 2015).
 
 ### How it works
 
@@ -110,7 +110,7 @@ A neural network stacks layers of weighted sums and non-linear activations; trai
 
 ### TL;DR
 
-Ein neuronales Netz ist ein Modell aus Schichten einfacher Einheiten, die jeweils eine gewichtete Summe ihrer Eingaben plus einen Bias berechnen und durch eine nichtlineare Aktivierungsfunktion leiten (Goodfellow et al., 2016). Netze mit einer verborgenen Schicht können bei genügend Einheiten jede vernünftige Funktion annähern (Hornik et al., 1989), und sie lernen ihre Gewichte mit Backpropagation aus Daten (Rumelhart et al., 1986). Tiefe Netze mit vielen Schichten lernen Repräsentationen auf mehreren Abstraktionsebenen und bilden die Grundlage moderner Bild-, Sprach- und Textverarbeitung (LeCun et al., 2015).
+Ein neuronales Netz ist ein Modell aus Schichten einfacher Einheiten, die jeweils eine gewichtete Summe ihrer Eingaben plus einen Bias berechnen und durch eine nichtlineare Aktivierungsfunktion leiten (Goodfellow et al., 2016). Netze mit einer verborgenen Schicht können bei genügend Einheiten jede vernünftige Funktion annähern (Hornik et al., 1989), und sie lernen ihre Gewichte mit [[back-propagation|Backpropagation]] aus Daten (Rumelhart et al., 1986). Tiefe Netze mit vielen Schichten lernen Repräsentationen auf mehreren Abstraktionsebenen und bilden die Grundlage moderner Bild-, Sprach- und Textverarbeitung (LeCun et al., 2015).
 
 ### Funktionsweise
 

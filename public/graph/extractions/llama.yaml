@@ -1,0 +1,30 @@
+version: 1
+note_sha256: 54e7db5fe275d1d7e184aa13ef4ebfd07d7283921f641d6aac92824ad8852147
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- attention-and-transformers
+- bias-in-nlp
+- cloud-ai-platforms
+- copyright-and-ai-training-data
+- embeddings
+- eu-ai-act
+- gpt
+- large-language-models
+- llm-adaptation
+- llm-alignment
+- llm-guardrails-and-red-teaming
+- lora
+- mlops-and-deployment
+- multimodal-models
+- qlora
+- quantisation
+- meta
+relations:
+- from: llama
+  type: DEVELOPED_BY
+  to: meta
+  evidence: llama is meta's family of openly released large language models
+- from: llama
+  type: IS_EXAMPLE_OF
+  to: large-language-models
+  evidence: llama is meta's family of openly released large language models

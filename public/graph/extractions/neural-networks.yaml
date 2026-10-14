@@ -1,5 +1,5 @@
 version: 1
-note_sha256: de7f98784e1f6ca72753132a7e0ea8cb46a008f39e2be0953f78f03609d27823
+note_sha256: 54eafcb8fc8100acf764ef9df6650a97d30221b55485f97dc0a684c0e8631a44
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - perceptron

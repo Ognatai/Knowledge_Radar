@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Machine translation (MT) uses computers to translate from one language to another, mostly for information access, as drafts for human post-editing and for in-the-moment communication (Jurafsky & Martin, 2026). Languages differ in word order, in how they divide meaning into words and in what they may omit, so MT must reorder and disambiguate. The standard architecture is the encoder-decoder Transformer, trained on parallel corpora of aligned sentences and decoded with beam search. Translations are judged for adequacy and fluency, by human raters or by automatic metrics such as chrF, BLEU, COMET or BERTScore (Jurafsky & Martin, 2026).
+Machine translation (MT) uses computers to translate from one language to another, mostly for information access, as drafts for human post-editing and for in-the-moment communication (Jurafsky & Martin, 2026). Languages differ in word order, in how they divide meaning into words and in what they may omit, so MT must reorder and disambiguate. The standard architecture is the encoder-decoder Transformer, trained on parallel corpora of aligned sentences and decoded with beam search. Translations are judged for adequacy and fluency, by human raters or by automatic metrics such as chrF, [[bleu|BLEU]], COMET or [[bertscore|BERTScore]] (Jurafsky & Martin, 2026).
 
 ### How it works
 
@@ -110,7 +110,7 @@ Machine translation maps sentences between languages with encoder-decoder Transf
 
 ### TL;DR
 
-Maschinelle Übersetzung (MT) übersetzt mit Computern von einer Sprache in eine andere, vor allem für den Informationszugang, als Entwurf für menschliches Post-Editing und für Kommunikation im Moment (Jurafsky & Martin, 2026). Sprachen unterscheiden sich in der Wortstellung, darin, wie sie Bedeutung auf Wörter verteilen, und darin, was sie weglassen dürfen, daher muss MT umordnen und disambiguieren. Die Standardarchitektur ist der Encoder-Decoder-Transformer, trainiert auf Parallelkorpora alignierter Sätze und dekodiert mit Beam Search. Übersetzungen werden nach Adäquatheit und Flüssigkeit bewertet, von menschlichen Bewertenden oder mit automatischen Metriken wie chrF, BLEU, COMET oder BERTScore (Jurafsky & Martin, 2026).
+Maschinelle Übersetzung (MT) übersetzt mit Computern von einer Sprache in eine andere, vor allem für den Informationszugang, als Entwurf für menschliches Post-Editing und für Kommunikation im Moment (Jurafsky & Martin, 2026). Sprachen unterscheiden sich in der Wortstellung, darin, wie sie Bedeutung auf Wörter verteilen, und darin, was sie weglassen dürfen, daher muss MT umordnen und disambiguieren. Die Standardarchitektur ist der Encoder-Decoder-Transformer, trainiert auf Parallelkorpora alignierter Sätze und dekodiert mit Beam Search. Übersetzungen werden nach Adäquatheit und Flüssigkeit bewertet, von menschlichen Bewertenden oder mit automatischen Metriken wie chrF, [[bleu|BLEU]], COMET oder [[bertscore|BERTScore]] (Jurafsky & Martin, 2026).
 
 ### Funktionsweise
 
