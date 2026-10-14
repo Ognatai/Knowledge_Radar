@@ -17,7 +17,7 @@ import yaml
 
 from app.backend.knowledge_radar.notes import FRONTMATTER_PATTERN, SECTION_PATTERN
 
-TEMPLATES = ("regulatory", "technical", "organisation")
+TEMPLATES = ("regulatory", "technical", "organisation", "person")
 
 # (EN heading, DE heading); required sections must appear in this order.
 REGULATORY_REQUIRED = [
@@ -57,6 +57,20 @@ ORGANISATION_OPTIONAL = [
     ("Relationship to other bodies", "Verhältnis zu anderen Stellen"),
     ("In practice", "In der Praxis"),
 ]
+# People (researchers, practitioners); only their public, professional role.
+PERSON_REQUIRED = [
+    ("TL;DR", "TL;DR"),
+    ("Key facts", "Eckdaten"),
+    ("Career", "Werdegang"),
+    ("Key contributions", "Wichtige Beiträge"),
+    ("Key works", "Wichtige Werke"),
+    ("Sources", "Quellen"),
+]
+PERSON_OPTIONAL = [
+    ("Influence and reception", "Wirkung und Rezeption"),
+    ("Relevance for AI development", "Bedeutung für die KI-Entwicklung"),
+    ("In practice", "In der Praxis"),
+]
 # Dated update entries (note_updates.py); always the last section.
 UPDATES = ("Updates", "Aktualisierungen")
 # Technology notes replace "How it works" with these two sections.
@@ -84,6 +98,8 @@ def default_template(entity_type: str) -> str:
         return "regulatory"
     if entity_type == "Organisation":
         return "organisation"
+    if entity_type == "Person":
+        return "person"
     return "technical"
 
 
@@ -137,9 +153,13 @@ def _check_language(text: str, lang: str, template: str, entity_type: str) -> li
     if template == "regulatory":
         required = [pair[index] for pair in REGULATORY_REQUIRED]
         allowed = None  # chapters, recitals and annexes are free-form
-    elif template == "organisation":
-        required = [pair[index] for pair in ORGANISATION_REQUIRED]
-        allowed = set(required) | {pair[index] for pair in ORGANISATION_OPTIONAL} | {UPDATES[index]}
+    elif template in ("organisation", "person"):
+        required_pairs, optional_pairs = (
+            (ORGANISATION_REQUIRED, ORGANISATION_OPTIONAL) if template == "organisation"
+            else (PERSON_REQUIRED, PERSON_OPTIONAL)
+        )
+        required = [pair[index] for pair in required_pairs]
+        allowed = set(required) | {pair[index] for pair in optional_pairs} | {UPDATES[index]}
     else:
         pairs = TECHNICAL_REQUIRED
         if entity_type == "Technology":
@@ -159,7 +179,7 @@ def _check_language(text: str, lang: str, template: str, entity_type: str) -> li
     if allowed is not None:
         unexpected = [title for title in top if title not in allowed]
         if unexpected:
-            problems.append(f"{lang}: sections not in the technical template: {', '.join(unexpected)}.")
+            problems.append(f"{lang}: sections not in the {template} template: {', '.join(unexpected)}.")
     return problems
 
 

@@ -231,3 +231,51 @@ def test_organisation_allows_relationship_section():
     en = ORGANISATION_EN[:-1] + ["Relationship to other bodies", "Sources"]
     de = ORGANISATION_DE[:-1] + ["Verhältnis zu anderen Stellen", "Quellen"]
     assert check_template(organisation(sections_en=en, sections_de=de)) == []
+
+
+PERSON_EN = ["TL;DR", "Key facts", "Career", "Key contributions", "Key works", "Sources"]
+PERSON_DE = ["TL;DR", "Eckdaten", "Werdegang", "Wichtige Beiträge", "Wichtige Werke", "Quellen"]
+
+
+def person(sections_en=None, sections_de=None):
+    body_en = "".join(f"### {title}\nText.\n\n" for title in (sections_en or PERSON_EN))
+    body_de = "".join(f"### {title}\nText.\n\n" for title in (sections_de or PERSON_DE))
+    return f"""---
+title_en: Ada Lovelace
+title_de: Ada Lovelace
+entity_type: Person
+sources:
+  - {SOURCE}
+---
+
+## EN
+
+> **Note:** LLM-generated summary.
+
+{body_en}[Website]({SOURCE})
+
+## DE
+
+> **Hinweis:** LLM-generierte Zusammenfassung.
+
+{body_de}[Website]({SOURCE})
+"""
+
+
+def test_person_notes_use_the_person_template():
+    assert check_template(person()) == []
+
+
+def test_person_sections_are_required():
+    problems = check_template(person(sections_en=[s for s in PERSON_EN if s != "Key works"]))
+    assert any("missing sections: Key works" in p for p in problems)
+
+
+def test_person_allows_influence_and_rejects_unknown_sections():
+    en = PERSON_EN[:-1] + ["Influence and reception", "Sources"]
+    de = PERSON_DE[:-1] + ["Wirkung und Rezeption", "Quellen"]
+    assert check_template(person(sections_en=en, sections_de=de)) == []
+
+    en = PERSON_EN[:-1] + ["Private life", "Sources"]
+    de = PERSON_DE[:-1] + ["Privatleben", "Quellen"]
+    assert any("not in the person template: Private life" in p for p in check_template(person(en, de)))

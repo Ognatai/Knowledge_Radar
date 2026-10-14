@@ -1,8 +1,9 @@
 # Note templates
 
-Every public note follows one of three templates, chosen by area:
+Every public note follows one of four templates, chosen by area:
 **regulatory** for legal topics, **technical** for methods, concepts, and technologies,
-**organisation** for standards bodies and supervisory authorities. All three share the
+**organisation** for standards bodies and supervisory authorities, **person** for
+people. All four share the
 repository's note format: YAML frontmatter, a `## EN` and a `## DE` section
 with identical structure, and an optional `## Original Source Text (DE)`.
 Sub-sections use `###`, details `####`.
@@ -12,7 +13,8 @@ in CI): required frontmatter, the LLM notice, TL;DR first, required sections in
 order, no manual table of contents or "related topics" list, identical EN/DE
 outline, and every frontmatter source cited in the text. The template defaults
 to *regulatory* for `entity_type: Regulation`, *organisation* for
-`entity_type: Organisation` and *technical* otherwise; a
+`entity_type: Organisation`, *person* for `entity_type: Person` and
+*technical* otherwise; a
 `template:` frontmatter key overrides it (e.g. legal concepts such as
 copyright and AI training data use the regulatory template).
 
@@ -149,6 +151,41 @@ levels:
 
 Long acts therefore exceed the length guideline of the technical template;
 that is intended.
+
+**Very long acts** (roughly more than 100 articles or §§, e.g. the TKG): cover
+only the parts relevant to this knowledge base, i.e. scope and definitions,
+provisions on data, security, confidentiality, AI or automated processing,
+supervision and sanctions. Summarise each selected part article by article as
+above, and state in "Scope" which parts are covered and which are left out.
+
+---
+
+## Person template
+
+For researchers, practitioners and authors (`entity_type: Person`). The note
+covers only the person's public, professional role: no private life, family,
+health, political or religious views, contact details or other personal data
+beyond what the person's own professional publications state. Primary sources
+are the person's own website or publications and their employer's official
+pages; secondary sources only for reception.
+
+```markdown
+## EN
+> **Note:** LLM-generated summary …
+### TL;DR                         (who, known for what, why it matters here)
+### Key facts                     (role, affiliation, field; table)
+### Career                        (professional stations only)
+### Key contributions             (one #### per idea, method or book theme)
+### Key works                     (publications, books, talks with links)
+### Influence and reception (optional)
+### Relevance for AI development (optional)
+### In practice (optional)        (how the ideas are applied today)
+### Sources
+## DE
+(TL;DR · Eckdaten · Werdegang · Wichtige Beiträge · Wichtige Werke ·
+Wirkung und Rezeption · Bedeutung für die KI-Entwicklung · In der Praxis ·
+Quellen)
+```
 
 ---
 
