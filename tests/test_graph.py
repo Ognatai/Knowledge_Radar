@@ -204,6 +204,18 @@ def test_registry_ids_must_not_shadow_note_entities(tmp_path):
         load_graph(graph_dir, load_notes(notes_dir), notes_dir)
 
 
+def test_registry_names_need_balanced_parentheses(tmp_path):
+    registry = REGISTRY + """  - id: gamma-proposal
+    type: Regulation
+    name_en: Gamma Directive (proposal
+    name_de: Gamma-Richtlinie (Vorschlag)
+"""
+    notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
+
+    with pytest.raises(GraphError, match="parentheses"):
+        load_graph(graph_dir, load_notes(notes_dir), notes_dir)
+
+
 @pytest.mark.parametrize("entity_type", ["Note", "Company", "Unknown"])
 def test_registry_types_must_be_public_entity_types(tmp_path, entity_type):
     registry = REGISTRY.replace("type: Organisation", f"type: {entity_type}")

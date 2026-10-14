@@ -229,13 +229,17 @@ def _load_registry(path: Path, entities: dict[str, Entity]) -> None:
                 f"{where}: type '{entity_type}' is not a public entity type "
                 f"({', '.join(sorted(allowed_types))})."
             )
-        entities[entity_id] = Entity(
+        entity = Entity(
             id=entity_id,
             type=entity_type,
             name_en=_text(entry, "name_en", where),
             name_de=_text(entry, "name_de", where),
             aliases=_string_list(entry.get("aliases"), "aliases", where),
         )
+        for name in (entity.name_en, entity.name_de, *entity.aliases):
+            if name.count("(") != name.count(")"):
+                raise GraphError(f"{where}: unbalanced parentheses in name '{name}'.")
+        entities[entity_id] = entity
 
 
 def relation_problem(
