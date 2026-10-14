@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Regularisation reduces overfitting by constraining a model, for example with an L2 penalty (ridge regression, Hoerl & Kennard, 1970), an L1 penalty (lasso, Tibshirani, 1996), dropout (Srivastava et al., 2014) or early stopping (Prechelt, 1998). Hyperparameters such as the penalty strength are not learned from the training data but chosen by search on validation data, where random search (Bergstra & Bengio, 2012) and Bayesian optimisation (Snoek et al., 2012) are more efficient than trying a grid.
+Regularisation reduces [[overfitting|overfitting]] by constraining a model, for example with an L2 penalty (ridge regression, Hoerl & Kennard, 1970), an L1 penalty (lasso, Tibshirani, 1996), dropout (Srivastava et al., 2014) or early stopping (Prechelt, 1998). Hyperparameters such as the penalty strength are not learned from the training data but chosen by search on validation data, where random search (Bergstra & Bengio, 2012) and Bayesian optimisation (Snoek et al., 2012) are more efficient than trying a grid.
 
 ### How it works
 
@@ -119,7 +119,7 @@ Regularisation constrains models to generalise better, and its strength, like ot
 
 ### TL;DR
 
-Regularisierung verringert Überanpassung, indem sie ein Modell einschränkt, etwa mit einem L2-Strafterm (Ridge-Regression, Hoerl & Kennard, 1970), einem L1-Strafterm (Lasso, Tibshirani, 1996), Dropout (Srivastava et al., 2014) oder Early Stopping (Prechelt, 1998). Hyperparameter wie die Stärke des Strafterms werden nicht aus den Trainingsdaten gelernt, sondern durch Suche auf Validierungsdaten gewählt; Random Search (Bergstra & Bengio, 2012) und Bayes'sche Optimierung (Snoek et al., 2012) sind dabei effizienter als ein Raster.
+Regularisierung verringert [[overfitting|Überanpassung]], indem sie ein Modell einschränkt, etwa mit einem L2-Strafterm (Ridge-Regression, Hoerl & Kennard, 1970), einem L1-Strafterm (Lasso, Tibshirani, 1996), Dropout (Srivastava et al., 2014) oder Early Stopping (Prechelt, 1998). Hyperparameter wie die Stärke des Strafterms werden nicht aus den Trainingsdaten gelernt, sondern durch Suche auf Validierungsdaten gewählt; Random Search (Bergstra & Bengio, 2012) und Bayes'sche Optimierung (Snoek et al., 2012) sind dabei effizienter als ein Raster.
 
 ### Funktionsweise
 

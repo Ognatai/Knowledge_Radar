@@ -39,7 +39,7 @@ The nearest neighbour rule assigns an unclassified point the class of the neares
 
 #### 2. k neighbours and prediction
 
-k-NN generalises the rule to the k closest training points: the prediction is the majority class among them or the average of their values (Hastie et al., 2009). k controls the bias-variance trade-off: a small k follows the training data closely, with low bias and high variance, while a large k smooths the prediction. Because all computation happens at prediction time, the method is called lazy learning.
+k-NN generalises the rule to the k closest training points: the prediction is the majority class among them or the average of their values (Hastie et al., 2009). k controls the [[bias-variance-tradeoff|bias-variance trade-off]]: a small k follows the training data closely, with low bias and high variance, while a large k smooths the prediction. Because all computation happens at prediction time, the method is called lazy learning.
 
 #### 3. Feature scaling
 

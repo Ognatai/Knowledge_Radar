@@ -161,6 +161,10 @@ areas:
       - model-comparison
       - causal-inference
       - time-series-analysis
+      - overfitting
+      - bias-variance-tradeoff
+      - platt-scaling
+      - five-two-cv-test
   - id: deep-learning
     name_en: Neural Networks & Deep Learning
     name_de: Neuronale Netze & Deep Learning

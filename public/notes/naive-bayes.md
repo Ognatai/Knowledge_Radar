@@ -49,7 +49,7 @@ With many indicative terms, the winning class gets a probability near 1 and the 
 
 #### 6. Feature selection
 
-Feature selection keeps a subset of terms, which makes training and classification cheaper and often more accurate by removing noise features, terms that by accident occur only in one class in the training data and cause overfitting (Manning et al., 2008, ch. 13):
+Feature selection keeps a subset of terms, which makes training and classification cheaper and often more accurate by removing noise features, terms that by accident occur only in one class in the training data and cause [[overfitting|overfitting]] (Manning et al., 2008, ch. 13):
 - **Mutual information** measures how much the presence or absence of a term contributes to the correct class decision.
 - **χ²** tests whether occurrence of the term and of the class are independent, ranking terms by the deviation of observed from expected counts.
 - **Frequency-based** selection keeps the most common terms of a class; it often does well with many thousands of features but also selects uninformative terms such as weekdays.
@@ -135,7 +135,7 @@ Bei vielen aussagekräftigen Termen erhält die gewinnende Klasse eine Wahrschei
 
 #### 6. Feature Selection
 
-Feature Selection behält eine Teilmenge der Terme, was Training und Klassifikation günstiger und durch das Entfernen von Rauschfeatures oft genauer macht, also von Termen, die im Training zufällig nur in einer Klasse vorkommen und Overfitting verursachen (Manning et al., 2008, Kap. 13):
+Feature Selection behält eine Teilmenge der Terme, was Training und Klassifikation günstiger und durch das Entfernen von Rauschfeatures oft genauer macht, also von Termen, die im Training zufällig nur in einer Klasse vorkommen und [[overfitting|Overfitting]] verursachen (Manning et al., 2008, Kap. 13):
 - **Mutual Information** misst, wie viel das Vorkommen oder Fehlen eines Terms zur richtigen Klassenentscheidung beiträgt.
 - **χ²** prüft, ob das Vorkommen des Terms und der Klasse unabhängig sind, und rankt Terme nach der Abweichung beobachteter von erwarteten Zählungen.
 - **Häufigkeitsbasierte** Auswahl behält die häufigsten Terme einer Klasse; sie funktioniert bei vielen Tausend Features oft gut, wählt aber auch nichtssagende Terme wie Wochentage.

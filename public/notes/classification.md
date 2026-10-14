@@ -52,7 +52,7 @@ Fisher (1936) introduced the linear discriminant function, a linear combination 
 
 #### 4. Calibrated probabilities
 
-Predicted probabilities do not always match true probabilities. Niculescu-Mizil & Caruana (2005) showed that boosted trees and stumps push predicted probabilities away from 0 and 1, naive Bayes pushes them towards 0 and 1, and neural nets and bagged trees are well calibrated. Platt scaling and isotonic regression correct these distortions; after calibration, boosted trees, random forests and SVMs predicted the best probabilities.
+Predicted probabilities do not always match true probabilities. Niculescu-Mizil & Caruana (2005) showed that boosted trees and stumps push predicted probabilities away from 0 and 1, naive Bayes pushes them towards 0 and 1, and neural nets and bagged trees are well calibrated. [[platt-scaling|Platt scaling]] and isotonic regression correct these distortions; after calibration, boosted trees, random forests and SVMs predicted the best probabilities.
 
 #### 5. Text classification: rules or learning
 
@@ -64,7 +64,7 @@ Vector space classifiers represent documents as length-normalised tf-idf vectors
 
 #### 7. Linear versus nonlinear classifiers and the bias-variance tradeoff
 
-A linear classifier compares a linear combination of the features with a threshold; Naive Bayes and Rocchio are linear, kNN is nonlinear. Bias measures how consistently a learning method is wrong, variance how much the learned classifier changes with the training set. Linear methods have low variance, while kNN has high variance, is sensitive to noise documents and is prone to overfitting. The tradeoff explains why no learning method is universally optimal; nonlinear models are not systematically better than linear ones, because they have more parameters to fit on limited, noisy data (Manning et al., 2008, ch. 14).
+A linear classifier compares a linear combination of the features with a threshold; Naive Bayes and Rocchio are linear, kNN is nonlinear. Bias measures how consistently a learning method is wrong, variance how much the learned classifier changes with the training set. Linear methods have low variance, while kNN has high variance, is sensitive to noise documents and is prone to [[overfitting|overfitting]]. The tradeoff explains why no learning method is universally optimal; nonlinear models are not systematically better than linear ones, because they have more parameters to fit on limited, noisy data (Manning et al., 2008, ch. 14).
 
 #### 8. More than two classes
 
@@ -164,7 +164,7 @@ Fisher (1936) führte die lineare Diskriminanzfunktion ein, eine Linearkombinati
 
 #### 4. Kalibrierte Wahrscheinlichkeiten
 
-Vorhergesagte Wahrscheinlichkeiten stimmen nicht immer mit den tatsächlichen überein. Niculescu-Mizil & Caruana (2005) zeigten, dass Boosted Trees und Stumps die Wahrscheinlichkeiten von 0 und 1 wegdrängen, Naive Bayes sie zu 0 und 1 hindrängt und [[neural-networks|neuronale Netze]] sowie Bagged Trees gut kalibriert sind. Platt Scaling und isotone Regression korrigieren diese Verzerrungen; nach der Kalibrierung lieferten Boosted Trees, Random Forests und SVMs die besten Wahrscheinlichkeiten.
+Vorhergesagte Wahrscheinlichkeiten stimmen nicht immer mit den tatsächlichen überein. Niculescu-Mizil & Caruana (2005) zeigten, dass Boosted Trees und Stumps die Wahrscheinlichkeiten von 0 und 1 wegdrängen, Naive Bayes sie zu 0 und 1 hindrängt und [[neural-networks|neuronale Netze]] sowie Bagged Trees gut kalibriert sind. [[platt-scaling|Platt Scaling]] und isotone Regression korrigieren diese Verzerrungen; nach der Kalibrierung lieferten Boosted Trees, Random Forests und SVMs die besten Wahrscheinlichkeiten.
 
 #### 5. Textklassifikation: Regeln oder Lernen
 
@@ -176,7 +176,7 @@ Vektorraum-Klassifikatoren stellen Dokumente als längennormierte tf-idf-Vektore
 
 #### 7. Lineare und nichtlineare Klassifikatoren und der Bias-Varianz-Zielkonflikt
 
-Ein linearer Klassifikator vergleicht eine Linearkombination der Merkmale mit einem Schwellenwert; Naive Bayes und Rocchio sind linear, kNN ist nichtlinear. Bias misst, wie beständig ein Lernverfahren danebenliegt, Varianz, wie stark sich der gelernte Klassifikator mit der Trainingsmenge ändert. Lineare Verfahren haben geringe Varianz, kNN dagegen hohe Varianz, reagiert empfindlich auf verrauschte Dokumente und neigt zur Überanpassung. Der Zielkonflikt erklärt, warum kein Lernverfahren allgemein optimal ist; nichtlineare Modelle sind nicht systematisch besser als lineare, weil sie mehr Parameter auf begrenzten, verrauschten Daten anpassen müssen (Manning et al., 2008, Kap. 14).
+Ein linearer Klassifikator vergleicht eine Linearkombination der Merkmale mit einem Schwellenwert; Naive Bayes und Rocchio sind linear, kNN ist nichtlinear. Bias misst, wie beständig ein Lernverfahren danebenliegt, Varianz, wie stark sich der gelernte Klassifikator mit der Trainingsmenge ändert. Lineare Verfahren haben geringe Varianz, kNN dagegen hohe Varianz, reagiert empfindlich auf verrauschte Dokumente und neigt zur [[overfitting|Überanpassung]]. Der Zielkonflikt erklärt, warum kein Lernverfahren allgemein optimal ist; nichtlineare Modelle sind nicht systematisch besser als lineare, weil sie mehr Parameter auf begrenzten, verrauschten Daten anpassen müssen (Manning et al., 2008, Kap. 14).
 
 #### 8. Mehr als zwei Klassen
 

@@ -1,0 +1,15 @@
+version: 1
+note_sha256: 9454df6b54d6edae5e5e347254dd629b0bc72f447bc203e705ee533a8ffe3ffb
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bias-variance-tradeoff
+- cross-validation
+- k-nearest-neighbours
+- model-comparison
+- neural-network-evaluation
+- neural-network-training
+- neural-networks
+- regularisation-and-hyperparameters
+- underfitting
+- double-descent
+relations: []

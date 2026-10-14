@@ -59,7 +59,7 @@ Glorot & Bengio (2010) showed why deep networks trained from standard random ini
 
 #### 6. Learning rate and regularisation
 
-The learning rate is the most important hyperparameter: too high and training diverges, too low and it progresses slowly (Goodfellow et al., 2016). Validation error is monitored to detect overfitting, which is countered with regularisation such as weight decay, dropout and early stopping ([[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
+The learning rate is the most important hyperparameter: too high and training diverges, too low and it progresses slowly (Goodfellow et al., 2016). Validation error is monitored to detect [[overfitting|overfitting]], which is countered with regularisation such as weight decay, dropout and early stopping ([[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
 
 #### Origin and variants
 
@@ -156,7 +156,7 @@ Glorot & Bengio (2010) zeigten, warum tiefe Netze mit gewöhnlicher Zufallsiniti
 
 #### 6. Lernrate und Regularisierung
 
-Die Lernrate ist der wichtigste Hyperparameter: Ist sie zu hoch, divergiert das Training, ist sie zu niedrig, kommt es nur langsam voran (Goodfellow et al., 2016). Der Validierungsfehler wird beobachtet, um Overfitting zu erkennen, dem mit Regularisierung wie Weight Decay, Dropout und Early Stopping begegnet wird ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]).
+Die Lernrate ist der wichtigste Hyperparameter: Ist sie zu hoch, divergiert das Training, ist sie zu niedrig, kommt es nur langsam voran (Goodfellow et al., 2016). Der Validierungsfehler wird beobachtet, um [[overfitting|Overfitting]] zu erkennen, dem mit Regularisierung wie Weight Decay, Dropout und Early Stopping begegnet wird ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]).
 
 #### Ursprung und Varianten
 

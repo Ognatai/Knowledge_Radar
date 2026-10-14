@@ -43,7 +43,7 @@ Accuracy alone rarely decides which model is better. Holistic evaluation of lang
 
 #### 2. Statistical tests on one dataset
 
-Dietterich (1998) compared five tests for whether one learning algorithm outperforms another on one task. A difference-of-proportions test and a paired t test over several random train-test splits had a high probability of detecting differences that do not exist and should not be used; the paired t test over 10-fold [[cross-validation|cross-validation]] had a somewhat elevated type I error. McNemar's test and the 5×2 cv test had acceptable type I error ([[statistics-fundamentals|Statistics Fundamentals]]).
+Dietterich (1998) compared five tests for whether one learning algorithm outperforms another on one task. A difference-of-proportions test and a paired t test over several random train-test splits had a high probability of detecting differences that do not exist and should not be used; the paired t test over 10-fold [[cross-validation|cross-validation]] had a somewhat elevated type I error. McNemar's test and the [[five-two-cv-test|5×2 cv test]] had acceptable type I error ([[statistics-fundamentals|Statistics Fundamentals]]).
 
 #### 3. Comparisons over multiple datasets
 
@@ -142,7 +142,7 @@ Die Accuracy allein entscheidet selten, welches Modell besser ist. Die ganzheitl
 
 #### 2. Statistische Tests auf einem Datensatz
 
-Dietterich (1998) verglich fünf Tests dafür, ob ein Lernverfahren ein anderes auf einer Aufgabe übertrifft. Ein Test auf die Differenz zweier Anteile und ein gepaarter t-Test über mehrere zufällige Trainings-Test-Aufteilungen fanden mit hoher Wahrscheinlichkeit Unterschiede, die nicht existieren, und sollten nicht verwendet werden; der gepaarte t-Test über zehnfache [[cross-validation|Kreuzvalidierung]] hatte einen etwas erhöhten Fehler erster Art. Der McNemar-Test und der 5×2-cv-Test hatten einen akzeptablen Fehler erster Art ([[statistics-fundamentals|Statistik-Grundlagen]]).
+Dietterich (1998) verglich fünf Tests dafür, ob ein Lernverfahren ein anderes auf einer Aufgabe übertrifft. Ein Test auf die Differenz zweier Anteile und ein gepaarter t-Test über mehrere zufällige Trainings-Test-Aufteilungen fanden mit hoher Wahrscheinlichkeit Unterschiede, die nicht existieren, und sollten nicht verwendet werden; der gepaarte t-Test über zehnfache [[cross-validation|Kreuzvalidierung]] hatte einen etwas erhöhten Fehler erster Art. Der McNemar-Test und der [[five-two-cv-test|5×2-cv-Test]] hatten einen akzeptablen Fehler erster Art ([[statistics-fundamentals|Statistik-Grundlagen]]).
 
 #### 3. Vergleiche über mehrere Datensätze
 

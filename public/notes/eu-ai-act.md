@@ -234,7 +234,7 @@ Article 3 defines key terms used throughout Regulation (EU) 2024/1689. These def
 
 **Paragraph 29** – Defines **training data** as data used for training an AI system through fitting its learnable parameters.
 
-**Paragraph 30** – Defines **validation data** as data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process in order, inter alia, to prevent underfitting or overfitting.
+**Paragraph 30** – Defines **validation data** as data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process in order, inter alia, to prevent underfitting or [[overfitting|overfitting]].
 
 **Paragraph 31** – Defines **validation data set** as a separate data set or part of the training data set, either as a fixed or variable split.
 
@@ -1899,7 +1899,7 @@ Artikel 3 definiert zahlreiche zentrale Begriffe, die für die Anwendung der Ver
 
 **Paragraph 29** – Der Begriff „Trainingsdaten“ bezeichnet Daten, die zum Trainieren eines KI-Systems verwendet werden, wobei dessen lernbare Parameter angepasst werden.
 
-**Paragraph 30** – Der Begriff „Validierungsdaten“ bezeichnet Daten, die zur Evaluation des trainierten KI-Systems und zur Einstellung seiner nicht erlernbaren Parameter und seines Lernprozesses verwendet werden, um unter anderem eine Unter- oder Überanpassung zu vermeiden.
+**Paragraph 30** – Der Begriff „Validierungsdaten“ bezeichnet Daten, die zur Evaluation des trainierten KI-Systems und zur Einstellung seiner nicht erlernbaren Parameter und seines Lernprozesses verwendet werden, um unter anderem eine Unter- oder [[overfitting|Überanpassung]] zu vermeiden.
 
 **Paragraph 31** – Der Begriff „Validierungsdatensatz“ bezeichnet einen separaten Datensatz oder einen Teil des Trainingsdatensatzes mit fester oder variabler Aufteilung.
 

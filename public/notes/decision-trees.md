@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-A decision tree predicts by passing an example through a sequence of tests on its features, from the root to a leaf that holds the prediction. Trees are grown top-down by repeatedly choosing the split that best separates the training examples (Quinlan, 1986) and then pruned to avoid overfitting (Hastie et al., 2009). They are easy to interpret but have high variance, which random forests reduce by combining many trees (Breiman, 2001).
+A decision tree predicts by passing an example through a sequence of tests on its features, from the root to a leaf that holds the prediction. Trees are grown top-down by repeatedly choosing the split that best separates the training examples (Quinlan, 1986) and then pruned to avoid [[overfitting|overfitting]] (Hastie et al., 2009). They are easy to interpret but have high variance, which random forests reduce by combining many trees (Breiman, 2001).
 
 ### How it works
 
@@ -104,7 +104,7 @@ Decision trees are interpretable models built from simple feature tests, but the
 
 ### TL;DR
 
-Ein Entscheidungsbaum trifft Vorhersagen, indem er ein Beispiel durch eine Folge von Tests auf seinen Merkmalen leitet, von der Wurzel bis zu einem Blatt, das die Vorhersage enthält. Bäume werden von oben nach unten aufgebaut, indem wiederholt die Aufteilung gewählt wird, die die Trainingsbeispiele am besten trennt (Quinlan, 1986), und anschließend beschnitten, um Überanpassung zu vermeiden (Hastie et al., 2009). Sie sind leicht zu interpretieren, haben aber eine hohe Varianz, die Random Forests durch die Kombination vieler Bäume verringern (Breiman, 2001).
+Ein Entscheidungsbaum trifft Vorhersagen, indem er ein Beispiel durch eine Folge von Tests auf seinen Merkmalen leitet, von der Wurzel bis zu einem Blatt, das die Vorhersage enthält. Bäume werden von oben nach unten aufgebaut, indem wiederholt die Aufteilung gewählt wird, die die Trainingsbeispiele am besten trennt (Quinlan, 1986), und anschließend beschnitten, um [[overfitting|Überanpassung]] zu vermeiden (Hastie et al., 2009). Sie sind leicht zu interpretieren, haben aber eine hohe Varianz, die Random Forests durch die Kombination vieler Bäume verringern (Breiman, 2001).
 
 ### Funktionsweise
 

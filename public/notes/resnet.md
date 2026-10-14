@@ -33,7 +33,7 @@ when dimensions change: zero-padding (A) or a 1×1 projection W_s·x (B)
 
 #### 1. The degradation problem
 
-Vanishing and exploding gradients had largely been addressed by normalised initialisation and batch normalisation, so networks with tens of layers could start converging (He et al., 2016). But as depth increased further, accuracy saturated and then degraded: a 56-layer plain network had higher training error, not just test error, than a 20-layer one on CIFAR-10, so the problem was not overfitting. A deeper network could in principle copy the shallower one and add identity layers, so it should never be worse; that solvers fail to find such solutions shows that some networks are harder to optimise than others (He et al., 2016).
+Vanishing and exploding gradients had largely been addressed by normalised initialisation and batch normalisation, so networks with tens of layers could start converging (He et al., 2016). But as depth increased further, accuracy saturated and then degraded: a 56-layer plain network had higher training error, not just test error, than a 20-layer one on CIFAR-10, so the problem was not [[overfitting|overfitting]]. A deeper network could in principle copy the shallower one and add identity layers, so it should never be worse; that solvers fail to find such solutions shows that some networks are harder to optimise than others (He et al., 2016).
 
 #### 2. Residual learning
 
@@ -116,7 +116,7 @@ bei Dimensionswechsel: Auffüllen mit Nullen (A) oder 1×1-Projektion W_s·x (B)
 
 #### 1. Das Degradationsproblem
 
-Verschwindende und explodierende Gradienten waren durch normalisierte Initialisierung und Batch-Normalisierung weitgehend gelöst, sodass Netze mit einigen Dutzend Schichten zu konvergieren begannen (He et al., 2016). Bei weiter wachsender Tiefe sättigte sich die Genauigkeit jedoch und sank dann: Ein einfaches Netz mit 56 Schichten hatte auf CIFAR-10 einen höheren Trainingsfehler, nicht nur Testfehler, als eines mit 20 Schichten; das Problem war also keine Überanpassung. Ein tieferes Netz könnte im Prinzip das flachere kopieren und Identitätsschichten ergänzen und dürfte daher nie schlechter sein; dass Optimierer solche Lösungen nicht finden, zeigt, dass manche Netze schwerer zu optimieren sind als andere (He et al., 2016).
+Verschwindende und explodierende Gradienten waren durch normalisierte Initialisierung und Batch-Normalisierung weitgehend gelöst, sodass Netze mit einigen Dutzend Schichten zu konvergieren begannen (He et al., 2016). Bei weiter wachsender Tiefe sättigte sich die Genauigkeit jedoch und sank dann: Ein einfaches Netz mit 56 Schichten hatte auf CIFAR-10 einen höheren Trainingsfehler, nicht nur Testfehler, als eines mit 20 Schichten; das Problem war also keine [[overfitting|Überanpassung]]. Ein tieferes Netz könnte im Prinzip das flachere kopieren und Identitätsschichten ergänzen und dürfte daher nie schlechter sein; dass Optimierer solche Lösungen nicht finden, zeigt, dass manche Netze schwerer zu optimieren sind als andere (He et al., 2016).
 
 #### 2. Residuales Lernen
 

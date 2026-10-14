@@ -49,7 +49,7 @@ Online controlled experiments, or A/B tests, randomly assign users to a control 
 
 #### 4. Comparing learning algorithms
 
-Dietterich (1998) compared five tests for whether one learning algorithm outperforms another. A test for the difference of two proportions and a paired t test over several random train-test splits had a high probability of detecting differences that do not exist (type I error) and should not be used; a paired t test based on 10-fold [[cross-validation|cross-validation]] had a somewhat elevated type I error. McNemar's test and the new 5×2 cv test, based on five repetitions of twofold cross-validation, had acceptable type I error ([[model-comparison|Model Comparison]]).
+Dietterich (1998) compared five tests for whether one learning algorithm outperforms another. A test for the difference of two proportions and a paired t test over several random train-test splits had a high probability of detecting differences that do not exist (type I error) and should not be used; a paired t test based on 10-fold [[cross-validation|cross-validation]] had a somewhat elevated type I error. McNemar's test and the new [[five-two-cv-test|5×2 cv test]], based on five repetitions of twofold cross-validation, had acceptable type I error ([[model-comparison|Model Comparison]]).
 
 #### 5. Bayesian and frequentist views
 
@@ -141,7 +141,7 @@ Kontrollierte Online-Experimente, auch A/B-Tests, teilen Nutzende zufällig eine
 
 #### 4. Vergleich von Lernverfahren
 
-Dietterich (1998) verglich fünf Tests dafür, ob ein Lernverfahren ein anderes übertrifft. Ein Test auf die Differenz zweier Anteile und ein gepaarter t-Test über mehrere zufällige Trainings-Test-Aufteilungen fanden mit hoher Wahrscheinlichkeit Unterschiede, die nicht existieren (Fehler erster Art), und sollten nicht verwendet werden; ein gepaarter t-Test auf Basis zehnfacher [[cross-validation|Kreuzvalidierung]] hatte einen etwas erhöhten Fehler erster Art. Der McNemar-Test und der neue 5×2-cv-Test, der auf fünf Wiederholungen zweifacher Kreuzvalidierung beruht, hatten einen akzeptablen Fehler erster Art ([[model-comparison|Modellvergleiche]]).
+Dietterich (1998) verglich fünf Tests dafür, ob ein Lernverfahren ein anderes übertrifft. Ein Test auf die Differenz zweier Anteile und ein gepaarter t-Test über mehrere zufällige Trainings-Test-Aufteilungen fanden mit hoher Wahrscheinlichkeit Unterschiede, die nicht existieren (Fehler erster Art), und sollten nicht verwendet werden; ein gepaarter t-Test auf Basis zehnfacher [[cross-validation|Kreuzvalidierung]] hatte einen etwas erhöhten Fehler erster Art. Der McNemar-Test und der neue [[five-two-cv-test|5×2-cv-Test]], der auf fünf Wiederholungen zweifacher Kreuzvalidierung beruht, hatten einen akzeptablen Fehler erster Art ([[model-comparison|Modellvergleiche]]).
 
 #### 5. Bayes'sche und frequentistische Sicht
 

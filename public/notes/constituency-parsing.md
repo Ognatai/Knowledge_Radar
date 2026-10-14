@@ -174,7 +174,7 @@ Pāṇini beschrieb die Grammatik des Sanskrit zwischen dem 7. und 4. Jahrhunder
 **Grenzen**
 - Reines CKY liefert alle Analysen, ohne eine auszuwählen (Jurafsky & Martin, 2026, Kap. 19).
 - CNF-Bäume passen nicht unbedingt zur ursprünglichen Grammatik der Entwickler und erschweren syntaxgetriebene Semantik (Jurafsky & Martin, 2026, Kap. 19).
-- Einfache PCFGs haben schlechte Unabhängigkeitsannahmen und keine lexikalische Konditionierung; das Aufspalten von Nichtterminalen vergrößert die Grammatik und birgt Overfitting (Jurafsky & Martin, 2026, Anh. E).
+- Einfache PCFGs haben schlechte Unabhängigkeitsannahmen und keine lexikalische Konditionierung; das Aufspalten von Nichtterminalen vergrößert die Grammatik und birgt [[overfitting|Overfitting]] (Jurafsky & Martin, 2026, Anh. E).
 
 ### Vergleich
 

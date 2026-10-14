@@ -46,7 +46,7 @@ When cross-validation is used to choose hyperparameters, the error of the chosen
 For time series, folds must respect time order. In time series cross-validation, also called evaluation on a rolling forecasting origin, each test set follows its training set in time, so no future observations are used for a forecast; the error is averaged over the test sets (Hyndman & Athanasopoulos, 2021). See [[time-series-analysis|Time Series Analysis]].
 
 #### Origin and variants
-Kohavi (1995) compared cross-validation with the bootstrap and gave the widely used recommendation of ten-fold stratified cross-validation; the bootstrap had low variance but extremely large bias on some problems. Dietterich (1998) studied statistical tests built on cross-validation and proposed the 5×2 cv test ([[model-comparison|Model Comparison]]). Varma & Simon (2006) and Cawley & Talbot (2010) showed how tuning on cross-validation biases the reported error.
+Kohavi (1995) compared cross-validation with the bootstrap and gave the widely used recommendation of ten-fold stratified cross-validation; the bootstrap had low variance but extremely large bias on some problems. Dietterich (1998) studied statistical tests built on cross-validation and proposed the [[five-two-cv-test|5×2 cv test]] ([[model-comparison|Model Comparison]]). Varma & Simon (2006) and Cawley & Talbot (2010) showed how tuning on cross-validation biases the reported error.
 
 ### When to use it
 - Estimating the performance of a model when data is too scarce to set aside a large test set (Kohavi, 1995).
@@ -65,7 +65,7 @@ Kohavi (1995) compared cross-validation with the bootstrap and gave the widely u
 **Limitations**
 - The model is trained k times (Kohavi, 1995), and unbiased evaluation of a tuned model needs even more computationally intensive protocols such as nested cross-validation (Cawley & Talbot, 2010).
 - Tuning on cross-validation and reporting the same estimate is biased: on data with no difference between classes, the cross-validation error of tuned classifiers was below 30% on 18.5% (shrunken centroids) and 38% (SVM) of the datasets, while their performance on independent test data was no better than chance (Varma & Simon, 2006).
-- Over-fitting the model selection criterion can cause performance differences of the same size as those between learning algorithms (Cawley & Talbot, 2010).
+- [[overfitting|Over-fitting]] the model selection criterion can cause performance differences of the same size as those between learning algorithms (Cawley & Talbot, 2010).
 - A paired t test over the folds of 10-fold cross-validation has a somewhat elevated type I error (Dietterich, 1998).
 - Random folds are wrong for time series and other ordered data (Hyndman & Athanasopoulos, 2021).
 
@@ -125,7 +125,7 @@ Wird Kreuzvalidierung zur Wahl von Hyperparametern genutzt, ist der Fehler des g
 Bei Zeitreihen müssen die Folds die zeitliche Reihenfolge einhalten. Bei der Zeitreihen-Kreuzvalidierung, auch Evaluation mit rollierendem Prognoseursprung genannt, folgt jede Testmenge zeitlich auf ihre Trainingsmenge, sodass für eine Prognose keine zukünftigen Beobachtungen verwendet werden; der Fehler wird über die Testmengen gemittelt (Hyndman & Athanasopoulos, 2021). Siehe [[time-series-analysis|Zeitreihenanalyse]].
 
 #### Ursprung und Varianten
-Kohavi (1995) verglich Kreuzvalidierung mit dem Bootstrap und gab die verbreitete Empfehlung der zehnfachen stratifizierten Kreuzvalidierung; der Bootstrap hatte geringe Varianz, aber bei manchen Problemen eine extrem große Verzerrung. Dietterich (1998) untersuchte statistische Tests auf Basis von Kreuzvalidierung und schlug den 5×2-cv-Test vor ([[model-comparison|Modellvergleich]]). Varma & Simon (2006) und Cawley & Talbot (2010) zeigten, wie Abstimmung per Kreuzvalidierung den berichteten Fehler verzerrt.
+Kohavi (1995) verglich Kreuzvalidierung mit dem Bootstrap und gab die verbreitete Empfehlung der zehnfachen stratifizierten Kreuzvalidierung; der Bootstrap hatte geringe Varianz, aber bei manchen Problemen eine extrem große Verzerrung. Dietterich (1998) untersuchte statistische Tests auf Basis von Kreuzvalidierung und schlug den [[five-two-cv-test|5×2-cv-Test]] vor ([[model-comparison|Modellvergleich]]). Varma & Simon (2006) und Cawley & Talbot (2010) zeigten, wie Abstimmung per Kreuzvalidierung den berichteten Fehler verzerrt.
 
 ### Wann einsetzen
 - Die Leistung eines Modells schätzen, wenn zu wenige Daten vorliegen, um eine große Testmenge zurückzuhalten (Kohavi, 1995).
@@ -144,7 +144,7 @@ Kohavi (1995) verglich Kreuzvalidierung mit dem Bootstrap und gab die verbreitet
 **Grenzen**
 - Das Modell wird k-mal trainiert (Kohavi, 1995), und die unverzerrte Evaluation eines abgestimmten Modells braucht noch rechenintensivere Protokolle wie verschachtelte Kreuzvalidierung (Cawley & Talbot, 2010).
 - Abstimmen per Kreuzvalidierung und Berichten derselben Schätzung ist verzerrt: Auf Daten ohne Unterschied zwischen den Klassen lag der Kreuzvalidierungsfehler abgestimmter Klassifikatoren bei 18,5 % (Shrunken Centroids) bzw. 38 % (SVM) der Datensätze unter 30 %, während ihre Leistung auf unabhängigen Testdaten nicht besser als Zufall war (Varma & Simon, 2006).
-- Überanpassung an das Modellauswahlkriterium kann Leistungsunterschiede derselben Größenordnung verursachen wie die zwischen Lernverfahren (Cawley & Talbot, 2010).
+- [[overfitting|Überanpassung]] an das Modellauswahlkriterium kann Leistungsunterschiede derselben Größenordnung verursachen wie die zwischen Lernverfahren (Cawley & Talbot, 2010).
 - Ein gepaarter t-Test über die Folds einer zehnfachen Kreuzvalidierung hat einen etwas erhöhten Fehler 1. Art (Dietterich, 1998).
 - Zufällige Folds sind für Zeitreihen und andere geordnete Daten falsch (Hyndman & Athanasopoulos, 2021).
 

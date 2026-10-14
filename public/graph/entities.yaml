@@ -487,10 +487,6 @@ entities:
   type: Concept
   name_en: Unsupervised learning
   name_de: Unüberwachtes Lernen
-- id: bias-variance-tradeoff
-  type: Concept
-  name_en: Bias-variance trade-off
-  name_de: Bias-Varianz-Dilemma
 - id: xgboost
   type: Method
   name_en: XGBoost
@@ -519,10 +515,6 @@ entities:
   type: Concept
   name_en: Generative model
   name_de: Generatives Modell
-- id: platt-scaling
-  type: Method
-  name_en: Platt scaling
-  name_de: Platt Scaling
 - id: isotonic-regression
   type: Method
   name_en: Isotonic regression
@@ -1738,10 +1730,6 @@ entities:
   type: Method
   name_en: McNemar's test
   name_de: McNemar-Test
-- id: five-two-cv-test
-  type: Method
-  name_en: 5×2 cv test
-  name_de: 5×2-cv-Test
 - id: wilcoxon-signed-ranks-test
   type: Method
   name_en: Wilcoxon signed-ranks test
@@ -1774,10 +1762,6 @@ entities:
   type: Method
   name_en: Contrastive learning
   name_de: Kontrastives Lernen
-- id: overfitting
-  type: Concept
-  name_en: Overfitting
-  name_de: Overfitting
 - id: underfitting
   type: Concept
   name_en: Underfitting
@@ -2948,3 +2932,7 @@ entities:
   type: Organisation
   name_en: Hugging Face
   name_de: Hugging Face
+- id: thomas-dietterich
+  type: Person
+  name_en: Thomas G. Dietterich
+  name_de: Thomas G. Dietterich

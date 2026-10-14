@@ -92,7 +92,7 @@ LeNet-style networks (LeCun et al., 1998) established CNNs for document recognit
 
 ### In practice
 
-Inputs are normalised, data augmentation such as cropping and flipping is used to reduce overfitting, and pretrained backbones are fine-tuned rather than trained from scratch when data is limited (Krizhevsky et al., 2012; Simonyan & Zisserman, 2014). Filter sizes, strides and padding are chosen so that the feature-map shapes fit the architecture (Goodfellow et al., 2016).
+Inputs are normalised, data augmentation such as cropping and flipping is used to reduce [[overfitting|overfitting]], and pretrained backbones are fine-tuned rather than trained from scratch when data is limited (Krizhevsky et al., 2012; Simonyan & Zisserman, 2014). Filter sizes, strides and padding are chosen so that the feature-map shapes fit the architecture (Goodfellow et al., 2016).
 
 ### Key takeaway
 
@@ -188,7 +188,7 @@ Netze im Stil von LeNet (LeCun et al., 1998) etablierten CNNs für die Dokumente
 
 ### In der Praxis
 
-Eingaben werden normalisiert, Datenaugmentation wie Zuschneiden und Spiegeln verringert Overfitting, und bei wenigen Daten werden vortrainierte Netze feinabgestimmt statt von Grund auf trainiert (Krizhevsky et al., 2012; Simonyan & Zisserman, 2014). Filtergrößen, Strides und Padding werden so gewählt, dass die Shapes der Feature Maps zur Architektur passen (Goodfellow et al., 2016).
+Eingaben werden normalisiert, Datenaugmentation wie Zuschneiden und Spiegeln verringert [[overfitting|Overfitting]], und bei wenigen Daten werden vortrainierte Netze feinabgestimmt statt von Grund auf trainiert (Krizhevsky et al., 2012; Simonyan & Zisserman, 2014). Filtergrößen, Strides und Padding werden so gewählt, dass die Shapes der Feature Maps zur Architektur passen (Goodfellow et al., 2016).
 
 ### Merksatz
 

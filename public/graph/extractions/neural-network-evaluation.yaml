@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4263cffdb7294b9d531c875a4fdc1770f87e84da97e8461dc2d6d6d53255e943
+note_sha256: b9a43a26a13fdc7137e0d553cc9cbcafe68d3eb194e24e96cc588e45cfba5e49
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - neural-networks

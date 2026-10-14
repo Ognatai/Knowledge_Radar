@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 641003ad648dd994b6e4b968f252584700a3a8c57489656003652f5e0cc3fe1a
+note_sha256: c62fc1bc53c65915a2294815007d7950d3cfbda44644e45dc631cdfbc2c631ac
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - part-of-speech-tagging

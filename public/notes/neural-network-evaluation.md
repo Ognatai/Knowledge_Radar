@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Evaluating a neural network means measuring how well it performs on data it was not trained on, with metrics that match the task: [[classification|classification]] metrics, error measures such as MAE and RMSE for regression (Hyndman & Koehler, 2006), and overlap metrics such as [[bleu|BLEU]] for generated text (Papineni et al., 2002). Comparing training and validation error reveals underfitting and overfitting (Goodfellow et al., 2016), although large networks can fit even random labels and still generalise on real data (Zhang et al., 2016). Predicted probabilities of modern networks are often poorly calibrated (Guo et al., 2017).
+Evaluating a neural network means measuring how well it performs on data it was not trained on, with metrics that match the task: [[classification|classification]] metrics, error measures such as MAE and RMSE for regression (Hyndman & Koehler, 2006), and overlap metrics such as [[bleu|BLEU]] for generated text (Papineni et al., 2002). Comparing training and validation error reveals underfitting and [[overfitting|overfitting]] (Goodfellow et al., 2016), although large networks can fit even random labels and still generalise on real data (Zhang et al., 2016). Predicted probabilities of modern networks are often poorly calibrated (Guo et al., 2017).
 
 ### How it works
 
@@ -55,11 +55,11 @@ A model underfits when its training error is too high, and overfits when the gap
 
 #### 5. Generalisation of large networks
 
-Zhang et al. (2016) showed that state-of-the-art convolutional networks for [[computer-vision|image classification]] easily fit a random labelling of the training data, even with explicit regularisation and even when the images are replaced by random noise. Traditional explanations based on model family or regularisation therefore do not explain why large networks generalise well. Belkin et al. (2018) reconcile this with the bias-variance trade-off through a "double descent" curve: test error first follows the classical U shape, but decreases again when capacity grows beyond the point where the model fits the training data exactly.
+Zhang et al. (2016) showed that state-of-the-art convolutional networks for [[computer-vision|image classification]] easily fit a random labelling of the training data, even with explicit regularisation and even when the images are replaced by random noise. Traditional explanations based on model family or regularisation therefore do not explain why large networks generalise well. Belkin et al. (2018) reconcile this with the [[bias-variance-tradeoff|bias-variance trade-off]] through a "double descent" curve: test error first follows the classical U shape, but decreases again when capacity grows beyond the point where the model fits the training data exactly.
 
 #### 6. Calibration
 
-Calibration means that predicted probabilities reflect the true likelihood of being correct. Modern [[neural-networks|neural networks]], unlike those from a decade ago, are poorly calibrated; depth, width, weight decay and batch normalisation influence this (Guo et al., 2017). On most datasets, temperature scaling, a single-parameter variant of Platt scaling, was surprisingly effective at correcting it ([[ml-preprocessing|ML Preprocessing]]).
+Calibration means that predicted probabilities reflect the true likelihood of being correct. Modern [[neural-networks|neural networks]], unlike those from a decade ago, are poorly calibrated; depth, width, weight decay and batch normalisation influence this (Guo et al., 2017). On most datasets, temperature scaling, a single-parameter variant of [[platt-scaling|Platt scaling]], was surprisingly effective at correcting it ([[ml-preprocessing|ML Preprocessing]]).
 
 #### Origin and variants
 
@@ -116,7 +116,7 @@ Neural networks are evaluated with task-appropriate metrics on held-out data, tr
 
 ### TL;DR
 
-Ein neuronales Netz zu evaluieren heißt zu messen, wie gut es auf Daten abschneidet, mit denen es nicht trainiert wurde, und zwar mit Metriken, die zur Aufgabe passen: Klassifikationsmetriken, Fehlermaße wie MAE und RMSE für Regression (Hyndman & Koehler, 2006) und Überlappungsmetriken wie [[bleu|BLEU]] für generierten Text (Papineni et al., 2002). Der Vergleich von Trainings- und Validierungsfehler zeigt Underfitting und Overfitting (Goodfellow et al., 2016), wobei große Netze sogar zufällige Labels auswendig lernen und auf echten Daten trotzdem generalisieren können (Zhang et al., 2016). Die vorhergesagten Wahrscheinlichkeiten moderner Netze sind oft schlecht kalibriert (Guo et al., 2017).
+Ein neuronales Netz zu evaluieren heißt zu messen, wie gut es auf Daten abschneidet, mit denen es nicht trainiert wurde, und zwar mit Metriken, die zur Aufgabe passen: Klassifikationsmetriken, Fehlermaße wie MAE und RMSE für Regression (Hyndman & Koehler, 2006) und Überlappungsmetriken wie [[bleu|BLEU]] für generierten Text (Papineni et al., 2002). Der Vergleich von Trainings- und Validierungsfehler zeigt Underfitting und [[overfitting|Overfitting]] (Goodfellow et al., 2016), wobei große Netze sogar zufällige Labels auswendig lernen und auf echten Daten trotzdem generalisieren können (Zhang et al., 2016). Die vorhergesagten Wahrscheinlichkeiten moderner Netze sind oft schlecht kalibriert (Guo et al., 2017).
 
 ### Funktionsweise
 
@@ -158,7 +158,7 @@ Zhang et al. (2016) zeigten, dass aktuelle konvolutionale Netze für Bildklassif
 
 #### 6. Kalibrierung
 
-Kalibrierung bedeutet, dass vorhergesagte Wahrscheinlichkeiten die tatsächliche Trefferwahrscheinlichkeit widerspiegeln. Moderne [[neural-networks|neuronale Netze]] sind anders als die von vor zehn Jahren schlecht kalibriert; Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen das (Guo et al., 2017). Auf den meisten Datensätzen korrigierte Temperature Scaling, eine Variante von Platt Scaling mit einem einzigen Parameter, dies überraschend wirksam ([[ml-preprocessing|Preprocessing für Machine Learning]]).
+Kalibrierung bedeutet, dass vorhergesagte Wahrscheinlichkeiten die tatsächliche Trefferwahrscheinlichkeit widerspiegeln. Moderne [[neural-networks|neuronale Netze]] sind anders als die von vor zehn Jahren schlecht kalibriert; Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen das (Guo et al., 2017). Auf den meisten Datensätzen korrigierte Temperature Scaling, eine Variante von [[platt-scaling|Platt Scaling]] mit einem einzigen Parameter, dies überraschend wirksam ([[ml-preprocessing|Preprocessing für Machine Learning]]).
 
 #### Ursprung und Varianten
 

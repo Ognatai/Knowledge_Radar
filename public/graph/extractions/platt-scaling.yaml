@@ -1,0 +1,24 @@
+version: 1
+note_sha256: 44f72aacbdac80a432deaf3aa2587b96a1ecae6c35df13eb91e203344ec20b11
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- classification
+- cross-validation
+- ml-preprocessing
+- naive-bayes
+- neural-network-evaluation
+- neural-networks
+- overfitting
+- scikit-learn
+- support-vector-machines
+- isotonic-regression
+- temperature-scaling
+relations:
+- from: temperature-scaling
+  type: BASED_ON
+  to: platt-scaling
+  evidence: temperature scaling, a single-parameter variant of platt scaling
+- from: platt-scaling
+  type: COMPLEMENTS
+  to: isotonic-regression
+  evidence: compared it with isotonic regression, which fits any monotonically increasing step function

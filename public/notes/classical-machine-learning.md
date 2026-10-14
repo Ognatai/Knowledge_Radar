@@ -44,7 +44,7 @@ The standard textbooks cover linear methods for regression and classification, [
 
 #### 3. Model assessment and the bias-variance trade-off
 
-The prediction error of a model is framed through the bias-variance trade-off: flexible models fit the training data closely but vary strongly with the sample, rigid models are stable but may miss structure (Hastie et al., 2009). Models are therefore assessed and selected on data not used for fitting, with [[cross-validation|cross-validation]] and the bootstrap ([[ml-preprocessing|ML Preprocessing]]).
+The prediction error of a model is framed through the [[bias-variance-tradeoff|bias-variance trade-off]]: flexible models fit the training data closely but vary strongly with the sample, rigid models are stable but may miss structure (Hastie et al., 2009). Models are therefore assessed and selected on data not used for fitting, with [[cross-validation|cross-validation]] and the bootstrap ([[ml-preprocessing|ML Preprocessing]]).
 
 #### 4. Common tooling
 

@@ -1,0 +1,19 @@
+version: 1
+note_sha256: 2e808014008df342790db13031208a1a54d007c09b2b68bda662dd1a7163485b
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- classification
+- cross-validation
+- model-comparison
+- statistics-fundamentals
+- mcnemars-test
+- thomas-dietterich
+relations:
+- from: five-two-cv-test
+  type: DEVELOPED_BY
+  to: thomas-dietterich
+  evidence: thomas dietterich proposed it in 1998
+- from: five-two-cv-test
+  type: BASED_ON
+  to: cross-validation
+  evidence: with twofold splitting, the two training sets of an iteration do not overlap
