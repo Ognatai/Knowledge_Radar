@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 1e034dac60aa6cb1e010428ba8444d34831d64a405fa79f089d4da2266c5a225
+note_sha256: 478242160d6321ac8488e1a2cffb5cc545d761a0f1b1cf5f3ad5ffaa80310a41
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bsig

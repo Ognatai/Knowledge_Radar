@@ -562,7 +562,7 @@ Regelt, dass die Richtlinie an die Mitgliedstaaten gerichtet ist.
 - **[[cyber-resilience-act|Cyberresilienz-Verordnung]]**: regelt die Sicherheit von Produkten mit digitalen Elementen, NIS-2 die Sicherheit der Einrichtungen, die sie einsetzen; CRA-konforme Produkte helfen bei der Sicherheit der Lieferkette.
 - **[[eecc|EECC]]** und **[[eidas|eIDAS]]**: NIS-2 ersetzt die Sicherheits- und Meldevorschriften für Telekommunikationsanbieter (Artikel 40 und 41 EECC) und Vertrauensdiensteanbieter (Artikel 19 eIDAS), die ab 18. Oktober 2024 gestrichen sind (Art. 42, 43).
 - **[[gdpr|DSGVO]]**: gilt neben NIS-2; die Verarbeitung personenbezogener Daten nach NIS-2 stützt sich auf Artikel 6 DSGVO (Art. 2 Abs. 14).
-- **Deutsche Umsetzung**: das [[bsig|BSI-Gesetz]] vom 2. Dezember 2025; die [[bsi-kritisv|BSI-KritisV]] bestimmt kritische Anlagen.
+- **Deutsche Umsetzung**: das [[bsig|BSI-Gesetz]] vom 2. Dezember 2025; die [[bsi-kritisv|BSI-KritisV]] bestimmt [[critical-facility|kritische Anlagen]].
 
 ### Bedeutung für die KI-Entwicklung
 

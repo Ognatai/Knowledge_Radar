@@ -61,7 +61,7 @@ Establishes the Federal Office for Information Security as a higher federal auth
 
 #### § 2 — Definitions
 
-Defines the terms of the Act, including security incident, significant security incident, near miss, cyber threat, vulnerability and managed service provider; critical facility and critical service follow the [[kritis-dachgesetz|KRITIS Umbrella Act]].
+Defines the terms of the Act, including security incident, significant security incident, near miss, cyber threat, vulnerability and managed service provider; [[critical-facility|critical facility]] and critical service follow the [[kritis-dachgesetz|KRITIS Umbrella Act]].
 
 ### Part 2 — The Federal Office
 
@@ -410,7 +410,7 @@ Das BSI-Gesetz (BSIG) ist das zentrale deutsche Gesetz zur Cybersicherheit. In s
 
 ### Anwendungsbereich
 
-**Besonders wichtige Einrichtungen** (§ 28 Abs. 1): Betreiber kritischer Anlagen; qualifizierte Vertrauensdiensteanbieter, Top Level Domain Name Registries und DNS-Diensteanbieter; Telekommunikationsanbieter ab 50 Mitarbeitern oder mehr als 10 Millionen Euro Jahresumsatz und Jahresbilanzsumme; sonstige Unternehmen einer Einrichtungsart der Anlage 1 mit mindestens 250 Mitarbeitern oder mehr als 50 Millionen Euro Jahresumsatz und mehr als 43 Millionen Euro Jahresbilanzsumme.
+**Besonders wichtige Einrichtungen** (§ 28 Abs. 1): [[critical-facility|Betreiber kritischer Anlagen]]; qualifizierte Vertrauensdiensteanbieter, Top Level Domain Name Registries und DNS-Diensteanbieter; Telekommunikationsanbieter ab 50 Mitarbeitern oder mehr als 10 Millionen Euro Jahresumsatz und Jahresbilanzsumme; sonstige Unternehmen einer Einrichtungsart der Anlage 1 mit mindestens 250 Mitarbeitern oder mehr als 50 Millionen Euro Jahresumsatz und mehr als 43 Millionen Euro Jahresbilanzsumme.
 
 **Wichtige Einrichtungen** (§ 28 Abs. 2): Vertrauensdiensteanbieter; kleinere Telekommunikationsanbieter; sonstige Unternehmen einer Einrichtungsart der Anlagen 1 oder 2 mit mindestens 50 Mitarbeitern oder mehr als 10 Millionen Euro Jahresumsatz und Jahresbilanzsumme.
 

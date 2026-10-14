@@ -1099,7 +1099,7 @@ Deems authorisation for qualified crypto custody business to have been granted t
 ### Relevance for AI development
 
 - **Risk models and data** (section 10(2)): institutions may process personal data of customers and guarantors for the purposes of the CRR; this is the legal basis for data-driven rating and risk models.
-- **Creditworthiness assessment** (section 18a): creditworthiness must be assessed before a consumer credit agreement, and the agreement may only be concluded if the result is positive. AI-based credit scoring is also subject to the obligations of the [[eu-ai-act|AI Act]] for high-risk AI systems.
+- **[[creditworthiness-assessment|Creditworthiness assessment]]** (section 18a): creditworthiness must be assessed before a consumer credit agreement, and the agreement may only be concluded if the result is positive. AI-based credit scoring is also subject to the obligations of the [[eu-ai-act|AI Act]] for high-risk AI systems.
 - **Business organisation** (section 25a): AI systems used in banking fall under risk management and internal control procedures; contingency management must cover IT systems in particular.
 - **Outsourcing** (section 25b): where AI services are sourced from third parties, the institution must avoid excessive additional risks and ensure the proper conduct of business and risk management.
 - **Transaction monitoring** (section 25h(2)): credit institutions must operate data processing systems that detect suspicious business relationships and transactions; machine learning is frequently used for this.
@@ -2192,7 +2192,7 @@ Lässt für Institute mit Erlaubnis für das Kryptoverwahrgeschäft am 29. Dezem
 ### Bedeutung für die KI-Entwicklung
 
 - **Risikomodelle und Daten** (§ 10 Abs. 2): Institute dürfen personenbezogene Daten von Kunden und Bürgen für die Zwecke der CRR verarbeiten; das ist die Rechtsgrundlage für datengetriebene Rating- und Risikomodelle.
-- **Kreditwürdigkeitsprüfung** (§ 18a): Vor einem Verbraucherdarlehensvertrag muss die Kreditwürdigkeit geprüft werden; der Vertrag darf nur bei positivem Ergebnis geschlossen werden. Für KI-gestütztes Kredit-Scoring gelten daneben die Pflichten des [[eu-ai-act|AI Act]] für Hochrisiko-KI-Systeme.
+- **[[creditworthiness-assessment|Kreditwürdigkeitsprüfung]]** (§ 18a): Vor einem Verbraucherdarlehensvertrag muss die Kreditwürdigkeit geprüft werden; der Vertrag darf nur bei positivem Ergebnis geschlossen werden. Für KI-gestütztes Kredit-Scoring gelten daneben die Pflichten des [[eu-ai-act|AI Act]] für Hochrisiko-KI-Systeme.
 - **Geschäftsorganisation** (§ 25a): KI-Systeme im Bankbetrieb fallen unter das Risikomanagement und die internen Kontrollverfahren; das Notfallmanagement muss insbesondere IT-Systeme abdecken.
 - **Auslagerung** (§ 25b): Werden KI-Dienste von Dritten bezogen, muss das Institut übermäßige zusätzliche Risiken vermeiden und die Ordnungsmäßigkeit der Geschäfte und das Risikomanagement sicherstellen.
 - **Transaktionsüberwachung** (§ 25h Abs. 2): Kreditinstitute müssen Datenverarbeitungssysteme betreiben, die auffällige Geschäftsbeziehungen und Transaktionen erkennen; hier werden häufig maschinelle Lernverfahren eingesetzt.

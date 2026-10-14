@@ -362,7 +362,7 @@ Verpflichtet Dateninhaber, dem Nutzer ohne Weiteres verfügbare Daten und Metada
 
 #### Artikel 5 – Recht des Nutzers auf Weitergabe von Daten an Dritte
 
-Gibt dem Nutzer das Recht, vom Dateninhaber die Bereitstellung ohne Weiteres verfügbarer Daten und Metadaten an einen Dritten zu verlangen, und schließt Torwächter nach dem Gesetz über digitale Märkte als berechtigte Dritte aus.
+Gibt dem Nutzer das Recht, vom Dateninhaber die Bereitstellung ohne Weiteres verfügbarer Daten und Metadaten an einen Dritten zu verlangen, und schließt [[gatekeeper|Torwächter]] nach dem Gesetz über digitale Märkte als berechtigte Dritte aus.
 
 #### Artikel 6 – Pflichten Dritter, die Daten auf Verlangen des Nutzers erhalten
 

@@ -58,7 +58,7 @@ The Federal Government is to adopt a strategy for improving the resilience of cr
 
 #### § 2 — Definitions
 
-Defines operator of critical facilities, facility, critical facility, critical service, resilience, risk, risk analysis, risk assessment, incident, federal administration bodies, management and maritime infrastructures. A critical service supplies the general public in one of the ten sectors, and its failure or impairment would lead to considerable supply shortages or threats to public security.
+Defines [[critical-facility|operator of critical facilities]], facility, critical facility, critical service, resilience, risk, risk analysis, risk assessment, incident, federal administration bodies, management and maritime infrastructures. A critical service supplies the general public in one of the ten sectors, and its failure or impairment would lead to considerable supply shortages or threats to public security.
 
 #### § 3 — Single point of contact; competent authorities; cooperation
 
@@ -203,7 +203,7 @@ Repealed by Article 8 of the Act of 21 July 2026.
 
 ### TL;DR
 
-Das KRITIS-Dachgesetz (KRITISDachG) ist das sektorenübergreifende deutsche Dachgesetz zur physischen Resilienz kritischer Anlagen und setzt die [[cer-directive|CER-Richtlinie]] um. Betreiber kritischer Anlagen in zehn Sektoren, von Energie und Verkehr über Gesundheit und Wasser bis zum Weltraum, müssen sich registrieren, mindestens alle vier Jahre ihre Risiken analysieren, verhältnismäßige technische, sicherheitsbezogene und organisatorische Resilienzmaßnahmen treffen, diese in einem Resilienzplan darstellen und Vorfälle binnen 24 Stunden melden. Zentrale Anlaufstelle ist das Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK); die Aufsicht liegt bei den Fachbehörden. Die IT-Sicherheit bleibt beim [[bsig|BSI-Gesetz]]. Welche Anlagen kritisch sind, soll eine Rechtsverordnung mit einem Regelschwellenwert von 500.000 versorgten Einwohnern festlegen; die Pflichten beginnen erst, wenn eine Anlage als kritisch gilt, was in der Regel diese Verordnung voraussetzt.
+Das KRITIS-Dachgesetz (KRITISDachG) ist das sektorenübergreifende deutsche Dachgesetz zur physischen Resilienz kritischer Anlagen und setzt die [[cer-directive|CER-Richtlinie]] um. [[critical-facility|Betreiber kritischer Anlagen]] in zehn Sektoren, von Energie und Verkehr über Gesundheit und Wasser bis zum Weltraum, müssen sich registrieren, mindestens alle vier Jahre ihre Risiken analysieren, verhältnismäßige technische, sicherheitsbezogene und organisatorische Resilienzmaßnahmen treffen, diese in einem Resilienzplan darstellen und Vorfälle binnen 24 Stunden melden. Zentrale Anlaufstelle ist das Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK); die Aufsicht liegt bei den Fachbehörden. Die IT-Sicherheit bleibt beim [[bsig|BSI-Gesetz]]. Welche Anlagen kritisch sind, soll eine Rechtsverordnung mit einem Regelschwellenwert von 500.000 versorgten Einwohnern festlegen; die Pflichten beginnen erst, wenn eine Anlage als kritisch gilt, was in der Regel diese Verordnung voraussetzt.
 
 ### Eckdaten
 

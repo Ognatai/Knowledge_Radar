@@ -3,6 +3,10 @@
 # the target notes it must not link to, with the reason.
 version: 1
 exclusions:
+  critical-facility:
+    classification: legal classification of facilities, not the ML task.
+  data-governance:
+    gatekeeper: a central data gatekeeper role, not the DMA gatekeeper.
   open-world-assumption:
     w3c: W3C appears only as the author name inside citations.
   ragas:

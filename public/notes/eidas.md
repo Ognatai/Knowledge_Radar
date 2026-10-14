@@ -572,7 +572,7 @@ Sieht die Zertifizierung elektronischer Identifizierungssysteme anhand von Cyber
 
 #### Artikel 12b – Zugang zu Hardware- und Software-Funktionen
 
-Verpflichtet Torwächter nach dem Gesetz über digitale Märkte, Anbietern europäischer Brieftaschen für die Digitale Identität und notifizierter elektronischer Identifizierungsmittel wirksame Interoperabilität mit denselben Betriebssystem-, Hardware- und Softwarefunktionen und Zugang dazu zu ermöglichen.
+Verpflichtet [[gatekeeper|Torwächter]] nach dem Gesetz über digitale Märkte, Anbietern europäischer Brieftaschen für die Digitale Identität und notifizierter elektronischer Identifizierungsmittel wirksame Interoperabilität mit denselben Betriebssystem-, Hardware- und Softwarefunktionen und Zugang dazu zu ermöglichen.
 
 ### Kapitel III – Vertrauensdienste
 

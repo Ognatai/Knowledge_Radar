@@ -1,0 +1,21 @@
+version: 1
+note_sha256: dc2012ac692416ae596bba6531fb19fe281620538833e1bed80f00ed72ee4d48
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bsi-kritisv
+- bsig
+- cer-directive
+- dora
+- it-governance-frameworks
+- kritis-dachgesetz
+- nis2-directive
+- bbk
+relations:
+- from: kritis-dachgesetz
+  type: REGULATES
+  to: critical-facility
+  evidence: operators of critical facilities must register, carry out risk analyses and resilience measures under the kritis-dachgesetz
+- from: bsig
+  type: REGULATES
+  to: critical-facility
+  evidence: with stricter it security duties under the bsi act

@@ -39,7 +39,7 @@ The Digital Markets Act (DMA) sets rules for large digital platforms that act as
 
 ### Scope
 
-**Who** (Art. 1(2)): core platform services provided or offered by gatekeepers to business users established in the EU or end users established or located in the EU, regardless of where the gatekeeper is established.
+**Who** (Art. 1(2)): core platform services provided or offered by gatekeepers to business users established in the EU or end users established or located in the EU, regardless of where the [[gatekeeper|gatekeeper]] is established.
 
 **Core platform services** (Art. 2(2)): online intermediation services (e.g. app stores and marketplaces), online search engines, online social networking services, video-sharing platform services, number-independent interpersonal communications services, operating systems, web browsers, virtual assistants, cloud computing services and online advertising services.
 
@@ -319,7 +319,7 @@ Sets out the date of entry into force and the phased application of this Regulat
 
 ### TL;DR
 
-Das Gesetz über digitale Märkte (Digital Markets Act, DMA) setzt Regeln für große digitale Plattformen, die als Torwächter zwischen Unternehmen und Verbrauchern stehen. Die Kommission benennt Unternehmen als Torwächter für bestimmte zentrale Plattformdienste, etwa Suchmaschinen, App-Stores, Betriebssysteme, soziale Netzwerke, Browser, virtuelle Assistenten, Cloud- und Werbedienste. Torwächter müssen eine Liste von Pflichten und Verboten unmittelbar einhalten, ohne dass zuvor ein Missbrauch festgestellt werden muss: Sie dürfen zum Beispiel personenbezogene Daten nicht ohne Einwilligung über Dienste hinweg zusammenführen, eigene Dienste im Ranking nicht bevorzugen und fremde App-Stores nicht verhindern. Die Kommission setzt den DMA mit Geldbußen bis zu 10 % des weltweiten Umsatzes durch, bei wiederholten Verstößen bis zu 20 %.
+Das Gesetz über digitale Märkte (Digital Markets Act, DMA) setzt Regeln für große digitale Plattformen, die als [[gatekeeper|Torwächter]] zwischen Unternehmen und Verbrauchern stehen. Die Kommission benennt Unternehmen als Torwächter für bestimmte zentrale Plattformdienste, etwa Suchmaschinen, App-Stores, Betriebssysteme, soziale Netzwerke, Browser, virtuelle Assistenten, Cloud- und Werbedienste. Torwächter müssen eine Liste von Pflichten und Verboten unmittelbar einhalten, ohne dass zuvor ein Missbrauch festgestellt werden muss: Sie dürfen zum Beispiel personenbezogene Daten nicht ohne Einwilligung über Dienste hinweg zusammenführen, eigene Dienste im Ranking nicht bevorzugen und fremde App-Stores nicht verhindern. Die Kommission setzt den DMA mit Geldbußen bis zu 10 % des weltweiten Umsatzes durch, bei wiederholten Verstößen bis zu 20 %.
 
 ### Eckdaten
 

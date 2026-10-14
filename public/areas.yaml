@@ -284,6 +284,7 @@ areas:
       - copyright-and-ai-training-data
       - legal-ai
       - contract-intelligence
+      - gatekeeper
     also:
       - dora
   - id: german-law
@@ -296,6 +297,7 @@ areas:
       - bsi-kritisv
       - kritis-dachgesetz
       - geschgehg
+      - critical-facility
   - id: financial-regulation
     name_en: Financial Supervision
     name_de: Finanzaufsicht
@@ -311,3 +313,4 @@ areas:
       - bafin
       - ecb
       - eba
+      - creditworthiness-assessment

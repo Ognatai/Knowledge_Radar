@@ -193,10 +193,6 @@ entities:
   type: Technology
   name_en: Docker Compose
   name_de: Docker Compose
-- id: critical-facility
-  type: Concept
-  name_en: Critical facility
-  name_de: Kritische Anlage
 - id: basel-committee
   type: Organisation
   name_en: Basel Committee on Banking Supervision
@@ -867,12 +863,6 @@ entities:
   type: Method
   name_en: Classifier-free guidance
   name_de: Classifier-free Guidance
-- id: gatekeeper
-  type: Concept
-  name_en: Gatekeeper (DMA)
-  name_de: Torwächter (DMA)
-  aliases:
-  - gatekeeper
 - id: core-platform-service
   type: Concept
   name_en: Core platform service
@@ -1489,10 +1479,6 @@ entities:
   type: Concept
   name_en: Authorisation requirement for banking business
   name_de: Erlaubnispflicht für Bankgeschäfte
-- id: creditworthiness-assessment
-  type: Concept
-  name_en: Creditworthiness assessment
-  name_de: Kreditwürdigkeitsprüfung
 - id: chinchilla
   type: Method
   name_en: Chinchilla
@@ -2900,3 +2886,10 @@ entities:
   name_de: Roy T. Fielding
   aliases:
   - Roy Fielding
+- id: consumer-credit-directive-2023
+  type: Regulation
+  name_en: Consumer Credit Directive (EU) 2023/2225
+  name_de: Verbraucherkreditrichtlinie (EU) 2023/2225
+  aliases:
+  - Directive (EU) 2023/2225
+  - CCD2

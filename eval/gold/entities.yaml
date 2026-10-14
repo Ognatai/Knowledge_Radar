@@ -181,10 +181,6 @@ entities:
     type: Technology
     name_en: Docker Compose
     name_de: Docker Compose
-  - id: critical-facility
-    type: Concept
-    name_en: Critical facility
-    name_de: Kritische Anlage
   - id: basel-committee
     type: Organisation
     name_en: Basel Committee on Banking Supervision

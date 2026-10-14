@@ -1,0 +1,30 @@
+version: 1
+note_sha256: a67b16a45d49a7e957baccd4cf5cc60adba1ee34da9db017e477cbf0b14ac17e
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bafin
+- bdsg
+- classification
+- data-governance
+- eba
+- eu-ai-act
+- explainable-ai
+- fairness-metrics
+- gdpr
+- kwg
+- marisk
+- bgb
+- consumer-credit-directive-2023
+relations:
+- from: kwg
+  type: REGULATES
+  to: creditworthiness-assessment
+  evidence: for credit institutions also § 18a kwg
+- from: eu-ai-act
+  type: REGULATES
+  to: creditworthiness-assessment
+  evidence: classifies ai systems for creditworthiness assessment of natural persons as high-risk
+- from: consumer-credit-directive-2023
+  type: REGULATES
+  to: creditworthiness-assessment
+  evidence: the revised consumer credit directive adds a right to human intervention and explanation for automated assessments

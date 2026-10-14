@@ -1,0 +1,15 @@
+version: 1
+note_sha256: 0865bea8e063fe4f575784e41395e6ef27d45c3a34e7c0925c479a008fc7adad
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- data-act
+- digital-markets-act
+- digital-services-act
+- gdpr
+- european-commission
+- core-platform-service
+relations:
+- from: digital-markets-act
+  type: REGULATES
+  to: gatekeeper
+  evidence: under the digital markets act (dma), a gatekeeper is an undertaking that provides core platform services
