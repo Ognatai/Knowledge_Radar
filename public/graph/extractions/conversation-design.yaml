@@ -1,0 +1,18 @@
+version: 1
+note_sha256: 40ba5a51b1d097bbe3e17908230796485d628c48f90514df9a79077f964fac98
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- conversation-analytics
+- conversational-ai
+- dialogue-state-tracking
+- llm-guardrails-and-red-teaming
+- natural-language-understanding
+- prompt-engineering
+- text-to-speech
+- voice-agents
+- google
+relations:
+- from: conversation-design
+  type: COMPLEMENTS
+  to: conversational-ai
+  evidence: the technical side, understanding the user and tracking the dialogue, is covered in conversational ai

@@ -1,0 +1,30 @@
+version: 1
+note_sha256: bcd7ac8e5dd1decb31a30b8511cab276d98750bc1f54605386309ae8cf250de1
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apache-spark
+- data-lakehouse
+- data-pipelines
+- inverted-index
+- pagerank
+- sql
+- jeffrey-dean
+- sanjay-ghemawat
+- google
+relations:
+- from: mapreduce
+  type: DEVELOPED_BY
+  to: jeffrey-dean
+  evidence: jeffrey dean and sanjay ghemawat presented mapreduce at osdi 2004
+- from: mapreduce
+  type: DEVELOPED_BY
+  to: sanjay-ghemawat
+  evidence: jeffrey dean and sanjay ghemawat presented mapreduce at osdi 2004
+- from: mapreduce
+  type: DEVELOPED_BY
+  to: google
+  evidence: google introduced it in 2004
+- from: apache-spark
+  type: BASED_ON
+  to: mapreduce
+  evidence: spark generalised the model with resilient distributed datasets

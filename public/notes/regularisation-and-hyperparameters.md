@@ -153,7 +153,7 @@ Das Lasso minimiert die Residuenquadratsumme unter der Nebenbedingung, dass die 
 
 #### 4. Dropout
 
-Dropout entfernt während des Trainings zufällig Einheiten samt ihrer Verbindungen aus einem neuronalen Netz und verhindert so, dass sich Einheiten zu stark aufeinander einstellen (Srivastava et al., 2014). Zur Testzeit nähert ein einzelnes Netz mit herunterskalierten Gewichten den Mittelwert der vielen ausgedünnten Netze aus dem Training an. Dropout verringerte Überanpassung und verbesserte Ergebnisse auf Benchmarks in Bildverarbeitung, Spracherkennung, Dokumentklassifikation und Bioinformatik ([[neural-network-training|Training neuronaler Netze]]).
+Dropout entfernt während des Trainings zufällig Einheiten samt ihrer Verbindungen aus einem neuronalen Netz und verhindert so, dass sich Einheiten zu stark aufeinander einstellen (Srivastava et al., 2014). Zur Testzeit nähert ein einzelnes Netz mit herunterskalierten Gewichten den Mittelwert der vielen ausgedünnten Netze aus dem Training an. Dropout verringerte Überanpassung und verbesserte Ergebnisse auf Benchmarks in [[computer-vision|Bildverarbeitung]], Spracherkennung, Dokumentklassifikation und Bioinformatik ([[neural-network-training|Training neuronaler Netze]]).
 
 #### 5. Early Stopping
 

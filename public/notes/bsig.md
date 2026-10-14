@@ -243,7 +243,7 @@ Makes the head of each federal administration body responsible for information s
 
 #### § 44 — Requirements of the Federal Office
 
-Obliges the federal administration to meet minimum requirements from IT-Grundschutz, BSI standards and the Federal Office's minimum standards, whose implementation fulfils the risk management obligations under § 30, and regulates advice and tools from the Federal Office.
+Obliges the federal administration to meet minimum requirements from [[it-governance-frameworks|IT-Grundschutz]], BSI standards and the Federal Office's minimum standards, whose implementation fulfils the risk management obligations under § 30, and regulates advice and tools from the Federal Office.
 
 #### § 45 — Information Security Officers of Federal Administration Bodies
 
@@ -617,7 +617,7 @@ Macht die Leitung jeder Einrichtung der Bundesverwaltung für die Informationssi
 
 #### § 44 – Vorgaben des Bundesamtes
 
-Verpflichtet die Bundesverwaltung auf Mindestanforderungen aus IT-Grundschutz, BSI-Standards und Mindeststandards des Bundesamtes, deren Umsetzung die Risikomanagementpflichten nach § 30 erfüllt, und regelt Beratung und Hilfsmittel des Bundesamtes.
+Verpflichtet die Bundesverwaltung auf Mindestanforderungen aus [[it-governance-frameworks|IT-Grundschutz]], BSI-Standards und Mindeststandards des Bundesamtes, deren Umsetzung die Risikomanagementpflichten nach § 30 erfüllt, und regelt Beratung und Hilfsmittel des Bundesamtes.
 
 #### § 45 – Informationssicherheitsbeauftragte der Einrichtungen der Bundesverwaltung
 

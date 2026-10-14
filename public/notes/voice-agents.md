@@ -32,7 +32,7 @@ caller audio ─► VAD ─► turn detection ─► STT ─► LLM / dialogue l
 
 #### 1. The speech pipeline
 
-The dialogue-state architecture already places [[automatic-speech-recognition|automatic speech recognition]] before understanding and [[text-to-speech|speech synthesis]] after generation (Jurafsky & Martin, 2026). Voice agent frameworks call this the STT-LLM-TTS pipeline, in which the language model does the understanding and response generation; alternatively, realtime models take audio in and produce audio out and bring their own turn detection (LiveKit docs: Turns).
+The dialogue-state architecture already places [[automatic-speech-recognition|automatic speech recognition]] before understanding and [[text-to-speech|speech synthesis]] after generation (Jurafsky & Martin, 2026). Voice [[agent-frameworks|agent frameworks]] call this the STT-LLM-TTS pipeline, in which the language model does the understanding and response generation; alternatively, realtime models take audio in and produce audio out and bring their own turn detection (LiveKit docs: Turns).
 
 #### 2. Hearing: VAD and turn detection
 

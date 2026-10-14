@@ -63,7 +63,7 @@ Three families build on the architecture (Urchs, 2025). Encoder-only BERT condit
 
 #### 6. Beyond text and efficiency
 
-A pure Transformer applied to sequences of image patches, the Vision Transformer, attained excellent image classification results compared with convolutional networks when pretrained on large data, while requiring substantially fewer computational resources to train (Dosovitskiy et al., 2020; [[multimodal-models|Multimodal Models]]). Self-attention's time and memory grow quadratically with sequence length. FlashAttention computes exact attention with tiling that reduces reads and writes between GPU memory levels, giving for example a 3× training speedup on GPT-2 with sequence length 1K and enabling longer contexts (Dao et al., 2022).
+A pure Transformer applied to sequences of image patches, the Vision Transformer, attained excellent [[computer-vision|image classification]] results compared with convolutional networks when pretrained on large data, while requiring substantially fewer computational resources to train (Dosovitskiy et al., 2020; [[multimodal-models|Multimodal Models]]). Self-attention's time and memory grow quadratically with sequence length. FlashAttention computes exact attention with tiling that reduces reads and writes between GPU memory levels, giving for example a 3× training speedup on GPT-2 with sequence length 1K and enabling longer contexts (Dao et al., 2022).
 
 #### Origin and variants
 

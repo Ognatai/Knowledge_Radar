@@ -1,0 +1,41 @@
+version: 1
+note_sha256: e1ea9eff4e90d86ac988c83134b464ad3f1321da56443395b28c39c9cf113acc
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- attention-and-transformers
+- autoencoders-and-gans
+- classification-metrics
+- convolutional-neural-networks
+- diffusion-models
+- document-processing
+- eu-ai-act
+- gdpr
+- multimodal-models
+- imagenet
+- yolo
+- mask-r-cnn
+- u-net
+- vision-transformer
+- clip
+- resnet
+relations:
+- from: imagenet
+  type: EVALUATES
+  to: computer-vision
+  evidence: the imagenet large scale visual recognition challenge (ilsvrc) ran annually from 2010
+- from: yolo
+  type: IS_EXAMPLE_OF
+  to: computer-vision
+  evidence: single-pass detectors such as yolo
+- from: u-net
+  type: IS_EXAMPLE_OF
+  to: computer-vision
+  evidence: encoder-decoder networks such as u-net for segmentation
+- from: mask-r-cnn
+  type: IS_EXAMPLE_OF
+  to: computer-vision
+  evidence: two-stage detectors with mask branches such as mask r-cnn
+- from: vision-transformer
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: feeds the sequence of patch embeddings to a standard transformer without convolutions

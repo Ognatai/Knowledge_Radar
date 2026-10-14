@@ -56,10 +56,12 @@ areas:
     notes:
       - agentic-ai
       - conversational-ai
+      - conversation-design
       - voice-agents
       - agent-skills
       - mcp-and-related-protocols
       - langchain-and-langgraph
+      - agent-frameworks
       - prompt-engineering
       - prompt-comparison
       - chain-of-thought-prompting
@@ -96,6 +98,7 @@ areas:
       - rag-retrieval-evaluation
       - rag-generation-evaluation
       - rag-failure-modes
+      - document-processing
     also:
       - embeddings
       - rag-vs-fine-tuning
@@ -114,6 +117,8 @@ areas:
       - bias-in-nlp
       - explainable-ai
       - differential-privacy-and-federated-learning
+      - llm-guardrails-and-red-teaming
+      - responsible-ai
     also:
       - prompt-injection
       - text-similarity-metrics
@@ -150,6 +155,7 @@ areas:
       - neural-network-training
       - neural-network-evaluation
       - convolutional-neural-networks
+      - computer-vision
       - recurrent-neural-networks
       - autoencoders-and-gans
       - diffusion-models
@@ -198,6 +204,13 @@ areas:
       - api-authentication
       - asynchronous-apis
       - monitoring-and-alerting
+      - ci-cd
+      - infrastructure-as-code
+      - software-testing
+      - ml-pipelines
+      - cloud-ai-platforms
+      - requirements-engineering
+      - frontend-development
     also:
       - scikit-learn
       - langchain-and-langgraph
@@ -205,6 +218,21 @@ areas:
       - quality-control
       - llm-observability-and-tracing
       - graph-databases
+  - id: data-engineering
+    name_en: Data Engineering & Analytics
+    name_de: Data Engineering & Analytics
+    notes:
+      - data-governance
+      - data-modelling
+      - data-lakehouse
+      - apache-spark
+      - mapreduce
+      - web-analytics
+      - data-visualisation
+    also:
+      - data-pipelines
+      - sql
+      - data-governance-act
   - id: eu-law
     name_en: EU Law & Legal AI
     name_de: EU-Recht & Legal AI
@@ -249,6 +277,7 @@ areas:
       - eba-governance-and-outsourcing-guidelines
       - bcbs-239-and-ecb-rdarr-guide
       - information-security-in-banking
+      - it-governance-frameworks
       - bafin
       - ecb
       - eba

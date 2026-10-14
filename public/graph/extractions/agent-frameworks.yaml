@@ -1,0 +1,33 @@
+version: 1
+note_sha256: 7ed25298f4b7ade072a2ffb9c63aa113c816e9953a75b959e859320c49ac347d
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agentic-ai
+- apis
+- cloud-ai-platforms
+- context-engineering
+- document-processing
+- harness-engineering
+- langchain-and-langgraph
+- llm-evaluation
+- llm-guardrails-and-red-teaming
+- llm-observability-and-tracing
+- mcp-and-related-protocols
+- prompt-injection
+- python
+- retrieval-augmented-generation
+- autogen
+- microsoft
+relations:
+- from: autogen
+  type: IS_EXAMPLE_OF
+  to: agent-frameworks
+  evidence: autogen, introduced by wu et al. (2023), builds applications from several customisable agents
+- from: langchain-and-langgraph
+  type: IS_EXAMPLE_OF
+  to: agent-frameworks
+  evidence: widely used examples are langchain/langgraph
+- from: autogen
+  type: DEVELOPED_BY
+  to: microsoft
+  evidence: microsoft's semantic kernel and autogen

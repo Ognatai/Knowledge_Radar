@@ -1,0 +1,19 @@
+version: 1
+note_sha256: 6998f92fef06a89ac7600f8e2449ec86ceb47ac1991aed02b69f40180227fb51
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agentic-ai
+- apis
+- asynchronous-apis
+- ci-cd
+- data-visualisation
+- python
+- requirements-engineering
+- retrieval-augmented-generation
+- software-testing
+- w3c
+relations:
+- from: frontend-development
+  type: COMPLEMENTS
+  to: apis
+  evidence: shared types between frontend and backend api definitions reduce integration errors

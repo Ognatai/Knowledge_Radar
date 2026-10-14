@@ -1,0 +1,29 @@
+version: 1
+note_sha256: eb974dda9363637cfd6b70a52769a322f7466979a8cb7b6c13f06b4319ae09e6
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bias-in-nlp
+- data-governance
+- differential-privacy-and-federated-learning
+- dora
+- eu-ai-act
+- explainable-ai
+- fairness-metrics
+- gdpr
+- it-governance-frameworks
+- llm-evaluation
+- llm-guardrails-and-red-teaming
+- marisk
+- monitoring-and-alerting
+- software-testing
+- nist
+- model-cards
+relations:
+- from: model-cards
+  type: IS_EXAMPLE_OF
+  to: responsible-ai
+  evidence: documentation such as model cards makes the evaluation of each model transparent
+- from: responsible-ai
+  type: DEVELOPED_BY
+  to: nist
+  evidence: the nist ai risk management framework names seven characteristics of trustworthy ai

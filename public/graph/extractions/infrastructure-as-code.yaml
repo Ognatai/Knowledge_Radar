@@ -1,0 +1,21 @@
+version: 1
+note_sha256: 8b34f0f27101086ad5b2fe80f0a2253407692eadcca2321ba350b147cccb4e5b
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apis
+- ci-cd
+- cloud-ai-platforms
+- docker
+- kubernetes
+- technical-debt
+- terraform
+- martin-fowler
+relations:
+- from: terraform
+  type: IMPLEMENTS
+  to: infrastructure-as-code
+  evidence: declarative tools such as terraform, azure resource manager templates and bicep describe the desired end state
+- from: infrastructure-as-code
+  type: COMPLEMENTS
+  to: ci-cd
+  evidence: iac is a component of continuous delivery

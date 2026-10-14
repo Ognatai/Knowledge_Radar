@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7d167d1988877ec979e4dafbf592e3f0f8ae26ad76b18ce1c51dd204ef5d1731
+note_sha256: 858b6761ebab9192616b009ba8bbe9cfc2945c50983d6d10b4629b734ddefb7c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bafin

@@ -55,7 +55,7 @@ A model underfits when its training error is too high, and overfits when the gap
 
 #### 5. Generalisation of large networks
 
-Zhang et al. (2016) showed that state-of-the-art convolutional networks for image classification easily fit a random labelling of the training data, even with explicit regularisation and even when the images are replaced by random noise. Traditional explanations based on model family or regularisation therefore do not explain why large networks generalise well. Belkin et al. (2018) reconcile this with the bias-variance trade-off through a "double descent" curve: test error first follows the classical U shape, but decreases again when capacity grows beyond the point where the model fits the training data exactly.
+Zhang et al. (2016) showed that state-of-the-art convolutional networks for [[computer-vision|image classification]] easily fit a random labelling of the training data, even with explicit regularisation and even when the images are replaced by random noise. Traditional explanations based on model family or regularisation therefore do not explain why large networks generalise well. Belkin et al. (2018) reconcile this with the bias-variance trade-off through a "double descent" curve: test error first follows the classical U shape, but decreases again when capacity grows beyond the point where the model fits the training data exactly.
 
 #### 6. Calibration
 

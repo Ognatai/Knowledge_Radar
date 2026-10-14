@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 89e80cb038fa0ed8ff5c773b2c813cb0071627a61fce0365d4c8fc8ae2c7e657
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apache-spark
+- apis
+- bcbs-239-and-ecb-rdarr-guide
+- data-act
+- data-governance-act
+- data-lakehouse
+- data-pipelines
+- data-visualisation
+- eu-ai-act
+- gdpr
+- ml-pipelines
+- retrieval-augmented-generation
+- unity-catalog
+- openlineage
+- databricks
+relations:
+- from: unity-catalog
+  type: IMPLEMENTS
+  to: data-governance
+  evidence: databricks' unity catalog, as an example of a governance layer
+- from: openlineage
+  type: IMPLEMENTS
+  to: data-governance
+  evidence: openlineage is "an open framework for data lineage collection and analysis"
+- from: unity-catalog
+  type: DEVELOPED_BY
+  to: databricks
+  evidence: databricks' unity catalog

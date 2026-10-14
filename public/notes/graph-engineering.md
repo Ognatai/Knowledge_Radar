@@ -47,7 +47,7 @@ The third reading stores an agent's knowledge as typed nodes and edges, such as 
 
 #### Origin and variants
 
-The earliest documented use found was a blog post in early July 2026; the term spread after Peter Steinberger posted on 18 July 2026 "Are we still talking loops or did we shift to graphs yet?", and a viral claim about a large Stanford and Anthropic study turned out to be fabricated (Ghelbur, 2026). The underlying practice is older: dataflow and DAG orchestration, multi-agent systems research and agent frameworks that made graphs first-class objects (Wang, 2026), such as LangGraph, which mixes deterministic and LLM-driven steps in one graph (LangGraph docs), and AutoGen, in which multiple agents converse to solve tasks (Wu et al., 2023). What is new in 2026 is mainly the vocabulary and the framing as a step after loop engineering.
+The earliest documented use found was a blog post in early July 2026; the term spread after Peter Steinberger posted on 18 July 2026 "Are we still talking loops or did we shift to graphs yet?", and a viral claim about a large Stanford and Anthropic study turned out to be fabricated (Ghelbur, 2026). The underlying practice is older: dataflow and DAG orchestration, multi-agent systems research and [[agent-frameworks|agent frameworks]] that made graphs first-class objects (Wang, 2026), such as LangGraph, which mixes deterministic and LLM-driven steps in one graph (LangGraph docs), and AutoGen, in which multiple agents converse to solve tasks (Wu et al., 2023). What is new in 2026 is mainly the vocabulary and the framing as a step after loop engineering.
 
 ### When to use it
 

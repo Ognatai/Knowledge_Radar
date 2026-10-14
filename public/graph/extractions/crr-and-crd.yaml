@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 42920dc5b1c5c157d3d67d532e44620b48884297b36ef682c5ebab28e21c6029
+note_sha256: bae5b685a0dad39351cbd17613d09bc1cc02a83a14ccf86c768ca31c6fb3bf97
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - kwg

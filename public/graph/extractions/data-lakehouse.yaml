@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 8083176651d45a3d2d9d8eaa981efbfe1ff7e4c9ff005ebc5fbc87cc2b2e9ea5
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apache-spark
+- cloud-ai-platforms
+- data-governance
+- data-modelling
+- data-pipelines
+- data-visualisation
+- mapreduce
+- sql
+- databricks
+- matei-zaharia
+- unity-catalog
+relations:
+- from: data-lakehouse
+  type: DEVELOPED_BY
+  to: databricks
+  evidence: michael armbrust, ali ghodsi, reynold xin and matei zaharia of databricks set out the lakehouse architecture at cidr 2021
+- from: data-lakehouse
+  type: DEVELOPED_BY
+  to: matei-zaharia
+  evidence: michael armbrust, ali ghodsi, reynold xin and matei zaharia of databricks set out the lakehouse architecture
+- from: data-lakehouse
+  type: BASED_ON
+  to: data-modelling
+  evidence: modelling the gold layer is covered in data modelling

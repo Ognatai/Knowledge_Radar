@@ -1,0 +1,34 @@
+version: 1
+note_sha256: 86bc4aa12b01902e77c59a0cf95bacbb9a6bbbd15edf937a4ffc1e25d61b3b58
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- agentic-ai
+- apis
+- ci-cd
+- data-act
+- data-lakehouse
+- dora
+- eba-governance-and-outsourcing-guidelines
+- embeddings
+- gdpr
+- information-retrieval
+- infrastructure-as-code
+- llm-cost-optimisation
+- llm-guardrails-and-red-teaming
+- ml-pipelines
+- mlops-and-deployment
+- rag-retrieval
+- retrieval-augmented-generation
+- scikit-learn
+- vector-databases
+- microsoft
+- google
+- nist
+- openai
+- anthropic
+relations:
+- from: cloud-ai-platforms
+  type: COMPLEMENTS
+  to: retrieval-augmented-generation
+  evidence: the platforms include managed retrieval for rag

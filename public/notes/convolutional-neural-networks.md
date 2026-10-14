@@ -62,7 +62,7 @@ Representations learned on large datasets generalise to other tasks: VGG represe
 
 #### Origin and variants
 
-LeNet-style networks (LeCun et al., 1998) established CNNs for document recognition, AlexNet (Krizhevsky et al., 2012) started the deep learning era in computer vision, and VGG (Simonyan & Zisserman, 2014) and ResNet (He et al., 2015) made networks much deeper. Vision Transformers later offered an attention-based alternative ([[attention-and-transformers|Attention and Transformers]]).
+LeNet-style networks (LeCun et al., 1998) established CNNs for document recognition, AlexNet (Krizhevsky et al., 2012) started the deep learning era in [[computer-vision|computer vision]], and VGG (Simonyan & Zisserman, 2014) and ResNet (He et al., 2015) made networks much deeper. Vision Transformers later offered an attention-based alternative ([[attention-and-transformers|Attention and Transformers]]).
 
 ### When to use it
 
@@ -158,7 +158,7 @@ Auf großen Datensätzen gelernte Repräsentationen lassen sich auf andere Aufga
 
 #### Ursprung und Varianten
 
-Netze im Stil von LeNet (LeCun et al., 1998) etablierten CNNs für die Dokumenterkennung, AlexNet (Krizhevsky et al., 2012) leitete die Deep-Learning-Ära in der Bildverarbeitung ein, und VGG (Simonyan & Zisserman, 2014) sowie ResNet (He et al., 2015) machten Netze deutlich tiefer. Vision Transformer boten später eine attention-basierte Alternative ([[attention-and-transformers|Attention und Transformer]]).
+Netze im Stil von LeNet (LeCun et al., 1998) etablierten CNNs für die Dokumenterkennung, AlexNet (Krizhevsky et al., 2012) leitete die Deep-Learning-Ära in der [[computer-vision|Bildverarbeitung]] ein, und VGG (Simonyan & Zisserman, 2014) sowie ResNet (He et al., 2015) machten Netze deutlich tiefer. Vision Transformer boten später eine attention-basierte Alternative ([[attention-and-transformers|Attention und Transformer]]).
 
 ### Wann einsetzen
 

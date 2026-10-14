@@ -1,0 +1,23 @@
+version: 1
+note_sha256: c870e8719e2791c456531d061c28c65f2b23c8830b441e677402aa4aaff86b99
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- causal-inference
+- data-governance
+- data-modelling
+- data-visualisation
+- eprivacy-directive
+- gdpr
+- sql
+- tdddg
+- bigquery
+- google
+relations:
+- from: bigquery
+  type: COMPLEMENTS
+  to: web-analytics
+  evidence: raw events can be exported to the bigquery data warehouse for sql analysis
+- from: web-analytics
+  type: BASED_ON
+  to: data-modelling
+  evidence: modelled into fact and dimension tables

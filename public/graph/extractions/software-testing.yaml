@@ -1,0 +1,24 @@
+version: 1
+note_sha256: 4c642044ba86f59efb30f4e32f82af385a2cbf6818480d306249b15f817944b5
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apis
+- ci-cd
+- frontend-development
+- llm-as-a-judge
+- llm-evaluation
+- monitoring-and-alerting
+- python
+- regression-testing
+- technical-debt
+- martin-fowler
+- ml-test-score
+relations:
+- from: ml-test-score
+  type: EVALUATES
+  to: software-testing
+  evidence: which breck et al. (2017) collect in the ml test score
+- from: software-testing
+  type: COMPLEMENTS
+  to: ci-cd
+  evidence: which makes them the foundation of ci/cd and refactoring

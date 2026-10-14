@@ -95,7 +95,7 @@ Requires the institution to carry out appropriate stress tests for its material 
 
 #### AT 4.3.4 — Use of models
 
-Sets requirements for models used in risk management processes, expressly including artificial intelligence, such as justified assumptions, data quality, overrides, regular validation and sufficient explainability.
+Sets requirements for models used in risk management processes, expressly including artificial intelligence, such as justified assumptions, [[data-governance|data quality]], overrides, regular validation and sufficient explainability.
 
 #### AT 4.4.1 — Risk control function
 
@@ -309,7 +309,7 @@ Verpflichtet das Institut, regelmäßig und anlassbezogen angemessene Stresstest
 
 #### AT 4.3.4 – Verwendung von Modellen
 
-Stellt Anforderungen an Modelle in den Prozessen des Risikomanagements, ausdrücklich auch an künstliche Intelligenz, etwa an die Begründung der Annahmen, die Datenqualität, Überschreibungen, die regelmäßige Validierung und eine hinreichende Erklärbarkeit.
+Stellt Anforderungen an Modelle in den Prozessen des Risikomanagements, ausdrücklich auch an künstliche Intelligenz, etwa an die Begründung der Annahmen, die [[data-governance|Datenqualität]], Überschreibungen, die regelmäßige Validierung und eine hinreichende Erklärbarkeit.
 
 #### AT 4.4.1 – Risikocontrolling-Funktion
 

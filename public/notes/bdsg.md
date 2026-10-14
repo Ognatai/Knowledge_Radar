@@ -552,7 +552,7 @@ Allows public and non-public bodies to process personal data for state awards an
 - **Scoring** (§ 31): models predicting a person's future behaviour for contract decisions, e.g. credit scoring, must rely on a scientifically recognised mathematical-statistical method and may not use address data only.
 - **Automated decisions** (§ 37): an additional exception to Art. 22 GDPR, limited to decisions under insurance contracts.
 - **Special categories and research** (§§ 22, 27): health or biometric data may be processed for research and statistics without consent if the controller's interests significantly outweigh those of the data subject, with appropriate safeguards; this is relevant for training models on such data, also for [[bias-in-nlp|bias analysis]] and [[fairness-metrics|fairness testing]].
-- **Video surveillance** (§ 4): computer vision on cameras in publicly accessible spaces is only permitted for the purposes listed and has to be made recognisable.
+- **Video surveillance** (§ 4): [[computer-vision|computer vision]] on cameras in publicly accessible spaces is only permitted for the purposes listed and has to be made recognisable.
 - **Data protection officer** (§ 38): required from **20** persons permanently engaged in automated processing, or regardless of size if the processing requires a data protection impact assessment, which is frequent for AI systems.
 
 ### Official sources
@@ -1096,7 +1096,7 @@ Regelt die Verarbeitung personenbezogener Daten für Zwecke staatlicher Auszeich
 - **Scoring** (§ 31): Modelle, die das künftige Verhalten einer Person für Vertragsentscheidungen vorhersagen, etwa Credit Scoring, müssen auf einem wissenschaftlich anerkannten mathematisch-statistischen Verfahren beruhen und dürfen nicht ausschließlich Anschriftendaten nutzen.
 - **Automatisierte Entscheidungen** (§ 37): eine zusätzliche Ausnahme zu Art. 22 DSGVO, beschränkt auf Entscheidungen im Rahmen von Versicherungsverträgen.
 - **Besondere Kategorien und Forschung** (§§ 22, 27): Gesundheits- oder biometrische Daten dürfen für Forschung und Statistik ohne Einwilligung verarbeitet werden, wenn die Interessen des Verantwortlichen erheblich überwiegen und angemessene Schutzmaßnahmen bestehen; das betrifft das Training von Modellen mit solchen Daten, auch für [[bias-in-nlp|Bias-Analysen]] und [[fairness-metrics|Fairness-Tests]].
-- **Videoüberwachung** (§ 4): Computer Vision mit Kameras in öffentlich zugänglichen Räumen ist nur für die genannten Zwecke zulässig und muss erkennbar gemacht werden.
+- **Videoüberwachung** (§ 4): [[computer-vision|Computer Vision]] mit Kameras in öffentlich zugänglichen Räumen ist nur für die genannten Zwecke zulässig und muss erkennbar gemacht werden.
 - **Datenschutzbeauftragte** (§ 38): Pflicht ab **20** Personen, die ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind, oder unabhängig von der Größe, wenn die Verarbeitung eine Datenschutz-Folgenabschätzung erfordert, was bei KI-Systemen häufig der Fall ist.
 
 ### Amtliche Quellen

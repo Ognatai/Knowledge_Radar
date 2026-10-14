@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-An inverted index maps every term of a collection to its postings list, the sorted list of IDs of the documents that contain it; queries are answered by looking up the terms and merging their postings lists instead of scanning the documents (Manning et al., 2008, ch. 1). Large collections are indexed block by block on disk or distributed with MapReduce, changing collections with auxiliary indexes, and the postings are compressed by storing gaps between document IDs with variable byte or γ codes (Manning et al., 2008, ch. 4 and 5). It is the core data structure of lexical search such as [[bm25|BM25]] and of [[information-retrieval|information retrieval]] in general.
+An inverted index maps every term of a collection to its postings list, the sorted list of IDs of the documents that contain it; queries are answered by looking up the terms and merging their postings lists instead of scanning the documents (Manning et al., 2008, ch. 1). Large collections are indexed block by block on disk or distributed with [[mapreduce|MapReduce]], changing collections with auxiliary indexes, and the postings are compressed by storing gaps between document IDs with variable byte or γ codes (Manning et al., 2008, ch. 4 and 5). It is the core data structure of lexical search such as [[bm25|BM25]] and of [[information-retrieval|information retrieval]] in general.
 
 ### How it works
 
@@ -109,7 +109,7 @@ An inverted index stores, for every term, the sorted list of documents containin
 
 ### TL;DR
 
-Ein Inverted Index ordnet jedem Term einer Sammlung seine Postings-Liste zu, die sortierte Liste der IDs der Dokumente, die ihn enthalten; Anfragen werden beantwortet, indem die Terme nachgeschlagen und ihre Postings-Listen zusammengeführt werden, statt die Dokumente zu durchsuchen (Manning et al., 2008, Kap. 1). Große Sammlungen werden blockweise auf der Festplatte oder verteilt mit MapReduce indexiert, sich ändernde Sammlungen mit Hilfsindizes, und die Postings werden komprimiert, indem die Abstände zwischen Dokument-IDs mit Variable-Byte- oder γ-Codes gespeichert werden (Manning et al., 2008, Kap. 4 und 5). Er ist die zentrale Datenstruktur der lexikalischen Suche wie [[bm25|BM25]] und des [[information-retrieval|Information Retrieval]] allgemein.
+Ein Inverted Index ordnet jedem Term einer Sammlung seine Postings-Liste zu, die sortierte Liste der IDs der Dokumente, die ihn enthalten; Anfragen werden beantwortet, indem die Terme nachgeschlagen und ihre Postings-Listen zusammengeführt werden, statt die Dokumente zu durchsuchen (Manning et al., 2008, Kap. 1). Große Sammlungen werden blockweise auf der Festplatte oder verteilt mit [[mapreduce|MapReduce]] indexiert, sich ändernde Sammlungen mit Hilfsindizes, und die Postings werden komprimiert, indem die Abstände zwischen Dokument-IDs mit Variable-Byte- oder γ-Codes gespeichert werden (Manning et al., 2008, Kap. 4 und 5). Er ist die zentrale Datenstruktur der lexikalischen Suche wie [[bm25|BM25]] und des [[information-retrieval|Information Retrieval]] allgemein.
 
 ### Funktionsweise
 

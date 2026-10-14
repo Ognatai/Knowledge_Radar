@@ -1,0 +1,36 @@
+version: 1
+note_sha256: 356827ddc4f3bd30613afd337474e81f0a5afcfd4b3075592de651e5807a5d08
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- agentic-ai
+- bias-in-nlp
+- cloud-ai-platforms
+- eu-ai-act
+- fairness-metrics
+- hallucination-detection
+- llm-alignment
+- llm-evaluation
+- llm-observability-and-tracing
+- monitoring-and-alerting
+- natural-language-inference
+- prompt-injection
+- regression-testing
+- responsible-ai
+- retrieval-augmented-generation
+- llama-guard
+- nemo-guardrails
+- owasp
+relations:
+- from: llama-guard
+  type: IS_EXAMPLE_OF
+  to: llm-guardrails-and-red-teaming
+  evidence: classifiers such as llama guard label prompts and responses against a risk taxonomy
+- from: nemo-guardrails
+  type: IS_EXAMPLE_OF
+  to: llm-guardrails-and-red-teaming
+  evidence: toolkits such as nemo guardrails add programmable rails
+- from: llm-guardrails-and-red-teaming
+  type: COMPLEMENTS
+  to: llm-alignment
+  evidence: both complement alignment training

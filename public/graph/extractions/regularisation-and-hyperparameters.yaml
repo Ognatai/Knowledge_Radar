@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "8bddfee8416f806a6b031aebb98aff1ecf990b2c991fa4df84d6257c864bf2f3"
+note_sha256: "c6d101cfbcb970114408a7567677dd545e4905ceb77cd63fb941e475373d6f64"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - ridge-regression

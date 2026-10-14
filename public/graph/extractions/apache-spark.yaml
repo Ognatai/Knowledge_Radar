@@ -1,0 +1,17 @@
+version: 1
+note_sha256: 25b1d5315fb303833ab3ac1c6a5fe1733e2a3b252f5878b2bb1bf490159f61ab
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apis
+- data-lakehouse
+- data-pipelines
+- feature-engineering
+- kubernetes
+- mapreduce
+- ml-pipelines
+- pagerank
+- python
+- sql
+- matei-zaharia
+- databricks
+relations: []

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d0e62e7351f65827b69402d2cf7779af13fec21ed18b32ad3a83be48c5de17ce
+note_sha256: 623b0be12f7868be5c0e2f445d455b3cf7c18dbb766bcdfa2bf7313fabe159ea
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - automatic-speech-recognition

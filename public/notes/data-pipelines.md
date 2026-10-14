@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-A data pipeline moves data from sources such as databases, applications and sensors into a system where it is stored, transformed and used, for example a data warehouse, a search index or a [[knowledge-graphs|knowledge graph]]. Pipelines either transform before loading (ETL) or load raw data first and transform it in the warehouse (ELT) (dbt: ELT), run as scheduled batches orchestrated as task graphs (Airflow docs: Overview) or continuously on event streams (Kafka docs: Introduction), and must produce the same result when a step is re-run (Airflow docs: Best practices).
+A data pipeline moves data from sources such as databases, applications and sensors into a system where it is stored, transformed and used, for example a [[data-lakehouse|data warehouse]], a search index or a [[knowledge-graphs|knowledge graph]]. Pipelines either transform before loading (ETL) or load raw data first and transform it in the warehouse (ELT) (dbt: ELT), run as scheduled batches orchestrated as task graphs (Airflow docs: Overview) or continuously on event streams (Kafka docs: Introduction), and must produce the same result when a step is re-run (Airflow docs: Best practices).
 
 ### How it works
 
@@ -107,7 +107,7 @@ A data pipeline extracts, loads and transforms data as a graph of steps, in batc
 
 ### TL;DR
 
-Eine Datenpipeline bringt Daten aus Quellen wie Datenbanken, Anwendungen und Sensoren in ein System, in dem sie gespeichert, transformiert und genutzt werden, etwa ein Data Warehouse, einen Suchindex oder einen [[knowledge-graphs|Knowledge Graph]]. Pipelines transformieren entweder vor dem Laden (ETL) oder laden zuerst Rohdaten und transformieren sie im Warehouse (ELT) (dbt: ELT), laufen als geplante Batches, orchestriert als Task-Graphen (Airflow docs: Overview), oder fortlaufend auf Event-Streams (Kafka docs: Introduction), und müssen bei einer Wiederholung eines Schritts dasselbe Ergebnis liefern (Airflow docs: Best practices).
+Eine Datenpipeline bringt Daten aus Quellen wie Datenbanken, Anwendungen und Sensoren in ein System, in dem sie gespeichert, transformiert und genutzt werden, etwa ein [[data-lakehouse|Data Warehouse]], einen Suchindex oder einen [[knowledge-graphs|Knowledge Graph]]. Pipelines transformieren entweder vor dem Laden (ETL) oder laden zuerst Rohdaten und transformieren sie im Warehouse (ELT) (dbt: ELT), laufen als geplante Batches, orchestriert als Task-Graphen (Airflow docs: Overview), oder fortlaufend auf Event-Streams (Kafka docs: Introduction), und müssen bei einer Wiederholung eines Schritts dasselbe Ergebnis liefern (Airflow docs: Best practices).
 
 ### Funktionsweise
 

@@ -1,0 +1,16 @@
+version: 1
+note_sha256: e51cb3d664262b9e13a6aa2dfe27cbd7a2f4c79b02696154c04a24ba16abad42
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- data-modelling
+- explainable-ai
+- frontend-development
+- knowledge-graphs
+- monitoring-and-alerting
+- principal-component-analysis
+- python
+- statistics-fundamentals
+- w3c
+- ben-shneiderman
+- hadley-wickham
+relations: []

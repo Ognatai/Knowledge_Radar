@@ -268,7 +268,7 @@ Article 3 defines key terms used throughout Regulation (EU) 2024/1689. These def
 
 **Paragraph 46** – Defines **law enforcement** as activities carried out by law enforcement authorities or on their behalf for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including safeguarding against and preventing threats to public security.
 
-**Paragraph 47** – Defines **AI Office** as the Commission’s function of contributing to the implementation, monitoring and supervision of AI systems and general-purpose AI models, and AI governance, provided for in Commission Decision of 24 January 2024; references in this Regulation to the AI Office shall be construed as references to the Commission.
+**Paragraph 47** – Defines **AI Office** as the Commission’s function of contributing to the implementation, monitoring and supervision of AI systems and general-purpose AI models, and [[responsible-ai|AI governance]], provided for in Commission Decision of 24 January 2024; references in this Regulation to the AI Office shall be construed as references to the Commission.
 
 **Paragraph 48** – Defines **national competent authority** as a notifying authority or a market surveillance authority; as regards AI systems put into service or used by Union institutions, agencies, offices and bodies, references to national competent authorities or market surveillance authorities in this Regulation shall be construed as references to the European Data Protection Supervisor.
 
@@ -537,7 +537,7 @@ The requirements in Article 9 apply to **Annex III systems** from **2 December 2
 
 ##### What is it about?
 
-Article 10 sets out requirements for the development of high-risk AI systems that rely on training data. It focuses on ensuring that the data used for training, validation, and testing meet specific quality criteria. The article also covers data governance practices and the need to address biases and data gaps. It applies to both AI systems that use training models and those that do not, though the latter are subject to limited requirements.
+Article 10 sets out requirements for the development of high-risk AI systems that rely on training data. It focuses on ensuring that the data used for training, validation, and testing meet specific quality criteria. The article also covers [[data-governance|data governance]] practices and the need to address biases and data gaps. It applies to both AI systems that use training models and those that do not, though the latter are subject to limited requirements.
 
 ##### What does the article require?
 
@@ -1933,7 +1933,7 @@ Artikel 3 definiert zahlreiche zentrale Begriffe, die für die Anwendung der Ver
 
 **Paragraph 46** – Der Begriff „Strafverfolgung“ bezeichnet Tätigkeiten der Strafverfolgungsbehörden oder in deren Auftrag zur Verhütung, Ermittlung, Aufdeckung oder Verfolgung von Straftaten oder zur Strafvollstreckung, einschließlich des Schutzes vor und der Abwehr von Gefahren für die öffentliche Sicherheit.
 
-**Paragraph 47** – Der Begriff „Büro für Künstliche Intelligenz“ bezeichnet die Aufgabe der Kommission, zur Umsetzung, Beobachtung und Überwachung von KI-Systemen und KI-Modellen mit allgemeinem Verwendungszweck und zu der im Beschluss der Kommission vom 24. Januar 2024 vorgesehenen KI-Governance beizutragen.
+**Paragraph 47** – Der Begriff „Büro für Künstliche Intelligenz“ bezeichnet die Aufgabe der Kommission, zur Umsetzung, Beobachtung und Überwachung von KI-Systemen und KI-Modellen mit allgemeinem Verwendungszweck und zu der im Beschluss der Kommission vom 24. Januar 2024 vorgesehenen [[responsible-ai|KI-Governance]] beizutragen.
 
 **Paragraph 48** – Der Begriff „zuständige nationale Behörde“ bezeichnet eine notifizierende Behörde oder eine Marktüberwachungsbehörde; in Bezug auf KI-Systeme, die von Organen, Einrichtungen und sonstigen Stellen der Union in Betrieb genommen oder verwendet werden, sind Bezugnahmen auf die zuständigen nationalen Behörden oder Marktüberwachungsbehörden in dieser Verordnung als Bezugnahmen auf den Europäischen Datenschutzbeauftragten auszulegen.
 
@@ -2228,7 +2228,7 @@ Der Artikel legt nicht fest, wie die Qualitätskriterien konkret gemessen oder b
 
 ##### Was könnte das in der Praxis bedeuten?
 
-**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:** Ein Anbieter oder Betreiber könnte beispielsweise eine umfassende Daten-Governance-Strategie entwickeln, die die Herkunft, Repräsentativität und Verzerrungsfreiheit der Daten sicherstellt. Dazu könnten Verfahren zur Datenaufbereitung, zur Erkennung von Verzerrungen und zur kontinuierlichen Überprüfung der Datenqualität gehören. Zudem könnte eine Analyse der spezifischen Rahmenbedingungen, unter denen das Hochrisiko-KI-System eingesetzt wird, durchgeführt werden, um sicherzustellen, dass die Datensätze entsprechend angepasst sind.
+**Mögliche Umsetzung – keine gesetzlich vorgeschriebene Checkliste:** Ein Anbieter oder Betreiber könnte beispielsweise eine umfassende Daten-Governance-Strategie entwickeln, die die Herkunft, Repräsentativität und Verzerrungsfreiheit der Daten sicherstellt. Dazu könnten Verfahren zur Datenaufbereitung, zur Erkennung von Verzerrungen und zur kontinuierlichen Überprüfung der [[data-governance|Datenqualität]] gehören. Zudem könnte eine Analyse der spezifischen Rahmenbedingungen, unter denen das Hochrisiko-KI-System eingesetzt wird, durchgeführt werden, um sicherzustellen, dass die Datensätze entsprechend angepasst sind.
 
 ##### Ab wann gilt der Artikel?
 

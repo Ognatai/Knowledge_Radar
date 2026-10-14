@@ -1,0 +1,19 @@
+version: 1
+note_sha256: b8f57cf0fe23c7f98e280f1cc080f54a277fc5cb247394aa4ed8a5c8d5defc56
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- agentic-ai
+- data-modelling
+- knowledge-graphs
+- ontology-design
+- software-testing
+- technical-debt
+- kent-beck
+- eric-evans
+- martin-fowler
+relations:
+- from: requirements-engineering
+  type: COMPLEMENTS
+  to: software-testing
+  evidence: testability links requirements to acceptance tests

@@ -41,7 +41,7 @@ To relate images and text, both must be represented in comparable vectors ([[emb
 
 #### 2. Contrastive learning with CLIP
 
-Radford et al. (2021) trained image and text encoders on 400 million image-text pairs collected from the internet with the simple task of predicting which caption goes with which image. Afterwards, natural language can name visual concepts, which allows zero-shot transfer: the model was benchmarked on over 30 computer vision datasets, was often competitive with fully supervised baselines without dataset-specific training, and matched the accuracy of the original ResNet-50 on ImageNet zero-shot without using any of its 1.28 million training examples.
+Radford et al. (2021) trained image and text encoders on 400 million image-text pairs collected from the internet with the simple task of predicting which caption goes with which image. Afterwards, natural language can name visual concepts, which allows zero-shot transfer: the model was benchmarked on over 30 [[computer-vision|computer vision]] datasets, was often competitive with fully supervised baselines without dataset-specific training, and matched the accuracy of the original ResNet-50 on ImageNet zero-shot without using any of its 1.28 million training examples.
 
 #### 3. Connecting vision encoders to language models
 
@@ -133,7 +133,7 @@ Um Bilder und Text aufeinander zu beziehen, müssen beide in vergleichbaren Vekt
 
 #### 2. Kontrastives Lernen mit CLIP
 
-Radford et al. (2021) trainierten Bild- und Text-Encoder auf 400 Millionen Bild-Text-Paaren aus dem Internet mit der einfachen Aufgabe vorherzusagen, welche Bildunterschrift zu welchem Bild gehört. Danach lassen sich visuelle Konzepte in natürlicher Sprache benennen, was Zero-Shot-Transfer erlaubt: Das Modell wurde auf über 30 Datensätzen der Bildverarbeitung getestet, war ohne datensatzspezifisches Training oft mit vollständig überwachten Baselines konkurrenzfähig und erreichte auf ImageNet zero-shot die Genauigkeit des ursprünglichen ResNet-50, ohne eines von dessen 1,28 Millionen Trainingsbeispielen zu nutzen.
+Radford et al. (2021) trainierten Bild- und Text-Encoder auf 400 Millionen Bild-Text-Paaren aus dem Internet mit der einfachen Aufgabe vorherzusagen, welche Bildunterschrift zu welchem Bild gehört. Danach lassen sich visuelle Konzepte in natürlicher Sprache benennen, was Zero-Shot-Transfer erlaubt: Das Modell wurde auf über 30 Datensätzen der [[computer-vision|Bildverarbeitung]] getestet, war ohne datensatzspezifisches Training oft mit vollständig überwachten Baselines konkurrenzfähig und erreichte auf ImageNet zero-shot die Genauigkeit des ursprünglichen ResNet-50, ohne eines von dessen 1,28 Millionen Trainingsbeispielen zu nutzen.
 
 #### 3. Bild-Encoder mit Sprachmodellen verbinden
 

@@ -1,0 +1,38 @@
+version: 1
+note_sha256: 6ce97d93d5962321825c3b48ba82f38e26201240f5750de0e81fc389ea47006b
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- docker
+- feature-engineering
+- git
+- infrastructure-as-code
+- llm-evaluation
+- ml-pipelines
+- mlops-and-deployment
+- monitoring-and-alerting
+- regression-testing
+- software-testing
+- kent-beck
+- martin-fowler
+- github-actions
+- azure-pipelines
+- dora-metrics
+- devops
+- github
+relations:
+- from: ci-cd
+  type: DEVELOPED_BY
+  to: kent-beck
+  evidence: kent beck developed ci in the 1990s as part of extreme programming
+- from: github-actions
+  type: IMPLEMENTS
+  to: ci-cd
+  evidence: platforms such as github actions and azure pipelines run these steps as yaml-defined pipelines
+- from: azure-pipelines
+  type: IMPLEMENTS
+  to: ci-cd
+  evidence: platforms such as github actions and azure pipelines run these steps as yaml-defined pipelines
+- from: dora-metrics
+  type: EVALUATES
+  to: ci-cd
+  evidence: dora measures delivery performance with five metrics

@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Knowledge graph engineering is the practice of building and operating [[knowledge-graphs|knowledge graphs]] as reliable data products: pipelines create and enrich the graph, entity resolution merges duplicate descriptions, validation checks the data against shapes, refinement completes and corrects it, and provenance records where each fact came from (Hogan et al., 2020). Key tools are SHACL for validation ([[w3c|W3C]] SHACL), entity resolution workflows (Christophides et al., 2019), quality dimensions and metrics (Zaveri et al., 2016) and PROV-O for provenance (W3C PROV-O).
+Knowledge graph engineering is the practice of building and operating [[knowledge-graphs|knowledge graphs]] as reliable [[data-governance|data products]]: pipelines create and enrich the graph, entity resolution merges duplicate descriptions, validation checks the data against shapes, refinement completes and corrects it, and provenance records where each fact came from (Hogan et al., 2020). Key tools are SHACL for validation ([[w3c|W3C]] SHACL), entity resolution workflows (Christophides et al., 2019), quality dimensions and metrics (Zaveri et al., 2016) and PROV-O for provenance (W3C PROV-O).
 
 ### How it works
 
@@ -94,7 +94,7 @@ Hogan et al. (2020) frame the knowledge graph life cycle; entity resolution (Chr
 
 ### In practice
 
-Graph pipelines are versioned, tested and monitored like other data and ML pipelines ([[mlops-and-deployment|MLOps and Deployment]]): SHACL validation and quality metrics run after each update, and failures block publication (W3C SHACL; Zaveri et al., 2016). Incremental updates are preferred for large graphs, with a full rebuild when the schema changes.
+Graph pipelines are versioned, tested and monitored like other data and [[ml-pipelines|ML pipelines]] ([[mlops-and-deployment|MLOps and Deployment]]): SHACL validation and quality metrics run after each update, and failures block publication (W3C SHACL; Zaveri et al., 2016). Incremental updates are preferred for large graphs, with a full rebuild when the schema changes.
 
 ### Key takeaway
 
@@ -141,7 +141,7 @@ Hogan et al. (2020) fassen den Lebenszyklus von Knowledge Graphs zusammen: Aufba
 
 #### 2. Entity Resolution
 
-Entity Resolution erkennt unterschiedliche Beschreibungen, die sich auf dieselbe reale Entität beziehen, und ist eine der wichtigsten Aufgaben für die Datenqualität (Christophides et al., 2019). Moderne Workflows verarbeiten locker strukturierte, vielfältige, sich schnell ändernde und große Sammlungen von Entitätsbeschreibungen mit Blocking oder Indexierung, die die Kandidatenpaare begrenzen, gefolgt von Abgleich und [[clustering|Clustering]]; Datenbank-, Semantic-Web- und Machine-Learning-Community haben dafür unterschiedliche Verfahren vorgeschlagen.
+Entity Resolution erkennt unterschiedliche Beschreibungen, die sich auf dieselbe reale Entität beziehen, und ist eine der wichtigsten Aufgaben für die [[data-governance|Datenqualität]] (Christophides et al., 2019). Moderne Workflows verarbeiten locker strukturierte, vielfältige, sich schnell ändernde und große Sammlungen von Entitätsbeschreibungen mit Blocking oder Indexierung, die die Kandidatenpaare begrenzen, gefolgt von Abgleich und [[clustering|Clustering]]; Datenbank-, Semantic-Web- und Machine-Learning-Community haben dafür unterschiedliche Verfahren vorgeschlagen.
 
 #### 3. Validierung mit Shapes
 
@@ -192,7 +192,7 @@ Hogan et al. (2020) beschreiben den Lebenszyklus von Knowledge Graphs; Entity Re
 
 ### In der Praxis
 
-Graph-Pipelines werden wie andere Daten- und ML-Pipelines versioniert, getestet und überwacht ([[mlops-and-deployment|MLOps und Deployment]]): SHACL-Validierung und Qualitätsmetriken laufen nach jeder Aktualisierung, und Fehlschläge blockieren die Veröffentlichung (W3C SHACL; Zaveri et al., 2016). Bei großen Graphen werden inkrementelle Aktualisierungen bevorzugt, ein vollständiger Neuaufbau erfolgt bei Schemaänderungen.
+Graph-Pipelines werden wie andere Daten- und [[ml-pipelines|ML-Pipelines]] versioniert, getestet und überwacht ([[mlops-and-deployment|MLOps und Deployment]]): SHACL-Validierung und Qualitätsmetriken laufen nach jeder Aktualisierung, und Fehlschläge blockieren die Veröffentlichung (W3C SHACL; Zaveri et al., 2016). Bei großen Graphen werden inkrementelle Aktualisierungen bevorzugt, ein vollständiger Neuaufbau erfolgt bei Schemaänderungen.
 
 ### Merksatz
 

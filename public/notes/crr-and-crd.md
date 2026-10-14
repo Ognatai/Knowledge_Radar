@@ -153,7 +153,7 @@ Sets the own funds requirement for operational risk as the business indicator co
 
 #### Articles 316–323 — Data collection and governance
 
-Lays down requirements for operational risk loss data, such as loss data sets, thresholds and data quality, and requires an operational risk management framework.
+Lays down requirements for operational risk loss data, such as loss data sets, thresholds and [[data-governance|data quality]], and requires an operational risk management framework.
 
 **Title IV — Own funds requirements for market risk**
 
@@ -1332,7 +1332,7 @@ Legt die Eigenmittelanforderung für das operationelle Risiko als Geschäftsindi
 
 #### Artikel 316–323 – Datenerhebung und -governance
 
-Legt Anforderungen an Verlustdaten aus operationellen Risiken fest, etwa Verlustdatensatz, Schwellenwerte und Datenqualität, und verlangt einen Rahmen für die Steuerung operationeller Risiken.
+Legt Anforderungen an Verlustdaten aus operationellen Risiken fest, etwa Verlustdatensatz, Schwellenwerte und [[data-governance|Datenqualität]], und verlangt einen Rahmen für die Steuerung operationeller Risiken.
 
 **Titel IV – Eigenmittelanforderungen für das Marktrisiko**
 

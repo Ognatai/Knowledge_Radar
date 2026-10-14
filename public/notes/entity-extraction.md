@@ -95,7 +95,7 @@ CoNLL-2003 (Tjong Kim Sang & De Meulder, 2003) set a common benchmark. Neural ar
 
 ### In practice
 
-Systems are evaluated with precision, recall and F1 on exact entity matches (Tjong Kim Sang & De Meulder, 2003), ideally on data from the target domain, since performance on a benchmark does not transfer automatically to specialised texts. When LLMs are used, a verification step against the label definitions reduces false positives (Wang et al., 2023). The entity types themselves should follow the domain model, for example an ontology ([[ontology-design|Ontology Design]]), so that extracted entities can be linked and stored consistently ([[knowledge-graphs|Knowledge Graphs]]).
+Systems are evaluated with precision, recall and F1 on exact entity matches (Tjong Kim Sang & De Meulder, 2003), ideally on data from the target domain, since performance on a benchmark does not transfer automatically to specialised texts. When LLMs are used, a verification step against the label definitions reduces false positives (Wang et al., 2023). The entity types themselves should follow the [[requirements-engineering|domain model]], for example an ontology ([[ontology-design|Ontology Design]]), so that extracted entities can be linked and stored consistently ([[knowledge-graphs|Knowledge Graphs]]).
 
 ### Key takeaway
 

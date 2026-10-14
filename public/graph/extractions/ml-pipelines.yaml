@@ -1,0 +1,32 @@
+version: 1
+note_sha256: c8ef12939e9dfb656db1540a211a951956e09d7dd80177a9a42babc75d921001
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- ci-cd
+- cloud-ai-platforms
+- data-lakehouse
+- data-pipelines
+- experiment-tracking
+- kubernetes
+- mlops-and-deployment
+- monitoring-and-alerting
+- python
+- software-testing
+- zenml
+- kubeflow-pipelines
+- mlflow
+- model-registry
+- apache-airflow
+relations:
+- from: zenml
+  type: IMPLEMENTS
+  to: ml-pipelines
+  evidence: orchestration frameworks such as zenml and kubeflow pipelines define pipelines as python code
+- from: kubeflow-pipelines
+  type: IMPLEMENTS
+  to: ml-pipelines
+  evidence: orchestration frameworks such as zenml and kubeflow pipelines define pipelines as python code
+- from: ml-pipelines
+  type: BASED_ON
+  to: model-registry
+  evidence: a model registry such as mlflow's holds the resulting model versions

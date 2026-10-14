@@ -61,7 +61,7 @@ change to prompt / model / retriever / chunking
    → no regression: deploy   |   regression: analyse cause, adjust change
 ```
 
-As in CI/CD pipelines, the regression run is a precondition for deployment, not an optional check afterwards ([[mlops-and-deployment|MLOps and Deployment]]). The ML Test Score likewise lists tests against a simpler baseline, quality checks on important data slices, canary tests before serving and the ability to roll back serving models (Breck et al., 2017).
+As in [[ci-cd|CI/CD]] pipelines, the regression run is a precondition for deployment, not an optional check afterwards ([[mlops-and-deployment|MLOps and Deployment]]). The ML Test Score likewise lists tests against a simpler baseline, quality checks on important data slices, canary tests before serving and the ability to roll back serving models (Breck et al., 2017).
 
 #### Origin and variants
 

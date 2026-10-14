@@ -1,0 +1,40 @@
+version: 1
+note_sha256: bff1d9e18c94c3eeae2df75d0e5a9204e06d0c2a508dedf697a27aae4c39ef87
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- computer-vision
+- contract-intelligence
+- entity-extraction
+- information-extraction
+- legal-ai
+- multimodal-models
+- rag-chunking
+- rag-failure-modes
+- retrieval-augmented-generation
+- tesseract
+- layoutlm
+- donut
+- docling
+- doclaynet
+relations:
+- from: tesseract
+  type: IMPLEMENTS
+  to: document-processing
+  evidence: the classic pipeline runs optical character recognition (ocr) with engines such as tesseract
+- from: doclaynet
+  type: EVALUATES
+  to: document-processing
+  evidence: object-detection models trained on datasets like doclaynet
+- from: layoutlm
+  type: IS_EXAMPLE_OF
+  to: document-processing
+  evidence: models that combine text and layout, such as layoutlm
+- from: donut
+  type: IS_EXAMPLE_OF
+  to: document-processing
+  evidence: ocr-free models such as donut read the document image directly
+- from: docling
+  type: IMPLEMENTS
+  to: document-processing
+  evidence: open-source converters such as docling bundle layout analysis and table-structure recognition

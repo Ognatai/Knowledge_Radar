@@ -36,7 +36,7 @@ Harness engineering is the design of everything around a language model that tur
 - **Instruction files and prompts:** system prompts, AGENTS.md or CLAUDE.md files, skill files and subagent prompts (Osmani, 2026a; [[agent-skills|Agent Skills]]).
 - **Tool definitions:** which tools exist and how their interfaces look; an unclear or overly broad tool definition is a harness weakness, not a prompt weakness. Tool documentation and testing form the agent-computer interface (Anthropic, 2024a).
 - **Permissions:** least privilege, so that an agent can only use the tools and data its task requires.
-- **Sandboxing:** code execution and file access run in an isolated environment; extensive testing in sandboxed environments with guardrails is recommended for agents (Anthropic, 2024a).
+- **Sandboxing:** code execution and file access run in an isolated environment; extensive testing in sandboxed environments with [[llm-guardrails-and-red-teaming|guardrails]] is recommended for agents (Anthropic, 2024a).
 - **Context assembly:** what enters the context in each iteration, such as earlier tool results, summaries and relevant files ([[context-engineering|Context Engineering]]).
 - **Output validation:** model outputs are checked against a schema before they are executed as actions.
 - **Hooks and middleware:** deterministic steps such as compaction, continuation or lint checks (Osmani, 2026a).
@@ -143,7 +143,7 @@ Harness Engineering ist die Gestaltung von allem rund um ein Sprachmodell, das e
 - **Anweisungsdateien und Prompts:** Systemprompts, AGENTS.md- oder CLAUDE.md-Dateien, Skill-Dateien und Prompts für Sub-Agenten (Osmani, 2026a; [[agent-skills|Agent Skills]]).
 - **Werkzeugdefinitionen:** welche Werkzeuge es gibt und wie ihre Schnittstellen aussehen; eine unklare oder zu weit gefasste Werkzeugdefinition ist eine Schwäche des Harness, nicht des Prompts. Dokumentation und Tests der Werkzeuge bilden die Schnittstelle zwischen Agent und Computer (Anthropic, 2024a).
 - **Berechtigungen:** Least Privilege, sodass ein Agent nur die Werkzeuge und Daten nutzen kann, die seine Aufgabe erfordert.
-- **Sandboxing:** Codeausführung und Dateizugriffe laufen in einer isolierten Umgebung; für Agenten werden ausführliche Tests in Sandbox-Umgebungen mit Guardrails empfohlen (Anthropic, 2024a).
+- **Sandboxing:** Codeausführung und Dateizugriffe laufen in einer isolierten Umgebung; für Agenten werden ausführliche Tests in Sandbox-Umgebungen mit [[llm-guardrails-and-red-teaming|Guardrails]] empfohlen (Anthropic, 2024a).
 - **Kontextaufbau:** was in jeder Iteration in den Kontext gelangt, etwa frühere Werkzeugergebnisse, Zusammenfassungen und relevante Dateien ([[context-engineering|Context Engineering]]).
 - **Ausgabevalidierung:** Modellausgaben werden gegen ein Schema geprüft, bevor sie als Aktion ausgeführt werden.
 - **Hooks und Middleware:** deterministische Schritte wie Kompaktierung, Fortsetzung oder Lint-Prüfungen (Osmani, 2026a).

@@ -57,7 +57,7 @@ Conversation flows visualise the order of intents customers take, with the share
 
 #### 6. Operational signals
 
-Dashboards add total conversations, average duration and average turns per conversation (Amazon Lex: Conversation dashboard), and webhook calls, failures, timeout rate and average latency for back-end calls (Dialogflow CX: Analytics). For tracing of LLM-based agents, see [[llm-observability-and-tracing|LLM Observability and Tracing]].
+[[data-visualisation|Dashboards]] add total conversations, average duration and average turns per conversation (Amazon Lex: Conversation dashboard), and webhook calls, failures, timeout rate and average latency for back-end calls (Dialogflow CX: Analytics). For tracing of LLM-based agents, see [[llm-observability-and-tracing|LLM Observability and Tracing]].
 
 ### When to use it
 
@@ -145,7 +145,7 @@ Conversation Flows zeigen die Reihenfolge der Intents, die Kunden durchlaufen, m
 
 #### 6. Betriebliche Signale
 
-Dashboards ergänzen die Gesamtzahl der Gespräche, die durchschnittliche Dauer und die durchschnittliche Zahl der Turns pro Gespräch (Amazon Lex: Conversation dashboard) sowie Aufrufe, Fehler, Timeout-Rate und durchschnittliche Latenz von [[asynchronous-apis|Webhooks]] für Backend-Aufrufe (Dialogflow CX: Analytics). Zum Tracing LLM-basierter Agenten siehe [[llm-observability-and-tracing|LLM Observability and Tracing]].
+[[data-visualisation|Dashboards]] ergänzen die Gesamtzahl der Gespräche, die durchschnittliche Dauer und die durchschnittliche Zahl der Turns pro Gespräch (Amazon Lex: Conversation dashboard) sowie Aufrufe, Fehler, Timeout-Rate und durchschnittliche Latenz von [[asynchronous-apis|Webhooks]] für Backend-Aufrufe (Dialogflow CX: Analytics). Zum Tracing LLM-basierter Agenten siehe [[llm-observability-and-tracing|LLM Observability and Tracing]].
 
 ### Wann einsetzen
 

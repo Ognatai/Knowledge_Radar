@@ -33,7 +33,7 @@ Training solves an optimisation problem that places the boundary as far as possi
 
 #### 1. Maximum margin
 
-Boser et al. (1992) presented a training algorithm that maximises the margin between the training patterns and the decision boundary. The solution is a linear combination of supporting patterns, the subset of training patterns closest to the boundary; all other training points do not influence it. The algorithm applies to a wide variety of classification functions, including perceptrons, polynomials and radial basis functions, and generalised well on optical character recognition.
+Boser et al. (1992) presented a training algorithm that maximises the margin between the training patterns and the decision boundary. The solution is a linear combination of supporting patterns, the subset of training patterns closest to the boundary; all other training points do not influence it. The algorithm applies to a wide variety of classification functions, including perceptrons, polynomials and radial basis functions, and generalised well on [[document-processing|optical character recognition]].
 
 #### 2. Soft margin
 

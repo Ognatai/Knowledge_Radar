@@ -1,6 +1,7 @@
 # Entities without a note of their own. Every public note already describes one
 # entity, whose id is the note's slug; those are not listed here. An entity
-# gets its own note once more than 3 notes discuss it.
+# gets its own note once 3 or more notes discuss it, and a short sourced text
+# before that.
 # Fields: id (lowercase ASCII slug), type (public entity type from schema.yaml),
 # name_en, name_de, aliases (optional; replaces the former synonyms.yaml).
 version: 1
@@ -2685,10 +2686,6 @@ entities:
   name_de: Neo4j Graph Data Science (GDS)
   aliases:
   - GDS
-- id: mapreduce
-  type: Method
-  name_en: MapReduce
-  name_de: MapReduce
 - id: singular-value-decomposition
   type: Method
   name_en: Singular value decomposition (SVD)
@@ -2851,3 +2848,147 @@ entities:
   type: Person
   name_en: Martin Fowler
   name_de: Martin Fowler
+- id: kent-beck
+  type: Person
+  name_en: Kent Beck
+  name_de: Kent Beck
+- id: github-actions
+  type: Technology
+  name_en: GitHub Actions
+  name_de: GitHub Actions
+- id: azure-pipelines
+  type: Technology
+  name_en: Azure Pipelines
+  name_de: Azure Pipelines
+  aliases:
+  - Azure DevOps Pipelines
+- id: dora-metrics
+  type: Method
+  name_en: DORA metrics
+  name_de: DORA-Metriken
+  aliases:
+  - DORA software delivery metrics
+- id: terraform
+  type: Technology
+  name_en: Terraform
+  name_de: Terraform
+- id: zenml
+  type: Technology
+  name_en: ZenML
+  name_de: ZenML
+- id: kubeflow-pipelines
+  type: Technology
+  name_en: Kubeflow Pipelines
+  name_de: Kubeflow Pipelines
+  aliases:
+  - Kubeflow
+- id: databricks
+  type: Organisation
+  name_en: Databricks
+  name_de: Databricks
+- id: unity-catalog
+  type: Technology
+  name_en: Unity Catalog
+  name_de: Unity Catalog
+- id: openlineage
+  type: Technology
+  name_en: OpenLineage
+  name_de: OpenLineage
+- id: matei-zaharia
+  type: Person
+  name_en: Matei Zaharia
+  name_de: Matei Zaharia
+- id: jeffrey-dean
+  type: Person
+  name_en: Jeffrey Dean
+  name_de: Jeffrey Dean
+  aliases:
+  - Jeff Dean
+- id: sanjay-ghemawat
+  type: Person
+  name_en: Sanjay Ghemawat
+  name_de: Sanjay Ghemawat
+- id: tesseract
+  type: Technology
+  name_en: Tesseract
+  name_de: Tesseract
+  aliases:
+  - Tesseract OCR
+- id: layoutlm
+  type: Method
+  name_en: LayoutLM
+  name_de: LayoutLM
+- id: donut
+  type: Method
+  name_en: Donut
+  name_de: Donut
+  aliases:
+  - Document understanding transformer
+- id: docling
+  type: Technology
+  name_en: Docling
+  name_de: Docling
+- id: doclaynet
+  type: Dataset
+  name_en: DocLayNet
+  name_de: DocLayNet
+- id: yolo
+  type: Method
+  name_en: YOLO
+  name_de: YOLO
+  aliases:
+  - You Only Look Once
+- id: mask-r-cnn
+  type: Method
+  name_en: Mask R-CNN
+  name_de: Mask R-CNN
+- id: u-net
+  type: Method
+  name_en: U-Net
+  name_de: U-Net
+- id: nist
+  type: Organisation
+  name_en: NIST
+  name_de: NIST
+  aliases:
+  - National Institute of Standards and Technology
+- id: edgar-f-codd
+  type: Person
+  name_en: Edgar F. Codd
+  name_de: Edgar F. Codd
+  aliases:
+  - E. F. Codd
+- id: ralph-kimball
+  type: Person
+  name_en: Ralph Kimball
+  name_de: Ralph Kimball
+- id: bigquery
+  type: Technology
+  name_en: BigQuery
+  name_de: BigQuery
+  aliases:
+  - Google BigQuery
+- id: isaca
+  type: Organisation
+  name_en: ISACA
+  name_de: ISACA
+- id: eric-evans
+  type: Person
+  name_en: Eric Evans
+  name_de: Eric Evans
+- id: ben-shneiderman
+  type: Person
+  name_en: Ben Shneiderman
+  name_de: Ben Shneiderman
+- id: hadley-wickham
+  type: Person
+  name_en: Hadley Wickham
+  name_de: Hadley Wickham
+- id: llama-guard
+  type: Method
+  name_en: Llama Guard
+  name_de: Llama Guard
+- id: nemo-guardrails
+  type: Technology
+  name_en: NeMo Guardrails
+  name_de: NeMo Guardrails

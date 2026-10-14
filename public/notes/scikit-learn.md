@@ -140,7 +140,7 @@ Weil der Scaler Teil der Pipeline ist, wird er nur auf den Trainings-Folds angep
 - Eine einheitliche Schnittstelle für alle Algorithmen; Modelle lassen sich austauschen, ohne den umgebenden Code zu ändern (Buitinck et al., 2013).
 - Pipelines und Meta-Estimators machen ganze Abläufe einschließlich Abstimmung zu einem Objekt (Buitinck et al., 2013).
 - Schwerpunkt auf Bedienbarkeit, Leistung, Dokumentation und API-Konsistenz; wenige Abhängigkeiten und eine BSD-Lizenz, die akademische und kommerzielle Nutzung erlaubt (Pedregosa et al., 2011).
-- Codequalität wird mit Unit-Tests und Stilrichtlinien gesichert (Pedregosa et al., 2011; Buitinck et al., 2013).
+- Codequalität wird mit [[software-testing|Unit-Tests]] und Stilrichtlinien gesichert (Pedregosa et al., 2011; Buitinck et al., 2013).
 
 **Grenzen**
 - 2013 nannten die Autoren [[neural-networks|neuronale Netze]], Bagging- und Subsampling-Ensembles sowie das Auffüllen fehlender Werte als noch nicht unterstützt; strukturierte Vorhersage und Reinforcement Learning lagen außerhalb des Projektumfangs, weil sie andere Datenrepräsentationen und APIs erfordern (Buitinck et al., 2013). Für Deep Learning werden Frameworks wie [[keras-and-tensorflow|Keras und TensorFlow]] verwendet.

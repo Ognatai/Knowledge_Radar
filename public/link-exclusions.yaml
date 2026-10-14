@@ -44,3 +44,7 @@ exclusions:
     graph-databases: knowledge graph technologies in general, not graph databases.
   llm-adaptation:
     natural-language-inference: RTE names a benchmark data set in a list of FLAN results.
+  ci-cd:
+    dora: the DORA research programme on software delivery, not the Digital Operational Resilience Act.
+  responsible-ai:
+    classification: risk classification of AI systems, not the ML task.

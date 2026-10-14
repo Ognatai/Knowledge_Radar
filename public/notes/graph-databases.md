@@ -91,7 +91,7 @@ Graph database models date back to the 1980s (Angles & Gutierrez, 2008). Propert
 
 ### In practice
 
-A simple legal knowledge graph in Cypher might create nodes for norms and decisions and connect them: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|GDPR]]"}), and later query MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 GDPR"}) RETURN d (Neo4j Cypher Manual). Data modelling starts from the queries the graph must answer ([[ontology-design|Ontology Design]]).
+A simple legal knowledge graph in Cypher might create nodes for norms and decisions and connect them: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|GDPR]]"}), and later query MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 GDPR"}) RETURN d (Neo4j Cypher Manual). [[data-modelling|Data modelling]] starts from the queries the graph must answer ([[ontology-design|Ontology Design]]).
 
 ### Key takeaway
 
@@ -182,7 +182,7 @@ Graphdatenbankmodelle reichen bis in die 1980er-Jahre zurück (Angles & Gutierre
 
 ### In der Praxis
 
-Ein einfacher juristischer Knowledge Graph in Cypher könnte Knoten für Normen und Entscheidungen anlegen und verbinden: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|DSGVO]]"}), und später abfragen: MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}) RETURN d (Neo4j Cypher Manual). Die Datenmodellierung beginnt mit den Abfragen, die der Graph beantworten soll ([[ontology-design|Ontologie-Design]]).
+Ein einfacher juristischer Knowledge Graph in Cypher könnte Knoten für Normen und Entscheidungen anlegen und verbinden: CREATE (d:Decision {id: "X"})-[:CITES]->(n:Norm {id: "Art. 6 [[gdpr|DSGVO]]"}), und später abfragen: MATCH (d:Decision)-[:CITES]->(n:Norm {id: "Art. 6 DSGVO"}) RETURN d (Neo4j Cypher Manual). Die [[data-modelling|Datenmodellierung]] beginnt mit den Abfragen, die der Graph beantworten soll ([[ontology-design|Ontologie-Design]]).
 
 ### Merksatz
 

@@ -1,0 +1,20 @@
+version: 1
+note_sha256: 29c059de9103003d7cb980707acc5a89c1d452481bf47608d4246b822342cd43
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bsig
+- cloud-ai-platforms
+- dora
+- eba-governance-and-outsourcing-guidelines
+- information-security-in-banking
+- kritis-dachgesetz
+- marisk
+- nis2-directive
+- responsible-ai
+- isaca
+- bsi
+relations:
+- from: it-governance-frameworks
+  type: COMPLEMENTS
+  to: dora
+  evidence: in banks and insurers, these frameworks are used to meet supervisory requirements such as marisk and dora
