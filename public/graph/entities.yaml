@@ -2693,10 +2693,6 @@ entities:
   type: Person
   name_en: Ward Cunningham
   name_de: Ward Cunningham
-- id: martin-fowler
-  type: Person
-  name_en: Martin Fowler
-  name_de: Martin Fowler
 - id: kent-beck
   type: Person
   name_en: Kent Beck
@@ -2893,3 +2889,9 @@ entities:
   aliases:
   - Directive (EU) 2023/2225
   - CCD2
+- id: thoughtworks
+  type: Organisation
+  name_en: Thoughtworks
+  name_de: Thoughtworks
+  aliases:
+  - ThoughtWorks

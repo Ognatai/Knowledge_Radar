@@ -1,0 +1,14 @@
+version: 1
+note_sha256: 57ea654346823330628b6b6ba90dd7015eada0718be942da56937346c57c341e
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- ci-cd
+- context-engineering
+- infrastructure-as-code
+- requirements-engineering
+- software-testing
+- technical-debt
+- thoughtworks
+- kent-beck
+- refactoring
+relations: []
