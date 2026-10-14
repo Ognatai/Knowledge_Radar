@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 985f9b22711b48cdb5f9e6d39b6c81b8f5a1ef3de2b97c24c4cfec283682489e
+note_sha256: 039d214c8594f1d72e152766591c65ab0fb3b2b4ec1febeb6ef2ef863bb97b4e
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - tkg

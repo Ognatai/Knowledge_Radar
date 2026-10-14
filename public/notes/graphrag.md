@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-GraphRAG extends retrieval-augmented generation ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) with graph structure: entities and relations are extracted into a knowledge graph, and retrieval follows the graph instead of only matching text chunks (Peng et al., 2024). Microsoft's GraphRAG builds an entity graph with an LLM and pregenerates summaries of communities of related entities, which answers global questions about a whole corpus much better than conventional RAG (Edge et al., 2024). Other approaches use graphs for multi-hop retrieval (Gutiérrez et al., 2024) or combine graph and vector retrieval (Guo et al., 2024).
+GraphRAG extends retrieval-augmented generation ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) with graph structure: entities and relations are extracted into a knowledge graph, and retrieval follows the graph instead of only matching text chunks (Peng et al., 2024). [[microsoft|Microsoft]]'s GraphRAG builds an entity graph with an LLM and pregenerates summaries of communities of related entities, which answers global questions about a whole corpus much better than conventional RAG (Edge et al., 2024). Other approaches use graphs for multi-hop retrieval (Gutiérrez et al., 2024) or combine graph and vector retrieval (Guo et al., 2024).
 
 ### How it works
 
@@ -121,7 +121,7 @@ EAT tackles the cost and the spurious reasoning paths of tightly coupled LLM–g
 
 ### TL;DR
 
-GraphRAG erweitert Retrieval-Augmented Generation ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) um Graphstruktur: Entitäten und Beziehungen werden in einen [[knowledge-graphs|Knowledge Graph]] extrahiert, und das Retrieval folgt dem Graphen, statt nur Textabschnitte abzugleichen (Peng et al., 2024). GraphRAG von Microsoft baut mit einem LLM einen Entitätengraphen auf und erzeugt vorab Zusammenfassungen von Gemeinschaften verwandter Entitäten; damit beantwortet es globale Fragen über ein ganzes Korpus deutlich besser als herkömmliches RAG (Edge et al., 2024). Andere Ansätze nutzen Graphen für Multi-Hop-Retrieval (Gutiérrez et al., 2024) oder kombinieren Graph- und Vektor-Retrieval (Guo et al., 2024).
+GraphRAG erweitert Retrieval-Augmented Generation ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]) um Graphstruktur: Entitäten und Beziehungen werden in einen [[knowledge-graphs|Knowledge Graph]] extrahiert, und das Retrieval folgt dem Graphen, statt nur Textabschnitte abzugleichen (Peng et al., 2024). GraphRAG von [[microsoft|Microsoft]] baut mit einem LLM einen Entitätengraphen auf und erzeugt vorab Zusammenfassungen von Gemeinschaften verwandter Entitäten; damit beantwortet es globale Fragen über ein ganzes Korpus deutlich besser als herkömmliches RAG (Edge et al., 2024). Andere Ansätze nutzen Graphen für Multi-Hop-Retrieval (Gutiérrez et al., 2024) oder kombinieren Graph- und Vektor-Retrieval (Guo et al., 2024).
 
 ### Funktionsweise
 

@@ -18,10 +18,6 @@ entities:
     type: Method
     name_en: IRCoT
     name_de: IRCoT
-  - id: microsoft
-    type: Organisation
-    name_en: Microsoft
-    name_de: Microsoft
   - id: trade-secret
     type: Concept
     name_en: Trade secret
@@ -118,10 +114,6 @@ entities:
     type: Method
     name_en: Reflexion
     name_de: Reflexion
-  - id: anthropic
-    type: Organisation
-    name_en: Anthropic
-    name_de: Anthropic
   - id: json-rpc
     type: Technology
     name_en: JSON-RPC
@@ -204,20 +196,11 @@ entities:
     name_en: Federal Commissioner for Data Protection and Freedom of Information (BfDI)
     name_de: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
     aliases: [BfDI]
-  - id: federal-network-agency
-    type: Organisation
-    name_en: Federal Network Agency
-    name_de: Bundesnetzagentur
   - id: digitale-dienste-gesetz
     type: Regulation
     name_en: Digital Services Act implementation law (Digitale-Dienste-Gesetz, DDG)
     name_de: Digitale-Dienste-Gesetz (DDG)
     aliases: [DDG]
-  - id: tkg
-    type: Regulation
-    name_en: Telecommunications Act (TKG)
-    name_de: Telekommunikationsgesetz (TKG)
-    aliases: [TKG]
   - id: e-evidence-regulation
     type: Regulation
     name_en: Regulation (EU) 2023/1543 on European production and preservation orders
@@ -227,10 +210,6 @@ entities:
     type: Regulation
     name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
     name_de: Einwilligungsverwaltungsverordnung (EinwV)
-  - id: federal-ministry-of-the-interior
-    type: Organisation
-    name_en: Federal Ministry of the Interior
-    name_de: Bundesministerium des Innern
   - id: mt-bench
     type: Dataset
     name_en: MT-bench

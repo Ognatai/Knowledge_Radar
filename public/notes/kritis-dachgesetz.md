@@ -35,12 +35,12 @@ The KRITIS Umbrella Act (KRITIS-Dachgesetz, KRITISDachG) is Germany's cross-sect
 | Signed | 11 March 2026 |
 | Entry into force | 17 March 2026; § 14(3) to (5) on 1 January 2030 |
 | Single point of contact | Federal Office of Civil Protection and Disaster Assistance (BBK) (§ 3(1)) |
-| Competent authorities | Sector authorities, among them the Federal Network Agency, the BSI and [[bafin\|BaFin]], and authorities of the Länder (§ 3(2) and (6)) |
+| Competent authorities | Sector authorities, among them the [[federal-network-agency\|Federal Network Agency]], the [[bsi\|BSI]] and [[bafin\|BaFin]], and authorities of the Länder (§ 3(2) and (6)) |
 | Consolidated text | as amended by Article 8 of the Act of 21 July 2026 (BGBl. 2026 I Nr. 221), in force since 29 July 2026 |
 
 ### Scope
 
-**Subject**: physical resilience of critical facilities, meaning their ability to prevent, protect against, respond to, limit, absorb and recover from incidents (§ 2 No. 5). Incidents that are exclusively IT security incidents under the BSI Act or the Telecommunications Act are not incidents under this Act (§ 2 No. 9).
+**Subject**: physical resilience of critical facilities, meaning their ability to prevent, protect against, respond to, limit, absorb and recover from incidents (§ 2 No. 5). Incidents that are exclusively IT security incidents under the BSI Act or the [[tkg|Telecommunications Act]] are not incidents under this Act (§ 2 No. 9).
 
 **Who**: operators of critical facilities, meaning whoever exercises decisive influence over one or more critical facilities; in the finance sector, whoever has actual physical control (§ 2 No. 1). A facility is critical if it is significant for providing a critical service (§ 2 No. 3). Facilities include software and IT services; for software and IT services that do not directly control, monitor or support physical processes, only the BSI Act applies (§ 2 No. 2).
 
@@ -62,7 +62,7 @@ Defines [[critical-facility|operator of critical facilities]], facility, critica
 
 #### § 3 — Single point of contact; competent authorities; cooperation
 
-Makes the BBK the single point of contact under Article 9(2) of the CER Directive. Lists the competent authorities, among them the Federal Ministry of the Interior for federal administration bodies, the Federal Network Agency for electricity, natural gas, hydrogen and public telecommunications, the BSI for voice and data transmission and data storage and processing, BaFin for undertakings for which it is the competent authority under DORA, and the BBK for registration, the suitability of sector-specific resilience standards and incident reporting. Further authorities are designated by ordinance or by the Länder. Authorities exchange information on risks, incidents and measures, and the BBK consults authorities in other Member States on cross-border links.
+Makes the BBK the single point of contact under Article 9(2) of the CER Directive. Lists the competent authorities, among them the [[federal-ministry-of-the-interior|Federal Ministry of the Interior]] for federal administration bodies, the Federal Network Agency for electricity, natural gas, hydrogen and public telecommunications, the BSI for voice and data transmission and data storage and processing, BaFin for undertakings for which it is the competent authority under DORA, and the BBK for registration, the suitability of sector-specific resilience standards and incident reporting. Further authorities are designated by ordinance or by the Länder. Authorities exchange information on risks, incidents and measures, and the BBK consults authorities in other Member States on cross-border links.
 
 #### § 4 — Scope; sectors; power to issue ordinances
 
@@ -86,7 +86,7 @@ Operators must register with the BBK, through a registration facility set up joi
 
 #### § 9 — Critical entities of particular European significance
 
-An operator that provides the same or similar essential services for or in at least six Member States and has been notified by the European Commission is a critical entity of particular European significance. On request, the Federal Ministry of the Interior passes parts of its risk analysis, its measures and supervisory measures to the Commission.
+An operator that provides the same or similar essential services for or in at least six Member States and has been notified by the [[european-commission|European Commission]] is a critical entity of particular European significance. On request, the Federal Ministry of the Interior passes parts of its risk analysis, its measures and supervisory measures to the Commission.
 
 #### § 10 — Advisory missions for such entities
 
@@ -214,12 +214,12 @@ Das KRITIS-Dachgesetz (KRITISDachG) ist das sektorenübergreifende deutsche Dach
 | Ausgefertigt | 11. März 2026 |
 | Inkrafttreten | 17. März 2026; § 14 Abs. 3 bis 5 am 1. Januar 2030 |
 | Zentrale Anlaufstelle | Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) (§ 3 Abs. 1) |
-| Zuständige Behörden | Fachbehörden, darunter Bundesnetzagentur, BSI und [[bafin\|BaFin]], sowie Behörden der Länder (§ 3 Abs. 2 und 6) |
+| Zuständige Behörden | Fachbehörden, darunter [[federal-network-agency\|Bundesnetzagentur]], [[bsi\|BSI]] und [[bafin\|BaFin]], sowie Behörden der Länder (§ 3 Abs. 2 und 6) |
 | Zusammengefasste Fassung | in der Fassung von Artikel 8 des Gesetzes vom 21. Juli 2026 (BGBl. 2026 I Nr. 221), in Kraft seit 29. Juli 2026 |
 
 ### Anwendungsbereich
 
-**Gegenstand**: die physische Resilienz kritischer Anlagen, also ihre Fähigkeit, einen Vorfall zu verhindern, sich davor zu schützen, ihn abzuwehren, darauf zu reagieren, seine Folgen zu begrenzen, ihn aufzufangen und zu bewältigen und sich davon zu erholen (§ 2 Nr. 5). Ereignisse, die ausschließlich Sicherheitsvorfälle nach dem BSI-Gesetz oder dem Telekommunikationsgesetz sind, sind keine Vorfälle im Sinne dieses Gesetzes (§ 2 Nr. 9).
+**Gegenstand**: die physische Resilienz kritischer Anlagen, also ihre Fähigkeit, einen Vorfall zu verhindern, sich davor zu schützen, ihn abzuwehren, darauf zu reagieren, seine Folgen zu begrenzen, ihn aufzufangen und zu bewältigen und sich davon zu erholen (§ 2 Nr. 5). Ereignisse, die ausschließlich Sicherheitsvorfälle nach dem BSI-Gesetz oder dem [[tkg|Telekommunikationsgesetz]] sind, sind keine Vorfälle im Sinne dieses Gesetzes (§ 2 Nr. 9).
 
 **Wer**: Betreiber kritischer Anlagen, also wer bestimmenden Einfluss auf eine oder mehrere kritische Anlagen ausübt; im Sektor Finanzwesen, wer die tatsächliche Sachherrschaft ausübt (§ 2 Nr. 1). Eine Anlage ist kritisch, wenn sie für die Erbringung einer kritischen Dienstleistung erheblich ist (§ 2 Nr. 3). Zu den Anlagen zählen auch Software und IT-Dienste; für Software und IT-Dienste, die nicht unmittelbar der Steuerung, Überwachung oder Unterstützung physischer Prozesse dienen, gilt ausschließlich das BSI-Gesetz (§ 2 Nr. 2).
 
@@ -241,7 +241,7 @@ Bestimmt Betreiber kritischer Anlagen, Anlage, kritische Anlage, kritische Diens
 
 #### § 3 – Zentrale Anlaufstelle; zuständige Behörde; behördliche Zusammenarbeit
 
-Bestimmt das BBK zur zentralen Anlaufstelle nach Artikel 9 Absatz 2 der CER-Richtlinie. Nennt die zuständigen Behörden, darunter das Bundesministerium des Innern für Einrichtungen der Bundesverwaltung, die Bundesnetzagentur für Strom, Erdgas, Wasserstoff und öffentliche Telekommunikation, das BSI für Sprach- und Datenübertragung sowie Datenspeicherung und -verarbeitung, die BaFin für Unternehmen, für die sie nach DORA zuständige Behörde ist, und das BBK für Registrierung, die Eignung branchenspezifischer Resilienzstandards und das Meldewesen. Weitere Behörden werden durch Rechtsverordnung oder von den Ländern bestimmt. Die Behörden tauschen Informationen zu Risiken, Vorfällen und Maßnahmen aus, und das BBK konsultiert bei grenzüberschreitenden Verbindungen die Behörden anderer Mitgliedstaaten.
+Bestimmt das BBK zur zentralen Anlaufstelle nach Artikel 9 Absatz 2 der CER-Richtlinie. Nennt die zuständigen Behörden, darunter das [[federal-ministry-of-the-interior|Bundesministerium des Innern]] für Einrichtungen der Bundesverwaltung, die Bundesnetzagentur für Strom, Erdgas, Wasserstoff und öffentliche Telekommunikation, das BSI für Sprach- und Datenübertragung sowie Datenspeicherung und -verarbeitung, die BaFin für Unternehmen, für die sie nach DORA zuständige Behörde ist, und das BBK für Registrierung, die Eignung branchenspezifischer Resilienzstandards und das Meldewesen. Weitere Behörden werden durch Rechtsverordnung oder von den Ländern bestimmt. Die Behörden tauschen Informationen zu Risiken, Vorfällen und Maßnahmen aus, und das BBK konsultiert bei grenzüberschreitenden Verbindungen die Behörden anderer Mitgliedstaaten.
 
 #### § 4 – Geltungsbereich; Sektoren; Verordnungsermächtigung
 
@@ -265,7 +265,7 @@ Betreiber müssen sich spätestens drei Monate, nachdem eine Anlage als kritisch
 
 #### § 9 – Kritische Einrichtungen von besonderer Bedeutung für Europa
 
-Ein Betreiber, der für oder in mindestens sechs Mitgliedstaaten gleiche oder ähnliche wesentliche Dienste erbringt und dem die Europäische Kommission dies mitgeteilt hat, gilt als kritische Einrichtung von besonderer Bedeutung für Europa. Auf Antrag übermittelt das Bundesministerium des Innern Teile seiner Risikoanalyse, seine Maßnahmen und Aufsichtsmaßnahmen an die Kommission.
+Ein Betreiber, der für oder in mindestens sechs Mitgliedstaaten gleiche oder ähnliche wesentliche Dienste erbringt und dem die [[european-commission|Europäische Kommission]] dies mitgeteilt hat, gilt als kritische Einrichtung von besonderer Bedeutung für Europa. Auf Antrag übermittelt das Bundesministerium des Innern Teile seiner Risikoanalyse, seine Maßnahmen und Aufsichtsmaßnahmen an die Kommission.
 
 #### § 10 – Beratungsmission bei Einrichtungen von besonderer Bedeutung für Europa
 

@@ -1,0 +1,21 @@
+version: 1
+note_sha256: 8b55ca2e18282370335ef20ccfd0e7172d5065c7276afc00b9e60fa855f82f50
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bsi
+- bsig
+- eecc
+- eprivacy-directive
+- federal-network-agency
+- gdpr
+- kritis-dachgesetz
+- mlops-and-deployment
+- monitoring-and-alerting
+- nis2-directive
+- tdddg
+- voice-agents
+relations:
+- from: tkg
+  type: IMPLEMENTS
+  to: eecc
+  evidence: the tkg transposes most of it in germany

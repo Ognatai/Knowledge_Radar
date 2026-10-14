@@ -30,7 +30,7 @@ The Minimum Requirements for Risk Management (Mindestanforderungen an das Risiko
 | Official reference | Rundschreiben 06/2026 (BA) – Mindestanforderungen an das Risikomanagement – MaRisk, as of 30.06.2026 |
 | Type and jurisdiction | administrative circular of BaFin; specifies section 25a(1), section 25b and section 26c KWG and binds supervisory practice |
 | Published | 30 June 2026 (9th MaRisk amendment) |
-| Competent authorities | Federal Financial Supervisory Authority (BaFin) together with the Deutsche Bundesbank |
+| Competent authorities | Federal Financial Supervisory Authority (BaFin) together with the [[deutsche-bundesbank\|Deutsche Bundesbank]] |
 | Version summarised | Rundschreiben 06/2026 (BA) as published |
 
 ### Scope
@@ -244,7 +244,7 @@ Die Mindestanforderungen an das Risikomanagement (MaRisk) sind ein Rundschreiben
 | Fundstelle | Rundschreiben 06/2026 (BA) – Mindestanforderungen an das Risikomanagement – MaRisk, Stand 30.06.2026 |
 | Art und Geltung | Verwaltungsvorschrift (Rundschreiben) der BaFin; konkretisiert § 25a Abs. 1, § 25b und § 26c KWG und bindet die Aufsichtspraxis |
 | Veröffentlicht | 30. Juni 2026 (9. MaRisk-Novelle) |
-| Zuständige Behörden | Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin) zusammen mit der Deutschen Bundesbank |
+| Zuständige Behörden | Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin) zusammen mit der Deutschen [[deutsche-bundesbank\|Bundesbank]] |
 | Zusammengefasste Fassung | Rundschreiben 06/2026 (BA) in der veröffentlichten Fassung |
 
 ### Anwendungsbereich

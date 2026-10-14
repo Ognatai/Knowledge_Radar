@@ -35,7 +35,7 @@ The NIS2 Directive sets EU-wide cybersecurity rules for medium-sized and large o
 | Entry into force | 16 January 2023 |
 | Transposition | by 17 October 2024; national measures apply from 18 October 2024 (Art. 41) |
 | Amendments | none |
-| Competent authorities | national competent authorities, single points of contact, cyber crisis management authorities and CSIRTs (Art. 8–10); at EU level the Cooperation Group, the CSIRTs network, EU-CyCLONe and ENISA; in Germany the Federal Office for Information Security (BSI) |
+| Competent authorities | national competent authorities, single points of contact, cyber crisis management authorities and CSIRTs (Art. 8–10); at EU level the Cooperation Group, the CSIRTs network, EU-CyCLONe and [[enisa\|ENISA]]; in Germany the [[bsi\|Federal Office for Information Security (BSI)]] |
 | Version summarised | text as published in the Official Journal |
 
 ### Scope
@@ -315,7 +315,7 @@ Die NIS-2-Richtlinie legt EU-weite Cybersicherheitsregeln für mittlere und gro�
 | Inkrafttreten | 16. Januar 2023 |
 | Umsetzung | bis 17. Oktober 2024; Anwendung der nationalen Vorschriften ab 18. Oktober 2024 (Art. 41) |
 | Änderungen | keine |
-| Zuständige Behörden | nationale zuständige Behörden, zentrale Anlaufstellen, Behörden für das Cyberkrisenmanagement und CSIRTs (Art. 8–10); auf EU-Ebene die Kooperationsgruppe, das CSIRTs-Netzwerk, EU-CyCLONe und die ENISA; in Deutschland das Bundesamt für Sicherheit in der Informationstechnik (BSI) |
+| Zuständige Behörden | nationale zuständige Behörden, zentrale Anlaufstellen, Behörden für das Cyberkrisenmanagement und CSIRTs (Art. 8–10); auf EU-Ebene die Kooperationsgruppe, das CSIRTs-Netzwerk, EU-CyCLONe und die [[enisa\|ENISA]]; in Deutschland das [[bsi\|Bundesamt für Sicherheit in der Informationstechnik (BSI)]] |
 | Zusammengefasste Fassung | im Amtsblatt veröffentlichter Text |
 
 ### Anwendungsbereich

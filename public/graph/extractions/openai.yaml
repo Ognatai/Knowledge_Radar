@@ -1,0 +1,23 @@
+version: 1
+note_sha256: bbe99d0335a520cfa90573bd093c85210c7de50646eaed0ce3f0b01efea00dce
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- ai-office
+- chatgpt
+- cloud-ai-platforms
+- copyright-and-ai-training-data
+- eu-ai-act
+- gpt
+- large-language-models
+- llm-alignment
+- microsoft
+relations:
+- from: gpt
+  type: DEVELOPED_BY
+  to: openai
+  evidence: openai develops the gpt model family and chatgpt
+- from: chatgpt
+  type: DEVELOPED_BY
+  to: openai
+  evidence: openai develops the gpt model family and chatgpt

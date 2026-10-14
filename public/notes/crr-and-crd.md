@@ -38,7 +38,7 @@ The Capital Requirements Regulation (CRR) and the Capital Requirements Directive
 | Type and jurisdiction | EU regulation (directly applicable) and EU directive (to be transposed by the Member States) |
 | Application | 1 January 2014 |
 | Main amendments | CRR II and CRD V (2019); CRR III (Regulation (EU) 2024/1623) and CRD VI (Directive (EU) 2024/1619) |
-| Competent authorities | the [[ecb\|European Central Bank]] for significant institutions under the Single Supervisory Mechanism, otherwise the national supervisors, in Germany the [[bafin\|Federal Financial Supervisory Authority (BaFin)]] together with the Deutsche Bundesbank; the [[eba\|European Banking Authority (EBA)]] develops technical standards and guidelines |
+| Competent authorities | the [[ecb\|European Central Bank]] for significant institutions under the Single Supervisory Mechanism, otherwise the national supervisors, in Germany the [[bafin\|Federal Financial Supervisory Authority (BaFin)]] together with the [[deutsche-bundesbank\|Deutsche Bundesbank]]; the [[eba\|European Banking Authority (EBA)]] develops technical standards and guidelines |
 | Version summarised | consolidated versions of 26 June 2026 (CRR) and 11 July 2026 (CRD); CRD provisions that apply only later, such as most rules for third-country branches, are not yet included |
 
 ### Scope
@@ -1217,7 +1217,7 @@ Die Kapitaladäquanzverordnung (CRR) und die Eigenkapitalrichtlinie (CRD) setzen
 | Art und Geltung | EU-Verordnung (unmittelbar anwendbar) und EU-Richtlinie (von den Mitgliedstaaten umzusetzen) |
 | Geltungsbeginn | 1. Januar 2014 |
 | Wichtige Änderungen | CRR II und CRD V (2019); CRR III (Verordnung (EU) 2024/1623) und CRD VI (Richtlinie (EU) 2024/1619) |
-| Zuständige Behörden | die [[ecb\|Europäische Zentralbank]] für bedeutende Institute im Einheitlichen Aufsichtsmechanismus, im Übrigen die nationalen Aufsichtsbehörden, in Deutschland die [[bafin\|Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)]] zusammen mit der Deutschen Bundesbank; die [[eba\|Europäische Bankenaufsichtsbehörde (EBA)]] erarbeitet technische Standards und Leitlinien |
+| Zuständige Behörden | die [[ecb\|Europäische Zentralbank]] für bedeutende Institute im Einheitlichen Aufsichtsmechanismus, im Übrigen die nationalen Aufsichtsbehörden, in Deutschland die [[bafin\|Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)]] zusammen mit der Deutschen [[deutsche-bundesbank\|Bundesbank]]; die [[eba\|Europäische Bankenaufsichtsbehörde (EBA)]] erarbeitet technische Standards und Leitlinien |
 | Zusammengefasste Fassung | konsolidierte Fassungen vom 26. Juni 2026 (CRR) und 11. Juli 2026 (CRD); erst später geltende Vorschriften der CRD, etwa die meisten Regeln für Drittlandszweigstellen, sind noch nicht enthalten |
 
 ### Anwendungsbereich

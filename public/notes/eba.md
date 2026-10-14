@@ -57,7 +57,7 @@ In January 2025, the EBA set up a workstream to map the AI Act against EU bankin
 - **European Supervisory Authorities**: cooperates with EIOPA and ESMA in the Joint Committee and shares the Joint Board of Appeal (EBA: Governance).
 - **European System of Financial Supervision and international bodies**: cooperates with EU institutions, members of the European System of Financial Supervision, the Basel Committee on Banking Supervision and authorities of third countries (EBA: Organisation and governance).
 - **National supervisors** such as [[bafin|BaFin]]: report whether they comply with EBA guidelines (EBA: Compliance).
-- **European Commission and AI Office**: the EBA is an observer in the EU AI Board's subgroup on financial services and passes its mapping as input to the Commission's guidelines on the interplay between the AI Act and sectoral law (EBA: AI Act letter; EBA: AI Act factsheet).
+- **[[european-commission|European Commission]] and [[ai-office|AI Office]]**: the EBA is an observer in the EU AI Board's subgroup on financial services and passes its mapping as input to the Commission's guidelines on the interplay between the AI Act and sectoral law (EBA: AI Act letter; EBA: AI Act factsheet).
 
 ### Sources
 
@@ -109,7 +109,7 @@ Im Januar 2025 richtete die EBA einen Arbeitsstrang ein, um die KI-Verordnung mi
 - **Europäische Aufsichtsbehörden**: arbeitet mit EIOPA und ESMA im Gemeinsamen Ausschuss zusammen und teilt den Gemeinsamen Beschwerdeausschuss (EBA: Governance).
 - **Europäisches System der Finanzaufsicht und internationale Gremien**: arbeitet mit EU-Institutionen, Mitgliedern des Europäischen Systems der Finanzaufsicht, dem Basler Ausschuss für Bankenaufsicht und Behörden von Drittstaaten zusammen (EBA: Organisation and governance).
 - **Nationale Aufsichtsbehörden** wie die [[bafin|BaFin]]: melden, ob sie den Leitlinien der EBA nachkommen (EBA: Compliance).
-- **Europäische Kommission und KI-Büro**: Die EBA ist Beobachterin in der Untergruppe Finanzdienstleistungen des KI-Gremiums und gibt ihren Abgleich als Beitrag zu den Leitlinien der Kommission über das Zusammenspiel von KI-Verordnung und Sektorrecht weiter (EBA: AI Act letter; EBA: AI Act factsheet).
+- **[[european-commission|Europäische Kommission]] und [[ai-office|KI-Büro]]**: Die EBA ist Beobachterin in der Untergruppe Finanzdienstleistungen des KI-Gremiums und gibt ihren Abgleich als Beitrag zu den Leitlinien der Kommission über das Zusammenspiel von KI-Verordnung und Sektorrecht weiter (EBA: AI Act letter; EBA: AI Act factsheet).
 
 ### Quellen
 

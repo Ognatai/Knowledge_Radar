@@ -72,7 +72,7 @@ MT was proposed by Weaver (1949); the 1966 ALPAC report cut US funding. Early ar
 
 **Strengths**
 - Encoder-decoder networks handle complex reorderings and divergences between languages (Jurafsky & Martin, 2026).
-- Google Translate alone translates hundreds of billions of words a day between over 100 languages (Jurafsky & Martin, 2026).
+- [[google|Google]] Translate alone translates hundreds of billions of words a day between over 100 languages (Jurafsky & Martin, 2026).
 
 **Limitations**
 - Most languages lack large parallel corpora, and many systems centre on English (Jurafsky & Martin, 2026).
@@ -164,7 +164,7 @@ MT wurde von Weaver (1949) vorgeschlagen; der ALPAC-Bericht von 1966 kürzte die
 
 **Stärken**
 - Encoder-Decoder-Netze bewältigen komplexe Umordnungen und Divergenzen zwischen Sprachen (Jurafsky & Martin, 2026).
-- Google Translate allein übersetzt täglich Hunderte Milliarden Wörter zwischen über 100 Sprachen (Jurafsky & Martin, 2026).
+- [[google|Google]] Translate allein übersetzt täglich Hunderte Milliarden Wörter zwischen über 100 Sprachen (Jurafsky & Martin, 2026).
 
 **Grenzen**
 - Den meisten Sprachen fehlen große Parallelkorpora, und viele Systeme sind auf Englisch ausgerichtet (Jurafsky & Martin, 2026).

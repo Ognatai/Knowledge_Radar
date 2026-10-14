@@ -113,7 +113,7 @@ Requires financial entities to establish crisis communication plans for responsi
 
 #### Article 15 — Further harmonisation of ICT risk management tools, methods, processes and policies
 
-Requires ESAs, through the Joint Committee and in consultation with ENISA, to develop common draft regulatory technical standards specifying further elements of ICT risk management tools, methods, processes and policies.
+Requires ESAs, through the Joint Committee and in consultation with [[enisa|ENISA]], to develop common draft regulatory technical standards specifying further elements of ICT risk management tools, methods, processes and policies.
 
 #### Article 16 — Simplified ICT risk management framework
 
@@ -471,7 +471,7 @@ Verpflichtet Finanzunternehmen, Kommunikationspläne zu erstellen, die eine vera
 
 #### Artikel 15 – Weitere Harmonisierung von Tools, Methoden, Prozessen und Richtlinien für IKT-Risikomanagement
 
-Verpflichtet die ESA, über den Gemeinsamen Ausschuss und nach Konsultation der ENISA bis zum 17. Januar 2024 Entwürfe technischer Regulierungsstandards zu weiteren Elementen des IKT-Risikomanagements auszuarbeiten.
+Verpflichtet die ESA, über den Gemeinsamen Ausschuss und nach Konsultation der [[enisa|ENISA]] bis zum 17. Januar 2024 Entwürfe technischer Regulierungsstandards zu weiteren Elementen des IKT-Risikomanagements auszuarbeiten.
 
 #### Artikel 16 – Vereinfachter IKT-Risikomanagementrahmen
 

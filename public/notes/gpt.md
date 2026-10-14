@@ -23,7 +23,7 @@ sources:
 > **Note:** LLM-generated summary based on the listed sources; it may be incomplete, outdated or wrong.
 
 ### TL;DR
-GPT (Generative Pre-trained Transformer) is OpenAI's family of language models built from the decoder of the [[attention-and-transformers|Transformer]] and pre-trained to predict the next token in large amounts of unlabelled text (Radford et al., 2018). Its generations show how the use of such models shifted: GPT-1 was fine-tuned for each task, GPT-2 solved tasks without any task-specific training, GPT-3 learned them from a few examples in the prompt, and [[llm-alignment|InstructGPT]] was trained with human feedback to follow instructions (Radford et al., 2019; Brown et al., 2020; Ouyang et al., 2022).
+GPT (Generative Pre-trained Transformer) is [[openai|OpenAI]]'s family of language models built from the decoder of the [[attention-and-transformers|Transformer]] and pre-trained to predict the next token in large amounts of unlabelled text (Radford et al., 2018). Its generations show how the use of such models shifted: GPT-1 was fine-tuned for each task, GPT-2 solved tasks without any task-specific training, GPT-3 learned them from a few examples in the prompt, and [[llm-alignment|InstructGPT]] was trained with human feedback to follow instructions (Radford et al., 2019; Brown et al., 2020; Ouyang et al., 2022).
 
 ### How it works
 
@@ -106,7 +106,7 @@ GPT is one model architecture trained on one objective, next-token prediction; w
 > **Hinweis:** LLM-generierte Zusammenfassung auf Basis der angegebenen Quellen; sie kann unvollständig, veraltet oder fehlerhaft sein.
 
 ### TL;DR
-GPT (Generative Pre-trained Transformer) ist die Sprachmodellfamilie von OpenAI. Sie baut auf dem Decoder des [[attention-and-transformers|Transformers]] auf und wird darauf vortrainiert, in großen Mengen ungelabelten Texts das nächste Token vorherzusagen (Radford et al., 2018). An ihren Generationen lässt sich ablesen, wie sich der Einsatz solcher Modelle verschoben hat: GPT-1 wurde für jede Aufgabe feinjustiert, GPT-2 löste Aufgaben ohne aufgabenspezifisches Training, GPT-3 lernte sie aus wenigen Beispielen im Prompt, und [[llm-alignment|InstructGPT]] wurde mit menschlichem Feedback darauf trainiert, Anweisungen zu befolgen (Radford et al., 2019; Brown et al., 2020; Ouyang et al., 2022).
+GPT (Generative Pre-trained Transformer) ist die Sprachmodellfamilie von [[openai|OpenAI]]. Sie baut auf dem Decoder des [[attention-and-transformers|Transformers]] auf und wird darauf vortrainiert, in großen Mengen ungelabelten Texts das nächste Token vorherzusagen (Radford et al., 2018). An ihren Generationen lässt sich ablesen, wie sich der Einsatz solcher Modelle verschoben hat: GPT-1 wurde für jede Aufgabe feinjustiert, GPT-2 löste Aufgaben ohne aufgabenspezifisches Training, GPT-3 lernte sie aus wenigen Beispielen im Prompt, und [[llm-alignment|InstructGPT]] wurde mit menschlichem Feedback darauf trainiert, Anweisungen zu befolgen (Radford et al., 2019; Brown et al., 2020; Ouyang et al., 2022).
 
 ### Funktionsweise
 

@@ -117,7 +117,7 @@ Sets out the tasks of the Federal Commissioner, in particular monitoring and enf
 
 #### § 15 — Activity Report
 
-Requires the Federal Commissioner to prepare an annual activity report and make it available to the Bundestag, Bundesrat, Federal Government, the public, the European Commission and the European Data Protection Board.
+Requires the Federal Commissioner to prepare an annual activity report and make it available to the Bundestag, Bundesrat, Federal Government, the public, the [[european-commission|European Commission]] and the European Data Protection Board.
 
 #### § 16 — Powers
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4954fdb8952d63b80c4494c9f3f1c85a02624b9df58b7f786ce0aa50291266ca
+note_sha256: 7de95ef0649b48e3271121a7cf3b70fb0e2d1d5f8ed200afb7c6ba85f503244a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - gdpr

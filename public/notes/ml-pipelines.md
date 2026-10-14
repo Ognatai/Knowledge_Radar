@@ -98,7 +98,7 @@ Sources: ZenML; Kubeflow; MLflow.
 
 ### In practice
 
-Pipelines are tested like other code, with unit tests for feature logic and integration tests between components ([[software-testing|software testing]]). Google suggests promoting pipelines semi-automatically: automatic deployment to a test environment, semi-automatic deployment to pre-production after review, and manual deployment to production after several successful pre-production runs (Google Cloud). On Databricks, the MLflow registry is integrated with Unity Catalog, where model versions require a signature (MLflow); see [[data-lakehouse|data lakehouse]].
+Pipelines are tested like other code, with unit tests for feature logic and integration tests between components ([[software-testing|software testing]]). Google suggests promoting pipelines semi-automatically: automatic deployment to a test environment, semi-automatic deployment to pre-production after review, and manual deployment to production after several successful pre-production runs (Google Cloud). On [[databricks|Databricks]], the MLflow registry is integrated with Unity Catalog, where model versions require a signature (MLflow); see [[data-lakehouse|data lakehouse]].
 
 ### Key takeaway
 
@@ -193,7 +193,7 @@ Quellen: ZenML; Kubeflow; MLflow.
 
 ### In der Praxis
 
-Pipelines werden wie anderer Code getestet, mit Unit-Tests für die Feature-Logik und Integrationstests zwischen Komponenten ([[software-testing|Softwaretests]]). Google schlägt eine gestufte Freigabe von Pipelines vor: automatisches Deployment in eine Testumgebung, halbautomatisches Deployment in die Vorproduktion nach einem Review und manuelles Deployment in die Produktion nach mehreren erfolgreichen Läufen in der Vorproduktion (Google Cloud). Auf Databricks ist die MLflow-Registry in Unity Catalog integriert, wo Modellversionen eine Signatur brauchen (MLflow); siehe [[data-lakehouse|Data Lakehouse]].
+Pipelines werden wie anderer Code getestet, mit Unit-Tests für die Feature-Logik und Integrationstests zwischen Komponenten ([[software-testing|Softwaretests]]). Google schlägt eine gestufte Freigabe von Pipelines vor: automatisches Deployment in eine Testumgebung, halbautomatisches Deployment in die Vorproduktion nach einem Review und manuelles Deployment in die Produktion nach mehreren erfolgreichen Läufen in der Vorproduktion (Google Cloud). Auf [[databricks|Databricks]] ist die MLflow-Registry in Unity Catalog integriert, wo Modellversionen eine Signatur brauchen (MLflow); siehe [[data-lakehouse|Data Lakehouse]].
 
 ### Merksatz
 

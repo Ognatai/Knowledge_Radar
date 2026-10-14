@@ -64,7 +64,7 @@ The revised guide to internal models aims to ensure that internal models using m
 
 ### Relationship to other bodies
 
-- **National supervisors**: together with the ECB they form the SSM; they directly supervise the less significant banks, and their representatives sit on the Supervisory Board, for Germany both [[bafin|BaFin]] and the Deutsche Bundesbank (ECB Banking Supervision: FAQ; ECB: Supervisory Board).
+- **National supervisors**: together with the ECB they form the SSM; they directly supervise the less significant banks, and their representatives sit on the Supervisory Board, for Germany both [[bafin|BaFin]] and the [[deutsche-bundesbank|Deutsche Bundesbank]] (ECB Banking Supervision: FAQ; ECB: Supervisory Board).
 - **National central banks**: form the Eurosystem with the ECB; their governors sit on the Governing Council (ECB: Tasks; ECB: Governing Council).
 - **Banking union**: European banking supervision is one of its three pillars, alongside the Single Resolution Mechanism and the European deposit insurance scheme (ECB Banking Supervision: Who we are).
 - **[[eba|EBA]]**: the EU banking authority, whose role in the European system of financial supervision is described in its own note.
@@ -121,7 +121,7 @@ Der überarbeitete Leitfaden zu internen Modellen soll sicherstellen, dass inter
 
 ### Verhältnis zu anderen Stellen
 
-- **Nationale Aufsichtsbehörden**: bilden mit der EZB den SSM; sie beaufsichtigen die weniger bedeutenden Banken unmittelbar, und ihre Vertreter sitzen im Aufsichtsgremium, für Deutschland [[bafin|BaFin]] und Deutsche Bundesbank (ECB Banking Supervision: FAQ; ECB: Supervisory Board).
+- **Nationale Aufsichtsbehörden**: bilden mit der EZB den SSM; sie beaufsichtigen die weniger bedeutenden Banken unmittelbar, und ihre Vertreter sitzen im Aufsichtsgremium, für Deutschland [[bafin|BaFin]] und [[deutsche-bundesbank|Deutsche Bundesbank]] (ECB Banking Supervision: FAQ; ECB: Supervisory Board).
 - **Nationale Zentralbanken**: bilden mit der EZB das Eurosystem; ihre Präsidentinnen und Präsidenten gehören dem EZB-Rat an (ECB: Tasks; ECB: Governing Council).
 - **Bankenunion**: Die europäische Bankenaufsicht ist eine ihrer drei Säulen, neben dem Einheitlichen Abwicklungsmechanismus und der europäischen Einlagensicherung (ECB Banking Supervision: Who we are).
 - **[[eba|EBA]]**: die europäische Bankenaufsichtsbehörde, deren Rolle im Europäischen System der Finanzaufsicht in ihrer eigenen Notiz beschrieben ist.

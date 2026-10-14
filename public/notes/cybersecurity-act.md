@@ -24,7 +24,7 @@ sources:
 
 ### TL;DR
 
-The Cybersecurity Act has two parts. It gives ENISA, the European Union Agency for Cybersecurity, a permanent mandate and sets out its tasks, from supporting EU cybersecurity policy and the CSIRTs network to awareness-raising and exercises. And it creates the European cybersecurity certification framework: ENISA prepares certification schemes for ICT products, services and processes, and since 2025 also for managed security services, which the Commission adopts by implementing acts. Certificates are issued at the assurance levels basic, substantial or high, are recognised throughout the EU and are voluntary unless other law makes them mandatory. Other acts such as the [[nis2-directive|NIS2 Directive]] and the [[cyber-resilience-act|Cyber Resilience Act]] build on these schemes.
+The Cybersecurity Act has two parts. It gives [[enisa|ENISA]], the European Union Agency for Cybersecurity, a permanent mandate and sets out its tasks, from supporting EU cybersecurity policy and the CSIRTs network to awareness-raising and exercises. And it creates the European cybersecurity certification framework: ENISA prepares certification schemes for ICT products, services and processes, and since 2025 also for managed security services, which the Commission adopts by implementing acts. Certificates are issued at the assurance levels basic, substantial or high, are recognised throughout the EU and are voluntary unless other law makes them mandatory. Other acts such as the [[nis2-directive|NIS2 Directive]] and the [[cyber-resilience-act|Cyber Resilience Act]] build on these schemes.
 
 ### Key facts
 
@@ -35,7 +35,7 @@ The Cybersecurity Act has two parts. It gives ENISA, the European Union Agency f
 | Adopted | 17 April 2019 |
 | Entry into force | 27 June 2019; the certification provisions on national authorities, conformity assessment bodies, notification, complaints, remedies and penalties apply from 28 June 2021 (Art. 69) |
 | Amendments | Regulation (EU) 2025/37 of 19 December 2024 (managed security services), in force since 4 February 2025 |
-| Competent authorities | ENISA (Title II); the Commission for adopting schemes; national cybersecurity certification authorities (Art. 58), in Germany the Federal Office for Information Security (§ 54 BSIG); national accreditation bodies (Art. 60) |
+| Competent authorities | ENISA (Title II); the Commission for adopting schemes; national cybersecurity certification authorities (Art. 58), in Germany the [[bsi\|Federal Office for Information Security]] (§ 54 BSIG); national accreditation bodies (Art. 60) |
 | Version summarised | consolidated text of 4 February 2025 |
 
 ### Scope
@@ -409,7 +409,7 @@ Provides for entry into force on the twentieth day after publication, with the p
 
 ### TL;DR
 
-Der Rechtsakt zur Cybersicherheit (Cybersecurity Act) hat zwei Teile. Er gibt der ENISA, der Agentur der Europäischen Union für Cybersicherheit, ein dauerhaftes Mandat und legt ihre Aufgaben fest, von der Unterstützung der EU-Cybersicherheitspolitik und des CSIRTs-Netzwerks bis zu Sensibilisierung und Übungen. Und er schafft den europäischen Zertifizierungsrahmen für die Cybersicherheit: Die ENISA arbeitet Zertifizierungsschemata für IKT-Produkte, -Dienste und -Prozesse aus, seit 2025 auch für verwaltete Sicherheitsdienste, die die Kommission durch Durchführungsrechtsakte annimmt. Zertifikate werden mit den Vertrauenswürdigkeitsstufen „niedrig“, „mittel“ oder „hoch“ ausgestellt, gelten in der ganzen EU und sind freiwillig, sofern andere Rechtsvorschriften sie nicht vorschreiben. Andere Rechtsakte wie die [[nis2-directive|NIS-2-Richtlinie]] und der [[cyber-resilience-act|Cyberresilienz-Verordnung]] bauen auf diesen Schemata auf.
+Der Rechtsakt zur Cybersicherheit (Cybersecurity Act) hat zwei Teile. Er gibt der [[enisa|ENISA]], der Agentur der Europäischen Union für Cybersicherheit, ein dauerhaftes Mandat und legt ihre Aufgaben fest, von der Unterstützung der EU-Cybersicherheitspolitik und des CSIRTs-Netzwerks bis zu Sensibilisierung und Übungen. Und er schafft den europäischen Zertifizierungsrahmen für die Cybersicherheit: Die ENISA arbeitet Zertifizierungsschemata für IKT-Produkte, -Dienste und -Prozesse aus, seit 2025 auch für verwaltete Sicherheitsdienste, die die Kommission durch Durchführungsrechtsakte annimmt. Zertifikate werden mit den Vertrauenswürdigkeitsstufen „niedrig“, „mittel“ oder „hoch“ ausgestellt, gelten in der ganzen EU und sind freiwillig, sofern andere Rechtsvorschriften sie nicht vorschreiben. Andere Rechtsakte wie die [[nis2-directive|NIS-2-Richtlinie]] und der [[cyber-resilience-act|Cyberresilienz-Verordnung]] bauen auf diesen Schemata auf.
 
 ### Eckdaten
 
@@ -420,7 +420,7 @@ Der Rechtsakt zur Cybersicherheit (Cybersecurity Act) hat zwei Teile. Er gibt de
 | Erlassen | 17. April 2019 |
 | Inkrafttreten | 27. Juni 2019; die Zertifizierungsvorschriften zu nationalen Behörden, Konformitätsbewertungsstellen, Notifikation, Beschwerden, Rechtsbehelfen und Sanktionen gelten ab 28. Juni 2021 (Art. 69) |
 | Änderungen | Verordnung (EU) 2025/37 vom 19. Dezember 2024 (verwaltete Sicherheitsdienste), in Kraft seit 4. Februar 2025 |
-| Zuständige Behörden | ENISA (Titel II); die Kommission für die Annahme von Schemata; nationale Behörden für die Cybersicherheitszertifizierung (Art. 58), in Deutschland das Bundesamt für Sicherheit in der Informationstechnik (§ 54 BSIG); nationale Akkreditierungsstellen (Art. 60) |
+| Zuständige Behörden | ENISA (Titel II); die Kommission für die Annahme von Schemata; nationale Behörden für die Cybersicherheitszertifizierung (Art. 58), in Deutschland das [[bsi\|Bundesamt für Sicherheit in der Informationstechnik]] (§ 54 BSIG); nationale Akkreditierungsstellen (Art. 60) |
 | Zusammengefasste Fassung | konsolidierte Fassung vom 4. Februar 2025 |
 
 ### Anwendungsbereich

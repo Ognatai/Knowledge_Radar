@@ -1,0 +1,18 @@
+version: 1
+note_sha256: 4d86dff76f9badfe5e55a51a6f9d4262c28708a27d27061473d35fc88002330a
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bias-in-nlp
+- bsig
+- critical-facility
+- cybersecurity-act
+- data-governance
+- enisa
+- explainable-ai
+- federal-ministry-of-the-interior
+- it-governance-frameworks
+- kritis-dachgesetz
+- llm-guardrails-and-red-teaming
+- nis2-directive
+- prompt-injection
+relations: []

@@ -38,6 +38,10 @@ areas:
       - distilbert
       - llama
       - actor-level-corpus-analysis
+      - google
+      - openai
+      - microsoft
+      - anthropic
     also:
       - bias-in-nlp
       - legal-ai
@@ -260,6 +264,7 @@ areas:
       - mapreduce
       - web-analytics
       - data-visualisation
+      - databricks
     also:
       - data-pipelines
       - sql
@@ -286,6 +291,9 @@ areas:
       - legal-ai
       - contract-intelligence
       - gatekeeper
+      - enisa
+      - ai-office
+      - european-commission
     also:
       - dora
   - id: german-law
@@ -299,6 +307,10 @@ areas:
       - kritis-dachgesetz
       - geschgehg
       - critical-facility
+      - bsi
+      - federal-network-agency
+      - federal-ministry-of-the-interior
+      - tkg
   - id: financial-regulation
     name_en: Financial Supervision
     name_de: Finanzaufsicht
@@ -315,3 +327,4 @@ areas:
       - ecb
       - eba
       - creditworthiness-assessment
+      - deutsche-bundesbank

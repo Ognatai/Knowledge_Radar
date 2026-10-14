@@ -47,7 +47,7 @@ output: Markdown / JSON / fields → chunking, indexing, information extraction
 
 #### 1. Getting the text: born-digital versus scanned
 
-Born-digital PDFs and office files already contain text, although often without reliable reading order or table structure; scans and photos contain only pixels and need OCR. Tesseract is a widely used open-source OCR engine: since version 4 it includes an LSTM-based neural engine that recognises whole text lines, it supports more than 100 languages and can be trained for others, and it outputs plain text, hOCR, searchable PDF, TSV, ALTO and PAGE (Tesseract). Formats such as hOCR and ALTO keep the position of each word, which later steps need. Tesseract was developed at Hewlett-Packard from 1985 to 1994, open-sourced in 2005 and maintained by Google until 2017 (Tesseract).
+Born-digital PDFs and office files already contain text, although often without reliable reading order or table structure; scans and photos contain only pixels and need OCR. Tesseract is a widely used open-source OCR engine: since version 4 it includes an LSTM-based neural engine that recognises whole text lines, it supports more than 100 languages and can be trained for others, and it outputs plain text, hOCR, searchable PDF, TSV, ALTO and PAGE (Tesseract). Formats such as hOCR and ALTO keep the position of each word, which later steps need. Tesseract was developed at Hewlett-Packard from 1985 to 1994, open-sourced in 2005 and maintained by [[google|Google]] until 2017 (Tesseract).
 
 #### 2. Layout analysis
 
@@ -140,7 +140,7 @@ Ausgabe: Markdown / JSON / Felder → Chunking, Indexierung, Informationsextrakt
 
 #### 1. Den Text gewinnen: digital erzeugt oder gescannt
 
-Digital erzeugte PDFs und Office-Dateien enthalten bereits Text, wenn auch oft ohne verlässliche Lesereihenfolge oder Tabellenstruktur; Scans und Fotos enthalten nur Pixel und brauchen OCR. Tesseract ist eine verbreitete Open-Source-OCR-Engine: Seit Version 4 enthält sie eine neuronale LSTM-Engine, die ganze Textzeilen erkennt, sie unterstützt mehr als 100 Sprachen, lässt sich für weitere trainieren und gibt reinen Text, hOCR, durchsuchbares PDF, TSV, ALTO und PAGE aus (Tesseract). Formate wie hOCR und ALTO bewahren die Position jedes Wortes, die spätere Schritte brauchen. Tesseract wurde von 1985 bis 1994 bei Hewlett-Packard entwickelt, 2005 als Open Source veröffentlicht und bis 2017 von Google gepflegt (Tesseract).
+Digital erzeugte PDFs und Office-Dateien enthalten bereits Text, wenn auch oft ohne verlässliche Lesereihenfolge oder Tabellenstruktur; Scans und Fotos enthalten nur Pixel und brauchen OCR. Tesseract ist eine verbreitete Open-Source-OCR-Engine: Seit Version 4 enthält sie eine neuronale LSTM-Engine, die ganze Textzeilen erkennt, sie unterstützt mehr als 100 Sprachen, lässt sich für weitere trainieren und gibt reinen Text, hOCR, durchsuchbares PDF, TSV, ALTO und PAGE aus (Tesseract). Formate wie hOCR und ALTO bewahren die Position jedes Wortes, die spätere Schritte brauchen. Tesseract wurde von 1985 bis 1994 bei Hewlett-Packard entwickelt, 2005 als Open Source veröffentlicht und bis 2017 von [[google|Google]] gepflegt (Tesseract).
 
 #### 2. Layoutanalyse
 

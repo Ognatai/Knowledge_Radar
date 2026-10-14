@@ -32,7 +32,7 @@ The BSI Critical Infrastructure Ordinance (BSI-Kritisverordnung, BSI-KritisV) de
 | Enacted | 22 April 2016, then as the Ordinance on the Determination of Critical Infrastructures under the BSI Act |
 | Entry into force | 3 May 2016 |
 | Current title | since 6 December 2025 (Act implementing the NIS2 Directive) |
-| Competent authorities | Federal Office for Information Security (BSI) for operators' obligations under the BSIG; Federal Ministry of the Interior as issuer of the Ordinance |
+| Competent authorities | [[bsi\|Federal Office for Information Security (BSI)]] for operators' obligations under the BSIG; [[federal-ministry-of-the-interior\|Federal Ministry of the Interior]] as issuer of the Ordinance |
 | Version summarised | consolidated text, last amended by Article 3(1) of the Act of 15 May 2026 |
 
 ### Scope
@@ -146,7 +146,7 @@ Die BSI-Kritisverordnung (BSI-KritisV) legt fest, welche Anlagen in Deutschland 
 | Ausgefertigt | 22. April 2016, damals als Verordnung zur Bestimmung Kritischer Infrastrukturen nach dem BSI-Gesetz |
 | Inkrafttreten | 3. Mai 2016 |
 | Heutige Bezeichnung | seit 6. Dezember 2025 (Gesetz zur Umsetzung der NIS-2-Richtlinie) |
-| Zuständige Behörden | Bundesamt für Sicherheit in der Informationstechnik (BSI) für die Pflichten der Betreiber nach dem BSIG; Bundesministerium des Innern als Verordnungsgeber |
+| Zuständige Behörden | [[bsi\|Bundesamt für Sicherheit in der Informationstechnik (BSI)]] für die Pflichten der Betreiber nach dem BSIG; [[federal-ministry-of-the-interior\|Bundesministerium des Innern]] als Verordnungsgeber |
 | Zusammengefasste Fassung | konsolidierte Fassung, zuletzt geändert durch Artikel 3 Absatz 1 des Gesetzes vom 15. Mai 2026 |
 
 ### Anwendungsbereich

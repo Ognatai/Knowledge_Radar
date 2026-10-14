@@ -47,7 +47,7 @@ The third reading stores an agent's knowledge as typed nodes and edges, such as 
 
 #### Origin and variants
 
-The earliest documented use found was a blog post in early July 2026; the term spread after Peter Steinberger posted on 18 July 2026 "Are we still talking loops or did we shift to graphs yet?", and a viral claim about a large Stanford and Anthropic study turned out to be fabricated (Ghelbur, 2026). The underlying practice is older: dataflow and DAG orchestration, multi-agent systems research and [[agent-frameworks|agent frameworks]] that made graphs first-class objects (Wang, 2026), such as LangGraph, which mixes deterministic and LLM-driven steps in one graph (LangGraph docs), and AutoGen, in which multiple agents converse to solve tasks (Wu et al., 2023). What is new in 2026 is mainly the vocabulary and the framing as a step after loop engineering.
+The earliest documented use found was a blog post in early July 2026; the term spread after Peter Steinberger posted on 18 July 2026 "Are we still talking loops or did we shift to graphs yet?", and a viral claim about a large Stanford and [[anthropic|Anthropic]] study turned out to be fabricated (Ghelbur, 2026). The underlying practice is older: dataflow and DAG orchestration, multi-agent systems research and [[agent-frameworks|agent frameworks]] that made graphs first-class objects (Wang, 2026), such as LangGraph, which mixes deterministic and LLM-driven steps in one graph (LangGraph docs), and AutoGen, in which multiple agents converse to solve tasks (Wu et al., 2023). What is new in 2026 is mainly the vocabulary and the framing as a step after loop engineering.
 
 ### When to use it
 
@@ -129,7 +129,7 @@ Die dritte Lesart speichert das Wissen eines Agenten als typisierte Knoten und K
 
 #### Ursprung und Varianten
 
-Die früheste gefundene Verwendung war ein Blogbeitrag Anfang Juli 2026; verbreitet hat sich der Begriff, nachdem Peter Steinberger am 18. Juli 2026 schrieb: „Are we still talking loops or did we shift to graphs yet?“, und eine viral geteilte Behauptung über eine große Studie von Stanford und Anthropic erwies sich als erfunden (Ghelbur, 2026). Die zugrunde liegende Praxis ist älter: Dataflow- und DAG-Orchestrierung, Forschung zu Multi-Agenten-Systemen und Agenten-Frameworks, die Graphen zu Objekten erster Klasse machten (Wang, 2026), etwa LangGraph, das deterministische und LLM-gesteuerte Schritte in einem Graphen verbindet (LangGraph docs), und AutoGen, in dem mehrere Agenten im Gespräch Aufgaben lösen (Wu et al., 2023). Neu ist 2026 vor allem das Vokabular und die Einordnung als Stufe nach Loop Engineering.
+Die früheste gefundene Verwendung war ein Blogbeitrag Anfang Juli 2026; verbreitet hat sich der Begriff, nachdem Peter Steinberger am 18. Juli 2026 schrieb: „Are we still talking loops or did we shift to graphs yet?“, und eine viral geteilte Behauptung über eine große Studie von Stanford und [[anthropic|Anthropic]] erwies sich als erfunden (Ghelbur, 2026). Die zugrunde liegende Praxis ist älter: Dataflow- und DAG-Orchestrierung, Forschung zu Multi-Agenten-Systemen und Agenten-Frameworks, die Graphen zu Objekten erster Klasse machten (Wang, 2026), etwa LangGraph, das deterministische und LLM-gesteuerte Schritte in einem Graphen verbindet (LangGraph docs), und AutoGen, in dem mehrere Agenten im Gespräch Aufgaben lösen (Wu et al., 2023). Neu ist 2026 vor allem das Vokabular und die Einordnung als Stufe nach Loop Engineering.
 
 ### Wann einsetzen
 

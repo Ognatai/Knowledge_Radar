@@ -34,7 +34,7 @@ The Digital Markets Act (DMA) sets rules for large digital platforms that act as
 | Entry into force | 1 November 2022 |
 | Application | 2 May 2023; certain provisions from 1 November 2022 and 25 June 2023 (Art. 54) |
 | Amendments | none |
-| Competent authorities | European Commission (exclusive enforcer); national competition authorities support it (Art. 37-38) |
+| Competent authorities | [[european-commission\|European Commission]] (exclusive enforcer); national competition authorities support it (Art. 37-38) |
 | Version summarised | text as published in the Official Journal |
 
 ### Scope
@@ -331,7 +331,7 @@ Das Gesetz über digitale Märkte (Digital Markets Act, DMA) setzt Regeln für g
 | Inkrafttreten | 1. November 2022 |
 | Geltungsbeginn | 2. Mai 2023; einzelne Vorschriften ab 1. November 2022 und 25. Juni 2023 (Art. 54) |
 | Änderungen | keine |
-| Zuständige Behörden | Europäische Kommission (allein zuständig für die Durchsetzung); nationale Wettbewerbsbehörden unterstützen sie (Art. 37–38) |
+| Zuständige Behörden | [[european-commission\|Europäische Kommission]] (allein zuständig für die Durchsetzung); nationale Wettbewerbsbehörden unterstützen sie (Art. 37–38) |
 | Zusammengefasste Fassung | im Amtsblatt veröffentlichter Text |
 
 ### Anwendungsbereich

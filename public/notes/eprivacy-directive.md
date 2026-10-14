@@ -182,7 +182,7 @@ Addresses the Member States as the intended recipients of the Directive.
 
 ### Enforcement and penalties
 
-- **Through national law**: the Directive has to be transposed; supervision and sanctions follow the national implementing acts. In Germany, the [[tdddg|TDDDG]] implements the provisions on terminal equipment and telemedia, telecommunications-specific rules are contained in the TDDDG and the Telecommunications Act (TKG).
+- **Through national law**: the Directive has to be transposed; supervision and sanctions follow the national implementing acts. In Germany, the [[tdddg|TDDDG]] implements the provisions on terminal equipment and telemedia, telecommunications-specific rules are contained in the TDDDG and the [[tkg|Telecommunications Act (TKG)]].
 - **Penalties** (Art. 15a): Member States lay down effective, proportionate and dissuasive penalties, including criminal sanctions where appropriate, and give competent national authorities powers to order the cessation of infringements.
 - **Breach notification** (Art. 4(3)): providers of publicly available electronic communications services must notify personal data breaches to the competent national authority and, where the breach is likely to adversely affect them, to the subscribers or individuals concerned.
 
@@ -374,7 +374,7 @@ Richtet die Richtlinie an die Mitgliedstaaten.
 
 ### Durchsetzung und Sanktionen
 
-- **Über nationales Recht**: Die Richtlinie muss umgesetzt werden; Aufsicht und Sanktionen richten sich nach den nationalen Umsetzungsgesetzen. In Deutschland setzt das [[tdddg|TDDDG]] die Vorschriften zu Endeinrichtungen und digitalen Diensten um; telekommunikationsspezifische Regeln stehen im TDDDG und im Telekommunikationsgesetz (TKG).
+- **Über nationales Recht**: Die Richtlinie muss umgesetzt werden; Aufsicht und Sanktionen richten sich nach den nationalen Umsetzungsgesetzen. In Deutschland setzt das [[tdddg|TDDDG]] die Vorschriften zu Endeinrichtungen und digitalen Diensten um; telekommunikationsspezifische Regeln stehen im TDDDG und im [[tkg|Telekommunikationsgesetz (TKG)]].
 - **Sanktionen** (Art. 15a): Die Mitgliedstaaten legen wirksame, verhältnismäßige und abschreckende Sanktionen fest, gegebenenfalls auch strafrechtliche, und geben den zuständigen nationalen Behörden die Befugnis, die Einstellung von Verstößen anzuordnen.
 - **Meldung von Datenschutzverletzungen** (Art. 4 Abs. 3): Anbieter öffentlich zugänglicher elektronischer Kommunikationsdienste müssen Verletzungen des Schutzes personenbezogener Daten der zuständigen nationalen Behörde melden und, wenn die Verletzung die Betroffenen voraussichtlich beeinträchtigt, auch die Teilnehmer oder Personen benachrichtigen.
 

@@ -24,7 +24,7 @@ sources:
 
 ### TL;DR
 
-The European Electronic Communications Code (EECC) is the EU's framework for telecommunications. It governs how networks and services may be offered (general authorisation), how radio spectrum is managed, how regulators can open up markets of operators with significant market power, which universal services must be available, and which rights end-users have, e.g. on contract information, contract duration, switching, number portability and emergency calls. Its definition of electronic communications services also covers internet-based messaging and calling services. As a directive, it applies through national law; in Germany mainly through the Telecommunications Act (TKG).
+The European Electronic Communications Code (EECC) is the EU's framework for telecommunications. It governs how networks and services may be offered (general authorisation), how radio spectrum is managed, how regulators can open up markets of operators with significant market power, which universal services must be available, and which rights end-users have, e.g. on contract information, contract duration, switching, number portability and emergency calls. Its definition of electronic communications services also covers internet-based messaging and calling services. As a directive, it applies through national law; in Germany mainly through the [[tkg|Telecommunications Act (TKG)]].
 
 ### Key facts
 
@@ -638,7 +638,7 @@ Addresses the Directive to the Member States.
 
 ### Enforcement and penalties
 
-- **Through national law**: supervision and sanctions follow the national transposition; in Germany, the Federal Network Agency (Bundesnetzagentur) is the national regulatory authority.
+- **Through national law**: supervision and sanctions follow the national transposition; in Germany, the [[federal-network-agency|Federal Network Agency (Bundesnetzagentur)]] is the national regulatory authority.
 - **Penalties** (Art. 29): Member States lay down penalties, including fines and non-criminal predetermined or periodic penalties, which must be appropriate, effective, proportionate and dissuasive.
 - **Compliance** (Art. 30): competent authorities monitor compliance with the general authorisation and rights of use and can order the cessation of infringements.
 - **Disputes** (Art. 25-27): out-of-court resolution of disputes between providers and consumers; binding decisions of national regulatory authorities in disputes between undertakings.
@@ -668,7 +668,7 @@ Addresses the Directive to the Member States.
 
 ### TL;DR
 
-Der Europäische Kodex für die elektronische Kommunikation (EKEK, englisch EECC) ist der Rechtsrahmen der EU für Telekommunikation. Er regelt, wie Netze und Dienste angeboten werden dürfen (Allgemeingenehmigung), wie Funkfrequenzen verwaltet werden, wie Regulierungsbehörden Märkte von Unternehmen mit beträchtlicher Marktmacht öffnen können, welche Universaldienste verfügbar sein müssen und welche Rechte Endnutzer haben, etwa bei Vertragsinformationen, Vertragslaufzeit, Anbieterwechsel, Rufnummernmitnahme und Notrufen. Seine Definition elektronischer Kommunikationsdienste umfasst auch internetbasierte Messaging- und Telefoniedienste. Als Richtlinie wirkt er über nationales Recht, in Deutschland vor allem über das Telekommunikationsgesetz (TKG).
+Der Europäische Kodex für die elektronische Kommunikation (EKEK, englisch EECC) ist der Rechtsrahmen der EU für Telekommunikation. Er regelt, wie Netze und Dienste angeboten werden dürfen (Allgemeingenehmigung), wie Funkfrequenzen verwaltet werden, wie Regulierungsbehörden Märkte von Unternehmen mit beträchtlicher Marktmacht öffnen können, welche Universaldienste verfügbar sein müssen und welche Rechte Endnutzer haben, etwa bei Vertragsinformationen, Vertragslaufzeit, Anbieterwechsel, Rufnummernmitnahme und Notrufen. Seine Definition elektronischer Kommunikationsdienste umfasst auch internetbasierte Messaging- und Telefoniedienste. Als Richtlinie wirkt er über nationales Recht, in Deutschland vor allem über das [[tkg|Telekommunikationsgesetz (TKG)]].
 
 ### Eckdaten
 
@@ -1278,7 +1278,7 @@ Richtet die Richtlinie an die Mitgliedstaaten.
 
 ### Durchsetzung und Sanktionen
 
-- **Über nationales Recht**: Aufsicht und Sanktionen richten sich nach der nationalen Umsetzung; in Deutschland ist die Bundesnetzagentur die nationale Regulierungsbehörde.
+- **Über nationales Recht**: Aufsicht und Sanktionen richten sich nach der nationalen Umsetzung; in Deutschland ist die [[federal-network-agency|Bundesnetzagentur]] die nationale Regulierungsbehörde.
 - **Sanktionen** (Art. 29): Die Mitgliedstaaten legen Sanktionen fest, einschließlich Geldbußen und nicht strafrechtlicher Sanktionen mit festen oder regelmäßig wiederkehrenden Beträgen, die angemessen, wirksam, verhältnismäßig und abschreckend sein müssen.
 - **Einhaltung** (Art. 30): Die zuständigen Behörden überwachen die Einhaltung der Allgemeingenehmigung und der Nutzungsrechte und können die Abstellung von Verstößen anordnen.
 - **Streitigkeiten** (Art. 25–27): außergerichtliche Beilegung von Streitigkeiten zwischen Anbietern und Verbrauchern; verbindliche Entscheidungen der nationalen Regulierungsbehörden bei Streitigkeiten zwischen Unternehmen.

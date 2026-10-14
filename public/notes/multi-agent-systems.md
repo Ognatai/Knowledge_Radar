@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-A multi-agent system lets several autonomous agents with different roles, tools or contexts work on a task by communicating with each other, instead of one agent doing everything. In LLM-based multi-agent systems, each agent is an LLM with its own profile, and the gains come from specialising agents and from their interaction, for example in software development teams, debates or simulations of societies (Guo et al., 2024). In Anthropic's research feature, a lead agent that spawns parallel subagents beat a single agent by 90.2% on an internal evaluation, but used about 15 times as many tokens as a chat (Anthropic, 2025). Gains on popular benchmarks are often small, and failures cluster in system design, misalignment between agents and missing verification (Cemri et al., 2025).
+A multi-agent system lets several autonomous agents with different roles, tools or contexts work on a task by communicating with each other, instead of one agent doing everything. In LLM-based multi-agent systems, each agent is an LLM with its own profile, and the gains come from specialising agents and from their interaction, for example in software development teams, debates or simulations of societies (Guo et al., 2024). In [[anthropic|Anthropic]]'s research feature, a lead agent that spawns parallel subagents beat a single agent by 90.2% on an internal evaluation, but used about 15 times as many tokens as a chat (Anthropic, 2025). Gains on popular benchmarks are often small, and failures cluster in system design, misalignment between agents and missing verification (Cemri et al., 2025).
 
 ### How it works
 

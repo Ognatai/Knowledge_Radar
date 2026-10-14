@@ -30,7 +30,7 @@ The German Banking Act (Kreditwesengesetz, KWG) is the core of German banking su
 | Official reference | Gesetz über das Kreditwesen, BGBl. I 1961, 881; republished by notice of 9 September 1998, BGBl. I 1998, 2776 |
 | Type and jurisdiction | German federal act |
 | Signed | 10 July 1961 |
-| Competent authorities | the supervisory authority is the [[ecb\|European Central Bank]] where it performs tasks under the SSM Regulation (EU) No 1024/2013, otherwise the [[bafin\|Federal Financial Supervisory Authority (BaFin)]] (section 1(5)); the Deutsche Bundesbank carries out ongoing monitoring (section 7) |
+| Competent authorities | the supervisory authority is the [[ecb\|European Central Bank]] where it performs tasks under the SSM Regulation (EU) No 1024/2013, otherwise the [[bafin\|Federal Financial Supervisory Authority (BaFin)]] (section 1(5)); the [[deutsche-bundesbank\|Deutsche Bundesbank]] carries out ongoing monitoring (section 7) |
 | Version summarised | consolidated version, last amended by Article 9 of the Act of 12 May 2026 (BGBl. 2026 I No. 139) |
 
 ### Scope
@@ -144,7 +144,7 @@ Governs cooperation between BaFin and the Deutsche Bundesbank, in particular the
 
 #### § 7a — Cooperation with the European Commission
 
-Requires BaFin to inform the European Commission of certain events, such as the lapse or revocation of authorisations.
+Requires BaFin to inform the [[european-commission|European Commission]] of certain events, such as the lapse or revocation of authorisations.
 
 #### § 7b — Cooperation with the European Banking Authority, the European Securities and Markets Authority and the European Insurance and Occupational Pensions Authority
 
@@ -1123,7 +1123,7 @@ Das Kreditwesengesetz (KWG) ist das Grundgesetz der deutschen Bankenaufsicht. We
 | Fundstelle | Gesetz über das Kreditwesen, BGBl. I 1961, 881; neu gefasst durch Bekanntmachung vom 9. September 1998, BGBl. I 1998, 2776 |
 | Art und Geltung | deutsches Bundesgesetz |
 | Ausgefertigt | 10. Juli 1961 |
-| Zuständige Behörden | Aufsichtsbehörde ist die [[ecb\|Europäische Zentralbank]], soweit sie Aufgaben nach der SSM-Verordnung (EU) Nr. 1024/2013 wahrnimmt, im Übrigen die [[bafin\|Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)]] (§ 1 Abs. 5); die Deutsche Bundesbank übernimmt die laufende Überwachung (§ 7) |
+| Zuständige Behörden | Aufsichtsbehörde ist die [[ecb\|Europäische Zentralbank]], soweit sie Aufgaben nach der SSM-Verordnung (EU) Nr. 1024/2013 wahrnimmt, im Übrigen die [[bafin\|Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)]] (§ 1 Abs. 5); die [[deutsche-bundesbank\|Deutsche Bundesbank]] übernimmt die laufende Überwachung (§ 7) |
 | Zusammengefasste Fassung | konsolidierte Fassung, zuletzt geändert durch Artikel 9 des Gesetzes vom 12. Mai 2026 (BGBl. 2026 I Nr. 139) |
 
 ### Anwendungsbereich

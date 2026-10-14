@@ -1,0 +1,14 @@
+version: 1
+note_sha256: 3c0a5fe2b9b6950be34e10315115cbc310a92d023452605baee0d32e74d25eaf
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apache-spark
+- data-governance
+- data-lakehouse
+- experiment-tracking
+- ml-pipelines
+relations:
+- from: data-lakehouse
+  type: DEVELOPED_BY
+  to: databricks
+  evidence: founded in 2013 by the original creators of the lakehouse architecture

@@ -29,7 +29,7 @@ data quality → development and offline evaluation → staged rollout → monit
      └──────────────────────────── feedback ──────────────────────────────────┘
 ```
 
-Teams at Microsoft described a nine-stage ML workflow from model requirements, data collection, cleaning and labelling through [[feature-engineering|feature engineering]], training and evaluation to deployment and monitoring, integrated into agile software processes (Amershi et al., 2019); quality checks belong to every stage.
+Teams at [[microsoft|Microsoft]] described a nine-stage ML workflow from model requirements, data collection, cleaning and labelling through [[feature-engineering|feature engineering]], training and evaluation to deployment and monitoring, integrated into agile software processes (Amershi et al., 2019); quality checks belong to every stage.
 
 #### 2. Areas to check
 
@@ -117,7 +117,7 @@ Datenqualität → Entwicklung und Offline-Evaluation → gestufter Rollout → 
      └──────────────────────────── Feedback ────────────────────────────────────┘
 ```
 
-Teams bei Microsoft beschrieben einen neunstufigen ML-Workflow von Modellanforderungen, Datensammlung, Bereinigung und Annotation über [[feature-engineering|Feature Engineering]], Training und Evaluation bis zu Deployment und Monitoring, eingebettet in agile Softwareprozesse (Amershi et al., 2019); Qualitätsprüfungen gehören in jede Stufe.
+Teams bei [[microsoft|Microsoft]] beschrieben einen neunstufigen ML-Workflow von Modellanforderungen, Datensammlung, Bereinigung und Annotation über [[feature-engineering|Feature Engineering]], Training und Evaluation bis zu Deployment und Monitoring, eingebettet in agile Softwareprozesse (Amershi et al., 2019); Qualitätsprüfungen gehören in jede Stufe.
 
 #### 2. Prüfbereiche
 

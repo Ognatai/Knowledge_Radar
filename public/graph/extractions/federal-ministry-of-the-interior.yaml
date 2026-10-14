@@ -1,0 +1,11 @@
+version: 1
+note_sha256: 841779917af4f54865e5820c71672b7a80308b95a1b41f6cfc2669da688ead56
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bsi
+- bsig
+- cer-directive
+- critical-facility
+- federal-network-agency
+- kritis-dachgesetz
+relations: []

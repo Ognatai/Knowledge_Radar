@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "cf4fbb0540709f9e88da2ec63b599c83d596f56a816f2bd28d593dce3ea47f88"
+note_sha256: "2c38691aae574c82b304121fdaadd0619650687054b787e6e36f80f677134286"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - rest

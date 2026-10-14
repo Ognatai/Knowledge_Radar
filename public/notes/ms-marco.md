@@ -53,7 +53,7 @@ On MS MARCO itself, neural retrievers trained on it beat [[bm25|BM25]] by 7 to 1
 
 #### Origin and variants
 
-Microsoft AI & Research presented MS MARCO at NIPS 2016; version 1.1 followed in January 2017, version 2.1 in 2018, and additional passage-ranking files in October 2018 (Bajaj et al., 2016). Prior retrieval work typically trains on MS MARCO, with 533,000 training examples, or on Natural Questions, with 133,000, the dataset used for [[dense-passage-retrieval|DPR]] (Thakur et al., 2021).
+[[microsoft|Microsoft]] AI & Research presented MS MARCO at NIPS 2016; version 1.1 followed in January 2017, version 2.1 in 2018, and additional passage-ranking files in October 2018 (Bajaj et al., 2016). Prior retrieval work typically trains on MS MARCO, with 533,000 training examples, or on Natural Questions, with 133,000, the dataset used for [[dense-passage-retrieval|DPR]] (Thakur et al., 2021).
 
 ### When to use it
 
@@ -138,7 +138,7 @@ Auf MS MARCO selbst schlugen darauf trainierte neuronale Retriever [[bm25|BM25]]
 
 #### Herkunft und Varianten
 
-Microsoft AI & Research stellte MS MARCO auf der NIPS 2016 vor; Version 1.1 folgte im Januar 2017, Version 2.1 im Jahr 2018 und zusätzliche Dateien für das Passagen-Ranking im Oktober 2018 (Bajaj et al., 2016). Frühere Retrieval-Arbeiten trainieren typischerweise auf MS MARCO mit 533.000 Trainingsbeispielen oder auf Natural Questions mit 133.000, dem Datensatz, den [[dense-passage-retrieval|DPR]] nutzte (Thakur et al., 2021).
+[[microsoft|Microsoft]] AI & Research stellte MS MARCO auf der NIPS 2016 vor; Version 1.1 folgte im Januar 2017, Version 2.1 im Jahr 2018 und zusätzliche Dateien für das Passagen-Ranking im Oktober 2018 (Bajaj et al., 2016). Frühere Retrieval-Arbeiten trainieren typischerweise auf MS MARCO mit 533.000 Trainingsbeispielen oder auf Natural Questions mit 133.000, dem Datensatz, den [[dense-passage-retrieval|DPR]] nutzte (Thakur et al., 2021).
 
 ### Wann einsetzen
 

@@ -1,0 +1,14 @@
+version: 1
+note_sha256: 455877d745ae237cf82ea6f4f9f463a944a8128f4ab4838729912f05a4a05ee3
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bsi
+- cybersecurity-act
+- european-commission
+- llm-guardrails-and-red-teaming
+- nis2-directive
+relations:
+- from: cybersecurity-act
+  type: REGULATES
+  to: enisa
+  evidence: the cybersecurity act established it in its current form with a permanent mandate from 27 june 2019

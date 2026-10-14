@@ -35,7 +35,7 @@ The Cyber Resilience Act (CRA) sets EU-wide cybersecurity requirements for hardw
 | Entry into force | 10 December 2024 |
 | Application | 11 December 2027; reporting obligations (Art. 14) from 11 September 2026; notification of conformity assessment bodies (Chapter IV) from 11 June 2026 (Art. 71) |
 | Amendments | Article 104 of Regulation (EU) 2025/327 (European Health Data Space), applicable from 26 March 2027: EHR systems demonstrate conformity through the EHDS procedure (new Art. 32(5a)); Art. 13(4) adjusted accordingly |
-| Competent authorities | national market surveillance authorities (Art. 52); CSIRTs designated as coordinators and ENISA for reports (Art. 14, 16); notifying authorities and notified bodies (Chapter IV) |
+| Competent authorities | national market surveillance authorities (Art. 52); CSIRTs designated as coordinators and [[enisa\|ENISA]] for reports (Art. 14, 16); notifying authorities and notified bodies (Chapter IV) |
 | Version summarised | text as published in the Official Journal; the 2025 amendment is described here but not consolidated |
 
 ### Scope
@@ -412,7 +412,7 @@ Die Cyberresilienz-Verordnung (Cyber Resilience Act, CRA) legt EU-weite Cybersic
 | Inkrafttreten | 10. Dezember 2024 |
 | Geltungsbeginn | 11. Dezember 2027; Meldepflichten (Art. 14) ab 11. September 2026; Notifizierung von Konformitätsbewertungsstellen (Kapitel IV) ab 11. Juni 2026 (Art. 71) |
 | Änderungen | Artikel 104 der Verordnung (EU) 2025/327 (Europäischer Gesundheitsdatenraum), anwendbar ab 26. März 2027: EHR-Systeme weisen die Konformität über das Verfahren des Gesundheitsdatenraums nach (neuer Art. 32 Abs. 5a); Art. 13 Abs. 4 wurde entsprechend angepasst |
-| Zuständige Behörden | nationale Marktüberwachungsbehörden (Art. 52); als Koordinatoren benannte CSIRTs und die ENISA für Meldungen (Art. 14, 16); notifizierende Behörden und notifizierte Stellen (Kapitel IV) |
+| Zuständige Behörden | nationale Marktüberwachungsbehörden (Art. 52); als Koordinatoren benannte CSIRTs und die [[enisa\|ENISA]] für Meldungen (Art. 14, 16); notifizierende Behörden und notifizierte Stellen (Kapitel IV) |
 | Zusammengefasste Fassung | im Amtsblatt veröffentlichter Text; die Änderung von 2025 ist hier beschrieben, aber nicht eingearbeitet |
 
 ### Anwendungsbereich

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: df78ad08af9b5748abe652bcaed5c0f1c052709ac6b16874706a10ba33065341
+note_sha256: e4a75cb3bfa26a277560d5b627ebffa7083ac246304ff6069a6a3ac17c31b9d4
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - gatekeeper

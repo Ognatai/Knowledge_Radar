@@ -32,7 +32,7 @@ The Telecommunications Digital Services Data Protection Act (Telekommunikation-D
 | Enacted | 23 June 2021, as Telekommunikation-Telemedien-Datenschutz-Gesetz (TTDSG) |
 | Entry into force | 1 December 2021 |
 | Renamed | 14 May 2024 by the [[digital-services-act\|Digital Services Act]] implementation law (Digitale-Dienste-Gesetz); "telemedia" became "digital services" |
-| Competent authorities | Federal Commissioner for Data Protection and Freedom of Information (BfDI) for telecommunications (§ 29); Federal Network Agency for Part 2 where the BfDI is not responsible (§ 30); state data protection authorities for digital services (§ 1(1) no. 8) |
+| Competent authorities | Federal Commissioner for Data Protection and Freedom of Information (BfDI) for telecommunications (§ 29); [[federal-network-agency\|Federal Network Agency]] for Part 2 where the BfDI is not responsible (§ 30); state data protection authorities for digital services (§ 1(1) no. 8) |
 | Version summarised | consolidated text, last amended by Article 3 of the Act of 10 March 2026 |
 
 ### Scope
@@ -56,7 +56,7 @@ Sets out the subject matter of the Act, including the secrecy of telecommunicati
 
 #### § 2 — Definitions
 
-Applies the definitions of the Telecommunications Act, the Digitale-Dienste-Gesetz and the GDPR, unless paragraph 2 provides otherwise, and adds definitions of its own.
+Applies the definitions of the [[tkg|Telecommunications Act]], the Digitale-Dienste-Gesetz and the GDPR, unless paragraph 2 provides otherwise, and adds definitions of its own.
 
 ### Part 2 — Data Protection and Protection of Privacy in Telecommunications
 
@@ -279,7 +279,7 @@ Das Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz (TDDDG) enthält die b
 | Ausgefertigt | 23. Juni 2021, als Telekommunikation-Telemedien-Datenschutz-Gesetz (TTDSG) |
 | Inkrafttreten | 1. Dezember 2021 |
 | Umbenennung | 14. Mai 2024 durch das Digitale-Dienste-Gesetz; aus „Telemedien“ wurden „digitale Dienste“ |
-| Zuständige Behörden | die oder der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI) für Telekommunikation (§ 29); die Bundesnetzagentur für Teil 2, soweit nicht die oder der BfDI zuständig ist (§ 30); die Landesdatenschutzbehörden für digitale Dienste (§ 1 Abs. 1 Nr. 8) |
+| Zuständige Behörden | die oder der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI) für Telekommunikation (§ 29); die [[federal-network-agency\|Bundesnetzagentur]] für Teil 2, soweit nicht die oder der BfDI zuständig ist (§ 30); die Landesdatenschutzbehörden für digitale Dienste (§ 1 Abs. 1 Nr. 8) |
 | Zusammengefasste Fassung | konsolidierte Fassung, zuletzt geändert durch Artikel 3 des Gesetzes vom 10. März 2026 |
 
 ### Anwendungsbereich
@@ -479,7 +479,7 @@ Regelt die Zuständigkeit der Bundesnetzagentur als Aufsichtsbehörde für die E
 
 | Datum | Ereignis |
 | --- | --- |
-| 23. Juni 2021 | Ausfertigung als TTDSG; es führt die Datenschutzregeln aus dem Telekommunikationsgesetz (TKG) und dem Telemediengesetz (TMG) zusammen |
+| 23. Juni 2021 | Ausfertigung als TTDSG; es führt die Datenschutzregeln aus dem [[tkg\|Telekommunikationsgesetz (TKG)]] und dem Telemediengesetz (TMG) zusammen |
 | 1. Dezember 2021 | Inkrafttreten |
 | 14. Mai 2024 | Umbenennung in TDDDG durch das Digitale-Dienste-Gesetz, das den EU [[digital-services-act\|Digital Services Act]] durchführt |
 | 2025 | Die Einwilligungsverwaltungsverordnung über anerkannte Dienste zur Einwilligungsverwaltung nach § 26 tritt in Kraft |

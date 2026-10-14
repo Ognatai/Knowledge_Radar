@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-The BSI Act (BSI-Gesetz, BSIG) is Germany's central cybersecurity law. In the version in force since 6 December 2025, it implements the [[nis2-directive|NIS2 Directive]]: particularly important and important entities in sectors such as energy, health, digital infrastructure, manufacturing or research must take risk management measures, report significant security incidents in stages (24 hours, 72 hours, one month) and register with the Federal Office for Information Security (BSI). Management must oversee implementation and is liable for breaches. The Act also sets out the tasks and powers of the BSI, information security in the federal administration, and certification.
+The BSI Act (BSI-Gesetz, BSIG) is Germany's central cybersecurity law. In the version in force since 6 December 2025, it implements the [[nis2-directive|NIS2 Directive]]: particularly important and important entities in sectors such as energy, health, digital infrastructure, manufacturing or research must take risk management measures, report significant security incidents in stages (24 hours, 72 hours, one month) and register with the [[bsi|Federal Office for Information Security (BSI)]]. Management must oversee implementation and is liable for breaches. The Act also sets out the tasks and powers of the BSI, information security in the federal administration, and certification.
 
 ### Key facts
 
@@ -31,7 +31,7 @@ The BSI Act (BSI-Gesetz, BSIG) is Germany's central cybersecurity law. In the ve
 | Type and jurisdiction | German federal law |
 | Enacted | 2 December 2025, as Article 1 of the Act implementing the NIS2 Directive |
 | Entry into force | 6 December 2025; replaces the BSI Act of 14 August 2009 |
-| Competent authorities | Federal Office for Information Security (BSI) as supervisory authority (§ 59); joint reporting and registration office with the Federal Office of Civil Protection and Disaster Assistance (BBK) (§§ 32, 33); Federal Ministry of the Interior for prohibiting critical components (§ 41) |
+| Competent authorities | Federal Office for Information Security (BSI) as supervisory authority (§ 59); joint reporting and registration office with the Federal Office of Civil Protection and Disaster Assistance (BBK) (§§ 32, 33); [[federal-ministry-of-the-interior\|Federal Ministry of the Interior]] for prohibiting critical components (§ 41) |
 | Version summarised | consolidated text including the amendments of 11 March, 21 July and 23 July 2026 |
 
 ### Scope
@@ -305,7 +305,7 @@ States that §§ 7, 8, 9, 11, 12, 15 and 16 restrict the secrecy of telecommunic
 
 #### § 58 — Reporting Obligations of the Federal Office
 
-Requires the Federal Office to report to the Federal Ministry of the Interior, which informs the public about threats at least once a year, and regulates reports to the Bundestag, ENISA and the European Commission.
+Requires the Federal Office to report to the Federal Ministry of the Interior, which informs the public about threats at least once a year, and regulates reports to the Bundestag, [[enisa|ENISA]] and the [[european-commission|European Commission]].
 
 ### Part 7 — Supervision
 
@@ -395,7 +395,7 @@ The KRITIS Umbrella Act's definitions of critical facility and critical service 
 
 ### TL;DR
 
-Das BSI-Gesetz (BSIG) ist das zentrale deutsche Gesetz zur Cybersicherheit. In seiner seit dem 6. Dezember 2025 geltenden Fassung setzt es die [[nis2-directive|NIS-2-Richtlinie]] um: Besonders wichtige und wichtige Einrichtungen aus Sektoren wie Energie, Gesundheit, digitale Infrastruktur, verarbeitendes Gewerbe oder Forschung müssen Risikomanagementmaßnahmen umsetzen, erhebliche Sicherheitsvorfälle in Stufen (24 Stunden, 72 Stunden, ein Monat) melden und sich beim Bundesamt für Sicherheit in der Informationstechnik (BSI) registrieren. Die Geschäftsleitung muss die Umsetzung überwachen und haftet bei Pflichtverletzungen. Daneben regelt das Gesetz die Aufgaben und Befugnisse des BSI, die Informationssicherheit der Bundesverwaltung und Zertifizierungen.
+Das BSI-Gesetz (BSIG) ist das zentrale deutsche Gesetz zur Cybersicherheit. In seiner seit dem 6. Dezember 2025 geltenden Fassung setzt es die [[nis2-directive|NIS-2-Richtlinie]] um: Besonders wichtige und wichtige Einrichtungen aus Sektoren wie Energie, Gesundheit, digitale Infrastruktur, verarbeitendes Gewerbe oder Forschung müssen Risikomanagementmaßnahmen umsetzen, erhebliche Sicherheitsvorfälle in Stufen (24 Stunden, 72 Stunden, ein Monat) melden und sich beim [[bsi|Bundesamt für Sicherheit in der Informationstechnik (BSI)]] registrieren. Die Geschäftsleitung muss die Umsetzung überwachen und haftet bei Pflichtverletzungen. Daneben regelt das Gesetz die Aufgaben und Befugnisse des BSI, die Informationssicherheit der Bundesverwaltung und Zertifizierungen.
 
 ### Eckdaten
 
@@ -405,7 +405,7 @@ Das BSI-Gesetz (BSIG) ist das zentrale deutsche Gesetz zur Cybersicherheit. In s
 | Art und Geltung | deutsches Bundesgesetz |
 | Ausgefertigt | 2. Dezember 2025, als Artikel 1 des Gesetzes zur Umsetzung der NIS-2-Richtlinie |
 | Inkrafttreten | 6. Dezember 2025; ersetzt das BSI-Gesetz vom 14. August 2009 |
-| Zuständige Behörden | Bundesamt für Sicherheit in der Informationstechnik (BSI) als Aufsichtsbehörde (§ 59); gemeinsame Melde- und Registrierungsstelle mit dem Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) (§§ 32, 33); Bundesministerium des Innern für die Untersagung kritischer Komponenten (§ 41) |
+| Zuständige Behörden | Bundesamt für Sicherheit in der Informationstechnik (BSI) als Aufsichtsbehörde (§ 59); gemeinsame Melde- und Registrierungsstelle mit dem Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) (§§ 32, 33); [[federal-ministry-of-the-interior\|Bundesministerium des Innern]] für die Untersagung kritischer Komponenten (§ 41) |
 | Zusammengefasste Fassung | konsolidierte Fassung mit den Änderungen vom 11. März, 21. Juli und 23. Juli 2026 |
 
 ### Anwendungsbereich
@@ -679,7 +679,7 @@ Stellt fest, dass die §§ 7, 8, 9, 11, 12, 15 und 16 das Fernmeldegeheimnis nac
 
 #### § 58 – Berichtspflichten des Bundesamtes
 
-Verpflichtet das Bundesamt, das Bundesministerium des Innern zu unterrichten, das mindestens jährlich öffentlich über Gefahren berichtet, und regelt Berichte an den Bundestag, an die ENISA und an die Europäische Kommission.
+Verpflichtet das Bundesamt, das Bundesministerium des Innern zu unterrichten, das mindestens jährlich öffentlich über Gefahren berichtet, und regelt Berichte an den Bundestag, an die [[enisa|ENISA]] und an die [[european-commission|Europäische Kommission]].
 
 ### Teil 7 – Aufsicht
 

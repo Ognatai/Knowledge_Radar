@@ -75,7 +75,7 @@ Problem details carry machine-readable error information in the response body in
 
 #### 6. Description and design guidelines
 
-The OpenAPI Specification describes HTTP APIs in a language-agnostic, machine-readable way, so that humans and tools can understand a service without reading its code or traffic; documentation, server and client code and tests can be generated from it (OpenAPI Specification). Google's API design guide, used internally since 2014, recommends resource-oriented design with standard methods (Get, List, Create, Update, Delete) and custom methods (Google API design guide).
+The OpenAPI Specification describes HTTP APIs in a language-agnostic, machine-readable way, so that humans and tools can understand a service without reading its code or traffic; documentation, server and client code and tests can be generated from it (OpenAPI Specification). [[google|Google]]'s API design guide, used internally since 2014, recommends resource-oriented design with standard methods (Get, List, Create, Update, Delete) and custom methods (Google API design guide).
 
 #### 7. Versioning and compatibility
 

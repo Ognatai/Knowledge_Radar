@@ -29,7 +29,7 @@ collect data → preprocessing → training → evaluation → deployment → mo
      └──────────────────────────── retraining ────────────────────────────┘
 ```
 
-Teams at Microsoft described a nine-stage workflow from model requirements and data work through training and evaluation to deployment and monitoring, integrated into agile software processes (Amershi et al., 2019). The cycle never really ends, because both the data and the requirements change ([[ml-preprocessing|Preprocessing for Machine Learning]]; [[neural-network-evaluation|Evaluating Neural Networks]]; [[llm-evaluation|LLM Evaluation]]).
+Teams at [[microsoft|Microsoft]] described a nine-stage workflow from model requirements and data work through training and evaluation to deployment and monitoring, integrated into agile software processes (Amershi et al., 2019). The cycle never really ends, because both the data and the requirements change ([[ml-preprocessing|Preprocessing for Machine Learning]]; [[neural-network-evaluation|Evaluating Neural Networks]]; [[llm-evaluation|LLM Evaluation]]).
 
 #### 2. Model serving
 
@@ -128,7 +128,7 @@ Daten sammeln → Preprocessing → Training → Evaluation → Deployment → M
      └──────────────────────────── Retraining ──────────────────────────────┘
 ```
 
-Teams bei Microsoft beschrieben einen neunstufigen Workflow von Modellanforderungen und Datenarbeit über Training und Evaluation bis zu Deployment und Monitoring, eingebettet in agile Softwareprozesse (Amershi et al., 2019). Der Zyklus endet nie wirklich, weil sich Daten und Anforderungen ändern ([[ml-preprocessing|Preprocessing für Machine Learning]]; [[neural-network-evaluation|Modellbewertung neuronaler Netze]]; [[llm-evaluation|LLM-Evaluation]]).
+Teams bei [[microsoft|Microsoft]] beschrieben einen neunstufigen Workflow von Modellanforderungen und Datenarbeit über Training und Evaluation bis zu Deployment und Monitoring, eingebettet in agile Softwareprozesse (Amershi et al., 2019). Der Zyklus endet nie wirklich, weil sich Daten und Anforderungen ändern ([[ml-preprocessing|Preprocessing für Machine Learning]]; [[neural-network-evaluation|Modellbewertung neuronaler Netze]]; [[llm-evaluation|LLM-Evaluation]]).
 
 #### 2. Model Serving
 

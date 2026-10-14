@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 550e4fb0f6671ebecbcfd53c5f6acb849557bcff27b47fd6385b2465740584ad
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- apis
+- asynchronous-apis
+- cloud-ai-platforms
+- digital-markets-act
+- european-commission
+- gatekeeper
+- ms-marco
+- openai
+- quality-control
+- resnet
+relations:
+- from: resnet
+  type: DEVELOPED_BY
+  to: microsoft
+  evidence: microsoft research produced resnet and ms marco
+- from: ms-marco
+  type: DEVELOPED_BY
+  to: microsoft
+  evidence: microsoft research produced resnet and ms marco
+- from: digital-markets-act
+  type: REGULATES
+  to: microsoft
+  evidence: microsoft is a dma gatekeeper for linkedin and windows

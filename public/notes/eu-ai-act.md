@@ -37,7 +37,7 @@ The rules apply to different actors—including providers, deployers, importers 
 | Entry into force | 1 August 2024 |
 | Application | staged, from 2 February 2025 to 2 August 2028 (see [Timeline](#timeline)) |
 | Amended by | Regulation (EU) 2026/1744 (Digital Omnibus on AI) of 8 July 2026, OJ 24.7.2026 |
-| Competent authorities | national market surveillance and notifying authorities; the AI Office (European Commission) for general-purpose AI models; the European Data Protection Supervisor for Union institutions |
+| Competent authorities | national market surveillance and notifying authorities; the [[ai-office\|AI Office (European Commission)]] for general-purpose AI models; the European Data Protection Supervisor for Union institutions |
 | Version summarised | consolidated text of 27 July 2026 |
 
 ### Scope
@@ -1719,7 +1719,7 @@ Die Vorschriften richten sich an unterschiedliche Beteiligte – darunter Anbiet
 | Inkrafttreten | 1. August 2024 |
 | Geltung | gestaffelt, vom 2. Februar 2025 bis 2. August 2028 (siehe [Zeitplan](#zeitplan)) |
 | Geändert durch | Verordnung (EU) 2026/1744 (Digital Omnibus on AI) vom 8. Juli 2026, ABl. vom 24.7.2026 |
-| Zuständige Behörden | nationale Marktüberwachungsbehörden und notifizierende Behörden; das Büro für Künstliche Intelligenz (Europäische Kommission) für KI-Modelle mit allgemeinem Verwendungszweck; der Europäische Datenschutzbeauftragte für Organe der Union |
+| Zuständige Behörden | nationale Marktüberwachungsbehörden und notifizierende Behörden; das [[ai-office\|Büro für Künstliche Intelligenz (Europäische Kommission)]] für KI-Modelle mit allgemeinem Verwendungszweck; der Europäische Datenschutzbeauftragte für Organe der Union |
 | Zusammengefasste Fassung | konsolidierter Text vom 27. Juli 2026 |
 
 ### Anwendungsbereich

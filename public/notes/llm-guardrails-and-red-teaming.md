@@ -48,7 +48,7 @@ Human-written test cases are expensive and limited in number and diversity. Pere
 
 #### 3. Input and output classifiers
 
-A safeguard model classifies both the user's prompt and the model's response. Llama Guard is a Llama 2 7B model instruction-tuned on a small, high-quality dataset to classify prompts and responses against a safety risk taxonomy; it matches or exceeds existing moderation tools on the OpenAI Moderation Evaluation dataset and ToxicChat, and users can adapt the taxonomy and output format through further tuning or zero- and [[few-shot-prompting|few-shot prompting]] (Inan et al., 2023). Its weights were released. Such classifiers can be placed before the model (to block malicious requests) and after it (to block harmful outputs).
+A safeguard model classifies both the user's prompt and the model's response. Llama Guard is a Llama 2 7B model instruction-tuned on a small, high-quality dataset to classify prompts and responses against a safety risk taxonomy; it matches or exceeds existing moderation tools on the [[openai|OpenAI]] Moderation Evaluation dataset and ToxicChat, and users can adapt the taxonomy and output format through further tuning or zero- and [[few-shot-prompting|few-shot prompting]] (Inan et al., 2023). Its weights were released. Such classifiers can be placed before the model (to block malicious requests) and after it (to block harmful outputs).
 
 #### 4. Programmable rails
 
@@ -144,7 +144,7 @@ Von Menschen geschriebene Testfälle sind teuer und in Zahl und Vielfalt begrenz
 
 #### 3. Klassifikatoren für Ein- und Ausgaben
 
-Ein Schutzmodell klassifiziert sowohl den Prompt der Nutzenden als auch die Antwort des Modells. Llama Guard ist ein Llama-2-7B-Modell, das auf einem kleinen, hochwertigen Datensatz per Instruction Tuning darauf trainiert wurde, Prompts und Antworten anhand einer Taxonomie von Sicherheitsrisiken zu klassifizieren; es erreicht oder übertrifft bestehende Moderationswerkzeuge auf dem OpenAI Moderation Evaluation Dataset und ToxicChat, und Nutzende können Taxonomie und Ausgabeformat durch weiteres Tuning oder Zero- und [[few-shot-prompting|Few-Shot-Prompting]] anpassen (Inan et al., 2023). Die Gewichte wurden veröffentlicht. Solche Klassifikatoren können vor dem Modell (um bösartige Anfragen zu blockieren) und danach (um schädliche Ausgaben zu blockieren) stehen.
+Ein Schutzmodell klassifiziert sowohl den Prompt der Nutzenden als auch die Antwort des Modells. Llama Guard ist ein Llama-2-7B-Modell, das auf einem kleinen, hochwertigen Datensatz per Instruction Tuning darauf trainiert wurde, Prompts und Antworten anhand einer Taxonomie von Sicherheitsrisiken zu klassifizieren; es erreicht oder übertrifft bestehende Moderationswerkzeuge auf dem [[openai|OpenAI]] Moderation Evaluation Dataset und ToxicChat, und Nutzende können Taxonomie und Ausgabeformat durch weiteres Tuning oder Zero- und [[few-shot-prompting|Few-Shot-Prompting]] anpassen (Inan et al., 2023). Die Gewichte wurden veröffentlicht. Solche Klassifikatoren können vor dem Modell (um bösartige Anfragen zu blockieren) und danach (um schädliche Ausgaben zu blockieren) stehen.
 
 #### 4. Programmierbare Rails
 

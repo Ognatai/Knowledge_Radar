@@ -1,0 +1,18 @@
+version: 1
+note_sha256: bf7c057c7d5db86ac3133de151cf7c654c3d99876d95d08528c7862955372fa5
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-skills
+- ai-office
+- cloud-ai-platforms
+- context-engineering
+- eu-ai-act
+- large-language-models
+- llm-alignment
+- mcp-and-related-protocols
+- multi-agent-systems
+relations:
+- from: agent-skills
+  type: DEVELOPED_BY
+  to: anthropic
+  evidence: in this knowledge base, anthropic is the source of the model context protocol, agent skills

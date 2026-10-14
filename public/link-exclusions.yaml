@@ -3,6 +3,10 @@
 # the target notes it must not link to, with the reason.
 version: 1
 exclusions:
+  information-security-in-banking:
+    deutsche-bundesbank: Bundesbank appears there only as a citation label.
+  apis:
+    google: Google appears there only as a citation label.
   critical-facility:
     classification: legal classification of facilities, not the ML task.
   data-governance:

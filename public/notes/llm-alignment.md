@@ -48,7 +48,7 @@ The model is fine-tuned on instructions paired with responses, with the same lan
 
 #### 3. Preference data
 
-Preference judgments do not require knowing how to do something, only an opinion about the result. Data consists of a prompt and sampled outputs with judgments such as "o_i is preferred to o_j"; it comes from trained annotators, from implicit signals such as votes on Reddit or StackExchange, or from LLMs acting as annotators, as in UltraFeedback ranked by GPT-4. Annotators may also rate single outputs on aspects such as helpfulness, honesty and correctness (Jurafsky & Martin, 2026). For InstructGPT, prompts came from customer requests to OpenAI applications and annotators ranked sets of 4 outputs (Jurafsky & Martin, 2026).
+Preference judgments do not require knowing how to do something, only an opinion about the result. Data consists of a prompt and sampled outputs with judgments such as "o_i is preferred to o_j"; it comes from trained annotators, from implicit signals such as votes on Reddit or StackExchange, or from LLMs acting as annotators, as in UltraFeedback ranked by GPT-4. Annotators may also rate single outputs on aspects such as helpfulness, honesty and correctness (Jurafsky & Martin, 2026). For InstructGPT, prompts came from customer requests to [[openai|OpenAI]] applications and annotators ranked sets of 4 outputs (Jurafsky & Martin, 2026).
 
 #### 4. Reward model
 

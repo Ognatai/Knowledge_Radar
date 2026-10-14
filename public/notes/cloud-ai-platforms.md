@@ -29,7 +29,7 @@ sources:
 
 ### TL;DR
 
-Cloud AI platforms are managed services from the large cloud providers that bundle access to foundation models with the tooling to build, ground, evaluate, deploy and govern AI applications: Microsoft Foundry (formerly Azure AI Studio and Azure AI Foundry, including Azure OpenAI), Google's Gemini Enterprise Agent Platform (Vertex AI until April 2026) and Amazon Bedrock (Microsoft Learn; Google Cloud Release Notes; AWS). In NIST's terms they are mostly platform-as-a-service offerings: the customer deploys applications and models but does not manage the underlying servers, networks or storage (Mell & Grance, 2011). Choosing one is largely a question of which models, data integrations, security controls and data-processing commitments fit an organisation's existing cloud.
+Cloud AI platforms are managed services from the large cloud providers that bundle access to foundation models with the tooling to build, ground, evaluate, deploy and govern AI applications: Microsoft Foundry (formerly Azure AI Studio and Azure AI Foundry, including Azure OpenAI), [[google|Google]]'s Gemini Enterprise Agent Platform (Vertex AI until April 2026) and Amazon Bedrock (Microsoft Learn; Google Cloud Release Notes; AWS). In NIST's terms they are mostly platform-as-a-service offerings: the customer deploys applications and models but does not manage the underlying servers, networks or storage (Mell & Grance, 2011). Choosing one is largely a question of which models, data integrations, security controls and data-processing commitments fit an organisation's existing cloud.
 
 ### How it works
 
@@ -53,7 +53,7 @@ NIST defines cloud computing as "a model for enabling ubiquitous, convenient, on
 
 #### 2. Model catalogue and endpoints
 
-All three platforms offer many models behind one API. Microsoft Foundry gives access to more than 10,000 models from Microsoft, OpenAI, Anthropic, Meta and others (Microsoft Learn). Amazon Bedrock is "a fully managed service that provides secure, enterprise-grade access to high-performing foundation models from leading AI companies" and lists more than 100 models from providers including Amazon, Anthropic, DeepSeek, OpenAI and xAI; it also supports fine-tuning, continued pre-training and distillation (AWS). Google's platform provides managed training for PyTorch, TensorFlow, [[scikit-learn|scikit-learn]] and XGBoost, AutoML and a Model Registry as "a central repository where you can manage the lifecycle of your ML models" (Google Cloud). Models are deployed in a chosen region or with global or data-zone deployment types that spread processing across regions for capacity (Microsoft Learn Privacy).
+All three platforms offer many models behind one API. Microsoft Foundry gives access to more than 10,000 models from Microsoft, [[openai|OpenAI]], [[anthropic|Anthropic]], Meta and others (Microsoft Learn). Amazon Bedrock is "a fully managed service that provides secure, enterprise-grade access to high-performing foundation models from leading AI companies" and lists more than 100 models from providers including Amazon, Anthropic, DeepSeek, OpenAI and xAI; it also supports fine-tuning, continued pre-training and distillation (AWS). Google's platform provides managed training for PyTorch, TensorFlow, [[scikit-learn|scikit-learn]] and XGBoost, AutoML and a Model Registry as "a central repository where you can manage the lifecycle of your ML models" (Google Cloud). Models are deployed in a chosen region or with global or data-zone deployment types that spread processing across regions for capacity (Microsoft Learn Privacy).
 
 #### 3. Retrieval and grounding
 
@@ -69,7 +69,7 @@ The platforms add evaluation, tracing and monitoring dashboards, identity and ro
 
 #### Origin and variants
 
-The NIST definition dates from 2011 (Mell & Grance, 2011). The AI platforms have been renamed repeatedly: Microsoft's sequence runs from Azure AI Studio via Azure AI Foundry to Microsoft Foundry, with Azure AI Services becoming Foundry Tools and the Assistants API being replaced by the Responses API (Microsoft Learn), and Google consolidated Vertex AI into the Gemini Enterprise Agent Platform in 2026 (Google Cloud Release Notes). Data platforms such as Databricks offer similar model serving next to the data, see [[data-lakehouse|data lakehouse]].
+The NIST definition dates from 2011 (Mell & Grance, 2011). The AI platforms have been renamed repeatedly: Microsoft's sequence runs from Azure AI Studio via Azure AI Foundry to Microsoft Foundry, with Azure AI Services becoming Foundry Tools and the Assistants API being replaced by the Responses API (Microsoft Learn), and Google consolidated Vertex AI into the Gemini Enterprise Agent Platform in 2026 (Google Cloud Release Notes). Data platforms such as [[databricks|Databricks]] offer similar model serving next to the data, see [[data-lakehouse|data lakehouse]].
 
 ### When to use it
 
@@ -130,7 +130,7 @@ Cloud AI platforms bundle models, retrieval, agents, evaluation and governance a
 
 ### TL;DR
 
-Cloud-KI-Plattformen sind verwaltete Dienste der großen Cloud-Anbieter, die den Zugang zu Foundation Models mit den Werkzeugen bündeln, um KI-Anwendungen zu bauen, mit Daten zu verankern, zu evaluieren, auszuliefern und zu steuern: Microsoft Foundry (früher Azure AI Studio und Azure AI Foundry, einschließlich Azure OpenAI), Googles Gemini Enterprise Agent Platform (bis April 2026 Vertex AI) und Amazon Bedrock (Microsoft Learn; Google Cloud Release Notes; AWS). In der Terminologie von NIST sind sie überwiegend Platform-as-a-Service-Angebote: Die Kundschaft stellt Anwendungen und Modelle bereit, verwaltet aber nicht die zugrunde liegenden Server, Netzwerke oder Speicher (Mell & Grance, 2011). Die Wahl ist vor allem eine Frage, welche Modelle, Datenanbindungen, Sicherheitsfunktionen und Zusagen zur Datenverarbeitung zur bestehenden Cloud einer Organisation passen.
+Cloud-KI-Plattformen sind verwaltete Dienste der großen Cloud-Anbieter, die den Zugang zu Foundation Models mit den Werkzeugen bündeln, um KI-Anwendungen zu bauen, mit Daten zu verankern, zu evaluieren, auszuliefern und zu steuern: Microsoft Foundry (früher Azure AI Studio und Azure AI Foundry, einschließlich Azure OpenAI), Googles Gemini Enterprise Agent Platform (bis April 2026 Vertex AI) und Amazon Bedrock (Microsoft Learn; [[google|Google]] Cloud Release Notes; AWS). In der Terminologie von NIST sind sie überwiegend Platform-as-a-Service-Angebote: Die Kundschaft stellt Anwendungen und Modelle bereit, verwaltet aber nicht die zugrunde liegenden Server, Netzwerke oder Speicher (Mell & Grance, 2011). Die Wahl ist vor allem eine Frage, welche Modelle, Datenanbindungen, Sicherheitsfunktionen und Zusagen zur Datenverarbeitung zur bestehenden Cloud einer Organisation passen.
 
 ### Funktionsweise
 
@@ -154,7 +154,7 @@ NIST definiert Cloud Computing als „a model for enabling ubiquitous, convenien
 
 #### 2. Modellkatalog und Endpunkte
 
-Alle drei Plattformen bieten viele Modelle hinter einer API. Microsoft Foundry gibt Zugang zu mehr als 10.000 Modellen von Microsoft, OpenAI, Anthropic, Meta und anderen (Microsoft Learn). Amazon Bedrock ist „a fully managed service that provides secure, enterprise-grade access to high-performing foundation models from leading AI companies“ und führt mehr als 100 Modelle von Anbietern wie Amazon, Anthropic, DeepSeek, OpenAI und xAI; es unterstützt außerdem Fine-Tuning, fortgesetztes Pre-Training und Distillation (AWS). Googles Plattform bietet verwaltetes Training für PyTorch, TensorFlow, [[scikit-learn|scikit-learn]] und XGBoost, AutoML und eine Model Registry als „a central repository where you can manage the lifecycle of your ML models“ (Google Cloud). Modelle werden in einer gewählten Region bereitgestellt oder mit globalen bzw. Data-Zone-Bereitstellungsarten, die die Verarbeitung aus Kapazitätsgründen über Regionen verteilen (Microsoft Learn Privacy).
+Alle drei Plattformen bieten viele Modelle hinter einer API. Microsoft Foundry gibt Zugang zu mehr als 10.000 Modellen von Microsoft, [[openai|OpenAI]], [[anthropic|Anthropic]], Meta und anderen (Microsoft Learn). Amazon Bedrock ist „a fully managed service that provides secure, enterprise-grade access to high-performing foundation models from leading AI companies“ und führt mehr als 100 Modelle von Anbietern wie Amazon, Anthropic, DeepSeek, OpenAI und xAI; es unterstützt außerdem Fine-Tuning, fortgesetztes Pre-Training und Distillation (AWS). Googles Plattform bietet verwaltetes Training für PyTorch, TensorFlow, [[scikit-learn|scikit-learn]] und XGBoost, AutoML und eine Model Registry als „a central repository where you can manage the lifecycle of your ML models“ (Google Cloud). Modelle werden in einer gewählten Region bereitgestellt oder mit globalen bzw. Data-Zone-Bereitstellungsarten, die die Verarbeitung aus Kapazitätsgründen über Regionen verteilen (Microsoft Learn Privacy).
 
 #### 3. Retrieval und Verankerung in Daten
 
@@ -170,7 +170,7 @@ Die Plattformen ergänzen Evaluation, Tracing und Monitoring-Dashboards, Identit
 
 #### Herkunft und Varianten
 
-Die NIST-Definition stammt von 2011 (Mell & Grance, 2011). Die KI-Plattformen wurden mehrfach umbenannt: Bei Microsoft führt die Reihe von Azure AI Studio über Azure AI Foundry zu Microsoft Foundry, wobei Azure AI Services zu Foundry Tools wurden und die Assistants API durch die Responses API ersetzt wurde (Microsoft Learn), und Google fasste Vertex AI 2026 in der Gemini Enterprise Agent Platform zusammen (Google Cloud Release Notes). Datenplattformen wie Databricks bieten ähnliches Model Serving direkt neben den Daten an, siehe [[data-lakehouse|Data Lakehouse]].
+Die NIST-Definition stammt von 2011 (Mell & Grance, 2011). Die KI-Plattformen wurden mehrfach umbenannt: Bei Microsoft führt die Reihe von Azure AI Studio über Azure AI Foundry zu Microsoft Foundry, wobei Azure AI Services zu Foundry Tools wurden und die Assistants API durch die Responses API ersetzt wurde (Microsoft Learn), und Google fasste Vertex AI 2026 in der Gemini Enterprise Agent Platform zusammen (Google Cloud Release Notes). Datenplattformen wie [[databricks|Databricks]] bieten ähnliches Model Serving direkt neben den Daten an, siehe [[data-lakehouse|Data Lakehouse]].
 
 ### Wann einsetzen
 

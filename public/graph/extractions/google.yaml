@@ -1,0 +1,30 @@
+version: 1
+note_sha256: 3127b5a7ffe533d7ecf9ebfa511be3f7f8c200d3860e3e9571d36e4f88276093
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- ai-office
+- cloud-ai-platforms
+- dialogflow-cx
+- digital-markets-act
+- eu-ai-act
+- european-commission
+- gatekeeper
+- kubernetes
+- machine-translation
+- mapreduce
+- ml-test-score
+- monitoring-and-alerting
+- responsible-ai
+- tokenisation
+- vision-transformer
+- web-analytics
+- word2vec
+relations:
+- from: vision-transformer
+  type: DEVELOPED_BY
+  to: google
+  evidence: the vision transformer from google research (2021)
+- from: digital-markets-act
+  type: REGULATES
+  to: google
+  evidence: under the eu digital markets act, alphabet is a designated gatekeeper for eight core platform services

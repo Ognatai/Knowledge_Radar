@@ -86,7 +86,7 @@ MCP servers are third-party code inside the harness, and their tool descriptions
 
 #### Origin and variants
 
-Anthropic open-sourced MCP on 25 November 2024 together with the specification, SDKs, local server support in Claude Desktop and reference servers for systems such as Google Drive, Slack, GitHub, [[git|Git]] and Postgres (Anthropic, 2024b). The protocol has been revised several times; the current version makes requests stateless, so that every request carries the protocol version and capabilities, and servers announce their capabilities through a discovery request (MCP architecture docs).
+Anthropic open-sourced MCP on 25 November 2024 together with the specification, SDKs, local server support in Claude Desktop and reference servers for systems such as [[google|Google]] Drive, Slack, GitHub, [[git|Git]] and Postgres (Anthropic, 2024b). The protocol has been revised several times; the current version makes requests stateless, so that every request carries the protocol version and capabilities, and servers announce their capabilities through a discovery request (MCP architecture docs).
 
 ### When to use it
 
@@ -207,7 +207,7 @@ MCP-Server sind Fremdcode im Harness, und ihre Werkzeugbeschreibungen erreichen 
 
 #### Ursprung und Varianten
 
-Anthropic veröffentlichte MCP am 25. November 2024 als Open Source, zusammen mit der Spezifikation, SDKs, Unterstützung lokaler Server in Claude Desktop und Referenzservern für Systeme wie Google Drive, Slack, GitHub, [[git|Git]] und Postgres (Anthropic, 2024b). Das Protokoll wurde mehrfach überarbeitet; die aktuelle Version macht Anfragen zustandslos, sodass jede Anfrage Protokollversion und Fähigkeiten mitführt, und Server geben ihre Fähigkeiten über eine Discovery-Anfrage bekannt (MCP architecture docs).
+Anthropic veröffentlichte MCP am 25. November 2024 als Open Source, zusammen mit der Spezifikation, SDKs, Unterstützung lokaler Server in Claude Desktop und Referenzservern für Systeme wie [[google|Google]] Drive, Slack, GitHub, [[git|Git]] und Postgres (Anthropic, 2024b). Das Protokoll wurde mehrfach überarbeitet; die aktuelle Version macht Anfragen zustandslos, sodass jede Anfrage Protokollversion und Fähigkeiten mitführt, und Server geben ihre Fähigkeiten über eine Discovery-Anfrage bekannt (MCP architecture docs).
 
 ### Wann einsetzen
 
