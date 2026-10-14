@@ -1120,10 +1120,6 @@ entities:
   - MRL
   - Matryoshka representations
   - Matryoshka embeddings
-- id: faiss
-  type: Technology
-  name_en: FAISS
-  name_de: FAISS
 - id: bagging
   type: Method
   name_en: Bagging (bootstrap aggregating)
@@ -1453,12 +1449,6 @@ entities:
   type: Method
   name_en: BART
   name_de: BART
-- id: dense-passage-retrieval
-  type: Method
-  name_en: Dense passage retrieval (DPR)
-  name_de: Dense Passage Retrieval (DPR)
-  aliases:
-  - DPR
 - id: probabilistic-relevance-framework
   type: Concept
   name_en: Probabilistic relevance framework
@@ -2092,10 +2082,6 @@ entities:
   type: Concept
   name_en: Grounding hallucination
   name_de: Grounding-Halluzination
-- id: reciprocal-rank-fusion
-  type: Method
-  name_en: Reciprocal rank fusion
-  name_de: Reciprocal Rank Fusion
 - id: claim-level-grounding-check
   type: Method
   name_en: Claim-level grounding check
@@ -2118,16 +2104,6 @@ entities:
   type: Method
   name_en: Sparse retrieval
   name_de: Sparse Retrieval
-- id: hnsw
-  type: Method
-  name_en: HNSW (Hierarchical Navigable Small World)
-  name_de: HNSW (Hierarchical Navigable Small World)
-  aliases:
-  - HNSW
-- id: colbert
-  type: Method
-  name_en: ColBERT
-  name_de: ColBERT
 - id: hyde
   type: Method
   name_en: HyDE (Hypothetical Document Embeddings)
@@ -2500,14 +2476,6 @@ entities:
   type: Dataset
   name_en: ALCE
   name_de: ALCE
-- id: ms-marco
-  type: Dataset
-  name_en: MS MARCO
-  name_de: MS MARCO
-- id: beir
-  type: Dataset
-  name_en: BEIR
-  name_de: BEIR
 - id: humaneval
   type: Dataset
   name_en: HumanEval
@@ -2992,3 +2960,24 @@ entities:
   type: Technology
   name_en: NeMo Guardrails
   name_de: NeMo Guardrails
+- id: meta
+  type: Organisation
+  name_en: Meta
+  name_de: Meta
+  aliases:
+  - Facebook AI Research
+  - FAIR
+- id: natural-questions
+  type: Dataset
+  name_en: Natural Questions
+  name_de: Natural Questions
+- id: omar-khattab
+  type: Person
+  name_en: Omar Khattab
+  name_de: Omar Khattab
+- id: ukp-lab
+  type: Organisation
+  name_en: UKP Lab (TU Darmstadt)
+  name_de: UKP Lab (TU Darmstadt)
+  aliases:
+  - Ubiquitous Knowledge Processing Lab

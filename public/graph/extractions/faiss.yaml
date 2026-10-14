@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 381393717fdb8cb95742a16a3ae6d585da3e1bbd985cf2dfccd9649e99b89311
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- clustering
+- dense-passage-retrieval
+- embeddings
+- hnsw
+- near-duplicate-detection
+- retrieval-augmented-generation
+- text-similarity-metrics
+- vector-databases
+- meta
+- product-quantisation
+relations:
+- from: faiss
+  type: DEVELOPED_BY
+  to: meta
+  evidence: is an open-source library from meta for vector similarity search
+- from: faiss
+  type: IMPLEMENTS
+  to: hnsw
+  evidence: graph indexes such as hnsw
+- from: faiss
+  type: IMPLEMENTS
+  to: product-quantisation
+  evidence: vector compression with product quantisation

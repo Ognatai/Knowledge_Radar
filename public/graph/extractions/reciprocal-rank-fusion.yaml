@@ -1,0 +1,17 @@
+version: 1
+note_sha256: baaefb7296e4554f8852c84b434764f6a5007c1d8ce9c7f0a39a8c05e585dc4d
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bm25
+- classification-metrics
+- cross-encoder
+- dense-passage-retrieval
+- query-expansion
+- rag-retrieval
+- retrieval-augmented-generation
+- text-similarity-metrics
+relations:
+- from: reciprocal-rank-fusion
+  type: COMPLEMENTS
+  to: bm25
+  evidence: the same pattern is used in rag pipelines that combine bm25 with dense retrieval

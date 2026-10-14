@@ -44,19 +44,19 @@ A first stage, such as [[bm25|BM25]] or a dense retriever, retrieves candidates 
 A bi-encoder can encode all candidates once, cache them and compare them with each new input. A cross-encoder must recompute the encoding for every input and candidate, which makes it prohibitively slow for scoring large numbers of candidates (Humeau et al., 2019). Finding the most similar pair among 10,000 sentences with a BERT cross-encoder takes about 50 million inference computations, roughly 65 hours on a V100 GPU, against about 5 seconds with [[sentence-bert|Sentence-BERT]] embeddings (Reimers & Gurevych, 2019).
 
 #### Origin and variants
-Humeau et al. (2019) compared the two common architectures for scoring pairs, cross-encoders and bi-encoders, and proposed the poly-encoder in between, which is faster than a cross-encoder and more accurate than a bi-encoder. Nogueira & Cho (2019) applied BERT as a passage re-ranker. ColBERT (Khattab & Zaharia, 2020) delays the interaction: query and documents are encoded separately and compared token by token, so document representations can be pre-computed; see [[semantic-retrieval|Semantic Retrieval]].
+Humeau et al. (2019) compared the two common architectures for scoring pairs, cross-encoders and bi-encoders, and proposed the poly-encoder in between, which is faster than a cross-encoder and more accurate than a bi-encoder. Nogueira & Cho (2019) applied BERT as a passage re-ranker. [[colbert|ColBERT]] (Khattab & Zaharia, 2020) delays the interaction: query and documents are encoded separately and compared token by token, so document representations can be pre-computed; see [[semantic-retrieval|Semantic Retrieval]].
 
 ### When to use it
 - Re-ranking the top candidates of a first-stage retriever in search and [[retrieval-augmented-generation|retrieval-augmented generation]] (Nogueira & Cho, 2019; [[rag-retrieval|RAG: Retrieval]]).
 - When precision at the top of the list matters more than latency (Humeau et al., 2019).
-- When the retrieval domain differs from the training data: re-ranking models generalised well to out-of-distribution data in BEIR (Thakur et al., 2021).
+- When the retrieval domain differs from the training data: re-ranking models generalised well to out-of-distribution data in [[beir|BEIR]] (Thakur et al., 2021).
 - Scoring a small number of given sentence pairs, for example their semantic similarity, a sentence-pair task on which BERT set new state-of-the-art results (Reimers & Gurevych, 2019).
 
 ### Strengths and limitations
 
 **Strengths**
 - Higher accuracy than bi-encoders, since query and text interact in every layer (Humeau et al., 2019).
-- A BERT re-ranker outperformed the previous state of the art on MS MARCO passage retrieval by 27% relative in MRR@10 (Nogueira & Cho, 2019).
+- A BERT re-ranker outperformed the previous state of the art on [[ms-marco|MS MARCO]] passage retrieval by 27% relative in MRR@10 (Nogueira & Cho, 2019).
 - On BEIR, re-ranking BM25's top candidates with a cross-encoder (BM25+CE) gave the best zero-shot results and beat BM25 on 16 of 18 datasets (Thakur et al., 2021).
 
 **Limitations**
@@ -119,12 +119,12 @@ Eine erste Stufe wie [[bm25|BM25]] oder ein Dense Retriever holt Kandidaten aus 
 Ein Bi-Encoder kann alle Kandidaten einmal kodieren, zwischenspeichern und mit jeder neuen Eingabe vergleichen. Ein Cross-Encoder muss die Kodierung für jede Eingabe und jeden Kandidaten neu berechnen, was ihn für das Bewerten großer Kandidatenmengen unerschwinglich langsam macht (Humeau et al., 2019). Das ähnlichste Paar unter 10.000 Sätzen mit einem BERT-Cross-Encoder zu finden, erfordert etwa 50 Millionen Inferenzschritte, rund 65 Stunden auf einer V100-GPU, gegenüber etwa 5 Sekunden mit Sentence-BERT-Embeddings (Reimers & Gurevych, 2019).
 
 #### Ursprung und Varianten
-Humeau et al. (2019) verglichen die beiden verbreiteten Architekturen zur Bewertung von Paaren, Cross-Encoder und Bi-Encoder, und schlugen dazwischen den Poly-Encoder vor, der schneller als ein Cross-Encoder und genauer als ein Bi-Encoder ist. Nogueira & Cho (2019) setzten BERT als Re-Ranker für Passagen ein. ColBERT (Khattab & Zaharia, 2020) verzögert die Interaktion: Anfrage und Dokumente werden getrennt kodiert und Token für Token verglichen, sodass sich die Dokumentrepräsentationen vorab berechnen lassen; siehe [[semantic-retrieval|Semantisches Retrieval]].
+Humeau et al. (2019) verglichen die beiden verbreiteten Architekturen zur Bewertung von Paaren, Cross-Encoder und Bi-Encoder, und schlugen dazwischen den Poly-Encoder vor, der schneller als ein Cross-Encoder und genauer als ein Bi-Encoder ist. Nogueira & Cho (2019) setzten BERT als Re-Ranker für Passagen ein. [[colbert|ColBERT]] (Khattab & Zaharia, 2020) verzögert die Interaktion: Anfrage und Dokumente werden getrennt kodiert und Token für Token verglichen, sodass sich die Dokumentrepräsentationen vorab berechnen lassen; siehe [[semantic-retrieval|Semantisches Retrieval]].
 
 ### Wann einsetzen
 - Re-Ranking der besten Kandidaten eines Retrievers der ersten Stufe in der Suche und bei [[retrieval-augmented-generation|Retrieval-Augmented Generation]] (Nogueira & Cho, 2019; [[rag-retrieval|RAG: Retrieval]]).
 - Wenn Präzision am Anfang der Liste wichtiger ist als Latenz (Humeau et al., 2019).
-- Wenn die Retrieval-Domäne von den Trainingsdaten abweicht: Re-Ranking-Modelle verallgemeinerten in BEIR gut auf Daten außerhalb der Trainingsverteilung (Thakur et al., 2021).
+- Wenn die Retrieval-Domäne von den Trainingsdaten abweicht: Re-Ranking-Modelle verallgemeinerten in [[beir|BEIR]] gut auf Daten außerhalb der Trainingsverteilung (Thakur et al., 2021).
 - Bewertung einer kleinen Zahl gegebener Satzpaare, etwa ihrer semantischen Ähnlichkeit, einer Satzpaar-Aufgabe, bei der BERT neue Bestwerte erzielte (Reimers & Gurevych, 2019).
 
 ### Stärken und Grenzen

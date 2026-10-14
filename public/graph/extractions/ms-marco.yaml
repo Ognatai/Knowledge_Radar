@@ -1,0 +1,16 @@
+version: 1
+note_sha256: 774fcb3215205295fc80ba4a6febb4dd3ebb99aa23e47b6b560f0fd5ae603e52
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- beir
+- bm25
+- colbert
+- dense-passage-retrieval
+- rag-retrieval-evaluation
+- text-similarity-metrics
+- microsoft
+relations:
+- from: ms-marco
+  type: DEVELOPED_BY
+  to: microsoft
+  evidence: microsoft ai & research presented ms marco at nips 2016

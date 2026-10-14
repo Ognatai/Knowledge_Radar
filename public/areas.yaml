@@ -99,6 +99,13 @@ areas:
       - rag-generation-evaluation
       - rag-failure-modes
       - document-processing
+      - dense-passage-retrieval
+      - colbert
+      - reciprocal-rank-fusion
+      - hnsw
+      - faiss
+      - beir
+      - ms-marco
     also:
       - embeddings
       - rag-vs-fine-tuning

@@ -72,8 +72,8 @@ An [[embeddings|embedding model]] maps each chunk to a vector of fixed dimension
 
 The vectors are stored in a [[vector-databases|vector database]] or a vector index. Comparing a query with every stored vector (exact nearest-neighbour search) costs time proportional to the number of vectors and becomes too slow for large collections. Vector indexes therefore use **approximate nearest-neighbour (ANN)** search, which trades a small loss in recall for a large gain in speed:
 
-- **HNSW** (Malkov & Yashunin, 2016) builds a hierarchy of proximity graphs. Each vector is inserted into the bottom layer and, with exponentially decreasing probability, into higher layers. A search starts in the sparse top layer, moves greedily towards the query and descends layer by layer; search effort grows roughly logarithmically with collection size.
-- **Inverted-file and quantisation methods**, as implemented in FAISS (Johnson et al., 2017), partition the vector space into clusters and compress vectors (product quantisation), so that only a few clusters are searched and billions of vectors fit into memory.
+- **[[hnsw|HNSW]]** (Malkov & Yashunin, 2016) builds a hierarchy of proximity graphs. Each vector is inserted into the bottom layer and, with exponentially decreasing probability, into higher layers. A search starts in the sparse top layer, moves greedily towards the query and descends layer by layer; search effort grows roughly logarithmically with collection size.
+- **Inverted-file and quantisation methods**, as implemented in [[faiss|FAISS]] (Johnson et al., 2017), partition the vector space into clusters and compress vectors (product quantisation), so that only a few clusters are searched and billions of vectors fit into memory.
 
 For lexical search, the chunks are additionally tokenised into an **[[inverted-index|inverted index]]** that maps each term to the chunks containing it.
 
@@ -87,7 +87,7 @@ The prepared query is matched against the indexes ([[rag-retrieval|RAG: retrieva
 
 - **[[semantic-retrieval|Dense retrieval]]** embeds the query with the same model as the chunks and retrieves the *k* nearest vectors from the ANN index. Closeness is usually measured by [[text-similarity-metrics|cosine similarity]], `cos(q, d) = (q · d) / (‖q‖ · ‖d‖)`, or by the inner product on normalised vectors. Dense retrieval finds passages that match the meaning even without shared words. Karpukhin et al. (2020) showed that a learned dense retriever outperformed a [[bm25|BM25]] baseline by 9–19 percentage points in top-20 passage retrieval accuracy on open-domain question answering.
 - **Sparse retrieval** with **BM25** (Robertson & Zaragoza, 2009) scores chunks by the query terms they contain: rare terms weigh more (inverse document frequency), repeated occurrences add less and less (term-frequency saturation), and long chunks are normalised. BM25 is strong on exact terms such as names, article numbers or error codes, where embeddings are often imprecise.
-- **Hybrid retrieval** runs both and merges the result lists. A common method is **Reciprocal Rank Fusion** (Cormack et al., 2009): each passage receives `RRF(d) = Σ 1 / (k + rank_r(d))` summed over all result lists *r*, with *k* = 60 in the original paper. RRF needs only ranks, not scores, so the incompatible score scales of BM25 and cosine similarity do not matter.
+- **Hybrid retrieval** runs both and merges the result lists. A common method is **[[reciprocal-rank-fusion|Reciprocal Rank Fusion]]** (Cormack et al., 2009): each passage receives `RRF(d) = Σ 1 / (k + rank_r(d))` summed over all result lists *r*, with *k* = 60 in the original paper. RRF needs only ranks, not scores, so the incompatible score scales of BM25 and cosine similarity do not matter.
 
 #### 6. Reranking
 
@@ -226,8 +226,8 @@ Ein [[embeddings|Embedding-Modell]] bildet jeden Chunk auf einen Vektor fester L
 
 Die Vektoren werden in einer [[vector-databases|Vektordatenbank]] oder einem Vektorindex gespeichert. Eine Query mit jedem gespeicherten Vektor zu vergleichen (exakte Nearest Neighbor Search), kostet Zeit proportional zur Anzahl der Vektoren und wird für große Sammlungen zu langsam. Vektorindizes nutzen deshalb **Approximate Nearest Neighbor Search (ANN)**, die einen kleinen Verlust an Recall gegen einen großen Geschwindigkeitsgewinn eintauscht:
 
-- **HNSW** (Malkov & Yashunin, 2016) baut eine Hierarchie von Proximity Graphs auf. Jeder Vektor wird in die unterste Ebene und mit exponentiell abnehmender Wahrscheinlichkeit auch in höhere Ebenen eingefügt. Eine Suche beginnt in der dünn besetzten obersten Ebene, nähert sich per Greedy Search der Query und steigt Ebene für Ebene ab; der Suchaufwand wächst ungefähr logarithmisch mit der Größe der Sammlung.
-- **Inverted-File- und Quantisierungsverfahren**, wie sie FAISS (Johnson et al., 2017) umsetzt, teilen den Vektorraum in Cluster auf und komprimieren die Vektoren (Product Quantization), sodass nur wenige Cluster durchsucht werden müssen und Milliarden Vektoren in den Speicher passen.
+- **[[hnsw|HNSW]]** (Malkov & Yashunin, 2016) baut eine Hierarchie von Proximity Graphs auf. Jeder Vektor wird in die unterste Ebene und mit exponentiell abnehmender Wahrscheinlichkeit auch in höhere Ebenen eingefügt. Eine Suche beginnt in der dünn besetzten obersten Ebene, nähert sich per Greedy Search der Query und steigt Ebene für Ebene ab; der Suchaufwand wächst ungefähr logarithmisch mit der Größe der Sammlung.
+- **Inverted-File- und Quantisierungsverfahren**, wie sie [[faiss|FAISS]] (Johnson et al., 2017) umsetzt, teilen den Vektorraum in Cluster auf und komprimieren die Vektoren (Product Quantization), sodass nur wenige Cluster durchsucht werden müssen und Milliarden Vektoren in den Speicher passen.
 
 Für die lexikalische Suche werden die Chunks zusätzlich tokenisiert und in einem **Inverted Index** abgelegt, der jedem Term die Chunks zuordnet, in denen er vorkommt.
 
@@ -241,7 +241,7 @@ Die aufbereitete Query wird gegen die Indizes abgeglichen ([[rag-retrieval|RAG: 
 
 - **Dense Retrieval** bettet die Query mit demselben Modell ein wie die Chunks und holt die *k* nächsten Vektoren aus dem ANN-Index. Die Nähe wird meist mit der [[text-similarity-metrics|Cosine Similarity]] gemessen, `cos(q, d) = (q · d) / (‖q‖ · ‖d‖)`, oder mit dem Inner Product normierter Vektoren. Dense Retrieval findet Passagen, die inhaltlich passen, auch ohne gemeinsame Wörter. Karpukhin et al. (2020) zeigten, dass ein gelernter Dense Retriever eine BM25-Baseline bei der Top-20 Retrieval Accuracy für Passagen im Open-Domain-Question-Answering um 9 bis 19 Prozentpunkte übertraf.
 - **Sparse Retrieval** mit **[[bm25|BM25]]** (Robertson & Zaragoza, 2009) bewertet Chunks nach den Query-Termen, die sie enthalten: Seltene Terme wiegen mehr (Inverse Document Frequency), wiederholtes Vorkommen bringt immer weniger hinzu (Term Frequency Saturation), und lange Chunks werden normalisiert. BM25 ist stark bei exakten Begriffen wie Namen, Artikelnummern oder Fehlercodes, bei denen Embeddings oft unscharf sind.
-- **Hybrid Retrieval** führt beide Suchen aus und verschmilzt die Ergebnislisten. Ein verbreitetes Verfahren ist **Reciprocal Rank Fusion** (Cormack et al., 2009): Jede Passage erhält `RRF(d) = Σ 1 / (k + rang_r(d))`, summiert über alle Ergebnislisten *r*, mit *k* = 60 im Originalpaper. RRF braucht nur Ränge, keine Scores; die unvereinbaren Skalen von BM25 und Cosine Similarity spielen daher keine Rolle.
+- **Hybrid Retrieval** führt beide Suchen aus und verschmilzt die Ergebnislisten. Ein verbreitetes Verfahren ist **[[reciprocal-rank-fusion|Reciprocal Rank Fusion]]** (Cormack et al., 2009): Jede Passage erhält `RRF(d) = Σ 1 / (k + rang_r(d))`, summiert über alle Ergebnislisten *r*, mit *k* = 60 im Originalpaper. RRF braucht nur Ränge, keine Scores; die unvereinbaren Skalen von BM25 und Cosine Similarity spielen daher keine Rolle.
 
 #### 6. Reranking
 

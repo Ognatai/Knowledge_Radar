@@ -93,7 +93,7 @@ Manning et al. (2008) treat these further topics in their own chapters:
 
 #### Origin and variants
 
-The vector space model (Salton et al., 1975) and the comparison of term-weighting schemes (Salton & Buckley, 1988) shaped classical ranked retrieval. BM25 grew out of the probabilistic relevance framework (Robertson & Zaragoza, 2009), and dense passage retrieval (Karpukhin et al., 2020) replaced sparse term vectors with learned embeddings. Manning et al. (2008) give a textbook overview of the classical methods. Urchs (2025) extends retrieval evaluation to representational fairness between genders.
+The vector space model (Salton et al., 1975) and the comparison of term-weighting schemes (Salton & Buckley, 1988) shaped classical ranked retrieval. BM25 grew out of the probabilistic relevance framework (Robertson & Zaragoza, 2009), and [[dense-passage-retrieval|dense passage retrieval]] (Karpukhin et al., 2020) replaced sparse term vectors with learned embeddings. Manning et al. (2008) give a textbook overview of the classical methods. Urchs (2025) extends retrieval evaluation to representational fairness between genders.
 
 ### When to use it
 
@@ -219,7 +219,7 @@ Manning et al. (2008) behandeln diese weiteren Themen in eigenen Kapiteln:
 
 #### Ursprung und Varianten
 
-Das Vektorraummodell (Salton et al., 1975) und der Vergleich von Termgewichtungsschemata (Salton & Buckley, 1988) prägten das klassische Ranked Retrieval. BM25 entstand aus dem probabilistischen Relevanzmodell (Robertson & Zaragoza, 2009), und Dense Passage Retrieval (Karpukhin et al., 2020) ersetzte dünnbesetzte Termvektoren durch gelernte Embeddings. Manning et al. (2008) geben einen Lehrbuchüberblick über die klassischen Verfahren. Urchs (2025) erweitert die Evaluation von Retrieval um die Fairness der Repräsentation zwischen den Geschlechtern.
+Das Vektorraummodell (Salton et al., 1975) und der Vergleich von Termgewichtungsschemata (Salton & Buckley, 1988) prägten das klassische Ranked Retrieval. BM25 entstand aus dem probabilistischen Relevanzmodell (Robertson & Zaragoza, 2009), und [[dense-passage-retrieval|Dense Passage Retrieval]] (Karpukhin et al., 2020) ersetzte dünnbesetzte Termvektoren durch gelernte Embeddings. Manning et al. (2008) geben einen Lehrbuchüberblick über die klassischen Verfahren. Urchs (2025) erweitert die Evaluation von Retrieval um die Fairness der Repräsentation zwischen den Geschlechtern.
 
 ### Wann einsetzen
 

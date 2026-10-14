@@ -26,7 +26,7 @@ Retrieval in [[retrieval-augmented-generation|RAG]] selects relevant context pas
 
 ### How it works
 
-RAG retrieval employs a multi-stage process: sparse retrieval using [[bm25|BM25]] identifies candidate passages via lexical matching, while [[semantic-retrieval|dense retrieval]] with bi-encoders generates semantic embeddings. Vector indexing via HNSW ([[vector-databases|Vector Databases]]) enables efficient similarity search, and hybrid fusion combines sparse and dense results using Reciprocal Rank Fusion (RRF). Subsequent reranking with [[cross-encoder|cross-encoders]] refines top candidates, and advanced variants include late interaction (ColBERT) and zero-shot retrieval (HyDE).
+RAG retrieval employs a multi-stage process: sparse retrieval using [[bm25|BM25]] identifies candidate passages via lexical matching, while [[semantic-retrieval|dense retrieval]] with bi-encoders generates semantic embeddings. Vector indexing via [[hnsw|HNSW]] ([[vector-databases|Vector Databases]]) enables efficient similarity search, and hybrid fusion combines sparse and dense results using [[reciprocal-rank-fusion|Reciprocal Rank Fusion (RRF)]]. Subsequent reranking with [[cross-encoder|cross-encoders]] refines top candidates, and advanced variants include [[colbert|late interaction]] (ColBERT) and zero-shot retrieval (HyDE).
 
 ```text
 query
@@ -133,7 +133,7 @@ Retrieval in [[retrieval-augmented-generation|RAG]] wählt relevante Kontextpass
 
 ### Funktionsweise
 
-RAG-Retrieval verwendet einen mehrstufigen Prozess: Sparse Retrieval mithilfe von [[bm25|BM25]] identifiziert Kandidatenpassagen über lexikale Übereinstimmung, während [[semantic-retrieval|Dense Retrieval]] mit bi-Encodern semantische Embeddings generiert. Vektorindexierung über HNSW ([[vector-databases|Vektordatenbanken]]) ermöglicht effiziente Ähnlichkeitssuche, und Hybridfusion kombiniert sparse und dense Ergebnisse mithilfe von Reciprocal Rank Fusion (RRF). Anschließend wird die Reranking-Phase mit [[cross-encoder|Cross-Encodern]] durchgeführt, um die besten Kandidaten zu verfeinern, und fortgeschrittene Varianten umfassen späte Interaktion (ColBERT) und zero-shot Retrieval (HyDE).
+RAG-Retrieval verwendet einen mehrstufigen Prozess: Sparse Retrieval mithilfe von [[bm25|BM25]] identifiziert Kandidatenpassagen über lexikale Übereinstimmung, während [[semantic-retrieval|Dense Retrieval]] mit bi-Encodern semantische Embeddings generiert. Vektorindexierung über [[hnsw|HNSW]] ([[vector-databases|Vektordatenbanken]]) ermöglicht effiziente Ähnlichkeitssuche, und Hybridfusion kombiniert sparse und dense Ergebnisse mithilfe von [[reciprocal-rank-fusion|Reciprocal Rank Fusion (RRF)]]. Anschließend wird die Reranking-Phase mit [[cross-encoder|Cross-Encodern]] durchgeführt, um die besten Kandidaten zu verfeinern, und fortgeschrittene Varianten umfassen späte Interaktion ([[colbert|ColBERT]]) und zero-shot Retrieval (HyDE).
 
 ```text
 Abfrage

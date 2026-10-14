@@ -55,7 +55,7 @@ BERT-Base has 12 layers, hidden size 768 and 12 attention heads (110M parameters
 BERT (Devlin et al., 2018) followed GPT-1 (Radford et al., 2018), which pre-trained a left-to-right Transformer decoder; BERT's masked objective allowed a deeply bidirectional model. Variants adapt it for other uses:
 - **Sentence-BERT** fine-tunes BERT in a siamese network so that each sentence gets its own embedding that can be compared with cosine similarity (Reimers & Gurevych, 2019); see [[embeddings|Embeddings]].
 - **BERT as re-ranker:** query and passage are fed in together, and the [CLS] vector scores relevance (Nogueira & Cho, 2019); see [[cross-encoder|Cross-encoder]].
-- **Dense Passage Retrieval** uses two independent BERT encoders for questions and passages (Karpukhin et al., 2020); see [[semantic-retrieval|Semantic Retrieval]].
+- **[[dense-passage-retrieval|Dense Passage Retrieval]]** uses two independent BERT encoders for questions and passages (Karpukhin et al., 2020); see [[semantic-retrieval|Semantic Retrieval]].
 - **DistilBERT** and **TinyBERT** are smaller BERT models trained by [[knowledge-distillation|knowledge distillation]] (Sanh et al., 2019; Jiao et al., 2019).
 
 ### When to use it
@@ -141,7 +141,7 @@ BERT-Base hat 12 Schichten, Hidden Size 768 und 12 Attention-Heads (110 Mio. Par
 BERT (Devlin et al., 2018) folgte auf GPT-1 (Radford et al., 2018), das einen Transformer-Decoder von links nach rechts vortrainierte; das maskierte Trainingsziel ermöglichte BERT ein tief bidirektionales Modell. Varianten passen es an andere Zwecke an:
 - **Sentence-BERT** justiert BERT in einem siamesischen Netz so nach, dass jeder Satz ein eigenes Embedding erhält, das sich per Kosinus-Ähnlichkeit vergleichen lässt (Reimers & Gurevych, 2019); siehe [[embeddings|Embeddings]].
 - **BERT als Re-Ranker:** Anfrage und Passage werden gemeinsam eingegeben, und der [CLS]-Vektor bewertet die Relevanz (Nogueira & Cho, 2019); siehe [[cross-encoder|Cross-Encoder]].
-- **Dense Passage Retrieval** verwendet zwei unabhängige BERT-Encoder für Fragen und Passagen (Karpukhin et al., 2020); siehe [[semantic-retrieval|Semantisches Retrieval]].
+- **[[dense-passage-retrieval|Dense Passage Retrieval]]** verwendet zwei unabhängige BERT-Encoder für Fragen und Passagen (Karpukhin et al., 2020); siehe [[semantic-retrieval|Semantisches Retrieval]].
 - **DistilBERT** und **TinyBERT** sind kleinere BERT-Modelle, die per [[knowledge-distillation|Knowledge Distillation]] trainiert wurden (Sanh et al., 2019; Jiao et al., 2019).
 
 ### Wann einsetzen

@@ -24,7 +24,7 @@ Vector databases provide scalable approximate nearest neighbour search for high-
 
 ### How it works
 
-Vector databases implement approximate nearest neighbour search through hierarchical graph construction for efficient navigation (HNSW) (Malkov & Yashunin, 2016), inverted-file partitioning with GPU acceleration (FAISS) (Johnson et al., 2017), vector compression via product quantisation (PQ) (Jégou et al., 2011), and anisotropic quantisation for inner product search (Guo et al., 2019), supporting metadata filtering for context-aware retrieval.
+Vector databases implement approximate nearest neighbour search through hierarchical graph construction for efficient navigation ([[hnsw|HNSW]]) (Malkov & Yashunin, 2016), inverted-file partitioning with GPU acceleration ([[faiss|FAISS]]) (Johnson et al., 2017), vector compression via product quantisation (PQ) (Jégou et al., 2011), and anisotropic quantisation for inner product search (Guo et al., 2019), supporting metadata filtering for context-aware retrieval.
 
 ```text
 vectors + metadata
@@ -119,7 +119,7 @@ Vektordatenbanken bieten skalierbare Approximate Nearest Neighbor Suche für hoc
 
 ### Funktionsweise
 
-Vektordatenbanken implementieren Approximate Nearest Neighbor Search durch hierarchische Graphenkonstruktion für effiziente Navigation (HNSW) (Malkov & Yashunin, 2016), inverted-file-Partitionierung mit GPU-Beschleunigung (FAISS) (Johnson et al., 2017), Vektorkompression über Product Quantization (PQ) (Jégou et al., 2011) und anisotrope Quantisierung für Inneprodukt-Suche (Guo et al., 2019), wobei Metadaten-Filterung für kontextbewusste Retrieval unterstützt wird.
+Vektordatenbanken implementieren Approximate Nearest Neighbor Search durch hierarchische Graphenkonstruktion für effiziente Navigation ([[hnsw|HNSW]]) (Malkov & Yashunin, 2016), inverted-file-Partitionierung mit GPU-Beschleunigung ([[faiss|FAISS]]) (Johnson et al., 2017), Vektorkompression über Product Quantization (PQ) (Jégou et al., 2011) und anisotrope Quantisierung für Inneprodukt-Suche (Guo et al., 2019), wobei Metadaten-Filterung für kontextbewusste Retrieval unterstützt wird.
 
 ```text
 Vektoren + Metadaten

@@ -1,0 +1,37 @@
+version: 1
+note_sha256: 1f6457fb31b4b8c538fc090cd8f3999f7ccb0d2a2a38c94a51a4184d24fd4258
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- beir
+- bert
+- bm25
+- classification-metrics
+- cross-encoder
+- dense-passage-retrieval
+- embeddings
+- faiss
+- ms-marco
+- rag-retrieval
+- rag-retrieval-evaluation
+- semantic-retrieval
+- text-similarity-metrics
+- vector-databases
+- omar-khattab
+- matei-zaharia
+relations:
+- from: colbert
+  type: BASED_ON
+  to: bert
+  evidence: one shared bert model serves both sides
+- from: colbert
+  type: DEVELOPED_BY
+  to: omar-khattab
+  evidence: omar khattab and matei zaharia of stanford presented colbert at sigir 2020
+- from: colbert
+  type: DEVELOPED_BY
+  to: matei-zaharia
+  evidence: omar khattab and matei zaharia of stanford presented colbert at sigir 2020
+- from: ms-marco
+  type: EVALUATES
+  to: colbert
+  evidence: on ms marco passage ranking, colbert re-ranking reached an mrr@10 of 34.9

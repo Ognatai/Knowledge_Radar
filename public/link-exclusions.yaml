@@ -48,3 +48,7 @@ exclusions:
     dora: the DORA research programme on software delivery, not the Digital Operational Resilience Act.
   responsible-ai:
     classification: risk classification of AI systems, not the ML task.
+  colbert:
+    quantisation: product quantisation of index vectors, not the quantisation of model weights.
+  faiss:
+    quantisation: product and scalar quantisation of index vectors, not the quantisation of model weights.

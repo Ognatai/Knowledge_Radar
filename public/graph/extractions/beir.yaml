@@ -1,0 +1,34 @@
+version: 1
+note_sha256: 611bcf2042a41f0b57e8db5a3f5e0395d5f304986e54c51adffd477535ef63cc
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bm25
+- classification-metrics
+- colbert
+- cross-encoder
+- dense-passage-retrieval
+- embeddings
+- information-retrieval
+- ms-marco
+- rag-retrieval
+- rag-retrieval-evaluation
+- reciprocal-rank-fusion
+- retrieval-augmented-generation
+- ukp-lab
+relations:
+- from: beir
+  type: DEVELOPED_BY
+  to: ukp-lab
+  evidence: nandan thakur, nils reimers and colleagues at the ukp lab of tu darmstadt published beir in 2021
+- from: beir
+  type: EVALUATES
+  to: bm25
+  evidence: bm25 remained a strong baseline
+- from: beir
+  type: EVALUATES
+  to: dense-passage-retrieval
+  evidence: dpr was on average 47.7% below bm25
+- from: beir
+  type: EVALUATES
+  to: colbert
+  evidence: colbert was 2.5% above bm25 on average

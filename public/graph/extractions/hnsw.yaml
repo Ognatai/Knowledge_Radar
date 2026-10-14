@@ -1,0 +1,16 @@
+version: 1
+note_sha256: 7b9ea2cffa1c2f6df5d8ff14d2d22b2d5dc8a514b61bf7a4d5c5d1e0a38e2337
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- faiss
+- neo4j
+- rag-retrieval
+- rag-retrieval-evaluation
+- retrieval-augmented-generation
+- semantic-retrieval
+- vector-databases
+relations:
+- from: hnsw
+  type: IS_EXAMPLE_OF
+  to: vector-databases
+  evidence: is one of the main index types in vector databases

@@ -54,7 +54,7 @@ Karpukhin et al. (2020) showed that retrieval for open-domain question answering
 
 #### 4. Late interaction and re-ranking
 
-ColBERT encodes query and document separately with BERT but keeps an embedding per token and computes a cheap late-interaction score between them; it was competitive with BERT-based ranking models while running two orders of magnitude faster and needing four orders of magnitude fewer FLOPs per query (Khattab & Zaharia, 2020). A cross-encoder re-ranker processes query and passage together and is the most accurate but most expensive option, so it is applied only to the top candidates; a BERT re-ranker improved the previous state of the art on MS MARCO passage retrieval by 27% relative in MRR@10 (Nogueira & Cho, 2019).
+[[colbert|ColBERT]] encodes query and document separately with BERT but keeps an embedding per token and computes a cheap late-interaction score between them; it was competitive with BERT-based ranking models while running two orders of magnitude faster and needing four orders of magnitude fewer FLOPs per query (Khattab & Zaharia, 2020). A cross-encoder re-ranker processes query and passage together and is the most accurate but most expensive option, so it is applied only to the top candidates; a BERT re-ranker improved the previous state of the art on [[ms-marco|MS MARCO]] passage retrieval by 27% relative in MRR@10 (Nogueira & Cho, 2019).
 
 #### 5. Retrieval without labelled data
 
@@ -62,11 +62,11 @@ Without relevance labels, it is hard to train an effective dense retriever. HyDE
 
 #### 6. Generalisation across domains
 
-BEIR evaluated 10 retrieval systems on 18 datasets from diverse domains in a zero-shot setting (Thakur et al., 2021). BM25 proved a robust baseline; re-ranking and late-interaction models achieved the best average zero-shot results at high computational cost, while dense retrievers were efficient but often underperformed, showing considerable room for improvement in their generalisation.
+[[beir|BEIR]] evaluated 10 retrieval systems on 18 datasets from diverse domains in a zero-shot setting (Thakur et al., 2021). BM25 proved a robust baseline; re-ranking and late-interaction models achieved the best average zero-shot results at high computational cost, while dense retrievers were efficient but often underperformed, showing considerable room for improvement in their generalisation.
 
 #### Origin and variants
 
-Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings practical for search, dense passage retrieval (Karpukhin et al., 2020) showed their value for question answering, ColBERT (Khattab & Zaharia, 2020) and cross-encoder re-ranking (Nogueira & Cho, 2019) improved precision, HyDE (Gao et al., 2022) removed the need for labels, and BEIR (Thakur et al., 2021) tested generalisation.
+Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings practical for search, [[dense-passage-retrieval|dense passage retrieval]] (Karpukhin et al., 2020) showed their value for question answering, ColBERT (Khattab & Zaharia, 2020) and cross-encoder re-ranking (Nogueira & Cho, 2019) improved precision, HyDE (Gao et al., 2022) removed the need for labels, and BEIR (Thakur et al., 2021) tested generalisation.
 
 ### When to use it
 
@@ -153,7 +153,7 @@ Karpukhin et al. (2020) zeigten, dass sich Retrieval für Open-Domain-Fragebeant
 
 #### 4. Late Interaction und Reranking
 
-ColBERT kodiert Anfrage und Dokument getrennt mit BERT, behält aber ein Embedding je Token und berechnet zwischen ihnen eine günstige späte Interaktion; es war mit BERT-basierten Ranking-Modellen konkurrenzfähig, lief dabei zwei Größenordnungen schneller und brauchte vier Größenordnungen weniger FLOPs je Anfrage (Khattab & Zaharia, 2020). Ein Cross-Encoder-Reranker verarbeitet Anfrage und Passage gemeinsam und ist die genaueste, aber teuerste Option; er wird daher nur auf die besten Kandidaten angewendet. Ein BERT-Reranker verbesserte den bisherigen Bestwert beim Passage-Retrieval auf MS MARCO um relativ 27 % im MRR@10 (Nogueira & Cho, 2019).
+[[colbert|ColBERT]] kodiert Anfrage und Dokument getrennt mit BERT, behält aber ein Embedding je Token und berechnet zwischen ihnen eine günstige späte Interaktion; es war mit BERT-basierten Ranking-Modellen konkurrenzfähig, lief dabei zwei Größenordnungen schneller und brauchte vier Größenordnungen weniger FLOPs je Anfrage (Khattab & Zaharia, 2020). Ein Cross-Encoder-Reranker verarbeitet Anfrage und Passage gemeinsam und ist die genaueste, aber teuerste Option; er wird daher nur auf die besten Kandidaten angewendet. Ein BERT-Reranker verbesserte den bisherigen Bestwert beim Passage-Retrieval auf [[ms-marco|MS MARCO]] um relativ 27 % im MRR@10 (Nogueira & Cho, 2019).
 
 #### 5. Retrieval ohne gelabelte Daten
 
@@ -161,11 +161,11 @@ Ohne Relevanzlabels lässt sich ein wirksamer Dense Retriever schwer trainieren.
 
 #### 6. Generalisierung über Domänen
 
-BEIR evaluierte 10 Retrieval-Systeme auf 18 Datensätzen aus vielfältigen Domänen ohne vorheriges Training darauf (Thakur et al., 2021). BM25 erwies sich als robuste Baseline; Reranking- und Late-Interaction-Modelle erzielten im Mittel die besten Zero-Shot-Ergebnisse bei hohem Rechenaufwand, während Dense Retriever effizient waren, aber oft schlechter abschnitten, was großen Verbesserungsbedarf bei ihrer Generalisierung zeigt.
+[[beir|BEIR]] evaluierte 10 Retrieval-Systeme auf 18 Datensätzen aus vielfältigen Domänen ohne vorheriges Training darauf (Thakur et al., 2021). BM25 erwies sich als robuste Baseline; Reranking- und Late-Interaction-Modelle erzielten im Mittel die besten Zero-Shot-Ergebnisse bei hohem Rechenaufwand, während Dense Retriever effizient waren, aber oft schlechter abschnitten, was großen Verbesserungsbedarf bei ihrer Generalisierung zeigt.
 
 #### Ursprung und Varianten
 
-Sentence-BERT (Reimers & Gurevych, 2019) machte Satz-Embeddings für die Suche praktikabel, Dense Passage Retrieval (Karpukhin et al., 2020) zeigte ihren Nutzen für die Fragebeantwortung, ColBERT (Khattab & Zaharia, 2020) und Cross-Encoder-Reranking (Nogueira & Cho, 2019) erhöhten die Präzision, HyDE (Gao et al., 2022) kam ohne Labels aus, und BEIR (Thakur et al., 2021) prüfte die Generalisierung.
+Sentence-BERT (Reimers & Gurevych, 2019) machte Satz-Embeddings für die Suche praktikabel, [[dense-passage-retrieval|Dense Passage Retrieval]] (Karpukhin et al., 2020) zeigte ihren Nutzen für die Fragebeantwortung, ColBERT (Khattab & Zaharia, 2020) und Cross-Encoder-Reranking (Nogueira & Cho, 2019) erhöhten die Präzision, HyDE (Gao et al., 2022) kam ohne Labels aus, und BEIR (Thakur et al., 2021) prüfte die Generalisierung.
 
 ### Wann einsetzen
 

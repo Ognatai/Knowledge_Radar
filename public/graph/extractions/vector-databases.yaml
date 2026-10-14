@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 55c7428c0d96bc5c5e93517f5dbcb02ccf39cbb326c28582906cd51bd6729959
+note_sha256: b8cc96787387874b9d4157a9545cc448b5f86fac6de6dcc62ddf185752349105
 extracted_by: claude
 discusses:
 - hnsw

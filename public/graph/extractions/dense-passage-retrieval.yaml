@@ -1,0 +1,34 @@
+version: 1
+note_sha256: 7b47bc653e69a0352677b9882ddae857192b5a2978474c1d36cce077020e7cf3
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- beir
+- bert
+- bm25
+- clustering
+- colbert
+- cross-encoder
+- faiss
+- inverted-index
+- rag-chunking
+- rag-retrieval
+- rag-retrieval-evaluation
+- reciprocal-rank-fusion
+- retrieval-augmented-generation
+- semantic-retrieval
+- vector-databases
+- natural-questions
+- meta
+relations:
+- from: dense-passage-retrieval
+  type: BASED_ON
+  to: bert
+  evidence: dpr uses two independent bert-base encoders
+- from: dense-passage-retrieval
+  type: COMPLEMENTS
+  to: bm25
+  evidence: a linear combination of bm25 and dpr scores improved results on some datasets
+- from: natural-questions
+  type: EVALUATES
+  to: dense-passage-retrieval
+  evidence: on natural questions, dpr reached 78.4% top-20 accuracy against 59.1% for bm25
