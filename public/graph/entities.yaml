@@ -405,10 +405,18 @@ entities:
   type: Technology
   name_en: Claude Code
   name_de: Claude Code
+  summary_en: Claude Code is Anthropic's AI coding assistant that builds features, fixes bugs and automates development tasks, working across the files and tools of a codebase (Claude Code documentation). It runs in the terminal, in IDE extensions, as a desktop app and on the web.
+  summary_de: Claude Code ist der KI-Programmierassistent von Anthropic, der Funktionen umsetzt, Fehler behebt und Entwicklungsaufgaben automatisiert und dabei über Dateien und Werkzeuge einer Codebasis hinweg arbeitet (Claude-Code-Dokumentation). Er läuft im Terminal, in IDE-Erweiterungen, als Desktop-App und im Web.
+  sources:
+  - https://docs.claude.com/en/docs/claude-code/overview
 - id: codex
   type: Technology
   name_en: Codex
   name_de: Codex
+  summary_en: Codex is OpenAI's coding agent (Codex repository). The Codex CLI runs locally on a developer's computer; Codex is also available in code editors, as a desktop app and as a cloud-based agent (Codex Web).
+  summary_de: Codex ist der Programmieragent von OpenAI (Codex-Repository). Die Codex-CLI läuft lokal auf dem Rechner der Entwickler; Codex gibt es außerdem in Code-Editoren, als Desktop-App und als cloudbasierten Agenten (Codex Web).
+  sources:
+  - https://github.com/openai/codex
 - id: product-liability-directive-2024
   type: Regulation
   name_en: Product Liability Directive (EU) 2024/2853
@@ -1861,14 +1869,26 @@ entities:
   aliases:
   - W&B
   - wandb
+  summary_en: Weights & Biases (W&B) is a platform for machine learning development that offers experiment tracking, hyperparameter sweeps, artifacts, reports and automations, plus W&B Weave for evaluating LLM and agent applications (W&B documentation).
+  summary_de: Weights & Biases (W&B) ist eine Plattform für die Entwicklung im maschinellen Lernen mit Experiment-Tracking, Hyperparameter-Sweeps, Artefakten, Berichten und Automatisierungen sowie W&B Weave zur Evaluation von LLM- und Agentenanwendungen (W&B-Dokumentation).
+  sources:
+  - https://docs.wandb.ai/
 - id: neptune
   type: Technology
   name_en: Neptune (experiment tracking)
   name_de: Neptune (Experiment Tracking)
+  summary_en: Neptune was an experiment tracker for teams training foundation models (Neptune documentation). Following its acquisition by OpenAI, the service was discontinued on 5 March 2026, with remaining data deleted at shutdown.
+  summary_de: Neptune war ein Experiment-Tracker für Teams, die Foundation Models trainieren (Neptune-Dokumentation). Nach der Übernahme durch OpenAI wurde der Dienst am 5. März 2026 eingestellt; verbliebene Daten wurden dabei gelöscht.
+  sources:
+  - https://docs.neptune.ai/
 - id: tensorboard
   type: Technology
   name_en: TensorBoard
   name_de: TensorBoard
+  summary_en: TensorBoard is the visualisation toolkit of TensorFlow for machine learning experiments (TensorFlow documentation). It tracks and plots metrics such as loss and accuracy, shows the model graph and histograms of weights and biases over time, projects embeddings into lower-dimensional space, displays images, text and audio, and profiles TensorFlow programs.
+  summary_de: TensorBoard ist das Visualisierungswerkzeug von TensorFlow für Experimente im maschinellen Lernen (TensorFlow-Dokumentation). Es verfolgt und zeichnet Metriken wie Loss und Accuracy, zeigt den Modellgraphen und Histogramme von Gewichten und Biases im Zeitverlauf, projiziert Embeddings in niedrigere Dimensionen, stellt Bilder, Text und Audio dar und profiliert TensorFlow-Programme.
+  sources:
+  - https://www.tensorflow.org/tensorboard
 - id: model-registry
   type: Concept
   name_en: Model registry
@@ -2140,6 +2160,10 @@ entities:
   type: Technology
   name_en: GitHub
   name_de: GitHub
+  summary_en: GitHub is a platform for building software that hosts Git repositories and supports the software development life cycle from planning work to deploying and operating software (GitHub Docs).
+  summary_de: GitHub ist eine Plattform für Softwareentwicklung, die Git-Repositories hostet und den Softwareentwicklungszyklus von der Planung bis zu Deployment und Betrieb unterstützt (GitHub Docs).
+  sources:
+  - https://docs.github.com/en/get-started/start-your-journey/about-github-and-git
 - id: viv-trivedy
   type: Person
   name_en: Viv Trivedy
@@ -2232,6 +2256,10 @@ entities:
   type: Technology
   name_en: PyTorch
   name_de: PyTorch
+  summary_en: PyTorch is a Python package for tensor computation, similar to NumPy but with strong GPU acceleration, and for deep neural networks built on a tape-based automatic differentiation system (PyTorch repository).
+  summary_de: PyTorch ist ein Python-Paket für Tensorberechnungen, ähnlich wie NumPy, aber mit starker GPU-Beschleunigung, und für tiefe neuronale Netze auf Grundlage eines bandbasierten Systems zur automatischen Differenzierung (PyTorch-Repository).
+  sources:
+  - https://github.com/pytorch/pytorch
 - id: shacl
   type: Technology
   name_en: SHACL
@@ -2246,6 +2274,10 @@ entities:
   type: Technology
   name_en: PROV-O
   name_de: PROV-O
+  summary_en: The PROV Ontology (PROV-O) expresses the W3C PROV data model in OWL 2 (W3C 2013). It provides classes, properties and restrictions for representing and exchanging provenance information from different systems and contexts, and can be specialised for particular applications and domains.
+  summary_de: Die PROV-Ontologie (PROV-O) drückt das PROV-Datenmodell des W3C in OWL 2 aus (W3C 2013). Sie stellt Klassen, Eigenschaften und Einschränkungen bereit, mit denen sich Provenienzinformationen aus unterschiedlichen Systemen und Kontexten darstellen und austauschen lassen, und kann für bestimmte Anwendungen und Domänen spezialisiert werden.
+  sources:
+  - https://www.w3.org/TR/prov-o/
 - id: entity-resolution
   type: Method
   name_en: Entity resolution
@@ -2262,6 +2294,10 @@ entities:
   type: Technology
   name_en: Helm
   name_de: Helm
+  summary_en: Helm manages Kubernetes applications through charts, which define, install and upgrade even complex applications and can be versioned, shared and published (Helm documentation). Helm is a graduated project of the Cloud Native Computing Foundation (CNCF).
+  summary_de: Helm verwaltet Kubernetes-Anwendungen über sogenannte Charts, mit denen sich auch komplexe Anwendungen definieren, installieren und aktualisieren lassen und die versioniert, geteilt und veröffentlicht werden können (Helm-Dokumentation). Helm ist ein Graduated Project der Cloud Native Computing Foundation (CNCF).
+  sources:
+  - https://helm.sh/
 - id: pod
   type: Concept
   name_en: Pod (Kubernetes)
@@ -2480,14 +2516,26 @@ entities:
   type: Technology
   name_en: Langfuse
   name_de: Langfuse
+  summary_en: Langfuse is an open-source, self-hostable platform for debugging, analysing and improving LLM and agent applications (Langfuse documentation). It covers observability through traces, cost and latency, prompt management and evaluation.
+  summary_de: Langfuse ist eine quelloffene, selbst betreibbare Plattform zum Debuggen, Analysieren und Verbessern von LLM- und Agentenanwendungen (Langfuse-Dokumentation). Sie umfasst Observability über Traces, Kosten und Latenz, Prompt-Verwaltung und Evaluation.
+  sources:
+  - https://langfuse.com/docs
 - id: langsmith
   type: Technology
   name_en: LangSmith
   name_de: LangSmith
+  summary_en: LangSmith is LangChain's platform for observing and evaluating LLM applications (LangSmith documentation). It records traces of what applications and agents did, from single runs to production-wide performance metrics, which are used for debugging, quality monitoring and building evaluation datasets.
+  summary_de: LangSmith ist die Plattform von LangChain zur Beobachtung und Evaluation von LLM-Anwendungen (LangSmith-Dokumentation). Sie zeichnet Traces dessen auf, was Anwendungen und Agenten getan haben, von einzelnen Läufen bis zu produktionsweiten Leistungsmetriken, und nutzt sie für Debugging, Qualitätsüberwachung und den Aufbau von Evaluationsdatensätzen.
+  sources:
+  - https://docs.smith.langchain.com/
 - id: opentelemetry
   type: Technology
   name_en: OpenTelemetry
   name_de: OpenTelemetry
+  summary_en: OpenTelemetry is an open-source, vendor- and tool-agnostic observability framework and toolkit for generating, exporting and collecting telemetry data such as traces, metrics and logs (OpenTelemetry documentation). It is not an observability backend; storage and visualisation are left to other tools such as Jaeger or Prometheus.
+  summary_de: OpenTelemetry ist ein quelloffenes, hersteller- und werkzeugunabhängiges Observability-Framework mit Toolkit zum Erzeugen, Exportieren und Sammeln von Telemetriedaten wie Traces, Metriken und Logs (OpenTelemetry-Dokumentation). Es ist selbst kein Observability-Backend; Speicherung und Visualisierung übernehmen andere Werkzeuge wie Jaeger oder Prometheus.
+  sources:
+  - https://opentelemetry.io/docs/what-is-opentelemetry/
 - id: distributed-tracing
   type: Concept
   name_en: Distributed tracing
@@ -2797,12 +2845,20 @@ entities:
   name_de: RDF Schema
   aliases:
   - RDFS
+  summary_en: RDF Schema (RDFS) is a W3C data-modelling vocabulary for RDF data that extends the basic RDF vocabulary, for example with classes, subclass and subproperty relations, and domains and ranges of properties (W3C 2014). RDF Schema 1.1 is an edited version of the 2004 Recommendation with unchanged technical content.
+  summary_de: RDF Schema (RDFS) ist ein Datenmodellierungsvokabular des W3C für RDF-Daten, das das grundlegende RDF-Vokabular erweitert, etwa um Klassen, Unterklassen- und Untereigenschaftsbeziehungen sowie Domänen und Wertebereiche von Eigenschaften (W3C 2014). RDF Schema 1.1 ist eine überarbeitete Fassung der Empfehlung von 2004 mit unverändertem technischem Inhalt.
+  sources:
+  - https://www.w3.org/TR/rdf-schema/
 - id: skos
   type: Technology
   name_en: SKOS (Simple Knowledge Organization System)
   name_de: SKOS (Simple Knowledge Organization System)
   aliases:
   - SKOS
+  summary_en: The Simple Knowledge Organization System (SKOS) is a W3C data model for sharing and linking knowledge organisation systems such as thesauri, taxonomies, classification schemes and subject heading systems via the Web (W3C 2009). It offers a low-cost migration path for existing systems to the Semantic Web and can be used on its own or together with formal languages such as OWL.
+  summary_de: Das Simple Knowledge Organization System (SKOS) ist ein Datenmodell des W3C, um Wissensorganisationssysteme wie Thesauri, Taxonomien, Klassifikationen und Schlagwortsysteme über das Web zu teilen und zu verknüpfen (W3C 2009). Es bietet einen kostengünstigen Migrationspfad für bestehende Systeme ins Semantic Web und lässt sich allein oder zusammen mit formalen Sprachen wie OWL nutzen.
+  sources:
+  - https://www.w3.org/TR/skos-reference/
 - id: competency-questions
   type: Method
   name_en: Competency questions
@@ -2868,14 +2924,26 @@ entities:
   type: Technology
   name_en: NumPy
   name_de: NumPy
+  summary_en: NumPy is the fundamental package for scientific computing in Python (NumPy documentation). At its core is the ndarray, an n-dimensional array of elements of one data type, on which many operations run in compiled code; the library adds routines for mathematical, logical and shape operations, sorting, I/O, Fourier transforms, linear algebra, statistics and random simulation.
+  summary_de: NumPy ist das grundlegende Paket für wissenschaftliches Rechnen in Python (NumPy-Dokumentation). Kern ist das ndarray, ein n-dimensionales Array aus Elementen desselben Datentyps, auf dem viele Operationen in kompiliertem Code laufen; dazu kommen Routinen für mathematische und logische Operationen, Formänderungen, Sortieren, Ein- und Ausgabe, Fourier-Transformationen, lineare Algebra, Statistik und Zufallssimulation.
+  sources:
+  - https://numpy.org/doc/stable/user/whatisnumpy.html
 - id: pandas
   type: Technology
   name_en: pandas
   name_de: pandas
+  summary_en: pandas is an open-source, BSD-licensed Python library that provides high-performance, easy-to-use data structures and data analysis tools (pandas documentation).
+  summary_de: pandas ist eine quelloffene Python-Bibliothek unter BSD-Lizenz, die leistungsfähige, einfach nutzbare Datenstrukturen und Werkzeuge zur Datenanalyse bereitstellt (pandas-Dokumentation).
+  sources:
+  - https://pandas.pydata.org/docs/
 - id: venv
   type: Technology
   name_en: venv (virtual environments)
   name_de: venv (virtuelle Umgebungen)
+  summary_en: The venv module of the Python standard library (since Python 3.3) creates lightweight virtual environments, each with its own independent set of installed Python packages (Python documentation). A virtual environment is built on top of an existing base Python installation and is isolated from its packages by default; installers such as pip install into the active virtual environment.
+  summary_de: Das Modul venv der Python-Standardbibliothek (seit Python 3.3) erzeugt leichtgewichtige virtuelle Umgebungen mit jeweils eigenen, unabhängig installierten Python-Paketen (Python-Dokumentation). Eine virtuelle Umgebung setzt auf einer bestehenden Basis-Installation von Python auf und ist standardmäßig von deren Paketen isoliert; Installationswerkzeuge wie pip installieren in die aktive virtuelle Umgebung.
+  sources:
+  - https://docs.python.org/3/library/venv.html
 - id: behavioural-testing
   type: Method
   name_en: Behavioural testing
@@ -3157,6 +3225,10 @@ entities:
   type: Technology
   name_en: ScaNN
   name_de: ScaNN
+  summary_en: ScaNN (Scalable Nearest Neighbors) is a Google Research method and library for efficient vector similarity search at scale (ScaNN repository). It combines search space pruning with quantisation for maximum inner product search, also supports distances such as the Euclidean distance, and is based on anisotropic vector quantisation (Guo et al. 2020).
+  summary_de: ScaNN (Scalable Nearest Neighbors) ist eine Methode und Bibliothek von Google Research für effiziente Vektorähnlichkeitssuche in großem Maßstab (ScaNN-Repository). Sie verbindet das Beschneiden des Suchraums mit Quantisierung für die Suche nach dem maximalen Skalarprodukt, unterstützt auch Distanzen wie die euklidische und beruht auf anisotroper Vektorquantisierung (Guo et al. 2020).
+  sources:
+  - https://github.com/google-research/google-research/tree/master/scann
 - id: metadata-filtering
   type: Method
   name_en: Metadata filtering
@@ -3165,18 +3237,35 @@ entities:
   type: Technology
   name_en: Turtle
   name_de: Turtle
+  summary_en: Turtle is a W3C textual syntax that writes an RDF graph completely in a compact and natural text form, with abbreviations for common usage patterns and datatypes (W3C 2014). It is compatible to some degree with N-Triples and with the triple pattern syntax of SPARQL.
+  summary_de: Turtle ist eine textuelle Syntax des W3C, mit der sich ein RDF-Graph vollständig in kompakter, natürlicher Textform aufschreiben lässt, mit Abkürzungen für häufige Muster und Datentypen (W3C 2014). Sie ist in Teilen kompatibel mit N-Triples und mit der Tripelmuster-Syntax von SPARQL.
+  sources:
+  - https://www.w3.org/TR/turtle/
 - id: json-ld
   type: Technology
   name_en: JSON-LD
   name_de: JSON-LD
+  summary_en: JSON-LD is a W3C JSON-based format for serialising Linked Data, designed to integrate easily into systems that already use JSON and to offer an upgrade path from JSON to JSON-LD (W3C 2020). Version 1.1 is a superset of JSON-LD 1.0, and 1.0 documents generally remain compatible.
+  summary_de: JSON-LD ist ein JSON-basiertes Format des W3C zur Serialisierung von Linked Data, das sich leicht in Systeme einfügen soll, die bereits JSON nutzen, und einen Übergang von JSON zu JSON-LD bietet (W3C 2020). Version 1.1 ist eine Obermenge von JSON-LD 1.0; Dokumente der Version 1.0 bleiben in der Regel kompatibel.
+  sources:
+  - https://www.w3.org/TR/json-ld11/
 - id: n-triples
   type: Technology
   name_en: N-Triples / N-Quads
   name_de: N-Triples / N-Quads
+  summary_en: N-Triples is a W3C line-based plain-text format for encoding an RDF graph; its counterpart N-Quads is a line-based plain-text format for encoding an RDF dataset, i.e. several graphs (W3C 2014a; W3C 2014b).
+  summary_de: N-Triples ist ein zeilenbasiertes Klartextformat des W3C zur Kodierung eines RDF-Graphen; das Gegenstück N-Quads ist ein zeilenbasiertes Klartextformat zur Kodierung eines RDF-Datasets, also mehrerer Graphen (W3C 2014a; W3C 2014b).
+  sources:
+  - https://www.w3.org/TR/n-triples/
+  - https://www.w3.org/TR/n-quads/
 - id: reification
   type: Method
   name_en: Reification (RDF)
   name_de: Reifikation (RDF)
+  summary_en: RDF reification uses a vocabulary (rdf:Statement, rdf:subject, rdf:predicate, rdf:object) to describe RDF statements without asserting them, so that statements about statements can be made (W3C 2014). The vocabulary dates back to the 1999 RDF Model and Syntax specification and has no normative formal semantics; RDF Schema 1.1 only describes its intended meaning in a non-normative section.
+  summary_de: Die RDF-Reifikation beschreibt RDF-Aussagen mit einem eigenen Vokabular (rdf:Statement, rdf:subject, rdf:predicate, rdf:object), ohne sie selbst zu behaupten, sodass sich Aussagen über Aussagen treffen lassen (W3C 2014). Das Vokabular stammt aus der RDF-Spezifikation von 1999 und hat keine normative formale Semantik; RDF Schema 1.1 beschreibt seine beabsichtigte Bedeutung nur in einem nicht normativen Abschnitt.
+  sources:
+  - https://www.w3.org/TR/rdf-schema/
 - id: lstm
   type: Method
   name_en: Long short-term memory (LSTM)
@@ -3427,6 +3516,11 @@ entities:
   type: Technology
   name_en: SentencePiece
   name_de: SentencePiece
+  summary_en: SentencePiece is an unsupervised text tokeniser and detokeniser for neural text generation with a vocabulary size fixed before training (Kudo and Richardson 2018). It implements byte-pair encoding and the unigram language model, trains directly on raw sentences and treats input as a raw sequence of Unicode characters, so no language-specific pre- or post-processing is needed.
+  summary_de: SentencePiece ist ein unüberwachter Tokenizer und Detokenizer für neuronale Textgenerierung mit vor dem Training festgelegter Vokabulargröße (Kudo und Richardson 2018). Er implementiert Byte-Pair-Encoding und das Unigram-Sprachmodell, trainiert direkt auf Rohsätzen und behandelt die Eingabe als Folge von Unicode-Zeichen, sodass keine sprachspezifische Vor- oder Nachverarbeitung nötig ist.
+  sources:
+  - https://github.com/google/sentencepiece
+  - https://arxiv.org/abs/1808.06226
 - id: gnmt
   type: Technology
   name_en: Google neural machine translation (GNMT)
@@ -3755,14 +3849,26 @@ entities:
   name_de: Speech Synthesis Markup Language (SSML)
   aliases:
   - SSML
+  summary_en: The Speech Synthesis Markup Language (SSML) is an XML-based W3C markup language that supports the generation of synthetic speech in Web and other applications (W3C 2010). It gives authors a standard way to control aspects of speech such as pronunciation, volume, pitch and rate across different synthesis platforms; SSML 1.1 became a W3C Recommendation in September 2010.
+  summary_de: Die Speech Synthesis Markup Language (SSML) ist eine XML-basierte Auszeichnungssprache des W3C, die die Erzeugung synthetischer Sprache in Web- und anderen Anwendungen unterstützt (W3C 2010). Sie bietet eine einheitliche Möglichkeit, Aspekte wie Aussprache, Lautstärke, Tonhöhe und Sprechgeschwindigkeit plattformübergreifend zu steuern; SSML 1.1 wurde im September 2010 W3C-Empfehlung.
+  sources:
+  - https://www.w3.org/TR/speech-synthesis11/
 - id: silero-vad
   type: Technology
   name_en: Silero VAD
   name_de: Silero VAD
+  summary_en: Silero VAD is a pre-trained voice activity detector, i.e. a model that detects which parts of an audio signal contain speech (Silero VAD repository). It runs on the CPU with PyTorch or ONNX Runtime.
+  summary_de: Silero VAD ist ein vortrainierter Voice Activity Detector, also ein Modell, das erkennt, welche Abschnitte eines Audiosignals Sprache enthalten (Silero-VAD-Repository). Es läuft auf der CPU mit PyTorch oder ONNX Runtime.
+  sources:
+  - https://github.com/snakers4/silero-vad
 - id: amazon-lex
   type: Technology
   name_en: Amazon Lex
   name_de: Amazon Lex
+  summary_en: Amazon Lex is an AWS service for building conversational interfaces using voice and text (AWS documentation). It provides natural language understanding and automatic speech recognition; developers specify the basic conversation flow to create a chatbot without deep learning expertise.
+  summary_de: Amazon Lex ist ein AWS-Dienst zum Bau sprach- und textbasierter Dialogschnittstellen (AWS-Dokumentation). Er stellt Sprachverstehen (NLU) und automatische Spracherkennung bereit; Entwickler legen den grundlegenden Gesprächsablauf fest und erstellen so einen Chatbot ohne Deep-Learning-Fachwissen.
+  sources:
+  - https://docs.aws.amazon.com/lexv2/latest/dg/what-is.html
 - id: multiwoz
   type: Dataset
   name_en: MultiWOZ
@@ -3789,12 +3895,20 @@ entities:
   name_de: Apache Kafka
   aliases:
   - Kafka
+  summary_en: Apache Kafka is a distributed event streaming platform (Apache Kafka documentation). It lets applications publish and subscribe to streams of events, store them durably for as long as needed and process them as they occur or retrospectively, in a scalable, fault-tolerant way.
+  summary_de: Apache Kafka ist eine verteilte Plattform für Event-Streaming (Apache-Kafka-Dokumentation). Anwendungen können damit Ereignisströme veröffentlichen und abonnieren, sie beliebig lange dauerhaft speichern und sie in Echtzeit oder nachträglich verarbeiten, skalierbar und fehlertolerant.
+  sources:
+  - https://kafka.apache.org/intro
 - id: apache-airflow
   type: Technology
   name_en: Apache Airflow
   name_de: Apache Airflow
   aliases:
   - Airflow
+  summary_en: Apache Airflow is an open-source platform for developing, scheduling and monitoring workflows such as batch data pipelines, model training and LLM-based workloads (Airflow documentation). Workflows are defined entirely in Python as directed acyclic graphs (DAGs), and a web interface helps visualise, manage and debug them.
+  summary_de: Apache Airflow ist eine quelloffene Plattform zum Entwickeln, Planen und Überwachen von Workflows wie Batch-Datenpipelines, Modelltraining und LLM-basierten Abläufen (Airflow-Dokumentation). Workflows werden vollständig in Python als gerichtete azyklische Graphen (DAGs) definiert; eine Weboberfläche hilft beim Visualisieren, Verwalten und Debuggen.
+  sources:
+  - https://airflow.apache.org/docs/apache-airflow/stable/index.html
 - id: dataflow-model
   type: Method
   name_en: Dataflow Model
@@ -3805,18 +3919,30 @@ entities:
   name_de: OAuth 2.0
   aliases:
   - OAuth
+  summary_en: OAuth 2.0 is an IETF authorisation framework that lets a third-party application obtain limited access to an HTTP service, either on behalf of a resource owner through an approval interaction or on its own behalf (RFC 6749, Hardt 2012). It defines four roles (resource owner, resource server, client and authorisation server) and uses access tokens, credentials that represent specific scopes and durations of access. It obsoletes OAuth 1.0 (RFC 5849).
+  summary_de: OAuth 2.0 ist ein Autorisierungs-Framework der IETF, mit dem eine Drittanwendung begrenzten Zugriff auf einen HTTP-Dienst erhält, entweder im Auftrag eines Ressourceneigentümers über eine Zustimmungsinteraktion oder im eigenen Namen (RFC 6749, Hardt 2012). Es definiert vier Rollen (Ressourceneigentümer, Ressourcenserver, Client und Autorisierungsserver) und arbeitet mit Access Tokens, also Berechtigungsnachweisen für bestimmte Zugriffsbereiche und -dauern. Es löst OAuth 1.0 (RFC 5849) ab.
+  sources:
+  - https://www.rfc-editor.org/rfc/rfc6749
 - id: json-web-token
   type: Technology
   name_en: JSON Web Token (JWT)
   name_de: JSON Web Token (JWT)
   aliases:
   - JWT
+  summary_en: A JSON Web Token (JWT) is a compact, URL-safe way of representing claims transferred between two parties (RFC 7519, Jones et al. 2015). The claims are encoded as a JSON object that serves as the payload of a JSON Web Signature or the plaintext of a JSON Web Encryption, so they can be signed, protected with a message authentication code and/or encrypted. In the compact serialisation, base64url-encoded parts are joined with periods.
+  summary_de: Ein JSON Web Token (JWT) ist eine kompakte, URL-sichere Darstellung von Claims, die zwischen zwei Parteien übertragen werden (RFC 7519, Jones et al. 2015). Die Claims werden als JSON-Objekt kodiert, das als Nutzlast einer JSON Web Signature oder als Klartext einer JSON Web Encryption dient, sodass sie signiert, mit einem Message Authentication Code geschützt und/oder verschlüsselt werden können. In der kompakten Serialisierung werden base64url-kodierte Teile durch Punkte verbunden.
+  sources:
+  - https://www.rfc-editor.org/rfc/rfc7519
 - id: pkce
   type: Method
   name_en: Proof Key for Code Exchange (PKCE)
   name_de: Proof Key for Code Exchange (PKCE)
   aliases:
   - PKCE
+  summary_en: Proof Key for Code Exchange (PKCE) protects OAuth 2.0 public clients using the authorisation code grant against interception of the authorisation code (RFC 7636, Sakimura et al. 2015). The client creates a secret code verifier and sends a transformed version, the code challenge, with the authorisation request; when redeeming the code it sends the verifier, and the authorisation server denies access if the transformed verifier does not match the challenge. An attacker who only intercepted the code cannot redeem it.
+  summary_de: Proof Key for Code Exchange (PKCE) schützt öffentliche OAuth-2.0-Clients, die den Authorization Code Grant nutzen, gegen das Abfangen des Autorisierungscodes (RFC 7636, Sakimura et al. 2015). Der Client erzeugt einen geheimen Code Verifier und sendet eine transformierte Fassung, die Code Challenge, mit der Autorisierungsanfrage; beim Einlösen des Codes sendet er den Verifier, und der Autorisierungsserver verweigert den Zugriff, wenn der transformierte Verifier nicht zur Challenge passt. Wer nur den Code abgefangen hat, kann ihn nicht einlösen.
+  sources:
+  - https://www.rfc-editor.org/rfc/rfc7636
 - id: owasp
   type: Organisation
   name_en: OWASP
@@ -3833,6 +3959,10 @@ entities:
   name_de: Neo4j Graph Data Science (GDS)
   aliases:
   - GDS
+  summary_en: The Neo4j Graph Data Science (GDS) library provides parallel implementations of common graph algorithms, exposed as Cypher procedures, and machine learning pipelines for supervised graph tasks such as predicting missing relationships (Neo4j documentation). Its features are grouped into production-quality, beta and alpha tiers.
+  summary_de: Die Neo4j Graph Data Science (GDS) Library stellt parallele Implementierungen gängiger Graphalgorithmen als Cypher-Prozeduren bereit, dazu Pipelines für überwachtes Lernen auf Graphen, etwa zur Vorhersage fehlender Beziehungen (Neo4j-Dokumentation). Die Funktionen sind in die Reifestufen production-quality, beta und alpha eingeteilt.
+  sources:
+  - https://neo4j.com/docs/graph-data-science/current/introduction/
 - id: singular-value-decomposition
   type: Method
   name_en: Singular value decomposition (SVD)
@@ -3906,6 +4036,10 @@ entities:
   type: Technology
   name_en: spaCy
   name_de: spaCy
+  summary_en: spaCy is a free, open-source library for advanced natural language processing in Python, designed for production use (spaCy documentation). It provides pipelines for tasks such as tokenisation, part-of-speech tagging, dependency parsing and named entity recognition.
+  summary_de: spaCy ist eine freie, quelloffene Bibliothek für fortgeschrittene Verarbeitung natürlicher Sprache in Python, die für den Produktiveinsatz ausgelegt ist (spaCy-Dokumentation). Sie bietet Pipelines für Aufgaben wie Tokenisierung, Wortartenerkennung, Dependenzparsing und Eigennamenerkennung.
+  sources:
+  - https://spacy.io/usage/spacy-101
 - id: mean-average-precision
   type: Method
   name_en: Mean Average Precision (MAP)
@@ -4029,6 +4163,10 @@ entities:
   type: Technology
   name_en: PyKEEN
   name_de: PyKEEN
+  summary_en: PyKEEN is a Python package for reproducible knowledge graph embeddings (PyKEEN documentation). A high-level pipeline function trains and evaluates embedding models such as TransE on named datasets, with configurable training loops and rank-based evaluation.
+  summary_de: PyKEEN ist ein Python-Paket für reproduzierbare Knowledge-Graph-Embeddings (PyKEEN-Dokumentation). Eine übergeordnete Pipeline-Funktion trainiert und evaluiert Embedding-Modelle wie TransE auf benannten Datensätzen, mit konfigurierbaren Trainingsschleifen und rangbasierter Evaluation.
+  sources:
+  - https://pykeen.readthedocs.io/en/stable/
 - id: fb15k-237
   type: Dataset
   name_en: FB15K-237
@@ -4081,12 +4219,20 @@ entities:
   type: Technology
   name_en: GitHub Actions
   name_de: GitHub Actions
+  summary_en: GitHub Actions is the continuous integration and continuous delivery platform of GitHub for automating build, test and deployment pipelines (GitHub Docs). Workflows are triggered by events in a repository, such as an opened pull request or a new issue, and run on GitHub-hosted Linux, Windows or macOS virtual machines or on self-hosted runners.
+  summary_de: GitHub Actions ist die Plattform von GitHub für Continuous Integration und Continuous Delivery, mit der sich Build-, Test- und Deployment-Pipelines automatisieren lassen (GitHub Docs). Workflows werden durch Ereignisse in einem Repository ausgelöst, etwa einen geöffneten Pull Request oder ein neues Issue, und laufen auf von GitHub bereitgestellten virtuellen Maschinen mit Linux, Windows oder macOS oder auf selbst betriebenen Runnern.
+  sources:
+  - https://docs.github.com/en/actions/get-started/understand-github-actions
 - id: azure-pipelines
   type: Technology
   name_en: Azure Pipelines
   name_de: Azure Pipelines
   aliases:
   - Azure DevOps Pipelines
+  summary_en: Azure Pipelines is the part of Azure DevOps that combines continuous integration, continuous testing and continuous delivery to build, test and deploy code projects automatically to any destination, on premises or in the cloud (Microsoft Learn).
+  summary_de: Azure Pipelines ist der Teil von Azure DevOps, der Continuous Integration, Continuous Testing und Continuous Delivery verbindet, um Codeprojekte automatisch zu bauen, zu testen und in beliebige Zielumgebungen auszuliefern, lokal oder in der Cloud (Microsoft Learn).
+  sources:
+  - https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines
 - id: dora-metrics
   type: Method
   name_en: DORA metrics
@@ -4097,24 +4243,44 @@ entities:
   type: Technology
   name_en: Terraform
   name_de: Terraform
+  summary_en: HashiCorp Terraform is an infrastructure-as-code tool that defines cloud and on-premises resources in human-readable configuration files that can be versioned, reused and shared (HashiCorp documentation). It creates and manages resources through the platforms' APIs via providers, from compute, storage and network resources to DNS entries and SaaS features.
+  summary_de: HashiCorp Terraform ist ein Infrastructure-as-Code-Werkzeug, das Cloud- und On-Premises-Ressourcen in menschenlesbaren Konfigurationsdateien beschreibt, die versioniert, wiederverwendet und geteilt werden können (HashiCorp-Dokumentation). Es erstellt und verwaltet Ressourcen über die APIs der Plattformen mithilfe sogenannter Provider, von Rechen-, Speicher- und Netzwerkressourcen bis zu DNS-Einträgen und SaaS-Funktionen.
+  sources:
+  - https://developer.hashicorp.com/terraform/intro
 - id: zenml
   type: Technology
   name_en: ZenML
   name_de: ZenML
+  summary_en: ZenML is an open-source MLOps framework for orchestrating production ML and LLM pipelines, with versioned artifacts, caching and infrastructure abstracted behind so-called stacks (ZenML documentation).
+  summary_de: ZenML ist ein quelloffenes MLOps-Framework zur Orchestrierung produktiver ML- und LLM-Pipelines mit versionierten Artefakten, Caching und einer hinter sogenannten Stacks abstrahierten Infrastruktur (ZenML-Dokumentation).
+  sources:
+  - https://docs.zenml.io/
 - id: kubeflow-pipelines
   type: Technology
   name_en: Kubeflow Pipelines
   name_de: Kubeflow Pipelines
   aliases:
   - Kubeflow
+  summary_en: Kubeflow Pipelines (KFP) is a platform for building and deploying portable, scalable machine learning workflows using containers on Kubernetes (Kubeflow documentation). Components and pipelines are written with the KFP Python SDK, compiled to an intermediate YAML representation and run on a KFP-conformant backend such as the open-source KFP backend or Google Cloud Vertex AI Pipelines.
+  summary_de: Kubeflow Pipelines (KFP) ist eine Plattform, um portable und skalierbare Workflows für maschinelles Lernen mit Containern auf Kubernetes zu bauen und auszuführen (Kubeflow-Dokumentation). Komponenten und Pipelines werden mit dem KFP-Python-SDK geschrieben, in eine YAML-Zwischendarstellung kompiliert und auf einem KFP-konformen Backend ausgeführt, etwa dem quelloffenen KFP-Backend oder Google Cloud Vertex AI Pipelines.
+  sources:
+  - https://www.kubeflow.org/docs/components/pipelines/overview/
 - id: unity-catalog
   type: Technology
   name_en: Unity Catalog
   name_de: Unity Catalog
+  summary_en: Unity Catalog is the governance layer for data and AI built into Databricks (Databricks documentation). It enforces access control when tables are queried or models called, tracks lineage, logs activity for auditing and models governed assets as securable objects; an open-source implementation also exists.
+  summary_de: Unity Catalog ist die in Databricks integrierte Governance-Schicht für Daten und KI (Databricks-Dokumentation). Sie setzt Zugriffskontrollen durch, wenn Tabellen abgefragt oder Modelle aufgerufen werden, verfolgt die Datenherkunft (Lineage), protokolliert Aktivitäten für Audits und bildet verwaltete Assets als absicherbare Objekte ab; es gibt auch eine quelloffene Implementierung.
+  sources:
+  - https://docs.databricks.com/aws/en/data-governance/unity-catalog/
 - id: openlineage
   type: Technology
   name_en: OpenLineage
   name_de: OpenLineage
+  summary_en: OpenLineage is an open framework and standard for collecting and analysing data lineage (OpenLineage documentation). Its core specification defines a generic model of datasets, jobs and runs with consistent naming, which can be extended with user-defined metadata called facets.
+  summary_de: OpenLineage ist ein offenes Framework und ein offener Standard für das Erfassen und Analysieren von Datenherkunft (Lineage) (OpenLineage-Dokumentation). Die Kernspezifikation definiert ein allgemeines Modell aus Datensätzen, Jobs und Läufen mit einheitlicher Benennung, das sich um benutzerdefinierte Metadaten, sogenannte Facets, erweitern lässt.
+  sources:
+  - https://openlineage.io/docs/
 - id: jeffrey-dean
   type: Person
   name_en: Jeffrey Dean
@@ -4139,6 +4305,10 @@ entities:
   name_de: Tesseract
   aliases:
   - Tesseract OCR
+  summary_en: Tesseract is an open-source OCR engine with a command-line program (Tesseract repository). It was developed at Hewlett-Packard between 1985 and 1994, open-sourced by HP in 2005 and developed by Google until 2017; since version 4 it includes a neural (LSTM) engine focused on line recognition and recognises more than 100 languages out of the box.
+  summary_de: Tesseract ist eine quelloffene OCR-Engine mit Kommandozeilenprogramm (Tesseract-Repository). Sie wurde zwischen 1985 und 1994 bei Hewlett-Packard entwickelt, 2005 von HP als Open Source veröffentlicht und bis 2017 von Google weiterentwickelt; seit Version 4 enthält sie eine neuronale Engine (LSTM) für die Zeilenerkennung und erkennt ohne Zusatzaufwand mehr als 100 Sprachen.
+  sources:
+  - https://github.com/tesseract-ocr/tesseract
 - id: layoutlm
   type: Method
   name_en: LayoutLM
@@ -4161,6 +4331,10 @@ entities:
   type: Technology
   name_en: Docling
   name_de: Docling
+  summary_en: Docling is an open-source library that parses many document formats, including PDF, DOCX, PPTX, HTML, images and audio, into a unified DoclingDocument representation (Docling repository). Its PDF understanding covers page layout, reading order, table structure, code and formulas, and documents can be exported to formats such as Markdown, HTML and JSON; it can run locally for sensitive data.
+  summary_de: Docling ist eine quelloffene Bibliothek, die viele Dokumentformate, darunter PDF, DOCX, PPTX, HTML, Bilder und Audio, in eine einheitliche DoclingDocument-Darstellung überführt (Docling-Repository). Die PDF-Verarbeitung erfasst Seitenlayout, Lesereihenfolge, Tabellenstruktur, Code und Formeln; Dokumente lassen sich etwa nach Markdown, HTML und JSON exportieren, und die Verarbeitung kann für sensible Daten lokal laufen.
+  sources:
+  - https://github.com/docling-project/docling
 - id: doclaynet
   type: Dataset
   name_en: DocLayNet
@@ -4221,6 +4395,10 @@ entities:
   name_de: BigQuery
   aliases:
   - Google BigQuery
+  summary_en: BigQuery is a fully managed, serverless data platform from Google Cloud for managing and analysing data with SQL and Python without infrastructure management (Google Cloud documentation). It supports business intelligence and ad hoc analysis, machine learning on the stored data and geospatial analysis, among other uses.
+  summary_de: BigQuery ist eine vollständig verwaltete, serverlose Datenplattform von Google Cloud, mit der sich Daten per SQL und Python verwalten und analysieren lassen, ohne Infrastruktur zu betreiben (Google-Cloud-Dokumentation). Sie unterstützt unter anderem Business Intelligence und Ad-hoc-Analysen, maschinelles Lernen auf den gespeicherten Daten und Geodatenanalysen.
+  sources:
+  - https://cloud.google.com/bigquery/docs/introduction
 - id: isaca
   type: Organisation
   name_en: ISACA
@@ -4257,6 +4435,10 @@ entities:
   type: Technology
   name_en: NeMo Guardrails
   name_de: NeMo Guardrails
+  summary_en: NVIDIA NeMo Guardrails is an open-source toolkit for adding programmable guardrails to LLM-based conversational applications (NeMo Guardrails repository). Guardrails ("rails") control a model's output, for example by avoiding certain topics, following a predefined dialogue path, using a particular style or extracting structured data.
+  summary_de: NVIDIA NeMo Guardrails ist ein quelloffenes Toolkit, mit dem sich programmierbare Guardrails in LLM-basierte Dialoganwendungen einbauen lassen (NeMo-Guardrails-Repository). Die Guardrails („Rails“) steuern die Ausgabe eines Modells, etwa indem bestimmte Themen vermieden, ein vordefinierter Dialogpfad eingehalten, ein bestimmter Stil verwendet oder strukturierte Daten extrahiert werden.
+  sources:
+  - https://github.com/NVIDIA-NeMo/Guardrails
 - id: natural-questions
   type: Dataset
   name_en: Natural Questions
@@ -4392,11 +4574,23 @@ entities:
   type: Technology
   name_en: DSPy
   name_de: DSPy
+  summary_en: DSPy (Declarative Self-improving Python) is a framework for programming rather than prompting language models (DSPy repository). Developers write compositional Python modules, and DSPy offers algorithms that optimise the prompts and weights of the resulting system, from classifiers to RAG pipelines and agent loops.
+  summary_de: DSPy (Declarative Self-improving Python) ist ein Framework, mit dem Sprachmodelle programmiert statt gepromptet werden (DSPy-Repository). Entwickler schreiben zusammensetzbare Python-Module, und DSPy bietet Algorithmen, die Prompts und Gewichte des entstehenden Systems optimieren, von Klassifikatoren über RAG-Pipelines bis zu Agentenschleifen.
+  sources:
+  - https://github.com/stanfordnlp/dspy
 - id: delta-lake
   type: Technology
   name_en: Delta Lake
   name_de: Delta Lake
+  summary_en: Delta Lake is an open-source project for building a lakehouse architecture on top of data lakes such as S3, ADLS, GCS and HDFS (Delta Lake documentation). It adds ACID transactions, scalable metadata handling, unified streaming and batch processing, schema enforcement and time travel through data versioning.
+  summary_de: Delta Lake ist ein quelloffenes Projekt, um eine Lakehouse-Architektur auf Data Lakes wie S3, ADLS, GCS und HDFS aufzubauen (Delta-Lake-Dokumentation). Es ergänzt ACID-Transaktionen, skalierbare Metadatenverwaltung, die gemeinsame Verarbeitung von Streaming- und Batch-Daten, Schemadurchsetzung und Zeitreisen über Datenversionierung.
+  sources:
+  - https://docs.delta.io/latest/index.html
 - id: microsoft-agent-framework
   type: Technology
   name_en: Microsoft Agent Framework
   name_de: Microsoft Agent Framework
+  summary_en: Microsoft Agent Framework is a framework for building AI agents and multi-agent workflows (Microsoft Learn). It combines agents that use LLMs, tools and MCP servers, graph-based workflows with explicit execution paths, and integrations with model providers, together with building blocks such as model clients, session state, memory and middleware.
+  summary_de: Microsoft Agent Framework ist ein Framework zum Bau von KI-Agenten und Multi-Agenten-Workflows (Microsoft Learn). Es verbindet Agenten, die LLMs, Werkzeuge und MCP-Server nutzen, graphbasierte Workflows mit expliziten Ausführungspfaden und Integrationen zu Modellanbietern mit Bausteinen wie Modell-Clients, Sitzungszustand, Gedächtnis und Middleware.
+  sources:
+  - https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview
