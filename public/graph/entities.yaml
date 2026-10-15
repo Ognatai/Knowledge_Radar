@@ -200,22 +200,38 @@ entities:
   type: Technology
   name_en: JSON-RPC
   name_de: JSON-RPC
+  summary_en: JSON-RPC is a stateless, lightweight remote procedure call protocol that uses JSON as its data format (JSON-RPC Working Group, 2010). Version 2.0 defines data structures for requests, responses and notifications and their processing rules, and is transport-agnostic, usable in-process, over sockets, over HTTP or other message passing environments.
+  summary_de: JSON-RPC ist ein zustandsloses, leichtgewichtiges Protokoll für entfernte Prozeduraufrufe, das JSON als Datenformat nutzt (JSON-RPC Working Group, 2010). Version 2.0 legt Datenstrukturen für Anfragen, Antworten und Benachrichtigungen samt Verarbeitungsregeln fest und ist unabhängig vom Transport, also im selben Prozess, über Sockets, über HTTP oder andere Nachrichtenwege nutzbar.
+  sources:
+  - https://www.jsonrpc.org/specification
 - id: language-server-protocol
   type: Technology
   name_en: Language Server Protocol (LSP)
   name_de: Language Server Protocol (LSP)
   aliases:
   - LSP
+  summary_en: The Language Server Protocol (LSP) standardises how editors and IDEs communicate with language servers that provide features such as auto-completion, go to definition and find all references (Microsoft, n.d.). One language server can thus be reused in many development tools, instead of reimplementing language support for each tool.
+  summary_de: Das Language Server Protocol (LSP) standardisiert, wie Editoren und IDEs mit Language Servern kommunizieren, die Funktionen wie Autovervollständigung, Sprung zur Definition und Suche aller Verweise bereitstellen (Microsoft, n.d.). So lässt sich ein Language Server in vielen Entwicklungswerkzeugen wiederverwenden, statt die Sprachunterstützung für jedes Werkzeug neu zu bauen.
+  sources:
+  - https://microsoft.github.io/language-server-protocol/
 - id: a2a
   type: Technology
   name_en: A2A (Agent2Agent protocol)
   name_de: A2A (Agent2Agent-Protokoll)
   aliases:
   - Agent2Agent
+  summary_en: The Agent2Agent (A2A) Protocol is an open standard for communication and collaboration between AI agents built with different frameworks and by different vendors (A2A Project, n.d.). Agents can delegate sub-tasks, exchange information and coordinate actions without sharing internal memory, tools or proprietary logic; the project is hosted by the Linux Foundation and complements MCP, which connects agents to tools.
+  summary_de: Das Agent2Agent-Protokoll (A2A) ist ein offener Standard für Kommunikation und Zusammenarbeit zwischen KI-Agenten, die mit unterschiedlichen Frameworks und von verschiedenen Anbietern gebaut wurden (A2A Project, n.d.). Agenten können Teilaufgaben delegieren, Informationen austauschen und Handlungen abstimmen, ohne internen Speicher, Werkzeuge oder eigene Logik offenzulegen; das Projekt ist bei der Linux Foundation angesiedelt und ergänzt MCP, das Agenten mit Werkzeugen verbindet.
+  sources:
+  - https://a2a-protocol.org/latest/
 - id: openapi
   type: Technology
   name_en: OpenAPI
   name_de: OpenAPI
+  summary_en: The OpenAPI Specification defines a standard, programming language-agnostic interface description for HTTP APIs, so that humans and computers can discover and understand a service's capabilities without access to source code, extra documentation or network inspection (OpenAPI Initiative, n.d.). A consumer of a properly described API can interact with it with minimal implementation logic.
+  summary_de: Die OpenAPI Specification legt eine standardisierte, von Programmiersprachen unabhängige Schnittstellenbeschreibung für HTTP-APIs fest, damit Menschen und Computer die Fähigkeiten eines Dienstes erkennen und verstehen können, ohne Zugriff auf Quellcode, zusätzliche Dokumentation oder Mitschnitte des Netzwerkverkehrs (OpenAPI Initiative, n.d.). Wer eine sauber beschriebene API nutzt, kommt mit minimaler eigener Implementierungslogik aus.
+  sources:
+  - https://spec.openapis.org/oas/latest.html
 - id: lime
   type: Method
   name_en: LIME
@@ -256,6 +272,10 @@ entities:
   type: Concept
   name_en: Container
   name_de: Container
+  summary_en: A container is an isolated process for one component of an application, such as a frontend, an API or a database, that runs in its own environment, isolated from everything else on the machine (Docker Inc., n.d.-e). Containers solve problems such as keeping runtime versions consistent across developers, CI/CD and production; they are started from container images.
+  summary_de: Ein Container ist ein isolierter Prozess für eine Komponente einer Anwendung, etwa ein Frontend, eine API oder eine Datenbank, der in einer eigenen Umgebung läuft, abgeschottet von allem anderen auf dem Rechner (Docker Inc., n.d.-e). Container lösen Probleme wie einheitliche Laufzeitversionen bei allen Entwicklerinnen und Entwicklern, in CI/CD und in Produktion; sie werden aus Container-Images gestartet.
+  sources:
+  - https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/
 - id: container-image
   type: Concept
   name_en: Container image
@@ -263,18 +283,34 @@ entities:
   aliases:
   - Image
   - Docker image
+  summary_en: A container image is a standardised package of all the files, binaries, libraries and configuration needed to run a container (Docker Inc., n.d.-d). Images are immutable, so changes produce a new image, and they are composed of layers, each a set of file system changes, which lets new images extend existing ones, for example an application image built on a Python base image.
+  summary_de: Ein Container-Image ist ein standardisiertes Paket mit allen Dateien, Programmen, Bibliotheken und Konfigurationen, die zum Ausführen eines Containers nötig sind (Docker Inc., n.d.-d). Images sind unveränderlich, Änderungen ergeben also ein neues Image, und sie bestehen aus Schichten, jeweils einer Menge von Dateisystemänderungen; so können neue Images bestehende erweitern, etwa ein Anwendungs-Image auf Basis eines Python-Images.
+  sources:
+  - https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/
 - id: dockerfile
   type: Technology
   name_en: Dockerfile
   name_de: Dockerfile
+  summary_en: A Dockerfile is a text document with the commands a user could run on the command line to assemble a container image; Docker builds images automatically by reading these instructions (Docker Inc., n.d.-a). Instructions include FROM to start a build stage from a base image, RUN to execute build commands, COPY and ADD to add files, ENV for environment variables and CMD or ENTRYPOINT for the default command.
+  summary_de: Ein Dockerfile ist ein Textdokument mit den Befehlen, die man auf der Kommandozeile ausführen könnte, um ein Container-Image zusammenzustellen; Docker baut Images automatisch, indem es diese Anweisungen liest (Docker Inc., n.d.-a). Zu den Anweisungen gehören FROM, um eine Build-Stufe von einem Basis-Image aus zu beginnen, RUN für Build-Befehle, COPY und ADD zum Hinzufügen von Dateien, ENV für Umgebungsvariablen und CMD oder ENTRYPOINT für den Standardbefehl.
+  sources:
+  - https://docs.docker.com/reference/dockerfile/
 - id: docker-volume
   type: Concept
   name_en: Docker volume
   name_de: Docker-Volume
+  summary_en: Docker volumes are persistent data stores for containers, created and managed by Docker and stored in a directory on the Docker host that is mounted into the container (Docker Inc., n.d.-c). Unlike bind mounts, they do not depend on the host's directory structure and operating system, and they are the preferred mechanism for persisting data that containers generate and use.
+  summary_de: Docker-Volumes sind dauerhafte Datenspeicher für Container, die Docker anlegt und verwaltet und in einem Verzeichnis auf dem Docker-Host ablegt, das in den Container eingebunden wird (Docker Inc., n.d.-c). Anders als Bind Mounts hängen sie nicht von Verzeichnisstruktur und Betriebssystem des Hosts ab und sind der bevorzugte Weg, Daten zu speichern, die Container erzeugen und nutzen.
+  sources:
+  - https://docs.docker.com/engine/storage/volumes/
 - id: docker-compose
   type: Technology
   name_en: Docker Compose
   name_de: Docker Compose
+  summary_en: 'Docker Compose is a tool for defining and running multi-container applications: services, networks and volumes are described in a single YAML file and started with one command (Docker Inc., n.d.-b). Compose works in production, staging, development, testing and CI and manages the application''s lifecycle, from starting, stopping and rebuilding services to viewing their status and logs.'
+  summary_de: 'Docker Compose ist ein Werkzeug, um Anwendungen aus mehreren Containern festzulegen und auszuführen: Dienste, Netzwerke und Volumes werden in einer einzigen YAML-Datei beschrieben und mit einem Befehl gestartet (Docker Inc., n.d.-b). Compose funktioniert in Produktion, Staging, Entwicklung, Test und CI und verwaltet den Lebenszyklus der Anwendung, vom Starten, Stoppen und Neubauen von Diensten bis zur Anzeige von Status und Logs.'
+  sources:
+  - https://docs.docker.com/compose/
 - id: basel-committee
   type: Organisation
   name_en: Basel Committee on Banking Supervision
@@ -367,24 +403,46 @@ entities:
   name_de: Remote Procedure Call (RPC)
   aliases:
   - RPC
+  summary_en: A remote procedure call (RPC) lets a program call a function on another machine or process as if it were local; a service defines the callable methods with their parameters and return types (gRPC Authors, n.d.). Examples include JSON-RPC, a stateless, lightweight, transport-agnostic RPC protocol using JSON, and gRPC, which generates client stubs from service definitions.
+  summary_de: Ein entfernter Prozeduraufruf (Remote Procedure Call, RPC) erlaubt einem Programm, eine Funktion auf einem anderen Rechner oder in einem anderen Prozess aufzurufen, als wäre sie lokal; ein Dienst legt die aufrufbaren Methoden mit Parametern und Rückgabetypen fest (gRPC Authors, n.d.). Beispiele sind JSON-RPC, ein zustandsloses, leichtgewichtiges und transportunabhängiges RPC-Protokoll mit JSON, und gRPC, das aus Dienstdefinitionen Client-Stubs erzeugt.
+  sources:
+  - https://grpc.io/docs/what-is-grpc/introduction/
+  - https://www.jsonrpc.org/specification
 - id: grpc
   type: Technology
   name_en: gRPC
   name_de: gRPC
+  summary_en: gRPC is a remote procedure call framework in which a client calls methods on a server on another machine as if it were a local object; a service defines the remotely callable methods with their parameters and return types, the server implements them and the client uses a stub (gRPC Authors, n.d.). gRPC can use Protocol Buffers as interface definition language and message format, and clients and servers can be written in different supported languages.
+  summary_de: gRPC ist ein Framework für entfernte Prozeduraufrufe, bei dem ein Client Methoden eines Servers auf einem anderen Rechner so aufruft, als wäre es ein lokales Objekt; ein Dienst legt die aufrufbaren Methoden mit Parametern und Rückgabetypen fest, der Server setzt sie um, und der Client nutzt einen Stub (gRPC Authors, n.d.). gRPC kann Protocol Buffers als Schnittstellenbeschreibungssprache und Nachrichtenformat nutzen, und Clients und Server lassen sich in verschiedenen unterstützten Sprachen schreiben.
+  sources:
+  - https://grpc.io/docs/what-is-grpc/introduction/
 - id: graphql
   type: Technology
   name_en: GraphQL
   name_de: GraphQL
+  summary_en: GraphQL is a query language with which client applications describe exactly the data they need and their interactions with a service, using a uniform type system defined by the specification (GraphQL Foundation, 2021). It is not a general programming language and does not prescribe a programming language or storage system for the services that implement it.
+  summary_de: GraphQL ist eine Abfragesprache, mit der Client-Anwendungen genau die benötigten Daten und ihre Interaktionen mit einem Dienst beschreiben, auf Grundlage eines einheitlichen Typsystems, das die Spezifikation festlegt (GraphQL Foundation, 2021). Es ist keine allgemeine Programmiersprache und schreibt den umsetzenden Diensten weder Programmiersprache noch Speichersystem vor.
+  sources:
+  - https://spec.graphql.org/October2021/
 - id: protocol-buffers
   type: Technology
   name_en: Protocol Buffers
   name_de: Protocol Buffers
+  summary_en: Protocol Buffers (protobuf) are a language-neutral, platform-neutral, extensible mechanism for serialising structured data, like JSON but smaller and faster, with generated native language bindings (Google, n.d.). The data structure is defined once and generated code reads and writes it in many languages; gRPC uses protobuf as its interface definition language and message format.
+  summary_de: Protocol Buffers (Protobuf) sind ein sprach- und plattformunabhängiger, erweiterbarer Mechanismus zur Serialisierung strukturierter Daten, ähnlich wie JSON, aber kleiner und schneller, mit generierten Anbindungen für die jeweilige Sprache (Google, n.d.). Die Datenstruktur wird einmal festgelegt, und generierter Code liest und schreibt sie in vielen Sprachen; gRPC nutzt Protobuf als Schnittstellenbeschreibungssprache und Nachrichtenformat.
+  sources:
+  - https://protobuf.dev/overview/
+  - https://grpc.io/docs/what-is-grpc/introduction/
 - id: problem-details
   type: Technology
   name_en: Problem Details for HTTP APIs (RFC 9457)
   name_de: Problem Details for HTTP APIs (RFC 9457)
   aliases:
   - RFC 9457
+  summary_en: Problem Details for HTTP APIs (RFC 9457) defines a "problem detail" format that carries machine-readable details of errors in HTTP response content, so that APIs do not need to invent their own error formats (Nottingham et al., 2023). It is an IETF Standards Track document and obsoletes RFC 7807.
+  summary_de: Problem Details for HTTP APIs (RFC 9457) legt ein Format für „Problem Details“ fest, das maschinenlesbare Fehlerangaben im Inhalt von HTTP-Antworten überträgt, damit APIs keine eigenen Fehlerformate erfinden müssen (Nottingham et al., 2023). Es ist ein Dokument des IETF Standards Track und ersetzt RFC 7807.
+  sources:
+  - https://www.rfc-editor.org/rfc/rfc9457.html
 - id: variational-autoencoder
   type: Method
   name_en: Variational autoencoder (VAE)
@@ -631,6 +689,10 @@ entities:
   type: Technology
   name_en: PEP 8
   name_de: PEP 8
+  summary_en: PEP 8 is the style guide for Python code, originally written as coding conventions for the Python standard library and adapted from Guido van Rossum's original Python style guide essay (van Rossum et al., 2001). It covers code layout such as indentation, line length and blank lines, imports, whitespace, comments, docstrings and naming conventions, and evolves as conventions change.
+  summary_de: PEP 8 ist der Stilleitfaden für Python-Code, ursprünglich als Konventionen für die Python-Standardbibliothek verfasst und aus Guido van Rossums ursprünglichem Essay zum Python-Stil abgeleitet (van Rossum et al., 2001). Er behandelt Code-Layout wie Einrückung, Zeilenlänge und Leerzeilen, Importe, Leerzeichen, Kommentare, Docstrings und Namenskonventionen und entwickelt sich mit den Konventionen weiter.
+  sources:
+  - https://peps.python.org/pep-0008/
 - id: modular-design
   type: Concept
   name_en: Modular design
@@ -689,6 +751,10 @@ entities:
   name_de: Bereich (Confluence)
   aliases:
   - Confluence space
+  summary_en: In Confluence, a space is a container where a team creates, stores and collaborates on work related to a team, shared project or initiative, a collaborative workspace or knowledge base (Atlassian, n.d.-a). Teams create as many spaces as they need, for example one knowledge base for how-to and troubleshooting guides or a collaboration space per product launch.
+  summary_de: In Confluence ist ein Bereich (Space) ein Container, in dem ein Team Arbeit zu einem Team, gemeinsamen Projekt oder Vorhaben erstellt, ablegt und gemeinsam bearbeitet, ein gemeinsamer Arbeitsbereich oder eine Wissensdatenbank (Atlassian, n.d.-a). Teams legen so viele Bereiche an wie nötig, etwa eine Wissensdatenbank für Anleitungen und Fehlerbehebung oder einen Bereich je Produkteinführung.
+  sources:
+  - https://support.atlassian.com/confluence-cloud/docs/what-is-a-space/
 - id: confluence-page-tree
   type: Concept
   name_en: Page tree (Confluence)
@@ -699,6 +765,10 @@ entities:
   name_de: Confluence Query Language (CQL)
   aliases:
   - CQL
+  summary_en: The Confluence Query Language (CQL) defines structured queries for the advanced search of the Confluence REST API (Atlassian, n.d.-b). A simple query, or clause, consists of a field, an operator and one or more values, and results take the same form as the content model returned by the Content REST API.
+  summary_de: Die Confluence Query Language (CQL) legt strukturierte Abfragen für die erweiterte Suche der Confluence-REST-API fest (Atlassian, n.d.-b). Eine einfache Abfrage, eine Klausel, besteht aus einem Feld, einem Operator und einem oder mehreren Werten, und die Ergebnisse haben dieselbe Form wie das Inhaltsmodell der Content-REST-API.
+  sources:
+  - https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/
 - id: llmlingua
   type: Method
   name_en: LLMLingua
@@ -1457,24 +1527,44 @@ entities:
   type: Concept
   name_en: Version control
   name_de: Versionskontrolle
+  summary_en: Version control records the history of a project's files so that earlier states can be inspected and restored. Most systems such as CVS and Subversion store changes to each file over time (delta-based), whereas Git stores a series of snapshots of the whole project, one per commit (Chacon & Straub, n.d.).
+  summary_de: Versionsverwaltung hält die Geschichte der Dateien eines Projekts fest, sodass frühere Stände eingesehen und wiederhergestellt werden können. Die meisten Systeme wie CVS und Subversion speichern Änderungen je Datei über die Zeit (deltabasiert), während Git eine Folge von Momentaufnahmen des ganzen Projekts speichert, eine je Commit (Chacon & Straub, n.d.).
+  sources:
+  - https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 - id: git-snapshot
   type: Concept
   name_en: Snapshot (Git)
   name_de: Snapshot (Git)
+  summary_en: 'Git stores data as a series of snapshots of a miniature file system rather than as file-based changes: every commit records what all files look like at that moment and stores a reference to that snapshot, linking to unchanged files instead of storing them again (Chacon & Straub, n.d.). This distinguishes Git from delta-based version control systems such as CVS or Subversion.'
+  summary_de: 'Git speichert Daten als Folge von Momentaufnahmen eines kleinen Dateisystems statt als dateibezogene Änderungen: Jeder Commit hält fest, wie alle Dateien in diesem Moment aussehen, und speichert einen Verweis auf diese Momentaufnahme, wobei unveränderte Dateien verlinkt statt erneut gespeichert werden (Chacon & Straub, n.d.). Das unterscheidet Git von deltabasierten Versionsverwaltungen wie CVS oder Subversion.'
+  sources:
+  - https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 - id: git-branch
   type: Concept
   name_en: Branch (Git)
   name_de: Branch (Git)
+  summary_en: A branch in Git is simply a lightweight movable pointer to a commit; each new commit moves the current branch pointer forward (Chacon & Straub, n.d.). Creating a branch just creates a new pointer to the current commit, and the default branch created by git init is not special in any way.
+  summary_de: Ein Branch in Git ist einfach ein leichtgewichtiger, verschiebbarer Zeiger auf einen Commit; jeder neue Commit bewegt den Zeiger des aktuellen Branches weiter (Chacon & Straub, n.d.). Einen Branch anzulegen erzeugt nur einen neuen Zeiger auf den aktuellen Commit, und der von git init angelegte Standard-Branch ist in keiner Weise besonders.
+  sources:
+  - https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
 - id: git-staging-area
   type: Concept
   name_en: Staging area (Git)
   name_de: Staging Area (Git)
   aliases:
   - three states
+  summary_en: The staging area in Git is a file in the Git directory that records what will go into the next commit; a staged file is a modified file marked to be included in its current version (Chacon & Straub, n.d.). Files thus move between three states, modified, staged and committed, across the working tree, the staging area and the Git directory.
+  summary_de: Die Staging Area in Git ist eine Datei im Git-Verzeichnis, die festhält, was in den nächsten Commit eingeht; eine vorgemerkte (staged) Datei ist eine geänderte Datei, die in ihrer aktuellen Fassung für den Commit markiert ist (Chacon & Straub, n.d.). Dateien durchlaufen so drei Zustände, geändert, vorgemerkt und committet, verteilt auf Arbeitsverzeichnis, Staging Area und Git-Verzeichnis.
+  sources:
+  - https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
 - id: gitignore
   type: Technology
   name_en: .gitignore
   name_de: .gitignore
+  summary_en: A .gitignore file specifies intentionally untracked files that Git should ignore, one pattern per line; files that Git already tracks are not affected (Git, n.d.). Patterns are read from several sources with a defined precedence, and a .gitignore in a directory applies relative to its location.
+  summary_de: Eine .gitignore-Datei legt bewusst nicht verfolgte Dateien fest, die Git ignorieren soll, ein Muster je Zeile; bereits von Git verfolgte Dateien sind davon nicht betroffen (Git, n.d.). Muster werden aus mehreren Quellen in festgelegter Rangfolge gelesen, und eine .gitignore in einem Verzeichnis gilt relativ zu ihrem Ort.
+  sources:
+  - https://git-scm.com/docs/gitignore
 - id: github
   type: Technology
   name_en: GitHub
@@ -1569,6 +1659,10 @@ entities:
   name_de: SHACL
   aliases:
   - Shapes Constraint Language
+  summary_en: The Shapes Constraint Language (SHACL) is a W3C language for validating RDF graphs against a set of conditions expressed as shapes in an RDF "shapes graph" (W3C, 2017). Because a shapes graph describes the data graphs that satisfy its conditions, it can also serve user interface building, code generation and data integration.
+  summary_de: Die Shapes Constraint Language (SHACL) ist eine W3C-Sprache, um RDF-Graphen anhand von Bedingungen zu validieren, die als Shapes in einem RDF-„Shapes Graph“ formuliert sind (W3C, 2017). Weil ein Shapes Graph die Datengraphen beschreibt, die seine Bedingungen erfüllen, kann er auch für den Bau von Oberflächen, Codegenerierung und Datenintegration dienen.
+  sources:
+  - https://www.w3.org/TR/shacl/
 - id: prov-o
   type: Technology
   name_en: PROV-O
