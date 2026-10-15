@@ -190,6 +190,11 @@ entities:
   type: Concept
   name_en: Ontology
   name_de: Ontologie
+  summary_en: An ontology is an explicit formal specification of the terms in a domain and the relations among them; it gives people and software a shared vocabulary and makes domain assumptions explicit (Noy and McGuinness 2001). In the Semantic Web, ontologies are written in languages such as RDF Schema and OWL.
+  summary_de: Eine Ontologie ist eine explizite formale Spezifikation der Begriffe einer Domäne und ihrer Beziehungen; sie gibt Menschen und Software ein gemeinsames Vokabular und macht Annahmen über die Domäne explizit (Noy und McGuinness 2001). Im Semantic Web werden Ontologien in Sprachen wie RDF Schema und OWL formuliert.
+  sources:
+  - https://protege.stanford.edu/publications/ontology_development/ontology101.pdf
+  - https://www.w3.org/TR/owl2-primer/
 - id: toolformer
   type: Method
   name_en: Toolformer
@@ -709,6 +714,10 @@ entities:
   type: Method
   name_en: Causal front-door adjustment
   name_de: Kausale Front-Door-Adjustierung
+  summary_en: Causal front-door adjustment estimates the effect of an input X on an output through intermediate variables (mediators) instead of manipulating X directly. Urchs (2025) describes it as one strategy for mitigating gender bias in language models, where intermediate steps such as chain-of-thought prompts mediate the effect of biased inputs on outputs, following Zhang et al. (2025).
+  summary_de: Die kausale Front-Door-Adjustierung schätzt die Wirkung einer Eingabe X auf eine Ausgabe über Zwischenvariablen (Mediatoren), statt X direkt zu verändern. Urchs (2025) beschreibt sie als eine Strategie, Gender-Bias in Sprachmodellen zu mindern, bei der Zwischenschritte wie Chain-of-Thought-Prompts die Wirkung verzerrter Eingaben auf die Ausgaben vermitteln, im Anschluss an Zhang et al. (2025).
+  sources:
+  - https://edoc.ub.uni-muenchen.de/36297/
 - id: ab-testing
   type: Method
   name_en: A/B testing
@@ -970,6 +979,10 @@ entities:
   type: Concept
   name_en: Hermitian dot product
   name_de: Hermitesches Skalarprodukt
+  summary_en: The Hermitian dot product is the complex counterpart of the ordinary dot product; it uses the complex conjugate of one of the vectors. ComplEx scores knowledge graph triples with it, and because the tail embedding is conjugated, the score of (h, r, t) can differ from that of (t, r, h), so ComplEx handles both symmetric and antisymmetric relations (Trouillon et al. 2016).
+  summary_de: Das hermitesche Skalarprodukt ist das komplexe Gegenstück zum gewöhnlichen Skalarprodukt; es verwendet die komplex Konjugierte eines der Vektoren. ComplEx bewertet damit Tripel eines Wissensgraphen, und weil das Embedding des Tail-Elements konjugiert wird, kann der Wert für (h, r, t) von dem für (t, r, h) abweichen; so kann ComplEx symmetrische und antisymmetrische Relationen abbilden (Trouillon et al. 2016).
+  sources:
+  - https://arxiv.org/abs/1606.06357
 - id: atlassian
   type: Organisation
   name_en: Atlassian
@@ -1030,10 +1043,18 @@ entities:
   type: Method
   name_en: LeNet
   name_de: LeNet
+  summary_en: LeNet is a family of convolutional neural networks by LeCun et al. for document recognition, in particular handwritten character recognition; LeNet-style networks trained with gradient-based learning established CNNs for this task (LeCun et al. 1998).
+  summary_de: LeNet ist eine Familie von Faltungsnetzen von LeCun et al. für die Dokumenterkennung, insbesondere die Erkennung handgeschriebener Zeichen; mit gradientenbasiertem Lernen trainierte Netze im Stil von LeNet etablierten CNNs für diese Aufgabe (LeCun et al. 1998).
+  sources:
+  - https://doi.org/10.1109/5.726791
 - id: alexnet
   type: Method
   name_en: AlexNet
   name_de: AlexNet
+  summary_en: AlexNet is the deep convolutional neural network with which Krizhevsky et al. classified the 1.3 million images of the ImageNet LSVRC-2010 training set into 1,000 classes, reaching top-1 and top-5 test error rates of 39.7% and 18.9% (Krizhevsky et al. 2012). It has 60 million parameters, five convolutional layers and two fully connected layers with a final 1,000-way softmax, and used non-saturating neurons, an efficient GPU implementation and a then-new regularisation method (dropout); it started the deep learning era in computer vision.
+  summary_de: AlexNet ist das tiefe Faltungsnetz, mit dem Krizhevsky et al. die 1,3 Millionen Bilder des Trainingsdatensatzes von ImageNet LSVRC-2010 in 1.000 Klassen einteilten und Top-1- und Top-5-Fehlerraten von 39,7 % und 18,9 % erreichten (Krizhevsky et al. 2012). Es hat 60 Millionen Parameter, fünf Faltungsschichten und zwei vollständig verbundene Schichten mit abschließendem Softmax über 1.000 Klassen und nutzte nicht sättigende Neuronen, eine effiziente GPU-Implementierung und ein damals neues Regularisierungsverfahren (Dropout); es leitete die Deep-Learning-Ära in der Computer Vision ein.
+  sources:
+  - https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
 - id: vgg
   type: Method
   name_en: VGG
@@ -1575,10 +1596,18 @@ entities:
   type: Method
   name_en: Semantic matching model
   name_de: Semantic-Matching-Modell
+  summary_en: Semantic matching models are knowledge graph embedding models that score triples by the similarity of entity and relation representations, for example with a bilinear form between head and tail embeddings and a relation matrix (Wang et al. 2017). DistMult belongs to this group and restricts the relation matrix to a diagonal.
+  summary_de: Semantic-Matching-Modelle sind Knowledge-Graph-Embedding-Modelle, die Tripel über die Ähnlichkeit von Entitäts- und Relationsrepräsentationen bewerten, etwa mit einer Bilinearform aus Head- und Tail-Embeddings und einer Relationsmatrix (Wang et al. 2017). DistMult gehört zu dieser Gruppe und beschränkt die Relationsmatrix auf eine Diagonalmatrix.
+  sources:
+  - https://doi.org/10.1109/TKDE.2017.2754499
 - id: rule-mining
   type: Method
   name_en: Rule mining
   name_de: Regel-Mining
+  summary_en: Rule mining derives logical rules such as "BornInCity(a, b) and CityInCountry(b, c) ⇒ Nationality(a, c)" from a knowledge base. Yang et al. (2014) mined such rules from relation embeddings, using the fact that composing relations corresponds to multiplying their matrices, and their approach outperformed a confidence-based rule miner on Horn rules involving compositional reasoning.
+  summary_de: Rule Mining leitet aus einer Wissensbasis logische Regeln ab, etwa „BornInCity(a, b) und CityInCountry(b, c) ⇒ Nationality(a, c)“. Yang et al. (2014) gewannen solche Regeln aus Relations-Embeddings, wobei die Verkettung von Relationen der Multiplikation ihrer Matrizen entspricht; ihr Ansatz übertraf einen konfidenzbasierten Regelminer bei Horn-Regeln mit kompositionellem Schließen.
+  sources:
+  - https://arxiv.org/abs/1412.6575
 - id: ict-risk-management
   type: Concept
   name_en: ICT risk management
@@ -1841,6 +1870,10 @@ entities:
   type: Method
   name_en: Coreference resolution
   name_de: Koreferenzauflösung
+  summary_en: Coreference resolution identifies expressions that refer to the same real-world entity in a text, partitioning the mentions into classes of the same entity, for example a full name, a title with surname and a pronoun (Urchs 2025). Without it, signals such as sentiment or frequency are spread across partial identities; corpus analyses use it to build one profile per person.
+  summary_de: Koreferenzauflösung erkennt Ausdrücke, die sich in einem Text auf dieselbe reale Entität beziehen, und teilt die Erwähnungen in Klassen derselben Entität ein, etwa einen vollen Namen, einen Titel mit Nachnamen und ein Pronomen (Urchs 2025). Ohne sie verteilen sich Signale wie Sentiment oder Häufigkeit auf Teilidentitäten; Korpusanalysen nutzen sie, um ein Profil pro Person zu bilden.
+  sources:
+  - https://edoc.ub.uni-muenchen.de/36297/
 - id: citizens-rights-directive-2009
   type: Regulation
   name_en: Directive 2009/136/EC (amending the ePrivacy Directive)
@@ -2402,6 +2435,10 @@ entities:
   type: Concept
   name_en: Bias-preserving algorithmic gender fairness
   name_de: Bias-erhaltende algorithmische Gender-Fairness
+  summary_en: Bias-preserving algorithmic gender fairness, as defined by Urchs (2025), assesses whether algorithmic outputs reflect real-world gender distributions without introducing or amplifying disparities. Bias-preserving approaches aim at formal equality and try to reflect the real world as accurately as possible, in contrast to bias-transforming approaches, which rely on a predefined notion of a better world (Wachter et al. 2021); Urchs applied the definition to retrieval and search results for professors at German universities.
+  summary_de: Bias-erhaltende algorithmische Gender-Fairness, wie Urchs (2025) sie definiert, prüft, ob algorithmische Ausgaben reale Geschlechterverteilungen abbilden, ohne Ungleichheiten einzuführen oder zu verstärken. Bias-erhaltende Ansätze zielen auf formale Gleichheit und wollen die reale Welt möglichst genau abbilden, im Unterschied zu bias-transformierenden Ansätzen, die auf einer vorab festgelegten Vorstellung einer besseren Welt beruhen (Wachter et al. 2021); Urchs wandte die Definition auf Retrieval- und Suchergebnisse zu Professorinnen und Professoren an deutschen Hochschulen an.
+  sources:
+  - https://edoc.ub.uni-muenchen.de/36297/
 - id: three-lines-of-defence
   type: Concept
   name_en: Three lines of defence
@@ -3179,6 +3216,10 @@ entities:
   type: Method
   name_en: Competency questions
   name_de: Kompetenzfragen
+  summary_en: Competency questions are a list of questions that a knowledge base built on an ontology should be able to answer; they help to determine the scope of the ontology and later serve as a litmus test of whether it contains enough information (Noy and McGuinness 2001, after Gruninger and Fox 1995). They are a sketch and need not be exhaustive.
+  summary_de: Kompetenzfragen sind eine Liste von Fragen, die eine auf einer Ontologie aufbauende Wissensbasis beantworten können soll; sie helfen, den Umfang der Ontologie festzulegen, und dienen später als Prüfstein, ob sie genug Information enthält (Noy und McGuinness 2001, nach Gruninger und Fox 1995). Sie sind eine Skizze und müssen nicht vollständig sein.
+  sources:
+  - https://protege.stanford.edu/publications/ontology_development/ontology101.pdf
 - id: dimensionality-reduction
   type: Concept
   name_en: Dimensionality reduction
@@ -4001,10 +4042,18 @@ entities:
   type: Method
   name_en: TransH
   name_de: TransH
+  summary_en: TransH is a knowledge graph embedding model that represents a relation as a hyperplane together with a translation on it (Wang et al. 2014). It addresses TransE's difficulties with reflexive, one-to-many, many-to-one and many-to-many relations while keeping almost the same model complexity as TransE.
+  summary_de: TransH ist ein Knowledge-Graph-Embedding-Modell, das eine Relation als Hyperebene zusammen mit einer Translation auf ihr darstellt (Wang et al. 2014). Es behebt Schwächen von TransE bei reflexiven, 1:n-, n:1- und n:m-Relationen und hat dabei fast dieselbe Modellkomplexität wie TransE.
+  sources:
+  - https://ojs.aaai.org/index.php/AAAI/article/view/8870
 - id: transr
   type: Method
   name_en: TransR
   name_de: TransR
+  summary_en: 'TransR is a knowledge graph embedding model that places entities and relations in separate spaces: entities are first projected from the entity space into a relation-specific space, where the relation acts as a translation between the projected entities (Lin et al. 2015). It is motivated by entities having multiple aspects on which different relations focus.'
+  summary_de: 'TransR ist ein Knowledge-Graph-Embedding-Modell, das Entitäten und Relationen in getrennten Räumen darstellt: Entitäten werden zunächst aus dem Entitätsraum in einen relationsspezifischen Raum projiziert, in dem die Relation als Translation zwischen den projizierten Entitäten wirkt (Lin et al. 2015). Grund ist, dass Entitäten mehrere Aspekte haben, auf die sich unterschiedliche Relationen beziehen.'
+  sources:
+  - https://ojs.aaai.org/index.php/AAAI/article/view/9491
 - id: andrej-karpathy
   type: Person
   name_en: Andrej Karpathy
@@ -4038,6 +4087,10 @@ entities:
   type: Dataset
   name_en: taz2024full
   name_de: taz2024full
+  summary_en: taz2024full is a corpus of over 1.8 million articles from the German daily newspaper taz published between 1980 and 2024, at the time of publication the largest publicly available German newspaper corpus (Urchs 2025). An actor-level pipeline applied to it found men mentioned more often and framed more positively than women, although coverage of women increased over time.
+  summary_de: taz2024full ist ein Korpus aus über 1,8 Millionen Artikeln der Tageszeitung taz aus den Jahren 1980 bis 2024 und war bei seiner Veröffentlichung das größte öffentlich verfügbare deutschsprachige Zeitungskorpus (Urchs 2025). Eine darauf angewandte Pipeline auf Akteursebene ergab, dass Männer häufiger erwähnt und positiver dargestellt werden als Frauen, wobei die Berichterstattung über Frauen im Zeitverlauf zunahm.
+  sources:
+  - https://edoc.ub.uni-muenchen.de/36297/
 - id: cuad
   type: Dataset
   name_en: CUAD
@@ -4076,14 +4129,26 @@ entities:
   type: Dataset
   name_en: DBpedia
   name_de: DBpedia
+  summary_en: DBpedia is a knowledge graph extracted from structured data in Wikipedia, mainly the key-value pairs of infoboxes (Paulheim 2017). In a crowd-sourced process, infobox types are mapped to the DBpedia ontology and infobox keys to its properties, and the knowledge graph is extracted on the basis of these mappings; DBpedia creates interlinked graphs for the different Wikipedia language editions.
+  summary_de: DBpedia ist ein Wissensgraph, der aus strukturierten Daten der Wikipedia extrahiert wird, vor allem aus den Schlüssel-Wert-Paaren der Infoboxen (Paulheim 2017). In einem Crowdsourcing-Prozess werden Infobox-Typen der DBpedia-Ontologie und Infobox-Schlüssel ihren Eigenschaften zugeordnet; auf Grundlage dieser Zuordnungen wird der Graph extrahiert, mit untereinander verknüpften Graphen für die einzelnen Sprachversionen der Wikipedia.
+  sources:
+  - https://doi.org/10.3233/SW-160218
 - id: yago
   type: Dataset
   name_en: YAGO
   name_de: YAGO
+  summary_en: YAGO is a knowledge graph that, like DBpedia, is extracted from Wikipedia (Paulheim 2017). It builds its classification from Wikipedia's category system and the lexical resource WordNet, maps infobox properties manually to a fixed set of attributes, and aims at an automatic fusion of knowledge from different Wikipedia language editions.
+  summary_de: YAGO ist ein Wissensgraph, der wie DBpedia aus der Wikipedia extrahiert wird (Paulheim 2017). Seine Klassifikation baut er aus dem Kategoriensystem der Wikipedia und der lexikalischen Ressource WordNet auf, Infobox-Eigenschaften werden manuell auf eine feste Menge von Attributen abgebildet, und Wissen aus verschiedenen Sprachversionen der Wikipedia wird automatisch zusammengeführt.
+  sources:
+  - https://doi.org/10.3233/SW-160218
 - id: freebase
   type: Dataset
   name_en: Freebase
   name_de: Freebase
+  summary_en: Freebase was a collaboratively edited knowledge graph (Paulheim 2017). It was shut down on 31 March 2015; its last version contained roughly 50 million entities and 3 billion facts, with a schema of about 27,000 entity types and 38,000 relation types, and much of its data was moved to Wikidata.
+  summary_de: Freebase war ein gemeinschaftlich bearbeiteter Wissensgraph (Paulheim 2017). Er wurde am 31. März 2015 abgeschaltet; die letzte Version enthielt rund 50 Millionen Entitäten und 3 Milliarden Fakten bei einem Schema mit etwa 27.000 Entitätstypen und 38.000 Relationstypen, und ein Großteil der Daten wurde nach Wikidata übertragen.
+  sources:
+  - https://doi.org/10.3233/SW-160218
 - id: lexglue
   type: Dataset
   name_en: LexGLUE
@@ -4334,6 +4399,11 @@ entities:
   name_de: Connectionist Temporal Classification (CTC)
   aliases:
   - CTC
+  summary_en: Connectionist Temporal Classification (CTC) is a method for training recurrent neural networks to label unsegmented input sequences directly, without pre-segmented training data or post-processing into label sequences (Graves et al. 2006). It was demonstrated on speech recognition, where it outperformed an HMM baseline and a hybrid HMM-RNN on TIMIT, and is used as a loss for speech recognition models such as wav2vec 2.0.
+  summary_de: Connectionist Temporal Classification (CTC) ist ein Verfahren, mit dem rekurrente neuronale Netze unsegmentierte Eingabesequenzen direkt labeln lernen, ohne vorsegmentierte Trainingsdaten oder Nachverarbeitung zu Labelfolgen (Graves et al. 2006). Es wurde an Spracherkennung gezeigt, wo es auf TIMIT eine HMM-Baseline und ein hybrides HMM-RNN übertraf, und dient als Loss für Spracherkennungsmodelle wie wav2vec 2.0.
+  sources:
+  - https://www.cs.toronto.edu/~graves/icml_2006.pdf
+  - https://arxiv.org/abs/2006.11477
 - id: vall-e
   type: Method
   name_en: VALL-E
@@ -4556,10 +4626,18 @@ entities:
   type: Dataset
   name_en: Penn Treebank
   name_de: Penn Treebank
+  summary_en: The Penn Treebank is a corpus of over 4.5 million words of American English built at the University of Pennsylvania (Marcus et al. 1993). In the first phase of the project (1989–1992) it was annotated for part-of-speech information, and over half of it for skeletal syntactic structure; it is distributed through the Linguistic Data Consortium.
+  summary_de: Die Penn Treebank ist ein Korpus aus über 4,5 Millionen Wörtern amerikanischen Englischs, aufgebaut an der University of Pennsylvania (Marcus et al. 1993). In der ersten Projektphase (1989–1992) wurde es mit Wortarten annotiert und zu über der Hälfte mit einer groben syntaktischen Struktur; vertrieben wird es über das Linguistic Data Consortium.
+  sources:
+  - https://aclanthology.org/J93-2004/
 - id: semcor
   type: Dataset
   name_en: SemCor
   name_de: SemCor
+  summary_en: SemCor is a semantic concordance, a corpus and lexicon combined so that every substantive word in the text is linked to its sense in the lexicon (Miller et al. 1993). The text is the Brown Corpus and the lexicon is WordNet; the sense tags were added manually, and SemCor is used to train and evaluate word sense disambiguation.
+  summary_de: SemCor ist eine semantische Konkordanz, also ein Korpus und ein Lexikon, die so verbunden sind, dass jedes bedeutungstragende Wort im Text mit seiner Bedeutung im Lexikon verknüpft ist (Miller et al. 1993). Der Text ist das Brown-Korpus, das Lexikon WordNet; die Bedeutungsannotationen wurden manuell eingefügt, und SemCor dient zum Training und zur Evaluation von Wortsinndisambiguierung.
+  sources:
+  - https://aclanthology.org/H93-1061/
 - id: spacy
   type: Technology
   name_en: spaCy
@@ -5017,6 +5095,10 @@ entities:
   type: Dataset
   name_en: Natural Questions
   name_de: Natural Questions
+  summary_en: Natural Questions is a question answering dataset whose questions are real, anonymised and aggregated queries to the Google search engine (Kwiatkowski et al. 2019). Annotators mark a long answer, typically a paragraph, and a short answer of one or more entities on a Wikipedia page from the top five search results, or null; the release contains 307,373 training examples and 5-way annotated development and test sets.
+  summary_de: Natural Questions ist ein Datensatz für Fragebeantwortung, dessen Fragen echte, anonymisierte und aggregierte Anfragen an die Google-Suche sind (Kwiatkowski et al. 2019). Annotierende markieren auf einer Wikipedia-Seite aus den ersten fünf Suchtreffern eine lange Antwort, meist einen Absatz, und eine kurze Antwort aus einer oder mehreren Entitäten oder vermerken, dass es keine gibt; die Veröffentlichung enthält 307.373 Trainingsbeispiele sowie fünffach annotierte Entwicklungs- und Testdaten.
+  sources:
+  - https://aclanthology.org/Q19-1026/
 - id: omar-khattab
   type: Person
   name_en: Omar Khattab
