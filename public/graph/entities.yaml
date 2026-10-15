@@ -2623,10 +2623,18 @@ entities:
   name_de: Jeffrey Dean
   aliases:
   - Jeff Dean
+  summary_en: Jeffrey Dean, then at Google, introduced MapReduce with Sanjay Ghemawat at OSDI 2004. MapReduce is a programming model in which users write a map and a reduce function and the run-time system parallelises the program across a large cluster of commodity machines, handling partitioning, scheduling, machine failures and communication.
+  summary_de: Jeffrey Dean stellte, damals bei Google, gemeinsam mit Sanjay Ghemawat auf der OSDI 2004 MapReduce vor. MapReduce ist ein Programmiermodell, bei dem eine Map- und eine Reduce-Funktion geschrieben werden und die Laufzeitumgebung das Programm auf einem großen Cluster gewöhnlicher Rechner parallelisiert und dabei Partitionierung, Ablaufplanung, Rechnerausfälle und Kommunikation übernimmt.
+  sources:
+  - https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/
 - id: sanjay-ghemawat
   type: Person
   name_en: Sanjay Ghemawat
   name_de: Sanjay Ghemawat
+  summary_en: Sanjay Ghemawat, then at Google, is co-author, with Jeffrey Dean, of the MapReduce paper presented at OSDI 2004. The paper describes a programming model and implementation that let programmers without experience in parallel and distributed systems process large data sets on clusters of commodity machines.
+  summary_de: Sanjay Ghemawat, damals bei Google, ist gemeinsam mit Jeffrey Dean Autor des MapReduce-Papers, das auf der OSDI 2004 vorgestellt wurde. Es beschreibt ein Programmiermodell mit Implementierung, mit dem auch Programmierende ohne Erfahrung mit parallelen und verteilten Systemen große Datenmengen auf Clustern gewöhnlicher Rechner verarbeiten können.
+  sources:
+  - https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/
 - id: tesseract
   type: Technology
   name_en: Tesseract
@@ -2677,6 +2685,10 @@ entities:
   name_de: Edgar F. Codd
   aliases:
   - E. F. Codd
+  summary_en: Edgar F. Codd, of the IBM Research Laboratory in San Jose, introduced the relational model of data in 1970 in Communications of the ACM. His model based on n-ary relations, a normal form and a universal data sublanguage aimed to protect users of large data banks from having to know how data is organised internally.
+  summary_de: Edgar F. Codd vom IBM Research Laboratory in San José stellte 1970 in den Communications of the ACM das relationale Datenmodell vor. Sein Modell auf Grundlage n-stelliger Relationen, einer Normalform und einer universellen Datenteilsprache sollte Nutzende großer Datenbanken davon befreien, die interne Organisation der Daten kennen zu müssen.
+  sources:
+  - https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf
 - id: ralph-kimball
   type: Person
   name_en: Ralph Kimball
@@ -2699,10 +2711,18 @@ entities:
   type: Person
   name_en: Ben Shneiderman
   name_de: Ben Shneiderman
+  summary_en: Ben Shneiderman, of the Human-Computer Interaction Laboratory at the University of Maryland, formulated the Visual Information-Seeking Mantra "overview first, zoom and filter, then details on demand" in 1996. The same paper proposes a task by data type taxonomy for information visualisation with seven data types and seven tasks.
+  summary_de: Ben Shneiderman vom Human-Computer Interaction Laboratory der University of Maryland formulierte 1996 das Visual Information-Seeking Mantra „overview first, zoom and filter, then details on demand“. Dasselbe Paper schlägt eine Taxonomie für Informationsvisualisierung nach Aufgaben und Datentypen vor, mit sieben Datentypen und sieben Aufgaben.
+  sources:
+  - https://www.cs.umd.edu/~ben/papers/Shneiderman1996eyes.pdf
 - id: hadley-wickham
   type: Person
   name_en: Hadley Wickham
   name_de: Hadley Wickham
+  summary_en: Hadley Wickham described a layered grammar of graphics in 2010, building on Wilkinson's grammar of graphics and refined while he built ggplot2, an open-source implementation for R. A grammar of graphics describes the components of a plot concisely instead of relying on named chart types such as the scatterplot.
+  summary_de: Hadley Wickham beschrieb 2010 eine geschichtete Grammatik der Grafik, die auf Wilkinsons Grammar of Graphics aufbaut und bei der Entwicklung von ggplot2, einer Open-Source-Umsetzung für R, verfeinert wurde. Eine solche Grammatik beschreibt die Bestandteile einer Grafik knapp, statt sich auf benannte Diagrammtypen wie das Streudiagramm zu stützen.
+  sources:
+  - https://vita.had.co.nz/papers/layered-grammar.pdf
 - id: llama-guard
   type: Method
   name_en: Llama Guard
@@ -2719,36 +2739,67 @@ entities:
   type: Person
   name_en: Omar Khattab
   name_de: Omar Khattab
+  summary_en: Omar Khattab, then at Stanford University, introduced ColBERT with Matei Zaharia at SIGIR 2020. ColBERT encodes queries and documents independently with BERT and scores them with a cheap "late interaction" step that keeps fine-grained similarity while making BERT-based retrieval efficient.
+  summary_de: Omar Khattab, damals an der Stanford University, stellte mit Matei Zaharia auf der SIGIR 2020 ColBERT vor. ColBERT kodiert Anfragen und Dokumente getrennt mit BERT und bewertet sie mit einem günstigen „Late Interaction“-Schritt, der feinkörnige Ähnlichkeit erhält und Retrieval mit BERT effizient macht.
+  sources:
+  - https://arxiv.org/abs/2004.12832
 - id: ukp-lab
   type: Organisation
   name_en: UKP Lab (TU Darmstadt)
   name_de: UKP Lab (TU Darmstadt)
   aliases:
   - Ubiquitous Knowledge Processing Lab
+  summary_en: The Ubiquitous Knowledge Processing (UKP) Lab is a research group in the Department of Computer Science at Technische Universität Darmstadt. Its researchers introduced BEIR in 2021, a heterogeneous benchmark of 18 public datasets for zero-shot evaluation of retrieval models, which found BM25 to be a robust baseline.
+  summary_de: Das Ubiquitous Knowledge Processing (UKP) Lab ist eine Forschungsgruppe im Fachbereich Informatik der Technischen Universität Darmstadt. Seine Forschenden stellten 2021 BEIR vor, einen heterogenen Benchmark aus 18 öffentlichen Datensätzen zur Zero-Shot-Evaluation von Retrieval-Modellen, in dem sich BM25 als robuste Baseline erwies.
+  sources:
+  - https://arxiv.org/abs/2104.08663
 - id: stanford-university
   type: Organisation
   name_en: Stanford University
   name_de: Stanford University
   aliases:
   - Stanford
+  summary_en: Stanford University is a research university in California. Work from its Computer Science Department cited here includes GloVe (2014), a global log-bilinear regression model for word vectors trained on word-word co-occurrence counts, and ColBERT (2020), a late-interaction retrieval model built on BERT.
+  summary_de: Die Stanford University ist eine Forschungsuniversität in Kalifornien. Zu den hier zitierten Arbeiten ihres Computer Science Department gehören GloVe (2014), ein globales log-bilineares Regressionsmodell für Wortvektoren auf Basis von Kookkurrenzzählungen, und ColBERT (2020), ein Retrieval-Modell mit Late Interaction auf Basis von BERT.
+  sources:
+  - https://nlp.stanford.edu/pubs/glove.pdf
+  - https://arxiv.org/abs/2004.12832
 - id: ibm
   type: Organisation
   name_en: IBM
   name_de: IBM
+  summary_en: IBM is a technology company whose research labs produced foundational work cited here, among them BLEU, developed at the IBM T. J. Watson Research Center in 2002 as a quick, inexpensive and language-independent automatic metric for machine translation, and Codd's relational model of data from the IBM Research Laboratory in San Jose in 1970.
+  summary_de: IBM ist ein Technologieunternehmen, aus dessen Forschungslaboren hier zitierte Grundlagenarbeiten stammen, darunter BLEU, 2002 am IBM T. J. Watson Research Center als schnelle, günstige und sprachunabhängige automatische Metrik für maschinelle Übersetzung entwickelt, sowie Codds relationales Datenmodell aus dem IBM Research Laboratory in San José von 1970.
+  sources:
+  - https://aclanthology.org/P02-1040/
+  - https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf
 - id: hugging-face
   type: Organisation
   name_en: Hugging Face
   name_de: Hugging Face
+  summary_en: Hugging Face is the company whose researchers released DistilBERT in 2019, a smaller general-purpose language model obtained by knowledge distillation during pre-training. DistilBERT reduced the size of a BERT model by 40% while retaining 97% of its language understanding capabilities and running 60% faster.
+  summary_de: Hugging Face ist das Unternehmen, dessen Forschende 2019 DistilBERT veröffentlichten, ein kleineres Allzweck-Sprachmodell, das durch Knowledge Distillation während des Vortrainings entsteht. DistilBERT verkleinerte ein BERT-Modell um 40 %, behielt 97 % seines Sprachverständnisses und war 60 % schneller.
+  sources:
+  - https://arxiv.org/abs/1910.01108
 - id: thomas-dietterich
   type: Person
   name_en: Thomas G. Dietterich
   name_de: Thomas G. Dietterich
+  summary_en: Thomas G. Dietterich compared approximate statistical tests for comparing supervised classification learning algorithms in a 1998 paper. He found McNemar's test preferable to the difference-of-proportions test and introduced the 5×2-fold cross-validated paired t-test.
+  summary_de: Thomas G. Dietterich verglich 1998 in einem Artikel näherungsweise statistische Tests zum Vergleich überwachter Klassifikationsverfahren. Er zog den McNemar-Test dem Test auf Differenz von Anteilen vor und führte den 5×2-fach kreuzvalidierten gepaarten t-Test ein.
+  sources:
+  - https://arxiv.org/abs/1811.12808
 - id: roy-fielding
   type: Person
   name_en: Roy T. Fielding
   name_de: Roy T. Fielding
   aliases:
   - Roy Fielding
+  summary_en: Roy T. Fielding defined Representational State Transfer (REST) in chapter 5 of his 2000 dissertation at the University of California, Irvine, as an architectural style for distributed hypermedia systems with a uniform connector interface. He is also lead author of RFC 9110, which specifies HTTP semantics.
+  summary_de: Roy T. Fielding definierte Representational State Transfer (REST) im fünften Kapitel seiner Dissertation an der University of California, Irvine, aus dem Jahr 2000 als Architekturstil für verteilte Hypermedia-Systeme mit einheitlicher Schnittstelle. Er ist außerdem Erstautor von RFC 9110, das die Semantik von HTTP festlegt.
+  sources:
+  - https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+  - https://www.rfc-editor.org/rfc/rfc9110.html
 - id: consumer-credit-directive-2023
   type: Regulation
   name_en: Consumer Credit Directive (EU) 2023/2225
@@ -2762,6 +2813,10 @@ entities:
   name_de: Thoughtworks
   aliases:
   - ThoughtWorks
+  summary_en: Thoughtworks is a software delivery company where Martin Fowler works with the title of Chief Scientist. Many authors of articles on his website martinfowler.com are or have been Thoughtworks colleagues.
+  summary_de: Thoughtworks ist ein Softwaredienstleister, bei dem Martin Fowler den Titel Chief Scientist trägt. Viele Autorinnen und Autoren von Artikeln auf seiner Website martinfowler.com sind oder waren Kolleginnen und Kollegen bei Thoughtworks.
+  sources:
+  - https://martinfowler.com/aboutMe.html
 - id: extreme-programming
   type: Method
   name_en: Extreme Programming (XP)
@@ -2769,6 +2824,10 @@ entities:
   aliases:
   - Extreme Programming
   - XP
+  summary_en: Extreme Programming (XP) is a software development methodology developed primarily by Kent Beck and one of the first agile methods; it was dominant in the late 1990s and early 2000s. It moves from values through principles to concrete practices and popularised continuous integration, refactoring, test-driven development and agile planning.
+  summary_de: Extreme Programming (XP) ist eine maßgeblich von Kent Beck entwickelte Methode der Softwareentwicklung und eine der ersten agilen Methoden; Ende der 1990er und Anfang der 2000er Jahre war sie vorherrschend. Sie führt von Werten über Prinzipien zu konkreten Praktiken und machte kontinuierliche Integration, Refactoring, testgetriebene Entwicklung und agile Planung bekannt.
+  sources:
+  - https://martinfowler.com/bliki/ExtremeProgramming.html
 - id: test-driven-development
   type: Method
   name_en: Test-driven development (TDD)
@@ -2777,14 +2836,27 @@ entities:
   - Test-driven development
   - TDD
   - Red, green, refactor
+  summary_en: Test-driven development (TDD) guides development by writing tests; Kent Beck developed it in the late 1990s as part of Extreme Programming. The cycle is to write a test for the next bit of functionality, write code until it passes and then refactor ("red, green, refactor"), starting from a list of test cases; neglecting the refactoring step is the most common mistake.
+  summary_de: Testgetriebene Entwicklung (TDD) steuert die Entwicklung über das Schreiben von Tests; Kent Beck entwickelte sie Ende der 1990er Jahre als Teil von Extreme Programming. Der Zyklus lautet, einen Test für das nächste Stück Funktionalität zu schreiben, dann Code, bis er besteht, und schließlich zu refaktorieren („Red, Green, Refactor“), ausgehend von einer Liste von Testfällen; den Refactoring-Schritt auszulassen ist der häufigste Fehler.
+  sources:
+  - https://martinfowler.com/bliki/TestDrivenDevelopment.html
 - id: junit
   type: Technology
   name_en: JUnit
   name_de: JUnit
+  summary_en: JUnit is "a simple framework to write repeatable tests" for Java and an instance of the xUnit architecture for unit testing frameworks. It was originally written by Kent Beck and Erich Gamma; JUnit 4 is in maintenance mode, and development continues in the newer JUnit framework.
+  summary_de: JUnit ist „a simple framework to write repeatable tests“ für Java und eine Umsetzung der xUnit-Architektur für Unit-Test-Frameworks. Ursprünglich schrieben es Kent Beck und Erich Gamma; JUnit 4 ist im Wartungsmodus, die Weiterentwicklung findet im neueren JUnit-Framework statt.
+  sources:
+  - https://junit.org/junit4/
+  - https://martinfowler.com/articles/continuousIntegration.html
 - id: erich-gamma
   type: Person
   name_en: Erich Gamma
   name_de: Erich Gamma
+  summary_en: Erich Gamma originally wrote the JUnit testing framework together with Kent Beck. According to Martin Fowler, JUnit had a marked impact on the Java community in the late 1990s and inspired similar xUnit frameworks for other languages.
+  summary_de: Erich Gamma schrieb gemeinsam mit Kent Beck ursprünglich das Testframework JUnit. Nach Martin Fowler prägte JUnit Ende der 1990er Jahre die Java-Gemeinschaft deutlich und regte ähnliche xUnit-Frameworks für andere Sprachen an.
+  sources:
+  - https://martinfowler.com/articles/continuousIntegration.html
 - id: dspy
   type: Technology
   name_en: DSPy
