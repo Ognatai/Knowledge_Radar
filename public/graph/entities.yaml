@@ -637,6 +637,11 @@ entities:
   type: Concept
   name_en: Critical entity
   name_de: Kritische Einrichtung
+  summary_en: Under the CER Directive, a critical entity is a public or private entity that a Member State has identified, in accordance with Article 6, as belonging to one of the categories listed in the Annex (Art. 2(1) CER Directive). Member States had to identify their critical entities for the sectors and subsectors in the Annex by 17 July 2026, based on their risk assessment and strategy (Art. 6(1)–(2) CER Directive).
+  summary_de: Nach der CER-Richtlinie ist eine kritische Einrichtung eine öffentliche oder private Einrichtung, die ein Mitgliedstaat nach Artikel 6 als einer der im Anhang aufgeführten Kategorien angehörend eingestuft hat (Art. 2 Nr. 1 CER-Richtlinie). Die Mitgliedstaaten hatten ihre kritischen Einrichtungen für die im Anhang festgelegten Sektoren und Teilsektoren bis zum 17. Juli 2026 zu ermitteln, auf Grundlage ihrer Risikobewertung und Strategie (Art. 6 Abs. 1 und 2 CER-Richtlinie).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L2557
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557
 - id: linear-regression
   type: Method
   name_en: Linear regression
@@ -956,14 +961,30 @@ entities:
   type: Concept
   name_en: Capital buffer
   name_de: Kapitalpuffer
+  summary_en: Capital buffers are own funds that institutions must or may be required to hold in addition to the minimum own funds requirements; the CRD defines the capital conservation buffer, the institution-specific countercyclical buffer, the G-SII and O-SII buffers for systemically important institutions and the systemic risk buffer, which together form the combined buffer requirement (Art. 128 CRD).
+  summary_de: Kapitalpuffer sind Eigenmittel, die Institute zusätzlich zu den Mindesteigenmittelanforderungen vorhalten müssen oder vorzuhalten verpflichtet werden können; die CRD bestimmt den Kapitalerhaltungspuffer, den institutsspezifischen antizyklischen Kapitalpuffer, die G-SRI- und O-SRI-Puffer für systemrelevante Institute und den Systemrisikopuffer, die zusammen die kombinierte Kapitalpufferanforderung bilden (Art. 128 CRD).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02013L0036-20260711
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013L0036-20260711
 - id: leverage-ratio
   type: Concept
   name_en: Leverage ratio
   name_de: Verschuldungsquote (Leverage Ratio)
+  summary_en: The leverage ratio is an institution's capital measure, its Tier 1 capital, divided by its total exposure measure, expressed as a percentage (Art. 429(2)–(3) CRR). Institutions must at all times maintain a leverage ratio of 3%, and global systemically important institutions an additional leverage ratio buffer (Art. 92(1)(d) and (1a) CRR).
+  summary_de: Die Verschuldungsquote ist der Quotient aus der Kapitalmessgröße eines Instituts, seinem Kernkapital, und seiner Gesamtrisikopositionsmessgröße, angegeben als Prozentsatz (Art. 429 Abs. 2 und 3 CRR). Institute müssen jederzeit eine Verschuldungsquote von 3 % einhalten, global systemrelevante Institute zusätzlich einen Puffer der Verschuldungsquote (Art. 92 Abs. 1 Buchst. d und Abs. 1a CRR).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02013R0575-20260626
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013R0575-20260626
 - id: output-floor
   type: Concept
   name_en: Output floor
   name_de: Output Floor
+  summary_en: 'The output floor, introduced by CRR III, sets a lower bound on risk-weighted assets: an institution''s total risk exposure amount is the higher of its un-floored amount and 72.5% of the amount calculated with the standardised approaches (Art. 92(3) CRR). Member States may, under conditions, apply the un-floored amount for institutions in a group whose parent is in the same Member State.'
+  summary_de: 'Die Eigenmitteluntergrenze (Output Floor), mit CRR III eingeführt, setzt eine Untergrenze für den Gesamtrisikobetrag: Der Gesamtrisikobetrag eines Instituts ist der höhere Wert aus dem Betrag ohne Untergrenze und 72,5 % des nach Standardansätzen berechneten Betrags (Art. 92 Abs. 3 CRR). Mitgliedstaaten können unter Bedingungen für Institute einer Gruppe mit Mutterinstitut im selben Mitgliedstaat den Betrag ohne Untergrenze zugrunde legen.'
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02013R0575-20260626
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013R0575-20260626
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1623
 - id: irb-approach
   type: Method
   name_en: Internal ratings-based approach (IRB)
@@ -976,6 +997,11 @@ entities:
   name_de: Aufsichtlicher Überprüfungs- und Bewertungsprozess (SREP)
   aliases:
   - SREP
+  summary_en: In the supervisory review and evaluation process (SREP), competent authorities review the arrangements, strategies, processes and mechanisms institutions have implemented to comply with the CRD and CRR and evaluate the risks to which they are or might be exposed, including risks revealed by stress testing (Art. 97(1) CRD).
+  summary_de: Im aufsichtlichen Überprüfungs- und Bewertungsprozess (SREP) überprüfen die zuständigen Behörden die Regelungen, Strategien, Verfahren und Mechanismen, die Institute zur Einhaltung von CRD und CRR geschaffen haben, und bewerten die Risiken, denen sie ausgesetzt sind oder sein könnten, einschließlich der anhand von Stresstests ermittelten Risiken (Art. 97 Abs. 1 CRD).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02013L0036-20260711
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013L0036-20260711
 - id: general-product-safety-regulation
   type: Regulation
   name_en: General Product Safety Regulation (EU) 2023/988
@@ -1003,6 +1029,11 @@ entities:
   type: Concept
   name_en: Product with digital elements
   name_de: Produkt mit digitalen Elementen
+  summary_en: Under the Cyber Resilience Act, a product with digital elements is "a software or hardware product and its remote data processing solutions, including software or hardware components being placed on the market separately" (Art. 3(1) CRA).
+  summary_de: Nach der Cyberresilienz-Verordnung ist ein Produkt mit digitalen Elementen „ein Software- oder Hardwareprodukt und dessen Datenfernverarbeitungslösungen, einschließlich Software- oder Hardwarekomponenten, die getrennt in den Verkehr gebracht werden“ (Art. 3 Nr. 1 CRA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R2847
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847
 - id: european-ombudsman
   type: Organisation
   name_en: European Ombudsman
@@ -1043,6 +1074,12 @@ entities:
   type: Concept
   name_en: European cybersecurity certification
   name_de: Europäische Cybersicherheitszertifizierung
+  summary_en: The Cybersecurity Act establishes European cybersecurity certification schemes, comprehensive sets of rules, technical requirements, standards and procedures established at Union level for the certification or conformity assessment of specific ICT products, services or processes (Art. 2(9) CSA). National schemes are adopted by national authorities for products in their scope (Art. 2(10) CSA); the EUCC, based on the Common Criteria, is a European scheme adopted under the Act.
+  summary_de: Der Rechtsakt zur Cybersicherheit schafft europäische Schemata für die Cybersicherheitszertifizierung, umfassende Pakete von Vorschriften, technischen Anforderungen, Normen und Verfahren, die auf Unionsebene festgelegt werden und für die Zertifizierung oder Konformitätsbewertung bestimmter IKT-Produkte, -Dienste und -Prozesse gelten (Art. 2 Nr. 9 CSA). Nationale Schemata werden von nationalen Behörden für die jeweils erfassten Produkte erlassen (Art. 2 Nr. 10 CSA); das EUCC auf Grundlage der Gemeinsamen Kriterien ist ein europäisches Schema nach dem Rechtsakt.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32019R0881
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0482
 - id: edib
   type: Organisation
   name_en: European Data Innovation Board (EDIB)
@@ -1322,10 +1359,20 @@ entities:
   type: Concept
   name_en: ICT risk management
   name_de: IKT-Risikomanagement
+  summary_en: Under DORA, financial entities must have a sound, comprehensive and well-documented ICT risk management framework as part of their overall risk management system, so that they can address ICT risk quickly, efficiently and comprehensively and ensure a high level of digital operational resilience (Art. 6(1) DORA). The framework includes at least strategies, policies, procedures, ICT protocols and tools to protect all information and ICT assets and relevant physical infrastructure (Art. 6(2) DORA).
+  summary_de: Nach DORA müssen Finanzunternehmen über einen soliden, umfassenden und gut dokumentierten IKT-Risikomanagementrahmen als Teil ihres Gesamtrisikomanagementsystems verfügen, um IKT-Risiken schnell, effizient und umfassend anzugehen und ein hohes Niveau an digitaler operationaler Resilienz zu gewährleisten (Art. 6 Abs. 1 DORA). Der Rahmen umfasst mindestens Strategien, Leit- und Richtlinien, Verfahren sowie IKT-Protokolle und -Tools zum Schutz aller Informations- und IKT-Assets und der relevanten physischen Infrastruktur (Art. 6 Abs. 2 DORA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2554
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554
 - id: ict-third-party-risk
   type: Concept
   name_en: ICT third-party risk
   name_de: IKT-Drittparteienrisiko
+  summary_en: Under DORA, ICT third-party risk is ICT risk that may arise for a financial entity from its use of ICT services provided by ICT third-party service providers or their subcontractors, including through outsourcing arrangements (Art. 3(18) DORA).
+  summary_de: Nach DORA ist das IKT-Drittparteienrisiko ein IKT-bezogenes Risiko, das für ein Finanzunternehmen aus der Nutzung von IKT-Dienstleistungen entstehen kann, die IKT-Drittdienstleister oder deren Unterauftragnehmer bereitstellen, auch über Vereinbarungen zur Auslagerung (Art. 3 Nr. 18 DORA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2554
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554
 - id: threat-led-penetration-testing
   type: Method
   name_en: Threat-led penetration testing (TLPT)
@@ -1336,6 +1383,11 @@ entities:
   type: Concept
   name_en: Critical ICT third-party service provider
   name_de: Kritischer IKT-Drittdienstleister
+  summary_en: A critical ICT third-party service provider under DORA is one designated as critical in accordance with Article 31 (Art. 3(23) DORA). The European Supervisory Authorities, through the Joint Committee and on recommendation of the Oversight Forum, designate such providers after an assessment against set criteria and appoint one of them as Lead Overseer for each (Art. 31(1) DORA).
+  summary_de: Ein kritischer IKT-Drittdienstleister im Sinne von DORA ist ein IKT-Drittdienstleister, der gemäß Artikel 31 als kritisch eingestuft wurde (Art. 3 Nr. 23 DORA). Die Europäischen Aufsichtsbehörden stufen solche Dienstleister über den Gemeinsamen Ausschuss und auf Empfehlung des Überwachungsforums nach einer Bewertung anhand festgelegter Kriterien ein und ernennen für jeden eine federführende Überwachungsbehörde (Art. 31 Abs. 1 DORA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2554
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554
 - id: credit-rating-agencies-regulation
   type: Regulation
   name_en: Credit Rating Agencies Regulation (EC) No 1060/2009
@@ -1397,10 +1449,20 @@ entities:
   type: Concept
   name_en: Electronic communications service
   name_de: Elektronischer Kommunikationsdienst
+  summary_en: Under the European Electronic Communications Code, an electronic communications service is a service normally provided for remuneration via electronic communications networks, including internet access services and interpersonal communications services, but excluding services that provide or exercise editorial control over content (Art. 2(4) EECC).
+  summary_de: Nach dem Europäischen Kodex für die elektronische Kommunikation sind elektronische Kommunikationsdienste gewöhnlich gegen Entgelt über elektronische Kommunikationsnetze erbrachte Dienste, die etwa Internetzugangsdienste und interpersonelle Kommunikationsdienste umfassen, nicht aber Dienste, die Inhalte anbieten oder eine redaktionelle Kontrolle über sie ausüben (Art. 2 Nr. 4 EKEK).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02018L1972-20241018
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02018L1972-20241018
 - id: universal-service
   type: Concept
   name_en: Universal service (telecommunications)
   name_de: Universaldienst (Telekommunikation)
+  summary_en: Universal service in telecommunications means that Member States ensure all consumers in their territory have access, at an affordable price and in light of national conditions, to an available adequate broadband internet access service and to voice communications services at a fixed location, including the underlying connection (Art. 84(1) EECC).
+  summary_de: Universaldienst in der Telekommunikation bedeutet, dass die Mitgliedstaaten sicherstellen, dass alle Verbraucher in ihrem Gebiet unter Berücksichtigung nationaler Gegebenheiten zu einem erschwinglichen Preis Zugang zu einem verfügbaren angemessenen Breitbandinternetzugangsdienst und zu Sprachkommunikationsdiensten an einem festen Standort einschließlich des zugrunde liegenden Anschlusses haben (Art. 84 Abs. 1 EKEK).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02018L1972-20241018
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02018L1972-20241018
 - id: eidas-2
   type: Regulation
   name_en: Regulation (EU) 2024/1183 (eIDAS 2.0)
@@ -1429,14 +1491,29 @@ entities:
   name_de: Europäische Brieftasche für die Digitale Identität (EUDI-Wallet)
   aliases:
   - EUDI Wallet
+  summary_en: The European Digital Identity Wallet is an electronic identification means that allows users to securely store, manage and validate person identification data and electronic attestations of attributes, present them to relying parties and other wallet users, and sign with qualified electronic signatures or seal with qualified electronic seals (Art. 3(42) eIDAS, as amended by Regulation (EU) 2024/1183).
+  summary_de: Die Europäische Brieftasche für die Digitale Identität ist ein elektronisches Identifizierungsmittel, mit dem Nutzer Personenidentifizierungsdaten und elektronische Attributsbescheinigungen sicher speichern, verwalten und validieren, sie vertrauenden Beteiligten und anderen Nutzern vorlegen und mit qualifizierten elektronischen Signaturen unterzeichnen oder mit qualifizierten elektronischen Siegeln siegeln können (Art. 3 Nr. 42 eIDAS in der Fassung der Verordnung (EU) 2024/1183).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02014R0910-20241018
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02014R0910-20241018
 - id: trust-service
   type: Concept
   name_en: Trust service
   name_de: Vertrauensdienst
+  summary_en: Under the eIDAS Regulation, a trust service is an electronic service normally provided for remuneration that consists of activities such as issuing or validating certificates for electronic signatures, electronic seals or website authentication, or other services listed in the Regulation (Art. 3(16) eIDAS).
+  summary_de: Nach der eIDAS-Verordnung ist ein Vertrauensdienst ein elektronischer Dienst, der in der Regel gegen Entgelt erbracht wird und etwa in der Ausstellung oder Validierung von Zertifikaten für elektronische Signaturen, elektronische Siegel oder Website-Authentifizierung oder in anderen in der Verordnung genannten Tätigkeiten besteht (Art. 3 Nr. 16 eIDAS).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02014R0910-20241018
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02014R0910-20241018
 - id: electronic-signature
   type: Concept
   name_en: Electronic signature
   name_de: Elektronische Signatur
+  summary_en: Under the eIDAS Regulation, an electronic signature is "data in electronic form which is attached to or logically associated with other data in electronic form and which is used by the signatory to sign" (Art. 3(10) eIDAS).
+  summary_de: Nach der eIDAS-Verordnung sind elektronische Signaturen „Daten in elektronischer Form, die anderen elektronischen Daten beigefügt oder logisch mit ihnen verbunden werden und die der Unterzeichner zum Unterzeichnen verwendet“ (Art. 3 Nr. 10 eIDAS).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02014R0910-20241018
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02014R0910-20241018
 - id: eudi-cooperation-group
   type: Organisation
   name_en: European Digital Identity Cooperation Group
@@ -2483,14 +2560,29 @@ entities:
   type: Concept
   name_en: Essential and important entities (NIS2)
   name_de: Wesentliche und wichtige Einrichtungen (NIS2)
+  summary_en: NIS2 distinguishes essential and important entities. Essential entities include entities of a type listed in Annex I that exceed the ceilings for medium-sized enterprises, qualified trust service providers, top-level domain name registries and DNS service providers regardless of size, and certain providers of public electronic communications and public administration entities; other Annex I or II entities that are not essential are important entities (Art. 3 NIS2).
+  summary_de: NIS2 unterscheidet wesentliche und wichtige Einrichtungen. Wesentlich sind unter anderem Einrichtungen der in Anhang I aufgeführten Art, die die Schwellenwerte für mittlere Unternehmen überschreiten, qualifizierte Vertrauensdiensteanbieter, Domänennamenregister der obersten Stufe und DNS-Diensteanbieter unabhängig von ihrer Größe sowie bestimmte Anbieter öffentlicher elektronischer Kommunikation und Einrichtungen der öffentlichen Verwaltung; andere Einrichtungen nach Anhang I oder II, die nicht wesentlich sind, gelten als wichtige Einrichtungen (Art. 3 NIS2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L2555
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
 - id: cybersecurity-risk-management-measures
   type: Concept
   name_en: Cybersecurity risk-management measures
   name_de: Risikomanagementmaßnahmen im Bereich der Cybersicherheit
+  summary_en: NIS2 requires essential and important entities to take appropriate and proportionate technical, operational and organisational measures to manage the risks to the security of the network and information systems they use, and to prevent or minimise the impact of incidents on recipients of their services and on other services, taking into account the state of the art, relevant standards and the cost of implementation (Art. 21(1) NIS2).
+  summary_de: NIS2 verpflichtet wesentliche und wichtige Einrichtungen, geeignete und verhältnismäßige technische, operative und organisatorische Maßnahmen zu ergreifen, um die Risiken für die Sicherheit ihrer Netz- und Informationssysteme zu beherrschen und die Auswirkungen von Sicherheitsvorfällen auf die Empfänger ihrer Dienste und auf andere Dienste zu verhindern oder möglichst gering zu halten, unter Berücksichtigung des Stands der Technik, einschlägiger Normen und der Umsetzungskosten (Art. 21 Abs. 1 NIS2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L2555
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
 - id: incident-reporting
   type: Concept
   name_en: Incident reporting
   name_de: Meldung von Sicherheitsvorfällen
+  summary_en: Under NIS2, essential and important entities must notify their CSIRT or competent authority without undue delay of any significant incident, one that has caused or can cause severe operational disruption or financial loss or considerable damage to others (Art. 23(1) and (3) NIS2). They submit an early warning within 24 hours of becoming aware of it and an incident notification within 72 hours (Art. 23(4) NIS2).
+  summary_de: Nach NIS2 müssen wesentliche und wichtige Einrichtungen ihr CSIRT oder die zuständige Behörde unverzüglich über jeden erheblichen Sicherheitsvorfall unterrichten, also einen Vorfall, der schwerwiegende Betriebsstörungen oder finanzielle Verluste oder erhebliche Schäden für andere verursacht hat oder verursachen kann (Art. 23 Abs. 1 und 3 NIS2). Innerhalb von 24 Stunden nach Kenntnisnahme übermitteln sie eine Frühwarnung und innerhalb von 72 Stunden eine Meldung über den Sicherheitsvorfall (Art. 23 Abs. 4 NIS2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L2555
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
 - id: rdf-schema
   type: Technology
   name_en: RDF Schema
