@@ -207,6 +207,10 @@ entities:
   type: Method
   name_en: Function calling
   name_de: Function Calling
+  summary_en: Function calling, also called tool use, lets a language model call functions that a developer defines or that the provider offers (Anthropic documentation). The model decides when to call a tool based on the user's request and the tool's description and returns a structured call, which the application (client tools) or the provider (server tools) executes.
+  summary_de: Function Calling, auch Tool Use genannt, erlaubt einem Sprachmodell, Funktionen aufzurufen, die Entwickler definieren oder der Anbieter bereitstellt (Anthropic-Dokumentation). Das Modell entscheidet anhand der Anfrage und der Werkzeugbeschreibung, wann es ein Werkzeug aufruft, und gibt einen strukturierten Aufruf zurück, den die Anwendung (Client-Tools) oder der Anbieter (Server-Tools) ausführt.
+  sources:
+  - https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview
 - id: react
   type: Method
   name_en: ReAct
@@ -303,6 +307,10 @@ entities:
   type: Concept
   name_en: Inherently interpretable models
   name_de: Inhärent interpretierbare Modelle
+  summary_en: Inherently interpretable models are models designed so that people can understand how they reach their predictions, rather than black-box models explained afterwards (Rudin 2019). Rudin argues that for high-stakes decisions, for example in healthcare and criminal justice, explaining black boxes is likely to perpetuate bad practices and that interpretable models should be used instead.
+  summary_de: Inhärent interpretierbare Modelle sind so gestaltet, dass Menschen nachvollziehen können, wie sie zu ihren Vorhersagen kommen, statt Black-Box-Modelle nachträglich zu erklären (Rudin 2019). Rudin argumentiert, dass das Erklären von Black Boxes bei folgenreichen Entscheidungen, etwa im Gesundheitswesen oder in der Strafjustiz, schlechte Praktiken fortschreibt und stattdessen interpretierbare Modelle genutzt werden sollten.
+  sources:
+  - https://arxiv.org/abs/1811.10154
 - id: container
   type: Concept
   name_en: Container
@@ -930,6 +938,10 @@ entities:
   type: Concept
   name_en: Modular design
   name_de: Modulares Design
+  summary_en: Modular design divides a system into modules with well-defined responsibilities so that it becomes more flexible and easier to understand; as a principle of software design it goes back to Parnas (1972), who proposed decomposing systems into modules according to the design decisions they hide.
+  summary_de: Modulares Design zerlegt ein System in Module mit klar abgegrenzten Zuständigkeiten, damit es flexibler und verständlicher wird; als Prinzip des Softwareentwurfs geht es auf Parnas (1972) zurück, der vorschlug, Systeme nach den Entwurfsentscheidungen in Module zu zerlegen, die diese verbergen.
+  sources:
+  - https://doi.org/10.1145/361598.361623
 - id: code-review
   type: Method
   name_en: Code review
@@ -1005,6 +1017,10 @@ entities:
   type: Concept
   name_en: Page tree (Confluence)
   name_de: Seitenbaum (Confluence)
+  summary_en: In Confluence, content lives in spaces, collaborative workspaces for a team, project or initiative, whose pages are organised hierarchically in a page tree of parent and child pages; blog posts complement them for time-based updates (Atlassian documentation).
+  summary_de: In Confluence liegen Inhalte in Bereichen (Spaces), gemeinsamen Arbeitsbereichen für ein Team, ein Projekt oder eine Initiative, deren Seiten hierarchisch in einem Seitenbaum aus über- und untergeordneten Seiten angeordnet sind; Blogbeiträge ergänzen sie für zeitbezogene Neuigkeiten (Atlassian-Dokumentation).
+  sources:
+  - https://support.atlassian.com/confluence-cloud/docs/what-is-a-space/
 - id: cql
   type: Technology
   name_en: Confluence Query Language (CQL)
@@ -1027,18 +1043,35 @@ entities:
   type: Method
   name_en: Clause extraction
   name_de: Klauselextraktion
+  summary_en: Clause extraction assigns passages of a contract to predefined clause types such as termination, limitation of liability, confidentiality, governing law or change of control. The CUAD dataset frames it as highlighting the salient portions of a contract that a human should review; it was created with dozens of legal experts and has over 13,000 annotations, and Transformer models showed only nascent performance (Hendrycks et al. 2021).
+  summary_de: Klauselextraktion ordnet Passagen eines Vertrags vordefinierten Klauseltypen zu, etwa Kündigung, Haftungsbeschränkung, Vertraulichkeit, anwendbares Recht oder Kontrollwechsel. Der Datensatz CUAD versteht das als Hervorheben der wichtigen Vertragsteile, die ein Mensch prüfen sollte; er entstand mit Dutzenden Rechtsexperten und umfasst über 13.000 Annotationen, und Transformer-Modelle zeigten nur ansatzweise gute Leistungen (Hendrycks et al. 2021).
+  sources:
+  - https://arxiv.org/abs/2103.06268
 - id: contract-type-classification
   type: Method
   name_en: Contract type classification
   name_de: Klassifikation des Vertragstyps
+  summary_en: Contract type classification assigns a whole contract to a category such as lease, consulting or software contract; Singh et al. (2025) list it among seven classification tasks for legal contracts. Because different contract types have different relevant clauses, it often precedes clause extraction. The Material Contracts Corpus, for example, classifies over one million contracts filed with the US SEC by agreement type with a fine-tuned LLaMA-2 model (Adelson and Nyarko 2025).
+  summary_de: Die Klassifikation des Vertragstyps ordnet einen ganzen Vertrag einer Kategorie zu, etwa Miet-, Beratungs- oder Softwarevertrag; Singh et al. (2025) zählen sie zu sieben Klassifikationsaufgaben für Verträge. Weil verschiedene Vertragstypen unterschiedliche relevante Klauseln haben, geht sie der Klauselextraktion oft voraus. Das Material Contracts Corpus etwa ordnet über eine Million bei der US-Börsenaufsicht SEC eingereichte Verträge mit einem feinabgestimmten LLaMA-2-Modell nach Vertragstyp ein (Adelson und Nyarko 2025).
+  sources:
+  - https://arxiv.org/abs/2507.21108
+  - https://arxiv.org/abs/2504.02864
 - id: contract-playbook
   type: Concept
   name_en: Contract playbook
   name_de: Vertrags-Playbook
+  summary_en: A contract playbook is an internal rulebook in which a company codifies which contract terms are acceptable, negotiable or dealbreakers, with a standard position and acceptable fallback deviations for each term (Harvey 2025). In contract review, clauses of a counterparty's contract are checked against the playbook, which requires understanding meaning rather than matching words, since contracts rarely use the playbook's exact wording.
+  summary_de: Ein Vertrags-Playbook ist ein internes Regelwerk, in dem ein Unternehmen festlegt, welche Vertragsbedingungen akzeptabel, verhandelbar oder ausgeschlossen sind, mit einer Standardposition und zulässigen Rückfallpositionen für jede Bedingung (Harvey 2025). Bei der Vertragsprüfung werden die Klauseln eines Gegenvertrags mit dem Playbook abgeglichen; das erfordert, die Bedeutung zu verstehen, weil Verträge selten den genauen Wortlaut des Playbooks verwenden.
+  sources:
+  - https://www.harvey.ai/blog/rebuilding-playbook-review-as-a-multi-agent-system
 - id: redlining
   type: Method
   name_en: Redlining
   name_de: Redlining
+  summary_en: Redlining is marking up a contract with suggested changes and comments that are sent back to the counterparty until both parties agree on the terms (Harvey 2025). AI systems propose redlines for clauses that deviate from a company's playbook; good redlines take the "lightest touch", changing as little as needed, because every edit is scrutinised by opposing counsel.
+  summary_de: Redlining ist das Markieren eines Vertrags mit Änderungsvorschlägen und Kommentaren, die an die Gegenseite zurückgehen, bis sich beide Parteien auf die Bedingungen geeinigt haben (Harvey 2025). KI-Systeme schlagen Redlines für Klauseln vor, die vom Playbook eines Unternehmens abweichen; gute Redlines ändern so wenig wie nötig („lightest touch“), weil jede Änderung von der Gegenseite genau geprüft wird.
+  sources:
+  - https://www.harvey.ai/blog/rebuilding-playbook-review-as-a-multi-agent-system
 - id: lenet
   type: Method
   name_en: LeNet
@@ -1115,10 +1148,19 @@ entities:
   name_de: Text und Data Mining (TDM)
   aliases:
   - TDM
+  summary_en: Under the DSM Directive, text and data mining means any automated analytical technique aimed at analysing text and data in digital form in order to generate information, including but not limited to patterns, trends and correlations (Art. 2(2) Directive (EU) 2019/790). German law permits reproductions of lawfully accessible works for this purpose unless the rightholder has reserved them, and for works available online the reservation must be machine-readable (§ 44b UrhG).
+  summary_de: Text und Data Mining ist die automatisierte Analyse von einzelnen oder mehreren digitalen oder digitalisierten Werken, um daraus Informationen insbesondere über Muster, Trends und Korrelationen zu gewinnen (§ 44b Abs. 1 UrhG). Vervielfältigungen rechtmäßig zugänglicher Werke dafür sind zulässig, sofern der Rechtsinhaber sich dies nicht vorbehalten hat; bei online zugänglichen Werken muss der Vorbehalt maschinenlesbar sein (§ 44b Abs. 2 und 3 UrhG, Umsetzung von Art. 4 DSM-Richtlinie).
+  sources:
+  - https://www.gesetze-im-internet.de/urhg/__44b.html
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0790
 - id: fair-use
   type: Concept
   name_en: Fair use
   name_de: Fair Use
+  summary_en: Fair use is a limitation of US copyright law under which the use of a copyrighted work for purposes such as criticism, comment, news reporting, teaching, scholarship or research is not an infringement (17 U.S.C. § 107). Courts weigh four factors - the purpose and character of the use, including whether it is commercial, the nature of the work, the amount and substantiality of the portion used, and the effect on the potential market for or value of the work.
+  summary_de: Fair Use ist eine Schranke des US-Urheberrechts, nach der die Nutzung eines geschützten Werks etwa für Kritik, Kommentar, Berichterstattung, Unterricht, Wissenschaft oder Forschung keine Rechtsverletzung ist (17 U.S.C. § 107). Gerichte wägen vier Faktoren ab, nämlich Zweck und Art der Nutzung einschließlich ihrer Kommerzialität, die Art des Werks, Umfang und Gewicht des genutzten Teils sowie die Auswirkung auf den potenziellen Markt oder Wert des Werks.
+  sources:
+  - https://www.law.cornell.edu/uscode/text/17/107
 - id: memorisation
   type: Concept
   name_en: Memorisation in models
@@ -1396,6 +1438,11 @@ entities:
   type: Concept
   name_en: Privacy-preserving machine learning
   name_de: Datenschutzfreundliches maschinelles Lernen
+  summary_en: Privacy-preserving machine learning covers techniques that protect personal data used to train or query models. Differential privacy guarantees that the output of an analysis changes only slightly when one person's data are added or removed, achieved by adding calibrated noise (Dwork and Roth 2014), and federated learning keeps training data on clients and shares only model updates (McMahan et al. 2017).
+  summary_de: Datenschutzwahrendes maschinelles Lernen umfasst Verfahren, die personenbezogene Daten schützen, mit denen Modelle trainiert oder abgefragt werden. Differential Privacy garantiert, dass sich das Ergebnis einer Analyse nur geringfügig ändert, wenn die Daten einer Person hinzukommen oder wegfallen, erreicht durch kalibriertes Rauschen (Dwork und Roth 2014); Federated Learning belässt die Trainingsdaten bei den Clients und teilt nur Modellaktualisierungen (McMahan et al. 2017).
+  sources:
+  - https://doi.org/10.1561/0400000042
+  - https://arxiv.org/abs/1602.05629
 - id: dp-deep-learning
   type: Method
   name_en: Differentially private deep learning
@@ -2078,6 +2125,10 @@ entities:
   type: Conference
   name_en: NeurIPS
   name_de: NeurIPS
+  summary_en: The Conference on Neural Information Processing Systems (NeurIPS), founded in 1987, is a multi-track interdisciplinary annual meeting on machine learning with invited talks, demonstrations, symposia and oral and poster presentations of refereed papers, accompanied by an exposition, tutorials and workshops (NeurIPS).
+  summary_de: Die Conference on Neural Information Processing Systems (NeurIPS), gegründet 1987, ist eine jährliche, mehrspurige interdisziplinäre Tagung zum maschinellen Lernen mit eingeladenen Vorträgen, Demonstrationen, Symposien sowie Vorträgen und Postern begutachteter Beiträge, begleitet von einer Ausstellung, Tutorials und Workshops (NeurIPS).
+  sources:
+  - https://neurips.cc/About
 - id: individual-fairness
   type: Concept
   name_en: Individual fairness
@@ -2651,6 +2702,10 @@ entities:
   type: Method
   name_en: Claude 3
   name_de: Claude 3
+  summary_en: Claude 3 is a family of language models announced by Anthropic on 4 March 2024, comprising Claude 3 Haiku, Claude 3 Sonnet and Claude 3 Opus in ascending order of capability, so that users can balance intelligence, speed and cost (Anthropic 2024).
+  summary_de: Claude 3 ist eine Familie von Sprachmodellen, die Anthropic am 4. März 2024 vorstellte; sie umfasst in aufsteigender Leistungsfähigkeit Claude 3 Haiku, Claude 3 Sonnet und Claude 3 Opus, sodass Nutzende zwischen Intelligenz, Geschwindigkeit und Kosten abwägen können (Anthropic 2024).
+  sources:
+  - https://www.anthropic.com/news/claude-3-family
 - id: gemini
   type: Method
   name_en: Gemini
@@ -2673,6 +2728,10 @@ entities:
   name_de: Amazon Titan
   aliases:
   - Titan
+  summary_en: Amazon Titan is a family of foundation models pretrained by AWS on large datasets and offered through Amazon Bedrock, which can be used as they are or customised with one's own data (AWS documentation). The family currently includes Titan Text Embeddings V2, Titan Multimodal Embeddings G1 and Titan Image Generator G1 v2.
+  summary_de: Amazon Titan ist eine Familie von Foundation Models, die AWS auf großen Datensätzen vortrainiert hat und über Amazon Bedrock anbietet; sie lassen sich direkt nutzen oder mit eigenen Daten anpassen (AWS-Dokumentation). Zur Familie gehören derzeit Titan Text Embeddings V2, Titan Multimodal Embeddings G1 und Titan Image Generator G1 v2.
+  sources:
+  - https://docs.aws.amazon.com/bedrock/latest/userguide/titan-models.html
 - id: zephyr
   type: Method
   name_en: Zephyr
@@ -2768,6 +2827,10 @@ entities:
   type: Method
   name_en: Semantic caching
   name_de: Semantic Caching
+  summary_en: Semantic caching stores LLM responses and answers new queries from the cache when they are similar, not only identical, to earlier ones, saving API calls and time (Bang 2023). GPTCache, an open-source semantic cache, receives user queries before the LLM and returns a cached answer if it has one; the risk is that answers to similar but different questions are returned.
+  summary_de: Semantisches Caching speichert LLM-Antworten und beantwortet neue Anfragen aus dem Cache, wenn sie früheren ähneln, nicht nur gleichen; das spart API-Aufrufe und Zeit (Bang 2023). GPTCache, ein quelloffener semantischer Cache, erhält Nutzeranfragen vor dem LLM und gibt eine gespeicherte Antwort zurück, wenn es eine hat; das Risiko ist, dass Antworten auf ähnliche, aber andere Fragen ausgegeben werden.
+  sources:
+  - https://aclanthology.org/2023.nlposs-1.24/
 - id: request-batching
   type: Method
   name_en: Batching of LLM requests
@@ -2847,6 +2910,11 @@ entities:
   type: Method
   name_en: Reflection loop
   name_de: Reflexionsschleife
+  summary_en: In a reflection loop a model reviews and improves its own output. Self-Refine uses a single LLM as generator, feedback provider and refiner without additional training (Madaan et al. 2023), while Reflexion agents reflect verbally on task feedback and keep these reflections in an episodic memory to decide better in later attempts (Shinn et al. 2023).
+  summary_de: In einer Reflexionsschleife prüft und verbessert ein Modell seine eigene Ausgabe. Self-Refine nutzt ein einziges LLM als Generator, Feedbackgeber und Überarbeiter, ohne zusätzliches Training (Madaan et al. 2023), während Reflexion-Agenten sprachlich über Rückmeldungen zur Aufgabe reflektieren und diese Reflexionen in einem episodischen Gedächtnis für spätere Versuche speichern (Shinn et al. 2023).
+  sources:
+  - https://arxiv.org/abs/2303.17651
+  - https://arxiv.org/abs/2303.11366
 - id: self-refine
   type: Method
   name_en: Self-Refine
@@ -2936,18 +3004,34 @@ entities:
   type: Method
   name_en: DevOps
   name_de: DevOps
+  summary_en: DevOps combines development (Dev) and operations (Ops) to unite people, process and technology in application planning, development, delivery and operations (Microsoft Learn). It enables collaboration between formerly siloed roles such as development, IT operations, quality engineering and security, so that teams deliver more reliable products and value to customers continually.
+  summary_de: DevOps verbindet Entwicklung (Dev) und Betrieb (Ops), um Menschen, Prozesse und Technik in Planung, Entwicklung, Auslieferung und Betrieb von Anwendungen zusammenzuführen (Microsoft Learn). Es ermöglicht die Zusammenarbeit früher getrennter Rollen wie Entwicklung, IT-Betrieb, Qualitätssicherung und Sicherheit, damit Teams fortlaufend zuverlässigere Produkte und Mehrwert liefern.
+  sources:
+  - https://learn.microsoft.com/en-us/devops/what-is-devops
 - id: shadow-deployment
   type: Method
   name_en: Shadow deployment
   name_de: Shadow Deployment
+  summary_en: In a shadow deployment or shadow test, a new model or serving configuration runs alongside the production version and its behaviour is compared without affecting end users (AWS documentation). It helps catch configuration errors and performance issues, for example latency and error rate, before a model validated offline is promoted to production.
+  summary_de: Bei einem Shadow Deployment oder Shadow Test läuft ein neues Modell oder eine neue Serving-Konfiguration parallel zur Produktivversion, und sein Verhalten wird verglichen, ohne Endnutzende zu beeinträchtigen (AWS-Dokumentation). So lassen sich Konfigurationsfehler und Leistungsprobleme wie Latenz und Fehlerrate erkennen, bevor ein offline validiertes Modell in Produktion geht.
+  sources:
+  - https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html
 - id: canary-release
   type: Method
   name_en: Canary release
   name_de: Canary Release
+  summary_en: A canary release reduces the risk of introducing a new software version by rolling it out to a small subset of users first and gradually routing more users to it as confidence grows (Sato 2014). Users can be selected at random, internal users can go first, or users can be chosen by profile; the ML Test Score asks that models pass a canary process before they serve production traffic (Breck et al. 2017).
+  summary_de: Ein Canary Release verringert das Risiko einer neuen Softwareversion, indem sie zunächst nur für eine kleine Gruppe von Nutzenden ausgerollt und mit wachsendem Vertrauen schrittweise für mehr Nutzende freigegeben wird (Sato 2014). Die Gruppe kann zufällig gewählt werden, interne Nutzende können zuerst an der Reihe sein, oder die Auswahl erfolgt nach Profil; der ML Test Score verlangt, dass Modelle einen Canary-Prozess durchlaufen, bevor sie produktiven Verkehr bedienen (Breck et al. 2017).
+  sources:
+  - https://martinfowler.com/bliki/CanaryRelease.html
 - id: blue-green-deployment
   type: Method
   name_en: Blue-green deployment
   name_de: Blue-Green Deployment
+  summary_en: Blue-green deployment keeps two production environments that are as identical as possible; one is live while the new release is tested in the other, and switching the router moves all traffic to the new environment (Fowler 2010). Switching back gives a rapid rollback if anything goes wrong.
+  summary_de: Beim Blue-Green Deployment gibt es zwei möglichst identische Produktivumgebungen; eine ist live, während das neue Release in der anderen getestet wird, und ein Umschalten des Routers leitet den gesamten Verkehr auf die neue Umgebung (Fowler 2010). Das Zurückschalten erlaubt bei Problemen einen schnellen Rollback.
+  sources:
+  - https://martinfowler.com/bliki/BlueGreenDeployment.html
 - id: data-drift
   type: Concept
   name_en: Data drift
@@ -2960,6 +3044,10 @@ entities:
   type: Concept
   name_en: Concept drift
   name_de: Concept Drift
+  summary_en: Concept drift describes unforeseeable changes in the underlying distribution of streaming data over time, including changes in the relationship between inputs and the correct output (Lu et al. 2018). If drift is not addressed, machine learning leads to poor results; research covers drift detection, understanding and adaptation.
+  summary_de: Concept Drift bezeichnet unvorhersehbare Veränderungen der zugrunde liegenden Verteilung von Datenströmen im Zeitverlauf, einschließlich Veränderungen des Zusammenhangs zwischen Eingaben und richtiger Ausgabe (Lu et al. 2018). Wird Drift nicht behandelt, liefert maschinelles Lernen schlechte Ergebnisse; die Forschung befasst sich mit Erkennung, Verständnis und Anpassung an Drift.
+  sources:
+  - https://arxiv.org/abs/2004.05785
 - id: wilcoxon-signed-ranks-test
   type: Method
   name_en: Wilcoxon signed-ranks test
@@ -3233,6 +3321,11 @@ entities:
   type: Method
   name_en: Eigenvalue decomposition
   name_de: Eigenwertzerlegung
+  summary_en: Eigenvalue decomposition factorises a square matrix into its eigenvectors and eigenvalues. In principal component analysis, the eigenvectors of the covariance or correlation matrix of the centred data give the directions of the principal components, ordered by the variance their eigenvalues capture (Jolliffe and Cadima 2016; Shlens 2014).
+  summary_de: Die Eigenwertzerlegung zerlegt eine quadratische Matrix in ihre Eigenvektoren und Eigenwerte. In der Hauptkomponentenanalyse geben die Eigenvektoren der Kovarianz- oder Korrelationsmatrix der zentrierten Daten die Richtungen der Hauptkomponenten an, geordnet nach der Varianz, die ihre Eigenwerte erfassen (Jolliffe und Cadima 2016; Shlens 2014).
+  sources:
+  - https://doi.org/10.1098/rsta.2015.0202
+  - https://arxiv.org/abs/1404.1100
 - id: formatspread
   type: Method
   name_en: FormatSpread
@@ -3309,6 +3402,10 @@ entities:
   type: Method
   name_en: Behavioural testing
   name_de: Verhaltenstests
+  summary_en: Behavioural testing checks what a model does on targeted inputs rather than only its accuracy on held-out data, which often overestimates performance (Ribeiro et al. 2020). CheckList, inspired by behavioural testing in software engineering, provides a matrix of linguistic capabilities and test types and a tool to generate many test cases, and found critical failures in NLP models.
+  summary_de: Verhaltenstests prüfen, was ein Modell bei gezielt gewählten Eingaben tut, statt nur seine Accuracy auf zurückgehaltenen Daten, die die Leistung oft überschätzt (Ribeiro et al. 2020). CheckList, angelehnt an Verhaltenstests in der Softwaretechnik, bietet eine Matrix aus sprachlichen Fähigkeiten und Testtypen sowie ein Werkzeug zur Erzeugung vieler Testfälle und deckte kritische Fehler in NLP-Modellen auf.
+  sources:
+  - https://arxiv.org/abs/2005.04118
 - id: checklist-nlp
   type: Method
   name_en: CheckList
@@ -3401,6 +3498,10 @@ entities:
   type: Method
   name_en: Structure-based chunking
   name_de: Strukturbasiertes Chunking
+  summary_en: Structure-based chunking splits documents along their structural elements, such as titles, sections, paragraphs, tables or, in legal texts, articles and clauses, instead of fixed lengths. Jimeno Yepes et al. (2024) chunked financial reports by element types annotated by document understanding models and found that this yields a good chunk size without tuning and improves retrieval-augmented question answering.
+  summary_de: Strukturbasiertes Chunking teilt Dokumente entlang ihrer Strukturelemente wie Titel, Abschnitte, Absätze, Tabellen oder, bei Rechtstexten, Artikel und Klauseln statt nach fester Länge. Jimeno Yepes et al. (2024) zerlegten Finanzberichte nach Elementtypen, die Modelle zum Dokumentverständnis annotiert hatten, und fanden, dass dies ohne Abstimmung eine gute Chunk-Größe ergibt und die Fragebeantwortung mit Retrieval verbessert.
+  sources:
+  - https://arxiv.org/abs/2402.05131
 - id: proposition-indexing
   type: Method
   name_en: Proposition indexing
@@ -3842,6 +3943,10 @@ entities:
   type: Concept
   name_en: Relational model
   name_de: Relationenmodell
+  summary_en: The relational model, proposed by Codd (1970), represents data as relations (tables) of tuples, independent of how they are stored. With normalisation, each fact is stored once, which avoids redundancy and inconsistency in operational databases; SQL databases are based on it.
+  summary_de: Das relationale Modell, vorgeschlagen von Codd (1970), stellt Daten als Relationen (Tabellen) aus Tupeln dar, unabhängig davon, wie sie gespeichert sind. Mit Normalisierung wird jede Tatsache nur einmal gespeichert, was Redundanz und Inkonsistenz in operativen Datenbanken vermeidet; SQL-Datenbanken beruhen darauf.
+  sources:
+  - https://doi.org/10.1145/362384.362685
 - id: window-functions
   type: Method
   name_en: Window functions (SQL)
@@ -4067,6 +4172,10 @@ entities:
   type: Concept
   name_en: Comprehension debt
   name_de: Comprehension Debt
+  summary_en: Comprehension debt is the gap that widens when a system ships code that nobody has read (Janakiram MSV 2026). Addy Osmani warns about it for agents running unattended in loops - two engineers running the same loop can get opposite outcomes, one moving faster on work they understand, the other avoiding understanding altogether.
+  summary_de: Comprehension Debt (Verständnisschuld) ist die Lücke, die wächst, wenn ein System Code ausliefert, den niemand gelesen hat (Janakiram MSV 2026). Addy Osmani warnt davor bei Agenten, die unbeaufsichtigt in Schleifen laufen - zwei Entwickler können mit derselben Schleife gegensätzliche Ergebnisse erzielen, der eine kommt bei verstandener Arbeit schneller voran, der andere vermeidet das Verstehen ganz.
+  sources:
+  - https://thenewstack.io/loop-engineering/
 - id: stereoset
   type: Dataset
   name_en: StereoSet
@@ -4871,6 +4980,10 @@ entities:
   name_de: DORA-Metriken
   aliases:
   - DORA software delivery metrics
+  summary_en: The DORA metrics are five software delivery performance metrics identified by the DORA research programme - change lead time, deployment frequency, failed deployment recovery time, change fail rate and deployment rework rate (DORA). DORA's research shows that they predict better organisational performance and team well-being; they evolved from the original four keys, for example replacing MTTR with failed deployment recovery time.
+  summary_de: Die DORA-Metriken sind fünf Kennzahlen der Softwareauslieferung aus dem DORA-Forschungsprogramm - Change Lead Time, Deployment Frequency, Failed Deployment Recovery Time, Change Fail Rate und Deployment Rework Rate (DORA). Laut der DORA-Forschung sagen sie bessere Unternehmensleistung und mehr Wohlbefinden im Team voraus; sie gingen aus den ursprünglichen vier Kennzahlen hervor, wobei etwa MTTR durch Failed Deployment Recovery Time ersetzt wurde.
+  sources:
+  - https://dora.dev/guides/dora-metrics/
 - id: terraform
   type: Technology
   name_en: Terraform
