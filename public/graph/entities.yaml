@@ -956,22 +956,42 @@ entities:
   type: Concept
   name_en: Connected product
   name_de: Vernetztes Produkt
+  summary_en: Under the Data Act, a connected product is an item that obtains, generates or collects data concerning its use or environment, can communicate product data via an electronic communications service, physical connection or on-device access, and whose primary function is not storing, processing or transmitting data on behalf of a party other than the user (Art. 2(5) Data Act).
+  summary_de: Nach dem Datengesetz ist ein vernetztes Produkt ein Gegenstand, der Daten über seine Nutzung oder Umgebung erlangt, generiert oder erhebt, Produktdaten über einen elektronischen Kommunikationsdienst, eine physische Verbindung oder einen geräteinternen Zugang übermitteln kann und dessen Hauptfunktion nicht die Speicherung, Verarbeitung oder Übertragung von Daten im Namen einer anderen Partei als des Nutzers ist (Art. 2 Nr. 5 Datengesetz).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R2854
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854
 - id: cloud-switching
   type: Concept
   name_en: Switching between data processing services
   name_de: Wechsel zwischen Datenverarbeitungsdiensten
   aliases:
   - cloud switching
+  summary_en: The Data Act requires providers of data processing services, such as cloud services, to enable customers to switch to another provider's service of the same type or to on-premises infrastructure, or to use several providers at the same time (Art. 23 Data Act). Providers may not impose, and must remove, pre-commercial, commercial, technical, contractual and organisational obstacles to switching.
+  summary_de: Das Datengesetz verpflichtet Anbieter von Datenverarbeitungsdiensten wie Cloud-Diensten, Kunden den Wechsel zu einem gleichartigen Dienst eines anderen Anbieters oder zu IKT-Infrastruktur in eigenen Räumlichkeiten oder die gleichzeitige Nutzung mehrerer Anbieter zu ermöglichen (Art. 23 Datengesetz). Anbieter dürfen keine vorkommerziellen, gewerblichen, technischen, vertraglichen und organisatorischen Hindernisse für einen Wechsel aufzwingen und müssen solche Hindernisse beseitigen.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R2854
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854
 - id: data-intermediation-service
   type: Concept
   name_en: Data intermediation service
   name_de: Datenvermittlungsdienst
   aliases:
   - data intermediary
+  summary_en: Under the Data Governance Act, a data intermediation service aims to establish commercial relationships for data sharing between an undetermined number of data subjects and data holders on the one hand and data users on the other, through technical, legal or other means, including for exercising data subjects' rights; services that aggregate, enrich or transform data to add substantial value and license the result are excluded (Art. 2(11) DGA).
+  summary_de: Nach dem Daten-Governance-Rechtsakt ist ein Datenvermittlungsdienst ein Dienst, mit dem durch technische, rechtliche oder sonstige Mittel Geschäftsbeziehungen zwischen einer unbestimmten Anzahl betroffener Personen oder Dateninhaber einerseits und Datennutzern andererseits zur gemeinsamen Datennutzung hergestellt werden sollen, auch zur Ausübung der Rechte betroffener Personen; ausgenommen sind Dienste, die Daten aggregieren, anreichern oder umwandeln, um ihren Wert erheblich zu steigern, und das Ergebnis lizenzieren (Art. 2 Nr. 11 DGA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R0868
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0868
 - id: data-altruism
   type: Concept
   name_en: Data altruism
   name_de: Datenaltruismus
+  summary_en: Under the Data Governance Act, data altruism is the voluntary sharing of data, based on data subjects' consent for personal data or data holders' permission for non-personal data, without a reward beyond compensation for costs, for objectives of general interest such as healthcare, combating climate change, improving mobility or official statistics (Art. 2(16) DGA).
+  summary_de: Nach dem Daten-Governance-Rechtsakt ist Datenaltruismus die freiwillige gemeinsame Nutzung von Daten auf Grundlage der Einwilligung betroffener Personen bei personenbezogenen Daten oder der Erlaubnis von Dateninhabern bei nicht personenbezogenen Daten, ohne ein Entgelt, das über eine Kostenentschädigung hinausgeht, für Ziele von allgemeinem Interesse wie Gesundheitsversorgung, Bekämpfung des Klimawandels, Verbesserung der Mobilität oder amtliche Statistik (Art. 2 Nr. 16 DGA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R0868
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0868
 - id: open-data-directive
   type: Regulation
   name_en: Open Data Directive (EU) 2019/1024
@@ -982,6 +1002,11 @@ entities:
   type: Concept
   name_en: Re-use of protected public sector data
   name_de: Weiterverwendung geschützter Daten des öffentlichen Sektors
+  summary_en: Chapter II of the Data Governance Act governs the re-use of data held by public sector bodies that are protected on grounds of commercial confidentiality, statistical confidentiality, third parties' intellectual property rights or the protection of personal data, insofar as such data fall outside the scope of Directive (EU) 2019/1024 (Art. 3(1) DGA). It does not apply, for example, to data held by public undertakings or public service broadcasters (Art. 3(2) DGA).
+  summary_de: Kapitel II des Daten-Governance-Rechtsakts regelt die Weiterverwendung von Daten im Besitz öffentlicher Stellen, die aus Gründen der geschäftlichen oder statistischen Geheimhaltung, des Schutzes geistigen Eigentums Dritter oder des Schutzes personenbezogener Daten geschützt sind, soweit sie nicht unter die Richtlinie (EU) 2019/1024 fallen (Art. 3 Abs. 1 DGA). Es gilt etwa nicht für Daten öffentlicher Unternehmen oder öffentlich-rechtlicher Rundfunkanstalten (Art. 3 Abs. 2 DGA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R0868
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0868
 - id: privacy-preserving-ml
   type: Concept
   name_en: Privacy-preserving machine learning
@@ -1041,6 +1066,11 @@ entities:
   type: Concept
   name_en: Core platform service
   name_de: Zentraler Plattformdienst
+  summary_en: Under the Digital Markets Act, core platform services are online intermediation services, online search engines, online social networking services, video-sharing platform services, number-independent interpersonal communications services, operating systems, web browsers, virtual assistants, cloud computing services and online advertising services provided by an undertaking that provides one of the others (Art. 2(2) DMA).
+  summary_de: Nach dem Gesetz über digitale Märkte sind zentrale Plattformdienste Online-Vermittlungsdienste, Online-Suchmaschinen, Online-Dienste sozialer Netzwerke, Video-Sharing-Plattform-Dienste, nummernunabhängige interpersonelle Kommunikationsdienste, Betriebssysteme, Webbrowser, virtuelle Assistenten, Cloud-Computing-Dienste und Online-Werbedienste eines Unternehmens, das einen der übrigen Dienste bereitstellt (Art. 2 Nr. 2 DMA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R1925
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1925
 - id: whistleblower-directive
   type: Regulation
   name_en: Whistleblower Directive (EU) 2019/1937
@@ -1058,6 +1088,11 @@ entities:
   type: Concept
   name_en: Intermediary service
   name_de: Vermittlungsdienst
+  summary_en: Under the Digital Services Act, an intermediary service is one of three information society services, a "mere conduit" service that transmits information or provides network access, a "caching" service with automatic, temporary storage to make onward transmission more efficient, or a "hosting" service that stores information provided by a recipient (Art. 3(g) DSA).
+  summary_de: 'Nach dem Gesetz über digitale Dienste ist ein Vermittlungsdienst eine von drei Diensten der Informationsgesellschaft: eine „reine Durchleitung“, die Informationen übermittelt oder Netzzugang vermittelt, eine „Caching“-Leistung mit automatischer, zeitlich begrenzter Zwischenspeicherung zur effizienteren Weiterleitung oder ein „Hosting“-Dienst, der von Nutzern bereitgestellte Informationen speichert (Art. 3 Buchst. g DSA).'
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: very-large-online-platform
   type: Concept
   name_en: Very large online platforms and search engines (VLOPs and VLOSEs)
@@ -1066,6 +1101,11 @@ entities:
   - VLOP
   - VLOSE
   - very large online platform
+  summary_en: Very large online platforms and very large online search engines are those with at least 45 million average monthly active recipients in the Union that the Commission has designated as such (Art. 33(1) DSA). They must, among other things, identify, analyse and assess systemic risks stemming from their services, at least once a year and before deploying functionalities with critical impact on those risks (Art. 34 DSA).
+  summary_de: Sehr große Online-Plattformen und sehr große Online-Suchmaschinen sind solche mit durchschnittlich mindestens 45 Millionen monatlich aktiven Nutzern in der Union, die die Kommission als solche benannt hat (Art. 33 Abs. 1 DSA). Sie müssen unter anderem die systemischen Risiken ihrer Dienste ermitteln, analysieren und bewerten, mindestens einmal jährlich und vor der Einführung von Funktionen mit kritischen Auswirkungen auf diese Risiken (Art. 34 DSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: european-board-for-digital-services
   type: Organisation
   name_en: European Board for Digital Services
@@ -1093,22 +1133,48 @@ entities:
   type: Concept
   name_en: Recommender system
   name_de: Empfehlungssystem
+  summary_en: Under the Digital Services Act, a recommender system is "a fully or partially automated system used by an online platform to suggest in its online interface specific information to recipients of the service or prioritise that information, including as a result of a search initiated by the recipient of the service or otherwise determining the relative order or prominence of information displayed" (Art. 3(s) DSA).
+  summary_de: Nach dem Gesetz über digitale Dienste ist ein Empfehlungssystem „ein vollständig oder teilweise automatisiertes System, das von einer Online-Plattform verwendet wird, um auf ihrer Online-Schnittstelle den Nutzern bestimmte Informationen vorzuschlagen oder diese Informationen zu priorisieren, auch infolge einer vom Nutzer veranlassten Suche, oder das auf andere Weise die relative Reihenfolge oder Hervorhebung der angezeigten Informationen bestimmt“ (Art. 3 Buchst. s DSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: content-moderation
   type: Concept
   name_en: Content moderation
   name_de: Inhaltsmoderation
+  summary_en: Under the Digital Services Act, content moderation means the activities, automated or not, of providers of intermediary services aimed at detecting, identifying and addressing illegal content or information incompatible with their terms and conditions (Art. 3(t) DSA). It includes measures affecting the availability, visibility and accessibility of such content, such as demotion, demonetisation, disabling access or removal, and measures affecting users, such as suspending or terminating accounts.
+  summary_de: Nach dem Gesetz über digitale Dienste ist die Moderation von Inhalten die automatisierte oder nicht automatisierte Tätigkeit von Anbietern von Vermittlungsdiensten, mit der insbesondere rechtswidrige Inhalte oder mit ihren allgemeinen Geschäftsbedingungen unvereinbare Informationen erkannt, festgestellt und bekämpft werden sollen (Art. 3 Buchst. t DSA). Dazu gehören Maßnahmen zu Verfügbarkeit, Anzeige und Zugänglichkeit solcher Inhalte, etwa Herabstufung, Demonetisierung, Sperrung des Zugangs oder Entfernung, und Maßnahmen gegenüber Nutzern wie die Sperrung oder Kündigung von Konten.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: online-advertising
   type: Concept
   name_en: Online advertising
   name_de: Online-Werbung
+  summary_en: The Digital Services Act defines an advertisement as information designed to promote the message of a legal or natural person, for commercial or non-commercial purposes, that an online platform presents on its interface against remuneration specifically for promoting that information (Art. 3(r) DSA). Online advertising services are also a core platform service under the Digital Markets Act (Art. 2(2)(j) DMA).
+  summary_de: Das Gesetz über digitale Dienste definiert Werbung als Informationen, die die Botschaft einer juristischen oder natürlichen Person zu gewerblichen oder nichtgewerblichen Zwecken verbreiten sollen und die eine Online-Plattform auf ihrer Online-Schnittstelle gegen Entgelt speziell zur Bekanntmachung dieser Informationen darstellt (Art. 3 Buchst. r DSA). Online-Werbedienste sind auch ein zentraler Plattformdienst nach dem Gesetz über digitale Märkte (Art. 2 Nr. 2 Buchst. j DMA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R1925
 - id: systemic-risk
   type: Concept
   name_en: Systemic risk (DSA)
   name_de: Systemisches Risiko (DSA)
+  summary_en: Under the Digital Services Act, very large online platforms and search engines must assess systemic risks stemming from their services, including the dissemination of illegal content, negative effects on fundamental rights such as human dignity, privacy, data protection, freedom of expression, non-discrimination and the rights of the child, effects on civic discourse, electoral processes and public security, and effects related to gender-based violence, public health, minors and physical and mental well-being (Art. 34(1) DSA).
+  summary_de: Nach dem Gesetz über digitale Dienste müssen sehr große Online-Plattformen und Suchmaschinen die systemischen Risiken ihrer Dienste bewerten, darunter die Verbreitung rechtswidriger Inhalte, nachteilige Auswirkungen auf Grundrechte wie Menschenwürde, Privatleben, Datenschutz, Meinungs- und Informationsfreiheit, Nichtdiskriminierung und Rechte des Kindes, Auswirkungen auf die gesellschaftliche Debatte, Wahlprozesse und die öffentliche Sicherheit sowie Auswirkungen in Bezug auf geschlechtsspezifische Gewalt, öffentliche Gesundheit, Minderjährige und körperliches und geistiges Wohlbefinden (Art. 34 Abs. 1 DSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: dark-patterns
   type: Concept
   name_en: Dark patterns
   name_de: Dark Patterns
+  summary_en: The Digital Services Act prohibits providers of online platforms from designing, organising or operating their online interfaces in a way that deceives or manipulates recipients or otherwise materially distorts or impairs their ability to make free and informed decisions (Art. 25(1) DSA). The Commission may issue guidelines on specific practices, such as giving more prominence to certain choices or repeatedly requesting a decision already made (Art. 25(3) DSA).
+  summary_de: Das Gesetz über digitale Dienste verbietet Anbietern von Online-Plattformen, ihre Online-Schnittstellen so zu konzipieren, zu organisieren oder zu betreiben, dass Nutzer getäuscht, manipuliert oder anderweitig in ihrer Fähigkeit, freie und informierte Entscheidungen zu treffen, maßgeblich beeinträchtigt oder behindert werden (Art. 25 Abs. 1 DSA). Die Kommission kann Leitlinien zu bestimmten Praktiken herausgeben, etwa zur stärkeren Hervorhebung bestimmter Auswahlmöglichkeiten oder zu wiederholten Aufforderungen zu einer bereits getroffenen Entscheidung (Art. 25 Abs. 3 DSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: semantic-matching-model
   type: Method
   name_en: Semantic matching model
@@ -1540,22 +1606,47 @@ entities:
   type: Concept
   name_en: Personal data
   name_de: Personenbezogene Daten
+  summary_en: Under the GDPR, personal data means "any information relating to an identified or identifiable natural person"; a person is identifiable if they can be identified directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or factors specific to their physical, physiological, genetic, mental, economic, cultural or social identity (Art. 4(1) GDPR).
+  summary_de: Nach der DSGVO sind personenbezogene Daten „alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person […] beziehen“; identifizierbar ist eine Person, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, einer Kennnummer, Standortdaten, einer Online-Kennung oder besonderen Merkmalen ihrer physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität identifiziert werden kann (Art. 4 Nr. 1 DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: special-categories-of-personal-data
   type: Concept
   name_en: Special categories of personal data
   name_de: Besondere Kategorien personenbezogener Daten
+  summary_en: Special categories of personal data are data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs or trade union membership, as well as genetic data, biometric data for uniquely identifying a person, health data and data concerning a person's sex life or sexual orientation; processing them is prohibited unless one of the exceptions in Article 9(2) applies (Art. 9 GDPR).
+  summary_de: Besondere Kategorien personenbezogener Daten sind Daten, aus denen die rassische und ethnische Herkunft, politische Meinungen, religiöse oder weltanschauliche Überzeugungen oder die Gewerkschaftszugehörigkeit hervorgehen, sowie genetische Daten, biometrische Daten zur eindeutigen Identifizierung, Gesundheitsdaten und Daten zum Sexualleben oder zur sexuellen Orientierung; ihre Verarbeitung ist untersagt, sofern keine Ausnahme nach Artikel 9 Absatz 2 greift (Art. 9 DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: data-minimisation
   type: Concept
   name_en: Data minimisation
   name_de: Datenminimierung
+  summary_en: 'Data minimisation is one of the GDPR''s principles for processing personal data: personal data must be "adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed" (Art. 5(1)(c) GDPR). It sits alongside lawfulness, fairness and transparency, purpose limitation and accuracy.'
+  summary_de: 'Datenminimierung ist einer der Grundsätze der DSGVO für die Verarbeitung personenbezogener Daten: Sie müssen „dem Zweck angemessen und erheblich sowie auf das für die Zwecke der Verarbeitung notwendige Maß beschränkt sein“ (Art. 5 Abs. 1 Buchst. c DSGVO). Er steht neben Rechtmäßigkeit, Verarbeitung nach Treu und Glauben und Transparenz, Zweckbindung und Richtigkeit.'
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: right-to-erasure
   type: Concept
   name_en: Right to erasure
   name_de: Recht auf Löschung
+  summary_en: The right to erasure ("right to be forgotten") entitles data subjects to have the controller erase their personal data without undue delay where one of several grounds applies, for example when the data are no longer necessary for their purposes or consent is withdrawn and there is no other legal ground (Art. 17 GDPR).
+  summary_de: Das Recht auf Löschung („Recht auf Vergessenwerden“) gibt betroffenen Personen das Recht, vom Verantwortlichen die unverzügliche Löschung ihrer personenbezogenen Daten zu verlangen, wenn einer von mehreren Gründen vorliegt, etwa wenn die Daten für ihre Zwecke nicht mehr notwendig sind oder die Einwilligung widerrufen wird und keine andere Rechtsgrundlage besteht (Art. 17 DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: automated-decision-making
   type: Concept
   name_en: Automated individual decision-making
   name_de: Automatisierte Entscheidung im Einzelfall
+  summary_en: Under Article 22 GDPR, data subjects have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning them or similarly significantly affects them. Exceptions apply where the decision is necessary for a contract, authorised by Union or Member State law with suitable safeguards, or based on explicit consent (Art. 22(2) GDPR).
+  summary_de: Nach Artikel 22 DSGVO haben betroffene Personen das Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung einschließlich Profiling beruhenden Entscheidung unterworfen zu werden, die ihnen gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt. Ausnahmen gelten, wenn die Entscheidung für einen Vertrag erforderlich ist, nach Unions- oder mitgliedstaatlichem Recht mit angemessenen Schutzmaßnahmen zulässig ist oder auf ausdrücklicher Einwilligung beruht (Art. 22 Abs. 2 DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: dpia
   type: Concept
   name_en: Data protection impact assessment (DPIA)
@@ -1563,16 +1654,31 @@ entities:
   aliases:
   - DPIA
   - DSFA
+  summary_en: A data protection impact assessment (DPIA) is required where a type of processing, in particular one using new technologies, is likely to result in a high risk to the rights and freedoms of natural persons; the controller must assess the impact of the envisaged processing on the protection of personal data before processing begins (Art. 35(1) GDPR). One assessment may cover a set of similar processing operations.
+  summary_de: Eine Datenschutz-Folgenabschätzung ist erforderlich, wenn eine Form der Verarbeitung, insbesondere bei Verwendung neuer Technologien, voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat; der Verantwortliche schätzt dann vorab die Folgen der vorgesehenen Verarbeitung für den Schutz personenbezogener Daten ab (Art. 35 Abs. 1 DSGVO). Eine einzige Abschätzung kann mehrere ähnliche Verarbeitungsvorgänge umfassen.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: binding-corporate-rules
   type: Concept
   name_en: Binding corporate rules
   name_de: Verbindliche interne Datenschutzvorschriften
+  summary_en: Binding corporate rules are personal data protection policies adhered to by a controller or processor established in a Member State for transfers of personal data to a controller or processor in one or more third countries within a group of undertakings or of enterprises engaged in a joint economic activity (Art. 4(20) GDPR). Approved under Article 47, they are one of the appropriate safeguards for transfers to third countries (Art. 46(2)(b) GDPR).
+  summary_de: Verbindliche interne Datenschutzvorschriften sind Maßnahmen zum Schutz personenbezogener Daten, zu deren Einhaltung sich ein in einem Mitgliedstaat niedergelassener Verantwortlicher oder Auftragsverarbeiter für Übermittlungen an einen Verantwortlichen oder Auftragsverarbeiter derselben Unternehmensgruppe oder einer Gruppe von Unternehmen mit gemeinsamer Wirtschaftstätigkeit in Drittländern verpflichtet (Art. 4 Nr. 20 DSGVO). Nach Artikel 47 genehmigt, sind sie eine der geeigneten Garantien für Übermittlungen in Drittländer (Art. 46 Abs. 2 Buchst. b DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: standard-contractual-clauses
   type: Concept
   name_en: Standard contractual clauses
   name_de: Standardvertragsklauseln
   aliases:
   - standard data protection clauses
+  summary_en: Standard data protection clauses adopted by the Commission are one of the appropriate safeguards under which personal data may be transferred to a third country or international organisation without an adequacy decision and without specific authorisation from a supervisory authority, provided enforceable data subject rights and effective legal remedies are available (Art. 46(1)–(2)(c) GDPR). Supervisory authorities may also adopt such clauses, subject to Commission approval (Art. 46(2)(d) GDPR).
+  summary_de: Von der Kommission erlassene Standarddatenschutzklauseln sind eine der geeigneten Garantien, unter denen personenbezogene Daten ohne Angemessenheitsbeschluss und ohne besondere Genehmigung einer Aufsichtsbehörde an ein Drittland oder eine internationale Organisation übermittelt werden dürfen, sofern durchsetzbare Rechte und wirksame Rechtsbehelfe für betroffene Personen bestehen (Art. 46 Abs. 1 und Abs. 2 Buchst. c DSGVO). Auch Aufsichtsbehörden können solche Klauseln annehmen, die die Kommission genehmigt (Art. 46 Abs. 2 Buchst. d DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: version-control
   type: Concept
   name_en: Version control
