@@ -291,3 +291,26 @@ language for a method with a multi-step mechanism, less for narrow concepts.
 An overview note explains every step at the depth needed to understand the
 whole mechanism; sub-notes go deeper into single steps, as the notes
 do for RAG ([[rag-retrieval]], [[rag-chunking]], …).
+
+## Short texts for entities without a note
+
+Entities in `public/graph/entities.yaml` that do not (yet) have a note of
+their own get a short text instead of a template, shown on the entity page
+above "Mentioned in":
+
+```yaml
+- id: junit
+  type: Technology
+  name_en: JUnit
+  name_de: JUnit
+  summary_en: 2-4 sentences, British English, what it is and why it matters here.
+  summary_de: Dieselben Aussagen auf Deutsch, ohne Anrede.
+  sources:
+  - https://… # at least one primary source that was actually read
+```
+
+Rules: both languages and at least one http(s) source are required together;
+every statement must come from the listed sources (German law: German source
+first); no wikilinks or citations inside the text. Once 3 or more notes discuss
+the entity, it gets a full note and the short text is dropped with the registry
+entry.

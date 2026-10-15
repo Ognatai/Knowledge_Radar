@@ -368,3 +368,37 @@ def test_entities_of_different_types_may_share_a_name(tmp_path):
     notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
 
     assert {"dora-method", "dora-act"} <= set(load_graph(graph_dir, load_notes(notes_dir), notes_dir).entities)
+
+
+SUMMARY = """    summary_en: A cloud and software company.
+    summary_de: Ein Cloud- und Softwareunternehmen.
+    sources: [https://example.org/microsoft]
+"""
+
+
+def test_registry_entities_carry_sourced_summaries(tmp_path):
+    registry = REGISTRY.replace("    aliases: [Microsoft Research]\n", "    aliases: [Microsoft Research]\n" + SUMMARY)
+    notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
+
+    entity = load_graph(graph_dir, load_notes(notes_dir), notes_dir).entities["microsoft"]
+
+    assert entity.summary_en == "A cloud and software company."
+    assert entity.summary_de == "Ein Cloud- und Softwareunternehmen."
+    assert entity.sources == ["https://example.org/microsoft"]
+
+
+@pytest.mark.parametrize(
+    ("summary", "message"),
+    [
+        (SUMMARY.replace("    summary_de: Ein Cloud- und Softwareunternehmen.\n", ""), "both summary_en and summary_de"),
+        (SUMMARY.replace("    sources: [https://example.org/microsoft]\n", ""), "at least one source URL"),
+        (SUMMARY.replace("https://example.org/microsoft", "Microsoft website"), "http"),
+        ("    sources: [https://example.org/microsoft]\n", "belong to a summary"),
+    ],
+)
+def test_registry_summaries_need_both_languages_and_a_source(tmp_path, summary, message):
+    registry = REGISTRY.replace("    aliases: [Microsoft Research]\n", "    aliases: [Microsoft Research]\n" + summary)
+    notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
+
+    with pytest.raises(GraphError, match=message):
+        load_graph(graph_dir, load_notes(notes_dir), notes_dir)

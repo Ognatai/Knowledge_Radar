@@ -821,6 +821,7 @@ function EntityStub({ data, entity, language, navigate, notesBySlug }: EntityStu
   const mentioning = data.graph.edges
     .filter((edge) => edge.type === "DISCUSSES" && edge.target === entity.id)
     .flatMap((edge) => notesBySlug.get(edge.source.replace(/^note:/, "")) ?? []);
+  const summary = language === "en" ? entity.summary_en : entity.summary_de;
   return (
     <article className="content-card note-detail" aria-labelledby="entity-title">
       <div className="article-meta">
@@ -828,7 +829,22 @@ function EntityStub({ data, entity, language, navigate, notesBySlug }: EntityStu
         <span className="draft-label">{t("stubLabel")}</span>
       </div>
       <h2 id="entity-title">{entityName(entity, language)}</h2>
-      <p className="muted">{t("stubIntro")}</p>
+      {summary ? (
+        <section className="entity-summary">
+          <p className="muted">{t("summaryNotice")}</p>
+          <p>{summary}</p>
+          <h3>{t("sources")}</h3>
+          <ul>
+            {(entity.sources ?? []).map((url) => (
+              <li key={url}>
+                <a href={url} rel="noreferrer" target="_blank">{sourceLabel(url)}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : (
+        <p className="muted">{t("stubIntro")}</p>
+      )}
       <section className="related-notes">
         <h3>{t("mentionedIn")}</h3>
         <ul className="stub-mentions">
@@ -847,6 +863,16 @@ function EntityStub({ data, entity, language, navigate, notesBySlug }: EntityStu
 }
 
 export default App;
+
+/** Host and path of a source URL, shown as its link text. */
+function sourceLabel(url: string): string {
+  try {
+    const parsed = new URL(url);
+    return `${parsed.host}${parsed.pathname === "/" ? "" : parsed.pathname}`;
+  } catch {
+    return url;
+  }
+}
 
 /** Renders the decoded postal address; it is assembled in the browser, so it is not in the HTML. */
 function PostalAddress() {

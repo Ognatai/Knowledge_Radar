@@ -52,6 +52,10 @@ class Entity:
     name_de: str
     aliases: list[str] = field(default_factory=list)
     note: str | None = None
+    # Short sourced text for registry entities without a note of their own.
+    summary_en: str | None = None
+    summary_de: str | None = None
+    sources: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -235,11 +239,34 @@ def _load_registry(path: Path, entities: dict[str, Entity]) -> None:
             name_en=_text(entry, "name_en", where),
             name_de=_text(entry, "name_de", where),
             aliases=_string_list(entry.get("aliases"), "aliases", where),
+            **_summary(entry, where),
         )
         for name in (entity.name_en, entity.name_de, *entity.aliases):
             if name.count("(") != name.count(")"):
                 raise GraphError(f"{where}: unbalanced parentheses in name '{name}'.")
         entities[entity_id] = entity
+
+
+def _summary(entry: dict, where: str) -> dict:
+    """The optional short text: both languages together, backed by at least one source URL."""
+    present = [key for key in ("summary_en", "summary_de") if entry.get(key) is not None]
+    sources = _string_list(entry.get("sources"), "sources", where)
+    if not present:
+        if sources:
+            raise GraphError(f"{where}: 'sources' belong to a summary; add summary_en and summary_de.")
+        return {}
+    if len(present) == 1:
+        raise GraphError(f"{where}: a summary needs both summary_en and summary_de.")
+    if not sources:
+        raise GraphError(f"{where}: a summary needs at least one source URL in 'sources'.")
+    for url in sources:
+        if not url.startswith(("https://", "http://")):
+            raise GraphError(f"{where}: source '{url}' must be an http(s) URL.")
+    return {
+        "summary_en": _text(entry, "summary_en", where),
+        "summary_de": _text(entry, "summary_de", where),
+        "sources": sources,
+    }
 
 
 def relation_problem(

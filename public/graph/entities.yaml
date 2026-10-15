@@ -3,7 +3,9 @@
 # gets its own note once 3 or more notes discuss it, and a short sourced text
 # before that.
 # Fields: id (lowercase ASCII slug), type (public entity type from schema.yaml),
-# name_en, name_de, aliases (optional; replaces the former synonyms.yaml).
+# name_en, name_de, aliases (optional; replaces the former synonyms.yaml),
+# summary_en, summary_de and sources (optional short text, 2-4 sentences per
+# language, based only on the listed primary sources; all three together).
 version: 1
 entities:
 - id: hipporag

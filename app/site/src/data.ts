@@ -29,6 +29,10 @@ export interface EntityNode {
   name_en: string;
   name_de: string;
   note: string | null;
+  /** Short sourced text for entities without a note of their own. */
+  summary_en?: string;
+  summary_de?: string;
+  sources?: string[];
 }
 
 export type GraphNode = NoteNode | EntityNode;

@@ -301,6 +301,9 @@ class Neo4jStore:
                 "name_de": entity.name_de,
                 "aliases": entity.aliases,
                 "note": entity.note,
+                "summary_en": entity.summary_en,
+                "summary_de": entity.summary_de,
+                "sources": entity.sources,
             }
             for entity in graph.entities.values()
         ]
@@ -328,7 +331,8 @@ class Neo4jStore:
             tx.run(
                 "UNWIND $rows AS row MERGE (e:Entity {id: row.id}) "
                 "SET e.type = row.type, e.name_en = row.name_en, e.name_de = row.name_de, "
-                "e.aliases = row.aliases, e.note = row.note",
+                "e.aliases = row.aliases, e.note = row.note, e.summary_en = row.summary_en, "
+                "e.summary_de = row.summary_de, e.sources = row.sources",
                 rows=entity_rows,
             )
             tx.run("MATCH (e:Entity) WHERE NOT e.id IN $ids DETACH DELETE e", ids=[row["id"] for row in entity_rows])

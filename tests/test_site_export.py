@@ -3,7 +3,7 @@ import json
 import pytest
 
 from app.backend.knowledge_radar.site_export import export_site_data
-from tests.test_graph import ALPHA_RELATIONS, extraction, note_hash, setup_repo, write_extraction
+from tests.test_graph import ALPHA_RELATIONS, REGISTRY, SUMMARY, extraction, note_hash, setup_repo, write_extraction
 
 
 def test_export_builds_two_layer_graph(tmp_path):
@@ -35,6 +35,18 @@ def test_export_builds_two_layer_graph(tmp_path):
         ("entity:alpha", "entity:microsoft", "DEVELOPED_BY"),
         ("entity:alpha", "entity:beta", "BASED_ON"),
     }
+
+
+def test_entity_summaries_are_exported(tmp_path):
+    registry = REGISTRY.replace("    aliases: [Microsoft Research]\n", "    aliases: [Microsoft Research]\n" + SUMMARY)
+    notes_dir, graph_dir, _ = setup_repo(tmp_path, registry)
+
+    data = json.loads(export_site_data(notes_dir, graph_dir, tmp_path / "out").read_text(encoding="utf-8"))
+    nodes = {node["id"]: node for node in data["graph"]["nodes"]}
+
+    assert nodes["entity:microsoft"]["summary_de"] == "Ein Cloud- und Softwareunternehmen."
+    assert nodes["entity:microsoft"]["sources"] == ["https://example.org/microsoft"]
+    assert "summary_en" not in nodes["entity:knowledge-graph"]
 
 
 def test_relation_supported_by_several_notes_is_exported_once(tmp_path):

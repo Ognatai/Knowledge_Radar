@@ -73,6 +73,11 @@ def build_site_data(
             "name_en": entity.name_en,
             "name_de": entity.name_de,
             "note": entity.note,
+            **(
+                {"summary_en": entity.summary_en, "summary_de": entity.summary_de, "sources": entity.sources}
+                if entity.summary_en
+                else {}
+            ),
         }
         for entity in sorted(graph.entities.values(), key=lambda entity: entity.id)
     ]
