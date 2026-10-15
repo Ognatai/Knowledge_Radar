@@ -61,6 +61,10 @@ entities:
   name_de: Gesetz gegen den unlauteren Wettbewerb (UWG)
   aliases:
   - UWG
+  summary_en: The German Act against Unfair Competition (Gesetz gegen den unlauteren Wettbewerb, UWG) protects competitors, consumers and other market participants against unfair commercial practices and, at the same time, the public interest in undistorted competition (§ 1 UWG). Special rules on particular aspects of unfair practices take precedence; according to its official notes, the Act transposes, among others, Directive 2005/29/EC on unfair commercial practices.
+  summary_de: Das Gesetz gegen den unlauteren Wettbewerb (UWG) dient dem Schutz der Mitbewerber, der Verbraucher sowie der sonstigen Marktteilnehmer vor unlauteren geschäftlichen Handlungen und schützt zugleich das Interesse der Allgemeinheit an einem unverfälschten Wettbewerb (§ 1 UWG). Vorschriften zu besonderen Aspekten unlauterer Handlungen gehen vor; nach den amtlichen Hinweisen setzt das Gesetz unter anderem die Richtlinie 2005/29/EG über unlautere Geschäftspraktiken um.
+  sources:
+  - https://www.gesetze-im-internet.de/uwg_2004/
 - id: intrinsic-dimension
   type: Concept
   name_en: Intrinsic dimension
@@ -349,6 +353,10 @@ entities:
   name_de: Digitale-Dienste-Gesetz (DDG)
   aliases:
   - DDG
+  summary_en: The Digitale-Dienste-Gesetz (DDG) of 6 May 2024 contains, among other things, the German rules implementing the Digital Services Act. The Federal Network Agency (Bundesnetzagentur) is the competent authority under Article 49(1) of Regulation (EU) 2022/2065, with special competences for the Federal Agency for Child and Youth Media Protection (§ 12 DDG); according to its official notes, the Act also transposes the E-Commerce Directive 2000/31/EC.
+  summary_de: Das Digitale-Dienste-Gesetz (DDG) vom 6. Mai 2024 enthält unter anderem die deutschen Durchführungsvorschriften zum Gesetz über digitale Dienste. Zuständige Behörde nach Artikel 49 Absatz 1 der Verordnung (EU) 2022/2065 ist die Bundesnetzagentur, mit besonderen Zuständigkeiten der Bundeszentrale für Kinder- und Jugendmedienschutz (§ 12 DDG); nach den amtlichen Hinweisen setzt das Gesetz außerdem die E-Commerce-Richtlinie 2000/31/EG um.
+  sources:
+  - https://www.gesetze-im-internet.de/ddg/
 - id: e-evidence-regulation
   type: Regulation
   name_en: Regulation (EU) 2023/1543 on European production and preservation orders
@@ -364,6 +372,10 @@ entities:
   type: Regulation
   name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
   name_de: Einwilligungsverwaltungsverordnung (EinwV)
+  summary_en: The Einwilligungsverwaltungsverordnung (EinwV), in force since 1 April 2025, is a German ordinance under the Telecommunications Digital Services Data Protection Act (TDDDG) on services for managing consent (§ 1 EinwV). It sets the requirements such services must meet to be recognised, the recognition procedure by an independent body, and technical and organisational measures for providers of digital services and browser software so that users' settings are respected.
+  summary_de: Die Einwilligungsverwaltungsverordnung (EinwV), seit 1. April 2025 in Kraft, ist eine Verordnung nach dem Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz (TDDDG) über Dienste zur Einwilligungsverwaltung (§ 1 EinwV). Sie regelt die Anforderungen an deren Anerkennung, das Anerkennungsverfahren durch eine unabhängige Stelle sowie technische und organisatorische Maßnahmen von Anbietern digitaler Dienste und von Browser-Software, damit die Einstellungen der Nutzer beachtet werden.
+  sources:
+  - https://www.gesetze-im-internet.de/einwv/
 - id: claude-code
   type: Technology
   name_en: Claude Code
@@ -407,6 +419,10 @@ entities:
   aliases:
   - ProdHaftG
   - Produkthaftungsgesetz
+  summary_en: The German Product Liability Act (Produkthaftungsgesetz, ProdHaftG), in force since 1 January 1990, makes the manufacturer of a product liable for damage when a defect kills someone, injures their body or health, or damages property other than the product itself that is ordinarily intended and mainly used for private purposes (§ 1 ProdHaftG). Liability is excluded in defined cases (§ 1(2) ProdHaftG).
+  summary_de: Das Produkthaftungsgesetz (ProdHaftG), seit 1. Januar 1990 in Kraft, verpflichtet den Hersteller eines Produkts zum Schadensersatz, wenn durch den Fehler des Produkts jemand getötet, sein Körper oder seine Gesundheit verletzt oder eine andere Sache als das fehlerhafte Produkt beschädigt wird, die gewöhnlich für den privaten Gebrauch bestimmt und hauptsächlich so verwendet worden ist (§ 1 ProdHaftG). In bestimmten Fällen ist die Haftung ausgeschlossen (§ 1 Abs. 2 ProdHaftG).
+  sources:
+  - https://www.gesetze-im-internet.de/prodhaftg/
 - id: product-liability-bill-2026
   type: Regulation
   name_en: German government bill on product liability (2026)
@@ -417,6 +433,10 @@ entities:
   name_de: Bürgerliches Gesetzbuch (BGB)
   aliases:
   - BGB
+  summary_en: The German Civil Code (Bürgerliches Gesetzbuch, BGB) is Germany's central codification of private law. Provisions relevant here include the general tort rule that anyone who intentionally or negligently and unlawfully injures another's life, body, health, freedom, property or other right must compensate the damage (§ 823 BGB), and the lender's duty to assess the borrower's creditworthiness before concluding a consumer loan agreement (§ 505a BGB).
+  summary_de: Das Bürgerliche Gesetzbuch (BGB) ist die zentrale Kodifikation des deutschen Privatrechts. Hier relevant sind unter anderem die allgemeine deliktische Haftung, nach der zum Schadensersatz verpflichtet ist, wer vorsätzlich oder fahrlässig das Leben, den Körper, die Gesundheit, die Freiheit, das Eigentum oder ein sonstiges Recht eines anderen widerrechtlich verletzt (§ 823 BGB), und die Pflicht des Darlehensgebers zur Kreditwürdigkeitsprüfung vor Abschluss eines Verbraucherdarlehensvertrags (§ 505a BGB).
+  sources:
+  - https://www.gesetze-im-internet.de/bgb/
 - id: remote-procedure-call
   type: Concept
   name_en: Remote procedure call (RPC)
@@ -544,6 +564,10 @@ entities:
   type: Regulation
   name_en: BSI Act (2009 version)
   name_de: BSI-Gesetz (Fassung von 2009)
+  summary_en: The BSI Act of 14 August 2009 (BGBl. I p. 2821) was the earlier version of the law on the Federal Office for Information Security, last amended in June 2021. It has been replaced by the 2025 BSI Act implementing NIS2, whose transitional provisions refer to obligations and deadlines under the 2009 version.
+  summary_de: Das BSI-Gesetz vom 14. August 2009 (BGBl. I S. 2821) war die frühere Fassung des Gesetzes über das Bundesamt für Sicherheit in der Informationstechnik, zuletzt im Juni 2021 geändert. Es wurde durch das BSI-Gesetz von 2025 zur Umsetzung von NIS2 abgelöst, dessen Übergangsvorschriften auf Pflichten und Fristen nach der Fassung von 2009 Bezug nehmen.
+  sources:
+  - https://www.gesetze-im-internet.de/bsig_2025/
 - id: it-security-label
   type: Concept
   name_en: IT security label
@@ -864,6 +888,10 @@ entities:
   name_de: Urheberrechtsgesetz (UrhG)
   aliases:
   - UrhG
+  summary_en: 'The German Copyright Act (Urheberrechtsgesetz, UrhG) protects authors of works of literature, science and art (§ 1 UrhG). For AI training, § 44b UrhG is central: it permits reproductions of lawfully accessible works for text and data mining, the automated analysis of works to obtain information on patterns, trends and correlations, unless the rights holder has reserved this use, which for works available online must be done in machine-readable form.'
+  summary_de: 'Das Urheberrechtsgesetz (UrhG) schützt die Urheber von Werken der Literatur, Wissenschaft und Kunst (§ 1 UrhG). Für KI-Training ist § 44b UrhG zentral: Er erlaubt Vervielfältigungen rechtmäßig zugänglicher Werke für Text und Data Mining, die automatisierte Analyse von Werken, um Informationen insbesondere über Muster, Trends und Korrelationen zu gewinnen, sofern sich der Rechtsinhaber diese Nutzung nicht vorbehalten hat; bei online zugänglichen Werken muss der Vorbehalt maschinenlesbar sein.'
+  sources:
+  - https://www.gesetze-im-internet.de/urhg/
 - id: text-and-data-mining
   type: Concept
   name_en: Text and data mining (TDM)
@@ -2009,6 +2037,10 @@ entities:
   aliases:
   - GwG
   - Money Laundering Act
+  summary_en: The German Money Laundering Act (Geldwäschegesetz, GwG; officially the act on detecting proceeds of serious crime), in its 2017 version, defines money laundering by reference to § 261 of the Criminal Code and defines terrorist financing (§ 1 GwG). It interacts with banking supervisory law, for example § 25h of the Banking Act.
+  summary_de: Das Geldwäschegesetz (GwG; amtlich Gesetz über das Aufspüren von Gewinnen aus schweren Straftaten) in der Fassung von 2017 definiert Geldwäsche als Straftat nach § 261 des Strafgesetzbuchs und bestimmt den Begriff der Terrorismusfinanzierung (§ 1 GwG). Es greift mit dem Bankaufsichtsrecht ineinander, etwa mit § 25h des Kreditwesengesetzes.
+  sources:
+  - https://www.gesetze-im-internet.de/gwg_2017/
 - id: banking-licence
   type: Concept
   name_en: Authorisation requirement for banking business
