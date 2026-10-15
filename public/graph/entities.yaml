@@ -348,6 +348,10 @@ entities:
   aliases:
   - Basel Committee
   - BCBS
+  summary_en: The Basel Committee on Banking Supervision (BCBS) is the primary global standard setter for the prudential regulation of banks and a forum for cooperation on banking supervisory matters (BIS). Its 45 members are central banks and bank supervisors from 28 jurisdictions; it exchanges information on risks to the global financial system and establishes global standards and guidelines for the regulation and supervision of banks.
+  summary_de: Der Basler Ausschuss für Bankenaufsicht (BCBS) ist der wichtigste globale Standardsetzer für die Bankenaufsichtsregulierung und ein Forum für die Zusammenarbeit in Fragen der Bankenaufsicht (BIZ). Seine 45 Mitglieder sind Zentralbanken und Bankenaufseher aus 28 Rechtsräumen; er tauscht Informationen über Risiken für das globale Finanzsystem aus und legt globale Standards und Leitlinien für die Regulierung und Beaufsichtigung von Banken fest.
+  sources:
+  - https://www.bis.org/bcbs/
 - id: risk-data-aggregation
   type: Concept
   name_en: Risk data aggregation and risk reporting (RDARR)
@@ -924,6 +928,10 @@ entities:
   type: Organisation
   name_en: Atlassian
   name_de: Atlassian
+  summary_en: Atlassian is a software company founded by Mike Cannon-Brookes and Scott Farquhar that makes team collaboration tools such as Jira and Confluence (Atlassian). It reports more than 300,000 customers.
+  summary_de: Atlassian ist ein Softwareunternehmen, gegründet von Mike Cannon-Brookes und Scott Farquhar, das Werkzeuge für die Zusammenarbeit im Team wie Jira und Confluence herstellt (Atlassian). Nach eigenen Angaben hat es mehr als 300.000 Kunden.
+  sources:
+  - https://www.atlassian.com/company
 - id: confluence-space
   type: Concept
   name_en: Space (Confluence)
@@ -1058,10 +1066,20 @@ entities:
   type: Organisation
   name_en: LAION
   name_de: LAION
+  summary_en: LAION is a non-profit organisation with members worldwide that aims to make large-scale machine learning models, datasets and code available to the public, releasing open datasets, code and models (LAION). In Germany, the Higher Regional Court of Hamburg ruled in 2025 that LAION's download of a photo for a training dataset was covered by the text and data mining exception, because the rights reservation was not machine-readable (OLG Hamburg 2025).
+  summary_de: LAION ist eine gemeinnützige Organisation mit Mitgliedern weltweit, die große Modelle, Datensätze und Code für maschinelles Lernen öffentlich verfügbar machen will und dazu offene Datensätze, Code und Modelle veröffentlicht (LAION). In Deutschland entschied das Hanseatische Oberlandesgericht Hamburg 2025, dass der Download eines Fotos durch LAION für einen Trainingsdatensatz von der Schranke für Text und Data Mining gedeckt war, weil der Nutzungsvorbehalt nicht maschinenlesbar war (OLG Hamburg 2025).
+  sources:
+  - https://laion.ai/about/
+  - https://medien-internet-und-recht.de/volltext.php?mir_dok_id=3526
 - id: gema
   type: Organisation
   name_en: GEMA
   name_de: GEMA
+  summary_en: GEMA (Gesellschaft für musikalische Aufführungs- und mechanische Vervielfältigungsrechte) is a German association representing more than 100,000 members, namely composers, lyricists and music publishers (GEMA). Members transfer the usage rights in their works to GEMA, which licenses them to music users and distributes the income as royalties. In 2025 the Regional Court of Munich I largely upheld GEMA's claim against OpenAI over ChatGPT storing and reproducing song lyrics (LG München I, 11 November 2025, 42 O 14139/24).
+  summary_de: Die GEMA (Gesellschaft für musikalische Aufführungs- und mechanische Vervielfältigungsrechte) ist ein Verein, der die Interessen von über 100.000 Mitgliedern vertritt, also Komponistinnen und Komponisten, Textdichtern und Musikverlagen (GEMA). Die Mitglieder übertragen ihr die Nutzungsrechte an ihren Werken; die GEMA vergibt Lizenzen an Musiknutzende und verteilt die Einnahmen als Tantiemen. 2025 gab das Landgericht München I einer Klage der GEMA gegen OpenAI wegen der Speicherung und Ausgabe von Liedtexten durch ChatGPT weitgehend statt (LG München I, 11.11.2025, 42 O 14139/24).
+  sources:
+  - https://www.gema.de/de/die-gema
+  - https://www.lto.de/recht/nachrichten/n/42o1413924-lg-muenchen-i-gema-openai-chatgpt-songtexte-ki
 - id: basel-iii
   type: Regulation
   name_en: Basel III
@@ -1089,6 +1107,10 @@ entities:
   name_de: Europäischer Ausschuss für Systemrisiken (ESRB)
   aliases:
   - ESRB
+  summary_en: The European Systemic Risk Board (ESRB), seated in Frankfurt am Main, is part of the European System of Financial Supervision (Art. 1 Regulation (EU) No 1092/2010). It is responsible for the macro-prudential oversight of the Union's financial system, contributing to the prevention or mitigation of systemic risks to financial stability so as to avoid periods of widespread financial distress (Art. 3(1)).
+  summary_de: Der Europäische Ausschuss für Systemrisiken (ESRB) mit Sitz in Frankfurt am Main ist Teil des Europäischen Finanzaufsichtssystems (Art. 1 Verordnung (EU) Nr. 1092/2010). Er ist für die Makroaufsicht über das Finanzsystem der Union zuständig und trägt dazu bei, Systemrisiken für die Finanzstabilität abzuwenden oder einzudämmen, damit Phasen weit verbreiteter finanzieller Notlagen vorgebeugt werden kann (Art. 3 Abs. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1092
 - id: capital-buffer
   type: Concept
   name_en: Capital buffer
@@ -1170,6 +1192,10 @@ entities:
   type: Organisation
   name_en: European Ombudsman
   name_de: Europäische Bürgerbeauftragte
+  summary_en: The European Ombudsman is elected by the European Parliament and receives complaints from Union citizens and from natural or legal persons residing or registered in a Member State about maladministration in the activities of Union institutions, bodies, offices or agencies, except the CJEU acting in its judicial role (Art. 228(1) TFEU). The Ombudsman conducts inquiries on complaints or on their own initiative and reports on them.
+  summary_de: Der Europäische Bürgerbeauftragte wird vom Europäischen Parlament gewählt und nimmt Beschwerden von Unionsbürgern sowie von natürlichen oder juristischen Personen mit Wohnort oder satzungsmäßigem Sitz in einem Mitgliedstaat über Missstände bei der Tätigkeit der Organe, Einrichtungen oder sonstigen Stellen der Union entgegen, mit Ausnahme des Gerichtshofs der Europäischen Union in Ausübung seiner Rechtsprechungsbefugnisse (Art. 228 Abs. 1 AEUV). Er führt aufgrund von Beschwerden oder von sich aus Untersuchungen durch und erstattet darüber Bericht.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016E228
 - id: enisa-regulation-2013
   type: Regulation
   name_en: ENISA Regulation (EU) No 526/2013
@@ -1218,6 +1244,10 @@ entities:
   name_de: Europäischer Dateninnovationsrat (EDIB)
   aliases:
   - EDIB
+  summary_en: The European Data Innovation Board (EDIB) is an expert group established by the Commission under the Data Governance Act (Art. 29 DGA). It consists of representatives of the Member States' competent authorities for data intermediation services and data altruism organisations, the EDPB, the EDPS, ENISA, the Commission, the EU SME Envoy and representatives of relevant bodies in specific sectors.
+  summary_de: Der Europäische Dateninnovationsrat (EDIB) ist eine von der Kommission nach dem Daten-Governance-Rechtsakt eingesetzte Expertengruppe (Art. 29 DGA). Er besteht aus Vertretern der für Datenvermittlungsdienste und datenaltruistische Organisationen zuständigen Behörden der Mitgliedstaaten, des Europäischen Datenschutzausschusses, des Europäischen Datenschutzbeauftragten, der ENISA, der Kommission, dem KMU-Beauftragten der EU und Vertretern maßgeblicher Stellen in bestimmten Sektoren.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0868
 - id: database-directive
   type: Regulation
   name_en: Database Directive 96/9/EC
@@ -1408,6 +1438,10 @@ entities:
   type: Organisation
   name_en: European Board for Digital Services
   name_de: Europäisches Gremium für digitale Dienste
+  summary_en: The European Board for Digital Services is an independent advisory group of the Digital Services Coordinators on the supervision of providers of intermediary services (Art. 61(1) DSA). It advises the Digital Services Coordinators and the Commission, for example to contribute to the consistent application of the DSA and to coordinate guidelines and analysis (Art. 61(2) DSA); it is composed of the Digital Services Coordinators, represented by high-level officials (Art. 62(1) DSA).
+  summary_de: Das Europäische Gremium für digitale Dienste ist eine unabhängige Beratergruppe der Koordinatoren für digitale Dienste für die Beaufsichtigung der Anbieter von Vermittlungsdiensten (Art. 61 Abs. 1 DSA). Es berät die Koordinatoren für digitale Dienste und die Kommission, etwa um zur einheitlichen Anwendung des DSA beizutragen und Leitlinien und Analysen zu koordinieren (Art. 61 Abs. 2 DSA); es setzt sich aus den Koordinatoren für digitale Dienste zusammen, die durch hochrangige Beamte vertreten werden (Art. 62 Abs. 1 DSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: cjeu
   type: Organisation
   name_en: Court of Justice of the European Union (CJEU)
@@ -1415,6 +1449,10 @@ entities:
   aliases:
   - CJEU
   - EuGH
+  summary_en: The Court of Justice of the European Union (CJEU) comprises the Court of Justice, the General Court and specialised courts and ensures that the law is observed in the interpretation and application of the Treaties (Art. 19(1) TEU). The Court of Justice has one judge per Member State, assisted by Advocates-General; judges are appointed by common accord of the Member States' governments for six years (Art. 19(2) TEU).
+  summary_de: Der Gerichtshof der Europäischen Union (EuGH) umfasst den Gerichtshof, das Gericht und Fachgerichte und sichert die Wahrung des Rechts bei der Auslegung und Anwendung der Verträge (Art. 19 Abs. 1 EUV). Der Gerichtshof besteht aus einem Richter je Mitgliedstaat und wird von Generalanwälten unterstützt; die Richter werden von den Regierungen der Mitgliedstaaten im gegenseitigen Einvernehmen für sechs Jahre ernannt (Art. 19 Abs. 2 EUV).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M019
 - id: e-commerce-directive
   type: Regulation
   name_en: E-Commerce Directive 2000/31/EC
@@ -1572,6 +1610,10 @@ entities:
   aliases:
   - BEREC
   - GEREK
+  summary_en: The Body of European Regulators for Electronic Communications (BEREC) was established, together with the BEREC Office, by Regulation (EU) 2018/1971, succeeding the bodies set up by Regulation (EC) No 1211/2009 (Art. 1). It aims in particular to ensure the consistent implementation of the regulatory framework for electronic communications, carries out its tasks independently and impartially, and assists and advises national regulatory authorities, the European Parliament, the Council and the Commission (Art. 3–4).
+  summary_de: Das Gremium europäischer Regulierungsstellen für elektronische Kommunikation (GEREK) wurde zusammen mit dem GEREK-Büro durch die Verordnung (EU) 2018/1971 eingerichtet, als Nachfolger der durch die Verordnung (EG) Nr. 1211/2009 geschaffenen Stellen (Art. 1). Es soll insbesondere eine einheitliche Umsetzung des Rechtsrahmens für die elektronische Kommunikation gewährleisten, übt seine Aufgaben unabhängig und unparteiisch aus und unterstützt und berät die nationalen Regulierungsbehörden, das Europäische Parlament, den Rat und die Kommission (Art. 3 und 4).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1971
 - id: telecom-framework-directives-2002
   type: Regulation
   name_en: Telecommunications framework directives 2002/19/EC to 2002/22/EC
@@ -1654,6 +1696,10 @@ entities:
   type: Organisation
   name_en: European Digital Identity Cooperation Group
   name_de: Kooperationsgruppe für die europäische digitale Identität
+  summary_en: The European Digital Identity Cooperation Group supports and facilitates cross-border cooperation and the exchange of information among Member States on trust services, European Digital Identity Wallets and notified electronic identification schemes (Art. 46e(1) eIDAS Regulation, inserted by Regulation (EU) 2024/1183). It is composed of representatives of the Member States and the Commission and is chaired by the Commission (Art. 46e(2)).
+  summary_de: Die europäische Kooperationsgruppe für die digitale Identität erleichtert die grenzübergreifende Zusammenarbeit und den Informationsaustausch der Mitgliedstaaten im Bereich der Vertrauensdienste, der europäischen Brieftaschen für die Digitale Identität und der notifizierten elektronischen Identifizierungssysteme (Art. 46e Abs. 1 eIDAS-Verordnung, eingefügt durch die Verordnung (EU) 2024/1183). Sie setzt sich aus Vertretern der Mitgliedstaaten und der Kommission zusammen; den Vorsitz führt die Kommission (Art. 46e Abs. 2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1183
 - id: matryoshka-representation-learning
   type: Method
   name_en: Matryoshka Representation Learning (MRL)
@@ -1893,6 +1939,10 @@ entities:
   aliases:
   - EDPS
   - EDSB
+  summary_en: The European Data Protection Supervisor (EDPS) ensures that Union institutions and bodies respect the fundamental rights and freedoms of natural persons, in particular their right to data protection, when processing personal data (Art. 52(1)–(2) Regulation (EU) 2018/1725). The EDPS monitors and ensures the application of that Regulation and other Union acts on data protection by Union institutions and bodies (Art. 52(3)).
+  summary_de: Der Europäische Datenschutzbeauftragte (EDSB) stellt sicher, dass die Organe und Einrichtungen der Union bei der Verarbeitung personenbezogener Daten die Grundrechte und Grundfreiheiten natürlicher Personen, insbesondere ihr Recht auf Datenschutz, achten (Art. 52 Abs. 1 und 2 Verordnung (EU) 2018/1725). Er überwacht und setzt die Anwendung dieser Verordnung und anderer Datenschutzrechtsakte der Union durch die Organe und Einrichtungen der Union durch (Art. 52 Abs. 3).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1725
 - id: weights-and-biases
   type: Technology
   name_en: Weights & Biases
@@ -2068,6 +2118,10 @@ entities:
   aliases:
   - EDPB
   - EDSA
+  summary_en: The European Data Protection Board (EDPB) is a body of the Union with legal personality, composed of the head of one supervisory authority of each Member State and the European Data Protection Supervisor, or their representatives (Art. 68 GDPR). It ensures the consistent application of the GDPR, among other things by monitoring its application and issuing guidelines, recommendations and best practices (Art. 70 GDPR).
+  summary_de: Der Europäische Datenschutzausschuss (EDSA) ist eine Einrichtung der Union mit eigener Rechtspersönlichkeit und besteht aus dem Leiter einer Aufsichtsbehörde jedes Mitgliedstaats und dem Europäischen Datenschutzbeauftragten oder ihren jeweiligen Vertretern (Art. 68 DSGVO). Er stellt die einheitliche Anwendung der DSGVO sicher, unter anderem indem er ihre Anwendung überwacht und Leitlinien, Empfehlungen und bewährte Verfahren bereitstellt (Art. 70 DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: personal-data
   type: Concept
   name_en: Personal data
@@ -2499,16 +2553,29 @@ entities:
   type: Organisation
   name_en: Google DeepMind
   name_de: Google DeepMind
+  summary_en: Google DeepMind is Google's AI research unit, created in April 2023 by combining the Brain team from Google Research and DeepMind, with Demis Hassabis as CEO (Google 2023). The two groups' earlier work includes AlphaGo, the Transformer, word2vec, WaveNet and AlphaFold.
+  summary_de: Google DeepMind ist die KI-Forschungseinheit von Google, die im April 2023 aus dem Brain-Team von Google Research und DeepMind gebildet wurde; CEO ist Demis Hassabis (Google 2023). Zu den früheren Arbeiten beider Gruppen gehören AlphaGo, der Transformer, word2vec, WaveNet und AlphaFold.
+  sources:
+  - https://blog.google/technology/ai/april-ai-update/
 - id: mistral-ai
   type: Organisation
   name_en: Mistral AI
   name_de: Mistral AI
   aliases:
   - Mistral
+  summary_en: Mistral AI is an AI company founded by Arthur Mensch (CEO), Guillaume Lample and Timothée Lacroix (Mistral AI). Its first employee started in June 2023; it released Mistral 7B in September 2023 and later models such as Mistral Large, as well as the assistant Le Chat.
+  summary_de: Mistral AI ist ein KI-Unternehmen, gegründet von Arthur Mensch (CEO), Guillaume Lample und Timothée Lacroix (Mistral AI). Der erste Mitarbeiter begann im Juni 2023; im September 2023 erschien Mistral 7B, später folgten Modelle wie Mistral Large sowie der Assistent Le Chat.
+  sources:
+  - https://mistral.ai/about
 - id: amazon
   type: Organisation
   name_en: Amazon
   name_de: Amazon
+  summary_en: Amazon is a company whose businesses include online shopping, cloud computing, streaming entertainment, consumer electronic devices, advertising, healthcare and AI services (Amazon). Its cloud arm, Amazon Web Services (AWS), offers AI services such as Amazon Lex (AWS documentation).
+  summary_de: Amazon ist ein Unternehmen mit Geschäftsfeldern wie Onlinehandel, Cloud Computing, Streaming, Unterhaltungselektronik, Werbung, Gesundheit und KI-Diensten (Amazon). Über Amazon Web Services (AWS) bietet es KI-Dienste wie Amazon Lex an (AWS-Dokumentation).
+  sources:
+  - https://www.aboutamazon.com/about-us
+  - https://docs.aws.amazon.com/lexv2/latest/dg/what-is.html
 - id: flan
   type: Method
   name_en: FLAN
@@ -2916,6 +2983,10 @@ entities:
   name_de: EU-CyCLONe
   aliases:
   - EU-CyCLONe
+  summary_en: The European cyber crisis liaison organisation network (EU-CyCLONe) supports the coordinated management of large-scale cybersecurity incidents and crises at operational level and ensures the regular exchange of relevant information among Member States and Union institutions, bodies, offices and agencies (Art. 16(1) NIS2 Directive). It is composed of representatives of the Member States' cyber crisis management authorities and, in certain cases, the Commission (Art. 16(2)).
+  summary_de: Das Europäische Netzwerk der Verbindungsorganisationen für Cyberkrisen (EU-CyCLONe) unterstützt das koordinierte Management von Cybersicherheitsvorfällen großen Ausmaßes und Krisen auf operativer Ebene und gewährleistet einen regelmäßigen Informationsaustausch zwischen den Mitgliedstaaten und den Organen, Einrichtungen und sonstigen Stellen der Union (Art. 16 Abs. 1 NIS-2-Richtlinie). Es setzt sich aus Vertretern der Behörden der Mitgliedstaaten für das Cyberkrisenmanagement und in bestimmten Fällen der Kommission zusammen (Art. 16 Abs. 2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
 - id: essential-and-important-entities
   type: Concept
   name_en: Essential and important entities (NIS2)
@@ -3560,6 +3631,10 @@ entities:
   type: Organisation
   name_en: American Statistical Association (ASA)
   name_de: American Statistical Association (ASA)
+  summary_en: The American Statistical Association (ASA), founded in Boston in 1839, is the world's largest community of statisticians and the second-oldest continuously operating professional association in the United States (ASA). Its mission is to promote the practice and profession of statistics; its members work in industry, government and academia in more than 90 countries.
+  summary_de: Die American Statistical Association (ASA), 1839 in Boston gegründet, ist die weltweit größte Gemeinschaft von Statistikerinnen und Statistikern und der zweitälteste fortlaufend bestehende Berufsverband der USA (ASA). Sie will Praxis und Beruf der Statistik fördern; ihre Mitglieder arbeiten in Wirtschaft, Verwaltung und Wissenschaft in mehr als 90 Ländern.
+  sources:
+  - https://www.amstat.org/about-asa
 - id: raptor
   type: Method
   name_en: RAPTOR
@@ -4115,6 +4190,10 @@ entities:
   name_de: OWASP
   aliases:
   - Open Worldwide Application Security Project
+  summary_en: The Open Worldwide Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software through community-led open-source projects, local chapters, conferences and training (OWASP). The project launched in 2001 and was incorporated as the OWASP Foundation, a US nonprofit, in 2004; it maintains widely adopted security standards such as its Top 10 lists.
+  summary_de: Das Open Worldwide Application Security Project (OWASP) ist eine gemeinnützige Stiftung, die die Sicherheit von Software durch gemeinschaftlich getragene Open-Source-Projekte, lokale Gruppen, Konferenzen und Schulungen verbessern will (OWASP). Das Projekt startete 2001 und wurde 2004 als OWASP Foundation, eine gemeinnützige Organisation in den USA, eingetragen; es pflegt verbreitete Sicherheitsstandards wie seine Top-10-Listen.
+  sources:
+  - https://owasp.org/about/
 - id: sql-pgq
   type: Technology
   name_en: SQL/PGQ
@@ -4570,6 +4649,12 @@ entities:
   name_de: NIST
   aliases:
   - National Institute of Standards and Technology
+  summary_en: The National Institute of Standards and Technology (NIST), founded in 1901, is part of the U.S. Department of Commerce and one of the oldest physical science laboratories in the United States (NIST). Its mission is to promote innovation and industrial competitiveness by advancing measurement science, standards and technology; its publications include the AI Risk Management Framework (NIST 2023) and the definition of cloud computing in SP 800-145.
+  summary_de: Das National Institute of Standards and Technology (NIST), gegründet 1901, gehört zum US-Handelsministerium und ist eines der ältesten physikalischen Forschungslabore der USA (NIST). Es soll Innovation und industrielle Wettbewerbsfähigkeit fördern, indem es Messwissenschaft, Standards und Technologie voranbringt; zu seinen Veröffentlichungen gehören das AI Risk Management Framework (NIST 2023) und die Cloud-Computing-Definition in SP 800-145.
+  sources:
+  - https://www.nist.gov/about-nist
+  - https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+  - https://csrc.nist.gov/pubs/sp/800/145/final
 - id: edgar-f-codd
   type: Person
   name_en: Edgar F. Codd
@@ -4598,6 +4683,11 @@ entities:
   type: Organisation
   name_en: ISACA
   name_de: ISACA
+  summary_en: ISACA is a global professional membership association for IT audit and assurance, information and cyber security, governance, risk management, compliance and privacy, with about 185,000 members (ISACA). It offers certifications, education, research, frameworks and standards; it developed COBIT, a framework for the governance and management of enterprise information and technology.
+  summary_de: ISACA ist ein weltweiter Berufsverband für IT-Prüfung, Informations- und Cybersicherheit, Governance, Risikomanagement, Compliance und Datenschutz mit rund 185.000 Mitgliedern (ISACA). Der Verband bietet Zertifizierungen, Weiterbildung, Forschung, Frameworks und Standards an und hat COBIT entwickelt, ein Framework für Governance und Management der Unternehmens-IT.
+  sources:
+  - https://www.isaca.org/about-us
+  - https://www.isaca.org/resources/cobit
 - id: eric-evans
   type: Person
   name_en: Eric Evans
