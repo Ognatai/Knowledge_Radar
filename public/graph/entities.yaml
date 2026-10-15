@@ -3247,10 +3247,18 @@ entities:
   type: Method
   name_en: Fixed-size chunking
   name_de: Chunking mit fester Größe
+  summary_en: Fixed-size chunking splits documents into chunks of a fixed number of tokens, for example 100, 256 or 512, the most common chunking method in retrieval-augmented generation (Gao et al. 2023). Larger chunks capture more context but also more noise and cost more to process, while smaller chunks have less noise but may not convey the necessary context; fixed lengths can also cut through sentences.
+  summary_de: Fixed-Size-Chunking zerlegt Dokumente in Abschnitte mit einer festen Anzahl von Tokens, etwa 100, 256 oder 512; es ist die häufigste Chunking-Methode in Retrieval-Augmented Generation (Gao et al. 2023). Größere Chunks erfassen mehr Kontext, aber auch mehr Rauschen und kosten mehr Verarbeitung, kleinere haben weniger Rauschen, vermitteln aber womöglich nicht den nötigen Kontext; feste Längen können zudem Sätze zerschneiden.
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: semantic-chunking
   type: Method
   name_en: Semantic chunking
   name_de: Semantisches Chunking
+  summary_en: Semantic chunking places chunk boundaries according to units of meaning rather than after a fixed length. A fine-grained form indexes propositions, atomic expressions that each contain one distinct factoid in a concise, self-contained form; indexing a corpus by propositions significantly outperformed passage-level indexing in dense retrieval and improved downstream question answering for a given computation budget (Chen et al. 2023).
+  summary_de: Semantisches Chunking setzt Chunk-Grenzen nach Bedeutungseinheiten statt nach einer festen Länge. Eine feingranulare Form indexiert Propositionen, atomare Ausdrücke, die jeweils genau einen Sachverhalt knapp und für sich verständlich enthalten; die Indexierung eines Korpus nach Propositionen übertraf beim Dense Retrieval die Indexierung nach Passagen deutlich und verbesserte bei gegebenem Rechenbudget die nachgelagerte Fragebeantwortung (Chen et al. 2023).
+  sources:
+  - https://arxiv.org/abs/2312.06648
 - id: structure-based-chunking
   type: Method
   name_en: Structure-based chunking
@@ -3275,14 +3283,26 @@ entities:
   type: Method
   name_en: Context enrichment of chunks
   name_de: Kontextanreicherung von Chunks
+  summary_en: Context enrichment attaches metadata such as page number, file name, author, category or timestamp to chunks, so that chunks retrieved on their own can be placed in context and retrieval can be filtered by these fields (Gao et al. 2023). For legal texts this can be, for example, the act and article a paragraph belongs to.
+  summary_de: Bei der Kontextanreicherung werden Chunks mit Metadaten wie Seitenzahl, Dateiname, Autor, Kategorie oder Zeitstempel versehen, sodass einzeln abgerufene Chunks eingeordnet werden können und sich das Retrieval nach diesen Feldern filtern lässt (Gao et al. 2023). Bei Rechtstexten kann das etwa das Gesetz und der Artikel sein, zu dem ein Absatz gehört.
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: chunk-overlap
   type: Method
   name_en: Chunk overlap
   name_de: Überlappung von Chunks
+  summary_en: Chunk overlap lets neighbouring chunks share part of their text, as in a sliding window, so that content cut at a chunk boundary still appears together in at least one chunk (Gao et al. 2023). It addresses the truncation of sentences by fixed-size chunking at the cost of storing and embedding some text twice.
+  summary_de: Bei Chunk-Overlap teilen sich benachbarte Chunks einen Teil ihres Texts, wie bei einem gleitenden Fenster, sodass an einer Chunk-Grenze getrennter Inhalt zumindest in einem Chunk zusammen vorkommt (Gao et al. 2023). Das mildert das Zerschneiden von Sätzen durch Fixed-Size-Chunking, um den Preis, dass ein Teil des Texts doppelt gespeichert und eingebettet wird.
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: parent-child-retrieval
   type: Method
   name_en: Parent-child retrieval
   name_de: Parent-Child-Retrieval
+  summary_en: Parent-child retrieval separates the unit that is searched from the unit given to the language model; methods such as Small2Big use sentences (small) as retrieval units and pass the surrounding sentences (big) to the LLM as context (Gao et al. 2023). This balances precise retrieval of small units against enough context for generation.
+  summary_de: Parent-Child-Retrieval trennt die Einheit, nach der gesucht wird, von der Einheit, die das Sprachmodell erhält; Verfahren wie Small2Big nutzen Sätze (klein) als Retrieval-Einheiten und geben die umgebenden Sätze (groß) als Kontext an das LLM weiter (Gao et al. 2023). So wird präzises Retrieval kleiner Einheiten mit ausreichend Kontext für die Generierung verbunden.
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: ares
   type: Method
   name_en: ARES
@@ -3314,14 +3334,29 @@ entities:
   type: Concept
   name_en: Citation hallucination
   name_de: Zitat-Halluzination
+  summary_en: A citation hallucination is a claim that cites a source which does not exist or does not support it. Magesh et al. (2024) call a response misgrounded if its key propositions are cited but misinterpret the source or reference an inapplicable one, and count this as a hallucination; in the PARCEL benchmark, fabricated but plausible citations caused the largest drop in detection performance (Demir and Canbaz 2026).
+  summary_de: Eine Zitathalluzination ist eine Aussage, die eine Quelle zitiert, die nicht existiert oder die Aussage nicht stützt. Magesh et al. (2024) nennen eine Antwort fehlverankert (misgrounded), wenn ihre zentralen Aussagen zwar belegt sind, die Quelle aber falsch auslegen oder auf eine nicht einschlägige Quelle verweisen, und werten das als Halluzination; im Benchmark PARCEL führten erfundene, aber plausible Zitate zum stärksten Leistungseinbruch bei der Erkennung (Demir und Canbaz 2026).
+  sources:
+  - https://arxiv.org/abs/2405.20362
+  - https://arxiv.org/abs/2610.10971
 - id: grounding-hallucination
   type: Concept
   name_en: Grounding hallucination
   name_de: Grounding-Halluzination
+  summary_en: A grounding hallucination is a statement in a retrieval-augmented answer that is not supported by the retrieved context. Ragas evaluates this as faithfulness, the idea that the answer should be grounded in the given context so that the context can justify it (Es et al. 2023); in legal claims, missing support was harder for LLMs to detect than direct contradiction (Demir and Canbaz 2026).
+  summary_de: Eine Verankerungshalluzination ist eine Aussage in einer Antwort mit Retrieval, die vom abgerufenen Kontext nicht gestützt wird. Ragas bewertet das als Faithfulness, also den Anspruch, dass die Antwort im gegebenen Kontext verankert ist und dieser sie begründen kann (Es et al. 2023); bei juristischen Aussagen war fehlende Stützung für LLMs schwerer zu erkennen als ein direkter Widerspruch (Demir und Canbaz 2026).
+  sources:
+  - https://arxiv.org/abs/2309.15217
+  - https://arxiv.org/abs/2610.10971
 - id: claim-level-grounding-check
   type: Method
   name_en: Claim-level grounding check
   name_de: Grounding-Prüfung auf Aussageebene
+  summary_en: A claim-level grounding check splits a generated answer into short statements or atomic facts and verifies each one against a source; the score is the share of supported claims. FActScore computes the percentage of atomic facts supported by a reliable knowledge source (Min et al. 2023), and Ragas measures faithfulness as the share of statements that can be inferred from the retrieved context (Es et al. 2023).
+  summary_de: Eine Prüfung der Verankerung auf Aussageebene zerlegt eine generierte Antwort in kurze Aussagen oder atomare Fakten und prüft jede gegen eine Quelle; der Wert ist der Anteil gestützter Aussagen. FActScore berechnet den Anteil atomarer Fakten, die von einer verlässlichen Wissensquelle gestützt werden (Min et al. 2023), und Ragas misst Faithfulness als Anteil der Aussagen, die sich aus dem abgerufenen Kontext ableiten lassen (Es et al. 2023).
+  sources:
+  - https://arxiv.org/abs/2305.14251
+  - https://arxiv.org/abs/2309.15217
 - id: factscore
   type: Method
   name_en: FActScore
@@ -3336,14 +3371,28 @@ entities:
   type: Method
   name_en: Citation correctness verification
   name_de: Prüfung der Zitatkorrektheit
+  summary_en: Citation verification checks whether the sources cited in a generated answer actually support it. The ALCE benchmark measures citation recall, whether each statement is fully supported by its cited passages, and citation precision, which detects irrelevant citations, using a natural language inference model (Gao et al. 2023); even the best models lacked complete citation support in half of the cases on ELI5.
+  summary_de: Bei der Zitatprüfung wird kontrolliert, ob die in einer generierten Antwort zitierten Quellen sie tatsächlich stützen. Der Benchmark ALCE misst mit einem Modell für Natural Language Inference den Citation Recall, also ob jede Aussage vollständig von den zitierten Passagen gestützt wird, und die Citation Precision, die irrelevante Zitate erkennt (Gao et al. 2023); selbst die besten Modelle hatten auf ELI5 in der Hälfte der Fälle keine vollständige Zitatstützung.
+  sources:
+  - https://arxiv.org/abs/2305.14627
 - id: hallucination-rate
   type: Method
   name_en: Hallucination rate
   name_de: Halluzinationsrate
+  summary_en: The hallucination rate is the share of generated content that is not supported, for example the share of unsupported claims among all claims checked, the complement of measures such as FActScore (Min et al. 2023). Magesh et al. (2024) counted a response as hallucinated if it was incorrect or misgrounded and found that leading AI legal research tools hallucinated in 17% to 33% of cases.
+  summary_de: Die Halluzinationsrate ist der Anteil generierter Inhalte, der nicht gestützt ist, etwa der Anteil nicht gestützter Aussagen an allen geprüften Aussagen, also das Gegenstück zu Maßen wie FActScore (Min et al. 2023). Magesh et al. (2024) werteten eine Antwort als halluziniert, wenn sie falsch oder fehlverankert war, und fanden bei führenden KI-Werkzeugen für juristische Recherche Halluzinationsraten von 17 % bis 33 %.
+  sources:
+  - https://arxiv.org/abs/2305.14251
+  - https://arxiv.org/abs/2405.20362
 - id: sparse-retrieval
   type: Method
   name_en: Sparse retrieval
   name_de: Sparse Retrieval
+  summary_en: Sparse retrieval represents queries and documents by weighted terms, as in BM25, and matches them on shared terms (Gao et al. 2023; Robertson and Zaragoza 2009). In retrieval-augmented generation it complements dense retrieval with embeddings in hybrid search, for example for queries with rare entities.
+  summary_de: Sparse Retrieval stellt Anfragen und Dokumente über gewichtete Terme dar, etwa mit BM25, und gleicht sie über gemeinsame Terme ab (Gao et al. 2023; Robertson und Zaragoza 2009). In Retrieval-Augmented Generation ergänzt es in hybrider Suche das Dense Retrieval mit Embeddings, etwa bei Anfragen mit seltenen Entitäten.
+  sources:
+  - https://arxiv.org/abs/2312.10997
+  - https://doi.org/10.1561/1500000019
 - id: hyde
   type: Method
   name_en: HyDE (Hypothetical Document Embeddings)
@@ -3456,6 +3505,10 @@ entities:
   type: Method
   name_en: Metadata filtering
   name_de: Metadatenfilterung
+  summary_en: Metadata filtering restricts retrieval to chunks whose metadata, such as file name, category or timestamp, match given conditions, which limits the scope of the search (Gao et al. 2023). Weighting timestamps, for example, allows time-aware retrieval that favours current over outdated information.
+  summary_de: Metadatenfilterung beschränkt das Retrieval auf Chunks, deren Metadaten wie Dateiname, Kategorie oder Zeitstempel bestimmte Bedingungen erfüllen, und grenzt so den Suchraum ein (Gao et al. 2023). Eine Gewichtung von Zeitstempeln erlaubt etwa zeitbewusstes Retrieval, das aktuelle Informationen gegenüber veralteten bevorzugt.
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: turtle
   type: Technology
   name_en: Turtle
