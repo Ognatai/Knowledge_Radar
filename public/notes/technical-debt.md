@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Technical debt is a metaphor, coined by Ward Cunningham, for deficiencies in the internal quality of software that make it harder to change and extend; the extra effort they cause for each new feature is the interest paid on the debt (Fowler, 2019). Cunningham compared shipping first-time code to going into debt: a little debt speeds development as long as it is paid back promptly with a rewrite, but every minute spent on not-quite-right code counts as interest (Cunningham, 1992). Debt can be deliberate or inadvertent and prudent or reckless (Fowler, 2009). Machine learning systems have all the maintenance problems of traditional code plus ML-specific debt at the system level, which ordinary refactoring does not remove (Sculley et al., 2015).
+Technical debt is a metaphor, coined by Ward Cunningham, for deficiencies in the internal quality of software that make it harder to change and extend; the extra effort they cause for each new feature is the interest paid on the debt (Fowler, 2019). Cunningham compared shipping first-time code to going into debt: a little debt speeds development as long as it is paid back promptly with a rewrite, but every minute spent on not-quite-right code counts as interest (Cunningham, 1992). Debt can be deliberate or inadvertent and prudent or reckless (Fowler, 2009). Machine learning systems have all the maintenance problems of traditional code plus ML-specific debt at the system level, which ordinary [[refactoring|refactoring]] does not remove (Sculley et al., 2015).
 
 ### How it works
 
@@ -106,7 +106,7 @@ Technical debt is the extra effort that deficient internal quality adds to every
 
 ### TL;DR
 
-Technische Schulden sind eine von Ward Cunningham geprägte Metapher für Mängel in der inneren Qualität von Software, die Änderungen und Erweiterungen erschweren; der Mehraufwand, den sie bei jedem neuen Feature verursachen, sind die Zinsen auf die Schulden (Fowler, 2019). Cunningham verglich das Ausliefern von Code in erster Fassung mit dem Aufnehmen von Schulden: Ein wenig Schulden beschleunigt die Entwicklung, solange sie zügig durch eine Überarbeitung zurückgezahlt werden, aber jede Minute, die für nicht ganz richtigen Code aufgewendet wird, zählt als Zins (Cunningham, 1992). Schulden können bewusst oder unbewusst und umsichtig oder leichtsinnig entstehen (Fowler, 2009). Machine-Learning-Systeme haben alle Wartungsprobleme herkömmlichen Codes und zusätzlich ML-spezifische Schulden auf Systemebene, die gewöhnliches Refactoring nicht beseitigt (Sculley et al., 2015).
+Technische Schulden sind eine von Ward Cunningham geprägte Metapher für Mängel in der inneren Qualität von Software, die Änderungen und Erweiterungen erschweren; der Mehraufwand, den sie bei jedem neuen Feature verursachen, sind die Zinsen auf die Schulden (Fowler, 2019). Cunningham verglich das Ausliefern von Code in erster Fassung mit dem Aufnehmen von Schulden: Ein wenig Schulden beschleunigt die Entwicklung, solange sie zügig durch eine Überarbeitung zurückgezahlt werden, aber jede Minute, die für nicht ganz richtigen Code aufgewendet wird, zählt als Zins (Cunningham, 1992). Schulden können bewusst oder unbewusst und umsichtig oder leichtsinnig entstehen (Fowler, 2009). Machine-Learning-Systeme haben alle Wartungsprobleme herkömmlichen Codes und zusätzlich ML-spezifische Schulden auf Systemebene, die gewöhnliches [[refactoring|Refactoring]] nicht beseitigt (Sculley et al., 2015).
 
 ### Funktionsweise
 

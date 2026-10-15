@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Martin Fowler is a software author and Chief Scientist at the software delivery company Thoughtworks, known for his books on refactoring, enterprise application architecture and UML, and for his website martinfowler.com, whose articles and "bliki" entries are widely cited definitions of software engineering practices (Fowler, n.d.-a). He co-signed the Manifesto for Agile Software Development in 2001 (Beck et al., 2001). In this knowledge base, his writing is a primary source for [[ci-cd|continuous integration]], [[technical-debt|technical debt]], [[software-testing|testing]], [[infrastructure-as-code|infrastructure as code]] and [[requirements-engineering|requirements]] practices such as user stories. Since 2023, his site has also published a series of memos by Thoughtworks colleagues on using generative AI in software delivery (Böckeler et al., 2023–2026).
+Martin Fowler is a software author and Chief Scientist at the software delivery company Thoughtworks, known for his books on [[refactoring|refactoring]], enterprise application architecture and UML, and for his website martinfowler.com, whose articles and "bliki" entries are widely cited definitions of software engineering practices (Fowler, n.d.-a). He co-signed the Manifesto for Agile Software Development in 2001 (Beck et al., 2001). In this knowledge base, his writing is a primary source for [[ci-cd|continuous integration]], [[technical-debt|technical debt]], [[software-testing|testing]], [[infrastructure-as-code|infrastructure as code]] and [[requirements-engineering|requirements]] practices such as user stories. Since 2023, his site has also published a series of memos by Thoughtworks colleagues on using generative AI in software delivery (Böckeler et al., 2023–2026).
 
 ### Key facts
 
@@ -43,7 +43,7 @@ Fowler worked as an independent consultant from 1991 and then joined Thoughtwork
 
 #### Refactoring
 
-Fowler defines refactoring as "a controlled technique for improving the design of an existing code base"; his book *Refactoring* appeared in 1999 and in a second edition in 2018, co-written with Kent Beck (Fowler, n.d.-c; Fowler, n.d.-b). The term "code smell", "a surface indication that usually corresponds to a deeper problem in the system", was coined by Kent Beck while helping Fowler with the book (Fowler, 2006; [[technical-debt|technical debt]]).
+Fowler defines refactoring as "a controlled technique for improving the design of an existing code base"; his book *Refactoring* appeared in 1999 and in a second edition in 2018, co-written with [[kent-beck|Kent Beck]] (Fowler, n.d.-c; Fowler, n.d.-b). The term "code smell", "a surface indication that usually corresponds to a deeper problem in the system", was coined by Kent Beck while helping Fowler with the book (Fowler, 2006; [[technical-debt|technical debt]]).
 
 #### Enterprise application architecture and patterns
 
@@ -97,7 +97,7 @@ The "Exploring Generative AI" series on his site, written mostly by Birgitta Bö
 
 ### TL;DR
 
-Martin Fowler ist Autor zu Softwareentwicklung und Chief Scientist beim Softwaredienstleister Thoughtworks, bekannt für seine Bücher über Refactoring, Architektur von Unternehmensanwendungen und UML sowie für seine Website martinfowler.com, deren Artikel und „Bliki“-Einträge viel zitierte Definitionen von Praktiken der Softwareentwicklung sind (Fowler, n.d.-a). 2001 unterzeichnete er das Manifest für agile Softwareentwicklung mit (Beck et al., 2001). In dieser Wissensbasis ist er Primärquelle für [[ci-cd|Continuous Integration]], [[technical-debt|technische Schulden]], [[software-testing|Testen]], [[infrastructure-as-code|Infrastructure as Code]] und Praktiken des [[requirements-engineering|Requirements Engineering]] wie User Stories. Seit 2023 veröffentlicht seine Website zudem eine Reihe von Notizen von Thoughtworks-Kolleginnen und -Kollegen zum Einsatz generativer KI in der Softwareentwicklung (Böckeler et al., 2023–2026).
+Martin Fowler ist Autor zu Softwareentwicklung und Chief Scientist beim Softwaredienstleister Thoughtworks, bekannt für seine Bücher über [[refactoring|Refactoring]], Architektur von Unternehmensanwendungen und UML sowie für seine Website martinfowler.com, deren Artikel und „Bliki“-Einträge viel zitierte Definitionen von Praktiken der Softwareentwicklung sind (Fowler, n.d.-a). 2001 unterzeichnete er das Manifest für agile Softwareentwicklung mit (Beck et al., 2001). In dieser Wissensbasis ist er Primärquelle für [[ci-cd|Continuous Integration]], [[technical-debt|technische Schulden]], [[software-testing|Testen]], [[infrastructure-as-code|Infrastructure as Code]] und Praktiken des [[requirements-engineering|Requirements Engineering]] wie User Stories. Seit 2023 veröffentlicht seine Website zudem eine Reihe von Notizen von Thoughtworks-Kolleginnen und -Kollegen zum Einsatz generativer KI in der Softwareentwicklung (Böckeler et al., 2023–2026).
 
 ### Eckdaten
 
@@ -119,7 +119,7 @@ Fowler arbeitete ab 1991 als unabhängiger Berater und kam dann zu Thoughtworks,
 
 #### Refactoring
 
-Fowler definiert Refactoring als „a controlled technique for improving the design of an existing code base“; sein Buch *Refactoring* erschien 1999 und 2018 in zweiter Auflage, gemeinsam mit Kent Beck (Fowler, n.d.-c; Fowler, n.d.-b). Den Begriff „Code Smell“, „a surface indication that usually corresponds to a deeper problem in the system“, prägte Kent Beck, als er Fowler bei dem Buch half (Fowler, 2006; [[technical-debt|technische Schulden]]).
+Fowler definiert Refactoring als „a controlled technique for improving the design of an existing code base“; sein Buch *Refactoring* erschien 1999 und 2018 in zweiter Auflage, gemeinsam mit [[kent-beck|Kent Beck]] (Fowler, n.d.-c; Fowler, n.d.-b). Den Begriff „Code Smell“, „a surface indication that usually corresponds to a deeper problem in the system“, prägte Kent Beck, als er Fowler bei dem Buch half (Fowler, 2006; [[technical-debt|technische Schulden]]).
 
 #### Architektur und Muster für Unternehmensanwendungen
 

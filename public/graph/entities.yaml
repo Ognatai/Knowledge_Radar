@@ -397,12 +397,6 @@ entities:
   type: Concept
   name_en: Simpson's paradox
   name_de: Simpson-Paradoxon
-- id: bbk
-  type: Organisation
-  name_en: Federal Office of Civil Protection and Disaster Assistance (BBK)
-  name_de: Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)
-  aliases:
-  - BBK
 - id: eci-directive
   type: Regulation
   name_en: European Critical Infrastructures Directive 2008/114/EC
@@ -511,10 +505,6 @@ entities:
   type: Concept
   name_en: Code smell
   name_de: Code Smell
-- id: refactoring
-  type: Method
-  name_en: Refactoring
-  name_de: Refactoring
 - id: code-review
   type: Method
   name_en: Code review
@@ -1274,10 +1264,6 @@ entities:
   type: Technology
   name_en: GitHub
   name_de: GitHub
-- id: autogen
-  type: Technology
-  name_en: AutoGen
-  name_de: AutoGen
 - id: viv-trivedy
   type: Person
   name_en: Viv Trivedy
@@ -2599,10 +2585,6 @@ entities:
   type: Person
   name_en: Ward Cunningham
   name_de: Ward Cunningham
-- id: kent-beck
-  type: Person
-  name_en: Kent Beck
-  name_de: Kent Beck
 - id: github-actions
   type: Technology
   name_en: GitHub Actions
@@ -2641,10 +2623,6 @@ entities:
   type: Technology
   name_en: OpenLineage
   name_de: OpenLineage
-- id: matei-zaharia
-  type: Person
-  name_en: Matei Zaharia
-  name_de: Matei Zaharia
 - id: jeffrey-dean
   type: Person
   name_en: Jeffrey Dean
@@ -2739,13 +2717,6 @@ entities:
   type: Technology
   name_en: NeMo Guardrails
   name_de: NeMo Guardrails
-- id: meta
-  type: Organisation
-  name_en: Meta
-  name_de: Meta
-  aliases:
-  - Facebook AI Research
-  - FAIR
 - id: natural-questions
   type: Dataset
   name_en: Natural Questions
@@ -2797,3 +2768,38 @@ entities:
   name_de: Thoughtworks
   aliases:
   - ThoughtWorks
+- id: extreme-programming
+  type: Method
+  name_en: Extreme Programming (XP)
+  name_de: Extreme Programming (XP)
+  aliases:
+  - Extreme Programming
+  - XP
+- id: test-driven-development
+  type: Method
+  name_en: Test-driven development (TDD)
+  name_de: Testgetriebene Entwicklung (TDD)
+  aliases:
+  - Test-driven development
+  - TDD
+  - Red, green, refactor
+- id: junit
+  type: Technology
+  name_en: JUnit
+  name_de: JUnit
+- id: erich-gamma
+  type: Person
+  name_en: Erich Gamma
+  name_de: Erich Gamma
+- id: dspy
+  type: Technology
+  name_en: DSPy
+  name_de: DSPy
+- id: delta-lake
+  type: Technology
+  name_en: Delta Lake
+  name_de: Delta Lake
+- id: microsoft-agent-framework
+  type: Technology
+  name_en: Microsoft Agent Framework
+  name_de: Microsoft Agent Framework

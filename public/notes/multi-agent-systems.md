@@ -44,7 +44,7 @@ A single LLM agent combines decision-making, tool use and memory; multi-agent sy
 
 #### 2. Communication
 
-Agents communicate cooperatively towards a shared goal, in a debate to refine a solution, or competitively towards conflicting goals (Guo et al., 2024). The communication structure can be layered, decentralised (peer-to-peer), centralised around one or more coordinating agents, or a shared message pool to which agents publish and subscribe, as in MetaGPT; the content is usually text (Guo et al., 2024). In AutoGen, agents are "conversable" and can be backed by LLMs, tools, humans or combinations, and developers program conversation patterns in natural language or code (Wu et al., 2023).
+Agents communicate cooperatively towards a shared goal, in a debate to refine a solution, or competitively towards conflicting goals (Guo et al., 2024). The communication structure can be layered, decentralised (peer-to-peer), centralised around one or more coordinating agents, or a shared message pool to which agents publish and subscribe, as in MetaGPT; the content is usually text (Guo et al., 2024). In [[autogen|AutoGen]], agents are "conversable" and can be backed by LLMs, tools, humans or combinations, and developers program conversation patterns in natural language or code (Wu et al., 2023).
 
 #### 3. The environment and feedback
 
@@ -136,7 +136,7 @@ Ein einzelner LLM-Agent verbindet Entscheidungsfindung, Werkzeugnutzung und Ged�
 
 #### 2. Kommunikation
 
-Agenten kommunizieren kooperativ auf ein gemeinsames Ziel hin, in einer Debatte, um eine Lösung zu verfeinern, oder kompetitiv mit widerstreitenden Zielen (Guo et al., 2024). Die Kommunikationsstruktur kann geschichtet, dezentral (Peer-to-Peer), um einen oder mehrere koordinierende Agenten zentriert oder ein gemeinsamer Nachrichtenpool sein, in den Agenten veröffentlichen und den sie abonnieren, wie bei MetaGPT; der Inhalt ist meist Text (Guo et al., 2024). In AutoGen sind Agenten „conversable“ und können auf LLMs, Werkzeugen, Menschen oder Kombinationen beruhen, und Entwicklerinnen und Entwickler programmieren Gesprächsmuster in natürlicher Sprache oder Code (Wu et al., 2023).
+Agenten kommunizieren kooperativ auf ein gemeinsames Ziel hin, in einer Debatte, um eine Lösung zu verfeinern, oder kompetitiv mit widerstreitenden Zielen (Guo et al., 2024). Die Kommunikationsstruktur kann geschichtet, dezentral (Peer-to-Peer), um einen oder mehrere koordinierende Agenten zentriert oder ein gemeinsamer Nachrichtenpool sein, in den Agenten veröffentlichen und den sie abonnieren, wie bei MetaGPT; der Inhalt ist meist Text (Guo et al., 2024). In [[autogen|AutoGen]] sind Agenten „conversable“ und können auf LLMs, Werkzeugen, Menschen oder Kombinationen beruhen, und Entwicklerinnen und Entwickler programmieren Gesprächsmuster in natürlicher Sprache oder Code (Wu et al., 2023).
 
 #### 3. Umgebung und Feedback
 

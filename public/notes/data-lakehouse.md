@@ -65,7 +65,7 @@ The pattern is a recommended practice, not a requirement (Databricks Medallion).
 
 #### Origin and variants
 
-Michael Armbrust, Ali Ghodsi, Reynold Xin and Matei Zaharia of Databricks set out the lakehouse architecture at CIDR 2021; Databricks had begun developing Delta Lake in 2016 and described it at VLDB 2020 (Armbrust et al., 2021; Armbrust et al., 2020). Governance across the lakehouse is provided by a catalogue such as Unity Catalog, which has an open-source implementation (Databricks Unity Catalog); see [[data-governance|data governance]].
+Michael Armbrust, Ali Ghodsi, Reynold Xin and [[matei-zaharia|Matei Zaharia]] of Databricks set out the lakehouse architecture at CIDR 2021; Databricks had begun developing Delta Lake in 2016 and described it at VLDB 2020 (Armbrust et al., 2021; Armbrust et al., 2020). Governance across the lakehouse is provided by a catalogue such as Unity Catalog, which has an open-source implementation (Databricks Unity Catalog); see [[data-governance|data governance]].
 
 ### When to use it
 
@@ -161,7 +161,7 @@ Das Muster ist eine Empfehlung, keine Pflicht (Databricks Medallion). Die Modell
 
 #### Herkunft und Varianten
 
-Michael Armbrust, Ali Ghodsi, Reynold Xin und Matei Zaharia von Databricks legten die Lakehouse-Architektur auf der CIDR 2021 dar; Databricks hatte 2016 mit der Entwicklung von Delta Lake begonnen und es auf der VLDB 2020 beschrieben (Armbrust et al., 2021; Armbrust et al., 2020). Governance über das Lakehouse liefert ein Katalog wie Unity Catalog, der auch als Open Source verfügbar ist (Databricks Unity Catalog); siehe [[data-governance|Data Governance]].
+Michael Armbrust, Ali Ghodsi, Reynold Xin und [[matei-zaharia|Matei Zaharia]] von Databricks legten die Lakehouse-Architektur auf der CIDR 2021 dar; Databricks hatte 2016 mit der Entwicklung von Delta Lake begonnen und es auf der VLDB 2020 beschrieben (Armbrust et al., 2021; Armbrust et al., 2020). Governance über das Lakehouse liefert ein Katalog wie Unity Catalog, der auch als Open Source verfügbar ist (Databricks Unity Catalog); siehe [[data-governance|Data Governance]].
 
 ### Wann einsetzen
 

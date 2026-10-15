@@ -42,6 +42,7 @@ areas:
       - openai
       - microsoft
       - anthropic
+      - meta
     also:
       - bias-in-nlp
       - legal-ai
@@ -86,6 +87,7 @@ areas:
       - few-shot-prompting
       - multi-agent-systems
       - dialogflow-cx
+      - autogen
   - id: retrieval
     name_en: Retrieval & RAG
     name_de: Retrieval & RAG
@@ -252,6 +254,8 @@ areas:
       - rest
       - http
       - martin-fowler
+      - refactoring
+      - kent-beck
     also:
       - scikit-learn
       - langchain-and-langgraph
@@ -271,6 +275,7 @@ areas:
       - web-analytics
       - data-visualisation
       - databricks
+      - matei-zaharia
     also:
       - data-pipelines
       - sql
@@ -318,6 +323,7 @@ areas:
       - federal-network-agency
       - federal-ministry-of-the-interior
       - tkg
+      - bbk
   - id: financial-regulation
     name_en: Financial Supervision
     name_de: Finanzaufsicht

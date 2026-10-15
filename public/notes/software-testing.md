@@ -25,7 +25,7 @@ sources:
 
 ### TL;DR
 
-Automated software tests check that code behaves as intended and keep checking it with every change, which makes them the foundation of [[ci-cd|CI/CD]] and refactoring. The test pyramid organises them by granularity: many fast unit tests at the bottom, fewer integration and contract tests in the middle, and only a few slow end-to-end tests through the user interface at the top (Vocke, 2018). Test doubles such as stubs and mocks replace real collaborators to keep tests fast and isolated (Fowler, 2006). In Python, pytest is the common framework; Playwright drives real browsers for end-to-end tests of web applications (pytest docs; Playwright docs). ML systems need additional tests for data, models and [[monitoring-and-alerting|monitoring]], which Breck et al. (2017) collect in the [[ml-test-score|ML Test Score]].
+Automated software tests check that code behaves as intended and keep checking it with every change, which makes them the foundation of [[ci-cd|CI/CD]] and [[refactoring|refactoring]]. The test pyramid organises them by granularity: many fast unit tests at the bottom, fewer integration and contract tests in the middle, and only a few slow end-to-end tests through the user interface at the top (Vocke, 2018). Test doubles such as stubs and mocks replace real collaborators to keep tests fast and isolated (Fowler, 2006). In Python, pytest is the common framework; Playwright drives real browsers for end-to-end tests of web applications (pytest docs; Playwright docs). ML systems need additional tests for data, models and [[monitoring-and-alerting|monitoring]], which Breck et al. (2017) collect in the [[ml-test-score|ML Test Score]].
 
 ### How it works
 
@@ -130,7 +130,7 @@ Automated tests are layered from many fast unit tests to few slow end-to-end tes
 
 ### TL;DR
 
-Automatisierte Softwaretests prüfen, ob sich Code wie beabsichtigt verhält, und prüfen das bei jeder Änderung erneut; damit sind sie die Grundlage von [[ci-cd|CI/CD]] und Refactoring. Die Testpyramide ordnet sie nach Granularität: viele schnelle Unit-Tests unten, weniger Integrations- und Contract-Tests in der Mitte und nur wenige langsame End-to-End-Tests über die Benutzeroberfläche oben (Vocke, 2018). Test Doubles wie Stubs und Mocks ersetzen echte Kollaborateure, damit Tests schnell und isoliert bleiben (Fowler, 2006). In Python ist pytest das verbreitete Framework; Playwright steuert echte Browser für End-to-End-Tests von Webanwendungen (pytest docs; Playwright docs). ML-Systeme brauchen zusätzliche Tests für Daten, Modelle und [[monitoring-and-alerting|Monitoring]], die Breck et al. (2017) im [[ml-test-score|ML Test Score]] zusammenfassen.
+Automatisierte Softwaretests prüfen, ob sich Code wie beabsichtigt verhält, und prüfen das bei jeder Änderung erneut; damit sind sie die Grundlage von [[ci-cd|CI/CD]] und [[refactoring|Refactoring]]. Die Testpyramide ordnet sie nach Granularität: viele schnelle Unit-Tests unten, weniger Integrations- und Contract-Tests in der Mitte und nur wenige langsame End-to-End-Tests über die Benutzeroberfläche oben (Vocke, 2018). Test Doubles wie Stubs und Mocks ersetzen echte Kollaborateure, damit Tests schnell und isoliert bleiben (Fowler, 2006). In Python ist pytest das verbreitete Framework; Playwright steuert echte Browser für End-to-End-Tests von Webanwendungen (pytest docs; Playwright docs). ML-Systeme brauchen zusätzliche Tests für Daten, Modelle und [[monitoring-and-alerting|Monitoring]], die Breck et al. (2017) im [[ml-test-score|ML Test Score]] zusammenfassen.
 
 ### Funktionsweise
 

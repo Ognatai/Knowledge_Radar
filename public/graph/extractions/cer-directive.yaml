@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5b204d68a891fedc3cc578bbf39ab3917d394512365e64f07c15a7a5433f90c6
+note_sha256: 4f7866eb9c14798ce6de8d290c7f9f06d1a41bf8c2e1adccfaf679e4131df8e4
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - nis2-directive

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 550e4fb0f6671ebecbcfd53c5f6acb849557bcff27b47fd6385b2465740584ad
+note_sha256: fcbdeb6a3d956be373460ad5114cb9c3aa6d5295518cea4911d45ac1b4214fb9
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agent-frameworks

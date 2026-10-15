@@ -1,0 +1,36 @@
+version: 1
+note_sha256: 8dec60328341ea80e93c9ab7ccc74b9a4249c272b70f9cf9303a9299dd965593
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- ci-cd
+- context-engineering
+- martin-fowler
+- refactoring
+- requirements-engineering
+- software-testing
+- extreme-programming
+- test-driven-development
+- junit
+- erich-gamma
+- code-smell
+relations:
+- from: extreme-programming
+  type: DEVELOPED_BY
+  to: kent-beck
+  evidence: extreme programming (xp), which he developed primarily
+- from: test-driven-development
+  type: DEVELOPED_BY
+  to: kent-beck
+  evidence: developed by kent beck in the late 1990's as part of extreme programming
+- from: junit
+  type: DEVELOPED_BY
+  to: kent-beck
+  evidence: junit, originally written by beck and erich gamma
+- from: junit
+  type: DEVELOPED_BY
+  to: erich-gamma
+  evidence: junit, originally written by beck and erich gamma
+- from: code-smell
+  type: DEVELOPED_BY
+  to: kent-beck
+  evidence: beck coined the term "code smell" while helping fowler

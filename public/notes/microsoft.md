@@ -42,7 +42,7 @@ Microsoft is organised in the three reporting segments above (Microsoft, 2026). 
 ### Key outputs
 
 - Research: ResNet, presented by Microsoft Research at CVPR 2016 ([[resnet|ResNet]]); the MS MARCO dataset of real Bing questions ([[ms-marco|MS MARCO]]).
-- Developer platforms: Azure and Azure AI Foundry (also Microsoft Foundry) with access to models from Microsoft, OpenAI and others ([[cloud-ai-platforms|cloud AI platforms]]); Semantic Kernel and AutoGen, merged into Microsoft Agent Framework ([[agent-frameworks|agent frameworks]]); GitHub (Microsoft, 2026).
+- Developer platforms: Azure and Azure AI Foundry (also Microsoft Foundry) with access to models from Microsoft, OpenAI and others ([[cloud-ai-platforms|cloud AI platforms]]); Semantic Kernel and [[autogen|AutoGen]], merged into Microsoft Agent Framework ([[agent-frameworks|agent frameworks]]); GitHub (Microsoft, 2026).
 - Engineering guidance: the Azure REST API Guidelines and the asynchronous request-reply pattern ([[apis|APIs]], [[asynchronous-apis|asynchronous APIs]]).
 - Products: Microsoft 365 Copilot and Copilot in search (Microsoft, 2026).
 
@@ -90,7 +90,7 @@ Microsoft ist in die drei genannten Berichtssegmente gegliedert (Microsoft, 2026
 ### Wichtige Ergebnisse
 
 - Forschung: ResNet, von Microsoft Research auf der CVPR 2016 vorgestellt ([[resnet|ResNet]]); der Datensatz MS MARCO mit echten Bing-Suchfragen ([[ms-marco|MS MARCO]]).
-- Entwicklerplattformen: Azure und Azure AI Foundry (auch Microsoft Foundry) mit Zugang zu Modellen von Microsoft, OpenAI und anderen ([[cloud-ai-platforms|Cloud-KI-Plattformen]]); Semantic Kernel und AutoGen, zusammengeführt im Microsoft Agent Framework ([[agent-frameworks|Agenten-Frameworks]]); GitHub (Microsoft, 2026).
+- Entwicklerplattformen: Azure und Azure AI Foundry (auch Microsoft Foundry) mit Zugang zu Modellen von Microsoft, OpenAI und anderen ([[cloud-ai-platforms|Cloud-KI-Plattformen]]); Semantic Kernel und [[autogen|AutoGen]], zusammengeführt im Microsoft Agent Framework ([[agent-frameworks|Agenten-Frameworks]]); GitHub (Microsoft, 2026).
 - Ingenieurshinweise: die Azure REST API Guidelines und das Muster asynchroner Anfrage und Antwort ([[apis|APIs]], [[asynchronous-apis|asynchrone APIs]]).
 - Produkte: Microsoft 365 Copilot und Copilot in der Suche (Microsoft, 2026).
 

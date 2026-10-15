@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4d86dff76f9badfe5e55a51a6f9d4262c28708a27d27061473d35fc88002330a
+note_sha256: 92cc82ea4849b856a730ce8a0317c3127f80c7f94f044454f0137a3e7a9fe114
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bias-in-nlp

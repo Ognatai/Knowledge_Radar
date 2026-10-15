@@ -1,0 +1,35 @@
+version: 1
+note_sha256: 5c0d233a11e21ac0dd780671037ce0b210a776a03c1700e6937595806b3df7d5
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apache-spark
+- bert
+- colbert
+- data-lakehouse
+- databricks
+- retrieval-augmented-generation
+- dspy
+- delta-lake
+- omar-khattab
+- mlflow
+relations:
+- from: apache-spark
+  type: DEVELOPED_BY
+  to: matei-zaharia
+  evidence: during his phd he started apache spark
+- from: colbert
+  type: DEVELOPED_BY
+  to: matei-zaharia
+  evidence: with omar khattab he introduced colbert
+- from: colbert
+  type: DEVELOPED_BY
+  to: omar-khattab
+  evidence: with omar khattab he introduced colbert
+- from: mlflow
+  type: DEVELOPED_BY
+  to: matei-zaharia
+  evidence: where he helped develop mlflow and delta lake
+- from: delta-lake
+  type: DEVELOPED_BY
+  to: matei-zaharia
+  evidence: where he helped develop mlflow and delta lake

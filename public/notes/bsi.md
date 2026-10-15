@@ -53,7 +53,7 @@ The BSI frames AI security in three perspectives: how AI systems can be attacked
 
 - **[[federal-ministry-of-the-interior|Federal Ministry of the Interior]]:** the BSI belongs to its portfolio (§ 1 BSIG).
 - **[[enisa|ENISA]] and EU networks:** the BSI works in the NIS2 Cooperation Group and CSIRTs network and carries out NIS2 peer reviews (§ 3 Abs. 1 Nr. 3, 6 BSIG).
-- **BBK:** jointly operates the registration channel for critical facilities ([[kritis-dachgesetz|KRITIS-Dachgesetz]]).
+- **[[bbk|BBK]]:** jointly operates the registration channel for critical facilities ([[kritis-dachgesetz|KRITIS-Dachgesetz]]).
 
 ### Sources
 
@@ -101,7 +101,7 @@ Das BSI betrachtet KI-Sicherheit aus drei Blickwinkeln: wie KI-Systeme angegriff
 
 - **[[federal-ministry-of-the-interior|Bundesministerium des Innern]]:** Das BSI gehört zu dessen Geschäftsbereich (§ 1 BSIG).
 - **[[enisa|ENISA]] und EU-Netzwerke:** Das BSI wirkt in der NIS-2-Kooperationsgruppe und im CSIRTs-Netzwerk mit und führt Peer Reviews nach NIS 2 durch (§ 3 Abs. 1 Nr. 3, 6 BSIG).
-- **BBK:** betreibt gemeinsam mit dem BSI die Registrierungsmöglichkeit für kritische Anlagen ([[kritis-dachgesetz|KRITIS-Dachgesetz]]).
+- **[[bbk|BBK]]:** betreibt gemeinsam mit dem BSI die Registrierungsmöglichkeit für kritische Anlagen ([[kritis-dachgesetz|KRITIS-Dachgesetz]]).
 
 ### Quellen
 

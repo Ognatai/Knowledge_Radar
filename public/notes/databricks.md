@@ -34,7 +34,7 @@ Databricks states that it is "on a mission to simplify and democratize data and 
 
 ### Structure and working methods
 
-The company has its origins in academia and the open-source community (Databricks, n.d.). Spark began at UC Berkeley around resilient distributed datasets ([[apache-spark|Apache Spark]]), and Databricks researchers, among them Michael Armbrust, Ali Ghodsi, Reynold Xin and Matei Zaharia, set out the lakehouse architecture at CIDR 2021 after Databricks had begun developing Delta Lake in 2016 ([[data-lakehouse|data lakehouse]]). It works with a network of more than 1,200 cloud, ISV and consulting partners (Databricks, n.d.).
+The company has its origins in academia and the open-source community (Databricks, n.d.). Spark began at UC Berkeley around resilient distributed datasets ([[apache-spark|Apache Spark]]), and Databricks researchers, among them Michael Armbrust, Ali Ghodsi, Reynold Xin and [[matei-zaharia|Matei Zaharia]], set out the lakehouse architecture at CIDR 2021 after Databricks had begun developing Delta Lake in 2016 ([[data-lakehouse|data lakehouse]]). It works with a network of more than 1,200 cloud, ISV and consulting partners (Databricks, n.d.).
 
 ### Key outputs
 
@@ -78,7 +78,7 @@ Databricks erklärt, es verfolge die Mission, „to simplify and democratize dat
 
 ### Aufbau und Arbeitsweise
 
-Das Unternehmen hat seine Wurzeln in der Wissenschaft und der Open-Source-Gemeinschaft (Databricks, n.d.). Spark entstand an der UC Berkeley rund um Resilient Distributed Datasets ([[apache-spark|Apache Spark]]), und Forschende von Databricks, darunter Michael Armbrust, Ali Ghodsi, Reynold Xin und Matei Zaharia, beschrieben die Lakehouse-Architektur auf der CIDR 2021, nachdem Databricks 2016 mit der Entwicklung von Delta Lake begonnen hatte ([[data-lakehouse|Data Lakehouse]]). Es arbeitet mit einem Netz aus mehr als 1 200 Cloud-, ISV- und Beratungspartnern (Databricks, n.d.).
+Das Unternehmen hat seine Wurzeln in der Wissenschaft und der Open-Source-Gemeinschaft (Databricks, n.d.). Spark entstand an der UC Berkeley rund um Resilient Distributed Datasets ([[apache-spark|Apache Spark]]), und Forschende von Databricks, darunter Michael Armbrust, Ali Ghodsi, Reynold Xin und [[matei-zaharia|Matei Zaharia]], beschrieben die Lakehouse-Architektur auf der CIDR 2021, nachdem Databricks 2016 mit der Entwicklung von Delta Lake begonnen hatte ([[data-lakehouse|Data Lakehouse]]). Es arbeitet mit einem Netz aus mehr als 1 200 Cloud-, ISV- und Beratungspartnern (Databricks, n.d.).
 
 ### Wichtige Ergebnisse
 

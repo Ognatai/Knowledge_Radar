@@ -46,7 +46,7 @@ deployment: staging → production (blue-green, canary, rolling) → monitoring
 
 #### 1. Mainline integration
 
-CI rests on a single version-controlled mainline that holds everything needed to build and run the product: code, scripts, database schemas, configuration and references to tools, but not build outputs (Fowler, 2024). Everyone pushes to the mainline at least once a day; Kent Beck's guideline is that no code sits unintegrated for more than a couple of hours. Small, frequent integrations keep conflicts small; Fowler (2024) calls long-lived feature branches "semi-integration" and treats CI and feature branching as mutually exclusive, except for features finished within a day. Unfinished work is integrated but hidden, for example behind feature flags, keystone interfaces or branch by abstraction (Fowler, 2024). Pull-request reviews that take hours or days break this rhythm; pair programming, the Ship/Show/Ask approach or review after integration are alternatives (Fowler, 2024). Branching itself is covered in [[git|Git]].
+CI rests on a single version-controlled mainline that holds everything needed to build and run the product: code, scripts, database schemas, configuration and references to tools, but not build outputs (Fowler, 2024). Everyone pushes to the mainline at least once a day; [[kent-beck|Kent Beck]]'s guideline is that no code sits unintegrated for more than a couple of hours. Small, frequent integrations keep conflicts small; Fowler (2024) calls long-lived feature branches "semi-integration" and treats CI and feature branching as mutually exclusive, except for features finished within a day. Unfinished work is integrated but hidden, for example behind feature flags, keystone interfaces or branch by abstraction (Fowler, 2024). Pull-request reviews that take hours or days break this rhythm; pair programming, the Ship/Show/Ask approach or review after integration are alternatives (Fowler, 2024). Branching itself is covered in [[git|Git]].
 
 #### 2. The self-testing build
 
@@ -92,7 +92,7 @@ Kent Beck developed CI in the 1990s as part of Extreme Programming; Grady Booch 
 
 **Strengths**
 - Removes delivery risk because each integration is small; Fowler (2024) writes that CI "effectively eliminates delivery risk".
-- Bugs are found close to the change that caused them, and frequent integration makes refactoring practical (Fowler, 2024).
+- Bugs are found close to the change that caused them, and frequent integration makes [[refactoring|refactoring]] practical (Fowler, 2024).
 - Speed and stability are not trade-offs: DORA reports that top performers do well on all its delivery metrics (DORA).
 
 **Limitations**
@@ -191,7 +191,7 @@ ML verändert drei Dinge (Google Cloud): CI testet und validiert neben Code auch
 
 #### Herkunft und Varianten
 
-Kent Beck entwickelte CI in den 1990er-Jahren als Teil von Extreme Programming; Grady Booch verwendete den Begriff nur beiläufig, und den täglichen Builds bei Microsoft fehlten die Tests und die sofortige Fehlerbehebung, die CI ausmachen (Fowler, 2024). Fowlers Artikel erschien erstmals 2000 und wurde 2006 und 2024 neu geschrieben. Das Buch *Continuous Delivery* von Humble und Farley (2010) verallgemeinerte den Ansatz, und das Forschungsprogramm DORA misst seine Wirkung (Humble, o. J.; DORA).
+[[kent-beck|Kent Beck]] entwickelte CI in den 1990er-Jahren als Teil von Extreme Programming; Grady Booch verwendete den Begriff nur beiläufig, und den täglichen Builds bei Microsoft fehlten die Tests und die sofortige Fehlerbehebung, die CI ausmachen (Fowler, 2024). Fowlers Artikel erschien erstmals 2000 und wurde 2006 und 2024 neu geschrieben. Das Buch *Continuous Delivery* von Humble und Farley (2010) verallgemeinerte den Ansatz, und das Forschungsprogramm DORA misst seine Wirkung (Humble, o. J.; DORA).
 
 ### Wann einsetzen
 
@@ -203,7 +203,7 @@ Kent Beck entwickelte CI in den 1990er-Jahren als Teil von Extreme Programming; 
 
 **Stärken**
 - Beseitigt Auslieferungsrisiken, weil jede Integration klein ist; Fowler (2024) schreibt, CI „effectively eliminates delivery risk“.
-- Fehler werden nahe an der verursachenden Änderung gefunden, und häufige Integration macht Refactoring praktikabel (Fowler, 2024).
+- Fehler werden nahe an der verursachenden Änderung gefunden, und häufige Integration macht [[refactoring|Refactoring]] praktikabel (Fowler, 2024).
 - Geschwindigkeit und Stabilität sind kein Zielkonflikt: Laut DORA schneiden die besten Teams bei allen Auslieferungsmetriken gut ab (DORA).
 
 **Grenzen**

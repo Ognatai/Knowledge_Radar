@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-The Bundesministerium des Innern (BMI) is the German federal ministry responsible for internal security, protection of the constitution, civil protection, social cohesion, and migration and integration; 19 authorities and institutions belong to its portfolio, among them the Federal Criminal Police Office, the Federal Office of Civil Protection and Disaster Assistance (BBK), the Federal Office for the Protection of the Constitution and the Federal Statistical Office (Bundesregierung, n.d.). The [[bsi|BSI]] is also in its portfolio (§ 1 [[bsig|BSIG]]). For critical infrastructure, the ministry determines by ordinance which services are critical and which facilities count as critical, decides individual cases, and can prohibit the use of critical components of a manufacturer (§§ 4, 5 KRITISDachG; § 41 BSIG).
+The Bundesministerium des Innern (BMI) is the German federal ministry responsible for internal security, protection of the constitution, civil protection, social cohesion, and migration and integration; 19 authorities and institutions belong to its portfolio, among them the Federal Criminal Police Office, the [[bbk|Federal Office of Civil Protection and Disaster Assistance (BBK)]], the Federal Office for the Protection of the Constitution and the Federal Statistical Office (Bundesregierung, n.d.). The [[bsi|BSI]] is also in its portfolio (§ 1 [[bsig|BSIG]]). For critical infrastructure, the ministry determines by ordinance which services are critical and which facilities count as critical, decides individual cases, and can prohibit the use of critical components of a manufacturer (§§ 4, 5 KRITISDachG; § 41 BSIG).
 
 ### Key facts
 
@@ -69,7 +69,7 @@ AI and software used in critical facilities fall under the rules whose scope the
 
 ### TL;DR
 
-Das Bundesministerium des Innern (BMI) ist das Bundesministerium für innere Sicherheit, Verfassungs- und Bevölkerungsschutz, gesellschaftlichen Zusammenhalt sowie Migration und Integration; zu seinem Geschäftsbereich gehören 19 Behörden und Einrichtungen, darunter das Bundeskriminalamt, das Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK), das Bundesamt für Verfassungsschutz und das Statistische Bundesamt (Bundesregierung, n.d.). Auch das [[bsi|BSI]] gehört zu seinem Geschäftsbereich (§ 1 [[bsig|BSIG]]). Beim Schutz kritischer Infrastrukturen bestimmt das Ministerium durch Rechtsverordnung, welche Dienstleistungen kritisch sind und welche Anlagen als kritische Anlagen gelten, entscheidet Einzelfälle und kann den Einsatz kritischer Komponenten eines Herstellers untersagen (§§ 4, 5 KRITISDachG; § 41 BSIG).
+Das Bundesministerium des Innern (BMI) ist das Bundesministerium für innere Sicherheit, Verfassungs- und Bevölkerungsschutz, gesellschaftlichen Zusammenhalt sowie Migration und Integration; zu seinem Geschäftsbereich gehören 19 Behörden und Einrichtungen, darunter das Bundeskriminalamt, das [[bbk|Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)]], das Bundesamt für Verfassungsschutz und das Statistische Bundesamt (Bundesregierung, n.d.). Auch das [[bsi|BSI]] gehört zu seinem Geschäftsbereich (§ 1 [[bsig|BSIG]]). Beim Schutz kritischer Infrastrukturen bestimmt das Ministerium durch Rechtsverordnung, welche Dienstleistungen kritisch sind und welche Anlagen als kritische Anlagen gelten, entscheidet Einzelfälle und kann den Einsatz kritischer Komponenten eines Herstellers untersagen (§§ 4, 5 KRITISDachG; § 41 BSIG).
 
 ### Eckdaten
 

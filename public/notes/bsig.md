@@ -31,7 +31,7 @@ The BSI Act (BSI-Gesetz, BSIG) is Germany's central cybersecurity law. In the ve
 | Type and jurisdiction | German federal law |
 | Enacted | 2 December 2025, as Article 1 of the Act implementing the NIS2 Directive |
 | Entry into force | 6 December 2025; replaces the BSI Act of 14 August 2009 |
-| Competent authorities | Federal Office for Information Security (BSI) as supervisory authority (§ 59); joint reporting and registration office with the Federal Office of Civil Protection and Disaster Assistance (BBK) (§§ 32, 33); [[federal-ministry-of-the-interior\|Federal Ministry of the Interior]] for prohibiting critical components (§ 41) |
+| Competent authorities | Federal Office for Information Security (BSI) as supervisory authority (§ 59); joint reporting and registration office with the [[bbk\|Federal Office of Civil Protection and Disaster Assistance (BBK)]] (§§ 32, 33); [[federal-ministry-of-the-interior\|Federal Ministry of the Interior]] for prohibiting critical components (§ 41) |
 | Version summarised | consolidated text including the amendments of 11 March, 21 July and 23 July 2026 |
 
 ### Scope
@@ -405,7 +405,7 @@ Das BSI-Gesetz (BSIG) ist das zentrale deutsche Gesetz zur Cybersicherheit. In s
 | Art und Geltung | deutsches Bundesgesetz |
 | Ausgefertigt | 2. Dezember 2025, als Artikel 1 des Gesetzes zur Umsetzung der NIS-2-Richtlinie |
 | Inkrafttreten | 6. Dezember 2025; ersetzt das BSI-Gesetz vom 14. August 2009 |
-| Zuständige Behörden | Bundesamt für Sicherheit in der Informationstechnik (BSI) als Aufsichtsbehörde (§ 59); gemeinsame Melde- und Registrierungsstelle mit dem Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK) (§§ 32, 33); [[federal-ministry-of-the-interior\|Bundesministerium des Innern]] für die Untersagung kritischer Komponenten (§ 41) |
+| Zuständige Behörden | Bundesamt für Sicherheit in der Informationstechnik (BSI) als Aufsichtsbehörde (§ 59); gemeinsame Melde- und Registrierungsstelle mit dem [[bbk\|Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)]] (§§ 32, 33); [[federal-ministry-of-the-interior\|Bundesministerium des Innern]] für die Untersagung kritischer Komponenten (§ 41) |
 | Zusammengefasste Fassung | konsolidierte Fassung mit den Änderungen vom 11. März, 21. Juli und 23. Juli 2026 |
 
 ### Anwendungsbereich

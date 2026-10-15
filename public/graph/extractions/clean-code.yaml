@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 132a2cf8569ead8c11082026eb67c2ec08c687d42c78f14d84dba931371fd195
+note_sha256: 14d8b8cef963ff5c8679cbc09b38b78486de7934e1cb2bc1cdc1e3dc1cebbeb0
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - robert-c-martin

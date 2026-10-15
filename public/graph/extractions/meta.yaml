@@ -1,0 +1,28 @@
+version: 1
+note_sha256: a1f5411cefd55236a1556e35fcc65582796f7fa92ef647ac1f285cb5b1fdd1d9
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- cloud-ai-platforms
+- digital-markets-act
+- digital-services-act
+- eu-ai-act
+- european-commission
+- faiss
+- gatekeeper
+- gdpr
+- llama
+- llm-adaptation
+- vector-databases
+relations:
+- from: llama
+  type: DEVELOPED_BY
+  to: meta
+  evidence: meta has released its llama foundation models
+- from: faiss
+  type: DEVELOPED_BY
+  to: meta
+  evidence: it also produced faiss
+- from: digital-markets-act
+  type: REGULATES
+  to: meta
+  evidence: in the eu, meta is a dma gatekeeper for facebook, instagram, whatsapp, messenger and meta ads

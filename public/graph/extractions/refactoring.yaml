@@ -1,0 +1,25 @@
+version: 1
+note_sha256: 783897414bebf3bfc397ae0e6714829b38be5254341c770e63ee10fa08ad595d
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- ci-cd
+- clean-code
+- kent-beck
+- martin-fowler
+- ml-pipelines
+- technical-debt
+- code-smell
+- test-driven-development
+relations:
+- from: refactoring
+  type: COMPLEMENTS
+  to: technical-debt
+  evidence: to pay down technical debt, including in ml pipelines where glue code and dead experimental paths accumulate
+- from: refactoring
+  type: COMPLEMENTS
+  to: code-smell
+  evidence: they point to where refactoring may help
+- from: test-driven-development
+  type: COMPLEMENTS
+  to: refactoring
+  evidence: 'it is the third step of test-driven development: red, green, refactor'

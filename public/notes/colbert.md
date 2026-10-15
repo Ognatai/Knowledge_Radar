@@ -54,7 +54,7 @@ On MS MARCO passage ranking, ColBERT re-ranking reached an [[rag-retrieval-evalu
 
 #### Origin and variants
 
-Omar Khattab and Matei Zaharia of Stanford presented ColBERT at SIGIR 2020 (Khattab & Zaharia, 2020). ColBERTv2 combines aggressive residual compression with denoised supervision, cutting the space footprint of late interaction by 6 to 10 times while reaching state-of-the-art quality both within and outside the training domain (Santhanam et al., 2022). ColBERT is evaluated on [[ms-marco|MS MARCO]] and, for zero-shot transfer, on [[beir|BEIR]].
+Omar Khattab and [[matei-zaharia|Matei Zaharia]] of Stanford presented ColBERT at SIGIR 2020 (Khattab & Zaharia, 2020). ColBERTv2 combines aggressive residual compression with denoised supervision, cutting the space footprint of late interaction by 6 to 10 times while reaching state-of-the-art quality both within and outside the training domain (Santhanam et al., 2022). ColBERT is evaluated on [[ms-marco|MS MARCO]] and, for zero-shot transfer, on [[beir|BEIR]].
 
 ### When to use it
 
@@ -139,7 +139,7 @@ Beim Passage Ranking auf MS MARCO erreichte ColBERT im Re-Ranking einen [[rag-re
 
 #### Herkunft und Varianten
 
-Omar Khattab und Matei Zaharia von der Stanford University stellten ColBERT auf der SIGIR 2020 vor (Khattab & Zaharia, 2020). ColBERTv2 verbindet aggressive Residual Compression mit entrauschter Supervision, verringert den Speicherbedarf von Late Interaction um das 6- bis 10-Fache und erreicht Bestwerte innerhalb und außerhalb der Trainingsdomäne (Santhanam et al., 2022). ColBERT wird auf [[ms-marco|MS MARCO]] und für Zero-Shot-Übertragung auf [[beir|BEIR]] evaluiert.
+Omar Khattab und [[matei-zaharia|Matei Zaharia]] von der Stanford University stellten ColBERT auf der SIGIR 2020 vor (Khattab & Zaharia, 2020). ColBERTv2 verbindet aggressive Residual Compression mit entrauschter Supervision, verringert den Speicherbedarf von Late Interaction um das 6- bis 10-Fache und erreicht Bestwerte innerhalb und außerhalb der Trainingsdomäne (Santhanam et al., 2022). ColBERT wird auf [[ms-marco|MS MARCO]] und für Zero-Shot-Übertragung auf [[beir|BEIR]] evaluiert.
 
 ### Wann einsetzen
 

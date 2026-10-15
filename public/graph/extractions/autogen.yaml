@@ -1,0 +1,18 @@
+version: 1
+note_sha256: e13cf114a592fa000126c6203a932c1e849b5ca2249071c99decd8f7c508450b
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- agent-frameworks
+- mcp-and-related-protocols
+- microsoft
+- multi-agent-systems
+- microsoft-agent-framework
+relations:
+- from: autogen
+  type: DEVELOPED_BY
+  to: microsoft
+  evidence: autogen is an open-source framework from microsoft research
+- from: autogen
+  type: IMPLEMENTS
+  to: multi-agent-systems
+  evidence: prototyping multi-agent systems in which agents with different roles critique, check or extend each other's work

@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-LLaMA is Meta's family of openly released [[large-language-models|large language models]]. The first LLaMA models (7 to 65 billion parameters, 2023) were trained only on publicly available data for 1 to 1.4 trillion tokens; LLaMA-13B outperformed GPT-3 with 175 billion parameters on most benchmarks, showing that smaller models trained longer are cheaper at inference (Touvron et al., 2023a). Llama 2 (7 to 70 billion) added 40% more training data, a doubled context of 4,096 tokens and chat versions aligned with RLHF, released for research and commercial use (Touvron et al., 2023b). Llama 3.1 (8, 70 and 405 billion) trained on 15.6 trillion tokens with a context of up to 128,000 tokens, supports eight languages and tool use, and reached quality comparable to GPT-4 on many tasks (Llama Team, 2024).
+LLaMA is [[meta|Meta]]'s family of openly released [[large-language-models|large language models]]. The first LLaMA models (7 to 65 billion parameters, 2023) were trained only on publicly available data for 1 to 1.4 trillion tokens; LLaMA-13B outperformed GPT-3 with 175 billion parameters on most benchmarks, showing that smaller models trained longer are cheaper at inference (Touvron et al., 2023a). Llama 2 (7 to 70 billion) added 40% more training data, a doubled context of 4,096 tokens and chat versions aligned with RLHF, released for research and commercial use (Touvron et al., 2023b). Llama 3.1 (8, 70 and 405 billion) trained on 15.6 trillion tokens with a context of up to 128,000 tokens, supports eight languages and tool use, and reached quality comparable to GPT-4 on many tasks (Llama Team, 2024).
 
 ### How it works
 
@@ -148,7 +148,7 @@ LLaMA-65B war konkurrenzfähig mit Chinchilla-70B und PaLM-540B (Touvron et al.,
 
 #### Herkunft und Varianten
 
-Meta AI gab die ersten LLaMA-Modelle im Februar 2023 an die Forschungsgemeinschaft frei, Llama 2 im Juli 2023 für Forschung und kommerzielle Nutzung und Llama 3.1 im Juli 2024 (Touvron et al., 2023a; 2023b; Llama Team, 2024). Experimente im Llama-3-Paper koppeln zudem Encoder für Bild, Video und Sprache an, siehe [[multimodal-models|Multimodale Modelle]]. Weil die Gewichte verfügbar sind, sind Llama-Modelle eine verbreitete Basis für Fine-Tuning mit Verfahren wie [[lora|LoRA]] und [[qlora|QLoRA]] und für den lokalen Betrieb ([[llm-adaptation|LLM-Anpassung]], [[quantisation|Quantisierung]]).
+[[meta|Meta]] AI gab die ersten LLaMA-Modelle im Februar 2023 an die Forschungsgemeinschaft frei, Llama 2 im Juli 2023 für Forschung und kommerzielle Nutzung und Llama 3.1 im Juli 2024 (Touvron et al., 2023a; 2023b; Llama Team, 2024). Experimente im Llama-3-Paper koppeln zudem Encoder für Bild, Video und Sprache an, siehe [[multimodal-models|Multimodale Modelle]]. Weil die Gewichte verfügbar sind, sind Llama-Modelle eine verbreitete Basis für Fine-Tuning mit Verfahren wie [[lora|LoRA]] und [[qlora|QLoRA]] und für den lokalen Betrieb ([[llm-adaptation|LLM-Anpassung]], [[quantisation|Quantisierung]]).
 
 ### Wann einsetzen
 

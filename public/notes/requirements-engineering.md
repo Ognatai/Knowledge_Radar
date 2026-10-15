@@ -48,7 +48,7 @@ acceptance criteria and tests → backlog → iterative delivery and feedback
 
 #### 1. Use cases and user stories
 
-Use cases "organize requirements to form a narrative of how users relate to and use a system", whereas user stories "break requirements into chunks for planning purposes"; stories are usually finer-grained because each must be buildable within one iteration, and a story may correspond to one or more steps of a use case (Fowler, 2003). Kent Beck introduced the term user story in Extreme Programming to encourage "a more informal and conversational style of requirements elicitation"; the essence of a story fits on a single card, and a common form is "As a … I want … so that …" (Fowler, 2013). Detailed requirements are therefore negotiated in conversation rather than fixed up front.
+Use cases "organize requirements to form a narrative of how users relate to and use a system", whereas user stories "break requirements into chunks for planning purposes"; stories are usually finer-grained because each must be buildable within one iteration, and a story may correspond to one or more steps of a use case (Fowler, 2003). [[kent-beck|Kent Beck]] introduced the term user story in Extreme Programming to encourage "a more informal and conversational style of requirements elicitation"; the essence of a story fits on a single card, and a common form is "As a … I want … so that …" (Fowler, 2013). Detailed requirements are therefore negotiated in conversation rather than fixed up front.
 
 #### 2. Good stories: INVEST
 
@@ -141,7 +141,7 @@ Akzeptanzkriterien und Tests → Backlog → iterative Lieferung und Rückmeldun
 
 #### 1. Use Cases und User Stories
 
-Use Cases „organize requirements to form a narrative of how users relate to and use a system“, während User Stories „break requirements into chunks for planning purposes“; Stories sind meist feiner, weil jede innerhalb einer Iteration umsetzbar sein muss, und eine Story kann einem oder mehreren Schritten eines Use Case entsprechen (Fowler, 2003). Kent Beck führte den Begriff User Story im Extreme Programming ein, um „a more informal and conversational style of requirements elicitation“ zu fördern; der Kern einer Story passt auf eine Karteikarte, und eine verbreitete Form lautet „As a … I want … so that …“ (Fowler, 2013). Details werden daher im Gespräch ausgehandelt statt vorab festgeschrieben.
+Use Cases „organize requirements to form a narrative of how users relate to and use a system“, während User Stories „break requirements into chunks for planning purposes“; Stories sind meist feiner, weil jede innerhalb einer Iteration umsetzbar sein muss, und eine Story kann einem oder mehreren Schritten eines Use Case entsprechen (Fowler, 2003). [[kent-beck|Kent Beck]] führte den Begriff User Story im Extreme Programming ein, um „a more informal and conversational style of requirements elicitation“ zu fördern; der Kern einer Story passt auf eine Karteikarte, und eine verbreitete Form lautet „As a … I want … so that …“ (Fowler, 2013). Details werden daher im Gespräch ausgehandelt statt vorab festgeschrieben.
 
 #### 2. Gute Stories: INVEST
 
