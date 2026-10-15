@@ -102,14 +102,26 @@ entities:
   type: Method
   name_en: ID3
   name_de: ID3
+  summary_en: ID3 (Iterative Dichotomiser 3), developed by Ross Quinlan in 1986, builds a multiway decision tree by greedily choosing, at each node, the categorical feature with the largest information gain (scikit-learn developers, n.d.-a). Trees are grown to maximum size and then usually pruned; its successor C4.5 also handles numerical features by discretising them.
+  summary_de: ID3 (Iterative Dichotomiser 3), 1986 von Ross Quinlan entwickelt, baut einen Entscheidungsbaum mit Mehrfachverzweigungen, indem es an jedem Knoten gierig das kategoriale Merkmal mit dem größten Informationsgewinn wählt (scikit-learn developers, n.d.-a). Bäume wachsen bis zur maximalen Größe und werden meist anschließend beschnitten; der Nachfolger C4.5 verarbeitet durch Diskretisierung auch numerische Merkmale.
+  sources:
+  - https://scikit-learn.org/stable/modules/tree.html
 - id: cart
   type: Method
   name_en: CART
   name_de: CART
+  summary_en: CART (Classification and Regression Trees) builds binary decision trees by choosing at each node the feature and threshold with the largest information gain; unlike C4.5 it supports numerical targets for regression and does not compute rule sets (scikit-learn developers, n.d.-a). scikit-learn implements an optimised version of CART.
+  summary_de: CART (Classification and Regression Trees) baut binäre Entscheidungsbäume, indem an jedem Knoten das Merkmal und der Schwellenwert mit dem größten Informationsgewinn gewählt werden; anders als C4.5 unterstützt es numerische Zielgrößen für Regression und erzeugt keine Regelmengen (scikit-learn developers, n.d.-a). scikit-learn setzt eine optimierte Fassung von CART um.
+  sources:
+  - https://scikit-learn.org/stable/modules/tree.html
 - id: cost-complexity-pruning
   type: Method
   name_en: Cost-complexity pruning
   name_de: Cost-Complexity Pruning
+  summary_en: Minimal cost-complexity pruning prunes a decision tree to avoid overfitting by finding the subtree that minimises R(T) + α·|leaves|, the tree's error or impurity plus a penalty per terminal node controlled by the complexity parameter α ≥ 0 (scikit-learn developers, n.d.-a). Larger α removes more branches; in scikit-learn it is set with ccp_alpha.
+  summary_de: Minimal Cost-Complexity Pruning beschneidet einen Entscheidungsbaum gegen Overfitting, indem es den Teilbaum sucht, der R(T) + α·|Blätter| minimiert, also Fehler oder Unreinheit des Baums plus eine Strafe je Endknoten, gesteuert durch den Komplexitätsparameter α ≥ 0 (scikit-learn developers, n.d.-a). Ein größeres α entfernt mehr Äste; in scikit-learn wird es über ccp_alpha gesetzt.
+  sources:
+  - https://scikit-learn.org/stable/modules/tree.html
 - id: fitnets
   type: Method
   name_en: FitNets
@@ -513,6 +525,10 @@ entities:
   type: Method
   name_en: Linear regression
   name_de: Lineare Regression
+  summary_en: Linear regression by ordinary least squares fits a linear model whose coefficients minimise the residual sum of squares between observed and predicted targets (scikit-learn developers, n.d.-d). Its coefficient estimates rely on the independence of the features; ridge and lasso regression add penalties on the coefficients.
+  summary_de: Lineare Regression nach der Methode der kleinsten Quadrate passt ein lineares Modell an, dessen Koeffizienten die Summe der quadrierten Abweichungen zwischen beobachteten und vorhergesagten Zielwerten minimieren (scikit-learn developers, n.d.-d). Ihre Koeffizientenschätzungen setzen unabhängige Merkmale voraus; Ridge- und Lasso-Regression ergänzen Strafterme auf die Koeffizienten.
+  sources:
+  - https://scikit-learn.org/stable/modules/linear_model.html
 - id: supervised-learning
   type: Concept
   name_en: Supervised learning
@@ -533,18 +549,30 @@ entities:
   type: Method
   name_en: Discriminant analysis
   name_de: Diskriminanzanalyse
+  summary_en: Discriminant analysis classifies by modelling the class-conditional distribution of the data, typically as a multivariate Gaussian, and choosing the class with the highest posterior probability via Bayes' rule (scikit-learn developers, n.d.-c). Its two classic forms, linear and quadratic discriminant analysis, have closed-form solutions, are inherently multiclass and have no hyperparameters to tune.
+  summary_de: Diskriminanzanalyse klassifiziert, indem sie die bedingte Verteilung der Daten je Klasse modelliert, meist als multivariate Normalverteilung, und über den Satz von Bayes die Klasse mit der höchsten A-posteriori-Wahrscheinlichkeit wählt (scikit-learn developers, n.d.-c). Ihre zwei klassischen Formen, lineare und quadratische Diskriminanzanalyse, haben geschlossene Lösungen, sind von Natur aus mehrklassenfähig und haben keine abzustimmenden Hyperparameter.
+  sources:
+  - https://scikit-learn.org/stable/modules/lda_qda.html
 - id: linear-discriminant-analysis
   type: Method
   name_en: Linear discriminant analysis (LDA)
   name_de: Lineare Diskriminanzanalyse (LDA)
   aliases:
   - LDA
+  summary_en: Linear discriminant analysis (LDA) is a classifier with a linear decision surface derived from Gaussian class-conditional models with a shared covariance matrix (scikit-learn developers, n.d.-c). It can also reduce dimensionality in a supervised way by projecting data onto the directions that best separate the classes, with fewer output dimensions than classes.
+  summary_de: Die lineare Diskriminanzanalyse (LDA) ist ein Klassifikator mit linearer Entscheidungsgrenze, hergeleitet aus Normalverteilungsmodellen je Klasse mit gemeinsamer Kovarianzmatrix (scikit-learn developers, n.d.-c). Sie kann auch überwacht die Dimension reduzieren, indem sie Daten auf die Richtungen projiziert, die die Klassen am besten trennen, mit weniger Ausgabedimensionen als Klassen.
+  sources:
+  - https://scikit-learn.org/stable/modules/lda_qda.html
 - id: quadratic-discriminant-analysis
   type: Method
   name_en: Quadratic discriminant analysis (QDA)
   name_de: Quadratische Diskriminanzanalyse (QDA)
   aliases:
   - QDA
+  summary_en: Quadratic discriminant analysis (QDA) models each class with its own Gaussian covariance matrix, which gives quadratic decision boundaries and makes it more flexible than linear discriminant analysis (scikit-learn developers, n.d.-c). Like LDA it has a closed-form solution and no hyperparameters to tune.
+  summary_de: Die quadratische Diskriminanzanalyse (QDA) modelliert jede Klasse mit eigener Kovarianzmatrix, was quadratische Entscheidungsgrenzen ergibt und sie flexibler macht als die lineare Diskriminanzanalyse (scikit-learn developers, n.d.-c). Wie LDA hat sie eine geschlossene Lösung und keine abzustimmenden Hyperparameter.
+  sources:
+  - https://scikit-learn.org/stable/modules/lda_qda.html
 - id: discriminative-model
   type: Concept
   name_en: Discriminative model
@@ -617,20 +645,36 @@ entities:
   name_de: k-Means
   aliases:
   - Lloyd's algorithm
+  summary_en: k-means clusters data into a fixed number of disjoint clusters by choosing centroids that minimise the inertia, the within-cluster sum of squares (scikit-learn developers, n.d.-b). It scales well to many samples but assumes convex, isotropic clusters, and the number of clusters must be specified in advance.
+  summary_de: k-Means teilt Daten in eine feste Zahl disjunkter Cluster, indem es Zentroide wählt, die die Inertia minimieren, die Summe der quadrierten Abstände innerhalb der Cluster (scikit-learn developers, n.d.-b). Es skaliert gut auf viele Datenpunkte, setzt aber konvexe, isotrope Cluster voraus, und die Zahl der Cluster muss vorab festgelegt werden.
+  sources:
+  - https://scikit-learn.org/stable/modules/clustering.html
 - id: k-means-plus-plus
   type: Method
   name_en: k-means++
   name_de: k-Means++
+  summary_en: k-means++ is an initialisation scheme for k-means that places the initial centroids generally far from each other, which usually leads to better results than random initialisation (scikit-learn developers, n.d.-b). It is the default initialisation in scikit-learn and can also be used on its own to select seeds for other clustering algorithms.
+  summary_de: k-Means++ ist ein Initialisierungsverfahren für k-Means, das die Startzentroide in der Regel weit voneinander entfernt platziert und meist zu besseren Ergebnissen führt als zufällige Initialisierung (scikit-learn developers, n.d.-b). Es ist in scikit-learn voreingestellt und kann auch eigenständig Startpunkte für andere Clustering-Verfahren auswählen.
+  sources:
+  - https://scikit-learn.org/stable/modules/clustering.html
 - id: hierarchical-clustering
   type: Method
   name_en: Hierarchical clustering
   name_de: Hierarchisches Clustering
   aliases:
   - agglomerative clustering
+  summary_en: Hierarchical clustering builds nested clusters by successively merging or splitting them, represented as a tree (dendrogram) whose root holds all samples and whose leaves are single samples (scikit-learn developers, n.d.-b). Agglomerative clustering works bottom up, and the linkage criterion, such as Ward, complete, average or single linkage, decides which clusters to merge.
+  summary_de: Hierarchisches Clustering bildet verschachtelte Cluster durch schrittweises Zusammenführen oder Aufteilen, dargestellt als Baum (Dendrogramm), dessen Wurzel alle Datenpunkte enthält und dessen Blätter einzelne Datenpunkte sind (scikit-learn developers, n.d.-b). Agglomeratives Clustering arbeitet von unten nach oben, und das Linkage-Kriterium, etwa Ward, Complete, Average oder Single Linkage, bestimmt, welche Cluster zusammengeführt werden.
+  sources:
+  - https://scikit-learn.org/stable/modules/clustering.html
 - id: dbscan
   type: Method
   name_en: DBSCAN
   name_de: DBSCAN
+  summary_en: DBSCAN views clusters as areas of high density separated by areas of low density, so clusters can have any shape, unlike in k-means (scikit-learn developers, n.d.-b). Core samples have at least min_samples neighbours within distance eps; a cluster consists of connected core samples and nearby non-core samples, and samples that are not close to any core sample are outliers.
+  summary_de: DBSCAN versteht Cluster als Bereiche hoher Dichte, getrennt durch Bereiche geringer Dichte, sodass Cluster anders als bei k-Means beliebige Formen haben können (scikit-learn developers, n.d.-b). Kernpunkte haben mindestens min_samples Nachbarn im Abstand eps; ein Cluster besteht aus verbundenen Kernpunkten und nahe gelegenen Nicht-Kernpunkten, und Punkte, die keinem Kernpunkt nahe sind, gelten als Ausreißer.
+  sources:
+  - https://scikit-learn.org/stable/modules/clustering.html
 - id: hermitian-dot-product
   type: Concept
   name_en: Hermitian dot product
@@ -1115,14 +1159,27 @@ entities:
   name_de: Bagging (Bootstrap Aggregating)
   aliases:
   - bootstrap aggregating
+  summary_en: Bagging (bootstrap aggregating) builds several instances of an estimator on random subsets of the training set and aggregates their predictions, which reduces the variance of the base estimator (scikit-learn developers, n.d.-e). It works best with strong, complex models such as fully grown decision trees, in contrast to boosting, which usually works best with weak models.
+  summary_de: Bagging (Bootstrap Aggregating) trainiert mehrere Instanzen eines Schätzers auf zufälligen Teilmengen der Trainingsdaten und fasst ihre Vorhersagen zusammen, was die Varianz des Basismodells senkt (scikit-learn developers, n.d.-e). Es wirkt am besten mit starken, komplexen Modellen wie voll ausgewachsenen Entscheidungsbäumen, während Boosting meist mit schwachen Modellen am besten funktioniert.
+  sources:
+  - https://scikit-learn.org/stable/modules/ensemble.html
 - id: adaboost
   type: Method
   name_en: AdaBoost
   name_de: AdaBoost
+  summary_en: AdaBoost, introduced by Freund and Schapire in 1995, fits a sequence of weak learners, such as small decision trees, on repeatedly reweighted versions of the data and combines them by a weighted majority vote (scikit-learn developers, n.d.-e). After each round, the weights of samples that were predicted incorrectly increase, so later learners focus on the hard cases.
+  summary_de: AdaBoost, 1995 von Freund und Schapire eingeführt, trainiert eine Folge schwacher Lerner, etwa kleiner Entscheidungsbäume, auf wiederholt neu gewichteten Fassungen der Daten und verbindet sie über eine gewichtete Mehrheitsentscheidung (scikit-learn developers, n.d.-e). Nach jeder Runde steigt das Gewicht falsch vorhergesagter Beispiele, sodass spätere Lerner sich auf die schwierigen Fälle konzentrieren.
+  sources:
+  - https://scikit-learn.org/stable/modules/ensemble.html
 - id: gradient-boosting
   type: Method
   name_en: Gradient boosting
   name_de: Gradient Boosting
+  summary_en: Gradient boosting generalises boosting to arbitrary differentiable loss functions, building an ensemble of decision trees stage by stage, following Friedman (2001) (scikit-learn developers, n.d.-e). Gradient-boosted trees are an excellent model for regression and classification on tabular data; histogram-based implementations are much faster on large datasets and handle missing values natively.
+  summary_de: Gradient Boosting verallgemeinert Boosting auf beliebige differenzierbare Verlustfunktionen und baut nach Friedman (2001) stufenweise ein Ensemble aus Entscheidungsbäumen auf (scikit-learn developers, n.d.-e). Gradient-geboostete Bäume sind ein sehr gutes Modell für Regression und Klassifikation auf tabellarischen Daten; histogrammbasierte Umsetzungen sind bei großen Datenmengen deutlich schneller und verarbeiten fehlende Werte direkt.
+  sources:
+  - https://scikit-learn.org/stable/modules/ensemble.html
+  - https://doi.org/10.1214/aos/1013203451
 - id: stacking
   type: Method
   name_en: Stacking (stacked generalisation)
@@ -1130,6 +1187,10 @@ entities:
   aliases:
   - stacked generalisation
   - stacked generalization
+  summary_en: 'Stacking (stacked generalisation), introduced by Wolpert (1992), combines estimators to reduce their biases: the predictions of the individual estimators are used as input to a final estimator, which is trained through cross-validation (scikit-learn developers, n.d.-e).'
+  summary_de: 'Stacking (Stacked Generalization), von Wolpert (1992) eingeführt, verbindet Schätzer, um ihre Verzerrungen zu verringern: Die Vorhersagen der einzelnen Schätzer dienen als Eingabe für einen abschließenden Schätzer, der per Kreuzvalidierung trainiert wird (scikit-learn developers, n.d.-e).'
+  sources:
+  - https://scikit-learn.org/stable/modules/ensemble.html
 - id: gliner
   type: Method
   name_en: GLiNER
@@ -1312,6 +1373,10 @@ entities:
   type: Method
   name_en: Target encoding
   name_de: Target Encoding
+  summary_en: Target encoding replaces each category of a nominal feature by the mean of the target conditioned on that category, blended with the overall target mean (scikit-learn developers, n.d.-g). It is useful for high-cardinality features such as postcodes, where one-hot encoding would inflate the feature space; scikit-learn's TargetEncoder uses cross fitting to avoid leaking the target into training.
+  summary_de: Target Encoding ersetzt jede Kategorie eines nominalen Merkmals durch den Mittelwert der Zielgröße für diese Kategorie, gemischt mit dem Gesamtmittel der Zielgröße (scikit-learn developers, n.d.-g). Es eignet sich für Merkmale mit vielen Ausprägungen wie Postleitzahlen, bei denen One-Hot-Encoding den Merkmalsraum aufblähen würde; der TargetEncoder in scikit-learn nutzt Cross Fitting, damit die Zielgröße nicht ins Training durchsickert.
+  sources:
+  - https://scikit-learn.org/stable/modules/preprocessing.html
 - id: fourier-terms
   type: Method
   name_en: Fourier terms (seasonal features)
@@ -1320,10 +1385,18 @@ entities:
   type: Method
   name_en: Feature selection
   name_de: Feature Selection
+  summary_en: Feature selection reduces the set of input features, either to improve an estimator's accuracy or to boost performance on very high-dimensional data (scikit-learn developers, n.d.-f). Approaches range from removing features with low variance and univariate statistical tests to recursive elimination and selection based on model weights, for example the sparse coefficients of the lasso.
+  summary_de: Merkmalsauswahl verkleinert die Menge der Eingabemerkmale, um die Genauigkeit eines Schätzers zu verbessern oder die Leistung bei sehr hochdimensionalen Daten zu steigern (scikit-learn developers, n.d.-f). Die Verfahren reichen vom Entfernen von Merkmalen mit geringer Varianz und univariaten statistischen Tests bis zu rekursiver Elimination und Auswahl über Modellgewichte, etwa die dünn besetzten Koeffizienten des Lasso.
+  sources:
+  - https://scikit-learn.org/stable/modules/feature_selection.html
 - id: lasso
   type: Method
   name_en: Lasso
   name_de: Lasso
+  summary_en: The lasso is a linear model with an L1 penalty on the coefficients that estimates sparse solutions, setting some coefficients exactly to zero and thereby reducing the number of features a model depends on (scikit-learn developers, n.d.-d). This makes it useful for feature selection and fundamental to compressed sensing.
+  summary_de: Das Lasso ist ein lineares Modell mit L1-Strafe auf die Koeffizienten, das dünn besetzte Lösungen schätzt, einige Koeffizienten exakt auf null setzt und so die Zahl der Merkmale verringert, von denen ein Modell abhängt (scikit-learn developers, n.d.-d). Das macht es nützlich für die Merkmalsauswahl und grundlegend für Compressed Sensing.
+  sources:
+  - https://scikit-learn.org/stable/modules/linear_model.html
 - id: data-leakage
   type: Concept
   name_en: Data leakage
@@ -1474,6 +1547,10 @@ entities:
   type: Method
   name_en: Nearest neighbour rule
   name_de: Nächste-Nachbarn-Regel
+  summary_en: 'The nearest neighbour rule classifies a query point by a majority vote of its nearest neighbours in the training data (scikit-learn developers, n.d.-m). It is instance-based or "non-generalising" learning: instead of building an internal model, it simply stores the training instances.'
+  summary_de: 'Die Nächste-Nachbarn-Regel klassifiziert einen Anfragepunkt per Mehrheitsentscheidung seiner nächsten Nachbarn in den Trainingsdaten (scikit-learn developers, n.d.-m). Es ist instanzbasiertes, „nicht generalisierendes“ Lernen: Statt ein internes Modell aufzubauen, werden die Trainingsbeispiele einfach gespeichert.'
+  sources:
+  - https://scikit-learn.org/stable/modules/neighbors.html
 - id: lazy-learning
   type: Concept
   name_en: Lazy learning
@@ -1864,6 +1941,11 @@ entities:
   type: Method
   name_en: Stochastic gradient descent (SGD)
   name_de: Stochastischer Gradientenabstieg (SGD)
+  summary_en: Stochastic gradient descent (SGD) updates model parameters using the gradient of the loss on a single training example at a time, which makes it a simple and very efficient way to fit models on large-scale and sparse problems such as text classification (scikit-learn developers, n.d.-i). It is also the basic optimisation method for training neural networks, on which adaptive variants such as Adam build.
+  summary_de: Stochastischer Gradientenabstieg (SGD) aktualisiert Modellparameter mit dem Gradienten des Verlusts für jeweils ein einzelnes Trainingsbeispiel und ist damit ein einfacher, sehr effizienter Weg, Modelle auf großen und dünn besetzten Problemen wie der Textklassifikation anzupassen (scikit-learn developers, n.d.-i). Er ist auch das grundlegende Optimierungsverfahren zum Training neuronaler Netze, auf dem adaptive Varianten wie Adam aufbauen.
+  sources:
+  - https://scikit-learn.org/stable/modules/sgd.html
+  - https://arxiv.org/abs/1412.6980
 - id: adamw
   type: Method
   name_en: AdamW
@@ -1912,6 +1994,10 @@ entities:
   type: Method
   name_en: Multilayer perceptron
   name_de: Mehrschichtiges Perzeptron
+  summary_en: A multilayer perceptron (MLP) is a supervised learning model that learns a non-linear function for classification or regression; unlike logistic regression it has one or more non-linear hidden layers between the input and output layers (scikit-learn developers, n.d.-j). It is trained with back-propagation and gradient-based optimisation.
+  summary_de: Ein Multilayer Perceptron (MLP) ist ein überwachtes Lernmodell, das eine nichtlineare Funktion für Klassifikation oder Regression lernt; anders als die logistische Regression hat es zwischen Ein- und Ausgabeschicht eine oder mehrere nichtlineare verborgene Schichten (scikit-learn developers, n.d.-j). Es wird mit Backpropagation und gradientenbasierter Optimierung trainiert.
+  sources:
+  - https://scikit-learn.org/stable/modules/neural_networks_supervised.html
 - id: deep-learning
   type: Method
   name_en: Deep learning
@@ -2346,6 +2432,10 @@ entities:
   type: Method
   name_en: Ridge regression (L2 regularisation)
   name_de: Ridge-Regression (L2-Regularisierung)
+  summary_en: Ridge regression adds a penalty on the size of the coefficients to least squares, minimising the residual sum of squares plus α times the squared L2 norm of the coefficients (scikit-learn developers, n.d.-d). The larger α, the stronger the shrinkage and the more robust the coefficients become to collinearity.
+  summary_de: Ridge-Regression ergänzt die Methode der kleinsten Quadrate um eine Strafe auf die Größe der Koeffizienten und minimiert die Summe der quadrierten Abweichungen plus α mal die quadrierte L2-Norm der Koeffizienten (scikit-learn developers, n.d.-d). Je größer α, desto stärker die Schrumpfung und desto robuster werden die Koeffizienten gegenüber Kollinearität.
+  sources:
+  - https://scikit-learn.org/stable/modules/linear_model.html
 - id: dropout
   type: Method
   name_en: Dropout
@@ -2358,10 +2448,18 @@ entities:
   type: Method
   name_en: Random search
   name_de: Zufallssuche (Random Search)
+  summary_en: Random search samples hyperparameter settings from specified distributions instead of an exhaustive grid (scikit-learn developers, n.d.-h). Its budget can be chosen independently of the number of parameters and values, and adding parameters that do not affect performance does not reduce its efficiency.
+  summary_de: Random Search zieht Hyperparameter-Einstellungen aus vorgegebenen Verteilungen statt ein Raster vollständig abzusuchen (scikit-learn developers, n.d.-h). Sein Budget lässt sich unabhängig von der Zahl der Parameter und Werte wählen, und Parameter ohne Einfluss auf die Leistung mindern seine Effizienz nicht.
+  sources:
+  - https://scikit-learn.org/stable/modules/grid_search.html
 - id: grid-search
   type: Method
   name_en: Grid search
   name_de: Rastersuche (Grid Search)
+  summary_en: Grid search exhaustively evaluates every combination of hyperparameter values from a specified grid, usually with cross-validation, and keeps the best combination (scikit-learn developers, n.d.-h). It is the most widely used approach to hyperparameter optimisation, but its cost grows with every added parameter and value.
+  summary_de: Grid Search bewertet erschöpfend jede Kombination von Hyperparameterwerten aus einem vorgegebenen Raster, meist mit Kreuzvalidierung, und behält die beste Kombination (scikit-learn developers, n.d.-h). Sie ist das am weitesten verbreitete Verfahren der Hyperparameter-Optimierung, doch ihr Aufwand wächst mit jedem zusätzlichen Parameter und Wert.
+  sources:
+  - https://scikit-learn.org/stable/modules/grid_search.html
 - id: bayesian-optimisation
   type: Method
   name_en: Bayesian optimisation
@@ -2370,6 +2468,10 @@ entities:
   type: Method
   name_en: Gaussian process
   name_de: Gauß-Prozess
+  summary_en: Gaussian processes are a nonparametric supervised learning method for regression and probabilistic classification whose predictions are probabilistic, so that confidence intervals can be computed, and whose behaviour is set by a choice of kernel (scikit-learn developers, n.d.-l). They lose efficiency in high-dimensional spaces, when the number of features exceeds a few dozen.
+  summary_de: Gaußprozesse sind ein nichtparametrisches überwachtes Lernverfahren für Regression und probabilistische Klassifikation, dessen Vorhersagen probabilistisch sind, sodass sich Konfidenzintervalle berechnen lassen, und dessen Verhalten über die Wahl eines Kernels festgelegt wird (scikit-learn developers, n.d.-l). In hochdimensionalen Räumen, ab einigen Dutzend Merkmalen, verlieren sie an Effizienz.
+  sources:
+  - https://scikit-learn.org/stable/modules/gaussian_process.html
 - id: q-learning
   type: Method
   name_en: Q-learning
@@ -2450,18 +2552,34 @@ entities:
   type: Method
   name_en: Support vector regression
   name_de: Support-Vector-Regression
+  summary_en: Support vector regression (SVR) extends support vector classification to regression; the model depends only on a subset of the training data because the cost function ignores samples whose prediction is close to their target (scikit-learn developers, n.d.-k). scikit-learn offers SVR, NuSVR and LinearSVR.
+  summary_de: Support Vector Regression (SVR) überträgt die Support-Vector-Klassifikation auf Regression; das Modell hängt nur von einem Teil der Trainingsdaten ab, weil die Kostenfunktion Beispiele ignoriert, deren Vorhersage nahe am Zielwert liegt (scikit-learn developers, n.d.-k). scikit-learn bietet SVR, NuSVR und LinearSVR.
+  sources:
+  - https://scikit-learn.org/stable/modules/svm.html
 - id: kernel-trick
   type: Method
   name_en: Kernel trick
   name_de: Kernel-Trick
+  summary_en: The kernel trick lets support vector machines work in a higher, possibly infinite-dimensional feature space without computing the mapping explicitly, because the dual formulation only needs inner products, which a kernel function such as the linear, polynomial, RBF or sigmoid kernel provides (scikit-learn developers, n.d.-k). It cannot be applied to the primal hinge-loss formulation used by LinearSVC.
+  summary_de: Der Kernel-Trick erlaubt Support Vector Machines, in einem höher-, möglicherweise unendlichdimensionalen Merkmalsraum zu arbeiten, ohne die Abbildung explizit zu berechnen, weil die duale Formulierung nur Skalarprodukte braucht, die eine Kernfunktion wie der lineare, polynomielle, RBF- oder Sigmoid-Kernel liefert (scikit-learn developers, n.d.-k). Auf die primale Formulierung mit Hinge Loss, die LinearSVC nutzt, lässt er sich nicht anwenden.
+  sources:
+  - https://scikit-learn.org/stable/modules/svm.html
 - id: soft-margin
   type: Method
   name_en: Soft margin
   name_de: Soft Margin
+  summary_en: 'A soft margin lets a support vector machine separate classes that are not perfectly separable: some samples may lie within the margin or on the wrong side at a distance ζ, penalised in the objective (scikit-learn developers, n.d.-k). The parameter C controls the strength of this penalty and acts as an inverse regularisation parameter.'
+  summary_de: 'Ein weicher Rand (Soft Margin) erlaubt einer Support Vector Machine, Klassen zu trennen, die nicht vollständig trennbar sind: Einzelne Beispiele dürfen im Randbereich oder auf der falschen Seite im Abstand ζ liegen und werden in der Zielfunktion bestraft (scikit-learn developers, n.d.-k). Der Parameter C steuert die Stärke dieser Strafe und wirkt als inverser Regularisierungsparameter.'
+  sources:
+  - https://scikit-learn.org/stable/modules/svm.html
 - id: hinge-loss
   type: Method
   name_en: Hinge loss
   name_de: Hinge Loss
+  summary_en: The hinge loss, max(0, 1 − y·f(x)), is zero for samples classified correctly with a margin of at least 1 and grows linearly otherwise (scikit-learn developers, n.d.-k). The primal problem of a linear support vector machine can be written as minimising ½‖w‖² plus C times the sum of hinge losses, the form LinearSVC optimises directly.
+  summary_de: Der Hinge Loss, max(0, 1 − y·f(x)), ist null für Beispiele, die mit einem Rand von mindestens 1 richtig klassifiziert sind, und wächst sonst linear (scikit-learn developers, n.d.-k). Das primale Problem einer linearen Support Vector Machine lässt sich als Minimierung von ½‖w‖² plus C mal die Summe der Hinge Losses schreiben, die Form, die LinearSVC direkt optimiert.
+  sources:
+  - https://scikit-learn.org/stable/modules/svm.html
 - id: rouge
   type: Method
   name_en: ROUGE
