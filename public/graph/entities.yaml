@@ -50,6 +50,11 @@ entities:
   name_de: Geschäftsgeheimnis-Richtlinie (EU) 2016/943
   aliases:
   - Directive (EU) 2016/943
+  summary_en: Directive (EU) 2016/943 of 8 June 2016 protects undisclosed know-how and business information (trade secrets) against their unlawful acquisition, use and disclosure (Art. 1(1)). Member States may provide more far-reaching protection as long as certain provisions are respected; in Germany it was transposed by the Trade Secrets Act (GeschGehG).
+  summary_de: Die Richtlinie (EU) 2016/943 vom 8. Juni 2016 schützt vertrauliches Know-how und vertrauliche Geschäftsinformationen (Geschäftsgeheimnisse) vor rechtswidrigem Erwerb sowie rechtswidriger Nutzung und Offenlegung (Art. 1 Abs. 1). Die Mitgliedstaaten können einen weitergehenden Schutz vorsehen, sofern bestimmte Vorschriften gewahrt bleiben; in Deutschland wurde sie durch das Geschäftsgeheimnisgesetz (GeschGehG) umgesetzt.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016L0943
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L0943
 - id: uwg
   type: Regulation
   name_en: Act against Unfair Competition (UWG)
@@ -350,6 +355,11 @@ entities:
   name_de: Verordnung (EU) 2023/1543 über Europäische Herausgabe- und Sicherungsanordnungen
   aliases:
   - Regulation (EU) 2023/1543
+  summary_en: Regulation (EU) 2023/1543 lays down rules under which an authority of a Member State, in criminal proceedings, may issue a European Production Order or a European Preservation Order requiring a service provider offering services in the Union and established or represented in another Member State to produce or preserve electronic evidence, regardless of where the data are located (Art. 1(1)).
+  summary_de: Die Verordnung (EU) 2023/1543 legt fest, nach welchen Regeln eine Behörde eines Mitgliedstaats im Strafverfahren eine Europäische Herausgabeanordnung oder Europäische Sicherungsanordnung erlassen und damit von einem Diensteanbieter, der in der Union Dienste anbietet und in einem anderen Mitgliedstaat niedergelassen oder vertreten ist, verlangen kann, elektronische Beweismittel herauszugeben oder zu sichern, unabhängig davon, wo sich die Daten befinden (Art. 1 Abs. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R1543
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1543
 - id: einwilligungsverwaltungsverordnung
   type: Regulation
   name_en: Ordinance on recognised consent management services (Einwilligungsverwaltungsverordnung)
@@ -368,12 +378,22 @@ entities:
   name_de: Produkthaftungsrichtlinie (EU) 2024/2853
   aliases:
   - Product Liability Directive (2024)
+  summary_en: Directive (EU) 2024/2853 of 23 October 2024 lays down common rules on the liability of economic operators for damage suffered by natural persons caused by defective products and on compensation for such damage, aiming at a functioning internal market and a high level of consumer protection (Art. 1). It repeals Council Directive 85/374/EEC.
+  summary_de: Die Richtlinie (EU) 2024/2853 vom 23. Oktober 2024 legt gemeinsame Vorschriften über die Haftung von Wirtschaftsakteuren für Schäden fest, die natürlichen Personen durch fehlerhafte Produkte entstanden sind, und über deren Ersatz, mit dem Ziel eines funktionierenden Binnenmarkts und eines hohen Verbraucherschutzniveaus (Art. 1). Sie hebt die Richtlinie 85/374/EWG des Rates auf.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024L2853
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2853
 - id: product-liability-directive-1985
   type: Regulation
   name_en: Product Liability Directive 85/374/EEC
   name_de: Produkthaftungsrichtlinie 85/374/EWG
   aliases:
   - Directive 85/374/EEC
+  summary_en: Council Directive 85/374/EEC was the EU's original directive on liability for defective products. It is repealed by Directive (EU) 2024/2853, which lays down new common rules on the liability of economic operators for damage caused by defective products.
+  summary_de: Die Richtlinie 85/374/EWG des Rates war die ursprüngliche EU-Richtlinie über die Haftung für fehlerhafte Produkte. Sie wird durch die Richtlinie (EU) 2024/2853 aufgehoben, die neue gemeinsame Vorschriften über die Haftung von Wirtschaftsakteuren für Schäden durch fehlerhafte Produkte festlegt.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024L2853
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L2853
 - id: ai-liability-directive-proposal
   type: Regulation
   name_en: AI Liability Directive (proposal)
@@ -575,6 +595,11 @@ entities:
   name_de: Richtlinie 2008/114/EG über Europäische kritische Infrastrukturen
   aliases:
   - Directive 2008/114/EC
+  summary_en: Council Directive 2008/114/EC established a procedure for identifying and designating European critical infrastructures (ECIs) and a common approach to assessing the need to improve their protection, to contribute to the protection of people (Art. 1). It was repealed with effect from 18 October 2024 by the CER Directive (EU) 2022/2557 (Art. 27 CER Directive).
+  summary_de: Die Richtlinie 2008/114/EG des Rates führte ein Verfahren zur Ermittlung und Ausweisung europäischer kritischer Infrastrukturen (EKI) und einen gemeinsamen Ansatz für die Bewertung der Notwendigkeit ihres besseren Schutzes ein, um zum Schutz der Menschen beizutragen (Art. 1). Sie wurde mit Wirkung vom 18. Oktober 2024 durch die CER-Richtlinie (EU) 2022/2557 aufgehoben (Art. 27 CER-Richtlinie).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32008L0114
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557
 - id: critical-entity
   type: Concept
   name_en: Critical entity
@@ -828,6 +853,11 @@ entities:
   aliases:
   - DSM Directive
   - DSM-Richtlinie
+  summary_en: Directive (EU) 2019/790 on copyright and related rights in the Digital Single Market further harmonises copyright law for digital and cross-border uses of protected content, with rules on exceptions and limitations, on facilitating licences and on a well-functioning marketplace for the exploitation of works (Art. 1(1)). Its text and data mining exceptions are central to the debate on AI training data; it also amended Directives 96/9/EC and 2001/29/EC (Art. 24).
+  summary_de: Die Richtlinie (EU) 2019/790 über das Urheberrecht und die verwandten Schutzrechte im digitalen Binnenmarkt harmonisiert das Urheberrecht weiter mit Blick auf die digitale und grenzüberschreitende Nutzung geschützter Inhalte, mit Vorschriften zu Ausnahmen und Beschränkungen, zur Erleichterung der Lizenzvergabe und zum Funktionieren des Marktes für die Verwertung von Werken (Art. 1 Abs. 1). Ihre Ausnahmen für Text und Data Mining sind zentral für die Debatte über KI-Trainingsdaten; sie änderte außerdem die Richtlinien 96/9/EG und 2001/29/EG (Art. 24).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32019L0790
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0790
 - id: urhg
   type: Regulation
   name_en: German Copyright Act (UrhG)
@@ -869,6 +899,12 @@ entities:
   aliases:
   - CRR III
   - CRD VI
+  summary_en: CRR III, Regulation (EU) 2024/1623, amends the Capital Requirements Regulation (EU) No 575/2013 as regards requirements for credit risk, credit valuation adjustment risk, operational risk, market risk and the output floor. CRD VI, Directive (EU) 2024/1619, amends the Capital Requirements Directive 2013/36/EU as regards supervisory powers, sanctions, third-country branches and environmental, social and governance risks.
+  summary_de: CRR III, die Verordnung (EU) 2024/1623, ändert die Kapitaladäquanzverordnung (EU) Nr. 575/2013 im Hinblick auf Vorschriften für das Kreditrisiko, das Risiko einer Anpassung der Kreditbewertung, das operationelle Risiko, das Marktrisiko und die Eigenmitteluntergrenze (Output Floor). CRD VI, die Richtlinie (EU) 2024/1619, ändert die Eigenkapitalrichtlinie 2013/36/EU im Hinblick auf Aufsichtsbefugnisse, Sanktionen, Zweigstellen aus Drittländern sowie Umwelt-, Sozial- und Unternehmensführungsrisiken.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1623
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1623
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024L1619
 - id: esrb
   type: Organisation
   name_en: European Systemic Risk Board (ESRB)
@@ -905,6 +941,11 @@ entities:
   name_de: Verordnung (EU) 2023/988 über die allgemeine Produktsicherheit
   aliases:
   - GPSR
+  summary_en: The General Product Safety Regulation (EU) 2023/988 lays down essential rules on the safety of consumer products placed or made available on the market, to improve the functioning of the internal market while providing a high level of consumer protection (Art. 1). It repealed Directive 2001/95/EC.
+  summary_de: Die Verordnung (EU) 2023/988 über die allgemeine Produktsicherheit legt wesentliche Vorschriften für die Sicherheit von Verbraucherprodukten fest, die in Verkehr gebracht oder auf dem Markt bereitgestellt werden, um die Funktionsweise des Binnenmarkts zu verbessern und ein hohes Verbraucherschutzniveau zu gewährleisten (Art. 1). Sie hob die Richtlinie 2001/95/EG auf.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R0988
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0988
 - id: european-health-data-space
   type: Regulation
   name_en: European Health Data Space Regulation (EU) 2025/327
@@ -912,6 +953,11 @@ entities:
   aliases:
   - EHDS
   - European Health Data Space
+  summary_en: Regulation (EU) 2025/327 establishes the European Health Data Space (EHDS) with common rules, standards, infrastructures and a governance framework to facilitate access to electronic health data for primary use and secondary use (Art. 1(1)). It specifies and complements GDPR rights regarding personal electronic health data and lays down common rules for electronic health record systems (Art. 1(2)).
+  summary_de: Die Verordnung (EU) 2025/327 schafft den europäischen Gesundheitsdatenraum (EHDS) mit gemeinsamen Vorschriften, Standards, Infrastrukturen und einem Governance-Rahmen, um den Zugang zu elektronischen Gesundheitsdaten für die Primär- und Sekundärnutzung zu erleichtern (Art. 1 Abs. 1). Sie präzisiert und ergänzt die Rechte aus der DSGVO in Bezug auf personenbezogene elektronische Gesundheitsdaten und legt gemeinsame Vorschriften für Systeme für elektronische Gesundheitsakten fest (Art. 1 Abs. 2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32025R0327
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327
 - id: product-with-digital-elements
   type: Concept
   name_en: Product with digital elements
@@ -926,16 +972,32 @@ entities:
   name_de: ENISA-Verordnung (EU) Nr. 526/2013
   aliases:
   - Regulation (EU) No 526/2013
+  summary_en: Regulation (EU) No 526/2013 established the European Union Agency for Network and Information Security (ENISA) to contribute to a high level of network and information security in the Union, to raise awareness and to promote a culture of network and information security (Art. 1(1)). It repealed Regulation (EC) No 460/2004 and was itself repealed with effect from 27 June 2019 by the Cybersecurity Act (EU) 2019/881 (Art. 68 CSA).
+  summary_de: Die Verordnung (EU) Nr. 526/2013 errichtete die Agentur der Europäischen Union für Netz- und Informationssicherheit (ENISA), um zu einer hohen Netz- und Informationssicherheit in der Union beizutragen, das Problembewusstsein zu heben und eine Kultur der Netz- und Informationssicherheit zu fördern (Art. 1 Abs. 1). Sie hob die Verordnung (EG) Nr. 460/2004 auf und wurde ihrerseits mit Wirkung vom 27. Juni 2019 durch den Rechtsakt zur Cybersicherheit (EU) 2019/881 aufgehoben (Art. 68 CSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32013R0526
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0526
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881
 - id: regulation-2025-37
   type: Regulation
   name_en: Regulation (EU) 2025/37 (managed security services)
   name_de: Verordnung (EU) 2025/37 (gemanagte Sicherheitsdienste)
+  summary_en: Regulation (EU) 2025/37 of 19 December 2024 amends the Cybersecurity Act (EU) 2019/881 as regards managed security services, so that the framework for European cybersecurity certification schemes covers managed security services in addition to ICT products, services and processes (Art. 1(1)).
+  summary_de: Die Verordnung (EU) 2025/37 vom 19. Dezember 2024 ändert den Rechtsakt zur Cybersicherheit (EU) 2019/881 im Hinblick auf verwaltete Sicherheitsdienste, sodass der Rahmen für europäische Schemata für die Cybersicherheitszertifizierung neben IKT-Produkten, -Diensten und -Prozessen auch verwaltete Sicherheitsdienste erfasst (Art. 1 Nr. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32025R0037
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0037
 - id: eucc
   type: Regulation
   name_en: EUCC certification scheme (Implementing Regulation (EU) 2024/482)
   name_de: EUCC-Zertifizierungsschema (Durchführungsverordnung (EU) 2024/482)
   aliases:
   - EUCC
+  summary_en: Commission Implementing Regulation (EU) 2024/482 sets out the European Common Criteria-based cybersecurity certification scheme (EUCC) under the Cybersecurity Act (Art. 1). It applies to all ICT products, including their documentation, submitted for certification under the EUCC and to protection profiles submitted for certification as part of the ICT process.
+  summary_de: Die Durchführungsverordnung (EU) 2024/482 der Kommission legt das auf den Gemeinsamen Kriterien beruhende europäische System für die Cybersicherheitszertifizierung (EUCC) nach dem Rechtsakt zur Cybersicherheit fest (Art. 1). Sie gilt für alle IKT-Produkte einschließlich ihrer Dokumentation, die zur Zertifizierung im Rahmen des EUCC vorgelegt werden, sowie für Schutzprofile, die im IKT-Prozess zur Zertifizierung vorgelegt werden.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R0482
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0482
 - id: cybersecurity-certification
   type: Concept
   name_en: European cybersecurity certification
@@ -952,6 +1014,12 @@ entities:
   name_de: Datenbank-Richtlinie 96/9/EG
   aliases:
   - Directive 96/9/EC
+  summary_en: Directive 96/9/EC on the legal protection of databases provides, in its Article 7, a sui generis right for database makers. Under the Data Act, this right does not apply when data is obtained from or generated by a connected product or related service within the Data Act's scope (Art. 43 Data Act), and the DSM Directive amended its exception for teaching and scientific research (Art. 24 DSM Directive).
+  summary_de: Die Richtlinie 96/9/EG über den rechtlichen Schutz von Datenbanken sieht in Artikel 7 ein Schutzrecht sui generis für Datenbankhersteller vor. Nach dem Datengesetz findet dieses Recht keine Anwendung, wenn Daten mittels eines in dessen Anwendungsbereich fallenden vernetzten Produkts oder verbundenen Dienstes erlangt oder erzeugt wurden (Art. 43 Datengesetz), und die DSM-Richtlinie änderte ihre Ausnahme für Unterricht und wissenschaftliche Forschung (Art. 24 DSM-Richtlinie).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023R2854
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L0790
 - id: connected-product
   type: Concept
   name_en: Connected product
@@ -998,6 +1066,12 @@ entities:
   name_de: Open-Data-Richtlinie (EU) 2019/1024
   aliases:
   - Directive (EU) 2019/1024
+  summary_en: The Open Data Directive (EU) 2019/1024, a recast on open data and the re-use of public sector information, sets minimum rules on the re-use of existing documents held by public sector bodies and certain public undertakings, to promote the use of open data and stimulate innovation in products and services (Art. 1(1)). Protected public sector data outside its scope fall under the Data Governance Act.
+  summary_de: Die Richtlinie (EU) 2019/1024 über offene Daten und die Weiterverwendung von Informationen des öffentlichen Sektors (Neufassung) enthält Mindestvorschriften für die Weiterverwendung vorhandener Dokumente öffentlicher Stellen und bestimmter öffentlicher Unternehmen, um die Verwendung offener Daten zu fördern und Innovation bei Produkten und Dienstleistungen anzuregen (Art. 1 Abs. 1). Geschützte Daten öffentlicher Stellen außerhalb ihres Anwendungsbereichs fallen unter den Daten-Governance-Rechtsakt.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32019L1024
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L1024
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R0868
 - id: public-sector-data-reuse
   type: Concept
   name_en: Re-use of protected public sector data
@@ -1077,6 +1151,11 @@ entities:
   name_de: Whistleblower-Richtlinie (EU) 2019/1937
   aliases:
   - Directive (EU) 2019/1937
+  summary_en: Directive (EU) 2019/1937 on the protection of persons who report breaches of Union law aims to enhance the enforcement of Union law and policies in specific areas by laying down common minimum standards for a high level of protection of whistleblowers (Art. 1).
+  summary_de: Die Richtlinie (EU) 2019/1937 zum Schutz von Personen, die Verstöße gegen das Unionsrecht melden, soll die Durchsetzung des Unionsrechts und der Unionspolitik in bestimmten Bereichen durch gemeinsame Mindeststandards verbessern, die ein hohes Schutzniveau für hinweisgebende Personen sicherstellen (Art. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32019L1937
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L1937
 - id: tfeu
   type: Regulation
   name_en: Treaty on the Functioning of the European Union (TFEU)
@@ -1123,12 +1202,22 @@ entities:
   name_de: E-Commerce-Richtlinie 2000/31/EG
   aliases:
   - Directive 2000/31/EC
+  summary_en: The E-Commerce Directive 2000/31/EC set out rules for information society services, including the liability exemptions for intermediaries in its Articles 12 to 15. The Digital Services Act deleted those articles; references to them are read as references to Articles 4, 5, 6 and 8 DSA (Art. 89 DSA).
+  summary_de: Die E-Commerce-Richtlinie 2000/31/EG enthielt Vorschriften für Dienste der Informationsgesellschaft, darunter in den Artikeln 12 bis 15 die Haftungsprivilegien für Vermittler. Das Gesetz über digitale Dienste hat diese Artikel gestrichen; Bezugnahmen darauf gelten als Bezugnahmen auf die Artikel 4, 5, 6 und 8 DSA (Art. 89 DSA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: representative-actions-directive
   type: Regulation
   name_en: Representative Actions Directive (EU) 2020/1828
   name_de: Verbandsklagenrichtlinie (EU) 2020/1828
   aliases:
   - Directive (EU) 2020/1828
+  summary_en: Directive (EU) 2020/1828 ensures that a representative action mechanism for the protection of the collective interests of consumers is available in all Member States, with safeguards against abusive litigation, to achieve a high level of consumer protection and improve consumers' access to justice (Art. 1(1)). It repealed Directive 2009/22/EC.
+  summary_de: Die Richtlinie (EU) 2020/1828 stellt sicher, dass in allen Mitgliedstaaten ein Verfahren für Verbandsklagen zum Schutz der Kollektivinteressen der Verbraucher besteht, mit Schutzmaßnahmen gegen Klagemissbrauch, um ein hohes Verbraucherschutzniveau zu erreichen und den Zugang der Verbraucher zur Justiz zu verbessern (Art. 1 Abs. 1). Sie hob die Richtlinie 2009/22/EG auf.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32020L1828
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020L1828
 - id: recommender-system
   type: Concept
   name_en: Recommender system
@@ -1207,6 +1296,11 @@ entities:
   name_de: Ratingagentur-Verordnung (EG) Nr. 1060/2009
   aliases:
   - Regulation (EC) No 1060/2009
+  summary_en: Regulation (EC) No 1060/2009 on credit rating agencies introduces a common regulatory approach to enhance the integrity, transparency, responsibility, good governance and reliability of credit rating activities (Art. 1). It lays down conditions for issuing credit ratings and rules on the organisation and conduct of credit rating agencies to promote their independence and avoid conflicts of interest.
+  summary_de: Die Verordnung (EG) Nr. 1060/2009 über Ratingagenturen führt einen gemeinsamen Regulierungsansatz ein, um Integrität, Transparenz, Verantwortung, gute Unternehmensführung und Verlässlichkeit von Ratingtätigkeiten zu fördern (Art. 1). Sie legt die Bedingungen für die Abgabe von Ratings sowie Organisations- und Verhaltensregeln für Ratingagenturen fest, die deren Unabhängigkeit fördern und Interessenkonflikte vermeiden sollen.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32009R1060
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060
 - id: emir
   type: Regulation
   name_en: European Market Infrastructure Regulation (EU) No 648/2012 (EMIR)
@@ -1214,6 +1308,11 @@ entities:
   aliases:
   - EMIR
   - Regulation (EU) No 648/2012
+  summary_en: The European Market Infrastructure Regulation (EU) No 648/2012 (EMIR) lays down clearing and bilateral risk-management requirements for over-the-counter (OTC) derivative contracts, reporting requirements for derivative contracts and uniform requirements for central counterparties (CCPs) and trade repositories (Art. 1(1)).
+  summary_de: Die Verordnung (EU) Nr. 648/2012 über OTC-Derivate, zentrale Gegenparteien und Transaktionsregister (EMIR) legt Clearing- und bilaterale Risikomanagementvorschriften für außerbörsliche (OTC-)Derivatekontrakte, Meldepflichten für Derivatekontrakte sowie einheitliche Vorschriften für zentrale Gegenparteien (CCPs) und Transaktionsregister fest (Art. 1 Abs. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32012R0648
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648
 - id: eba-gl-2026-09
   type: Regulation
   name_en: EBA Guidelines on third-party risk for non-ICT services (EBA/GL/2026/09)
@@ -1239,6 +1338,11 @@ entities:
   type: Regulation
   name_en: Telecommunications framework directives 2002/19/EC to 2002/22/EC
   name_de: Telekommunikations-Rahmenrichtlinien 2002/19/EG bis 2002/22/EG
+  summary_en: The 2002 telecommunications framework consisted of Directives 2002/19/EC (access), 2002/20/EC (authorisation), 2002/21/EC (framework) and 2002/22/EC (universal service). They were repealed with effect from 21 December 2020 by the European Electronic Communications Code, Directive (EU) 2018/1972 (Art. 125 EECC).
+  summary_de: Der Telekommunikationsrahmen von 2002 bestand aus den Richtlinien 2002/19/EG (Zugang), 2002/20/EG (Genehmigung), 2002/21/EG (Rahmen) und 2002/22/EG (Universaldienst). Sie wurden mit Wirkung vom 21. Dezember 2020 durch den Europäischen Kodex für die elektronische Kommunikation, die Richtlinie (EU) 2018/1972, aufgehoben (Art. 125 EKEK).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02018L1972-20241018
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02018L1972-20241018
 - id: electronic-communications-service
   type: Concept
   name_en: Electronic communications service
@@ -1253,12 +1357,22 @@ entities:
   name_de: Verordnung (EU) 2024/1183 (eIDAS 2.0)
   aliases:
   - eIDAS 2.0
+  summary_en: Regulation (EU) 2024/1183 (eIDAS 2.0) amends Regulation (EU) No 910/2014 to establish the European Digital Identity Framework. The amended eIDAS Regulation aims to ensure the proper functioning of the internal market and an adequate level of security of electronic identification means and trust services, so that people and businesses can participate safely in the digital society and access online services throughout the Union (Art. 1).
+  summary_de: Die Verordnung (EU) 2024/1183 (eIDAS 2.0) ändert die Verordnung (EU) Nr. 910/2014, um den europäischen Rahmen für eine digitale Identität zu schaffen. Die geänderte eIDAS-Verordnung dient dem Funktionieren des Binnenmarkts und einem angemessenen Sicherheitsniveau bei elektronischen Identifizierungsmitteln und Vertrauensdiensten, damit natürliche und juristische Personen sicher an der digitalen Gesellschaft teilhaben und unionsweit Online-Dienste nutzen können (Art. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32024R1183
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1183
 - id: e-signatures-directive
   type: Regulation
   name_en: Electronic Signatures Directive 1999/93/EC
   name_de: Signaturrichtlinie 1999/93/EG
   aliases:
   - Directive 1999/93/EC
+  summary_en: The Electronic Signatures Directive 1999/93/EC was the EU's first legal framework for electronic signatures. It was repealed with effect from 1 July 2016 by the eIDAS Regulation (EU) No 910/2014, and references to it are read as references to eIDAS (Art. 50 eIDAS).
+  summary_de: Die Signaturrichtlinie 1999/93/EG war der erste Rechtsrahmen der EU für elektronische Signaturen. Sie wurde mit Wirkung vom 1. Juli 2016 durch die eIDAS-Verordnung (EU) Nr. 910/2014 aufgehoben, und Bezugnahmen darauf gelten als Bezugnahmen auf die eIDAS-Verordnung (Art. 50 eIDAS).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32014R0910
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910
 - id: eudi-wallet
   type: Concept
   name_en: European Digital Identity Wallet
@@ -1361,18 +1475,33 @@ entities:
   name_de: Richtlinie 2009/136/EG (Änderung der ePrivacy-Richtlinie)
   aliases:
   - Directive 2009/136/EC
+  summary_en: Directive 2009/136/EC of 25 November 2009 amended the Universal Service Directive 2002/22/EC, the ePrivacy Directive 2002/58/EC and the consumer protection cooperation rules, as part of the 2009 telecoms reform. Among other things, it replaced Article 5(3) of the ePrivacy Directive so that storing information on, or accessing information in, a user's terminal equipment is only allowed with consent after clear and comprehensive information (Art. 2(5)), the basis of cookie consent.
+  summary_de: Die Richtlinie 2009/136/EG vom 25. November 2009 änderte die Universaldienstrichtlinie 2002/22/EG, die Datenschutzrichtlinie für elektronische Kommunikation 2002/58/EG und die Vorschriften zur Zusammenarbeit im Verbraucherschutz als Teil der Telekommunikationsreform von 2009. Unter anderem fasste sie Artikel 5 Absatz 3 der ePrivacy-Richtlinie neu, sodass das Speichern von Informationen im Endgerät eines Nutzers oder der Zugriff darauf nur mit Einwilligung nach klarer und umfassender Information zulässig ist (Art. 2 Nr. 5), die Grundlage der Einwilligung in Cookies.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32009L0136
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136
 - id: data-retention-directive
   type: Regulation
   name_en: Data Retention Directive 2006/24/EC
   name_de: Vorratsdatenspeicherungsrichtlinie 2006/24/EG
   aliases:
   - Directive 2006/24/EC
+  summary_en: The Data Retention Directive 2006/24/EC harmonised obligations of providers of public electronic communications services and networks to retain traffic and location data so that they were available for the investigation, detection and prosecution of serious crime (Art. 1). In Digital Rights Ireland (C-293/12, 8 April 2014), the Court of Justice declared the Directive invalid.
+  summary_de: Die Richtlinie 2006/24/EG über die Vorratsspeicherung von Daten harmonisierte die Pflichten von Anbietern öffentlicher elektronischer Kommunikationsdienste und -netze, Verkehrs- und Standortdaten zu speichern, damit sie zur Ermittlung, Feststellung und Verfolgung schwerer Straftaten zur Verfügung stehen (Art. 1). Im Urteil Digital Rights Ireland (C-293/12, 8. April 2014) erklärte der Gerichtshof die Richtlinie für ungültig.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32006L0024
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:62012CJ0293
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62012CJ0293
 - id: telecom-privacy-directive-1997
   type: Regulation
   name_en: Telecommunications Privacy Directive 97/66/EC
   name_de: Telekommunikations-Datenschutzrichtlinie 97/66/EG
   aliases:
   - Directive 97/66/EC
+  summary_en: The Telecommunications Privacy Directive 97/66/EC governed the processing of personal data and the protection of privacy in the telecommunications sector. It was repealed by the ePrivacy Directive 2002/58/EC, and references to it are read as references to that Directive (Art. 19 ePrivacy Directive).
+  summary_de: Die Telekommunikations-Datenschutzrichtlinie 97/66/EG regelte die Verarbeitung personenbezogener Daten und den Schutz der Privatsphäre im Telekommunikationsbereich. Sie wurde durch die Datenschutzrichtlinie für elektronische Kommunikation 2002/58/EG aufgehoben, und Bezugnahmen darauf gelten als Bezugnahmen auf diese Richtlinie (Art. 19 ePrivacy-Richtlinie).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002L0058-20091219
 - id: eprivacy-regulation-proposal
   type: Regulation
   name_en: ePrivacy Regulation (proposal)
@@ -1481,6 +1610,11 @@ entities:
   aliases:
   - Digital Omnibus on AI
   - Regulation (EU) 2026/1744
+  summary_en: Regulation (EU) 2026/1744 of 8 July 2026 (Digital Omnibus on AI) amends the AI Act, Regulation (EU) 2024/1689, together with Regulations (EU) 2018/1139 and (EU) 2023/1230, to simplify the implementation of harmonised rules on artificial intelligence. Among other changes, it adds small mid-cap enterprises to the AI Act's innovation support measures and limits which provisions apply to high-risk AI systems related to products under Section B of Annex I (Art. 1).
+  summary_de: Die Verordnung (EU) 2026/1744 vom 8. Juli 2026 (Digital-Omnibus-Verordnung zur KI) ändert die KI-Verordnung (EU) 2024/1689 sowie die Verordnungen (EU) 2018/1139 und (EU) 2023/1230, um die Umsetzung harmonisierter Vorschriften für künstliche Intelligenz zu vereinfachen. Unter anderem bezieht sie kleine Midcap-Unternehmen in die Maßnahmen zur Innovationsförderung ein und begrenzt, welche Vorschriften für Hochrisiko-KI-Systeme im Zusammenhang mit Produkten nach Anhang I Abschnitt B gelten (Art. 1).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32026R1744
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744
 - id: edps
   type: Organisation
   name_en: European Data Protection Supervisor (EDPS)
@@ -1595,6 +1729,11 @@ entities:
   name_de: Datenschutzrichtlinie 95/46/EG
   aliases:
   - Directive 95/46/EC
+  summary_en: The Data Protection Directive 95/46/EC was the EU's general data protection law before the GDPR. It was repealed with effect from 25 May 2018; references to it are read as references to the GDPR, and references to its Article 29 Working Party as references to the European Data Protection Board (Art. 94 GDPR).
+  summary_de: Die Datenschutzrichtlinie 95/46/EG war vor der DSGVO das allgemeine Datenschutzrecht der EU. Sie wurde mit Wirkung vom 25. Mai 2018 aufgehoben; Verweise auf sie gelten als Verweise auf die DSGVO und Verweise auf die Artikel-29-Datenschutzgruppe als Verweise auf den Europäischen Datenschutzausschuss (Art. 94 DSGVO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679
 - id: edpb
   type: Organisation
   name_en: European Data Protection Board (EDPB)
@@ -2267,6 +2406,11 @@ entities:
   aliases:
   - NIS1
   - Directive (EU) 2016/1148
+  summary_en: The NIS Directive (EU) 2016/1148 laid down measures for a high common level of security of network and information systems in the Union, including national strategies, a Cooperation Group and a CSIRTs network (Art. 1). It was repealed with effect from 18 October 2024 by the NIS2 Directive (EU) 2022/2555 (Art. 44 NIS2).
+  summary_de: Die NIS-Richtlinie (EU) 2016/1148 legte Maßnahmen für ein hohes gemeinsames Sicherheitsniveau von Netz- und Informationssystemen in der Union fest, darunter nationale Strategien, eine Kooperationsgruppe und ein CSIRTs-Netzwerk (Art. 1). Sie wurde mit Wirkung vom 18. Oktober 2024 durch die NIS-2-Richtlinie (EU) 2022/2555 aufgehoben (Art. 44 NIS2).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016L1148
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555
 - id: eu-cyclone
   type: Organisation
   name_en: EU-CyCLONe (European cyber crisis liaison organisation network)
@@ -3802,6 +3946,11 @@ entities:
   aliases:
   - Directive (EU) 2023/2225
   - CCD2
+  summary_en: Directive (EU) 2023/2225 of 18 October 2023 lays down a common framework for harmonising certain aspects of Member States' rules on credit agreements for consumers (Art. 1) and repeals the Consumer Credit Directive 2008/48/EC. Its Article 18 requires creditors to carry out a thorough assessment of the consumer's creditworthiness before concluding a credit agreement.
+  summary_de: Die Richtlinie (EU) 2023/2225 vom 18. Oktober 2023 legt einen gemeinsamen Rahmen zur Harmonisierung bestimmter Aspekte der mitgliedstaatlichen Vorschriften über Verbraucherkreditverträge fest (Art. 1) und hebt die Verbraucherkreditrichtlinie 2008/48/EG auf. Ihr Artikel 18 verpflichtet Kreditgeber, vor Abschluss eines Kreditvertrags die Kreditwürdigkeit des Verbrauchers eingehend zu prüfen.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32023L2225
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023L2225
 - id: thoughtworks
   type: Organisation
   name_en: Thoughtworks
