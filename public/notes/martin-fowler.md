@@ -43,7 +43,7 @@ Fowler worked as an independent consultant from 1991 and then joined Thoughtwork
 
 #### Refactoring
 
-Fowler defines refactoring as "a controlled technique for improving the design of an existing code base"; his book *Refactoring* appeared in 1999 and in a second edition in 2018, co-written with [[kent-beck|Kent Beck]] (Fowler, n.d.-c; Fowler, n.d.-b). The term "code smell", "a surface indication that usually corresponds to a deeper problem in the system", was coined by Kent Beck while helping Fowler with the book (Fowler, 2006; [[technical-debt|technical debt]]).
+Fowler defines refactoring as "a controlled technique for improving the design of an existing code base"; his book *Refactoring* appeared in 1999 and in a second edition in 2018, co-written with [[kent-beck|Kent Beck]] (Fowler, n.d.-c; Fowler, n.d.-b). The term "[[code-smell|code smell]]", "a surface indication that usually corresponds to a deeper problem in the system", was coined by Kent Beck while helping Fowler with the book (Fowler, 2006; [[technical-debt|technical debt]]).
 
 #### Enterprise application architecture and patterns
 
@@ -119,7 +119,7 @@ Fowler arbeitete ab 1991 als unabhängiger Berater und kam dann zu Thoughtworks,
 
 #### Refactoring
 
-Fowler definiert Refactoring als „a controlled technique for improving the design of an existing code base“; sein Buch *Refactoring* erschien 1999 und 2018 in zweiter Auflage, gemeinsam mit [[kent-beck|Kent Beck]] (Fowler, n.d.-c; Fowler, n.d.-b). Den Begriff „Code Smell“, „a surface indication that usually corresponds to a deeper problem in the system“, prägte Kent Beck, als er Fowler bei dem Buch half (Fowler, 2006; [[technical-debt|technische Schulden]]).
+Fowler definiert Refactoring als „a controlled technique for improving the design of an existing code base“; sein Buch *Refactoring* erschien 1999 und 2018 in zweiter Auflage, gemeinsam mit [[kent-beck|Kent Beck]] (Fowler, n.d.-c; Fowler, n.d.-b). Den Begriff „[[code-smell|Code Smell]]“, „a surface indication that usually corresponds to a deeper problem in the system“, prägte Kent Beck, als er Fowler bei dem Buch half (Fowler, 2006; [[technical-debt|technische Schulden]]).
 
 #### Architektur und Muster für Unternehmensanwendungen
 

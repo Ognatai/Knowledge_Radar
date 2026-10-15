@@ -501,10 +501,6 @@ entities:
   type: Concept
   name_en: Modular design
   name_de: Modulares Design
-- id: code-smell
-  type: Concept
-  name_en: Code smell
-  name_de: Code Smell
 - id: code-review
   type: Method
   name_en: Code review
@@ -1095,10 +1091,6 @@ entities:
   aliases:
   - EDPS
   - EDSB
-- id: mlflow
-  type: Technology
-  name_en: MLflow
-  name_de: MLflow
 - id: weights-and-biases
   type: Technology
   name_en: Weights & Biases

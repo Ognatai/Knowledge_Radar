@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Databricks is a data and AI company headquartered in San Francisco, founded in 2013 by the original creators of the lakehouse architecture and of the open-source projects Apache Spark, Delta Lake, MLflow and Unity Catalog (Databricks, n.d.). Its mission is "to simplify and democratize data and AI", and more than 20,000 organisations, including 70% of the Fortune 500, use its Data + AI Platform (Databricks, n.d.). In this knowledge base it appears as the origin of the [[data-lakehouse|data lakehouse]] architecture, as a company founded by the creators of [[apache-spark|Apache Spark]] and as an example of a governance layer with Unity Catalog ([[data-governance|data governance]]).
+Databricks is a data and AI company headquartered in San Francisco, founded in 2013 by the original creators of the lakehouse architecture and of the open-source projects Apache Spark, Delta Lake, [[mlflow|MLflow]] and Unity Catalog (Databricks, n.d.). Its mission is "to simplify and democratize data and AI", and more than 20,000 organisations, including 70% of the Fortune 500, use its Data + AI Platform (Databricks, n.d.). In this knowledge base it appears as the origin of the [[data-lakehouse|data lakehouse]] architecture, as a company founded by the creators of [[apache-spark|Apache Spark]] and as an example of a governance layer with Unity Catalog ([[data-governance|data governance]]).
 
 ### Key facts
 
@@ -60,7 +60,7 @@ Databricks links data engineering and machine learning on one platform: data sto
 
 ### TL;DR
 
-Databricks ist ein Daten- und KI-Unternehmen mit Sitz in San Francisco, 2013 gegründet von den ursprünglichen Urhebern der Lakehouse-Architektur und der Open-Source-Projekte Apache Spark, Delta Lake, MLflow und Unity Catalog (Databricks, n.d.). Seine Mission ist, „to simplify and democratize data and AI“, und mehr als 20 000 Organisationen, darunter 70 % der Fortune-500-Unternehmen, nutzen seine Data + AI Platform (Databricks, n.d.). In dieser Wissensbasis erscheint es als Ursprung der [[data-lakehouse|Data-Lakehouse]]-Architektur, als Unternehmen der Urheber von [[apache-spark|Apache Spark]] und als Beispiel für eine Governance-Schicht mit Unity Catalog ([[data-governance|Data Governance]]).
+Databricks ist ein Daten- und KI-Unternehmen mit Sitz in San Francisco, 2013 gegründet von den ursprünglichen Urhebern der Lakehouse-Architektur und der Open-Source-Projekte Apache Spark, Delta Lake, [[mlflow|MLflow]] und Unity Catalog (Databricks, n.d.). Seine Mission ist, „to simplify and democratize data and AI“, und mehr als 20 000 Organisationen, darunter 70 % der Fortune-500-Unternehmen, nutzen seine Data + AI Platform (Databricks, n.d.). In dieser Wissensbasis erscheint es als Ursprung der [[data-lakehouse|Data-Lakehouse]]-Architektur, als Unternehmen der Urheber von [[apache-spark|Apache Spark]] und als Beispiel für eine Governance-Schicht mit Unity Catalog ([[data-governance|Data Governance]]).
 
 ### Eckdaten
 

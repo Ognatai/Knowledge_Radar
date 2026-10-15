@@ -1,0 +1,25 @@
+version: 1
+note_sha256: 3c369a5de4676ce36fbbb6305f8557d39d03d7f2b661208dab3ffcbd0f78ed44
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- apache-spark
+- data-governance
+- databricks
+- docker
+- experiment-tracking
+- git
+- llm-as-a-judge
+- llm-observability-and-tracing
+- ml-pipelines
+- python
+- scikit-learn
+- matei-zaharia
+relations:
+- from: mlflow
+  type: DEVELOPED_BY
+  to: databricks
+  evidence: launched by databricks in june 2018
+- from: mlflow
+  type: IMPLEMENTS
+  to: experiment-tracking
+  evidence: tracking parameters, metrics and artifacts of training runs so that results can be compared and reproduced

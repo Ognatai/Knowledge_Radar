@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Experiment tracking is the systematic logging of ML training runs: hyperparameters, metrics, data and code versions and output files, so that results can be traced, compared and reproduced later. ML development revolves around constant experimentation with datasets, models, libraries and parameters, and keeping track of these inputs is one of the challenges that distinguishes it from traditional software development (Zaharia et al., 2018). Tools such as MLflow Tracking log parameters, code versions, metrics and artifacts per run and show them in a UI for comparison (MLflow Tracking docs).
+Experiment tracking is the systematic logging of ML training runs: hyperparameters, metrics, data and code versions and output files, so that results can be traced, compared and reproduced later. ML development revolves around constant experimentation with datasets, models, libraries and parameters, and keeping track of these inputs is one of the challenges that distinguishes it from traditional software development (Zaharia et al., 2018). Tools such as [[mlflow|MLflow Tracking]] log parameters, code versions, metrics and artifacts per run and show them in a UI for comparison (MLflow Tracking docs).
 
 ### How it works
 
@@ -115,7 +115,7 @@ Experiment tracking records every run with its configuration, code, data, metric
 
 ### TL;DR
 
-Experiment Tracking ist das systematische Protokollieren von ML-Trainingsläufen: Hyperparameter, Metriken, Daten- und Codeversionen sowie Ausgabedateien, damit sich Ergebnisse später nachvollziehen, vergleichen und reproduzieren lassen. ML-Entwicklung besteht aus ständigem Experimentieren mit Datensätzen, Modellen, Bibliotheken und Parametern, und den Überblick über diese Eingaben zu behalten, ist eine der Herausforderungen, die sie von klassischer Softwareentwicklung unterscheiden (Zaharia et al., 2018). Werkzeuge wie MLflow Tracking protokollieren Parameter, Codeversionen, Metriken und Artefakte je Lauf und zeigen sie zum Vergleich in einer Oberfläche (MLflow Tracking docs).
+Experiment Tracking ist das systematische Protokollieren von ML-Trainingsläufen: Hyperparameter, Metriken, Daten- und Codeversionen sowie Ausgabedateien, damit sich Ergebnisse später nachvollziehen, vergleichen und reproduzieren lassen. ML-Entwicklung besteht aus ständigem Experimentieren mit Datensätzen, Modellen, Bibliotheken und Parametern, und den Überblick über diese Eingaben zu behalten, ist eine der Herausforderungen, die sie von klassischer Softwareentwicklung unterscheiden (Zaharia et al., 2018). Werkzeuge wie [[mlflow|MLflow Tracking]] protokollieren Parameter, Codeversionen, Metriken und Artefakte je Lauf und zeigen sie zum Vergleich in einer Oberfläche (MLflow Tracking docs).
 
 ### Funktionsweise
 

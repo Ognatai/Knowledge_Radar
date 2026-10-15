@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 569c36a754240078977a1ae39214877cab46e8691e2bc4ba65d336210b7b390f
+note_sha256: a996fac7522ad9df6a94eef1487ee357443b07d519f5619915a66f81f3e19cec
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - ci-cd

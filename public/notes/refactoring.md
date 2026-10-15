@@ -42,7 +42,7 @@ Each refactoring does little and is "too small to be worth doing", but a sequenc
 
 #### 2. Code smells as triggers
 
-A code smell is "a surface indication that usually corresponds to a deeper problem in the system", a term coined by Kent Beck while helping with the *Refactoring* book (Fowler, 2006). Smells are quick to spot, for example a long method or a class with data but no behaviour, but do not always indicate a problem; they point to where refactoring may help (Fowler, 2006).
+A [[code-smell|code smell]] is "a surface indication that usually corresponds to a deeper problem in the system", a term coined by Kent Beck while helping with the *Refactoring* book (Fowler, 2006). Smells are quick to spot, for example a long method or a class with data but no behaviour, but do not always indicate a problem; they point to where refactoring may help (Fowler, 2006).
 
 #### 3. Tests as a safety net
 
@@ -129,7 +129,7 @@ Jedes Refactoring bewirkt wenig und ist für sich „too small to be worth doing
 
 #### 2. Code Smells als Auslöser
 
-Ein Code Smell ist „a surface indication that usually corresponds to a deeper problem in the system“, ein Begriff, den Kent Beck bei der Mitarbeit am Buch *Refactoring* prägte (Fowler, 2006). Smells sind schnell zu erkennen, etwa eine lange Methode oder eine Klasse mit Daten, aber ohne Verhalten, weisen aber nicht immer auf ein Problem hin; sie zeigen, wo Refactoring helfen kann (Fowler, 2006).
+Ein [[code-smell|Code Smell]] ist „a surface indication that usually corresponds to a deeper problem in the system“, ein Begriff, den Kent Beck bei der Mitarbeit am Buch *Refactoring* prägte (Fowler, 2006). Smells sind schnell zu erkennen, etwa eine lange Methode oder eine Klasse mit Daten, aber ohne Verhalten, weisen aber nicht immer auf ein Problem hin; sie zeigen, wo Refactoring helfen kann (Fowler, 2006).
 
 #### 3. Tests als Sicherheitsnetz
 

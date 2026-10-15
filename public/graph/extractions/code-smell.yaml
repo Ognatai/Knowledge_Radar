@@ -1,0 +1,19 @@
+version: 1
+note_sha256: 53bb75de7cdae5b2f7f9fea441d1e8d9c80070bd7db64ba3db6156030a0e24d0
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- clean-code
+- kent-beck
+- martin-fowler
+- ml-pipelines
+- refactoring
+- technical-debt
+relations:
+- from: code-smell
+  type: DEVELOPED_BY
+  to: kent-beck
+  evidence: kent beck coined the term while helping martin fowler with the book
+- from: code-smell
+  type: COMPLEMENTS
+  to: refactoring
+  evidence: the fix is usually refactoring

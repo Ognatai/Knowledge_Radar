@@ -22,7 +22,7 @@ sources:
 
 ### TL;DR
 
-An ML pipeline turns the steps of model development, from data extraction and validation through training and evaluation to registration, into an automated, versioned workflow that can be rerun on new data. Google describes this as the step from a manual, notebook-driven process (MLOps level 0) to continuous training (level 1) and finally to CI/CD for the pipelines themselves (level 2) (Google Cloud). Orchestration frameworks such as ZenML and Kubeflow Pipelines define pipelines as [[python|Python]] code, run each step in a container on a chosen infrastructure, store every intermediate artifact and record metadata for lineage and caching (ZenML; Kubeflow). A model registry such as MLflow's holds the resulting model versions and the aliases that decide which version is served (MLflow).
+An ML pipeline turns the steps of model development, from data extraction and validation through training and evaluation to registration, into an automated, versioned workflow that can be rerun on new data. Google describes this as the step from a manual, notebook-driven process (MLOps level 0) to continuous training (level 1) and finally to CI/CD for the pipelines themselves (level 2) (Google Cloud). Orchestration frameworks such as ZenML and Kubeflow Pipelines define pipelines as [[python|Python]] code, run each step in a container on a chosen infrastructure, store every intermediate artifact and record metadata for lineage and caching (ZenML; Kubeflow). A model registry such as [[mlflow|MLflow]]'s holds the resulting model versions and the aliases that decide which version is served (MLflow).
 
 ### How it works
 
@@ -117,7 +117,7 @@ ML pipelines turn data validation, training, evaluation and registration into a 
 
 ### TL;DR
 
-Eine ML-Pipeline macht aus den Schritten der Modellentwicklung, von Datenextraktion und Validierung über Training und Evaluation bis zur Registrierung, einen automatisierten, versionierten Ablauf, der auf neuen Daten erneut ausgeführt werden kann. Google beschreibt das als Weg von einem manuellen, notebookgetriebenen Prozess (MLOps-Stufe 0) zu Continuous Training (Stufe 1) und schließlich zu CI/CD für die Pipelines selbst (Stufe 2) (Google Cloud). Orchestrierungs-Frameworks wie ZenML und Kubeflow Pipelines definieren Pipelines als Python-Code, führen jeden Schritt in einem Container auf einer gewählten Infrastruktur aus, speichern jedes Zwischenartefakt und erfassen Metadaten für Lineage und Caching (ZenML; Kubeflow). Eine Model Registry wie die von MLflow hält die entstehenden Modellversionen und die Aliase, die bestimmen, welche Version ausgeliefert wird (MLflow).
+Eine ML-Pipeline macht aus den Schritten der Modellentwicklung, von Datenextraktion und Validierung über Training und Evaluation bis zur Registrierung, einen automatisierten, versionierten Ablauf, der auf neuen Daten erneut ausgeführt werden kann. Google beschreibt das als Weg von einem manuellen, notebookgetriebenen Prozess (MLOps-Stufe 0) zu Continuous Training (Stufe 1) und schließlich zu CI/CD für die Pipelines selbst (Stufe 2) (Google Cloud). Orchestrierungs-Frameworks wie ZenML und Kubeflow Pipelines definieren Pipelines als Python-Code, führen jeden Schritt in einem Container auf einer gewählten Infrastruktur aus, speichern jedes Zwischenartefakt und erfassen Metadaten für Lineage und Caching (ZenML; Kubeflow). Eine Model Registry wie die von [[mlflow|MLflow]] hält die entstehenden Modellversionen und die Aliase, die bestimmen, welche Version ausgeliefert wird (MLflow).
 
 ### Funktionsweise
 

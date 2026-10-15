@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Matei Zaharia is an associate professor of electrical engineering and computer sciences at UC Berkeley, working on computer systems and AI in the Sky Lab, and co-founder and CTO of [[databricks|Databricks]] (Zaharia, n.d.). During his PhD he started [[apache-spark|Apache Spark]], whose resilient distributed datasets (RDDs) made in-memory cluster computing fault-tolerant (Zaharia, n.d.; Zaharia et al., 2012). At Databricks he helped develop MLflow and Delta Lake, and he co-authored the [[data-lakehouse|lakehouse]] paper (Zaharia, n.d.; Armbrust et al., 2021). His group's work on AI includes the retrieval model [[colbert|ColBERT]], the DSPy framework for LLM programs and the prompt optimiser GEPA (Zaharia, n.d.; Khattab & Zaharia, 2020). He received the ACM Prize in Computing in 2025 (Zaharia, n.d.).
+Matei Zaharia is an associate professor of electrical engineering and computer sciences at UC Berkeley, working on computer systems and AI in the Sky Lab, and co-founder and CTO of [[databricks|Databricks]] (Zaharia, n.d.). During his PhD he started [[apache-spark|Apache Spark]], whose resilient distributed datasets (RDDs) made in-memory cluster computing fault-tolerant (Zaharia, n.d.; Zaharia et al., 2012). At Databricks he helped develop [[mlflow|MLflow]] and Delta Lake, and he co-authored the [[data-lakehouse|lakehouse]] paper (Zaharia, n.d.; Armbrust et al., 2021). His group's work on AI includes the retrieval model [[colbert|ColBERT]], the DSPy framework for LLM programs and the prompt optimiser GEPA (Zaharia, n.d.; Khattab & Zaharia, 2020). He received the ACM Prize in Computing in 2025 (Zaharia, n.d.).
 
 ### Key facts
 
@@ -76,7 +76,7 @@ Spark and the lakehouse are common foundations for preparing training data and f
 
 ### TL;DR
 
-Matei Zaharia ist Associate Professor für Elektrotechnik und Informatik an der UC Berkeley, wo er im Sky Lab zu Computersystemen und KI forscht, und Mitgründer und CTO von [[databricks|Databricks]] (Zaharia, n.d.). Während seiner Promotion startete er [[apache-spark|Apache Spark]], dessen Resilient Distributed Datasets (RDDs) In-Memory-Berechnungen auf Clustern fehlertolerant machten (Zaharia, n.d.; Zaharia et al., 2012). Bei Databricks wirkte er an der Entwicklung von MLflow und Delta Lake mit und ist Mitautor des Papers zum [[data-lakehouse|Lakehouse]] (Zaharia, n.d.; Armbrust et al., 2021). Zu den KI-Arbeiten seiner Gruppe gehören das Retrieval-Modell [[colbert|ColBERT]], das Framework DSPy für LLM-Programme und der Prompt-Optimierer GEPA (Zaharia, n.d.; Khattab & Zaharia, 2020). 2025 erhielt er den ACM Prize in Computing (Zaharia, n.d.).
+Matei Zaharia ist Associate Professor für Elektrotechnik und Informatik an der UC Berkeley, wo er im Sky Lab zu Computersystemen und KI forscht, und Mitgründer und CTO von [[databricks|Databricks]] (Zaharia, n.d.). Während seiner Promotion startete er [[apache-spark|Apache Spark]], dessen Resilient Distributed Datasets (RDDs) In-Memory-Berechnungen auf Clustern fehlertolerant machten (Zaharia, n.d.; Zaharia et al., 2012). Bei Databricks wirkte er an der Entwicklung von [[mlflow|MLflow]] und Delta Lake mit und ist Mitautor des Papers zum [[data-lakehouse|Lakehouse]] (Zaharia, n.d.; Armbrust et al., 2021). Zu den KI-Arbeiten seiner Gruppe gehören das Retrieval-Modell [[colbert|ColBERT]], das Framework DSPy für LLM-Programme und der Prompt-Optimierer GEPA (Zaharia, n.d.; Khattab & Zaharia, 2020). 2025 erhielt er den ACM Prize in Computing (Zaharia, n.d.).
 
 ### Eckdaten
 

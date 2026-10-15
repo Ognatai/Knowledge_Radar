@@ -256,6 +256,7 @@ areas:
       - martin-fowler
       - refactoring
       - kent-beck
+      - code-smell
     also:
       - scikit-learn
       - langchain-and-langgraph
@@ -276,6 +277,7 @@ areas:
       - data-visualisation
       - databricks
       - matei-zaharia
+      - mlflow
     also:
       - data-pipelines
       - sql

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9ec7e0050987d9d440ac760499888cee2c2977bc9aabe270bed817f755911454
+note_sha256: c3c15b4fe6c6a6056883c255815db575e24e59b522bc302568bc4a4acabf0e8c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - mlflow
