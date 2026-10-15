@@ -687,6 +687,11 @@ entities:
   type: Concept
   name_en: Potential-outcomes model
   name_de: Potential-Outcomes-Modell
+  summary_en: In the potential-outcomes model, each unit has an outcome under treatment and an outcome under control, and the causal effect is their difference (Holland 1986). Only one of the two can ever be observed for a given unit, which Holland calls the fundamental problem of causal inference; causal inference therefore estimates average effects over groups under assumptions, for example those justified by randomisation (Hernán and Robins 2020).
+  summary_de: Im Potential-Outcomes-Modell hat jede Einheit ein Ergebnis unter Behandlung und eines unter Kontrolle, und der kausale Effekt ist ihre Differenz (Holland 1986). Für eine Einheit lässt sich immer nur eines der beiden beobachten, was Holland das fundamentale Problem der Kausalinferenz nennt; Kausalinferenz schätzt daher durchschnittliche Effekte über Gruppen unter Annahmen, etwa solchen, die durch Randomisierung gerechtfertigt sind (Hernán und Robins 2020).
+  sources:
+  - https://doi.org/10.1080/01621459.1986.10478354
+  - https://miguelhernan.org/whatifbook
 - id: counterfactual-fairness
   type: Concept
   name_en: Counterfactual fairness
@@ -705,10 +710,19 @@ entities:
   name_de: A/B-Test
   aliases:
   - A/B test
+  summary_en: An A/B test, or online controlled experiment, randomly assigns users to a control and a treatment variant; it is the best scientific design for establishing a causal effect of a change on user behaviour (Kohavi et al. 2009). Kohavi et al.'s practical guide covers statistical power, sample size and variance reduction, and discusses the limitations of such experiments.
+  summary_de: Ein A/B-Test, auch Online Controlled Experiment, teilt Nutzende zufällig einer Kontroll- und einer Behandlungsvariante zu; er ist das beste wissenschaftliche Design, um eine kausale Wirkung einer Änderung auf das Nutzerverhalten nachzuweisen (Kohavi et al. 2009). Der Praxisleitfaden von Kohavi et al. behandelt Teststärke, Stichprobengröße und Varianzreduktion und erörtert die Grenzen solcher Experimente.
+  sources:
+  - https://doi.org/10.1007/s10618-008-0114-1
 - id: simpsons-paradox
   type: Concept
   name_en: Simpson's paradox
   name_de: Simpson-Paradoxon
+  summary_en: Simpson's paradox is a reversal phenomenon in which an association in aggregated data disappears or reverses once the data are split into subgroups; Pearl calls it the classical example of why causal vocabulary is needed to interpret data (Pearl 2009). In graduate admissions at Berkeley, women appeared to be admitted less often overall, but disaggregated by department there was little evidence of discrimination, because women applied more often to departments that were harder to enter for applicants of either sex (Bickel et al. 1975).
+  summary_de: Das Simpson-Paradoxon ist ein Umkehrphänomen, bei dem ein Zusammenhang in aggregierten Daten verschwindet oder sich umkehrt, sobald die Daten in Untergruppen aufgeteilt werden; Pearl nennt es das klassische Beispiel dafür, dass Daten nur mit kausalem Vokabular richtig interpretiert werden können (Pearl 2009). Bei den Zulassungen zum Graduiertenstudium in Berkeley schienen Frauen insgesamt seltener zugelassen zu werden, nach Fachbereichen aufgeschlüsselt gab es aber kaum Hinweise auf Diskriminierung, weil sich Frauen häufiger bei Fachbereichen bewarben, die für Bewerbende beiderlei Geschlechts schwerer zugänglich waren (Bickel et al. 1975).
+  sources:
+  - https://doi.org/10.1126/science.187.4175.398
+  - https://doi.org/10.1214/09-SS057
 - id: eci-directive
   type: Regulation
   name_en: European Critical Infrastructures Directive 2008/114/EC
@@ -2083,6 +2097,10 @@ entities:
   type: Method
   name_en: Fourier terms (seasonal features)
   name_de: Fourier-Terme (saisonale Merkmale)
+  summary_en: Fourier terms are pairs of sine and cosine terms at the seasonal frequencies, sin(2πkt/m) and cos(2πkt/m) for seasonal period m, used as predictors for seasonal patterns instead of seasonal dummy variables (Hyndman and Athanasopoulos 2021). They usually need fewer predictors than dummies, which makes them useful for long seasonal periods such as weekly data with m ≈ 52.
+  summary_de: Fourier-Terme sind Paare aus Sinus- und Kosinustermen bei den saisonalen Frequenzen, sin(2πkt/m) und cos(2πkt/m) für die Saisonperiode m, die statt saisonaler Dummy-Variablen als Prädiktoren für saisonale Muster dienen (Hyndman und Athanasopoulos 2021). Sie brauchen meist weniger Prädiktoren als Dummies und eignen sich daher für lange Saisonperioden, etwa Wochendaten mit m ≈ 52.
+  sources:
+  - https://otexts.com/fpp3/useful-predictors.html
 - id: feature-selection
   type: Method
   name_en: Feature selection
@@ -2888,14 +2906,27 @@ entities:
   type: Method
   name_en: Mean absolute error (MAE)
   name_de: Mittlerer absoluter Fehler (MAE)
+  summary_en: The mean absolute error (MAE) is the mean of the absolute forecast errors, mean(|e_t|) (Hyndman and Athanasopoulos 2021). It is scale-dependent, so it cannot compare series with different units, but it is easy to understand and compute; minimising the MAE leads to forecasts of the median.
+  summary_de: Der mittlere absolute Fehler (MAE) ist der Mittelwert der absoluten Prognosefehler, mean(|e_t|) (Hyndman und Athanasopoulos 2021). Er ist skalenabhängig und eignet sich daher nicht für Vergleiche zwischen Reihen mit unterschiedlichen Einheiten, ist aber leicht zu verstehen und zu berechnen; die Minimierung des MAE führt zu Prognosen des Medians.
+  sources:
+  - https://otexts.com/fpp3/accuracy.html
 - id: root-mean-squared-error
   type: Method
   name_en: Root mean squared error (RMSE)
   name_de: Wurzel der mittleren quadratischen Abweichung (RMSE)
+  summary_en: The root mean squared error (RMSE) is the square root of the mean of the squared forecast errors (Hyndman and Athanasopoulos 2021). Like the MAE it is scale-dependent; minimising the RMSE leads to forecasts of the mean, which is why it is widely used despite being harder to interpret.
+  summary_de: Die Wurzel der mittleren quadratischen Abweichung (RMSE) ist die Quadratwurzel des Mittelwerts der quadrierten Prognosefehler (Hyndman und Athanasopoulos 2021). Wie der MAE ist sie skalenabhängig; ihre Minimierung führt zu Prognosen des Mittelwerts, weshalb sie trotz schwierigerer Interpretation weit verbreitet ist.
+  sources:
+  - https://otexts.com/fpp3/accuracy.html
 - id: mean-absolute-scaled-error
   type: Method
   name_en: Mean absolute scaled error (MASE)
   name_de: Mittlerer absoluter skalierter Fehler (MASE)
+  summary_en: The mean absolute scaled error (MASE) is the mean of the absolute scaled errors, where each forecast error is divided by the training-set MAE of a simple benchmark, for non-seasonal data the one-step naive forecast (Hyndman and Koehler 2006; Hyndman and Athanasopoulos 2021). It is independent of the scale of the data, so it can compare accuracy across series; values below one mean the forecast is better than the average naive forecast on the training data.
+  summary_de: Der mittlere absolute skalierte Fehler (MASE) ist der Mittelwert der absoluten skalierten Fehler; dabei wird jeder Prognosefehler durch den MAE einer einfachen Vergleichsprognose auf den Trainingsdaten geteilt, bei nicht saisonalen Daten der naiven Ein-Schritt-Prognose (Hyndman und Koehler 2006; Hyndman und Athanasopoulos 2021). Er ist unabhängig von der Skala der Daten und erlaubt so Vergleiche über Reihen hinweg; Werte unter eins bedeuten, dass die Prognose besser ist als die durchschnittliche naive Prognose auf den Trainingsdaten.
+  sources:
+  - https://otexts.com/fpp3/accuracy.html
+  - https://doi.org/10.1016/j.ijforecast.2006.03.001
 - id: stochastic-gradient-descent
   type: Method
   name_en: Stochastic gradient descent (SGD)
@@ -3632,18 +3663,35 @@ entities:
   type: Method
   name_en: Bootstrap
   name_de: Bootstrap
+  summary_en: The bootstrap estimates the sampling distribution of a statistic from the observed data by resampling it, and works on a variety of estimation problems, for example the error rate of a linear discriminant analysis (Efron 1979). In machine learning it is used, for instance, to quantify the uncertainty of evaluation metrics.
+  summary_de: Der Bootstrap schätzt die Stichprobenverteilung einer Statistik aus den beobachteten Daten, indem er aus ihnen erneut Stichproben zieht, und funktioniert bei vielen Schätzproblemen, etwa für die Fehlerrate einer linearen Diskriminanzanalyse (Efron 1979). Im maschinellen Lernen dient er zum Beispiel dazu, die Unsicherheit von Evaluationsmetriken zu beziffern.
+  sources:
+  - https://doi.org/10.1214/aos/1176344552
 - id: p-value
   type: Concept
   name_en: p-value
   name_de: p-Wert
+  summary_en: A p-value is the probability that the chosen test statistic would have been at least as large as its observed value if every model assumption were correct, including the test hypothesis (Greenland et al. 2016). It is not the probability that the hypothesis is true and does not measure the size or importance of an effect; the American Statistical Association warns against basing decisions only on whether a p-value passes a threshold (Wasserstein and Lazar 2016).
+  summary_de: Ein p-Wert ist die Wahrscheinlichkeit, dass die gewählte Teststatistik mindestens so groß wie ihr beobachteter Wert ausgefallen wäre, wenn alle Modellannahmen einschließlich der Testhypothese zuträfen (Greenland et al. 2016). Er ist nicht die Wahrscheinlichkeit, dass die Hypothese wahr ist, und misst weder Größe noch Bedeutung eines Effekts; die American Statistical Association warnt davor, Entscheidungen allein daran festzumachen, ob ein p-Wert eine Schwelle unterschreitet (Wasserstein und Lazar 2016).
+  sources:
+  - https://doi.org/10.1007/s10654-016-0149-3
+  - https://doi.org/10.1080/00031305.2016.1154108
 - id: confidence-interval
   type: Concept
   name_en: Confidence interval
   name_de: Konfidenzintervall
+  summary_en: A confidence interval is an interval estimate with the property that, if 95% confidence intervals are computed repeatedly in valid applications, 95% of them will on average contain the true effect size (Greenland et al. 2016). A specific reported interval does not have a 95% chance of containing the true value; the 95% refers only to how often such intervals would contain it if all assumptions were correct.
+  summary_de: Ein Konfidenzintervall ist ein Intervallschätzer mit der Eigenschaft, dass bei wiederholter Berechnung von 95-%-Konfidenzintervallen in gültigen Anwendungen im Mittel 95 % von ihnen die wahre Effektgröße enthalten (Greenland et al. 2016). Ein konkret berichtetes Intervall enthält den wahren Wert nicht mit 95 % Wahrscheinlichkeit; die 95 % beziehen sich nur darauf, wie oft solche Intervalle ihn enthalten würden, wenn alle Annahmen zuträfen.
+  sources:
+  - https://doi.org/10.1007/s10654-016-0149-3
 - id: bayesian-inference
   type: Method
   name_en: Bayesian inference
   name_de: Bayessche Inferenz
+  summary_en: In Bayesian inference, unknown quantities are treated as random; a prior distribution is combined with the likelihood of the data via Bayes' rule into a posterior distribution, and uncertainty is summarised with posterior intervals (Gelman et al. 2013). This contrasts with frequentist tests and confidence intervals, which describe how a procedure behaves over repeated samples.
+  summary_de: In der bayesschen Inferenz werden unbekannte Größen als zufällig behandelt; eine A-priori-Verteilung wird über den Satz von Bayes mit der Likelihood der Daten zu einer A-posteriori-Verteilung verbunden, und die Unsicherheit wird mit Posterior-Intervallen zusammengefasst (Gelman et al. 2013). Frequentistische Tests und Konfidenzintervalle beschreiben dagegen, wie sich ein Verfahren über wiederholte Stichproben verhält.
+  sources:
+  - https://sites.stat.columbia.edu/gelman/book/
 - id: american-statistical-association
   type: Organisation
   name_en: American Statistical Association (ASA)
@@ -3706,22 +3754,44 @@ entities:
   name_de: Exponentielle Glättung (ETS)
   aliases:
   - ETS
+  summary_en: Exponential smoothing forecasts with weighted averages of past observations whose weights decrease exponentially with age, controlled by a smoothing parameter α between 0 and 1 (Hyndman and Athanasopoulos 2021). The ETS family of state space models (Error, Trend, Seasonal) produces the same point forecasts as the exponential smoothing methods but also prediction intervals, and allows model selection with information criteria.
+  summary_de: Exponentielle Glättung prognostiziert mit gewichteten Mittelwerten vergangener Beobachtungen, deren Gewichte mit zunehmendem Alter exponentiell abnehmen; gesteuert wird das über einen Glättungsparameter α zwischen 0 und 1 (Hyndman und Athanasopoulos 2021). Die ETS-Familie von Zustandsraummodellen (Error, Trend, Seasonal) liefert dieselben Punktprognosen wie die Glättungsverfahren, zusätzlich aber Prognoseintervalle, und erlaubt die Modellwahl über Informationskriterien.
+  sources:
+  - https://otexts.com/fpp3/ses.html
+  - https://otexts.com/fpp3/ets.html
 - id: arima
   type: Method
   name_en: ARIMA
   name_de: ARIMA
+  summary_en: ARIMA (AutoRegressive Integrated Moving Average) models combine differencing with autoregression and a moving average model; "integration" is the reverse of differencing (Hyndman and Athanasopoulos 2021). While exponential smoothing describes trend and seasonality, ARIMA models aim to describe the autocorrelations in the data; together they are the two most widely used approaches to time series forecasting.
+  summary_de: ARIMA-Modelle (AutoRegressive Integrated Moving Average) verbinden Differenzenbildung mit Autoregression und einem Moving-Average-Modell; „Integration“ ist dabei die Umkehrung der Differenzenbildung (Hyndman und Athanasopoulos 2021). Während exponentielle Glättung Trend und Saisonalität beschreibt, beschreiben ARIMA-Modelle die Autokorrelationen in den Daten; beide sind die am weitesten verbreiteten Ansätze der Zeitreihenprognose.
+  sources:
+  - https://otexts.com/fpp3/arima.html
+  - https://otexts.com/fpp3/non-seasonal-arima.html
 - id: stationarity
   type: Concept
   name_en: Stationarity
   name_de: Stationarität
+  summary_en: A stationary time series is one whose statistical properties do not depend on the time at which it is observed (Hyndman and Athanasopoulos 2021). Series with trend or seasonality are therefore not stationary, while white noise is; differencing can make a series stationary, and unit root tests help decide objectively whether differencing is needed.
+  summary_de: Eine stationäre Zeitreihe ist eine Reihe, deren statistische Eigenschaften nicht vom Beobachtungszeitpunkt abhängen (Hyndman und Athanasopoulos 2021). Reihen mit Trend oder Saisonalität sind daher nicht stationär, weißes Rauschen dagegen schon; Differenzenbildung kann eine Reihe stationär machen, und Einheitswurzeltests helfen, objektiv zu entscheiden, ob Differenzen nötig sind.
+  sources:
+  - https://otexts.com/fpp3/stationarity.html
 - id: autocorrelation
   type: Concept
   name_en: Autocorrelation
   name_de: Autokorrelation
+  summary_en: Autocorrelation measures the linear relationship between lagged values of a time series, just as correlation measures the linear relationship between two variables (Hyndman and Athanasopoulos 2021). The coefficient r_k relates y_t to y_{t−k}; plotted against the lag k, the coefficients form the autocorrelation function, which shows for example trend and seasonality.
+  summary_de: Autokorrelation misst den linearen Zusammenhang zwischen zeitversetzten Werten einer Zeitreihe, so wie die Korrelation den linearen Zusammenhang zweier Variablen misst (Hyndman und Athanasopoulos 2021). Der Koeffizient r_k setzt y_t mit y_{t−k} in Beziehung; gegen die Verzögerung k aufgetragen, bilden die Koeffizienten die Autokorrelationsfunktion, die etwa Trend und Saisonalität sichtbar macht.
+  sources:
+  - https://otexts.com/fpp3/acf.html
 - id: dickey-fuller-test
   type: Method
   name_en: Dickey-Fuller test
   name_de: Dickey-Fuller-Test
+  summary_en: The Dickey-Fuller test is a unit root test (Dickey and Fuller 1979). For the autoregressive model Y_t = ρY_{t−1} + e_t, Dickey and Fuller derived the distribution of the regression estimator and of the t-statistic under ρ = 1, which gives a test of the hypothesis that the series has a unit root, i.e. is not stationary.
+  summary_de: Der Dickey-Fuller-Test ist ein Einheitswurzeltest (Dickey und Fuller 1979). Für das autoregressive Modell Y_t = ρY_{t−1} + e_t leiteten Dickey und Fuller die Verteilung des Regressionsschätzers und der t-Statistik unter ρ = 1 her; das liefert einen Test der Hypothese, dass die Reihe eine Einheitswurzel hat, also nicht stationär ist.
+  sources:
+  - https://doi.org/10.1080/01621459.1979.10482531
 - id: unigram-language-model-tokenisation
   type: Method
   name_en: Unigram language model (tokenisation)
