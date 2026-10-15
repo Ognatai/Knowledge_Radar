@@ -3064,6 +3064,11 @@ entities:
   type: Method
   name_en: Singular value decomposition (SVD)
   name_de: Singulärwertzerlegung (SVD)
+  summary_en: The singular value decomposition (SVD) solves the low-rank approximation problem, finding the matrix of rank at most k closest to a given matrix in Frobenius norm (Manning et al., 2008). Applied to a term-document matrix, this yields latent semantic indexing, which maps documents and queries into a low-rank space to cope with synonymy and polysemy.
+  summary_de: Die Singulärwertzerlegung (SVD) löst das Problem der Niedrigrang-Approximation, also das Finden der Matrix mit Rang höchstens k, die einer gegebenen Matrix in der Frobeniusnorm am nächsten ist (Manning et al., 2008). Auf eine Term-Dokument-Matrix angewendet ergibt das Latent Semantic Indexing, das Dokumente und Anfragen in einen Raum niedrigen Rangs abbildet, um Synonymie und Polysemie zu begegnen.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/low-rank-approximations-1.html
+  - https://nlp.stanford.edu/IR-book/html/htmledition/latent-semantic-indexing-1.html
 - id: jaccard-coefficient
   type: Concept
   name_en: Jaccard coefficient
@@ -3130,24 +3135,44 @@ entities:
   name_de: Mean Average Precision (MAP)
   aliases:
   - MAP
+  summary_en: 'Mean Average Precision (MAP) is a single-figure measure of ranked retrieval quality across recall levels: for each information need, average precision is the mean of the precision values after each relevant document is retrieved, and MAP averages this over information needs (Manning et al., 2008). It is the most standard measure in the TREC community and has especially good discrimination and stability.'
+  summary_de: 'Mean Average Precision (MAP) ist ein einzelnes Maß für die Qualität gerankter Ergebnisse über alle Recall-Stufen: Für jeden Informationsbedarf ist die Average Precision der Mittelwert der Precision-Werte nach jedem gefundenen relevanten Dokument, und MAP mittelt dies über alle Informationsbedarfe (Manning et al., 2008). Es ist das gebräuchlichste Maß in der TREC-Gemeinschaft und unterscheidet Systeme besonders trennscharf und stabil.'
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html
 - id: r-precision
   type: Method
   name_en: R-precision
   name_de: R-Precision
+  summary_en: R-precision is the precision of the top |Rel| documents returned for a query, where |Rel| is the number of known relevant documents (Manning et al., 2008). It adjusts for the size of the relevant set, so a perfect system can score 1 on every query, which makes averaging across queries more meaningful than precision at a fixed cut-off.
+  summary_de: R-Precision ist die Precision der ersten |Rel| zurückgegebenen Dokumente einer Anfrage, wobei |Rel| die Zahl der bekannten relevanten Dokumente ist (Manning et al., 2008). Sie gleicht die Größe der relevanten Menge aus, sodass ein perfektes System bei jeder Anfrage 1 erreichen kann; das macht die Mittelung über Anfragen aussagekräftiger als Precision an einer festen Grenze.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html
 - id: relevance-pooling
   type: Method
   name_en: Pooling (relevance assessment)
   name_de: Pooling (Relevanzbeurteilung)
+  summary_en: 'Pooling is the standard way to collect relevance judgements for large test collections: relevance is assessed only for a pool of documents formed from the top results of several retrieval systems, usually those being evaluated, plus possibly other sources such as Boolean searches or expert searchers (Manning et al., 2008). Exhaustive judgements of every query-document pair are only feasible for tiny collections such as Cranfield.'
+  summary_de: 'Pooling ist das übliche Verfahren, Relevanzurteile für große Testkollektionen zu erheben: Relevanz wird nur für einen Pool von Dokumenten bewertet, der aus den Top-Ergebnissen mehrerer Retrieval-Systeme gebildet wird, meist der zu evaluierenden, ergänzt um weitere Quellen wie Boolesche Suchen oder Recherchen von Fachleuten (Manning et al., 2008). Vollständige Urteile für jedes Paar aus Anfrage und Dokument sind nur bei sehr kleinen Kollektionen wie Cranfield machbar.'
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html
 - id: kappa-statistic
   type: Method
   name_en: Kappa statistic
   name_de: Kappa-Statistik
+  summary_en: The kappa statistic measures agreement between judges on categorical judgements and corrects the simple agreement rate for agreement expected by chance, as (P(A) − P(E)) / (1 − P(E)) (Manning et al., 2008). It is 1 for perfect agreement, 0 for chance-level agreement and negative for worse than chance; as a rule of thumb, values above 0.8 indicate good agreement in relevance assessment.
+  summary_de: Die Kappa-Statistik misst die Übereinstimmung von Bewertenden bei kategorialen Urteilen und bereinigt die einfache Übereinstimmungsrate um die zufällig erwartete Übereinstimmung, als (P(A) − P(E)) / (1 − P(E)) (Manning et al., 2008). Sie ist 1 bei vollständiger Übereinstimmung, 0 bei zufälliger und negativ bei schlechterer als zufälliger; als Faustregel gelten Werte über 0,8 bei Relevanzurteilen als gute Übereinstimmung.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/assessing-relevance-1.html
 - id: expectation-maximization
   type: Method
   name_en: Expectation-Maximization (EM) algorithm
   name_de: Expectation-Maximization-Algorithmus (EM)
   aliases:
   - EM algorithm
+  summary_en: The Expectation-Maximization (EM) algorithm is an iterative method for maximum likelihood estimation that, used for model-based clustering, generalises k-means (Manning et al., 2008). It alternates an expectation step, which computes soft assignments of documents to clusters, and a maximisation step, which re-estimates the model parameters, so documents can belong partly to several clusters.
+  summary_de: Der Expectation-Maximization-Algorithmus (EM) ist ein iteratives Verfahren zur Maximum-Likelihood-Schätzung, das im modellbasierten Clustering k-Means verallgemeinert (Manning et al., 2008). Er wechselt zwischen einem Erwartungsschritt, der weiche Zuordnungen von Dokumenten zu Clustern berechnet, und einem Maximierungsschritt, der die Modellparameter neu schätzt, sodass Dokumente anteilig mehreren Clustern angehören können.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/model-based-clustering-1.html
 - id: cluster-hypothesis
   type: Concept
   name_en: Cluster hypothesis
@@ -3156,6 +3181,10 @@ entities:
   type: Method
   name_en: Rand index
   name_de: Rand-Index
+  summary_en: The Rand index evaluates a clustering against gold-standard classes by treating it as a series of decisions for every pair of documents and measuring the share of correct decisions, both pairs correctly put together and pairs correctly kept apart (Manning et al., 2008). It weights false positives and false negatives equally; the F measure allows weighting them differently.
+  summary_de: Der Rand-Index bewertet ein Clustering gegenüber Goldstandard-Klassen, indem er es als Folge von Entscheidungen für jedes Dokumentpaar betrachtet und den Anteil richtiger Entscheidungen misst, sowohl richtig zusammengelegter als auch richtig getrennter Paare (Manning et al., 2008). Er gewichtet falsch positive und falsch negative Entscheidungen gleich; das F-Maß erlaubt eine unterschiedliche Gewichtung.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html
 - id: normalised-mutual-information
   type: Method
   name_en: Normalised mutual information (NMI)
@@ -3163,18 +3192,34 @@ entities:
   aliases:
   - NMI
   - Normalized mutual information (NMI)
+  summary_en: 'Normalised mutual information (NMI) is an external measure of clustering quality: the mutual information between clusters and gold-standard classes, normalised by their entropies (Manning et al., 2008). Unlike purity or plain mutual information, it does not reward splitting data into many small clusters, so clusterings with different numbers of clusters can be compared; it always lies between 0 and 1.'
+  summary_de: 'Normalised Mutual Information (NMI) ist ein externes Maß für die Güte eines Clusterings: die Transinformation zwischen Clustern und Goldstandard-Klassen, normiert über deren Entropien (Manning et al., 2008). Anders als Purity oder einfache Transinformation belohnt sie nicht das Aufteilen in viele kleine Cluster, sodass sich Clusterings mit unterschiedlich vielen Clustern vergleichen lassen; sie liegt immer zwischen 0 und 1.'
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-clustering-1.html
 - id: stemming
   type: Method
   name_en: Stemming
   name_de: Stemming
+  summary_en: Stemming reduces inflected and sometimes derivationally related word forms to a common base by a crude heuristic process that chops off word endings, so that a search for one form also finds others (Manning et al., 2008). Unlike lemmatisation, it uses no vocabulary or morphological analysis; Porter's algorithm, with five phases of rule-based reductions, is the most common stemmer for English.
+  summary_de: Stemming führt flektierte und teils abgeleitete Wortformen auf eine gemeinsame Grundform zurück, indem es Wortendungen mit groben Heuristiken abschneidet, sodass eine Suche nach einer Form auch andere findet (Manning et al., 2008). Anders als die Lemmatisierung nutzt es weder Wörterbuch noch morphologische Analyse; der Porter-Algorithmus mit fünf Phasen regelbasierter Kürzungen ist der verbreitetste Stemmer für Englisch.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
 - id: boolean-retrieval
   type: Method
   name_en: Boolean retrieval
   name_de: Boolesches Retrieval
+  summary_en: The Boolean retrieval model lets users pose queries as Boolean expressions of terms combined with AND, OR and NOT, and treats each document as a set of words (Manning et al., 2008). Queries are answered by combining the rows of a term-document incidence matrix, or in practice an inverted index, for example Brutus AND Caesar AND NOT Calpurnia over Shakespeare's plays.
+  summary_de: Das Boolesche Retrieval-Modell erlaubt Anfragen als Boolesche Ausdrücke aus Termen, verknüpft mit AND, OR und NOT, und behandelt jedes Dokument als Menge von Wörtern (Manning et al., 2008). Anfragen werden beantwortet, indem Zeilen einer Term-Dokument-Inzidenzmatrix, in der Praxis eines invertierten Index, verknüpft werden, etwa Brutus AND Caesar AND NOT Calpurnia über die Stücke Shakespeares.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/an-example-information-retrieval-problem-1.html
 - id: compound-splitting
   type: Method
   name_en: Compound splitting
   name_de: Kompositazerlegung
+  summary_en: Compound splitting divides words written without spaces, such as German compounds like Computerlinguistik or Lebensversicherungsgesellschaftsangestellter, into their parts for indexing (Manning et al., 2008). Retrieval systems for German benefit greatly from a compound splitter, usually implemented by checking whether a word can be divided into several words that appear in a vocabulary.
+  summary_de: Compound Splitting zerlegt ohne Leerzeichen geschriebene Wörter, etwa deutsche Komposita wie Computerlinguistik oder Lebensversicherungsgesellschaftsangestellter, für die Indexierung in ihre Bestandteile (Manning et al., 2008). Retrieval-Systeme für Deutsch profitieren stark von einem Kompositazerleger, der meist prüft, ob sich ein Wort in mehrere Wörter eines Vokabulars aufteilen lässt.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html
 - id: rescal
   type: Method
   name_en: RESCAL
