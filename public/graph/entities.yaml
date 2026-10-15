@@ -12,10 +12,18 @@ entities:
   type: Method
   name_en: HippoRAG
   name_de: HippoRAG
+  summary_en: HippoRAG is a retrieval framework inspired by the hippocampal indexing theory of human long-term memory; it combines LLMs, a knowledge graph and Personalized PageRank (Gutiérrez et al., 2024). On multi-hop question answering it outperformed earlier methods by up to 20%, and single-step retrieval with HippoRAG matched iterative retrieval such as IRCoT while being 10 to 30 times cheaper.
+  summary_de: HippoRAG ist ein Retrieval-Framework nach dem Vorbild der hippocampalen Indexierungstheorie des menschlichen Langzeitgedächtnisses; es verbindet LLMs, einen Wissensgraphen und Personalized PageRank (Gutiérrez et al., 2024). Bei mehrstufiger Fragebeantwortung übertraf es frühere Verfahren um bis zu 20 %, und einstufiges Retrieval mit HippoRAG erreichte iteratives Retrieval wie IRCoT bei 10- bis 30-mal geringeren Kosten.
+  sources:
+  - https://arxiv.org/abs/2405.14831
 - id: lightrag
   type: Method
   name_en: LightRAG
   name_de: LightRAG
+  summary_en: LightRAG incorporates graph structures into text indexing and retrieval for retrieval-augmented generation, with dual-level retrieval of low-level and high-level knowledge (Guo et al., 2024). Combining graphs with vector representations speeds up retrieval of related entities and relationships, and an incremental update algorithm integrates new data in a timely way.
+  summary_de: LightRAG bindet Graphstrukturen in Indexierung und Retrieval für Retrieval-Augmented Generation ein, mit einem zweistufigen Retrieval von Detail- und Überblickswissen (Guo et al., 2024). Die Verbindung von Graphen mit Vektorrepräsentationen beschleunigt das Abrufen verwandter Entitäten und Beziehungen, und ein inkrementelles Aktualisierungsverfahren nimmt neue Daten zeitnah auf.
+  sources:
+  - https://arxiv.org/abs/2410.05779
 - id: personalized-pagerank
   type: Method
   name_en: Personalized PageRank
@@ -24,6 +32,10 @@ entities:
   type: Method
   name_en: IRCoT
   name_de: IRCoT
+  summary_en: IRCoT interleaves retrieval with the steps of a chain of thought for multi-step question answering, so that what is retrieved next depends on what has been derived so far (Trivedi et al., 2022). With GPT-3 it improved retrieval by up to 21 points and question answering by up to 15 points on HotpotQA, 2WikiMultihopQA, MuSiQue and IIRC, and reduced hallucination.
+  summary_de: IRCoT verschränkt Retrieval mit den Schritten einer Chain of Thought für mehrstufige Fragebeantwortung, sodass das als Nächstes Abgerufene davon abhängt, was bisher hergeleitet wurde (Trivedi et al., 2022). Mit GPT-3 verbesserte es das Retrieval um bis zu 21 Punkte und die Fragebeantwortung um bis zu 15 Punkte auf HotpotQA, 2WikiMultihopQA, MuSiQue und IIRC und verringerte Halluzinationen.
+  sources:
+  - https://arxiv.org/abs/2212.10509
 - id: trade-secret
   type: Concept
   name_en: Trade secret
@@ -54,6 +66,10 @@ entities:
   name_de: DoRA (Weight-Decomposed Low-Rank Adaptation)
   aliases:
   - DoRA
+  summary_en: Weight-Decomposed Low-Rank Adaptation (DoRA) splits each pre-trained weight into a magnitude and a direction and fine-tunes the direction with LoRA, which brings learning capacity and stability closer to full fine-tuning without extra inference cost (Liu et al., 2024). It consistently outperformed LoRA when fine-tuning LLaMA, LLaVA and VL-BART on tasks such as commonsense reasoning and visual instruction tuning.
+  summary_de: Weight-Decomposed Low-Rank Adaptation (DoRA) zerlegt jedes vortrainierte Gewicht in Betrag und Richtung und passt die Richtung mit LoRA an; das bringt Lernfähigkeit und Stabilität näher an vollständiges Fine-Tuning, ohne zusätzliche Inferenzkosten (Liu et al., 2024). Beim Fine-Tuning von LLaMA, LLaVA und VL-BART, etwa für Common-Sense-Schlussfolgern und visuelles Instruction Tuning, übertraf es LoRA durchgängig.
+  sources:
+  - https://arxiv.org/abs/2402.09353
 - id: adapter-layers
   type: Method
   name_en: Adapter layers
@@ -62,6 +78,10 @@ entities:
   type: Method
   name_en: T5
   name_de: T5
+  summary_en: T5 (Text-to-Text Transfer Transformer) treats every text-based language problem in a unified text-to-text format and was used for a systematic comparison of pre-training objectives, architectures, unlabelled datasets and transfer approaches (Raffel et al., 2019). Combined with scale and the new Colossal Clean Crawled Corpus (C4), it reached state-of-the-art results on benchmarks for summarisation, question answering and text classification.
+  summary_de: T5 (Text-to-Text Transfer Transformer) behandelt jede textbasierte Sprachaufgabe in einem einheitlichen Text-zu-Text-Format und diente einem systematischen Vergleich von Vortrainingszielen, Architekturen, nicht annotierten Datensätzen und Transferverfahren (Raffel et al., 2019). Zusammen mit Skalierung und dem neuen Colossal Clean Crawled Corpus (C4) erreichte es Bestwerte auf Benchmarks für Zusammenfassung, Fragebeantwortung und Textklassifikation.
+  sources:
+  - https://arxiv.org/abs/1910.10683
 - id: masked-language-modelling
   type: Method
   name_en: Masked language modelling
@@ -70,6 +90,10 @@ entities:
   type: Method
   name_en: FlashAttention
   name_de: FlashAttention
+  summary_en: FlashAttention is an IO-aware exact attention algorithm that uses tiling to reduce reads and writes between GPU high-bandwidth memory and on-chip SRAM (Dao et al., 2022). It sped up training, for example threefold for GPT-2 with sequence length 1K, and enabled longer contexts, including the first Transformers to beat chance on the Path-X challenge with 16K tokens.
+  summary_de: FlashAttention ist ein exakter Attention-Algorithmus, der Speicherzugriffe berücksichtigt und mit Kachelung die Lese- und Schreibvorgänge zwischen dem Hauptspeicher der GPU (HBM) und dem SRAM auf dem Chip verringert (Dao et al., 2022). Es beschleunigte das Training, etwa um das Dreifache für GPT-2 mit Sequenzlänge 1K, und ermöglichte längere Kontexte, darunter die ersten Transformer, die bei der Path-X-Aufgabe mit 16K Tokens über dem Zufall lagen.
+  sources:
+  - https://arxiv.org/abs/2205.14135
 - id: id3
   type: Method
   name_en: ID3
@@ -86,20 +110,36 @@ entities:
   type: Method
   name_en: FitNets
   name_de: FitNets
+  summary_en: FitNets extend knowledge distillation so that a student network deeper and thinner than its teacher learns not only from the teacher's outputs but also from its intermediate representations, used as "hints" (Romero et al., 2014). On CIFAR-10, a deep student with about 10.4 times fewer parameters outperformed a larger state-of-the-art teacher.
+  summary_de: FitNets erweitern Knowledge Distillation, sodass ein Schülernetz, das tiefer und schmaler ist als sein Lehrer, nicht nur von dessen Ausgaben, sondern auch von seinen Zwischenrepräsentationen als „Hinweisen“ lernt (Romero et al., 2014). Auf CIFAR-10 übertraf ein tiefer Schüler mit rund 10,4-mal weniger Parametern einen größeren Lehrer auf dem damaligen Stand der Technik.
+  sources:
+  - https://arxiv.org/abs/1412.6550
 - id: tinybert
   type: Method
   name_en: TinyBERT
   name_de: TinyBERT
+  summary_en: TinyBERT uses a Transformer distillation method applied in both pre-training and task-specific learning to transfer knowledge from a large BERT teacher to a small student (Jiao et al., 2019). With 4 layers it reached more than 96.8% of BERT-base's performance on GLUE while being 7.5 times smaller and 9.4 times faster at inference.
+  summary_de: TinyBERT nutzt ein Destillationsverfahren für Transformer, das sowohl im Vortraining als auch beim aufgabenspezifischen Lernen angewendet wird, um Wissen von einem großen BERT-Lehrer auf einen kleinen Schüler zu übertragen (Jiao et al., 2019). Mit 4 Schichten erreichte es über 96,8 % der Leistung von BERT-base auf GLUE, bei 7,5-mal kleinerer Größe und 9,4-mal schnellerer Inferenz.
+  sources:
+  - https://arxiv.org/abs/1909.10351
 - id: g-eval
   type: Method
   name_en: G-Eval
   name_de: G-Eval
+  summary_en: G-Eval evaluates generated text with an LLM using chain-of-thought and a form-filling paradigm (Liu et al., 2023). With GPT-4 as backbone it reached a Spearman correlation of 0.514 with human judgements on summarisation, well above earlier metrics, and its authors noted a possible bias of LLM evaluators towards LLM-generated text.
+  summary_de: G-Eval bewertet erzeugte Texte mit einem LLM, das Chain-of-Thought und ein Formular-Ausfüll-Schema nutzt (Liu et al., 2023). Mit GPT-4 als Grundlage erreichte es bei Zusammenfassungen eine Spearman-Korrelation von 0,514 mit menschlichen Urteilen, deutlich über früheren Metriken, und die Autoren wiesen auf eine mögliche Bevorzugung LLM-erzeugter Texte durch LLM-Bewerter hin.
+  sources:
+  - https://arxiv.org/abs/2303.16634
 - id: prometheus
   type: Method
   name_en: Prometheus (evaluator model)
   name_de: Prometheus (Evaluator-Modell)
   aliases:
   - Prometheus
+  summary_en: Prometheus is an open-source 13B evaluator LLM trained on the Feedback Collection of 1,000 score rubrics, 20,000 instructions and 100,000 GPT-4 responses with feedback; it grades long-form text against a user-provided rubric (Kim et al., 2023). With reference answers and rubrics it reached a Pearson correlation of 0.897 with human evaluators, on par with GPT-4 (0.882).
+  summary_de: Prometheus ist ein offenes Bewertungs-LLM mit 13 Milliarden Parametern, trainiert auf der Feedback Collection aus 1 000 Bewertungsrastern, 20 000 Anweisungen und 100 000 Antworten mit Feedback von GPT-4; es bewertet lange Texte anhand eines vorgegebenen Rasters (Kim et al., 2023). Mit Referenzantworten und Rastern erreichte es eine Pearson-Korrelation von 0,897 mit menschlichen Bewertungen, gleichauf mit GPT-4 (0,882).
+  sources:
+  - https://arxiv.org/abs/2310.08491
 - id: ontology
   type: Concept
   name_en: Ontology
@@ -108,6 +148,10 @@ entities:
   type: Method
   name_en: Toolformer
   name_de: Toolformer
+  summary_en: Toolformer is a language model that teaches itself in a self-supervised way which APIs to call, when, with which arguments and how to use the results, from only a handful of demonstrations per API (Schick et al., 2023). Its tools include a calculator, a question-answering system, two search engines, a translation system and a calendar, and it improved zero-shot performance on many tasks.
+  summary_de: Toolformer ist ein Sprachmodell, das sich selbstüberwacht beibringt, welche APIs es wann mit welchen Argumenten aufruft und wie es die Ergebnisse nutzt, mit nur wenigen Beispielen je API (Schick et al., 2023). Zu seinen Werkzeugen gehören ein Taschenrechner, ein Frage-Antwort-System, zwei Suchmaschinen, ein Übersetzungssystem und ein Kalender, und es verbesserte die Zero-Shot-Leistung bei vielen Aufgaben.
+  sources:
+  - https://arxiv.org/abs/2302.04761
 - id: function-calling
   type: Method
   name_en: Function calling
@@ -116,14 +160,26 @@ entities:
   type: Method
   name_en: ReAct
   name_de: ReAct
+  summary_en: 'ReAct prompts an LLM to generate reasoning traces and task-specific actions in an interleaved way: reasoning helps the model plan and handle exceptions, and actions let it query external sources such as a Wikipedia API (Yao et al., 2022). On ALFWorld and WebShop it outperformed imitation and reinforcement learning methods by 34 and 10 percentage points with only one or two in-context examples.'
+  summary_de: 'ReAct lässt ein LLM abwechselnd Gedankengänge und aufgabenbezogene Aktionen erzeugen: Das Schlussfolgern hilft beim Planen und beim Umgang mit Ausnahmen, die Aktionen fragen externe Quellen wie eine Wikipedia-API ab (Yao et al., 2022). Auf ALFWorld und WebShop übertraf es Imitations- und Reinforcement-Learning-Verfahren um 34 und 10 Prozentpunkte, mit nur ein oder zwei Beispielen im Prompt.'
+  sources:
+  - https://arxiv.org/abs/2210.03629
 - id: memgpt
   type: Method
   name_en: MemGPT
   name_de: MemGPT
+  summary_en: MemGPT applies "virtual context management", inspired by hierarchical memory in operating systems, to give an LLM extended context beyond its context window by moving data between memory tiers and using interrupts to manage control flow (Packer et al., 2023). It was evaluated on analysing documents far larger than the context window and on multi-session chat agents that remember users over long interactions.
+  summary_de: 'MemGPT überträgt „virtuelle Kontextverwaltung“, angelehnt an hierarchischen Speicher in Betriebssystemen, auf LLMs: Daten werden zwischen Speicherebenen verschoben und Interrupts steuern den Ablauf, sodass das Modell über sein Kontextfenster hinaus arbeiten kann (Packer et al., 2023). Evaluiert wurde es an Dokumenten, die weit größer sind als das Kontextfenster, und an Chat-Agenten, die sich über viele Sitzungen an Nutzende erinnern.'
+  sources:
+  - https://arxiv.org/abs/2310.08560
 - id: reflexion
   type: Method
   name_en: Reflexion
   name_de: Reflexion
+  summary_en: 'Reflexion reinforces language agents through linguistic feedback instead of weight updates: agents reflect verbally on task feedback and keep these reflections in an episodic memory to decide better in later trials (Shinn et al., 2023). It reached 91% pass@1 on the HumanEval coding benchmark, against 80% for GPT-4 at the time.'
+  summary_de: 'Reflexion verbessert Sprach-Agenten über sprachliches Feedback statt über Gewichtsanpassungen: Agenten reflektieren schriftlich über Rückmeldungen zur Aufgabe und halten diese Reflexionen in einem episodischen Gedächtnis fest, um in späteren Versuchen besser zu entscheiden (Shinn et al., 2023). Auf dem Programmier-Benchmark HumanEval erreichte es 91 % pass@1, GPT-4 damals 80 %.'
+  sources:
+  - https://arxiv.org/abs/2303.11366
 - id: json-rpc
   type: Technology
   name_en: JSON-RPC
@@ -160,6 +216,10 @@ entities:
   type: Method
   name_en: Counterfactual explanations
   name_de: Kontrafaktische Erklärungen
+  summary_en: Counterfactual explanations describe the smallest change to the world that would lead to a desired outcome of an automated decision, without explaining the system's internal logic (Wachter et al., 2017). The authors propose them as a way for data controllers to help people understand, contest and change decisions in the context of the GDPR.
+  summary_de: Kontrafaktische Erklärungen beschreiben die kleinste Änderung der Umstände, die zu einem gewünschten Ergebnis einer automatisierten Entscheidung führen würde, ohne die innere Logik des Systems zu erklären (Wachter et al., 2017). Die Autoren schlagen sie Verantwortlichen vor, um Betroffenen im Rahmen der DSGVO zu helfen, Entscheidungen zu verstehen, anzufechten und zu ändern.
+  sources:
+  - https://arxiv.org/abs/1711.00399
 - id: interpretable-models
   type: Concept
   name_en: Inherently interpretable models
@@ -315,6 +375,10 @@ entities:
   name_de: Wasserstein-GAN
   aliases:
   - WGAN
+  summary_en: Wasserstein GAN (WGAN) is an alternative algorithm for training generative adversarial networks that improves learning stability, avoids problems such as mode collapse and yields meaningful learning curves for debugging and hyperparameter search (Arjovsky et al., 2017). Its authors show that the underlying optimisation problem is sound and relate it to distances between probability distributions.
+  summary_de: Wasserstein GAN (WGAN) ist ein alternatives Trainingsverfahren für Generative Adversarial Networks, das die Stabilität des Lernens verbessert, Probleme wie Mode Collapse vermeidet und aussagekräftige Lernkurven für Fehlersuche und Hyperparameter-Suche liefert (Arjovsky et al., 2017). Die Autoren zeigen, dass das zugrunde liegende Optimierungsproblem wohldefiniert ist, und setzen es in Bezug zu Abständen zwischen Wahrscheinlichkeitsverteilungen.
+  sources:
+  - https://arxiv.org/abs/1701.07875
 - id: employee-data-protection
   type: Concept
   name_en: Employee data protection
@@ -425,6 +489,10 @@ entities:
   type: Method
   name_en: XGBoost
   name_de: XGBoost
+  summary_en: XGBoost is a scalable end-to-end tree boosting system widely used by data scientists to reach state-of-the-art results in machine learning challenges (Chen & Guestrin, 2016). It adds a sparsity-aware algorithm, a weighted quantile sketch for approximate tree learning and optimisations for cache access, compression and sharding, scaling beyond billions of examples.
+  summary_de: XGBoost ist ein skalierbares, durchgängiges System für Tree Boosting, das in Data Science weit verbreitet ist, um Spitzenergebnisse in ML-Wettbewerben zu erreichen (Chen & Guestrin, 2016). Es ergänzt einen Algorithmus für dünn besetzte Daten, eine gewichtete Quantilschätzung für näherungsweises Baumlernen sowie Optimierungen für Cache-Zugriffe, Kompression und Sharding und skaliert über Milliarden von Beispielen.
+  sources:
+  - https://arxiv.org/abs/1603.02754
 - id: discriminant-analysis
   type: Method
   name_en: Discriminant analysis
@@ -555,6 +623,10 @@ entities:
   type: Method
   name_en: LLMLingua
   name_de: LLMLingua
+  summary_en: LLMLingua is a coarse-to-fine prompt compression method with a budget controller, token-level iterative compression and instruction tuning to align a small and a large language model (Jiang et al., 2023). On GSM8K, BBH, ShareGPT and arXiv data it allowed up to 20 times compression with little loss in performance, speeding up inference and lowering cost.
+  summary_de: LLMLingua ist ein Verfahren zur Prompt-Kompression vom Groben zum Feinen mit Budgetsteuerung, iterativer Kompression auf Token-Ebene und Instruction Tuning, um ein kleines und ein großes Sprachmodell aufeinander abzustimmen (Jiang et al., 2023). Auf GSM8K, BBH, ShareGPT und arXiv-Daten erlaubte es bis zu 20-fache Kompression bei geringem Leistungsverlust und beschleunigte so die Inferenz bei niedrigeren Kosten.
+  sources:
+  - https://arxiv.org/abs/2310.05736
 - id: clause-extraction
   type: Method
   name_en: Clause extraction
@@ -783,6 +855,10 @@ entities:
   name_de: Latent Diffusion Model
   aliases:
   - latent diffusion
+  summary_en: Latent diffusion models train diffusion models in the latent space of a pretrained autoencoder instead of pixel space, which greatly reduces computational cost while preserving detail (Rombach et al., 2021). Cross-attention layers allow conditioning on inputs such as text or bounding boxes, enabling high-resolution text-to-image synthesis and inpainting.
+  summary_de: Latent-Diffusion-Modelle trainieren Diffusionsmodelle im latenten Raum eines vortrainierten Autoencoders statt im Pixelraum, was den Rechenaufwand stark senkt und Details erhält (Rombach et al., 2021). Cross-Attention-Schichten erlauben die Konditionierung auf Eingaben wie Text oder Begrenzungsrahmen und ermöglichen hochaufgelöste Text-zu-Bild-Synthese und Inpainting.
+  sources:
+  - https://arxiv.org/abs/2112.10752
 - id: classifier-guidance
   type: Method
   name_en: Classifier guidance
@@ -973,6 +1049,10 @@ entities:
   - MRL
   - Matryoshka representations
   - Matryoshka embeddings
+  summary_en: Matryoshka Representation Learning (MRL) trains one embedding that encodes information at several granularities, so that shorter prefixes of the vector can be used when computation is constrained, at no extra inference cost (Kusupati et al., 2022). It allowed up to 14 times smaller embeddings for ImageNet-1K classification at the same accuracy and up to 14 times faster large-scale retrieval.
+  summary_de: Matryoshka Representation Learning (MRL) trainiert ein Embedding, das Informationen in mehreren Granularitäten kodiert, sodass bei knappen Ressourcen kürzere Anfangsstücke des Vektors genutzt werden können, ohne zusätzliche Kosten bei der Inferenz (Kusupati et al., 2022). Es ermöglichte bis zu 14-mal kleinere Embeddings bei gleicher Accuracy für die Klassifikation auf ImageNet-1K und bis zu 14-mal schnelleres Retrieval im großen Maßstab.
+  sources:
+  - https://arxiv.org/abs/2205.13147
 - id: bagging
   type: Method
   name_en: Bagging (bootstrap aggregating)
@@ -998,10 +1078,18 @@ entities:
   type: Method
   name_en: GLiNER
   name_de: GLiNER
+  summary_en: GLiNER is a compact named entity recognition model built on a bidirectional Transformer encoder that can identify arbitrary entity types given in natural language and extracts entities in parallel rather than token by token (Zaratiana et al., 2023). In zero-shot evaluations on several NER benchmarks it outperformed ChatGPT and fine-tuned LLMs.
+  summary_de: GLiNER ist ein kompaktes Modell für Named Entity Recognition auf Basis eines bidirektionalen Transformer-Encoders, das beliebige, in natürlicher Sprache angegebene Entitätstypen erkennt und Entitäten parallel statt Token für Token extrahiert (Zaratiana et al., 2023). In Zero-Shot-Evaluationen auf mehreren NER-Benchmarks übertraf es ChatGPT und feinjustierte LLMs.
+  sources:
+  - https://arxiv.org/abs/2311.08526
 - id: gpt-ner
   type: Method
   name_en: GPT-NER
   name_de: GPT-NER
+  summary_en: GPT-NER turns named entity recognition into a generation task an LLM can handle, for example by rewriting "Columbus is a city" as "@@Columbus## is a city" to mark a location, and adds a self-verification step against over-confident labelling (Wang et al., 2023). On five NER datasets it reached performance comparable to fully supervised baselines and did better in low-resource settings.
+  summary_de: GPT-NER verwandelt Named Entity Recognition in eine Generierungsaufgabe für ein LLM, etwa indem „Columbus is a city“ als „@@Columbus## is a city“ ausgegeben wird, um einen Ort zu markieren, und ergänzt eine Selbstprüfung gegen übermäßig selbstsicheres Labeln (Wang et al., 2023). Auf fünf NER-Datensätzen erreichte es Ergebnisse vergleichbar mit vollständig überwachten Baselines und war bei wenigen Trainingsdaten besser.
+  sources:
+  - https://arxiv.org/abs/2304.10428
 - id: bilstm-crf
   type: Method
   name_en: BiLSTM-CRF
@@ -1348,6 +1436,10 @@ entities:
   type: Method
   name_en: Entity resolution
   name_de: Entity Resolution
+  summary_en: Entity resolution identifies different descriptions that refer to the same real-world entity and is a key task for data quality (Christophides et al., 2019). End-to-end workflows combine entity indexing with matching, and methods from databases, the Semantic Web and machine learning address loosely structured, diverse, fast-changing and large-scale entity descriptions.
+  summary_de: Entity Resolution erkennt unterschiedliche Beschreibungen, die sich auf dieselbe reale Entität beziehen, und ist eine Kernaufgabe der Datenqualität (Christophides et al., 2019). Durchgängige Abläufe verbinden die Indexierung von Entitäten mit dem Abgleich, und Verfahren aus Datenbanken, Semantic Web und maschinellem Lernen behandeln lose strukturierte, vielfältige, sich schnell ändernde und große Mengen von Beschreibungen.
+  sources:
+  - https://arxiv.org/abs/1905.06397
 - id: kg-refinement
   type: Method
   name_en: Knowledge graph refinement
@@ -1459,10 +1551,18 @@ entities:
   type: Method
   name_en: FrugalGPT
   name_de: FrugalGPT
+  summary_en: FrugalGPT is an LLM cascade that learns which combination of LLMs to query for each request in order to reduce cost and improve accuracy (Chen et al., 2023). Its authors describe three cost strategies, prompt adaptation, LLM approximation and LLM cascades, and report matching GPT-4 with up to 98% lower cost or improving on GPT-4 by 4% at the same cost.
+  summary_de: FrugalGPT ist eine LLM-Kaskade, die lernt, welche Kombination von LLMs je Anfrage abgefragt wird, um Kosten zu senken und die Accuracy zu verbessern (Chen et al., 2023). Die Autoren beschreiben drei Kostenstrategien, Prompt-Anpassung, LLM-Approximation und LLM-Kaskaden, und berichten, GPT-4 bei bis zu 98 % geringeren Kosten zu erreichen oder GPT-4 bei gleichen Kosten um 4 % zu übertreffen.
+  sources:
+  - https://arxiv.org/abs/2305.05176
 - id: routellm
   type: Method
   name_en: RouteLLM
   name_de: RouteLLM
+  summary_en: RouteLLM trains router models that choose at inference time between a stronger and a weaker LLM to balance cost and response quality, using human preference data and data augmentation (Ong et al., 2024). The routers reduced costs by more than half in some cases without lowering quality and kept working when the strong and weak models were swapped at test time.
+  summary_de: RouteLLM trainiert Router-Modelle, die bei der Inferenz zwischen einem stärkeren und einem schwächeren LLM wählen, um Kosten und Antwortqualität auszubalancieren, mit menschlichen Präferenzdaten und Datenaugmentierung (Ong et al., 2024). Die Router senkten die Kosten in einigen Fällen um mehr als die Hälfte ohne Qualitätsverlust und funktionierten weiter, wenn starkes und schwaches Modell beim Testen ausgetauscht wurden.
+  sources:
+  - https://arxiv.org/abs/2406.18665
 - id: model-routing
   type: Method
   name_en: Model routing
@@ -1525,6 +1625,10 @@ entities:
   type: Method
   name_en: Self-Refine
   name_de: Self-Refine
+  summary_en: 'Self-Refine improves an LLM''s output iteratively: the same model generates an initial answer, gives feedback on it and refines it, without supervised data, extra training or reinforcement learning (Madaan et al., 2023). Across seven tasks, from dialogue responses to mathematical reasoning, it improved task performance by about 20 percentage points on average over one-step generation.'
+  summary_de: 'Self-Refine verbessert die Ausgabe eines LLM schrittweise: Dasselbe Modell erzeugt eine erste Antwort, gibt Feedback dazu und überarbeitet sie, ohne überwachte Daten, zusätzliches Training oder Reinforcement Learning (Madaan et al., 2023). Über sieben Aufgaben, von Dialogantworten bis zu mathematischem Schlussfolgern, verbesserte es die Leistung gegenüber einstufiger Generierung im Mittel um rund 20 Prozentpunkte.'
+  sources:
+  - https://arxiv.org/abs/2303.17651
 - id: risk-bearing-capacity
   type: Concept
   name_en: Risk-bearing capacity
@@ -1558,10 +1662,18 @@ entities:
   name_de: 8-Bit-Optimierer
   aliases:
   - 8-bit optimizers
+  summary_en: 8-bit optimisers store the state of stateful optimisers such as Adam in 8 bits using block-wise dynamic quantisation, which keeps the performance of 32-bit optimiser states with a fraction of the memory (Dettmers et al., 2021). A stable embedding layer reduces gradient variance, and the optimisers serve as a drop-in replacement needing a two-line code change.
+  summary_de: 8-Bit-Optimierer speichern den Zustand zustandsbehafteter Optimierer wie Adam mit blockweiser dynamischer Quantisierung in 8 Bit und erreichen so die Leistung von 32-Bit-Zuständen bei einem Bruchteil des Speichers (Dettmers et al., 2021). Eine stabile Embedding-Schicht verringert die Varianz der Gradienten, und die Optimierer lassen sich mit einer Änderung von zwei Codezeilen einsetzen.
+  sources:
+  - https://arxiv.org/abs/2110.02861
 - id: adam-optimiser
   type: Method
   name_en: Adam
   name_de: Adam
+  summary_en: Adam is an algorithm for first-order gradient-based optimisation of stochastic objectives based on adaptive estimates of lower-order moments of the gradients (Kingma & Ba, 2014). It is simple to implement, computationally efficient, needs little memory, suits large and noisy or sparse problems, and its hyperparameters typically need little tuning.
+  summary_de: Adam ist ein Verfahren zur gradientenbasierten Optimierung stochastischer Zielfunktionen erster Ordnung, das auf adaptiven Schätzungen der niedrigen Momente der Gradienten beruht (Kingma & Ba, 2014). Es ist einfach umzusetzen, recheneffizient, braucht wenig Speicher, eignet sich für große sowie verrauschte oder dünn besetzte Probleme, und seine Hyperparameter müssen meist kaum abgestimmt werden.
+  sources:
+  - https://arxiv.org/abs/1412.6980
 - id: smote
   type: Method
   name_en: SMOTE (Synthetic Minority Over-sampling Technique)
