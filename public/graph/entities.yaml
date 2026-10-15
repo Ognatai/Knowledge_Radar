@@ -863,6 +863,11 @@ entities:
   type: Person
   name_en: Robert C. Martin
   name_de: Robert C. Martin
+  summary_en: Robert C. Martin ("Uncle Bob") is a programmer, speaker and teacher and the author of Clean Code. A Handbook of Agile Software Craftsmanship, published by Pearson in 2008, which he wrote with colleagues from Object Mentor (Pearson; cleancoder.com). The term clean code goes back to this book.
+  summary_de: Robert C. Martin („Uncle Bob“) ist Programmierer, Redner und Lehrender und Autor von Clean Code. A Handbook of Agile Software Craftsmanship, 2008 bei Pearson erschienen und gemeinsam mit Kollegen von Object Mentor erarbeitet (Pearson; cleancoder.com). Der Begriff Clean Code geht auf dieses Buch zurück.
+  sources:
+  - https://cleancoder.com/
+  - https://www.informit.com/store/clean-code-a-handbook-of-agile-software-craftsmanship-9780132350884
 - id: pep-8
   type: Technology
   name_en: PEP 8
@@ -2253,6 +2258,10 @@ entities:
   type: Person
   name_en: Viv Trivedy
   name_de: Viv Trivedy
+  summary_en: Viv Trivedy coined the term harness engineering, the design of the scaffolding around an AI model; the post "Anatomy of an Agent Harness" derives what an agent harness is and why each of its parts exists (Osmani 2026a).
+  summary_de: Viv Trivedy prägte den Begriff Harness Engineering, also die Gestaltung des Gerüsts um ein KI-Modell; der Beitrag „Anatomy of an Agent Harness“ leitet her, was ein Agent-Harness ist und wozu seine einzelnen Teile dienen (Osmani 2026a).
+  sources:
+  - https://addyosmani.com/blog/agent-harness-engineering/
 - id: sandboxing
   type: Concept
   name_en: Sandboxing
@@ -2691,10 +2700,18 @@ entities:
   type: Person
   name_en: Addy Osmani
   name_de: Addy Osmani
+  summary_en: Addy Osmani is an engineering and evangelism leader and a Member of Technical Staff at Anthropic, working on Claude Code (addyosmani.com). Before that he spent more than 14 years at Google, most recently as a Director at Google Cloud AI, and earlier led developer experience for Chrome, DevTools, Lighthouse and Core Web Vitals; his books include Learning JavaScript Design Patterns, and his blog posts on agent harness engineering and loop engineering are sources for this knowledge base.
+  summary_de: Addy Osmani ist eine Führungskraft in Engineering und Developer Relations und Member of Technical Staff bei Anthropic, wo er an Claude Code arbeitet (addyosmani.com). Zuvor war er mehr als 14 Jahre bei Google, zuletzt als Director bei Google Cloud AI, und leitete davor die Developer Experience für Chrome, DevTools, Lighthouse und Core Web Vitals; zu seinen Büchern gehört Learning JavaScript Design Patterns, und seine Blogbeiträge zu Agent Harness Engineering und Loop Engineering sind Quellen dieser Wissensbasis.
+  sources:
+  - https://addyosmani.com/
 - id: boris-cherny
   type: Person
   name_en: Boris Cherny
   name_de: Boris Cherny
+  summary_en: 'Boris Cherny is head of Claude Code at Anthropic (Osmani 2026b). Cherny is quoted as saying: "I don''t prompt Claude anymore. I have loops running that prompt Claude and figuring out what to do. My job is to write loops", an example of loop engineering.'
+  summary_de: Boris Cherny leitet Claude Code bei Anthropic (Osmani 2026b). Cherny wird mit der Aussage zitiert, Claude nicht mehr direkt zu prompten, sondern Schleifen laufen zu lassen, die Claude prompten; die eigene Aufgabe sei, Schleifen zu schreiben. Das ist ein Beispiel für Loop Engineering.
+  sources:
+  - https://addyosmani.com/blog/loop-engineering/
 - id: reflection-loop
   type: Method
   name_en: Reflection loop
@@ -3756,6 +3773,11 @@ entities:
   type: Person
   name_en: Andrej Karpathy
   name_de: Andrej Karpathy
+  summary_en: Andrej Karpathy is an AI researcher and educator (karpathy.ai). He was a founding member of OpenAI (2015–2017), Director of AI at Tesla (2017–2022), where he led the computer vision team of Autopilot, and returned to OpenAI in 2023–2024; during his PhD at Stanford, advised by Fei-Fei Li, he designed and taught the deep learning course CS 231n. He coined the term vibe coding on 6 February 2025 (Willison 2025).
+  summary_de: Andrej Karpathy ist KI-Forscher und Lehrender (karpathy.ai). Er war Gründungsmitglied von OpenAI (2015–2017), Director of AI bei Tesla (2017–2022), wo er das Computer-Vision-Team von Autopilot leitete, und 2023–2024 erneut bei OpenAI; während seiner Promotion in Stanford bei Fei-Fei Li konzipierte und leitete er den Deep-Learning-Kurs CS 231n. Den Begriff Vibe Coding prägte er am 6. Februar 2025 (Willison 2025).
+  sources:
+  - https://karpathy.ai/
+  - https://simonwillison.net/2025/Mar/19/vibe-coding/
 - id: comprehension-debt
   type: Concept
   name_en: Comprehension debt
@@ -4453,6 +4475,11 @@ entities:
   type: Person
   name_en: Tim Berners-Lee
   name_de: Tim Berners-Lee
+  summary_en: Sir Tim Berners-Lee invented the World Wide Web at CERN in 1989 and wrote the first web server and client in 1990; his specifications of URIs, HTTP and HTML were refined as the Web spread (W3C). When the World Wide Web Consortium (W3C) was formed in 1994, he started leading its work; he is also co-founder and CTO of Inrupt, which develops the open-source Solid platform for giving people control over their data.
+  summary_de: Sir Tim Berners-Lee erfand 1989 am CERN das World Wide Web und schrieb 1990 den ersten Webserver und -client; seine Spezifikationen von URIs, HTTP und HTML wurden mit der Verbreitung des Webs weiterentwickelt (W3C). Als 1994 das World Wide Web Consortium (W3C) gegründet wurde, übernahm er die Leitung seiner Arbeit; außerdem ist er Mitgründer und CTO von Inrupt, das die quelloffene Plattform Solid entwickelt, mit der Menschen die Kontrolle über ihre Daten erhalten sollen.
+  sources:
+  - https://www.w3.org/People/Berners-Lee/
+  - https://www.w3.org/about/history/
 - id: snli
   type: Dataset
   name_en: SNLI (Stanford Natural Language Inference corpus)
@@ -4489,6 +4516,11 @@ entities:
   type: Person
   name_en: Ward Cunningham
   name_de: Ward Cunningham
+  summary_en: Ward Cunningham is a programmer and co-principal of Cunningham & Cunningham, a consultancy specialising in object-oriented programming that hosts the Portland Pattern Repository and its wiki, the de facto home of Extreme Programming (c2.com). Cunningham's OOPSLA 1992 experience report on the WyCash portfolio management system compared shipping first-time code with going into debt, the origin of the technical debt metaphor (Cunningham 1992).
+  summary_de: Ward Cunningham ist Programmierer und Mitinhaber von Cunningham & Cunningham, einer auf objektorientierte Programmierung spezialisierten Beratung, die das Portland Pattern Repository und dessen Wiki betreibt, die faktische Heimat von Extreme Programming (c2.com). Cunninghams OOPSLA-Erfahrungsbericht von 1992 über das Portfoliomanagementsystem WyCash verglich das Ausliefern von Code in erster Fassung mit dem Aufnehmen von Schulden, der Ursprung der Metapher der technischen Schulden (Cunningham 1992).
+  sources:
+  - https://c2.com/
+  - http://c2.com/doc/oopsla92.html
 - id: github-actions
   type: Technology
   name_en: GitHub Actions
@@ -4669,6 +4701,10 @@ entities:
   type: Person
   name_en: Ralph Kimball
   name_de: Ralph Kimball
+  summary_en: Ralph Kimball founded the Kimball Group and was, from the mid-1980s, a leading proponent of the dimensional approach to data warehousing and business intelligence (Kimball Group). He co-authored all books in the Toolkit series and trained more than 20,000 students.
+  summary_de: Ralph Kimball gründete die Kimball Group und war ab Mitte der 1980er-Jahre ein führender Vertreter des dimensionalen Ansatzes für Data Warehousing und Business Intelligence (Kimball Group). Er war Mitautor aller Bücher der Toolkit-Reihe und schulte mehr als 20.000 Teilnehmende.
+  sources:
+  - https://www.kimballgroup.com/about-kimball-group/
 - id: bigquery
   type: Technology
   name_en: BigQuery
@@ -4692,6 +4728,11 @@ entities:
   type: Person
   name_en: Eric Evans
   name_de: Eric Evans
+  summary_en: Eric Evans is a software designer focusing on domain modelling and the author of the book Domain-Driven Design (Addison-Wesley), which gave domain-driven design its name (Domain Language; Fowler 2020). At Domain Language, which offers training in DDD, Evans focuses particularly on strategic design.
+  summary_de: Eric Evans ist Softwaredesigner mit Schwerpunkt Domänenmodellierung und Autor des Buchs Domain-Driven Design (Addison-Wesley), nach dem Domain-Driven Design benannt ist (Domain Language; Fowler 2020). Bei Domain Language, das Schulungen zu DDD anbietet, konzentriert sich Evans besonders auf strategisches Design.
+  sources:
+  - https://www.domainlanguage.com/about/
+  - https://martinfowler.com/bliki/DomainDrivenDesign.html
 - id: ben-shneiderman
   type: Person
   name_en: Ben Shneiderman
