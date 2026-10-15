@@ -2173,10 +2173,18 @@ entities:
   type: Dataset
   name_en: StereoSet
   name_de: StereoSet
+  summary_en: StereoSet is a large-scale natural English dataset for measuring stereotypical bias in pretrained language models across four domains, gender, profession, race and religion (Nadeem et al., 2020). Its authors found strong stereotypical biases in BERT, GPT-2, RoBERTa and XLNet and run a leaderboard with a hidden test set.
+  summary_de: StereoSet ist ein großer, natürlicher englischer Datensatz, der stereotype Verzerrungen vortrainierter Sprachmodelle in vier Bereichen misst, Geschlecht, Beruf, Herkunft und Religion (Nadeem et al., 2020). Die Autoren fanden starke stereotype Verzerrungen in BERT, GPT-2, RoBERTa und XLNet und betreiben eine Rangliste mit verborgener Testmenge.
+  sources:
+  - https://arxiv.org/abs/2004.09456
 - id: bbq
   type: Dataset
   name_en: Bias Benchmark for QA (BBQ)
   name_de: Bias Benchmark for QA (BBQ)
+  summary_en: The Bias Benchmark for QA (BBQ) consists of hand-built question sets that target attested social biases against protected groups along nine social dimensions relevant for U.S. English-speaking contexts (Parrish et al., 2021). With under-informative contexts, models often relied on stereotypes, and even with informative contexts their accuracy was up to 3.4 percentage points higher when the correct answer matched a social bias.
+  summary_de: Der Bias Benchmark for QA (BBQ) besteht aus von Hand erstellten Fragensätzen zu belegten sozialen Vorurteilen gegenüber geschützten Gruppen entlang neun sozialer Dimensionen im US-englischsprachigen Kontext (Parrish et al., 2021). Bei wenig informativem Kontext stützten sich Modelle oft auf Stereotype, und selbst bei informativem Kontext lag ihre Accuracy bis zu 3,4 Prozentpunkte höher, wenn die richtige Antwort einem Vorurteil entsprach.
+  sources:
+  - https://arxiv.org/abs/2110.08193
 - id: taz2024full
   type: Dataset
   name_en: taz2024full
@@ -2187,14 +2195,26 @@ entities:
   name_de: CUAD
   aliases:
   - Contract Understanding Atticus Dataset
+  summary_en: The Contract Understanding Atticus Dataset (CUAD) is a dataset for legal contract review created with dozens of legal experts from The Atticus Project, with over 13,000 annotations (Hendrycks et al., 2021). The task is to highlight the parts of a contract that a human reviewer should look at; Transformer models showed nascent performance that depended strongly on model design and training set size.
+  summary_de: Der Contract Understanding Atticus Dataset (CUAD) ist ein Datensatz für die Vertragsprüfung, erstellt mit Dutzenden Fachleuten des Atticus Project, mit über 13 000 Annotationen (Hendrycks et al., 2021). Aufgabe ist, die Stellen eines Vertrags zu markieren, die eine prüfende Person ansehen sollte; Transformer-Modelle zeigten erste Erfolge, die stark von Modellaufbau und Größe der Trainingsdaten abhingen.
+  sources:
+  - https://arxiv.org/abs/2103.06268
 - id: contractnli
   type: Dataset
   name_en: ContractNLI
   name_de: ContractNLI
+  summary_en: ContractNLI frames contract review as document-level natural language inference; for each hypothesis, such as that some obligations survive termination, a system decides whether the contract entails it, contradicts it or does not mention it and marks the evidence spans (Koreeda & Manning, 2021). It contains 607 annotated contracts, and negations by exceptions make the task hard.
+  summary_de: ContractNLI fasst die Vertragsprüfung als Natural Language Inference auf Dokumentebene; für jede Hypothese, etwa dass bestimmte Pflichten eine Kündigung überdauern, entscheidet ein System, ob der Vertrag sie stützt, ihr widerspricht oder sie nicht erwähnt, und markiert die Belegstellen (Koreeda & Manning, 2021). Er umfasst 607 annotierte Verträge, und Negationen durch Ausnahmen machen die Aufgabe schwierig.
+  sources:
+  - https://arxiv.org/abs/2110.01799
 - id: mteb
   type: Dataset
   name_en: Massive Text Embedding Benchmark (MTEB)
   name_de: Massive Text Embedding Benchmark (MTEB)
+  summary_en: The Massive Text Embedding Benchmark (MTEB) evaluates text embeddings on 8 task types, among them clustering and reranking, with 58 datasets in 112 languages (Muennighoff et al., 2022). Benchmarking 33 models, its authors found that no embedding method dominates across all tasks; MTEB has open-source code and a public leaderboard.
+  summary_de: Der Massive Text Embedding Benchmark (MTEB) bewertet Text-Embeddings in 8 Aufgabentypen, darunter Clustering und Reranking, mit 58 Datensätzen in 112 Sprachen (Muennighoff et al., 2022). Beim Vergleich von 33 Modellen dominierte keine Embedding-Methode über alle Aufgaben; MTEB bietet offenen Code und eine öffentliche Rangliste.
+  sources:
+  - https://arxiv.org/abs/2210.07316
 - id: conll-2003
   type: Dataset
   name_en: CoNLL-2003
@@ -2215,24 +2235,44 @@ entities:
   type: Dataset
   name_en: LexGLUE
   name_de: LexGLUE
+  summary_en: The Legal General Language Understanding Evaluation (LexGLUE) benchmark collects datasets for evaluating models on diverse English legal NLU tasks in a standardised way (Chalkidis et al., 2021). In its evaluation, legal-oriented models consistently outperformed generic ones across multiple tasks.
+  summary_de: Der Benchmark Legal General Language Understanding Evaluation (LexGLUE) bündelt Datensätze, um Modelle einheitlich auf verschiedenen Aufgaben des Verstehens englischer Rechtssprache zu bewerten (Chalkidis et al., 2021). In seiner Evaluation übertrafen auf Recht ausgerichtete Modelle generische Modelle durchgängig über mehrere Aufgaben.
+  sources:
+  - https://arxiv.org/abs/2110.00976
 - id: legalbench
   type: Dataset
   name_en: LegalBench
   name_de: LegalBench
+  summary_en: LegalBench is a collaboratively built benchmark of 162 tasks covering six types of legal reasoning, designed and hand-crafted by legal professionals (Guha et al., 2023). Its authors map the tasks to legal frameworks for describing legal reasoning and evaluated 20 open-source and commercial LLMs.
+  summary_de: LegalBench ist ein gemeinschaftlich erstellter Benchmark aus 162 Aufgaben zu sechs Arten juristischen Schlussfolgerns, von Fachleuten aus dem Recht entworfen (Guha et al., 2023). Die Autoren ordnen die Aufgaben juristischen Modellen des Schlussfolgerns zu und evaluierten 20 offene und kommerzielle LLMs.
+  sources:
+  - https://arxiv.org/abs/2308.11462
 - id: mmlu
   type: Dataset
   name_en: MMLU
   name_de: MMLU
   aliases:
   - Massive Multitask Language Understanding
+  summary_en: MMLU (Measuring Massive Multitask Language Understanding) tests a text model's multitask accuracy on 57 tasks, including elementary mathematics, US history, computer science and law (Hendrycks et al., 2020). When it was introduced, most models were near chance, the largest GPT-3 model improved on chance by almost 20 percentage points, and models were near random on subjects such as morality and law.
+  summary_de: MMLU (Measuring Massive Multitask Language Understanding) prüft die Multitask-Accuracy eines Textmodells in 57 Aufgaben, darunter Elementarmathematik, US-Geschichte, Informatik und Recht (Hendrycks et al., 2020). Bei der Einführung lagen die meisten Modelle nahe am Zufall, das größte GPT-3-Modell um fast 20 Prozentpunkte darüber, und bei Themen wie Moral und Recht blieben Modelle nahe am Zufall.
+  sources:
+  - https://arxiv.org/abs/2009.03300
 - id: truthfulqa
   type: Dataset
   name_en: TruthfulQA
   name_de: TruthfulQA
+  summary_en: TruthfulQA measures whether a language model answers truthfully, with 817 questions in 38 categories such as health, law, finance and politics that some humans would answer falsely because of misconceptions (Lin et al., 2021). The best model tested was truthful on 58% of questions against 94% for humans, and the largest models were generally the least truthful.
+  summary_de: TruthfulQA misst, ob ein Sprachmodell wahrheitsgemäß antwortet, mit 817 Fragen in 38 Kategorien wie Gesundheit, Recht, Finanzen und Politik, die manche Menschen wegen verbreiteter Irrtümer falsch beantworten würden (Lin et al., 2021). Das beste getestete Modell war bei 58 % der Fragen wahrheitsgemäß, Menschen bei 94 %, und die größten Modelle waren im Allgemeinen am wenigsten wahrheitsgemäß.
+  sources:
+  - https://arxiv.org/abs/2109.07958
 - id: mt-bench
   type: Dataset
   name_en: MT-bench
   name_de: MT-bench
+  summary_en: MT-bench is a set of multi-turn questions for evaluating chat assistants, introduced together with the crowdsourced Chatbot Arena to check how well LLM judges agree with human preferences (Zheng et al., 2023). Strong judges such as GPT-4 reached over 80% agreement with human preferences, the same level as agreement between humans.
+  summary_de: MT-bench ist eine Sammlung mehrstufiger Fragen zur Bewertung von Chat-Assistenten, vorgestellt zusammen mit der per Crowdsourcing betriebenen Chatbot Arena, um zu prüfen, wie gut LLM-Judges mit menschlichen Präferenzen übereinstimmen (Zheng et al., 2023). Starke Judges wie GPT-4 erreichten über 80 % Übereinstimmung, so viel wie Menschen untereinander.
+  sources:
+  - https://arxiv.org/abs/2306.05685
 - id: chatbot-arena
   type: Technology
   name_en: Chatbot Arena
@@ -2243,22 +2283,42 @@ entities:
   name_de: SQuAD
   aliases:
   - Stanford Question Answering Dataset
+  summary_en: The Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset of more than 100,000 questions posed by crowdworkers on Wikipedia articles, where each answer is a segment of the corresponding passage (Rajpurkar et al., 2016). Its logistic regression baseline reached an F1 score of 51.0% against human performance of 86.8%.
+  summary_de: Der Stanford Question Answering Dataset (SQuAD) ist ein Datensatz zum Leseverständnis mit über 100 000 Fragen, die Crowdworker zu Wikipedia-Artikeln stellten; jede Antwort ist ein Abschnitt der zugehörigen Textpassage (Rajpurkar et al., 2016). Die Baseline mit logistischer Regression erreichte einen F1-Wert von 51,0 %, Menschen 86,8 %.
+  sources:
+  - https://arxiv.org/abs/1606.05250
 - id: alce
   type: Dataset
   name_en: ALCE
   name_de: ALCE
+  summary_en: ALCE is a benchmark for Automatic LLMs' Citation Evaluation, in which systems retrieve supporting evidence and generate answers with citations; it measures fluency, correctness and citation quality with automatic metrics that correlate strongly with human judgements (Gao et al., 2023). On the ELI5 dataset, even the best models lacked complete citation support half of the time.
+  summary_de: ALCE ist ein Benchmark für die automatische Bewertung von Zitaten in LLM-Antworten, bei dem Systeme Belege abrufen und Antworten mit Quellenangaben erzeugen; er misst Flüssigkeit, Korrektheit und Zitierqualität mit automatischen Metriken, die stark mit menschlichen Urteilen korrelieren (Gao et al., 2023). Auf dem Datensatz ELI5 fehlte selbst den besten Modellen in der Hälfte der Fälle eine vollständige Belegung durch Zitate.
+  sources:
+  - https://arxiv.org/abs/2305.14627
 - id: humaneval
   type: Dataset
   name_en: HumanEval
   name_de: HumanEval
+  summary_en: HumanEval is an evaluation set released with Codex to measure the functional correctness of programs synthesised from docstrings (Chen et al., 2021). Codex solved 28.8% of its problems against 0% for GPT-3, and 70.2% when 100 samples were drawn per problem.
+  summary_de: HumanEval ist ein Evaluationsdatensatz, der mit Codex veröffentlicht wurde, um die funktionale Korrektheit von Programmen zu messen, die aus Docstrings erzeugt werden (Chen et al., 2021). Codex löste 28,8 % der Aufgaben, GPT-3 0 %, und mit 100 Stichproben je Aufgabe 70,2 %.
+  sources:
+  - https://arxiv.org/abs/2107.03374
 - id: agentbench
   type: Dataset
   name_en: AgentBench
   name_de: AgentBench
+  summary_en: AgentBench evaluates LLMs as agents in 8 distinct interactive environments that test reasoning and decision-making (Liu et al., 2023). It found a significant gap between top commercial LLMs and many open-source models up to 70B parameters, with poor long-term reasoning, decision-making and instruction following as the main obstacles.
+  summary_de: AgentBench bewertet LLMs als Agenten in 8 verschiedenen interaktiven Umgebungen, die Schlussfolgern und Entscheiden prüfen (Liu et al., 2023). Er zeigte eine deutliche Lücke zwischen führenden kommerziellen LLMs und vielen offenen Modellen bis 70 Milliarden Parametern; Hauptprobleme waren schwaches langfristiges Schlussfolgern, Entscheiden und Befolgen von Anweisungen.
+  sources:
+  - https://arxiv.org/abs/2308.03688
 - id: swe-bench
   type: Dataset
   name_en: SWE-bench
   name_de: SWE-bench
+  summary_en: SWE-bench is an evaluation framework of 2,294 software engineering problems drawn from real GitHub issues and pull requests across 12 popular Python repositories; a model must edit the codebase to resolve the issue (Jimenez et al., 2023). At its release, the best model, Claude 2, resolved only 1.96% of the issues.
+  summary_de: SWE-bench ist ein Evaluationsrahmen aus 2 294 Softwareentwicklungsaufgaben aus echten GitHub-Issues und Pull Requests von 12 verbreiteten Python-Repositories; ein Modell muss die Codebasis so ändern, dass das Issue gelöst ist (Jimenez et al., 2023). Bei der Veröffentlichung löste das beste Modell, Claude 2, nur 1,96 % der Issues.
+  sources:
+  - https://arxiv.org/abs/2310.06770
 - id: houyi
   type: Method
   name_en: HouYi
@@ -2267,6 +2327,10 @@ entities:
   type: Dataset
   name_en: InjecAgent
   name_de: InjecAgent
+  summary_en: InjecAgent is a benchmark for indirect prompt injection attacks on tool-integrated LLM agents, with 1,054 test cases covering 17 user tools and 62 attacker tools and two attack intentions, direct harm to users and exfiltration of private data (Zhan et al., 2024). Of 30 agents evaluated, ReAct-prompted GPT-4 was vulnerable 24% of the time, and reinforcing attacks with a hacking prompt nearly doubled the success rate.
+  summary_de: InjecAgent ist ein Benchmark für indirekte Prompt-Injection-Angriffe auf LLM-Agenten mit Werkzeugen, mit 1 054 Testfällen zu 17 Nutzer- und 62 Angreiferwerkzeugen und zwei Angriffszielen, direktem Schaden für Nutzende und Abfluss privater Daten (Zhan et al., 2024). Von 30 getesteten Agenten war GPT-4 mit ReAct-Prompting in 24 % der Fälle angreifbar, und ein zusätzlicher Hacking-Prompt verdoppelte die Erfolgsrate fast.
+  sources:
+  - https://arxiv.org/abs/2403.02691
 - id: ltbd
   type: Method
   name_en: Learnable Trust-Boundary Delimiters (LTBD)
@@ -2283,6 +2347,10 @@ entities:
   type: Dataset
   name_en: RAG-PIBench
   name_de: RAG-PIBench
+  summary_en: RAG-PIBench is a benchmark for detecting prompt injections embedded in retrieved content in RAG systems, with 4,876 contextual examples in frozen train, validation and protected test splits built by a leakage-aware pipeline (Jaffal et al., 2026). DistilBERT performed best on the protected test set (F1 0.896), while TF-IDF with SVM or logistic regression remained competitive.
+  summary_de: RAG-PIBench ist ein Benchmark zur Erkennung von Prompt Injections in abgerufenen Inhalten von RAG-Systemen, mit 4 876 kontextbezogenen Beispielen in festen Trainings-, Validierungs- und geschützten Testmengen, erstellt mit einem Verfahren gegen Datenlecks (Jaffal et al., 2026). DistilBERT schnitt auf der geschützten Testmenge am besten ab (F1 0,896), TF-IDF mit SVM oder logistischer Regression blieb konkurrenzfähig.
+  sources:
+  - https://arxiv.org/abs/2610.08571
 - id: pruning
   type: Method
   name_en: Pruning
@@ -2299,6 +2367,10 @@ entities:
   type: Dataset
   name_en: HaDes
   name_de: HaDes
+  summary_en: HaDes (HAllucination DEtection dataSet) supports token-level, reference-free hallucination detection for free-form text generation (Liu et al., 2021). It was built by perturbing text segments from English Wikipedia and verifying them with crowd-sourced annotations, using an iterative model-in-the-loop strategy against label imbalance.
+  summary_de: HaDes (HAllucination DEtection dataSet) dient der Erkennung von Halluzinationen auf Token-Ebene ohne Referenztext bei freier Textgenerierung (Liu et al., 2021). Er entstand, indem Textabschnitte aus der englischen Wikipedia verändert und per Crowdsourcing geprüft wurden, mit einem iterativen Model-in-the-Loop-Verfahren gegen unausgewogene Labels.
+  sources:
+  - https://arxiv.org/abs/2104.08704
 - id: reld
   type: Method
   name_en: RelD
@@ -2363,6 +2435,10 @@ entities:
   type: Dataset
   name_en: MultiWOZ
   name_de: MultiWOZ
+  summary_en: The Multi-Domain Wizard-of-Oz dataset (MultiWOZ) is a fully labelled collection of about 10,000 human-human written task-oriented conversations spanning several domains, annotated with dialogue belief states and dialogue acts (Budzianowski et al., 2018). It was collected entirely by crowdsourcing and provides baselines for belief tracking, dialogue act and response generation.
+  summary_de: Der Multi-Domain Wizard-of-Oz-Datensatz (MultiWOZ) ist eine vollständig annotierte Sammlung von rund 10 000 schriftlichen, aufgabenorientierten Gesprächen zwischen Menschen über mehrere Domänen, mit Belief States und Dialogakten (Budzianowski et al., 2018). Er wurde vollständig per Crowdsourcing erhoben und liefert Baselines für Belief Tracking, Dialogakte und Antwortgenerierung.
+  sources:
+  - https://arxiv.org/abs/1810.00278
 - id: neural-belief-tracker
   type: Method
   name_en: Neural Belief Tracker
@@ -2563,6 +2639,10 @@ entities:
   aliases:
   - SNLI
   - Stanford Natural Language Inference corpus
+  summary_en: The Stanford Natural Language Inference corpus (SNLI) is a freely available collection of 570,000 human-written sentence pairs labelled for entailment and contradiction, created in a grounded task based on image captions (Bowman et al., 2015). Its scale, two orders of magnitude larger than earlier resources, allowed a neural network model to compete on natural language inference benchmarks for the first time.
+  summary_de: Das Stanford Natural Language Inference Corpus (SNLI) ist eine frei verfügbare Sammlung von 570 000 von Menschen geschriebenen Satzpaaren mit Labels für Folgerung und Widerspruch, erstellt in einer Aufgabe auf Grundlage von Bildbeschreibungen (Bowman et al., 2015). Sein Umfang, zwei Größenordnungen über früheren Ressourcen, ließ erstmals ein neuronales Modell auf Benchmarks für Natural Language Inference mithalten.
+  sources:
+  - https://arxiv.org/abs/1508.05326
 - id: multinli
   type: Dataset
   name_en: MultiNLI (Multi-Genre NLI corpus)
@@ -2571,6 +2651,11 @@ entities:
   - MultiNLI
   - MNLI
   - Multi-Genre Natural Language Inference corpus
+  summary_en: The Multi-Genre Natural Language Inference corpus (MultiNLI) contains 433,000 sentence pairs for training and evaluating models of sentence understanding through inference (Williams et al., 2017). It covers ten genres of written and spoken English and offers an explicit setting for evaluating cross-genre domain adaptation; it is one of the nine GLUE tasks.
+  summary_de: Das Multi-Genre Natural Language Inference Corpus (MultiNLI) enthält 433 000 Satzpaare zum Training und zur Evaluation von Modellen für Satzverständnis durch Inferenz (Williams et al., 2017). Es deckt zehn Textsorten geschriebenen und gesprochenen Englischs ab und bietet einen eigenen Aufbau zur Bewertung der Domänenanpassung zwischen Textsorten; es ist eine der neun GLUE-Aufgaben.
+  sources:
+  - https://arxiv.org/abs/1704.05426
+  - https://arxiv.org/abs/1804.07461
 - id: summac
   type: Method
   name_en: SummaC
@@ -2659,6 +2744,10 @@ entities:
   type: Dataset
   name_en: DocLayNet
   name_de: DocLayNet
+  summary_en: DocLayNet is a publicly available document-layout annotation dataset in COCO format with 80,863 manually annotated pages from diverse sources, each with bounding boxes in 11 classes (Pfitzmann et al., 2022). Models trained on it predicted layouts more robustly than those trained on PubLayNet or DocBank, which come only from scientific articles.
+  summary_de: DocLayNet ist ein öffentlich verfügbarer Datensatz zur Annotation von Dokumentlayouts im COCO-Format mit 80 863 von Hand annotierten Seiten aus vielfältigen Quellen, jeweils mit Begrenzungsrahmen in 11 Klassen (Pfitzmann et al., 2022). Darauf trainierte Modelle sagten Layouts robuster vorher als solche, die auf PubLayNet oder DocBank trainiert wurden, die nur aus wissenschaftlichen Artikeln stammen.
+  sources:
+  - https://arxiv.org/abs/2206.01062
 - id: yolo
   type: Method
   name_en: YOLO

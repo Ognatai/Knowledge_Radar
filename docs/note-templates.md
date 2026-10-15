@@ -311,6 +311,6 @@ above "Mentioned in":
 
 Rules: both languages and at least one http(s) source are required together;
 every statement must come from the listed sources (German law: German source
-first); no wikilinks or citations inside the text. Once 3 or more notes discuss
+first); no wikilinks; author-year citations may refer to the listed sources. Once 3 or more notes discuss
 the entity, it gets a full note and the short text is dropped with the registry
 entry.
