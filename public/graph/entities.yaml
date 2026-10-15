@@ -74,6 +74,10 @@ entities:
   type: Method
   name_en: Adapter layers
   name_de: Adapter-Layer
+  summary_en: Adapter layers are small trainable modules inserted into a pre-trained network while the original parameters stay fixed, so each new task adds only a few parameters and tasks can be added without revisiting earlier ones (Houlsby et al., 2019). Transferring BERT to 26 text classification tasks, adapters came within 0.4% of full fine-tuning on GLUE while adding only 3.6% parameters per task.
+  summary_de: Adapter-Schichten sind kleine trainierbare Module, die in ein vortrainiertes Netz eingefügt werden, während dessen Parameter fest bleiben; jede neue Aufgabe fügt so nur wenige Parameter hinzu, und Aufgaben lassen sich ergänzen, ohne frühere erneut anzufassen (Houlsby et al., 2019). Beim Transfer von BERT auf 26 Textklassifikationsaufgaben lagen Adapter auf GLUE nur 0,4 % hinter vollständigem Fine-Tuning, bei nur 3,6 % zusätzlichen Parametern je Aufgabe.
+  sources:
+  - https://arxiv.org/abs/1902.00751
 - id: t5
   type: Method
   name_en: T5
@@ -204,14 +208,26 @@ entities:
   type: Method
   name_en: LIME
   name_de: LIME
+  summary_en: LIME explains the predictions of any classifier by learning an interpretable model locally around a prediction (Ribeiro et al., 2016). Its authors also proposed selecting representative predictions with explanations to explain a whole model and showed in experiments with human subjects that explanations help decide whether to trust a prediction or a model.
+  summary_de: LIME erklärt die Vorhersagen beliebiger Klassifikatoren, indem es lokal um eine Vorhersage ein interpretierbares Modell lernt (Ribeiro et al., 2016). Die Autoren schlugen außerdem vor, repräsentative Vorhersagen mit Erklärungen auszuwählen, um ein ganzes Modell zu erklären, und zeigten in Experimenten mit Menschen, dass Erklärungen bei der Entscheidung helfen, ob einer Vorhersage oder einem Modell zu trauen ist.
+  sources:
+  - https://arxiv.org/abs/1602.04938
 - id: shap
   type: Method
   name_en: SHAP
   name_de: SHAP
+  summary_en: SHAP (SHapley Additive exPlanations) assigns each feature an importance value for a particular prediction (Lundberg & Lee, 2017). It defines a class of additive feature importance measures with a unique solution that has desirable properties, unifies six existing explanation methods and led to new estimation methods that are faster or more consistent with human intuition.
+  summary_de: SHAP (SHapley Additive exPlanations) weist jedem Merkmal für eine bestimmte Vorhersage einen Wichtigkeitswert zu (Lundberg & Lee, 2017). Es definiert eine Klasse additiver Wichtigkeitsmaße mit einer eindeutigen Lösung mit wünschenswerten Eigenschaften, vereint sechs bestehende Erklärungsverfahren und führte zu neuen Schätzverfahren, die schneller sind oder besser mit menschlicher Intuition übereinstimmen.
+  sources:
+  - https://arxiv.org/abs/1705.07874
 - id: integrated-gradients
   type: Method
   name_en: Integrated Gradients
   name_de: Integrated Gradients
+  summary_en: Integrated Gradients attributes a deep network's prediction to its input features and was designed to satisfy two axioms, sensitivity and implementation invariance, that most earlier attribution methods violate (Sundararajan et al., 2017). It needs no change to the network and only a few calls to the standard gradient operator, and was applied to image, text and chemistry models.
+  summary_de: Integrated Gradients ordnet die Vorhersage eines tiefen Netzes seinen Eingabemerkmalen zu und wurde so entworfen, dass es zwei Axiome erfüllt, Sensitivität und Implementierungsinvarianz, die die meisten früheren Attributionsverfahren verletzen (Sundararajan et al., 2017). Es erfordert keine Änderung am Netz und nur wenige Aufrufe des üblichen Gradientenoperators und wurde auf Bild-, Text- und Chemiemodelle angewendet.
+  sources:
+  - https://arxiv.org/abs/1703.01365
 - id: counterfactual-explanations
   type: Method
   name_en: Counterfactual explanations
@@ -363,12 +379,20 @@ entities:
   name_de: Variational Autoencoder (VAE)
   aliases:
   - VAE
+  summary_en: The variational autoencoder (VAE) comes from Auto-Encoding Variational Bayes, a stochastic variational inference and learning algorithm for models with continuous latent variables and intractable posteriors (Kingma & Welling, 2013). A reparameterisation of the variational lower bound makes it optimisable with standard stochastic gradient methods, and an approximate inference (recognition) model makes posterior inference efficient.
+  summary_de: Der Variational Autoencoder (VAE) geht auf Auto-Encoding Variational Bayes zurück, ein stochastisches Verfahren für variationelle Inferenz und Lernen in Modellen mit stetigen latenten Variablen und nicht berechenbaren Posterior-Verteilungen (Kingma & Welling, 2013). Eine Reparametrisierung der variationellen unteren Schranke macht es mit üblichen stochastischen Gradientenverfahren optimierbar, und ein Modell für näherungsweise Inferenz (Recognition Model) macht die Posterior-Inferenz effizient.
+  sources:
+  - https://arxiv.org/abs/1312.6114
 - id: dcgan
   type: Method
   name_en: Deep convolutional GAN (DCGAN)
   name_de: Deep Convolutional GAN (DCGAN)
   aliases:
   - DCGAN
+  summary_en: Deep convolutional generative adversarial networks (DCGANs) are a class of convolutional GANs with specific architectural constraints for unsupervised representation learning (Radford et al., 2015). Trained on image datasets, generator and discriminator learn a hierarchy of representations from object parts to scenes, and the learned features work as general image representations for new tasks.
+  summary_de: Deep Convolutional Generative Adversarial Networks (DCGANs) sind eine Klasse konvolutionaler GANs mit bestimmten Architekturvorgaben für unüberwachtes Repräsentationslernen (Radford et al., 2015). Auf Bilddatensätzen trainiert, lernen Generator und Diskriminator eine Hierarchie von Repräsentationen von Objektteilen bis zu Szenen, und die gelernten Merkmale dienen als allgemeine Bildrepräsentationen für neue Aufgaben.
+  sources:
+  - https://arxiv.org/abs/1511.06434
 - id: wasserstein-gan
   type: Method
   name_en: Wasserstein GAN
@@ -404,16 +428,28 @@ entities:
   name_de: Word Embedding Association Test (WEAT)
   aliases:
   - WEAT
+  summary_en: The Word Embedding Association Test (WEAT) measures bias in word embeddings by analogy with the Implicit Association Test from psychology (Caliskan et al., 2016). Using it on GloVe embeddings trained on web text, Caliskan et al. replicated a spectrum of known human biases, from neutral ones towards insects and flowers to problematic ones towards race and gender.
+  summary_de: Der Word Embedding Association Test (WEAT) misst Verzerrungen in Wort-Embeddings in Anlehnung an den Impliziten Assoziationstest der Psychologie (Caliskan et al., 2016). Damit reproduzierten Caliskan et al. an GloVe-Embeddings aus Webtexten eine Reihe bekannter menschlicher Vorurteile, von neutralen gegenüber Insekten und Blumen bis zu problematischen bezüglich Herkunft und Geschlecht.
+  sources:
+  - https://arxiv.org/abs/1608.07187
 - id: wefat
   type: Method
   name_en: Word Embedding Factual Association Test (WEFAT)
   name_de: Word Embedding Factual Association Test (WEFAT)
   aliases:
   - WEFAT
+  summary_en: The Word Embedding Factual Association Test (WEFAT) relates associations in word embeddings to real-world facts, for example the gender distribution of careers or first names (Caliskan et al., 2016). It shows that embeddings capture veridical imprints of the status quo alongside biases, introduced together with the Word Embedding Association Test.
+  summary_de: Der Word Embedding Factual Association Test (WEFAT) setzt Assoziationen in Wort-Embeddings mit realen Fakten in Beziehung, etwa der Geschlechterverteilung in Berufen oder bei Vornamen (Caliskan et al., 2016). Er zeigt, dass Embeddings neben Vorurteilen auch zutreffende Abbilder des Status quo enthalten, und wurde zusammen mit dem Word Embedding Association Test eingeführt.
+  sources:
+  - https://arxiv.org/abs/1608.07187
 - id: geometric-debiasing
   type: Method
   name_en: Geometric debiasing of word embeddings
   name_de: Geometrisches Debiasing von Word Embeddings
+  summary_en: Geometric debiasing of word embeddings uses the finding that gender bias is captured by a direction in the embedding space and that gender-neutral words are linearly separable from gender-definitional words (Bolukbasi et al., 2016). The method removes stereotypical associations such as receptionist–female while keeping definitional ones such as queen–female, and keeps clustering and analogy abilities.
+  summary_de: Geometrisches Debiasing von Wort-Embeddings nutzt den Befund, dass Geschlechterverzerrung durch eine Richtung im Embedding-Raum erfasst wird und geschlechtsneutrale Wörter linear von geschlechtsdefinierenden Wörtern trennbar sind (Bolukbasi et al., 2016). Das Verfahren entfernt stereotype Zuordnungen wie Empfangskraft–weiblich und behält definitorische wie Königin–weiblich, ohne Clustering- und Analogiefähigkeiten zu verlieren.
+  sources:
+  - https://arxiv.org/abs/1607.06520
 - id: bsig-2009
   type: Regulation
   name_en: BSI Act (2009 version)
@@ -655,6 +691,10 @@ entities:
   type: Method
   name_en: VGG
   name_de: VGG
+  summary_en: VGG networks are deep convolutional networks with very small 3×3 filters that showed that increasing depth to 16 to 19 weight layers markedly improves large-scale image recognition (Simonyan & Zisserman, 2014). The team won first place in localisation and second in classification at the ImageNet Challenge 2014 and released their two best models.
+  summary_de: VGG-Netze sind tiefe Convolutional Networks mit sehr kleinen 3×3-Filtern, die zeigten, dass eine Tiefe von 16 bis 19 Gewichtsschichten die Bilderkennung im großen Maßstab deutlich verbessert (Simonyan & Zisserman, 2014). Das Team belegte bei der ImageNet Challenge 2014 den ersten Platz in der Lokalisierung und den zweiten in der Klassifikation und veröffentlichte seine zwei besten Modelle.
+  sources:
+  - https://arxiv.org/abs/1409.1556
 - id: convolution
   type: Concept
   name_en: Convolution
@@ -838,6 +878,10 @@ entities:
   name_de: Differentially Private Deep Learning
   aliases:
   - DP-SGD
+  summary_en: Differentially private deep learning trains neural networks under the framework of differential privacy, so that models do not expose private information from their training data (Abadi et al., 2016). Abadi et al. developed algorithmic techniques and a refined analysis of privacy costs and showed that deep networks with non-convex objectives can be trained under a modest privacy budget at manageable cost in complexity, efficiency and model quality.
+  summary_de: Differenziell privates Deep Learning trainiert neuronale Netze im Rahmen der Differential Privacy, sodass Modelle keine privaten Informationen aus ihren Trainingsdaten preisgeben (Abadi et al., 2016). Abadi et al. entwickelten Trainingsverfahren und eine genauere Analyse der Privatsphärekosten und zeigten, dass tiefe Netze mit nicht konvexen Zielfunktionen bei moderatem Privatsphärebudget und vertretbarem Aufwand an Komplexität, Effizienz und Modellqualität trainierbar sind.
+  sources:
+  - https://arxiv.org/abs/1607.00133
 - id: federated-averaging
   type: Method
   name_en: Federated averaging
@@ -845,6 +889,10 @@ entities:
   aliases:
   - FedAvg
   - iterative model averaging
+  summary_en: Federated averaging is a practical method for federated learning in which training data stays on mobile devices and a shared model is learned by iteratively averaging locally computed updates (McMahan et al., 2016). It proved robust to unbalanced and non-IID data and reduced the required communication rounds by 10 to 100 times compared with synchronised stochastic gradient descent.
+  summary_de: Federated Averaging ist ein praktisches Verfahren für föderiertes Lernen, bei dem die Trainingsdaten auf den Mobilgeräten bleiben und ein gemeinsames Modell durch iteratives Mitteln lokal berechneter Updates gelernt wird (McMahan et al., 2016). Es erwies sich als robust gegenüber unausgewogenen und nicht identisch verteilten Daten und verringerte die nötigen Kommunikationsrunden gegenüber synchronisiertem stochastischem Gradientenabstieg um das 10- bis 100-Fache.
+  sources:
+  - https://arxiv.org/abs/1602.05629
 - id: gradient-leakage
   type: Concept
   name_en: Gradient leakage
@@ -863,10 +911,18 @@ entities:
   type: Method
   name_en: Classifier guidance
   name_de: Classifier Guidance
+  summary_en: Classifier guidance improves sample quality in conditional diffusion models by using gradients of an image classifier to trade diversity for fidelity (Dhariwal & Nichol, 2021). With it, diffusion models surpassed the best GANs on ImageNet image synthesis, for example with an FID of 4.59 at 256×256, while covering the distribution better.
+  summary_de: Classifier Guidance verbessert die Qualität von Samples bedingter Diffusionsmodelle, indem es die Gradienten eines Bildklassifikators nutzt, um Vielfalt gegen Detailtreue abzuwägen (Dhariwal & Nichol, 2021). Damit übertrafen Diffusionsmodelle die besten GANs bei der Bildsynthese auf ImageNet, etwa mit einem FID von 4,59 bei 256×256, und deckten die Verteilung besser ab.
+  sources:
+  - https://arxiv.org/abs/2105.05233
 - id: classifier-free-guidance
   type: Method
   name_en: Classifier-free guidance
   name_de: Classifier-free Guidance
+  summary_en: 'Classifier-free guidance trades off sample quality and diversity in conditional diffusion models without a separate classifier: a conditional and an unconditional diffusion model are trained jointly, and their score estimates are combined at sampling time (Ho & Salimans, 2022). It reaches a trade-off similar to classifier guidance, which instead uses gradients of a separately trained image classifier.'
+  summary_de: 'Classifier-free Guidance wägt bei bedingten Diffusionsmodellen Qualität und Vielfalt der Samples ab, ohne einen separaten Klassifikator: Ein bedingtes und ein unbedingtes Diffusionsmodell werden gemeinsam trainiert und ihre Score-Schätzungen beim Sampling kombiniert (Ho & Salimans, 2022). Es erreicht eine ähnliche Abwägung wie Classifier Guidance, das dafür die Gradienten eines separat trainierten Bildklassifikators nutzt.'
+  sources:
+  - https://arxiv.org/abs/2207.12598
 - id: core-platform-service
   type: Concept
   name_en: Core platform service
@@ -1094,6 +1150,10 @@ entities:
   type: Method
   name_en: BiLSTM-CRF
   name_de: BiLSTM-CRF
+  summary_en: A BiLSTM-CRF model combines a bidirectional LSTM, which uses both past and future input features, with a conditional random field layer that uses sentence-level tag information (Huang et al., 2015). Its authors were the first to apply it to standard NLP sequence tagging benchmarks and reached state-of-the-art or near state-of-the-art accuracy on part-of-speech tagging, chunking and named entity recognition.
+  summary_de: Ein BiLSTM-CRF-Modell verbindet ein bidirektionales LSTM, das vorherige und nachfolgende Eingaben nutzt, mit einer Conditional-Random-Field-Schicht, die Informationen über die Tags des ganzen Satzes verwendet (Huang et al., 2015). Die Autoren setzten es als Erste auf Standard-Benchmarks für Sequenz-Tagging ein und erreichten bei Wortartenerkennung, Chunking und Named Entity Recognition Bestwerte oder Werte nahe daran.
+  sources:
+  - https://arxiv.org/abs/1508.01991
 - id: coreference-resolution
   type: Method
   name_en: Coreference resolution
@@ -1382,6 +1442,10 @@ entities:
   type: Method
   name_en: BART
   name_de: BART
+  summary_en: 'BART is a denoising autoencoder for pre-training sequence-to-sequence models: text is corrupted with a noising function and a standard Transformer encoder-decoder learns to reconstruct it, generalising BERT''s bidirectional encoder and GPT''s left-to-right decoder (Lewis et al., 2019). It works especially well for text generation, setting new results in abstractive dialogue, question answering and summarisation with gains of up to 6 ROUGE.'
+  summary_de: 'BART ist ein entrauschender Autoencoder zum Vortraining von Sequence-to-Sequence-Modellen: Text wird mit einer Störfunktion verfälscht, und ein üblicher Transformer mit Encoder und Decoder lernt, ihn wiederherzustellen; das verallgemeinert den bidirektionalen Encoder von BERT und den Links-nach-rechts-Decoder von GPT (Lewis et al., 2019). Es eignet sich besonders für Textgenerierung und erzielte neue Bestwerte bei abstraktiven Dialogen, Fragebeantwortung und Zusammenfassung mit bis zu 6 ROUGE-Punkten Zugewinn.'
+  sources:
+  - https://arxiv.org/abs/1910.13461
 - id: probabilistic-relevance-framework
   type: Concept
   name_en: Probabilistic relevance framework
@@ -1487,6 +1551,10 @@ entities:
   type: Method
   name_en: Chinchilla
   name_de: Chinchilla
+  summary_en: Chinchilla is a 70-billion-parameter language model trained with the same compute budget as Gopher but on four times more data, to test the finding that model size and training tokens should be scaled equally (Hoffmann et al., 2022). Based on over 400 trained models, the study concluded that large language models were significantly undertrained; Chinchilla outperformed Gopher, GPT-3 and Megatron-Turing NLG and reached 67.5% on MMLU.
+  summary_de: Chinchilla ist ein Sprachmodell mit 70 Milliarden Parametern, trainiert mit demselben Rechenbudget wie Gopher, aber auf viermal mehr Daten, um den Befund zu prüfen, dass Modellgröße und Zahl der Trainingstokens gleichermaßen wachsen sollten (Hoffmann et al., 2022). Auf Grundlage von über 400 trainierten Modellen kam die Studie zu dem Schluss, dass große Sprachmodelle deutlich untertrainiert waren; Chinchilla übertraf Gopher, GPT-3 und Megatron-Turing NLG und erreichte 67,5 % auf MMLU.
+  sources:
+  - https://arxiv.org/abs/2203.15556
 - id: scaling-laws
   type: Concept
   name_en: Scaling laws
@@ -1503,6 +1571,10 @@ entities:
   name_de: Nucleus-Sampling (Top-p)
   aliases:
   - top-p sampling
+  summary_en: Nucleus (top-p) sampling generates text by sampling from the dynamic nucleus of the probability distribution, which keeps diversity while cutting off the unreliable tail (Holtzman et al., 2019). It was proposed because likelihood-maximising decoding produces bland and repetitive text, and it yields more human-like text without losing fluency and coherence.
+  summary_de: Nucleus Sampling (Top-p) erzeugt Text, indem aus dem dynamischen Kern der Wahrscheinlichkeitsverteilung gezogen wird; das erhält Vielfalt und schneidet den unzuverlässigen Rand der Verteilung ab (Holtzman et al., 2019). Es wurde vorgeschlagen, weil auf maximale Wahrscheinlichkeit ausgerichtetes Dekodieren eintönigen, sich wiederholenden Text liefert, und ergibt menschenähnlicheren Text ohne Verlust an Flüssigkeit und Kohärenz.
+  sources:
+  - https://arxiv.org/abs/1904.09751
 - id: claude-3
   type: Method
   name_en: Claude 3
@@ -1515,6 +1587,10 @@ entities:
   type: Method
   name_en: Mistral models
   name_de: Mistral-Modelle
+  summary_en: Mistral 7B is a 7-billion-parameter language model that uses grouped-query attention for faster inference and sliding window attention for long sequences at reduced cost (Jiang et al., 2023). It outperformed Llama 2 13B on all evaluated benchmarks, its instruction-tuned version surpassed Llama 2 13B Chat, and both were released under the Apache 2.0 licence.
+  summary_de: Mistral 7B ist ein Sprachmodell mit 7 Milliarden Parametern, das Grouped-Query Attention für schnellere Inferenz und Sliding Window Attention für lange Sequenzen bei geringeren Kosten nutzt (Jiang et al., 2023). Es übertraf Llama 2 13B auf allen evaluierten Benchmarks, seine Instruct-Version übertraf Llama 2 13B Chat, und beide wurden unter der Apache-2.0-Lizenz veröffentlicht.
+  sources:
+  - https://arxiv.org/abs/2310.06825
 - id: amazon-titan
   type: Method
   name_en: Amazon Titan
@@ -1525,10 +1601,18 @@ entities:
   type: Method
   name_en: Zephyr
   name_de: Zephyr
+  summary_en: Zephyr-7B is a small chat model aligned to user intent through distilled supervised fine-tuning and distilled direct preference optimisation on preference data ranked by a teacher model, without human annotation (Tunstall et al., 2023). Training takes only a few hours, and on MT-Bench Zephyr-7B surpassed Llama2-Chat-70B.
+  summary_de: Zephyr-7B ist ein kleines Chat-Modell, das über destilliertes Supervised Fine-Tuning und destillierte Direct Preference Optimization auf von einem Lehrermodell gerankten Präferenzdaten an Nutzerabsichten angepasst wurde, ohne menschliche Annotation (Tunstall et al., 2023). Das Training dauert nur wenige Stunden, und auf MT-Bench übertraf Zephyr-7B Llama2-Chat-70B.
+  sources:
+  - https://arxiv.org/abs/2310.16944
 - id: deepseek-llm
   type: Method
   name_en: DeepSeek LLM
   name_de: DeepSeek LLM
+  summary_en: DeepSeek LLM is an open-source family of large language models in 7B and 67B configurations, guided by its developers' own study of scaling laws and pre-trained on a dataset of 2 trillion tokens (DeepSeek-AI, 2024). Supervised fine-tuning and Direct Preference Optimization produced DeepSeek Chat models; the 67B model surpassed LLaMA-2 70B on several benchmarks, particularly code, mathematics and reasoning.
+  summary_de: DeepSeek LLM ist eine offene Familie großer Sprachmodelle in den Größen 7B und 67B, entwickelt auf Grundlage einer eigenen Untersuchung von Skalierungsgesetzen und vortrainiert auf einem Datensatz von 2 Billionen Tokens (DeepSeek-AI, 2024). Supervised Fine-Tuning und Direct Preference Optimization ergaben die DeepSeek-Chat-Modelle; das 67B-Modell übertraf LLaMA-2 70B auf mehreren Benchmarks, besonders bei Code, Mathematik und Schlussfolgern.
+  sources:
+  - https://arxiv.org/abs/2401.02954
 - id: google-deepmind
   type: Organisation
   name_en: Google DeepMind
@@ -1547,6 +1631,10 @@ entities:
   type: Method
   name_en: FLAN
   name_de: FLAN
+  summary_en: FLAN is a 137-billion-parameter language model instruction-tuned on more than 60 NLP tasks phrased as natural language instructions (Wei et al., 2021). Instruction tuning substantially improved zero-shot performance on unseen task types, and FLAN surpassed zero-shot GPT-3 (175B) on 20 of 25 evaluated tasks; the number of tasks, model scale and natural language instructions were key to the effect.
+  summary_de: FLAN ist ein Sprachmodell mit 137 Milliarden Parametern, das mit Instruction Tuning auf über 60 als Anweisungen formulierten NLP-Aufgaben angepasst wurde (Wei et al., 2021). Das Instruction Tuning verbesserte die Zero-Shot-Leistung bei unbekannten Aufgabentypen deutlich, und FLAN übertraf Zero-Shot-GPT-3 (175B) bei 20 von 25 Aufgaben; entscheidend waren die Zahl der Aufgaben, die Modellgröße und die Anweisungen in natürlicher Sprache.
+  sources:
+  - https://arxiv.org/abs/2109.01652
 - id: frugalgpt
   type: Method
   name_en: FrugalGPT
@@ -1589,6 +1677,10 @@ entities:
   name_de: HELM (Holistic Evaluation of Language Models)
   aliases:
   - HELM
+  summary_en: HELM (Holistic Evaluation of Language Models) is a living benchmark that taxonomises scenarios and metrics and measures seven metrics, accuracy, calibration, robustness, fairness, bias, toxicity and efficiency, on 16 core scenarios (Liang et al., 2022). It evaluated 30 language models on 42 scenarios under standardised conditions, raising the share of core scenarios covered per model from 17.9% to 96.0%, and released all prompts and completions.
+  summary_de: HELM (Holistic Evaluation of Language Models) ist ein fortlaufend aktualisierter Benchmark, der Szenarien und Metriken systematisiert und sieben Metriken misst, Accuracy, Kalibrierung, Robustheit, Fairness, Bias, Toxizität und Effizienz, auf 16 Kernszenarien (Liang et al., 2022). Er evaluierte 30 Sprachmodelle auf 42 Szenarien unter einheitlichen Bedingungen, erhöhte den Anteil abgedeckter Kernszenarien je Modell von 17,9 % auf 96,0 % und veröffentlichte alle Prompts und Ausgaben.
+  sources:
+  - https://arxiv.org/abs/2211.09110
 - id: crowdsourced-pairwise-comparison
   type: Method
   name_en: Crowdsourced pairwise comparison
