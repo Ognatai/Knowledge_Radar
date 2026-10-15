@@ -40,10 +40,18 @@ entities:
   type: Concept
   name_en: Trade secret
   name_de: Geschäftsgeheimnis
+  summary_en: Under the German Trade Secrets Act, a trade secret is information that is not generally known or readily accessible to people who normally deal with such information and therefore has economic value, that is subject to reasonable confidentiality measures by its lawful holder, and in whose confidentiality there is a legitimate interest (§ 2 No. 1 GeschGehG).
+  summary_de: Nach dem Geschäftsgeheimnisgesetz ist ein Geschäftsgeheimnis eine Information, die den Personen, die üblicherweise mit dieser Art von Informationen umgehen, weder allgemein bekannt noch ohne Weiteres zugänglich und daher von wirtschaftlichem Wert ist, die Gegenstand angemessener Geheimhaltungsmaßnahmen durch ihren rechtmäßigen Inhaber ist und bei der ein berechtigtes Interesse an der Geheimhaltung besteht (§ 2 Nr. 1 GeschGehG).
+  sources:
+  - https://www.gesetze-im-internet.de/geschgehg/
 - id: reverse-engineering
   type: Concept
   name_en: Reverse engineering
   name_de: Reverse Engineering
+  summary_en: Under the German Trade Secrets Act, a trade secret may lawfully be obtained by observing, studying, disassembling or testing a product that has been made publicly available or that is lawfully in the possession of the person doing so, if that person is not under a duty to limit the acquisition of the trade secret (§ 3(1) No. 2 GeschGehG).
+  summary_de: Nach dem Geschäftsgeheimnisgesetz darf ein Geschäftsgeheimnis durch Beobachten, Untersuchen, Rückbauen oder Testen eines Produkts erlangt werden, das öffentlich verfügbar gemacht wurde oder sich im rechtmäßigen Besitz der handelnden Person befindet, sofern diese keiner Pflicht zur Beschränkung der Erlangung unterliegt (§ 3 Abs. 1 Nr. 2 GeschGehG).
+  sources:
+  - https://www.gesetze-im-internet.de/geschgehg/
 - id: trade-secrets-directive
   type: Regulation
   name_en: Trade Secrets Directive (EU) 2016/943
@@ -337,16 +345,29 @@ entities:
   type: Concept
   name_en: Secrecy of telecommunications
   name_de: Fernmeldegeheimnis
+  summary_en: The secrecy of telecommunications (Fernmeldegeheimnis) covers the content of telecommunications and its specific circumstances, in particular whether someone is or was involved in a telecommunications process, including unsuccessful connection attempts (§ 3(1) TDDDG). Providers of publicly available and of commercially offered telecommunications services, and persons involved in providing them, are bound by it (§ 3(2) TDDDG).
+  summary_de: Dem Fernmeldegeheimnis unterliegen der Inhalt der Telekommunikation und ihre näheren Umstände, insbesondere die Tatsache, ob jemand an einem Telekommunikationsvorgang beteiligt ist oder war, auch bei erfolglosen Verbindungsversuchen (§ 3 Abs. 1 TDDDG). Zu seiner Wahrung verpflichtet sind unter anderem Anbieter öffentlich zugänglicher und geschäftsmäßig angebotener Telekommunikationsdienste und die an deren Erbringung mitwirkenden Personen (§ 3 Abs. 2 TDDDG).
+  sources:
+  - https://www.gesetze-im-internet.de/ttdsg/
 - id: cookie-consent
   type: Concept
   name_en: Consent for cookies and device access
   name_de: Einwilligung für Cookies und Endgerätezugriff
+  summary_en: Storing information in, or accessing information already stored in, an end user's terminal equipment, for example through cookies, is only permitted if the end user has consented on the basis of clear and comprehensive information, given in accordance with the GDPR (§ 25(1) TDDDG, implementing Art. 5(3) ePrivacy Directive). No consent is needed where storage or access is solely for transmitting a message or strictly necessary to provide a service the user has expressly requested (§ 25(2) TDDDG).
+  summary_de: Die Speicherung von Informationen in der Endeinrichtung des Endnutzers oder der Zugriff auf dort gespeicherte Informationen, etwa über Cookies, ist nur zulässig, wenn der Endnutzer auf Grundlage klarer und umfassender Informationen eingewilligt hat; Information und Einwilligung richten sich nach der DSGVO (§ 25 Abs. 1 TDDDG, Umsetzung von Art. 5 Abs. 3 ePrivacy-Richtlinie). Keine Einwilligung ist nötig, wenn Speicherung oder Zugriff allein der Übertragung einer Nachricht dienen oder unbedingt erforderlich sind, um einen ausdrücklich gewünschten Dienst bereitzustellen (§ 25 Abs. 2 TDDDG).
+  sources:
+  - https://www.gesetze-im-internet.de/ttdsg/
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002L0058-20091219
 - id: bfdi
   type: Organisation
   name_en: Federal Commissioner for Data Protection and Freedom of Information (BfDI)
   name_de: Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
   aliases:
   - BfDI
+  summary_en: The Federal Commissioner for Data Protection and Freedom of Information (Bundesbeauftragte für den Datenschutz und die Informationsfreiheit, BfDI) is a supreme federal authority with its seat in Bonn (§ 8(1) BDSG).
+  summary_de: Die oder der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI) ist eine oberste Bundesbehörde mit Dienstsitz in Bonn (§ 8 Abs. 1 BDSG).
+  sources:
+  - https://www.gesetze-im-internet.de/bdsg_2018/
 - id: digitale-dienste-gesetz
   type: Regulation
   name_en: Digital Services Act implementation law (Digitale-Dienste-Gesetz, DDG)
@@ -526,6 +547,10 @@ entities:
   type: Concept
   name_en: Employee data protection
   name_de: Beschäftigtendatenschutz
+  summary_en: The German Federal Data Protection Act allows employees' personal data to be processed for employment purposes where this is necessary to decide on establishing an employment relationship, to carry it out or end it, or to exercise or fulfil rights and duties of employee representation arising from law or collective agreements (§ 26(1) BDSG). Processing to uncover criminal offences is subject to additional conditions.
+  summary_de: Nach dem Bundesdatenschutzgesetz dürfen personenbezogene Daten von Beschäftigten für Zwecke des Beschäftigungsverhältnisses verarbeitet werden, wenn dies für die Entscheidung über seine Begründung, für seine Durchführung oder Beendigung oder zur Ausübung oder Erfüllung der sich aus Gesetz oder Kollektivvereinbarung ergebenden Rechte und Pflichten der Interessenvertretung erforderlich ist (§ 26 Abs. 1 BDSG). Für die Aufdeckung von Straftaten gelten zusätzliche Voraussetzungen.
+  sources:
+  - https://www.gesetze-im-internet.de/bdsg_2018/
 - id: credit-scoring
   type: Concept
   name_en: Scoring (probability values for contract decisions)
@@ -533,14 +558,26 @@ entities:
   aliases:
   - scoring
   - credit scoring
+  summary_en: Under the German Federal Data Protection Act, scoring is the use of a probability value about a natural person's specific future behaviour to decide on establishing, carrying out or ending a contractual relationship with that person (§ 31(1) BDSG). It is only permitted if, among other conditions, data protection law is complied with and the data used are demonstrably relevant for calculating the probability on the basis of a scientifically recognised mathematical-statistical method.
+  summary_de: Nach dem Bundesdatenschutzgesetz ist Scoring die Verwendung eines Wahrscheinlichkeitswerts über ein bestimmtes zukünftiges Verhalten einer natürlichen Person zum Zweck der Entscheidung über die Begründung, Durchführung oder Beendigung eines Vertragsverhältnisses mit ihr (§ 31 Abs. 1 BDSG). Es ist nur zulässig, wenn unter anderem das Datenschutzrecht eingehalten wird und die genutzten Daten unter Zugrundelegung eines wissenschaftlich anerkannten mathematisch-statistischen Verfahrens nachweisbar für die Berechnung der Wahrscheinlichkeit erheblich sind.
+  sources:
+  - https://www.gesetze-im-internet.de/bdsg_2018/
 - id: video-surveillance
   type: Concept
   name_en: Video surveillance
   name_de: Videoüberwachung
+  summary_en: Under the German Federal Data Protection Act, monitoring publicly accessible spaces with optical-electronic devices (video surveillance) is only permitted where necessary for public bodies' tasks, for exercising domiciliary rights or for legitimate interests for specified purposes, and only if there is no indication that the data subjects' interests override (§ 4(1) BDSG).
+  summary_de: Nach dem Bundesdatenschutzgesetz ist die Beobachtung öffentlich zugänglicher Räume mit optisch-elektronischen Einrichtungen (Videoüberwachung) nur zulässig, soweit sie zur Aufgabenerfüllung öffentlicher Stellen, zur Wahrnehmung des Hausrechts oder zur Wahrnehmung berechtigter Interessen für konkret festgelegte Zwecke erforderlich ist und keine Anhaltspunkte bestehen, dass schutzwürdige Interessen der Betroffenen überwiegen (§ 4 Abs. 1 BDSG).
+  sources:
+  - https://www.gesetze-im-internet.de/bdsg_2018/
 - id: data-protection-officer
   type: Concept
   name_en: Data protection officer
   name_de: Datenschutzbeauftragte
+  summary_en: Under the German Federal Data Protection Act, public bodies must designate a data protection officer, chosen on the basis of professional qualities and in particular expert knowledge of data protection law and practice (§ 5(1) and (3) BDSG). Several public bodies may designate a joint officer (§ 5(2) BDSG).
+  summary_de: Nach dem Bundesdatenschutzgesetz benennen öffentliche Stellen eine Datenschutzbeauftragte oder einen Datenschutzbeauftragten, die oder der auf Grundlage der beruflichen Qualifikation und insbesondere des Fachwissens auf dem Gebiet des Datenschutzrechts und der Datenschutzpraxis benannt wird (§ 5 Abs. 1 und 3 BDSG). Mehrere öffentliche Stellen können eine gemeinsame Person benennen (§ 5 Abs. 2 BDSG).
+  sources:
+  - https://www.gesetze-im-internet.de/bdsg_2018/
 - id: weat
   type: Method
   name_en: Word Embedding Association Test (WEAT)
@@ -581,6 +618,10 @@ entities:
   type: Concept
   name_en: IT security label
   name_de: IT-Sicherheitskennzeichen
+  summary_en: The voluntary IT security label (IT-Sicherheitskennzeichen) introduced by the BSI informs consumers about the IT security of products in categories set by the BSI; it says nothing about data protection properties (§ 55(1) BSIG). It consists of a manufacturer's or service provider's assurance that the product meets certain IT security requirements for a set period and a BSI information about security-relevant IT properties of the product (§ 55(2) BSIG).
+  summary_de: Das freiwillige IT-Sicherheitskennzeichen des BSI informiert Verbraucher über die IT-Sicherheit von Produkten bestimmter vom BSI festgelegter Produktkategorien und trifft keine Aussage über Datenschutzeigenschaften (§ 55 Abs. 1 BSIG). Es besteht aus einer Herstellererklärung, dass das Produkt für eine festgelegte Dauer bestimmte IT-Sicherheitsanforderungen erfüllt, und einer Sicherheitsinformation des BSI über sicherheitsrelevante IT-Eigenschaften des Produkts (§ 55 Abs. 2 BSIG).
+  sources:
+  - https://www.gesetze-im-internet.de/bsig_2025/
 - id: propensity-score
   type: Method
   name_en: Propensity score
@@ -1641,6 +1682,10 @@ entities:
   type: Concept
   name_en: Unsolicited direct marketing
   name_de: Unerbetene Direktwerbung
+  summary_en: German unfair competition law prohibits commercial practices that unreasonably harass market participants, in particular advertising the recipient evidently does not want (§ 7(1) UWG). Unreasonable harassment is always assumed for telephone advertising to consumers without their prior express consent and for advertising by automated calling machine, fax or email without prior express consent, with a limited exception for email advertising in an existing customer relationship (§ 7(2)–(3) UWG); according to its official notes, the UWG also transposes the ePrivacy Directive 2002/58/EC.
+  summary_de: Das Lauterkeitsrecht verbietet geschäftliche Handlungen, die Marktteilnehmer unzumutbar belästigen, insbesondere Werbung, die der Angesprochene erkennbar nicht wünscht (§ 7 Abs. 1 UWG). Eine unzumutbare Belästigung ist stets anzunehmen bei Telefonwerbung gegenüber Verbrauchern ohne deren vorherige ausdrückliche Einwilligung und bei Werbung mit automatischen Anrufmaschinen, Fax oder E-Mail ohne vorherige ausdrückliche Einwilligung, mit einer begrenzten Ausnahme für E-Mail-Werbung im Rahmen einer bestehenden Kundenbeziehung (§ 7 Abs. 2 und 3 UWG); nach seinen amtlichen Hinweisen setzt das UWG auch die ePrivacy-Richtlinie 2002/58/EG um.
+  sources:
+  - https://www.gesetze-im-internet.de/uwg_2004/
 - id: ai-system
   type: Concept
   name_en: AI system
@@ -2152,6 +2197,10 @@ entities:
   type: Concept
   name_en: Authorisation requirement for banking business
   name_de: Erlaubnispflicht für Bankgeschäfte
+  summary_en: Under the German Banking Act, anyone who wants to conduct banking business or provide financial services in Germany commercially, or on a scale requiring a commercially organised business operation, needs written or electronic authorisation from the supervisory authority (§ 32(1) KWG).
+  summary_de: Nach dem Kreditwesengesetz bedarf, wer im Inland gewerbsmäßig oder in einem Umfang, der einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert, Bankgeschäfte betreiben oder Finanzdienstleistungen erbringen will, der schriftlichen oder elektronischen Erlaubnis der Aufsichtsbehörde (§ 32 Abs. 1 KWG).
+  sources:
+  - https://www.gesetze-im-internet.de/kredwg/
 - id: chinchilla
   type: Method
   name_en: Chinchilla
