@@ -412,6 +412,11 @@ entities:
   name_de: KI-Haftungsrichtlinie (Vorschlag)
   aliases:
   - AI Liability Directive
+  summary_en: The AI Liability Directive was a Commission proposal of 2022, COM(2022) 496 final, procedure 2022/0303 (COD), "on adapting non-contractual civil liability rules to artificial intelligence". The Commission listed it for withdrawal in its 2025 work programme, approved the withdrawal on 16 July 2025, and the withdrawal was published in the Official Journal on 6 October 2025 (C/2025/5423).
+  summary_de: Die KI-Haftungsrichtlinie war ein Vorschlag der Kommission von 2022, COM(2022) 496 final, Verfahren 2022/0303 (COD), zur Anpassung der Vorschriften über außervertragliche zivilrechtliche Haftung an künstliche Intelligenz. Die Kommission sah ihre Rücknahme im Arbeitsprogramm 2025 vor, beschloss sie am 16. Juli 2025, und die Rücknahme wurde am 6. Oktober 2025 im Amtsblatt veröffentlicht (C/2025/5423).
+  sources:
+  - https://data.consilium.europa.eu/doc/document/ST-13873-2025-INIT/en/pdf
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52022PC0496
 - id: produkthaftungsgesetz
   type: Regulation
   name_en: Product Liability Act (ProdHaftG)
@@ -427,6 +432,10 @@ entities:
   type: Regulation
   name_en: German government bill on product liability (2026)
   name_de: Regierungsentwurf zum Produkthaftungsrecht (2026)
+  summary_en: The German government's bill to modernise product liability law (Bundestag printed paper 21/4297 of 25 February 2026) transposes the Product Liability Directive (EU) 2024/2853, which must be implemented by 9 December 2026, and is to replace the Product Liability Act of 1989. Software, regardless of how it is provided or used, is to be covered, and with it AI systems; open-source software developed or supplied outside a commercial activity remains excluded.
+  summary_de: Der Gesetzentwurf der Bundesregierung zur Modernisierung des Produkthaftungsrechts (Bundestagsdrucksache 21/4297 vom 25. Februar 2026) dient der Umsetzung der Produkthaftungsrichtlinie (EU) 2024/2853, die bis zum 9. Dezember 2026 umzusetzen ist, und soll das Produkthaftungsgesetz von 1989 neu fassen. Software soll unabhängig von der Art ihrer Bereitstellung oder Nutzung einbezogen werden und damit auch KI-Systeme; Open-Source-Software, die außerhalb einer Geschäftstätigkeit entwickelt oder bereitgestellt wird, bleibt ausgenommen.
+  sources:
+  - https://dserver.bundestag.de/btd/21/042/2104297.pdf
 - id: bgb
   type: Regulation
   name_en: German Civil Code (BGB)
@@ -920,6 +929,10 @@ entities:
   type: Regulation
   name_en: Basel III
   name_de: Basel III
+  summary_en: Basel III is the set of post-crisis reforms agreed by the Basel Committee on Banking Supervision, now integrated into the consolidated Basel Framework (BIS, n.d.). It includes the initial 2010/2011 framework for more resilient banks, the Liquidity Coverage Ratio (2013), the Net Stable Funding Ratio (2014), revised market risk requirements (2019) and the 2017 finalisation of the post-crisis reforms, with transitional arrangements for 2017 to 2028.
+  summary_de: Basel III umfasst die nach der Finanzkrise vom Basler Ausschuss für Bankenaufsicht vereinbarten Reformen, die inzwischen in das konsolidierte Basel Framework eingegangen sind (BIS, n.d.). Dazu gehören der ursprüngliche Rahmen von 2010/2011 für widerstandsfähigere Banken, die Liquiditätsdeckungsquote (2013), die strukturelle Liquiditätsquote (2014), überarbeitete Anforderungen an das Marktrisiko (2019) und die Finalisierung der Reformen 2017 mit Übergangsregelungen für 2017 bis 2028.
+  sources:
+  - https://www.bis.org/bcbs/basel3.htm
 - id: crr-iii-and-crd-vi
   type: Regulation
   name_en: CRR III (Regulation (EU) 2024/1623) and CRD VI (Directive (EU) 2024/1619)
@@ -1191,6 +1204,11 @@ entities:
   aliases:
   - TFEU
   - AEUV
+  summary_en: The Treaty on the Functioning of the European Union (TFEU) is one of the EU's treaties and provides the legal bases for EU legislation. The Digital Markets Act, for example, was adopted "having regard to the Treaty on the Functioning of the European Union, and in particular Article 114 thereof".
+  summary_de: Der Vertrag über die Arbeitsweise der Europäischen Union (AEUV) ist einer der Verträge der EU und enthält die Rechtsgrundlagen für EU-Rechtsakte. Das Gesetz über digitale Märkte etwa wurde „gestützt auf den Vertrag über die Arbeitsweise der Europäischen Union, insbesondere auf Artikel 114“ erlassen.
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R1925
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1925
 - id: intermediary-service
   type: Concept
   name_en: Intermediary service
@@ -1347,6 +1365,10 @@ entities:
   name_de: EBA-Leitlinien zum Drittparteienrisiko bei Nicht-IKT-Dienstleistungen (EBA/GL/2026/09)
   aliases:
   - EBA/GL/2026/09
+  summary_en: The EBA Guidelines on the sound management of third-party risk regarding non-ICT services (EBA/GL/2026/09, final report of 18 September 2026) extend the traditional notion of outsourcing to the broader scope of arrangements with third-party service providers, based on the governance mandate in Article 74 CRD. They will repeal the EBA Guidelines on outsourcing of 25 February 2019 and apply from a date still to be set, with a transitional period for reviewing arrangements that support critical or important functions.
+  summary_de: Die EBA-Leitlinien zum soliden Management des Drittparteienrisikos bei Nicht-IKT-Dienstleistungen (EBA/GL/2026/09, Abschlussbericht vom 18. September 2026) erweitern den klassischen Begriff der Auslagerung auf Vereinbarungen mit Drittdienstleistern insgesamt, gestützt auf das Governance-Mandat in Artikel 74 CRD. Sie werden die EBA-Leitlinien zu Auslagerungen vom 25. Februar 2019 aufheben und ab einem noch festzulegenden Datum gelten, mit einer Übergangsfrist für die Überprüfung von Vereinbarungen zu kritischen oder wichtigen Funktionen.
+  sources:
+  - https://www.eba.europa.eu/sites/default/files/2026-09/dc9ccbb3-79b9-493d-b693-c21adeffbcc9/Final%20report%20on%20GL%20on%20third-party%20risk%20management.pdf
 - id: outsourcing
   type: Concept
   name_en: Outsourcing (banking supervision)
@@ -1534,6 +1556,10 @@ entities:
   type: Regulation
   name_en: ePrivacy Regulation (proposal)
   name_de: ePrivacy-Verordnung (Vorschlag)
+  summary_en: The ePrivacy Regulation was a Commission proposal of 2017, procedure 2017/0003 (COD), "concerning the respect for private life and the protection of personal data in electronic communications and repealing Directive 2002/58/EC". It was among the pending proposals withdrawn under the Commission's 2025 work programme, with the withdrawal published in the Official Journal on 6 October 2025 (C/2025/5423).
+  summary_de: Die ePrivacy-Verordnung war ein Vorschlag der Kommission von 2017, Verfahren 2017/0003 (COD), über die Achtung des Privatlebens und den Schutz personenbezogener Daten in der elektronischen Kommunikation und zur Aufhebung der Richtlinie 2002/58/EG. Sie gehörte zu den anhängigen Vorschlägen, die nach dem Arbeitsprogramm 2025 der Kommission zurückgenommen wurden; die Rücknahme wurde am 6. Oktober 2025 im Amtsblatt veröffentlicht (C/2025/5423).
+  sources:
+  - https://data.consilium.europa.eu/doc/document/ST-13873-2025-INIT/en/pdf
 - id: direct-marketing
   type: Concept
   name_en: Unsolicited direct marketing
@@ -1952,6 +1978,10 @@ entities:
   name_de: Bankaufsichtliche Anforderungen an die IT (BAIT)
   aliases:
   - BAIT
+  summary_en: The BAIT (Bankaufsichtliche Anforderungen an die IT, BaFin Circular 10/2017, version of 16 December 2024) set out, on the basis of § 25a(1) of the German Banking Act, a flexible framework for institutions' technical and organisational IT resources, IT risk management and IT security management (Deutsche Bundesbank, n.d.). Institutions that must run ICT risk management under DORA are excluded, and the BAIT are to be repealed entirely at the end of 31 December 2026.
+  summary_de: Die Bankaufsichtlichen Anforderungen an die IT (BAIT, BaFin-Rundschreiben 10/2017 in der Fassung vom 16. Dezember 2024) geben auf Grundlage des § 25a Abs. 1 KWG einen flexiblen und praxisnahen Rahmen für die technisch-organisatorische Ausstattung der Institute vor, insbesondere für IT-Ressourcen, IT-Risikomanagement und IT-Sicherheitsmanagement (Deutsche Bundesbank, n.d.). Ausgenommen sind Institute, die ein IKT-Risikomanagement nach DORA betreiben müssen, und die BAIT werden mit Ablauf des 31. Dezember 2026 vollständig aufgehoben.
+  sources:
+  - https://www.bundesbank.de/de/aufgaben/bankenaufsicht/einzelaspekte/risikomanagement/bait-dora-598580
 - id: internal-control-system
   type: Concept
   name_en: Internal control system
