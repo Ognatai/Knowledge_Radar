@@ -1812,18 +1812,34 @@ entities:
   type: Method
   name_en: CLIP
   name_de: CLIP
+  summary_en: CLIP learns image representations from natural language supervision by predicting which caption goes with which image, trained on 400 million image-text pairs from the internet (Radford et al., 2021). Natural language then names visual concepts, enabling zero-shot transfer; CLIP matched the accuracy of the original ResNet-50 on ImageNet without using any of its 1.28 million training examples.
+  summary_de: CLIP lernt Bildrepräsentationen aus natürlichsprachlicher Überwachung, indem es vorhersagt, welche Bildunterschrift zu welchem Bild gehört, trainiert auf 400 Millionen Bild-Text-Paaren aus dem Internet (Radford et al., 2021). Natürliche Sprache benennt danach visuelle Konzepte und ermöglicht Zero-Shot-Transfer; CLIP erreichte die Accuracy des ursprünglichen ResNet-50 auf ImageNet, ohne eines seiner 1,28 Millionen Trainingsbeispiele zu nutzen.
+  sources:
+  - https://arxiv.org/abs/2103.00020
 - id: flamingo
   type: Method
   name_en: Flamingo
   name_de: Flamingo
+  summary_en: Flamingo is a family of visual language models that bridges pretrained vision-only and language-only models and handles arbitrarily interleaved sequences of images, videos and text (Alayrac et al., 2022). Trained on large multimodal web corpora, it learns new image and video tasks in context from a few examples and outperformed models fine-tuned on thousands of times more task-specific data on many benchmarks.
+  summary_de: Flamingo ist eine Familie visueller Sprachmodelle, die vortrainierte reine Bild- und reine Sprachmodelle verbindet und beliebig verschränkte Folgen aus Bildern, Videos und Text verarbeitet (Alayrac et al., 2022). Auf großen multimodalen Webkorpora trainiert, lernt es neue Bild- und Videoaufgaben im Kontext aus wenigen Beispielen und übertraf auf vielen Benchmarks Modelle, die mit tausendfach mehr aufgabenspezifischen Daten feinjustiert waren.
+  sources:
+  - https://arxiv.org/abs/2204.14198
 - id: blip-2
   type: Method
   name_en: BLIP-2
   name_de: BLIP-2
+  summary_en: BLIP-2 is a pre-training strategy that bootstraps vision-language learning from a frozen pretrained image encoder and a frozen large language model, bridged by a lightweight Querying Transformer trained in two stages (Li et al., 2023). With far fewer trainable parameters it reached state-of-the-art results, outperforming Flamingo-80B by 8.7% on zero-shot VQAv2 with 54 times fewer trainable parameters.
+  summary_de: BLIP-2 ist eine Vortrainingsstrategie, die Bild-Sprach-Lernen aus einem eingefrorenen vortrainierten Bild-Encoder und einem eingefrorenen großen Sprachmodell aufbaut, verbunden durch einen leichten, in zwei Stufen trainierten Querying Transformer (Li et al., 2023). Mit deutlich weniger trainierbaren Parametern erreichte es Bestwerte und übertraf Flamingo-80B auf Zero-Shot-VQAv2 um 8,7 % bei 54-mal weniger trainierbaren Parametern.
+  sources:
+  - https://arxiv.org/abs/2301.12597
 - id: llava
   type: Method
   name_en: LLaVA
   name_de: LLaVA
+  summary_en: LLaVA (Large Language and Vision Assistant) is a large multimodal model that connects a vision encoder with an LLM and is trained end to end by visual instruction tuning on language-image instruction data generated with language-only GPT-4 (Liu et al., 2023). It showed multimodal chat abilities and, fine-tuned on Science QA together with GPT-4, reached 92.53% accuracy.
+  summary_de: LLaVA (Large Language and Vision Assistant) ist ein großes multimodales Modell, das einen Bild-Encoder mit einem LLM verbindet und durchgängig per visuellem Instruction Tuning auf Bild-Sprach-Anweisungsdaten trainiert wird, die mit dem rein sprachlichen GPT-4 erzeugt wurden (Liu et al., 2023). Es zeigte multimodale Chat-Fähigkeiten und erreichte, auf Science QA feinjustiert und mit GPT-4 kombiniert, 92,53 % Accuracy.
+  sources:
+  - https://arxiv.org/abs/2304.08485
 - id: contrastive-learning
   type: Method
   name_en: Contrastive learning
@@ -1848,12 +1864,20 @@ entities:
   type: Method
   name_en: AdamW
   name_de: AdamW
+  summary_en: 'AdamW is Adam with decoupled weight decay: Loshchilov and Hutter showed that L2 regularisation and weight decay are not equivalent for adaptive optimisers such as Adam and applied weight decay separately from the gradient step (Loshchilov & Hutter, 2017). This decoupled the best weight decay factor from the learning rate and substantially improved Adam''s generalisation on image classification.'
+  summary_de: 'AdamW ist Adam mit entkoppeltem Weight Decay: Loshchilov und Hutter zeigten, dass L2-Regularisierung und Weight Decay für adaptive Optimierer wie Adam nicht gleichwertig sind, und wenden den Weight Decay getrennt vom Gradientenschritt an (Loshchilov & Hutter, 2017). Das entkoppelte den besten Weight-Decay-Faktor von der Lernrate und verbesserte die Generalisierung von Adam bei der Bildklassifikation deutlich.'
+  sources:
+  - https://arxiv.org/abs/1711.05101
 - id: batch-normalisation
   type: Method
   name_en: Batch normalisation
   name_de: Batch-Normalisierung
   aliases:
   - Batch normalization
+  summary_en: Batch normalisation normalises layer inputs for each training mini-batch as part of the model architecture, to counter "internal covariate shift", the change in layer input distributions during training (Ioffe & Szegedy, 2015). It allows much higher learning rates, makes initialisation less critical, acts as a regulariser and reached the same accuracy as a leading image classifier with 14 times fewer training steps.
+  summary_de: Batch Normalization normalisiert die Eingaben einer Schicht für jedes Trainings-Mini-Batch als Teil der Modellarchitektur, um „Internal Covariate Shift“ zu begegnen, der Verschiebung der Eingabeverteilungen einer Schicht während des Trainings (Ioffe & Szegedy, 2015). Sie erlaubt deutlich höhere Lernraten, macht die Initialisierung weniger heikel, wirkt regularisierend und erreichte die Accuracy eines führenden Bildklassifikators mit 14-mal weniger Trainingsschritten.
+  sources:
+  - https://arxiv.org/abs/1502.03167
 - id: glorot-initialisation
   type: Method
   name_en: Glorot initialisation
@@ -1864,10 +1888,18 @@ entities:
   type: Method
   name_en: He initialisation
   name_de: He-Initialisierung
+  summary_en: He initialisation is a weight initialisation method derived for networks with rectifier nonlinearities such as ReLU and PReLU, which allows very deep rectified models to be trained from scratch (He et al., 2015). With it and the parametric ReLU, He et al. reached 4.94% top-5 error on ImageNet 2012 classification, reported as the first result to surpass human-level performance of 5.1%.
+  summary_de: He-Initialisierung ist ein Verfahren zur Initialisierung von Gewichten, das für Netze mit Gleichrichter-Nichtlinearitäten wie ReLU und PReLU hergeleitet wurde und es erlaubt, sehr tiefe Netze dieser Art von Grund auf zu trainieren (He et al., 2015). Damit und mit der parametrischen ReLU erreichten He et al. 4,94 % Top-5-Fehler bei der ImageNet-2012-Klassifikation, nach ihren Angaben das erste Ergebnis unter dem menschlichen Wert von 5,1 %.
+  sources:
+  - https://arxiv.org/abs/1502.01852
 - id: weight-decay
   type: Method
   name_en: Weight decay
   name_de: Weight Decay
+  summary_en: Weight decay is a regularisation technique that shrinks a network's weights during training. For standard stochastic gradient descent it is equivalent to L2 regularisation when rescaled by the learning rate, but not for adaptive optimisers such as Adam, where decoupling weight decay from the gradient step (AdamW) improves generalisation (Loshchilov & Hutter, 2017).
+  summary_de: Weight Decay ist eine Regularisierungstechnik, die die Gewichte eines Netzes während des Trainings verkleinert. Für gewöhnlichen stochastischen Gradientenabstieg ist sie, mit der Lernrate skaliert, gleichwertig zu L2-Regularisierung, nicht aber für adaptive Optimierer wie Adam, bei denen ein vom Gradientenschritt entkoppelter Weight Decay (AdamW) die Generalisierung verbessert (Loshchilov & Hutter, 2017).
+  sources:
+  - https://arxiv.org/abs/1711.05101
 - id: perceptron
   type: Method
   name_en: Perceptron
@@ -1953,14 +1985,26 @@ entities:
   type: Method
   name_en: Zero-shot chain of thought
   name_de: Zero-Shot Chain of Thought
+  summary_en: Zero-shot chain of thought elicits step-by-step reasoning without examples by adding "Let's think step by step" before each answer (Kojima et al., 2022). With InstructGPT (text-davinci-002) this single prompt raised accuracy on MultiArith from 17.7% to 78.7% and on GSM8K from 10.4% to 40.7%, with similar gains for the 540B PaLM model.
+  summary_de: Zero-Shot Chain of Thought löst schrittweises Schlussfolgern ohne Beispiele aus, indem vor jeder Antwort „Let's think step by step“ ergänzt wird (Kojima et al., 2022). Mit InstructGPT (text-davinci-002) hob dieser eine Prompt die Accuracy auf MultiArith von 17,7 % auf 78,7 % und auf GSM8K von 10,4 % auf 40,7 %, mit ähnlichen Gewinnen beim 540B-Modell PaLM.
+  sources:
+  - https://arxiv.org/abs/2205.11916
 - id: self-consistency
   type: Method
   name_en: Self-consistency
   name_de: Self-Consistency
+  summary_en: Self-consistency is a decoding strategy for chain-of-thought prompting that samples a diverse set of reasoning paths instead of only the greedy one and selects the most consistent final answer (Wang et al., 2022). It rests on the intuition that complex problems admit several ways of reasoning to the same correct answer and improved results markedly, for example by 17.9 percentage points on GSM8K.
+  summary_de: Self-Consistency ist eine Dekodierstrategie für Chain-of-Thought-Prompting, die statt nur des wahrscheinlichsten Lösungswegs eine Vielfalt von Lösungswegen zieht und die am häufigsten erreichte Antwort wählt (Wang et al., 2022). Sie beruht auf der Annahme, dass komplexe Probleme mehrere Lösungswege zur selben richtigen Antwort zulassen, und verbesserte die Ergebnisse deutlich, etwa um 17,9 Prozentpunkte auf GSM8K.
+  sources:
+  - https://arxiv.org/abs/2203.11171
 - id: prompt-report
   type: Method
   name_en: The Prompt Report (taxonomy of prompting techniques)
   name_de: The Prompt Report (Taxonomie von Prompting-Techniken)
+  summary_en: The Prompt Report is a systematic survey of prompt engineering that establishes a vocabulary of 33 terms, a taxonomy of 58 prompting techniques for LLMs and 40 techniques for other modalities, and best practices for prompting (Schulhoff et al., 2024). It also includes a meta-analysis of the literature on natural-language prefix prompting.
+  summary_de: The Prompt Report ist eine systematische Übersicht über Prompt Engineering mit einem Vokabular aus 33 Begriffen, einer Taxonomie von 58 Prompting-Techniken für LLMs und 40 Techniken für andere Modalitäten sowie Empfehlungen für das Prompting (Schulhoff et al., 2024). Er enthält außerdem eine Metaanalyse der Literatur zu natürlichsprachlichem Präfix-Prompting.
+  sources:
+  - https://arxiv.org/abs/2406.06608
 - id: numpy
   type: Technology
   name_en: NumPy
@@ -1981,14 +2025,26 @@ entities:
   type: Method
   name_en: CheckList
   name_de: CheckList
+  summary_en: CheckList is a task-agnostic methodology for behavioural testing of NLP models, inspired by software engineering, with a matrix of general linguistic capabilities and test types and a tool to generate many test cases quickly (Ribeiro et al., 2020). It found critical failures in commercial and state-of-the-art models, and practitioners using it created twice as many tests and found almost three times as many bugs.
+  summary_de: CheckList ist eine aufgabenunabhängige Methode für Verhaltenstests von NLP-Modellen nach dem Vorbild der Softwaretechnik, mit einer Matrix allgemeiner sprachlicher Fähigkeiten und Testarten und einem Werkzeug, das schnell viele Testfälle erzeugt (Ribeiro et al., 2020). Sie deckte kritische Fehler in kommerziellen und aktuellen Modellen auf, und Fachleute erstellten damit doppelt so viele Tests und fanden fast dreimal so viele Fehler.
+  sources:
+  - https://arxiv.org/abs/2005.04118
 - id: model-cards
   type: Method
   name_en: Model cards
   name_de: Model Cards
+  summary_en: Model cards are short documents that accompany trained machine learning models and report benchmarked evaluation across relevant groups, for example by demographic or phenotypic characteristics and their intersections, together with the intended context of use and the evaluation procedure (Mitchell et al., 2018). They aim to make clear where a model is suitable and to increase transparency about how well it works.
+  summary_de: Model Cards sind kurze Dokumente zu trainierten ML-Modellen, die Evaluationsergebnisse für relevante Gruppen angeben, etwa nach demografischen oder phänotypischen Merkmalen und deren Überschneidungen, zusammen mit dem vorgesehenen Einsatzkontext und dem Evaluationsverfahren (Mitchell et al., 2018). Sie sollen klarstellen, wofür ein Modell geeignet ist, und die Transparenz darüber erhöhen, wie gut es funktioniert.
+  sources:
+  - https://arxiv.org/abs/1810.03993
 - id: datasheets-for-datasets
   type: Method
   name_en: Datasheets for datasets
   name_de: Datasheets for Datasets
+  summary_en: Datasheets for datasets propose that, as electronic components come with datasheets, every dataset be accompanied by a document on its motivation, composition, collection process and recommended uses (Gebru et al., 2018). They aim to improve communication between dataset creators and consumers and to make transparency and accountability a priority in machine learning.
+  summary_de: Datasheets for Datasets schlagen vor, dass jeder Datensatz, wie elektronische Bauteile ein Datenblatt haben, von einem Dokument zu Motivation, Zusammensetzung, Erhebungsprozess und empfohlener Verwendung begleitet wird (Gebru et al., 2018). Sie sollen die Kommunikation zwischen Erstellern und Nutzenden von Datensätzen verbessern und Transparenz und Rechenschaft im maschinellen Lernen stärken.
+  sources:
+  - https://arxiv.org/abs/1803.09010
 - id: post-training-quantisation
   type: Method
   name_en: Post-training quantisation (PTQ)
@@ -1996,6 +2052,10 @@ entities:
   aliases:
   - PTQ
   - Post-training quantization (PTQ)
+  summary_en: Post-training quantisation (PTQ) reduces the numerical precision of a model's weights after training, without retraining, to cut memory and inference cost. GPTQ, a one-shot PTQ method for large generative Transformers, compressed 175-billion-parameter models to 3 or 4 bits per weight with negligible accuracy loss (Frantar et al., 2022).
+  summary_de: Post-Training-Quantisierung (PTQ) verringert die numerische Genauigkeit der Gewichte eines Modells nach dem Training, ohne erneutes Training, um Speicher und Inferenzkosten zu senken. GPTQ, ein einmalig angewendetes PTQ-Verfahren für große generative Transformer, komprimierte Modelle mit 175 Milliarden Parametern auf 3 oder 4 Bit je Gewicht bei vernachlässigbarem Genauigkeitsverlust (Frantar et al., 2022).
+  sources:
+  - https://arxiv.org/abs/2210.17323
 - id: quantisation-aware-training
   type: Method
   name_en: Quantisation-aware training (QAT)
@@ -2007,16 +2067,28 @@ entities:
   type: Method
   name_en: LLM.int8()
   name_de: LLM.int8()
+  summary_en: LLM.int8() is an 8-bit matrix multiplication procedure for Transformer feed-forward and attention projection layers that halves inference memory while keeping full-precision performance (Dettmers et al., 2022). It combines vector-wise quantisation with a mixed-precision decomposition that keeps rare emergent outlier feature dimensions in 16 bit, so models with up to 175 billion parameters run without performance loss.
+  summary_de: LLM.int8() ist ein Verfahren für 8-Bit-Matrixmultiplikation in den Feed-Forward- und Attention-Projektionsschichten von Transformern, das den Speicherbedarf bei der Inferenz halbiert und die volle Genauigkeit erhält (Dettmers et al., 2022). Es verbindet vektorweise Quantisierung mit einer Zerlegung in gemischter Genauigkeit, die seltene, auffällige Ausreißer-Dimensionen in 16 Bit belässt, sodass Modelle mit bis zu 175 Milliarden Parametern ohne Leistungsverlust laufen.
+  sources:
+  - https://arxiv.org/abs/2208.07339
 - id: gptq
   type: Method
   name_en: GPTQ
   name_de: GPTQ
+  summary_en: GPTQ is a one-shot post-training weight quantisation method for generative Transformers based on approximate second-order information (Frantar et al., 2022). It quantises models with 175 billion parameters to 3 or 4 bits per weight in about four GPU hours with negligible accuracy loss, which made it possible to run such a model on a single GPU, with inference speed-ups of around 3.25 to 4.5 times over FP16.
+  summary_de: GPTQ ist ein einmalig angewendetes Verfahren zur Quantisierung der Gewichte generativer Transformer nach dem Training, das auf genäherten Informationen zweiter Ordnung beruht (Frantar et al., 2022). Es quantisiert Modelle mit 175 Milliarden Parametern in rund vier GPU-Stunden auf 3 oder 4 Bit je Gewicht bei vernachlässigbarem Genauigkeitsverlust; dadurch ließ sich ein solches Modell erstmals auf einer einzigen GPU ausführen, mit rund 3,25- bis 4,5-fach schnellerer Inferenz als mit FP16.
+  sources:
+  - https://arxiv.org/abs/2210.17323
 - id: awq
   type: Method
   name_en: AWQ (Activation-aware Weight Quantization)
   name_de: AWQ (Activation-aware Weight Quantization)
   aliases:
   - AWQ
+  summary_en: Activation-aware Weight Quantization (AWQ) is a hardware-friendly low-bit weight-only quantisation method for LLMs; it protects the roughly 1% of salient weight channels, identified from activation statistics, by scaling them rather than keeping them in higher precision (Lin et al., 2023). It needs no backpropagation or reconstruction, generalises across domains and modalities, and its TinyChat framework runs 4-bit models more than three times faster than FP16.
+  summary_de: Activation-aware Weight Quantization (AWQ) ist ein hardwarefreundliches Verfahren zur Niedrigbit-Quantisierung nur der Gewichte von LLMs; es schützt die rund 1 % wichtigen Gewichtskanäle, erkannt an Aktivierungsstatistiken, durch Skalierung statt durch höhere Genauigkeit (Lin et al., 2023). Es braucht weder Backpropagation noch Rekonstruktion, generalisiert über Domänen und Modalitäten, und sein Framework TinyChat führt 4-Bit-Modelle mehr als dreimal so schnell aus wie FP16.
+  sources:
+  - https://arxiv.org/abs/2306.00978
 - id: fixed-size-chunking
   type: Method
   name_en: Fixed-size chunking
@@ -2037,6 +2109,10 @@ entities:
   type: Method
   name_en: Late chunking
   name_de: Late Chunking
+  summary_en: Late chunking embeds all tokens of a long text with a long-context embedding model first and applies chunking only afterwards, just before mean pooling, so that each chunk embedding keeps context from the surrounding text (Günther et al., 2024). It improved results across retrieval tasks, works with many long-context embedding models without additional training, and can be strengthened by dedicated fine-tuning.
+  summary_de: Late Chunking bettet zunächst alle Tokens eines langen Textes mit einem Embedding-Modell für lange Kontexte ein und teilt erst danach, direkt vor dem Mean Pooling, in Chunks; so behält jedes Chunk-Embedding den Kontext des umgebenden Textes (Günther et al., 2024). Es verbesserte die Ergebnisse über verschiedene Retrieval-Aufgaben, funktioniert ohne zusätzliches Training mit vielen Embedding-Modellen für lange Kontexte und lässt sich durch gezieltes Fine-Tuning weiter stärken.
+  sources:
+  - https://arxiv.org/abs/2409.04701
 - id: context-enrichment
   type: Method
   name_en: Context enrichment of chunks
@@ -2053,12 +2129,21 @@ entities:
   type: Method
   name_en: ARES
   name_de: ARES
+  summary_en: ARES (Automated RAG Evaluation System) evaluates retrieval-augmented generation systems on context relevance, answer faithfulness and answer relevance by fine-tuning lightweight LM judges on synthetic training data it creates itself (Saad-Falcon et al., 2023). A few hundred human annotations feed prediction-powered inference to correct judge errors, and the judges stayed accurate after shifts in queries and documents.
+  summary_de: ARES (Automated RAG Evaluation System) bewertet Retrieval-Augmented-Generation-Systeme nach Kontextrelevanz, Antworttreue und Antwortrelevanz, indem es leichte Sprachmodelle als Richter auf selbst erzeugten synthetischen Trainingsdaten feinjustiert (Saad-Falcon et al., 2023). Einige hundert menschliche Annotationen fließen in Prediction-Powered Inference ein, um Fehler der Richter auszugleichen, und die Richter blieben auch nach veränderten Anfragen und Dokumenten genau.
+  sources:
+  - https://arxiv.org/abs/2311.09476
 - id: prediction-powered-inference
   type: Method
   name_en: Prediction-powered inference (PPI)
   name_de: Prediction-Powered Inference (PPI)
   aliases:
   - PPI
+  summary_en: Prediction-powered inference is a framework for valid statistical inference when an experimental dataset is supplemented with predictions from a machine learning system (Angelopoulos et al., 2023). It yields provably valid confidence intervals for quantities such as means, quantiles and regression coefficients without assumptions about the ML model, and more accurate predictions give narrower intervals; ARES uses it to correct LM judges with a small set of human labels.
+  summary_de: Prediction-Powered Inference ist ein Rahmen für gültige statistische Inferenz, wenn ein experimenteller Datensatz durch Vorhersagen eines ML-Systems ergänzt wird (Angelopoulos et al., 2023). Er liefert nachweislich gültige Konfidenzintervalle für Größen wie Mittelwerte, Quantile und Regressionskoeffizienten ohne Annahmen über das ML-Modell, und genauere Vorhersagen ergeben engere Intervalle; ARES nutzt ihn, um LM-Richter mit wenigen menschlichen Labels zu korrigieren.
+  sources:
+  - https://arxiv.org/abs/2301.09633
+  - https://arxiv.org/abs/2311.09476
 - id: context-pollution
   type: Concept
   name_en: Context pollution
@@ -2081,6 +2166,10 @@ entities:
   name_de: FActScore
   aliases:
   - FACTSCORE
+  summary_en: FActScore evaluates the factuality of long-form generated text by breaking it into atomic facts and computing the percentage supported by a reliable knowledge source (Min et al., 2023). In human evaluation of generated biographies, ChatGPT reached only 58%, and an automated estimator using retrieval and a strong language model had an error rate below 2%.
+  summary_de: FActScore bewertet die Faktentreue langer generierter Texte, indem er sie in atomare Fakten zerlegt und den Anteil berechnet, den eine verlässliche Wissensquelle stützt (Min et al., 2023). In einer menschlichen Bewertung generierter Biografien erreichte ChatGPT nur 58 %, und ein automatischer Schätzer mit Retrieval und einem starken Sprachmodell hatte eine Fehlerrate unter 2 %.
+  sources:
+  - https://arxiv.org/abs/2305.14251
 - id: citation-verification
   type: Method
   name_en: Citation correctness verification
@@ -2099,10 +2188,18 @@ entities:
   name_de: HyDE (Hypothetical Document Embeddings)
   aliases:
   - HyDE
+  summary_en: 'HyDE (Hypothetical Document Embeddings) enables zero-shot dense retrieval without relevance labels: an instruction-following LLM writes a hypothetical document for the query, and an unsupervised encoder such as Contriever embeds it to find similar real documents (Gao et al., 2022). The encoder''s dense bottleneck filters out false details, and HyDE significantly outperformed Contriever across web search, QA and fact verification.'
+  summary_de: 'HyDE (Hypothetical Document Embeddings) ermöglicht dichtes Retrieval ohne Relevanzlabels: Ein anweisungsfolgendes LLM schreibt zur Anfrage ein hypothetisches Dokument, und ein unüberwacht trainierter Encoder wie Contriever bettet es ein, um ähnliche echte Dokumente zu finden (Gao et al., 2022). Die Verdichtung im Encoder filtert falsche Details heraus, und HyDE übertraf Contriever deutlich bei Websuche, Fragebeantwortung und Faktenprüfung.'
+  sources:
+  - https://arxiv.org/abs/2212.10496
 - id: contriever
   type: Method
   name_en: Contriever
   name_de: Contriever
+  summary_en: Contriever is an unsupervised dense retriever trained with contrastive learning (Izacard et al., 2021). On the BEIR benchmark it outperformed BM25 on 11 of 15 datasets for Recall@100, improved further when used as pre-training before fine-tuning, and showed strong multilingual and cross-lingual retrieval, for example retrieving English documents from Arabic queries.
+  summary_de: Contriever ist ein unüberwacht mit kontrastivem Lernen trainierter dichter Retriever (Izacard et al., 2021). Auf dem BEIR-Benchmark übertraf er BM25 bei 11 von 15 Datensätzen im Recall@100, verbesserte sich weiter, wenn er als Vortraining vor dem Fine-Tuning diente, und zeigte starkes mehrsprachiges und sprachübergreifendes Retrieval, etwa englische Dokumente zu arabischen Anfragen.
+  sources:
+  - https://arxiv.org/abs/2112.09118
 - id: raft
   type: Method
   name_en: RAFT (Retrieval Augmented Fine-Tuning)
