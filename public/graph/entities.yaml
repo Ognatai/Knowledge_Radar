@@ -358,6 +358,11 @@ entities:
   name_de: Risikodatenaggregation und Risikoberichterstattung (RDARR)
   aliases:
   - RDARR
+  summary_en: Risk data aggregation and risk reporting (RDARR) is the ability of banks to aggregate risk data quickly and accurately and report it to decision-makers; the Basel Committee set out 14 principles for it in BCBS 239 (January 2013), covering governance and IT infrastructure, risk data aggregation capabilities, risk reporting practices and supervisory review. The ECB guide of May 2024 sets out the ECB's supervisory expectations for the banks it supervises directly and uses the BCBS 239 principles as a benchmark (ECB 2024).
+  summary_de: Risikodatenaggregation und Risikoberichterstattung (RDARR) bezeichnet die Fähigkeit von Banken, Risikodaten schnell und genau zusammenzuführen und an Entscheidungsträger zu berichten; der Basler Ausschuss hat dafür in BCBS 239 (Januar 2013) 14 Grundsätze festgelegt, die Governance und IT-Infrastruktur, Fähigkeiten zur Risikodatenaggregation, Risikoberichterstattung und aufsichtliche Überprüfung abdecken. Der EZB-Leitfaden vom Mai 2024 legt die aufsichtlichen Erwartungen der EZB an die direkt beaufsichtigten Banken fest und nutzt die BCBS-239-Grundsätze als Maßstab (EZB 2024).
+  sources:
+  - https://www.bis.org/publ/bcbs239.htm
+  - https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.supervisory_guides240503_riskreporting.en.pdf
 - id: secrecy-of-telecommunications
   type: Concept
   name_en: Secrecy of telecommunications
@@ -1164,6 +1169,10 @@ entities:
   name_de: Auf internen Ratings basierender Ansatz (IRB-Ansatz)
   aliases:
   - IRB
+  summary_en: Under the internal ratings-based approach (IRB approach), institutions calculate their risk-weighted exposure amounts for credit risk on the basis of their own rating systems, with permission from the competent authority where the conditions of the CRR are met (Art. 143(1) CRR). Prior permission is required for each exposure class, each rating system and each approach to estimating loss given default (LGD) and conversion factors (Art. 143(2) CRR).
+  summary_de: Beim auf internen Einstufungen basierenden Ansatz (IRB-Ansatz) berechnen Institute ihre risikogewichteten Positionsbeträge für das Kreditrisiko auf Grundlage eigener Ratingsysteme; die zuständige Behörde gestattet dies, wenn die Bedingungen der CRR erfüllt sind (Art. 143 Abs. 1 CRR). Eine vorherige Erlaubnis ist für jede Risikopositionsklasse, jedes Ratingsystem und jeden Ansatz für die Schätzung der Verlustquote bei Ausfall (LGD) und der Umrechnungsfaktoren erforderlich (Art. 143 Abs. 2 CRR).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013R0575-20260626
 - id: srep
   type: Concept
   name_en: Supervisory review and evaluation process (SREP)
@@ -1572,6 +1581,10 @@ entities:
   name_de: Bedrohungsorientierte Penetrationstests (TLPT)
   aliases:
   - TLPT
+  summary_en: Under DORA, threat-led penetration testing (TLPT) is a framework that mimics the tactics, techniques and procedures of real-life threat actors and delivers a controlled, bespoke, intelligence-led red team test of a financial entity's critical live production systems (Art. 3(17) DORA). Financial entities identified by the competent authorities must carry out such advanced testing at least every three years, covering several or all critical or important functions (Art. 26(1)–(2) DORA).
+  summary_de: Nach DORA sind bedrohungsorientierte Penetrationstests (TLPT) ein Rahmen, der Taktik, Techniken und Verfahren realer Angreifer nachbildet und einen kontrollierten, maßgeschneiderten, erkenntnisgestützten Red-Team-Test der kritischen Live-Produktionssysteme eines Finanzunternehmens ermöglicht (Art. 3 Nr. 17 DORA). Von den zuständigen Behörden ermittelte Finanzunternehmen müssen solche erweiterten Tests mindestens alle drei Jahre durchführen; sie erstrecken sich auf mehrere oder alle kritischen oder wichtigen Funktionen (Art. 26 Abs. 1 und 2 DORA).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554
 - id: critical-ict-third-party-provider
   type: Concept
   name_en: Critical ICT third-party service provider
@@ -1618,10 +1631,19 @@ entities:
   type: Concept
   name_en: Outsourcing (banking supervision)
   name_de: Auslagerung (Bankenaufsicht)
+  summary_en: In banking supervision, outsourcing is an arrangement of any form between an institution, a payment institution or an electronic money institution and a service provider by which the provider performs a process, service or activity that the institution would otherwise undertake itself (EBA/GL/2019/02). Under German law, an institution must take appropriate precautions against excessive additional risks when outsourcing activities and processes that are material for its banking business, keep an outsourcing register, and remains responsible for compliance; the managers' responsibility cannot be transferred (§ 25b(1)–(2) KWG).
+  summary_de: In der Bankenaufsicht ist eine Auslagerung eine Vereinbarung gleich welcher Form zwischen einem Institut, einem Zahlungsinstitut oder einem E-Geld-Institut und einem Dienstleister, in deren Rahmen der Dienstleister einen Prozess durchführt, eine Dienstleistung erbringt oder eine Tätigkeit ausführt, die das Institut ansonsten selbst übernähme (EBA/GL/2019/02). Nach dem Kreditwesengesetz muss ein Institut bei der Auslagerung von für Bankgeschäfte wesentlichen Aktivitäten und Prozessen angemessene Vorkehrungen gegen übermäßige zusätzliche Risiken treffen und ein Auslagerungsregister führen; es bleibt für die Einhaltung der gesetzlichen Bestimmungen verantwortlich, und die Verantwortung der Geschäftsleiter darf nicht übertragen werden (§ 25b Abs. 1 und 2 KWG).
+  sources:
+  - https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/internal-governance/guidelines-outsourcing-arrangements
+  - https://www.gesetze-im-internet.de/kredwg/__25b.html
 - id: internal-governance
   type: Concept
   name_en: Internal governance (banks)
   name_de: Interne Governance (Banken)
+  summary_en: Internal governance covers the standards and principles for setting an institution's objectives, strategies and risk management framework, how its business is organised, how responsibilities and reporting lines are allocated, and how the internal control framework is organised; it also includes IT systems, outsourcing and business continuity (EBA/GL/2021/05). The EBA guidelines specify the arrangements, processes and mechanisms that institutions under Directive 2013/36/EU should implement under Article 74(1) CRD.
+  summary_de: Die EBA-Leitlinien zur internen Governance präzisieren die internen Regelungen, Prozesse und Mechanismen für die interne Governance, die Institute nach der Richtlinie 2013/36/EU gemäß Artikel 74 Absatz 1 der Richtlinie einführen sollten (EBA/GL/2021/05). Dazu gehören unter anderem eine klare Organisationsstruktur, ein unabhängiges internes Risikomanagement, eine Compliance-Funktion und eine interne Revision mit ausreichenden Befugnissen und Ressourcen sowie ein angemessener Rahmen für die interne Kontrolle.
+  sources:
+  - https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/internal-governance/guidelines-internal-governance-under-crd
 - id: berec
   type: Organisation
   name_en: Body of European Regulators for Electronic Communications (BEREC)
@@ -2284,12 +2306,21 @@ entities:
   type: Concept
   name_en: Sandboxing
   name_de: Sandboxing
+  summary_en: Sandboxing runs code in an isolated environment whose access to files, network and system resources is restricted. For AI agents, Anthropic recommends extensive testing in sandboxed environments with appropriate guardrails (Anthropic 2024); in Claude Code, for example, the operating system enforces which files and network domains shell commands may reach, so sandboxed commands can run without approval for each one.
+  summary_de: Sandboxing führt Code in einer isolierten Umgebung aus, deren Zugriff auf Dateien, Netzwerk und Systemressourcen eingeschränkt ist. Für KI-Agenten empfiehlt Anthropic umfangreiche Tests in Sandbox-Umgebungen mit geeigneten Guardrails (Anthropic 2024); in Claude Code etwa setzt das Betriebssystem durch, welche Dateien und Netzwerkdomänen Shell-Befehle erreichen dürfen, sodass solche Befehle ohne Einzelfreigabe laufen können.
+  sources:
+  - https://www.anthropic.com/engineering/building-effective-agents
+  - https://docs.claude.com/en/docs/claude-code/sandboxing
 - id: least-privilege
   type: Concept
   name_en: Least privilege
   name_de: Least Privilege
   aliases:
   - principle of least privilege
+  summary_en: The least-privilege principle limits access rights to what a task requires. DORA makes it a legal requirement for financial entities, which must implement policies that limit physical or logical access to information and ICT assets to what is required for legitimate and approved functions and activities only (Art. 9(4)(c) DORA); for AI agents, it means that an agent can only use the tools and data its task requires.
+  summary_de: 'Das Prinzip der minimalen Rechte (Least Privilege) beschränkt Zugriffsrechte auf das, was eine Aufgabe erfordert. DORA macht es für Finanzunternehmen zur Rechtspflicht: Sie implementieren Richtlinien, die den physischen oder logischen Zugang zu Informations- und IKT-Assets ausschließlich auf den Umfang beschränken, der für rechtmäßige und zulässige Funktionen und Tätigkeiten erforderlich ist (Art. 9 Abs. 4 Buchst. c DORA); bei KI-Agenten bedeutet es, dass ein Agent nur die Werkzeuge und Daten nutzen kann, die seine Aufgabe erfordert.'
+  sources:
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554
 - id: open-ie
   type: Method
   name_en: Open information extraction (Open IE)
@@ -2346,6 +2377,10 @@ entities:
   name_de: Three Lines of Defence (drei Verteidigungslinien)
   aliases:
   - three lines of defense
+  summary_en: The three lines of defence model assigns risk responsibilities in an institution to the business lines, which take risks and manage them operationally (first line), the independent risk management and compliance functions (second line) and internal audit (third line) (EBA/GL/2021/05). The EBA guidelines on internal governance are consistent with this model and set out detailed requirements for the second and third lines.
+  summary_de: Das Modell der drei Verteidigungslinien ordnet die Verantwortung für Risiken in einem Institut den Geschäftsbereichen zu, die Risiken eingehen und operativ steuern (erste Linie), den unabhängigen Funktionen Risikomanagement und Compliance (zweite Linie) und der internen Revision (dritte Linie) (EBA/GL/2021/05, Begründung, nur auf Englisch). Die EBA-Leitlinien zur internen Governance folgen diesem Modell und legen detaillierte Anforderungen an die zweite und dritte Linie fest.
+  sources:
+  - https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/internal-governance/guidelines-internal-governance-under-crd
 - id: bait
   type: Regulation
   name_en: Supervisory Requirements for IT in Financial Institutions (BAIT)
@@ -2360,6 +2395,11 @@ entities:
   type: Concept
   name_en: Internal control system
   name_de: Internes Kontrollsystem
+  summary_en: Under the German Banking Act, an institution's risk management includes internal control procedures with an internal control system and an independent internal audit function (§ 25a(1) sentence 4 no. 3 KWG). The internal control system comprises in particular organisational rules with a clear allocation of responsibilities, processes for identifying, assessing, managing, monitoring and communicating risks, and independent risk control and compliance functions; BaFin's MaRisk specify these requirements.
+  summary_de: Nach dem Kreditwesengesetz umfasst das Risikomanagement eines Instituts interne Kontrollverfahren mit einem internen Kontrollsystem und einer unabhängigen Internen Revision (§ 25a Abs. 1 Satz 4 Nr. 3 KWG). Das interne Kontrollsystem umfasst insbesondere aufbau- und ablauforganisatorische Regelungen mit klarer Abgrenzung der Verantwortungsbereiche, Prozesse zur Identifizierung, Beurteilung, Steuerung, Überwachung und Kommunikation der Risiken sowie eine unabhängige Risikocontrolling- und Compliance-Funktion; die MaRisk der BaFin konkretisieren diese Anforderungen.
+  sources:
+  - https://www.gesetze-im-internet.de/kredwg/__25a.html
+  - https://www.bafin.de/SharedDocs/Downloads/DE/Rundschreiben/dl_rs_0626_9_marisk.html
 - id: nearest-neighbour-rule
   type: Method
   name_en: Nearest neighbour rule
@@ -2746,6 +2786,11 @@ entities:
   type: Concept
   name_en: Risk-bearing capacity
   name_de: Risikotragfähigkeit
+  summary_en: Under the German Banking Act, an institution must ensure its risk-bearing capacity (Risikotragfähigkeit) on an ongoing basis through appropriate and effective risk management (§ 25a(1) KWG). The procedures for determining and ensuring it are based on a prudent assessment of the risks, of potential losses under stress scenarios and of the risk coverage potential available to cover them (§ 25a(1) sentence 4 no. 2 KWG); BaFin's MaRisk specify these requirements.
+  summary_de: Nach dem Kreditwesengesetz muss ein Institut auf Basis eines angemessenen und wirksamen Risikomanagements seine Risikotragfähigkeit laufend sicherstellen (§ 25a Abs. 1 KWG). Die Verfahren zur Ermittlung und Sicherstellung der Risikotragfähigkeit beruhen auf einer vorsichtigen Ermittlung der Risiken, der potenziellen Verluste aus Stressszenarien und des zu ihrer Abdeckung verfügbaren Risikodeckungspotenzials (§ 25a Abs. 1 Satz 4 Nr. 2 KWG); die MaRisk der BaFin konkretisieren diese Anforderungen.
+  sources:
+  - https://www.gesetze-im-internet.de/kredwg/__25a.html
+  - https://www.bafin.de/SharedDocs/Downloads/DE/Rundschreiben/dl_rs_0626_9_marisk.html
 - id: fp16
   type: Concept
   name_en: FP16 (IEEE half precision)
