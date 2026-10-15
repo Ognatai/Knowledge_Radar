@@ -953,10 +953,18 @@ entities:
   type: Concept
   name_en: Convolution
   name_de: Faltung
+  summary_en: Convolution is a specialised kind of linear operation that gives convolutional networks their name; these networks process data with a grid-like topology such as time series (1-D) or images (2-D) (Goodfellow et al., 2016). In network terminology, the first argument of the convolution is the input, the second the kernel, and the output the feature map.
+  summary_de: Die Faltung (Convolution) ist eine spezielle lineare Operation, nach der Convolutional Networks benannt sind; diese verarbeiten Daten mit gitterartiger Struktur wie Zeitreihen (1-D) oder Bilder (2-D) (Goodfellow et al., 2016). In der Terminologie dieser Netze ist das erste Argument der Faltung die Eingabe, das zweite der Kernel und das Ergebnis die Feature Map.
+  sources:
+  - https://www.deeplearningbook.org/contents/convnets.html
 - id: pooling
   type: Concept
   name_en: Pooling
   name_de: Pooling
+  summary_en: In a convolutional network, a pooling function replaces the output at a location with a summary statistic of nearby outputs, for example the maximum within a rectangular neighbourhood (max pooling) or its average (Goodfellow et al., 2016). A typical convolutional layer applies convolutions, then a nonlinearity such as ReLU, and then pooling.
+  summary_de: In einem Convolutional Network ersetzt eine Pooling-Funktion die Ausgabe an einer Stelle durch eine zusammenfassende Kennzahl der benachbarten Ausgaben, etwa das Maximum in einer rechteckigen Umgebung (Max Pooling) oder deren Mittelwert (Goodfellow et al., 2016). Eine typische Faltungsschicht wendet Faltungen an, dann eine Nichtlinearität wie ReLU und dann Pooling.
+  sources:
+  - https://www.deeplearningbook.org/contents/convnets.html
 - id: transfer-learning
   type: Concept
   name_en: Transfer learning
@@ -1865,6 +1873,10 @@ entities:
   type: Concept
   name_en: Model registry
   name_de: Model Registry
+  summary_en: A model registry is a centralised model store with APIs and a user interface for managing the lifecycle of machine learning models (MLflow, n.d.). The MLflow Model Registry, for example, provides versioning, lineage to the run that produced each version, aliases such as @champion for deployment workflows, and tags and annotations.
+  summary_de: Eine Model Registry ist ein zentraler Modellspeicher mit APIs und Oberfläche zur Verwaltung des Lebenszyklus von ML-Modellen (MLflow, n.d.). Die MLflow Model Registry etwa bietet Versionierung, Lineage zum erzeugenden Run jeder Version, Aliase wie @champion für Bereitstellungsabläufe sowie Tags und Anmerkungen.
+  sources:
+  - https://mlflow.org/docs/latest/ml/model-registry/
 - id: neurips
   type: Conference
   name_en: NeurIPS
@@ -2208,6 +2220,10 @@ entities:
   type: Concept
   name_en: Lazy learning
   name_de: Lazy Learning
+  summary_en: Lazy learning, also called instance-based or non-generalising learning, does not construct a general internal model during training but simply stores the training instances; predictions are computed at query time, for example by a majority vote of the nearest neighbours (scikit-learn developers, n.d.).
+  summary_de: Lazy Learning, auch instanzbasiertes oder nicht generalisierendes Lernen, baut beim Training kein allgemeines internes Modell auf, sondern speichert einfach die Trainingsbeispiele; Vorhersagen werden erst bei der Anfrage berechnet, etwa per Mehrheitsentscheidung der nächsten Nachbarn (scikit-learn developers, n.d.).
+  sources:
+  - https://scikit-learn.org/stable/modules/neighbors.html
 - id: curse-of-dimensionality
   type: Concept
   name_en: Curse of dimensionality
@@ -2250,26 +2266,51 @@ entities:
   type: Concept
   name_en: Pod (Kubernetes)
   name_de: Pod (Kubernetes)
+  summary_en: A Pod is the smallest deployable unit of computing in Kubernetes, a group of one or more containers with shared storage and network resources and a specification for how to run them (Kubernetes, n.d.-a). A Pod's containers are always co-located, co-scheduled and run in a shared context, modelling an application-specific "logical host".
+  summary_de: Ein Pod ist die kleinste bereitstellbare Recheneinheit in Kubernetes, eine Gruppe aus einem oder mehreren Containern mit gemeinsamem Speicher und Netzwerk sowie einer Spezifikation, wie sie auszuführen sind (Kubernetes, n.d.-a). Die Container eines Pods liegen immer zusammen, werden gemeinsam eingeplant und laufen in einem gemeinsamen Kontext, sodass der Pod einen anwendungsspezifischen „logischen Host“ bildet.
+  sources:
+  - https://kubernetes.io/docs/concepts/workloads/pods/
 - id: kubernetes-deployment
   type: Concept
   name_en: Deployment (Kubernetes)
   name_de: Deployment (Kubernetes)
+  summary_en: 'A Kubernetes Deployment provides declarative updates for Pods and ReplicaSets: users describe a desired state, and the Deployment controller changes the actual state to the desired state at a controlled rate (Kubernetes, n.d.-b). Typical uses are rolling out a new state of the Pods, rolling back to an earlier revision and scaling up for more load.'
+  summary_de: 'Ein Kubernetes-Deployment liefert deklarative Aktualisierungen für Pods und ReplicaSets: Man beschreibt einen gewünschten Zustand, und der Deployment-Controller überführt den tatsächlichen Zustand kontrolliert in den gewünschten (Kubernetes, n.d.-b). Typische Anwendungen sind das Ausrollen eines neuen Zustands der Pods, das Zurückrollen auf eine frühere Revision und das Hochskalieren bei mehr Last.'
+  sources:
+  - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - id: declarative-configuration
   type: Concept
   name_en: Declarative configuration
   name_de: Deklarative Konfiguration
+  summary_en: With declarative object configuration in Kubernetes, users work on configuration files stored locally without defining the operations to perform; kubectl detects create, update and delete operations per object automatically (Kubernetes, n.d.-e). Kubernetes is a platform for managing containerised workloads that facilitates both declarative configuration and automation (Kubernetes, n.d.-f).
+  summary_de: Bei deklarativer Objektkonfiguration in Kubernetes arbeiten Nutzende mit lokal gespeicherten Konfigurationsdateien, ohne die auszuführenden Operationen festzulegen; kubectl erkennt Anlegen, Aktualisieren und Löschen je Objekt automatisch (Kubernetes, n.d.-e). Kubernetes ist eine Plattform zur Verwaltung containerisierter Arbeitslasten, die sowohl deklarative Konfiguration als auch Automatisierung unterstützt (Kubernetes, n.d.-f).
+  sources:
+  - https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/
+  - https://kubernetes.io/docs/concepts/overview/
 - id: self-healing
   type: Concept
   name_en: Self-healing
   name_de: Self-Healing
+  summary_en: Self-healing in Kubernetes means that the platform restarts containers that fail, replaces containers, kills containers that do not respond to user-defined health checks, and does not advertise them to clients until they are ready to serve (Kubernetes, n.d.-f).
+  summary_de: Selbstheilung in Kubernetes bedeutet, dass die Plattform ausgefallene Container neu startet, Container ersetzt, Container beendet, die auf benutzerdefinierte Gesundheitsprüfungen nicht antworten, und sie Clients erst anbietet, wenn sie bereit sind (Kubernetes, n.d.-f).
+  sources:
+  - https://kubernetes.io/docs/concepts/overview/
 - id: probe
   type: Concept
   name_en: Probe (Kubernetes)
   name_de: Probe (Kubernetes)
+  summary_en: Kubernetes probes check the health of containers. A liveness probe detects states such as deadlocks in which an application runs but makes no progress; if it fails more often than configured, the kubelet restarts the container, while readiness probes decide when a container is ready to accept traffic and a startup probe holds back liveness and readiness checks until the application has initialised (Kubernetes, n.d.-d). Badly configured liveness probes can cause cascading failures under load.
+  summary_de: Kubernetes-Probes prüfen den Zustand von Containern. Eine Liveness-Probe erkennt Zustände wie Deadlocks, in denen eine Anwendung läuft, aber nicht vorankommt; schlägt sie öfter fehl als eingestellt, startet das Kubelet den Container neu, während Readiness-Probes bestimmen, wann ein Container Verkehr annehmen kann, und eine Startup-Probe Liveness- und Readiness-Prüfungen zurückhält, bis die Anwendung initialisiert ist (Kubernetes, n.d.-d). Falsch eingestellte Liveness-Probes können unter Last zu Kaskadenfehlern führen.
+  sources:
+  - https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/
 - id: kubernetes-namespace
   type: Concept
   name_en: Namespace (Kubernetes)
   name_de: Namespace (Kubernetes)
+  summary_en: In Kubernetes, namespaces isolate groups of resources within a single cluster; names must be unique within a namespace but not across namespaces (Kubernetes, n.d.-c). Namespace scoping applies only to namespaced objects such as Deployments and Services, not to cluster-wide objects such as Nodes, and namespaces are intended for environments with many users across teams or projects.
+  summary_de: In Kubernetes trennen Namespaces Gruppen von Ressourcen innerhalb eines Clusters; Namen müssen innerhalb eines Namespace eindeutig sein, nicht aber über Namespaces hinweg (Kubernetes, n.d.-c). Die Abgrenzung gilt nur für Objekte mit Namespace wie Deployments und Services, nicht für clusterweite Objekte wie Nodes, und Namespaces sind für Umgebungen mit vielen Nutzenden über mehrere Teams oder Projekte gedacht.
+  sources:
+  - https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 - id: gwg
   type: Regulation
   name_en: Money Laundering Act (GwG)
@@ -2451,6 +2492,11 @@ entities:
   type: Concept
   name_en: Distributed tracing
   name_de: Distributed Tracing
+  summary_en: A distributed trace records the path a single request takes as it propagates through multiple services, for example from an API gateway to a backend service and a database (OpenTelemetry, n.d.). A trace consists of spans, units of work with names, timestamps and attributes; the root span represents the whole request and child spans show the steps within it.
+  summary_de: Ein verteilter Trace hält den Weg fest, den eine einzelne Anfrage durch mehrere Dienste nimmt, etwa von einem API-Gateway über einen Backend-Dienst zu einer Datenbank (OpenTelemetry, n.d.). Ein Trace besteht aus Spans, Arbeitseinheiten mit Namen, Zeitstempeln und Attributen; der Root-Span steht für die ganze Anfrage, untergeordnete Spans zeigen die Schritte darin.
+  sources:
+  - https://opentelemetry.io/docs/concepts/observability-primer/
+  - https://opentelemetry.io/docs/concepts/signals/traces/
 - id: addy-osmani
   type: Person
   name_en: Addy Osmani
@@ -2692,6 +2738,10 @@ entities:
   type: Concept
   name_en: Universal approximation theorem
   name_de: Universeller Approximationssatz
+  summary_en: The universal approximation theorem (Hornik et al., 1989; Cybenko, 1989) states that a feedforward network with a linear output layer and at least one hidden layer with a "squashing" activation function can approximate any Borel measurable function between finite-dimensional spaces to any desired accuracy, given enough hidden units; later versions cover activations such as ReLU (Goodfellow et al., 2016). It guarantees representation, not that training will find the right function.
+  summary_de: Das universelle Approximationstheorem (Hornik et al., 1989; Cybenko, 1989) besagt, dass ein Feedforward-Netz mit linearer Ausgabeschicht und mindestens einer verborgenen Schicht mit einer „stauchenden“ Aktivierungsfunktion jede Borel-messbare Funktion zwischen endlichdimensionalen Räumen beliebig genau annähern kann, sofern es genug verborgene Einheiten hat; spätere Fassungen gelten auch für Aktivierungen wie ReLU (Goodfellow et al., 2016). Es garantiert die Darstellbarkeit, nicht dass das Training die richtige Funktion findet.
+  sources:
+  - https://www.deeplearningbook.org/contents/mlp.html
 - id: relu
   type: Method
   name_en: Rectified linear unit (ReLU)
@@ -2761,6 +2811,11 @@ entities:
   type: Concept
   name_en: Dimensionality reduction
   name_de: Dimensionsreduktion
+  summary_en: Dimensionality reduction maps data to fewer dimensions while keeping as much relevant structure as possible. Principal component analysis, for example, decomposes a multivariate dataset into successive orthogonal components that explain a maximum amount of the variance and projects new data onto them (scikit-learn developers, n.d.); linear discriminant analysis offers a supervised alternative.
+  summary_de: Dimensionsreduktion bildet Daten auf weniger Dimensionen ab und erhält dabei möglichst viel relevante Struktur. Die Hauptkomponentenanalyse etwa zerlegt einen multivariaten Datensatz in aufeinanderfolgende orthogonale Komponenten, die ein Maximum der Varianz erklären, und projiziert neue Daten darauf (scikit-learn developers, n.d.); die lineare Diskriminanzanalyse bietet eine überwachte Alternative.
+  sources:
+  - https://scikit-learn.org/stable/modules/decomposition.html
+  - https://scikit-learn.org/stable/modules/lda_qda.html
 - id: eigendecomposition
   type: Method
   name_en: Eigenvalue decomposition
@@ -3162,6 +3217,10 @@ entities:
   type: Concept
   name_en: Negative flip
   name_de: Negative Flip
+  summary_en: A negative flip is a test sample that an old (reference) model classified correctly but a new model classifies incorrectly (Yan et al., 2020). Reducing such inconsistencies between model versions can matter as much in practice as reducing overall error; positive-congruent training targets them.
+  summary_de: Ein Negative Flip ist ein Testbeispiel, das ein altes (Referenz-)Modell richtig, ein neues Modell aber falsch klassifiziert (Yan et al., 2020). Negative Flips zu verringern kann in der Praxis so wichtig sein wie die Gesamtfehlerrate zu senken; Positive-Congruent Training zielt darauf ab.
+  sources:
+  - https://arxiv.org/abs/2011.09161
 - id: ridge-regression
   type: Method
   name_en: Ridge regression (L2 regularisation)
@@ -3789,6 +3848,10 @@ entities:
   name_de: Jaccard-Koeffizient
   aliases:
   - Jaccard similarity
+  summary_en: The Jaccard coefficient measures the overlap of two sets as the size of their intersection divided by the size of their union (Manning et al., 2008). For near-duplicate detection, documents are represented as sets of shingles; if their Jaccard coefficient exceeds a threshold, they are treated as near duplicates, and hashing with random permutations avoids computing all pairwise coefficients.
+  summary_de: Der Jaccard-Koeffizient misst die Überschneidung zweier Mengen als Größe ihrer Schnittmenge geteilt durch die Größe ihrer Vereinigung (Manning et al., 2008). Bei der Erkennung von Beinahe-Duplikaten werden Dokumente als Mengen von Shingles dargestellt; übersteigt ihr Jaccard-Koeffizient eine Schwelle, gelten sie als Beinahe-Duplikate, und Hashing mit zufälligen Permutationen erspart die paarweise Berechnung.
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/near-duplicates-and-shingling-1.html
 - id: direct-preference-optimization
   type: Method
   name_en: Direct Preference Optimization (DPO)
@@ -3891,6 +3954,10 @@ entities:
   type: Concept
   name_en: Cluster hypothesis
   name_de: Cluster-Hypothese
+  summary_en: 'The cluster hypothesis states that documents in the same cluster behave similarly with respect to relevance to information needs: if one document from a cluster is relevant to a request, other documents from the same cluster are likely relevant too (Manning et al., 2008). It is the fundamental assumption behind using clustering in information retrieval.'
+  summary_de: 'Die Cluster-Hypothese besagt, dass sich Dokumente desselben Clusters hinsichtlich ihrer Relevanz für einen Informationsbedarf ähnlich verhalten: Ist ein Dokument eines Clusters relevant, sind wahrscheinlich auch andere Dokumente desselben Clusters relevant (Manning et al., 2008). Sie ist die Grundannahme hinter dem Einsatz von Clustering im Information Retrieval.'
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/clustering-in-information-retrieval-1.html
 - id: rand-index
   type: Method
   name_en: Rand index
