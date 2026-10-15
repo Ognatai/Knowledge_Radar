@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Residual networks (ResNets) make very deep [[neural-networks|neural networks]] trainable by letting each block of layers learn a residual `F(x)` that is added to its input through a shortcut connection, so the block outputs `F(x) + x` instead of a new mapping from scratch (He et al., 2016). This solved the "degradation problem", in which deeper plain networks had higher training error than shallower ones, and allowed networks of 152 layers on ImageNet and over 1,000 layers on CIFAR-10 (He et al., 2016). ResNets won the ILSVRC and COCO 2015 competitions with 3.57% top-5 error on ImageNet, and residual connections became a standard building block, including in every Transformer layer ([[attention-and-transformers|attention and Transformers]]).
+Residual networks (ResNets) make very deep [[neural-networks|neural networks]] trainable by letting each block of layers learn a residual `F(x)` that is added to its input through a shortcut connection, so the block outputs `F(x) + x` instead of a new mapping from scratch (He et al., 2016). This solved the "degradation problem", in which deeper plain networks had higher training error than shallower ones, and allowed networks of 152 layers on [[imagenet|ImageNet]] and over 1,000 layers on CIFAR-10 (He et al., 2016). ResNets won the ILSVRC and COCO 2015 competitions with 3.57% top-5 error on ImageNet, and residual connections became a standard building block, including in every Transformer layer ([[attention-and-transformers|attention and Transformers]]).
 
 ### How it works
 
@@ -102,7 +102,7 @@ ResNets let layers learn a residual that is added back to their input through id
 
 ### TL;DR
 
-Residual Networks (ResNets) machen sehr tiefe [[neural-networks|neuronale Netze]] trainierbar, indem jeder Block von Schichten ein Residuum `F(x)` lernt, das über eine Shortcut-Verbindung zu seiner Eingabe addiert wird, sodass der Block `F(x) + x` ausgibt statt einer völlig neuen Abbildung (He et al., 2016). Das löste das „Degradationsproblem“, bei dem tiefere einfache Netze einen höheren Trainingsfehler hatten als flachere, und ermöglichte Netze mit 152 Schichten auf ImageNet und über 1.000 Schichten auf CIFAR-10 (He et al., 2016). ResNets gewannen 2015 die Wettbewerbe ILSVRC und COCO mit 3,57 % Top-5-Fehler auf ImageNet, und Residualverbindungen wurden zum Standardbaustein, auch in jeder Transformer-Schicht ([[attention-and-transformers|Attention und Transformer]]).
+Residual Networks (ResNets) machen sehr tiefe [[neural-networks|neuronale Netze]] trainierbar, indem jeder Block von Schichten ein Residuum `F(x)` lernt, das über eine Shortcut-Verbindung zu seiner Eingabe addiert wird, sodass der Block `F(x) + x` ausgibt statt einer völlig neuen Abbildung (He et al., 2016). Das löste das „Degradationsproblem“, bei dem tiefere einfache Netze einen höheren Trainingsfehler hatten als flachere, und ermöglichte Netze mit 152 Schichten auf [[imagenet|ImageNet]] und über 1.000 Schichten auf CIFAR-10 (He et al., 2016). ResNets gewannen 2015 die Wettbewerbe ILSVRC und COCO mit 3,57 % Top-5-Fehler auf ImageNet, und Residualverbindungen wurden zum Standardbaustein, auch in jeder Transformer-Schicht ([[attention-and-transformers|Attention und Transformer]]).
 
 ### Funktionsweise
 

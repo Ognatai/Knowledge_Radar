@@ -3,6 +3,12 @@
 # the target notes it must not link to, with the reason.
 version: 1
 exclusions:
+  imagenet:
+    word-sense-disambiguation: WordNet is the lexical database, not the WSD task.
+  isotonic-regression:
+    scikit-learn: scikit-learn appears there only as a citation label.
+  technical-debt:
+    glue: glue code is integration code, not the GLUE benchmark.
   information-security-in-banking:
     deutsche-bundesbank: Bundesbank appears there only as a citation label.
   apis:

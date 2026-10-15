@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b9a43a26a13fdc7137e0d553cc9cbcafe68d3eb194e24e96cc588e45cfba5e49
+note_sha256: e34c222684a0fcfa189e2476c076f63dca33b2f50997df83ca67036a19ab299d
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - neural-networks
@@ -10,7 +10,6 @@ discusses:
 - mean-absolute-scaled-error
 - bleu
 - overfitting
-- underfitting
 - double-descent
 - bias-variance-tradeoff
 - classification

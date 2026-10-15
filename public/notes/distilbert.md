@@ -14,7 +14,7 @@ sources:
 
 ### TL;DR
 
-DistilBERT is a smaller version of [[bert|BERT]] created by [[knowledge-distillation|knowledge distillation]] during pre-training: a 6-layer student learns from the 12-layer BERT-base teacher and keeps 97% of its language understanding performance on GLUE with 40% fewer parameters and 60% faster inference (Sanh et al., 2019). Its training objective combines three losses: matching the teacher's soft output distribution, the usual masked language modelling loss and a cosine loss that aligns the student's hidden states with the teacher's (Sanh et al., 2019). Released by Hugging Face in 2019, it is a general-purpose model that can be fine-tuned like BERT and is small enough for on-device use.
+DistilBERT is a smaller version of [[bert|BERT]] created by [[knowledge-distillation|knowledge distillation]] during pre-training: a 6-layer student learns from the 12-layer BERT-base teacher and keeps 97% of its language understanding performance on [[glue|GLUE]] with 40% fewer parameters and 60% faster inference (Sanh et al., 2019). Its training objective combines three losses: matching the teacher's soft output distribution, the usual masked language modelling loss and a cosine loss that aligns the student's hidden states with the teacher's (Sanh et al., 2019). Released by Hugging Face in 2019, it is a general-purpose model that can be fine-tuned like BERT and is small enough for on-device use.
 
 ### How it works
 
@@ -99,7 +99,7 @@ DistilBERT halves BERT's depth and learns from BERT during pre-training with a t
 
 ### TL;DR
 
-DistilBERT ist eine kleinere Fassung von [[bert|BERT]], erzeugt durch [[knowledge-distillation|Knowledge Distillation]] während des Vortrainings: Ein Schülermodell mit 6 Schichten lernt vom Lehrermodell BERT-base mit 12 Schichten und behält 97 % seiner Leistung beim Sprachverstehen auf GLUE, bei 40 % weniger Parametern und 60 % schnellerer Inferenz (Sanh et al., 2019). Seine Zielfunktion verbindet drei Verluste: die weiche Ausgabeverteilung des Lehrers nachbilden, den üblichen Masked-Language-Modelling-Verlust und einen Cosine-Verlust, der die verborgenen Zustände des Schülers an die des Lehrers angleicht (Sanh et al., 2019). 2019 von Hugging Face veröffentlicht, ist es ein Allzweckmodell, das sich wie BERT feinjustieren lässt und klein genug für den Einsatz auf Endgeräten ist.
+DistilBERT ist eine kleinere Fassung von [[bert|BERT]], erzeugt durch [[knowledge-distillation|Knowledge Distillation]] während des Vortrainings: Ein Schülermodell mit 6 Schichten lernt vom Lehrermodell BERT-base mit 12 Schichten und behält 97 % seiner Leistung beim Sprachverstehen auf [[glue|GLUE]], bei 40 % weniger Parametern und 60 % schnellerer Inferenz (Sanh et al., 2019). Seine Zielfunktion verbindet drei Verluste: die weiche Ausgabeverteilung des Lehrers nachbilden, den üblichen Masked-Language-Modelling-Verlust und einen Cosine-Verlust, der die verborgenen Zustände des Schülers an die des Lehrers angleicht (Sanh et al., 2019). 2019 von Hugging Face veröffentlicht, ist es ein Allzweckmodell, das sich wie BERT feinjustieren lässt und klein genug für den Einsatz auf Endgeräten ist.
 
 ### Funktionsweise
 

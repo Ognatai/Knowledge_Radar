@@ -1,0 +1,24 @@
+version: 1
+note_sha256: 3904b2a7e930a3d1d5f820706ce220d70471e6e6714f2c04b41ee46c6a4cb50f
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- classification
+- classification-metrics
+- isotonic-regression
+- knowledge-distillation
+- large-language-models
+- ml-preprocessing
+- neural-network-evaluation
+- neural-networks
+- overfitting
+- platt-scaling
+- resnet
+relations:
+- from: temperature-scaling
+  type: BASED_ON
+  to: platt-scaling
+  evidence: this one-parameter variant of platt scaling
+- from: temperature-scaling
+  type: COMPLEMENTS
+  to: knowledge-distillation
+  evidence: the same temperature-softened softmax is used in knowledge distillation to produce soft targets

@@ -142,6 +142,7 @@ areas:
       - responsible-ai
       - bleu
       - bertscore
+      - glue
     also:
       - prompt-injection
       - text-similarity-metrics
@@ -174,6 +175,9 @@ areas:
       - bias-variance-tradeoff
       - platt-scaling
       - five-two-cv-test
+      - double-descent
+      - isotonic-regression
+      - mcnemars-test
   - id: deep-learning
     name_en: Neural Networks & Deep Learning
     name_de: Neuronale Netze & Deep Learning
@@ -191,6 +195,8 @@ areas:
       - back-propagation
       - resnet
       - vision-transformer
+      - imagenet
+      - temperature-scaling
     also:
       - attention-and-transformers
   - id: knowledge-graphs

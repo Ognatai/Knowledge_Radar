@@ -1,0 +1,13 @@
+version: 1
+note_sha256: e7eb3207b20277571108bf3fa5ae5e51f1e68b0e91d3c22d18b77a32e72721d4
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- classification-metrics
+- cross-validation
+- five-two-cv-test
+- model-comparison
+relations:
+- from: mcnemars-test
+  type: COMPLEMENTS
+  to: five-two-cv-test
+  evidence: it does not account for variation across training sets, which the 5×2cv test addresses

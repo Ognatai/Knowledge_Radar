@@ -1,11 +1,14 @@
 ---
-title_en: Overfitting
-title_de: Overfitting
+title_en: Overfitting and Underfitting
+title_de: Overfitting und Underfitting
 entity_type: Concept
 aliases:
 - Overfitting
 - Over-fitting
 - Überanpassung
+- Underfitting
+- Under-fitting
+- Unteranpassung
 sources:
 - https://www.deeplearningbook.org/contents/ml.html
 - https://arxiv.org/abs/1812.11118
@@ -17,7 +20,7 @@ sources:
 
 ### TL;DR
 
-A model overfits when the gap between its training error and its test error is too large: it has memorised properties of the training set that do not help on new data. It underfits when it cannot reach a sufficiently low error even on the training set (Goodfellow et al., 2016). Both depend on the model's capacity, its ability to fit a wide variety of functions: too little capacity leads to underfitting, too much to overfitting, and generalisation error typically follows a U-shaped curve as capacity grows (Goodfellow et al., 2016). Overfitting is detected by comparing training and validation error and reduced by regularisation, more data or a smaller hypothesis space ([[regularisation-and-hyperparameters|regularisation and hyperparameters]]). Very large modern models complicate the picture: they can fit the training data exactly and still generalise well ("double descent", Belkin et al., 2019).
+A model overfits when the gap between its training error and its test error is too large: it has memorised properties of the training set that do not help on new data. It underfits when it cannot reach a sufficiently low error even on the training set (Goodfellow et al., 2016). Both depend on the model's capacity, its ability to fit a wide variety of functions: too little capacity leads to underfitting, too much to overfitting, and generalisation error typically follows a U-shaped curve as capacity grows (Goodfellow et al., 2016). Overfitting is detected by comparing training and validation error and reduced by regularisation, more data or a smaller hypothesis space ([[regularisation-and-hyperparameters|regularisation and hyperparameters]]). Very large modern models complicate the picture: they can fit the training data exactly and still generalise well ("[[double-descent|double descent]]", Belkin et al., 2019).
 
 ### How it works
 
@@ -103,7 +106,7 @@ A model overfits when its test error is much higher than its training error and 
 
 ### TL;DR
 
-Ein Modell ist überangepasst (Overfitting), wenn der Abstand zwischen Trainingsfehler und Testfehler zu groß ist: Es hat Eigenschaften der Trainingsdaten auswendig gelernt, die bei neuen Daten nicht helfen. Es ist unterangepasst (Underfitting), wenn es schon auf den Trainingsdaten keinen ausreichend niedrigen Fehler erreicht (Goodfellow et al., 2016). Beides hängt von der Kapazität des Modells ab, seiner Fähigkeit, sehr unterschiedliche Funktionen abzubilden: Zu wenig Kapazität führt zu Underfitting, zu viel zu Overfitting, und der Generalisierungsfehler folgt mit wachsender Kapazität typischerweise einer U-Kurve (Goodfellow et al., 2016). Overfitting wird durch den Vergleich von Trainings- und Validierungsfehler erkannt und durch Regularisierung, mehr Daten oder einen kleineren Hypothesenraum verringert ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]). Sehr große moderne Modelle machen das Bild komplizierter: Sie können die Trainingsdaten exakt abbilden und trotzdem gut generalisieren („Double Descent“, Belkin et al., 2019).
+Ein Modell ist überangepasst (Overfitting), wenn der Abstand zwischen Trainingsfehler und Testfehler zu groß ist: Es hat Eigenschaften der Trainingsdaten auswendig gelernt, die bei neuen Daten nicht helfen. Es ist unterangepasst (Underfitting), wenn es schon auf den Trainingsdaten keinen ausreichend niedrigen Fehler erreicht (Goodfellow et al., 2016). Beides hängt von der Kapazität des Modells ab, seiner Fähigkeit, sehr unterschiedliche Funktionen abzubilden: Zu wenig Kapazität führt zu Underfitting, zu viel zu Overfitting, und der Generalisierungsfehler folgt mit wachsender Kapazität typischerweise einer U-Kurve (Goodfellow et al., 2016). Overfitting wird durch den Vergleich von Trainings- und Validierungsfehler erkannt und durch Regularisierung, mehr Daten oder einen kleineren Hypothesenraum verringert ([[regularisation-and-hyperparameters|Regularisierung und Hyperparameter]]). Sehr große moderne Modelle machen das Bild komplizierter: Sie können die Trainingsdaten exakt abbilden und trotzdem gut generalisieren („[[double-descent|Double Descent]]“, Belkin et al., 2019).
 
 ### Funktionsweise
 

@@ -1,0 +1,25 @@
+version: 1
+note_sha256: cb69915586fdc20eccfa66354aa2eb94959c0eec902d369ed5b4bbbc36bd4cd9
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- classification
+- computer-vision
+- convolutional-neural-networks
+- fairness-metrics
+- neural-networks
+- overfitting
+- resnet
+- vision-transformer
+relations:
+- from: imagenet
+  type: EVALUATES
+  to: convolutional-neural-networks
+  evidence: after a deep convolutional network won in 2012 with 16.4% top-5 error
+- from: imagenet
+  type: EVALUATES
+  to: resnet
+  evidence: later architectures such as resnet and the vision transformer were also evaluated on imagenet
+- from: imagenet
+  type: EVALUATES
+  to: vision-transformer
+  evidence: later architectures such as resnet and the vision transformer were also evaluated on imagenet

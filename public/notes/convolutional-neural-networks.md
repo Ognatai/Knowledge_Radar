@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Convolutional [[neural-networks|neural networks]] (CNNs) process grid-like data such as images by sliding small learned filters over the input, so that the same weights detect a pattern wherever it occurs (Goodfellow et al., 2016). Stacked convolution and pooling layers learn features from edges to objects. CNNs outperformed all other methods on handwritten digit recognition (LeCun et al., 1998), won ImageNet in 2012 (Krizhevsky et al., 2012), and became much deeper with small filters (Simonyan & Zisserman, 2014) and residual connections (He et al., 2015).
+Convolutional [[neural-networks|neural networks]] (CNNs) process grid-like data such as images by sliding small learned filters over the input, so that the same weights detect a pattern wherever it occurs (Goodfellow et al., 2016). Stacked convolution and pooling layers learn features from edges to objects. CNNs outperformed all other methods on handwritten digit recognition (LeCun et al., 1998), won [[imagenet|ImageNet]] in 2012 (Krizhevsky et al., 2012), and became much deeper with small filters (Simonyan & Zisserman, 2014) and residual connections (He et al., 2015).
 
 ### How it works
 
@@ -112,7 +112,7 @@ CNNs learn small filters that are shared across the whole input, which makes the
 
 ### TL;DR
 
-Convolutional Neural Networks (CNNs) verarbeiten gitterartige Daten wie Bilder, indem sie kleine gelernte Filter über die Eingabe schieben; so erkennen dieselben Gewichte ein Muster, wo immer es auftritt (Goodfellow et al., 2016). Gestapelte Faltungs- und Pooling-Schichten lernen Merkmale von Kanten bis zu Objekten. CNNs übertrafen bei der Erkennung handgeschriebener Ziffern alle anderen Verfahren (LeCun et al., 1998), gewannen 2012 ImageNet (Krizhevsky et al., 2012) und wurden mit kleinen Filtern (Simonyan & Zisserman, 2014) und Residualverbindungen (He et al., 2015) deutlich tiefer.
+Convolutional Neural Networks (CNNs) verarbeiten gitterartige Daten wie Bilder, indem sie kleine gelernte Filter über die Eingabe schieben; so erkennen dieselben Gewichte ein Muster, wo immer es auftritt (Goodfellow et al., 2016). Gestapelte Faltungs- und Pooling-Schichten lernen Merkmale von Kanten bis zu Objekten. CNNs übertrafen bei der Erkennung handgeschriebener Ziffern alle anderen Verfahren (LeCun et al., 1998), gewannen 2012 [[imagenet|ImageNet]] (Krizhevsky et al., 2012) und wurden mit kleinen Filtern (Simonyan & Zisserman, 2014) und Residualverbindungen (He et al., 2015) deutlich tiefer.
 
 ### Funktionsweise
 

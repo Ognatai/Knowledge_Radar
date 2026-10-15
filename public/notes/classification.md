@@ -52,7 +52,7 @@ Fisher (1936) introduced the linear discriminant function, a linear combination 
 
 #### 4. Calibrated probabilities
 
-Predicted probabilities do not always match true probabilities. Niculescu-Mizil & Caruana (2005) showed that boosted trees and stumps push predicted probabilities away from 0 and 1, naive Bayes pushes them towards 0 and 1, and neural nets and bagged trees are well calibrated. [[platt-scaling|Platt scaling]] and isotonic regression correct these distortions; after calibration, boosted trees, random forests and SVMs predicted the best probabilities.
+Predicted probabilities do not always match true probabilities. Niculescu-Mizil & Caruana (2005) showed that boosted trees and stumps push predicted probabilities away from 0 and 1, naive Bayes pushes them towards 0 and 1, and neural nets and bagged trees are well calibrated. [[platt-scaling|Platt scaling]] and [[isotonic-regression|isotonic regression]] correct these distortions; after calibration, boosted trees, random forests and SVMs predicted the best probabilities.
 
 #### 5. Text classification: rules or learning
 
@@ -164,7 +164,7 @@ Fisher (1936) führte die lineare Diskriminanzfunktion ein, eine Linearkombinati
 
 #### 4. Kalibrierte Wahrscheinlichkeiten
 
-Vorhergesagte Wahrscheinlichkeiten stimmen nicht immer mit den tatsächlichen überein. Niculescu-Mizil & Caruana (2005) zeigten, dass Boosted Trees und Stumps die Wahrscheinlichkeiten von 0 und 1 wegdrängen, Naive Bayes sie zu 0 und 1 hindrängt und [[neural-networks|neuronale Netze]] sowie Bagged Trees gut kalibriert sind. [[platt-scaling|Platt Scaling]] und isotone Regression korrigieren diese Verzerrungen; nach der Kalibrierung lieferten Boosted Trees, Random Forests und SVMs die besten Wahrscheinlichkeiten.
+Vorhergesagte Wahrscheinlichkeiten stimmen nicht immer mit den tatsächlichen überein. Niculescu-Mizil & Caruana (2005) zeigten, dass Boosted Trees und Stumps die Wahrscheinlichkeiten von 0 und 1 wegdrängen, Naive Bayes sie zu 0 und 1 hindrängt und [[neural-networks|neuronale Netze]] sowie Bagged Trees gut kalibriert sind. [[platt-scaling|Platt Scaling]] und [[isotonic-regression|isotone Regression]] korrigieren diese Verzerrungen; nach der Kalibrierung lieferten Boosted Trees, Random Forests und SVMs die besten Wahrscheinlichkeiten.
 
 #### 5. Textklassifikation: Regeln oder Lernen
 

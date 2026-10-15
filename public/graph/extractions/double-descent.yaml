@@ -1,0 +1,17 @@
+version: 1
+note_sha256: 66e06db0defb7ce4a73d0d4aa4cb964818e4a1ac323901af4cf018e8fa5ea7e7
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bias-variance-tradeoff
+- neural-network-evaluation
+- neural-networks
+- openai
+- overfitting
+- regularisation-and-hyperparameters
+- early-stopping
+- ridge-regression
+relations:
+- from: double-descent
+  type: COMPLEMENTS
+  to: bias-variance-tradeoff
+  evidence: it does not contradict the bias-variance trade-off

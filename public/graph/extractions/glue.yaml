@@ -1,0 +1,30 @@
+version: 1
+note_sha256: eecba80c5b0507fb8403e402b86f4cff655b67a4215e05eb5d6c6fda69f29d6f
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- bert
+- classification
+- classification-metrics
+- distilbert
+- gpt
+- knowledge-distillation
+- large-language-models
+- legal-ai
+- llm-evaluation
+- natural-language-inference
+- natural-language-understanding
+- multinli
+- squad
+relations:
+- from: glue
+  type: EVALUATES
+  to: bert
+  evidence: glue became the showcase for pre-trained models such as gpt and bert
+- from: glue
+  type: EVALUATES
+  to: gpt
+  evidence: glue became the showcase for pre-trained models such as gpt and bert
+- from: glue
+  type: EVALUATES
+  to: distilbert
+  evidence: distilbert, for example, reported its quality as a share of bert's glue score

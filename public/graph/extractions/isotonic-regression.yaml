@@ -1,0 +1,23 @@
+version: 1
+note_sha256: fe03a231a4b2f1560ee87781f11dfdc56b6f03a0d1a35312c199cfd3111be6b9
+extracted_by: claude (hand-labelled, 2026-10-14)
+discusses:
+- classification
+- classification-metrics
+- cross-validation
+- decision-trees
+- naive-bayes
+- neural-networks
+- overfitting
+- platt-scaling
+- resnet
+- temperature-scaling
+relations:
+- from: isotonic-regression
+  type: COMPLEMENTS
+  to: platt-scaling
+  evidence: because it can correct any monotonic distortion, it is more flexible than platt scaling
+- from: isotonic-regression
+  type: COMPLEMENTS
+  to: temperature-scaling
+  evidence: for modern neural networks, the simpler temperature scaling usually calibrates better

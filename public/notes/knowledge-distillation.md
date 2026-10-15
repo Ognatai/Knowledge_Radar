@@ -48,7 +48,7 @@ FitNets extend distillation so that a student can be deeper and thinner than its
 
 #### 4. Distilling pretrained language models
 
-DistilBERT applies distillation during pretraining rather than for one task, with a triple loss combining language modelling, distillation and cosine-distance losses; it reduced BERT's size by 40% while retaining 97% of its language understanding and running 60% faster (Sanh et al., 2019). TinyBERT designs a distillation method for Transformer layers and applies it in both pretraining and task-specific fine-tuning; with 4 layers it reached more than 96.8% of BERT-base's performance on GLUE while being 7.5 times smaller and 9.4 times faster at inference (Jiao et al., 2019; [[large-language-models|Large Language Models]]).
+DistilBERT applies distillation during pretraining rather than for one task, with a triple loss combining language modelling, distillation and cosine-distance losses; it reduced BERT's size by 40% while retaining 97% of its language understanding and running 60% faster (Sanh et al., 2019). TinyBERT designs a distillation method for Transformer layers and applies it in both pretraining and task-specific fine-tuning; with 4 layers it reached more than 96.8% of BERT-base's performance on [[glue|GLUE]] while being 7.5 times smaller and 9.4 times faster at inference (Jiao et al., 2019; [[large-language-models|Large Language Models]]).
 
 #### 5. Kinds of knowledge and schemes
 
@@ -139,7 +139,7 @@ FitNets erweitern die Destillation so, dass ein Schüler tiefer und schmaler sei
 
 #### 4. Destillation vortrainierter Sprachmodelle
 
-DistilBERT wendet die Destillation im Vortraining statt für eine einzelne Aufgabe an, mit einem dreiteiligen Verlust aus Sprachmodellierung, Destillation und Kosinusabstand; es verkleinerte BERT um 40 %, behielt 97 % seines Sprachverständnisses und war 60 % schneller (Sanh et al., 2019). TinyBERT entwickelt ein Destillationsverfahren für Transformer-Schichten und wendet es im Vortraining und im aufgabenspezifischen Fine-Tuning an; mit 4 Schichten erreichte es mehr als 96,8 % der Leistung von BERT-base auf GLUE, war 7,5-mal kleiner und bei der Inferenz 9,4-mal schneller (Jiao et al., 2019; [[large-language-models|Large Language Models]]).
+DistilBERT wendet die Destillation im Vortraining statt für eine einzelne Aufgabe an, mit einem dreiteiligen Verlust aus Sprachmodellierung, Destillation und Kosinusabstand; es verkleinerte BERT um 40 %, behielt 97 % seines Sprachverständnisses und war 60 % schneller (Sanh et al., 2019). TinyBERT entwickelt ein Destillationsverfahren für Transformer-Schichten und wendet es im Vortraining und im aufgabenspezifischen Fine-Tuning an; mit 4 Schichten erreichte es mehr als 96,8 % der Leistung von BERT-base auf [[glue|GLUE]], war 7,5-mal kleiner und bei der Inferenz 9,4-mal schneller (Jiao et al., 2019; [[large-language-models|Large Language Models]]).
 
 #### 5. Arten von Wissen und Verfahren
 

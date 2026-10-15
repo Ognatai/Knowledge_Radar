@@ -48,7 +48,7 @@ The Transformer (Vaswani et al., 2017) is a sequence model based solely on atten
 
 #### 4. Pretraining and fine-tuning
 
-[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabelled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a GLUE score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabelled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a [[glue|GLUE]] score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
 
 #### 5. Few-shot learning with large language models
 
@@ -176,7 +176,7 @@ Jurafsky & Martin (SLP3) geben einen Lehrbuchüberblick über klassische und neu
 
 ### In der Praxis
 
-Aufgaben werden mit aufgabenspezifischen Benchmarks und Metriken evaluiert, beispielsweise BLEU für die Übersetzung (Vaswani et al., 2017; [[text-similarity-metrics|Textähnlichkeitsmetriken]]), GLUE und SQuAD für das Verständnis und das Beantworten von Fragen (Devlin et al., 2018) sowie Wortähnlichkeitstests für Wortvektoren (Mikolov et al., 2013). Da große Modelle auf Webdaten trainiert werden, können Benchmark-Ergebnisse durch Überschneidungen mit den Trainingsdaten beeinflusst werden (Brown et al., 2020), weshalb eine Evaluation auf zurückgehaltenen, aufgabenspezifischen Daten weiterhin notwendig ist ([[llm-evaluation|LLM-Evaluation]]).
+Aufgaben werden mit aufgabenspezifischen Benchmarks und Metriken evaluiert, beispielsweise BLEU für die Übersetzung (Vaswani et al., 2017; [[text-similarity-metrics|Textähnlichkeitsmetriken]]), [[glue|GLUE]] und SQuAD für das Verständnis und das Beantworten von Fragen (Devlin et al., 2018) sowie Wortähnlichkeitstests für Wortvektoren (Mikolov et al., 2013). Da große Modelle auf Webdaten trainiert werden, können Benchmark-Ergebnisse durch Überschneidungen mit den Trainingsdaten beeinflusst werden (Brown et al., 2020), weshalb eine Evaluation auf zurückgehaltenen, aufgabenspezifischen Daten weiterhin notwendig ist ([[llm-evaluation|LLM-Evaluation]]).
 
 ### Merksatz
 

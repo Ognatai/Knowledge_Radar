@@ -25,7 +25,7 @@ sources:
 
 ### TL;DR
 
-Computer vision is the field of AI that extracts information from images and video. Its core tasks are image classification (what is in the image), object detection (where are which objects, as bounding boxes), segmentation (which pixels belong to which object or class) and keypoint or pose estimation; further tasks include OCR, tracking and visual question answering. Since the ImageNet challenge, deep learning has dominated: convolutional networks for classification, single-pass detectors such as YOLO, two-stage detectors with mask branches such as Mask R-CNN, encoder-decoder networks such as U-Net for segmentation, and Vision Transformers that treat images as sequences of patches (Russakovsky et al., 2015; Redmon et al., 2016; He et al., 2017; Ronneberger et al., 2015; Dosovitskiy et al., 2021). Models trained on image-text pairs such as CLIP recognise categories named in natural language without task-specific training (Radford et al., 2021).
+Computer vision is the field of AI that extracts information from images and video. Its core tasks are image classification (what is in the image), object detection (where are which objects, as bounding boxes), segmentation (which pixels belong to which object or class) and keypoint or pose estimation; further tasks include OCR, tracking and visual question answering. Since the [[imagenet|ImageNet]] challenge, deep learning has dominated: convolutional networks for classification, single-pass detectors such as YOLO, two-stage detectors with mask branches such as Mask R-CNN, encoder-decoder networks such as U-Net for segmentation, and Vision Transformers that treat images as sequences of patches (Russakovsky et al., 2015; Redmon et al., 2016; He et al., 2017; Ronneberger et al., 2015; Dosovitskiy et al., 2021). Models trained on image-text pairs such as CLIP recognise categories named in natural language without task-specific training (Radford et al., 2021).
 
 ### How it works
 
@@ -144,7 +144,7 @@ Nachbearbeitung, Evaluation (Accuracy, mAP, IoU) und Betrieb
 
 #### 1. Klassifikation und der ImageNet-Benchmark
 
-Die ImageNet Large Scale Visual Recognition Challenge (ILSVRC) lief ab 2010 jährlich und umfasste Objektklassifikation und -erkennung über Hunderte Kategorien und Millionen Bilder, mit mehr als fünfzig teilnehmenden Einrichtungen; das Paper vergleicht darauf auch die Genauigkeit von Maschinen und Menschen (Russakovsky et al., 2015). Klassifikationsmodelle aus Faltungen, Pooling und immer tieferen Architekturen beschreibt [[convolutional-neural-networks|Convolutional Neural Networks]]. Ein auf solchen Daten vortrainiertes Backbone wird meist per Transfer Learning für andere Aufgaben weiterverwendet.
+Die [[imagenet|ImageNet Large Scale Visual Recognition Challenge]] (ILSVRC) lief ab 2010 jährlich und umfasste Objektklassifikation und -erkennung über Hunderte Kategorien und Millionen Bilder, mit mehr als fünfzig teilnehmenden Einrichtungen; das Paper vergleicht darauf auch die Genauigkeit von Maschinen und Menschen (Russakovsky et al., 2015). Klassifikationsmodelle aus Faltungen, Pooling und immer tieferen Architekturen beschreibt [[convolutional-neural-networks|Convolutional Neural Networks]]. Ein auf solchen Daten vortrainiertes Backbone wird meist per Transfer Learning für andere Aufgaben weiterverwendet.
 
 #### 2. Objekterkennung
 

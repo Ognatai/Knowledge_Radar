@@ -453,10 +453,6 @@ entities:
   type: Concept
   name_en: Generative model
   name_de: Generatives Modell
-- id: isotonic-regression
-  type: Method
-  name_en: Isotonic regression
-  name_de: Isotone Regression
 - id: confusion-matrix
   type: Concept
   name_en: Confusion matrix
@@ -1592,10 +1588,6 @@ entities:
   name_de: SMOTE (Synthetic Minority Over-sampling Technique)
   aliases:
   - SMOTE
-- id: temperature-scaling
-  type: Method
-  name_en: Temperature scaling
-  name_de: Temperature Scaling
 - id: devops
   type: Method
   name_en: DevOps
@@ -1620,10 +1612,6 @@ entities:
   type: Concept
   name_en: Concept drift
   name_de: Concept Drift
-- id: mcnemars-test
-  type: Method
-  name_en: McNemar's test
-  name_de: McNemar-Test
 - id: wilcoxon-signed-ranks-test
   type: Method
   name_en: Wilcoxon signed-ranks test
@@ -1656,14 +1644,6 @@ entities:
   type: Method
   name_en: Contrastive learning
   name_de: Kontrastives Lernen
-- id: underfitting
-  type: Concept
-  name_en: Underfitting
-  name_de: Underfitting
-- id: double-descent
-  type: Concept
-  name_en: Double descent
-  name_de: Double Descent
 - id: mean-absolute-error
   type: Method
   name_en: Mean absolute error (MAE)
@@ -2231,10 +2211,6 @@ entities:
   type: Dataset
   name_en: ContractNLI
   name_de: ContractNLI
-- id: imagenet
-  type: Dataset
-  name_en: ImageNet
-  name_de: ImageNet
 - id: mteb
   type: Dataset
   name_en: Massive Text Embedding Benchmark (MTEB)
@@ -2281,12 +2257,6 @@ entities:
   type: Technology
   name_en: Chatbot Arena
   name_de: Chatbot Arena
-- id: glue
-  type: Dataset
-  name_en: GLUE
-  name_de: GLUE
-  aliases:
-  - General Language Understanding Evaluation
 - id: squad
   type: Dataset
   name_en: SQuAD

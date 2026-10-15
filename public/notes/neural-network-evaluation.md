@@ -55,11 +55,11 @@ A model underfits when its training error is too high, and overfits when the gap
 
 #### 5. Generalisation of large networks
 
-Zhang et al. (2016) showed that state-of-the-art convolutional networks for [[computer-vision|image classification]] easily fit a random labelling of the training data, even with explicit regularisation and even when the images are replaced by random noise. Traditional explanations based on model family or regularisation therefore do not explain why large networks generalise well. Belkin et al. (2018) reconcile this with the [[bias-variance-tradeoff|bias-variance trade-off]] through a "double descent" curve: test error first follows the classical U shape, but decreases again when capacity grows beyond the point where the model fits the training data exactly.
+Zhang et al. (2016) showed that state-of-the-art convolutional networks for [[computer-vision|image classification]] easily fit a random labelling of the training data, even with explicit regularisation and even when the images are replaced by random noise. Traditional explanations based on model family or regularisation therefore do not explain why large networks generalise well. Belkin et al. (2018) reconcile this with the [[bias-variance-tradeoff|bias-variance trade-off]] through a "[[double-descent|double descent]]" curve: test error first follows the classical U shape, but decreases again when capacity grows beyond the point where the model fits the training data exactly.
 
 #### 6. Calibration
 
-Calibration means that predicted probabilities reflect the true likelihood of being correct. Modern [[neural-networks|neural networks]], unlike those from a decade ago, are poorly calibrated; depth, width, weight decay and batch normalisation influence this (Guo et al., 2017). On most datasets, temperature scaling, a single-parameter variant of [[platt-scaling|Platt scaling]], was surprisingly effective at correcting it ([[ml-preprocessing|ML Preprocessing]]).
+Calibration means that predicted probabilities reflect the true likelihood of being correct. Modern [[neural-networks|neural networks]], unlike those from a decade ago, are poorly calibrated; depth, width, weight decay and batch normalisation influence this (Guo et al., 2017). On most datasets, [[temperature-scaling|temperature scaling]], a single-parameter variant of [[platt-scaling|Platt scaling]], was surprisingly effective at correcting it ([[ml-preprocessing|ML Preprocessing]]).
 
 #### Origin and variants
 
@@ -154,11 +154,11 @@ Ein Modell ist unteranpasst (Underfitting), wenn sein Trainingsfehler zu hoch is
 
 #### 5. Generalisierung großer Netze
 
-Zhang et al. (2016) zeigten, dass aktuelle konvolutionale Netze für Bildklassifikation eine zufällige Zuordnung der Trainingslabels problemlos lernen, auch mit expliziter Regularisierung und selbst dann, wenn die Bilder durch Zufallsrauschen ersetzt werden. Klassische Erklärungen über Modellfamilie oder Regularisierung erklären daher nicht, warum große Netze gut generalisieren. Belkin et al. (2018) bringen dies mit der Bias-Varianz-Abwägung über eine „Double Descent“-Kurve in Einklang: Der Testfehler folgt zunächst der klassischen U-Form, sinkt aber wieder, wenn die Kapazität über den Punkt hinaus wächst, an dem das Modell die Trainingsdaten exakt abbildet.
+Zhang et al. (2016) zeigten, dass aktuelle konvolutionale Netze für Bildklassifikation eine zufällige Zuordnung der Trainingslabels problemlos lernen, auch mit expliziter Regularisierung und selbst dann, wenn die Bilder durch Zufallsrauschen ersetzt werden. Klassische Erklärungen über Modellfamilie oder Regularisierung erklären daher nicht, warum große Netze gut generalisieren. Belkin et al. (2018) bringen dies mit der Bias-Varianz-Abwägung über eine „[[double-descent|Double Descent]]“-Kurve in Einklang: Der Testfehler folgt zunächst der klassischen U-Form, sinkt aber wieder, wenn die Kapazität über den Punkt hinaus wächst, an dem das Modell die Trainingsdaten exakt abbildet.
 
 #### 6. Kalibrierung
 
-Kalibrierung bedeutet, dass vorhergesagte Wahrscheinlichkeiten die tatsächliche Trefferwahrscheinlichkeit widerspiegeln. Moderne [[neural-networks|neuronale Netze]] sind anders als die von vor zehn Jahren schlecht kalibriert; Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen das (Guo et al., 2017). Auf den meisten Datensätzen korrigierte Temperature Scaling, eine Variante von [[platt-scaling|Platt Scaling]] mit einem einzigen Parameter, dies überraschend wirksam ([[ml-preprocessing|Preprocessing für Machine Learning]]).
+Kalibrierung bedeutet, dass vorhergesagte Wahrscheinlichkeiten die tatsächliche Trefferwahrscheinlichkeit widerspiegeln. Moderne [[neural-networks|neuronale Netze]] sind anders als die von vor zehn Jahren schlecht kalibriert; Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen das (Guo et al., 2017). Auf den meisten Datensätzen korrigierte [[temperature-scaling|Temperature Scaling]], eine Variante von [[platt-scaling|Platt Scaling]] mit einem einzigen Parameter, dies überraschend wirksam ([[ml-preprocessing|Preprocessing für Machine Learning]]).
 
 #### Ursprung und Varianten
 

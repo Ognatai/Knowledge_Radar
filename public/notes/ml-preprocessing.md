@@ -53,7 +53,7 @@ Data is imbalanced when classes are not approximately equally represented, and m
 
 #### 5. Probability calibration
 
-Some models produce distorted probabilities: boosted trees push them away from 0 and 1, naive Bayes towards 0 and 1, and [[platt-scaling|Platt scaling]] and isotonic regression correct these distortions (Niculescu-Mizil & Caruana, 2005). Modern [[neural-networks|neural networks]] are also poorly calibrated; on most datasets, temperature scaling, a single-parameter variant of Platt scaling, was surprisingly effective (Guo et al., 2017).
+Some models produce distorted probabilities: boosted trees push them away from 0 and 1, naive Bayes towards 0 and 1, and [[platt-scaling|Platt scaling]] and [[isotonic-regression|isotonic regression]] correct these distortions (Niculescu-Mizil & Caruana, 2005). Modern [[neural-networks|neural networks]] are also poorly calibrated; on most datasets, [[temperature-scaling|temperature scaling]], a single-parameter variant of Platt scaling, was surprisingly effective (Guo et al., 2017).
 
 #### Origin and variants
 
@@ -145,7 +145,7 @@ Daten sind unausgewogen, wenn die Klassen nicht annähernd gleich häufig vertre
 
 #### 5. Kalibrierung von Wahrscheinlichkeiten
 
-Manche Modelle liefern verzerrte Wahrscheinlichkeiten: Boosted Trees drängen sie von 0 und 1 weg, Naive Bayes zu 0 und 1 hin, und [[platt-scaling|Platt Scaling]] sowie isotone Regression korrigieren diese Verzerrungen (Niculescu-Mizil & Caruana, 2005). Auch moderne [[neural-networks|neuronale Netze]] sind schlecht kalibriert; auf den meisten Datensätzen war Temperature Scaling, eine Variante von Platt Scaling mit einem einzigen Parameter, überraschend wirksam (Guo et al., 2017).
+Manche Modelle liefern verzerrte Wahrscheinlichkeiten: Boosted Trees drängen sie von 0 und 1 weg, Naive Bayes zu 0 und 1 hin, und [[platt-scaling|Platt Scaling]] sowie [[isotonic-regression|isotone Regression]] korrigieren diese Verzerrungen (Niculescu-Mizil & Caruana, 2005). Auch moderne [[neural-networks|neuronale Netze]] sind schlecht kalibriert; auf den meisten Datensätzen war [[temperature-scaling|Temperature Scaling]], eine Variante von Platt Scaling mit einem einzigen Parameter, überraschend wirksam (Guo et al., 2017).
 
 #### Ursprung und Varianten
 

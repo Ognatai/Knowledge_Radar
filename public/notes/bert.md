@@ -69,7 +69,7 @@ BERT (Devlin et al., 2018) followed GPT-1 (Radford et al., 2018), which pre-trai
 **Strengths**
 - Each token representation uses context from both sides in all layers (Devlin et al., 2018).
 - One pre-trained model serves many tasks with only one task-specific output layer (Devlin et al., 2018).
-- Distilled versions keep most of the quality at a fraction of the cost: DistilBERT is 40% smaller and 60% faster while retaining 97% of BERT's language understanding (Sanh et al., 2019); TinyBERT with 4 layers reaches over 96.8% of BERT-Base on GLUE, being 7.5x smaller and 9.4x faster (Jiao et al., 2019).
+- Distilled versions keep most of the quality at a fraction of the cost: DistilBERT is 40% smaller and 60% faster while retaining 97% of BERT's language understanding (Sanh et al., 2019); TinyBERT with 4 layers reaches over 96.8% of BERT-Base on [[glue|GLUE]], being 7.5x smaller and 9.4x faster (Jiao et al., 2019).
 
 **Limitations**
 - BERT does not generate text; for generation, decoder models such as [[gpt|GPT]] are used.
@@ -155,7 +155,7 @@ BERT (Devlin et al., 2018) folgte auf GPT-1 (Radford et al., 2018), das einen Tr
 **Stärken**
 - Jede Token-Repräsentation nutzt in allen Schichten Kontext von beiden Seiten (Devlin et al., 2018).
 - Ein vortrainiertes Modell bedient viele Aufgaben mit nur einer aufgabenspezifischen Ausgabeschicht (Devlin et al., 2018).
-- Destillierte Versionen behalten den Großteil der Qualität bei einem Bruchteil der Kosten: DistilBERT ist 40 % kleiner und 60 % schneller und behält 97 % des Sprachverständnisses von BERT (Sanh et al., 2019); TinyBERT mit 4 Schichten erreicht über 96,8 % der Leistung von BERT-Base auf GLUE und ist 7,5-mal kleiner und 9,4-mal schneller (Jiao et al., 2019).
+- Destillierte Versionen behalten den Großteil der Qualität bei einem Bruchteil der Kosten: DistilBERT ist 40 % kleiner und 60 % schneller und behält 97 % des Sprachverständnisses von BERT (Sanh et al., 2019); TinyBERT mit 4 Schichten erreicht über 96,8 % der Leistung von BERT-Base auf [[glue|GLUE]] und ist 7,5-mal kleiner und 9,4-mal schneller (Jiao et al., 2019).
 
 **Grenzen**
 - BERT erzeugt keinen Text; für Generierung werden Decoder-Modelle wie [[gpt|GPT]] eingesetzt.
