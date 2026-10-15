@@ -2161,6 +2161,10 @@ entities:
   aliases:
   - QAT
   - Quantization-aware training (QAT)
+  summary_en: Quantisation-aware training co-designs the training procedure with a quantisation scheme so that model accuracy is preserved after quantisation (Jacob et al., 2017). Jacob et al. combined it with integer-only arithmetic inference, which is more efficient on common integer hardware, and improved the accuracy-latency trade-off even for efficient MobileNets on ImageNet classification and COCO detection.
+  summary_de: Quantisierungsbewusstes Training stimmt das Trainingsverfahren auf ein Quantisierungsschema ab, damit die Genauigkeit des Modells nach der Quantisierung erhalten bleibt (Jacob et al., 2017). Jacob et al. verbanden es mit Inferenz allein in Ganzzahlarithmetik, die auf gängiger Hardware effizienter ist, und verbesserten das Verhältnis von Genauigkeit und Latenz selbst bei effizienten MobileNets für ImageNet-Klassifikation und COCO-Detektion.
+  sources:
+  - https://arxiv.org/abs/1712.05877
 - id: llm-int8
   type: Method
   name_en: LLM.int8()
@@ -2342,16 +2346,28 @@ entities:
   name_de: Inverted File Index (IVF)
   aliases:
   - IVF
+  summary_en: An inverted file index (IVF) clusters database vectors at indexing time with a coarse quantiser, storing the vectors of each cluster contiguously in inverted lists (Douze et al., 2024). At search time only the clusters with the nearest centroids are visited, set by the nprobe parameter, which trades speed against accuracy in vector search libraries such as Faiss.
+  summary_de: Ein Inverted File Index (IVF) clustert Datenbankvektoren bei der Indexierung mit einem groben Quantisierer und speichert die Vektoren jedes Clusters zusammenhängend in invertierten Listen (Douze et al., 2024). Bei der Suche werden nur die Cluster mit den nächsten Zentroiden besucht, festgelegt über den Parameter nprobe, der in Bibliotheken wie Faiss Geschwindigkeit gegen Genauigkeit abwägt.
+  sources:
+  - https://arxiv.org/abs/2401.08281
 - id: product-quantisation
   type: Method
   name_en: Product quantisation (PQ)
   name_de: Produktquantisierung (PQ)
   aliases:
   - Product quantization (PQ)
+  summary_en: Product quantisation (PQ) compresses vectors by splitting each into M sub-vectors and quantising each separately with k-means; the code is the concatenation of the sub-quantiser indices, so each vector is stored as a short code (Douze et al., 2024). It was introduced by Jégou, Douze and Schmid for nearest-neighbour search and is a core compression method in Faiss.
+  summary_de: Product Quantization (PQ) komprimiert Vektoren, indem jeder in M Teilvektoren zerlegt und jeder Teil separat mit k-Means quantisiert wird; der Code ist die Verkettung der Indizes der Teilquantisierer, sodass jeder Vektor als kurzer Code gespeichert wird (Douze et al., 2024). Sie wurde von Jégou, Douze und Schmid für die Nächste-Nachbarn-Suche eingeführt und ist ein zentrales Kompressionsverfahren in Faiss.
+  sources:
+  - https://arxiv.org/abs/2401.08281
 - id: ivf-pq
   type: Method
   name_en: IVF-PQ
   name_de: IVF-PQ
+  summary_en: IVF-PQ combines an inverted file index, which restricts search to the clusters nearest to the query, with product quantisation of the stored vectors, so large collections can be searched quickly with compact codes (Douze et al., 2024). It is a central index type in Faiss, and Google's ScaNN library is a heavily optimised implementation of IVF-PQ.
+  summary_de: IVF-PQ verbindet einen Inverted File Index, der die Suche auf die der Anfrage nächsten Cluster beschränkt, mit Product Quantization der gespeicherten Vektoren, sodass große Sammlungen schnell und mit kompakten Codes durchsucht werden können (Douze et al., 2024). Er ist ein zentraler Indextyp in Faiss, und Googles Bibliothek ScaNN ist eine stark optimierte Umsetzung von IVF-PQ.
+  sources:
+  - https://arxiv.org/abs/2401.08281
 - id: anisotropic-quantisation
   type: Method
   name_en: Anisotropic quantisation
@@ -2408,6 +2424,10 @@ entities:
   name_de: Gated Recurrent Unit (GRU)
   aliases:
   - GRU
+  summary_en: The gated recurrent unit (GRU) is a recurrent unit with a gating mechanism, like the long short-term memory (LSTM) unit (Chung et al., 2014). On polyphonic music and speech signal modelling, gated units clearly beat traditional tanh units, and the GRU was comparable to the LSTM.
+  summary_de: Die Gated Recurrent Unit (GRU) ist eine rekurrente Einheit mit Gating-Mechanismus, ähnlich der Long-Short-Term-Memory-Einheit (LSTM) (Chung et al., 2014). Bei der Modellierung polyphoner Musik und von Sprachsignalen schlugen Einheiten mit Gating klassische tanh-Einheiten deutlich, und die GRU war mit dem LSTM vergleichbar.
+  sources:
+  - https://arxiv.org/abs/1412.3555
 - id: back-propagation-through-time
   type: Method
   name_en: Back-propagation through time
@@ -2464,6 +2484,10 @@ entities:
   type: Method
   name_en: Bayesian optimisation
   name_de: Bayessche Optimierung
+  summary_en: Bayesian optimisation tunes hyperparameters automatically by modelling a learning algorithm's generalisation performance as a sample from a Gaussian process, whose posterior guides which settings to try next (Snoek et al., 2012). Snoek et al. showed that careful choices of prior and inference can reach or surpass human expert tuning, and added variants that account for the cost of experiments and run them in parallel.
+  summary_de: Bayes'sche Optimierung stimmt Hyperparameter automatisch ab, indem sie die Generalisierungsleistung eines Lernverfahrens als Stichprobe aus einem Gaußprozess modelliert, dessen Posterior bestimmt, welche Einstellungen als Nächstes probiert werden (Snoek et al., 2012). Snoek et al. zeigten, dass eine sorgfältige Wahl von Prior und Inferenz die Abstimmung durch Fachleute erreichen oder übertreffen kann, und ergänzten Varianten, die die Kosten von Experimenten berücksichtigen und sie parallel ausführen.
+  sources:
+  - https://arxiv.org/abs/1206.2944
 - id: gaussian-process
   type: Method
   name_en: Gaussian process
@@ -2854,10 +2878,18 @@ entities:
   type: Method
   name_en: Pruning
   name_de: Pruning
+  summary_en: Pruning removes parameters from a trained neural network; it can reduce parameter counts by over 90% while keeping accuracy and lowering storage and inference cost (Frankle & Carbin, 2018). Frankle and Carbin found that standard pruning uncovers sparse "winning ticket" subnetworks that, trained from their original initialisation, reach comparable accuracy, the lottery ticket hypothesis.
+  summary_de: Pruning entfernt Parameter aus einem trainierten neuronalen Netz; es kann die Zahl der Parameter um über 90 % verringern, ohne Genauigkeit einzubüßen, und senkt Speicher- und Inferenzkosten (Frankle & Carbin, 2018). Frankle und Carbin fanden, dass übliches Pruning dünn besetzte „Gewinnlos“-Teilnetze freilegt, die von ihrer ursprünglichen Initialisierung aus trainiert eine vergleichbare Genauigkeit erreichen, die Lottery-Ticket-Hypothese.
+  sources:
+  - https://arxiv.org/abs/1803.03635
 - id: low-rank-factorisation
   type: Method
   name_en: Low-rank factorisation
   name_de: Low-Rank-Faktorisierung
+  summary_en: Low-rank factorisation is one of four main categories of techniques for compressing and accelerating deep neural networks, alongside parameter pruning and quantisation, transferred or compact convolutional filters, and knowledge distillation (Cheng et al., 2017).
+  summary_de: Low-Rank-Faktorisierung ist eine von vier Hauptgruppen von Verfahren zur Kompression und Beschleunigung tiefer neuronaler Netze, neben Pruning und Quantisierung von Parametern, übertragenen oder kompakten Faltungsfiltern und Knowledge Distillation (Cheng et al., 2017).
+  sources:
+  - https://arxiv.org/abs/1710.09282
 - id: selfcheckgpt
   type: Method
   name_en: SelfCheckGPT
@@ -2894,6 +2926,10 @@ entities:
   type: Method
   name_en: Next sentence prediction (NSP)
   name_de: Next Sentence Prediction (NSP)
+  summary_en: 'Next sentence prediction (NSP) is the second pre-training task of BERT, besides masked language modelling: for each pair of sentences A and B, B is the actual next sentence in 50% of cases and a random sentence otherwise, and the model predicts which (Devlin et al., 2018). It was added because tasks such as question answering and natural language inference depend on relationships between sentences, and the authors found it very beneficial for both.'
+  summary_de: 'Next Sentence Prediction (NSP) ist neben Masked Language Modelling die zweite Vortrainingsaufgabe von BERT: Für jedes Satzpaar A und B ist B in 50 % der Fälle der tatsächliche Folgesatz und sonst ein zufälliger Satz, und das Modell sagt vorher, welcher Fall vorliegt (Devlin et al., 2018). Sie wurde ergänzt, weil Aufgaben wie Fragebeantwortung und Natural Language Inference von Beziehungen zwischen Sätzen abhängen, und erwies sich nach Angaben der Autoren für beide als sehr nützlich.'
+  sources:
+  - https://arxiv.org/abs/1810.04805
 - id: bm25f
   type: Method
   name_en: BM25F
@@ -3040,18 +3076,30 @@ entities:
   name_de: Direct Preference Optimization (DPO)
   aliases:
   - DPO
+  summary_en: Direct Preference Optimization (DPO) aligns language models with human preferences using a simple classification loss instead of reinforcement learning, based on a reparameterisation of the RLHF reward model whose optimal policy has a closed form (Rafailov et al., 2023). It is stable and lightweight, needs no sampling during fine-tuning, and matched or exceeded PPO-based RLHF on sentiment control, summarisation and single-turn dialogue.
+  summary_de: Direct Preference Optimization (DPO) richtet Sprachmodelle mit einem einfachen Klassifikationsverlust statt mit Reinforcement Learning an menschlichen Präferenzen aus, gestützt auf eine Umparametrisierung des RLHF-Belohnungsmodells, deren optimale Policy eine geschlossene Form hat (Rafailov et al., 2023). Es ist stabil und leichtgewichtig, braucht beim Fine-Tuning kein Sampling und erreichte oder übertraf PPO-basiertes RLHF bei Sentimentsteuerung, Zusammenfassung und einstufigen Dialogen.
+  sources:
+  - https://arxiv.org/abs/2305.18290
 - id: constitutional-ai
   type: Method
   name_en: Constitutional AI
   name_de: Constitutional AI
   aliases:
   - RLAIF
+  summary_en: Constitutional AI trains a harmless AI assistant without human labels for harmful outputs; the only human oversight is a list of principles (Bai et al., 2022). In a supervised phase the model critiques and revises its own responses and is fine-tuned on the revisions; in a reinforcement learning phase an AI preference model provides the reward ("RL from AI Feedback"), producing an assistant that explains its objections instead of being evasive.
+  summary_de: Constitutional AI trainiert einen harmlosen KI-Assistenten ohne menschliche Labels für schädliche Ausgaben; die einzige menschliche Aufsicht ist eine Liste von Prinzipien (Bai et al., 2022). In einer überwachten Phase kritisiert und überarbeitet das Modell eigene Antworten und wird auf die Überarbeitungen feinjustiert; in einer Reinforcement-Learning-Phase liefert ein KI-Präferenzmodell die Belohnung („RL from AI Feedback“), sodass ein Assistent entsteht, der seine Einwände erklärt, statt auszuweichen.
+  sources:
+  - https://arxiv.org/abs/2212.08073
 - id: rlvr
   type: Method
   name_en: Reinforcement learning with verifiable rewards (RLVR)
   name_de: Reinforcement Learning mit überprüfbaren Belohnungen (RLVR)
   aliases:
   - RLVR
+  summary_en: Reinforcement learning with verifiable rewards (RLVR) is a post-training method introduced with the fully open Tulu 3 models, alongside supervised fine-tuning and Direct Preference Optimization (Lambert et al., 2024). Tulu 3, built on Llama 3.1 base models, surpassed the instruct versions of Llama 3.1, Qwen 2.5 and Mistral as well as GPT-4o-mini and Claude 3.5 Haiku, and its data, code and recipes were released.
+  summary_de: Reinforcement Learning with Verifiable Rewards (RLVR) ist ein Nachtrainingsverfahren, das mit den vollständig offenen Tulu-3-Modellen neben Supervised Fine-Tuning und Direct Preference Optimization eingeführt wurde (Lambert et al., 2024). Tulu 3 auf Basis von Llama 3.1 übertraf die Instruct-Versionen von Llama 3.1, Qwen 2.5 und Mistral sowie GPT-4o-mini und Claude 3.5 Haiku, und Daten, Code und Rezepte wurden veröffentlicht.
+  sources:
+  - https://arxiv.org/abs/2411.15124
 - id: bradley-terry-model
   type: Concept
   name_en: Bradley-Terry model
@@ -3135,10 +3183,18 @@ entities:
   type: Method
   name_en: TuckER
   name_de: TuckER
+  summary_en: TuckER is a linear model for knowledge graph link prediction based on the Tucker decomposition of the binary tensor of knowledge graph triples (Balažević et al., 2019). It outperformed earlier models on standard link prediction datasets, is fully expressive, and several earlier linear models are special cases of it.
+  summary_de: TuckER ist ein lineares Modell zur Linkvorhersage in Wissensgraphen auf Grundlage der Tucker-Zerlegung des binären Tensors der Tripel (Balažević et al., 2019). Es übertraf frühere Modelle auf Standarddatensätzen zur Linkvorhersage, ist voll ausdrucksstark, und mehrere frühere lineare Modelle sind Spezialfälle davon.
+  sources:
+  - https://arxiv.org/abs/1901.09590
 - id: conve
   type: Method
   name_en: ConvE
   name_de: ConvE
+  summary_en: ConvE is a multi-layer convolutional network for knowledge graph link prediction that is highly parameter-efficient, matching DistMult and R-GCN with 8 and 17 times fewer parameters (Dettmers et al., 2017). Its authors also showed that the WN18 and FB15k datasets suffer from test leakage through inverse relations and derived robust variants of commonly used datasets.
+  summary_de: ConvE ist ein mehrschichtiges Convolutional Network zur Linkvorhersage in Wissensgraphen, das sehr parametersparsam ist und DistMult und R-GCN mit 8- bzw. 17-mal weniger Parametern erreicht (Dettmers et al., 2017). Die Autoren zeigten außerdem, dass die Datensätze WN18 und FB15k über inverse Relationen Testdaten durchsickern lassen, und leiteten robuste Varianten gängiger Datensätze ab.
+  sources:
+  - https://arxiv.org/abs/1707.01476
 - id: rdf2vec
   type: Method
   name_en: RDF2Vec
@@ -3187,6 +3243,10 @@ entities:
   type: Method
   name_en: SummaC
   name_de: SummaC
+  summary_en: SummaC revisits natural language inference models for detecting factual inconsistencies between a summary and its source document; its method SummaCConv splits documents into sentences and aggregates sentence-pair NLI scores, resolving the mismatch between sentence-level NLI data and document-level detection (Laban et al., 2021). On the new SummaC benchmark of six datasets it reached 74.4% balanced accuracy.
+  summary_de: SummaC greift Modelle für Natural Language Inference wieder auf, um sachliche Widersprüche zwischen einer Zusammenfassung und ihrem Quelldokument zu erkennen; das Verfahren SummaCConv zerlegt Dokumente in Sätze und fasst NLI-Werte für Satzpaare zusammen und behebt so den Unterschied zwischen satzweisen NLI-Daten und Erkennung auf Dokumentebene (Laban et al., 2021). Auf dem neuen SummaC-Benchmark aus sechs Datensätzen erreichte es 74,4 % Balanced Accuracy.
+  sources:
+  - https://arxiv.org/abs/2111.09525
 - id: ward-cunningham
   type: Person
   name_en: Ward Cunningham
@@ -3257,12 +3317,20 @@ entities:
   type: Method
   name_en: LayoutLM
   name_de: LayoutLM
+  summary_en: LayoutLM pre-trains a model jointly on text and layout information from scanned document images, and also uses image features of words (Xu et al., 2019). It set new results on form understanding (from 70.72 to 79.27), receipt understanding and document image classification, useful for information extraction from scanned documents.
+  summary_de: LayoutLM trainiert ein Modell gemeinsam auf Text und Layout gescannter Dokumentbilder vor und nutzt zusätzlich Bildmerkmale der Wörter (Xu et al., 2019). Es erzielte neue Bestwerte beim Verständnis von Formularen (von 70,72 auf 79,27), Belegen und bei der Klassifikation von Dokumentbildern, nützlich für die Informationsextraktion aus gescannten Dokumenten.
+  sources:
+  - https://arxiv.org/abs/1912.13318
 - id: donut
   type: Method
   name_en: Donut
   name_de: Donut
   aliases:
   - Document understanding transformer
+  summary_en: 'Donut (Document understanding transformer) is an OCR-free model for visual document understanding: a Transformer reads document images such as invoices directly, avoiding the cost, inflexibility and error propagation of separate OCR engines (Kim et al., 2021). It reached state-of-the-art speed and accuracy on several document understanding tasks and comes with a synthetic data generator for other languages and domains.'
+  summary_de: 'Donut (Document understanding transformer) ist ein Modell für visuelles Dokumentverständnis ohne OCR: Ein Transformer liest Dokumentbilder wie Rechnungen direkt und vermeidet Kosten, Unflexibilität und Fehlerfortpflanzung separater OCR-Engines (Kim et al., 2021). Es erreichte Bestwerte bei Geschwindigkeit und Genauigkeit in mehreren Aufgaben des Dokumentverständnisses und bringt einen Generator synthetischer Daten für weitere Sprachen und Domänen mit.'
+  sources:
+  - https://arxiv.org/abs/2111.15664
 - id: docling
   type: Technology
   name_en: Docling
@@ -3281,14 +3349,26 @@ entities:
   name_de: YOLO
   aliases:
   - You Only Look Once
+  summary_en: YOLO (You Only Look Once) frames object detection as a single regression from full images to spatially separated bounding boxes and class probabilities, so one network can be optimised end to end (Redmon et al., 2015). The base model ran in real time at 45 frames per second; it made more localisation errors than other detectors but fewer false detections on background and generalised well from natural images to artwork.
+  summary_de: YOLO (You Only Look Once) fasst Objekterkennung als eine einzige Regression vom ganzen Bild auf räumlich getrennte Begrenzungsrahmen und Klassenwahrscheinlichkeiten auf, sodass ein einziges Netz durchgängig optimiert werden kann (Redmon et al., 2015). Das Basismodell lief in Echtzeit mit 45 Bildern pro Sekunde; es machte mehr Lokalisierungsfehler als andere Detektoren, aber weniger Fehlerkennungen im Hintergrund und generalisierte gut von Fotos auf Kunstwerke.
+  sources:
+  - https://arxiv.org/abs/1506.02640
 - id: mask-r-cnn
   type: Method
   name_en: Mask R-CNN
   name_de: Mask R-CNN
+  summary_en: Mask R-CNN is a framework for object instance segmentation that extends Faster R-CNN with a branch predicting a segmentation mask for each detected object in parallel with bounding-box recognition (He et al., 2017). It adds little overhead, generalises to tasks such as human pose estimation and outperformed all single-model entries in the COCO instance segmentation, detection and keypoint tracks.
+  summary_de: Mask R-CNN ist ein Framework für Instanzsegmentierung, das Faster R-CNN um einen Zweig ergänzt, der parallel zur Erkennung der Begrenzungsrahmen für jedes erkannte Objekt eine Segmentierungsmaske vorhersagt (He et al., 2017). Es verursacht wenig Mehraufwand, lässt sich auf Aufgaben wie Posenschätzung übertragen und übertraf alle Einzelmodelle in den COCO-Disziplinen Instanzsegmentierung, Detektion und Keypoints.
+  sources:
+  - https://arxiv.org/abs/1703.06870
 - id: u-net
   type: Method
   name_en: U-Net
   name_de: U-Net
+  summary_en: U-Net is a convolutional network for image segmentation with a contracting path that captures context and a symmetric expanding path that enables precise localisation, trained end to end with heavy data augmentation from very few images (Ronneberger et al., 2015). It won segmentation and cell tracking challenges in biomedical microscopy and segments a 512×512 image in under a second on a GPU.
+  summary_de: U-Net ist ein Convolutional Network für Bildsegmentierung mit einem verdichtenden Pfad, der Kontext erfasst, und einem symmetrischen erweiternden Pfad für genaue Lokalisierung, das mit starker Datenaugmentierung aus sehr wenigen Bildern durchgängig trainiert wird (Ronneberger et al., 2015). Es gewann Wettbewerbe zur Segmentierung und Zellverfolgung in der biomedizinischen Mikroskopie und segmentiert ein Bild mit 512×512 Pixeln auf einer GPU in unter einer Sekunde.
+  sources:
+  - https://arxiv.org/abs/1505.04597
 - id: nist
   type: Organisation
   name_en: NIST
@@ -3343,6 +3423,10 @@ entities:
   type: Method
   name_en: Llama Guard
   name_de: Llama Guard
+  summary_en: 'Llama Guard is an LLM-based input-output safeguard for human-AI conversations: a Llama 2 7B model instruction-tuned to classify both prompts and responses against a safety risk taxonomy (Inan et al., 2023). It matched or exceeded available content moderation tools on the OpenAI Moderation Evaluation dataset and ToxicChat, and its taxonomy can be adapted to a use case through zero-shot or few-shot prompting.'
+  summary_de: 'Llama Guard ist ein LLM-basierter Schutz für Ein- und Ausgaben in Gesprächen zwischen Menschen und KI: ein Llama-2-7B-Modell, das per Instruction Tuning darauf trainiert ist, Prompts und Antworten anhand einer Taxonomie von Sicherheitsrisiken zu klassifizieren (Inan et al., 2023). Auf dem OpenAI Moderation Evaluation Dataset und ToxicChat erreichte oder übertraf es verfügbare Moderationswerkzeuge, und seine Taxonomie lässt sich per Zero- oder Few-Shot-Prompting an einen Anwendungsfall anpassen.'
+  sources:
+  - https://arxiv.org/abs/2312.06674
 - id: nemo-guardrails
   type: Technology
   name_en: NeMo Guardrails
