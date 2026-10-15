@@ -647,10 +647,18 @@ entities:
   type: Method
   name_en: Propensity score
   name_de: Propensity Score
+  summary_en: The propensity score is the probability that a unit receives a treatment given its observed covariates (Rosenbaum and Rubin 1983). Adjusting for it is sufficient to remove bias due to all observed covariates, so it reduces adjustment for many covariates to a single score and can be used for matching, subclassification or regression adjustment in observational studies.
+  summary_de: Der Propensity Score ist die Wahrscheinlichkeit, dass eine Einheit eine Behandlung erhält, gegeben ihre beobachteten Kovariaten (Rosenbaum und Rubin 1983). Eine Adjustierung für ihn genügt, um Verzerrungen durch alle beobachteten Kovariaten zu beseitigen; er verdichtet die Adjustierung für viele Kovariaten so auf einen einzigen Wert und lässt sich in Beobachtungsstudien für Matching, Stratifizierung oder Regressionsadjustierung nutzen.
+  sources:
+  - https://doi.org/10.1093/biomet/70.1.41
 - id: instrumental-variables
   type: Method
   name_en: Instrumental variables
   name_de: Instrumentvariablen
+  summary_en: 'An instrumental variable affects whether a unit receives treatment but influences the outcome only through the treatment, which allows causal effects to be identified despite unobserved confounding or imperfect compliance (Angrist et al. 1996). Angrist, Imbens and Rubin embedded the approach in the potential-outcomes framework: under simple assumptions it identifies the average causal effect for compliers, illustrated with the Vietnam-era draft lottery as an instrument for veteran status.'
+  summary_de: 'Eine Instrumentvariable beeinflusst, ob eine Einheit behandelt wird, wirkt auf das Ergebnis aber nur über die Behandlung; das erlaubt es, kausale Effekte trotz unbeobachteter Störgrößen oder unvollständiger Befolgung zu identifizieren (Angrist et al. 1996). Angrist, Imbens und Rubin betten den Ansatz in das Potential-Outcomes-Modell ein: Unter einfachen Annahmen identifiziert er den durchschnittlichen kausalen Effekt für die Befolgenden (Compliers), illustriert mit der Wehrpflicht-Lotterie der Vietnamkriegszeit als Instrument für den Veteranenstatus.'
+  sources:
+  - https://doi.org/10.1080/01621459.1996.10476902
 - id: randomised-experiments
   type: Method
   name_en: Randomised experiment
@@ -658,10 +666,19 @@ entities:
   aliases:
   - randomized experiment
   - randomised controlled trial
+  summary_en: In a randomised experiment, treatment is assigned at random, so treated and untreated groups are comparable in expectation and differences in outcomes can be attributed to the treatment (Holland 1986; Hernán and Robins 2020). Randomised experiments are therefore the reference design for estimating causal effects.
+  summary_de: In einem randomisierten Experiment wird die Behandlung zufällig zugeteilt, sodass behandelte und unbehandelte Gruppen im Erwartungswert vergleichbar sind und Unterschiede im Ergebnis der Behandlung zugeschrieben werden können (Holland 1986; Hernán und Robins 2020). Randomisierte Experimente sind daher das Referenzdesign für die Schätzung kausaler Effekte.
+  sources:
+  - https://doi.org/10.1080/01621459.1986.10478354
+  - https://miguelhernan.org/whatifbook
 - id: structural-causal-model
   type: Method
   name_en: Structural causal model
   name_de: Strukturelles Kausalmodell
+  summary_en: The structural causal model (SCM) is Pearl's framework for causal inference, which combines structural equation models, the potential-outcome framework of Neyman and Rubin, and graphical models (Pearl 2009). Causal assumptions are expressed as structural equations and directed graphs, from which the effects of interventions, counterfactuals and testable implications such as conditional independencies (d-separation) can be derived.
+  summary_de: Das strukturelle Kausalmodell (SCM) ist Pearls Rahmenwerk für Kausalinferenz, das Strukturgleichungsmodelle, das Potential-Outcomes-Modell von Neyman und Rubin und graphische Modelle verbindet (Pearl 2009). Kausale Annahmen werden als Strukturgleichungen und gerichtete Graphen formuliert, aus denen sich Effekte von Interventionen, Kontrafaktische und prüfbare Folgerungen wie bedingte Unabhängigkeiten (d-Separation) ableiten lassen.
+  sources:
+  - https://doi.org/10.1214/09-SS057
 - id: potential-outcomes-model
   type: Concept
   name_en: Potential-outcomes model
@@ -858,6 +875,11 @@ entities:
   type: Method
   name_en: Code review
   name_de: Code Review
+  summary_en: A code review is a process in which someone other than the author examines a piece of code; Google uses it to maintain the quality of its code and products (Google Engineering Practices). Reviewers look at design, functionality, complexity, tests, naming, comments, style and documentation, with the overall design being the most important point.
+  summary_de: Ein Code Review ist ein Prozess, in dem jemand anderes als die Autorin oder der Autor ein Stück Code prüft; Google nutzt ihn, um die Qualität von Code und Produkten zu sichern (Google Engineering Practices). Geprüft werden Design, Funktionalität, Komplexität, Tests, Benennung, Kommentare, Stil und Dokumentation, wobei das Gesamtdesign der wichtigste Punkt ist.
+  sources:
+  - https://google.github.io/eng-practices/review/
+  - https://google.github.io/eng-practices/review/reviewer/looking-for.html
 - id: k-means
   type: Method
   name_en: k-means
@@ -2193,18 +2215,34 @@ entities:
   name_de: Open Information Extraction (Open IE)
   aliases:
   - Open IE
+  summary_en: Open information extraction (Open IE) is an extraction paradigm in which a system makes a single data-driven pass over a corpus and extracts a large set of relational tuples without requiring humans to name target relations, write rules or label training examples (Banko et al. 2007). This contrasts with traditional information extraction for narrow, pre-specified requests.
+  summary_de: Open Information Extraction (Open IE) ist ein Extraktionsparadigma, bei dem ein System in einem einzigen datengetriebenen Durchlauf über ein Korpus eine große Menge relationaler Tupel extrahiert, ohne dass Menschen Zielrelationen benennen, Regeln schreiben oder Trainingsbeispiele annotieren (Banko et al. 2007). Das unterscheidet sie von klassischer Informationsextraktion für enge, vorab festgelegte Anfragen.
+  sources:
+  - https://www.ijcai.org/Proceedings/07/Papers/429.pdf
 - id: textrunner
   type: Method
   name_en: TextRunner
   name_de: TextRunner
+  summary_en: TextRunner is a fully implemented, highly scalable Open IE system (Banko et al. 2007). It assigns probabilities to the extracted tuples and indexes them for queries; on a corpus of 9 million web pages it reduced errors by 33% compared with the web extraction system KnowItAll on a comparable set of extractions.
+  summary_de: TextRunner ist ein vollständig umgesetztes, hochskalierbares Open-IE-System (Banko et al. 2007). Es versieht die extrahierten Tupel mit Wahrscheinlichkeiten und indexiert sie für Abfragen; auf einem Korpus von 9 Millionen Webseiten verringerte es die Fehler gegenüber dem Websystem KnowItAll bei vergleichbaren Extraktionen um 33 %.
+  sources:
+  - https://www.ijcai.org/Proceedings/07/Papers/429.pdf
 - id: relation-extraction
   type: Method
   name_en: Relation extraction
   name_de: Relationsextraktion
+  summary_en: Relation extraction identifies relation triples (subject, relation, object) in raw text, for example to populate or validate knowledge bases or for fact checking (Huguet Cabot and Navigli 2021). Pipelines first recognise entities and then classify relations between them, which can propagate errors; end-to-end approaches solve both tasks together.
+  summary_de: Relationsextraktion erkennt Relationstripel (Subjekt, Relation, Objekt) in Rohtext, etwa um Wissensbasen zu befüllen oder zu prüfen oder für Faktenchecks (Huguet Cabot und Navigli 2021). Pipelines erkennen zuerst Entitäten und klassifizieren dann Relationen zwischen ihnen, wodurch sich Fehler fortpflanzen können; End-to-End-Ansätze lösen beide Aufgaben gemeinsam.
+  sources:
+  - https://aclanthology.org/2021.findings-emnlp.204/
 - id: rebel
   type: Method
   name_en: REBEL
   name_de: REBEL
+  summary_en: REBEL (Relation Extraction By End-to-end Language generation) is a sequence-to-sequence model based on BART that frames relation extraction as generating triples as text and covers more than 200 relation types (Huguet Cabot and Navigli 2021). It comes with a large distantly supervised dataset built with the help of a natural language inference model.
+  summary_de: REBEL (Relation Extraction By End-to-end Language generation) ist ein Sequence-to-Sequence-Modell auf Basis von BART, das Relationsextraktion als Erzeugung von Tripeln in Textform behandelt und mehr als 200 Relationstypen abdeckt (Huguet Cabot und Navigli 2021). Dazu gehört ein großer, per Distant Supervision erstellter Datensatz, der mithilfe eines Modells für Natural Language Inference aufgebaut wurde.
+  sources:
+  - https://aclanthology.org/2021.findings-emnlp.204/
 - id: bart
   type: Method
   name_en: BART
@@ -2299,6 +2337,10 @@ entities:
   type: Method
   name_en: Knowledge graph refinement
   name_de: Knowledge Graph Refinement
+  summary_en: Knowledge graph refinement covers methods that improve an existing knowledge graph by inferring and adding missing knowledge (completion) or identifying erroneous information (error detection) (Paulheim 2017). It addresses the trade-off between completeness and correctness in large graphs such as DBpedia, YAGO and Freebase.
+  summary_de: Knowledge-Graph-Refinement umfasst Methoden, die einen bestehenden Wissensgraphen verbessern, indem sie fehlendes Wissen ableiten und ergänzen (Vervollständigung) oder fehlerhafte Informationen erkennen (Fehlererkennung) (Paulheim 2017). Es betrifft den Zielkonflikt zwischen Vollständigkeit und Korrektheit großer Graphen wie DBpedia, YAGO und Freebase.
+  sources:
+  - https://doi.org/10.3233/SW-160218
 - id: helm
   type: Technology
   name_en: Helm
@@ -2698,10 +2740,18 @@ entities:
   type: Method
   name_en: Wilcoxon signed-ranks test
   name_de: Wilcoxon-Vorzeichen-Rang-Test
+  summary_en: The Wilcoxon signed-ranks test is a non-parametric alternative to the paired t-test (Demšar 2006). To compare two classifiers over several datasets, it ranks the absolute performance differences per dataset and compares the rank sums of positive and negative differences; Demšar recommends it for comparing two classifiers over multiple datasets.
+  summary_de: Der Wilcoxon-Vorzeichen-Rang-Test ist eine nicht parametrische Alternative zum gepaarten t-Test (Demšar 2006). Um zwei Klassifikatoren über mehrere Datensätze zu vergleichen, bringt er die absoluten Leistungsunterschiede je Datensatz in eine Rangfolge und vergleicht die Rangsummen positiver und negativer Unterschiede; Demšar empfiehlt ihn für den Vergleich zweier Klassifikatoren über mehrere Datensätze.
+  sources:
+  - https://jmlr.org/papers/v7/demsar06a.html
 - id: friedman-test
   type: Method
   name_en: Friedman test
   name_de: Friedman-Test
+  summary_en: The Friedman test is a non-parametric equivalent of repeated-measures ANOVA (Demšar 2006). It ranks the algorithms separately on each dataset and tests whether their average ranks differ, under the null hypothesis that all algorithms are equivalent; Demšar recommends it, with post-hoc tests, for comparing more than two classifiers over multiple datasets.
+  summary_de: Der Friedman-Test ist ein nicht parametrisches Gegenstück zur Varianzanalyse mit Messwiederholung (Demšar 2006). Er bringt die Algorithmen auf jedem Datensatz einzeln in eine Rangfolge und prüft, ob sich ihre mittleren Ränge unterscheiden, unter der Nullhypothese, dass alle Algorithmen gleichwertig sind; Demšar empfiehlt ihn mit Post-hoc-Tests für den Vergleich von mehr als zwei Klassifikatoren über mehrere Datensätze.
+  sources:
+  - https://jmlr.org/papers/v7/demsar06a.html
 - id: expected-validation-performance
   type: Method
   name_en: Expected validation performance
@@ -2795,6 +2845,10 @@ entities:
   name_de: Glorot-Initialisierung
   aliases:
   - Xavier initialisation
+  summary_en: Glorot initialisation (also called Xavier initialisation) draws the initial weights of a layer from a uniform distribution whose range depends on the number of units in that layer and the next, ±√6/√(n_j + n_{j+1}) (Glorot and Bengio 2010). It was proposed to keep activations and back-propagated gradients from shrinking or growing across the layers of deep networks at initialisation.
+  summary_de: Die Glorot-Initialisierung (auch Xavier-Initialisierung) zieht die Anfangsgewichte einer Schicht aus einer Gleichverteilung, deren Spannweite von der Zahl der Einheiten dieser und der nächsten Schicht abhängt, ±√6/√(n_j + n_{j+1}) (Glorot und Bengio 2010). Sie wurde vorgeschlagen, damit Aktivierungen und zurückpropagierte Gradienten bei der Initialisierung tiefer Netze nicht über die Schichten hinweg schrumpfen oder wachsen.
+  sources:
+  - https://proceedings.mlr.press/v9/glorot10a.html
 - id: he-initialisation
   type: Method
   name_en: He initialisation
@@ -2827,6 +2881,11 @@ entities:
   type: Method
   name_en: Deep learning
   name_de: Deep Learning
+  summary_en: Deep learning uses computational models with multiple processing layers that learn representations of data at multiple levels of abstraction (LeCun et al. 2015). The back-propagation algorithm indicates how the internal parameters of each layer should change; deep convolutional networks brought breakthroughs for images, video, speech and audio, and recurrent networks for sequential data such as text and speech.
+  summary_de: Deep Learning nutzt Rechenmodelle aus mehreren Verarbeitungsschichten, die Repräsentationen von Daten auf mehreren Abstraktionsebenen lernen (LeCun et al. 2015). Der Backpropagation-Algorithmus gibt an, wie die internen Parameter jeder Schicht angepasst werden; tiefe Faltungsnetze brachten Durchbrüche bei Bildern, Video, Sprache und Audio, rekurrente Netze bei sequenziellen Daten wie Text und gesprochener Sprache.
+  sources:
+  - https://doi.org/10.1038/nature14539
+  - https://www.deeplearningbook.org/
 - id: universal-approximation-theorem
   type: Concept
   name_en: Universal approximation theorem
@@ -3317,6 +3376,11 @@ entities:
   name_de: Long Short-Term Memory (LSTM)
   aliases:
   - LSTM
+  summary_en: Long short-term memory (LSTM) is a recurrent neural network architecture that addresses the decaying error flow that makes learning over long time intervals with recurrent back-propagation slow (Hochreiter and Schmidhuber 1997). Special units enforce constant error flow through so-called constant error carousels, and multiplicative gate units learn to open and close access to them, so that LSTM can bridge time lags of more than 1,000 steps.
+  summary_de: Long Short-Term Memory (LSTM) ist eine Architektur rekurrenter neuronaler Netze, die das Abklingen des Fehlersignals angeht, das Lernen über lange Zeitabstände mit rekurrenter Backpropagation verlangsamt (Hochreiter und Schmidhuber 1997). Spezielle Einheiten erzwingen einen konstanten Fehlerfluss durch sogenannte Constant Error Carousels, und multiplikative Gate-Einheiten lernen, den Zugang dazu zu öffnen und zu schließen, sodass LSTM Zeitabstände von mehr als 1.000 Schritten überbrücken kann.
+  sources:
+  - https://doi.org/10.1162/neco.1997.9.8.1735
+  - https://www.bioinf.jku.at/publications/older/2604.pdf
 - id: gru
   type: Method
   name_en: Gated recurrent unit (GRU)
@@ -3367,10 +3431,19 @@ entities:
   type: Method
   name_en: Dropout
   name_de: Dropout
+  summary_en: Dropout is a regularisation technique for neural networks that randomly drops units together with their connections during training, which prevents units from co-adapting too much (Srivastava et al. 2014). Training thus samples from an exponential number of thinned networks; at test time a single unthinned network with smaller weights approximates averaging their predictions.
+  summary_de: Dropout ist eine Regularisierungstechnik für neuronale Netze, die während des Trainings zufällig Einheiten samt ihren Verbindungen weglässt und so verhindert, dass sich Einheiten zu stark aneinander anpassen (Srivastava et al. 2014). Das Training zieht damit Stichproben aus exponentiell vielen ausgedünnten Netzen; zur Testzeit nähert ein einzelnes vollständiges Netz mit kleineren Gewichten den Mittelwert ihrer Vorhersagen an.
+  sources:
+  - https://jmlr.org/papers/v15/srivastava14a.html
 - id: early-stopping
   type: Method
   name_en: Early stopping
   name_de: Early Stopping
+  summary_en: Early stopping uses the error on a validation set, i.e. examples not used for training, to detect when overfitting starts during training and stops training before convergence (Prechelt 1998). In Prechelt's experiments with multi-layer perceptrons, slower stopping criteria improved generalisation slightly, by about 4% on average, but needed about four times as much training time.
+  summary_de: Early Stopping nutzt den Fehler auf einem Validierungsdatensatz, also auf nicht zum Training verwendeten Beispielen, um zu erkennen, wann während des Trainings Overfitting einsetzt, und bricht das Training vor der Konvergenz ab (Prechelt 1998). In Prechelts Experimenten mit mehrschichtigen Perzeptronen verbesserten langsamere Abbruchkriterien die Generalisierung leicht, im Mittel um etwa 4 %, kosteten aber etwa die vierfache Trainingszeit.
+  sources:
+  - https://doi.org/10.1007/3-540-49430-8_3
+  - https://page.mi.fu-berlin.de/prechelt/Biblio/stop_tricks1997.pdf
 - id: random-search
   type: Method
   name_en: Random search
@@ -3407,6 +3480,10 @@ entities:
   type: Method
   name_en: Q-learning
   name_de: Q-Learning
+  summary_en: Q-learning is a reinforcement learning method in which an agent learns to act optimally in Markovian domains by incrementally improving its estimates of the quality (Q-value) of particular actions in particular states (Watkins and Dayan 1992). It converges to the optimal action values with probability 1 as long as all actions are sampled repeatedly in all states and the values are represented discretely.
+  summary_de: Q-Learning ist ein Verfahren des Reinforcement Learning, bei dem ein Agent lernt, in Markov-Umgebungen optimal zu handeln, indem er schrittweise seine Schätzungen der Qualität (Q-Wert) bestimmter Aktionen in bestimmten Zuständen verbessert (Watkins und Dayan 1992). Es konvergiert mit Wahrscheinlichkeit 1 gegen die optimalen Aktionswerte, solange alle Aktionen in allen Zuständen wiederholt ausprobiert werden und die Werte diskret dargestellt sind.
+  sources:
+  - https://doi.org/10.1007/BF00992698
 - id: deep-q-learning
   type: Method
   name_en: Deep Q-learning (DQN)
@@ -3443,14 +3520,26 @@ entities:
   type: Method
   name_en: Window functions (SQL)
   name_de: Fensterfunktionen (SQL)
+  summary_en: A window function in SQL performs a calculation across a set of table rows that are related to the current row, similar to an aggregate function, but without grouping the rows into a single output row; each row keeps its identity (PostgreSQL documentation). The rows considered are defined in an OVER clause, for example with PARTITION BY.
+  summary_de: Eine Fensterfunktion in SQL führt eine Berechnung über eine Menge von Tabellenzeilen aus, die mit der aktuellen Zeile zusammenhängen, ähnlich wie eine Aggregatfunktion, fasst die Zeilen aber nicht zu einer einzigen Ausgabezeile zusammen; jede Zeile bleibt erhalten (PostgreSQL-Dokumentation). Welche Zeilen einbezogen werden, legt eine OVER-Klausel fest, etwa mit PARTITION BY.
+  sources:
+  - https://www.postgresql.org/docs/current/tutorial-window.html
 - id: common-table-expressions
   type: Method
   name_en: Common table expressions (CTEs)
   name_de: Common Table Expressions (CTEs)
+  summary_en: Common table expressions (CTEs) are auxiliary statements in a SQL WITH clause that act like temporary tables existing only for one query (PostgreSQL documentation). They break complicated queries into simpler parts, and recursive CTEs are typically used for hierarchical or tree-structured data.
+  summary_de: Common Table Expressions (CTEs) sind Hilfsanweisungen in einer WITH-Klausel von SQL, die wie temporäre Tabellen wirken, die nur für eine Abfrage existieren (PostgreSQL-Dokumentation). Sie zerlegen komplizierte Abfragen in einfachere Teile; rekursive CTEs werden typischerweise für hierarchische oder baumartige Daten genutzt.
+  sources:
+  - https://www.postgresql.org/docs/current/queries-with.html
 - id: database-index
   type: Method
   name_en: Database index
   name_de: Datenbankindex
+  summary_en: A database index is an auxiliary structure that lets the database system locate matching rows without scanning the entire table row by row, for example by walking a few levels of a search tree (PostgreSQL documentation). Like the index of a book, it speeds up frequent lookups; because it has to be kept synchronised with the table, it adds overhead to data changes.
+  summary_de: Ein Datenbankindex ist eine Hilfsstruktur, mit der das Datenbanksystem passende Zeilen findet, ohne die ganze Tabelle Zeile für Zeile zu durchsuchen, etwa indem es wenige Ebenen eines Suchbaums durchläuft (PostgreSQL-Dokumentation). Wie das Register eines Buchs beschleunigt er häufige Suchen, muss aber mit der Tabelle synchron gehalten werden, was Datenänderungen verlangsamt.
+  sources:
+  - https://www.postgresql.org/docs/current/indexes-intro.html
 - id: bootstrap
   type: Method
   name_en: Bootstrap
@@ -3515,6 +3604,10 @@ entities:
   type: Method
   name_en: ROUGE
   name_de: ROUGE
+  summary_en: ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of measures for automatically evaluating summaries by counting overlapping units such as n-grams, word sequences and word pairs between a generated summary and human reference summaries (Lin 2004). The original package introduced ROUGE-N, ROUGE-L, ROUGE-W and ROUGE-S.
+  summary_de: ROUGE (Recall-Oriented Understudy for Gisting Evaluation) ist eine Gruppe von Maßen zur automatischen Bewertung von Zusammenfassungen, die überlappende Einheiten wie N-Gramme, Wortfolgen und Wortpaare zwischen einer erzeugten Zusammenfassung und menschlichen Referenzzusammenfassungen zählen (Lin 2004). Das ursprüngliche Paket führte ROUGE-N, ROUGE-L, ROUGE-W und ROUGE-S ein.
+  sources:
+  - https://aclanthology.org/W04-1013/
 - id: exponential-smoothing
   type: Method
   name_en: Exponential smoothing (ETS)
@@ -3982,6 +4075,10 @@ entities:
   type: Method
   name_en: Dataflow Model
   name_de: Dataflow-Modell
+  summary_en: The Dataflow Model is Google's processing model for unbounded, unordered, large-scale datasets (Akidau et al. 2015). It assumes that one never knows whether all data has been seen, and offers principled abstractions, such as event-time windowing, that let practitioners choose trade-offs between correctness, latency and cost; it describes the processing model of Google Cloud Dataflow, based on FlumeJava and MillWheel.
+  summary_de: Das Dataflow Model ist Googles Verarbeitungsmodell für unbegrenzte, ungeordnete, sehr große Datenbestände (Akidau et al. 2015). Es geht davon aus, dass nie sicher ist, ob alle Daten eingetroffen sind, und bietet grundlegende Abstraktionen wie Fenster nach Ereigniszeit, mit denen Praktiker Zielkonflikte zwischen Korrektheit, Latenz und Kosten abwägen; es beschreibt das Verarbeitungsmodell von Google Cloud Dataflow, das auf FlumeJava und MillWheel aufbaut.
+  sources:
+  - https://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf
 - id: oauth-2-0
   type: Technology
   name_en: OAuth 2.0
