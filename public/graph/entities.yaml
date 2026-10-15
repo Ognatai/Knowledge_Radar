@@ -28,6 +28,11 @@ entities:
   type: Method
   name_en: Personalized PageRank
   name_de: Personalized PageRank
+  summary_en: Personalised PageRank biases the random surfer's teleport step towards a chosen set of nodes instead of all nodes, so that the steady state reflects importance relative to these nodes (Manning et al. 2008). For a user with mixed interests it can be computed as a linear combination of topic-specific PageRank vectors; HippoRAG uses Personalized PageRank over a knowledge graph for retrieval (Gutiérrez et al. 2024).
+  summary_de: Personalisierter PageRank lenkt den Teleport-Schritt des Zufallssurfers auf eine gewählte Knotenmenge statt auf alle Knoten, sodass der stationäre Zustand die Wichtigkeit relativ zu diesen Knoten abbildet (Manning et al. 2008). Für Nutzende mit gemischten Interessen lässt er sich als Linearkombination themenspezifischer PageRank-Vektoren berechnen; HippoRAG nutzt Personalized PageRank über einem Wissensgraphen für das Retrieval (Gutiérrez et al. 2024).
+  sources:
+  - https://nlp.stanford.edu/IR-book/html/htmledition/topic-specific-pagerank-1.html
+  - https://arxiv.org/abs/2405.14831
 - id: ircot
   type: Method
   name_en: IRCoT
@@ -111,6 +116,10 @@ entities:
   type: Method
   name_en: Masked language modelling
   name_de: Masked Language Modelling
+  summary_en: Masked language modelling is a pre-training objective in which some input tokens are masked at random and the model predicts the original tokens from their left and right context, inspired by the Cloze task (Devlin et al. 2019). BERT selects 15% of the token positions; of these, 80% are replaced by a [MASK] token, 10% by a random token and 10% stay unchanged, to reduce the mismatch with fine-tuning, where [MASK] does not occur.
+  summary_de: Masked Language Modelling ist ein Vortrainingsziel, bei dem zufällig einige Eingabetokens maskiert werden und das Modell die ursprünglichen Tokens aus ihrem linken und rechten Kontext vorhersagt, angelehnt an den Cloze-Test (Devlin et al. 2019). BERT wählt 15 % der Tokenpositionen aus; davon werden 80 % durch ein [MASK]-Token, 10 % durch ein zufälliges Token ersetzt und 10 % bleiben unverändert, um den Unterschied zum Fine-Tuning zu verringern, in dem [MASK] nicht vorkommt.
+  sources:
+  - https://arxiv.org/abs/1810.04805
 - id: flashattention
   type: Method
   name_en: FlashAttention
@@ -2410,6 +2419,10 @@ entities:
   type: Method
   name_en: Gemini
   name_de: Gemini
+  summary_en: Gemini is a family of multimodal models from Google that understand image, audio, video and text, introduced in sizes Ultra, Pro and Nano for uses from complex reasoning to on-device applications (Gemini Team 2023). According to the technical report, Gemini Ultra advanced the state of the art on 30 of 32 benchmarks examined and was the first model to reach human-expert performance on MMLU.
+  summary_de: Gemini ist eine Familie multimodaler Modelle von Google, die Bild, Audio, Video und Text verarbeiten; sie wurde in den Größen Ultra, Pro und Nano für Anwendungen vom komplexen Schlussfolgern bis zum Einsatz auf Endgeräten vorgestellt (Gemini Team 2023). Laut technischem Bericht verbesserte Gemini Ultra den Stand der Technik in 30 von 32 untersuchten Benchmarks und erreichte als erstes Modell Leistung auf dem Niveau menschlicher Fachleute im MMLU.
+  sources:
+  - https://arxiv.org/abs/2312.11805
 - id: mistral-models
   type: Method
   name_en: Mistral models
@@ -2482,14 +2495,26 @@ entities:
   type: Method
   name_en: Model routing
   name_de: Model Routing
+  summary_en: Model routing selects for each request which language model answers it, for example a weaker, cheaper model for easy requests and a stronger one for hard requests (Ong et al. 2024). RouteLLM trains such routers on human preference data and reduced costs by more than half in some cases without lowering response quality; the routers kept their performance when the strong and weak models were swapped at test time.
+  summary_de: Model Routing wählt für jede Anfrage aus, welches Sprachmodell sie beantwortet, etwa ein schwächeres, günstigeres Modell für einfache und ein stärkeres für schwierige Anfragen (Ong et al. 2024). RouteLLM trainiert solche Router auf menschlichen Präferenzdaten und senkte die Kosten in einigen Fällen auf weniger als die Hälfte, ohne die Antwortqualität zu verringern; die Router behielten ihre Leistung, als starkes und schwaches Modell zur Testzeit ausgetauscht wurden.
+  sources:
+  - https://arxiv.org/abs/2406.18665
 - id: llm-cascade
   type: Method
   name_en: LLM cascade
   name_de: LLM-Kaskade
+  summary_en: An LLM cascade sends a query to a sequence of language models, typically starting with cheaper ones, and only passes it on to more expensive models when needed (Chen et al. 2023). Chen et al. name cascades as one of three cost strategies alongside prompt adaptation and LLM approximation; their FrugalGPT learns which combinations of LLMs to use per query and matched the best single model with up to 98% lower cost in their experiments.
+  summary_de: Eine LLM-Kaskade schickt eine Anfrage an eine Folge von Sprachmodellen, meist beginnend mit günstigeren, und reicht sie nur bei Bedarf an teurere Modelle weiter (Chen et al. 2023). Chen et al. nennen Kaskaden neben Prompt-Anpassung und LLM-Approximation als eine von drei Kostenstrategien; ihr FrugalGPT lernt, welche Kombinationen von LLMs pro Anfrage genutzt werden, und erreichte in ihren Experimenten die Leistung des besten Einzelmodells bei bis zu 98 % geringeren Kosten.
+  sources:
+  - https://arxiv.org/abs/2305.05176
 - id: prompt-caching
   type: Method
   name_en: Prompt caching
   name_de: Prompt Caching
+  summary_en: Prompt caching lets an LLM API resume processing from a cached prefix of a prompt, which reduces processing time and cost for repeated tasks or prompts with constant parts (Anthropic documentation). In the Claude API it is enabled either automatically with one cache_control field per request or with explicit cache breakpoints on individual content blocks.
+  summary_de: Prompt Caching erlaubt einer LLM-API, die Verarbeitung ab einem zwischengespeicherten Präfix eines Prompts fortzusetzen, was Verarbeitungszeit und Kosten bei wiederkehrenden Aufgaben oder Prompts mit gleichbleibenden Teilen senkt (Anthropic-Dokumentation). In der Claude-API wird es entweder automatisch mit einem cache_control-Feld pro Anfrage oder mit expliziten Cache-Breakpoints an einzelnen Inhaltsblöcken aktiviert.
+  sources:
+  - https://platform.claude.com/docs/en/build-with-claude/prompt-caching
 - id: semantic-caching
   type: Method
   name_en: Semantic caching
@@ -2498,6 +2523,10 @@ entities:
   type: Method
   name_en: Batching of LLM requests
   name_de: Batching von LLM-Anfragen
+  summary_en: Batching submits many LLM requests together for asynchronous processing instead of answering each immediately, which suits bulk data processing and large evaluations (Anthropic documentation). Anthropic's Message Batches API reduces costs by 50%, and most batches finish in less than one hour.
+  summary_de: Beim Batching werden viele LLM-Anfragen gemeinsam zur asynchronen Verarbeitung eingereicht, statt jede sofort zu beantworten; das eignet sich für Massendatenverarbeitung und große Evaluationen (Anthropic-Dokumentation). Die Message Batches API von Anthropic senkt die Kosten um 50 %, und die meisten Batches sind in weniger als einer Stunde abgeschlossen.
+  sources:
+  - https://platform.claude.com/docs/en/build-with-claude/batch-processing
 - id: helm-framework
   type: Method
   name_en: HELM (Holistic Evaluation of Language Models)
@@ -2512,6 +2541,10 @@ entities:
   type: Method
   name_en: Crowdsourced pairwise comparison
   name_de: Crowdsourcing-Paarvergleich
+  summary_en: In crowdsourced pairwise comparison, many users compare the answers of two systems to the same input and vote for the one they prefer; a statistical model then turns the votes into a ranking (Chiang et al. 2024). Chatbot Arena uses this approach with anonymous models whose identities are revealed only after the vote, and estimates rankings with the Bradley-Terry model, among other methods.
+  summary_de: Beim crowdgestützten Paarvergleich vergleichen viele Nutzende die Antworten zweier Systeme auf dieselbe Eingabe und stimmen für die bevorzugte; ein statistisches Modell macht daraus eine Rangfolge (Chiang et al. 2024). Chatbot Arena nutzt dieses Vorgehen mit anonymen Modellen, deren Identität erst nach der Abstimmung offengelegt wird, und schätzt Rangfolgen unter anderem mit dem Bradley-Terry-Modell.
+  sources:
+  - https://arxiv.org/abs/2403.04132
 - id: langfuse
   type: Technology
   name_en: Langfuse
@@ -2605,6 +2638,10 @@ entities:
   type: Method
   name_en: Loss scaling
   name_de: Loss Scaling
+  summary_en: Loss scaling is a technique of mixed precision training that multiplies the loss by a factor before back-propagation so that small gradient values are not lost in the limited numerical range of half-precision numbers (Micikevicius et al. 2018). It is combined with a single-precision master copy of the weights that accumulates the gradient updates.
+  summary_de: Loss Scaling ist eine Technik des Mixed-Precision-Trainings, die den Loss vor der Backpropagation mit einem Faktor multipliziert, damit kleine Gradientenwerte im begrenzten Zahlenbereich von Halbpräzisionszahlen nicht verloren gehen (Micikevicius et al. 2018). Es wird mit einer Masterkopie der Gewichte in einfacher Genauigkeit kombiniert, in der die Gradientenaktualisierungen aufsummiert werden.
+  sources:
+  - https://arxiv.org/abs/1710.03740
 - id: eight-bit-optimisers
   type: Method
   name_en: 8-bit optimisers
@@ -2629,6 +2666,10 @@ entities:
   name_de: SMOTE (Synthetic Minority Over-sampling Technique)
   aliases:
   - SMOTE
+  summary_en: SMOTE (Synthetic Minority Over-sampling Technique) addresses imbalanced classification data by creating synthetic examples of the minority class instead of only duplicating existing ones (Chawla et al. 2002). Combined with under-sampling of the majority class, it achieved better classifier performance in ROC space than under-sampling alone in the authors' experiments.
+  summary_de: SMOTE (Synthetic Minority Over-sampling Technique) behandelt unausgewogene Klassifikationsdaten, indem synthetische Beispiele der Minderheitsklasse erzeugt werden, statt nur vorhandene zu duplizieren (Chawla et al. 2002). In Kombination mit Unterabtastung der Mehrheitsklasse erreichte es in den Experimenten der Autoren eine bessere Klassifikationsleistung im ROC-Raum als Unterabtastung allein.
+  sources:
+  - https://doi.org/10.1613/jair.953
 - id: devops
   type: Method
   name_en: DevOps
@@ -2705,6 +2746,10 @@ entities:
   type: Method
   name_en: Contrastive learning
   name_de: Kontrastives Lernen
+  summary_en: Contrastive learning trains representations so that matching pairs end up similar and non-matching pairs dissimilar. CLIP trains an image encoder and a text encoder to maximise the cosine similarity of the real image–text pairs in a batch and minimise it for all incorrect pairings, learning on 400 million image–text pairs from the internet; natural language can then refer to visual concepts, which enables zero-shot transfer to new tasks (Radford et al. 2021).
+  summary_de: Kontrastives Lernen trainiert Repräsentationen so, dass zusammengehörige Paare ähnlich und nicht zusammengehörige unähnlich werden. CLIP trainiert einen Bild- und einen Text-Encoder darauf, die Kosinusähnlichkeit der echten Bild-Text-Paare eines Batches zu maximieren und die aller falschen Paarungen zu minimieren, mit 400 Millionen Bild-Text-Paaren aus dem Internet; dadurch lässt sich anschließend mit natürlicher Sprache auf visuelle Konzepte verweisen, was Zero-Shot-Transfer auf neue Aufgaben ermöglicht (Radford et al. 2021).
+  sources:
+  - https://arxiv.org/abs/2103.00020
 - id: mean-absolute-error
   type: Method
   name_en: Mean absolute error (MAE)
@@ -3527,6 +3572,10 @@ entities:
   name_de: Google Neural Machine Translation (GNMT)
   aliases:
   - GNMT
+  summary_en: Google's Neural Machine Translation system (GNMT) is a deep LSTM network with eight encoder and eight decoder layers, attention and residual connections (Wu et al. 2016). To handle rare words it splits words into a limited set of common sub-word units called wordpieces; in human side-by-side evaluation it reduced translation errors by an average of 60% compared with Google's phrase-based production system.
+  summary_de: Googles Neural Machine Translation System (GNMT) ist ein tiefes LSTM-Netz mit acht Encoder- und acht Decoder-Schichten, Attention und Residualverbindungen (Wu et al. 2016). Für seltene Wörter zerlegt es Wörter in eine begrenzte Menge häufiger Teilworteinheiten, sogenannte Wordpieces; in einer menschlichen Gegenüberstellung verringerte es die Übersetzungsfehler im Mittel um 60 % gegenüber Googles phrasenbasiertem Produktivsystem.
+  sources:
+  - https://arxiv.org/abs/1609.08144
 - id: transh
   type: Method
   name_en: TransH
@@ -3593,6 +3642,10 @@ entities:
   type: Dataset
   name_en: CoNLL-2003
   name_de: CoNLL-2003
+  summary_en: CoNLL-2003 is the shared task and dataset on language-independent named entity recognition at the Conference on Computational Natural Language Learning 2003, with English and German data (Tjong Kim Sang and De Meulder 2003). It is one of the standard benchmarks for named entity recognition.
+  summary_de: CoNLL-2003 ist die Shared Task samt Datensatz zur sprachunabhängigen Eigennamenerkennung der Conference on Computational Natural Language Learning 2003, mit englischen und deutschen Daten (Tjong Kim Sang und De Meulder 2003). Sie ist einer der Standard-Benchmarks für die Eigennamenerkennung.
+  sources:
+  - https://aclanthology.org/W03-0419/
 - id: dbpedia
   type: Dataset
   name_en: DBpedia
@@ -3651,6 +3704,10 @@ entities:
   type: Technology
   name_en: Chatbot Arena
   name_de: Chatbot Arena
+  summary_en: Chatbot Arena is an open platform for evaluating LLMs by human preference (Chiang et al. 2024). Users enter any prompt, receive answers from two anonymous models and vote for the better one; the models' identities are revealed only after voting. Rankings are estimated with statistical methods such as the Bradley-Terry model, and the authors found the crowdsourced votes to agree well with expert ratings.
+  summary_de: Chatbot Arena ist eine offene Plattform zur Bewertung von LLMs anhand menschlicher Präferenzen (Chiang et al. 2024). Nutzende geben einen beliebigen Prompt ein, erhalten Antworten von zwei anonymen Modellen und stimmen für die bessere; die Identität der Modelle wird erst nach der Abstimmung offengelegt. Rangfolgen werden mit statistischen Verfahren wie dem Bradley-Terry-Modell geschätzt, und die Crowd-Stimmen stimmten nach Angaben der Autoren gut mit Expertenurteilen überein.
+  sources:
+  - https://arxiv.org/abs/2403.04132
 - id: squad
   type: Dataset
   name_en: SQuAD
@@ -3777,6 +3834,10 @@ entities:
   type: Method
   name_en: RelD
   name_de: RelD
+  summary_en: RelD is a discriminator for detecting hallucinations in answers generated by large language models (Chen et al. 2023). It is trained on RelQA, a bilingual question-answering dialogue dataset with LLM-generated answers, and detected hallucinations in answers from different LLMs on in-distribution and out-of-distribution data.
+  summary_de: RelD ist ein Diskriminator, der Halluzinationen in Antworten großer Sprachmodelle erkennt (Chen et al. 2023). Er wird auf RelQA trainiert, einem zweisprachigen Question-Answering-Dialogdatensatz mit von LLMs erzeugten Antworten, und erkannte Halluzinationen in Antworten verschiedener LLMs auf Daten innerhalb und außerhalb der Trainingsverteilung.
+  sources:
+  - https://arxiv.org/abs/2407.04121
 - id: grounding-probe
   type: Method
   name_en: Grounding Probe
@@ -3789,6 +3850,10 @@ entities:
   type: Dataset
   name_en: PARCEL
   name_de: PARCEL
+  summary_en: PARCEL is a benchmark for checking whether legal claims are supported by the cited authority (Demir and Canbaz 2026). It contains 3,396 claims about recent decisions of the New York State Court of Appeals labelled as Supported, Refuted or Not Found and treats the task as three-way natural language inference; the best LLMs reached up to 0.97 accuracy zero-shot but still marked unsupported claims as supported.
+  summary_de: PARCEL ist ein Benchmark, der prüft, ob juristische Aussagen von der zitierten Quelle gestützt werden (Demir und Canbaz 2026). Er enthält 3.396 Aussagen über neuere Entscheidungen des New York State Court of Appeals mit den Labels Supported, Refuted oder Not Found und behandelt die Aufgabe als dreistufige Natural Language Inference; die besten LLMs erreichten zero-shot bis zu 0,97 Accuracy, markierten aber weiterhin nicht gestützte Aussagen als gestützt.
+  sources:
+  - https://arxiv.org/abs/2610.10971
 - id: next-sentence-prediction
   type: Method
   name_en: Next sentence prediction (NSP)
@@ -3889,6 +3954,10 @@ entities:
   type: Method
   name_en: PARADISE (dialogue evaluation framework)
   name_de: PARADISE (Framework zur Dialogevaluation)
+  summary_en: PARADISE (PARAdigm for DIalogue System Evaluation) is a general framework for evaluating spoken dialogue agents (Walker et al. 1997). It separates task requirements from an agent's dialogue behaviour, supports comparing dialogue strategies, computes performance for subdialogues and whole dialogues, determines how much various factors contribute to performance and normalises for task complexity, so that agents for different tasks can be compared.
+  summary_de: PARADISE (PARAdigm for DIalogue System Evaluation) ist ein allgemeines Framework zur Evaluation gesprochener Dialogagenten (Walker et al. 1997). Es trennt die Aufgabenanforderungen vom Dialogverhalten eines Agenten, ermöglicht den Vergleich von Dialogstrategien, berechnet die Leistung für Teildialoge und ganze Dialoge, bestimmt den Beitrag verschiedener Faktoren zur Leistung und normalisiert nach Aufgabenkomplexität, sodass sich Agenten für unterschiedliche Aufgaben vergleichen lassen.
+  sources:
+  - https://arxiv.org/abs/cmp-lg/9704004
 - id: apache-kafka
   type: Technology
   name_en: Apache Kafka
@@ -3953,6 +4022,10 @@ entities:
   type: Technology
   name_en: SQL/PGQ
   name_de: SQL/PGQ
+  summary_en: SQL/PGQ (Property Graph Queries) is a part of the ISO SQL standard that defines graph views over a tabular SQL schema and runs read-only graph queries against them (Deutsch et al. 2021). Its core, a graph pattern matching language, is shared with the property graph query language GQL; both are developed by the ISO/IEC JTC1 SC32 working group WG3.
+  summary_de: SQL/PGQ (Property Graph Queries) ist ein Teil des ISO-SQL-Standards, der Graphsichten über ein tabellarisches SQL-Schema definiert und darauf nur lesende Graphabfragen ausführt (Deutsch et al. 2021). Sein Kern, eine Sprache für Graph-Pattern-Matching, ist mit der Property-Graph-Abfragesprache GQL identisch; beide werden von der Arbeitsgruppe WG3 von ISO/IEC JTC1 SC32 entwickelt.
+  sources:
+  - https://arxiv.org/abs/2112.06217
 - id: neo4j-graph-data-science
   type: Technology
   name_en: Neo4j Graph Data Science (GDS)
@@ -4016,10 +4089,19 @@ entities:
   type: Concept
   name_en: Bradley-Terry model
   name_de: Bradley-Terry-Modell
+  summary_en: The Bradley-Terry model is a statistical model for paired comparisons in which each item has a positive strength parameter and the probability that one item is preferred over another depends on their relative strengths (Bradley and Terry 1952). It is used, for example, to turn pairwise human votes between LLMs into a ranking in Chatbot Arena (Chiang et al. 2024).
+  summary_de: Das Bradley-Terry-Modell ist ein statistisches Modell für Paarvergleiche, in dem jedes Objekt einen positiven Stärkeparameter hat und die Wahrscheinlichkeit, dass ein Objekt einem anderen vorgezogen wird, von ihren relativen Stärken abhängt (Bradley und Terry 1952). Es wird zum Beispiel in Chatbot Arena genutzt, um paarweise menschliche Abstimmungen zwischen LLMs in eine Rangfolge zu überführen (Chiang et al. 2024).
+  sources:
+  - https://doi.org/10.2307/2334029
+  - https://arxiv.org/abs/2403.04132
 - id: deepseek-r1
   type: Technology
   name_en: DeepSeek-R1
   name_de: DeepSeek-R1
+  summary_en: DeepSeek-R1 is a DeepSeek-AI language model whose reasoning abilities were developed through reinforcement learning without human-labelled reasoning trajectories (DeepSeek-AI 2025). The authors report emergent reasoning patterns such as self-reflection and verification, strong results on verifiable tasks in mathematics, programming competitions and STEM, and transfer of these patterns to smaller models; the work was published in Nature.
+  summary_de: DeepSeek-R1 ist ein Sprachmodell von DeepSeek-AI, dessen Fähigkeiten zum schlussfolgernden Denken durch Reinforcement Learning ohne von Menschen annotierte Denkwege entwickelt wurden (DeepSeek-AI 2025). Die Autoren berichten von emergenten Denkmustern wie Selbstreflexion und Verifikation, starken Ergebnissen bei überprüfbaren Aufgaben in Mathematik, Programmierwettbewerben und MINT-Fächern und von der Übertragung dieser Muster auf kleinere Modelle; die Arbeit erschien in Nature.
+  sources:
+  - https://arxiv.org/abs/2501.12948
 - id: perplexity
   type: Concept
   name_en: Perplexity
@@ -4139,6 +4221,10 @@ entities:
   type: Method
   name_en: RESCAL
   name_de: RESCAL
+  summary_en: RESCAL is a tensor decomposition model for knowledge graph embeddings that represents each relation as a matrix, so that it can capture edge direction, at a higher cost than DistMult, which uses one vector per relation (Hogan et al. 2021).
+  summary_de: RESCAL ist ein Tensorzerlegungsmodell für Knowledge-Graph-Embeddings, das jede Relation als Matrix darstellt und dadurch die Kantenrichtung erfassen kann, zu höheren Kosten als DistMult, das einen Vektor pro Relation nutzt (Hogan et al. 2021).
+  sources:
+  - https://arxiv.org/abs/2003.02320
 - id: tucker
   type: Method
   name_en: TuckER
@@ -4159,6 +4245,10 @@ entities:
   type: Method
   name_en: RDF2Vec
   name_de: RDF2Vec
+  summary_en: RDF2Vec is a language-based knowledge graph embedding method that generates random walks over an RDF graph and feeds them as "sentences" into word2vec to learn vectors for entities (Hogan et al. 2021).
+  summary_de: RDF2Vec ist eine sprachbasierte Methode für Knowledge-Graph-Embeddings, die Zufallspfade über einen RDF-Graphen erzeugt und sie als „Sätze“ in word2vec einspeist, um Vektoren für Entitäten zu lernen (Hogan et al. 2021).
+  sources:
+  - https://arxiv.org/abs/2003.02320
 - id: pykeen
   type: Technology
   name_en: PyKEEN
@@ -4171,10 +4261,18 @@ entities:
   type: Dataset
   name_en: FB15K-237
   name_de: FB15K-237
+  summary_en: FB15K-237 is a link prediction benchmark derived from the Freebase-based dataset FB15K by Toutanova and Chen (2015). They kept only one relation of each group of near-duplicate or inverse relations, leaving 237 relations, and removed test triples whose entity pairs were directly linked in the training data, to obtain a more realistic dataset without trivially entailed facts.
+  summary_de: FB15K-237 ist ein Benchmark für Link Prediction, den Toutanova und Chen (2015) aus dem Freebase-basierten Datensatz FB15K abgeleitet haben. Sie behielten von jeder Gruppe nahezu doppelter oder inverser Relationen nur eine, sodass 237 Relationen übrig blieben, und entfernten Testtripel, deren Entitätenpaare in den Trainingsdaten direkt verbunden waren, um einen realistischeren Datensatz ohne trivial ableitbare Fakten zu erhalten.
+  sources:
+  - https://aclanthology.org/W15-4007/
 - id: wn18rr
   type: Dataset
   name_en: WN18RR
   name_de: WN18RR
+  summary_en: WN18RR is a WordNet-based link prediction benchmark that Dettmers et al. (2018) derived from WN18 after showing that a simple rule-based model exploiting inverse relations reached state-of-the-art results on WN18 and FB15K. It contains 93,003 triples with 40,943 entities and 11 relations, and the authors recommend it, FB15K-237 and YAGO3-10 instead of WN18 and FB15K.
+  summary_de: WN18RR ist ein WordNet-basierter Benchmark für Link Prediction, den Dettmers et al. (2018) aus WN18 abgeleitet haben, nachdem ein einfaches regelbasiertes Modell, das inverse Relationen ausnutzt, auf WN18 und FB15K State-of-the-Art-Ergebnisse erzielt hatte. Er umfasst 93.003 Tripel mit 40.943 Entitäten und 11 Relationen; die Autoren empfehlen ihn, FB15K-237 und YAGO3-10 anstelle von WN18 und FB15K.
+  sources:
+  - https://arxiv.org/abs/1707.01476
 - id: tim-berners-lee
   type: Person
   name_en: Tim Berners-Lee
