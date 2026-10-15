@@ -77,6 +77,10 @@ entities:
   type: Concept
   name_en: Intrinsic dimension
   name_de: Intrinsische Dimension
+  summary_en: The intrinsic dimension of a fine-tuning problem is the size of the smallest low-dimensional reparameterisation that is as effective as the full parameter space (Aghajanyan et al., 2020). Pre-trained language models have a very low intrinsic dimension; for example, optimising only 200 parameters projected into the full space reached 90% of full performance with RoBERTa on MRPC.
+  summary_de: Die intrinsische Dimension eines Fine-Tuning-Problems ist die Größe der kleinsten niedrigdimensionalen Umparametrisierung, die so wirksam ist wie der volle Parameterraum (Aghajanyan et al., 2020). Vortrainierte Sprachmodelle haben eine sehr niedrige intrinsische Dimension; etwa erreichte die Optimierung von nur 200 in den vollen Raum projizierten Parametern mit RoBERTa auf MRPC 90 % der vollen Leistung.
+  sources:
+  - https://arxiv.org/abs/2012.13255
 - id: weight-decomposed-low-rank-adaptation
   type: Method
   name_en: DoRA (Weight-Decomposed Low-Rank Adaptation)
@@ -649,6 +653,10 @@ entities:
   type: Concept
   name_en: Counterfactual fairness
   name_de: Counterfactual Fairness
+  summary_en: 'Counterfactual fairness uses causal inference to define fairness towards an individual: a decision is fair if it is the same in the actual world and in a counterfactual world in which the individual belonged to a different demographic group (Kusner et al., 2017). The authors demonstrated it on predicting success in law school.'
+  summary_de: 'Kontrafaktische Fairness nutzt kausale Inferenz, um Fairness gegenüber einer Person zu bestimmen: Eine Entscheidung ist fair, wenn sie in der tatsächlichen Welt und in einer kontrafaktischen Welt, in der die Person einer anderen demografischen Gruppe angehört, gleich ausfällt (Kusner et al., 2017). Die Autoren zeigten das am Beispiel der Vorhersage des Studienerfolgs im Jurastudium.'
+  sources:
+  - https://arxiv.org/abs/1703.06856
 - id: front-door-adjustment
   type: Method
   name_en: Causal front-door adjustment
@@ -747,26 +755,46 @@ entities:
   type: Concept
   name_en: Confusion matrix
   name_de: Konfusionsmatrix
+  summary_en: A confusion matrix tabulates a classifier's predictions against the true classes; in scikit-learn's convention, entry (i, j) is the number of observations actually in class i but predicted to be in class j (scikit-learn developers, n.d.). It can be normalised to show ratios instead of counts and underlies metrics such as precision, recall and specificity.
+  summary_de: Eine Konfusionsmatrix stellt die Vorhersagen eines Klassifikators den wahren Klassen gegenüber; nach der Konvention von scikit-learn ist Eintrag (i, j) die Zahl der Beobachtungen, die tatsächlich zur Klasse i gehören, aber Klasse j zugeordnet wurden (scikit-learn developers, n.d.). Sie lässt sich normieren, um Anteile statt Zählungen zu zeigen, und liegt Metriken wie Precision, Recall und Spezifität zugrunde.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: specificity
   type: Concept
   name_en: Specificity
   name_de: Spezifität
+  summary_en: Specificity, or true negative rate, is the proportion of actual negatives that a classifier correctly identifies, TN / (TN + FP) (scikit-learn developers, n.d.). Balanced accuracy is the mean of recall (sensitivity) and specificity, and the false positive rate plotted in a ROC curve is one minus specificity.
+  summary_de: Spezifität oder True Negative Rate ist der Anteil tatsächlich negativer Fälle, die ein Klassifikator richtig erkennt, TN / (TN + FP) (scikit-learn developers, n.d.). Die Balanced Accuracy ist der Mittelwert aus Recall (Sensitivität) und Spezifität, und die False Positive Rate in einer ROC-Kurve ist eins minus Spezifität.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: accuracy
   type: Concept
   name_en: Accuracy
   name_de: Accuracy
+  summary_en: Accuracy is the fraction of correct predictions, the number of samples whose predicted label equals the true label divided by the number of samples (scikit-learn developers, n.d.). In multilabel classification, scikit-learn's accuracy_score returns subset accuracy, which counts a sample as correct only if its whole set of predicted labels matches the true set.
+  summary_de: Accuracy ist der Anteil richtiger Vorhersagen, also die Zahl der Beispiele, deren vorhergesagtes Label dem wahren entspricht, geteilt durch die Zahl aller Beispiele (scikit-learn developers, n.d.). Bei Multilabel-Klassifikation liefert accuracy_score in scikit-learn die Subset Accuracy, die ein Beispiel nur dann als richtig zählt, wenn die gesamte Menge vorhergesagter Labels mit der wahren übereinstimmt.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: f1-score
   type: Concept
   name_en: F1 score
   name_de: F1-Score
   aliases:
   - F1
+  summary_en: The F1 score is the harmonic mean of precision, a classifier's ability not to label negative samples as positive, and recall, its ability to find all positive samples; the general F-beta measure weights the two and reaches its best value at 1 and worst at 0 (scikit-learn developers, n.d.). With beta = 1, precision and recall are equally important.
+  summary_de: Der F1-Score ist das harmonische Mittel aus Precision, der Fähigkeit eines Klassifikators, negative Beispiele nicht als positiv zu kennzeichnen, und Recall, der Fähigkeit, alle positiven Beispiele zu finden; das allgemeine F-Beta-Maß gewichtet beide und reicht von 0 (schlechtester) bis 1 (bester Wert) (scikit-learn developers, n.d.). Bei Beta = 1 sind Precision und Recall gleich wichtig.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: matthews-correlation-coefficient
   type: Concept
   name_en: Matthews correlation coefficient (MCC)
   name_de: Matthews-Korrelationskoeffizient (MCC)
   aliases:
   - MCC
+  summary_en: The Matthews correlation coefficient (MCC) measures the quality of binary classifications from true and false positives and negatives and is regarded as balanced even when classes have very different sizes (scikit-learn developers, n.d.). It ranges from −1, an inverse prediction, through 0, an average random prediction, to +1, a perfect prediction; it is also known as the phi coefficient.
+  summary_de: Der Matthews-Korrelationskoeffizient (MCC) misst die Güte binärer Klassifikationen aus richtig und falsch positiven und negativen Fällen und gilt auch bei sehr unterschiedlich großen Klassen als ausgewogen (scikit-learn developers, n.d.). Er reicht von −1, einer umgekehrten Vorhersage, über 0, einer zufälligen Vorhersage, bis +1, einer perfekten Vorhersage; er ist auch als Phi-Koeffizient bekannt.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: roc-curve
   type: Concept
   name_en: ROC curve and AUC
@@ -775,12 +803,20 @@ entities:
   - ROC
   - ROC AUC
   - receiver operating characteristic
+  summary_en: A receiver operating characteristic (ROC) curve plots the true positive rate (sensitivity) against the false positive rate (one minus specificity) of a binary classifier as its decision threshold varies (scikit-learn developers, n.d.). It is computed from true labels and scores such as probability estimates; the area under the curve (AUC) summarises it in one number.
+  summary_de: Eine ROC-Kurve (Receiver Operating Characteristic) trägt die True Positive Rate (Sensitivität) eines binären Klassifikators gegen die False Positive Rate (eins minus Spezifität) auf, während die Entscheidungsschwelle variiert (scikit-learn developers, n.d.). Sie wird aus wahren Labels und Scores wie Wahrscheinlichkeitsschätzungen berechnet; die Fläche unter der Kurve (AUC) fasst sie in einer Zahl zusammen.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: precision-recall-curve
   type: Concept
   name_en: Precision-recall curve
   name_de: Precision-Recall-Kurve
   aliases:
   - PR curve
+  summary_en: A precision-recall curve shows precision against recall as a classifier's decision threshold varies (scikit-learn developers, n.d.). Average precision summarises it as the sum of precision values weighted by the increase in recall at each threshold; with random predictions it equals the fraction of positive samples, and linear interpolation between points gives an overly optimistic measure.
+  summary_de: Eine Precision-Recall-Kurve zeigt Precision gegen Recall, während die Entscheidungsschwelle eines Klassifikators variiert (scikit-learn developers, n.d.). Die Average Precision fasst sie als Summe der Precision-Werte zusammen, gewichtet mit dem Zuwachs an Recall je Schwelle; bei zufälligen Vorhersagen entspricht sie dem Anteil positiver Beispiele, und lineare Interpolation zwischen den Punkten ergibt ein zu optimistisches Maß.
+  sources:
+  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: exact-match
   type: Concept
   name_en: Exact match
@@ -925,6 +961,10 @@ entities:
   type: Concept
   name_en: Transfer learning
   name_de: Transfer Learning
+  summary_en: Transfer learning reuses features learned on one task for another; in deep convolutional networks, first-layer features resemble general Gabor filters and colour blobs, while higher layers become specific to the original task (Yosinski et al., 2014). Transferability decreases as tasks diverge, yet features transferred even from distant tasks beat random features, and initialising with transferred features can improve generalisation after fine-tuning.
+  summary_de: Transfer Learning nutzt auf einer Aufgabe gelernte Merkmale für eine andere; in tiefen Convolutional Networks ähneln die Merkmale der ersten Schicht allgemeinen Gabor-Filtern und Farbflecken, während höhere Schichten auf die ursprüngliche Aufgabe spezialisiert sind (Yosinski et al., 2014). Die Übertragbarkeit nimmt mit dem Abstand der Aufgaben ab, doch selbst von entfernten Aufgaben übertragene Merkmale schlagen zufällige, und eine Initialisierung mit übertragenen Merkmalen kann die Generalisierung nach dem Fine-Tuning verbessern.
+  sources:
+  - https://arxiv.org/abs/1411.1792
 - id: dsm-directive
   type: Regulation
   name_en: Directive (EU) 2019/790 on copyright in the Digital Single Market (DSM Directive)
@@ -963,6 +1003,10 @@ entities:
   name_de: Memorisierung in Modellen
   aliases:
   - memorization
+  summary_en: Memorisation means that a model stores individual training examples verbatim; Carlini et al. (2020) extracted hundreds of verbatim sequences from GPT-2's training data by querying the model, including personally identifiable information, code and UUIDs, even when a sequence appeared in only one training document. Larger models were more vulnerable than smaller ones.
+  summary_de: Memorisierung bedeutet, dass ein Modell einzelne Trainingsbeispiele wörtlich speichert; Carlini et al. (2020) extrahierten durch Abfragen von GPT-2 Hunderte wörtlicher Sequenzen aus dessen Trainingsdaten, darunter personenbezogene Daten, Code und UUIDs, selbst wenn eine Sequenz nur in einem einzigen Trainingsdokument vorkam. Größere Modelle waren anfälliger als kleinere.
+  sources:
+  - https://arxiv.org/abs/2012.07805
 - id: laion
   type: Organisation
   name_en: LAION
@@ -1229,6 +1273,10 @@ entities:
   type: Concept
   name_en: Gradient leakage
   name_de: Gradient Leakage
+  summary_en: Gradient leakage means that private training data can be recovered from gradients shared in distributed or collaborative training, contrary to the long-held belief that gradients are safe to share (Zhu et al., 2019). Deep Leakage from Gradients recovered images pixel-accurately and text token by token; gradient pruning was the most effective defence they found.
+  summary_de: Gradient Leakage bedeutet, dass private Trainingsdaten aus Gradienten rekonstruiert werden können, die beim verteilten oder gemeinsamen Training ausgetauscht werden, entgegen der lange verbreiteten Annahme, Gradienten seien unbedenklich (Zhu et al., 2019). Deep Leakage from Gradients stellte Bilder pixelgenau und Texte Token für Token wieder her; Gradient Pruning war die wirksamste gefundene Abwehr.
+  sources:
+  - https://arxiv.org/abs/1906.08935
 - id: latent-diffusion
   type: Method
   name_en: Latent diffusion model
@@ -1825,46 +1873,86 @@ entities:
   type: Concept
   name_en: Individual fairness
   name_de: Individuelle Fairness
+  summary_en: Individual fairness requires that similar individuals be treated similarly, measured by a task-specific metric of how similar individuals are with respect to the classification task (Dwork et al., 2011). Dwork et al. proposed a framework that maximises the classifier's utility subject to this constraint.
+  summary_de: Individuelle Fairness verlangt, dass ähnliche Personen ähnlich behandelt werden, gemessen mit einer aufgabenspezifischen Metrik dafür, wie ähnlich sich Personen in Bezug auf die Klassifikationsaufgabe sind (Dwork et al., 2011). Dwork et al. schlugen einen Rahmen vor, der den Nutzen des Klassifikators unter dieser Nebenbedingung maximiert.
+  sources:
+  - https://arxiv.org/abs/1104.3913
 - id: group-fairness
   type: Concept
   name_en: Group fairness
   name_de: Gruppenfairness
+  summary_en: Group fairness covers statistical fairness definitions that fix a small collection of pre-defined groups and require parity of some statistic of the classifier, such as false positive rates or the rate of positive decisions, across them (Kearns et al., 2017). Examples are demographic parity, equalised odds and predictive parity.
+  summary_de: Gruppenfairness umfasst statistische Fairnessbegriffe, die eine kleine Menge vorab festgelegter Gruppen bestimmen und Parität einer Kennzahl des Klassifikators über diese Gruppen verlangen, etwa der False Positive Rates oder des Anteils positiver Entscheidungen (Kearns et al., 2017). Beispiele sind demografische Parität, Equalised Odds und Predictive Parity.
+  sources:
+  - https://arxiv.org/abs/1711.05144
 - id: subgroup-fairness
   type: Concept
   name_en: Subgroup fairness
   name_de: Subgruppen-Fairness
+  summary_en: Subgroup fairness demands statistical notions of fairness, such as equal false positive rates or statistical parity, across exponentially or infinitely many subgroups defined by a structured class of functions over the protected attributes, interpolating between group and individual fairness (Kearns et al., 2017). Auditing it is computationally hard in the worst case; Kearns et al. give algorithms based on a game between a learner and an auditor.
+  summary_de: Subgruppenfairness verlangt statistische Fairnessbegriffe wie gleiche False Positive Rates oder statistische Parität über exponentiell oder unendlich viele Teilgruppen, die durch eine strukturierte Funktionsklasse über den geschützten Merkmalen bestimmt sind, und liegt damit zwischen Gruppen- und individueller Fairness (Kearns et al., 2017). Ihre Prüfung ist im schlimmsten Fall rechnerisch schwer; Kearns et al. geben Algorithmen auf Grundlage eines Spiels zwischen Lerner und Prüfer an.
+  sources:
+  - https://arxiv.org/abs/1711.05144
 - id: fairness-through-awareness
   type: Concept
   name_en: Fairness through awareness
   name_de: Fairness through Awareness
+  summary_en: 'Fairness Through Awareness is the framework by Dwork et al. (2011) for fair classification: with a task-specific similarity metric between individuals, a classifier maximises utility subject to the constraint that similar individuals are treated similarly. An adaptation achieves "fair affirmative action", guaranteeing statistical parity while treating similar individuals as similarly as possible.'
+  summary_de: 'Fairness Through Awareness ist der Rahmen von Dwork et al. (2011) für faire Klassifikation: Mit einer aufgabenspezifischen Ähnlichkeitsmetrik zwischen Personen maximiert ein Klassifikator seinen Nutzen unter der Bedingung, dass ähnliche Personen ähnlich behandelt werden. Eine Anpassung erreicht „faire Fördermaßnahmen“, die statistische Parität garantieren und ähnliche Personen dennoch möglichst ähnlich behandeln.'
+  sources:
+  - https://arxiv.org/abs/1104.3913
 - id: fairness-through-unawareness
   type: Concept
   name_en: Fairness through unawareness
   name_de: Fairness through Unawareness
+  summary_en: Fairness through unawareness (FTU) considers an algorithm fair as long as protected attributes are not explicitly used in decision-making (Kusner et al., 2017). Its clear shortcoming is that other features can contain discriminatory information equivalent to the protected attribute, so removing the attribute alone does not prevent discrimination.
+  summary_de: Fairness through Unawareness (FTU) hält einen Algorithmus für fair, solange geschützte Merkmale nicht ausdrücklich in die Entscheidung eingehen (Kusner et al., 2017). Ihr deutlicher Mangel ist, dass andere Merkmale diskriminierende Informationen enthalten können, die dem geschützten Merkmal entsprechen, sodass dessen bloßes Weglassen Diskriminierung nicht verhindert.
+  sources:
+  - https://arxiv.org/abs/1703.06856
 - id: demographic-parity
   type: Concept
   name_en: Demographic parity
   name_de: Demographic Parity
   aliases:
   - statistical parity
+  summary_en: Demographic parity, also called statistical parity, requires that a decision, such as accepting or denying a loan application, be independent of the protected attribute (Hardt et al., 2016). Hardt et al. note that it often cripples utility when the target, for example actually defaulting, is correlated with the protected attribute.
+  summary_de: Demografische Parität, auch statistische Parität, verlangt, dass eine Entscheidung, etwa über die Annahme oder Ablehnung eines Kreditantrags, vom geschützten Merkmal unabhängig ist (Hardt et al., 2016). Hardt et al. merken an, dass sie den Nutzen oft stark einschränkt, wenn die Zielgröße, etwa ein tatsächlicher Zahlungsausfall, mit dem geschützten Merkmal korreliert.
+  sources:
+  - https://arxiv.org/abs/1610.02413
 - id: equalised-odds
   type: Concept
   name_en: Equalised odds
   name_de: Equalised Odds
   aliases:
   - equalized odds
+  summary_en: A predictor satisfies equalised odds if its prediction and the protected attribute are independent conditional on the true outcome; for binary variables this means equal true positive rates and equal false positive rates across groups (Hardt et al., 2016). Unlike demographic parity, it allows the prediction to depend on the protected attribute through the true outcome.
+  summary_de: Ein Prädiktor erfüllt Equalised Odds, wenn Vorhersage und geschütztes Merkmal bedingt auf das wahre Ergebnis unabhängig sind; bei binären Variablen bedeutet das gleiche True Positive Rates und gleiche False Positive Rates in allen Gruppen (Hardt et al., 2016). Anders als demografische Parität erlaubt es eine Abhängigkeit der Vorhersage vom geschützten Merkmal über das wahre Ergebnis.
+  sources:
+  - https://arxiv.org/abs/1610.02413
 - id: equal-opportunity
   type: Concept
   name_en: Equal opportunity
   name_de: Equal Opportunity
+  summary_en: A binary predictor satisfies equal opportunity if its true positive rate is the same across groups defined by the protected attribute, that is, among individuals whose true outcome is positive, each group receives a positive prediction equally often (Hardt et al., 2016). It is a weaker notion than equalised odds and typically allows higher utility.
+  summary_de: Ein binärer Prädiktor erfüllt Equal Opportunity, wenn seine True Positive Rate in allen durch das geschützte Merkmal bestimmten Gruppen gleich ist, unter Personen mit tatsächlich positivem Ergebnis also jede Gruppe gleich häufig eine positive Vorhersage erhält (Hardt et al., 2016). Es ist ein schwächerer Begriff als Equalised Odds und erlaubt in der Regel einen höheren Nutzen.
+  sources:
+  - https://arxiv.org/abs/1610.02413
 - id: predictive-parity
   type: Concept
   name_en: Predictive parity
   name_de: Predictive Parity
+  summary_en: A score satisfies predictive parity at a threshold if the likelihood of the outcome among those classified as high-risk is the same regardless of group, that is, the positive predictive value is equal across groups (Chouldechova, 2017). Chouldechova showed that when prevalence differs between groups, predictive parity and equal error rates cannot all be satisfied at once, as in the debate over the COMPAS recidivism score.
+  summary_de: Ein Score erfüllt Predictive Parity an einer Schwelle, wenn die Wahrscheinlichkeit des Ereignisses unter den als hochriskant Eingestuften unabhängig von der Gruppe gleich ist, der positive Vorhersagewert also in allen Gruppen gleich ist (Chouldechova, 2017). Chouldechova zeigte, dass sich Predictive Parity und gleiche Fehlerraten nicht zugleich erfüllen lassen, wenn sich die Prävalenz zwischen Gruppen unterscheidet, wie in der Debatte über den Rückfall-Score COMPAS.
+  sources:
+  - https://arxiv.org/abs/1703.00056
 - id: fairness-gerrymandering
   type: Concept
   name_en: Fairness gerrymandering
   name_de: Fairness Gerrymandering
+  summary_en: Fairness gerrymandering is when a classifier appears fair on each of a few pre-defined groups but badly violates the fairness constraint on structured subgroups defined over combinations of the protected attributes, whether intentionally or not (Kearns et al., 2017). Subgroup fairness was proposed to prevent it.
+  summary_de: Fairness Gerrymandering liegt vor, wenn ein Klassifikator für jede von wenigen vorab festgelegten Gruppen fair erscheint, die Fairnessbedingung aber für strukturierte Teilgruppen aus Kombinationen geschützter Merkmale deutlich verletzt, absichtlich oder nicht (Kearns et al., 2017). Subgruppenfairness wurde vorgeschlagen, um das zu verhindern.
+  sources:
+  - https://arxiv.org/abs/1711.05144
 - id: target-encoding
   type: Method
   name_en: Target encoding
@@ -2215,10 +2303,18 @@ entities:
   name_de: Skalierungsgesetze
   aliases:
   - compute-optimal scaling
+  summary_en: Scaling laws describe how language model loss falls as a power law with model size, dataset size and training compute, with trends spanning more than seven orders of magnitude, while width or depth matter little within a wide range (Kaplan et al., 2020). They allow allocating a fixed compute budget optimally; Kaplan et al. concluded that larger models are more sample-efficient.
+  summary_de: Skalierungsgesetze beschreiben, wie der Verlust von Sprachmodellen als Potenzgesetz mit Modellgröße, Datenmenge und Trainingsrechenaufwand sinkt, über mehr als sieben Größenordnungen, während Breite oder Tiefe in einem weiten Bereich kaum eine Rolle spielen (Kaplan et al., 2020). Sie erlauben, ein festes Rechenbudget optimal zu verteilen; Kaplan et al. folgerten, dass größere Modelle dateneffizienter sind.
+  sources:
+  - https://arxiv.org/abs/2001.08361
 - id: emergent-abilities
   type: Concept
   name_en: Emergent abilities
   name_de: Emergente Fähigkeiten
+  summary_en: An ability of large language models is called emergent if it is not present in smaller models but is present in larger ones, so it cannot be predicted by extrapolating the performance of smaller models (Wei et al., 2022). Its existence implies that further scaling could expand the range of capabilities.
+  summary_de: Eine Fähigkeit großer Sprachmodelle gilt als emergent, wenn sie in kleineren Modellen fehlt, in größeren aber vorhanden ist, sodass sie sich nicht durch Extrapolation der Leistung kleinerer Modelle vorhersagen lässt (Wei et al., 2022). Ihr Auftreten legt nahe, dass weitere Skalierung das Spektrum der Fähigkeiten erweitern könnte.
+  sources:
+  - https://arxiv.org/abs/2206.07682
 - id: nucleus-sampling
   type: Method
   name_en: Nucleus (top-p) sampling
@@ -2385,12 +2481,21 @@ entities:
   name_de: FP16 (IEEE-Halbgenauigkeit)
   aliases:
   - FP16
+  summary_en: FP16 is the IEEE half-precision floating-point format, which has a more limited numerical range than single precision (FP32) (Micikevicius et al., 2017). Mixed precision training stores weights, activations and gradients in FP16 while keeping an FP32 master copy of the weights and scaling the loss, nearly halving memory use.
+  summary_de: FP16 ist das IEEE-Gleitkommaformat mit halber Genauigkeit, das einen kleineren Wertebereich hat als einfache Genauigkeit (FP32) (Micikevicius et al., 2017). Beim Mixed-Precision-Training werden Gewichte, Aktivierungen und Gradienten in FP16 gespeichert, während eine FP32-Masterkopie der Gewichte erhalten bleibt und der Verlust skaliert wird; das halbiert den Speicherbedarf fast.
+  sources:
+  - https://arxiv.org/abs/1710.03740
 - id: fp32
   type: Concept
   name_en: FP32 (single precision)
   name_de: FP32 (einfache Genauigkeit)
   aliases:
   - FP32
+  summary_en: FP32 is the IEEE 754 single-precision floating-point format, the standard for training deep neural networks (Kalamkar et al., 2019). In mixed precision training, an FP32 copy of the weights accumulates gradient updates while computations use half precision (Micikevicius et al., 2017).
+  summary_de: FP32 ist das IEEE-754-Gleitkommaformat mit einfacher Genauigkeit, der Standard beim Training tiefer neuronaler Netze (Kalamkar et al., 2019). Beim Mixed-Precision-Training sammelt eine FP32-Kopie der Gewichte die Gradientenupdates, während die Berechnungen in halber Genauigkeit laufen (Micikevicius et al., 2017).
+  sources:
+  - https://arxiv.org/abs/1905.12322
+  - https://arxiv.org/abs/1710.03740
 - id: bfloat16
   type: Concept
   name_en: bfloat16 (BF16)
@@ -2398,6 +2503,10 @@ entities:
   aliases:
   - BF16
   - BFLOAT16
+  summary_en: bfloat16 (Brain Floating Point) is a 16-bit floating-point format with the same numerical range as FP32 and simple conversion to and from it (Kalamkar et al., 2019). Unlike IEEE FP16, it needs no hyperparameter tuning for convergence, and training with bfloat16 tensors matched FP32 results across image, speech, language and recommendation tasks.
+  summary_de: bfloat16 (Brain Floating Point) ist ein 16-Bit-Gleitkommaformat mit demselben Wertebereich wie FP32 und einfacher Umwandlung von und nach FP32 (Kalamkar et al., 2019). Anders als IEEE-FP16 braucht es für die Konvergenz keine Anpassung der Hyperparameter, und Training mit bfloat16-Tensoren erreichte bei Bild-, Sprach-, Text- und Empfehlungsaufgaben die Ergebnisse von FP32.
+  sources:
+  - https://arxiv.org/abs/1905.12322
 - id: loss-scaling
   type: Method
   name_en: Loss scaling
@@ -2851,6 +2960,10 @@ entities:
   type: Concept
   name_en: Context pollution
   name_de: Kontextverschmutzung
+  summary_en: 'Context pollution means that the context given to a language model contains irrelevant or poorly placed material. It matters because language models do not use long contexts robustly: performance is often highest when relevant information is at the beginning or end of the input and degrades significantly when it is in the middle, even for long-context models (Liu et al., 2023).'
+  summary_de: 'Kontextverschmutzung bedeutet, dass der Kontext eines Sprachmodells irrelevante oder ungünstig platzierte Inhalte enthält. Das wiegt schwer, weil Sprachmodelle lange Kontexte nicht robust nutzen: Die Leistung ist oft am höchsten, wenn relevante Information am Anfang oder Ende der Eingabe steht, und sinkt deutlich, wenn sie in der Mitte steht, auch bei Modellen für lange Kontexte (Liu et al., 2023).'
+  sources:
+  - https://arxiv.org/abs/2307.03172
 - id: citation-hallucination
   type: Concept
   name_en: Citation hallucination
@@ -3033,6 +3146,10 @@ entities:
   type: Concept
   name_en: Vanishing and exploding gradients
   name_de: Verschwindende und explodierende Gradienten
+  summary_en: The vanishing and exploding gradient problems make training recurrent neural networks difficult, as gradients shrink towards zero or grow uncontrollably when propagated through many time steps (Pascanu et al., 2012). Pascanu et al. proposed gradient norm clipping against exploding gradients and a soft constraint against vanishing gradients.
+  summary_de: Das Problem verschwindender und explodierender Gradienten erschwert das Training rekurrenter neuronaler Netze, weil Gradienten über viele Zeitschritte hinweg gegen null schrumpfen oder unkontrolliert wachsen (Pascanu et al., 2012). Pascanu et al. schlugen Gradient Norm Clipping gegen explodierende und eine weiche Nebenbedingung gegen verschwindende Gradienten vor.
+  sources:
+  - https://arxiv.org/abs/1211.5063
 - id: positive-congruent-training
   type: Method
   name_en: Positive-congruent training
