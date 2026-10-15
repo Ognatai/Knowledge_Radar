@@ -760,10 +760,20 @@ entities:
   type: Concept
   name_en: Supervised learning
   name_de: Überwachtes Lernen
+  summary_en: Supervised learning is learning from a training set of labelled examples provided by an external supervisor; each example describes a situation together with the correct output, often the category it belongs to (Sutton and Barto 2018). Supervised learning algorithms experience a dataset whose examples each have features and an associated label or target (Goodfellow et al. 2016).
+  summary_de: Überwachtes Lernen ist Lernen aus einem Trainingsdatensatz mit gelabelten Beispielen, die eine externe Instanz bereitstellt; jedes Beispiel beschreibt eine Situation zusammen mit der richtigen Ausgabe, oft der Kategorie, zu der sie gehört (Sutton und Barto 2018). Algorithmen des überwachten Lernens arbeiten mit einem Datensatz, dessen Beispiele jeweils Merkmale und ein zugehöriges Label oder einen Zielwert haben (Goodfellow et al. 2016).
+  sources:
+  - http://incompleteideas.net/book/the-book-2nd.html
+  - https://www.deeplearningbook.org/contents/ml.html
 - id: unsupervised-learning
   type: Concept
   name_en: Unsupervised learning
   name_de: Unüberwachtes Lernen
+  summary_en: Unsupervised learning is about finding structure hidden in collections of unlabelled data (Sutton and Barto 2018). Unsupervised algorithms learn useful properties of a dataset's structure, for example the probability distribution that generated it, as in density estimation, or a division into clusters of similar examples (Goodfellow et al. 2016).
+  summary_de: Unüberwachtes Lernen sucht nach verborgener Struktur in Sammlungen ungelabelter Daten (Sutton und Barto 2018). Unüberwachte Algorithmen lernen nützliche Eigenschaften der Struktur eines Datensatzes, etwa die Wahrscheinlichkeitsverteilung, die ihn erzeugt hat, wie bei der Dichteschätzung, oder eine Aufteilung in Cluster ähnlicher Beispiele (Goodfellow et al. 2016).
+  sources:
+  - http://incompleteideas.net/book/the-book-2nd.html
+  - https://www.deeplearningbook.org/contents/ml.html
 - id: xgboost
   type: Method
   name_en: XGBoost
@@ -804,10 +814,18 @@ entities:
   type: Concept
   name_en: Discriminative model
   name_de: Diskriminatives Modell
+  summary_en: A discriminative classifier models the posterior p(y|x) directly or learns a direct map from inputs x to class labels, as logistic regression does (Ng and Jordan 2001). Ng and Jordan found that discriminative learning has the lower asymptotic error, while a generative classifier such as naive Bayes may approach its higher asymptotic error much faster, so each can be better depending on the training set size.
+  summary_de: Ein diskriminativer Klassifikator modelliert die A-posteriori-Wahrscheinlichkeit p(y|x) direkt oder lernt eine direkte Abbildung von Eingaben x auf Klassenlabels, wie die logistische Regression (Ng und Jordan 2001). Ng und Jordan zeigten, dass diskriminatives Lernen den geringeren asymptotischen Fehler hat, ein generativer Klassifikator wie Naive Bayes seinen höheren asymptotischen Fehler aber deutlich schneller erreichen kann, sodass je nach Größe des Trainingsdatensatzes das eine oder das andere besser ist.
+  sources:
+  - https://proceedings.neurips.cc/paper/2001/hash/7b7a53e239400a13bd6be6c91c4f6c4e-Abstract.html
 - id: generative-model
   type: Concept
   name_en: Generative model
   name_de: Generatives Modell
+  summary_en: A generative classifier learns a model of the joint probability p(x, y) of inputs and labels, as naive Bayes does, and predicts by computing p(y|x) with Bayes' rule and picking the most likely label (Ng and Jordan 2001). Compared with discriminative classifiers such as logistic regression, generative classifiers can approach their (higher) asymptotic error much faster, so they may perform better with small training sets.
+  summary_de: Ein generativer Klassifikator lernt ein Modell der gemeinsamen Wahrscheinlichkeit p(x, y) von Eingaben und Labels, wie Naive Bayes, und sagt vorher, indem er p(y|x) mit dem Satz von Bayes berechnet und das wahrscheinlichste Label wählt (Ng und Jordan 2001). Im Vergleich zu diskriminativen Klassifikatoren wie der logistischen Regression können generative Klassifikatoren ihren (höheren) asymptotischen Fehler deutlich schneller erreichen und daher bei kleinen Trainingsdatensätzen besser abschneiden.
+  sources:
+  - https://proceedings.neurips.cc/paper/2001/hash/7b7a53e239400a13bd6be6c91c4f6c4e-Abstract.html
 - id: confusion-matrix
   type: Concept
   name_en: Confusion matrix
@@ -878,6 +896,10 @@ entities:
   type: Concept
   name_en: Exact match
   name_de: Exact Match
+  summary_en: Exact match scores a prediction as correct only if it is identical to a reference answer; in extractive question answering such as SQuAD, it is reported alongside a token-level F1 score that gives partial credit for overlap (Rajpurkar et al. 2016).
+  summary_de: Exact Match wertet eine Vorhersage nur dann als richtig, wenn sie mit einer Referenzantwort identisch ist; bei extraktiver Fragebeantwortung wie SQuAD wird es zusammen mit einem F1-Wert auf Tokenebene berichtet, der Überlappungen teilweise anrechnet (Rajpurkar et al. 2016).
+  sources:
+  - https://arxiv.org/abs/1606.05250
 - id: robert-c-martin
   type: Person
   name_en: Robert C. Martin
@@ -2145,6 +2167,11 @@ entities:
   name_de: Data Leakage
   aliases:
   - leakage
+  summary_en: Data leakage is the introduction of information about the target that should not legitimately be available to the model; it is considered one of the top data mining mistakes and has affected major public competitions (Kaufman et al. 2012). A common source is fitting preprocessing on all data before splitting, which pipelines fitted only on training data prevent (Pedregosa et al. 2011).
+  summary_de: Data Leakage bezeichnet das Einschleusen von Informationen über die Zielgröße, die dem Modell legitimerweise nicht zur Verfügung stehen sollten; es gilt als einer der häufigsten Fehler im Data Mining und hat große öffentliche Wettbewerbe beeinträchtigt (Kaufman et al. 2012). Eine häufige Ursache ist das Anpassen der Vorverarbeitung auf allen Daten vor der Aufteilung, was Pipelines verhindern, die nur auf den Trainingsdaten angepasst werden (Pedregosa et al. 2011).
+  sources:
+  - https://doi.org/10.1145/2382577.2382579
+  - https://jmlr.org/papers/v12/pedregosa11a.html
 - id: data-protection-directive-1995
   type: Regulation
   name_en: Data Protection Directive 95/46/EC
@@ -2367,6 +2394,10 @@ entities:
   type: Concept
   name_en: Probabilistic relevance framework
   name_de: Probabilistisches Relevanzmodell
+  summary_en: The probabilistic relevance framework is the probabilistic model of information retrieval developed from work in the 1970s and 1980s, from which BM25 grew (Robertson and Zaragoza 2009). It models whether a document is "elite" for a term, a form of aboutness, and BM25 approximates the resulting term weight with a saturation function.
+  summary_de: Das Probabilistic Relevance Framework ist das probabilistische Modell des Information Retrieval, das aus Arbeiten der 1970er- und 1980er-Jahre hervorging und aus dem BM25 entstand (Robertson und Zaragoza 2009). Es modelliert, ob ein Dokument für einen Term „elite“ ist, also von ihm handelt, und BM25 nähert das resultierende Termgewicht mit einer Sättigungsfunktion an.
+  sources:
+  - https://doi.org/10.1561/1500000019
 - id: bias-preserving-gender-fairness
   type: Concept
   name_en: Bias-preserving algorithmic gender fairness
@@ -2420,6 +2451,11 @@ entities:
   type: Concept
   name_en: Curse of dimensionality
   name_de: Fluch der Dimensionalität
+  summary_en: The curse of dimensionality is the phenomenon that many machine learning problems become exceedingly difficult when the data have many dimensions, in particular because the number of possible distinct configurations of a set of variables grows exponentially with the number of variables (Goodfellow et al. 2016). For nearest-neighbour methods, distances between points also become less meaningful as dimensionality grows (Beyer et al. 1999).
+  summary_de: Der Fluch der Dimensionalität bezeichnet das Phänomen, dass viele Probleme des maschinellen Lernens bei hochdimensionalen Daten sehr schwierig werden, insbesondere weil die Zahl möglicher unterschiedlicher Konfigurationen einer Menge von Variablen exponentiell mit der Zahl der Variablen wächst (Goodfellow et al. 2016). Für Nächste-Nachbarn-Verfahren werden mit zunehmender Dimension zudem die Abstände zwischen Punkten weniger aussagekräftig (Beyer et al. 1999).
+  sources:
+  - https://www.deeplearningbook.org/contents/ml.html
+  - https://doi.org/10.1007/3-540-49257-7_15
 - id: pytorch
   type: Technology
   name_en: PyTorch
@@ -2879,6 +2915,10 @@ entities:
   type: Concept
   name_en: Data drift
   name_de: Data Drift
+  summary_en: Data drift, or dataset shift, means that the distribution of inputs a deployed model receives moves away from the training data; because ML systems depend strongly on properties of their inputs such as the i.i.d. assumption, they tend to fail silently (Rabanser et al. 2018). In an empirical comparison of detection methods, two-sample tests on representations from pretrained classifiers performed best.
+  summary_de: Data Drift oder Dataset Shift bedeutet, dass sich die Verteilung der Eingaben, die ein produktives Modell erhält, von den Trainingsdaten entfernt; weil ML-Systeme stark von Eigenschaften ihrer Eingaben wie der i.i.d.-Annahme abhängen, scheitern sie dabei oft unbemerkt (Rabanser et al. 2018). In einem empirischen Vergleich von Erkennungsmethoden schnitten Zwei-Stichproben-Tests auf Repräsentationen vortrainierter Klassifikatoren am besten ab.
+  sources:
+  - https://arxiv.org/abs/1810.11953
 - id: concept-drift
   type: Concept
   name_en: Concept drift
@@ -3029,6 +3069,10 @@ entities:
   type: Method
   name_en: Perceptron
   name_de: Perzeptron
+  summary_en: The perceptron is a single neural unit that computes a weighted sum of its inputs and applies a threshold; it is the historical starting point of neural networks (Goodfellow et al. 2016). A single layer of such units can only separate classes linearly.
+  summary_de: Das Perzeptron ist eine einzelne neuronale Einheit, die eine gewichtete Summe ihrer Eingaben bildet und einen Schwellenwert anwendet; es ist der historische Ausgangspunkt neuronaler Netze (Goodfellow et al. 2016). Eine einzelne Schicht solcher Einheiten kann Klassen nur linear trennen.
+  sources:
+  - https://www.deeplearningbook.org/
 - id: multilayer-perceptron
   type: Method
   name_en: Multilayer perceptron
@@ -3058,6 +3102,10 @@ entities:
   type: Method
   name_en: Rectified linear unit (ReLU)
   name_de: Rectified Linear Unit (ReLU)
+  summary_en: The rectified linear unit (ReLU) uses the activation function g(z) = max{0, z} and is the default activation recommended for most feedforward neural networks (Goodfellow et al. 2016). Being piecewise linear with two linear pieces, it keeps many properties that make linear models easy to optimise with gradient-based methods and generalise well.
+  summary_de: Die Rectified Linear Unit (ReLU) nutzt die Aktivierungsfunktion g(z) = max{0, z} und ist die für die meisten Feedforward-Netze empfohlene Standardaktivierung (Goodfellow et al. 2016). Als stückweise lineare Funktion aus zwei linearen Teilen behält sie viele Eigenschaften, die lineare Modelle gut mit gradientenbasierten Verfahren optimierbar machen und gut generalisieren lassen.
+  sources:
+  - https://www.deeplearningbook.org/contents/mlp.html
 - id: nis-directive-2016
   type: Regulation
   name_en: NIS Directive (EU) 2016/1148
@@ -3164,6 +3212,10 @@ entities:
   type: Method
   name_en: Zero-shot prompting
   name_de: Zero-Shot-Prompting
+  summary_en: A zero-shot prompt contains only the task instruction and the input, without demonstrations. Kojima et al. (2022) showed that adding "Let's think step by step" before the answer makes large models produce reasoning steps without examples (zero-shot chain of thought), which with text-davinci-002 raised accuracy on MultiArith from 17.7% to 78.7%.
+  summary_de: Ein Zero-Shot-Prompt enthält nur die Aufgabenanweisung und die Eingabe, ohne Beispiele. Kojima et al. (2022) zeigten, dass der Zusatz „Let's think step by step“ vor der Antwort große Modelle ohne Beispiele Denkschritte erzeugen lässt (Zero-Shot Chain of Thought); mit text-davinci-002 stieg die Accuracy auf MultiArith dadurch von 17,7 % auf 78,7 %.
+  sources:
+  - https://arxiv.org/abs/2205.11916
 - id: zero-shot-chain-of-thought
   type: Method
   name_en: Zero-shot chain of thought
@@ -3612,6 +3664,10 @@ entities:
   type: Method
   name_en: Back-propagation through time
   name_de: Backpropagation Through Time
+  summary_en: Back-propagation through time (BPTT) is the back-propagation algorithm applied to the graph of a recurrent neural network unrolled over the time steps of a sequence (Goodfellow et al. 2016). Its runtime and memory cost grow with the sequence length, because the states of the forward pass must be stored until they are reused in the backward pass.
+  summary_de: Backpropagation Through Time (BPTT) ist der Backpropagation-Algorithmus, angewandt auf den über die Zeitschritte einer Sequenz ausgerollten Graphen eines rekurrenten neuronalen Netzes (Goodfellow et al. 2016). Laufzeit und Speicherbedarf wachsen mit der Sequenzlänge, weil die Zustände des Vorwärtsdurchlaufs bis zu ihrer Wiederverwendung im Rückwärtsdurchlauf gespeichert werden müssen.
+  sources:
+  - https://www.deeplearningbook.org/contents/rnn.html
 - id: vanishing-and-exploding-gradients
   type: Concept
   name_en: Vanishing and exploding gradients
@@ -3713,14 +3769,26 @@ entities:
   type: Concept
   name_en: Markov decision process
   name_de: Markov-Entscheidungsprozess
+  summary_en: A Markov decision process (MDP) is a classical formalisation of sequential decision making in which actions influence not only immediate rewards but also subsequent states and thus future rewards (Sutton and Barto 2018). MDPs therefore involve delayed reward and a trade-off between immediate and delayed reward; they reduce goal-directed learning to actions, states and rewards passed between an agent and its environment.
+  summary_de: Ein Markov-Entscheidungsprozess (MDP) ist eine klassische Formalisierung sequenzieller Entscheidungen, bei denen Aktionen nicht nur die unmittelbare Belohnung, sondern auch die folgenden Zustände und damit künftige Belohnungen beeinflussen (Sutton und Barto 2018). MDPs beinhalten daher verzögerte Belohnungen und eine Abwägung zwischen unmittelbarer und späterer Belohnung; sie reduzieren zielgerichtetes Lernen auf Aktionen, Zustände und Belohnungen, die zwischen Agent und Umgebung ausgetauscht werden.
+  sources:
+  - http://incompleteideas.net/book/the-book-2nd.html
 - id: exploration-exploitation-tradeoff
   type: Concept
   name_en: Exploration-exploitation trade-off
   name_de: Exploration-Exploitation-Abwägung
+  summary_en: The exploration-exploitation trade-off is a challenge specific to reinforcement learning (Sutton and Barto 2018). To obtain much reward, an agent must prefer actions it has found effective, but to discover such actions it must try actions it has not selected before; neither exploitation nor exploration can be pursued exclusively without failing at the task.
+  summary_de: Die Abwägung zwischen Exploration und Exploitation ist eine für Reinforcement Learning typische Herausforderung (Sutton und Barto 2018). Um viel Belohnung zu erhalten, muss ein Agent Aktionen bevorzugen, die sich als wirksam erwiesen haben; um solche Aktionen zu finden, muss er aber auch bisher nicht gewählte Aktionen ausprobieren. Weder Exploitation noch Exploration lässt sich ausschließlich verfolgen, ohne an der Aufgabe zu scheitern.
+  sources:
+  - http://incompleteideas.net/book/the-book-2nd.html
 - id: epsilon-greedy
   type: Method
   name_en: Epsilon-greedy action selection
   name_de: Epsilon-Greedy-Aktionsauswahl
+  summary_en: Epsilon-greedy action selection behaves greedily most of the time, choosing the action with the highest estimated value, but with a small probability ε selects an action at random from all actions (Sutton and Barto 2018). In the limit every action is sampled infinitely often, so all value estimates converge to their true values.
+  summary_de: Die ε-greedy-Aktionsauswahl handelt meist gierig, wählt also die Aktion mit dem höchsten geschätzten Wert, wählt aber mit einer kleinen Wahrscheinlichkeit ε zufällig eine beliebige Aktion (Sutton und Barto 2018). Im Grenzfall wird jede Aktion unendlich oft ausprobiert, sodass alle Wertschätzungen gegen ihre wahren Werte konvergieren.
+  sources:
+  - http://incompleteideas.net/book/the-book-2nd.html
 - id: self-adversarial-negative-sampling
   type: Method
   name_en: Self-adversarial negative sampling
@@ -4224,6 +4292,10 @@ entities:
   type: Method
   name_en: BM25F
   name_de: BM25F
+  summary_en: BM25F extends BM25 to documents with several fields, such as title, body and anchor text, which are weighted separately; the weighted frequencies of a term are summed across fields before the saturation function is applied (Robertson and Zaragoza 2009).
+  summary_de: BM25F erweitert BM25 auf Dokumente mit mehreren Feldern wie Titel, Text und Ankertext, die getrennt gewichtet werden; die gewichteten Häufigkeiten eines Terms werden über die Felder summiert, bevor die Sättigungsfunktion angewandt wird (Robertson und Zaragoza 2009).
+  sources:
+  - https://doi.org/10.1561/1500000019
 - id: poly-encoder
   type: Method
   name_en: Poly-encoder
@@ -4236,6 +4308,10 @@ entities:
   type: Method
   name_en: Nested cross-validation
   name_de: Verschachtelte Kreuzvalidierung
+  summary_en: 'Nested cross-validation adds a second loop when hyperparameters are tuned by cross-validation: an inner cross-validation tunes the hyperparameters and an outer one estimates the error of the whole procedure, tuning included (Varma and Simon 2006). Using the same cross-validation for tuning and for reporting the error biases the estimate; all model-building steps must be repeated inside each outer fold.'
+  summary_de: 'Verschachtelte Kreuzvalidierung fügt eine zweite Schleife hinzu, wenn Hyperparameter per Kreuzvalidierung gewählt werden: Eine innere Kreuzvalidierung stimmt die Hyperparameter ab, eine äußere schätzt den Fehler des gesamten Verfahrens einschließlich der Abstimmung (Varma und Simon 2006). Wird dieselbe Kreuzvalidierung für Abstimmung und Fehlerangabe genutzt, ist die Schätzung verzerrt; alle Schritte der Modellbildung müssen in jeder äußeren Falte wiederholt werden.'
+  sources:
+  - https://doi.org/10.1186/1471-2105-7-91
 - id: whisper
   type: Method
   name_en: Whisper
@@ -4472,6 +4548,10 @@ entities:
   type: Concept
   name_en: Perplexity
   name_de: Perplexität
+  summary_en: The perplexity of a language model on a test set is the inverse probability of the test set, normalised by the number of words or tokens via the N-th root (Jurafsky and Martin 2026). It is therefore also called per-word or per-token perplexity; lower perplexity means the model assigns higher probability to the test data.
+  summary_de: Die Perplexität eines Sprachmodells auf einem Testdatensatz ist die inverse Wahrscheinlichkeit des Testdatensatzes, normiert auf die Zahl der Wörter oder Tokens über die N-te Wurzel (Jurafsky und Martin 2026). Sie heißt daher auch Perplexität pro Wort oder pro Token; eine niedrigere Perplexität bedeutet, dass das Modell den Testdaten eine höhere Wahrscheinlichkeit zuweist.
+  sources:
+  - https://web.stanford.edu/~jurafsky/slp3/3.pdf
 - id: penn-treebank
   type: Dataset
   name_en: Penn Treebank
