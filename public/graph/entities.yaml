@@ -1319,6 +1319,11 @@ entities:
   type: Concept
   name_en: AI system
   name_de: KI-System
+  summary_en: Under the AI Act, an AI system is "a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments" (Art. 3(1) AI Act).
+  summary_de: Nach der KI-Verordnung ist ein KI-System „ein maschinengestütztes System, das für einen in unterschiedlichem Grade autonomen Betrieb ausgelegt ist und das nach seiner Betriebsaufnahme anpassungsfähig sein kann und das aus den erhaltenen Eingaben für explizite oder implizite Ziele ableitet, wie Ausgaben wie etwa Vorhersagen, Inhalte, Empfehlungen oder Entscheidungen erstellt werden, die physische oder virtuelle Umgebungen beeinflussen können“ (Art. 3 Nr. 1 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: general-purpose-ai-model
   type: Concept
   name_en: General-purpose AI model (GPAI model)
@@ -1326,38 +1331,83 @@ entities:
   aliases:
   - GPAI model
   - general-purpose AI model
+  summary_en: A general-purpose AI model under the AI Act is an AI model, including one trained with a large amount of data using self-supervision at scale, that displays significant generality, can competently perform a wide range of distinct tasks regardless of how it is placed on the market and can be integrated into a variety of downstream systems or applications; models used only for research, development or prototyping before being placed on the market are excluded (Art. 3(63) AI Act).
+  summary_de: Ein KI-Modell mit allgemeinem Verwendungszweck im Sinne der KI-Verordnung ist ein KI-Modell, auch wenn es mit einer großen Datenmenge unter umfassender Selbstüberwachung trainiert wird, das eine erhebliche allgemeine Verwendbarkeit aufweist, unabhängig von der Art seines Inverkehrbringens ein breites Spektrum unterschiedlicher Aufgaben kompetent erfüllen und in eine Vielzahl nachgelagerter Systeme oder Anwendungen integriert werden kann; ausgenommen sind Modelle, die vor dem Inverkehrbringen nur für Forschung, Entwicklung oder Prototypen genutzt werden (Art. 3 Nr. 63 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: general-purpose-ai-system
   type: Concept
   name_en: General-purpose AI system
   name_de: KI-System mit allgemeinem Verwendungszweck
+  summary_en: A general-purpose AI system under the AI Act is an AI system that is based on a general-purpose AI model and can serve a variety of purposes, both for direct use and for integration in other AI systems (Art. 3(66) AI Act).
+  summary_de: Ein KI-System mit allgemeinem Verwendungszweck im Sinne der KI-Verordnung ist ein KI-System, das auf einem KI-Modell mit allgemeinem Verwendungszweck beruht und einer Vielzahl von Zwecken sowohl für die direkte Verwendung als auch für die Integration in andere KI-Systeme dienen kann (Art. 3 Nr. 66 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: high-risk-ai-system
   type: Concept
   name_en: High-risk AI system
   name_de: Hochrisiko-KI-System
+  summary_en: Under Article 6 of the AI Act, an AI system is high-risk if it is a safety component of a product, or itself a product, covered by the Union harmonisation legislation in Annex I and subject to third-party conformity assessment, or if it falls under one of the use cases listed in Annex III (Art. 6(1)–(2) AI Act). An Annex III system is not high-risk if it does not pose a significant risk of harm to health, safety or fundamental rights, including by not materially influencing the outcome of decision-making (Art. 6(3) AI Act).
+  summary_de: Nach Artikel 6 der KI-Verordnung ist ein KI-System hochriskant, wenn es als Sicherheitsbauteil eines Produkts verwendet werden soll oder selbst ein Produkt ist, das unter die Harmonisierungsrechtsvorschriften in Anhang I fällt und einer Konformitätsbewertung durch Dritte unterliegt, oder wenn es unter einen der in Anhang III genannten Anwendungsfälle fällt (Art. 6 Abs. 1 und 2 KI-VO). Ein System nach Anhang III gilt nicht als hochriskant, wenn es kein erhebliches Risiko der Beeinträchtigung von Gesundheit, Sicherheit oder Grundrechten birgt, unter anderem weil es das Ergebnis der Entscheidungsfindung nicht wesentlich beeinflusst (Art. 6 Abs. 3 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: prohibited-ai-practice
   type: Concept
   name_en: Prohibited AI practice
   name_de: Verbotene Praktik im KI-Bereich
+  summary_en: Article 5 of the AI Act prohibits certain AI practices outright, among them manipulative or deceptive techniques that cause significant harm, exploiting vulnerabilities due to age or disability, social scoring, predicting criminal offences based solely on profiling, untargeted scraping of facial images for facial recognition databases, emotion recognition in workplaces and education, biometric categorisation to infer sensitive traits and, with exceptions, real-time remote biometric identification for law enforcement in public spaces. Later amendments added AI systems that generate non-consensual intimate images of identifiable persons or child sexual abuse material (Art. 5(1) AI Act).
+  summary_de: Artikel 5 der KI-Verordnung verbietet bestimmte Praktiken im KI-Bereich vollständig, darunter manipulative oder täuschende Techniken, die erheblichen Schaden verursachen, das Ausnutzen von Schwächen aufgrund von Alter oder Behinderung, Social Scoring, die Vorhersage von Straftaten allein aufgrund von Profiling, das ungezielte Auslesen von Gesichtsbildern für Gesichtserkennungsdatenbanken, Emotionserkennung am Arbeitsplatz und in Bildungseinrichtungen, biometrische Kategorisierung zum Ableiten sensibler Merkmale sowie, mit Ausnahmen, biometrische Echtzeit-Fernidentifizierung zur Strafverfolgung in öffentlich zugänglichen Räumen. Spätere Änderungen ergänzten KI-Systeme, die ohne Zustimmung intime Darstellungen bestimmbarer Personen oder Material über sexuellen Kindesmissbrauch erzeugen (Art. 5 Abs. 1 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: ai-literacy
   type: Concept
   name_en: AI literacy
   name_de: KI-Kompetenz
+  summary_en: Article 4 of the AI Act requires providers and deployers of AI systems to take measures to support the development of AI literacy of their staff and other persons operating or using AI systems on their behalf, taking into account their knowledge, experience, training and the context of use; the obligation does not require guaranteeing a specific level of AI literacy (Art. 4(1) AI Act). The Commission and the Member States support providers and deployers, especially SMEs, and the Commission publishes practical examples (Art. 4(2) AI Act).
+  summary_de: Artikel 4 der KI-Verordnung verpflichtet Anbieter und Betreiber von KI-Systemen, Maßnahmen zu ergreifen, um die Entwicklung der KI-Kompetenz ihres Personals und anderer Personen zu unterstützen, die in ihrem Auftrag mit Betrieb und Nutzung von KI-Systemen befasst sind, unter Berücksichtigung von Kenntnissen, Erfahrung, Ausbildung und Einsatzkontext; die Pflicht verlangt nicht, ein bestimmtes Niveau an KI-Kompetenz zu garantieren (Art. 4 Abs. 1 KI-VO). Kommission und Mitgliedstaaten unterstützen Anbieter und Betreiber, insbesondere KMU, und die Kommission veröffentlicht praktische Beispiele (Art. 4 Abs. 2 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: ai-regulatory-sandbox
   type: Concept
   name_en: AI regulatory sandbox
   name_de: KI-Reallabor
+  summary_en: An AI regulatory sandbox is a controlled framework set up by a competent authority in which providers or prospective providers can develop, train, validate and test an innovative AI system, where appropriate in real-world conditions, for a limited time under regulatory supervision (Art. 3(55) AI Act). Each Member State must ensure that its competent authorities establish at least one sandbox at national level, operational by 2 August 2027, possibly jointly with other Member States or by participating in an existing sandbox; additional regional or local sandboxes are possible (Art. 57(1)–(2) AI Act).
+  summary_de: Ein KI-Reallabor ist ein von einer zuständigen Behörde geschaffener kontrollierter Rahmen, den Anbieter oder zukünftige Anbieter nach einem Plan für einen begrenzten Zeitraum und unter regulatorischer Aufsicht nutzen können, um ein innovatives KI-System zu entwickeln, zu trainieren, zu validieren und gegebenenfalls unter Realbedingungen zu testen (Art. 3 Nr. 55 KI-VO). Jeder Mitgliedstaat sorgt dafür, dass seine zuständigen Behörden mindestens ein KI-Reallabor auf nationaler Ebene einrichten, das bis zum 2. August 2027 einsatzbereit sein muss, auch gemeinsam mit anderen Mitgliedstaaten oder durch Beteiligung an einem bestehenden Reallabor; zusätzliche regionale oder lokale Reallabore sind möglich (Art. 57 Abs. 1 und 2 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: deep-fake
   type: Concept
   name_en: Deep fake
   name_de: Deepfake
+  summary_en: Under the AI Act, a deep fake is "AI-generated or manipulated image, audio or video content that resembles existing persons, objects, places, entities or events and would falsely appear to a person to be authentic or truthful" (Art. 3(60) AI Act). Since a later amendment, placing on the market or using AI systems that generate realistic intimate images or sexually explicit depictions of an identifiable person without explicit consent is a prohibited practice (Art. 5(1)(ba) AI Act).
+  summary_de: Nach der KI-Verordnung ist ein Deepfake „ein durch KI erzeugter oder manipulierter Bild-, Ton- oder Videoinhalt, der wirklichen Personen, Gegenständen, Orten, Einrichtungen oder Ereignissen ähnelt und einer Person fälschlicherweise als echt oder wahrheitsgemäß erscheinen würde“ (Art. 3 Nr. 60 KI-VO). Seit einer späteren Änderung ist das Inverkehrbringen oder Verwenden von KI-Systemen verboten, die ohne ausdrückliche Zustimmung realistische Darstellungen intimer Körperteile oder eindeutig sexueller Handlungen einer bestimmbaren Person erzeugen (Art. 5 Abs. 1 Buchst. ba KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: ai-act-provider
   type: Concept
   name_en: Provider (AI Act)
   name_de: Anbieter (KI-Verordnung)
+  summary_en: A provider under the AI Act is a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model, or has one developed, and places it on the market or puts the AI system into service under its own name or trademark, whether for payment or free of charge (Art. 3(3) AI Act).
+  summary_de: Anbieter im Sinne der KI-Verordnung ist eine natürliche oder juristische Person, Behörde, Einrichtung oder sonstige Stelle, die ein KI-System oder ein KI-Modell mit allgemeinem Verwendungszweck entwickelt oder entwickeln lässt und es unter ihrem eigenen Namen oder ihrer Handelsmarke in Verkehr bringt oder das KI-System unter ihrem eigenen Namen oder ihrer Handelsmarke in Betrieb nimmt, sei es entgeltlich oder unentgeltlich (Art. 3 Nr. 3 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: ai-act-deployer
   type: Concept
   name_en: Deployer (AI Act)
   name_de: Betreiber (KI-Verordnung)
+  summary_en: A deployer under the AI Act is a natural or legal person, public authority, agency or other body using an AI system under its authority, except where the AI system is used in the course of a personal non-professional activity (Art. 3(4) AI Act). Like providers, deployers must for example take measures to support the AI literacy of their staff (Art. 4 AI Act).
+  summary_de: Betreiber im Sinne der KI-Verordnung ist eine natürliche oder juristische Person, Behörde, Einrichtung oder sonstige Stelle, die ein KI-System in eigener Verantwortung verwendet, es sei denn, das KI-System wird im Rahmen einer persönlichen und nicht beruflichen Tätigkeit verwendet (Art. 3 Nr. 4 KI-VO). Wie Anbieter müssen Betreiber etwa Maßnahmen ergreifen, um die KI-Kompetenz ihres Personals zu unterstützen (Art. 4 KI-VO).
+  sources:
+  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:02024R1689-20260727
+  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727
 - id: digital-omnibus-on-ai
   type: Regulation
   name_en: Digital Omnibus on AI (Regulation (EU) 2026/1744)
