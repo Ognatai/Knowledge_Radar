@@ -1808,6 +1808,10 @@ entities:
   type: Method
   name_en: Expected validation performance
   name_de: Erwartete Validierungsleistung
+  summary_en: Expected validation performance reports the expected best validation score of a model as a function of computation budget, such as the number of hyperparameter search trials or training time (Dodge et al., 2019). Its authors found published model comparisons whose conclusions would have changed with more or less computation and recommend reporting it alongside test results.
+  summary_de: Expected Validation Performance gibt den erwarteten besten Validierungswert eines Modells in Abhängigkeit vom Rechenbudget an, etwa der Zahl der Durchläufe bei der Hyperparameter-Suche oder der Trainingszeit (Dodge et al., 2019). Die Autoren fanden veröffentlichte Modellvergleiche, deren Schlussfolgerung sich mit mehr oder weniger Rechenaufwand geändert hätte, und empfehlen, sie neben Testergebnissen zu berichten.
+  sources:
+  - https://arxiv.org/abs/1909.03004
 - id: clip
   type: Method
   name_en: CLIP
@@ -1973,10 +1977,18 @@ entities:
   type: Method
   name_en: FormatSpread
   name_de: FormatSpread
+  summary_en: FormatSpread is an algorithm that evaluates a sampled set of plausible prompt formats for a task and reports the interval of expected performance, without access to model weights (Sclar et al., 2023). It was motivated by the finding that open LLMs are extremely sensitive to meaning-preserving formatting changes in few-shot prompts, with differences of up to 76 accuracy points for LLaMA-2-13B.
+  summary_de: FormatSpread ist ein Algorithmus, der eine Stichprobe plausibler Prompt-Formate für eine Aufgabe evaluiert und das Intervall der zu erwartenden Leistung angibt, ohne Zugriff auf die Modellgewichte (Sclar et al., 2023). Anlass war der Befund, dass offene LLMs bei Few-Shot-Prompts extrem empfindlich auf bedeutungserhaltende Formatänderungen reagieren, mit Unterschieden von bis zu 76 Accuracy-Punkten bei LLaMA-2-13B.
+  sources:
+  - https://arxiv.org/abs/2310.11324
 - id: multi-prompt-evaluation
   type: Method
   name_en: Multi-prompt evaluation
   name_de: Multi-Prompt-Evaluation
+  summary_en: Multi-prompt evaluation assesses LLMs with a set of diverse instruction templates instead of a single one, because results from single-prompt evaluation are brittle (Mizrahi et al., 2023). The analysis covered 6.5 million instances, 20 LLMs and 39 tasks from three benchmarks and proposes metrics tailored to different use cases, such as model developers versus developers of a specific downstream task.
+  summary_de: Multi-Prompt-Evaluation bewertet LLMs mit einer Menge unterschiedlicher Anweisungsvorlagen statt mit einer einzigen, weil Ergebnisse aus Evaluationen mit nur einem Prompt brüchig sind (Mizrahi et al., 2023). Die Analyse umfasste 6,5 Millionen Instanzen, 20 LLMs und 39 Aufgaben aus drei Benchmarks und schlägt Metriken für unterschiedliche Zwecke vor, etwa für Modellentwickler oder für Entwickler einer bestimmten Anwendung.
+  sources:
+  - https://arxiv.org/abs/2401.00595
 - id: zero-shot-prompting
   type: Method
   name_en: Zero-shot prompting
@@ -2105,6 +2117,10 @@ entities:
   type: Method
   name_en: Proposition indexing
   name_de: Indexierung nach Propositionen
+  summary_en: Proposition indexing uses propositions, atomic, self-contained expressions that each state one distinct factoid, as the retrieval unit for dense retrieval instead of passages or sentences (Chen et al., 2023). Indexing a corpus by propositions significantly outperformed passage-level units in retrieval and improved downstream question answering for a given computation budget.
+  summary_de: Proposition Indexing nutzt Propositionen, atomare, für sich verständliche Aussagen mit jeweils einem Faktum, statt Passagen oder Sätzen als Einheit für dichtes Retrieval (Chen et al., 2023). Ein nach Propositionen indexiertes Korpus übertraf Einheiten auf Passagenebene im Retrieval deutlich und verbesserte die nachgelagerte Fragebeantwortung bei gegebenem Rechenbudget.
+  sources:
+  - https://arxiv.org/abs/2312.06648
 - id: late-chunking
   type: Method
   name_en: Late chunking
@@ -2206,18 +2222,34 @@ entities:
   name_de: RAFT (Retrieval Augmented Fine-Tuning)
   aliases:
   - RAFT
+  summary_en: 'Retrieval Augmented Fine-Tuning (RAFT) is a training recipe for "open-book" domain-specific question answering: the model is given a question and retrieved documents and learns to ignore distractor documents and to cite the relevant passage verbatim in a chain-of-thought answer (Zhang et al., 2024). It consistently improved performance on PubMed, HotpotQA and Gorilla.'
+  summary_de: 'Retrieval Augmented Fine-Tuning (RAFT) ist ein Trainingsverfahren für domänenspezifische Fragebeantwortung „mit offenem Buch“: Das Modell erhält eine Frage und abgerufene Dokumente, lernt, ablenkende Dokumente zu ignorieren, und zitiert die relevante Stelle wörtlich in einer Chain-of-Thought-Antwort (Zhang et al., 2024). Es verbesserte die Leistung auf PubMed, HotpotQA und Gorilla durchgängig.'
+  sources:
+  - https://arxiv.org/abs/2403.10131
 - id: naive-rag
   type: Method
   name_en: Naive RAG
   name_de: Naive RAG
+  summary_en: Naive RAG is the first of three paradigms in Gao et al.'s survey of retrieval-augmented generation, followed by Advanced RAG and Modular RAG (Gao et al., 2023). The survey describes RAG as built on three components, retrieval, generation and augmentation, and RAG as a way to counter hallucination and outdated knowledge by drawing on external databases.
+  summary_de: Naive RAG ist das erste von drei Paradigmen in der Übersicht von Gao et al. zu Retrieval-Augmented Generation, gefolgt von Advanced RAG und Modular RAG (Gao et al., 2023). Die Übersicht beschreibt RAG als Verbindung von drei Bausteinen, Retrieval, Generierung und Augmentierung, und als Mittel gegen Halluzinationen und veraltetes Wissen durch Rückgriff auf externe Datenbanken.
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: advanced-rag
   type: Method
   name_en: Advanced RAG
   name_de: Advanced RAG
+  summary_en: Advanced RAG is the second of three paradigms in Gao et al.'s survey of retrieval-augmented generation, between Naive RAG and Modular RAG; the survey traces how techniques for retrieval, generation and augmentation advanced across these paradigms (Gao et al., 2023).
+  summary_de: Advanced RAG ist das zweite von drei Paradigmen in der Übersicht von Gao et al. zu Retrieval-Augmented Generation, zwischen Naive RAG und Modular RAG; die Übersicht zeichnet nach, wie sich Verfahren für Retrieval, Generierung und Augmentierung über diese Paradigmen weiterentwickelt haben (Gao et al., 2023).
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: modular-rag
   type: Method
   name_en: Modular RAG
   name_de: Modular RAG
+  summary_en: Modular RAG is the third and most recent of the RAG paradigms in Gao et al.'s survey, after Naive RAG and Advanced RAG, in the progression of paradigms that the survey examines through their retrieval, generation and augmentation techniques (Gao et al., 2023).
+  summary_de: Modular RAG ist das dritte und jüngste der RAG-Paradigmen in der Übersicht von Gao et al., nach Naive RAG und Advanced RAG, in der Entwicklung von Paradigmen, die die Übersicht anhand ihrer Verfahren für Retrieval, Generierung und Augmentierung untersucht (Gao et al., 2023).
+  sources:
+  - https://arxiv.org/abs/2312.10997
 - id: inverted-file-index
   type: Method
   name_en: Inverted file index (IVF)
@@ -2240,12 +2272,20 @@ entities:
   name_de: Anisotrope Quantisierung
   aliases:
   - Anisotropic quantization
+  summary_en: Anisotropic quantisation is a vector quantisation approach for maximum inner product search that, instead of minimising reconstruction error, penalises the component of a data point's residual parallel to the point more than the orthogonal one, because points with the largest inner products matter most (Guo et al., 2019). It achieved state-of-the-art results on the ann-benchmarks.com benchmarks.
+  summary_de: Anisotrope Quantisierung ist ein Verfahren der Vektorquantisierung für Maximum Inner Product Search, das statt den Rekonstruktionsfehler zu minimieren den zum Datenpunkt parallelen Anteil des Restfehlers stärker bestraft als den orthogonalen, weil Punkte mit den größten Skalarprodukten am wichtigsten sind (Guo et al., 2019). Es erreichte Bestwerte auf den Benchmarks von ann-benchmarks.com.
+  sources:
+  - https://arxiv.org/abs/1908.10396
 - id: maximum-inner-product-search
   type: Method
   name_en: Maximum inner product search (MIPS)
   name_de: Maximum Inner Product Search (MIPS)
   aliases:
   - MIPS
+  summary_en: Maximum inner product search (MIPS) finds the database vectors with the largest inner product with a query vector. Quantisation-based techniques are the state of the art for scaling MIPS to massive databases, for example anisotropic vector quantisation, which focuses accuracy on the points with the largest inner products (Guo et al., 2019).
+  summary_de: Maximum Inner Product Search (MIPS) sucht die Datenbankvektoren mit dem größten Skalarprodukt zu einem Anfragevektor. Quantisierungsverfahren sind der Stand der Technik, um MIPS auf sehr große Datenbanken zu skalieren, etwa die anisotrope Vektorquantisierung, die die Genauigkeit auf die Punkte mit den größten Skalarprodukten konzentriert (Guo et al., 2019).
+  sources:
+  - https://arxiv.org/abs/1908.10396
 - id: scann
   type: Technology
   name_en: ScaNN
@@ -2294,6 +2334,10 @@ entities:
   type: Method
   name_en: Positive-congruent training
   name_de: Positive-Congruent Training
+  summary_en: Positive-congruent training reduces "negative flips", test samples that an old model classified correctly but a new model gets wrong, while also lowering the overall error rate (Yan et al., 2020). Its method, Focal Distillation, gives more weight to samples the reference model classified correctly, and using an ensemble as reference reduced negative flips further.
+  summary_de: Positive-Congruent Training verringert „Negative Flips“, also Testbeispiele, die ein altes Modell richtig, ein neues aber falsch klassifiziert, und senkt zugleich die Gesamtfehlerrate (Yan et al., 2020). Das Verfahren Focal Distillation gewichtet Beispiele stärker, die das Referenzmodell richtig klassifiziert hat, und ein Ensemble als Referenz verringerte Negative Flips weiter.
+  sources:
+  - https://arxiv.org/abs/2011.09161
 - id: negative-flip
   type: Concept
   name_en: Negative flip
@@ -2334,6 +2378,10 @@ entities:
   type: Method
   name_en: Deep Q-learning (DQN)
   name_de: Deep Q-Learning (DQN)
+  summary_en: Deep Q-learning trains a convolutional neural network with a variant of Q-learning to learn control policies directly from raw pixels, with a value function estimating future rewards as output (Mnih et al., 2013). Applied to seven Atari 2600 games without changing architecture or algorithm, it outperformed all previous approaches on six and surpassed a human expert on three.
+  summary_de: Deep Q-Learning trainiert ein Convolutional Neural Network mit einer Variante von Q-Learning, um Steuerungsstrategien direkt aus Rohpixeln zu lernen; die Ausgabe ist eine Wertfunktion, die künftige Belohnungen schätzt (Mnih et al., 2013). Bei sieben Atari-2600-Spielen ohne Anpassung von Architektur oder Algorithmus übertraf es bei sechs alle früheren Verfahren und bei drei einen menschlichen Experten.
+  sources:
+  - https://arxiv.org/abs/1312.5602
 - id: markov-decision-process
   type: Concept
   name_en: Markov decision process
@@ -2350,6 +2398,10 @@ entities:
   type: Method
   name_en: Self-adversarial negative sampling
   name_de: Self-adversarial Negative Sampling
+  summary_en: Self-adversarial negative sampling is a technique for training knowledge graph embedding models, proposed together with RotatE to train it efficiently and effectively (Sun et al., 2019). RotatE itself models each relation as a rotation from the source to the target entity in complex vector space, capturing symmetry, antisymmetry, inversion and composition.
+  summary_de: Self-Adversarial Negative Sampling ist ein Verfahren zum Training von Knowledge-Graph-Embedding-Modellen, das zusammen mit RotatE vorgeschlagen wurde, um es effizient und wirksam zu trainieren (Sun et al., 2019). RotatE selbst modelliert jede Relation als Drehung von der Ausgangs- zur Zielentität im komplexen Vektorraum und erfasst so Symmetrie, Antisymmetrie, Inversion und Komposition.
+  sources:
+  - https://arxiv.org/abs/1902.10197
 - id: relational-model
   type: Concept
   name_en: Relational model
@@ -2390,6 +2442,10 @@ entities:
   type: Method
   name_en: RAPTOR
   name_de: RAPTOR
+  summary_en: RAPTOR recursively embeds, clusters and summarises text chunks to build a tree with different levels of summarisation from the bottom up, and retrieves from this tree at inference time to integrate information across long documents (Sarthi et al., 2024). Combined with GPT-4 it improved the best result on the QuALITY benchmark by 20 percentage points in accuracy.
+  summary_de: RAPTOR bettet Textabschnitte rekursiv ein, clustert und fasst sie zusammen und baut so von unten einen Baum mit unterschiedlichen Zusammenfassungsebenen auf, aus dem es bei der Inferenz abruft, um Informationen aus langen Dokumenten zu verbinden (Sarthi et al., 2024). Zusammen mit GPT-4 verbesserte es das beste Ergebnis auf dem Benchmark QuALITY um 20 Prozentpunkte Accuracy.
+  sources:
+  - https://arxiv.org/abs/2401.18059
 - id: support-vector-regression
   type: Method
   name_en: Support vector regression
@@ -2438,12 +2494,20 @@ entities:
   name_de: Unigram-Sprachmodell (Tokenisierung)
   aliases:
   - Unigram language model (tokenization)
+  summary_en: The unigram language model tokenisation algorithm segments text into subwords based on a unigram language model and was proposed to sample subword segmentations for subword regularisation (Kudo, 2018). Because several segmentations are possible with the same vocabulary, it can produce probabilistic alternatives instead of one fixed segmentation.
+  summary_de: Die Unigram-Language-Model-Tokenisierung zerlegt Text auf Grundlage eines Unigramm-Sprachmodells in Subwörter und wurde vorgeschlagen, um Segmentierungen für Subword Regularization zu ziehen (Kudo, 2018). Da mit demselben Vokabular mehrere Segmentierungen möglich sind, kann sie statt einer festen Zerlegung wahrscheinlichkeitsgewichtete Alternativen liefern.
+  sources:
+  - https://arxiv.org/abs/1804.10959
 - id: subword-regularisation
   type: Method
   name_en: Subword regularisation
   name_de: Subword-Regularisierung
   aliases:
   - Subword regularization
+  summary_en: Subword regularisation trains neural machine translation models on multiple subword segmentations of the same sentence, sampled probabilistically during training, using segmentation ambiguity as noise to improve robustness (Kudo, 2018). It gave consistent improvements, especially in low-resource and out-of-domain settings.
+  summary_de: Subword Regularization trainiert neuronale Übersetzungsmodelle auf mehreren, während des Trainings zufällig gezogenen Subwort-Segmentierungen desselben Satzes und nutzt die Mehrdeutigkeit der Segmentierung als Rauschen, um die Robustheit zu erhöhen (Kudo, 2018). Es brachte durchgängige Verbesserungen, besonders bei wenigen Ressourcen und außerhalb der Trainingsdomäne.
+  sources:
+  - https://arxiv.org/abs/1804.10959
 - id: sentencepiece
   type: Technology
   name_en: SentencePiece
@@ -2624,6 +2688,10 @@ entities:
   type: Method
   name_en: HouYi
   name_de: HouYi
+  summary_en: HouYi is a black-box prompt injection attack technique for LLM-integrated applications, inspired by web injection attacks, with three parts, a pre-constructed prompt, an injection prompt that induces context partition and a malicious payload (Liu et al., 2023). Deployed on 36 real applications, it found 31 susceptible, with outcomes such as unrestricted LLM use and theft of application prompts; ten vendors confirmed the findings.
+  summary_de: 'HouYi ist eine Black-Box-Technik für Prompt-Injection-Angriffe auf LLM-integrierte Anwendungen nach dem Vorbild von Injection-Angriffen im Web, mit drei Teilen: einem vorbereiteten Prompt, einem Injection-Prompt, der eine Kontexttrennung herbeiführt, und einer schädlichen Nutzlast (Liu et al., 2023). Bei 36 echten Anwendungen waren 31 anfällig, mit Folgen wie uneingeschränkter LLM-Nutzung und Diebstahl von Anwendungs-Prompts; zehn Anbieter bestätigten die Befunde.'
+  sources:
+  - https://arxiv.org/abs/2306.05499
 - id: injecagent
   type: Dataset
   name_en: InjecAgent
@@ -2636,14 +2704,26 @@ entities:
   type: Method
   name_en: Learnable Trust-Boundary Delimiters (LTBD)
   name_de: Learnable Trust-Boundary Delimiters (LTBD)
+  summary_en: Learnable Trust-Boundary Delimiters (LTBD) defend against prompt injection by inserting a small number of learnable delimiters that mark trusted user instructions apart from untrusted external data, without changing the LLM's parameters (Zhao et al., 2026). LTBD outperformed inference-time defences, competed with training-based ones, kept benign-task utility and reached 0.00% attack success on AlpacaFarm.
+  summary_de: Learnable Trust-Boundary Delimiters (LTBD) wehren Prompt Injection ab, indem wenige lernbare Trennzeichen vertrauenswürdige Anweisungen der Nutzenden von nicht vertrauenswürdigen externen Daten abgrenzen, ohne die Parameter des LLM zu verändern (Zhao et al., 2026). LTBD übertraf Abwehrmaßnahmen zur Inferenzzeit, hielt mit trainingsbasierten mit, erhielt die Nützlichkeit bei harmlosen Aufgaben und erreichte 0,00 % Angriffserfolg auf AlpacaFarm.
+  sources:
+  - https://arxiv.org/abs/2610.11634
 - id: raised
   type: Method
   name_en: RAISED
   name_de: RAISED
+  summary_en: 'RAISED (Robust Attack Invariance through Self-Distillation) trains tool-using LLM agents against indirect prompt injection: the model generates its own tool-use scenarios and is then trained to match its clean-context behaviour on both clean and injected versions of the same trajectory (Dhouib et al., 2026). It substantially reduced attack success while, unlike earlier training-based defences, preserving utility on agentic and general benchmarks.'
+  summary_de: 'RAISED (Robust Attack Invariance through Self-Distillation) trainiert LLM-Agenten mit Werkzeugen gegen indirekte Prompt Injection: Das Modell erzeugt eigene Szenarien mit Werkzeugnutzung und wird dann darauf trainiert, sich bei sauberen und manipulierten Varianten desselben Ablaufs so zu verhalten wie im sauberen Kontext (Dhouib et al., 2026). Es senkte den Angriffserfolg deutlich und erhielt, anders als frühere trainingsbasierte Abwehr, die Nützlichkeit auf Agenten- und allgemeinen Benchmarks.'
+  sources:
+  - https://arxiv.org/abs/2610.06401
 - id: apex-execution-boundary
   type: Method
   name_en: APEX
   name_de: APEX
+  summary_en: APEX defends LLM agents against indirect prompt injection at the execution boundary, where an agent turns internal state into an external action or output, instead of trying to recognise attack patterns (Zheng et al., 2026). An authorisation contract compiled from the trusted task before untrusted execution admits only justified effects and exposes unendorsed use through deception; APEX reached 0% attack success on five of six benchmarks.
+  summary_de: APEX schützt LLM-Agenten gegen indirekte Prompt Injection an der Ausführungsgrenze, an der ein Agent internen Zustand in eine externe Aktion oder Ausgabe umsetzt, statt Angriffsmuster erkennen zu wollen (Zheng et al., 2026). Ein vor der Ausführung aus der vertrauenswürdigen Aufgabe kompilierter Berechtigungsvertrag lässt nur begründete Wirkungen zu und macht nicht gedeckte Nutzung durch Täuschung sichtbar; APEX erreichte bei fünf von sechs Benchmarks 0 % Angriffserfolg.
+  sources:
+  - https://arxiv.org/abs/2610.06966
 - id: rag-pibench
   type: Dataset
   name_en: RAG-PIBench
@@ -2664,6 +2744,10 @@ entities:
   type: Method
   name_en: SelfCheckGPT
   name_de: SelfCheckGPT
+  summary_en: 'SelfCheckGPT is a sampling-based method for detecting hallucinations of black-box LLMs without an external database: if a model knows a fact, sampled responses tend to be consistent, whereas hallucinated facts diverge and contradict each other (Manakul et al., 2023). On GPT-3 passages about people from WikiBio it detected non-factual sentences and ranked passages by factuality better than grey-box baselines.'
+  summary_de: 'SelfCheckGPT erkennt Halluzinationen von Black-Box-LLMs über Stichproben und ohne externe Datenbank: Kennt ein Modell einen Fakt, stimmen mehrere gezogene Antworten meist überein, während halluzinierte Fakten auseinanderlaufen und sich widersprechen (Manakul et al., 2023). Bei GPT-3-Texten über Personen aus WikiBio erkannte es nicht faktentreue Sätze und ordnete Texte nach Faktentreue besser als Grey-Box-Verfahren.'
+  sources:
+  - https://arxiv.org/abs/2303.08896
 - id: hades
   type: Dataset
   name_en: HaDes
@@ -2680,6 +2764,10 @@ entities:
   type: Method
   name_en: Grounding Probe
   name_de: Grounding Probe
+  summary_en: The Grounding Probe detects ungrounded RAG responses with logistic regression over mean-pooled middle-layer hidden states of an observer language model that reads context, question and response in one forward pass, independent of the generating model (Rathmayr et al., 2026). Trained on 15,090 annotated responses it reached 0.879 to 0.894 AUROC on RAGTruth and held across six generators.
+  summary_de: Die Grounding Probe erkennt nicht belegte RAG-Antworten mit logistischer Regression über gemittelte verborgene Zustände einer mittleren Schicht eines Beobachter-Sprachmodells, das Kontext, Frage und Antwort in einem Durchlauf liest, unabhängig vom erzeugenden Modell (Rathmayr et al., 2026). Auf 15 090 annotierten Antworten trainiert, erreichte sie 0,879 bis 0,894 AUROC auf RAGTruth und blieb über sechs Generatoren stabil.
+  sources:
+  - https://arxiv.org/abs/2610.04642
 - id: parcel
   type: Dataset
   name_en: PARCEL
@@ -2696,6 +2784,10 @@ entities:
   type: Method
   name_en: Poly-encoder
   name_de: Poly-Encoder
+  summary_en: The Poly-encoder is a Transformer architecture for scoring pairs of sequences that learns global rather than token-level self-attention features, placed between bi-encoders, which encode both sides separately, and cross-encoders, which attend over the full pair (Humeau et al., 2019). It was faster than cross-encoders and more accurate than bi-encoders, with best results after pre-training on data similar to the downstream task.
+  summary_de: Der Poly-Encoder ist eine Transformer-Architektur zum Bewerten von Sequenzpaaren, die globale statt tokenweise Self-Attention-Merkmale lernt; er liegt zwischen Bi-Encodern, die beide Seiten getrennt kodieren, und Cross-Encodern, die über das ganze Paar Aufmerksamkeit berechnen (Humeau et al., 2019). Er war schneller als Cross-Encoder und genauer als Bi-Encoder, am besten nach Vortraining auf Daten ähnlich der Zielaufgabe.
+  sources:
+  - https://arxiv.org/abs/1905.01969
 - id: nested-cross-validation
   type: Method
   name_en: Nested cross-validation
@@ -2704,10 +2796,18 @@ entities:
   type: Method
   name_en: Whisper
   name_de: Whisper
+  summary_en: Whisper is a family of speech recognition models trained to predict transcripts on 680,000 hours of multilingual and multitask audio from the internet (Radford et al., 2022). The models generalise to standard benchmarks in a zero-shot setting without fine-tuning, are often competitive with fully supervised systems and approach human accuracy and robustness; models and inference code were released.
+  summary_de: Whisper ist eine Familie von Spracherkennungsmodellen, die auf 680 000 Stunden mehrsprachigem und multitask-annotiertem Audio aus dem Internet darauf trainiert wurden, Transkripte vorherzusagen (Radford et al., 2022). Die Modelle generalisieren ohne Fine-Tuning auf Standard-Benchmarks, sind oft mit vollständig überwachten Systemen konkurrenzfähig und nähern sich menschlicher Genauigkeit und Robustheit; Modelle und Inferenzcode wurden veröffentlicht.
+  sources:
+  - https://arxiv.org/abs/2212.04356
 - id: wav2vec-2-0
   type: Method
   name_en: wav2vec 2.0
   name_de: wav2vec 2.0
+  summary_en: wav2vec 2.0 learns speech representations self-supervised from audio alone by masking the input in latent space and solving a contrastive task over jointly learned quantised representations, followed by fine-tuning on transcribed speech (Baevski et al., 2020). With ten minutes of labelled data and 53,000 hours of unlabelled pre-training data it still reached 4.8/8.2 word error rate on Librispeech clean/other.
+  summary_de: wav2vec 2.0 lernt Sprachrepräsentationen selbstüberwacht allein aus Audio, indem es die Eingabe im latenten Raum maskiert und eine kontrastive Aufgabe über gemeinsam gelernte quantisierte Repräsentationen löst; danach folgt Fine-Tuning auf transkribierter Sprache (Baevski et al., 2020). Mit zehn Minuten annotierter Daten und 53 000 Stunden nicht annotierter Vortrainingsdaten erreichte es noch 4,8/8,2 Wortfehlerrate auf Librispeech clean/other.
+  sources:
+  - https://arxiv.org/abs/2006.11477
 - id: connectionist-temporal-classification
   type: Method
   name_en: Connectionist Temporal Classification (CTC)
@@ -2718,6 +2818,10 @@ entities:
   type: Method
   name_en: VALL-E
   name_de: VALL-E
+  summary_en: VALL-E treats text-to-speech as conditional language modelling over discrete codes from a neural audio codec rather than as continuous signal regression, pre-trained on 60,000 hours of English speech (Wang et al., 2023). From a 3-second recording of an unseen speaker it synthesises personalised speech, preserving the speaker's emotion and acoustic environment, and outperformed the best zero-shot TTS system in naturalness and speaker similarity.
+  summary_de: VALL-E behandelt Sprachsynthese als bedingte Sprachmodellierung über diskrete Codes eines neuronalen Audio-Codecs statt als Regression kontinuierlicher Signale und wurde auf 60 000 Stunden englischer Sprache vortrainiert (Wang et al., 2023). Aus einer 3-Sekunden-Aufnahme einer unbekannten Person erzeugt es personalisierte Sprache, erhält Emotion und akustische Umgebung und übertraf das beste Zero-Shot-TTS-System in Natürlichkeit und Sprecherähnlichkeit.
+  sources:
+  - https://arxiv.org/abs/2301.02111
 - id: ssml
   type: Technology
   name_en: Speech Synthesis Markup Language (SSML)
@@ -2744,6 +2848,10 @@ entities:
   type: Method
   name_en: Neural Belief Tracker
   name_de: Neural Belief Tracker
+  summary_en: The Neural Belief Tracker estimates the user's goal at every step of a dialogue by composing pre-trained word vectors into representations of user utterances and dialogue context (Mrkšić et al., 2016). It avoids the need for large annotated spoken language understanding data or hand-crafted lexicons and matched or outperformed models that rely on such lexicons.
+  summary_de: Der Neural Belief Tracker schätzt in jedem Dialogschritt das Ziel der Nutzenden, indem er vortrainierte Wortvektoren zu Repräsentationen von Äußerungen und Dialogkontext zusammensetzt (Mrkšić et al., 2016). Er kommt ohne große annotierte Daten für Spoken Language Understanding und ohne handgefertigte Lexika aus und erreichte oder übertraf Modelle, die solche Lexika nutzen.
+  sources:
+  - https://arxiv.org/abs/1606.03777
 - id: paradise-framework
   type: Method
   name_en: PARADISE (dialogue evaluation framework)
