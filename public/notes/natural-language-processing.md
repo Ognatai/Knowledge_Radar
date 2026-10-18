@@ -48,7 +48,7 @@ The Transformer (Vaswani et al., 2017) is a sequence model based solely on atten
 
 #### 4. Pretraining and fine-tuning
 
-[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabelled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a [[glue|GLUE]] score of 80.5% (7.7 points absolute improvement) and SQuAD v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
+[[bert|BERT]] (Devlin et al., 2018) pretrains deep bidirectional representations from unlabelled text by conditioning on both left and right context in all layers. The pretrained model is then fine-tuned with just one additional output layer, without substantial task-specific architecture changes. This gave new state-of-the-art results on eleven NLP tasks, among them a [[glue|GLUE]] score of 80.5% (7.7 points absolute improvement) and [[squad|SQuAD]] v1.1 question answering Test F1 of 93.2 (Devlin et al., 2018).
 
 #### 5. Few-shot learning with large language models
 
@@ -138,7 +138,7 @@ Der Transformer (Vaswani et al., 2017) ist ein Sequenzmodell, das ausschließlic
 
 #### 4. Vortraining und Fine-Tuning
 
-[[bert|BERT]] (Devlin et al., 2018) trainiert tiefe bidirektionale Repräsentationen auf nicht annotiertem Text vor, indem es in allen Schichten sowohl den linken als auch den rechten Kontext berücksichtigt. Das vortrainierte Modell wird dann mit nur einer zusätzlichen Ausgabeschicht feinabgestimmt, ohne wesentliche aufgabenspezifische Änderungen der Architektur. Das ergab neue Bestwerte bei elf NLP-Aufgaben, darunter einen GLUE-Score von 80,5 % (7,7 Punkte absolute Verbesserung) und einen Test-F1-Wert von 93,2 bei der Fragebeantwortung auf SQuAD v1.1 (Devlin et al., 2018).
+[[bert|BERT]] (Devlin et al., 2018) trainiert tiefe bidirektionale Repräsentationen auf nicht annotiertem Text vor, indem es in allen Schichten sowohl den linken als auch den rechten Kontext berücksichtigt. Das vortrainierte Modell wird dann mit nur einer zusätzlichen Ausgabeschicht feinabgestimmt, ohne wesentliche aufgabenspezifische Änderungen der Architektur. Das ergab neue Bestwerte bei elf NLP-Aufgaben, darunter einen GLUE-Score von 80,5 % (7,7 Punkte absolute Verbesserung) und einen Test-F1-Wert von 93,2 bei der Fragebeantwortung auf [[squad|SQuAD]] v1.1 (Devlin et al., 2018).
 
 #### 5. Few-Shot-Learning mit großen Sprachmodellen
 

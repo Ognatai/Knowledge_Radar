@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-API authentication establishes who calls an API and on whose behalf. The dominant standard is OAuth 2.0: an authorisation server issues access tokens to a client, which presents them to the resource server, usually as bearer tokens in the Authorization header over TLS (RFC 6749; RFC 6750). Tokens are often JSON Web Tokens whose claims, such as issuer, audience and expiry, must be validated (RFC 7519). Current best practice drops the implicit and password grants, requires PKCE for public clients and restricts tokens to their audience (RFC 9700); broken authentication is the second-most critical API security risk in the OWASP API Top 10 2023 (OWASP API2:2023).
+API authentication establishes who calls an API and on whose behalf. The dominant standard is OAuth 2.0: an authorisation server issues access tokens to a client, which presents them to the resource server, usually as bearer tokens in the Authorization header over TLS (RFC 6749; RFC 6750). Tokens are often JSON Web Tokens whose claims, such as issuer, audience and expiry, must be validated (RFC 7519). Current best practice drops the implicit and password grants, requires PKCE for public clients and restricts tokens to their audience (RFC 9700); broken authentication is the second-most critical API security risk in the [[owasp|OWASP]] API Top 10 2023 (OWASP API2:2023).
 
 ### How it works
 
@@ -103,7 +103,7 @@ APIs authenticate callers with standard OAuth 2.0 tokens sent as bearer tokens o
 
 ### TL;DR
 
-API-Authentifizierung stellt fest, wer eine API aufruft und in wessen Auftrag. Der vorherrschende Standard ist OAuth 2.0: Ein Authorization Server gibt einem Client Access Tokens aus, die dieser dem Resource Server vorlegt, meist als Bearer Tokens im Authorization-Header über TLS (RFC 6749; RFC 6750). Tokens sind oft JSON Web Tokens, deren Claims wie Aussteller, Zielgruppe und Ablauf geprüft werden müssen (RFC 7519). Die aktuelle Best Practice verzichtet auf Implicit- und Password-Grant, verlangt PKCE für öffentliche Clients und beschränkt Tokens auf ihre Zielgruppe (RFC 9700); fehlerhafte Authentifizierung ist das zweitgrößte API-Sicherheitsrisiko der OWASP API Top 10 2023 (OWASP API2:2023).
+API-Authentifizierung stellt fest, wer eine API aufruft und in wessen Auftrag. Der vorherrschende Standard ist OAuth 2.0: Ein Authorization Server gibt einem Client Access Tokens aus, die dieser dem Resource Server vorlegt, meist als Bearer Tokens im Authorization-Header über TLS (RFC 6749; RFC 6750). Tokens sind oft JSON Web Tokens, deren Claims wie Aussteller, Zielgruppe und Ablauf geprüft werden müssen (RFC 7519). Die aktuelle Best Practice verzichtet auf Implicit- und Password-Grant, verlangt PKCE für öffentliche Clients und beschränkt Tokens auf ihre Zielgruppe (RFC 9700); fehlerhafte Authentifizierung ist das zweitgrößte API-Sicherheitsrisiko der [[owasp|OWASP]] API Top 10 2023 (OWASP API2:2023).
 
 ### Funktionsweise
 

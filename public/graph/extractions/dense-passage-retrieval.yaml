@@ -1,7 +1,8 @@
 version: 1
-note_sha256: 7b47bc653e69a0352677b9882ddae857192b5a2978474c1d36cce077020e7cf3
+note_sha256: 21849270bcb29b78db28710ccaebf01386235ee2d789f6d982c176985f27d81a
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
+- squad
 - beir
 - bert
 - bm25

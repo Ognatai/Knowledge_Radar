@@ -54,7 +54,7 @@ Compression keeps the context within budget. LLMLingua (Jiang et al., 2023) comp
 
 #### 5. Memory beyond the context window
 
-When information does not fit into the window, it can be moved to external storage. MemGPT (Packer et al., 2023) uses virtual context management inspired by the hierarchical memory of operating systems: it moves data between fast and slow memory tiers to provide the appearance of a larger context, and uses interrupts to manage control flow between itself and the user. It was evaluated on analysing documents far larger than the context window and on multi-session chat in which agents remember and adapt over long interactions (Packer et al., 2023).
+When information does not fit into the window, it can be moved to external storage. [[memgpt|MemGPT]] (Packer et al., 2023) uses virtual context management inspired by the hierarchical memory of operating systems: it moves data between fast and slow memory tiers to provide the appearance of a larger context, and uses interrupts to manage control flow between itself and the user. It was evaluated on analysing documents far larger than the context window and on multi-session chat in which agents remember and adapt over long interactions (Packer et al., 2023).
 
 #### 6. Understanding versus generation
 
@@ -152,7 +152,7 @@ Die Kompression hält den Kontext innerhalb des Budgets. LLMLingua (Jiang et al.
 
 #### 5. Gedächtnis über das Kontextfenster hinaus
 
-Wenn Informationen nicht in das Fenster passen, können sie in externen Speicher verschoben werden. MemGPT (Packer et al., 2023) verwendet eine virtuelle Kontextverwaltung nach dem Vorbild der Speicherhierarchie von Betriebssystemen: Es verschiebt Daten zwischen schnellen und langsamen Speicherebenen, um den Eindruck eines größeren Kontexts zu erzeugen, und nutzt Interrupts, um den Kontrollfluss zwischen sich und dem Nutzer zu steuern. Es wurde bei der Analyse von Dokumenten getestet, die weit größer als das Kontextfenster waren, und bei Chats über mehrere Sitzungen, bei denen Agenten sich über lange Interaktionen erinnern und anpassen (Packer et al., 2023).
+Wenn Informationen nicht in das Fenster passen, können sie in externen Speicher verschoben werden. [[memgpt|MemGPT]] (Packer et al., 2023) verwendet eine virtuelle Kontextverwaltung nach dem Vorbild der Speicherhierarchie von Betriebssystemen: Es verschiebt Daten zwischen schnellen und langsamen Speicherebenen, um den Eindruck eines größeren Kontexts zu erzeugen, und nutzt Interrupts, um den Kontrollfluss zwischen sich und dem Nutzer zu steuern. Es wurde bei der Analyse von Dokumenten getestet, die weit größer als das Kontextfenster waren, und bei Chats über mehrere Sitzungen, bei denen Agenten sich über lange Interaktionen erinnern und anpassen (Packer et al., 2023).
 
 #### 6. Verständnis versus Generierung
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4464f46950b12f3c45a68f3f5561e00b049ab16ce78d33cfa524b76639a7f271
+note_sha256: c59f23573b269165692fca7b8921532cdec84d78cd988cc7e3decca0df86262c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - zero-shot-prompting

@@ -40,7 +40,7 @@ Tools let the model act outside the text: search, databases, APIs, code executio
 
 #### 3. Reasoning and acting: ReAct
 
-ReAct interleaves reasoning traces with actions: reasoning helps to create and update plans and handle exceptions, actions gather information from external sources (Yao et al., 2022). With a simple Wikipedia API, ReAct reduced hallucination and error propagation compared with pure chain-of-thought reasoning (Yao et al., 2022).
+[[react|ReAct]] interleaves reasoning traces with actions: reasoning helps to create and update plans and handle exceptions, actions gather information from external sources (Yao et al., 2022). With a simple Wikipedia API, ReAct reduced hallucination and error propagation compared with pure chain-of-thought reasoning (Yao et al., 2022).
 
 ```text
 while not done:
@@ -54,11 +54,11 @@ The design of this loop, with termination, state and error handling, is describe
 
 #### 4. State and memory
 
-Agents keep state: completed steps, tool results, open tasks and errors. Short-term memory covers the current task; long-term memory covers preferences, earlier projects and facts across sessions, often stored in [[vector-databases|Vector Databases]] or [[knowledge-graphs|Knowledge Graphs]]. Because context windows are limited, MemGPT manages several memory tiers and moves information in and out of the context, similar to an operating system (Packer et al., 2023); compaction and structured note-taking keep long tasks coherent ([[context-engineering|Context Engineering]]; Anthropic, 2025a).
+Agents keep state: completed steps, tool results, open tasks and errors. Short-term memory covers the current task; long-term memory covers preferences, earlier projects and facts across sessions, often stored in [[vector-databases|Vector Databases]] or [[knowledge-graphs|Knowledge Graphs]]. Because context windows are limited, [[memgpt|MemGPT]] manages several memory tiers and moves information in and out of the context, similar to an operating system (Packer et al., 2023); compaction and structured note-taking keep long tasks coherent ([[context-engineering|Context Engineering]]; Anthropic, 2025a).
 
 #### 5. Reflection and self-correction
 
-Reflexion agents reflect verbally on feedback and keep these reflections in an episodic memory for later attempts, reaching 91% pass@1 on the HumanEval coding benchmark (Shinn et al., 2023). An evaluator, possibly another LLM, can check intermediate results and trigger a retry ([[llm-as-a-judge|LLM-as-a-Judge]]).
+Reflexion agents reflect verbally on feedback and keep these reflections in an episodic memory for later attempts, reaching 91% pass@1 on the [[humaneval|HumanEval]] coding benchmark (Shinn et al., 2023). An evaluator, possibly another LLM, can check intermediate results and trigger a retry ([[llm-as-a-judge|LLM-as-a-Judge]]).
 
 #### 6. Single-agent and multi-agent systems
 
@@ -143,7 +143,7 @@ Werkzeuge erlauben dem Modell, außerhalb des Textes zu handeln: Suche, Datenban
 
 #### 3. Überlegen und Handeln: ReAct
 
-ReAct verzahnt Gedankengänge mit Aktionen: Das Überlegen hilft, Pläne aufzustellen und anzupassen und Ausnahmen zu behandeln, die Aktionen holen Informationen aus externen Quellen (Yao et al., 2022). Mit einer einfachen Wikipedia-API verringerte ReAct Halluzinationen und Fehlerfortpflanzung gegenüber reinem Chain-of-Thought-Schlussfolgern (Yao et al., 2022).
+[[react|ReAct]] verzahnt Gedankengänge mit Aktionen: Das Überlegen hilft, Pläne aufzustellen und anzupassen und Ausnahmen zu behandeln, die Aktionen holen Informationen aus externen Quellen (Yao et al., 2022). Mit einer einfachen Wikipedia-API verringerte ReAct Halluzinationen und Fehlerfortpflanzung gegenüber reinem Chain-of-Thought-Schlussfolgern (Yao et al., 2022).
 
 ```text
 while not done:
@@ -157,11 +157,11 @@ Wie diese Schleife mit Abbruch, Zustand und Fehlerbehandlung gestaltet wird, bes
 
 #### 4. Zustand und Gedächtnis
 
-Agenten führen einen Zustand: erledigte Schritte, Werkzeugergebnisse, offene Aufgaben und Fehler. Das Kurzzeitgedächtnis umfasst die aktuelle Aufgabe, das Langzeitgedächtnis Vorlieben, frühere Projekte und Fakten über Sitzungen hinweg, oft gespeichert in [[vector-databases|Vektordatenbanken]] oder [[knowledge-graphs|Knowledge Graphs]]. Weil Kontextfenster begrenzt sind, verwaltet MemGPT mehrere Speicherebenen und verschiebt Informationen in den Kontext hinein und heraus, ähnlich einem Betriebssystem (Packer et al., 2023); Kompaktierung und strukturierte Notizen halten lange Aufgaben zusammen ([[context-engineering|Context Engineering]]; Anthropic, 2025a).
+Agenten führen einen Zustand: erledigte Schritte, Werkzeugergebnisse, offene Aufgaben und Fehler. Das Kurzzeitgedächtnis umfasst die aktuelle Aufgabe, das Langzeitgedächtnis Vorlieben, frühere Projekte und Fakten über Sitzungen hinweg, oft gespeichert in [[vector-databases|Vektordatenbanken]] oder [[knowledge-graphs|Knowledge Graphs]]. Weil Kontextfenster begrenzt sind, verwaltet [[memgpt|MemGPT]] mehrere Speicherebenen und verschiebt Informationen in den Kontext hinein und heraus, ähnlich einem Betriebssystem (Packer et al., 2023); Kompaktierung und strukturierte Notizen halten lange Aufgaben zusammen ([[context-engineering|Context Engineering]]; Anthropic, 2025a).
 
 #### 5. Reflexion und Selbstkorrektur
 
-Reflexion-Agenten reflektieren Rückmeldungen in Worten und halten diese Reflexionen in einem episodischen Gedächtnis für spätere Versuche fest; sie erreichten 91 % pass@1 im Coding-Benchmark HumanEval (Shinn et al., 2023). Eine bewertende Instanz, etwa ein weiteres LLM, kann Zwischenergebnisse prüfen und einen neuen Versuch auslösen ([[llm-as-a-judge|LLM-as-a-Judge]]).
+Reflexion-Agenten reflektieren Rückmeldungen in Worten und halten diese Reflexionen in einem episodischen Gedächtnis für spätere Versuche fest; sie erreichten 91 % pass@1 im Coding-Benchmark [[humaneval|HumanEval]] (Shinn et al., 2023). Eine bewertende Instanz, etwa ein weiteres LLM, kann Zwischenergebnisse prüfen und einen neuen Versuch auslösen ([[llm-as-a-judge|LLM-as-a-Judge]]).
 
 #### 6. Einzel- und Multi-Agenten-Systeme
 

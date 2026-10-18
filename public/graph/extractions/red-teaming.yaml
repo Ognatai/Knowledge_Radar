@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 1309d02464d498cb7a7d60aaf0cb753f60591f403b2104b6572ddae6d7f5a153
+note_sha256: 896216f39bd718035330d80adfe1ae0bd0043be05accd6fe4533b1e632dc2e8f
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - llm-guardrails

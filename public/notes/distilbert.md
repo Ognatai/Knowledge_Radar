@@ -47,7 +47,7 @@ Following RoBERTa's practices, DistilBERT was trained with very large batches of
 
 #### 5. Results
 
-On the GLUE dev sets, DistilBERT scored 77.0 against 79.5 for BERT-base and 68.7 for the ELMo baseline (Sanh et al., 2019). On IMDb sentiment classification it reached 92.82% accuracy against 93.46%, and on SQuAD 1.1 77.7/85.8 EM/F1 against 81.2/88.5, improving to 79.1/86.9 with a second distillation step during fine-tuning. With 66 million instead of 110 million parameters, a full pass over the STS-B task on CPU took 410 instead of 668 seconds; on an iPhone 7 Plus, a question answering model was 71% faster than one based on BERT-base and weighed 207 MB (Sanh et al., 2019).
+On the GLUE dev sets, DistilBERT scored 77.0 against 79.5 for BERT-base and 68.7 for the ELMo baseline (Sanh et al., 2019). On IMDb sentiment classification it reached 92.82% accuracy against 93.46%, and on [[squad|SQuAD 1.1]] 77.7/85.8 EM/F1 against 81.2/88.5, improving to 79.1/86.9 with a second distillation step during fine-tuning. With 66 million instead of 110 million parameters, a full pass over the STS-B task on CPU took 410 instead of 668 seconds; on an iPhone 7 Plus, a question answering model was 71% faster than one based on BERT-base and weighed 207 MB (Sanh et al., 2019).
 
 #### Origin and variants
 
@@ -132,7 +132,7 @@ Nach den Praktiken von RoBERTa wurde DistilBERT mit sehr großen Batches von bis
 
 #### 5. Ergebnisse
 
-Auf den Dev-Sets von GLUE erreichte DistilBERT 77,0 gegenüber 79,5 für BERT-base und 68,7 für die ELMo-Baseline (Sanh et al., 2019). Bei der Sentimentklassifikation auf IMDb erreichte es 92,82 % Accuracy gegenüber 93,46 %, auf SQuAD 1.1 77,7/85,8 EM/F1 gegenüber 81,2/88,5, mit einem zweiten Distillationsschritt beim Fine-Tuning 79,1/86,9. Mit 66 statt 110 Millionen Parametern dauerte ein vollständiger Durchlauf über die STS-B-Aufgabe auf der CPU 410 statt 668 Sekunden; auf einem iPhone 7 Plus war ein Modell zur Fragebeantwortung 71 % schneller als eines auf Basis von BERT-base und wog 207 MB (Sanh et al., 2019).
+Auf den Dev-Sets von GLUE erreichte DistilBERT 77,0 gegenüber 79,5 für BERT-base und 68,7 für die ELMo-Baseline (Sanh et al., 2019). Bei der Sentimentklassifikation auf IMDb erreichte es 92,82 % Accuracy gegenüber 93,46 %, auf [[squad|SQuAD 1.1]] 77,7/85,8 EM/F1 gegenüber 81,2/88,5, mit einem zweiten Distillationsschritt beim Fine-Tuning 79,1/86,9. Mit 66 statt 110 Millionen Parametern dauerte ein vollständiger Durchlauf über die STS-B-Aufgabe auf der CPU 410 statt 668 Sekunden; auf einem iPhone 7 Plus war ein Modell zur Fragebeantwortung 71 % schneller als eines auf Basis von BERT-base und wog 207 MB (Sanh et al., 2019).
 
 #### Herkunft und Varianten
 

@@ -1,7 +1,8 @@
 version: 1
-note_sha256: "2c38691aae574c82b304121fdaadd0619650687054b787e6e36f80f677134286"
+note_sha256: "68f5ada7d57b75256f39853357c8429b4543187856df8f9d5c87fe3de6b3a5e9"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
+- owasp
 - rest
 - remote-procedure-call
 - grpc

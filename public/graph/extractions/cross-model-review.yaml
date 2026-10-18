@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8cc110716aa32184c1ffe875cc5bb4dcfadb795e0b6d9cf1c1ecdcca50c5d9fb
+note_sha256: 134919fed40f4567b07e5dac94bfa8d270ac89a01150328285bd834da70e5d9e
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - self-preference-bias
@@ -17,6 +17,9 @@ discusses:
 - regression-testing
 - llm-evaluation
 - llama
+- humaneval
+- codex
+- gemini
 relations:
 - from: cross-model-review
   type: BASED_ON

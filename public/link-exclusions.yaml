@@ -3,6 +3,10 @@
 # the target notes it must not link to, with the reason.
 version: 1
 exclusions:
+  memgpt:
+    dialogflow-cx: conversational agents in general, not the Dialogflow CX product.
+  llm-guardrails:
+    owasp: OWASP appears there only as a citation label.
   imagenet:
     word-sense-disambiguation: WordNet is the lexical database, not the WSD task.
   isotonic-regression:

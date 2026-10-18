@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7e6dafdd71e5a66ac03f8141838c4e471f89b86ee6bb083cda8275e892027d7d
+note_sha256: d815b3492330ce94f08911ef269da9bf6943e98a0be7e3dccf7f491dbc830c9b
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - attention-and-transformers
@@ -30,6 +30,8 @@ discusses:
 - anthropic
 - apis
 - large-language-models
+- humaneval
+- mmlu
 relations:
 - from: memorybank
   type: IS_EXAMPLE_OF

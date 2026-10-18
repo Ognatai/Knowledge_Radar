@@ -1,0 +1,20 @@
+version: 1
+note_sha256: 36a6cb27a72b94c8cacace9e0431e95ec1d76ee9180cab2afa6bc32c948253a2
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- chain-of-thought-prompting
+- large-language-models
+- temperature-scaling
+- hallucination-detection
+- react
+- prompt-engineering
+- llm-as-a-judge
+- llm-cost-optimisation
+- llm-evaluation
+- monitoring-and-alerting
+- tool-calling
+relations:
+- from: self-consistency
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: Self-consistency is a decoding strategy for chain-of-thought prompting

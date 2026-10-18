@@ -1,0 +1,32 @@
+version: 1
+note_sha256: dfa1c7bfcd021334ac50999bf9b3e0d53a6eb53995ab902e5965c3e24a25bdc3
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- chain-of-thought-prompting
+- self-consistency
+- agentic-ai
+- few-shot-prompting
+- prompt-engineering
+- tool-calling
+- retrieval-augmented-generation
+- langchain-and-langgraph
+- multi-agent-systems
+- llm-cost-optimisation
+- llm-observability-and-tracing
+- llm-evaluation
+- prompt-injection
+- llm-guardrails
+- agent-frameworks
+relations:
+- from: react
+  type: BASED_ON
+  to: chain-of-thought-prompting
+  evidence: combining chain-of-thought prompting (Wei et al., 2022) with action generation
+- from: react
+  type: COMPLEMENTS
+  to: self-consistency
+  evidence: The best results came from combining internal and external knowledge with self-consistency
+- from: agentic-ai
+  type: BASED_ON
+  to: react
+  evidence: The thought-action-observation loop became the standard pattern of LLM agents

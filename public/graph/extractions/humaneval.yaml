@@ -1,0 +1,22 @@
+version: 1
+note_sha256: a5012916e2ed7a87d86ae5b5669bfb83117baaeeaf57201e402f119f81b1c15c
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- bleu
+- software-testing
+- agentic-ai
+- swe-bench
+- llm-as-a-judge
+- harness-engineering
+- cross-model-review
+- memory-in-llms
+- llm-evaluation
+- humaneval-plus
+- openai
+- chatgpt
+- python
+relations:
+- from: humaneval
+  type: DEVELOPED_BY
+  to: openai
+  evidence: released by OpenAI with the Codex paper

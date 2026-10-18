@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Prompt engineering designs the input text so that a large language model performs a task without any change to its weights. Instructions alone (zero-shot), a few demonstrations (few-shot), demonstrations with intermediate reasoning steps ([[chain-of-thought-prompting|chain of thought]]) and voting over several sampled reasoning paths (self-consistency) can substantially improve results, especially on reasoning tasks (Brown et al., 2020; Wei et al., 2022; Wang et al., 2022).
+Prompt engineering designs the input text so that a large language model performs a task without any change to its weights. Instructions alone (zero-shot), a few demonstrations (few-shot), demonstrations with intermediate reasoning steps ([[chain-of-thought-prompting|chain of thought]]) and voting over several sampled reasoning paths ([[self-consistency|self-consistency]]) can substantially improve results, especially on reasoning tasks (Brown et al., 2020; Wei et al., 2022; Wang et al., 2022).
 
 ### How it works
 
@@ -107,7 +107,7 @@ Prompt engineering steers a model through its input alone, and instructions, dem
 
 ### TL;DR
 
-Prompt-Engineering gestaltet den Eingabetext so, dass ein großes Sprachmodell eine Aufgabe ausführt, ohne dass sich seine Gewichte ändern. Reine Anweisungen (Zero-Shot), einige Demonstrationsbeispiele (Few-Shot), Demonstrationen mit Zwischenschritten des Schließens ([[chain-of-thought-prompting|Chain of Thought]]) und die Abstimmung über mehrere gesampelte Lösungswege (Self-Consistency) können die Ergebnisse erheblich verbessern, insbesondere bei Aufgaben, die logisches Denken erfordern (Brown et al., 2020; Wei et al., 2022; Wang et al., 2022).
+Prompt-Engineering gestaltet den Eingabetext so, dass ein großes Sprachmodell eine Aufgabe ausführt, ohne dass sich seine Gewichte ändern. Reine Anweisungen (Zero-Shot), einige Demonstrationsbeispiele (Few-Shot), Demonstrationen mit Zwischenschritten des Schließens ([[chain-of-thought-prompting|Chain of Thought]]) und die Abstimmung über mehrere gesampelte Lösungswege ([[self-consistency|Self-Consistency]]) können die Ergebnisse erheblich verbessern, insbesondere bei Aufgaben, die logisches Denken erfordern (Brown et al., 2020; Wei et al., 2022; Wang et al., 2022).
 
 ### Funktionsweise
 

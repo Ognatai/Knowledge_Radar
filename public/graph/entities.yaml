@@ -104,14 +104,6 @@ entities:
   summary_de: Adapter-Schichten sind kleine trainierbare Module, die in ein vortrainiertes Netz eingefügt werden, während dessen Parameter fest bleiben; jede neue Aufgabe fügt so nur wenige Parameter hinzu, und Aufgaben lassen sich ergänzen, ohne frühere erneut anzufassen (Houlsby et al., 2019). Beim Transfer von BERT auf 26 Textklassifikationsaufgaben lagen Adapter auf GLUE nur 0,4 % hinter vollständigem Fine-Tuning, bei nur 3,6 % zusätzlichen Parametern je Aufgabe.
   sources:
   - https://arxiv.org/abs/1902.00751
-- id: t5
-  type: Method
-  name_en: T5
-  name_de: T5
-  summary_en: T5 (Text-to-Text Transfer Transformer) treats every text-based language problem in a unified text-to-text format and was used for a systematic comparison of pre-training objectives, architectures, unlabelled datasets and transfer approaches (Raffel et al., 2019). Combined with scale and the new Colossal Clean Crawled Corpus (C4), it reached state-of-the-art results on benchmarks for summarisation, question answering and text classification.
-  summary_de: T5 (Text-to-Text Transfer Transformer) behandelt jede textbasierte Sprachaufgabe in einem einheitlichen Text-zu-Text-Format und diente einem systematischen Vergleich von Vortrainingszielen, Architekturen, nicht annotierten Datensätzen und Transferverfahren (Raffel et al., 2019). Zusammen mit Skalierung und dem neuen Colossal Clean Crawled Corpus (C4) erreichte es Bestwerte auf Benchmarks für Zusammenfassung, Fragebeantwortung und Textklassifikation.
-  sources:
-  - https://arxiv.org/abs/1910.10683
 - id: masked-language-modelling
   type: Method
   name_en: Masked language modelling
@@ -203,22 +195,6 @@ entities:
   summary_de: Toolformer ist ein Sprachmodell, das sich selbstüberwacht beibringt, welche APIs es wann mit welchen Argumenten aufruft und wie es die Ergebnisse nutzt, mit nur wenigen Beispielen je API (Schick et al., 2023). Zu seinen Werkzeugen gehören ein Taschenrechner, ein Frage-Antwort-System, zwei Suchmaschinen, ein Übersetzungssystem und ein Kalender, und es verbesserte die Zero-Shot-Leistung bei vielen Aufgaben.
   sources:
   - https://arxiv.org/abs/2302.04761
-- id: react
-  type: Method
-  name_en: ReAct
-  name_de: ReAct
-  summary_en: 'ReAct prompts an LLM to generate reasoning traces and task-specific actions in an interleaved way: reasoning helps the model plan and handle exceptions, and actions let it query external sources such as a Wikipedia API (Yao et al., 2022). On ALFWorld and WebShop it outperformed imitation and reinforcement learning methods by 34 and 10 percentage points with only one or two in-context examples.'
-  summary_de: 'ReAct lässt ein LLM abwechselnd Gedankengänge und aufgabenbezogene Aktionen erzeugen: Das Schlussfolgern hilft beim Planen und beim Umgang mit Ausnahmen, die Aktionen fragen externe Quellen wie eine Wikipedia-API ab (Yao et al., 2022). Auf ALFWorld und WebShop übertraf es Imitations- und Reinforcement-Learning-Verfahren um 34 und 10 Prozentpunkte, mit nur ein oder zwei Beispielen im Prompt.'
-  sources:
-  - https://arxiv.org/abs/2210.03629
-- id: memgpt
-  type: Method
-  name_en: MemGPT
-  name_de: MemGPT
-  summary_en: MemGPT applies "virtual context management", inspired by hierarchical memory in operating systems, to give an LLM extended context beyond its context window by moving data between memory tiers and using interrupts to manage control flow (Packer et al., 2023). It was evaluated on analysing documents far larger than the context window and on multi-session chat agents that remember users over long interactions.
-  summary_de: 'MemGPT überträgt „virtuelle Kontextverwaltung“, angelehnt an hierarchischen Speicher in Betriebssystemen, auf LLMs: Daten werden zwischen Speicherebenen verschoben und Interrupts steuern den Ablauf, sodass das Modell über sein Kontextfenster hinaus arbeiten kann (Packer et al., 2023). Evaluiert wurde es an Dokumenten, die weit größer sind als das Kontextfenster, und an Chat-Agenten, die sich über viele Sitzungen an Nutzende erinnern.'
-  sources:
-  - https://arxiv.org/abs/2310.08560
 - id: reflexion
   type: Method
   name_en: Reflexion
@@ -3350,14 +3326,6 @@ entities:
   summary_de: Zero-Shot Chain of Thought löst schrittweises Schlussfolgern ohne Beispiele aus, indem vor jeder Antwort „Let's think step by step“ ergänzt wird (Kojima et al., 2022). Mit InstructGPT (text-davinci-002) hob dieser eine Prompt die Accuracy auf MultiArith von 17,7 % auf 78,7 % und auf GSM8K von 10,4 % auf 40,7 %, mit ähnlichen Gewinnen beim 540B-Modell PaLM.
   sources:
   - https://arxiv.org/abs/2205.11916
-- id: self-consistency
-  type: Method
-  name_en: Self-consistency
-  name_de: Self-Consistency
-  summary_en: Self-consistency is a decoding strategy for chain-of-thought prompting that samples a diverse set of reasoning paths instead of only the greedy one and selects the most consistent final answer (Wang et al., 2022). It rests on the intuition that complex problems admit several ways of reasoning to the same correct answer and improved results markedly, for example by 17.9 percentage points on GSM8K.
-  summary_de: Self-Consistency ist eine Dekodierstrategie für Chain-of-Thought-Prompting, die statt nur des wahrscheinlichsten Lösungswegs eine Vielfalt von Lösungswegen zieht und die am häufigsten erreichte Antwort wählt (Wang et al., 2022). Sie beruht auf der Annahme, dass komplexe Probleme mehrere Lösungswege zur selben richtigen Antwort zulassen, und verbesserte die Ergebnisse deutlich, etwa um 17,9 Prozentpunkte auf GSM8K.
-  sources:
-  - https://arxiv.org/abs/2203.11171
 - id: prompt-report
   type: Method
   name_en: The Prompt Report (taxonomy of prompting techniques)
@@ -4300,16 +4268,6 @@ entities:
   summary_de: Chatbot Arena ist eine offene Plattform zur Bewertung von LLMs anhand menschlicher Präferenzen (Chiang et al. 2024). Nutzende geben einen beliebigen Prompt ein, erhalten Antworten von zwei anonymen Modellen und stimmen für die bessere; die Identität der Modelle wird erst nach der Abstimmung offengelegt. Rangfolgen werden mit statistischen Verfahren wie dem Bradley-Terry-Modell geschätzt, und die Crowd-Stimmen stimmten nach Angaben der Autoren gut mit Expertenurteilen überein.
   sources:
   - https://arxiv.org/abs/2403.04132
-- id: squad
-  type: Dataset
-  name_en: SQuAD
-  name_de: SQuAD
-  aliases:
-  - Stanford Question Answering Dataset
-  summary_en: The Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset of more than 100,000 questions posed by crowdworkers on Wikipedia articles, where each answer is a segment of the corresponding passage (Rajpurkar et al., 2016). Its logistic regression baseline reached an F1 score of 51.0% against human performance of 86.8%.
-  summary_de: Der Stanford Question Answering Dataset (SQuAD) ist ein Datensatz zum Leseverständnis mit über 100 000 Fragen, die Crowdworker zu Wikipedia-Artikeln stellten; jede Antwort ist ein Abschnitt der zugehörigen Textpassage (Rajpurkar et al., 2016). Die Baseline mit logistischer Regression erreichte einen F1-Wert von 51,0 %, Menschen 86,8 %.
-  sources:
-  - https://arxiv.org/abs/1606.05250
 - id: alce
   type: Dataset
   name_en: ALCE
@@ -4318,14 +4276,6 @@ entities:
   summary_de: ALCE ist ein Benchmark für die automatische Bewertung von Zitaten in LLM-Antworten, bei dem Systeme Belege abrufen und Antworten mit Quellenangaben erzeugen; er misst Flüssigkeit, Korrektheit und Zitierqualität mit automatischen Metriken, die stark mit menschlichen Urteilen korrelieren (Gao et al., 2023). Auf dem Datensatz ELI5 fehlte selbst den besten Modellen in der Hälfte der Fälle eine vollständige Belegung durch Zitate.
   sources:
   - https://arxiv.org/abs/2305.14627
-- id: humaneval
-  type: Dataset
-  name_en: HumanEval
-  name_de: HumanEval
-  summary_en: HumanEval is an evaluation set released with Codex to measure the functional correctness of programs synthesised from docstrings (Chen et al., 2021). Codex solved 28.8% of its problems against 0% for GPT-3, and 70.2% when 100 samples were drawn per problem.
-  summary_de: HumanEval ist ein Evaluationsdatensatz, der mit Codex veröffentlicht wurde, um die funktionale Korrektheit von Programmen zu messen, die aus Docstrings erzeugt werden (Chen et al., 2021). Codex löste 28,8 % der Aufgaben, GPT-3 0 %, und mit 100 Stichproben je Aufgabe 70,2 %.
-  sources:
-  - https://arxiv.org/abs/2107.03374
 - id: agentbench
   type: Dataset
   name_en: AgentBench
@@ -4621,16 +4571,6 @@ entities:
   summary_de: Proof Key for Code Exchange (PKCE) schützt öffentliche OAuth-2.0-Clients, die den Authorization Code Grant nutzen, gegen das Abfangen des Autorisierungscodes (RFC 7636, Sakimura et al. 2015). Der Client erzeugt einen geheimen Code Verifier und sendet eine transformierte Fassung, die Code Challenge, mit der Autorisierungsanfrage; beim Einlösen des Codes sendet er den Verifier, und der Autorisierungsserver verweigert den Zugriff, wenn der transformierte Verifier nicht zur Challenge passt. Wer nur den Code abgefangen hat, kann ihn nicht einlösen.
   sources:
   - https://www.rfc-editor.org/rfc/rfc7636
-- id: owasp
-  type: Organisation
-  name_en: OWASP
-  name_de: OWASP
-  aliases:
-  - Open Worldwide Application Security Project
-  summary_en: The Open Worldwide Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software through community-led open-source projects, local chapters, conferences and training (OWASP). The project launched in 2001 and was incorporated as the OWASP Foundation, a US nonprofit, in 2004; it maintains widely adopted security standards such as its Top 10 lists.
-  summary_de: Das Open Worldwide Application Security Project (OWASP) ist eine gemeinnützige Stiftung, die die Sicherheit von Software durch gemeinschaftlich getragene Open-Source-Projekte, lokale Gruppen, Konferenzen und Schulungen verbessern will (OWASP). Das Projekt startete 2001 und wurde 2004 als OWASP Foundation, eine gemeinnützige Organisation in den USA, eingetragen; es pflegt verbreitete Sicherheitsstandards wie seine Top-10-Listen.
-  sources:
-  - https://owasp.org/about/
 - id: sql-pgq
   type: Technology
   name_en: SQL/PGQ
@@ -5575,3 +5515,13 @@ entities:
   summary_de: RGD (Refinement and Guidance Debugging) ist ein Agenten-Framework mit mehreren LLMs für Codeerzeugung und automatisches Debugging mit drei Agenten, einem Guide Agent, einem Debug Agent und einem Feedback Agent, die Code anhand von Selbstreflexion und Rückmeldungen schrittweise verbessern (Jin et al., 2024). Es berichtete Verbesserungen um 9,8 % auf HumanEval und 16,2 % auf MBPP gegenüber früheren Ansätzen und direktem Prompting.
   sources:
   - https://arxiv.org/abs/2410.01242
+- id: humaneval-plus
+  type: Dataset
+  name_en: HumanEval+
+  name_de: HumanEval+
+  aliases:
+  - EvalPlus
+  summary_en: HumanEval+ extends the tests of the HumanEval benchmark 80-fold with LLM- and mutation-based test generation from the EvalPlus framework (Liu et al., 2023). Across 26 LLMs it caught a significant amount of previously undetected wrong code, reduced pass@k by up to 19.3 to 28.9% and changed model rankings.
+  summary_de: HumanEval+ erweitert die Tests des Benchmarks HumanEval mit LLM- und mutationsbasierter Testerzeugung aus dem Framework EvalPlus auf das 80-Fache (Liu et al., 2023). Über 26 LLMs hinweg fing es eine beträchtliche Menge bisher unentdeckten falschen Codes ab, senkte pass@k um bis zu 19,3 bis 28,9 % und veränderte die Rangfolge der Modelle.
+  sources:
+  - https://arxiv.org/abs/2305.01210

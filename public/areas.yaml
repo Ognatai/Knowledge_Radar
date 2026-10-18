@@ -12,6 +12,7 @@ areas:
       - gpt
       - chatgpt
       - bert
+      - t5
       - natural-language-processing
       - n-gram-language-models
       - hidden-markov-models
@@ -78,6 +79,7 @@ areas:
       - prompt-engineering
       - prompt-comparison
       - chain-of-thought-prompting
+      - self-consistency
       - context-engineering
       - structured-context-construction
       - prompt-injection
@@ -93,6 +95,8 @@ areas:
       - tool-calling
       - cross-model-review
       - openrouter
+      - react
+      - memgpt
   - id: retrieval
     name_en: Retrieval & RAG
     name_de: Retrieval & RAG
@@ -149,10 +153,13 @@ areas:
       - red-teaming
       - sleeper-agents
       - llm-honesty-benchmarks
+      - owasp
       - responsible-ai
       - bleu
       - bertscore
       - glue
+      - humaneval
+      - squad
     also:
       - prompt-injection
       - text-similarity-metrics

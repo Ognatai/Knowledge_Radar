@@ -1,7 +1,8 @@
 version: 1
-note_sha256: a5b9db6ada39b279e821a02883443bf435a73badb5a2c88f5aaa4e0d52ff07f8
+note_sha256: dffbcb633add9aac51d2ee7cef5868bf16cc8bfa838566a25ed62aed9335bc24
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
+- squad
 - bert
 - classification
 - embeddings

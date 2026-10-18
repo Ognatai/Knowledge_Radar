@@ -1,0 +1,20 @@
+version: 1
+note_sha256: 31b79791b6d71f37b183309a41bf6c2fb41b1ea5e732c18664bf62dc31aa91f5
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- llm-guardrails
+- red-teaming
+- apis
+- api-authentication
+- prompt-injection
+- sleeper-agents
+- bsi
+- cyber-resilience-act
+- ci-cd
+- agentic-ai
+- tool-calling
+- vector-databases
+- retrieval-augmented-generation
+- mcp-and-related-protocols
+- embeddings
+relations: []

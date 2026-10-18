@@ -1,7 +1,8 @@
 version: 1
-note_sha256: 88bf627375b175fd9d7088bfe5c274317dba62e82e06aaf5f9fcb13bab5a5e6c
+note_sha256: 8d602b4b19dc91d6120c1e50593f37e12c26438ff2a38ab6eaa2753f2e1c82b6
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
+- squad
 - confusion-matrix
 - specificity
 - accuracy

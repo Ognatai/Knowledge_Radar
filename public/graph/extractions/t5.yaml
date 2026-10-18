@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 4e5f1a353187f0b37094c010e973ec2bb7332be4fc90f3e84ca6feb2c8d45f4d
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- attention-and-transformers
+- natural-language-inference
+- bert
+- bias-in-nlp
+- lora
+- llm-adaptation
+- glue
+- google
+- large-language-models
+- speculative-decoding
+- gpt
+- distilbert
+- squad
+- classification
+relations:
+- from: t5
+  type: DEVELOPED_BY
+  to: google
+  evidence: T5 was introduced by Raffel et al. (2019) at Google
+- from: t5
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: T5 closely follows the original encoder-decoder Transformer

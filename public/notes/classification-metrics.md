@@ -62,7 +62,7 @@ When negatives far outnumber positives, ROC plots can look reassuring while most
 
 #### 6. Exact match for extracted answers
 
-For extractive question answering, where the answer is a span of text, predictions are scored with exact match, i.e. whether the predicted span equals a reference answer, and with a token-level F1 score that gives partial credit for overlap. On SQuAD, a logistic regression baseline reached an F1 of 51.0%, compared with 86.8% for humans (Rajpurkar et al., 2016; [[text-similarity-metrics|Text Similarity Metrics]]).
+For extractive question answering, where the answer is a span of text, predictions are scored with exact match, i.e. whether the predicted span equals a reference answer, and with a token-level F1 score that gives partial credit for overlap. On [[squad|SQuAD]], a logistic regression baseline reached an F1 of 51.0%, compared with 86.8% for humans (Rajpurkar et al., 2016; [[text-similarity-metrics|Text Similarity Metrics]]).
 
 #### Origin and variants
 
@@ -161,7 +161,7 @@ Wenn negative Fälle weit überwiegen, können ROC-Kurven beruhigend aussehen, o
 
 #### 6. Exact Match für extrahierte Antworten
 
-Bei extraktiver Fragebeantwortung, bei der die Antwort ein Textabschnitt ist, werden Vorhersagen mit Exact Match bewertet, also danach, ob der vorhergesagte Abschnitt einer Referenzantwort entspricht, und mit einem F1-Score auf Token-Ebene, der Überlappungen teilweise anrechnet. Auf SQuAD erreichte eine Baseline mit logistischer Regression einen F1-Wert von 51,0 %, Menschen 86,8 % (Rajpurkar et al., 2016; [[text-similarity-metrics|Textähnlichkeitsmetriken]]).
+Bei extraktiver Fragebeantwortung, bei der die Antwort ein Textabschnitt ist, werden Vorhersagen mit Exact Match bewertet, also danach, ob der vorhergesagte Abschnitt einer Referenzantwort entspricht, und mit einem F1-Score auf Token-Ebene, der Überlappungen teilweise anrechnet. Auf [[squad|SQuAD]] erreichte eine Baseline mit logistischer Regression einen F1-Wert von 51,0 %, Menschen 86,8 % (Rajpurkar et al., 2016; [[text-similarity-metrics|Textähnlichkeitsmetriken]]).
 
 #### Ursprung und Varianten
 

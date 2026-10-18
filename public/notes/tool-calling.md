@@ -58,7 +58,7 @@ Client tools run in the developer's application, which executes the operation an
 
 #### 5. Returning the result and looping
 
-The application sends the output back in a second request, in Anthropic's API as a `tool_result` block that refers to the call's id, and the model then answers or calls further tools (Anthropic documentation; OpenAI documentation). Repeating this loop, with the model reasoning between calls, is the ReAct pattern: interleaving reasoning traces with actions let a model on HotpotQA and FEVER query a Wikipedia API and reduce hallucination and error propagation compared with chain-of-thought alone (Yao et al., 2022). Agent frameworks and SDKs automate the loop ([[agent-frameworks|agent frameworks]]).
+The application sends the output back in a second request, in Anthropic's API as a `tool_result` block that refers to the call's id, and the model then answers or calls further tools (Anthropic documentation; OpenAI documentation). Repeating this loop, with the model reasoning between calls, is the [[react|ReAct]] pattern: interleaving reasoning traces with actions let a model on HotpotQA and FEVER query a Wikipedia API and reduce hallucination and error propagation compared with chain-of-thought alone (Yao et al., 2022). Agent frameworks and SDKs automate the loop ([[agent-frameworks|agent frameworks]]).
 
 #### 6. Teaching models to use tools
 

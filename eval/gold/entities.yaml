@@ -49,10 +49,6 @@ entities:
     type: Method
     name_en: Adapter layers
     name_de: Adapter-Layer
-  - id: t5
-    type: Method
-    name_en: T5
-    name_de: T5
   - id: masked-language-modelling
     type: Method
     name_en: Masked language modelling
@@ -98,14 +94,6 @@ entities:
     type: Method
     name_en: Toolformer
     name_de: Toolformer
-  - id: react
-    type: Method
-    name_en: ReAct
-    name_de: ReAct
-  - id: memgpt
-    type: Method
-    name_en: MemGPT
-    name_de: MemGPT
   - id: reflexion
     type: Method
     name_en: Reflexion
@@ -214,10 +202,6 @@ entities:
     type: Technology
     name_en: Chatbot Arena
     name_de: Chatbot Arena
-  - id: humaneval
-    type: Dataset
-    name_en: HumanEval
-    name_de: HumanEval
   - id: agentbench
     type: Dataset
     name_en: AgentBench

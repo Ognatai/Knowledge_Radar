@@ -41,7 +41,7 @@ regression test set → re-test after every change
 
 #### 1. Threat model and scope
 
-A red-team exercise starts from what should not happen: categories of harm such as offensive language, dangerous instructions or leakage of private data, and for applications the security risks of the OWASP Top 10 for LLM applications, for example prompt injection, sensitive information disclosure, data and model poisoning or excessive agency (OWASP, 2025). The scope decides whether the plain model, the model with its system prompt, or the whole application including retrieval and tools is attacked; prompt injection through retrieved documents only shows up in the last case ([[prompt-injection|prompt injection]]).
+A red-team exercise starts from what should not happen: categories of harm such as offensive language, dangerous instructions or leakage of private data, and for applications the security risks of the [[owasp|OWASP]] Top 10 for LLM applications, for example prompt injection, sensitive information disclosure, data and model poisoning or excessive agency (OWASP, 2025). The scope decides whether the plain model, the model with its system prompt, or the whole application including retrieval and tools is attacked; prompt injection through retrieved documents only shows up in the last case ([[prompt-injection|prompt injection]]).
 
 #### 2. Human red teaming
 
@@ -138,7 +138,7 @@ Regressionstestset → erneuter Test nach jeder Änderung
 
 #### 1. Bedrohungsmodell und Umfang
 
-Eine Red-Team-Übung beginnt mit dem, was nicht passieren darf: Schadenskategorien wie beleidigende Sprache, gefährliche Anleitungen oder das Durchsickern privater Daten und bei Anwendungen die Sicherheitsrisiken der OWASP Top 10 für LLM-Anwendungen, etwa Prompt Injection, Offenlegung sensibler Informationen, Daten- und Modellvergiftung oder übermäßige Handlungsbefugnis (OWASP, 2025). Der Umfang legt fest, ob das reine Modell, das Modell mit seinem System-Prompt oder die ganze Anwendung samt Retrieval und Tools angegriffen wird; Prompt Injection über abgerufene Dokumente zeigt sich nur im letzten Fall ([[prompt-injection|Prompt Injection]]).
+Eine Red-Team-Übung beginnt mit dem, was nicht passieren darf: Schadenskategorien wie beleidigende Sprache, gefährliche Anleitungen oder das Durchsickern privater Daten und bei Anwendungen die Sicherheitsrisiken der [[owasp|OWASP]] Top 10 für LLM-Anwendungen, etwa Prompt Injection, Offenlegung sensibler Informationen, Daten- und Modellvergiftung oder übermäßige Handlungsbefugnis (OWASP, 2025). Der Umfang legt fest, ob das reine Modell, das Modell mit seinem System-Prompt oder die ganze Anwendung samt Retrieval und Tools angegriffen wird; Prompt Injection über abgerufene Dokumente zeigt sich nur im letzten Fall ([[prompt-injection|Prompt Injection]]).
 
 #### 2. Red Teaming durch Menschen
 

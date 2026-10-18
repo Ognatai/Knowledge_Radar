@@ -20,7 +20,7 @@ LangChain and LangGraph are open-source frameworks for building LLM applications
 ### Core concepts
 
 - **Agent = model + harness:** In LangChain, the harness is everything around the model loop, the prompt, the tools and any middleware; create_agent composes them, and a standard interface supports many model providers (LangChain docs; [[harness-engineering|Harness Engineering]]).
-- **Agent loop:** The agent alternates between reasoning and tool calls until it can answer, an approach introduced as ReAct, which interleaves reasoning traces with actions such as API calls (Yao et al., 2022; [[agentic-ai|Agentic AI]]).
+- **Agent loop:** The agent alternates between reasoning and tool calls until it can answer, an approach introduced as [[react|ReAct]], which interleaves reasoning traces with actions such as API calls (Yao et al., 2022; [[agentic-ai|Agentic AI]]).
 - **LangGraph graphs:** Applications are graphs whose nodes are steps, either deterministic code or LLM-driven decisions, that read and update a shared state, and whose edges determine the next step; this allows deterministic and agentic steps in the same graph (LangGraph docs).
 - **Durable execution and persistence:** LangGraph persists the state so that long-running agents can resume after failures, pause for human approval and keep memory across turns (LangGraph docs).
 - **Relationship:** LangChain agents are built on top of LangGraph, using its durable execution, human-in-the-loop support and persistence (LangChain docs).
@@ -119,7 +119,7 @@ LangChain und LangGraph sind Open-Source-Frameworks zum Bau von LLM-Anwendungen 
 ### Kernkonzepte
 
 - **Agent = Modell + Harness:** In LangChain ist der Harness alles rund um die Modellschleife: Prompt, Tools und Middleware; create_agent setzt sie zusammen, und eine einheitliche Schnittstelle unterstützt viele Modellanbieter (LangChain docs; [[harness-engineering|Harness Engineering]]).
-- **Agent-Schleife:** Der Agent wechselt zwischen Überlegen und Tool-Aufrufen, bis er antworten kann; dieser Ansatz wurde als ReAct eingeführt, das Gedankengänge mit Aktionen wie API-Aufrufen verzahnt (Yao et al., 2022; [[agentic-ai|Agentic AI]]).
+- **Agent-Schleife:** Der Agent wechselt zwischen Überlegen und Tool-Aufrufen, bis er antworten kann; dieser Ansatz wurde als [[react|ReAct]] eingeführt, das Gedankengänge mit Aktionen wie API-Aufrufen verzahnt (Yao et al., 2022; [[agentic-ai|Agentic AI]]).
 - **LangGraph-Graphen:** Anwendungen sind Graphen, deren Knoten Schritte sind, entweder deterministischer Code oder LLM-gesteuerte Entscheidungen, die einen gemeinsamen Zustand lesen und aktualisieren, und deren Kanten den nächsten Schritt bestimmen; so lassen sich deterministische und agentische Schritte im selben Graphen verbinden (LangGraph docs).
 - **Dauerhafte Ausführung und Persistenz:** LangGraph speichert den Zustand, sodass lang laufende Agenten nach Fehlern weitermachen, für menschliche Freigaben pausieren und über mehrere Runden ein Gedächtnis behalten können (LangGraph docs).
 - **Verhältnis:** LangChain-Agenten bauen auf LangGraph auf und nutzen dessen dauerhafte Ausführung, Human-in-the-Loop-Unterstützung und Persistenz (LangChain docs).

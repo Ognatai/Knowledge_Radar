@@ -1,7 +1,8 @@
 version: 1
-note_sha256: 12cd6fb227fd2dc7aa66ee7eb5d0059e8dfa8de1aed8a5adcdc4816065bfa20d
+note_sha256: 60fd5918ac95ebd9f800750358da9d156d6d83230cb9f02d87296ed53d10a041
 extracted_by: claude
 discusses:
+- react
 - large-language-models
 - agentic-ai
 - retrieval-augmented-generation

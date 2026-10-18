@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 71724981f416a9aa77bf4f5bed96adf920e99f586fdcc1d314baadf36212798e
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- memory-in-llms
+- tool-calling
+- hnsw
+- embeddings
+- vector-databases
+- structured-context-construction
+- agent-frameworks
+- llm-cost-optimisation
+- rag-failure-modes
+- retrieval-augmented-generation
+- llm-observability-and-tracing
+- gdpr
+- context-engineering
+- natural-questions
+relations:
+- from: memgpt
+  type: BASED_ON
+  to: tool-calling
+  evidence: the model itself moves information between them through function calls
+- from: memgpt
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: It is one of the main designs for memory in LLM agents

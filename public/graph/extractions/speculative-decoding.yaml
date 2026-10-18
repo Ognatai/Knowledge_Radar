@@ -12,6 +12,8 @@ discusses:
 - llm-cost-optimisation
 - mlops-and-deployment
 - distilbert
+- t5
+- chinchilla
 relations:
 - from: medusa
   type: IS_EXAMPLE_OF
