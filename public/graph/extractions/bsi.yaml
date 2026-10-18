@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 92cc82ea4849b856a730ce8a0317c3127f80c7f94f044454f0137a3e7a9fe114
+note_sha256: e76de3d68b956fe25ff8ac8703a8661dbd9367b22894d0f771cce6473b07fa10
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bias-in-nlp
@@ -12,7 +12,8 @@ discusses:
 - federal-ministry-of-the-interior
 - it-governance-frameworks
 - kritis-dachgesetz
-- llm-guardrails-and-red-teaming
+- llm-guardrails
+- red-teaming
 - nis2-directive
 - prompt-injection
 relations: []

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f12dff00465d536b4891a3b7b8d1d8c5b51ab7ea5403a69a62a7739fd7b7c654
+note_sha256: 572f6d914d7ca6e3970080584e309a362c69e0dbc2563f8b34d5e11fd03f70e9
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bleu
@@ -15,6 +15,7 @@ discusses:
 - retrieval-augmented-generation
 - sql
 - text-similarity-metrics
+- tool-calling
 relations:
 - from: ragas
   type: IMPLEMENTS

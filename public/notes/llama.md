@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-LLaMA is [[meta|Meta]]'s family of openly released [[large-language-models|large language models]]. The first LLaMA models (7 to 65 billion parameters, 2023) were trained only on publicly available data for 1 to 1.4 trillion tokens; LLaMA-13B outperformed GPT-3 with 175 billion parameters on most benchmarks, showing that smaller models trained longer are cheaper at inference (Touvron et al., 2023a). Llama 2 (7 to 70 billion) added 40% more training data, a doubled context of 4,096 tokens and chat versions aligned with RLHF, released for research and commercial use (Touvron et al., 2023b). Llama 3.1 (8, 70 and 405 billion) trained on 15.6 trillion tokens with a context of up to 128,000 tokens, supports eight languages and tool use, and reached quality comparable to GPT-4 on many tasks (Llama Team, 2024).
+LLaMA is [[meta|Meta]]'s family of openly released [[large-language-models|large language models]]. The first LLaMA models (7 to 65 billion parameters, 2023) were trained only on publicly available data for 1 to 1.4 trillion tokens; LLaMA-13B outperformed GPT-3 with 175 billion parameters on most benchmarks, showing that smaller models trained longer are cheaper at inference (Touvron et al., 2023a). Llama 2 (7 to 70 billion) added 40% more training data, a doubled context of 4,096 tokens and chat versions aligned with RLHF, released for research and commercial use (Touvron et al., 2023b). Llama 3.1 (8, 70 and 405 billion) trained on 15.6 trillion tokens with a context of up to 128,000 tokens, supports eight languages and [[tool-calling|tool use]], and reached quality comparable to GPT-4 on many tasks (Llama Team, 2024).
 
 ### How it works
 
@@ -49,7 +49,7 @@ LLaMA is a decoder-only Transformer ([[attention-and-transformers|attention and 
 
 #### 4. Post-training and safety
 
-Llama 2-Chat was fine-tuned with supervised examples and then with reinforcement learning from human feedback, using two reward models for helpfulness and safety and both rejection sampling and proximal policy optimisation; a technique called Ghost Attention keeps system instructions effective over multiple turns (Touvron et al., 2023b). Llama 3 replaced PPO with rounds of supervised fine-tuning, rejection sampling and direct preference optimisation, and was released together with Llama Guard 3, a classifier for input and output safety (Llama Team, 2024). The alignment methods are explained in [[llm-alignment|LLM alignment]], safety classifiers in [[llm-guardrails-and-red-teaming|LLM guardrails and red teaming]].
+Llama 2-Chat was fine-tuned with supervised examples and then with reinforcement learning from human feedback, using two reward models for helpfulness and safety and both rejection sampling and proximal policy optimisation; a technique called Ghost Attention keeps system instructions effective over multiple turns (Touvron et al., 2023b). Llama 3 replaced PPO with rounds of supervised fine-tuning, rejection sampling and direct preference optimisation, and was released together with Llama Guard 3, a classifier for input and output safety (Llama Team, 2024). The alignment methods are explained in [[llm-alignment|LLM alignment]], safety classifiers in [[llm-guardrails|LLM guardrails]].
 
 #### 5. Capabilities and releases
 
@@ -140,7 +140,7 @@ LLaMA ist ein Decoder-only-Transformer ([[attention-and-transformers|Attention u
 
 #### 4. Post-Training und Sicherheit
 
-Llama 2-Chat wurde mit überwachten Beispielen und anschließend mit Reinforcement Learning from Human Feedback feinjustiert, mit zwei Reward-Modellen für Hilfsbereitschaft und Sicherheit sowie Rejection Sampling und Proximal Policy Optimization; eine Technik namens Ghost Attention hält Systemanweisungen über mehrere Gesprächsrunden wirksam (Touvron et al., 2023b). Llama 3 ersetzte PPO durch Runden aus überwachtem Fine-Tuning, Rejection Sampling und Direct Preference Optimization und wurde zusammen mit Llama Guard 3 veröffentlicht, einem Klassifikator für die Sicherheit von Ein- und Ausgaben (Llama Team, 2024). Die Alignment-Verfahren erklärt [[llm-alignment|LLM-Alignment]], Sicherheitsklassifikatoren [[llm-guardrails-and-red-teaming|LLM-Guardrails und Red Teaming]].
+Llama 2-Chat wurde mit überwachten Beispielen und anschließend mit Reinforcement Learning from Human Feedback feinjustiert, mit zwei Reward-Modellen für Hilfsbereitschaft und Sicherheit sowie Rejection Sampling und Proximal Policy Optimization; eine Technik namens Ghost Attention hält Systemanweisungen über mehrere Gesprächsrunden wirksam (Touvron et al., 2023b). Llama 3 ersetzte PPO durch Runden aus überwachtem Fine-Tuning, Rejection Sampling und Direct Preference Optimization und wurde zusammen mit Llama Guard 3 veröffentlicht, einem Klassifikator für die Sicherheit von Ein- und Ausgaben (Llama Team, 2024). Die Alignment-Verfahren erklärt [[llm-alignment|LLM-Alignment]], Sicherheitsklassifikatoren [[llm-guardrails|LLM-Guardrails]].
 
 #### 5. Fähigkeiten und Veröffentlichungen
 

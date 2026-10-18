@@ -85,7 +85,7 @@ ELIZA (Weizenbaum, 1966) was an early pattern-action chatbot; the GUS system of 
 | Pattern-action chatbot | Rules map patterns to answers, as in ELIZA (Jurafsky & Martin, 2026) | Very narrow scripted dialogues |
 | Frame-based dialogue system | NLU, state tracking, policy, NLG (Jurafsky & Martin, 2026) | Tasks with known slots |
 | Flow-based platform | Flows of pages, routes, event handlers (Dialogflow CX: Flows; Dialogflow CX: Handlers) | Explicitly modelled conversation paths |
-| Generative agent | LLM prompt from goal, instructions and tools (Dialogflow CX: Playbooks) | Free phrasing, tool use; see [[agentic-ai\|Agentic AI]] |
+| Generative agent | LLM prompt from goal, instructions and tools (Dialogflow CX: Playbooks) | Free phrasing, [[tool-calling\|tool use]]; see [[agentic-ai\|Agentic AI]] |
 
 ### In practice
 

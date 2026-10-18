@@ -1,7 +1,7 @@
 version: 1
-note_sha256: "1d8d4b254ede0276bae92a9861dc723d89451a91dbbd8bfa0fd99eca54edca9e"
+note_sha256: "de108735c602621a9a56ba2db48cb51cba49486f0785f62bb35f1f0f3f674be9"
 extracted_by: manual
-discusses: [large-language-models, toolformer, function-calling, react, memgpt, reflexion, prompt-injection, multi-agent-systems, langchain-and-langgraph, humaneval, agentbench, swe-bench]
+discusses: [large-language-models, toolformer, tool-calling, react, memgpt, reflexion, prompt-injection, multi-agent-systems, langchain-and-langgraph, humaneval, agentbench, swe-bench]
 relations:
   - from: agentic-ai
     type: BASED_ON

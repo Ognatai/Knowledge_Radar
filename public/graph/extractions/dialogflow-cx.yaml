@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e891bc8aeaa76a46939b2a9c422de59864f4bc7495517208add4154693025d4a
+note_sha256: 95f1ecf6c8917d150d40beac6e22565e8a1efaa12ee80d213e0bee77dec83043
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - asynchronous-apis
@@ -7,7 +7,8 @@ discusses:
 - conversation-design
 - conversational-ai
 - few-shot-prompting
-- llm-guardrails-and-red-teaming
+- llm-guardrails
+- red-teaming
 - natural-language-understanding
 - voice-agents
 - google

@@ -57,7 +57,7 @@ Karpathy's post of 6 February 2025 named the practice, and the term quickly spre
 |----------|----------------|
 | Prototypes, experiments, throwaway scripts | Good: fast iteration matters more than longevity (Willison, 2025) |
 | Internal tools with limited impact | Suitable with basic tests |
-| Production code with high correctness requirements | Only with review, test coverage and [[llm-guardrails-and-red-teaming\|guardrails]] |
+| Production code with high correctness requirements | Only with review, test coverage and [[llm-guardrails\|guardrails]] |
 | Security-critical or regulated systems | Risky without an additional control layer |
 | Legacy code with implicit dependencies | Risky, because missing understanding makes errors more likely |
 
@@ -148,7 +148,7 @@ Karpathys Beitrag vom 6. Februar 2025 gab der Praxis ihren Namen, und der Begrif
 |----------|----------------|
 | Prototypen, Experimente, Wegwerf-Skripte | Gut: schnelle Iteration zählt mehr als Langlebigkeit (Willison, 2025) |
 | Interne Werkzeuge mit begrenzter Tragweite | Geeignet, mit grundlegenden Tests |
-| Produktivcode mit hohem Korrektheitsanspruch | Nur mit Review, Testabdeckung und [[llm-guardrails-and-red-teaming\|Guardrails]] |
+| Produktivcode mit hohem Korrektheitsanspruch | Nur mit Review, Testabdeckung und [[llm-guardrails\|Guardrails]] |
 | Sicherheitskritische oder regulierte Systeme | Riskant ohne zusätzliche Kontrollschicht |
 | Legacy-Code mit impliziten Abhängigkeiten | Riskant, weil fehlendes Verständnis Fehler wahrscheinlicher macht |
 

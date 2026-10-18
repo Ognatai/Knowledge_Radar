@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "f0fb6de101209d4b0b0ca7e9f90cc2f3fe51e4edfa66529713fdfb73e4079dd3"
+note_sha256: 354b6d51080b668b2944fc9ab08d00c236f41ff7a41bb2b53456785cccd344cf
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -10,6 +10,7 @@ discusses:
 - git
 - prompt-injection
 - context-engineering
+- llm-guardrails
 relations:
 - from: prompt-engineering
   type: BASED_ON

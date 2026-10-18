@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 1309d02464d498cb7a7d60aaf0cb753f60591f403b2104b6572ddae6d7f5a153
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- llm-guardrails
+- llm-alignment
+- prompt-injection
+- bias-in-nlp
+- fairness-metrics
+- sleeper-agents
+- llm-honesty-benchmarks
+- llm-evaluation
+- regression-testing
+- agentic-ai
+- responsible-ai
+- eu-ai-act
+- owasp
+- constitutional-classifiers
+- mask-benchmark
+relations:
+- from: red-teaming
+  type: COMPLEMENTS
+  to: llm-guardrails
+  evidence: Its findings feed alignment training, guardrails and regression tests
+- from: red-teaming
+  type: COMPLEMENTS
+  to: llm-alignment
+  evidence: Its findings feed alignment training, guardrails and regression tests

@@ -47,7 +47,7 @@ The BSI is part of the portfolio of the Federal Ministry of the Interior (§ 1 B
 
 ### Relevance for AI development
 
-The BSI frames AI security in three perspectives: how AI systems can be attacked and demonstrably protected, how AI can improve defence, and which new threats arise from AI in attack tools (BSI, n.d.-b). Its guidance is directly usable for building LLM applications, for example on [[prompt-injection|prompt injection]], evasion attacks and secure development, and its bias and explainability papers address [[bias-in-nlp|bias]] and [[explainable-ai|explainable AI]] (BSI, n.d.-b). AI systems that run as part of critical facilities fall under the BSI's supervision of operators, including attack detection and audits ([[critical-facility|critical facility]], [[llm-guardrails-and-red-teaming|LLM guardrails and red teaming]]).
+The BSI frames AI security in three perspectives: how AI systems can be attacked and demonstrably protected, how AI can improve defence, and which new threats arise from AI in attack tools (BSI, n.d.-b). Its guidance is directly usable for building LLM applications, for example on [[prompt-injection|prompt injection]], evasion attacks and secure development, and its bias and explainability papers address [[bias-in-nlp|bias]] and [[explainable-ai|explainable AI]] (BSI, n.d.-b). AI systems that run as part of critical facilities fall under the BSI's supervision of operators, including attack detection and audits ([[critical-facility|critical facility]], [[llm-guardrails|LLM guardrails]] and [[red-teaming|red teaming]]).
 
 ### Relationship to other bodies
 
@@ -95,7 +95,7 @@ Das BSI gehört zum Geschäftsbereich des Bundesministeriums des Innern (§ 1 BS
 
 ### Bedeutung für die KI-Entwicklung
 
-Das BSI betrachtet KI-Sicherheit aus drei Blickwinkeln: wie KI-Systeme angegriffen und nachweisbar geschützt werden können, wie KI die Verteidigung verbessern kann und welche neuen Bedrohungen durch KI in Angriffswerkzeugen entstehen (BSI, n.d.-b). Seine Hinweise lassen sich beim Bau von LLM-Anwendungen direkt nutzen, etwa zu [[prompt-injection|Prompt Injection]], Evasion-Angriffen und sicherer Entwicklung, und seine Papiere zu Bias und Erklärbarkeit behandeln [[bias-in-nlp|Bias]] und [[explainable-ai|Explainable AI]] (BSI, n.d.-b). KI-Systeme, die Teil kritischer Anlagen sind, fallen unter die Aufsicht des BSI über die Betreiber, einschließlich Angriffserkennung und Audits ([[critical-facility|kritische Anlage]], [[llm-guardrails-and-red-teaming|LLM-Guardrails und Red Teaming]]).
+Das BSI betrachtet KI-Sicherheit aus drei Blickwinkeln: wie KI-Systeme angegriffen und nachweisbar geschützt werden können, wie KI die Verteidigung verbessern kann und welche neuen Bedrohungen durch KI in Angriffswerkzeugen entstehen (BSI, n.d.-b). Seine Hinweise lassen sich beim Bau von LLM-Anwendungen direkt nutzen, etwa zu [[prompt-injection|Prompt Injection]], Evasion-Angriffen und sicherer Entwicklung, und seine Papiere zu Bias und Erklärbarkeit behandeln [[bias-in-nlp|Bias]] und [[explainable-ai|Explainable AI]] (BSI, n.d.-b). KI-Systeme, die Teil kritischer Anlagen sind, fallen unter die Aufsicht des BSI über die Betreiber, einschließlich Angriffserkennung und Audits ([[critical-facility|kritische Anlage]], [[llm-guardrails|LLM-Guardrails]] und [[red-teaming|Red Teaming]]).
 
 ### Verhältnis zu anderen Stellen
 

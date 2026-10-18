@@ -52,7 +52,7 @@ The earliest documented use found was a blog post in early July 2026; the term s
 ### When to use it
 
 - When a system consists of several agents or loops whose responsibilities, transitions and permissions must be designed explicitly.
-- When agent memory needs typed relations, for example decisions that supersede earlier decisions.
+- When [[memory-in-llms|agent memory]] needs typed relations, for example decisions that supersede earlier decisions.
 - In discussions, only after clarifying which of the three meanings is meant.
 
 ### Strengths and limitations

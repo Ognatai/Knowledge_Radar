@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c69a418f37aed56ce2c7bff0f82afd9f6ae7dde36719d119e53c3d012e46a8da
+note_sha256: 39e53b514f6a65647ee3f607534ef7fa88235b9ae58f2ba51154a677a18b671c
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - attention-and-transformers
@@ -12,13 +12,14 @@ discusses:
 - large-language-models
 - llm-adaptation
 - llm-alignment
-- llm-guardrails-and-red-teaming
+- llm-guardrails
 - lora
 - mlops-and-deployment
 - multimodal-models
 - qlora
 - quantisation
 - meta
+- tool-calling
 relations:
 - from: llama
   type: DEVELOPED_BY

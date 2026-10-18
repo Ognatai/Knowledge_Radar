@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 08db0ce8ac5ecfb7c633e8c2a6292eaa33e10d7ea07f923865939f635c90befa
+note_sha256: b9141b6ff603ca17ab576f45fc73a70d763576a23caebd13004c018e85558bb3
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agent-frameworks
@@ -15,7 +15,7 @@ discusses:
 - information-retrieval
 - infrastructure-as-code
 - llm-cost-optimisation
-- llm-guardrails-and-red-teaming
+- llm-guardrails
 - ml-pipelines
 - mlops-and-deployment
 - rag-retrieval

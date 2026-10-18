@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 736a50036489ffc096b7a1f1dea632c150d625259cf75fe8132447c4316aff94
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- anthropic
+- data-poisoning
+- defection-probes
+- red-teaming
+- owasp
+- llm-honesty-benchmarks
+- prompt-injection
+- llm-guardrails
+- hallucination-detection
+- responsible-ai
+- software-testing
+- harness-engineering
+- llm-alignment
+- chain-of-thought-prompting
+relations:
+- from: defection-probes
+  type: EVALUATES
+  to: sleeper-agents
+  evidence: simple linear probes on internal activations detected the deliberately built sleeper agents with high accuracy
+- from: sleeper-agents
+  type: BASED_ON
+  to: data-poisoning
+  evidence: Backdoors can be inserted by poisoning training data

@@ -1,0 +1,36 @@
+version: 1
+note_sha256: 8cc110716aa32184c1ffe875cc5bb4dcfadb795e0b6d9cf1c1ecdcca50c5d9fb
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- self-preference-bias
+- multiagent-debate
+- unidebugger
+- rgd-debugger
+- llm-as-a-judge
+- openrouter
+- multi-agent-systems
+- vibe-coding
+- llm-cost-optimisation
+- software-testing
+- agent-skills
+- harness-engineering
+- regression-testing
+- llm-evaluation
+- llama
+relations:
+- from: cross-model-review
+  type: BASED_ON
+  to: self-preference-bias
+  evidence: The research basis is that LLM evaluators recognise and favour their own generations
+- from: cross-model-review
+  type: BASED_ON
+  to: multiagent-debate
+  evidence: several model instances debating their answers improves reasoning and factuality
+- from: unidebugger
+  type: IS_EXAMPLE_OF
+  to: multi-agent-systems
+  evidence: Multi-agent debugging frameworks such as UniDebugger and RGD split debugging into roles
+- from: rgd-debugger
+  type: IS_EXAMPLE_OF
+  to: multi-agent-systems
+  evidence: Multi-agent debugging frameworks such as UniDebugger and RGD split debugging into roles

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e4a896457f26bc436155c19110bcd1fd727be6647ff77d6b63964dac24b716d0
+note_sha256: 46cdf5ee9fd210bf2882b2eb2d31bee3c3288119142c90269b39e28f0ae2b2d6
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agent-frameworks
@@ -10,6 +10,7 @@ discusses:
 - llm-as-a-judge
 - anthropic
 - autogen
+- tool-calling
 relations:
 - from: autogen
   type: IMPLEMENTS

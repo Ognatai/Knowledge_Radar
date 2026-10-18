@@ -1,0 +1,69 @@
+version: 1
+note_sha256: 7e6dafdd71e5a66ac03f8141838c4e471f89b86ee6bb083cda8275e892027d7d
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- attention-and-transformers
+- llm-adaptation
+- retrieval-augmented-generation
+- rag-vs-fine-tuning
+- context-engineering
+- knn-lm
+- memorizing-transformers
+- engram
+- mixture-of-experts
+- n-gram-language-models
+- k-nearest-neighbours
+- embeddings
+- vector-databases
+- memgpt
+- memorybank
+- generative-agents
+- dense-passage-retrieval
+- faiss
+- tool-calling
+- agent-frameworks
+- rag-failure-modes
+- rag-retrieval
+- semantic-retrieval
+- gdpr
+- llm-observability-and-tracing
+- anthropic
+- apis
+- large-language-models
+relations:
+- from: memorybank
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: as in MemoryBank, MemGPT and Generative Agents
+- from: memgpt
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: as in MemoryBank, MemGPT and Generative Agents
+- from: generative-agents
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: as in MemoryBank, MemGPT and Generative Agents
+- from: engram
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: as in DeepSeek's Engram, a large table of n-gram embeddings retrieved in constant time
+- from: knn-lm
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: nearest-neighbour memories over past representations
+- from: memorizing-transformers
+  type: IS_EXAMPLE_OF
+  to: memory-in-llms
+  evidence: nearest-neighbour memories over past representations
+- from: engram
+  type: BASED_ON
+  to: n-gram-language-models
+  evidence: Their Engram module modernises classic n-gram embeddings
+- from: engram
+  type: COMPLEMENTS
+  to: mixture-of-experts
+  evidence: a second axis of sparsity next to the conditional computation of Mixture-of-Experts
+- from: memorybank
+  type: BASED_ON
+  to: dense-passage-retrieval
+  evidence: a dual-tower dense retriever similar to Dense Passage Retrieval

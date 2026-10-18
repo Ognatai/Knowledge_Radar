@@ -24,7 +24,7 @@ sources:
 
 ### TL;DR
 
-Agent frameworks are libraries that provide the recurring building blocks of LLM agents: clients for different model providers, tool and function calling, connections to data and MCP servers, memory and session state, multi-step workflows that coordinate several agents, and hooks for tracing and safety checks. Widely used examples are LangChain/LangGraph, [[microsoft|Microsoft]]'s Semantic Kernel and [[autogen|AutoGen]], now merged into Microsoft Agent Framework, LlamaIndex, which started from retrieval over private data, and CrewAI, which organises agents into crews (Microsoft Learn; Wu et al., 2023; LlamaIndex; CrewAI). They differ mainly in how much control flow they make explicit: free conversation between agents, event-driven workflows or graphs with defined execution paths. Microsoft's own guidance is that a plain function beats an agent whenever one can be written (Microsoft Learn).
+Agent frameworks are libraries that provide the recurring building blocks of LLM agents: clients for different model providers, tool and [[tool-calling|function calling]], connections to data and MCP servers, memory and session state, multi-step workflows that coordinate several agents, and hooks for tracing and safety checks. Widely used examples are LangChain/LangGraph, [[microsoft|Microsoft]]'s Semantic Kernel and [[autogen|AutoGen]], now merged into Microsoft Agent Framework, LlamaIndex, which started from retrieval over private data, and CrewAI, which organises agents into crews (Microsoft Learn; Wu et al., 2023; LlamaIndex; CrewAI). They differ mainly in how much control flow they make explicit: free conversation between agents, event-driven workflows or graphs with defined execution paths. Microsoft's own guidance is that a plain function beats an agent whenever one can be written (Microsoft Learn).
 
 ### How it works
 
@@ -98,7 +98,7 @@ Sources: Microsoft Learn; Semantic Kernel; Wu et al. (2023); LlamaIndex; CrewAI.
 
 ### In practice
 
-Framework choice matters less than evaluation: agent runs should be traced and tested on representative tasks before release ([[llm-evaluation|LLM evaluation]], [[llm-observability-and-tracing|LLM observability and tracing]]). Tool access needs the same care as any API, including approval steps for actions with side effects and defences against [[prompt-injection|prompt injection]]; see also [[llm-guardrails-and-red-teaming|LLM guardrails and red teaming]].
+Framework choice matters less than evaluation: agent runs should be traced and tested on representative tasks before release ([[llm-evaluation|LLM evaluation]], [[llm-observability-and-tracing|LLM observability and tracing]]). Tool access needs the same care as any API, including approval steps for actions with side effects and defences against [[prompt-injection|prompt injection]]; see also [[llm-guardrails|LLM guardrails]] and [[red-teaming|red teaming]].
 
 ### Key takeaway
 
@@ -118,7 +118,7 @@ Agent frameworks package model clients, tools, retrieval, memory, orchestration 
 
 ### TL;DR
 
-Agent-Frameworks sind Bibliotheken, die die wiederkehrenden Bausteine von LLM-Agenten bereitstellen: Clients für verschiedene Modellanbieter, Tool- und Function Calling, Anbindungen an Daten und MCP-Server, Gedächtnis und Sitzungszustand, mehrstufige Workflows, die mehrere Agenten koordinieren, sowie Einstiegspunkte für Tracing und Sicherheitsprüfungen. Verbreitete Beispiele sind LangChain/LangGraph, Microsofts Semantic Kernel und [[autogen|AutoGen]], inzwischen zu Microsoft Agent Framework zusammengeführt, LlamaIndex, das von Retrieval über private Daten ausging, und CrewAI, das Agenten in Crews organisiert (Microsoft Learn; Wu et al., 2023; LlamaIndex; CrewAI). Sie unterscheiden sich vor allem darin, wie explizit sie den Kontrollfluss machen: freie Konversation zwischen Agenten, ereignisgesteuerte Workflows oder Graphen mit festgelegten Ausführungspfaden. Microsofts eigene Empfehlung lautet, dass eine einfache Funktion einem Agenten vorzuziehen ist, wann immer sie sich schreiben lässt (Microsoft Learn).
+Agent-Frameworks sind Bibliotheken, die die wiederkehrenden Bausteine von LLM-Agenten bereitstellen: Clients für verschiedene Modellanbieter, Tool- und [[tool-calling|Function Calling]], Anbindungen an Daten und MCP-Server, Gedächtnis und Sitzungszustand, mehrstufige Workflows, die mehrere Agenten koordinieren, sowie Einstiegspunkte für Tracing und Sicherheitsprüfungen. Verbreitete Beispiele sind LangChain/LangGraph, Microsofts Semantic Kernel und [[autogen|AutoGen]], inzwischen zu Microsoft Agent Framework zusammengeführt, LlamaIndex, das von Retrieval über private Daten ausging, und CrewAI, das Agenten in Crews organisiert (Microsoft Learn; Wu et al., 2023; LlamaIndex; CrewAI). Sie unterscheiden sich vor allem darin, wie explizit sie den Kontrollfluss machen: freie Konversation zwischen Agenten, ereignisgesteuerte Workflows oder Graphen mit festgelegten Ausführungspfaden. Microsofts eigene Empfehlung lautet, dass eine einfache Funktion einem Agenten vorzuziehen ist, wann immer sie sich schreiben lässt (Microsoft Learn).
 
 ### Funktionsweise
 
@@ -192,7 +192,7 @@ Quellen: Microsoft Learn; Semantic Kernel; Wu et al. (2023); LlamaIndex; CrewAI.
 
 ### In der Praxis
 
-Die Wahl des Frameworks zählt weniger als die Evaluation: Agentenläufe sollten vor dem Release auf repräsentativen Aufgaben nachverfolgt und getestet werden ([[llm-evaluation|LLM-Evaluation]], [[llm-observability-and-tracing|LLM-Observability und Tracing]]). Tool-Zugriff braucht dieselbe Sorgfalt wie jede API, einschließlich Freigabeschritten für Aktionen mit Nebenwirkungen und Schutz vor [[prompt-injection|Prompt Injection]]; siehe auch [[llm-guardrails-and-red-teaming|LLM-Guardrails und Red Teaming]].
+Die Wahl des Frameworks zählt weniger als die Evaluation: Agentenläufe sollten vor dem Release auf repräsentativen Aufgaben nachverfolgt und getestet werden ([[llm-evaluation|LLM-Evaluation]], [[llm-observability-and-tracing|LLM-Observability und Tracing]]). Tool-Zugriff braucht dieselbe Sorgfalt wie jede API, einschließlich Freigabeschritten für Aktionen mit Nebenwirkungen und Schutz vor [[prompt-injection|Prompt Injection]]; siehe auch [[llm-guardrails|LLM-Guardrails]] und [[red-teaming|Red Teaming]].
 
 ### Merksatz
 

@@ -1,17 +1,21 @@
 version: 1
-note_sha256: "478100b30c549292984747ce7bb157eccb18420033d5459fa4d2229adef86964"
+note_sha256: 9d13aa2a83c52a9509c1cb6778a88352026aac536f8d26cd12c90ecf06ae4ee9
 extracted_by: claude (hand-labelled gold standard)
-discusses: [agentic-ai, react, mcp-and-related-protocols]
+discusses:
+- agentic-ai
+- react
+- mcp-and-related-protocols
+- tool-calling
 relations:
-  - from: langchain-and-langgraph
-    type: IMPLEMENTS
-    to: agentic-ai
-    evidence: LangChain and LangGraph are open-source frameworks for building LLM applications and agents
-  - from: langchain-and-langgraph
-    type: IMPLEMENTS
-    to: mcp-and-related-protocols
-    evidence: Convert Model Context Protocol tools into LangChain tools
-  - from: langchain-and-langgraph
-    type: BASED_ON
-    to: react
-    evidence: an approach introduced as ReAct
+- from: langchain-and-langgraph
+  type: IMPLEMENTS
+  to: agentic-ai
+  evidence: LangChain and LangGraph are open-source frameworks for building LLM applications and agents
+- from: langchain-and-langgraph
+  type: IMPLEMENTS
+  to: mcp-and-related-protocols
+  evidence: Convert Model Context Protocol tools into LangChain tools
+- from: langchain-and-langgraph
+  type: BASED_ON
+  to: react
+  evidence: an approach introduced as ReAct

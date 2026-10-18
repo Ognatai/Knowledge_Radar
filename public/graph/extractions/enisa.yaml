@@ -1,11 +1,12 @@
 version: 1
-note_sha256: 455877d745ae237cf82ea6f4f9f463a944a8128f4ab4838729912f05a4a05ee3
+note_sha256: 73492e4cd70f464e1e420b12e12826a292b0b5581d29c716586a47398b15b0f8
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bsi
 - cybersecurity-act
 - european-commission
-- llm-guardrails-and-red-teaming
+- llm-guardrails
+- red-teaming
 - nis2-directive
 relations:
 - from: cybersecurity-act

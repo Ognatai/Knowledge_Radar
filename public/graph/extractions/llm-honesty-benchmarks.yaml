@@ -1,0 +1,29 @@
+version: 1
+note_sha256: 43e7ee226655867fdffce930df2f913dcf3f4b1816db776d5885c510784cafaa
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- truthfulqa
+- mask-benchmark
+- behonest
+- machiavelli-benchmark
+- in-context-scheming
+- felonybench
+- sleeper-agents
+- llm-alignment
+- llm-evaluation
+- model-comparison
+- red-teaming
+- llm-guardrails
+- llm-as-a-judge
+- agentic-ai
+- llama
+- prompt-injection
+relations:
+- from: felonybench
+  type: EVALUATES
+  to: agentic-ai
+  evidence: a benchmark for whether AI agents respect authorisation boundaries they have the means to cross
+- from: machiavelli-benchmark
+  type: EVALUATES
+  to: agentic-ai
+  evidence: MACHIAVELLI and agentic scheming evaluations test deceptive and unethical behaviour of agents

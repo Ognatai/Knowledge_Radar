@@ -82,7 +82,7 @@ The first example is a tool-calling agent with LangChain; the second a fixed [[r
 **Limitations**
 - LangGraph is deliberately low-level, so more of the application logic must be written explicitly (LangGraph docs).
 - Abstractions add a layer between the application and the model provider's API, which must be understood when debugging; tracing tools help (LangChain docs; [[llm-observability-and-tracing|LLM Observability and Tracing]]).
-- Agent loops in the ReAct style still depend on the model's reasoning and can fail on tool use (Yao et al., 2022).
+- Agent loops in the ReAct style still depend on the model's reasoning and can fail on [[tool-calling|tool use]] (Yao et al., 2022).
 
 ### Comparison
 

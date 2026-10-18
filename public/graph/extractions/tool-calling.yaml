@@ -1,0 +1,43 @@
+version: 1
+note_sha256: 5283e3c5e2a7e9629f30698e6726816559fe0a448d8430dd5aed5459a9f97c05
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- agentic-ai
+- react
+- toolformer
+- gorilla
+- toolllm
+- prompt-engineering
+- context-engineering
+- llm-guardrails
+- apis
+- agent-frameworks
+- mcp-and-related-protocols
+- agent-skills
+- retrieval-augmented-generation
+- prompt-injection
+- llm-observability-and-tracing
+- llm-evaluation
+- harness-engineering
+- llm-cost-optimisation
+- anthropic
+- openai
+- chatgpt
+- llama
+relations:
+- from: agentic-ai
+  type: BASED_ON
+  to: tool-calling
+  evidence: It is the mechanism behind agents
+- from: toolformer
+  type: IS_EXAMPLE_OF
+  to: tool-calling
+  evidence: Toolformer showed that a model can teach itself, in a self-supervised way
+- from: gorilla
+  type: IS_EXAMPLE_OF
+  to: tool-calling
+  evidence: Gorilla, a fine-tuned LLaMA-based model, surpassed GPT-4 on writing API calls
+- from: toolllm
+  type: IS_EXAMPLE_OF
+  to: tool-calling
+  evidence: ToolLLM built ToolBench from 16,464 real-world REST APIs in 49 categories

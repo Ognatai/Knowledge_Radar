@@ -62,7 +62,7 @@ Turns should be "brief and optimally relevant from the user's point of view", re
 
 #### Origin and variants
 
-Google published its conversation design guidelines for the Google Assistant; Conversational Actions themselves were deprecated on 13 June 2023, while the design guidelines are still published (Google, What is). For LLM-based assistants, the corresponding levers are system prompts ([[prompt-engineering|prompt engineering]]) and runtime checks ([[llm-guardrails-and-red-teaming|LLM guardrails]]).
+Google published its conversation design guidelines for the Google Assistant; Conversational Actions themselves were deprecated on 13 June 2023, while the design guidelines are still published (Google, What is). For LLM-based assistants, the corresponding levers are system prompts ([[prompt-engineering|prompt engineering]]) and runtime checks ([[llm-guardrails|LLM guardrails]]).
 
 ### When to use it
 
@@ -153,7 +153,7 @@ Beiträge sollten „brief and optimally relevant from the user's point of view�
 
 #### Herkunft und Varianten
 
-Google veröffentlichte seine Richtlinien zum Conversation Design für den Google Assistant; die Conversational Actions selbst wurden am 13. Juni 2023 eingestellt, die Gestaltungsrichtlinien sind aber weiterhin veröffentlicht (Google, What is). Bei LLM-basierten Assistenten sind die entsprechenden Stellschrauben System-Prompts ([[prompt-engineering|Prompt Engineering]]) und Prüfungen zur Laufzeit ([[llm-guardrails-and-red-teaming|LLM-Guardrails]]).
+Google veröffentlichte seine Richtlinien zum Conversation Design für den Google Assistant; die Conversational Actions selbst wurden am 13. Juni 2023 eingestellt, die Gestaltungsrichtlinien sind aber weiterhin veröffentlicht (Google, What is). Bei LLM-basierten Assistenten sind die entsprechenden Stellschrauben System-Prompts ([[prompt-engineering|Prompt Engineering]]) und Prüfungen zur Laufzeit ([[llm-guardrails|LLM-Guardrails]]).
 
 ### Wann einsetzen
 

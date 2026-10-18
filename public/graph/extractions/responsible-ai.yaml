@@ -1,5 +1,5 @@
 version: 1
-note_sha256: eb974dda9363637cfd6b70a52769a322f7466979a8cb7b6c13f06b4319ae09e6
+note_sha256: 95f1fdb573c5b138d4b3fd4abd78155715d9708b4cc066e870793932649de764
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bias-in-nlp
@@ -12,7 +12,8 @@ discusses:
 - gdpr
 - it-governance-frameworks
 - llm-evaluation
-- llm-guardrails-and-red-teaming
+- llm-guardrails
+- red-teaming
 - marisk
 - monitoring-and-alerting
 - software-testing

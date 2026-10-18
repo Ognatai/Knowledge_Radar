@@ -102,7 +102,7 @@ Source: Google Cloud (2026c).
 
 ### In practice
 
-Model each topic as its own flow and keep pages small; define handlers for repeated no-match and no-input events that end in a handover to a human ([[conversational-ai|conversational AI]]). Use [[asynchronous-apis|webhooks]] for anything that touches back-end systems, and keep generative playbooks to tasks where free conversation helps, guarded like other LLM applications ([[llm-guardrails-and-red-teaming|LLM guardrails and red teaming]]). Conversation logs and analytics show where users drop out or are misunderstood ([[conversation-analytics|conversation analytics]]).
+Model each topic as its own flow and keep pages small; define handlers for repeated no-match and no-input events that end in a handover to a human ([[conversational-ai|conversational AI]]). Use [[asynchronous-apis|webhooks]] for anything that touches back-end systems, and keep generative playbooks to tasks where free conversation helps, guarded like other LLM applications ([[llm-guardrails|LLM guardrails]] and [[red-teaming|red teaming]]). Conversation logs and analytics show where users drop out or are misunderstood ([[conversation-analytics|conversation analytics]]).
 
 ### Key takeaway
 
@@ -205,7 +205,7 @@ Quelle: Google Cloud (2026c).
 
 ### In der Praxis
 
-Jedes Thema wird als eigener Flow modelliert, Pages bleiben klein; für wiederholte no-match- und no-input-Ereignisse werden Handler definiert, die mit einer Übergabe an einen Menschen enden ([[conversational-ai|Conversational AI]]). [[asynchronous-apis|Webhooks]] dienen allem, was Backend-Systeme berührt, und generative Playbooks bleiben Aufgaben vorbehalten, bei denen freie Konversation hilft, abgesichert wie andere LLM-Anwendungen ([[llm-guardrails-and-red-teaming|LLM-Guardrails und Red Teaming]]). Gesprächsprotokolle und Analysen zeigen, wo Nutzende abbrechen oder missverstanden werden ([[conversation-analytics|Conversation Analytics]]).
+Jedes Thema wird als eigener Flow modelliert, Pages bleiben klein; für wiederholte no-match- und no-input-Ereignisse werden Handler definiert, die mit einer Übergabe an einen Menschen enden ([[conversational-ai|Conversational AI]]). [[asynchronous-apis|Webhooks]] dienen allem, was Backend-Systeme berührt, und generative Playbooks bleiben Aufgaben vorbehalten, bei denen freie Konversation hilft, abgesichert wie andere LLM-Anwendungen ([[llm-guardrails|LLM-Guardrails]] und [[red-teaming|Red Teaming]]). Gesprächsprotokolle und Analysen zeigen, wo Nutzende abbrechen oder missverstanden werden ([[conversation-analytics|Conversation Analytics]]).
 
 ### Merksatz
 

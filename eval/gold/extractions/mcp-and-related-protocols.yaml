@@ -1,7 +1,7 @@
 version: 1
 note_sha256: "143cc8d52cd99ae21a2711557b31b399b4f122b5002d497575297ce7695c06c7"
 extracted_by: manual
-discusses: [anthropic, json-rpc, language-server-protocol, a2a, openapi, function-calling, langchain-and-langgraph, prompt-injection]
+discusses: [anthropic, json-rpc, language-server-protocol, a2a, openapi, tool-calling, langchain-and-langgraph, prompt-injection]
 relations:
   - from: mcp-and-related-protocols
     type: DEVELOPED_BY
@@ -9,7 +9,7 @@ relations:
     evidence: Anthropic open-sourced MCP on 25 November 2024
   - from: mcp-and-related-protocols
     type: BASED_ON
-    to: function-calling
+    to: tool-calling
     evidence: Function calling remains the basis; MCP standardises how tool definitions and results travel
   - from: langchain-and-langgraph
     type: IMPLEMENTS

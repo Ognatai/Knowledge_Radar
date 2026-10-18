@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 38f00f165ad04d50422ab777184733d38a664ceaf60ddee061ed954dc271bcd9
+note_sha256: e2826b18e916a69f26fb8f3aac4dc36c423564ad8ba7a926060654eaf79c467b
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agentic-ai
@@ -10,7 +10,8 @@ discusses:
 - harness-engineering
 - langchain-and-langgraph
 - llm-evaluation
-- llm-guardrails-and-red-teaming
+- llm-guardrails
+- red-teaming
 - llm-observability-and-tracing
 - mcp-and-related-protocols
 - prompt-injection
@@ -18,6 +19,7 @@ discusses:
 - retrieval-augmented-generation
 - autogen
 - microsoft
+- tool-calling
 relations:
 - from: autogen
   type: IS_EXAMPLE_OF

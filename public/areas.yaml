@@ -24,6 +24,7 @@ areas:
       - tokenisation
       - embeddings
       - multimodal-models
+      - memory-in-llms
       - natural-language-understanding
       - natural-language-inference
       - dialogue-state-tracking
@@ -61,6 +62,7 @@ areas:
       - mixed-precision-training
       - llm-cost-optimisation
       - qlora
+      - speculative-decoding
   - id: agents
     name_en: Agents, Prompting & AI Engineering
     name_de: Agenten, Prompting & AI Engineering
@@ -88,6 +90,9 @@ areas:
       - multi-agent-systems
       - dialogflow-cx
       - autogen
+      - tool-calling
+      - cross-model-review
+      - openrouter
   - id: retrieval
     name_en: Retrieval & RAG
     name_de: Retrieval & RAG
@@ -140,7 +145,10 @@ areas:
       - bias-in-nlp
       - explainable-ai
       - differential-privacy-and-federated-learning
-      - llm-guardrails-and-red-teaming
+      - llm-guardrails
+      - red-teaming
+      - sleeper-agents
+      - llm-honesty-benchmarks
       - responsible-ai
       - bleu
       - bertscore

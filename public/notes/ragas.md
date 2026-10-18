@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Ragas (Retrieval Augmented Generation Assessment) is an open-source framework for evaluating [[retrieval-augmented-generation|retrieval-augmented generation]] pipelines with metrics computed by prompting an LLM (Es et al., 2024). The original paper proposed three reference-free metrics: faithfulness (is the answer grounded in the retrieved context?), answer relevance (does it address the question?) and context relevance (is the retrieved context focused?). On the WikiEval dataset, the Ragas faithfulness metric agreed with human judgements in 95% of pairwise comparisons, far more than asking [[chatgpt|ChatGPT]] directly for a score (Es et al., 2024). The library has since grown to include context precision and recall, noise sensitivity, metrics for agents and tool use, [[sql|SQL]] and classical text comparison metrics (Ragas documentation, 2026).
+Ragas (Retrieval Augmented Generation Assessment) is an open-source framework for evaluating [[retrieval-augmented-generation|retrieval-augmented generation]] pipelines with metrics computed by prompting an LLM (Es et al., 2024). The original paper proposed three reference-free metrics: faithfulness (is the answer grounded in the retrieved context?), answer relevance (does it address the question?) and context relevance (is the retrieved context focused?). On the WikiEval dataset, the Ragas faithfulness metric agreed with human judgements in 95% of pairwise comparisons, far more than asking [[chatgpt|ChatGPT]] directly for a score (Es et al., 2024). The library has since grown to include context precision and recall, noise sensitivity, metrics for agents and [[tool-calling|tool use]], [[sql|SQL]] and classical text comparison metrics (Ragas documentation, 2026).
 
 ### Core concepts
 

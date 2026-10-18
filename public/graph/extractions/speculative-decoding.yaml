@@ -1,0 +1,27 @@
+version: 1
+note_sha256: 608484d312d0130f6d741fbc993b5a11d7239109c2bfcd69070bc2754ca18761
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- medusa
+- eagle-speculative-sampling
+- dspark
+- voice-agents
+- quantisation
+- knowledge-distillation
+- model-compression
+- llm-cost-optimisation
+- mlops-and-deployment
+- distilbert
+relations:
+- from: medusa
+  type: IS_EXAMPLE_OF
+  to: speculative-decoding
+  evidence: extra heads (Medusa)
+- from: eagle-speculative-sampling
+  type: IS_EXAMPLE_OF
+  to: speculative-decoding
+  evidence: feature extrapolation (EAGLE, Eagle3)
+- from: dspark
+  type: IS_EXAMPLE_OF
+  to: speculative-decoding
+  evidence: semi-autoregressive drafters with load-aware verification (DSpark)

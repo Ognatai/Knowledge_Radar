@@ -98,10 +98,6 @@ entities:
     type: Method
     name_en: Toolformer
     name_de: Toolformer
-  - id: function-calling
-    type: Method
-    name_en: Function calling
-    name_de: Function Calling
   - id: react
     type: Method
     name_en: ReAct

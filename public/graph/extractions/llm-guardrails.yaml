@@ -1,0 +1,52 @@
+version: 1
+note_sha256: ac99c9fe3c029d522f5a6f821313a559153e640a5c7c971be22ddbda9d58be6c
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- llama
+- openai
+- anthropic
+- few-shot-prompting
+- constitutional-classifiers
+- conversational-ai
+- hallucination-detection
+- natural-language-inference
+- retrieval-augmented-generation
+- tool-calling
+- harness-engineering
+- prompt-injection
+- sleeper-agents
+- embeddings
+- cloud-ai-platforms
+- llm-alignment
+- red-teaming
+- llm-observability-and-tracing
+- regression-testing
+- agent-frameworks
+- responsible-ai
+- eu-ai-act
+- llama-guard
+- nemo-guardrails
+- owasp
+- selfcheckgpt
+- classification
+relations:
+- from: llama-guard
+  type: IS_EXAMPLE_OF
+  to: llm-guardrails
+  evidence: Safeguard classifiers such as Llama Guard label prompts and responses against a risk taxonomy
+- from: nemo-guardrails
+  type: IS_EXAMPLE_OF
+  to: llm-guardrails
+  evidence: toolkits such as NeMo Guardrails add programmable rails
+- from: constitutional-classifiers
+  type: IS_EXAMPLE_OF
+  to: llm-guardrails
+  evidence: Constitutional Classifiers are trained on synthetic data generated from a written constitution of permitted and restricted content
+- from: llm-guardrails
+  type: COMPLEMENTS
+  to: llm-alignment
+  evidence: Guardrails catch part of what alignment training and red teaming miss
+- from: llm-guardrails
+  type: COMPLEMENTS
+  to: red-teaming
+  evidence: Guardrails catch part of what alignment training and red teaming miss

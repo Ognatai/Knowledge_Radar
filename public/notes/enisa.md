@@ -52,7 +52,7 @@ ENISA's governance consists of a Management Board, an Executive Board, an Execut
 
 ### Relevance for AI development
 
-ENISA's multilayer framework offers a step-by-step approach for securing AI systems, operations and processes by building on existing good practices and identifying gaps (ENISA, 2023). Its analyses of emerging technologies and threat landscapes cover AI as part of its mandate under Art. 9 of the Cybersecurity Act, and certification schemes it prepares can apply to ICT products that contain AI ([[cybersecurity-act|Cybersecurity Act]]). For providers of AI services in the cloud, the NIS2 register and vulnerability database are part of the operational landscape ([[nis2-directive|NIS2]], [[llm-guardrails-and-red-teaming|LLM guardrails and red teaming]]).
+ENISA's multilayer framework offers a step-by-step approach for securing AI systems, operations and processes by building on existing good practices and identifying gaps (ENISA, 2023). Its analyses of emerging technologies and threat landscapes cover AI as part of its mandate under Art. 9 of the Cybersecurity Act, and certification schemes it prepares can apply to ICT products that contain AI ([[cybersecurity-act|Cybersecurity Act]]). For providers of AI services in the cloud, the NIS2 register and vulnerability database are part of the operational landscape ([[nis2-directive|NIS2]], [[llm-guardrails|LLM guardrails]] and [[red-teaming|red teaming]]).
 
 ### Relationship to other bodies
 
@@ -105,7 +105,7 @@ Die Verwaltungs- und Leitungsstruktur der ENISA besteht aus einem Verwaltungsrat
 
 ### Bedeutung für die KI-Entwicklung
 
-Der mehrschichtige Rahmen der ENISA bietet ein schrittweises Vorgehen, um KI-Systeme, -Abläufe und -Prozesse auf Basis bestehender guter Praktiken abzusichern und Lücken zu erkennen (ENISA, 2023). Ihre Analysen neu entstehender Technik und der Bedrohungslage umfassen KI im Rahmen ihres Auftrags nach Art. 9 des Rechtsakts zur Cybersicherheit, und von ihr ausgearbeitete Zertifizierungsschemata können für IKT-Produkte mit KI gelten ([[cybersecurity-act|Rechtsakt zur Cybersicherheit]]). Für Anbieter von KI-Diensten in der Cloud gehören das NIS-2-Register und die Schwachstellendatenbank zum operativen Umfeld ([[nis2-directive|NIS 2]], [[llm-guardrails-and-red-teaming|LLM-Guardrails und Red Teaming]]).
+Der mehrschichtige Rahmen der ENISA bietet ein schrittweises Vorgehen, um KI-Systeme, -Abläufe und -Prozesse auf Basis bestehender guter Praktiken abzusichern und Lücken zu erkennen (ENISA, 2023). Ihre Analysen neu entstehender Technik und der Bedrohungslage umfassen KI im Rahmen ihres Auftrags nach Art. 9 des Rechtsakts zur Cybersicherheit, und von ihr ausgearbeitete Zertifizierungsschemata können für IKT-Produkte mit KI gelten ([[cybersecurity-act|Rechtsakt zur Cybersicherheit]]). Für Anbieter von KI-Diensten in der Cloud gehören das NIS-2-Register und die Schwachstellendatenbank zum operativen Umfeld ([[nis2-directive|NIS 2]], [[llm-guardrails|LLM-Guardrails]] und [[red-teaming|Red Teaming]]).
 
 ### Verhältnis zu anderen Stellen
 

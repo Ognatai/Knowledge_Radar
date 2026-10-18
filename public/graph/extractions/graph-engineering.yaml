@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "69e0e5ab3d687114a81e45f8812bc5c1ac653b5770c62ee837e10ec811950f85"
+note_sha256: 5aebd4a39cf58af36bcb562e6a28a3bccbb7a4f8585b162922aa7a69a12b642a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - engineering-methods-for-ai-systems
@@ -13,6 +13,7 @@ discusses:
 - graphrag
 - knowledge-graphs
 - quality-control
+- memory-in-llms
 relations:
 - from: graph-engineering
   type: IS_EXAMPLE_OF

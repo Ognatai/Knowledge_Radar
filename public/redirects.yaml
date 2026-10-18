@@ -3,6 +3,7 @@
 notes:
   k-nearest-neighbors: k-nearest-neighbours
   llm-cost-optimization: llm-cost-optimisation
+  llm-guardrails-and-red-teaming: llm-guardrails
   quantization: quantisation
   regularization-and-hyperparameters: regularisation-and-hyperparameters
   tokenization: tokenisation
@@ -10,6 +11,7 @@ entities:
   adam-optimizer: adam-optimiser
   anisotropic-quantization: anisotropic-quantisation
   eight-bit-optimizers: eight-bit-optimisers
+  function-calling: tool-calling
   normalized-mutual-information: normalised-mutual-information
   post-training-quantization: post-training-quantisation
   product-quantization: product-quantisation

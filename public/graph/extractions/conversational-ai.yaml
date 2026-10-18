@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 59f7a4ec9b08c2b3bc7715b09a3696f41109e11daaeed3855f16d0d6f49ce5dd
+note_sha256: f90b5257419e477af97bdcc32fae79b385e08b68aee4bb32eea470fd5e702ed7
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - natural-language-understanding
@@ -12,6 +12,7 @@ discusses:
 - voice-agents
 - conversation-analytics
 - hallucination-detection
+- tool-calling
 relations:
 - from: conversational-ai
   type: COMPLEMENTS

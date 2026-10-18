@@ -1,0 +1,16 @@
+version: 1
+note_sha256: 3e73bff8cc60ccd1d0792cd501b0780573efdc953f8062c5583a77c6a2cf5ee8
+extracted_by: claude (hand-labelled, 2026-10-18)
+discusses:
+- openai
+- anthropic
+- apis
+- cloud-ai-platforms
+- model-comparison
+- llm-evaluation
+- cross-model-review
+- llm-cost-optimisation
+- agent-frameworks
+- gdpr
+- http
+relations: []
