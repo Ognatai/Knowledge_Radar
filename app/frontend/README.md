@@ -1,20 +1,23 @@
 # Local app frontend
 
-React UI of the local app, served by nginx in Docker together with the FastAPI
-backend (`docker-compose.yml`, started by `scripts/start-app.ps1`) on
-`http://127.0.0.1:8080`, bound to `localhost` only. The public note browser lives
-in `app/site/`.
+React UI of the local app. It is served by nginx in Docker together with the
+FastAPI backend (`docker-compose.yml`, started by `scripts/start-app.ps1`) on
+`http://127.0.0.1:8080` and is bound to `localhost` only. The public note browser
+lives in `app/site/`.
 
 - **Chat** over the public and the private index (`POST /api/chat`), with the
   sources of every answer. The conversation lives in the browser tab only.
 - **Interview commands** `/new-application`, `/new-round`, `/retro`: guided
-  dialogues that write the private repository (`app/backend/knowledge_radar/interviews.py`)
-  and refresh the private index afterwards (`app/agents/private_refresh.py`).
-- **`/prep`**: a briefing for one round, saved as `prep.md` after editing
-  (`app/backend/knowledge_radar/prep.py`).
-- **Review Dashboard** (`src/Review.tsx`, `app/backend/knowledge_radar/review.py`):
-  the weekly run's public drafts (mark or discard; publishing follows Claude's review)
-  and the private inbox branches on GitLab (accept or discard).
+  dialogues that write the private repository and refresh the private index
+  afterwards.
+- **`/prep`**: a briefing for one interview round, saved as `prep.md` after
+  editing.
+- **Review Dashboard** (`src/Review.tsx`): the weekly run's drafts (keep or
+  discard) and the private inbox branches (accept or discard).
 
-Development: `npm install`, then `npm run dev` (port 5173; `/api` is proxied to
-the API on port 8000).
+Development:
+
+```powershell
+npm install
+npm run dev     # port 5173; /api is proxied to the API on port 8000
+```

@@ -1,18 +1,25 @@
 # Evaluation
 
-`gold/` is the hand-labelled gold standard for the extraction agent: 18 public
-notes, labelled by the rules in `docs/extraction-guidelines.md`, in the same
-format as `public/graph/` (`entities.yaml` plus `extractions/<slug>.yaml`).
-The agent's output for these notes is scored against it (precision and recall
-of discussed entities and of relations).
+Gold standards for the agents that use the local model, the commands that score
+the agents against them, and the latest results. Every gold set is split into
+development items (to tune prompts, models and the pipeline) and held-out test
+items (used only for the final numbers).
 
-`gold/split.yaml` divides the notes into 9 development notes, used to tune
-prompts, models and the pipeline, and 9 held-out test notes, used only for the
-final numbers below.
+| Folder | Gold standard for |
+| --- | --- |
+| `gold/` | the extraction agent (`app/agents/extraction.py`) |
+| `relevance/` | the relevance agent (`app/agents/monitoring/relevance.py`) |
+| `resolution/` | entity resolution (`app/agents/entity_resolution.py`) |
 
-`tests/test_gold_set.py` checks that the labels are valid against
-`schema.yaml` and that no labelled note has changed since; if a note changes,
-its gold labels must be reviewed again and the recorded hash updated.
+## Extraction (`gold/`)
+
+18 public notes, labelled by the rules in `docs/extraction-guidelines.md`, in the
+same format as `public/graph/` (`entities.yaml` plus `extractions/<slug>.yaml`).
+`gold/split.yaml` divides them into 9 development and 9 test notes.
+
+`tests/test_gold_set.py` checks that the labels are valid against `schema.yaml`
+and that no labelled note has changed since; if a note changes, its labels must
+be reviewed again and the recorded hash updated.
 
 ```powershell
 python -m app.agents.evaluate_extraction                 # development notes
@@ -20,7 +27,7 @@ python -m app.agents.evaluate_extraction --split test    # held-out notes
 python -m app.agents.evaluate_extraction --predictions <run dir>   # rescore a run
 ```
 
-## Metrics
+Metrics:
 
 - **Entities**: the (note, entity) pairs a note discusses. The agent names new
   entities itself, so predicted entities are aligned to gold entities by id,
@@ -30,12 +37,8 @@ python -m app.agents.evaluate_extraction --predictions <run dir>   # rescore a r
 - **Untyped relations**: which entity pairs are connected, ignoring type and
   direction.
 
-## Results
-
-### Final, held-out test notes
-
-`qwen3:30b-a3b` with reasoning, entity pass, relation pass and
-type-and-direction classifier (commit 381dc55), 2026-10-09:
+Results on the held-out test notes, `qwen3:30b-a3b` with reasoning, entity pass,
+relation pass and type-and-direction classifier:
 
 | | Precision | Recall | F1 |
 | --- | --- | --- | --- |
@@ -43,108 +46,54 @@ type-and-direction classifier (commit 381dc55), 2026-10-09:
 | Relations | 0.35 | 0.35 | **0.35** |
 | Untyped relations | 0.42 | 0.42 | 0.42 |
 
-These numbers predate the schema extension of 2026-10-10 (`Dataset`,
-`EVALUATES`), which added benchmark entities and one relation to the gold
-notes agentic-ai and llm-as-a-judge.
+The model finds most entities and many of the right entity pairs, but often
+chooses the wrong relation type or direction. Its output is therefore a
+proposal: every extraction is reviewed against the note text and corrected
+before it enters `public/graph/`.
 
-The target was F1 0.75 for entities and 0.6 for relations. The local model
-finds most entities and many of the right entity pairs, but often chooses the
-wrong relation type or direction. Its output is therefore used as a proposal:
-every extraction is reviewed against the note text and corrected before it
-enters `public/graph/` (see "Provenance" below).
+## Relevance (`relevance/`)
 
-### Development notes, by iteration
-
-F1 on the 9 development notes. Runs on the same configuration vary by several
-points (only 58 gold relations; outputs also changed with the Ollama backend),
-so small differences are not meaningful.
-
-| Iteration | Entities | Relations | What changed |
-| --- | --- | --- | --- |
-| qwen3:14b, one call per chunk | 0.47 | 0.28 | baseline with reasoning (without: 0.24 / 0.13) |
-| qwen3:30b-a3b | 0.48 | 0.40 | larger model: relation precision 0.88, recall 0.26 |
-| + relation pass per window | 0.56 | 0.52 | recall of relations 0.26 → 0.41 |
-| + example for concept lists, Vulkan backend | 0.58 | 0.46 | rescored with type-aware alignment |
-| relation pass without reasoning | 0.55 | 0.36 | 3× faster, but relation precision 0.55 → 0.36 |
-| relation pass may add entities, yes/no verifier | 0.60 | 0.03 | verifier rejected 38 of 39 relations (0.43 before it) |
-
-Fixes that removed systematic errors along the way: a token cap and timeout
-against repetition loops, tolerance for punctuation around evidence quotes, a
-fallback for empty German names, case-sensitive acronyms (the method DoRA is not
-the regulation DORA), and gold-derived examples removed from the prompt.
-
-### Speed
-
-On the Desktop (Radeon RX 7900 XT, 20 GB), decode speed under ROCm fell from
-about 110 to 18 tokens/s as the context grew to 14k tokens; the Vulkan backend
-keeps about 30 tokens/s (`scripts/start-ollama.ps1`). With reasoning, one
-extraction call produces about 6,000 tokens. A development run takes about
-50 minutes without the classifier and about three times as long with it.
-
-## Relevance agent
-
-`relevance/gold.yaml`: 40 findings of the first source run (2026-10-10), 22 from
-arXiv and 18 from feeds, labelled by Claude and split into 20 development and 20
-held-out test items. Proposals are `update` and `new_topic`; 3 of the 40 are
-proposals (all on prompt injection, which five notes mention but none covers).
+`relevance/gold.yaml`: 40 findings of a source run, from arXiv and the curated
+feeds, each labelled `irrelevant`, `duplicate`, `update` or `new_topic`, split
+into 20 development and 20 test items.
 
 ```powershell
-python -m app.agents.monitoring.evaluate_relevance --split test
+python -m app.agents.monitoring.evaluate_relevance                # dev split
+python -m app.agents.monitoring.evaluate_relevance --split test   # held-out items
 ```
 
-Per-finding classifier, `qwen3:30b-a3b` without reasoning, 2026-10-10:
-
-| Variant (dev split) | Proposal precision | Proposal recall | Accuracy |
-| --- | --- | --- | --- |
-| model chooses the decision directly | 0.12 | 1.00 | 0.20 |
-| narrow questions, decision derived in code | 1.00 | 0.00 | 0.60-0.70 |
-| same with reasoning (46 s per finding) | 0.25 | 1.00 | 0.55 |
-
-Held-out test split, final variant: no false proposals, accuracy 0.70; the one
-prompt-injection item was classified as a duplicate of the agentic AI note.
-Duplicate and irrelevant are often confused, which does not matter: both are
+What matters most is the precision and recall of proposals (`update` and
+`new_topic`): proposals cost review time, missed proposals cost coverage. On the
+test split the final variant makes no false proposals, at an accuracy of 0.70.
+`duplicate` and `irrelevant` are often confused, which does not matter: both are
 discarded.
 
-New topics are therefore found per topic across the whole run: on the full first
-run (225 findings) the topic check proposed prompt injection (8 findings, among
-them a gold item), hallucination detection, model compression and LLM judge
-reliability (the last arguably covered by the LLM-as-a-judge note). With
-reasoning, the topic check is not fully deterministic; a corrigendum passed it in
-one of two runs, so corrigenda are now excluded at the source.
+## Entity resolution (`resolution/`)
 
-## Entity resolution
+`resolution/cases.yaml` holds 80 cases built from the entity registry, split
+evenly into dev and test:
 
-`resolution/cases.yaml` holds 80 cases built from the entity registry
-(`python -m app.agents.evaluate_resolution --build`), split evenly into
-dev and test:
-
-- 40 `alias` cases: an alias of a known entity that exact name matching
-  cannot recover (abbreviations, translations, spellings, synonyms) is
-  withheld and presented as a new entity; the expected answer is that entity.
-- 40 `distinct` cases: an entity whose name is closest to another entity of
-  the same type (WEAT and WEFAT, BM25 and BM25F, EDPS and EDPB) is withheld;
-  the expected answer is no match.
-
-Precision is what matters: a wrong merge corrupts the graph silently, a
-missed one leaves a duplicate for the review.
+- 40 `alias` cases: an alias of a known entity that exact name matching cannot
+  recover (abbreviations, translations, spellings, synonyms) is withheld and
+  presented as a new entity; the expected answer is that entity.
+- 40 `distinct` cases: an entity whose name is closest to another entity of the
+  same type (WEAT and WEFAT, BM25 and BM25F, EDPS and EDPB) is withheld; the
+  expected answer is no match.
 
 ```powershell
+python -m app.agents.evaluate_resolution --build         # rebuild the cases from the registry
 python -m app.agents.evaluate_resolution                 # dev split
 python -m app.agents.evaluate_resolution --split test    # held-out cases
 ```
 
-`qwen3:30b-a3b` with reasoning, shortlist of 5 (commit d9cdfd9), 2026-10-11:
+Precision is what matters: a wrong merge corrupts the graph silently, a missed
+one leaves a duplicate for the review. `qwen3:30b-a3b` with reasoning and a
+shortlist of 5:
 
 | Split | Merges | Precision | Recall (aliases) | Shortlist recall | Distinct pairs kept apart |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | dev | 12 | 1.00 | 0.55 | 0.91 | 18 of 18 |
 | test | 13 | 1.00 | 0.72 | 0.89 | 22 of 22 |
-
-Most missed aliases are notes that bundle two acts ("CRD" in the CRR/CRD
-note, the EBA governance and outsourcing guidelines), which the model treats
-as parts, as instructed. The shortlist misses citation-style aliases
-("Directive 2008/114/EC") and synonyms without shared words ("Lloyd's
-algorithm" for k-means).
 
 ## Provenance
 
@@ -153,5 +102,4 @@ extraction comes from:
 
 - `claude (hand-labelled gold standard)`: one of the 18 gold notes.
 - `qwen3:30b-a3b, reviewed by claude`: proposed by the local model, then
-  checked against the note text and corrected (types, directions, missing and
-  unsupported relations).
+  checked against the note text and corrected.

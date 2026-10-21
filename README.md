@@ -9,17 +9,25 @@ free and Ollama-only; no API key is required.
 
 ## Repository layout
 
+Every folder has its own README with details.
+
 | Path | Contents |
 | --- | --- |
-| `public/notes/` | Public Markdown notes (MIT, like the code) |
-| `public/graph/` | Versioned knowledge graph: `entities.yaml` (entities without a note, with aliases) and `extractions/<note>.yaml` (entities and relations per note, with evidence quotes) |
-| `schema.yaml` | Entity/relation schema, `visibility: public/private` per type |
+| `public/` | Published content: Markdown notes (`notes/`), the versioned knowledge graph (`graph/`), subject areas, redirects and link exclusions |
 | `app/site/` | Static public site (React, GitHub Pages): graph + text view, DE/EN, client-side search |
-| `app/backend/` | Python package: note loading/validation, static-site export, local app API (FastAPI) |
-| `app/agents/` | Agent pipeline (currently: note validation) |
+| `app/backend/` | Python package `knowledge_radar`: notes and graph, static-site export, local index (Neo4j), local app API (FastAPI) |
+| `app/frontend/` | Local app UI: chat, interview commands, Review Dashboard |
+| `app/agents/` | Agent pipeline: validation, extraction, entity resolution, linking, weekly monitoring |
 | `app/mcp/` | MCP servers |
-| `app/frontend/` | Local app UI: chat + Review Dashboard (planned) |
-| `scripts/` | Private-data check, weekly monitoring run, Task Scheduler registration |
+| `docs/` | Note templates, extraction guidelines and examples, the weekly run as a graph |
+| `eval/` | Gold standards and results for the extraction, relevance and resolution agents |
+| `tests/` | Test suite (pytest) |
+| `scripts/` | PowerShell helpers to set up and start the local app, the indices and Ollama; weekly run; private-data check |
+| `.githooks/` | Git hooks that guard the public/private boundary |
+| `schema.yaml` | Entity/relation schema, `visibility: public/private` per type |
+| `sources.yaml` | Curated sources of the monitoring run (arXiv phrases, venues, feeds) |
+| `local-config.example.yaml` | Template for the untracked per-machine configuration |
+| `docker-compose*.yml` | Neo4j indices and the local app in Docker |
 | `scheduled_task.xml` | Windows Task Scheduler definition (template) for the weekly run |
 
 ## Note format
@@ -30,6 +38,7 @@ under `sources`. Content is split into `## EN` and `## DE` sections.
 `## Original Source Text (DE)` is optional for source text that must remain
 untranslated. Links to other notes are written as `[[wikilinks]]`
 (`[[slug]]`, `[[slug|label]]`); they become `RELATED_TO` edges in the graph.
+The templates are described in [docs/note-templates.md](docs/note-templates.md).
 
 ## Public/private boundary
 
@@ -38,6 +47,12 @@ separate repository checked out *next to* this one; its location is set in an
 untracked `local-config.yaml` (see `local-config.example.yaml`). Three safety
 nets guard the boundary: physically separate checkouts, a pre-commit hook, and
 a GitHub Actions check on every push (see SETUP.md).
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs the private-data check, the note validation,
+the tests and a build of the static site on every push. `.github/workflows/pages.yml` builds the static site
+from `public/` and deploys it to GitHub Pages after every push to `main`.
 
 ## License
 
