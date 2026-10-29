@@ -5,7 +5,8 @@
 
 A failing source is reported and skipped; the others still run. New findings go
 to `.knowledge-radar/monitoring/runs/findings-<time>.jsonl` for the relevance
-agent and are remembered in `seen.json`, so the next run skips them.
+agent. The relevance agent remembers them in `seen.json` once it has assessed them,
+so the next run skips them; a run that fails before that hands them on again.
 """
 
 from __future__ import annotations
@@ -151,7 +152,8 @@ def main() -> int:
     result = collect_findings(config, seen, since=now.date() - timedelta(days=args.days), watchlist=watchlist)
     if not args.dry_run:
         path = write_run(result.findings, now)
-        seen.add(result.findings + result.baseline, now)
+        # Findings are remembered once the relevance agent has assessed them (relevance.py).
+        seen.add(result.baseline, now)
         seen.add_sources(result.fetched_sources)
         seen.save()
 

@@ -44,7 +44,7 @@
     <AllowStartOnDemand>true</AllowStartOnDemand>
     <Enabled>true</Enabled>
     <Hidden>false</Hidden>
-    <WakeToRun>false</WakeToRun>
+    <WakeToRun>true</WakeToRun>
     <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>
     <Priority>7</Priority>
   </Settings>

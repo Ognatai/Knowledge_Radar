@@ -4,6 +4,7 @@ from datetime import date, datetime, timezone
 
 import pytest
 
+from app.agents.monitoring import run_sources
 from app.agents.monitoring.config import ConfigError, load_sources_config
 from app.agents.monitoring.feeds import (
     ArxivQuery,
@@ -13,8 +14,8 @@ from app.agents.monitoring.feeds import (
     parse_daily_papers,
     parse_feed,
 )
-from app.agents.monitoring.findings import Finding, SeenStore
-from app.agents.monitoring.run_sources import collect_findings
+from app.agents.monitoring.findings import Finding, SeenStore, write_run
+from app.agents.monitoring.run_sources import CollectResult, collect_findings
 
 NOW = datetime(2026, 10, 10, 12, tzinfo=timezone.utc)
 
@@ -287,6 +288,32 @@ def test_undated_items_of_a_new_feed_become_the_baseline(tmp_path):
     assert first.findings == [] and [f.id for f in first.baseline] == ["rss:volume-1"]
     assert "Proceedings" in first.fetched_sources
     assert [f.id for f in second.findings] == ["rss:volume-2"]
+
+
+def test_source_run_leaves_findings_unseen_until_the_relevance_agent_assessed_them(tmp_path, monkeypatch):
+    # A crash between source run and relevance agent must not lose the findings.
+    seen_path = tmp_path / "seen.json"
+    result = CollectResult(
+        findings=[finding("rss:new")],
+        errors=[],
+        baseline=[finding("rss:undated", published=None)],
+        fetched_sources=["Lab blog"],
+    )
+    monkeypatch.setattr(run_sources, "load_sources_config", lambda: None)
+    monkeypatch.setattr(run_sources, "collect_findings", lambda *args, **kwargs: result)
+    monkeypatch.setattr(run_sources, "SeenStore", lambda: SeenStore(seen_path))
+    monkeypatch.setattr(run_sources, "write_run", lambda findings, when: write_run(findings, when, tmp_path))
+    monkeypatch.setattr(run_sources, "gap_topics", lambda *args: [])
+    monkeypatch.setattr(run_sources, "local_config", lambda: type("Config", (), {"private_repo_path": None})())
+    monkeypatch.setattr(run_sources, "public_entities", lambda: {})
+    monkeypatch.setattr("sys.argv", ["run_sources"])
+
+    assert run_sources.main() == 0
+
+    seen = SeenStore(seen_path)
+    assert not seen.contains("rss:new")
+    assert seen.contains("rss:undated") and seen.knows_source("Lab blog")
+    assert [json.loads(line)["id"] for line in next(tmp_path.glob("findings-*.jsonl")).read_text(encoding="utf-8").splitlines()] == ["rss:new"]
 
 
 DAILY_PAPERS = json.dumps(

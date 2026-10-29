@@ -48,7 +48,7 @@ from typing import Any
 
 from app.agents import llm
 from app.agents.monitoring.config import load_sources_config
-from app.agents.monitoring.findings import RUNS_DIRECTORY, Finding
+from app.agents.monitoring.findings import RUNS_DIRECTORY, Finding, SeenStore
 from app.backend.knowledge_radar import embeddings
 from app.backend.knowledge_radar.index import _sections
 from app.backend.knowledge_radar.models import NoteDetail
@@ -539,6 +539,13 @@ def main() -> int:
     }
     report_path = run_path.with_name(run_path.name.replace("findings-", "relevance-").replace(".jsonl", ".json"))
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
+    if not args.limit:
+        # Only now are the findings handed on: a run that crashed before this point
+        # leaves them unseen, so the next source run fetches them again. Findings the
+        # model failed on stay unseen as well.
+        seen = SeenStore()
+        seen.add([decision.finding for decision in decisions], datetime.now().astimezone())
+        seen.save()
 
     counts = {name: sum(1 for d in decisions if d.decision == name) for name in DECISIONS}
     print(", ".join(f"{count} {name}" for name, count in counts.items()))
