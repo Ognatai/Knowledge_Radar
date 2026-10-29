@@ -1,0 +1,33 @@
+version: 1
+note_sha256: 0c02356f2141d9b6962f5f5a6b302c2d63e48601acb975ef3ad2e7eb128bd6d1
+extracted_by: claude
+discusses:
+- large-language-models
+- chain-of-thought-prompting
+- reinforcement-learning
+- self-consistency
+- llm-alignment
+- knowledge-distillation
+- red-teaming
+- rlvr
+- deepseek-r1
+- openai-o1
+- grpo
+- process-reward-model
+relations:
+- from: reasoning-models
+  type: BASED_ON
+  to: reinforcement-learning
+  evidence: The ability is trained with reinforcement learning, mostly on tasks whose answers can be checked automatically
+- from: reasoning-models
+  type: BASED_ON
+  to: rlvr
+  evidence: This is RL with verifiable rewards, the last post-training stage described in LLM alignment
+- from: openai-o1
+  type: IS_EXAMPLE_OF
+  to: reasoning-models
+  evidence: The o1 models "think before they answer"
+- from: deepseek-r1
+  type: IS_EXAMPLE_OF
+  to: reasoning-models
+  evidence: DeepSeek-R1 writes it between `<think>` and `</think>` tags before the answer

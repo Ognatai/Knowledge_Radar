@@ -74,3 +74,6 @@ exclusions:
     quantisation: product quantisation of index vectors, not the quantisation of model weights.
   faiss:
     quantisation: product and scalar quantisation of index vectors, not the quantisation of model weights.
+  reasoning-models:
+    monitoring-and-alerting: monitoring of chains of thought, not operational monitoring and alerting.
+    openai: OpenAI appears there only as a citation label.

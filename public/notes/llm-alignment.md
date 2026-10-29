@@ -102,7 +102,7 @@ Initialising reward models from pretrained LLMs goes back to Ziegler et al. (201
 
 ### In practice
 
-Post-training runs in stages: instruction tuning first, then preference alignment, then, for reasoning models, RLVR (Jurafsky & Martin, 2026). Instruction-tuned models are evaluated leave-one-out on clusters of withheld tasks, so that similar tasks do not leak into training (Jurafsky & Martin, 2026). Aligned models are evaluated with human or model judgments ([[llm-as-a-judge|LLM-as-a-Judge]]; [[llm-evaluation|LLM Evaluation]]), and alignment does not remove the need to check outputs for factual errors ([[hallucination-detection|Hallucination Detection]]). Other ways to adapt a model are compared in [[llm-adaptation|LLM Adaptation]].
+Post-training runs in stages: instruction tuning first, then preference alignment, then, for [[reasoning-models|reasoning models]], RLVR (Jurafsky & Martin, 2026). Instruction-tuned models are evaluated leave-one-out on clusters of withheld tasks, so that similar tasks do not leak into training (Jurafsky & Martin, 2026). Aligned models are evaluated with human or model judgments ([[llm-as-a-judge|LLM-as-a-Judge]]; [[llm-evaluation|LLM Evaluation]]), and alignment does not remove the need to check outputs for factual errors ([[hallucination-detection|Hallucination Detection]]). Other ways to adapt a model are compared in [[llm-adaptation|LLM Adaptation]].
 
 ### Key takeaway
 

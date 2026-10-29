@@ -10,6 +10,7 @@ areas:
       - attention-and-transformers
       - large-language-models
       - mixture-of-experts
+      - reasoning-models
       - gpt
       - chatgpt
       - bert
@@ -100,6 +101,8 @@ areas:
       - openrouter
       - react
       - memgpt
+    also:
+      - reasoning-models
   - id: retrieval
     name_en: Retrieval & RAG
     name_de: Retrieval & RAG

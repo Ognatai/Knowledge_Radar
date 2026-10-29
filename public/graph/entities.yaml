@@ -5556,3 +5556,36 @@ entities:
   summary_de: DeepSeekMoE ist eine Mixture-of-Experts-Architektur, die Experten in feinere aufteilt und bei gleichem Aufwand mehr davon aktiviert (Fine-Grained Expert Segmentation) und geteilte Experten ergänzt, die jedes Token durchläuft (Shared Expert Isolation), damit sich jeder geroutete Experte spezialisieren kann (Dai et al., 2024). DeepSeekMoE 16B mit 16,4 Milliarden Parametern insgesamt und rund 2,8 Milliarden aktiven erreichte mit etwa 40 % des Rechenaufwands eine mit DeepSeek 7B und LLaMA2 7B vergleichbare Leistung.
   sources:
   - https://arxiv.org/abs/2401.06066
+- id: openai-o1
+  type: Technology
+  name_en: OpenAI o1
+  name_de: OpenAI o1
+  aliases:
+  - o1
+  - o1-mini
+  - o1-preview
+  summary_en: OpenAI o1 is a series of large language models trained with large-scale reinforcement learning to reason using chain of thought; the models produce a long chain of thought before responding and learn to refine their thinking, try different strategies and recognise their mistakes (OpenAI, 2024). The models reason about OpenAI's safety policies in context before answering (deliberative alignment), and ChatGPT shows users summaries of the chain of thought rather than the chain itself.
+  summary_de: OpenAI o1 ist eine Reihe großer Sprachmodelle, die mit großskaligem Reinforcement Learning darauf trainiert sind, mit einer Chain of Thought zu schlussfolgern; die Modelle erzeugen vor der Antwort eine lange Chain of Thought und lernen, ihr Denken zu verfeinern, verschiedene Strategien zu probieren und ihre Fehler zu erkennen (OpenAI, 2024). Vor dem Antworten überlegen sie im Kontext anhand der Sicherheitsrichtlinien von OpenAI (Deliberative Alignment), und ChatGPT zeigt Nutzern Zusammenfassungen der Chain of Thought statt der Kette selbst.
+  sources:
+  - https://arxiv.org/abs/2412.16720
+- id: grpo
+  type: Method
+  name_en: Group Relative Policy Optimization (GRPO)
+  name_de: Group Relative Policy Optimization (GRPO)
+  aliases:
+  - GRPO
+  summary_en: Group Relative Policy Optimization (GRPO) is a reinforcement learning algorithm for language models that samples a group of outputs for each question and computes each output's advantage as its reward minus the group mean, divided by the group's standard deviation; it was proposed to simplify PPO and reduce its resource consumption (DeepSeek-AI, 2025). DeepSeek-R1-Zero and DeepSeek-R1 were trained with it, sampling 16 outputs per question.
+  summary_de: Group Relative Policy Optimization (GRPO) ist ein Reinforcement-Learning-Algorithmus für Sprachmodelle, der zu jeder Frage eine Gruppe von Ausgaben zieht und den Vorteil jeder Ausgabe als ihre Belohnung minus dem Gruppenmittel, geteilt durch die Standardabweichung der Gruppe, berechnet; er wurde vorgeschlagen, um PPO zu vereinfachen und dessen Ressourcenbedarf zu senken (DeepSeek-AI, 2025). DeepSeek-R1-Zero und DeepSeek-R1 wurden damit trainiert, mit 16 gezogenen Ausgaben je Frage.
+  sources:
+  - https://arxiv.org/abs/2501.12948
+- id: process-reward-model
+  type: Method
+  name_en: Process reward model (PRM)
+  name_de: Process Reward Model (PRM)
+  aliases:
+  - PRM
+  - Process supervision
+  summary_en: A process reward model gives feedback on each intermediate step of a model's reasoning, whereas an outcome reward model judges only the final result (Lightman et al., 2023). Trained on PRM800K, 800,000 step-level human labels, a process-supervised reward model selected solutions to 78.2% of a representative subset of the MATH test set and significantly outperformed outcome supervision.
+  summary_de: Ein Process Reward Model gibt Rückmeldung zu jedem Zwischenschritt der Überlegungen eines Modells, während ein Outcome Reward Model nur das Endergebnis bewertet (Lightman et al., 2023). Trainiert auf PRM800K, 800.000 schrittweisen menschlichen Labels, wählte ein prozessüberwachtes Reward Model Lösungen für 78,2 % einer repräsentativen Teilmenge der MATH-Testmenge aus und übertraf die Outcome Supervision deutlich.
+  sources:
+  - https://arxiv.org/abs/2305.20050
