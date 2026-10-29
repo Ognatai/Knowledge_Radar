@@ -181,7 +181,7 @@ Lineage hält fest, woher Daten stammen und was mit ihnen geschehen ist. OpenLin
 
 #### Herkunft und Varianten
 
-Zhamak Dehghani beschrieb Data Mesh zuerst in einem früheren Artikel über die Abkehr vom monolithischen Data Lake und legte die Prinzipien 2020 als Alternative zu einem zentralen Data Lake oder Data Warehouse dar (Dehghani, 2020). Die sechs Dimensionen von DAMA UK sind eine verbreitete Auswahl; das Rahmenwerk nutzt sie als gemeinsame Grundlage zur Bewertung der Qualität (Government Data Quality Hub, 2020). Lineage-Standards wie OpenLineage machen Metadaten zwischen Werkzeugen übertragbar (OpenLineage).
+Zhamak Dehghani beschrieb Data Mesh zuerst in einem früheren Artikel über die Abkehr vom monolithischen Data Lake und legte die Prinzipien 2020 als Alternative zu einem zentralen Data Lake oder [[data-warehouse|Data Warehouse]] dar (Dehghani, 2020). Die sechs Dimensionen von DAMA UK sind eine verbreitete Auswahl; das Rahmenwerk nutzt sie als gemeinsame Grundlage zur Bewertung der Qualität (Government Data Quality Hub, 2020). Lineage-Standards wie OpenLineage machen Metadaten zwischen Werkzeugen übertragbar (OpenLineage).
 
 ### Wann einsetzen
 

@@ -24,7 +24,7 @@ sources:
 
 ### TL;DR
 
-Data modelling decides how the information of a domain is structured into tables, keys and relationships so that it can be stored consistently and queried efficiently. Two styles dominate. For operational systems, the relational model with normalisation stores each fact once and avoids redundancy and inconsistency, as proposed by Codd (1970). For analytics, dimensional modelling, introduced to data warehousing by Ralph Kimball in 1996, organises data into fact tables of numeric measurements surrounded by descriptive dimension tables, usually as a star schema, and tracks history with slowly changing dimensions (Kimball Group). In a lakehouse, the gold layer is typically modelled dimensionally ([[data-lakehouse|data lakehouse]]).
+Data modelling decides how the information of a domain is structured into tables, keys and relationships so that it can be stored consistently and queried efficiently. Two styles dominate. For operational systems, the relational model with normalisation stores each fact once and avoids redundancy and inconsistency, as proposed by Codd (1970). For analytics, dimensional modelling, introduced to [[data-warehouse|data warehousing]] by Ralph Kimball in 1996, organises data into fact tables of numeric measurements surrounded by descriptive dimension tables, usually as a star schema, and tracks history with slowly changing dimensions (Kimball Group). In a lakehouse, the gold layer is typically modelled dimensionally ([[data-lakehouse|data lakehouse]]).
 
 ### How it works
 
@@ -116,7 +116,7 @@ Data modelling structures data for its use: normalised relations keep operationa
 
 ### TL;DR
 
-Datenmodellierung legt fest, wie die Informationen einer Domäne in Tabellen, Schlüssel und Beziehungen gegliedert werden, damit sie konsistent gespeichert und effizient abgefragt werden können. Zwei Stile herrschen vor. Für operative Systeme speichert das relationale Modell mit Normalisierung jede Tatsache nur einmal und vermeidet Redundanz und Inkonsistenz, wie von Codd (1970) vorgeschlagen. Für Analysen ordnet die dimensionale Modellierung, 1996 von Ralph Kimball in das Data Warehousing eingeführt, Daten in Faktentabellen mit numerischen Messgrößen und umgebende beschreibende Dimensionstabellen, meist als Sternschema, und bildet Historie mit Slowly Changing Dimensions ab (Kimball Group). In einem Lakehouse wird die Gold-Schicht typischerweise dimensional modelliert ([[data-lakehouse|Data Lakehouse]]).
+Datenmodellierung legt fest, wie die Informationen einer Domäne in Tabellen, Schlüssel und Beziehungen gegliedert werden, damit sie konsistent gespeichert und effizient abgefragt werden können. Zwei Stile herrschen vor. Für operative Systeme speichert das relationale Modell mit Normalisierung jede Tatsache nur einmal und vermeidet Redundanz und Inkonsistenz, wie von Codd (1970) vorgeschlagen. Für Analysen ordnet die dimensionale Modellierung, 1996 von Ralph Kimball in das [[data-warehouse|Data Warehousing]] eingeführt, Daten in Faktentabellen mit numerischen Messgrößen und umgebende beschreibende Dimensionstabellen, meist als Sternschema, und bildet Historie mit Slowly Changing Dimensions ab (Kimball Group). In einem Lakehouse wird die Gold-Schicht typischerweise dimensional modelliert ([[data-lakehouse|Data Lakehouse]]).
 
 ### Funktionsweise
 

@@ -5589,3 +5589,29 @@ entities:
   summary_de: Ein Process Reward Model gibt Rückmeldung zu jedem Zwischenschritt der Überlegungen eines Modells, während ein Outcome Reward Model nur das Endergebnis bewertet (Lightman et al., 2023). Trainiert auf PRM800K, 800.000 schrittweisen menschlichen Labels, wählte ein prozessüberwachtes Reward Model Lösungen für 78,2 % einer repräsentativen Teilmenge der MATH-Testmenge aus und übertraf die Outcome Supervision deutlich.
   sources:
   - https://arxiv.org/abs/2305.20050
+- id: c-store
+  type: Technology
+  name_en: C-Store
+  name_de: C-Store
+  summary_en: C-Store is a read-optimised relational database system from MIT, Brandeis, UMass Boston and Brown that stores data by column rather than by row, codes and densely packs values, and keeps overlapping groups of columns sorted on different attributes, called projections (Stonebraker et al., 2005). A small writeable store takes inserts and a tuple mover moves them in batches into the large read-optimised store; in preliminary tests on seven TPC-H queries, C-Store was much faster than a commercial row store and a commercial column store.
+  summary_de: C-Store ist ein leseoptimiertes relationales Datenbanksystem von MIT, Brandeis, UMass Boston und Brown, das Daten spaltenweise statt zeilenweise speichert, Werte kodiert und dicht packt und überlappende, nach verschiedenen Attributen sortierte Spaltengruppen hält, sogenannte Projektionen (Stonebraker et al., 2005). Ein kleiner beschreibbarer Speicher nimmt Einfügungen auf, und ein Tuple Mover verschiebt sie stapelweise in den großen leseoptimierten Speicher; in vorläufigen Tests mit sieben TPC-H-Abfragen war C-Store deutlich schneller als ein kommerzielles zeilen- und ein kommerzielles spaltenorientiertes System.
+  sources:
+  - https://www.vldb.org/archives/website/2005/program/paper/thu/p553-stonebraker.pdf
+- id: dremel
+  type: Technology
+  name_en: Dremel
+  name_de: Dremel
+  summary_en: Dremel is Google's interactive ad hoc query system for read-only nested data; it combines multi-level execution trees with a columnar storage format for nested records and runs aggregation queries over trillion-row tables in seconds, scaling to thousands of CPUs and petabytes of data (Melnik et al., 2010). It reads data in place, for example from a distributed file system, and complements MapReduce rather than replacing it.
+  summary_de: Dremel ist Googles interaktives System für Ad-hoc-Abfragen auf schreibgeschützten verschachtelten Daten; es kombiniert mehrstufige Ausführungsbäume mit einem spaltenorientierten Speicherformat für verschachtelte Datensätze und führt Aggregationsabfragen über Tabellen mit Billionen Zeilen in Sekunden aus, skalierbar auf Tausende CPUs und Petabytes an Daten (Melnik et al., 2010). Es liest Daten direkt dort, wo sie liegen, etwa in einem verteilten Dateisystem, und ergänzt MapReduce, statt es zu ersetzen.
+  sources:
+  - https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36632.pdf
+- id: snowflake
+  type: Technology
+  name_en: Snowflake
+  name_de: Snowflake
+  aliases:
+  - Snowflake Elastic Data Warehouse
+  summary_en: Snowflake is a data warehouse offered as a cloud service that separates storage and compute. Tables are stored as immutable, column-grouped and compressed files in Amazon S3, and queries run on virtual warehouses, clusters of compute nodes that can be created, resized or shut down without affecting the data (Dageville et al., 2016). It supports ANSI SQL, ACID transactions and semi-structured data, and uses min-max pruning instead of user-created indexes.
+  summary_de: Snowflake ist ein als Cloud-Dienst angebotenes Data Warehouse, das Speicher und Rechenleistung trennt. Tabellen liegen als unveränderliche, spaltenweise gruppierte und komprimierte Dateien in Amazon S3, und Abfragen laufen auf virtuellen Warehouses, Clustern von Rechenknoten, die sich erzeugen, in der Größe ändern oder abschalten lassen, ohne die Daten zu berühren (Dageville et al., 2016). Es unterstützt ANSI-SQL, ACID-Transaktionen und halbstrukturierte Daten und nutzt Min-Max-Pruning statt vom Nutzer angelegter Indizes.
+  sources:
+  - https://info.snowflake.net/rs/252-RFO-227/images/Snowflake_SIGMOD.pdf

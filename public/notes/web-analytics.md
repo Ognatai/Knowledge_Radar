@@ -24,7 +24,7 @@ sources:
 
 ### TL;DR
 
-Web analytics measures how people use websites and apps, page views, clicks, sign-ups, purchases, in order to improve products, marketing and customer journeys. In Google Analytics 4 (GA4), a widely used tool, everything is recorded as events with parameters; important events are marked as key events, raw events can be exported to the BigQuery data warehouse for SQL analysis, and attribution models distribute credit for a key event across the marketing touchpoints that preceded it (Google Analytics, Events; Google Analytics, BigQuery Export; Google Analytics, Attribution). In the EU, cookies and identifiers for analytics require consent, which GA4 handles through consent mode (Google Tag Platform, Consent mode; [[tdddg|TDDDG]]).
+Web analytics measures how people use websites and apps, page views, clicks, sign-ups, purchases, in order to improve products, marketing and customer journeys. In Google Analytics 4 (GA4), a widely used tool, everything is recorded as events with parameters; important events are marked as key events, raw events can be exported to the BigQuery [[data-warehouse|data warehouse]] for SQL analysis, and attribution models distribute credit for a key event across the marketing touchpoints that preceded it (Google Analytics, Events; Google Analytics, BigQuery Export; Google Analytics, Attribution). In the EU, cookies and identifiers for analytics require consent, which GA4 handles through consent mode (Google Tag Platform, Consent mode; [[tdddg|TDDDG]]).
 
 ### How it works
 

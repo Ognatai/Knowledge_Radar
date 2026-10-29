@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 766f4388cf5831882b71fb9dcc80123ab14b1c47cc6c89978c3e96eea1a5687f
+extracted_by: claude
+discusses:
+- data-pipelines
+- data-modelling
+- data-lakehouse
+- mapreduce
+- apache-spark
+- sql
+- data-governance
+- bcbs-239-and-ecb-rdarr-guide
+- c-store
+- dremel
+- snowflake
+relations:
+- from: snowflake
+  type: IS_EXAMPLE_OF
+  to: data-warehouse
+  evidence: Snowflake, a data warehouse built for the cloud, separates storage and compute
+- from: dremel
+  type: COMPLEMENTS
+  to: mapreduce
+  evidence: it complements rather than replaces MapReduce
+- from: data-lakehouse
+  type: BASED_ON
+  to: data-warehouse
+  evidence: The data lakehouse adds warehouse features on top of open file formats in a data lake

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c870e8719e2791c456531d061c28c65f2b23c8830b441e677402aa4aaff86b99
+note_sha256: 9ad7d883bf70862e3c31d3e15680d87a2e167631cbb5b4c838b31a446eb0e0fe
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - causal-inference

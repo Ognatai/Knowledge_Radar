@@ -43,7 +43,7 @@ The RDD paper introduced resilient distributed datasets, read-only, partitioned 
 
 #### Lakehouse and Databricks platform
 
-With colleagues at Databricks, Zaharia argued that the lakehouse, based on open direct-access data formats such as Apache Parquet, with first-class support for machine learning and data science and state-of-the-art performance, would replace the classic data warehouse architecture (Armbrust et al., 2021; [[data-lakehouse|data lakehouse]]). He helped develop MLflow and Delta Lake (Zaharia, n.d.).
+With colleagues at Databricks, Zaharia argued that the lakehouse, based on open direct-access data formats such as Apache Parquet, with first-class support for machine learning and data science and state-of-the-art performance, would replace the classic [[data-warehouse|data warehouse]] architecture (Armbrust et al., 2021; [[data-lakehouse|data lakehouse]]). He helped develop MLflow and Delta Lake (Zaharia, n.d.).
 
 #### Retrieval and LLM programs
 
@@ -114,7 +114,7 @@ Mit Omar Khattab stellte er ColBERT vor, das Anfragen und Dokumente getrennt mit
 |---|---|---|
 | 2012 | *Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing* (NSDI) | Chowdhury, Das, Dave, Ma, McCauley, Franklin, Shenker, Stoica |
 | 2020 | *ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT* (SIGIR) | Khattab |
-| 2021 | *Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics* (CIDR) | Armbrust, Ghodsi, Xin |
+| 2021 | *Lakehouse: A New Generation of Open Platforms that Unify [[data-warehouse\|Data Warehousing]] and Advanced Analytics* (CIDR) | Armbrust, Ghodsi, Xin |
 
 Quellen: Zaharia et al. (2012); Khattab & Zaharia (2020); Armbrust et al. (2021).
 

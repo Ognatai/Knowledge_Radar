@@ -291,6 +291,7 @@ areas:
     notes:
       - data-governance
       - data-modelling
+      - data-warehouse
       - data-lakehouse
       - apache-spark
       - mapreduce
