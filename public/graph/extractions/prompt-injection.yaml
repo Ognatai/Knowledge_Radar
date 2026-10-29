@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 60fd5918ac95ebd9f800750358da9d156d6d83230cb9f02d87296ed53d10a041
+note_sha256: 45613efd6b3bf7be5e7a8896b4c6db1d40f6101f963afc4bb23f19ee64569fa6
 extracted_by: claude
 discusses:
 - react
@@ -18,6 +18,11 @@ discusses:
 - cyber-resilience-act
 - nis2-directive
 - eu-ai-act
+- llm-as-a-judge
+- attention-and-transformers
+- classification-metrics
+- browsesafe-plus-plus
+- attention-tracker
 relations:
 - from: houyi
   type: IS_EXAMPLE_OF
@@ -35,3 +40,7 @@ relations:
   type: REGULATES
   to: prompt-injection
   evidence: requires actively exploited vulnerabilities to be reported within 24 hours; prompt injection leading to code execution in an AI feature of a product is such a vulnerability
+- from: browsesafe-plus-plus
+  type: EVALUATES
+  to: prompt-injection
+  evidence: The benchmark BrowseSafe++ pairs each of 38,675 attacked pages with the same page without the injection

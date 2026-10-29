@@ -5525,3 +5525,19 @@ entities:
   summary_de: HumanEval+ erweitert die Tests des Benchmarks HumanEval mit LLM- und mutationsbasierter Testerzeugung aus dem Framework EvalPlus auf das 80-Fache (Liu et al., 2023). Über 26 LLMs hinweg fing es eine beträchtliche Menge bisher unentdeckten falschen Codes ab, senkte pass@k um bis zu 19,3 bis 28,9 % und veränderte die Rangfolge der Modelle.
   sources:
   - https://arxiv.org/abs/2305.01210
+- id: browsesafe-plus-plus
+  type: Dataset
+  name_en: BrowseSafe++
+  name_de: BrowseSafe++
+  summary_en: BrowseSafe++ is a benchmark for detecting prompt injections in web pages read by browser agents, with 38,675 pairs of an attacked page and the same page without the injection; 32,187 of the injections were observed on production websites, and every page comes as HTML, Markdown, accessibility tree and screenshot (Chen et al., 2026). Even the best prompted detector falsely flagged 13.82–15.10% of benign pages, while BrowseSafe-Guard, a 0.8B-parameter detector trained on the pairs, reached 92.98–98.29 F1.
+  summary_de: BrowseSafe++ ist ein Benchmark zur Erkennung von Prompt Injections in Webseiten, die Browser-Agenten lesen, mit 38.675 Paaren aus einer angegriffenen Seite und derselben Seite ohne Injection; 32.187 der Injections wurden auf produktiven Websites beobachtet, und jede Seite liegt als HTML, Markdown, Accessibility Tree und Screenshot vor (Chen et al., 2026). Selbst der beste gepromptete Detektor markierte fälschlich 13,82–15,10 % der harmlosen Seiten, während BrowseSafe-Guard, ein auf den Paaren trainierter Detektor mit 0,8 Milliarden Parametern, 92,98–98,29 F1 erreichte.
+  sources:
+  - https://arxiv.org/abs/2610.17457
+- id: attention-tracker
+  type: Method
+  name_en: Attention Tracker
+  name_de: Attention Tracker
+  summary_en: Attention Tracker detects prompt injections from a model's attention patterns. It uses attention heads whose focus shifts away from the original instruction under attack, and its attack score rises as attention to the trusted instruction falls (Gupta & Tembey, 2026). In a comparison of five internal-state detectors on two open models, it separated successful attacks from benign inputs best (AUROC 0.949 on Qwen and 0.887 on Gemma).
+  summary_de: Attention Tracker erkennt Prompt Injections an den Attention-Mustern eines Modells. Er nutzt Attention-Heads, deren Fokus sich bei einem Angriff von der ursprünglichen Anweisung abwendet, und sein Angriffswert steigt, je weniger Aufmerksamkeit die vertrauenswürdige Anweisung erhält (Gupta & Tembey, 2026). In einem Vergleich von fünf Detektoren auf internen Zuständen bei zwei offenen Modellen trennte er erfolgreiche Angriffe am besten von harmlosen Eingaben (AUROC 0,949 bei Qwen und 0,887 bei Gemma).
+  sources:
+  - https://arxiv.org/abs/2610.19452
