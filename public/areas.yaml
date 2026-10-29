@@ -9,6 +9,7 @@ areas:
     notes:
       - attention-and-transformers
       - large-language-models
+      - mixture-of-experts
       - gpt
       - chatgpt
       - bert
@@ -64,6 +65,8 @@ areas:
       - llm-cost-optimisation
       - qlora
       - speculative-decoding
+    also:
+      - mixture-of-experts
   - id: agents
     name_en: Agents, Prompting & AI Engineering
     name_de: Agenten, Prompting & AI Engineering

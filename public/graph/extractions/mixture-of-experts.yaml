@@ -1,0 +1,42 @@
+version: 1
+note_sha256: a5692c2a4bf598dbd014ec5cdd5c6400833e350a4a2101b667912113e8bce5c8
+extracted_by: claude
+discusses:
+- attention-and-transformers
+- large-language-models
+- llama
+- back-propagation
+- mixed-precision-training
+- machine-translation
+- t5
+- knowledge-distillation
+- quantisation
+- model-compression
+- ensemble-methods
+- llm-cost-optimisation
+- eu-ai-act
+- lstm
+- switch-transformer
+- mixtral
+- deepseekmoe
+relations:
+- from: switch-transformer
+  type: BASED_ON
+  to: mixture-of-experts
+  evidence: The Switch Transformer routes each token to a single expert (`k = 1`)
+- from: mixtral
+  type: IS_EXAMPLE_OF
+  to: mixture-of-experts
+  evidence: Mixtral made a strong MoE model openly available under Apache 2.0
+- from: deepseekmoe
+  type: BASED_ON
+  to: mixture-of-experts
+  evidence: DeepSeekMoE introduced fine-grained and shared experts
+- from: mixture-of-experts
+  type: COMPLEMENTS
+  to: quantisation
+  evidence: the total size of an MoE model has to fit into memory even though each token touches only a fraction of it; quantisation and model compression address this side
+- from: mixture-of-experts
+  type: COMPLEMENTS
+  to: model-compression
+  evidence: the total size of an MoE model has to fit into memory even though each token touches only a fraction of it; quantisation and model compression address this side

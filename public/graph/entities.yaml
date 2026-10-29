@@ -5382,17 +5382,6 @@ entities:
   summary_de: Engram ist ein Conditional-Memory-Modul von DeepSeek-AI, das klassische n-Gramm-Embeddings für Lookups in konstanter Zeit modernisiert; gehashte Suffix-n-Gramme rufen Vektoren aus einer großen Tabelle ab, die durch den aktuellen Hidden State gewichtet und in das Modell eingespeist werden (Cheng et al., 2026). Engram-27B übertraf eine Mixture-of-Experts-Basis mit gleichen Parametern und FLOPs bei Wissens-, Schlussfolgerungs-, Code-, Mathematik- und Langkontext-Benchmarks, und eine in den Host-Speicher ausgelagerte Tabelle mit 100 Milliarden Parametern verursachte vernachlässigbaren Mehraufwand.
   sources:
   - https://arxiv.org/abs/2601.07372
-- id: mixture-of-experts
-  type: Method
-  name_en: Mixture-of-Experts
-  name_de: Mixture-of-Experts
-  aliases:
-  - MoE
-  - Sparsely-Gated Mixture-of-Experts
-  summary_en: A Sparsely-Gated Mixture-of-Experts (MoE) layer consists of up to thousands of feed-forward sub-networks, the experts, of which a trainable gating network selects a sparse combination for each example (Shazeer et al., 2017). This conditional computation increased model capacity more than 1000-fold with only minor losses in computational efficiency, and MoE models of up to 137 billion parameters beat the state of the art in language modelling and machine translation at lower computational cost.
-  summary_de: Eine Sparsely-Gated-Mixture-of-Experts-Schicht (MoE) besteht aus bis zu Tausenden von Feed-Forward-Teilnetzen, den Experten, von denen ein trainierbares Gating-Netz je Beispiel eine dünn besetzte Kombination auswählt (Shazeer et al., 2017). Diese bedingte Berechnung erhöhte die Modellkapazität um mehr als das Tausendfache bei nur geringen Einbußen an Recheneffizienz, und MoE-Modelle mit bis zu 137 Milliarden Parametern übertrafen den Stand der Technik bei Sprachmodellierung und maschineller Übersetzung mit geringerem Rechenaufwand.
-  sources:
-  - https://arxiv.org/abs/1701.06538
 - id: knn-lm
   type: Method
   name_en: kNN-LM
@@ -5541,3 +5530,29 @@ entities:
   summary_de: Attention Tracker erkennt Prompt Injections an den Attention-Mustern eines Modells. Er nutzt Attention-Heads, deren Fokus sich bei einem Angriff von der ursprünglichen Anweisung abwendet, und sein Angriffswert steigt, je weniger Aufmerksamkeit die vertrauenswürdige Anweisung erhält (Gupta & Tembey, 2026). In einem Vergleich von fünf Detektoren auf internen Zuständen bei zwei offenen Modellen trennte er erfolgreiche Angriffe am besten von harmlosen Eingaben (AUROC 0,949 bei Qwen und 0,887 bei Gemma).
   sources:
   - https://arxiv.org/abs/2610.19452
+- id: switch-transformer
+  type: Method
+  name_en: Switch Transformer
+  name_de: Switch Transformer
+  summary_en: The Switch Transformer is a Mixture-of-Experts Transformer that routes each token to a single expert instead of two or more, which reduces router computation and communication while preserving model quality (Fedus et al., 2021). With selective float32 precision in the router and a simplified load-balancing loss, it trained models of up to 1.6 trillion parameters and reached up to 7 times faster pre-training than T5 models with the same computational resources.
+  summary_de: Der Switch Transformer ist ein Mixture-of-Experts-Transformer, der jedes Token an einen einzigen statt an zwei oder mehr Experten schickt; das senkt Rechenaufwand und Kommunikation des Routers bei erhaltener Modellqualität (Fedus et al., 2021). Mit float32-Genauigkeit nur im Router und einem vereinfachten Verlustterm für die Lastverteilung trainierte er Modelle mit bis zu 1,6 Billionen Parametern und erreichte bis zu 7-mal schnelleres Pretraining als T5-Modelle mit gleichen Rechenressourcen.
+  sources:
+  - https://arxiv.org/abs/2101.03961
+- id: mixtral
+  type: Method
+  name_en: Mixtral
+  name_de: Mixtral
+  aliases:
+  - Mixtral 8x7B
+  summary_en: Mixtral 8x7B is a sparse Mixture-of-Experts language model by Mistral AI with the architecture of Mistral 7B, in which each layer has 8 feed-forward experts and a router selects two of them for every token, so that each token has access to 47B parameters but uses 13B (Jiang et al., 2024). It outperformed or matched Llama 2 70B and GPT-3.5 across the evaluated benchmarks and was released under the Apache 2.0 licence.
+  summary_de: Mixtral 8x7B ist ein dünn besetztes Mixture-of-Experts-Sprachmodell von Mistral AI mit der Architektur von Mistral 7B, bei dem jede Schicht 8 Feed-Forward-Experten hat und ein Router für jedes Token zwei davon auswählt; jedes Token hat so Zugriff auf 47 Milliarden Parameter, nutzt aber 13 Milliarden (Jiang et al., 2024). Es übertraf oder erreichte Llama 2 70B und GPT-3.5 auf allen evaluierten Benchmarks und wurde unter der Apache-2.0-Lizenz veröffentlicht.
+  sources:
+  - https://arxiv.org/abs/2401.04088
+- id: deepseekmoe
+  type: Method
+  name_en: DeepSeekMoE
+  name_de: DeepSeekMoE
+  summary_en: DeepSeekMoE is a Mixture-of-Experts architecture that splits experts into finer ones and activates more of them at the same cost (fine-grained expert segmentation), and adds shared experts that every token passes through (shared expert isolation), so that each routed expert can specialise (Dai et al., 2024). DeepSeekMoE 16B, with 16.4B total and about 2.8B active parameters, achieved performance comparable to DeepSeek 7B and LLaMA2 7B with about 40% of their computation.
+  summary_de: DeepSeekMoE ist eine Mixture-of-Experts-Architektur, die Experten in feinere aufteilt und bei gleichem Aufwand mehr davon aktiviert (Fine-Grained Expert Segmentation) und geteilte Experten ergänzt, die jedes Token durchläuft (Shared Expert Isolation), damit sich jeder geroutete Experte spezialisieren kann (Dai et al., 2024). DeepSeekMoE 16B mit 16,4 Milliarden Parametern insgesamt und rund 2,8 Milliarden aktiven erreichte mit etwa 40 % des Rechenaufwands eine mit DeepSeek 7B und LLaMA2 7B vergleichbare Leistung.
+  sources:
+  - https://arxiv.org/abs/2401.06066
