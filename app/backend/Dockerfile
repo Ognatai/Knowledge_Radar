@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.15-slim
 
 # git for the Review Dashboard: the proposal branches (mounted .git) and the private
 # inbox branches; the mounts belong to the host user, hence safe.directory.
