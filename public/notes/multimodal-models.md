@@ -82,7 +82,7 @@ Vision Transformers (Dosovitskiy et al., 2020) brought the Transformer to images
 | Approach | How it differs | Suited for |
 |----------|----------------|------------|
 | Contrastive dual encoder (CLIP) | Separate encoders aligned in one embedding space (Radford et al., 2021) | Zero-shot classification, image-text retrieval |
-| Vision-language model (Flamingo, BLIP-2) | Vision encoder feeds a language model (Alayrac et al., 2022; Li et al., 2023) | Visual question answering, captioning |
+| Vision-language model (Flamingo, BLIP-2) | Vision encoder feeds a language model (Alayrac et al., 2022; Li et al., 2023) | Visual [[question-answering\|question answering]], captioning |
 | Instruction-tuned VLM (LLaVA) | Trained on visual instruction-following data (Liu et al., 2023) | Multimodal chat assistants |
 | Text-to-image diffusion | Text conditions an image generator (Rombach et al., 2021) | Image generation |
 

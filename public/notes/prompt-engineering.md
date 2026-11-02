@@ -40,7 +40,7 @@ A zero-shot prompt contains only the task instruction and the input. Kojima et a
 
 #### 2. Few-shot prompting
 
-A few-shot prompt adds a small number of input-output demonstrations before the new input, and the model infers the task from them in context, without gradient updates or fine-tuning (Brown et al., 2020). [[gpt|GPT-3]] with 175 billion parameters achieved strong performance this way on many NLP tasks, including translation and question answering, but still struggled on some data sets (Brown et al., 2020). Which and how many demonstrations are used is part of the prompt design.
+A few-shot prompt adds a small number of input-output demonstrations before the new input, and the model infers the task from them in context, without gradient updates or fine-tuning (Brown et al., 2020). [[gpt|GPT-3]] with 175 billion parameters achieved strong performance this way on many NLP tasks, including translation and [[question-answering|question answering]], but still struggled on some data sets (Brown et al., 2020). Which and how many demonstrations are used is part of the prompt design.
 
 #### 3. Chain-of-thought prompting
 

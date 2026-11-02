@@ -33,11 +33,11 @@ check: reliability diagram (mean predicted value vs. fraction of positives per b
 
 #### 1. Why calibration is needed
 
-A classifier is well calibrated when, among the cases it gives a probability of about 0.8, about 80% actually belong to the positive class ([[scikit-learn|scikit-learn]] developers, 2026). Many applications need such probabilities, and good accuracy or area under the ROC curve is not sufficient (Niculescu-Mizil & Caruana, 2005). Maximum margin methods such as SVMs, boosted trees and boosted stumps push predicted probabilities away from 0 and 1, which produces a characteristic sigmoid-shaped distortion; naive Bayes pushes them towards 0 and 1 ([[naive-bayes|naive Bayes]]); neural networks, bagged trees and logistic regression were well calibrated in that study (Niculescu-Mizil & Caruana, 2005).
+A classifier is well calibrated when, among the cases it gives a probability of about 0.8, about 80% actually belong to the positive class ([[scikit-learn|scikit-learn]] developers, 2026). Many applications need such probabilities, and good accuracy or area under the ROC curve is not sufficient (Niculescu-Mizil & Caruana, 2005). Maximum margin methods such as SVMs, boosted trees and boosted stumps push predicted probabilities away from 0 and 1, which produces a characteristic sigmoid-shaped distortion; naive Bayes pushes them towards 0 and 1 ([[naive-bayes|naive Bayes]]); neural networks, bagged trees and [[logistic-regression|logistic regression]] were well calibrated in that study (Niculescu-Mizil & Caruana, 2005).
 
 #### 2. The sigmoid fit
 
-The classifier's output f(x) is passed through a sigmoid with parameters A and B, which are fitted by maximum likelihood, that is by minimising the log loss on a calibration set of pairs (fᵢ, yᵢ) (Niculescu-Mizil & Caruana, 2005). Because the sigmoid is strictly monotonic, it keeps the ranking of the predictions and therefore ranking metrics such as ROC-AUC (scikit-learn developers, 2026).
+The classifier's output f(x) is passed through a sigmoid with parameters A and B, which are fitted by maximum likelihood, that is by minimising the [[cross-entropy|log loss]] on a calibration set of pairs (fᵢ, yᵢ) (Niculescu-Mizil & Caruana, 2005). Because the sigmoid is strictly monotonic, it keeps the ranking of the predictions and therefore ranking metrics such as ROC-AUC (scikit-learn developers, 2026).
 
 #### 3. An independent calibration set
 
@@ -76,7 +76,7 @@ Platt (1999) proposed the method to turn SVM outputs into posterior probabilitie
 |---|---|---|---|
 | Platt scaling | sigmoid, 2 parameters | small calibration sets | yes |
 | Isotonic regression | monotonic step function | about 1,000 cases or more | ties possible |
-| Temperature scaling | softmax with one temperature | small | yes |
+| Temperature scaling | [[softmax\|softmax]] with one temperature | small | yes |
 
 Sources: Niculescu-Mizil & Caruana (2005); scikit-learn developers (2026); Guo et al. (2017).
 
@@ -115,11 +115,11 @@ Prüfung: Reliability-Diagramm (mittlerer Vorhersagewert vs. Anteil Positiver je
 
 #### 1. Warum Kalibrierung nötig ist
 
-Ein Klassifikator ist gut kalibriert, wenn von den Fällen, denen er eine Wahrscheinlichkeit von etwa 0,8 gibt, etwa 80 % tatsächlich zur positiven Klasse gehören ([[scikit-learn|scikit-learn]] developers, 2026). Viele Anwendungen brauchen solche Wahrscheinlichkeiten, und eine gute Accuracy oder Fläche unter der ROC-Kurve reicht nicht aus (Niculescu-Mizil & Caruana, 2005). Maximum-Margin-Verfahren wie SVMs, Boosted Trees und Boosted Stumps drängen vorhergesagte Wahrscheinlichkeiten von 0 und 1 weg, was eine typische sigmoidförmige Verzerrung erzeugt; Naive Bayes drängt sie zu 0 und 1 hin ([[naive-bayes|Naive Bayes]]); neuronale Netze, Bagged Trees und logistische Regression waren in dieser Studie gut kalibriert (Niculescu-Mizil & Caruana, 2005).
+Ein Klassifikator ist gut kalibriert, wenn von den Fällen, denen er eine Wahrscheinlichkeit von etwa 0,8 gibt, etwa 80 % tatsächlich zur positiven Klasse gehören ([[scikit-learn|scikit-learn]] developers, 2026). Viele Anwendungen brauchen solche Wahrscheinlichkeiten, und eine gute Accuracy oder Fläche unter der ROC-Kurve reicht nicht aus (Niculescu-Mizil & Caruana, 2005). Maximum-Margin-Verfahren wie SVMs, Boosted Trees und Boosted Stumps drängen vorhergesagte Wahrscheinlichkeiten von 0 und 1 weg, was eine typische sigmoidförmige Verzerrung erzeugt; Naive Bayes drängt sie zu 0 und 1 hin ([[naive-bayes|Naive Bayes]]); neuronale Netze, Bagged Trees und [[logistic-regression|logistische Regression]] waren in dieser Studie gut kalibriert (Niculescu-Mizil & Caruana, 2005).
 
 #### 2. Die Sigmoid-Anpassung
 
-Die Ausgabe f(x) des Klassifikators wird durch eine Sigmoidfunktion mit den Parametern A und B geschickt, die per Maximum Likelihood angepasst werden, also durch Minimierung des Log Loss auf einer Kalibrierungsmenge aus Paaren (fᵢ, yᵢ) (Niculescu-Mizil & Caruana, 2005). Da die Sigmoidfunktion streng monoton ist, bleibt die Rangfolge der Vorhersagen erhalten und damit auch Rangmetriken wie ROC-AUC (scikit-learn developers, 2026).
+Die Ausgabe f(x) des Klassifikators wird durch eine Sigmoidfunktion mit den Parametern A und B geschickt, die per Maximum Likelihood angepasst werden, also durch Minimierung des [[cross-entropy|Log Loss]] auf einer Kalibrierungsmenge aus Paaren (fᵢ, yᵢ) (Niculescu-Mizil & Caruana, 2005). Da die Sigmoidfunktion streng monoton ist, bleibt die Rangfolge der Vorhersagen erhalten und damit auch Rangmetriken wie ROC-AUC (scikit-learn developers, 2026).
 
 #### 3. Eine unabhängige Kalibrierungsmenge
 
@@ -158,7 +158,7 @@ Platt (1999) schlug das Verfahren vor, um SVM-Ausgaben in A-posteriori-Wahrschei
 |---|---|---|---|
 | Platt Scaling | Sigmoid, 2 Parameter | kleine Kalibrierungsmengen | ja |
 | Isotone Regression | monotone Treppenfunktion | etwa 1.000 Fälle oder mehr | Gleichstände möglich |
-| Temperature Scaling | Softmax mit einer Temperatur | wenig | ja |
+| Temperature Scaling | [[softmax\|Softmax]] mit einer Temperatur | wenig | ja |
 
 Quellen: Niculescu-Mizil & Caruana (2005); scikit-learn developers (2026); Guo et al. (2017).
 

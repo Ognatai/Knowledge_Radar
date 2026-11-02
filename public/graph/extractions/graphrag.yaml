@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "f079766f37af48d4bd21fd5114e84cde6a0f3cd2f959d51681633a11c5094037"
+note_sha256: "0b5a4a3ad88aaee48aca5447699234648ffbc1292f4ee68df249002820da69e9"
 extracted_by: claude (hand-labelled gold standard)
 discusses:
   - retrieval-augmented-generation
@@ -12,6 +12,8 @@ discusses:
   - lightrag
   - personalized-pagerank
   - ircot
+  - question-answering
+  - text-summarisation
 relations:
   - from: graphrag
     type: BASED_ON

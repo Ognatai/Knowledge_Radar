@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 0cadc6708f5991ad4fccbf2c1ffcf761add02a2904d25bdcbd290c4cf9fe83cb
+note_sha256: 5dd3148f677f036ecfa74d85c5608d0cc0e7efe1d718d4d032160dc38cc7bff7
 extracted_by: qwen3:30b-a3b, reviewed by claude; extended by claude 2026-10-13
 discusses:
 - k-means
@@ -14,6 +14,7 @@ discusses:
 - near-duplicate-detection
 - latent-semantic-indexing
 - classification
+- cosine-similarity
 relations:
 - from: k-means
   type: IS_EXAMPLE_OF

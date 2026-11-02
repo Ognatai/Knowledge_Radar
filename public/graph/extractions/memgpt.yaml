@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 71724981f416a9aa77bf4f5bed96adf920e99f586fdcc1d314baadf36212798e
+note_sha256: d022d6891feb937a807e61521f01473ee8711308ac7fc5592f7e075dae775289
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - memory-in-llms
@@ -16,6 +16,8 @@ discusses:
 - gdpr
 - context-engineering
 - natural-questions
+- context-window
+- question-answering
 relations:
 - from: memgpt
   type: BASED_ON

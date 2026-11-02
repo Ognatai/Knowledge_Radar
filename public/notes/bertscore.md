@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-BERTScore evaluates generated text against a reference by matching tokens through their contextual embeddings instead of exact strings: each token of one sentence is paired with its most similar token in the other by cosine similarity, and the averages give [[classification-metrics|precision]], recall and F1 (Zhang et al., 2020). Because contextual embeddings represent meaning in context, BERTScore credits paraphrases that n-gram metrics such as [[bleu|BLEU]] miss. In tests on the outputs of 363 [[machine-translation|machine translation]] and image captioning systems it correlated better with human judgements than existing metrics, and it was more robust on adversarial paraphrase pairs (Zhang et al., 2020). The authors recommend F1 with the 24-layer RoBERTa-large model for English.
+BERTScore evaluates generated text against a reference by matching tokens through their contextual embeddings instead of exact strings: each token of one sentence is paired with its most similar token in the other by [[cosine-similarity|cosine similarity]], and the averages give [[classification-metrics|precision]], recall and F1 (Zhang et al., 2020). Because contextual embeddings represent meaning in context, BERTScore credits paraphrases that n-gram metrics such as [[bleu|BLEU]] miss. In tests on the outputs of 363 [[machine-translation|machine translation]] and image captioning systems it correlated better with human judgements than existing metrics, and it was more robust on adversarial paraphrase pairs (Zhang et al., 2020). The authors recommend F1 with the 24-layer RoBERTa-large model for English.
 
 ### How it works
 
@@ -40,7 +40,7 @@ With normalised vectors, the cosine similarity of two tokens is their dot produc
 
 #### 3. Importance weighting
 
-Rare words are often more telling for sentence similarity than common ones, so BERTScore can weight each reference token by its inverse document frequency computed over the reference sentences of the test set, with plus-one smoothing for unknown word pieces (Zhang et al., 2020). In the experiments, idf weighting sometimes helped and sometimes did not, so the main results do not use it.
+Rare words are often more telling for sentence similarity than common ones, so BERTScore can weight each reference token by its [[tf-idf|inverse document frequency]] computed over the reference sentences of the test set, with plus-one smoothing for unknown word pieces (Zhang et al., 2020). In the experiments, idf weighting sometimes helped and sometimes did not, so the main results do not use it.
 
 #### 4. Baseline rescaling
 
@@ -56,7 +56,7 @@ Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Weinberger and Yoav Artzi at Corn
 
 ### When to use it
 
-- Evaluating generated text against references where valid outputs may use different words, such as translation, captioning or summarisation (Zhang et al., 2020).
+- Evaluating generated text against references where valid outputs may use different words, such as translation, captioning or [[text-summarisation|summarisation]] (Zhang et al., 2020).
 - Segment-level comparisons, where sentence-level BLEU is less reliable (Zhang et al., 2020).
 - As a reference-based signal in LLM and [[retrieval-augmented-generation|RAG]] evaluation pipelines ([[rag-generation-evaluation|RAG generation evaluation]]).
 
@@ -100,7 +100,7 @@ BERTScore matches each token to its most similar counterpart in contextual embed
 
 ### TL;DR
 
-BERTScore bewertet erzeugten Text gegenüber einer Referenz, indem es Token über ihre kontextuellen Embeddings statt über exakte Zeichenketten abgleicht: Jedes Token eines Satzes wird per Cosine Similarity mit dem ähnlichsten Token des anderen gepaart, und die Mittelwerte ergeben [[classification-metrics|Precision]], Recall und F1 (Zhang et al., 2020). Weil kontextuelle Embeddings Bedeutung im Zusammenhang abbilden, erkennt BERTScore Umschreibungen an, die N-Gramm-Metriken wie [[bleu|BLEU]] übersehen. In Tests auf den Ausgaben von 363 Systemen zur maschinellen Übersetzung und Bildbeschreibung korrelierte es besser mit menschlichen Urteilen als bestehende Metriken und war robuster bei adversarialen Paraphrasenpaaren (Zhang et al., 2020). Die Autoren empfehlen für Englisch F1 mit dem 24-schichtigen Modell RoBERTa-large.
+BERTScore bewertet erzeugten Text gegenüber einer Referenz, indem es Token über ihre kontextuellen Embeddings statt über exakte Zeichenketten abgleicht: Jedes Token eines Satzes wird per [[cosine-similarity|Cosine Similarity]] mit dem ähnlichsten Token des anderen gepaart, und die Mittelwerte ergeben [[classification-metrics|Precision]], Recall und F1 (Zhang et al., 2020). Weil kontextuelle Embeddings Bedeutung im Zusammenhang abbilden, erkennt BERTScore Umschreibungen an, die N-Gramm-Metriken wie [[bleu|BLEU]] übersehen. In Tests auf den Ausgaben von 363 Systemen zur maschinellen Übersetzung und Bildbeschreibung korrelierte es besser mit menschlichen Urteilen als bestehende Metriken und war robuster bei adversarialen Paraphrasenpaaren (Zhang et al., 2020). Die Autoren empfehlen für Englisch F1 mit dem 24-schichtigen Modell RoBERTa-large.
 
 ### Funktionsweise
 

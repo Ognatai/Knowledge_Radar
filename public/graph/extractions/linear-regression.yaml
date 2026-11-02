@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 903a7d302761ccdc06013050c9970bcf449cf6566c79514013dc3f756a36a1fa
+note_sha256: 5e2990889d2b49fa2f8c333c115121dc312d0b7450dd4a3c54fdae828b157fc6
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - gradient-descent

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: ec4b27a96507ccfdcb6baf84f067619303817a52908ff218cbd02d435b29356e
+note_sha256: 561d8ed5dc05899adfb46dc41d1b064a9f60ef087e083a2de12e77b9176b5bf5
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - chain-of-thought-prompting
@@ -7,6 +7,7 @@ discusses:
 - gpt
 - llm-adaptation
 - prompt-engineering
+- context-window
 relations:
 - from: few-shot-prompting
   type: IS_EXAMPLE_OF

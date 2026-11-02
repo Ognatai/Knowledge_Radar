@@ -1,5 +1,5 @@
 version: 1
-note_sha256: dffbcb633add9aac51d2ee7cef5868bf16cc8bfa838566a25ed62aed9335bc24
+note_sha256: 86b845b55ef79336a92701ff4cb5dbcf9836a925ba1625ba57f650492b043288
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - squad
@@ -13,6 +13,9 @@ discusses:
 - quantisation
 - hugging-face
 - glue
+- cosine-similarity
+- question-answering
+- softmax
 relations:
 - from: distilbert
   type: BASED_ON

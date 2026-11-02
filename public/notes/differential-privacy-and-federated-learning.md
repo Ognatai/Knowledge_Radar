@@ -45,7 +45,7 @@ Abadi et al. (2016) developed algorithmic techniques for learning and a refined 
 
 #### 3. Federated learning
 
-McMahan et al. (2016) proposed leaving the training data distributed on mobile devices and learning a shared model by aggregating locally computed updates, an approach they called federated learning. Their method is based on iterative model averaging. It was robust to the unbalanced and non-IID data distributions typical of this setting, and since communication is the main constraint, it reduced the required communication rounds by 10 to 100 times compared with synchronised stochastic gradient descent.
+McMahan et al. (2016) proposed leaving the training data distributed on mobile devices and learning a shared model by aggregating locally computed updates, an approach they called federated learning. Their method is based on iterative model averaging. It was robust to the unbalanced and non-IID data distributions typical of this setting, and since communication is the main constraint, it reduced the required communication rounds by 10 to 100 times compared with synchronised [[gradient-descent|stochastic gradient descent]].
 
 #### 4. Open problems in federated learning
 
@@ -137,7 +137,7 @@ Abadi et al. (2016) entwickelten algorithmische Lernverfahren und eine verfeiner
 
 #### 3. Federated Learning
 
-McMahan et al. (2016) schlugen vor, die Trainingsdaten verteilt auf den Mobilgeräten zu belassen und ein gemeinsames Modell durch Zusammenführen lokal berechneter Aktualisierungen zu lernen; diesen Ansatz nannten sie Federated Learning. Ihr Verfahren beruht auf iterativer Mittelung der Modelle. Es war robust gegenüber den unausgewogenen und nicht unabhängig identisch verteilten (Non-IID) Daten, die für dieses Szenario typisch sind, und da die Kommunikation der Engpass ist, verringerte es die nötigen Kommunikationsrunden gegenüber synchronisiertem stochastischem Gradientenabstieg um das 10- bis 100-Fache.
+McMahan et al. (2016) schlugen vor, die Trainingsdaten verteilt auf den Mobilgeräten zu belassen und ein gemeinsames Modell durch Zusammenführen lokal berechneter Aktualisierungen zu lernen; diesen Ansatz nannten sie Federated Learning. Ihr Verfahren beruht auf iterativer Mittelung der Modelle. Es war robust gegenüber den unausgewogenen und nicht unabhängig identisch verteilten (Non-IID) Daten, die für dieses Szenario typisch sind, und da die Kommunikation der Engpass ist, verringerte es die nötigen Kommunikationsrunden gegenüber synchronisiertem stochastischem [[gradient-descent|Gradientenabstieg]] um das 10- bis 100-Fache.
 
 #### 4. Offene Probleme des Federated Learning
 

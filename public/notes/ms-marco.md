@@ -59,7 +59,7 @@ On MS MARCO itself, neural retrievers trained on it beat [[bm25|BM25]] by 7 to 1
 
 - Training dense retrievers, cross-encoders or late-interaction models that need many labelled query-passage pairs (Thakur et al., 2021).
 - Comparing ranking models on a common, large benchmark (Bajaj et al., 2016).
-- Studying question answering over noisy, real web queries (Bajaj et al., 2016).
+- Studying [[question-answering|question answering]] over noisy, real web queries (Bajaj et al., 2016).
 
 ### Strengths and limitations
 

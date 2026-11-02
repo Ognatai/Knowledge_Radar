@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Classification predicts a discrete class from input features. Classical methods are logistic regression (Cox, 1958), [[naive-bayes|naive Bayes]] and discriminant analysis (Fisher, 1936; Hastie et al., 2009). Discriminative models such as logistic regression model the class probability directly, while generative models such as naive Bayes model how the features are distributed in each class (Ng & Jordan, 2001). Predicted probabilities are often distorted and need calibration (Niculescu-Mizil & Caruana, 2005). For text, the amount of labelled data decides between hand-written rules, simple high-bias learners and more complex classifiers (Manning et al., 2008, ch. 15).
+Classification predicts a discrete class from input features. Classical methods are [[logistic-regression|logistic regression]] (Cox, 1958), [[naive-bayes|naive Bayes]] and discriminant analysis (Fisher, 1936; Hastie et al., 2009). Discriminative models such as logistic regression model the class probability directly, while generative models such as naive Bayes model how the features are distributed in each class (Ng & Jordan, 2001). Predicted probabilities are often distorted and need calibration (Niculescu-Mizil & Caruana, 2005). For text, the amount of labelled data decides between hand-written rules, simple high-bias learners and more complex classifiers (Manning et al., 2008, ch. 15).
 
 ### How it works
 
@@ -59,7 +59,7 @@ In [[information-retrieval|information retrieval]], classification sorts documen
 
 #### 6. Vector space classification: Rocchio and kNN
 
-Vector space classifiers represent documents as length-normalised tf-idf vectors and rely on the contiguity hypothesis: documents of one class form a contiguous region that does not overlap with other classes. Whether it holds depends on the representation; a stop list, for example, removes the pronoun *I*, which distinguishes single authors from groups. Rocchio classification assigns a document to the class with the nearest centroid; it is simple and efficient but inaccurate if classes are not roughly spheres of similar radius. k nearest neighbour ([[k-nearest-neighbours|kNN]]) assigns the majority class of the k nearest training documents; it needs no explicit training, is slower at test time and handles non-spherical classes better when the training set is large (Manning et al., 2008, ch. 14).
+Vector space classifiers represent documents as length-normalised [[tf-idf|tf-idf]] vectors and rely on the contiguity hypothesis: documents of one class form a contiguous region that does not overlap with other classes. Whether it holds depends on the representation; a stop list, for example, removes the pronoun *I*, which distinguishes single authors from groups. Rocchio classification assigns a document to the class with the nearest centroid; it is simple and efficient but inaccurate if classes are not roughly spheres of similar radius. k nearest neighbour ([[k-nearest-neighbours|kNN]]) assigns the majority class of the k nearest training documents; it needs no explicit training, is slower at test time and handles non-spherical classes better when the training set is large (Manning et al., 2008, ch. 14).
 
 #### 7. Linear versus nonlinear classifiers and the bias-variance tradeoff
 
@@ -133,7 +133,7 @@ Classification predicts classes either by modelling the class probability direct
 
 ### TL;DR
 
-Klassifikation sagt aus Eingabemerkmalen eine diskrete Klasse vorher. Klassische Verfahren sind die logistische Regression (Cox, 1958), [[naive-bayes|Naive Bayes]] und die Diskriminanzanalyse (Fisher, 1936; Hastie et al., 2009). Diskriminative Modelle wie die logistische Regression modellieren die Klassenwahrscheinlichkeit direkt, generative Modelle wie Naive Bayes modellieren, wie die Merkmale in jeder Klasse verteilt sind (Ng & Jordan, 2001). Vorhergesagte Wahrscheinlichkeiten sind oft verzerrt und müssen kalibriert werden (Niculescu-Mizil & Caruana, 2005). Bei Text entscheidet die Menge gelabelter Daten zwischen handgeschriebenen Regeln, einfachen Lernverfahren mit hohem Bias und komplexeren Klassifikatoren (Manning et al., 2008, Kap. 15).
+Klassifikation sagt aus Eingabemerkmalen eine diskrete Klasse vorher. Klassische Verfahren sind die [[logistic-regression|logistische Regression]] (Cox, 1958), [[naive-bayes|Naive Bayes]] und die Diskriminanzanalyse (Fisher, 1936; Hastie et al., 2009). Diskriminative Modelle wie die logistische Regression modellieren die Klassenwahrscheinlichkeit direkt, generative Modelle wie Naive Bayes modellieren, wie die Merkmale in jeder Klasse verteilt sind (Ng & Jordan, 2001). Vorhergesagte Wahrscheinlichkeiten sind oft verzerrt und müssen kalibriert werden (Niculescu-Mizil & Caruana, 2005). Bei Text entscheidet die Menge gelabelter Daten zwischen handgeschriebenen Regeln, einfachen Lernverfahren mit hohem Bias und komplexeren Klassifikatoren (Manning et al., 2008, Kap. 15).
 
 ### Funktionsweise
 

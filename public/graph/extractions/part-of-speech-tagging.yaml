@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f5cf50b656a5afa86e3f83a83bc8629d5f8166dc8809c2cb31eec71653473bc8
+note_sha256: 139b5641b8e1a71f01f442fb43b7ea05f2c95031ca9a5661439f68b51d51bcff
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - hidden-markov-models
@@ -9,4 +9,5 @@ discusses:
 - natural-language-processing
 - constituency-parsing
 - dependency-parsing
+- gradient-descent
 relations: []

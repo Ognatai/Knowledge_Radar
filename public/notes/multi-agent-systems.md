@@ -52,7 +52,7 @@ Agents act in a sandbox such as a code interpreter or game rules, in a physical 
 
 #### 4. Orchestrator and workers in practice
 
-Anthropic's research system uses an orchestrator-worker pattern: a lead agent plans, spawns three to five subagents that search in parallel, each with its own context window, and compiles their condensed findings; a separate citation agent attributes claims to sources (Anthropic, 2025). Parallelisation cut research time by up to 90% for complex queries. On the BrowseComp benchmark, token usage alone explained 80% of the performance variance (Anthropic, 2025). How agents and transitions are arranged can itself be designed as a graph ([[graph-engineering|graph engineering]]).
+Anthropic's research system uses an orchestrator-worker pattern: a lead agent plans, spawns three to five subagents that search in parallel, each with its own [[context-window|context window]], and compiles their condensed findings; a separate citation agent attributes claims to sources (Anthropic, 2025). Parallelisation cut research time by up to 90% for complex queries. On the BrowseComp benchmark, token usage alone explained 80% of the performance variance (Anthropic, 2025). How agents and transitions are arranged can itself be designed as a graph ([[graph-engineering|graph engineering]]).
 
 #### Origin and variants
 

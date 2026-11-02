@@ -18,7 +18,7 @@ sources:
 
 ### TL;DR
 
-Legal AI is the use of AI systems in law: legal research, document and contract analysis, summarisation, compliance checks and question answering over legal sources. [[large-language-models|Large language models]] make these tasks far more accessible, but errors in law have direct legal or financial consequences, and studies find that general LLMs hallucinate on 58 to 88% of verifiable questions about US federal court cases (Dahl et al., 2024), while even commercial RAG-based legal research tools hallucinate on 17 to 33% of queries (Magesh et al., 2024). Grounding, verifiable citations and human review are therefore central.
+Legal AI is the use of AI systems in law: legal research, document and contract analysis, [[text-summarisation|summarisation]], compliance checks and [[question-answering|question answering]] over legal sources. [[large-language-models|Large language models]] make these tasks far more accessible, but errors in law have direct legal or financial consequences, and studies find that general LLMs hallucinate on 58 to 88% of verifiable questions about US federal court cases (Dahl et al., 2024), while even commercial RAG-based legal research tools hallucinate on 17 to 33% of queries (Magesh et al., 2024). Grounding, verifiable citations and human review are therefore central.
 
 ### How it works
 

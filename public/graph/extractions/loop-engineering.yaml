@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8f627d160f877247045cd1ab36aa86543a462b24f496429df78157b9fefa87fe
+note_sha256: 55408da0ae5ab8f8499ec9ac27c050c5c3c176074b7c6e3ac02f2fdfe4629edc
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - agentic-ai
@@ -11,6 +11,7 @@ discusses:
 - self-refine
 - reflexion
 - context-engineering
+- context-window
 relations:
 - from: loop-engineering
   type: BASED_ON

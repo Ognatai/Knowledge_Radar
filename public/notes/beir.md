@@ -29,7 +29,7 @@ news, question answering, tweets, bio-medical IR, entity retrieval)
 
 #### 1. Datasets and tasks
 
-BEIR covers fact checking (FEVER, Climate-FEVER, SciFact), citation prediction (SCIDOCS), duplicate-question retrieval (CQADupStack, Quora), argument retrieval (ArguAna, Touché-2020), news retrieval (TREC-NEWS, Robust04), question answering (NQ, HotpotQA, FiQA-2018), tweet retrieval (Signal-1M), bio-medical retrieval (TREC-COVID, NFCorpus, BioASQ) and entity retrieval (DBPedia) (Thakur et al., 2021). Corpora range from 3,600 to 15 million documents, average query lengths from 3 to 192 words and document lengths from 11 to 635 words. The datasets are converted into one format and released with an open-source package (Thakur et al., 2021).
+BEIR covers fact checking (FEVER, Climate-FEVER, SciFact), citation prediction (SCIDOCS), duplicate-question retrieval (CQADupStack, Quora), argument retrieval (ArguAna, Touché-2020), news retrieval (TREC-NEWS, Robust04), [[question-answering|question answering]] (NQ, HotpotQA, FiQA-2018), tweet retrieval (Signal-1M), bio-medical retrieval (TREC-COVID, NFCorpus, BioASQ) and entity retrieval (DBPedia) (Thakur et al., 2021). Corpora range from 3,600 to 15 million documents, average query lengths from 3 to 192 words and document lengths from 11 to 635 words. The datasets are converted into one format and released with an open-source package (Thakur et al., 2021).
 
 #### 2. Metric
 

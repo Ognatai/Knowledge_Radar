@@ -50,7 +50,7 @@ LlamaIndex describes itself as "a [[python|Python]] toolkit for building LLM-pow
 
 #### 3. Multi-agent conversation
 
-AutoGen, introduced by Wu et al. (2023), builds applications from several customisable agents that converse with each other to solve a task; agents can combine LLMs, human input and tools, and developers program the interaction patterns in natural language and code (Wu et al., 2023). The authors report applications in mathematics, coding, question answering, operations research, online decision-making and entertainment (Wu et al., 2023). CrewAI groups agents with specific goals and tools into crews, "teams of autonomous agents that collaborate to solve specific tasks delegated to them by the Flow" (CrewAI). Patterns and risks of such systems are discussed in [[agentic-ai|agentic AI]].
+AutoGen, introduced by Wu et al. (2023), builds applications from several customisable agents that converse with each other to solve a task; agents can combine LLMs, human input and tools, and developers program the interaction patterns in natural language and code (Wu et al., 2023). The authors report applications in mathematics, coding, [[question-answering|question answering]], operations research, online decision-making and entertainment (Wu et al., 2023). CrewAI groups agents with specific goals and tools into crews, "teams of autonomous agents that collaborate to solve specific tasks delegated to them by the Flow" (CrewAI). Patterns and risks of such systems are discussed in [[agentic-ai|agentic AI]].
 
 #### 4. Workflows with explicit control flow
 

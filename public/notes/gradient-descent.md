@@ -61,7 +61,7 @@ The learning rate η is a hyperparameter: too high and steps overshoot the minim
 
 #### 5. Stopping
 
-The algorithm stops when the gradient norm falls below a threshold or when progress halts, for example when the loss on a held-out set starts rising ([[regularisation-and-hyperparameters|early stopping]]; Jurafsky & Martin, 2026). Training data is shuffled in each epoch (Ruder, 2016; scikit-learn).
+The algorithm stops when the gradient norm falls below a threshold or when progress halts, for example when the loss on a held-out set starts rising ([[regularisation-and-hyperparameters|early stopping]]; Jurafsky & Martin, 2026). Training data is shuffled in each epoch (Ruder, 2016; [[scikit-learn|scikit-learn]]).
 
 #### Origin and variants
 
@@ -70,7 +70,7 @@ Gradient descent is a general first-order optimisation method; scikit-learn note
 ### When to use it
 
 - Training any differentiable model, from [[logistic-regression|logistic regression]] and [[linear-regression|linear regression]] to deep networks ([[neural-network-training|neural network training]]).
-- Large or sparse data such as text classification, where scikit-learn's SGD classifiers scale to more than 10^5 examples and 10^5 features (scikit-learn).
+- Large or sparse data such as text [[classification|classification]], where scikit-learn's SGD classifiers scale to more than 10^5 examples and 10^5 features (scikit-learn).
 - Online learning, where the model must update as new examples arrive (Ruder, 2016).
 
 ### Strengths and limitations
@@ -93,7 +93,7 @@ Gradient descent is a general first-order optimisation method; scikit-learn note
 | Batch GD | whole data set | `θ − η∇J` | small convex problems |
 | SGD | one example | noisy, frequent | online learning |
 | Mini-batch SGD | m examples | lower variance, parallel | neural networks |
-| SGD + momentum | mini-batch | accumulated velocity | ravines, image classification |
+| SGD + momentum | mini-batch | accumulated velocity | ravines, [[computer-vision\|image classification]] |
 | [[adam-optimiser\|Adam]] | mini-batch | per-parameter adaptive step | sparse data, fast convergence of deep networks |
 
 Sources: Jurafsky & Martin (2026), Ruder (2016), Loshchilov & Hutter (2019).
@@ -157,7 +157,7 @@ Die Lernrate η ist ein Hyperparameter: Ist sie zu hoch, schießen Schritte übe
 
 #### 5. Abbruch
 
-Der Algorithmus endet, wenn die Norm des Gradienten unter eine Schwelle fällt oder der Fortschritt stockt, etwa wenn der Verlust auf zurückgehaltenen Daten zu steigen beginnt ([[regularisation-and-hyperparameters|Early Stopping]]; Jurafsky & Martin, 2026). Die Trainingsdaten werden in jeder Epoche gemischt (Ruder, 2016; scikit-learn).
+Der Algorithmus endet, wenn die Norm des Gradienten unter eine Schwelle fällt oder der Fortschritt stockt, etwa wenn der Verlust auf zurückgehaltenen Daten zu steigen beginnt ([[regularisation-and-hyperparameters|Early Stopping]]; Jurafsky & Martin, 2026). Die Trainingsdaten werden in jeder Epoche gemischt (Ruder, 2016; [[scikit-learn|scikit-learn]]).
 
 #### Ursprung und Varianten
 

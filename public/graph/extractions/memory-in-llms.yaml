@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a078f93c2771fc3aba3cd29a6f20f9e6aec7840d9235b07cd9f327606f14895c
+note_sha256: 0146a16708d06fb514935408d6195106dba226f08c4c144e6ef6d97beca4fdfe
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - attention-and-transformers
@@ -32,6 +32,7 @@ discusses:
 - large-language-models
 - humaneval
 - mmlu
+- context-window
 relations:
 - from: memorybank
   type: IS_EXAMPLE_OF

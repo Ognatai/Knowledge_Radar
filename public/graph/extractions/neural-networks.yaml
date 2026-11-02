@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 54eafcb8fc8100acf764ef9df6650a97d30221b55485f97dc0a684c0e8631a44
+note_sha256: 56c3b6fa6e48302ce319841ae3f14048d0192f4686ffba8afb1f9dedb08f1efb
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - perceptron
@@ -13,6 +13,8 @@ discusses:
 - attention-and-transformers
 - keras-and-tensorflow
 - pytorch
+- cross-entropy
+- softmax
 relations:
 - from: neural-networks
   type: BASED_ON

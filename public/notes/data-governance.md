@@ -75,7 +75,7 @@ Lineage records where data comes from and what was done to it. OpenLineage is "a
 
 #### Origin and variants
 
-Zhamak Dehghani first described data mesh in an earlier article on moving beyond a monolithic data lake and set out its principles in 2020 as an alternative to a central data lake or warehouse (Dehghani, 2020). The six DAMA UK dimensions are one widely used set; the framework uses them as a common basis for assessing quality (Government Data Quality Hub, 2020). Lineage standards such as OpenLineage make metadata portable across tools (OpenLineage).
+Zhamak Dehghani first described data mesh in an earlier article on moving beyond a monolithic data lake and set out its principles in 2020 as an alternative to a central data lake or [[data-warehouse|warehouse]] (Dehghani, 2020). The six DAMA UK dimensions are one widely used set; the framework uses them as a common basis for assessing quality (Government Data Quality Hub, 2020). Lineage standards such as OpenLineage make metadata portable across tools (OpenLineage).
 
 ### When to use it
 

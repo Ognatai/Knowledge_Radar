@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3de26530bbe4901360313ba8c379c14932e9da8f17ac5077950d2e4f873ee461
+note_sha256: 3c87e8a06f7cdff1d98489c3f8491fb2dc6127c29ca2643da59517e3046466ac
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bert
@@ -15,6 +15,7 @@ discusses:
 - natural-language-understanding
 - multinli
 - squad
+- question-answering
 relations:
 - from: glue
   type: EVALUATES

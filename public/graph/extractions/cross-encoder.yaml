@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6f7ee203fc8199ce78f4086eb339c0f8abbc7cff2498460243d8e0e5f8e3c9b9
+note_sha256: c8149ef574affc2c3df2c803ff7c54b35030812b76c2e501d023a6b536ef5a24
 extracted_by: claude
 discusses:
 - bert
@@ -16,6 +16,7 @@ discusses:
 - rag-retrieval-evaluation
 - vector-databases
 - embeddings
+- cosine-similarity
 relations:
 - from: cross-encoder
   type: BASED_ON

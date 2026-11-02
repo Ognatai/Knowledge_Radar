@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Context engineering is the systematic optimisation of everything a language model receives at inference time, going beyond the wording of the prompt ([[prompt-engineering|Prompt Engineering]]) to cover retrieval, processing and management of context (Mei et al., 2025). Its main levers are which information enters the limited context window, where it is placed, how it is compressed and how information that does not fit is kept in external memory.
+Context engineering is the systematic optimisation of everything a language model receives at inference time, going beyond the wording of the prompt ([[prompt-engineering|Prompt Engineering]]) to cover retrieval, processing and management of context (Mei et al., 2025). Its main levers are which information enters the limited [[context-window|context window]], where it is placed, how it is compressed and how information that does not fit is kept in external memory.
 
 ### How it works
 
@@ -42,7 +42,7 @@ Mei et al. (2025) define context engineering as a formal discipline for the syst
 
 #### 2. Retrieval of external knowledge
 
-Retrieval adds knowledge that is not stored in the model's parameters. Lewis et al. (2020) combined a pretrained [[attention-and-transformers|sequence-to-sequence model]] with a dense vector index of Wikipedia accessed through a neural retriever ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Because the knowledge lives in the index, it can be updated without retraining, and these models set the state of the art on three open-domain question answering tasks (Lewis et al., 2020).
+Retrieval adds knowledge that is not stored in the model's parameters. Lewis et al. (2020) combined a pretrained [[attention-and-transformers|sequence-to-sequence model]] with a dense vector index of Wikipedia accessed through a neural retriever ([[retrieval-augmented-generation|Retrieval-Augmented Generation]]). Because the knowledge lives in the index, it can be updated without retraining, and these models set the state of the art on three [[question-answering|open-domain question answering]] tasks (Lewis et al., 2020).
 
 #### 3. Position in the context
 
@@ -114,7 +114,7 @@ Context engineering decides what a model sees, where and in how many tokens, and
 
 ### TL;DR
 
-Context Engineering ist die systematische Optimierung aller Informationen, die ein Sprachmodell zur Inferenzzeit erhält; es geht über die Formulierung des Prompts ([[prompt-engineering|Prompt Engineering]]) hinaus und umfasst Retrieval, Verarbeitung und Verwaltung des Kontexts (Mei et al., 2025). Seine Haupthebel sind, welche Informationen in das begrenzte Kontextfenster gelangen, wo sie platziert werden, wie sie komprimiert werden und wie Informationen, die nicht passen, in externem Speicher gehalten werden.
+Context Engineering ist die systematische Optimierung aller Informationen, die ein Sprachmodell zur Inferenzzeit erhält; es geht über die Formulierung des Prompts ([[prompt-engineering|Prompt Engineering]]) hinaus und umfasst Retrieval, Verarbeitung und Verwaltung des Kontexts (Mei et al., 2025). Seine Haupthebel sind, welche Informationen in das begrenzte [[context-window|Kontextfenster]] gelangen, wo sie platziert werden, wie sie komprimiert werden und wie Informationen, die nicht passen, in externem Speicher gehalten werden.
 
 ### Funktionsweise
 

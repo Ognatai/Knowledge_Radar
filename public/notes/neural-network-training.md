@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Training a neural network means adjusting its weights to minimise a loss function on training data. [[back-propagation|Back-propagation]] computes the gradients, and a gradient-based optimiser such as stochastic gradient descent or Adam updates the weights on small batches of data, pass after pass over the training set (Goodfellow et al., 2016; Kingma & Ba, 2014). Careful initialisation (Glorot & Bengio, 2010; He et al., 2015), normalisation (Ioffe & Szegedy, 2015) and the choice of learning rate decide whether deep networks train well.
+Training a neural network means adjusting its weights to minimise a loss function on training data. [[back-propagation|Back-propagation]] computes the gradients, and a gradient-based optimiser such as [[gradient-descent|stochastic gradient descent]] or [[adam-optimiser|Adam]] updates the weights on small batches of data, pass after pass over the training set (Goodfellow et al., 2016; Kingma & Ba, 2014). Careful initialisation (Glorot & Bengio, 2010; He et al., 2015), normalisation (Ioffe & Szegedy, 2015) and the choice of learning rate decide whether deep networks train well.
 
 ### How it works
 
@@ -39,7 +39,7 @@ The training loop repeats four steps: compute predictions for a batch (forward p
 
 #### 1. Loss functions
 
-The loss measures how far predictions are from the targets and is chosen together with the output layer: cross-entropy for [[classification|classification]] with a softmax output, mean squared error for regression (Goodfellow et al., 2016). Training minimises the average loss over the training data.
+The loss measures how far predictions are from the targets and is chosen together with the output layer: [[cross-entropy|cross-entropy]] for [[classification|classification]] with a [[softmax|softmax]] output, mean squared error for regression (Goodfellow et al., 2016). Training minimises the average loss over the training data.
 
 #### 2. Back-propagation
 
@@ -114,7 +114,7 @@ Training repeats forward pass, loss, back-propagation and weight update on small
 
 ### TL;DR
 
-Ein neuronales Netz zu trainieren heißt, seine Gewichte so anzupassen, dass eine Verlustfunktion auf den Trainingsdaten minimal wird. [[back-propagation|Backpropagation]] berechnet die Gradienten, und ein gradientenbasierter Optimierer wie stochastischer Gradientenabstieg oder Adam aktualisiert die Gewichte auf kleinen Datenpaketen (Batches), Durchlauf für Durchlauf über die Trainingsmenge (Goodfellow et al., 2016; Kingma & Ba, 2014). Sorgfältige Initialisierung (Glorot & Bengio, 2010; He et al., 2015), Normalisierung (Ioffe & Szegedy, 2015) und die Wahl der Lernrate entscheiden, ob tiefe Netze gut trainieren.
+Ein neuronales Netz zu trainieren heißt, seine Gewichte so anzupassen, dass eine Verlustfunktion auf den Trainingsdaten minimal wird. [[back-propagation|Backpropagation]] berechnet die Gradienten, und ein gradientenbasierter Optimierer wie [[gradient-descent|stochastischer Gradientenabstieg]] oder [[adam-optimiser|Adam]] aktualisiert die Gewichte auf kleinen Datenpaketen (Batches), Durchlauf für Durchlauf über die Trainingsmenge (Goodfellow et al., 2016; Kingma & Ba, 2014). Sorgfältige Initialisierung (Glorot & Bengio, 2010; He et al., 2015), Normalisierung (Ioffe & Szegedy, 2015) und die Wahl der Lernrate entscheiden, ob tiefe Netze gut trainieren.
 
 ### Funktionsweise
 
@@ -136,7 +136,7 @@ Die Trainingsschleife wiederholt vier Schritte: Vorhersagen für einen Batch ber
 
 #### 1. Verlustfunktionen
 
-Die Verlustfunktion misst, wie weit die Vorhersagen von den Zielwerten entfernt sind, und wird zusammen mit der Ausgabeschicht gewählt: Kreuzentropie für [[classification|Klassifikation]] mit Softmax-Ausgabe, mittlerer quadratischer Fehler für Regression (Goodfellow et al., 2016). Das Training minimiert den durchschnittlichen Verlust über die Trainingsdaten.
+Die Verlustfunktion misst, wie weit die Vorhersagen von den Zielwerten entfernt sind, und wird zusammen mit der Ausgabeschicht gewählt: [[cross-entropy|Kreuzentropie]] für [[classification|Klassifikation]] mit Softmax-Ausgabe, mittlerer quadratischer Fehler für Regression (Goodfellow et al., 2016). Das Training minimiert den durchschnittlichen Verlust über die Trainingsdaten.
 
 #### 2. Backpropagation
 

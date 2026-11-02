@@ -49,7 +49,7 @@ LLaMA is a decoder-only Transformer ([[attention-and-transformers|attention and 
 
 #### 4. Post-training and safety
 
-Llama 2-Chat was fine-tuned with supervised examples and then with reinforcement learning from human feedback, using two reward models for helpfulness and safety and both rejection sampling and proximal policy optimisation; a technique called Ghost Attention keeps system instructions effective over multiple turns (Touvron et al., 2023b). Llama 3 replaced PPO with rounds of supervised fine-tuning, rejection sampling and direct preference optimisation, and was released together with Llama Guard 3, a classifier for input and output safety (Llama Team, 2024). The alignment methods are explained in [[llm-alignment|LLM alignment]], safety classifiers in [[llm-guardrails|LLM guardrails]].
+Llama 2-Chat was fine-tuned with supervised examples and then with reinforcement learning from human feedback, using two reward models for helpfulness and safety and both rejection sampling and proximal policy optimisation; a technique called Ghost Attention keeps system instructions effective over multiple turns (Touvron et al., 2023b). Llama 3 replaced PPO with rounds of [[instruction-tuning|supervised fine-tuning]], rejection sampling and direct preference optimisation, and was released together with Llama Guard 3, a classifier for input and output safety (Llama Team, 2024). The alignment methods are explained in [[llm-alignment|LLM alignment]], safety classifiers in [[llm-guardrails|LLM guardrails]].
 
 #### 5. Capabilities and releases
 
@@ -97,7 +97,7 @@ Providers of general-purpose AI models released under free and open-source licen
 
 ### Key takeaway
 
-The Llama family showed that openly released, comparatively small decoder-only Transformers trained on many tokens of public data can match much larger closed models, and its later generations added RLHF or DPO alignment, long context, multilinguality and frontier scale.
+The Llama family showed that openly released, comparatively small decoder-only Transformers trained on many tokens of public data can match much larger closed models, and its later generations added RLHF or DPO alignment, [[context-window|long context]], multilinguality and frontier scale.
 
 ### Sources
 
@@ -173,7 +173,7 @@ LLaMA-65B war konkurrenzfähig mit Chinchilla-70B und PaLM-540B (Touvron et al.,
 | Generation | Größen | Trainingstoken | Kontext | Post-Training |
 |---|---|---|---|---|
 | LLaMA (2023) | 7B–65B | 1–1,4 Bio. | 2.048 | keines (Basismodelle) |
-| Llama 2 (2023) | 7B–70B | 2 Bio. | 4.096 | SFT + RLHF (Rejection Sampling, PPO) |
+| Llama 2 (2023) | 7B–70B | 2 Bio. | 4.096 | [[instruction-tuning\|SFT]] + RLHF (Rejection Sampling, PPO) |
 | Llama 3.1 (2024) | 8B, 70B, 405B | 15,6 Bio. (405B) | bis 128K | SFT + Rejection Sampling + DPO |
 
 Quellen: Touvron et al. (2023a; 2023b); Llama Team (2024). Der Kontext von 2.048 Token (2k) des ersten LLaMA stammt aus der Vergleichstabelle bei Touvron et al. (2023b). Andere Modellfamilien vergleichen [[large-language-models|Große Sprachmodelle]] und [[gpt|GPT]].

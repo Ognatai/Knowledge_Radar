@@ -12,6 +12,7 @@ discusses:
 - delta-lake
 - omar-khattab
 - mlflow
+- data-warehouse
 relations:
 - from: apache-spark
   type: DEVELOPED_BY

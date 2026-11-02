@@ -43,7 +43,7 @@ The MLE of a bigram probability is the bigram count divided by the count of the 
 
 #### 3. Perplexity
 
-Models are compared on a held-out test set; the better model assigns it a higher probability. Perplexity normalises this by length: the N-th root of the inverse test-set probability, so lower perplexity means a better model. On the Wall Street Journal, unigram, bigram and trigram models trained on 38 million words reached perplexities of 962, 170 and 109. Perplexity is only comparable with identical vocabularies, and an intrinsic improvement does not guarantee an extrinsic improvement in a task such as speech recognition. It can be read as a weighted average branching factor and is 2 raised to the cross-entropy (Jurafsky & Martin, 2026, ch. 3).
+Models are compared on a held-out test set; the better model assigns it a higher probability. Perplexity normalises this by length: the N-th root of the inverse test-set probability, so lower perplexity means a better model. On the Wall Street Journal, unigram, bigram and trigram models trained on 38 million words reached perplexities of 962, 170 and 109. Perplexity is only comparable with identical vocabularies, and an intrinsic improvement does not guarantee an extrinsic improvement in a task such as speech recognition. It can be read as a weighted average branching factor and is 2 raised to the [[cross-entropy|cross-entropy]] (Jurafsky & Martin, 2026, ch. 3).
 
 #### 4. Laplace and add-k smoothing
 
@@ -130,7 +130,7 @@ Die MLE einer Bigramm-Wahrscheinlichkeit ist die Bigramm-Zählung geteilt durch 
 
 #### 3. Perplexität
 
-Modelle werden auf einer zurückgehaltenen Testmenge verglichen; das bessere Modell weist ihr eine höhere Wahrscheinlichkeit zu. Die Perplexität normiert das auf die Länge: die N-te Wurzel der inversen Wahrscheinlichkeit der Testmenge, niedrigere Perplexität bedeutet also ein besseres Modell. Auf dem Wall Street Journal erreichten Unigramm-, Bigramm- und Trigramm-Modelle, trainiert auf 38 Millionen Wörtern, Perplexitäten von 962, 170 und 109. Perplexität ist nur bei identischem Vokabular vergleichbar, und eine intrinsische Verbesserung garantiert keine extrinsische in einer Aufgabe wie der Spracherkennung. Sie lässt sich als gewichteter mittlerer Verzweigungsfaktor lesen und ist 2 hoch der Kreuzentropie (Jurafsky & Martin, 2026, Kap. 3).
+Modelle werden auf einer zurückgehaltenen Testmenge verglichen; das bessere Modell weist ihr eine höhere Wahrscheinlichkeit zu. Die Perplexität normiert das auf die Länge: die N-te Wurzel der inversen Wahrscheinlichkeit der Testmenge, niedrigere Perplexität bedeutet also ein besseres Modell. Auf dem Wall Street Journal erreichten Unigramm-, Bigramm- und Trigramm-Modelle, trainiert auf 38 Millionen Wörtern, Perplexitäten von 962, 170 und 109. Perplexität ist nur bei identischem Vokabular vergleichbar, und eine intrinsische Verbesserung garantiert keine extrinsische in einer Aufgabe wie der Spracherkennung. Sie lässt sich als gewichteter mittlerer Verzweigungsfaktor lesen und ist 2 hoch der [[cross-entropy|Kreuzentropie]] (Jurafsky & Martin, 2026, Kap. 3).
 
 #### 4. Laplace- und Add-k-Glättung
 

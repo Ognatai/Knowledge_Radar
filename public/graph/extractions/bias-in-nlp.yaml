@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 30ce2a30efcc5714b79c6614cee0285cf81750e12540f9fb9a5ed6a4a7419197
+note_sha256: 919b34047606e8969c7b6a3a58d42c6b067643bb920e6f8ffdae5dd3912f0f66
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - embeddings
@@ -15,6 +15,7 @@ discusses:
 - stereoset
 - bbq
 - taz2024full
+- question-answering
 relations:
 - from: eu-ai-act
   type: REGULATES

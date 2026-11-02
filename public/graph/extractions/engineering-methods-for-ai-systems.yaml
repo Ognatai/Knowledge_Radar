@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "27e0ac8737f0561278b5dfa0f399caba1122020e1dd63b08fd72500a27ea8fd6"
+note_sha256: "8d385db343717278bba50c435a74d8eb59bb457cbb275a4e3b7931e335a4c478"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -12,6 +12,7 @@ discusses:
 - vibe-coding
 - llm-cost-optimisation
 - llm-observability-and-tracing
+- context-window
 relations:
 - from: prompt-engineering
   type: IS_EXAMPLE_OF

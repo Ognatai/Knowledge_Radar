@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3002610db710e2099b8cad5eb69de8d4b6efcc57921ac52c6eb555bb2c70ae5b
+note_sha256: a3bcb7f5ba9826a5ad67585eb90d1e3d9959310c07294d6e9eed9c4f16b84200
 extracted_by: claude (hand-labelled, 2026-10-13)
 discusses:
 - openai
@@ -11,6 +11,7 @@ discusses:
 - prompt-engineering
 - copyright-and-ai-training-data
 - large-language-models
+- instruction-tuning
 relations:
 - from: chatgpt
   type: DEVELOPED_BY

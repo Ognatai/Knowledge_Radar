@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 01617aec6eb806ac744d5dbda072925f4e63676c270d149be57a6b32a6bbb0ca
+note_sha256: 7dc7cfade9a8b252abc4555ebaa4e7372e7c831632275fcf059cf939d8d4d6be
 extracted_by: claude
 discusses:
 - sparse-retrieval
@@ -20,6 +20,8 @@ discusses:
 - embeddings
 - large-language-models
 - context-pollution
+- cosine-similarity
+- tf-idf
 relations:
 - from: rag-retrieval
   type: BASED_ON

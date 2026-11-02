@@ -15,7 +15,7 @@ sources:
 
 ### TL;DR
 
-Text similarity metrics score how close a candidate text is to a reference or to another text. Lexical metrics such as [[bleu|BLEU]] (Papineni et al., 2002) and ROUGE (Lin, 2004) count overlapping n-grams. Embedding-based methods compare learned representations instead: [[bertscore|BERTScore]] matches tokens via contextual embeddings (Zhang et al., 2019), and [[sentence-bert|Sentence-BERT]] compares whole sentences by the cosine similarity of their [[embeddings|Embeddings]] (Reimers & Gurevych, 2019).
+Text similarity metrics score how close a candidate text is to a reference or to another text. Lexical metrics such as [[bleu|BLEU]] (Papineni et al., 2002) and ROUGE (Lin, 2004) count overlapping n-grams. Embedding-based methods compare learned representations instead: [[bertscore|BERTScore]] matches tokens via contextual embeddings (Zhang et al., 2019), and [[sentence-bert|Sentence-BERT]] compares whole sentences by the [[cosine-similarity|cosine similarity]] of their [[embeddings|Embeddings]] (Reimers & Gurevych, 2019).
 
 ### How it works
 
@@ -49,7 +49,7 @@ BERTScore (Zhang et al., 2019) computes a similarity score for each token in the
 
 #### Origin and variants
 
-BLEU (Papineni et al., 2002) was developed for machine translation and ROUGE (Lin, 2004) for summarisation. In 2019, BERTScore (Zhang et al., 2019) brought contextual embeddings into evaluation metrics, and Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings efficient enough for similarity search over large collections.
+BLEU (Papineni et al., 2002) was developed for machine translation and ROUGE (Lin, 2004) for [[text-summarisation|summarisation]]. In 2019, BERTScore (Zhang et al., 2019) brought contextual embeddings into evaluation metrics, and Sentence-BERT (Reimers & Gurevych, 2019) made sentence embeddings efficient enough for similarity search over large collections.
 
 ### When to use it
 

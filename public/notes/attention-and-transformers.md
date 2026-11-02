@@ -43,7 +43,7 @@ Each token is turned into a query, a key and a value. Attention compares a token
 
 #### 1. Encoder-decoder and its bottleneck
 
-Sequence-to-sequence models encode an input sequence into a vector of fixed dimensionality with one LSTM and decode the output from it with another (Sutskever et al., 2014; [[recurrent-neural-networks|Recurrent Neural Networks and Time Series]]). Bahdanau et al. (2014) conjectured that this fixed-length vector is a bottleneck for translation performance.
+Sequence-to-sequence models encode an input sequence into a vector of fixed dimensionality with one [[lstm|LSTM]] and decode the output from it with another (Sutskever et al., 2014; [[recurrent-neural-networks|Recurrent Neural Networks and Time Series]]). Bahdanau et al. (2014) conjectured that this fixed-length vector is a bottleneck for translation performance.
 
 #### 2. Attention
 
@@ -51,7 +51,7 @@ Bahdanau et al. (2014) let the decoder automatically (soft-)search for the parts
 
 #### 3. Scaled dot-product and multi-head attention
 
-The Transformer computes attention as softmax(QKᵀ / √d_k)V: the similarity of queries Q and keys K determines weights over the values V, scaled by the square root of the key dimension d_k (Urchs, 2025). Instead of one attention function, h heads with their own learned projections attend to different representation subspaces in parallel, and their outputs are concatenated and projected back (Urchs, 2025).
+The Transformer computes attention as [[softmax|softmax]](QKᵀ / √d_k)V: the similarity of queries Q and keys K determines weights over the values V, scaled by the square root of the key dimension d_k (Urchs, 2025). Instead of one attention function, h heads with their own learned projections attend to different representation subspaces in parallel, and their outputs are concatenated and projected back (Urchs, 2025).
 
 #### 4. The Transformer layer
 
@@ -99,7 +99,7 @@ Attention for [[machine-translation|neural machine translation]] (Bahdanau et al
 
 ### In practice
 
-Pretrained Transformer models are fine-tuned or prompted rather than trained from scratch ([[llm-adaptation|LLM Adaptation]]). Context length and attention implementation determine memory use (Dao et al., 2022), and inputs are tokenised into subwords before they reach the model ([[tokenisation|Tokenisation]]).
+Pretrained Transformer models are fine-tuned or prompted rather than trained from scratch ([[llm-adaptation|LLM Adaptation]]). [[context-window|Context length]] and attention implementation determine memory use (Dao et al., 2022), and inputs are tokenised into subwords before they reach the model ([[tokenisation|Tokenisation]]).
 
 ### Key takeaway
 
@@ -143,7 +143,7 @@ Jedes Token wird in eine Query, einen Key und einen Value umgewandelt. Attention
 
 #### 1. Encoder-Decoder und sein Engpass
 
-Sequence-to-Sequence-Modelle kodieren eine Eingabesequenz mit einem LSTM in einen Vektor fester Dimension und dekodieren daraus mit einem zweiten die Ausgabe (Sutskever et al., 2014; [[recurrent-neural-networks|RNN und Zeitreihen]]). Bahdanau et al. (2014) vermuteten, dass dieser Vektor fester Länge ein Engpass für die Übersetzungsqualität ist.
+Sequence-to-Sequence-Modelle kodieren eine Eingabesequenz mit einem [[lstm|LSTM]] in einen Vektor fester Dimension und dekodieren daraus mit einem zweiten die Ausgabe (Sutskever et al., 2014; [[recurrent-neural-networks|RNN und Zeitreihen]]). Bahdanau et al. (2014) vermuteten, dass dieser Vektor fester Länge ein Engpass für die Übersetzungsqualität ist.
 
 #### 2. Attention
 
@@ -151,7 +151,7 @@ Bahdanau et al. (2014) ließen den Decoder automatisch („weich“) nach den Te
 
 #### 3. Scaled Dot-Product und Multi-Head-Attention
 
-Der Transformer berechnet Attention als softmax(QKᵀ / √d_k)V: Die Ähnlichkeit von Queries Q und Keys K bestimmt Gewichte über die Values V, skaliert mit der Wurzel der Key-Dimension d_k (Urchs, 2025). Statt einer einzigen Attention-Funktion achten h Heads mit eigenen gelernten Projektionen parallel auf verschiedene Teilräume der Repräsentation; ihre Ausgaben werden verkettet und zurückprojiziert (Urchs, 2025).
+Der Transformer berechnet Attention als [[softmax|softmax]](QKᵀ / √d_k)V: Die Ähnlichkeit von Queries Q und Keys K bestimmt Gewichte über die Values V, skaliert mit der Wurzel der Key-Dimension d_k (Urchs, 2025). Statt einer einzigen Attention-Funktion achten h Heads mit eigenen gelernten Projektionen parallel auf verschiedene Teilräume der Repräsentation; ihre Ausgaben werden verkettet und zurückprojiziert (Urchs, 2025).
 
 #### 4. Die Transformer-Schicht
 

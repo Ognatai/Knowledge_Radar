@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7120eeb01135c0d2615c689e0919527ee8ed624d75ac165bca0e10d2d46ac6fe
+note_sha256: f14ab459ac04303b1621be01de4697273c6f77277493ce479778625fe42f5211
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - variational-autoencoder
@@ -8,6 +8,7 @@ discusses:
 - convolutional-neural-networks
 - principal-component-analysis
 - diffusion-models
+- gradient-descent
 relations:
 - from: variational-autoencoder
   type: IS_EXAMPLE_OF

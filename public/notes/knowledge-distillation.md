@@ -40,7 +40,7 @@ Averaging the predictions of many models improves accuracy, but such an ensemble
 
 #### 2. Soft targets and temperature
 
-Hard labels say only which class is correct. The teacher's full output distribution also shows which wrong classes it considers similar, and this "dark knowledge" helps the student generalise (Hinton et al., 2015). Dividing the logits by a temperature above 1 before the softmax softens the distribution and makes these small probabilities visible. The student is trained on a weighted combination of the loss against these soft targets, computed at the same temperature, and the usual loss against the true labels.
+Hard labels say only which class is correct. The teacher's full output distribution also shows which wrong classes it considers similar, and this "dark knowledge" helps the student generalise (Hinton et al., 2015). Dividing the logits by a temperature above 1 before the [[softmax|softmax]] softens the distribution and makes these small probabilities visible. The student is trained on a weighted combination of the loss against these soft targets, computed at the same temperature, and the usual loss against the true labels.
 
 #### 3. Learning from intermediate representations
 
@@ -131,7 +131,7 @@ Die Vorhersagen vieler Modelle zu mitteln verbessert die Genauigkeit, doch ein s
 
 #### 2. Soft Targets und Temperatur
 
-Harte Labels sagen nur, welche Klasse richtig ist. Die vollständige Ausgabeverteilung des Lehrers zeigt zusätzlich, welche falschen Klassen er für ähnlich hält, und dieses „dunkle Wissen“ hilft dem Schüler zu generalisieren (Hinton et al., 2015). Werden die Logits vor der Softmax durch eine Temperatur größer als 1 geteilt, wird die Verteilung geglättet, und diese kleinen Wahrscheinlichkeiten werden sichtbar. Der Schüler wird auf einer gewichteten Kombination aus dem Verlust gegenüber diesen Soft Targets, berechnet bei derselben Temperatur, und dem üblichen Verlust gegenüber den echten Labels trainiert.
+Harte Labels sagen nur, welche Klasse richtig ist. Die vollständige Ausgabeverteilung des Lehrers zeigt zusätzlich, welche falschen Klassen er für ähnlich hält, und dieses „dunkle Wissen“ hilft dem Schüler zu generalisieren (Hinton et al., 2015). Werden die Logits vor der [[softmax|Softmax]] durch eine Temperatur größer als 1 geteilt, wird die Verteilung geglättet, und diese kleinen Wahrscheinlichkeiten werden sichtbar. Der Schüler wird auf einer gewichteten Kombination aus dem Verlust gegenüber diesen Soft Targets, berechnet bei derselben Temperatur, und dem üblichen Verlust gegenüber den echten Labels trainiert.
 
 #### 3. Lernen aus Zwischenrepräsentationen
 

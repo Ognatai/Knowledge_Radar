@@ -1,5 +1,5 @@
 version: 1
-note_sha256: ac99c9fe3c029d522f5a6f821313a559153e640a5c7c971be22ddbda9d58be6c
+note_sha256: 42ec6bd30a0c15402f75f6afa27b0602384d7bd86b9e7b8ee8317fd7e8868561
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - llama
@@ -29,6 +29,7 @@ discusses:
 - owasp
 - selfcheckgpt
 - classification
+- instruction-tuning
 relations:
 - from: llama-guard
   type: IS_EXAMPLE_OF

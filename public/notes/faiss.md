@@ -38,7 +38,7 @@ Every vector index trades accuracy against search time and memory, plus index-bu
 
 #### 2. Exhaustive search and metrics
 
-`IndexFlat` implements brute-force search and returns exact neighbours (Douze et al., 2024). Besides k-nearest-neighbour search, FAISS supports range search, batched queries, and the metrics L2 distance and inner product; [[text-similarity-metrics|cosine similarity]] is obtained by normalising vectors, and the library documents transformations that let an index for one metric serve another (Douze et al., 2024). Below about 10,000 vectors, exhaustive search is usually sufficient.
+`IndexFlat` implements brute-force search and returns exact neighbours (Douze et al., 2024). Besides k-nearest-neighbour search, FAISS supports range search, batched queries, and the metrics L2 distance and inner product; [[cosine-similarity|cosine similarity]] is obtained by normalising vectors, and the library documents transformations that let an index for one metric serve another (Douze et al., 2024). Below about 10,000 vectors, exhaustive search is usually sufficient.
 
 #### 3. Inverted files (IVF)
 
@@ -85,7 +85,7 @@ Sources: Douze et al. (2024); the code is an illustrative example.
 ### When to use it
 
 - Similarity search over millions to billions of embeddings inside an application, without running a separate database server (Douze et al., 2024).
-- Retrieval for RAG and open-domain question answering, where the passage index is built offline ([[dense-passage-retrieval|DPR]], [[retrieval-augmented-generation|RAG]]).
+- Retrieval for RAG and [[question-answering|open-domain question answering]], where the passage index is built offline ([[dense-passage-retrieval|DPR]], [[retrieval-augmented-generation|RAG]]).
 - [[clustering|Clustering]], [[near-duplicate-detection|deduplication]] and data mining on large datasets, for example removing duplicates from 1.3 billion images or mining bilingual text (Douze et al., 2024).
 
 ### Strengths and limitations
@@ -113,7 +113,7 @@ Sources: Douze et al. (2024); Johnson et al. (2017).
 
 ### In practice
 
-The usual workflow is to build an exact `Flat` index on a sample as ground truth, then compare candidate indexes by recall and query time on that sample before choosing one (Douze et al., 2024). Inner product search on normalised vectors gives cosine similarity, a common metric for text [[embeddings|embeddings]] (Douze et al., 2024).
+The usual workflow is to build an exact `Flat` index on a sample as ground truth, then compare candidate indexes by recall and query time on that sample before choosing one (Douze et al., 2024). Inner product search on normalised vectors gives [[cosine-similarity|cosine similarity]], a common metric for text [[embeddings|embeddings]] (Douze et al., 2024).
 
 ### Key takeaway
 
@@ -152,7 +152,7 @@ Jeder Vektorindex wägt Genauigkeit gegen Suchzeit und Speicher ab, dazu die Zei
 
 #### 2. Erschöpfende Suche und Metriken
 
-`IndexFlat` setzt Brute-Force-Suche um und liefert exakte Nachbarn (Douze et al., 2024). Neben der Suche nach den k nächsten Nachbarn unterstützt FAISS Bereichssuche, gebündelte Anfragen sowie die Metriken L2-Distanz und Skalarprodukt; [[text-similarity-metrics|Cosine Similarity]] ergibt sich durch Normalisierung der Vektoren, und die Bibliothek dokumentiert Transformationen, mit denen ein Index für eine Metrik eine andere bedienen kann (Douze et al., 2024). Unterhalb von etwa 10.000 Vektoren genügt meist erschöpfende Suche.
+`IndexFlat` setzt Brute-Force-Suche um und liefert exakte Nachbarn (Douze et al., 2024). Neben der Suche nach den k nächsten Nachbarn unterstützt FAISS Bereichssuche, gebündelte Anfragen sowie die Metriken L2-Distanz und Skalarprodukt; [[cosine-similarity|Cosine Similarity]] ergibt sich durch Normalisierung der Vektoren, und die Bibliothek dokumentiert Transformationen, mit denen ein Index für eine Metrik eine andere bedienen kann (Douze et al., 2024). Unterhalb von etwa 10.000 Vektoren genügt meist erschöpfende Suche.
 
 #### 3. Inverted Files (IVF)
 
@@ -227,7 +227,7 @@ Quellen: Douze et al. (2024); Johnson et al. (2017).
 
 ### In der Praxis
 
-Üblich ist, auf einer Stichprobe einen exakten `Flat`-Index als Referenz zu bauen und dann Kandidatenindizes nach [[classification-metrics|Recall]] und Anfragezeit auf dieser Stichprobe zu vergleichen, bevor einer gewählt wird (Douze et al., 2024). Suche per Skalarprodukt auf normalisierten Vektoren ergibt Cosine Similarity, eine verbreitete Metrik für Text-[[embeddings|Embeddings]] (Douze et al., 2024).
+Üblich ist, auf einer Stichprobe einen exakten `Flat`-Index als Referenz zu bauen und dann Kandidatenindizes nach [[classification-metrics|Recall]] und Anfragezeit auf dieser Stichprobe zu vergleichen, bevor einer gewählt wird (Douze et al., 2024). Suche per Skalarprodukt auf normalisierten Vektoren ergibt [[cosine-similarity|Cosine Similarity]], eine verbreitete Metrik für Text-[[embeddings|Embeddings]] (Douze et al., 2024).
 
 ### Merksatz
 

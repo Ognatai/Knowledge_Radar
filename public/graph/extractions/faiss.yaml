@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9710a021abf557246ff1a6f72405a8fda8896d5bf6fa55ed43b5f5dc4ab5f722
+note_sha256: 52a44e2c8e80efa0a5f32310ead57abee1603b02e361d4dc4fe33f899581a3df
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - clustering
@@ -12,6 +12,8 @@ discusses:
 - vector-databases
 - meta
 - product-quantisation
+- cosine-similarity
+- question-answering
 relations:
 - from: faiss
   type: DEVELOPED_BY

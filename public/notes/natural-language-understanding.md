@@ -45,7 +45,7 @@ Slot filling extracts the slots and values the user means. The simplest systems 
 
 #### 3. Joint models
 
-A typical architecture passes the words through a pretrained language model encoder, followed by a feedforward layer and a softmax over BIO tags at each position; domain and intent are added as the label of a final end-of-sentence token, so one model performs all three tasks (Jurafsky & Martin, 2026). Chen et al. (2019) proposed joint intent classification and slot filling on [[bert|BERT]] and reported clear improvements over attention-based recurrent and slot-gated models in intent accuracy, slot F1 and sentence-level semantic frame accuracy; they also pointed to the limited amount of human-labelled data as a problem for generalisation, especially for rare words.
+A typical architecture passes the words through a pretrained language model encoder, followed by a feedforward layer and a [[softmax|softmax]] over BIO tags at each position; domain and intent are added as the label of a final end-of-sentence token, so one model performs all three tasks (Jurafsky & Martin, 2026). Chen et al. (2019) proposed joint intent classification and slot filling on [[bert|BERT]] and reported clear improvements over attention-based recurrent and slot-gated models in intent accuracy, slot F1 and sentence-level semantic frame accuracy; they also pointed to the limited amount of human-labelled data as a problem for generalisation, especially for rare words.
 
 #### 4. Normalisation
 
@@ -130,7 +130,7 @@ Slot Filling gewinnt die gemeinten Slots und Werte. Die einfachsten Systeme nutz
 
 #### 3. Gemeinsame Modelle
 
-Eine typische Architektur gibt die Wörter durch einen vortrainierten Sprachmodell-Encoder, gefolgt von einer Feedforward-Schicht und einem Softmax über BIO-Tags an jeder Position; Domäne und Intent kommen als Label eines abschließenden Satzende-Tokens hinzu, sodass ein Modell alle drei Aufgaben löst (Jurafsky & Martin, 2026). Chen et al. (2019) schlugen gemeinsame Intent-Klassifikation und Slot Filling auf [[bert|BERT]] vor und berichteten deutliche Verbesserungen gegenüber Attention-basierten rekurrenten und Slot-Gated-Modellen bei Intent-Accuracy, Slot-F1 und Semantic Frame Accuracy auf Satzebene; zugleich nannten sie die geringe Menge menschlich annotierter Daten als Problem für die Generalisierung, besonders bei seltenen Wörtern.
+Eine typische Architektur gibt die Wörter durch einen vortrainierten Sprachmodell-Encoder, gefolgt von einer Feedforward-Schicht und einem [[softmax|Softmax]] über BIO-Tags an jeder Position; Domäne und Intent kommen als Label eines abschließenden Satzende-Tokens hinzu, sodass ein Modell alle drei Aufgaben löst (Jurafsky & Martin, 2026). Chen et al. (2019) schlugen gemeinsame Intent-Klassifikation und Slot Filling auf [[bert|BERT]] vor und berichteten deutliche Verbesserungen gegenüber Attention-basierten rekurrenten und Slot-Gated-Modellen bei Intent-Accuracy, Slot-F1 und Semantic Frame Accuracy auf Satzebene; zugleich nannten sie die geringe Menge menschlich annotierter Daten als Problem für die Generalisierung, besonders bei seltenen Wörtern.
 
 #### 4. Normalisierung
 

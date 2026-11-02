@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 26253a4d02a339f5a245d0fcee15bcc8b8693c9b33910f85578846095c63758d
+note_sha256: 377597e37757ec0da12737d68ad85c1de2b5cb9852a1b5b16ee1a4c382ebb828
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -12,6 +12,9 @@ discusses:
 - attention-and-transformers
 - quantisation
 - mixed-precision-training
+- adam-optimiser
+- instruction-tuning
+- question-answering
 relations:
 - from: prompt-engineering
   type: IS_EXAMPLE_OF

@@ -36,7 +36,7 @@ A GPT model reads a sequence of tokens and outputs a probability distribution ov
 ```
 
 #### 1. Architecture
-GPT uses a multi-layer Transformer decoder: token and position [[embeddings|embeddings]], followed by blocks of masked multi-head self-attention and position-wise feed-forward layers, and a softmax over the vocabulary (Radford et al., 2018). The mask lets each position attend only to earlier positions, so the model sees left context only (Vaswani et al., 2017). This is the main difference from [[bert|BERT]], which conditions on left and right context in all layers (Devlin et al., 2018). GPT-1 had 12 layers with 768-dimensional states and 12 attention heads (Radford et al., 2018).
+GPT uses a multi-layer Transformer decoder: token and position [[embeddings|embeddings]], followed by blocks of masked multi-head self-attention and position-wise feed-forward layers, and a [[softmax|softmax]] over the vocabulary (Radford et al., 2018). The mask lets each position attend only to earlier positions, so the model sees left context only (Vaswani et al., 2017). This is the main difference from [[bert|BERT]], which conditions on left and right context in all layers (Devlin et al., 2018). GPT-1 had 12 layers with 768-dimensional states and 12 attention heads (Radford et al., 2018).
 
 #### 2. Generative pre-training
 The model is trained to maximise the likelihood of each token given the preceding tokens, a standard language modelling objective that needs no labels (Radford et al., 2018). GPT-1 was pre-trained on BooksCorpus, over 7,000 unpublished books; GPT-2 on WebText, about 8 million documents (40 GB of text) from outbound Reddit links with at least 3 karma (Radford et al., 2018; Radford et al., 2019). GPT-2 uses byte-level [[tokenisation|byte pair encoding]] with a vocabulary of 50,257 tokens and a context of 1,024 tokens (Radford et al., 2019).
@@ -47,7 +47,7 @@ The model is trained to maximise the likelihood of each token given the precedin
 - **[[few-shot-prompting|In-context learning]] (GPT-3):** GPT-3 has 175 billion parameters. A task is specified as text: an instruction plus none, one or a few demonstrations (typically 10 to 100, as many as fit into the 2,048-token context), with no gradient updates. Few-shot performance grew faster with model size than zero-shot performance (Brown et al., 2020). This is the basis of [[prompt-engineering|prompt engineering]].
 
 #### 4. Instruction tuning and human feedback
-Larger models do not automatically follow user intent. InstructGPT fine-tunes GPT-3 in three steps: supervised fine-tuning on demonstrations written by labellers, training a reward model on labellers' rankings of outputs, and optimising the model against that reward model with PPO ([[reinforcement-learning|reinforcement learning]] from human feedback). Labellers preferred outputs of the 1.3B-parameter InstructGPT to those of the 175B GPT-3 (Ouyang et al., 2022).
+Larger models do not automatically follow user intent. InstructGPT fine-tunes GPT-3 in three steps: [[instruction-tuning|supervised fine-tuning]] on demonstrations written by labellers, training a reward model on labellers' rankings of outputs, and optimising the model against that reward model with PPO ([[reinforcement-learning|reinforcement learning]] from human feedback). Labellers preferred outputs of the 1.3B-parameter InstructGPT to those of the 175B GPT-3 (Ouyang et al., 2022).
 
 #### 5. GPT-4
 GPT-4 accepts image and text inputs and produces text ([[multimodal-models|multimodal models]]); on a simulated bar exam it scored around the top 10% of test takers. The technical report contains no details about architecture, model size, hardware, training compute or dataset construction (OpenAI, 2023).
@@ -56,7 +56,7 @@ GPT-4 accepts image and text inputs and produces text ([[multimodal-models|multi
 GPT-1 (Radford et al., 2018) combined generative pre-training of a Transformer with discriminative fine-tuning. GPT-2 (Radford et al., 2019) and GPT-3 (Brown et al., 2020) scaled model and data and moved task specification into the prompt; InstructGPT (Ouyang et al., 2022) added training on human preferences, and GPT-4 (OpenAI, 2023) multimodal input. The family is one line of [[large-language-models|large language models]]; for adapting such models, see [[llm-adaptation|LLM adaptation]].
 
 ### When to use it
-- Generating text: continuation, summarisation, translation, answering questions (Radford et al., 2019; Brown et al., 2020).
+- Generating text: continuation, [[text-summarisation|summarisation]], translation, answering questions (Radford et al., 2019; Brown et al., 2020).
 - Solving tasks for which there is little or no labelled data, by describing them in the prompt with a few examples (Brown et al., 2020).
 - Following natural-language instructions in assistants and chat applications (Ouyang et al., 2022).
 - As a pre-trained starting point that is fine-tuned for a task (Radford et al., 2018).
@@ -119,7 +119,7 @@ Ein GPT-Modell liest eine Folge von Tokens und gibt eine Wahrscheinlichkeitsvert
 ```
 
 #### 1. Architektur
-GPT verwendet einen mehrschichtigen Transformer-Decoder: Token- und Positions-Embeddings, darauf Blöcke aus maskierter Multi-Head-Self-Attention und positionsweisen Feed-Forward-Schichten, am Ende ein Softmax über das Vokabular (Radford et al., 2018). Die Maske erlaubt jeder Position nur den Blick auf frühere Positionen, das Modell sieht also nur linken Kontext (Vaswani et al., 2017). Das ist der Hauptunterschied zu [[bert|BERT]], das in allen Schichten linken und rechten Kontext einbezieht (Devlin et al., 2018). GPT-1 hatte 12 Schichten mit 768-dimensionalen Zuständen und 12 Attention-Heads (Radford et al., 2018).
+GPT verwendet einen mehrschichtigen Transformer-Decoder: Token- und Positions-Embeddings, darauf Blöcke aus maskierter Multi-Head-Self-Attention und positionsweisen Feed-Forward-Schichten, am Ende ein [[softmax|Softmax]] über das Vokabular (Radford et al., 2018). Die Maske erlaubt jeder Position nur den Blick auf frühere Positionen, das Modell sieht also nur linken Kontext (Vaswani et al., 2017). Das ist der Hauptunterschied zu [[bert|BERT]], das in allen Schichten linken und rechten Kontext einbezieht (Devlin et al., 2018). GPT-1 hatte 12 Schichten mit 768-dimensionalen Zuständen und 12 Attention-Heads (Radford et al., 2018).
 
 #### 2. Generatives Vortraining
 Das Modell wird darauf trainiert, die Wahrscheinlichkeit jedes Tokens gegeben die vorangehenden Tokens zu maximieren; dieses übliche Sprachmodellierungsziel braucht keine Labels (Radford et al., 2018). GPT-1 wurde auf BooksCorpus vortrainiert, über 7.000 unveröffentlichten Büchern; GPT-2 auf WebText, etwa 8 Millionen Dokumenten (40 GB Text) aus ausgehenden Reddit-Links mit mindestens 3 Karma (Radford et al., 2018; Radford et al., 2019). GPT-2 nutzt Byte-Pair-Encoding auf Byte-Ebene ([[tokenisation|Tokenisierung]]) mit einem Vokabular von 50.257 Tokens und einem Kontext von 1.024 Tokens (Radford et al., 2019).

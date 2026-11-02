@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9ad7d883bf70862e3c31d3e15680d87a2e167631cbb5b4c838b31a446eb0e0fe
+note_sha256: 056170a4e21e40c88723c5656498464cf58a95606b64072523e8116bae6689db
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - causal-inference
@@ -12,6 +12,7 @@ discusses:
 - tdddg
 - bigquery
 - google
+- data-warehouse
 relations:
 - from: bigquery
   type: COMPLEMENTS

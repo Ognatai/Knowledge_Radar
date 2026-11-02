@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b6816ad2a7a7449b950dfc2516bb5d746a755ea0c43d48c6ab5f532cc43623a5
+note_sha256: 485a2c495f3112e66b3b5aa7f6445c6295bd14bf9500ff8cccc2ca3921741670
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - tokenisation
@@ -14,6 +14,7 @@ discusses:
 - entity-extraction
 - glue
 - squad
+- question-answering
 relations:
 - from: natural-language-processing
   type: BASED_ON

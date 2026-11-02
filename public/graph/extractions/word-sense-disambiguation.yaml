@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 405dcfca62c4ab6b4a946013aa610e17100bac73924ec90083071d7f228451b8
+note_sha256: df40555103079acf1eddeac304e329b3efbb7c469fd732073360d74d7cfc0fde
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - semcor
@@ -8,6 +8,9 @@ discusses:
 - k-nearest-neighbours
 - collocations
 - clustering
+- cosine-similarity
+- question-answering
+- tf-idf
 relations:
 - from: word-sense-disambiguation
   type: BASED_ON

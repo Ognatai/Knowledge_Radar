@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 76f82cc99daa0a7baadeb61612229fe1a2cb50c1589fa94f2c0057f573018e19
+note_sha256: a1abd01c6e5f0cf78eeda77e9e8aea9339a13f388242776bd8d04fc612239521
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - agentic-ai
@@ -24,6 +24,7 @@ discusses:
 - openai
 - chatgpt
 - llama
+- context-window
 relations:
 - from: agentic-ai
   type: BASED_ON

@@ -1,9 +1,10 @@
 version: 1
-note_sha256: 8597dc8f1602f402f66c08c523290c7a63c051b5b9bf42488079f68a85703eb5
+note_sha256: b0d5fc020c72e7e86ac2ca40679de36874d9598cc4021d72b8baa26cc03d333e
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - constituency-parsing
 - information-extraction
 - part-of-speech-tagging
 - spacy
+- question-answering
 relations: []

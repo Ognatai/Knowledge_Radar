@@ -1,5 +1,5 @@
 version: 1
-note_sha256: fe03a231a4b2f1560ee87781f11dfdc56b6f03a0d1a35312c199cfd3111be6b9
+note_sha256: 2d8df3c04ca27a803d9c8eb5f8a56b6b7765f6e9d193ca21fb58ae46c3d90b21
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - classification
@@ -12,6 +12,7 @@ discusses:
 - platt-scaling
 - resnet
 - temperature-scaling
+- softmax
 relations:
 - from: isotonic-regression
   type: COMPLEMENTS

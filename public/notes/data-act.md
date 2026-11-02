@@ -65,7 +65,7 @@ Requires connected products and related services to be designed and provided so 
 
 #### Article 4 — The rights and obligations of users and data holders with regard to access, use and making available product data and related service data
 
-Requires data holders to make readily available data and metadata accessible to the user without undue delay where the user cannot access them directly, subject to limits such as the protection of trade secrets.
+Requires data holders to make readily available data and metadata accessible to the user without undue delay where the user cannot access them directly, subject to limits such as the protection of [[geschgehg|trade secrets]].
 
 #### Article 5 — Right of the user to share data with third parties
 
@@ -358,7 +358,7 @@ Regelt die Pflicht, Produktdaten und verbundene Dienstdaten standardmäßig einf
 
 #### Artikel 4 – Rechte und Pflichten von Nutzern und Dateninhabern in Bezug auf den Zugang zu sowie die Nutzung und die Bereitstellung von Produktdaten und verbundenen Dienstdaten
 
-Verpflichtet Dateninhaber, dem Nutzer ohne Weiteres verfügbare Daten und Metadaten unverzüglich bereitzustellen, wenn er nicht direkt darauf zugreifen kann, mit Grenzen etwa zum Schutz von Geschäftsgeheimnissen.
+Verpflichtet Dateninhaber, dem Nutzer ohne Weiteres verfügbare Daten und Metadaten unverzüglich bereitzustellen, wenn er nicht direkt darauf zugreifen kann, mit Grenzen etwa zum Schutz von [[geschgehg|Geschäftsgeheimnissen]].
 
 #### Artikel 5 – Recht des Nutzers auf Weitergabe von Daten an Dritte
 

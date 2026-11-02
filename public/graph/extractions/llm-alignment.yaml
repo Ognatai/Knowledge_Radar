@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8911e3a6b2256545f5f7591c359f39cc356e7e063a263f46f4e3bbb300789e13
+note_sha256: a2cd0f8e94a27fef571f8bf686e96a93eb7a057e1e1aed6d84c4ae3833cca9b2
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - direct-preference-optimization
@@ -15,6 +15,10 @@ discusses:
 - hallucination-detection
 - llm-adaptation
 - chatgpt
+- cross-entropy
+- instruction-tuning
+- reasoning-models
+- text-summarisation
 relations:
 - from: direct-preference-optimization
   type: IS_EXAMPLE_OF

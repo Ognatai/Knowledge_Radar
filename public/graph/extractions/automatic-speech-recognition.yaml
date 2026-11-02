@@ -1,5 +1,5 @@
 version: 1
-note_sha256: bc1e758bfa14545c5d3c2d792dfe5e0997bad094ff4a8f9345d4d23ebea3959b
+note_sha256: 63349e4d36d8e9da4f2e2e27fbdbef8bf0c13682f441389edc93e0e65b2148d4
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - whisper
@@ -10,6 +10,7 @@ discusses:
 - conversational-ai
 - natural-language-understanding
 - dialogue-state-tracking
+- context-window
 relations:
 - from: whisper
   type: IS_EXAMPLE_OF

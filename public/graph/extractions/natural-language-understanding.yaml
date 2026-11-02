@@ -1,5 +1,5 @@
 version: 1
-note_sha256: bd9bc1d54eecb285a8aa5d2df147baa4179980fd2ceb4ff6bc2f4e30389ba4ca
+note_sha256: 3b6b3caac83229f9afd0bbadff20ceedda6846ad44d3171217e518703ac19ecd
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - conversational-ai
@@ -10,6 +10,7 @@ discusses:
 - information-extraction
 - automatic-speech-recognition
 - conversation-analytics
+- softmax
 relations:
 - from: natural-language-understanding
   type: BASED_ON

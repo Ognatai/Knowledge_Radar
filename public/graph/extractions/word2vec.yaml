@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5a100ce48c7deaa27f93d3f2ace92ef0802631df797805735d9e54570f7aa43e
+note_sha256: b97a927e51cff4aff539390e7ee447525d0ab14b97c72b2522393802e9b23ac1
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - attention-and-transformers
@@ -11,6 +11,8 @@ discusses:
 - fairness-metrics
 - glove
 - google
+- logistic-regression
+- softmax
 relations:
 - from: word2vec
   type: DEVELOPED_BY

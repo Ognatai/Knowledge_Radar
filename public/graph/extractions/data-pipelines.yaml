@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f9c77d6ffe62c940b007cb92958ae7b93398c7956f978eb957ee199991ef82d3
+note_sha256: 480dd77a897f8b20a11c0348cd7703c52f59c90c94da0a97eef6e27ee3c03cc8
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - apache-airflow
@@ -10,6 +10,7 @@ discusses:
 - mlops-and-deployment
 - retrieval-augmented-generation
 - knowledge-graph-engineering
+- data-warehouse
 relations:
 - from: apache-airflow
   type: IMPLEMENTS

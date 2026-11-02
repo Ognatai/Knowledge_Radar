@@ -50,7 +50,7 @@ Pooling replaces a region of a feature map with a summary statistic, such as its
 
 #### 4. Typical architecture
 
-A typical CNN alternates convolution layers with non-linear activations and pooling, and ends with fully connected layers and a softmax. Krizhevsky et al. (2012) trained such a network with 60 million parameters, five convolutional and three fully connected layers on 1.2 million ImageNet images; using ReLU activations, GPU training and dropout, it reached top-1 and top-5 error rates of 37.5% and 17.0%, and a variant won ILSVRC-2012 with 15.3% top-5 error versus 26.2% for the second-best entry.
+A typical CNN alternates convolution layers with non-linear activations and pooling, and ends with fully connected layers and a [[softmax|softmax]]. Krizhevsky et al. (2012) trained such a network with 60 million parameters, five convolutional and three fully connected layers on 1.2 million ImageNet images; using ReLU activations, GPU training and dropout, it reached top-1 and top-5 error rates of 37.5% and 17.0%, and a variant won ILSVRC-2012 with 15.3% top-5 error versus 26.2% for the second-best entry.
 
 #### 5. Going deeper
 

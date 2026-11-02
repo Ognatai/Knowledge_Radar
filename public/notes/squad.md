@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-The Stanford Question Answering Dataset (SQuAD) is a reading comprehension benchmark in which crowdworkers wrote more than 100,000 questions about Wikipedia paragraphs, and the answer to each question is a span of text from the paragraph (Rajpurkar et al., 2016). Systems are scored by exact match and token-level F1 against human answers; at release, a [[classification|logistic regression]] model reached 51.0% F1 against 86.8% for humans (Rajpurkar et al., 2016). SQuAD 2.0 added over 50,000 unanswerable questions written to look answerable, so that systems must also know when to abstain: a strong model with 86% F1 on SQuAD 1.1 reached only 66% on SQuAD 2.0 (Rajpurkar et al., 2018). SQuAD became one of the standard benchmarks for extractive [[information-extraction|question answering]] and is part of the evaluation of models such as [[t5|T5]] (Raffel et al., 2019).
+The Stanford Question Answering Dataset (SQuAD) is a [[question-answering|reading comprehension]] benchmark in which crowdworkers wrote more than 100,000 questions about Wikipedia paragraphs, and the answer to each question is a span of text from the paragraph (Rajpurkar et al., 2016). Systems are scored by exact match and token-level F1 against human answers; at release, a [[classification|logistic regression]] model reached 51.0% F1 against 86.8% for humans (Rajpurkar et al., 2016). SQuAD 2.0 added over 50,000 unanswerable questions written to look answerable, so that systems must also know when to abstain: a strong model with 86% F1 on SQuAD 1.1 reached only 66% on SQuAD 2.0 (Rajpurkar et al., 2018). SQuAD became one of the standard benchmarks for extractive [[information-extraction|question answering]] and is part of the evaluation of models such as [[t5|T5]] (Raffel et al., 2019).
 
 ### How it works
 
@@ -51,7 +51,7 @@ Exact match counts a prediction as correct only if it equals one of the referenc
 
 #### 4. What the questions require
 
-The authors analysed the reasoning needed with dependency and constituency trees ([[dependency-parsing|dependency parsing]], [[constituency-parsing|constituency parsing]]). Their logistic regression baseline depended strongly on lexical and dependency-path features, and its performance dropped as answer types became more complex and as the syntax of the question diverged from the sentence containing the answer, while human performance did not drop (Rajpurkar et al., 2016). A sliding-window baseline reached about 20% F1 (Rajpurkar et al., 2016).
+The authors analysed the reasoning needed with dependency and constituency trees ([[dependency-parsing|dependency parsing]], [[constituency-parsing|constituency parsing]]). Their [[logistic-regression|logistic regression]] baseline depended strongly on lexical and dependency-path features, and its performance dropped as answer types became more complex and as the syntax of the question diverged from the sentence containing the answer, while human performance did not drop (Rajpurkar et al., 2016). A sliding-window baseline reached about 20% F1 (Rajpurkar et al., 2016).
 
 #### 5. SQuAD 2.0: unanswerable questions
 

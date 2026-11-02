@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e08cedb5aea8b9f17fcffff38982151f041160cd55b2d0aa8a4d047b325cb270
+note_sha256: e796227ba99def8153d884cb9a8da8ecb0739bd9a1310f827fa721f74f204cc7
 extracted_by: claude
 discusses:
 - attention-and-transformers
@@ -20,6 +20,9 @@ discusses:
 - llm-as-a-judge
 - quantisation
 - prompt-comparison
+- instruction-tuning
+- softmax
+- text-summarisation
 relations:
 - from: gpt
   type: BASED_ON

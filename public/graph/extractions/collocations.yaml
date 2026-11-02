@@ -1,8 +1,9 @@
 version: 1
-note_sha256: cb8abb8d9f9232af92805dfd59d707e3c7ce21f54669f9b48f0bd642d3d73e13
+note_sha256: c9a0333b6984dd614142369053f02643507e08980960c38707c1b85f3b571a4d
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - information-retrieval
 - embeddings
 - statistics-fundamentals
+- tf-idf
 relations: []

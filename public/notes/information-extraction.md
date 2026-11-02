@@ -37,7 +37,7 @@ Entities are identified first, because they are the arguments that relations con
 
 #### 1. Entities as building blocks
 
-Relations connect entities, so entity recognition is usually the first step ([[entity-extraction|Entity Extraction]]). Lample et al. (2016) showed that neural architectures, a bidirectional LSTM with a [[part-of-speech-tagging|conditional random field]] and a transition-based model, reach state-of-the-art entity recognition in four languages without hand-crafted features or gazetteers, using character-based word representations and word representations learned from unannotated text.
+Relations connect entities, so entity recognition is usually the first step ([[entity-extraction|Entity Extraction]]). Lample et al. (2016) showed that neural architectures, a bidirectional [[lstm|LSTM]] with a [[part-of-speech-tagging|conditional random field]] and a transition-based model, reach state-of-the-art entity recognition in four languages without hand-crafted features or gazetteers, using character-based word representations and word representations learned from unannotated text.
 
 #### 2. Open information extraction
 
@@ -132,7 +132,7 @@ Zuerst werden Entitäten erkannt, denn sie sind die Argumente, die Relationen ve
 
 #### 1. Entitäten als Bausteine
 
-Relationen verbinden Entitäten, daher ist die Entitätserkennung meist der erste Schritt ([[entity-extraction|Entitätsextraktion]]). Lample et al. (2016) zeigten, dass neuronale Architekturen, ein bidirektionales LSTM mit [[part-of-speech-tagging|Conditional Random Field]] und ein transitionsbasiertes Modell, in vier Sprachen den Stand der Technik bei der Entitätserkennung erreichen, ohne handgefertigte Merkmale oder Gazetteers. Sie nutzen zeichenbasierte Wortrepräsentationen und Wortrepräsentationen, die aus nicht annotiertem Text gelernt wurden.
+Relationen verbinden Entitäten, daher ist die Entitätserkennung meist der erste Schritt ([[entity-extraction|Entitätsextraktion]]). Lample et al. (2016) zeigten, dass neuronale Architekturen, ein bidirektionales [[lstm|LSTM]] mit [[part-of-speech-tagging|Conditional Random Field]] und ein transitionsbasiertes Modell, in vier Sprachen den Stand der Technik bei der Entitätserkennung erreichen, ohne handgefertigte Merkmale oder Gazetteers. Sie nutzen zeichenbasierte Wortrepräsentationen und Wortrepräsentationen, die aus nicht annotiertem Text gelernt wurden.
 
 #### 2. Offene Informationsextraktion
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d74119de54da86b8d1a4863739d1c4046416f960faae42368aac18fdb62a415e
+note_sha256: ec0107a468811955a79a8d0e64cab61c885e6d0e924dda831217770548653612
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - singular-value-decomposition
@@ -7,6 +7,8 @@ discusses:
 - text-similarity-metrics
 - embeddings
 - clustering
+- cosine-similarity
+- tf-idf
 relations:
 - from: latent-semantic-indexing
   type: BASED_ON

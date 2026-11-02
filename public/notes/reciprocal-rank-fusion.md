@@ -37,7 +37,7 @@ Given a set of documents D and a set of rankings R, RRF computes `RRFscore(d) = 
 
 #### 2. Why ranks instead of scores
 
-Different retrieval methods produce scores with different ranges: BM25 has no upper limit, [[text-similarity-metrics|cosine similarity]] of vectors lies within a fixed range, and rerankers use their own scales (Microsoft Learn). Combining raw scores therefore needs normalisation and weights, whereas RRF ignores the arbitrary scores and only uses positions, like Condorcet Fuse (Cormack et al., 2009). One or two systems that rank a document highly can lift it considerably, which Cormack et al. (2009) suspect is why RRF exploits the diversity of the input rankings better than Condorcet, where a majority of weak preferences can overrule stronger ones.
+Different retrieval methods produce scores with different ranges: BM25 has no upper limit, [[cosine-similarity|cosine similarity]] of vectors lies within a fixed range, and rerankers use their own scales (Microsoft Learn). Combining raw scores therefore needs normalisation and weights, whereas RRF ignores the arbitrary scores and only uses positions, like Condorcet Fuse (Cormack et al., 2009). One or two systems that rank a document highly can lift it considerably, which Cormack et al. (2009) suspect is why RRF exploits the diversity of the input rankings better than Condorcet, where a majority of weak preferences can overrule stronger ones.
 
 #### 3. Hybrid search
 
@@ -119,7 +119,7 @@ Für eine Menge von Dokumenten D und eine Menge von Rankings R berechnet RRF `RR
 
 #### 2. Warum Ränge statt Scores
 
-Verschiedene Retrieval-Verfahren liefern Scores mit unterschiedlichen Wertebereichen: BM25 hat keine Obergrenze, die [[text-similarity-metrics|Cosine Similarity]] von Vektoren liegt in einem festen Bereich, und Reranker nutzen eigene Skalen (Microsoft Learn). Rohscores zu kombinieren, erfordert daher Normalisierung und Gewichte, während RRF wie Condorcet Fuse die willkürlichen Scores ignoriert und nur Positionen nutzt (Cormack et al., 2009). Ein oder zwei Systeme, die ein Dokument hoch einstufen, können es deutlich nach oben bringen; Cormack et al. (2009) vermuten, dass RRF deshalb die Vielfalt der Eingangsrankings besser nutzt als Condorcet, bei dem eine Mehrheit schwacher Präferenzen stärkere überstimmen kann.
+Verschiedene Retrieval-Verfahren liefern Scores mit unterschiedlichen Wertebereichen: BM25 hat keine Obergrenze, die [[cosine-similarity|Cosine Similarity]] von Vektoren liegt in einem festen Bereich, und Reranker nutzen eigene Skalen (Microsoft Learn). Rohscores zu kombinieren, erfordert daher Normalisierung und Gewichte, während RRF wie Condorcet Fuse die willkürlichen Scores ignoriert und nur Positionen nutzt (Cormack et al., 2009). Ein oder zwei Systeme, die ein Dokument hoch einstufen, können es deutlich nach oben bringen; Cormack et al. (2009) vermuten, dass RRF deshalb die Vielfalt der Eingangsrankings besser nutzt als Condorcet, bei dem eine Mehrheit schwacher Präferenzen stärkere überstimmen kann.
 
 #### 3. Hybride Suche
 

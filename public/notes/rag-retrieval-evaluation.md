@@ -61,7 +61,7 @@ Normalised discounted cumulative gain is designed for graded relevance and evalu
 
 #### 5. Annotation selection bias
 
-Because unjudged documents are assumed to be nonrelevant, a new system that retrieves different documents than the systems that formed the pool is penalised. Many BEIR datasets have a lexical bias: candidates for annotation were retrieved with TF-IDF or BM25. On TREC-COVID, the share of unjudged documents in the top 10 (Hole@10) was 6.4% for [[bm25|BM25]] but 14.4% for the dense retriever ANCE and 31.8% for TAS-B. After annotating these holes, ANCE rose from 0.654 to 0.735 nDCG@10, 6.7 points above BM25, while lexical systems barely changed (Thakur et al., 2021).
+Because unjudged documents are assumed to be nonrelevant, a new system that retrieves different documents than the systems that formed the pool is penalised. Many BEIR datasets have a lexical bias: candidates for annotation were retrieved with [[tf-idf|TF-IDF]] or BM25. On TREC-COVID, the share of unjudged documents in the top 10 (Hole@10) was 6.4% for [[bm25|BM25]] but 14.4% for the dense retriever ANCE and 31.8% for TAS-B. After annotating these holes, ANCE rose from 0.654 to 0.735 nDCG@10, 6.7 points above BM25, while lexical systems barely changed (Thakur et al., 2021).
 
 #### 6. Beyond relevance
 
@@ -163,7 +163,7 @@ Normalised Discounted Cumulative Gain ist für abgestufte Relevanz gedacht und w
 
 #### 5. Verzerrung durch die Auswahl der Annotationen
 
-Weil nicht beurteilte Dokumente als nicht relevant gelten, wird ein neues System benachteiligt, das andere Dokumente findet als die Systeme, aus denen der Pool stammt. Viele BEIR-Datensätze haben eine lexikalische Verzerrung: Die Kandidaten für die Annotation wurden mit TF-IDF oder BM25 gesucht. Auf TREC-COVID lag der Anteil nicht beurteilter Dokumente in den Top 10 (Hole@10) bei 6,4 % für [[bm25|BM25]], aber bei 14,4 % für den Dense Retriever ANCE und 31,8 % für TAS-B. Nach der Annotation dieser Lücken stieg ANCE von 0,654 auf 0,735 nDCG@10, 6,7 Punkte über BM25, während sich lexikalische Systeme kaum veränderten (Thakur et al., 2021).
+Weil nicht beurteilte Dokumente als nicht relevant gelten, wird ein neues System benachteiligt, das andere Dokumente findet als die Systeme, aus denen der Pool stammt. Viele BEIR-Datensätze haben eine lexikalische Verzerrung: Die Kandidaten für die Annotation wurden mit [[tf-idf|TF-IDF]] oder BM25 gesucht. Auf TREC-COVID lag der Anteil nicht beurteilter Dokumente in den Top 10 (Hole@10) bei 6,4 % für [[bm25|BM25]], aber bei 14,4 % für den Dense Retriever ANCE und 31,8 % für TAS-B. Nach der Annotation dieser Lücken stieg ANCE von 0,654 auf 0,735 nDCG@10, 6,7 Punkte über BM25, während sich lexikalische Systeme kaum veränderten (Thakur et al., 2021).
 
 #### 6. Über Relevanz hinaus
 

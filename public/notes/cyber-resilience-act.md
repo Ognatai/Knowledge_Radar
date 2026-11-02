@@ -314,7 +314,7 @@ Sets out the procedure for the committee assisting the Commission, including the
 
 #### Article 63 — Confidentiality
 
-Requires all parties involved in applying the Regulation to keep information confidential, protecting in particular trade secrets including source code, inspections and investigations, security interests and the integrity of proceedings.
+Requires all parties involved in applying the Regulation to keep information confidential, protecting in particular [[geschgehg|trade secrets]] including source code, inspections and investigations, security interests and the integrity of proceedings.
 
 #### Article 64 — Penalties
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7e137732d0fbd2f560d9c1025c9e4423da773e17a2484eea0cfb4975418ba6e8
+note_sha256: 65e551e13ee4a60df344141fa659f8d0055b4e32af1dff1aa44256a59c35b8d5
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - enisa
@@ -10,6 +10,7 @@ discusses:
 - nis2-directive
 - cybersecurity-act
 - gdpr
+- geschgehg
 relations:
 - from: cyber-resilience-act
   type: COMPLEMENTS

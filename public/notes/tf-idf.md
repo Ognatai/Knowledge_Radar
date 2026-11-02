@@ -23,7 +23,7 @@ sources:
 
 ### TL;DR
 
-TF-IDF (term frequency–inverse document frequency) weights a word in a document by how often it occurs there (term frequency) and how rare it is across the collection (inverse document frequency), so that words which occur often in few documents get high weights and words that occur everywhere get weights near zero (Manning et al., 2008). Documents and queries become sparse vectors with one dimension per vocabulary word, and the classic vector space model ranks documents by the [[cosine-similarity|cosine]] between the tf-idf vectors of query and document (Jurafsky & Martin, 2026). TF-IDF is also a standard feature weighting for text [[classification|classification]] and [[clustering|clustering]] (scikit-learn), and [[bm25|BM25]] is a variant of it.
+TF-IDF (term frequency–inverse document frequency) weights a word in a document by how often it occurs there (term frequency) and how rare it is across the collection (inverse document frequency), so that words which occur often in few documents get high weights and words that occur everywhere get weights near zero (Manning et al., 2008). Documents and queries become sparse vectors with one dimension per vocabulary word, and the classic vector space model ranks documents by the [[cosine-similarity|cosine]] between the tf-idf vectors of query and document (Jurafsky & Martin, 2026). TF-IDF is also a standard feature weighting for text [[classification|classification]] and [[clustering|clustering]] ([[scikit-learn|scikit-learn]]), and [[bm25|BM25]] is a variant of it.
 
 ### How it works
 
@@ -65,7 +65,7 @@ The idf weight was introduced by Spärck Jones in 1972 (Jurafsky & Martin, 2026)
 ### When to use it
 
 - Keyword search over a document collection, for a baseline or the lexical side of hybrid retrieval ([[information-retrieval|information retrieval]], [[rag-retrieval|RAG retrieval]]).
-- Features for text classification and clustering, for example with [[naive-bayes|Naive Bayes]], logistic regression or k-means (scikit-learn; [[classification|classification]]).
+- Features for text classification and clustering, for example with [[naive-bayes|Naive Bayes]], [[logistic-regression|logistic regression]] or k-means (scikit-learn; [[classification|classification]]).
 - Finding characteristic words of a document or of a group of documents.
 - Input to dimensionality reduction such as [[latent-semantic-indexing|latent semantic indexing]].
 
@@ -95,7 +95,7 @@ Sources: Jurafsky & Martin (2026), Manning et al. (2008).
 
 ### In practice
 
-The choices that most change results are tokenisation and lower-casing, whether tf is raw or logarithmic, whether idf is smoothed and whether vectors are normalised; they should be fixed together with the vocabulary on training data and reused unchanged at query time (scikit-learn). For retrieval, BM25 is usually preferred over plain tf-idf, and lexical scores are often fused with dense retrieval, for example with [[reciprocal-rank-fusion|reciprocal rank fusion]].
+The choices that most change results are [[tokenisation|tokenisation]] and lower-casing, whether tf is raw or logarithmic, whether idf is smoothed and whether vectors are normalised; they should be fixed together with the vocabulary on training data and reused unchanged at query time (scikit-learn). For retrieval, BM25 is usually preferred over plain tf-idf, and lexical scores are often fused with dense retrieval, for example with [[reciprocal-rank-fusion|reciprocal rank fusion]].
 
 ### Key takeaway
 
@@ -115,7 +115,7 @@ TF-IDF multiplies a dampened term frequency by the log of how rare a term is acr
 
 ### TL;DR
 
-TF-IDF (Term Frequency–Inverse Document Frequency) gewichtet ein Wort in einem Dokument danach, wie oft es dort vorkommt (Term Frequency) und wie selten es in der Sammlung ist (Inverse Document Frequency), sodass Wörter, die in wenigen Dokumenten häufig vorkommen, hohe Gewichte erhalten und Wörter, die überall vorkommen, Gewichte nahe null (Manning et al., 2008). Dokumente und Anfragen werden zu dünn besetzten Vektoren mit einer Dimension pro Wort des Vokabulars, und das klassische Vektorraummodell ordnet Dokumente nach dem [[cosine-similarity|Kosinus]] zwischen den TF-IDF-Vektoren von Anfrage und Dokument (Jurafsky & Martin, 2026). TF-IDF ist auch eine Standardgewichtung für Merkmale in der Text-[[classification|Klassifikation]] und beim [[clustering|Clustering]] (scikit-learn), und [[bm25|BM25]] ist eine Variante davon.
+TF-IDF (Term Frequency–Inverse Document Frequency) gewichtet ein Wort in einem Dokument danach, wie oft es dort vorkommt (Term Frequency) und wie selten es in der Sammlung ist (Inverse Document Frequency), sodass Wörter, die in wenigen Dokumenten häufig vorkommen, hohe Gewichte erhalten und Wörter, die überall vorkommen, Gewichte nahe null (Manning et al., 2008). Dokumente und Anfragen werden zu dünn besetzten Vektoren mit einer Dimension pro Wort des Vokabulars, und das klassische Vektorraummodell ordnet Dokumente nach dem [[cosine-similarity|Kosinus]] zwischen den TF-IDF-Vektoren von Anfrage und Dokument (Jurafsky & Martin, 2026). TF-IDF ist auch eine Standardgewichtung für Merkmale in der Text-[[classification|Klassifikation]] und beim [[clustering|Clustering]] ([[scikit-learn|scikit-learn]]), und [[bm25|BM25]] ist eine Variante davon.
 
 ### Funktionsweise
 
@@ -187,7 +187,7 @@ Quellen: Jurafsky & Martin (2026), Manning et al. (2008).
 
 ### In der Praxis
 
-Am stärksten verändern Tokenisierung und Kleinschreibung die Ergebnisse, außerdem die Wahl zwischen roher und logarithmischer tf, ob idf geglättet wird und ob Vektoren normalisiert werden; diese Entscheidungen werden zusammen mit dem Vokabular auf den Trainingsdaten festgelegt und zur Anfragezeit unverändert wiederverwendet (scikit-learn). Für Retrieval wird meist BM25 statt reinem TF-IDF genutzt, und lexikalische Scores werden oft mit Dense Retrieval fusioniert, etwa mit [[reciprocal-rank-fusion|Reciprocal Rank Fusion]].
+Am stärksten verändern [[tokenisation|Tokenisierung]] und Kleinschreibung die Ergebnisse, außerdem die Wahl zwischen roher und logarithmischer tf, ob idf geglättet wird und ob Vektoren normalisiert werden; diese Entscheidungen werden zusammen mit dem Vokabular auf den Trainingsdaten festgelegt und zur Anfragezeit unverändert wiederverwendet (scikit-learn). Für Retrieval wird meist BM25 statt reinem TF-IDF genutzt, und lexikalische Scores werden oft mit Dense Retrieval fusioniert, etwa mit [[reciprocal-rank-fusion|Reciprocal Rank Fusion]].
 
 ### Merksatz
 

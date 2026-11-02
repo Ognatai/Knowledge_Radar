@@ -1,5 +1,5 @@
 version: 1
-note_sha256: baaefb7296e4554f8852c84b434764f6a5007c1d8ce9c7f0a39a8c05e585dc4d
+note_sha256: 5d7e0a9f9115fbc21f904cd3fd0b5dd8cae3f14fe3c9563cdaa9732ef11bf310
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bm25
@@ -10,6 +10,7 @@ discusses:
 - rag-retrieval
 - retrieval-augmented-generation
 - text-similarity-metrics
+- cosine-similarity
 relations:
 - from: reciprocal-rank-fusion
   type: COMPLEMENTS

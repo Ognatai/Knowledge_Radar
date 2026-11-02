@@ -37,7 +37,7 @@ Vanishing and exploding gradients had largely been addressed by normalised initi
 
 #### 2. Residual learning
 
-Instead of letting a stack of layers fit a desired mapping `H(x)` directly, ResNet lets it fit the residual `F(x) = H(x) − x` and recovers the mapping as `F(x) + x` (He et al., 2016). The hypothesis is that the residual is easier to optimise: if the identity were optimal, the layers would only need to push F towards zero. In practice, learned residuals tend to be small, so the identity provides a useful starting point. The addition is implemented by a shortcut connection that skips one or more layers; identity shortcuts add neither parameters nor computation, and the network is still trained end to end with stochastic gradient descent and [[back-propagation|back-propagation]] (He et al., 2016).
+Instead of letting a stack of layers fit a desired mapping `H(x)` directly, ResNet lets it fit the residual `F(x) = H(x) − x` and recovers the mapping as `F(x) + x` (He et al., 2016). The hypothesis is that the residual is easier to optimise: if the identity were optimal, the layers would only need to push F towards zero. In practice, learned residuals tend to be small, so the identity provides a useful starting point. The addition is implemented by a shortcut connection that skips one or more layers; identity shortcuts add neither parameters nor computation, and the network is still trained end to end with [[gradient-descent|stochastic gradient descent]] and [[back-propagation|back-propagation]] (He et al., 2016).
 
 #### 3. Shortcuts across dimension changes
 
@@ -120,7 +120,7 @@ Verschwindende und explodierende Gradienten waren durch normalisierte Initialisi
 
 #### 2. Residuales Lernen
 
-Statt eine Schichtfolge eine gewünschte Abbildung `H(x)` direkt lernen zu lassen, lässt ResNet sie das Residuum `F(x) = H(x) − x` lernen und gewinnt die Abbildung als `F(x) + x` zurück (He et al., 2016). Die Hypothese ist, dass das Residuum leichter zu optimieren ist: Wäre die Identität optimal, müssten die Schichten F nur gegen null treiben. In der Praxis sind die gelernten Residuen eher klein, sodass die Identität einen nützlichen Ausgangspunkt bietet. Die Addition setzt eine Shortcut-Verbindung um, die eine oder mehrere Schichten überspringt; Identitäts-Shortcuts fügen weder Parameter noch Rechenaufwand hinzu, und das Netz wird weiterhin Ende-zu-Ende mit stochastischem Gradientenabstieg und [[back-propagation|Backpropagation]] trainiert (He et al., 2016).
+Statt eine Schichtfolge eine gewünschte Abbildung `H(x)` direkt lernen zu lassen, lässt ResNet sie das Residuum `F(x) = H(x) − x` lernen und gewinnt die Abbildung als `F(x) + x` zurück (He et al., 2016). Die Hypothese ist, dass das Residuum leichter zu optimieren ist: Wäre die Identität optimal, müssten die Schichten F nur gegen null treiben. In der Praxis sind die gelernten Residuen eher klein, sodass die Identität einen nützlichen Ausgangspunkt bietet. Die Addition setzt eine Shortcut-Verbindung um, die eine oder mehrere Schichten überspringt; Identitäts-Shortcuts fügen weder Parameter noch Rechenaufwand hinzu, und das Netz wird weiterhin Ende-zu-Ende mit stochastischem [[gradient-descent|Gradientenabstieg]] und [[back-propagation|Backpropagation]] trainiert (He et al., 2016).
 
 #### 3. Shortcuts bei Dimensionswechseln
 

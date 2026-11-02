@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 21849270bcb29b78db28710ccaebf01386235ee2d789f6d982c176985f27d81a
+note_sha256: a259c5cfb75bbbceaa9ab49f2fc0cbb6abae485d454d1f675e2cdedc398ed9b2
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - squad
@@ -20,6 +20,9 @@ discusses:
 - vector-databases
 - natural-questions
 - meta
+- cosine-similarity
+- cross-entropy
+- question-answering
 relations:
 - from: dense-passage-retrieval
   type: BASED_ON

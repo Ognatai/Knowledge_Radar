@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9eb4922e745bd5fbe8bd6ef7fb70335fd18f74e1c87199e09b875fa85b85de3f
+note_sha256: 432ddf61bae8e49f2f9e6cbb0f3c89038570a13feeecbc715914ec93b98be729
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - lenet
@@ -11,6 +11,7 @@ discusses:
 - transfer-learning
 - vision-transformer
 - imagenet
+- softmax
 relations:
 - from: lenet
   type: IS_EXAMPLE_OF

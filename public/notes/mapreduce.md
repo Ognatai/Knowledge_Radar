@@ -177,7 +177,7 @@ Jeffrey Dean und Sanjay Ghemawat stellten MapReduce auf der OSDI 2004 vor. Bei G
 - Datenlokalität spart knappe Netzwerkbandbreite (Dean & Ghemawat, 2004).
 
 **Grenzen**
-- Daten lassen sich zwischen Jobs nur über stabilen Speicher weitergeben, was iterative ML- und Graphalgorithmen wie PageRank, k-Means oder logistische Regression langsam macht (Zaharia et al., 2012).
+- Daten lassen sich zwischen Jobs nur über stabilen Speicher weitergeben, was iterative ML- und Graphalgorithmen wie PageRank, k-Means oder [[logistic-regression|logistische Regression]] langsam macht (Zaharia et al., 2012).
 - Nicht für interaktive Abfragen geeignet; Spark war bei iterativen Anwendungen bis zu 20-mal schneller als Hadoop (Zaharia et al., 2012).
 - Mehrstufige Logik erfordert verkettete Jobs, jeder mit vollständigem Shuffle über die Festplatte (Dean & Ghemawat, 2004; Zaharia et al., 2012).
 

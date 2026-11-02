@@ -40,7 +40,7 @@ During indexing, an LLM extracts entities and relationships from the documents a
 
 #### 1. Why plain RAG falls short
 
-RAG retrieves passages from an external source to ground a model's answer (Lewis et al., 2020). It fails on global questions directed at an entire corpus, such as "What are the main themes in the dataset?", because these are query-focused summarisation tasks rather than retrieval tasks (Edge et al., 2024). Flat chunk retrieval also struggles to capture relations between entities spread across documents (Peng et al., 2024; Guo et al., 2024).
+RAG retrieves passages from an external source to ground a model's answer (Lewis et al., 2020). It fails on global questions directed at an entire corpus, such as "What are the main themes in the dataset?", because these are query-focused [[text-summarisation|summarisation]] tasks rather than retrieval tasks (Edge et al., 2024). Flat chunk retrieval also struggles to capture relations between entities spread across documents (Peng et al., 2024; Guo et al., 2024).
 
 #### 2. Graph-based indexing
 
@@ -52,7 +52,7 @@ Edge et al. (2024) group closely related entities into communities and pregenera
 
 #### 4. Graph-guided retrieval
 
-HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized [[pagerank|PageRank]] algorithm (Gutiérrez et al., 2024). On multi-hop question answering it outperformed state-of-the-art methods by up to 20%, and single-step retrieval with HippoRAG matched or beat iterative retrieval such as IRCoT while being 10 to 30 times cheaper and 6 to 13 times faster.
+HippoRAG, inspired by the hippocampal indexing theory of human memory, combines an LLM, a knowledge graph and the Personalized [[pagerank|PageRank]] algorithm (Gutiérrez et al., 2024). On multi-hop [[question-answering|question answering]] it outperformed state-of-the-art methods by up to 20%, and single-step retrieval with HippoRAG matched or beat iterative retrieval such as IRCoT while being 10 to 30 times cheaper and 6 to 13 times faster.
 
 #### 5. Combining graphs and vectors
 

@@ -58,7 +58,7 @@ Forecasts are evaluated on test data from after the training period and with tim
 
 #### 6. Neural sequence models
 
-Long short-term memory (LSTM) networks keep error flow constant over long time lags through gated memory cells and can learn dependencies over more than 1000 time steps, where earlier recurrent networks failed (Hochreiter & Schmidhuber, 1997; [[recurrent-neural-networks|Recurrent Neural Networks]]).
+[[lstm|Long short-term memory]] (LSTM) networks keep error flow constant over long time lags through gated memory cells and can learn dependencies over more than 1000 time steps, where earlier recurrent networks failed (Hochreiter & Schmidhuber, 1997; [[recurrent-neural-networks|Recurrent Neural Networks]]).
 
 #### Origin and variants
 
@@ -155,7 +155,7 @@ Prognosen werden auf Testdaten aus der Zeit nach dem Trainingszeitraum und mit Z
 
 #### 6. Neuronale Sequenzmodelle
 
-Long Short-Term Memory (LSTM) hält den Fehlerfluss über gesteuerte Speicherzellen auch über lange Zeitabstände konstant und kann Abhängigkeiten über mehr als 1000 Zeitschritte lernen, woran frühere rekurrente Netze scheiterten (Hochreiter & Schmidhuber, 1997; [[recurrent-neural-networks|RNN und Zeitreihen]]).
+[[lstm|Long Short-Term Memory (LSTM)]] hält den Fehlerfluss über gesteuerte Speicherzellen auch über lange Zeitabstände konstant und kann Abhängigkeiten über mehr als 1000 Zeitschritte lernen, woran frühere rekurrente Netze scheiterten (Hochreiter & Schmidhuber, 1997; [[recurrent-neural-networks|RNN und Zeitreihen]]).
 
 #### Ursprung und Varianten
 

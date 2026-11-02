@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 582d5ba1ab9aee7e16e1fc392f95162c0de355b23bf90894fa0c33c7a7badfdb
+note_sha256: 76a6c8db04b0714f7a48e3e09309191f97b41c3987df16aa609198f47594f189
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - cross-validation
@@ -9,6 +9,7 @@ discusses:
 - overfitting
 - regularisation-and-hyperparameters
 - double-descent
+- linear-regression
 relations:
 - from: bias-variance-tradeoff
   type: COMPLEMENTS

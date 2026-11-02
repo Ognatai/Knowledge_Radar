@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "dec8afdf6f1745c462b3eeef9493ca24a6bcb3dac0430d2e7012b67ea1b5cbe1"
+note_sha256: "8a3486ad08ef83bcbade2f778ea1b03b440ba752aea519556ed8e1eff08d8609"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - gdpr
@@ -10,6 +10,7 @@ discusses:
 - edib
 - connected-product
 - cloud-switching
+- geschgehg
 relations:
 - from: gdpr
   type: TAKES_PRECEDENCE_OVER

@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Recurrent [[neural-networks|neural networks]] (RNNs) process sequences step by step and carry a hidden state that summarises what they have seen so far, sharing the same weights at every time step (Goodfellow et al., 2016). They are trained with [[back-propagation|back-propagation]] through time, but long-term dependencies are hard to learn because gradients vanish or explode over many steps (Bengio et al., 1994). Gated variants such as the LSTM (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this and powered sequence-to-sequence models for translation (Sutskever et al., 2014), before Transformers largely replaced them in language processing.
+Recurrent [[neural-networks|neural networks]] (RNNs) process sequences step by step and carry a hidden state that summarises what they have seen so far, sharing the same weights at every time step (Goodfellow et al., 2016). They are trained with [[back-propagation|back-propagation]] through time, but long-term dependencies are hard to learn because gradients vanish or explode over many steps (Bengio et al., 1994). Gated variants such as the [[lstm|LSTM]] (Hochreiter & Schmidhuber, 1997) and GRU (Cho et al., 2014) address this and powered sequence-to-sequence models for translation (Sutskever et al., 2014), before Transformers largely replaced them in language processing.
 
 ### How it works
 
@@ -47,7 +47,7 @@ To train an RNN, the network is unrolled over the sequence into a deep feedforwa
 
 #### 3. Vanishing and exploding gradients
 
-Bengio et al. (1994) showed why gradient-based learning becomes increasingly difficult as the dependencies to be captured span longer intervals: gradients propagated back over many steps tend to vanish or explode. This exposes a trade-off between efficient learning by gradient descent and holding on to information over long periods.
+Bengio et al. (1994) showed why gradient-based learning becomes increasingly difficult as the dependencies to be captured span longer intervals: gradients propagated back over many steps tend to vanish or explode. This exposes a trade-off between efficient learning by [[gradient-descent|gradient descent]] and holding on to information over long periods.
 
 #### 4. Gated units: LSTM and GRU
 
@@ -115,7 +115,7 @@ RNNs process sequences step by step with a shared state; gated units such as the
 
 ### TL;DR
 
-Rekurrente [[neural-networks|neuronale Netze]] (RNNs) verarbeiten Sequenzen Schritt für Schritt und führen einen verborgenen Zustand mit, der das bisher Gesehene zusammenfasst; dabei nutzen sie in jedem Zeitschritt dieselben Gewichte (Goodfellow et al., 2016). Sie werden mit [[back-propagation|Backpropagation]] Through Time trainiert, doch weitreichende Abhängigkeiten sind schwer zu lernen, weil Gradienten über viele Schritte verschwinden oder explodieren (Bengio et al., 1994). Gesteuerte Varianten wie das LSTM (Hochreiter & Schmidhuber, 1997) und die GRU (Cho et al., 2014) lösen das und trugen Sequence-to-Sequence-Modelle für Übersetzung (Sutskever et al., 2014), bevor Transformer sie in der Sprachverarbeitung weitgehend ablösten.
+Rekurrente [[neural-networks|neuronale Netze]] (RNNs) verarbeiten Sequenzen Schritt für Schritt und führen einen verborgenen Zustand mit, der das bisher Gesehene zusammenfasst; dabei nutzen sie in jedem Zeitschritt dieselben Gewichte (Goodfellow et al., 2016). Sie werden mit [[back-propagation|Backpropagation]] Through Time trainiert, doch weitreichende Abhängigkeiten sind schwer zu lernen, weil Gradienten über viele Schritte verschwinden oder explodieren (Bengio et al., 1994). Gesteuerte Varianten wie das [[lstm|LSTM]] (Hochreiter & Schmidhuber, 1997) und die GRU (Cho et al., 2014) lösen das und trugen Sequence-to-Sequence-Modelle für Übersetzung (Sutskever et al., 2014), bevor Transformer sie in der Sprachverarbeitung weitgehend ablösten.
 
 ### Funktionsweise
 
@@ -145,7 +145,7 @@ Zum Training wird das Netz über die Sequenz zu einem tiefen Feedforward-Graphen
 
 #### 3. Verschwindende und explodierende Gradienten
 
-Bengio et al. (1994) zeigten, warum gradientenbasiertes Lernen immer schwieriger wird, je länger die zu erfassenden Abhängigkeiten sind: Über viele Schritte zurückpropagierte Gradienten neigen dazu zu verschwinden oder zu explodieren. Daraus ergibt sich ein Zielkonflikt zwischen effizientem Lernen per Gradientenabstieg und dem Festhalten von Information über lange Zeiträume.
+Bengio et al. (1994) zeigten, warum gradientenbasiertes Lernen immer schwieriger wird, je länger die zu erfassenden Abhängigkeiten sind: Über viele Schritte zurückpropagierte Gradienten neigen dazu zu verschwinden oder zu explodieren. Daraus ergibt sich ein Zielkonflikt zwischen effizientem Lernen per [[gradient-descent|Gradientenabstieg]] und dem Festhalten von Information über lange Zeiträume.
 
 #### 4. Gesteuerte Einheiten: LSTM und GRU
 

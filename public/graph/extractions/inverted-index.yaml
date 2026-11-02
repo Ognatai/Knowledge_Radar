@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "4dffccf8738a8f297bc6ec400c21dc7e39b2ed29ffe97f2c679c3a34ae319fe5"
+note_sha256: "e4160ef998e84880c2878b8090a6db587130464c6d551290e2f9ddfaff1ea8ff"
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - information-retrieval
@@ -7,6 +7,7 @@ discusses:
 - mapreduce
 - rag-retrieval
 - vector-databases
+- tf-idf
 relations:
 - from: bm25
   type: BASED_ON

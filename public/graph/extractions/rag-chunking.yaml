@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4245d491368c7133f25a1bfee2cbaad47291302917a46acd4b4ab45012e20a51
+note_sha256: 4ac369cae0332f1dd9a60548afa2255f5d5fe56994bcd9f073b3fd9a4c6c4835
 extracted_by: claude
 discusses:
 - fixed-size-chunking
@@ -13,6 +13,8 @@ discusses:
 - structured-context-construction
 - embeddings
 - vector-databases
+- context-window
+- question-answering
 relations:
 - from: fixed-size-chunking
   type: IS_EXAMPLE_OF

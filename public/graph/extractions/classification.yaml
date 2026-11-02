@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 05f42f312abdd4c9e2523822aa076d076a289fb78e5154cb354e3c9b698c78e2
+note_sha256: 8500df2002b8d3d6e7dc476a41d5e6d2f90a51e1795303c64f2dfec066add99f
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - naive-bayes
@@ -14,6 +14,8 @@ discusses:
 - support-vector-machines
 - neural-networks
 - k-nearest-neighbours
+- logistic-regression
+- tf-idf
 relations:
 - from: naive-bayes
   type: IS_EXAMPLE_OF

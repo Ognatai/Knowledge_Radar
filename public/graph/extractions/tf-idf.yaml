@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3cb0ceec10745940b219627a1c2b5051ba0107a428a3669153c064e6652176d8
+note_sha256: bb4e57b20181b7321abac5e9ce9aaf65a191ca974b1e62e3f4beab3a97799928
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - cosine-similarity
@@ -17,6 +17,7 @@ discusses:
 - rag-retrieval
 - reciprocal-rank-fusion
 - scikit-learn
+- logistic-regression
 relations:
 - from: bm25
   type: BASED_ON

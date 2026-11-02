@@ -1,11 +1,12 @@
 version: 1
-note_sha256: 200379fa8193ee6afa872244f56e8696aa638916f6b79f03492e01361f2821a6
+note_sha256: 7f08e932bc19e1347eca208acdda1c8fadf1a6774756585b265070d9210c0241
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - pytorch
 - neural-network-training
 - convolutional-neural-networks
 - recurrent-neural-networks
+- lstm
 relations:
 - from: keras-and-tensorflow
   type: IMPLEMENTS

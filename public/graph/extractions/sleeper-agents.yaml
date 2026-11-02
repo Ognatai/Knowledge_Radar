@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f46dad1c4494bb29ea52e50d14f959614a4ead3a00317572ffd47e7713902dab
+note_sha256: 17b2a660863ca0d83049456f0fc11c4232c3a267c78dec244114f77d2800531d
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - anthropic
@@ -16,6 +16,7 @@ discusses:
 - harness-engineering
 - llm-alignment
 - chain-of-thought-prompting
+- instruction-tuning
 relations:
 - from: defection-probes
   type: EVALUATES

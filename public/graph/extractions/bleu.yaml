@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e94ec80cec38504e81513dac1473fc17c4f3f37b52f95ecd3d88d14c50bc3358
+note_sha256: 2190f6c470b2f45a9423602bc9cd63953e1c1bcbf90ebb934a16d3ecb670b3e2
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bertscore
@@ -12,6 +12,7 @@ discusses:
 - text-similarity-metrics
 - tokenisation
 - ibm
+- text-summarisation
 relations:
 - from: bleu
   type: DEVELOPED_BY

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: cfc20c91c1f1269b7a37c212502ae69cf9f8bfb77fdf9e71c6774b81cde8aa14
+note_sha256: ec0d61f65a821986b82c9f91025ff5b7c014f260db31def4bd2ed748bb8c7068
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - explainable-ai
@@ -10,6 +10,8 @@ discusses:
 - neural-networks
 - resnet
 - gradient-descent
+- cross-entropy
+- logistic-regression
 relations:
 - from: back-propagation
   type: COMPLEMENTS

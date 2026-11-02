@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8d602b4b19dc91d6120c1e50593f37e12c26438ff2a38ab6eaa2753f2e1c82b6
+note_sha256: a14d78bdf1447c4ea54a4a15c2856ba5430c60597c76f7d630883bde22af8502
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - squad
@@ -11,6 +11,8 @@ discusses:
 - roc-curve
 - precision-recall-curve
 - exact-match
+- logistic-regression
+- question-answering
 relations:
 - from: classification-metrics
   type: BASED_ON

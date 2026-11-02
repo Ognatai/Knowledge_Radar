@@ -62,7 +62,7 @@ When negatives far outnumber positives, ROC plots can look reassuring while most
 
 #### 6. Exact match for extracted answers
 
-For extractive question answering, where the answer is a span of text, predictions are scored with exact match, i.e. whether the predicted span equals a reference answer, and with a token-level F1 score that gives partial credit for overlap. On [[squad|SQuAD]], a logistic regression baseline reached an F1 of 51.0%, compared with 86.8% for humans (Rajpurkar et al., 2016; [[text-similarity-metrics|Text Similarity Metrics]]).
+For extractive [[question-answering|question answering]], where the answer is a span of text, predictions are scored with exact match, i.e. whether the predicted span equals a reference answer, and with a token-level F1 score that gives partial credit for overlap. On [[squad|SQuAD]], a [[logistic-regression|logistic regression]] baseline reached an F1 of 51.0%, compared with 86.8% for humans (Rajpurkar et al., 2016; [[text-similarity-metrics|Text Similarity Metrics]]).
 
 #### Origin and variants
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 26870f161bf5f6687c7ca33a83ca35c51ca5cfd6c39fef3ba36eed717eb84a4a
+note_sha256: d6d6aa7f27381f04d1bc1ce8622aa2d223636ba30e6fccb140035bc44c169008
 extracted_by: claude
 discusses:
 - ragas
@@ -11,6 +11,7 @@ discusses:
 - llm-as-a-judge
 - retrieval-augmented-generation
 - large-language-models
+- question-answering
 relations:
 - from: rag-evaluation
   type: BASED_ON

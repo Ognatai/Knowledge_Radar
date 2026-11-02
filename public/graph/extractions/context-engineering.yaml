@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 46e8cf708f03322b33837c3a90a2081379723f931ac6c1291c2155d16e57d4a3
+note_sha256: 9c8daa687d5dd75d56fdbb9cbf0b705aaa49bce69b43432058df0884bf0a17ef
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - prompt-engineering
@@ -8,6 +8,8 @@ discusses:
 - llmlingua
 - memgpt
 - multi-agent-systems
+- context-window
+- question-answering
 relations:
 - from: context-engineering
   type: BASED_ON

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c28cba37779f19c67b572bc3c4ed3bc4f38cd8a2fc6fe831bd65bbf1be833e5d
+note_sha256: 8d061fcbbff45d3f5603853348f65ae1354401bd797984e6c7d7d65699d1bf96
 extracted_by: claude (hand-labelled, 2026-10-13)
 discusses:
 - snli
@@ -13,6 +13,9 @@ discusses:
 - recurrent-neural-networks
 - information-retrieval
 - llm-as-a-judge
+- lstm
+- question-answering
+- text-summarisation
 relations:
 - from: snli
   type: EVALUATES

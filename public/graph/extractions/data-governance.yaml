@@ -1,5 +1,5 @@
 version: 1
-note_sha256: bf50721fa6ca9200edd25f0670138ce95990fc2b394ed1ec871d97f7523743a1
+note_sha256: 11dc1c592156a0a8ae0b04cd94b898aea461c81cf0551c8e10d3454ff26c102a
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apache-spark
@@ -17,6 +17,7 @@ discusses:
 - unity-catalog
 - openlineage
 - databricks
+- data-warehouse
 relations:
 - from: unity-catalog
   type: IMPLEMENTS

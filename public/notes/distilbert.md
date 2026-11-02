@@ -14,7 +14,7 @@ sources:
 
 ### TL;DR
 
-DistilBERT is a smaller version of [[bert|BERT]] created by [[knowledge-distillation|knowledge distillation]] during pre-training: a 6-layer student learns from the 12-layer BERT-base teacher and keeps 97% of its language understanding performance on [[glue|GLUE]] with 40% fewer parameters and 60% faster inference (Sanh et al., 2019). Its training objective combines three losses: matching the teacher's soft output distribution, the usual masked language modelling loss and a cosine loss that aligns the student's hidden states with the teacher's (Sanh et al., 2019). Released by Hugging Face in 2019, it is a general-purpose model that can be fine-tuned like BERT and is small enough for on-device use.
+DistilBERT is a smaller version of [[bert|BERT]] created by [[knowledge-distillation|knowledge distillation]] during pre-training: a 6-layer student learns from the 12-layer BERT-base teacher and keeps 97% of its language understanding performance on [[glue|GLUE]] with 40% fewer parameters and 60% faster inference (Sanh et al., 2019). Its training objective combines three losses: matching the teacher's soft output distribution, the usual masked language modelling loss and a [[cosine-similarity|cosine]] loss that aligns the student's hidden states with the teacher's (Sanh et al., 2019). Released by Hugging Face in 2019, it is a general-purpose model that can be fine-tuned like BERT and is small enough for on-device use.
 
 ### How it works
 
@@ -35,7 +35,7 @@ Most earlier work distilled BERT for one specific task after fine-tuning; Distil
 
 #### 2. The triple loss
 
-The distillation loss `L_ce = Σ_i t_i · log(s_i)` compares the teacher's probabilities t with the student's s, both softened with the same temperature T in the softmax `p_i = exp(z_i/T) / Σ_j exp(z_j/T)`; at inference T is set to 1 (Sanh et al., 2019). It is combined linearly with the masked language modelling loss of BERT and a cosine embedding loss that aligns the directions of student and teacher hidden-state vectors. In the ablation, the two distillation losses accounted for most of the performance, while removing the masked language modelling loss had little impact (Sanh et al., 2019).
+The distillation loss `L_ce = Σ_i t_i · log(s_i)` compares the teacher's probabilities t with the student's s, both softened with the same temperature T in the [[softmax|softmax]] `p_i = exp(z_i/T) / Σ_j exp(z_j/T)`; at inference T is set to 1 (Sanh et al., 2019). It is combined linearly with the masked language modelling loss of BERT and a cosine embedding loss that aligns the directions of student and teacher hidden-state vectors. In the ablation, the two distillation losses accounted for most of the performance, while removing the masked language modelling loss had little impact (Sanh et al., 2019).
 
 #### 3. Student architecture and initialisation
 
@@ -47,7 +47,7 @@ Following RoBERTa's practices, DistilBERT was trained with very large batches of
 
 #### 5. Results
 
-On the GLUE dev sets, DistilBERT scored 77.0 against 79.5 for BERT-base and 68.7 for the ELMo baseline (Sanh et al., 2019). On IMDb sentiment classification it reached 92.82% accuracy against 93.46%, and on [[squad|SQuAD 1.1]] 77.7/85.8 EM/F1 against 81.2/88.5, improving to 79.1/86.9 with a second distillation step during fine-tuning. With 66 million instead of 110 million parameters, a full pass over the STS-B task on CPU took 410 instead of 668 seconds; on an iPhone 7 Plus, a question answering model was 71% faster than one based on BERT-base and weighed 207 MB (Sanh et al., 2019).
+On the GLUE dev sets, DistilBERT scored 77.0 against 79.5 for BERT-base and 68.7 for the ELMo baseline (Sanh et al., 2019). On IMDb sentiment classification it reached 92.82% accuracy against 93.46%, and on [[squad|SQuAD 1.1]] 77.7/85.8 EM/F1 against 81.2/88.5, improving to 79.1/86.9 with a second distillation step during fine-tuning. With 66 million instead of 110 million parameters, a full pass over the STS-B task on CPU took 410 instead of 668 seconds; on an iPhone 7 Plus, a [[question-answering|question answering]] model was 71% faster than one based on BERT-base and weighed 207 MB (Sanh et al., 2019).
 
 #### Origin and variants
 
@@ -120,7 +120,7 @@ Die meisten früheren Arbeiten destillierten BERT nach dem Fine-Tuning für eine
 
 #### 2. Der dreifache Verlust
 
-Der Distillationsverlust `L_ce = Σ_i t_i · log(s_i)` vergleicht die Wahrscheinlichkeiten t des Lehrers mit denen s des Schülers, beide mit derselben Temperatur T im Softmax `p_i = exp(z_i/T) / Σ_j exp(z_j/T)` geglättet; bei der Inferenz ist T = 1 (Sanh et al., 2019). Er wird linear mit dem Masked-Language-Modelling-Verlust von BERT und einem Cosine-Embedding-Verlust kombiniert, der die Richtungen der verborgenen Zustandsvektoren von Schüler und Lehrer angleicht. In der Ablation trugen die beiden Distillationsverluste den größten Teil der Leistung, während das Weglassen des Masked-Language-Modelling-Verlusts wenig ausmachte (Sanh et al., 2019).
+Der Distillationsverlust `L_ce = Σ_i t_i · log(s_i)` vergleicht die Wahrscheinlichkeiten t des Lehrers mit denen s des Schülers, beide mit derselben Temperatur T im [[softmax|Softmax]] `p_i = exp(z_i/T) / Σ_j exp(z_j/T)` geglättet; bei der Inferenz ist T = 1 (Sanh et al., 2019). Er wird linear mit dem Masked-Language-Modelling-Verlust von BERT und einem Cosine-Embedding-Verlust kombiniert, der die Richtungen der verborgenen Zustandsvektoren von Schüler und Lehrer angleicht. In der Ablation trugen die beiden Distillationsverluste den größten Teil der Leistung, während das Weglassen des Masked-Language-Modelling-Verlusts wenig ausmachte (Sanh et al., 2019).
 
 #### 3. Architektur und Initialisierung des Schülers
 

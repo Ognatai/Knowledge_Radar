@@ -31,7 +31,7 @@ waveform ─► log mel frames ─► convolutional layers ─► transformer en
 
 #### 1. Acoustic features
 
-The waveform is cut into overlapping frames and turned into a log mel spectrum, a vector per frame with one channel per mel filter. Whisper, for example, extracts 128-channel log mel features with a 25 ms window and a 10 ms stride, giving 3,000 frames for its 30-second context window (Jurafsky & Martin, 2026).
+The waveform is cut into overlapping frames and turned into a log mel spectrum, a vector per frame with one channel per mel filter. Whisper, for example, extracts 128-channel log mel features with a 25 ms window and a 10 ms stride, giving 3,000 frames for its 30-second [[context-window|context window]] (Jurafsky & Martin, 2026).
 
 #### 2. Convolutional front end
 

@@ -45,11 +45,11 @@ The sense inventory depends on the task: WordNet senses, supersenses, the transl
 
 #### 4. Contextual embeddings
 
-Each sense-tagged token in SemCor is encoded with a contextual model, and the embeddings of a sense's tokens are averaged into a sense embedding; at test time the sense with the highest cosine to the target token's embedding wins. For senses missing from SemCor, Loureiro and Jorge (2019) impute embeddings bottom-up through WordNet: from the synset, then the hypernym, then the supersense, which guarantees a representation for every sense (Jurafsky & Martin, 2026).
+Each sense-tagged token in SemCor is encoded with a contextual model, and the embeddings of a sense's tokens are averaged into a sense embedding; at test time the sense with the highest [[cosine-similarity|cosine]] to the target token's embedding wins. For senses missing from SemCor, Loureiro and Jorge (2019) impute embeddings bottom-up through WordNet: from the synset, then the hypernym, then the supersense, which guarantees a representation for every sense (Jurafsky & Martin, 2026).
 
 #### 5. Feature-based and knowledge-based WSD
 
-Feature-based classifiers such as IMS use an SVM with POS tags and collocation features in a window of 3 words and a distance-weighted average of embeddings, and work almost as well. Knowledge-based methods need no labelled data: the Lesk algorithm chooses the sense whose gloss and examples share the most words with the context (for *The bank can guarantee deposits …*, *deposits* and *mortgage* overlap with sense 1); weighting by IDF or comparing embeddings improves it (Jurafsky & Martin, 2026).
+Feature-based classifiers such as IMS use an SVM with POS tags and collocation features in a window of 3 words and a distance-weighted average of embeddings, and work almost as well. Knowledge-based methods need no labelled data: the Lesk algorithm chooses the sense whose gloss and examples share the most words with the context (for *The bank can guarantee deposits …*, *deposits* and *mortgage* overlap with sense 1); weighting by [[tf-idf|IDF]] or comparing embeddings improves it (Jurafsky & Martin, 2026).
 
 #### 6. Related tasks
 
@@ -61,7 +61,7 @@ Weaver (1949) observed that a word's meaning can be decided if one sees enough w
 
 ### When to use it
 
-- Question answering, for example knowing which *bat* a question about bat care means (Jurafsky & Martin, 2026).
+- [[question-answering|Question answering]], for example knowing which *bat* a question about bat care means (Jurafsky & Martin, 2026).
 - [[machine-translation|Machine translation]], since senses often have different translations (*murciélago* versus *bate*) (Jurafsky & Martin, 2026).
 - Evaluating how language models represent word senses (Jurafsky & Martin, 2026).
 - Distinguishing antonyms that embeddings confuse, such as turning music up rather than down (Jurafsky & Martin, 2026).
@@ -137,7 +137,7 @@ Jedes sinnannotierte Token in SemCor wird mit einem kontextuellen Modell kodiert
 
 #### 5. Merkmals- und wissensbasierte WSD
 
-Merkmalsbasierte Klassifikatoren wie IMS nutzen eine SVM mit Part-of-Speech-Tags und Kollokationsmerkmalen in einem Fenster von 3 Wörtern sowie einem nach Abstand gewichteten Mittel der Embeddings und funktionieren fast genauso gut. Wissensbasierte Verfahren brauchen keine gelabelten Daten: Der Lesk-Algorithmus wählt den Sinn, dessen Glosse und Beispiele die meisten Wörter mit dem Kontext teilen (bei *The bank can guarantee deposits …* überlappen *deposits* und *mortgage* mit Sinn 1); Gewichtung mit IDF oder der Vergleich von Embeddings verbessert ihn (Jurafsky & Martin, 2026).
+Merkmalsbasierte Klassifikatoren wie IMS nutzen eine SVM mit Part-of-Speech-Tags und Kollokationsmerkmalen in einem Fenster von 3 Wörtern sowie einem nach Abstand gewichteten Mittel der Embeddings und funktionieren fast genauso gut. Wissensbasierte Verfahren brauchen keine gelabelten Daten: Der Lesk-Algorithmus wählt den Sinn, dessen Glosse und Beispiele die meisten Wörter mit dem Kontext teilen (bei *The bank can guarantee deposits …* überlappen *deposits* und *mortgage* mit Sinn 1); Gewichtung mit [[tf-idf|IDF]] oder der Vergleich von Embeddings verbessert ihn (Jurafsky & Martin, 2026).
 
 #### 6. Verwandte Aufgaben
 
@@ -149,7 +149,7 @@ Weaver (1949) bemerkte, dass sich die Bedeutung eines Wortes bestimmen lässt, w
 
 ### Wann einsetzen
 
-- Question Answering, etwa um zu wissen, welche *bat* eine Frage zur Pflege meint (Jurafsky & Martin, 2026).
+- [[question-answering|Question Answering]], etwa um zu wissen, welche *bat* eine Frage zur Pflege meint (Jurafsky & Martin, 2026).
 - [[machine-translation|Maschinelle Übersetzung]], da Sinne oft unterschiedliche Übersetzungen haben (*murciélago* gegenüber *bate*) (Jurafsky & Martin, 2026).
 - Evaluieren, wie Sprachmodelle Wortsinne repräsentieren (Jurafsky & Martin, 2026).
 - Antonyme unterscheiden, die Embeddings verwechseln, etwa Musik lauter statt leiser stellen (Jurafsky & Martin, 2026).

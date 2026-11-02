@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 93f11c75848bb1397e6596f0fb30f8f26b04c9986cdbf1751f01be4942b6d483
+note_sha256: f929366bac410ffb26e75d301f9c9f21edbb92f226a444d953f8fa4d8e31be02
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - retrieval-augmented-generation
@@ -13,6 +13,9 @@ discusses:
 - knowledge-graphs
 - lexglue
 - legalbench
+- ai-liability-law
+- question-answering
+- text-summarisation
 relations:
 - from: eu-ai-act
   type: REGULATES

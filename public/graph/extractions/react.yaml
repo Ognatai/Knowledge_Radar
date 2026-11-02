@@ -1,5 +1,5 @@
 version: 1
-note_sha256: dfa1c7bfcd021334ac50999bf9b3e0d53a6eb53995ab902e5965c3e24a25bdc3
+note_sha256: 3e1460af6c7f02dc07bf773a20890eb557410360651c04ff49948d26b90012e5
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - chain-of-thought-prompting
@@ -17,6 +17,7 @@ discusses:
 - prompt-injection
 - llm-guardrails
 - agent-frameworks
+- question-answering
 relations:
 - from: react
   type: BASED_ON

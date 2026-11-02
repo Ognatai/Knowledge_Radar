@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-Linear regression predicts a numeric response as a weighted sum of predictors plus an intercept, `Y ≈ β₀ + β₁X₁ + … + β_pX_p`, and estimates the coefficients by ordinary least squares, which minimises the sum of squared differences between observed and predicted values (James et al., 2023; scikit-learn). It is the basic supervised learning method for quantitative targets and a tool for inference: standard errors, confidence intervals and t-tests show which predictors are associated with the response (James et al., 2023). Ridge and lasso add penalties on the coefficients to reduce variance and, for lasso, to select features (scikit-learn).
+Linear regression predicts a numeric response as a weighted sum of predictors plus an intercept, `Y ≈ β₀ + β₁X₁ + … + β_pX_p`, and estimates the coefficients by ordinary least squares, which minimises the sum of squared differences between observed and predicted values (James et al., 2023; [[scikit-learn|scikit-learn]]). It is the basic supervised learning method for quantitative targets and a tool for inference: standard errors, confidence intervals and t-tests show which predictors are associated with the response (James et al., 2023). Ridge and lasso add penalties on the coefficients to reduce variance and, for lasso, to select features (scikit-learn).
 
 ### How it works
 
@@ -114,7 +114,7 @@ Linear regression fits a weighted sum of predictors by least squares and gives i
 
 ### TL;DR
 
-Die lineare Regression sagt eine numerische Zielgröße als gewichtete Summe von Prädiktoren plus Achsenabschnitt vorher, `Y ≈ β₀ + β₁X₁ + … + β_pX_p`, und schätzt die Koeffizienten mit der Methode der kleinsten Quadrate, die die Summe der quadrierten Abweichungen zwischen beobachteten und vorhergesagten Werten minimiert (James et al., 2023; scikit-learn). Sie ist das grundlegende Verfahren des überwachten Lernens für quantitative Ziele und ein Werkzeug der Inferenz: Standardfehler, Konfidenzintervalle und t-Tests zeigen, welche Prädiktoren mit der Zielgröße zusammenhängen (James et al., 2023). Ridge und Lasso fügen Strafterme auf die Koeffizienten hinzu, um die Varianz zu senken und, beim Lasso, Merkmale auszuwählen (scikit-learn).
+Die lineare Regression sagt eine numerische Zielgröße als gewichtete Summe von Prädiktoren plus Achsenabschnitt vorher, `Y ≈ β₀ + β₁X₁ + … + β_pX_p`, und schätzt die Koeffizienten mit der Methode der kleinsten Quadrate, die die Summe der quadrierten Abweichungen zwischen beobachteten und vorhergesagten Werten minimiert (James et al., 2023; [[scikit-learn|scikit-learn]]). Sie ist das grundlegende Verfahren des überwachten Lernens für quantitative Ziele und ein Werkzeug der Inferenz: Standardfehler, Konfidenzintervalle und t-Tests zeigen, welche Prädiktoren mit der Zielgröße zusammenhängen (James et al., 2023). Ridge und Lasso fügen Strafterme auf die Koeffizienten hinzu, um die Varianz zu senken und, beim Lasso, Merkmale auszuwählen (scikit-learn).
 
 ### Funktionsweise
 

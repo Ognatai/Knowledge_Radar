@@ -48,7 +48,7 @@ The HMM tagger estimates transition probabilities P(t_i | t_i−1) and emission 
 
 #### 4. Conditional random fields
 
-HMMs make it hard to add features for unknown words, such as capitalisation or the suffix *-ed*. A linear-chain CRF is a log-linear model that computes P(Y | X) for the whole tag sequence directly: local features may use the current and previous tag, the entire input and the position, and are summed and normalised over the sequence. Feature templates generate features such as "tag VB and word *back*"; word shape (*DC10-30* → *XXdd-dd*), prefixes and suffixes help with unknown words. Decoding uses Viterbi and training uses stochastic gradient descent with a CRF version of forward-backward and L1 or L2 regularisation (Jurafsky & Martin, 2026).
+HMMs make it hard to add features for unknown words, such as capitalisation or the suffix *-ed*. A linear-chain CRF is a log-linear model that computes P(Y | X) for the whole tag sequence directly: local features may use the current and previous tag, the entire input and the position, and are summed and normalised over the sequence. Feature templates generate features such as "tag VB and word *back*"; word shape (*DC10-30* → *XXdd-dd*), prefixes and suffixes help with unknown words. Decoding uses Viterbi and training uses [[gradient-descent|stochastic gradient descent]] with a CRF version of forward-backward and L1 or L2 regularisation (Jurafsky & Martin, 2026).
 
 #### 5. Named entities as sequence labelling
 
@@ -132,7 +132,7 @@ Der HMM-Tagger schätzt Übergangswahrscheinlichkeiten P(t_i | t_i−1) und Emis
 
 #### 4. Conditional Random Fields
 
-HMMs erschweren Merkmale für unbekannte Wörter, etwa Großschreibung oder das Suffix *-ed*. Ein Linear-Chain-CRF ist ein log-lineares Modell, das P(Y | X) für die ganze Tag-Folge direkt berechnet: Lokale Merkmale dürfen das aktuelle und das vorherige Tag, die gesamte Eingabe und die Position nutzen und werden über die Folge summiert und normalisiert. Merkmalsvorlagen erzeugen Merkmale wie „Tag VB und Wort *back*“; Wortform (*DC10-30* → *XXdd-dd*), Präfixe und Suffixe helfen bei unbekannten Wörtern. Dekodiert wird mit Viterbi, trainiert mit stochastischem Gradientenabstieg, einer CRF-Version von Forward-Backward und L1- oder L2-Regularisierung (Jurafsky & Martin, 2026).
+HMMs erschweren Merkmale für unbekannte Wörter, etwa Großschreibung oder das Suffix *-ed*. Ein Linear-Chain-CRF ist ein log-lineares Modell, das P(Y | X) für die ganze Tag-Folge direkt berechnet: Lokale Merkmale dürfen das aktuelle und das vorherige Tag, die gesamte Eingabe und die Position nutzen und werden über die Folge summiert und normalisiert. Merkmalsvorlagen erzeugen Merkmale wie „Tag VB und Wort *back*“; Wortform (*DC10-30* → *XXdd-dd*), Präfixe und Suffixe helfen bei unbekannten Wörtern. Dekodiert wird mit Viterbi, trainiert mit stochastischem [[gradient-descent|Gradientenabstieg]], einer CRF-Version von Forward-Backward und L1- oder L2-Regularisierung (Jurafsky & Martin, 2026).
 
 #### 5. Named Entities als Sequenzmarkierung
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c881224ae8d212f9b046ce21c63eea76526cb34ff9f659e9ea2f38220e7bd023
+note_sha256: 76beea1c96c8b2684004c6105946a10b05b3d151e1733bcecea86b0e34f4c16f
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apache-spark
@@ -11,6 +11,7 @@ discusses:
 - jeffrey-dean
 - sanjay-ghemawat
 - google
+- logistic-regression
 relations:
 - from: mapreduce
   type: DEVELOPED_BY

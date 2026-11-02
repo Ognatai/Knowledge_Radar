@@ -34,7 +34,7 @@ no gradient update – the "learning" happens in the forward pass over the conte
 
 #### 1. Zero-shot, one-shot, few-shot
 
-Brown et al. (2020) place the settings on a spectrum of how much task-specific data they use: fine-tuning updates the weights on thousands to hundreds of thousands of labelled examples; few-shot gives K demonstrations of context and completion at inference time, typically 10 to 100 for GPT-3, as many as fit in its context window of 2,048 tokens; one-shot gives a single demonstration plus a task description; zero-shot gives only a natural-language instruction. Zero-shot is the most convenient but also the hardest setting, because the format of a task can be unclear without examples (Brown et al., 2020).
+Brown et al. (2020) place the settings on a spectrum of how much task-specific data they use: fine-tuning updates the weights on thousands to hundreds of thousands of labelled examples; few-shot gives K demonstrations of context and completion at inference time, typically 10 to 100 for GPT-3, as many as fit in its [[context-window|context window]] of 2,048 tokens; one-shot gives a single demonstration plus a task description; zero-shot gives only a natural-language instruction. Zero-shot is the most convenient but also the hardest setting, because the format of a task can be unclear without examples (Brown et al., 2020).
 
 #### 2. In-context learning
 
@@ -118,7 +118,7 @@ keine Gradientenänderung – das „Lernen“ geschieht im Vorwärtsdurchlauf �
 
 #### 1. Zero-Shot, One-Shot, Few-Shot
 
-Brown et al. (2020) ordnen die Varianten auf einem Spektrum danach ein, wie viele aufgabenspezifische Daten sie nutzen: Fine-Tuning ändert die Gewichte anhand von Tausenden bis Hunderttausenden gelabelten Beispielen; Few-Shot gibt zur Inferenzzeit K Demonstrationen aus Kontext und Vervollständigung, bei GPT-3 typischerweise 10 bis 100, so viele, wie in das Kontextfenster von 2.048 Token passen; One-Shot gibt eine einzige Demonstration plus Aufgabenbeschreibung; Zero-Shot gibt nur eine Anweisung in natürlicher Sprache. Zero-Shot ist am bequemsten, aber auch am schwierigsten, weil das Format einer Aufgabe ohne Beispiele unklar sein kann (Brown et al., 2020).
+Brown et al. (2020) ordnen die Varianten auf einem Spektrum danach ein, wie viele aufgabenspezifische Daten sie nutzen: Fine-Tuning ändert die Gewichte anhand von Tausenden bis Hunderttausenden gelabelten Beispielen; Few-Shot gibt zur Inferenzzeit K Demonstrationen aus Kontext und Vervollständigung, bei GPT-3 typischerweise 10 bis 100, so viele, wie in das [[context-window|Kontextfenster]] von 2.048 Token passen; One-Shot gibt eine einzige Demonstration plus Aufgabenbeschreibung; Zero-Shot gibt nur eine Anweisung in natürlicher Sprache. Zero-Shot ist am bequemsten, aber auch am schwierigsten, weil das Format einer Aufgabe ohne Beispiele unklar sein kann (Brown et al., 2020).
 
 #### 2. In-Context Learning
 

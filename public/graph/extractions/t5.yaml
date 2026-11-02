@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4e5f1a353187f0b37094c010e973ec2bb7332be4fc90f3e84ca6feb2c8d45f4d
+note_sha256: 784d168ca4b4c9cbbe8f608cf0c53d95dae484a4424a7a46b7b7367119a4aef1
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - attention-and-transformers
@@ -16,6 +16,8 @@ discusses:
 - distilbert
 - squad
 - classification
+- question-answering
+- text-summarisation
 relations:
 - from: t5
   type: DEVELOPED_BY

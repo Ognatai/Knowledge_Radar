@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4fe610a99a52f8fc077d61f1683916562db685d6fa7a214dcbc0b0b03c5973f5
+note_sha256: d1beb6dade80f6430d3c1cf550b94db86f35feb867e8c74ed7aab96e040e47e9
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - hidden-markov-models
@@ -8,6 +8,7 @@ discusses:
 - naive-bayes
 - large-language-models
 - automatic-speech-recognition
+- cross-entropy
 relations:
 - from: n-gram-language-models
   type: BASED_ON

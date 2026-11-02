@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8b61550cb98da489f9472984e1232b0a3cfbe0145cf7f302bc1c455a41d3933a
+note_sha256: 46de03ea0b5a6ed8e05427ebbe035dc294eccc9392ab66c12bd9cb02fc669f45
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - back-propagation
@@ -10,6 +10,7 @@ discusses:
 - attention-and-transformers
 - convolutional-neural-networks
 - time-series-analysis
+- gradient-descent
 relations:
 - from: recurrent-neural-networks
   type: BASED_ON

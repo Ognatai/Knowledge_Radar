@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 25b1d5315fb303833ab3ac1c6a5fe1733e2a3b252f5878b2bb1bf490159f61ab
+note_sha256: bfc1af7875a40818fc2e366ed85f1ccecee66dc5fc90eb2ae08bed91e6d35ed1
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apis
@@ -14,4 +14,5 @@ discusses:
 - sql
 - matei-zaharia
 - databricks
+- logistic-regression
 relations: []

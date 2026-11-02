@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d7e14681e44773ce8740ecd6cf5f507c0a0290b248271f96da73321a093ed5a3
+note_sha256: ce3871bc8caf3b6cbcd6c9bd3ec68df9713b7e4e8a800e995bd90172a08511a9
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bert
@@ -12,6 +12,9 @@ discusses:
 - rag-generation-evaluation
 - retrieval-augmented-generation
 - text-similarity-metrics
+- cosine-similarity
+- text-summarisation
+- tf-idf
 relations:
 - from: bertscore
   type: BASED_ON

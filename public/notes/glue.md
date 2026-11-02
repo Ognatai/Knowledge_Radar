@@ -45,7 +45,7 @@ A small, expert-built set of NLI sentence pairs is tagged with linguistic phenom
 
 #### 4. Baselines and the move to SuperGLUE
 
-In the original paper, multi-task training on all tasks beat training one model per task, and the best baseline used ELMo; on WNLI no model beat majority-class guessing (65.1%) (Wang et al., 2019a). Within about a year, pre-trained Transformers had raised the state of the art beyond the human estimate, leaving little headroom (Wang et al., 2019b). SuperGLUE keeps the two hardest GLUE tasks, adds tasks chosen from an open call for difficulty (BoolQ, CB, COPA, MultiRC, ReCoRD, RTE, WiC, WSC), widens the formats to question answering and coreference, and reports human baselines for every task; its BERT-based baseline was nearly 20 points below human performance (Wang et al., 2019b).
+In the original paper, multi-task training on all tasks beat training one model per task, and the best baseline used ELMo; on WNLI no model beat majority-class guessing (65.1%) (Wang et al., 2019a). Within about a year, pre-trained Transformers had raised the state of the art beyond the human estimate, leaving little headroom (Wang et al., 2019b). SuperGLUE keeps the two hardest GLUE tasks, adds tasks chosen from an open call for difficulty (BoolQ, CB, COPA, MultiRC, ReCoRD, RTE, WiC, WSC), widens the formats to [[question-answering|question answering]] and coreference, and reports human baselines for every task; its BERT-based baseline was nearly 20 points below human performance (Wang et al., 2019b).
 
 #### Origin and variants
 

@@ -35,7 +35,7 @@ An answer is faithful if the claims it makes can be inferred from the context (E
 
 #### Answer relevance
 
-Answer relevance penalises incomplete or redundant answers and ignores factuality (Es et al., 2024). The LLM generates n questions that the answer would respond to; the score is the average [[text-similarity-metrics|cosine similarity]] between the [[embeddings|embeddings]] of these questions and the original question (Es et al., 2024). The current library calls it response relevancy (Ragas documentation, 2026).
+Answer relevance penalises incomplete or redundant answers and ignores factuality (Es et al., 2024). The LLM generates n questions that the answer would respond to; the score is the average [[cosine-similarity|cosine similarity]] between the [[embeddings|embeddings]] of these questions and the original question (Es et al., 2024). The current library calls it response relevancy (Ragas documentation, 2026).
 
 #### Context relevance, precision and recall
 
@@ -43,7 +43,7 @@ In the paper, context relevance is the share of context sentences that an LLM ex
 
 #### Origin and variants
 
-Ragas was introduced with three reference-free metrics and integrations for llama-index and LangChain (Es et al., 2024); the documentation now also lists metrics for agents and tool use (topic adherence, tool call accuracy, agent goal accuracy), natural language comparison (factual correctness, semantic similarity, [[bleu|BLEU]], ROUGE, exact match), SQL, summarisation and general-purpose rubric-based scoring (Ragas documentation, 2026).
+Ragas was introduced with three reference-free metrics and integrations for llama-index and LangChain (Es et al., 2024); the documentation now also lists metrics for agents and tool use (topic adherence, tool call accuracy, agent goal accuracy), natural language comparison (factual correctness, semantic similarity, [[bleu|BLEU]], ROUGE, exact match), SQL, [[text-summarisation|summarisation]] and general-purpose rubric-based scoring (Ragas documentation, 2026).
 
 ### Common usage
 

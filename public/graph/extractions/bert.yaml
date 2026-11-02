@@ -1,5 +1,5 @@
 version: 1
-note_sha256: ace3285ccc1ea5bd3fb7a110bd3479d82209043b524fbb41155ad1c8571d33aa
+note_sha256: b5562a6fa68350328052d227680bdee099221188028ba5a026d7f5759e632e71
 extracted_by: claude
 discusses:
 - attention-and-transformers
@@ -22,6 +22,8 @@ discusses:
 - vector-databases
 - text-similarity-metrics
 - bias-in-nlp
+- cosine-similarity
+- question-answering
 relations:
 - from: bert
   type: BASED_ON

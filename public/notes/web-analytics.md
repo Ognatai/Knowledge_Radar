@@ -74,7 +74,7 @@ GA4 is built around events for websites and apps alike (Google Analytics, Events
 
 - Measuring conversion funnels and drop-offs on websites and apps (Google Analytics, Events).
 - Evaluating marketing channels and campaigns across multi-step customer journeys (Google Analytics, Attribution).
-- Combining behavioural data with internal data in a warehouse for segmentation, forecasting or personalisation (Google Analytics, BigQuery Export).
+- Combining behavioural data with internal data in a [[data-warehouse|warehouse]] for segmentation, forecasting or personalisation (Google Analytics, BigQuery Export).
 
 ### Strengths and limitations
 
@@ -174,7 +174,7 @@ GA4 ist für Websites und Apps gleichermaßen um Events herum aufgebaut (Google 
 
 - Conversion-Funnels und Abbrüche auf Websites und in Apps messen (Google Analytics, Events).
 - Marketingkanäle und Kampagnen über mehrstufige Customer Journeys hinweg bewerten (Google Analytics, Attribution).
-- Verhaltensdaten im Warehouse mit internen Daten verbinden, für Segmentierung, Prognosen oder Personalisierung (Google Analytics, BigQuery Export).
+- Verhaltensdaten im [[data-warehouse|Warehouse]] mit internen Daten verbinden, für Segmentierung, Prognosen oder Personalisierung (Google Analytics, BigQuery Export).
 
 ### Stärken und Grenzen
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: eaa0380d1f9232ea5ba442a20b5462f034b0ce07bf75683de3e2c0012221c4b6
+note_sha256: 3379548ca0e798e39490e569bf1597d820a574ae7c178bd46ee29d818fa4a2bb
 extracted_by: claude
 discusses:
 - large-language-models
@@ -15,6 +15,8 @@ discusses:
 - reld
 - grounding-probe
 - parcel
+- logistic-regression
+- question-answering
 relations:
 - from: hallucination-detection
   type: BASED_ON

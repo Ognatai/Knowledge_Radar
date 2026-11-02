@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2f7af982f8f534ecb7f29ef40cc847f6287f13e1cdaf6f9aaafeaab1d6a20221
+note_sha256: f89ee40d6aad8bc5e27a2118620f1df77f86761cea20f14ba207806a391b4312
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - beir
@@ -18,6 +18,9 @@ discusses:
 - vector-databases
 - omar-khattab
 - matei-zaharia
+- cosine-similarity
+- cross-entropy
+- softmax
 relations:
 - from: colbert
   type: BASED_ON

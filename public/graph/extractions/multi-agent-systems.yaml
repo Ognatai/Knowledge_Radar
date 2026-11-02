@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 46cdf5ee9fd210bf2882b2eb2d31bee3c3288119142c90269b39e28f0ae2b2d6
+note_sha256: 833c211a683df16011be8303ae0c48cf32e1a1b710c72d923c59d05ccc9ecdfa
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agent-frameworks
@@ -11,6 +11,7 @@ discusses:
 - anthropic
 - autogen
 - tool-calling
+- context-window
 relations:
 - from: autogen
   type: IMPLEMENTS

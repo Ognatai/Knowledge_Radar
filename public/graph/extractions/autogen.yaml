@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e13cf114a592fa000126c6203a932c1e849b5ca2249071c99decd8f7c508450b
+note_sha256: 5cb43cff02898d603ad7eb779887bbee2049fa44ae1c08eb8e9d0b6f6f36cfdc
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agent-frameworks
@@ -7,6 +7,7 @@ discusses:
 - microsoft
 - multi-agent-systems
 - microsoft-agent-framework
+- question-answering
 relations:
 - from: autogen
   type: DEVELOPED_BY

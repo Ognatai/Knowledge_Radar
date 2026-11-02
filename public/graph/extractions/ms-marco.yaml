@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 54a4df6356ef650bf457d1286365ee195497e63355ac00a262da667565192f94
+note_sha256: 244c50edf0a299ea4e4b50e0714e975d83eaac3eb8be7a3af5f0faeaf5ab0b60
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - beir
@@ -9,6 +9,7 @@ discusses:
 - rag-retrieval-evaluation
 - text-similarity-metrics
 - microsoft
+- question-answering
 relations:
 - from: ms-marco
   type: DEVELOPED_BY

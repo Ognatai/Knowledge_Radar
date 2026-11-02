@@ -30,7 +30,7 @@ sources:
 
 ### TL;DR
 
-Text summarisation produces a shorter text that keeps the important content of one or more documents. Extractive methods select and rearrange sentences from the source; abstractive methods generate new text, which can paraphrase but also invent content (See et al., 2017). The field moved from graph-based sentence extraction such as TextRank (Mihalcea & Tarau, 2004) through neural sequence-to-sequence models (Rush et al., 2015; See et al., 2017) and pre-trained encoder-decoders (Lewis et al., 2020; Zhang et al., 2020) to prompted large language models, whose news summaries humans prefer or rate on par with freelance writers (Goyal et al., 2022; Zhang et al., 2023). Evaluation with ROUGE (Lin, 2004) remains standard, but it cannot reliably judge LLM summaries, and faithfulness to the source is the main open problem (Goyal et al., 2022; Maynez et al., 2020).
+Text summarisation produces a shorter text that keeps the important content of one or more documents. Extractive methods select and rearrange sentences from the source; abstractive methods generate new text, which can paraphrase but also invent content (See et al., 2017). The field moved from graph-based sentence extraction such as TextRank (Mihalcea & Tarau, 2004) through neural sequence-to-sequence models (Rush et al., 2015; See et al., 2017) and pre-trained encoder-decoders (Lewis et al., 2020; Zhang et al., 2020) to prompted [[large-language-models|large language models]], whose news summaries humans prefer or rate on par with freelance writers (Goyal et al., 2022; Zhang et al., 2023). Evaluation with ROUGE (Lin, 2004) remains standard, but it cannot reliably judge LLM summaries, and faithfulness to the source is the main open problem (Goyal et al., 2022; Maynez et al., 2020).
 
 ### How it works
 
@@ -63,7 +63,7 @@ Humans overwhelmingly preferred news summaries from GPT-3 prompted with only a t
 
 #### 5. Evaluation
 
-ROUGE (Recall-Oriented Understudy for Gisting Evaluation) counts overlapping units between a system summary and human reference summaries: ROUGE-N is n-gram recall, ROUGE-L uses the longest common subsequence, ROUGE-W a weighted version of it and ROUGE-S skip-bigrams (Lin, 2004). It was introduced because manual evaluation, as in the Document Understanding Conference, would require more than 3,000 hours of human effort (Lin, 2004). Reference-based and reference-free automatic metrics could not reliably evaluate GPT-3 summaries (Goyal et al., 2022), so human judgement and LLM judges complement them ([[text-similarity-metrics|text similarity metrics]], [[llm-as-a-judge|LLM-as-a-judge]]).
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) counts overlapping units between a system summary and human reference summaries: ROUGE-N is n-gram [[classification-metrics|recall]], ROUGE-L uses the longest common subsequence, ROUGE-W a weighted version of it and ROUGE-S skip-bigrams (Lin, 2004). It was introduced because manual evaluation, as in the Document Understanding Conference, would require more than 3,000 hours of human effort (Lin, 2004). Reference-based and reference-free automatic metrics could not reliably evaluate GPT-3 summaries (Goyal et al., 2022), so human judgement and LLM judges complement them ([[text-similarity-metrics|text similarity metrics]], [[llm-as-a-judge|LLM-as-a-judge]]).
 
 #### 6. Faithfulness and hallucination
 

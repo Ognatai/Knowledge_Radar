@@ -55,7 +55,7 @@ Because crowdworkers wrote one hypothesis per label for each premise, the hypoth
 
 #### 5. NLI for factual consistency
 
-Generated text is often inconsistent with the input it is conditioned on. TRUE standardised 11 data sets from summarisation, dialogue, fact verification and paraphrasing to binary labels for factual consistency and evaluated metrics per example with ROC AUC (Honovich et al., 2022). An NLI model built by fine-tuning T5-11B on the Adversarial NLI data set takes the grounding text as premise and the generated text as hypothesis and uses the entailment probability as the consistency score. It reached an average ROC AUC of 81.5; NLI-based models were best on 6 data sets, and Q², which generates questions and compares the answers with an NLI model, reached 80.7. Averaging Q², the ANLI model and the NLI-based summarisation metric SummaC raised the best single result by 4.5 ROC AUC (Honovich et al., 2022).
+Generated text is often inconsistent with the input it is conditioned on. TRUE standardised 11 data sets from [[text-summarisation|summarisation]], dialogue, fact verification and paraphrasing to binary labels for factual consistency and evaluated metrics per example with ROC AUC (Honovich et al., 2022). An NLI model built by fine-tuning T5-11B on the Adversarial NLI data set takes the grounding text as premise and the generated text as hypothesis and uses the entailment probability as the consistency score. It reached an average ROC AUC of 81.5; NLI-based models were best on 6 data sets, and Q², which generates questions and compares the answers with an NLI model, reached 80.7. Averaging Q², the ANLI model and the NLI-based summarisation metric SummaC raised the best single result by 4.5 ROC AUC (Honovich et al., 2022).
 
 #### Origin and variants
 
@@ -75,7 +75,7 @@ NLI continues the textual entailment work of the RTE challenges (Bowman et al., 
 
 **Limitations**
 - Annotation artefacts let models score well from the hypothesis alone, so benchmark results overstate understanding (Gururangan et al., 2018).
-- Models trained on one corpus transfer poorly: the LSTM trained on SNLI failed on SICK and labelled more neutral examples as contradictions than correctly (Bowman et al., 2015).
+- Models trained on one corpus transfer poorly: the [[lstm|LSTM]] trained on SNLI failed on SICK and labelled more neutral examples as contradictions than correctly (Bowman et al., 2015).
 - As consistency checks, all metrics degrade for grounding texts longer than 200 tokens, and the best metrics missed subtle inconsistencies in 21 of 180 analysed examples (Honovich et al., 2022).
 
 ### Comparison
@@ -91,7 +91,7 @@ Sources: Bowman et al. (2015); Williams et al. (2018).
 
 ### In practice
 
-For a consistency check, the source or retrieved passage is the premise and the generated text the hypothesis; the entailment probability serves as the score (Honovich et al., 2022). NLI and question answering models may struggle with long inputs; SummaC splits document and summary into sentences and scores every pair of document and summary sentence. Aggregating scores over parts of a text can hide a small inconsistency; taking the minimum instead of the average catches more of them at the cost of more false negatives. Combining NLI with question-generation-based checks gives better results than either alone (Honovich et al., 2022). An [[llm-as-a-judge|LLM as a judge]] is an alternative for the same verification step.
+For a consistency check, the source or retrieved passage is the premise and the generated text the hypothesis; the entailment probability serves as the score (Honovich et al., 2022). NLI and [[question-answering|question answering]] models may struggle with long inputs; SummaC splits document and summary into sentences and scores every pair of document and summary sentence. Aggregating scores over parts of a text can hide a small inconsistency; taking the minimum instead of the average catches more of them at the cost of more false negatives. Combining NLI with question-generation-based checks gives better results than either alone (Honovich et al., 2022). An [[llm-as-a-judge|LLM as a judge]] is an alternative for the same verification step.
 
 ### Key takeaway
 
@@ -163,7 +163,7 @@ NLI setzt die Arbeiten zu Textual Entailment aus den RTE-Challenges fort (Bowman
 
 **Grenzen**
 - Annotationsartefakte erlauben gute Ergebnisse allein anhand der Hypothese, sodass Benchmark-Ergebnisse das Verständnis überschätzen (Gururangan et al., 2018).
-- Auf einem Korpus trainierte Modelle übertragen sich schlecht: Das auf SNLI trainierte LSTM versagte auf SICK und ordnete mehr neutrale Beispiele als Widerspruch ein als richtig (Bowman et al., 2015).
+- Auf einem Korpus trainierte Modelle übertragen sich schlecht: Das auf SNLI trainierte [[lstm|LSTM]] versagte auf SICK und ordnete mehr neutrale Beispiele als Widerspruch ein als richtig (Bowman et al., 2015).
 - Als Konsistenzprüfung verschlechtern sich alle Metriken für Quelltexte mit mehr als 200 Tokens, und die besten Metriken übersahen subtile Inkonsistenzen in 21 von 180 analysierten Beispielen (Honovich et al., 2022).
 
 ### Vergleich

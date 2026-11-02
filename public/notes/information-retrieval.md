@@ -22,7 +22,7 @@ sources:
 
 ### TL;DR
 
-Information retrieval (IR) is finding material, usually text documents, of an unstructured nature that satisfies an information need from within large collections (Manning et al., 2008, ch. 1); systems find the documents relevant to a query and rank them (Manning et al., 2008). Classical systems use an [[inverted-index|inverted index]] and rank documents with term weights such as tf-idf (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on open-domain question answering (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information retrieval (IR) is finding material, usually text documents, of an unstructured nature that satisfies an information need from within large collections (Manning et al., 2008, ch. 1); systems find the documents relevant to a query and rank them (Manning et al., 2008). Classical systems use an [[inverted-index|inverted index]] and rank documents with term weights such as [[tf-idf|tf-idf]] (Salton & Buckley, 1988) or the probabilistic [[bm25|BM25]] function (Robertson & Zaragoza, 2009). Dense retrieval compares learned query and passage [[embeddings|Embeddings]] instead and outperformed BM25 on [[question-answering|open-domain question answering]] (Karpukhin et al., 2020). IR is the retrieval step of [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### How it works
 
@@ -54,7 +54,7 @@ Boolean queries remain common among professional searchers: in 2005 the legal se
 
 #### 2. Vector space model
 
-The vector space model (Salton et al., 1975) represents documents and queries as vectors of term weights in a common space, with one dimension per term. Documents are ranked by their similarity to the query vector; a common measure is the [[text-similarity-metrics|cosine similarity]], the cosine of the angle between the two vectors, which does not depend on vector length (Manning et al., 2008).
+The vector space model (Salton et al., 1975) represents documents and queries as vectors of term weights in a common space, with one dimension per term. Documents are ranked by their similarity to the query vector; a common measure is the [[cosine-similarity|cosine similarity]], the cosine of the angle between the two vectors, which does not depend on vector length (Manning et al., 2008).
 
 #### 3. Term weighting with tf-idf
 
@@ -148,7 +148,7 @@ Information retrieval ranks documents for a query, classically with an inverted 
 
 ### TL;DR
 
-Information Retrieval (IR) bedeutet, unstrukturiertes Material, meist Textdokumente, zu finden, das ein Informationsbedürfnis in großen Sammlungen erfüllt (Manning et al., 2008, Kap. 1); Systeme finden die für eine Anfrage relevanten Dokumente und bringen sie in eine Rangfolge (Manning et al., 2008). Klassische Systeme nutzen einen invertierten Index und ranken Dokumente mit Termgewichten wie tf-idf (Salton & Buckley, 1988) oder mit der probabilistischen Funktion [[bm25|BM25]] (Robertson & Zaragoza, 2009). Dense Retrieval vergleicht stattdessen gelernte [[embeddings|Embeddings]] von Anfrage und Passage und übertraf BM25 bei Open-Domain-Fragebeantwortung (Karpukhin et al., 2020). IR ist der Retrieval-Schritt von [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
+Information Retrieval (IR) bedeutet, unstrukturiertes Material, meist Textdokumente, zu finden, das ein Informationsbedürfnis in großen Sammlungen erfüllt (Manning et al., 2008, Kap. 1); Systeme finden die für eine Anfrage relevanten Dokumente und bringen sie in eine Rangfolge (Manning et al., 2008). Klassische Systeme nutzen einen invertierten Index und ranken Dokumente mit Termgewichten wie [[tf-idf|tf-idf]] (Salton & Buckley, 1988) oder mit der probabilistischen Funktion [[bm25|BM25]] (Robertson & Zaragoza, 2009). Dense Retrieval vergleicht stattdessen gelernte [[embeddings|Embeddings]] von Anfrage und Passage und übertraf BM25 bei Open-Domain-Fragebeantwortung (Karpukhin et al., 2020). IR ist der Retrieval-Schritt von [[retrieval-augmented-generation|Retrieval-Augmented Generation]].
 
 ### Funktionsweise
 

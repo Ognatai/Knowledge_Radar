@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 611bcf2042a41f0b57e8db5a3f5e0395d5f304986e54c51adffd477535ef63cc
+note_sha256: 55b1175cc237f239f82882b06c0b791c390bf9cc21454d02a53c22dc18e27c5f
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bm25
@@ -15,6 +15,7 @@ discusses:
 - reciprocal-rank-fusion
 - retrieval-augmented-generation
 - ukp-lab
+- question-answering
 relations:
 - from: beir
   type: DEVELOPED_BY

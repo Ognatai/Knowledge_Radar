@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9774c185ac511043977de2f4fe1386a2c579fabbc725b3621f10059efb749cab
+note_sha256: 7a51edb9fc187393a5681e17ab29a1013d8e1377d3341a8fe6cb03f7dd2394b9
 extracted_by: claude (hand-labelled gold standard)
 discusses:
 - id3
@@ -7,6 +7,7 @@ discusses:
 - cost-complexity-pruning
 - ensemble-methods
 - scikit-learn
+- cross-entropy
 relations:
 - from: id3
   type: IS_EXAMPLE_OF

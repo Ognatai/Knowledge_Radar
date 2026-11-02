@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3f3048331a4dc41598a950fab644be68ad7302de1579d64f5a60e167c5964954
+note_sha256: c725d907f0f3a89de37c3b4f93b995a6693ed66d39747cd481bd52c3e8675b04
 extracted_by: claude
 discusses:
 - probabilistic-relevance-framework
@@ -13,6 +13,8 @@ discusses:
 - rag-retrieval-evaluation
 - retrieval-augmented-generation
 - rag-failure-modes
+- question-answering
+- tf-idf
 relations:
 - from: bm25
   type: BASED_ON

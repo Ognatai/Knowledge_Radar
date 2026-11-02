@@ -36,7 +36,7 @@ An autoencoder passes the input through an encoder to a small code and back thro
 
 #### 1. Autoencoders
 
-An autoencoder is a multilayer network with a small central layer that is trained to reconstruct its high-dimensional input, so the central layer learns a low-dimensional code (Hinton & Salakhutdinov, 2006). Gradient descent works well for fine-tuning such deep autoencoders only if the initial weights are close to a good solution; with an effective initialisation, deep autoencoders learned codes that worked much better than principal component analysis for reducing dimensionality ([[principal-component-analysis|Principal Component Analysis (PCA)]]).
+An autoencoder is a multilayer network with a small central layer that is trained to reconstruct its high-dimensional input, so the central layer learns a low-dimensional code (Hinton & Salakhutdinov, 2006). [[gradient-descent|Gradient descent]] works well for fine-tuning such deep autoencoders only if the initial weights are close to a good solution; with an effective initialisation, deep autoencoders learned codes that worked much better than principal component analysis for reducing dimensionality ([[principal-component-analysis|Principal Component Analysis (PCA)]]).
 
 #### 2. Variational autoencoders
 
@@ -127,7 +127,7 @@ Ein Autoencoder leitet die Eingabe über einen Encoder zu einem kleinen Code und
 
 #### 1. Autoencoder
 
-Ein Autoencoder ist ein mehrschichtiges Netz mit einer kleinen mittleren Schicht, das darauf trainiert wird, seine hochdimensionale Eingabe zu rekonstruieren; die mittlere Schicht lernt dabei einen niedrigdimensionalen Code (Hinton & Salakhutdinov, 2006). Gradientenabstieg eignet sich zur Feinabstimmung solcher tiefen Autoencoder nur, wenn die Anfangsgewichte nahe an einer guten Lösung liegen; mit einer wirksamen Initialisierung lernten tiefe Autoencoder Codes, die zur Dimensionsreduktion deutlich besser funktionierten als die Hauptkomponentenanalyse ([[principal-component-analysis|Hauptkomponentenanalyse (PCA)]]).
+Ein Autoencoder ist ein mehrschichtiges Netz mit einer kleinen mittleren Schicht, das darauf trainiert wird, seine hochdimensionale Eingabe zu rekonstruieren; die mittlere Schicht lernt dabei einen niedrigdimensionalen Code (Hinton & Salakhutdinov, 2006). [[gradient-descent|Gradientenabstieg]] eignet sich zur Feinabstimmung solcher tiefen Autoencoder nur, wenn die Anfangsgewichte nahe an einer guten Lösung liegen; mit einer wirksamen Initialisierung lernten tiefe Autoencoder Codes, die zur Dimensionsreduktion deutlich besser funktionierten als die Hauptkomponentenanalyse ([[principal-component-analysis|Hauptkomponentenanalyse (PCA)]]).
 
 #### 2. Variational Autoencoder
 

@@ -45,7 +45,7 @@ Both perform well; a small λ or a large α means more smoothing. Less smoothing
 
 #### 4. Relation to tf-idf
 
-Term frequency appears directly, and mixing document and collection probabilities works a little like idf: terms that are rare in the collection but common in a document weigh more. Like tf-idf models, it treats terms as independent, but its intuitions are probabilistic rather than geometric and the model is more principled (Manning et al., 2008, ch. 12; [[information-retrieval|Information Retrieval]]).
+Term frequency appears directly, and mixing document and collection probabilities works a little like idf: terms that are rare in the collection but common in a document weigh more. Like [[tf-idf|tf-idf]] models, it treats terms as independent, but its intuitions are probabilistic rather than geometric and the model is more principled (Manning et al., 2008, ch. 12; [[information-retrieval|Information Retrieval]]).
 
 #### 5. Extensions
 
@@ -77,7 +77,7 @@ Ponte and Croft (1998) introduced the approach, hoping that a probabilistic foun
 
 | Model | Ranks by | Source |
 |-------|----------|--------|
-| Vector space with tf-idf | Cosine of weighted term vectors | [[information-retrieval\|Information Retrieval]] |
+| Vector space with tf-idf | [[cosine-similarity\|Cosine]] of weighted term vectors | [[information-retrieval\|Information Retrieval]] |
 | [[bm25\|BM25]] | Probabilistic relevance weights | [[bm25\|BM25]] |
 | Query likelihood | P(q \| M_d) with smoothing | Manning et al. (2008, ch. 12) |
 | KL divergence | Distance between query and document models | Manning et al. (2008, ch. 12) |
@@ -139,7 +139,7 @@ Ponte und Croft (1998) führten den Ansatz ein, in der Hoffnung, dass eine proba
 
 ### Wann einsetzen
 
-- Als prinzipientreue Alternative zu tf-idf und [[bm25|BM25]] für gerankte Stichwortsuche über einem [[inverted-index|Inverted Index]] (Manning et al., 2008, Kap. 12).
+- Als prinzipientreue Alternative zu [[tf-idf|tf-idf]] und [[bm25|BM25]] für gerankte Stichwortsuche über einem [[inverted-index|Inverted Index]] (Manning et al., 2008, Kap. 12).
 - Wenn Sammlungsstatistiken als Teil des Modells statt als Heuristik in das Ranking eingehen sollen (Manning et al., 2008, Kap. 12).
 - Mit A-priori-Gewichten für Dokumente, etwa Autorität oder Aktualität, die die Query Likelihood multiplizieren sollen (Manning et al., 2008, Kap. 12).
 

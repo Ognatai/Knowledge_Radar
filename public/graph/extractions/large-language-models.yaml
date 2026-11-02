@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5152bdf6b8d59a910b77d55ace3c513e7b52c5a8c1cbe2a95ece08f860b05192
+note_sha256: 36828bbaeb05f9dc950caf46b0d0e91488936816f48ffbcd4efae6c9151e6b47
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - attention-and-transformers
@@ -24,6 +24,10 @@ discusses:
 - mistral-ai
 - amazon
 - prompt-engineering
+- context-window
+- cross-entropy
+- instruction-tuning
+- softmax
 relations:
 - from: large-language-models
   type: BASED_ON

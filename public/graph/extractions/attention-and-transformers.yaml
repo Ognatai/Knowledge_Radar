@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 0931937df8d9f4cf79af7bd714d436c7ad11f6878c02329dd02dd5955606eff2
+note_sha256: 8a75b93f249307945ff635ce7af91f3113eadcfb51d9952f8b3423ee147416f8
 extracted_by: claude (hand-labelled gold standard)
 discusses:
 - recurrent-neural-networks
@@ -9,6 +9,9 @@ discusses:
 - masked-language-modelling
 - vision-transformer
 - flashattention
+- context-window
+- lstm
+- softmax
 relations:
 - from: attention-and-transformers
   type: BASED_ON

@@ -41,7 +41,7 @@ Variance is the amount by which the fitted model would change if it were estimat
 
 #### 3. Bias
 
-Bias is the error introduced by approximating a real-life problem, which may be very complicated, with a much simpler model (James et al., 2023). Linear regression assumes a linear relationship; if the true function is strongly non-linear, no amount of training data makes the linear estimate accurate (James et al., 2023).
+Bias is the error introduced by approximating a real-life problem, which may be very complicated, with a much simpler model (James et al., 2023). [[linear-regression|Linear regression]] assumes a linear relationship; if the true function is strongly non-linear, no amount of training data makes the linear estimate accurate (James et al., 2023).
 
 #### 4. The trade-off
 
@@ -125,7 +125,7 @@ Varianz ist das Ausmaß, in dem sich das angepasste Modell ändern würde, wenn 
 
 #### 3. Bias
 
-Bias ist der Fehler, der entsteht, wenn ein reales, möglicherweise sehr kompliziertes Problem durch ein viel einfacheres Modell angenähert wird (James et al., 2023). Lineare Regression nimmt einen linearen Zusammenhang an; ist die wahre Funktion stark nichtlinear, macht keine noch so große Datenmenge die lineare Schätzung genau (James et al., 2023).
+Bias ist der Fehler, der entsteht, wenn ein reales, möglicherweise sehr kompliziertes Problem durch ein viel einfacheres Modell angenähert wird (James et al., 2023). [[linear-regression|Lineare Regression]] nimmt einen linearen Zusammenhang an; ist die wahre Funktion stark nichtlinear, macht keine noch so große Datenmenge die lineare Schätzung genau (James et al., 2023).
 
 #### 4. Das Dilemma
 

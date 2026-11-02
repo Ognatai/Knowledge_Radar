@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Natural language processing (NLP) builds systems that analyse, understand and generate human language, for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, question answering and [[machine-translation|machine translation]] (Jurafsky & Martin (SLP3)). Modern NLP represents text as tokens and learned vectors and models it with [[neural-networks|neural networks]], today mostly Transformer-based pretrained language models that are fine-tuned or prompted for a task ([[large-language-models|Large Language Models]]).
+Natural language processing (NLP) builds systems that analyse, understand and generate human language, for tasks such as part-of-speech tagging, named entity recognition, parsing, information extraction, [[question-answering|question answering]] and [[machine-translation|machine translation]] (Jurafsky & Martin (SLP3)). Modern NLP represents text as tokens and learned vectors and models it with [[neural-networks|neural networks]], today mostly Transformer-based pretrained language models that are fine-tuned or prompted for a task ([[large-language-models|Large Language Models]]).
 
 ### How it works
 

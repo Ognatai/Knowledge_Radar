@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2580a4e46047b7879e3fa61989a51b1a6bab82c2e99d1c023bd3d9e1b9f00da8
+note_sha256: 9012d4cdadaa60d025c0405926095f9ad04d2128e16ba87b9c67bf71360f717c
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apache-spark
@@ -13,6 +13,7 @@ discusses:
 - databricks
 - matei-zaharia
 - unity-catalog
+- data-warehouse
 relations:
 - from: data-lakehouse
   type: DEVELOPED_BY

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 39e53b514f6a65647ee3f607534ef7fa88235b9ae58f2ba51154a677a18b671c
+note_sha256: bd76025f1971a3ff3d3c49a4f51289c9bbddd2e87088237099f2911b1b12c488
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - attention-and-transformers
@@ -20,6 +20,8 @@ discusses:
 - quantisation
 - meta
 - tool-calling
+- context-window
+- instruction-tuning
 relations:
 - from: llama
   type: DEVELOPED_BY

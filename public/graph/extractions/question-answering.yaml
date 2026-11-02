@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c442406eaa2bcda0908281de49da7e34e974ae9a204920eac8a307c31a67a3a2
+note_sha256: e02b9eeb89342975ba0fbb52a57939b33956b4045bb2ed6ef6be93aacbceb84c
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - retrieval-augmented-generation
@@ -24,6 +24,8 @@ discusses:
 - mmlu
 - exact-match
 - f1-score
+- instruction-tuning
+- logistic-regression
 relations:
 - from: squad
   type: EVALUATES

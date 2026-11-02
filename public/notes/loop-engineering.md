@@ -52,7 +52,7 @@ A good stopping rule usually combines several criteria; an iteration limit alone
 
 #### 3. State and context across iterations
 
-With each iteration the history grows. The loop design decides what is carried forward in full, what is summarised and what is dropped. Relevant information in the middle of long contexts is used less reliably than at the beginning or end (Liu et al., 2023; [[rag-chunking|RAG: Chunking]]); countermeasures are compaction, structured notes outside the context window and sub-agents with clean contexts (Anthropic, 2025a; [[context-engineering|Context Engineering]]). Memory that survives between runs lives on disk, for example in a Markdown file or an issue board, because the model forgets between runs (Osmani, 2026b).
+With each iteration the history grows. The loop design decides what is carried forward in full, what is summarised and what is dropped. Relevant information in the middle of long contexts is used less reliably than at the beginning or end (Liu et al., 2023; [[rag-chunking|RAG: Chunking]]); countermeasures are compaction, structured notes outside the [[context-window|context window]] and sub-agents with clean contexts (Anthropic, 2025a; [[context-engineering|Context Engineering]]). Memory that survives between runs lives on disk, for example in a Markdown file or an issue board, because the model forgets between runs (Osmani, 2026b).
 
 #### 4. Error handling
 

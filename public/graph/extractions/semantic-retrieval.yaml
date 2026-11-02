@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5922b775df2c5863403a782bf8219303d5a524e78302bd87a0e531573fc59def
+note_sha256: f59c5f61b3e7e3df6d1ea3a66f5d8cff4693e0d525d5fd1392afb24377ef8dd2
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bm25
@@ -15,6 +15,9 @@ discusses:
 - rag-retrieval-evaluation
 - beir
 - ms-marco
+- cosine-similarity
+- question-answering
+- tf-idf
 relations:
 - from: semantic-retrieval
   type: BASED_ON

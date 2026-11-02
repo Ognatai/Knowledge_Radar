@@ -71,7 +71,7 @@ To analyse training data, Urchs et al. (2024) combine linguistic discourse analy
 
 #### Origin and variants
 
-Bias in word embeddings and its reduction were described by Bolukbasi et al. (2016) and Caliskan et al. (2016). Benchmarks then moved to pretrained language models (Nadeem et al., 2020) and to downstream tasks such as question answering (Parrish et al., 2021), while Blodgett et al. (2020) critically reviewed how the field defines and measures bias. Studies of generative models such as ChatGPT (Urchs et al., 2023) and actor-level analyses of training corpora (Urchs et al., 2024; Urchs, 2025) extend the work to large language models and their data.
+Bias in word embeddings and its reduction were described by Bolukbasi et al. (2016) and Caliskan et al. (2016). Benchmarks then moved to pretrained language models (Nadeem et al., 2020) and to downstream tasks such as [[question-answering|question answering]] (Parrish et al., 2021), while Blodgett et al. (2020) critically reviewed how the field defines and measures bias. Studies of generative models such as ChatGPT (Urchs et al., 2023) and actor-level analyses of training corpora (Urchs et al., 2024; Urchs, 2025) extend the work to large language models and their data.
 
 ### When to use it
 

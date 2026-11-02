@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 32bfc1dc086e0edec029401fc4640d8c6e707463a3338b09a8a4872594de1a7b
+note_sha256: 0c4a098f5c2ae3dee41607f27d38c5c548b1739f899e501233fe4daf4a07a829
 extracted_by: claude
 discusses:
 - large-language-models
@@ -28,6 +28,10 @@ discusses:
 - llm-as-a-judge
 - gdpr
 - right-to-erasure
+- context-window
+- cosine-similarity
+- question-answering
+- tf-idf
 relations:
 - from: retrieval-augmented-generation
   type: BASED_ON

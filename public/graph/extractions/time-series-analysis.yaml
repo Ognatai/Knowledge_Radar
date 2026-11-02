@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2ab8cd9a97cb14aecb513f223a1bc4ffab8ef3db3e38dc663b1fd4f37906ca9d
+note_sha256: f5fcc98b401af1ec99e93ce35a837d6cacd9ed3376f456c61a0725928a67075c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - exponential-smoothing

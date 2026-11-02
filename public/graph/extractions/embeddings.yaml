@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 07fcb1fe253fd86a788d770fc64236f68eab986cfb6fa69aad325c0b346449ec
+note_sha256: 51ad590abe003909fd6a567fee7f9dfb5df83201686120c5eef6a46ad6abc47b
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - word2vec
@@ -16,6 +16,8 @@ discusses:
 - attention-and-transformers
 - neural-networks
 - mteb
+- cosine-similarity
+- tf-idf
 relations:
 - from: information-retrieval
   type: BASED_ON

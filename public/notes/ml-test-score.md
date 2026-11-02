@@ -43,7 +43,7 @@ Model specifications are reviewed and checked into a repository; offline proxy m
 
 #### 4. Tests for ML infrastructure
 
-Training is reproducible; model specification code is unit tested; the full ML pipeline is integration tested; model quality is validated before serving; the model can be debugged step by step on a single example; models are canaried before serving; and serving models can be rolled back quickly and safely (Breck et al., 2017). A useful unit test trains a model for a single step of gradient descent on random input to catch library mistakes; "golden tests" that compare a partially trained model to a stored one are hard to maintain and should be avoided (Breck et al., 2017). Validation before serving checks both slow degradation over many versions and sudden drops relative to the previous model ([[regression-testing|regression testing]]).
+Training is reproducible; model specification code is unit tested; the full ML pipeline is integration tested; model quality is validated before serving; the model can be debugged step by step on a single example; models are canaried before serving; and serving models can be rolled back quickly and safely (Breck et al., 2017). A useful unit test trains a model for a single step of [[gradient-descent|gradient descent]] on random input to catch library mistakes; "golden tests" that compare a partially trained model to a stored one are hard to maintain and should be avoided (Breck et al., 2017). Validation before serving checks both slow degradation over many versions and sudden drops relative to the previous model ([[regression-testing|regression testing]]).
 
 #### 5. Monitoring tests
 

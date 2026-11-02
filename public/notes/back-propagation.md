@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Back-propagation ("backprop") computes the gradient of a network's cost with respect to all its parameters by applying the chain rule backwards through the computational graph, from the cost to the inputs, while reusing intermediate results so that each partial derivative is computed only once (Goodfellow et al., 2016). It is only the method for computing gradients; an optimiser such as stochastic gradient descent then uses them to update the weights ([[neural-network-training|neural network training]]). Back-propagation is a special case of reverse-mode automatic differentiation and works for any differentiable function, not only multilayer networks (Goodfellow et al., 2016). Its popularisation by Rumelhart, Hinton and Williams in 1986 made training multilayer [[neural-networks|neural networks]] practical.
+Back-propagation ("backprop") computes the gradient of a network's cost with respect to all its parameters by applying the chain rule backwards through the computational graph, from the cost to the inputs, while reusing intermediate results so that each partial derivative is computed only once (Goodfellow et al., 2016). It is only the method for computing gradients; an optimiser such as [[gradient-descent|stochastic gradient descent]] then uses them to update the weights ([[neural-network-training|neural network training]]). Back-propagation is a special case of reverse-mode automatic differentiation and works for any differentiable function, not only multilayer networks (Goodfellow et al., 2016). Its popularisation by Rumelhart, Hinton and Williams in 1986 made training multilayer [[neural-networks|neural networks]] practical.
 
 ### How it works
 
@@ -48,7 +48,7 @@ The key to efficiency is that each node stores its gradient in a table once it i
 
 #### 5. An example: training a multilayer perceptron
 
-For a network with one hidden layer, `H = max{0, X W⁽¹⁾}` with a ReLU, followed by an output layer and a cross-entropy cost plus weight decay, the backward pass computes the gradient with respect to the output weights from the hidden activations, passes the gradient through the output weights to the hidden layer, zeroes it where the ReLU was inactive, and then computes the gradient with respect to the first-layer weights (Goodfellow et al., 2016). Minibatch stochastic gradient descent then updates both weight matrices.
+For a network with one hidden layer, `H = max{0, X W⁽¹⁾}` with a ReLU, followed by an output layer and a [[cross-entropy|cross-entropy]] cost plus weight decay, the backward pass computes the gradient with respect to the output weights from the hidden activations, passes the gradient through the output weights to the hidden layer, zeroes it where the ReLU was inactive, and then computes the gradient with respect to the first-layer weights (Goodfellow et al., 2016). Minibatch stochastic gradient descent then updates both weight matrices.
 
 #### Origin and variants
 
@@ -56,7 +56,7 @@ The chain rule dates back to Leibniz (1676) and L'Hôpital (1696), and gradient 
 
 ### When to use it
 
-- Training any differentiable model with gradient-based optimisation, from logistic regression to Transformers ([[neural-network-training|neural network training]]).
+- Training any differentiable model with gradient-based optimisation, from [[logistic-regression|logistic regression]] to Transformers ([[neural-network-training|neural network training]]).
 - Computing gradients of a scalar output with respect to many inputs, where reverse mode is far cheaper than computing each derivative separately (Goodfellow et al., 2016).
 - Gradient-based explanation methods that need derivatives of a prediction with respect to the input ([[explainable-ai|explainable AI]]).
 
@@ -100,7 +100,7 @@ Back-propagation applies the chain rule backwards through the computational grap
 
 ### TL;DR
 
-Backpropagation („Backprop“) berechnet den Gradienten der Kostenfunktion eines Netzes nach allen seinen Parametern, indem es die Kettenregel rückwärts durch den Rechengraphen anwendet, von den Kosten zu den Eingaben, und dabei Zwischenergebnisse wiederverwendet, sodass jede partielle Ableitung nur einmal berechnet wird (Goodfellow et al., 2016). Es ist nur das Verfahren zur Berechnung der Gradienten; ein Optimierer wie der stochastische Gradientenabstieg nutzt sie dann, um die Gewichte anzupassen ([[neural-network-training|Training neuronaler Netze]]). Backpropagation ist ein Spezialfall der automatischen Differentiation im Rückwärtsmodus und funktioniert für jede differenzierbare Funktion, nicht nur für mehrschichtige Netze (Goodfellow et al., 2016). Seine Verbreitung durch Rumelhart, Hinton und Williams 1986 machte das Training mehrschichtiger [[neural-networks|neuronaler Netze]] praktikabel.
+Backpropagation („Backprop“) berechnet den Gradienten der Kostenfunktion eines Netzes nach allen seinen Parametern, indem es die Kettenregel rückwärts durch den Rechengraphen anwendet, von den Kosten zu den Eingaben, und dabei Zwischenergebnisse wiederverwendet, sodass jede partielle Ableitung nur einmal berechnet wird (Goodfellow et al., 2016). Es ist nur das Verfahren zur Berechnung der Gradienten; ein Optimierer wie der stochastische [[gradient-descent|Gradientenabstieg]] nutzt sie dann, um die Gewichte anzupassen ([[neural-network-training|Training neuronaler Netze]]). Backpropagation ist ein Spezialfall der automatischen Differentiation im Rückwärtsmodus und funktioniert für jede differenzierbare Funktion, nicht nur für mehrschichtige Netze (Goodfellow et al., 2016). Seine Verbreitung durch Rumelhart, Hinton und Williams 1986 machte das Training mehrschichtiger [[neural-networks|neuronaler Netze]] praktikabel.
 
 ### Funktionsweise
 

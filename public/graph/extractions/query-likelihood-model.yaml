@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 910f9eca258b3224807f3c4091e1897f6a773be545eb01916772ff2ae63e9f41
+note_sha256: abc1c897ba9e87c14b76169761969d4c36037571b31bbcb524700e0a51c311a1
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - naive-bayes
@@ -7,6 +7,8 @@ discusses:
 - bm25
 - inverted-index
 - large-language-models
+- cosine-similarity
+- tf-idf
 relations:
 - from: query-likelihood-model
   type: BASED_ON

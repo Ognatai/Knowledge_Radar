@@ -795,7 +795,7 @@ This paragraph does not apply if the original provider has explicitly stated tha
 
 **Paragraph 4** – The provider of a high-risk AI system and any third party supplying AI systems, models, tools, or components used in a high-risk AI system must specify, by written agreement, necessary information, capabilities, and technical access based on the generally acknowledged state of the art. This requirement does not apply to third parties offering tools, services, or components under a free and open-source licence. The AI Office may develop and recommend voluntary model terms for such contracts, taking into account sector-specific requirements.
 
-**Paragraph 5** – Paragraphs 2 and 3 do not affect the need to observe and protect intellectual property rights, confidential business information, and trade secrets in accordance with Union and national law.
+**Paragraph 5** – Paragraphs 2 and 3 do not affect the need to observe and protect intellectual property rights, confidential business information, and [[geschgehg|trade secrets]] in accordance with Union and national law.
 
 ##### Who is affected?
 
@@ -2455,7 +2455,7 @@ b) Das Hochrisiko-KI-System wird unter dem Namen oder der Handelsmarke des Produ
 
 **Paragraph 4** – Der Anbieter eines Hochrisiko-KI-Systems und der Dritte, der ein KI-System, ein KI-Modell, Instrumente, Dienste, Komponenten oder Verfahren bereitstellt, die in einem Hochrisiko-KI-System verwendet oder integriert werden, legen in einer schriftlichen Vereinbarung die Informationen, die Fähigkeiten, den technischen Zugang und die sonstige Unterstützung nach dem allgemein anerkannten Stand der Technik fest, die erforderlich sind, damit der Anbieter des Hochrisiko-KI-Systems die in dieser Verordnung festgelegten Pflichten vollständig erfüllen kann. Dieser Absatz gilt nicht für Dritte, die Instrumente, Dienste, Verfahren oder Komponenten, bei denen es sich nicht um KI-Modelle mit allgemeinem Verwendungszweck handelt, im Rahmen einer freien und quelloffenen Lizenz öffentlich zugänglich machen. Das Büro für Künstliche Intelligenz kann freiwillige Musterbedingungen für Verträge zwischen Anbietern von Hochrisiko-KI-Systemen und Dritten, die Instrumente, Dienste, Komponenten oder Verfahren bereitstellen, die für Hochrisiko-KI-Systeme verwendet oder in diese integriert werden, ausarbeiten und empfehlen. Bei der Ausarbeitung dieser freiwilligen Musterbedingungen berücksichtigt das Büro für Künstliche Intelligenz mögliche vertragliche Anforderungen, die in bestimmten Sektoren oder Geschäftsfällen gelten. Die freiwilligen Musterbedingungen werden veröffentlicht und sind kostenlos in einem leicht nutzbaren elektronischen Format verfügbar.
 
-**Paragraph 5** – Die Absätze 2 und 3 berühren nicht die Notwendigkeit, Rechte des geistigen Eigentums, vertrauliche Geschäftsinformationen und Geschäftsgeheimnisse im Einklang mit dem Unionsrecht und dem nationalen Recht zu achten und zu schützen.
+**Paragraph 5** – Die Absätze 2 und 3 berühren nicht die Notwendigkeit, Rechte des geistigen Eigentums, vertrauliche Geschäftsinformationen und [[geschgehg|Geschäftsgeheimnisse]] im Einklang mit dem Unionsrecht und dem nationalen Recht zu achten und zu schützen.
 
 ##### Wer ist betroffen?
 

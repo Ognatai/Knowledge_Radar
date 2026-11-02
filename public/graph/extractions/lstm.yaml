@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8071c2d89f7e4058eea728e5b452bb7b61dd173e2d4ed19a537c9b0a4f7ed249
+note_sha256: 5324a1ccf4ce98d62ef35a4253dadcfb97684e582259a4f8f0073ec6e130b79a
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - recurrent-neural-networks

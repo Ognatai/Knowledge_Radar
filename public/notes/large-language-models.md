@@ -25,7 +25,7 @@ Large language models (LLMs) are Transformer-based [[neural-networks|neural netw
 
 ### How it works
 
-Text is split into subword tokens, a Transformer computes a contextual representation of the token sequence, and the model outputs a probability distribution over the next token. Generation repeats this step token by token, guided by a decoding strategy. The model is first pretrained on large corpora and then aligned through instruction tuning and reinforcement learning from human feedback; scaling laws describe how performance depends on model size, data and compute.
+Text is split into subword tokens, a Transformer computes a contextual representation of the token sequence, and the model outputs a probability distribution over the next token. Generation repeats this step token by token, guided by a decoding strategy. The model is first pretrained on large corpora and then aligned through [[instruction-tuning|instruction tuning]] and reinforcement learning from human feedback; scaling laws describe how performance depends on model size, data and compute.
 
 ```text
 1. Subword tokenization
@@ -45,7 +45,7 @@ Text is split into subword tokens, a Transformer computes a contextual represent
 
 #### 1. Subword tokenisation
 
-Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces ([[tokenisation|Tokenisation]]). Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols in the training corpus, so that frequent words become single tokens while rare words are composed of several subwords (Sennrich et al., 2015). The vocabulary is fixed before training, and context length is measured in tokens rather than characters or words. In [[machine-translation|neural machine translation]], subword units improved over a back-off dictionary baseline by up to 1.1 [[bleu|BLEU]] (English-German) and 1.3 BLEU (English-Russian) (Sennrich et al., 2015).
+Text is split into subword units so that rare and unknown words can be represented as sequences of more frequent pieces ([[tokenisation|Tokenisation]]). Byte pair encoding (BPE) builds the vocabulary by repeatedly merging the most frequent pair of adjacent symbols in the training corpus, so that frequent words become single tokens while rare words are composed of several subwords (Sennrich et al., 2015). The vocabulary is fixed before training, and [[context-window|context length]] is measured in tokens rather than characters or words. In [[machine-translation|neural machine translation]], subword units improved over a back-off dictionary baseline by up to 1.1 [[bleu|BLEU]] (English-German) and 1.3 BLEU (English-Russian) (Sennrich et al., 2015).
 
 #### 2. Transformer architecture
 
@@ -61,11 +61,11 @@ Pretraining optimises next-token prediction on large text corpora. With 175 bill
 
 #### 5. Decoding at inference time
 
-Greedy decoding always picks the most probable token, and beam search keeps several high-probability candidate sequences; both maximisation-based methods tend to produce bland, repetitive text (Holtzman et al., 2019). Sampling methods introduce randomness: temperature divides the model's scores (logits) before the softmax, with low temperatures making the distribution sharper and high temperatures flatter; top-k sampling restricts the choice to the k most probable tokens. Nucleus (top-p) sampling samples from the smallest set of tokens whose cumulative probability exceeds p, so the candidate set grows or shrinks with the shape of the distribution and the unreliable tail is cut off (Holtzman et al., 2019).
+Greedy decoding always picks the most probable token, and beam search keeps several high-probability candidate sequences; both maximisation-based methods tend to produce bland, repetitive text (Holtzman et al., 2019). Sampling methods introduce randomness: temperature divides the model's scores (logits) before the [[softmax|softmax]], with low temperatures making the distribution sharper and high temperatures flatter; top-k sampling restricts the choice to the k most probable tokens. Nucleus (top-p) sampling samples from the smallest set of tokens whose cumulative probability exceeds p, so the candidate set grows or shrinks with the shape of the distribution and the unreliable tail is cut off (Holtzman et al., 2019).
 
 #### 6. Scaling
 
-The cross-entropy loss of language models falls as a power law with model size, data set size and training compute, and larger models are more sample-efficient (Kaplan et al., 2020). For compute-optimal training, model size and the number of training tokens should be scaled in equal proportion: for every doubling of model size, the number of training tokens should also be doubled (Hoffmann et al., 2022). Following this, Chinchilla (70B parameters, trained on four times more data than Gopher with the same compute) outperformed larger models such as Gopher (280B) and GPT-3 (175B), reaching an average accuracy of 67.5% on MMLU, more than 7 percentage points above Gopher (Hoffmann et al., 2022). Some abilities are described as emergent: they are absent in smaller models and appear only in larger ones, so they cannot be predicted by extrapolating from smaller models (Wei et al., 2022).
+The [[cross-entropy|cross-entropy loss]] of language models falls as a power law with model size, data set size and training compute, and larger models are more sample-efficient (Kaplan et al., 2020). For compute-optimal training, model size and the number of training tokens should be scaled in equal proportion: for every doubling of model size, the number of training tokens should also be doubled (Hoffmann et al., 2022). Following this, Chinchilla (70B parameters, trained on four times more data than Gopher with the same compute) outperformed larger models such as Gopher (280B) and GPT-3 (175B), reaching an average accuracy of 67.5% on MMLU, more than 7 percentage points above Gopher (Hoffmann et al., 2022). Some abilities are described as emergent: they are absent in smaller models and appear only in larger ones, so they cannot be predicted by extrapolating from smaller models (Wei et al., 2022).
 
 #### 7. Proprietary and open models
 
@@ -133,7 +133,7 @@ Große Sprachmodelle (LLMs) sind Transformer-basierte [[neural-networks|neuronal
 
 ### Funktionsweise
 
-Text wird in Subwort-Token aufgeteilt, ein Transformer berechnet eine kontextuelle Darstellung der Token-Reihe, und das Modell gibt eine Wahrscheinlichkeitsverteilung über das nächste Token aus. Die Generierung wiederholt diesen Schritt Token für Token, unter Berücksichtigung einer Decodierstrategie. Das Modell wird zunächst auf großen Corpora vortrainiert und dann durch Instruction Tuning und Reinforcement Learning from Human Feedback (RLHF) ausgerichtet; Skalierungsgesetze beschreiben, wie die Leistung von der Modellgröße, Daten und Rechenleistung abhängt.
+Text wird in Subwort-Token aufgeteilt, ein Transformer berechnet eine kontextuelle Darstellung der Token-Reihe, und das Modell gibt eine Wahrscheinlichkeitsverteilung über das nächste Token aus. Die Generierung wiederholt diesen Schritt Token für Token, unter Berücksichtigung einer Decodierstrategie. Das Modell wird zunächst auf großen Corpora vortrainiert und dann durch [[instruction-tuning|Instruction Tuning]] und Reinforcement Learning from Human Feedback (RLHF) ausgerichtet; Skalierungsgesetze beschreiben, wie die Leistung von der Modellgröße, Daten und Rechenleistung abhängt.
 
 ```text
 1. Subwort-Tokenisierung
@@ -161,7 +161,7 @@ Der Transformer ersetzt Rekurrenzen und Faltungen durch Aufmerksamkeit (Vaswani 
 
 #### 3. Autoregressives Vorhersagen des nächsten Tokens
 
-Gegeben die vorherigen Tokens gibt das Modell eine Wahrscheinlichkeitsverteilung über das Vokabular für das nächste Token aus. Die Generierung ist iterativ: ein Token wird aus dieser Verteilung gewählt, an die Eingabe angehängt, und der Schritt wird wiederholt, bis eine Stop-Bedingung erreicht ist (Brown et al., 2020). Das Kontextfenster, die maximale Anzahl an Token, die das Modell gleichzeitig verarbeiten kann, begrenzt, wie viel vorheriger Text sichtbar ist. Da jedes neue Token von den vorherigen abhängt, ist die Generierung sequenziell, weshalb das Erzeugen langer Ausgaben proportional länger dauert.
+Gegeben die vorherigen Tokens gibt das Modell eine Wahrscheinlichkeitsverteilung über das Vokabular für das nächste Token aus. Die Generierung ist iterativ: ein Token wird aus dieser Verteilung gewählt, an die Eingabe angehängt, und der Schritt wird wiederholt, bis eine Stop-Bedingung erreicht ist (Brown et al., 2020). Das [[context-window|Kontextfenster]], die maximale Anzahl an Token, die das Modell gleichzeitig verarbeiten kann, begrenzt, wie viel vorheriger Text sichtbar ist. Da jedes neue Token von den vorherigen abhängt, ist die Generierung sequenziell, weshalb das Erzeugen langer Ausgaben proportional länger dauert.
 
 #### 4. Trainingsphasen
 
@@ -169,7 +169,7 @@ Das Vortraining optimiert die Vorhersage des nächsten Tokens anhand großer Tex
 
 #### 5. Decodieren zur Inferenzzeit
 
-Greedy-Decodierung wählt immer den wahrscheinlichsten Token aus, und der Beam-Search behält mehrere Kandidatenfolgen mit hoher Wahrscheinlichkeit bei; beide, auf Maximierung basierende Methoden, neigen dazu, langweilige, repetitive Texte zu erzeugen (Holtzman et al., 2019). Sampling-Methoden führen Zufälligkeit ein: die Temperatur teilt die Scores (Logits) des Modells vor dem Softmax, wobei niedrige Temperaturen die Verteilung schärfer und hohe Temperaturen flacher machen; das Top-k-Sampling beschränkt die Wahl auf die k wahrscheinlichsten Token. Nucleus-Sampling (Top-p) zieht aus der kleinsten Menge an Token, deren kumulative Wahrscheinlichkeit p übersteigt; so wächst oder schrumpft die Kandidatenmenge mit der Form der Verteilung, und der unzuverlässige Rand der Verteilung wird abgeschnitten (Holtzman et al., 2019).
+Greedy-Decodierung wählt immer den wahrscheinlichsten Token aus, und der Beam-Search behält mehrere Kandidatenfolgen mit hoher Wahrscheinlichkeit bei; beide, auf Maximierung basierende Methoden, neigen dazu, langweilige, repetitive Texte zu erzeugen (Holtzman et al., 2019). Sampling-Methoden führen Zufälligkeit ein: die Temperatur teilt die Scores (Logits) des Modells vor dem [[softmax|Softmax]], wobei niedrige Temperaturen die Verteilung schärfer und hohe Temperaturen flacher machen; das Top-k-Sampling beschränkt die Wahl auf die k wahrscheinlichsten Token. Nucleus-Sampling (Top-p) zieht aus der kleinsten Menge an Token, deren kumulative Wahrscheinlichkeit p übersteigt; so wächst oder schrumpft die Kandidatenmenge mit der Form der Verteilung, und der unzuverlässige Rand der Verteilung wird abgeschnitten (Holtzman et al., 2019).
 
 #### 6. Skalierung
 

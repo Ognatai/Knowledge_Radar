@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-LLM adaptation covers the ways a pretrained language model is made to perform a specific task or use specific knowledge. The options range from leaving the weights unchanged (prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) through updating all weights (fine-tuning, instruction tuning) or only a few (LoRA, [[qlora|QLoRA]]), to transferring knowledge into a smaller model (distillation). Mixed precision and quantisation reduce the memory and compute these methods need.
+LLM adaptation covers the ways a pretrained language model is made to perform a specific task or use specific knowledge. The options range from leaving the weights unchanged (prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) through updating all weights (fine-tuning, [[instruction-tuning|instruction tuning]]) or only a few (LoRA, [[qlora|QLoRA]]), to transferring knowledge into a smaller model (distillation). Mixed precision and quantisation reduce the memory and compute these methods need.
 
 ### How it works
 
@@ -39,7 +39,7 @@ The methods differ in what they change: the input, all parameters, a small numbe
 
 #### 1. Adaptation without changing weights
 
-Prompting steers a model through instructions or examples in the input and relies on what the model already knows ([[prompt-engineering|Prompt Engineering]]). Retrieval-augmented generation combines the parametric memory of a pretrained [[attention-and-transformers|sequence-to-sequence model]] with a non-parametric memory, a dense vector index of Wikipedia accessed by a neural retriever; the model conditions either on the same retrieved passages for the whole output or on different passages per token (Lewis et al., 2020). Because knowledge sits in the index, it can be updated without retraining, and RAG models set the state of the art on three open-domain question answering tasks (Lewis et al., 2020).
+Prompting steers a model through instructions or examples in the input and relies on what the model already knows ([[prompt-engineering|Prompt Engineering]]). Retrieval-augmented generation combines the parametric memory of a pretrained [[attention-and-transformers|sequence-to-sequence model]] with a non-parametric memory, a dense vector index of Wikipedia accessed by a neural retriever; the model conditions either on the same retrieved passages for the whole output or on different passages per token (Lewis et al., 2020). Because knowledge sits in the index, it can be updated without retraining, and RAG models set the state of the art on three [[question-answering|open-domain question answering]] tasks (Lewis et al., 2020).
 
 #### 2. Full fine-tuning and instruction tuning
 
@@ -47,7 +47,7 @@ Full fine-tuning updates all parameters on task-specific data, so every task nee
 
 #### 3. Parameter-efficient fine-tuning with LoRA
 
-LoRA freezes the pretrained weights and injects trainable rank-decomposition matrices into each layer of the Transformer ([[lora|LoRA]]). For a frozen weight matrix W of size d×k, the update is the product BA of a d×r matrix B and an r×k matrix A, with a rank r much smaller than d and k (Hu et al., 2021). Compared with fine-tuning GPT-3 175B with Adam, LoRA reduced the number of trainable parameters by 10,000 times and the GPU memory requirement by three times, performed on par with or better than fine-tuning on RoBERTa, DeBERTa, GPT-2 and GPT-3, and adds no inference latency because the update can be merged into the weights (Hu et al., 2021).
+LoRA freezes the pretrained weights and injects trainable rank-decomposition matrices into each layer of the Transformer ([[lora|LoRA]]). For a frozen weight matrix W of size d×k, the update is the product BA of a d×r matrix B and an r×k matrix A, with a rank r much smaller than d and k (Hu et al., 2021). Compared with fine-tuning GPT-3 175B with [[adam-optimiser|Adam]], LoRA reduced the number of trainable parameters by 10,000 times and the GPU memory requirement by three times, performed on par with or better than fine-tuning on RoBERTa, DeBERTa, GPT-2 and GPT-3, and adds no inference latency because the update can be merged into the weights (Hu et al., 2021).
 
 #### 4. QLoRA
 
@@ -116,7 +116,7 @@ Adapting an LLM means choosing how much of it to change: the input, a few added 
 
 ### TL;DR
 
-LLM-Anpassung umfasst die Verfahren, mit denen ein vortrainiertes Sprachmodell so angepasst wird, dass es eine bestimmte Aufgabe ausführt oder spezifisches Wissen nutzt. Die Optionen reichen von unveränderten Gewichten (Prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) über das Aktualisieren aller Gewichte (Fine-Tuning, Instruction Tuning) oder nur einiger weniger (LoRA, [[qlora|QLoRA]]) bis hin zum Übertragen von Wissen in ein kleineres Modell (Distillation). Mixed Precision und Quantisierung verringern den Speicher- und Rechenbedarf dieser Methoden.
+LLM-Anpassung umfasst die Verfahren, mit denen ein vortrainiertes Sprachmodell so angepasst wird, dass es eine bestimmte Aufgabe ausführt oder spezifisches Wissen nutzt. Die Optionen reichen von unveränderten Gewichten (Prompting, [[retrieval-augmented-generation|Retrieval-Augmented Generation]]) über das Aktualisieren aller Gewichte (Fine-Tuning, [[instruction-tuning|Instruction Tuning]]) oder nur einiger weniger (LoRA, [[qlora|QLoRA]]) bis hin zum Übertragen von Wissen in ein kleineres Modell (Distillation). Mixed Precision und Quantisierung verringern den Speicher- und Rechenbedarf dieser Methoden.
 
 ### Funktionsweise
 
@@ -146,7 +146,7 @@ Vollständiges Fine-Tuning aktualisiert alle Parameter anhand aufgabenspezifisch
 
 #### 3. Parameter-effizientes Fine-Tuning mit LoRA
 
-LoRA friert die vortrainierten Gewichte ein und injiziert in jede Schicht des Transformers trainierbare Rang-Zerlegungsmatrizen ([[lora|LoRA]]). Für eine gefrorene Gewichtsmatrix W der Größe d×k ist die Aktualisierung das Produkt BA einer d×r-Matrix B und einer r×k-Matrix A, wobei der Rang r deutlich kleiner als d und k ist (Hu et al., 2021). Im Vergleich zum Fine-Tuning von GPT-3 175B mit Adam verringerte LoRA die Anzahl der trainierbaren Parameter auf ein Zehntausendstel und den GPU-Speicherbedarf auf ein Drittel, erzielte gleich gute oder bessere Ergebnisse als das Fine-Tuning bei RoBERTa, DeBERTa, GPT-2 und GPT-3 waren, und fügt keine Inferenzverzögerung hinzu, da die Aktualisierung in die Gewichte eingerechnet werden kann (Hu et al., 2021).
+LoRA friert die vortrainierten Gewichte ein und injiziert in jede Schicht des Transformers trainierbare Rang-Zerlegungsmatrizen ([[lora|LoRA]]). Für eine gefrorene Gewichtsmatrix W der Größe d×k ist die Aktualisierung das Produkt BA einer d×r-Matrix B und einer r×k-Matrix A, wobei der Rang r deutlich kleiner als d und k ist (Hu et al., 2021). Im Vergleich zum Fine-Tuning von GPT-3 175B mit [[adam-optimiser|Adam]] verringerte LoRA die Anzahl der trainierbaren Parameter auf ein Zehntausendstel und den GPU-Speicherbedarf auf ein Drittel, erzielte gleich gute oder bessere Ergebnisse als das Fine-Tuning bei RoBERTa, DeBERTa, GPT-2 und GPT-3 waren, und fügt keine Inferenzverzögerung hinzu, da die Aktualisierung in die Gewichte eingerechnet werden kann (Hu et al., 2021).
 
 #### 4. QLoRA
 

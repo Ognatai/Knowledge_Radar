@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 9579a7f2c357c4b5e1e4fad7da3f544b91366804d77ce7b8bd2eb5c0d35d742a
+note_sha256: faeeade987de4694ce71e086dbfd4e746ee92d051f52f84224b165d70c4611fd
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - attention-and-transformers
@@ -11,6 +11,7 @@ discusses:
 - vision-transformer
 - microsoft
 - imagenet
+- gradient-descent
 relations:
 - from: resnet
   type: DEVELOPED_BY

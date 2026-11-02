@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7c1e785ff46bc253ac87c30078498fb8c39cdc18401786ba404fbb1f4d395b9a
+note_sha256: a9d292954baeda5c4232f80a4cbaa0778e1ad434c8a526ac3a5e020dda575df9
 extracted_by: claude
 discusses:
 - bert
@@ -12,6 +12,9 @@ discusses:
 - vector-databases
 - rag-retrieval
 - rag-retrieval-evaluation
+- cosine-similarity
+- question-answering
+- softmax
 relations:
 - from: sentence-bert
   type: BASED_ON

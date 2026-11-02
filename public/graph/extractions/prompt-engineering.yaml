@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c59f23573b269165692fca7b8921532cdec84d78cd988cc7e3decca0df86262c
+note_sha256: c3c8cbffc66b2f2a975f1ef0680c10d30b2f473176c2bd91b078bb15c3d26904
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - zero-shot-prompting
@@ -11,6 +11,7 @@ discusses:
 - gpt
 - large-language-models
 - llm-adaptation
+- question-answering
 relations:
 - from: zero-shot-prompting
   type: IS_EXAMPLE_OF

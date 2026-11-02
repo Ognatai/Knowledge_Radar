@@ -36,7 +36,7 @@ skip-gram: centre word vector → predict each context word
 
 #### 1. From atomic words to vectors
 
-Many NLP systems treated words as atomic indices with no notion of similarity; Word2Vec instead learns continuous vectors in which similar words are close (Mikolov et al., 2013a). The models remove the non-linear hidden layer of earlier neural language models, keeping only a projection layer and a log-linear classifier, which cuts training cost enough to use billions of words. The idea of distributed word representations goes back to Rumelhart, Hinton and Williams in 1986 (Mikolov et al., 2013b). Embeddings in general are covered in [[embeddings|embeddings]].
+Many NLP systems treated words as atomic indices with no notion of similarity; Word2Vec instead learns continuous vectors in which similar words are close (Mikolov et al., 2013a). The models remove the non-linear hidden layer of earlier neural language models, keeping only a projection layer and a [[logistic-regression|log-linear classifier]], which cuts training cost enough to use billions of words. The idea of distributed word representations goes back to Rumelhart, Hinton and Williams in 1986 (Mikolov et al., 2013b). Embeddings in general are covered in [[embeddings|embeddings]].
 
 #### 2. CBOW and skip-gram
 
@@ -44,7 +44,7 @@ CBOW projects the vectors of the surrounding words, four before and four after i
 
 #### 3. Efficient output layers
 
-A full softmax over a vocabulary of V words is expensive. Hierarchical softmax arranges the vocabulary in a Huffman tree so that only about log₂(V) outputs are evaluated per word (Mikolov et al., 2013a). Negative sampling replaces the softmax with a [[classification|logistic regression]] that distinguishes the observed context word from k words drawn from a noise distribution: `log σ(v′_O · v_I) + Σ_{i=1..k} E_{w_i ∼ P_n} [log σ(−v′_{w_i} · v_I)]` (Mikolov et al., 2013b). Values of k from 5 to 20 suit small datasets, 2 to 5 large ones, and the unigram distribution raised to the power 3/4 worked best as noise distribution. On the analogy task, negative sampling outperformed hierarchical softmax (Mikolov et al., 2013b).
+A full [[softmax|softmax]] over a vocabulary of V words is expensive. Hierarchical softmax arranges the vocabulary in a Huffman tree so that only about log₂(V) outputs are evaluated per word (Mikolov et al., 2013a). Negative sampling replaces the softmax with a [[classification|logistic regression]] that distinguishes the observed context word from k words drawn from a noise distribution: `log σ(v′_O · v_I) + Σ_{i=1..k} E_{w_i ∼ P_n} [log σ(−v′_{w_i} · v_I)]` (Mikolov et al., 2013b). Values of k from 5 to 20 suit small datasets, 2 to 5 large ones, and the unigram distribution raised to the power 3/4 worked best as noise distribution. On the analogy task, negative sampling outperformed hierarchical softmax (Mikolov et al., 2013b).
 
 #### 4. Subsampling and phrases
 
@@ -129,7 +129,7 @@ CBOW projiziert die Vektoren der umgebenden Wörter, in der besten Einstellung v
 
 #### 3. Effiziente Ausgabeschichten
 
-Ein voller Softmax über ein Vokabular aus V Wörtern ist teuer. Der hierarchische Softmax ordnet das Vokabular in einem Huffman-Baum an, sodass je Wort nur etwa log₂(V) Ausgaben berechnet werden (Mikolov et al., 2013a). Negative Sampling ersetzt den Softmax durch eine logistische Regression, die das beobachtete Kontextwort von k Wörtern aus einer Rauschverteilung unterscheidet: `log σ(v′_O · v_I) + Σ_{i=1..k} E_{w_i ∼ P_n} [log σ(−v′_{w_i} · v_I)]` (Mikolov et al., 2013b). Werte von k zwischen 5 und 20 passen zu kleinen Datensätzen, 2 bis 5 zu großen, und die Unigramm-Verteilung hoch 3/4 funktionierte als Rauschverteilung am besten. Bei der Analogieaufgabe übertraf Negative Sampling den hierarchischen Softmax (Mikolov et al., 2013b).
+Ein voller [[softmax|Softmax]] über ein Vokabular aus V Wörtern ist teuer. Der hierarchische Softmax ordnet das Vokabular in einem Huffman-Baum an, sodass je Wort nur etwa log₂(V) Ausgaben berechnet werden (Mikolov et al., 2013a). Negative Sampling ersetzt den Softmax durch eine [[logistic-regression|logistische Regression]], die das beobachtete Kontextwort von k Wörtern aus einer Rauschverteilung unterscheidet: `log σ(v′_O · v_I) + Σ_{i=1..k} E_{w_i ∼ P_n} [log σ(−v′_{w_i} · v_I)]` (Mikolov et al., 2013b). Werte von k zwischen 5 und 20 passen zu kleinen Datensätzen, 2 bis 5 zu großen, und die Unigramm-Verteilung hoch 3/4 funktionierte als Rauschverteilung am besten. Bei der Analogieaufgabe übertraf Negative Sampling den hierarchischen Softmax (Mikolov et al., 2013b).
 
 #### 4. Ausdünnen und Wortgruppen
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 704e4a2f741cadfe1f4e99506359d2bc1e5e4a8bb32c5539a3dbd7b1a2d9bf2e
+note_sha256: 8283244beb98e5d5a74da050ddb6eb6275f0f489c241676c5f580d55e7301d37
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - graph-databases
@@ -13,6 +13,7 @@ discusses:
 - sparql
 - sql
 - docker
+- cosine-similarity
 relations:
 - from: neo4j
   type: IMPLEMENTS

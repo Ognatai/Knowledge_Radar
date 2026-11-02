@@ -60,7 +60,7 @@ The vocabulary keeps growing with the collection, as Heaps' law M = k·T^b descr
 
 #### Origin and variants
 
-The book's chapters build up from Boolean retrieval to the index structures and compression used in search engines (Manning et al., 2008). The same idea, extended with term frequencies and weights, underlies ranked retrieval with tf-idf and BM25 ([[information-retrieval|Information Retrieval]]; [[bm25|BM25]]).
+The book's chapters build up from Boolean retrieval to the index structures and compression used in search engines (Manning et al., 2008). The same idea, extended with term frequencies and weights, underlies ranked retrieval with [[tf-idf|tf-idf]] and BM25 ([[information-retrieval|Information Retrieval]]; [[bm25|BM25]]).
 
 ### When to use it
 
@@ -150,7 +150,7 @@ Das Vokabular wächst mit der Sammlung weiter, wie Heaps' Law M = k·T^b beschre
 
 #### Herkunft und Varianten
 
-Die Kapitel des Buchs bauen vom booleschen Retrieval bis zu den Indexstrukturen und Kompressionsverfahren von Suchmaschinen auf (Manning et al., 2008). Dieselbe Idee, ergänzt um Termhäufigkeiten und Gewichte, liegt dem gerankten Retrieval mit tf-idf und BM25 zugrunde ([[information-retrieval|Information Retrieval]]; [[bm25|BM25]]).
+Die Kapitel des Buchs bauen vom booleschen Retrieval bis zu den Indexstrukturen und Kompressionsverfahren von Suchmaschinen auf (Manning et al., 2008). Dieselbe Idee, ergänzt um Termhäufigkeiten und Gewichte, liegt dem gerankten Retrieval mit [[tf-idf|tf-idf]] und BM25 zugrunde ([[information-retrieval|Information Retrieval]]; [[bm25|BM25]]).
 
 ### Wann einsetzen
 

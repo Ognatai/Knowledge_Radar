@@ -43,7 +43,7 @@ A RAG model conditions its generation on retrieved passages (Lewis et al., 2020;
 
 #### 2. Position in the context
 
-Liu et al. (2023) found that performance on multi-document question answering and key-value retrieval was often highest when the relevant information was at the beginning or end of the input, and degraded significantly when it was in the middle of a long context, even for explicitly long-context models. Placing the most relevant passages first or last and keeping the context short therefore helps.
+Liu et al. (2023) found that performance on multi-document [[question-answering|question answering]] and key-value retrieval was often highest when the relevant information was at the beginning or end of the input, and degraded significantly when it was in the middle of a [[context-window|long context]], even for explicitly long-context models. Placing the most relevant passages first or last and keeping the context short therefore helps.
 
 #### 3. Formatting choices
 

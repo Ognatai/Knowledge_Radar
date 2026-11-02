@@ -20,7 +20,7 @@ sources:
 
 ### TL;DR
 
-Semantic retrieval finds documents by meaning rather than by shared words: queries and documents are encoded as vectors, and documents whose vectors are close to the query vector are returned (Reimers & Gurevych, 2019; Karpukhin et al., 2020). Dense retrievers outperformed [[bm25|BM25]] on open-domain question answering, late-interaction models and [[cross-encoder|cross-encoder]] re-rankers add precision (Khattab & Zaharia, 2020; Nogueira & Cho, 2019), and hypothetical document embeddings work without relevance labels (Gao et al., 2022). On diverse benchmarks, however, BM25 remains a robust baseline, so semantic and lexical retrieval are often combined (Thakur et al., 2021).
+Semantic retrieval finds documents by meaning rather than by shared words: queries and documents are encoded as vectors, and documents whose vectors are close to the query vector are returned (Reimers & Gurevych, 2019; Karpukhin et al., 2020). Dense retrievers outperformed [[bm25|BM25]] on [[question-answering|open-domain question answering]], late-interaction models and [[cross-encoder|cross-encoder]] re-rankers add precision (Khattab & Zaharia, 2020; Nogueira & Cho, 2019), and hypothetical document embeddings work without relevance labels (Gao et al., 2022). On diverse benchmarks, however, BM25 remains a robust baseline, so semantic and lexical retrieval are often combined (Thakur et al., 2021).
 
 ### How it works
 
@@ -42,11 +42,11 @@ An encoder turns every document into an embedding in advance, and the embeddings
 
 #### 1. From lexical to semantic matching
 
-Lexical retrieval with BM25 or tf-idf matches the words of the query ([[information-retrieval|Information Retrieval]]). It misses relevant documents that use different words for the same meaning; semantic retrieval addresses this by comparing learned representations of meaning ([[embeddings|Embeddings]]).
+Lexical retrieval with BM25 or [[tf-idf|tf-idf]] matches the words of the query ([[information-retrieval|Information Retrieval]]). It misses relevant documents that use different words for the same meaning; semantic retrieval addresses this by comparing learned representations of meaning ([[embeddings|Embeddings]]).
 
 #### 2. Bi-encoders and sentence embeddings
 
-Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). [[sentence-bert|Sentence-BERT]] encodes each text separately into an embedding compared with [[text-similarity-metrics|cosine similarity]], which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
+Scoring every query-document pair jointly with [[bert|BERT]] is too expensive for search: finding the most similar pair among 10,000 sentences takes about 65 hours (Reimers & Gurevych, 2019). [[sentence-bert|Sentence-BERT]] encodes each text separately into an embedding compared with [[cosine-similarity|cosine similarity]], which reduces this to about 5 seconds while keeping BERT's accuracy; document embeddings can be computed once and stored in a vector index ([[vector-databases|Vector Databases]]).
 
 #### 3. Dense passage retrieval
 
@@ -141,7 +141,7 @@ Ein Encoder wandelt jedes Dokument vorab in ein Embedding um, und die Embeddings
 
 #### 1. Von lexikalischem zu semantischem Abgleich
 
-Lexikalisches Retrieval mit BM25 oder tf-idf gleicht die Wörter der Anfrage ab ([[information-retrieval|Information Retrieval]]). Es übersieht relevante Dokumente, die für dieselbe Bedeutung andere Wörter verwenden; semantisches Retrieval begegnet dem, indem es gelernte Bedeutungsrepräsentationen vergleicht ([[embeddings|Embeddings]]).
+Lexikalisches Retrieval mit BM25 oder [[tf-idf|tf-idf]] gleicht die Wörter der Anfrage ab ([[information-retrieval|Information Retrieval]]). Es übersieht relevante Dokumente, die für dieselbe Bedeutung andere Wörter verwenden; semantisches Retrieval begegnet dem, indem es gelernte Bedeutungsrepräsentationen vergleicht ([[embeddings|Embeddings]]).
 
 #### 2. Bi-Encoder und Satz-Embeddings
 

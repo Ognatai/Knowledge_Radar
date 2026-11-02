@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2be2f7d807fd436f234e42b1e2a22f2f6fb12f901367d033034b70cc4d0d6366
+note_sha256: 4840e29b00b7b4b8748c0fb8a91ab22da3b2eb5bed49ce43b70c55a1105d0798
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - back-propagation
@@ -10,6 +10,8 @@ discusses:
 - he-initialisation
 - weight-decay
 - overfitting
+- cross-entropy
+- softmax
 relations:
 - from: neural-network-training
   type: BASED_ON

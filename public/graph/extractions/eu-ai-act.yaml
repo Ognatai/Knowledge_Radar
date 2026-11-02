@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 45d0265ac261362134e928b8a60a6ddc054c1a6ec5a5584eebc980f0523162a2
+note_sha256: 18377dea6086345dc1ae7febba4a32165997bd97989a5c08d09f81b9f5e91b55
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - ai-system
@@ -31,6 +31,7 @@ discusses:
 - diffusion-models
 - multimodal-models
 - large-language-models
+- geschgehg
 relations:
 - from: eu-ai-act
   type: REGULATES

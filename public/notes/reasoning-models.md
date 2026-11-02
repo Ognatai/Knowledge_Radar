@@ -45,7 +45,7 @@ Inference
 The o1 models "think before they answer": they produce a long chain of thought before responding, and during training they learn to refine this thinking process, try different strategies and recognise their mistakes (OpenAI, 2024). In [[chatgpt|ChatGPT]], users see summaries of this chain of thought rather than the chain itself (OpenAI, 2024). Open models mark the thinking explicitly; DeepSeek-R1 writes it between `<think>` and `</think>` tags before the answer (DeepSeek-AI, 2025). Unlike [[chain-of-thought-prompting|chain-of-thought prompting]], which asks a model for intermediate steps, the behaviour is trained into the model.
 
 #### 2. Reinforcement learning with verifiable rewards
-DeepSeek-R1-Zero was trained from the base model DeepSeek-V3-Base with reinforcement learning alone, without a supervised fine-tuning stage first (DeepSeek-AI, 2025):
+DeepSeek-R1-Zero was trained from the base model DeepSeek-V3-Base with reinforcement learning alone, without a [[instruction-tuning|supervised fine-tuning]] stage first (DeepSeek-AI, 2025):
 
 - **Rewards:** rule-based, not learned. An accuracy reward checks the final answer, for example a boxed number for a maths problem or the result of test cases for code, and a format reward checks that the reasoning stands between the thinking tags. The authors avoided neural reward models for reasoning because they are susceptible to reward hacking during large-scale RL.
 - **Algorithm:** Group Relative Policy Optimization (GRPO) samples a group of answers to each question (16 in training) and scores each answer against the group: its advantage is its reward minus the group mean, divided by the group's standard deviation. GRPO was proposed to simplify PPO and reduce its resource consumption.

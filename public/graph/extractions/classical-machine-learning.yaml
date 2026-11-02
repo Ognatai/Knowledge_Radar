@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a90adf03d534a8c2426946af88011470b152bfeb551ecd48e95f7075aae71b09
+note_sha256: 8c341e92090c90bb492a11895ee7e19e69860b68b94bbe71ee64cea1d4648219
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - decision-trees
@@ -18,6 +18,7 @@ discusses:
 - python
 - xgboost
 - neural-networks
+- logistic-regression
 relations:
 - from: decision-trees
   type: IS_EXAMPLE_OF

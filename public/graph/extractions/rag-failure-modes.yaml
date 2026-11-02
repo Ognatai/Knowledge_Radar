@@ -1,5 +1,5 @@
 version: 1
-note_sha256: f3feec165c96a6f4c7444eddaea4a3c8e5c24d7bc67e9b7db76184c32c5b6028
+note_sha256: 9699943461dea502a6527aa50cc424ec636d25da65ea02a2a9a6f27022e0e367
 extracted_by: claude
 discusses:
 - retrieval-augmented-generation
@@ -18,6 +18,7 @@ discusses:
 - llm-as-a-judge
 - embeddings
 - alce
+- context-window
 relations:
 - from: rag-failure-modes
   type: BASED_ON

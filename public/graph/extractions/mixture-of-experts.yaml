@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a5692c2a4bf598dbd014ec5cdd5c6400833e350a4a2101b667912113e8bce5c8
+note_sha256: bdc39cd992404f1bc34006dff27df6f755e6ca9caefa269485fd34c8ca0d902c
 extracted_by: claude
 discusses:
 - attention-and-transformers
@@ -19,6 +19,7 @@ discusses:
 - switch-transformer
 - mixtral
 - deepseekmoe
+- softmax
 relations:
 - from: switch-transformer
   type: BASED_ON

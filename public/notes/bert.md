@@ -43,7 +43,7 @@ Text is split into WordPiece tokens with a 30,000-token vocabulary ([[tokenisati
 #### 2. Pre-training
 BERT is pre-trained on BooksCorpus (800M words) and English Wikipedia (2,500M words) with two tasks (Devlin et al., 2018):
 - **Masked language modelling (MLM):** 15% of the tokens are chosen for prediction; a chosen token is replaced by [MASK] 80% of the time, by a random token 10% of the time, and left unchanged 10% of the time. Mixing in random and unchanged tokens reduces the mismatch that [MASK] never appears during fine-tuning.
-- **Next sentence prediction (NSP):** for sentences A and B, B is the actual next sentence half of the time and a random sentence otherwise; the model predicts which from the [CLS] vector. Removing NSP hurt performance on question answering and inference tasks in the authors' ablation.
+- **Next sentence prediction (NSP):** for sentences A and B, B is the actual next sentence half of the time and a random sentence otherwise; the model predicts which from the [CLS] vector. Removing NSP hurt performance on [[question-answering|question answering]] and inference tasks in the authors' ablation.
 
 #### 3. Fine-tuning
 For a task, one output layer is added and all parameters are trained on labelled data: the [CLS] vector feeds classification (e.g. entailment, sentiment), the token vectors feed token-level tasks such as sequence tagging ([[entity-extraction|Entity Extraction]]) or the start and end of an answer span in question answering (Devlin et al., 2018).
@@ -53,7 +53,7 @@ BERT-Base has 12 layers, hidden size 768 and 12 attention heads (110M parameters
 
 #### Origin and variants
 BERT (Devlin et al., 2018) followed GPT-1 (Radford et al., 2018), which pre-trained a left-to-right Transformer decoder; BERT's masked objective allowed a deeply bidirectional model. Variants adapt it for other uses:
-- **Sentence-BERT** fine-tunes BERT in a siamese network so that each sentence gets its own embedding that can be compared with cosine similarity (Reimers & Gurevych, 2019); see [[embeddings|Embeddings]].
+- **Sentence-BERT** fine-tunes BERT in a siamese network so that each sentence gets its own embedding that can be compared with [[cosine-similarity|cosine similarity]] (Reimers & Gurevych, 2019); see [[embeddings|Embeddings]].
 - **BERT as re-ranker:** query and passage are fed in together, and the [CLS] vector scores relevance (Nogueira & Cho, 2019); see [[cross-encoder|Cross-encoder]].
 - **[[dense-passage-retrieval|Dense Passage Retrieval]]** uses two independent BERT encoders for questions and passages (Karpukhin et al., 2020); see [[semantic-retrieval|Semantic Retrieval]].
 - **[[distilbert|DistilBERT]]** and **TinyBERT** are smaller BERT models trained by [[knowledge-distillation|knowledge distillation]] (Sanh et al., 2019; Jiao et al., 2019).
@@ -132,7 +132,7 @@ BERT wird auf BooksCorpus (800 Mio. Wörter) und der englischen Wikipedia (2.500
 - **Next Sentence Prediction (NSP):** Bei den Sätzen A und B ist B in der Hälfte der Fälle der tatsächliche Folgesatz, sonst ein zufälliger Satz; das Modell sagt aus dem [CLS]-Vektor vorher, welcher Fall vorliegt. In der Ablationsstudie der Autoren verschlechterte das Weglassen von NSP die Leistung bei Frage-Antwort- und Inferenzaufgaben.
 
 #### 3. Fine-Tuning
-Für eine Aufgabe wird eine Ausgabeschicht ergänzt, und alle Parameter werden auf gelabelten Daten trainiert: Der [CLS]-Vektor speist die Klassifikation (z. B. Entailment, Sentiment), die Token-Vektoren speisen Aufgaben auf Token-Ebene wie Sequence Tagging ([[entity-extraction|Entitätsextraktion]]) oder Anfang und Ende einer Antwortspanne beim Question Answering (Devlin et al., 2018).
+Für eine Aufgabe wird eine Ausgabeschicht ergänzt, und alle Parameter werden auf gelabelten Daten trainiert: Der [CLS]-Vektor speist die Klassifikation (z. B. Entailment, Sentiment), die Token-Vektoren speisen Aufgaben auf Token-Ebene wie Sequence Tagging ([[entity-extraction|Entitätsextraktion]]) oder Anfang und Ende einer Antwortspanne beim [[question-answering|Question Answering]] (Devlin et al., 2018).
 
 #### 4. Modellgrößen
 BERT-Base hat 12 Schichten, Hidden Size 768 und 12 Attention-Heads (110 Mio. Parameter); es wurde so gewählt, dass es für den Vergleich gleich groß wie [[gpt|GPT]]-1 ist. BERT-Large hat 24 Schichten, Hidden Size 1.024 und 16 Heads (340 Mio. Parameter) (Devlin et al., 2018).

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6acfdb2be913d11bccb9a46d99ac1a6803e4451aeb6fb6018ec4dabfe0def0e8
+note_sha256: ad9306b07bad7e04d270066af855b4d5cdb94fccffc30c27c8c986340d11b18e
 extracted_by: claude (hand-labelled, 2026-10-13)
 discusses:
 - information-retrieval
@@ -14,6 +14,7 @@ discusses:
 - beir
 - bm25
 - cross-encoder
+- tf-idf
 relations:
 - from: rag-retrieval-evaluation
   type: BASED_ON

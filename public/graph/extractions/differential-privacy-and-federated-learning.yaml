@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d33735ef29da8a0db2e7e7479c8ccaaad45c206d4b9ee7272709ea33639f6b87
+note_sha256: 20e27ca6ea33b64c373b1aace223344a26470c45056da68f18cb56af1148b792
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - privacy-preserving-ml
@@ -7,6 +7,7 @@ discusses:
 - federated-averaging
 - gradient-leakage
 - neural-networks
+- gradient-descent
 relations:
 - from: differential-privacy-and-federated-learning
   type: IS_EXAMPLE_OF

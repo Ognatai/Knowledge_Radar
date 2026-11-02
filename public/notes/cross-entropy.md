@@ -63,7 +63,7 @@ Maximum likelihood with a Gaussian output recovers mean squared error, so cross-
 
 #### Origin and variants
 
-- **Label smoothing** replaces the one-hot target with `(1 − ε) δ_{k,y} + ε/K`; Szegedy et al. (2016) introduced it because a one-hot target pushes the correct logit far above all others, which can overfit and makes the model too confident, and with ε = 0.1 they found about 0.2 percentage points lower top-1 and top-5 error on ImageNet. Müller et al. (2019) showed that it also improves calibration, but makes knowledge distillation from such a teacher less effective ([[knowledge-distillation|knowledge distillation]]).
+- **Label smoothing** replaces the one-hot target with `(1 − ε) δ_{k,y} + ε/K`; Szegedy et al. (2016) introduced it because a one-hot target pushes the correct logit far above all others, which can overfit and makes the model too confident, and with ε = 0.1 they found about 0.2 percentage points lower top-1 and top-5 error on [[imagenet|ImageNet]]. Müller et al. (2019) showed that it also improves calibration, but makes knowledge distillation from such a teacher less effective ([[knowledge-distillation|knowledge distillation]]).
 - **Focal loss** multiplies cross-entropy by `(1 − p_t)^γ` to down-weight easy examples under extreme class imbalance; with γ = 2, an example classified with probability 0.9 gets 100 times less loss than with plain cross-entropy (Lin et al., 2017).
 
 ### When to use it
@@ -100,7 +100,7 @@ Sources: Jurafsky & Martin (2026), Goodfellow et al. (2016), Szegedy et al. (201
 
 ### In practice
 
-Training curves report the mean cross-entropy per token or example; for language models it is often converted to perplexity, and comparisons across tokenisers need care (Jurafsky & Martin, 2026). Label smoothing has been used in image classification, translation and speech recognition models; because it erases information about similarities between classes in the logits, it should be switched off for a model that will serve as a distillation teacher (Müller et al., 2019).
+Training curves report the mean cross-entropy per token or example; for language models it is often converted to perplexity, and comparisons across tokenisers need care (Jurafsky & Martin, 2026). Label smoothing has been used in [[computer-vision|image classification]], translation and [[automatic-speech-recognition|speech recognition]] models; because it erases information about similarities between classes in the logits, it should be switched off for a model that will serve as a distillation teacher (Müller et al., 2019).
 
 ### Key takeaway
 
@@ -159,7 +159,7 @@ Maximum Likelihood mit einer Gauß-Ausgabe ergibt den mittleren quadratischen Fe
 
 #### Ursprung und Varianten
 
-- **Label Smoothing** ersetzt das One-hot-Ziel durch `(1 − ε) δ_{k,y} + ε/K`; Szegedy et al. (2016) führten es ein, weil ein One-hot-Ziel den richtigen Logit weit über alle anderen treibt, was zu Overfitting führen kann und das Modell zu selbstsicher macht, und fanden mit ε = 0,1 etwa 0,2 Prozentpunkte niedrigere Top-1- und Top-5-Fehler auf ImageNet. Müller et al. (2019) zeigten, dass es auch die Kalibrierung verbessert, aber die Knowledge Distillation von einem so trainierten Lehrermodell weniger wirksam macht ([[knowledge-distillation|Knowledge Distillation]]).
+- **Label Smoothing** ersetzt das One-hot-Ziel durch `(1 − ε) δ_{k,y} + ε/K`; Szegedy et al. (2016) führten es ein, weil ein One-hot-Ziel den richtigen Logit weit über alle anderen treibt, was zu [[overfitting|Overfitting]] führen kann und das Modell zu selbstsicher macht, und fanden mit ε = 0,1 etwa 0,2 Prozentpunkte niedrigere Top-1- und Top-5-Fehler auf [[imagenet|ImageNet]]. Müller et al. (2019) zeigten, dass es auch die Kalibrierung verbessert, aber die Knowledge Distillation von einem so trainierten Lehrermodell weniger wirksam macht ([[knowledge-distillation|Knowledge Distillation]]).
 - **Focal Loss** multipliziert die Cross-Entropy mit `(1 − p_t)^γ`, um bei extremem Klassenungleichgewicht einfache Beispiele herunterzugewichten; mit γ = 2 erhält ein Beispiel, das mit Wahrscheinlichkeit 0,9 richtig klassifiziert ist, 100-mal weniger Verlust als mit einfacher Cross-Entropy (Lin et al., 2017).
 
 ### Wann einsetzen

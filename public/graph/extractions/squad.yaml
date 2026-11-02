@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 92af6f6369df3e14190af2f1f5e0ff06439e0e98c32c10b08f99e9e06a129074
+note_sha256: 02440a639461350b73691dff66b0a37ef5ab6fe260ab225f935791a5a239ac97
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - information-extraction
@@ -15,4 +15,6 @@ discusses:
 - glue
 - rag-generation-evaluation
 - classification
+- logistic-regression
+- question-answering
 relations: []

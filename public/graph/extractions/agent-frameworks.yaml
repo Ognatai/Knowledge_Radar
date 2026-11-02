@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e2826b18e916a69f26fb8f3aac4dc36c423564ad8ba7a926060654eaf79c467b
+note_sha256: 242d5cb5019b5e8bd7c16e208843680e866f1f5624beb22f99a5e37bd8acd218
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - agentic-ai
@@ -20,6 +20,7 @@ discusses:
 - autogen
 - microsoft
 - tool-calling
+- question-answering
 relations:
 - from: autogen
   type: IS_EXAMPLE_OF

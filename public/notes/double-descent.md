@@ -44,7 +44,7 @@ When capacity is just large enough to fit the n training points exactly, there i
 
 #### 3. The second descent
 
-Beyond the threshold, many functions fit the training data perfectly, and the learning procedure picks a particular one. With a minimum-norm choice, the fit becomes smoother as capacity grows; the splines with 42 and 80 degrees of freedom are much less wild than the one with 20 (James et al., 2023). Belkin et al. (2019) explain the second descent as an inductive bias towards smooth, small-norm solutions, a form of Occam's razor, which gradient descent and averaging in random forests also provide.
+Beyond the threshold, many functions fit the training data perfectly, and the learning procedure picks a particular one. With a minimum-norm choice, the fit becomes smoother as capacity grows; the splines with 42 and 80 degrees of freedom are much less wild than the one with 20 (James et al., 2023). Belkin et al. (2019) explain the second descent as an inductive bias towards smooth, small-norm solutions, a form of Occam's razor, which [[gradient-descent|gradient descent]] and averaging in random forests also provide.
 
 #### 4. Deep double descent
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b51124faa7340b71aad50ba4d684a49359701954327ed5eaef11d93bfb86dd2e
+note_sha256: 86d1e4d22235ab629ead6d70b79432c93d6834fe69345537b6a1817954feda69
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bleu
@@ -11,6 +11,8 @@ discusses:
 - clustering
 - llm-as-a-judge
 - rag-generation-evaluation
+- cosine-similarity
+- text-summarisation
 relations:
 - from: bleu
   type: IS_EXAMPLE_OF

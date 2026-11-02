@@ -76,7 +76,7 @@ Zadrozny and Elkan used isotonic regression to calibrate SVMs, [[naive-bayes|nai
 |---|---|---|---|
 | Platt scaling | sigmoid | 2 | works with small calibration sets |
 | Isotonic regression | monotonic step function | non-parametric | about 1,000 cases or more |
-| Temperature scaling | softmax with one temperature | 1 | small validation set; keeps the predicted class |
+| Temperature scaling | [[softmax\|softmax]] with one temperature | 1 | small validation set; keeps the predicted class |
 
 Sources: Niculescu-Mizil & Caruana (2005); scikit-learn developers (2026b); Guo et al. (2017).
 
@@ -157,7 +157,7 @@ Zadrozny und Elkan nutzten die isotone Regression, um SVMs, [[naive-bayes|Naive 
 |---|---|---|---|
 | Platt Scaling | Sigmoid | 2 | funktioniert mit kleinen Kalibrierungsmengen |
 | Isotone Regression | monotone Stufenfunktion | nichtparametrisch | etwa 1 000 Fälle oder mehr |
-| Temperature Scaling | Softmax mit einer Temperatur | 1 | kleine Validierungsmenge; vorhergesagte Klasse bleibt gleich |
+| Temperature Scaling | [[softmax\|Softmax]] mit einer Temperatur | 1 | kleine Validierungsmenge; vorhergesagte Klasse bleibt gleich |
 
 Quellen: Niculescu-Mizil & Caruana (2005); scikit-learn developers (2026b); Guo et al. (2017).
 

@@ -55,11 +55,11 @@ QA systems differ in where the knowledge comes from (given document, retrieved c
 
 #### 2. Retriever
 
-Open-domain QA traditionally retrieved passages with sparse vector space models such as [[tf-idf|TF-IDF]] or [[bm25|BM25]] (Karpukhin et al., 2020). DrQA's document retriever used bigram hashing and TF-IDF matching over Wikipedia (Chen et al., 2017). Dense Passage Retrieval learns question and passage embeddings with a dual encoder from a small number of question–passage pairs and outperformed a Lucene BM25 system by 9 to 19 percentage points in top-20 passage retrieval accuracy; on Natural Questions it reached 65.2% top-5 accuracy against 42.9% for BM25 (Karpukhin et al., 2020; [[dense-passage-retrieval|dense passage retrieval]]).
+Open-domain QA traditionally retrieved passages with sparse vector space models such as [[tf-idf|TF-IDF]] or [[bm25|BM25]] (Karpukhin et al., 2020). DrQA's document retriever used bigram hashing and TF-IDF matching over Wikipedia (Chen et al., 2017). Dense Passage Retrieval learns question and passage [[embeddings|embeddings]] with a dual encoder from a small number of question–passage pairs and outperformed a Lucene BM25 system by 9 to 19 percentage points in top-20 passage retrieval accuracy; on Natural Questions it reached 65.2% top-5 accuracy against 42.9% for BM25 (Karpukhin et al., 2020; [[dense-passage-retrieval|dense passage retrieval]]).
 
 #### 3. Reader or generator
 
-The extractive reader predicts the start and end of the answer span in a retrieved paragraph; DrQA used a multi-layer recurrent network ([[lstm|LSTM]]) trained to detect answers in Wikipedia paragraphs (Chen et al., 2017). The generator in RAG is a pre-trained sequence-to-sequence model conditioned on retrieved passages, either using the same passage for the whole answer (RAG-Sequence) or a different passage per token (RAG-Token) (Lewis et al., 2020). With today's large language models, the basic algorithm is to retrieve the top-k passages, put them into a prompt with the question ("Based on these texts, answer this question: …") and let the LLM generate the answer, optionally with knowledge citations such as numbered references to sources (Jurafsky & Martin, 2026).
+The extractive reader predicts the start and end of the answer span in a retrieved paragraph; DrQA used a multi-layer recurrent network ([[lstm|LSTM]]) trained to detect answers in Wikipedia paragraphs (Chen et al., 2017). The generator in RAG is a pre-trained [[attention-and-transformers|sequence-to-sequence model]] conditioned on retrieved passages, either using the same passage for the whole answer (RAG-Sequence) or a different passage per token (RAG-Token) (Lewis et al., 2020). With today's [[large-language-models|large language models]], the basic algorithm is to retrieve the top-k passages, put them into a prompt with the question ("Based on these texts, answer this question: …") and let the LLM generate the answer, optionally with knowledge citations such as numbered references to sources (Jurafsky & Martin, 2026).
 
 #### 4. Unanswerable questions
 
@@ -67,11 +67,11 @@ Extractive systems tend to make unreliable guesses when the context does not con
 
 #### 5. Evaluation
 
-For multiple-choice questions such as MMLU, systems are scored by exact match, the percentage of predictions identical to the gold answer; for free-text answers such as Natural Questions, token-level F1 treats prediction and gold answer as bags of tokens and averages F1 over questions (Jurafsky & Martin, 2026; [[classification-metrics|classification metrics]]). Before comparison, answers are usually lower-cased and stripped of articles, punctuation and extra whitespace (Roberts et al., 2020). On the first SQuAD, a logistic regression model reached 51.0% F1 and humans 86.8% (Rajpurkar et al., 2016).
+For multiple-choice questions such as MMLU, systems are scored by exact match, the percentage of predictions identical to the gold answer; for free-text answers such as Natural Questions, token-level F1 treats prediction and gold answer as bags of tokens and averages F1 over questions (Jurafsky & Martin, 2026; [[classification-metrics|classification metrics]]). Before comparison, answers are usually lower-cased and stripped of articles, punctuation and extra whitespace (Roberts et al., 2020). On the first SQuAD, a [[logistic-regression|logistic regression]] model reached 51.0% F1 and humans 86.8% (Rajpurkar et al., 2016).
 
 #### Origin and variants
 
-Early systems in the 1960s and 1970s matched parsed questions against parsed text or translated them into logical forms over databases, such as LUNAR for lunar geology; the TREC evaluations added an influential QA track in 1999 (Jurafsky & Martin, 2026). Neural reading comprehension followed on SQuAD, then dense retrieval with span readers, and then large language models that answer from their parameters or with retrieval (Jurafsky & Martin, 2026). Agent-based RAG lets the system decide when and from which collection to retrieve (Jurafsky & Martin, 2026; [[agentic-ai|agentic AI]]).
+Early systems in the 1960s and 1970s matched parsed questions against parsed text or translated them into logical forms over databases, such as LUNAR for lunar geology; the TREC evaluations added an influential QA track in 1999 (Jurafsky & Martin, 2026). Neural reading comprehension followed on SQuAD, then [[semantic-retrieval|dense retrieval]] with span readers, and then large language models that answer from their parameters or with retrieval (Jurafsky & Martin, 2026). Agent-based RAG lets the system decide when and from which collection to retrieve (Jurafsky & Martin, 2026; [[agentic-ai|agentic AI]]).
 
 ### When to use it
 
@@ -174,7 +174,7 @@ Multiple-Choice-Fragen wie in MMLU werden mit Exact Match bewertet, dem Anteil d
 
 #### Ursprung und Varianten
 
-Frühe Systeme der 1960er- und 1970er-Jahre glichen geparste Fragen mit geparstem Text ab oder übersetzten sie in logische Formen über Datenbanken, etwa LUNAR für die Mondgeologie; die TREC-Evaluationen ergänzten 1999 einen einflussreichen QA-Track (Jurafsky & Martin, 2026). Es folgten neuronale Reading Comprehension auf SQuAD, dann Dense Retrieval mit Span-Readern und dann große Sprachmodelle, die aus ihren Parametern oder mit Retrieval antworten (Jurafsky & Martin, 2026). Agentenbasiertes RAG lässt das System entscheiden, wann und aus welcher Sammlung abgerufen wird (Jurafsky & Martin, 2026; [[agentic-ai|Agentic AI]]).
+Frühe Systeme der 1960er- und 1970er-Jahre glichen geparste Fragen mit geparstem Text ab oder übersetzten sie in logische Formen über Datenbanken, etwa LUNAR für die Mondgeologie; die TREC-Evaluationen ergänzten 1999 einen einflussreichen QA-Track (Jurafsky & Martin, 2026). Es folgten neuronale Reading Comprehension auf SQuAD, dann [[semantic-retrieval|Dense Retrieval]] mit Span-Readern und dann große Sprachmodelle, die aus ihren Parametern oder mit Retrieval antworten (Jurafsky & Martin, 2026). Agentenbasiertes RAG lässt das System entscheiden, wann und aus welcher Sammlung abgerufen wird (Jurafsky & Martin, 2026; [[agentic-ai|Agentic AI]]).
 
 ### Wann einsetzen
 
@@ -210,7 +210,7 @@ Quellen: Jurafsky & Martin (2026), Roberts et al. (2020), Yang et al. (2018).
 
 ### In der Praxis
 
-Datensätze unterscheiden sich darin, ob ihre Fragen echte Informationsbedürfnisse sind, etwa anonymisierte Suchanfragen in Natural Questions und Bing-Anfragen in MS MARCO, oder Prüffragen, die Systeme testen sollen, etwa Prüfungsfragen in MMLU; derselbe Datensatz lässt sich Open Book oder Closed Book nutzen (Jurafsky & Martin, 2026). Für RAG kann ein LLM per Instruction Tuning auf Fragen mit abgerufenen Passagen und richtigen Antworten trainiert werden, und der Retriever lässt sich Ende-zu-Ende mit dem Generator trainieren (Jurafsky & Martin, 2026). Wird nur die Endantwort bewertet, bleibt verborgen, ob Retrieval oder Generierung versagt hat; deshalb werden beide getrennt gemessen ([[rag-retrieval-evaluation|Retrieval-Evaluation]], [[rag-generation-evaluation|Generierungs-Evaluation]]).
+Datensätze unterscheiden sich darin, ob ihre Fragen echte Informationsbedürfnisse sind, etwa anonymisierte Suchanfragen in Natural Questions und Bing-Anfragen in MS MARCO, oder Prüffragen, die Systeme testen sollen, etwa Prüfungsfragen in MMLU; derselbe Datensatz lässt sich Open Book oder Closed Book nutzen (Jurafsky & Martin, 2026). Für RAG kann ein LLM per [[instruction-tuning|Instruction Tuning]] auf Fragen mit abgerufenen Passagen und richtigen Antworten trainiert werden, und der Retriever lässt sich Ende-zu-Ende mit dem Generator trainieren (Jurafsky & Martin, 2026). Wird nur die Endantwort bewertet, bleibt verborgen, ob Retrieval oder Generierung versagt hat; deshalb werden beide getrennt gemessen ([[rag-retrieval-evaluation|Retrieval-Evaluation]], [[rag-generation-evaluation|Generierungs-Evaluation]]).
 
 ### Merksatz
 

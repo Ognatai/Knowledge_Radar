@@ -83,7 +83,7 @@ Kishore Papineni, Salim Roukos, Todd Ward and Wei-Jing Zhu at IBM presented BLEU
 | Metric | Matches | Level | Main use |
 |---|---|---|---|
 | BLEU | exact n-grams, precision + brevity penalty | corpus | machine translation |
-| ROUGE | n-gram / subsequence recall | summary | summarisation ([[text-similarity-metrics\|text similarity metrics]]) |
+| ROUGE | n-gram / subsequence recall | summary | [[text-summarisation\|summarisation]] ([[text-similarity-metrics\|text similarity metrics]]) |
 | [[bertscore\|BERTScore]] | contextual [[embeddings\|embeddings]] of tokens | sentence | general text generation |
 | [[llm-as-a-judge\|LLM as a judge]] | model judgement | answer | open-ended LLM output |
 

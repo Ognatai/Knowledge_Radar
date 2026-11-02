@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b8cc96787387874b9d4157a9545cc448b5f86fac6de6dcc62ddf185752349105
+note_sha256: 76d65c64ad2e5554129911fe568d9c190b8c861a41cbacbcdd1e3c03937caa58
 extracted_by: claude
 discusses:
 - hnsw
@@ -16,6 +16,8 @@ discusses:
 - embeddings
 - retrieval-augmented-generation
 - large-language-models
+- context-window
+- cosine-similarity
 relations:
 - from: vector-databases
   type: BASED_ON

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 51fee100dd44ac54e33804b33b4d7cf52e737deb477809538c547a651d19801c
+note_sha256: d89d242654428c5aa89128747749e7a434b92e809021bfe398dc9b044aa223b0
 extracted_by: claude
 discusses:
 - retrieval-augmented-generation
@@ -9,6 +9,8 @@ discusses:
 - vector-databases
 - faiss
 - chain-of-thought-prompting
+- cross-entropy
+- question-answering
 relations:
 - from: rag-vs-fine-tuning
   type: BASED_ON

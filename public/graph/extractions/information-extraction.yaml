@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4a39e87b3f6b55beb67a66411a07cb03f5994350010717c84b97f36a10b84dab
+note_sha256: 708f866e20a0431d44fcb9e4d8c915b4ad37c1086a1e04ff6d0e43398a15fa2f
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - entity-extraction
@@ -17,6 +17,7 @@ discusses:
 - contract-intelligence
 - prompt-engineering
 - bias-in-nlp
+- lstm
 relations:
 - from: information-extraction
   type: BASED_ON

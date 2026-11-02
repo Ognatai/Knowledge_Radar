@@ -80,7 +80,7 @@ Sources: Zaharia et al. (2012); Armbrust et al. (2015); Apache Spark. The exampl
 ### When to use it
 
 - Datasets too large for one machine, for [[data-pipelines|ETL]], aggregation or feature engineering, typically on a [[data-lakehouse|data lakehouse]] (Apache Spark).
-- Iterative ML and graph algorithms that reuse data, such as k-means, logistic regression or [[pagerank|PageRank]] (Zaharia et al., 2012).
+- Iterative ML and graph algorithms that reuse data, such as k-means, [[logistic-regression|logistic regression]] or [[pagerank|PageRank]] (Zaharia et al., 2012).
 - Interactive exploration of large data, which Zaharia et al. (2012) demonstrated by scanning 1 TB with 5–7 s latency.
 
 ### Strengths and limitations
@@ -183,7 +183,7 @@ Quellen: Zaharia et al. (2012); Armbrust et al. (2015); Apache Spark. Das Beispi
 ### Wann einsetzen
 
 - Datenmengen, die für einen Rechner zu groß sind, für [[data-pipelines|ETL]], Aggregation oder Feature Engineering, typischerweise auf einem [[data-lakehouse|Data Lakehouse]] (Apache Spark).
-- Iterative ML- und Graphalgorithmen, die Daten wiederverwenden, etwa k-Means, logistische Regression oder [[pagerank|PageRank]] (Zaharia et al., 2012).
+- Iterative ML- und Graphalgorithmen, die Daten wiederverwenden, etwa k-Means, [[logistic-regression|logistische Regression]] oder [[pagerank|PageRank]] (Zaharia et al., 2012).
 - Interaktive Erkundung großer Daten; Zaharia et al. (2012) zeigten das Durchsuchen von 1 TB mit 5–7 s Latenz.
 
 ### Stärken und Grenzen

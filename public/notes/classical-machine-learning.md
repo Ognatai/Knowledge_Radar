@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Classical machine learning comprises statistical learning methods such as linear and logistic regression, decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis (Hastie et al., 2009). It distinguishes supervised learning, where a model predicts a known response, from unsupervised learning, where it finds structure in unlabelled data (James et al., 2021). On medium-sized tabular data, tree-based ensembles still outperform deep learning (Grinsztajn et al., 2022).
+Classical machine learning comprises statistical learning methods such as linear and [[logistic-regression|logistic regression]], decision trees and their ensembles, support vector machines, nearest neighbours, clustering and principal component analysis (Hastie et al., 2009). It distinguishes supervised learning, where a model predicts a known response, from unsupervised learning, where it finds structure in unlabelled data (James et al., 2021). On medium-sized tabular data, tree-based ensembles still outperform deep learning (Grinsztajn et al., 2022).
 
 ### How it works
 
@@ -107,7 +107,7 @@ Classical machine learning provides well-understood supervised and unsupervised 
 
 ### TL;DR
 
-Klassisches maschinelles Lernen umfasst statistische Lernverfahren wie lineare und logistische Regression, Entscheidungsbäume und ihre Ensembles, Support Vector Machines, Nächste-Nachbarn-Verfahren, Clustering und Hauptkomponentenanalyse (Hastie et al., 2009). Es unterscheidet überwachtes Lernen, bei dem ein Modell eine bekannte Zielgröße vorhersagt, von unüberwachtem Lernen, bei dem es Strukturen in nicht gelabelten Daten findet (James et al., 2021). Auf mittelgroßen tabellarischen Daten übertreffen baumbasierte Ensembles Deep Learning weiterhin (Grinsztajn et al., 2022).
+Klassisches maschinelles Lernen umfasst statistische Lernverfahren wie lineare und [[logistic-regression|logistische Regression]], Entscheidungsbäume und ihre Ensembles, Support Vector Machines, Nächste-Nachbarn-Verfahren, Clustering und Hauptkomponentenanalyse (Hastie et al., 2009). Es unterscheidet überwachtes Lernen, bei dem ein Modell eine bekannte Zielgröße vorhersagt, von unüberwachtem Lernen, bei dem es Strukturen in nicht gelabelten Daten findet (James et al., 2021). Auf mittelgroßen tabellarischen Daten übertreffen baumbasierte Ensembles Deep Learning weiterhin (Grinsztajn et al., 2022).
 
 ### Funktionsweise
 

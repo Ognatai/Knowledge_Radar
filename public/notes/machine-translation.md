@@ -36,7 +36,7 @@ About 7,000 languages differ systematically, which linguistic typology studies. 
 
 #### 2. Encoder-decoder Transformer
 
-The model maximises P(y_1, …, y_m | x_1, …, x_n). The encoder maps the source tokens to representations H_enc; the decoder is a conditional language model whose blocks add a cross-attention layer, in which queries come from the decoder and keys and values from the encoder output. Training uses cross-entropy loss with teacher forcing. Source and target share a subword vocabulary, which makes copying names easy and handles languages without spaces; the unigram (SentencePiece) algorithm tends to produce more meaningful tokens than BPE (Jurafsky & Martin, 2026).
+The model maximises P(y_1, …, y_m | x_1, …, x_n). The encoder maps the source tokens to representations H_enc; the decoder is a conditional language model whose blocks add a cross-attention layer, in which queries come from the decoder and keys and values from the encoder output. Training uses [[cross-entropy|cross-entropy loss]] with teacher forcing. Source and target share a subword vocabulary, which makes copying names easy and handles languages without spaces; the unigram (SentencePiece) algorithm tends to produce more meaningful tokens than BPE (Jurafsky & Martin, 2026).
 
 #### 3. Training data
 
@@ -128,7 +128,7 @@ Etwa 7.000 Sprachen unterscheiden sich systematisch, was die Sprachtypologie unt
 
 #### 2. Encoder-Decoder-Transformer
 
-Das Modell maximiert P(y_1, …, y_m | x_1, …, x_n). Der Encoder bildet die Quell-Token auf Repräsentationen H_enc ab; der Decoder ist ein bedingtes Sprachmodell, dessen Blöcke eine Cross-Attention-Schicht ergänzen, in der die Queries vom Decoder und Keys und Values aus der Encoder-Ausgabe stammen. Trainiert wird mit Kreuzentropie und Teacher Forcing. Quelle und Ziel teilen sich ein Subword-Vokabular, was das Kopieren von Namen erleichtert und Sprachen ohne Leerzeichen abdeckt; der Unigram-Algorithmus (SentencePiece) erzeugt meist bedeutungsvollere Token als BPE (Jurafsky & Martin, 2026).
+Das Modell maximiert P(y_1, …, y_m | x_1, …, x_n). Der Encoder bildet die Quell-Token auf Repräsentationen H_enc ab; der Decoder ist ein bedingtes Sprachmodell, dessen Blöcke eine Cross-Attention-Schicht ergänzen, in der die Queries vom Decoder und Keys und Values aus der Encoder-Ausgabe stammen. Trainiert wird mit [[cross-entropy|Kreuzentropie]] und Teacher Forcing. Quelle und Ziel teilen sich ein Subword-Vokabular, was das Kopieren von Namen erleichtert und Sprachen ohne Leerzeichen abdeckt; der Unigram-Algorithmus (SentencePiece) erzeugt meist bedeutungsvollere Token als BPE (Jurafsky & Martin, 2026).
 
 #### 3. Trainingsdaten
 

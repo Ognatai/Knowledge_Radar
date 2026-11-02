@@ -41,7 +41,7 @@ Applications are built in two steps: defining conversable agents with roles and 
 
 #### Conversation patterns
 
-The paper demonstrates two-agent chats, hierarchical and dynamic group chats in which a manager selects the next speaker, and human-in-the-loop modes, with applications from maths problem solving and retrieval-augmented question answering to multi-agent coding and conversational chess (Wu et al., 2023). In the OptiGuide coding application, a Commander, Writer and Safeguard agent check and execute code; AutoGen reduced its core workflow code from over 430 to 100 lines (Wu et al., 2023).
+The paper demonstrates two-agent chats, hierarchical and dynamic group chats in which a manager selects the next speaker, and human-in-the-loop modes, with applications from maths problem solving and retrieval-augmented [[question-answering|question answering]] to multi-agent coding and conversational chess (Wu et al., 2023). In the OptiGuide coding application, a Commander, Writer and Safeguard agent check and execute code; AutoGen reduced its core workflow code from over 430 to 100 lines (Wu et al., 2023).
 
 #### Origin and variants
 

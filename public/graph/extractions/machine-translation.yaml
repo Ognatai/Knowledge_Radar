@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 051f7345dd13213382c95747f8a1f0ffe7d861a8d5ac8b0a0aff454d4c705e17
+note_sha256: 1bde234db4a8e5e31477abd43f42d25039de40a902c83a01d1c32e791ab70560
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - attention-and-transformers
@@ -10,6 +10,7 @@ discusses:
 - chatgpt
 - bias-in-nlp
 - text-similarity-metrics
+- cross-entropy
 relations:
 - from: machine-translation
   type: BASED_ON

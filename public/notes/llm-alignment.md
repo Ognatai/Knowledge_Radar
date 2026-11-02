@@ -25,7 +25,7 @@ sources:
 
 ### TL;DR
 
-A pretrained language model predicts the next word of web text, an objective that is misaligned with what people need: models that follow instructions, help, and do no harm (Jurafsky & Martin, 2026). Alignment is done in post-training: instruction tuning (supervised fine-tuning, SFT) on instructions with responses, then preference alignment, either RLHF with a reward model and reinforcement learning (Ouyang et al., 2022) or Direct Preference Optimization (DPO) directly on preference pairs (Rafailov et al., 2023); AI feedback can replace human labels (Bai et al., 2022), and reinforcement learning with verifiable rewards trains reasoning (DeepSeek-AI, 2025). The methods have known open problems (Casper et al., 2023).
+A pretrained language model predicts the next word of web text, an objective that is misaligned with what people need: models that follow instructions, help, and do no harm (Jurafsky & Martin, 2026). Alignment is done in post-training: [[instruction-tuning|instruction tuning]] (supervised fine-tuning, SFT) on instructions with responses, then preference alignment, either RLHF with a reward model and reinforcement learning (Ouyang et al., 2022) or Direct Preference Optimization (DPO) directly on preference pairs (Rafailov et al., 2023); AI feedback can replace human labels (Bai et al., 2022), and reinforcement learning with verifiable rewards trains reasoning (DeepSeek-AI, 2025). The methods have known open problems (Casper et al., 2023).
 
 ### How it works
 
@@ -51,7 +51,7 @@ Preference judgments do not require knowing how to do something, only an opinion
 
 #### 4. Reward model
 
-The Bradley-Terry model turns preferences into probabilities: P(o_i ≻ o_j | x) = σ(r(x, o_i) − r(x, o_j)). A reward model r(x, o), today usually initialised from a pretrained LLM (Ziegler et al., 2019) whose language-modelling head is replaced by a linear layer, is trained with a binary cross-entropy loss on preference pairs. Reward models are also used for best-of-N sampling and for selecting instruction data (Jurafsky & Martin, 2026).
+The Bradley-Terry model turns preferences into probabilities: P(o_i ≻ o_j | x) = σ(r(x, o_i) − r(x, o_j)). A reward model r(x, o), today usually initialised from a pretrained LLM (Ziegler et al., 2019) whose language-modelling head is replaced by a linear layer, is trained with a binary [[cross-entropy|cross-entropy loss]] on preference pairs. Reward models are also used for best-of-N sampling and for selecting instruction data (Jurafsky & Martin, 2026).
 
 #### 5. RLHF with a KL penalty
 
@@ -59,7 +59,7 @@ In reinforcement learning terms, tokens are actions, the context is the state, t
 
 #### 6. Direct Preference Optimization
 
-DPO rewrites the closed-form solution of the KL-constrained objective so that the reward is expressed through the policy and the reference model; in the Bradley-Terry difference the intractable partition function cancels. The loss `−log σ(β·log π_θ(o_w|x)/π_ref(o_w|x) − β·log π_θ(o_l|x)/π_ref(o_l|x))` raises the likelihood of preferred and lowers that of dispreferred outputs, with β typically between 0.01 and 0.1. DPO needs no explicit reward model, no online sampling and only 2 models in memory instead of 4 for PPO (Jurafsky & Martin, 2026). Rafailov et al. (2023) describe RLHF as complex and often unstable; in their experiments DPO exceeded PPO-based RLHF in sentiment control and matched or improved summarisation and single-turn dialogue.
+DPO rewrites the closed-form solution of the KL-constrained objective so that the reward is expressed through the policy and the reference model; in the Bradley-Terry difference the intractable partition function cancels. The loss `−log σ(β·log π_θ(o_w|x)/π_ref(o_w|x) − β·log π_θ(o_l|x)/π_ref(o_l|x))` raises the likelihood of preferred and lowers that of dispreferred outputs, with β typically between 0.01 and 0.1. DPO needs no explicit reward model, no online sampling and only 2 models in memory instead of 4 for PPO (Jurafsky & Martin, 2026). Rafailov et al. (2023) describe RLHF as complex and often unstable; in their experiments DPO exceeded PPO-based RLHF in sentiment control and matched or improved [[text-summarisation|summarisation]] and single-turn dialogue.
 
 #### 7. AI feedback and verifiable rewards
 
@@ -124,7 +124,7 @@ LLM alignment post-trains a pretrained model with instructions and then with pre
 
 ### TL;DR
 
-Ein vortrainiertes Sprachmodell sagt das nächste Wort von Webtext voraus, ein Ziel, das nicht mit dem übereinstimmt, was Menschen brauchen: Modelle, die Anweisungen folgen, helfen und keinen Schaden anrichten (Jurafsky & Martin, 2026). Alignment geschieht im Post-Training: Instruction Tuning (Supervised Fine-Tuning, SFT) auf Anweisungen mit Antworten, dann Präferenz-Alignment, entweder RLHF mit einem Reward Model und Reinforcement Learning (Ouyang et al., 2022) oder Direct Preference Optimization (DPO) direkt auf Präferenzpaaren (Rafailov et al., 2023); KI-Feedback kann menschliche Labels ersetzen (Bai et al., 2022), und Reinforcement Learning mit überprüfbaren Belohnungen trainiert Reasoning (DeepSeek-AI, 2025). Die Verfahren haben bekannte offene Probleme (Casper et al., 2023).
+Ein vortrainiertes Sprachmodell sagt das nächste Wort von Webtext voraus, ein Ziel, das nicht mit dem übereinstimmt, was Menschen brauchen: Modelle, die Anweisungen folgen, helfen und keinen Schaden anrichten (Jurafsky & Martin, 2026). Alignment geschieht im Post-Training: [[instruction-tuning|Instruction Tuning]] (Supervised Fine-Tuning, SFT) auf Anweisungen mit Antworten, dann Präferenz-Alignment, entweder RLHF mit einem Reward Model und Reinforcement Learning (Ouyang et al., 2022) oder Direct Preference Optimization (DPO) direkt auf Präferenzpaaren (Rafailov et al., 2023); KI-Feedback kann menschliche Labels ersetzen (Bai et al., 2022), und Reinforcement Learning mit überprüfbaren Belohnungen trainiert Reasoning (DeepSeek-AI, 2025). Die Verfahren haben bekannte offene Probleme (Casper et al., 2023).
 
 ### Funktionsweise
 
@@ -150,7 +150,7 @@ Präferenzurteile verlangen nicht zu wissen, wie man etwas tut, nur eine Meinung
 
 #### 4. Reward Model
 
-Das Bradley-Terry-Modell macht aus Präferenzen Wahrscheinlichkeiten: P(o_i ≻ o_j | x) = σ(r(x, o_i) − r(x, o_j)). Ein Reward Model r(x, o), heute meist aus einem vortrainierten LLM initialisiert (Ziegler et al., 2019), dessen Sprachmodell-Kopf durch eine lineare Schicht ersetzt ist, wird mit einer binären Kreuzentropie auf Präferenzpaaren trainiert. Reward Models dienen auch zum Best-of-N-Sampling und zur Auswahl von Instruktionsdaten (Jurafsky & Martin, 2026).
+Das Bradley-Terry-Modell macht aus Präferenzen Wahrscheinlichkeiten: P(o_i ≻ o_j | x) = σ(r(x, o_i) − r(x, o_j)). Ein Reward Model r(x, o), heute meist aus einem vortrainierten LLM initialisiert (Ziegler et al., 2019), dessen Sprachmodell-Kopf durch eine lineare Schicht ersetzt ist, wird mit einer binären [[cross-entropy|Kreuzentropie]] auf Präferenzpaaren trainiert. Reward Models dienen auch zum Best-of-N-Sampling und zur Auswahl von Instruktionsdaten (Jurafsky & Martin, 2026).
 
 #### 5. RLHF mit KL-Strafterm
 

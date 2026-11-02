@@ -63,7 +63,7 @@ Dependency grammar is much older than constituency grammar and goes back to Pā�
 
 ### When to use it
 
-- Information extraction, semantic parsing and question answering, which benefit directly from head-dependent relations (Jurafsky & Martin, 2026).
+- Information extraction, semantic parsing and [[question-answering|question answering]], which benefit directly from head-dependent relations (Jurafsky & Martin, 2026).
 - Languages with free word order such as Czech, where one relation type can cover an adverbial in any position (Jurafsky & Martin, 2026).
 - Multilingual work, using the UD treebanks (Jurafsky & Martin, 2026).
 
@@ -152,7 +152,7 @@ Die Dependenzgrammatik ist viel älter als die Konstituentengrammatik und geht a
 
 ### Wann einsetzen
 
-- Informationsextraktion, semantisches Parsing und Question Answering, die direkt von Kopf-Dependent-Relationen profitieren (Jurafsky & Martin, 2026).
+- Informationsextraktion, semantisches Parsing und [[question-answering|Question Answering]], die direkt von Kopf-Dependent-Relationen profitieren (Jurafsky & Martin, 2026).
 - Sprachen mit freier Wortstellung wie Tschechisch, in denen ein Relationstyp ein Adverbial an jeder Position abdecken kann (Jurafsky & Martin, 2026).
 - Mehrsprachige Arbeit mit den UD-Treebanks (Jurafsky & Martin, 2026).
 

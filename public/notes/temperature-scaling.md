@@ -16,7 +16,7 @@ sources:
 
 ### TL;DR
 
-Temperature scaling calibrates a trained classification network by dividing its logits by a single scalar T > 0 before the softmax; T is fitted by minimising the negative log-likelihood on a validation set, and because it does not change which class has the highest score, accuracy stays the same (Guo et al., 2017). Guo et al. (2017) found that modern deep networks are overconfident and that this one-parameter variant of [[platt-scaling|Platt scaling]] was the most effective post-hoc calibration method on the vision datasets they tested, beating [[isotonic-regression|isotonic regression]], histogram binning and more general matrix and vector scaling. The same temperature-softened softmax is used in [[knowledge-distillation|knowledge distillation]] to produce soft targets (Hinton et al., 2015).
+Temperature scaling calibrates a trained classification network by dividing its logits by a single scalar T > 0 before the [[softmax|softmax]]; T is fitted by minimising the [[cross-entropy|negative log-likelihood]] on a validation set, and because it does not change which class has the highest score, accuracy stays the same (Guo et al., 2017). Guo et al. (2017) found that modern deep networks are overconfident and that this one-parameter variant of [[platt-scaling|Platt scaling]] was the most effective post-hoc calibration method on the vision datasets they tested, beating [[isotonic-regression|isotonic regression]], histogram binning and more general matrix and vector scaling. The same temperature-softened softmax is used in [[knowledge-distillation|knowledge distillation]] to produce soft targets (Hinton et al., 2015).
 
 ### How it works
 
@@ -98,7 +98,7 @@ Dividing the logits by one fitted temperature makes overconfident deep networks 
 
 ### TL;DR
 
-Temperature Scaling kalibriert ein trainiertes Klassifikationsnetz, indem seine Logits vor der Softmax durch einen einzigen Skalar T > 0 geteilt werden; T wird durch Minimieren der negativen Log-Likelihood auf einer Validierungsmenge angepasst, und weil sich nicht ändert, welche Klasse den höchsten Wert hat, bleibt die Accuracy gleich (Guo et al., 2017). Guo et al. (2017) stellten fest, dass moderne tiefe Netze zu selbstsicher sind und dass diese Variante von [[platt-scaling|Platt Scaling]] mit einem Parameter auf den getesteten Bilddatensätzen das wirksamste nachträgliche Kalibrierungsverfahren war, besser als [[isotonic-regression|isotone Regression]], Histogram Binning und die allgemeineren Verfahren Matrix und Vector Scaling. Dieselbe durch eine Temperatur abgeschwächte Softmax wird bei der [[knowledge-distillation|Knowledge Distillation]] genutzt, um weiche Zielwerte zu erzeugen (Hinton et al., 2015).
+Temperature Scaling kalibriert ein trainiertes Klassifikationsnetz, indem seine Logits vor der [[softmax|Softmax]] durch einen einzigen Skalar T > 0 geteilt werden; T wird durch Minimieren der negativen Log-Likelihood auf einer Validierungsmenge angepasst, und weil sich nicht ändert, welche Klasse den höchsten Wert hat, bleibt die Accuracy gleich (Guo et al., 2017). Guo et al. (2017) stellten fest, dass moderne tiefe Netze zu selbstsicher sind und dass diese Variante von [[platt-scaling|Platt Scaling]] mit einem Parameter auf den getesteten Bilddatensätzen das wirksamste nachträgliche Kalibrierungsverfahren war, besser als [[isotonic-regression|isotone Regression]], Histogram Binning und die allgemeineren Verfahren Matrix und Vector Scaling. Dieselbe durch eine Temperatur abgeschwächte Softmax wird bei der [[knowledge-distillation|Knowledge Distillation]] genutzt, um weiche Zielwerte zu erzeugen (Hinton et al., 2015).
 
 ### Funktionsweise
 
@@ -113,7 +113,7 @@ argmax unverändert → gleiche Vorhersagen, kalibrierte Konfidenzen
 
 #### 1. Warum moderne Netze es brauchen
 
-Ein Netz ist kalibriert, wenn seine Konfidenz der Wahrscheinlichkeit entspricht, richtig zu liegen; Guo et al. (2017) zeigten, dass ein LeNet mit 5 Schichten auf CIFAR-100 gut kalibriert war, während ein [[resnet|ResNet]] mit 110 Schichten genauer, aber deutlich zu selbstsicher war. Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen die Kalibrierung, und Netze können sich an die negative Log-Likelihood überanpassen, ohne sich an den 0/1-Verlust überanzupassen: Auf CIFAR-100 sank der Testfehler weiter von 29 % auf 27 %, während die NLL bereits überangepasst war (Guo et al., 2017).
+Ein Netz ist kalibriert, wenn seine Konfidenz der Wahrscheinlichkeit entspricht, richtig zu liegen; Guo et al. (2017) zeigten, dass ein LeNet mit 5 Schichten auf CIFAR-100 gut kalibriert war, während ein [[resnet|ResNet]] mit 110 Schichten genauer, aber deutlich zu selbstsicher war. Tiefe, Breite, Weight Decay und Batch Normalization beeinflussen die Kalibrierung, und Netze können sich an die [[cross-entropy|negative Log-Likelihood]] überanpassen, ohne sich an den 0/1-Verlust überanzupassen: Auf CIFAR-100 sank der Testfehler weiter von 29 % auf 27 %, während die NLL bereits überangepasst war (Guo et al., 2017).
 
 #### 2. Die Temperatur
 
