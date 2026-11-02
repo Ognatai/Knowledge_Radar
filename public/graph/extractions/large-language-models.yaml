@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 761c1173a025646538ddef36242c3fa6b5384943558932a164070dfbbdce2b5c
+note_sha256: 4e34a61f0f225fd098667045aa0839dec9fbcc82166a3b4d1698534cfb41710a
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - attention-and-transformers
@@ -11,7 +11,7 @@ discusses:
 - chinchilla
 - scaling-laws
 - emergent-abilities
-- nucleus-sampling
+- decoding-strategies
 - claude-3
 - gemini
 - mistral-models

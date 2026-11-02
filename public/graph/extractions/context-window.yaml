@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b1ff08f58f8d8896c8f2bc9cd4e283a00f76c955a85c744141ed4eb79d393595
+note_sha256: 9e5f70c116e3983c9bcf9a0c41954b3d0ea3b42418834d8039c7bfa6f0819745
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - retrieval-augmented-generation
@@ -13,6 +13,7 @@ discusses:
 - llm-evaluation
 - llm-cost-optimisation
 - flashattention
+- llm-inference-serving
 relations:
 - from: context-window
   type: BASED_ON

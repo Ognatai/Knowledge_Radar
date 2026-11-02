@@ -10,6 +10,7 @@ areas:
       - attention-and-transformers
       - large-language-models
       - context-window
+      - decoding-strategies
       - mixture-of-experts
       - reasoning-models
       - gpt
@@ -71,6 +72,7 @@ areas:
       - qlora
       - speculative-decoding
       - flashattention
+      - llm-inference-serving
     also:
       - mixture-of-experts
   - id: agents
@@ -162,6 +164,7 @@ areas:
       - fairness-metrics
       - bias-in-nlp
       - explainable-ai
+      - mechanistic-interpretability
       - differential-privacy-and-federated-learning
       - llm-guardrails
       - red-teaming
@@ -227,6 +230,7 @@ areas:
       - computer-vision
       - recurrent-neural-networks
       - lstm
+      - graph-neural-networks
       - autoencoders-and-gans
       - diffusion-models
       - reinforcement-learning
@@ -234,6 +238,7 @@ areas:
       - back-propagation
       - softmax
       - cross-entropy
+      - contrastive-learning
       - resnet
       - vision-transformer
       - imagenet

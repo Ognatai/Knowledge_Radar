@@ -1,5 +1,5 @@
 version: 1
-note_sha256: b0d5fc020c72e7e86ac2ca40679de36874d9598cc4021d72b8baa26cc03d333e
+note_sha256: 473e48516cf4554603d64dab25375946026c0ca4e4d7aefec883eb0e9fa7679c
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - constituency-parsing
@@ -7,4 +7,5 @@ discusses:
 - part-of-speech-tagging
 - spacy
 - question-answering
+- decoding-strategies
 relations: []

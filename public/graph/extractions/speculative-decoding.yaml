@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 608484d312d0130f6d741fbc993b5a11d7239109c2bfcd69070bc2754ca18761
+note_sha256: 6a745a17a1aa88e8bdf7edfd18af3c9b94e05b8d2aec9804e4e10f303e3a023d
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - medusa
@@ -14,6 +14,7 @@ discusses:
 - distilbert
 - t5
 - chinchilla
+- decoding-strategies
 relations:
 - from: medusa
   type: IS_EXAMPLE_OF

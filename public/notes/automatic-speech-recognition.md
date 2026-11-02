@@ -39,7 +39,7 @@ Speech frames are much shorter than letters or words, so convolutional layers wi
 
 #### 3. Encoder-decoder (attention-based)
 
-An attention-based encoder-decoder, also called Listen Attend and Spell, encodes the frames and generates the transcript token by token while attending to the encoder output, usually with beam search (Jurafsky & Martin, 2026). Whisper uses this architecture; it was trained on 680,000 hours of multilingual and multitask audio from the internet, generalises to standard benchmarks without fine-tuning, approaches human accuracy and robustness, and was released with its inference code (Radford et al., 2023). It also performs speech translation, language identification and [[voice-activity-detection|voice activity detection]] (Jurafsky & Martin, 2026).
+An attention-based encoder-decoder, also called Listen Attend and Spell, encodes the frames and generates the transcript token by token while attending to the encoder output, usually with [[decoding-strategies|beam search]] (Jurafsky & Martin, 2026). Whisper uses this architecture; it was trained on 680,000 hours of multilingual and multitask audio from the internet, generalises to standard benchmarks without fine-tuning, approaches human accuracy and robustness, and was released with its inference code (Radford et al., 2023). It also performs speech translation, language identification and [[voice-activity-detection|voice activity detection]] (Jurafsky & Martin, 2026).
 
 #### 4. Self-supervised encoders and CTC
 
@@ -118,7 +118,7 @@ Sprachframes sind viel kürzer als Buchstaben oder Wörter, daher verkürzen Fal
 
 #### 3. Encoder-Decoder (Attention-basiert)
 
-Ein Attention-basierter Encoder-Decoder, auch Listen Attend and Spell genannt, kodiert die Frames und erzeugt das Transkript Token für Token, wobei er auf die Encoder-Ausgabe achtet, meist mit Beam Search (Jurafsky & Martin, 2026). Whisper nutzt diese Architektur; es wurde mit 680.000 Stunden mehrsprachigem Multitask-Audio aus dem Internet trainiert, generalisiert ohne Fine-Tuning auf Standard-Benchmarks, nähert sich menschlicher Genauigkeit und Robustheit und wurde mitsamt Inferenzcode veröffentlicht (Radford et al., 2023). Es beherrscht außerdem Sprachübersetzung, Spracherkennung der Sprache und [[voice-activity-detection|Voice Activity Detection]] (Jurafsky & Martin, 2026).
+Ein Attention-basierter Encoder-Decoder, auch Listen Attend and Spell genannt, kodiert die Frames und erzeugt das Transkript Token für Token, wobei er auf die Encoder-Ausgabe achtet, meist mit [[decoding-strategies|Beam Search]] (Jurafsky & Martin, 2026). Whisper nutzt diese Architektur; es wurde mit 680.000 Stunden mehrsprachigem Multitask-Audio aus dem Internet trainiert, generalisiert ohne Fine-Tuning auf Standard-Benchmarks, nähert sich menschlicher Genauigkeit und Robustheit und wurde mitsamt Inferenzcode veröffentlicht (Radford et al., 2023). Es beherrscht außerdem Sprachübersetzung, Spracherkennung der Sprache und [[voice-activity-detection|Voice Activity Detection]] (Jurafsky & Martin, 2026).
 
 #### 4. Selbstüberwachte Encoder und CTC
 

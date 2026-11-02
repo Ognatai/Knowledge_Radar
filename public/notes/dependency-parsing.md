@@ -47,7 +47,7 @@ Treebanks contain trees, not transitions, so training data is created by simulat
 
 #### 4. Variants: arc-eager and beam search
 
-The arc-eager system attaches words to their heads as early as possible and adds a REDUCE operator; other transition systems assign POS tags, produce non-projective trees or parse code-mixed text. Beam search keeps several configurations, scored by the sum of their transition scores, instead of one greedy choice (Jurafsky & Martin, 2026).
+The arc-eager system attaches words to their heads as early as possible and adds a REDUCE operator; other transition systems assign POS tags, produce non-projective trees or parse code-mixed text. [[decoding-strategies|Beam search]] keeps several configurations, scored by the sum of their transition scores, instead of one greedy choice (Jurafsky & Martin, 2026).
 
 #### 5. Graph-based parsing
 
@@ -136,7 +136,7 @@ Treebanks enthalten Bäume, keine Transitionen, deshalb entstehen Trainingsdaten
 
 #### 4. Varianten: Arc-Eager und Beam Search
 
-Das Arc-Eager-System hängt Wörter so früh wie möglich an ihre Köpfe und ergänzt einen REDUCE-Operator; andere Transitionssysteme vergeben Part-of-Speech-Tags, erzeugen nicht-projektive Bäume oder parsen Text mit Sprachmischung. Beam Search behält mehrere Konfigurationen, bewertet über die Summe ihrer Transitions-Scores, statt einer einzigen gierigen Wahl (Jurafsky & Martin, 2026).
+Das Arc-Eager-System hängt Wörter so früh wie möglich an ihre Köpfe und ergänzt einen REDUCE-Operator; andere Transitionssysteme vergeben Part-of-Speech-Tags, erzeugen nicht-projektive Bäume oder parsen Text mit Sprachmischung. [[decoding-strategies|Beam Search]] behält mehrere Konfigurationen, bewertet über die Summe ihrer Transitions-Scores, statt einer einzigen gierigen Wahl (Jurafsky & Martin, 2026).
 
 #### 5. Graphbasiertes Parsing
 

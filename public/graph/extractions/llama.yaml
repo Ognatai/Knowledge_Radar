@@ -1,5 +1,5 @@
 version: 1
-note_sha256: bd76025f1971a3ff3d3c49a4f51289c9bbddd2e87088237099f2911b1b12c488
+note_sha256: 04827cf911f19428dc30a722d94292ea19588ddd8eb902d78c32c88e1bf6b433
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - attention-and-transformers
@@ -22,6 +22,7 @@ discusses:
 - tool-calling
 - context-window
 - instruction-tuning
+- llm-inference-serving
 relations:
 - from: llama
   type: DEVELOPED_BY

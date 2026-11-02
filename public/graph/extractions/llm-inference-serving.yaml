@@ -1,0 +1,31 @@
+version: 1
+note_sha256: 55f9c0c2d2a10c2e2c2e7b33c5af8536f73c783c85d55361e7b4241820a1203a
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- attention-and-transformers
+- context-window
+- decoding-strategies
+- agentic-ai
+- retrieval-augmented-generation
+- speculative-decoding
+- quantisation
+- flashattention
+- mixture-of-experts
+- cloud-ai-platforms
+- mlops-and-deployment
+- context-engineering
+- llm-observability-and-tracing
+- llm-cost-optimisation
+relations:
+- from: speculative-decoding
+  type: COMPLEMENTS
+  to: llm-inference-serving
+  evidence: speculative decoding lets a small model propose several tokens that the large model verifies in one pass
+- from: flashattention
+  type: COMPLEMENTS
+  to: llm-inference-serving
+  evidence: FlashAttention speeds up the attention kernel itself
+- from: llm-inference-serving
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: Recomputing keys and values of all earlier tokens at every step would waste computation, so they are stored in a KV cache

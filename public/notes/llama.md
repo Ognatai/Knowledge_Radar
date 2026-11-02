@@ -45,7 +45,7 @@ The first LLaMA used only publicly available data: mostly English CommonCrawl an
 
 #### 3. Architecture
 
-LLaMA is a decoder-only Transformer ([[attention-and-transformers|attention and Transformers]]) with three changes from the original design: pre-normalisation of each sub-layer's input with RMSNorm for stable training, the SwiGLU activation instead of ReLU, and rotary position [[embeddings|embeddings]] (RoPE) instead of absolute positions (Touvron et al., 2023a). Llama 2 adds grouped-query attention to the 34B and 70B models to make inference more scalable (Touvron et al., 2023b). For Llama 3, the team deliberately kept a standard dense Transformer rather than a mixture-of-experts model to keep training stable, with the largest model at 405 billion parameters (Llama Team, 2024).
+LLaMA is a decoder-only Transformer ([[attention-and-transformers|attention and Transformers]]) with three changes from the original design: pre-normalisation of each sub-layer's input with RMSNorm for stable training, the SwiGLU activation instead of ReLU, and rotary position [[embeddings|embeddings]] (RoPE) instead of absolute positions (Touvron et al., 2023a). Llama 2 adds [[llm-inference-serving|grouped-query attention]] to the 34B and 70B models to make inference more scalable (Touvron et al., 2023b). For Llama 3, the team deliberately kept a standard dense Transformer rather than a mixture-of-experts model to keep training stable, with the largest model at 405 billion parameters (Llama Team, 2024).
 
 #### 4. Post-training and safety
 
@@ -136,7 +136,7 @@ Das erste LLaMA nutzte nur öffentlich verfügbare Daten: überwiegend englische
 
 #### 3. Architektur
 
-LLaMA ist ein Decoder-only-Transformer ([[attention-and-transformers|Attention und Transformer]]) mit drei Änderungen gegenüber dem ursprünglichen Entwurf: Pre-Normalisierung der Eingabe jeder Teilschicht mit RMSNorm für stabiles Training, SwiGLU-Aktivierung statt ReLU und Rotary Position [[embeddings|Embeddings]] (RoPE) statt absoluter Positionen (Touvron et al., 2023a). Llama 2 ergänzt Grouped-Query Attention in den Modellen mit 34 und 70 Milliarden Parametern, um die Inferenz besser skalierbar zu machen (Touvron et al., 2023b). Für Llama 3 blieb das Team bewusst bei einem gewöhnlichen dichten Transformer statt eines Mixture-of-Experts-Modells, um das Training stabil zu halten, mit dem größten Modell bei 405 Milliarden Parametern (Llama Team, 2024).
+LLaMA ist ein Decoder-only-Transformer ([[attention-and-transformers|Attention und Transformer]]) mit drei Änderungen gegenüber dem ursprünglichen Entwurf: Pre-Normalisierung der Eingabe jeder Teilschicht mit RMSNorm für stabiles Training, SwiGLU-Aktivierung statt ReLU und Rotary Position [[embeddings|Embeddings]] (RoPE) statt absoluter Positionen (Touvron et al., 2023a). Llama 2 ergänzt [[llm-inference-serving|Grouped-Query Attention]] in den Modellen mit 34 und 70 Milliarden Parametern, um die Inferenz besser skalierbar zu machen (Touvron et al., 2023b). Für Llama 3 blieb das Team bewusst bei einem gewöhnlichen dichten Transformer statt eines Mixture-of-Experts-Modells, um das Training stabil zu halten, mit dem größten Modell bei 405 Milliarden Parametern (Llama Team, 2024).
 
 #### 4. Post-Training und Sicherheit
 

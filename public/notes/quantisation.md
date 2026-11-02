@@ -91,7 +91,7 @@ Integer-only inference with quantisation-aware training (Jacob et al., 2017) and
 |----------|----------------|------------|
 | Post-training quantisation | No retraining, no labels (Nagel et al., 2021) | 8-bit deployment |
 | Quantisation-aware training | Simulates quantisation during training (Nagel et al., 2021; Jacob et al., 2017) | Lower bit widths |
-| LLM.int8() | 8-bit with 16-bit handling of outlier features (Dettmers et al., 2022) | Large LLM inference without accuracy loss |
+| LLM.int8() | 8-bit with 16-bit handling of outlier features (Dettmers et al., 2022) | Large [[llm-inference-serving\|LLM inference]] without accuracy loss |
 | GPTQ / AWQ | 3- to 4-bit weight-only quantisation using second-order or activation information (Frantar et al., 2022; Lin et al., 2023) | Running large LLMs on few GPUs |
 | QLoRA | Fine-tuning adapters on a frozen 4-bit model (Dettmers et al., 2023) | Fine-tuning on limited hardware |
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 947343fa9f980d093dcb4f174860aa26c4c2e82ad0cc3ff142571a0ee998aea4
+note_sha256: b4fd83eb91efd98a123bcd58f78ccb4f8910ee01dbae32087c9c59151fc37ba8
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - cross-entropy
@@ -20,6 +20,7 @@ discusses:
 - isotonic-regression
 - classification-metrics
 - ridge-and-lasso
+- mechanistic-interpretability
 relations:
 - from: logistic-regression
   type: IS_EXAMPLE_OF

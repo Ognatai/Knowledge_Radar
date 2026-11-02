@@ -2606,16 +2606,6 @@ entities:
   summary_de: Eine Fähigkeit großer Sprachmodelle gilt als emergent, wenn sie in kleineren Modellen fehlt, in größeren aber vorhanden ist, sodass sie sich nicht durch Extrapolation der Leistung kleinerer Modelle vorhersagen lässt (Wei et al., 2022). Ihr Auftreten legt nahe, dass weitere Skalierung das Spektrum der Fähigkeiten erweitern könnte.
   sources:
   - https://arxiv.org/abs/2206.07682
-- id: nucleus-sampling
-  type: Method
-  name_en: Nucleus (top-p) sampling
-  name_de: Nucleus-Sampling (Top-p)
-  aliases:
-  - top-p sampling
-  summary_en: Nucleus (top-p) sampling generates text by sampling from the dynamic nucleus of the probability distribution, which keeps diversity while cutting off the unreliable tail (Holtzman et al., 2019). It was proposed because likelihood-maximising decoding produces bland and repetitive text, and it yields more human-like text without losing fluency and coherence.
-  summary_de: Nucleus Sampling (Top-p) erzeugt Text, indem aus dem dynamischen Kern der Wahrscheinlichkeitsverteilung gezogen wird; das erhält Vielfalt und schneidet den unzuverlässigen Rand der Verteilung ab (Holtzman et al., 2019). Es wurde vorgeschlagen, weil auf maximale Wahrscheinlichkeit ausgerichtetes Dekodieren eintönigen, sich wiederholenden Text liefert, und ergibt menschenähnlicheren Text ohne Verlust an Flüssigkeit und Kohärenz.
-  sources:
-  - https://arxiv.org/abs/1904.09751
 - id: claude-3
   type: Method
   name_en: Claude 3
@@ -3014,14 +3004,6 @@ entities:
   summary_de: LLaVA (Large Language and Vision Assistant) ist ein großes multimodales Modell, das einen Bild-Encoder mit einem LLM verbindet und durchgängig per visuellem Instruction Tuning auf Bild-Sprach-Anweisungsdaten trainiert wird, die mit dem rein sprachlichen GPT-4 erzeugt wurden (Liu et al., 2023). Es zeigte multimodale Chat-Fähigkeiten und erreichte, auf Science QA feinjustiert und mit GPT-4 kombiniert, 92,53 % Accuracy.
   sources:
   - https://arxiv.org/abs/2304.08485
-- id: contrastive-learning
-  type: Method
-  name_en: Contrastive learning
-  name_de: Kontrastives Lernen
-  summary_en: Contrastive learning trains representations so that matching pairs end up similar and non-matching pairs dissimilar. CLIP trains an image encoder and a text encoder to maximise the cosine similarity of the real image–text pairs in a batch and minimise it for all incorrect pairings, learning on 400 million image–text pairs from the internet; natural language can then refer to visual concepts, which enables zero-shot transfer to new tasks (Radford et al. 2021).
-  summary_de: Kontrastives Lernen trainiert Repräsentationen so, dass zusammengehörige Paare ähnlich und nicht zusammengehörige unähnlich werden. CLIP trainiert einen Bild- und einen Text-Encoder darauf, die Kosinusähnlichkeit der echten Bild-Text-Paare eines Batches zu maximieren und die aller falschen Paarungen zu minimieren, mit 400 Millionen Bild-Text-Paaren aus dem Internet; dadurch lässt sich anschließend mit natürlicher Sprache auf visuelle Konzepte verweisen, was Zero-Shot-Transfer auf neue Aufgaben ermöglicht (Radford et al. 2021).
-  sources:
-  - https://arxiv.org/abs/2103.00020
 - id: mean-absolute-error
   type: Method
   name_en: Mean absolute error (MAE)

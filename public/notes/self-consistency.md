@@ -19,7 +19,7 @@ sources:
 
 ### TL;DR
 
-Self-consistency is a decoding strategy for [[chain-of-thought-prompting|chain-of-thought prompting]]: instead of taking the single greedy reasoning path, it samples many diverse reasoning paths and chooses the final answer that most of them reach, a majority vote over answers (Wang et al., 2022). It rests on the intuition that a complex reasoning problem admits several ways of thinking that lead to the same correct answer (Wang et al., 2022). With 40 sampled paths it improved chain-of-thought prompting by large margins, for example by 17.9 percentage points on GSM8K, 11.0 on SVAMP, 12.2 on AQuA, 6.4 on StrategyQA and 3.9 on ARC-challenge, across four language models from 20 to 540 billion parameters (Wang et al., 2022). The share of paths that agree also works as an uncertainty estimate; the price is many model calls per question (Wang et al., 2022).
+Self-consistency is a [[decoding-strategies|decoding]] strategy for [[chain-of-thought-prompting|chain-of-thought prompting]]: instead of taking the single greedy reasoning path, it samples many diverse reasoning paths and chooses the final answer that most of them reach, a majority vote over answers (Wang et al., 2022). It rests on the intuition that a complex reasoning problem admits several ways of thinking that lead to the same correct answer (Wang et al., 2022). With 40 sampled paths it improved chain-of-thought prompting by large margins, for example by 17.9 percentage points on GSM8K, 11.0 on SVAMP, 12.2 on AQuA, 6.4 on StrategyQA and 3.9 on ARC-challenge, across four language models from 20 to 540 billion parameters (Wang et al., 2022). The share of paths that agree also works as an uncertainty estimate; the price is many model calls per question (Wang et al., 2022).
 
 ### How it works
 
@@ -131,7 +131,7 @@ Das Modell wird genau wie beim Chain-of-Thought-Prompting angesprochen, mit eini
 
 #### 2. Vielfältige Lösungswege ziehen
 
-Statt Greedy Decoding, das dem einen wahrscheinlichsten Weg folgt, zieht der Decoder mehrere Ausgaben, jede bestehend aus einem Lösungsweg `r_i` und einer Endantwort `a_i` (Wang et al., 2022). Die Autorinnen und Autoren beschreiben das als „Sample-and-Marginalize“-Verfahren, das die Wiederholungen und lokalen Optima des Greedy Decoding vermeidet und zugleich den Zufall einer einzelnen gezogenen Ausgabe verringert (Wang et al., 2022). In den Hauptexperimenten wurden je Frage 40 Ausgaben gezogen und die Ergebnisse über 10 Läufe gemittelt (Wang et al., 2022). Die Temperatur steuert, wie unterschiedlich die Wege ausfallen ([[large-language-models|große Sprachmodelle]]).
+Statt [[decoding-strategies|Greedy Decoding]], das dem einen wahrscheinlichsten Weg folgt, zieht der Decoder mehrere Ausgaben, jede bestehend aus einem Lösungsweg `r_i` und einer Endantwort `a_i` (Wang et al., 2022). Die Autorinnen und Autoren beschreiben das als „Sample-and-Marginalize“-Verfahren, das die Wiederholungen und lokalen Optima des Greedy Decoding vermeidet und zugleich den Zufall einer einzelnen gezogenen Ausgabe verringert (Wang et al., 2022). In den Hauptexperimenten wurden je Frage 40 Ausgaben gezogen und die Ergebnisse über 10 Läufe gemittelt (Wang et al., 2022). Die Temperatur steuert, wie unterschiedlich die Wege ausfallen ([[large-language-models|große Sprachmodelle]]).
 
 #### 3. Antworten zusammenführen
 

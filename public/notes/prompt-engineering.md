@@ -48,7 +48,7 @@ Chain-of-thought prompting uses demonstrations that contain a series of intermed
 
 #### 4. Self-consistency
 
-Self-consistency replaces greedy decoding in chain-of-thought prompting: it samples a diverse set of reasoning paths and selects the most consistent answer, that is, the answer most paths arrive at (Wang et al., 2022). The idea is that a complex problem usually allows several ways of reasoning that lead to the same correct answer. Self-consistency improved chain-of-thought results on GSM8K by 17.9%, on SVAMP by 11.0% and on AQuA by 12.2%, at the cost of generating several outputs per question (Wang et al., 2022).
+Self-consistency replaces [[decoding-strategies|greedy decoding]] in chain-of-thought prompting: it samples a diverse set of reasoning paths and selects the most consistent answer, that is, the answer most paths arrive at (Wang et al., 2022). The idea is that a complex problem usually allows several ways of reasoning that lead to the same correct answer. Self-consistency improved chain-of-thought results on GSM8K by 17.9%, on SVAMP by 11.0% and on AQuA by 12.2%, at the cost of generating several outputs per question (Wang et al., 2022).
 
 #### 5. Taxonomy of prompting techniques
 

@@ -81,3 +81,11 @@ exclusions:
     monitoring-and-alerting: monitoring a validation set during training, not production monitoring.
   glove:
     context-window: the local co-occurrence window of word vectors, not a language model's context window.
+  mmlu:
+    mechanistic-interpretability: probing data sets test knowledge; not probing classifiers.
+  natural-questions:
+    mechanistic-interpretability: probing data sets test knowledge; not probing classifiers.
+  hidden-markov-models:
+    decoding-strategies: HMM decoding is the Viterbi search for the best state sequence, not LLM text generation.
+  part-of-speech-tagging:
+    decoding-strategies: HMM decoding with Viterbi, not LLM text generation.

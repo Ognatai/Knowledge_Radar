@@ -1,0 +1,18 @@
+version: 1
+note_sha256: b3c89a1ae966bd33282da7bb3318f4294ce2cd6700c87067fad12ac49e5f0bd3
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- knowledge-graphs
+- attention-and-transformers
+- distmult
+- knowledge-graph-embeddings
+- embeddings
+relations:
+- from: graph-neural-networks
+  type: COMPLEMENTS
+  to: knowledge-graph-embeddings
+  evidence: as an encoder for DistMult link prediction they improved results by 29.8% on FB15k-237 over a decoder-only baseline
+- from: graph-neural-networks
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: Graph attention networks weight neighbours by learned attention coefficients

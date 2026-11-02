@@ -69,7 +69,7 @@ Goodfellow et al. (2016) relate the softmax's competition between units to later
 ### When to use it
 
 - As the output layer of a classifier over K mutually exclusive classes ([[neural-networks|neural networks]], [[classification|classification]]).
-- To produce next-token probabilities in language models and decoding (Jurafsky & Martin, 2026).
+- To produce next-token probabilities in language models and [[decoding-strategies|decoding]] (Jurafsky & Martin, 2026).
 - To normalise attention scores into weights (Vaswani et al., 2017).
 
 ### Strengths and limitations
@@ -165,7 +165,7 @@ Goodfellow et al. (2016) vergleichen den Wettbewerb zwischen den Einheiten der S
 ### Wann einsetzen
 
 - Als Ausgabeschicht eines Klassifikators über K sich gegenseitig ausschließende Klassen ([[neural-networks|neuronale Netze]], [[classification|Klassifikation]]).
-- Um in Sprachmodellen und beim Decoding Wahrscheinlichkeiten für das nächste Token zu erzeugen (Jurafsky & Martin, 2026).
+- Um in Sprachmodellen und beim [[decoding-strategies|Decoding]] Wahrscheinlichkeiten für das nächste Token zu erzeugen (Jurafsky & Martin, 2026).
 - Um Attention-Scores zu Gewichten zu normalisieren (Vaswani et al., 2017).
 
 ### Stärken und Grenzen

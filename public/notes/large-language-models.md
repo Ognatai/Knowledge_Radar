@@ -25,7 +25,7 @@ Large language models (LLMs) are Transformer-based [[neural-networks|neural netw
 
 ### How it works
 
-Text is split into subword tokens, a Transformer computes a contextual representation of the token sequence, and the model outputs a probability distribution over the next token. Generation repeats this step token by token, guided by a decoding strategy. The model is first pretrained on large corpora and then aligned through [[instruction-tuning|instruction tuning]] and reinforcement learning from human feedback; scaling laws describe how performance depends on model size, data and compute.
+Text is split into subword tokens, a Transformer computes a contextual representation of the token sequence, and the model outputs a probability distribution over the next token. Generation repeats this step token by token, guided by a [[decoding-strategies|decoding]] strategy. The model is first pretrained on large corpora and then aligned through [[instruction-tuning|instruction tuning]] and reinforcement learning from human feedback; scaling laws describe how performance depends on model size, data and compute.
 
 ```text
 1. Subword tokenization

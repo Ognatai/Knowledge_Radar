@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 36a6cb27a72b94c8cacace9e0431e95ec1d76ee9180cab2afa6bc32c948253a2
+note_sha256: 8145ee83c4a2fcf49a5e415f61f2893c999736568aa61e019dbf991d6872bca7
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - chain-of-thought-prompting
@@ -13,6 +13,7 @@ discusses:
 - llm-evaluation
 - monitoring-and-alerting
 - tool-calling
+- decoding-strategies
 relations:
 - from: self-consistency
   type: BASED_ON

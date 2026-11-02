@@ -68,7 +68,7 @@ Logistic regression is a generalised linear model with a Bernoulli or binomial d
 - Baseline for text classification such as sentiment, spam or language identification (Jurafsky & Martin, 2026).
 - Binary decisions where calibrated probabilities matter, such as credit default (James et al., 2023; [[creditworthiness-assessment|creditworthiness assessment]]).
 - Testing whether a feature is associated with an outcome while controlling for confounds (Jurafsky & Martin, 2026).
-- Probing classifiers on top of frozen representations, as in Sentence-BERT's SentEval evaluation ([[sentence-bert|Sentence-BERT]]).
+- [[mechanistic-interpretability|Probing classifiers]] on top of frozen representations, as in Sentence-BERT's SentEval evaluation ([[sentence-bert|Sentence-BERT]]).
 
 ### Strengths and limitations
 

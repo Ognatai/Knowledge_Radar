@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 63349e4d36d8e9da4f2e2e27fbdbef8bf0c13682f441389edc93e0e65b2148d4
+note_sha256: 03720b1c8b7c560f9cb7fad702de0654b2e07245543d7faba9e104fd3e1831e6
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - whisper
@@ -11,6 +11,7 @@ discusses:
 - natural-language-understanding
 - dialogue-state-tracking
 - context-window
+- decoding-strategies
 relations:
 - from: whisper
   type: IS_EXAMPLE_OF

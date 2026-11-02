@@ -94,7 +94,7 @@ Sources as given in the table.
 
 ### In practice
 
-Because each generation of the kernels targets specific GPUs, the main decisions are hardware and precision: matching the kernel generation to the GPU and choosing between 16-bit formats and FP8 (Dao, 2024; Shah et al., 2024; [[mixed-precision-training|mixed-precision training]]). Because memory no longer grows quadratically, the [[context-window|context window]] is limited mainly by compute time and the KV cache at inference.
+Because each generation of the kernels targets specific GPUs, the main decisions are hardware and precision: matching the kernel generation to the GPU and choosing between 16-bit formats and FP8 (Dao, 2024; Shah et al., 2024; [[mixed-precision-training|mixed-precision training]]). Because memory no longer grows quadratically, the [[context-window|context window]] is limited mainly by compute time and the [[llm-inference-serving|KV cache]] at inference.
 
 ### Key takeaway
 
@@ -186,7 +186,7 @@ Quellen wie in der Tabelle angegeben.
 
 ### In der Praxis
 
-Weil jede Generation der Kernel auf bestimmte GPUs zielt, betreffen die wichtigsten Entscheidungen Hardware und Genauigkeit: die Kernel-Generation passend zur GPU wählen und zwischen 16-Bit-Formaten und FP8 entscheiden (Dao, 2024; Shah et al., 2024; [[mixed-precision-training|Mixed-Precision-Training]]). Weil der Speicher nicht mehr quadratisch wächst, wird das [[context-window|Kontextfenster]] vor allem durch Rechenzeit und bei der Inferenz durch den KV-Cache begrenzt.
+Weil jede Generation der Kernel auf bestimmte GPUs zielt, betreffen die wichtigsten Entscheidungen Hardware und Genauigkeit: die Kernel-Generation passend zur GPU wählen und zwischen 16-Bit-Formaten und FP8 entscheiden (Dao, 2024; Shah et al., 2024; [[mixed-precision-training|Mixed-Precision-Training]]). Weil der Speicher nicht mehr quadratisch wächst, wird das [[context-window|Kontextfenster]] vor allem durch Rechenzeit und bei der Inferenz durch den [[llm-inference-serving|KV-Cache]] begrenzt.
 
 ### Merksatz
 

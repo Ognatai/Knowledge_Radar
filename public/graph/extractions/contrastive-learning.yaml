@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 5c5c117f542875af7f0381e328d23b09b4aeff98e81c357ff5a0a39bd9108e98
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- embeddings
+- cosine-similarity
+- cross-entropy
+- softmax
+- imagenet
+- multimodal-models
+- natural-language-inference
+- dense-passage-retrieval
+- semantic-retrieval
+- sentence-bert
+- clip
+relations:
+- from: contrastive-learning
+  type: BASED_ON
+  to: cross-entropy
+  evidence: It is a cross-entropy over which candidate is the positive
+- from: clip
+  type: IS_EXAMPLE_OF
+  to: contrastive-learning
+  evidence: CLIP uses each image and its caption as a positive pair and the other N² − N combinations in the batch as negatives
+- from: dense-passage-retrieval
+  type: BASED_ON
+  to: contrastive-learning
+  evidence: Dense retrievers such as DPR train question and passage encoders with the same in-batch negative principle

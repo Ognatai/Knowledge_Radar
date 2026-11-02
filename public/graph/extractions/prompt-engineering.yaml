@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c3c8cbffc66b2f2a975f1ef0680c10d30b2f473176c2bd91b078bb15c3d26904
+note_sha256: 769d86fa88dd0abc8b8df9914fae4f2c0491bb66b6ec3ecc204829bfdfaacb1c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - zero-shot-prompting
@@ -12,6 +12,7 @@ discusses:
 - large-language-models
 - llm-adaptation
 - question-answering
+- decoding-strategies
 relations:
 - from: zero-shot-prompting
   type: IS_EXAMPLE_OF

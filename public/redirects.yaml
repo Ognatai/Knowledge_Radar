@@ -20,6 +20,7 @@ entities:
   grid-search: hyperparameter-optimisation
   lasso: ridge-and-lasso
   normalized-mutual-information: normalised-mutual-information
+  nucleus-sampling: decoding-strategies
   post-training-quantization: post-training-quantisation
   product-quantization: product-quantisation
   quantization-aware-training: quantisation-aware-training

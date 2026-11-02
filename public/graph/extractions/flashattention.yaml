@@ -1,5 +1,5 @@
 version: 1
-note_sha256: fec31df8dc3dbfab581303fccf4b9c5660d41ebfd1e7bd55b3800154f93530ce
+note_sha256: eeb58dbf8b403da29bc2271360001b81ee2e69346a0ed22f1fbbe4b1597426f0
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - attention-and-transformers
@@ -11,6 +11,7 @@ discusses:
 - neural-network-training
 - llm-cost-optimisation
 - mixed-precision-training
+- llm-inference-serving
 relations:
 - from: flashattention
   type: BASED_ON

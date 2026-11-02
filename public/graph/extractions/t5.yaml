@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 784d168ca4b4c9cbbe8f608cf0c53d95dae484a4424a7a46b7b7367119a4aef1
+note_sha256: 26730904150b5c327e26cde43cd162f258cb940087a57d515fde4a61e6baeb01
 extracted_by: claude (hand-labelled, 2026-10-18)
 discusses:
 - attention-and-transformers
@@ -18,6 +18,7 @@ discusses:
 - classification
 - question-answering
 - text-summarisation
+- decoding-strategies
 relations:
 - from: t5
   type: DEVELOPED_BY

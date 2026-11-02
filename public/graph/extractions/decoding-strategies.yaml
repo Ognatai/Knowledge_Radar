@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 22f7108dcdbe0951ba9cbc5895dd56328ad96b280d36f58e2859c90b8757bb70
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- machine-translation
+- softmax
+- speculative-decoding
+- self-consistency
+- tool-calling
+- llm-as-a-judge
+- regression-testing
+- llm-evaluation
+- llm-inference-serving
+relations:
+- from: decoding-strategies
+  type: BASED_ON
+  to: softmax
+  evidence: dividing the logits by τ before the softmax sharpens the distribution for τ < 1 and flattens it for τ > 1
+- from: speculative-decoding
+  type: COMPLEMENTS
+  to: decoding-strategies
+  evidence: Decoding can also be sped up without changing the output distribution by speculative decoding
+- from: self-consistency
+  type: BASED_ON
+  to: decoding-strategies
+  evidence: sampled several times and aggregated by majority vote as in self-consistency

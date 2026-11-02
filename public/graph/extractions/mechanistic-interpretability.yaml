@@ -1,0 +1,22 @@
+version: 1
+note_sha256: 190b1bffd0495f6d50a38ec782c6562cfe942b1e164a355269597e7025967d68
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- explainable-ai
+- logistic-regression
+- softmax
+- autoencoders-and-gans
+- few-shot-prompting
+- bias-in-nlp
+- fairness-metrics
+- sleeper-agents
+- red-teaming
+relations:
+- from: mechanistic-interpretability
+  type: COMPLEMENTS
+  to: explainable-ai
+  evidence: Unlike post-hoc explainable AI methods that attribute a prediction to input features, it looks at the model's internals
+- from: mechanistic-interpretability
+  type: BASED_ON
+  to: logistic-regression
+  evidence: A probe is a simple classifier, such as logistic regression or a small MLP, trained on frozen activations

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 4b5e9b2a1261b000f1a12b6fac9cc40c7b7fe432230e147da60595b2f1d35f44
+note_sha256: fc883c38a55137909a993695d313be89229cc17803a115935809d4b5b4fd3791
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - post-training-quantisation
@@ -13,6 +13,7 @@ discusses:
 - knowledge-distillation
 - gpt
 - fp16
+- llm-inference-serving
 relations:
 - from: post-training-quantisation
   type: IS_EXAMPLE_OF
