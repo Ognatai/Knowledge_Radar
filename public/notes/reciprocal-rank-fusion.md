@@ -76,7 +76,7 @@ Gordon Cormack, Charles Clarke and Stefan Büttcher proposed RRF at SIGIR 2009 o
 | RRF | ranks | sum of 1/(k + rank) | none |
 | Condorcet Fuse | ranks | pairwise majority vote | none |
 | CombMNZ | scores | sum of scores × number of systems returning the document | none, but scores must be comparable |
-| Learning to rank | features | learned model | labelled data |
+| [[learning-to-rank\|Learning to rank]] | features | learned model | labelled data |
 
 Source: Cormack et al. (2009).
 
@@ -158,7 +158,7 @@ Gordon Cormack, Charles Clarke und Stefan Büttcher schlugen RRF auf der SIGIR 2
 | RRF | Ränge | Summe von 1/(k + Rang) | keines |
 | Condorcet Fuse | Ränge | paarweise Mehrheitsentscheidung | keines |
 | CombMNZ | Scores | Summe der Scores × Zahl der Systeme, die das Dokument liefern | keines, aber Scores müssen vergleichbar sein |
-| Learning to Rank | Merkmale | gelerntes Modell | gelabelte Daten |
+| [[learning-to-rank\|Learning to Rank]] | Merkmale | gelerntes Modell | gelabelte Daten |
 
 Quelle: Cormack et al. (2009).
 

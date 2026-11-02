@@ -1527,15 +1527,6 @@ entities:
   sources:
   - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32020L1828
   - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020L1828
-- id: recommender-system
-  type: Concept
-  name_en: Recommender system
-  name_de: Empfehlungssystem
-  summary_en: Under the Digital Services Act, a recommender system is "a fully or partially automated system used by an online platform to suggest in its online interface specific information to recipients of the service or prioritise that information, including as a result of a search initiated by the recipient of the service or otherwise determining the relative order or prominence of information displayed" (Art. 3(s) DSA).
-  summary_de: Nach dem Gesetz über digitale Dienste ist ein Empfehlungssystem „ein vollständig oder teilweise automatisiertes System, das von einer Online-Plattform verwendet wird, um auf ihrer Online-Schnittstelle den Nutzern bestimmte Informationen vorzuschlagen oder diese Informationen zu priorisieren, auch infolge einer vom Nutzer veranlassten Suche, oder das auf andere Weise die relative Reihenfolge oder Hervorhebung der angezeigten Informationen bestimmt“ (Art. 3 Buchst. s DSA).
-  sources:
-  - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022R2065
-  - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2065
 - id: content-moderation
   type: Concept
   name_en: Content moderation
@@ -2972,14 +2963,6 @@ entities:
   summary_de: Expected Validation Performance gibt den erwarteten besten Validierungswert eines Modells in Abhängigkeit vom Rechenbudget an, etwa der Zahl der Durchläufe bei der Hyperparameter-Suche oder der Trainingszeit (Dodge et al., 2019). Die Autoren fanden veröffentlichte Modellvergleiche, deren Schlussfolgerung sich mit mehr oder weniger Rechenaufwand geändert hätte, und empfehlen, sie neben Testergebnissen zu berichten.
   sources:
   - https://arxiv.org/abs/1909.03004
-- id: clip
-  type: Method
-  name_en: CLIP
-  name_de: CLIP
-  summary_en: CLIP learns image representations from natural language supervision by predicting which caption goes with which image, trained on 400 million image-text pairs from the internet (Radford et al., 2021). Natural language then names visual concepts, enabling zero-shot transfer; CLIP matched the accuracy of the original ResNet-50 on ImageNet without using any of its 1.28 million training examples.
-  summary_de: CLIP lernt Bildrepräsentationen aus natürlichsprachlicher Überwachung, indem es vorhersagt, welche Bildunterschrift zu welchem Bild gehört, trainiert auf 400 Millionen Bild-Text-Paaren aus dem Internet (Radford et al., 2021). Natürliche Sprache benennt danach visuelle Konzepte und ermöglicht Zero-Shot-Transfer; CLIP erreichte die Accuracy des ursprünglichen ResNet-50 auf ImageNet, ohne eines seiner 1,28 Millionen Trainingsbeispiele zu nutzen.
-  sources:
-  - https://arxiv.org/abs/2103.00020
 - id: flamingo
   type: Method
   name_en: Flamingo

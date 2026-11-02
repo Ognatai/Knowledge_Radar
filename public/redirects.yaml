@@ -25,6 +25,7 @@ entities:
   product-quantization: product-quantisation
   quantization-aware-training: quantisation-aware-training
   random-search: hyperparameter-optimisation
+  recommender-system: recommender-systems
   ridge-regression: ridge-and-lasso
   stochastic-gradient-descent: gradient-descent
   subword-regularization: subword-regularisation

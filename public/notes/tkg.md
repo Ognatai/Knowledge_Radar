@@ -81,7 +81,7 @@ All providers of telecommunications services, with stricter duties for operators
 
 ##### What could this mean in practice?
 
-Possible implementation, not a legal requirement: AI components used in network operation, such as anomaly detection or automated network management, become part of the systems whose security, supply chain and access control must meet these requirements.
+Possible implementation, not a legal requirement: AI components used in network operation, such as [[anomaly-detection|anomaly detection]] or automated network management, become part of the systems whose security, supply chain and access control must meet these requirements.
 
 #### § 166 — Security Officer and Security Concept
 

@@ -1,0 +1,30 @@
+version: 1
+note_sha256: ba183ff36a4474bde463fc77a64388389d6d249ee905d4d336d9bb86ce21e991
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- cross-entropy
+- cross-encoder
+- ms-marco
+- support-vector-machines
+- gradient-descent
+- recommender-systems
+- ensemble-methods
+- decision-trees
+- retrieval-augmented-generation
+- rag-retrieval
+- bm25
+- reciprocal-rank-fusion
+- rag-retrieval-evaluation
+relations:
+- from: learning-to-rank
+  type: COMPLEMENTS
+  to: bm25
+  evidence: Combining many relevance signals, such as BM25, freshness and click features, into one ranking
+- from: cross-encoder
+  type: IS_EXAMPLE_OF
+  to: learning-to-rank
+  evidence: The BERT re-ranker of Nogueira and Cho (2019) is pointwise
+- from: learning-to-rank
+  type: BASED_ON
+  to: ensemble-methods
+  evidence: LambdaMART uses these λ-gradients in MART, gradient-boosted regression trees

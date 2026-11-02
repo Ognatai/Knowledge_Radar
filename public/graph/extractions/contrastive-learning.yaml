@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5c5c117f542875af7f0381e328d23b09b4aeff98e81c357ff5a0a39bd9108e98
+note_sha256: 2cf09ee78f93160e4a73ee57f131d76109d3e371d88e3731220d0b1e2b5efdb7
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - embeddings

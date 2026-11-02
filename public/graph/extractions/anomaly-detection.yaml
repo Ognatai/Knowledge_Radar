@@ -1,0 +1,23 @@
+version: 1
+note_sha256: 8367470d26b76815645ab52aada59ad0e29c6c00182c2ee286c4e277d772b848
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- time-series-analysis
+- classification
+- principal-component-analysis
+- autoencoders-and-gans
+- k-nearest-neighbours
+- ensemble-methods
+- monitoring-and-alerting
+- ml-preprocessing
+- classification-metrics
+- scikit-learn
+relations:
+- from: anomaly-detection
+  type: COMPLEMENTS
+  to: classification
+  evidence: When labelled anomalies exist, the problem becomes heavily imbalanced classification
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: anomaly-detection
+  evidence: In scikit-learn, `predict` labels inliers 1 and outliers −1

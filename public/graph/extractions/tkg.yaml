@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8b55ca2e18282370335ef20ccfd0e7172d5065c7276afc00b9e60fa855f82f50
+note_sha256: e8ae99776073b21f3759198a5f49a85158d7f52561fd0f087ac1ddac0745bbae
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bsi
@@ -14,6 +14,7 @@ discusses:
 - nis2-directive
 - tdddg
 - voice-agents
+- anomaly-detection
 relations:
 - from: tkg
   type: IMPLEMENTS

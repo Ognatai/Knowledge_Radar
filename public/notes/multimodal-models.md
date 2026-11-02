@@ -17,7 +17,7 @@ sources:
 
 ### TL;DR
 
-Multimodal models process more than one kind of data, most often images and text. Contrastive models such as CLIP learn a shared embedding space in which matching images and captions lie close together, enabling zero-shot image [[classification|classification]] (Radford et al., 2021). Vision-language models connect a vision encoder to a large language model, so that they can answer questions about images and follow visual instructions (Alayrac et al., 2022; Li et al., 2023; Liu et al., 2023), and diffusion models generate images from text (Rombach et al., 2021).
+Multimodal models process more than one kind of data, most often images and text. Contrastive models such as [[clip|CLIP]] learn a shared embedding space in which matching images and captions lie close together, enabling zero-shot image [[classification|classification]] (Radford et al., 2021). Vision-language models connect a vision encoder to a large language model, so that they can answer questions about images and follow visual instructions (Alayrac et al., 2022; Li et al., 2023; Liu et al., 2023), and diffusion models generate images from text (Rombach et al., 2021).
 
 ### How it works
 
@@ -109,7 +109,7 @@ Multimodal models align or connect encoders for different data types, so that la
 
 ### TL;DR
 
-Multimodale Modelle verarbeiten mehr als eine Art von Daten, meist Bilder und Text. Kontrastive Modelle wie CLIP lernen einen gemeinsamen Embedding-Raum, in dem zusammengehörige Bilder und Bildunterschriften nahe beieinander liegen, was Zero-Shot-Bildklassifikation ermöglicht (Radford et al., 2021). Vision-Language-Modelle verbinden einen Bild-Encoder mit einem großen Sprachmodell, sodass sie Fragen zu Bildern beantworten und visuellen Anweisungen folgen können (Alayrac et al., 2022; Li et al., 2023; Liu et al., 2023), und Diffusionsmodelle erzeugen Bilder aus Text (Rombach et al., 2021).
+Multimodale Modelle verarbeiten mehr als eine Art von Daten, meist Bilder und Text. Kontrastive Modelle wie [[clip|CLIP]] lernen einen gemeinsamen Embedding-Raum, in dem zusammengehörige Bilder und Bildunterschriften nahe beieinander liegen, was Zero-Shot-Bildklassifikation ermöglicht (Radford et al., 2021). Vision-Language-Modelle verbinden einen Bild-Encoder mit einem großen Sprachmodell, sodass sie Fragen zu Bildern beantworten und visuellen Anweisungen folgen können (Alayrac et al., 2022; Li et al., 2023; Liu et al., 2023), und Diffusionsmodelle erzeugen Bilder aus Text (Rombach et al., 2021).
 
 ### Funktionsweise
 

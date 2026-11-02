@@ -141,6 +141,7 @@ areas:
       - dense-passage-retrieval
       - colbert
       - reciprocal-rank-fusion
+      - learning-to-rank
       - hnsw
       - faiss
       - beir
@@ -202,6 +203,8 @@ areas:
       - k-nearest-neighbours
       - support-vector-machines
       - clustering
+      - anomaly-detection
+      - recommender-systems
       - principal-component-analysis
       - regularisation-and-hyperparameters
       - hyperparameter-optimisation
@@ -239,6 +242,7 @@ areas:
       - softmax
       - cross-entropy
       - contrastive-learning
+      - clip
       - resnet
       - vision-transformer
       - imagenet

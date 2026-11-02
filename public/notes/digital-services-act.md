@@ -22,7 +22,7 @@ sources:
 
 ### TL;DR
 
-The Digital Services Act (DSA) sets EU-wide rules for intermediary services such as internet access providers, hosting services, online platforms and search engines. It keeps the liability exemptions for third-party content, adds due diligence obligations graduated by type and size of service, and gives users rights against content moderation decisions. Very large online platforms and search engines with at least 45 million monthly active users in the EU must also assess and mitigate systemic risks, open their recommender systems and advertising to scrutiny and give researchers access to data. The Commission supervises them directly, with fines of up to 6 % of worldwide annual turnover.
+The Digital Services Act (DSA) sets EU-wide rules for intermediary services such as internet access providers, hosting services, online platforms and search engines. It keeps the liability exemptions for third-party content, adds due diligence obligations graduated by type and size of service, and gives users rights against content moderation decisions. Very large online platforms and search engines with at least 45 million monthly active users in the EU must also assess and mitigate systemic risks, open their [[recommender-systems|recommender systems]] and advertising to scrutiny and give researchers access to data. The Commission supervises them directly, with fines of up to 6 % of worldwide annual turnover.
 
 ### Key facts
 
@@ -501,7 +501,7 @@ Sets out the date of entry into force and the phased application of the Regulati
 
 ### TL;DR
 
-Das Gesetz über digitale Dienste (Digital Services Act, DSA) legt EU-weite Regeln für Vermittlungsdienste fest, etwa Internetzugangsanbieter, Hostingdienste, Online-Plattformen und Suchmaschinen. Es behält die Haftungsbefreiungen für Inhalte Dritter bei, ergänzt nach Art und Größe des Dienstes gestaffelte Sorgfaltspflichten und gibt Nutzern Rechte gegen Entscheidungen zur Moderation von Inhalten. Sehr große Online-Plattformen und Suchmaschinen mit mindestens 45 Millionen monatlich aktiven Nutzern in der EU müssen zusätzlich systemische Risiken bewerten und mindern, ihre Empfehlungssysteme und Werbung offenlegen und Forschenden Datenzugang gewähren. Die Kommission beaufsichtigt sie direkt, mit Geldbußen bis zu 6 % des weltweiten Jahresumsatzes.
+Das Gesetz über digitale Dienste (Digital Services Act, DSA) legt EU-weite Regeln für Vermittlungsdienste fest, etwa Internetzugangsanbieter, Hostingdienste, Online-Plattformen und Suchmaschinen. Es behält die Haftungsbefreiungen für Inhalte Dritter bei, ergänzt nach Art und Größe des Dienstes gestaffelte Sorgfaltspflichten und gibt Nutzern Rechte gegen Entscheidungen zur Moderation von Inhalten. Sehr große Online-Plattformen und Suchmaschinen mit mindestens 45 Millionen monatlich aktiven Nutzern in der EU müssen zusätzlich systemische Risiken bewerten und mindern, ihre [[recommender-systems|Empfehlungssysteme]] und Werbung offenlegen und Forschenden Datenzugang gewähren. Die Kommission beaufsichtigt sie direkt, mit Geldbußen bis zu 6 % des weltweiten Jahresumsatzes.
 
 ### Eckdaten
 

@@ -51,7 +51,7 @@ The largest model, ViT-H/14 pre-trained on JFT-300M, reached 88.55% on ImageNet,
 
 #### Origin and variants
 
-Alexey Dosovitskiy and colleagues at Google Research presented ViT at ICLR 2021 and released code and pre-trained models (Dosovitskiy et al., 2021). A hybrid variant feeds CNN feature maps instead of raw patches into the Transformer. Image-text models such as CLIP use ViT image encoders ([[multimodal-models|multimodal models]], [[computer-vision|computer vision]]).
+Alexey Dosovitskiy and colleagues at Google Research presented ViT at ICLR 2021 and released code and pre-trained models (Dosovitskiy et al., 2021). A hybrid variant feeds CNN feature maps instead of raw patches into the Transformer. Image-text models such as [[clip|CLIP]] use ViT image encoders ([[multimodal-models|multimodal models]], [[computer-vision|computer vision]]).
 
 ### When to use it
 
@@ -136,7 +136,7 @@ Das größte Modell, ViT-H/14 vortrainiert auf JFT-300M, erreichte 88,55 % auf I
 
 #### Herkunft und Varianten
 
-Alexey Dosovitskiy und Kolleginnen und Kollegen bei Google Research stellten ViT auf der ICLR 2021 vor und veröffentlichten Code und vortrainierte Modelle (Dosovitskiy et al., 2021). Eine Hybridvariante gibt CNN-Feature-Maps statt roher Ausschnitte in den Transformer. Bild-Text-Modelle wie CLIP nutzen ViT als Bild-Encoder ([[multimodal-models|Multimodale Modelle]], [[computer-vision|Computer Vision]]).
+Alexey Dosovitskiy und Kolleginnen und Kollegen bei Google Research stellten ViT auf der ICLR 2021 vor und veröffentlichten Code und vortrainierte Modelle (Dosovitskiy et al., 2021). Eine Hybridvariante gibt CNN-Feature-Maps statt roher Ausschnitte in den Transformer. Bild-Text-Modelle wie [[clip|CLIP]] nutzen ViT als Bild-Encoder ([[multimodal-models|Multimodale Modelle]], [[computer-vision|Computer Vision]]).
 
 ### Wann einsetzen
 

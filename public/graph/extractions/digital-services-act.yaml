@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 31246553d7463fe0c1a7aac7313637e4cf60ebaa62efeccfc128d26c3ee25b36
+note_sha256: 5f74ce7356b6558dc19ec1733a49e74de2db7482a24aeb7bab4fa6e07ef96a35
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - intermediary-service
@@ -9,7 +9,7 @@ discusses:
 - cjeu
 - e-commerce-directive
 - representative-actions-directive
-- recommender-system
+- recommender-systems
 - content-moderation
 - online-advertising
 - systemic-risk
@@ -57,7 +57,7 @@ relations:
   evidence: AI systems used for content moderation or recommendations remain subject to the DSA; the AI Act adds its own requirements
 - from: digital-services-act
   type: REGULATES
-  to: recommender-system
+  to: recommender-systems
   evidence: online platforms must explain the main parameters of their recommender systems
 - from: digital-services-act
   type: REGULATES

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 2c2a68ee6effd1090c044e8139ed19f8c22c3ddf7c1295b15745af2e3b6b598b
+note_sha256: 693489e4a78512a07bce35d6ad01bc80db71796bc884b230677dcb43c107bc36
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - attention-and-transformers
@@ -12,6 +12,7 @@ discusses:
 - resnet
 - google
 - imagenet
+- clip
 relations:
 - from: vision-transformer
   type: BASED_ON

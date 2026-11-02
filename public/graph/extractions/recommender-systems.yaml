@@ -1,0 +1,27 @@
+version: 1
+note_sha256: dabb26c32db224d4ca3a40dd13dc03e07dd32f24844ac42971e61ac4697873fa
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- embeddings
+- cosine-similarity
+- gradient-descent
+- learning-to-rank
+- vector-databases
+- hyperparameter-optimisation
+- graph-neural-networks
+- classification-metrics
+- digital-services-act
+- logistic-regression
+relations:
+- from: recommender-systems
+  type: BASED_ON
+  to: embeddings
+  evidence: by giving users and items embeddings whose dot product scores how well they match
+- from: digital-services-act
+  type: REGULATES
+  to: recommender-systems
+  evidence: online platforms that use recommender systems must state their main parameters
+- from: recommender-systems
+  type: COMPLEMENTS
+  to: learning-to-rank
+  evidence: The criterion is closely related to optimising the area under the ROC curve

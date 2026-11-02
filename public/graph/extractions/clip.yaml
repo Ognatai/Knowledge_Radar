@@ -1,0 +1,29 @@
+version: 1
+note_sha256: b312d52506a54b367a8842f5a710624a518dc634758494a129c70fd341341f02
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- cosine-similarity
+- contrastive-learning
+- vision-transformer
+- resnet
+- logistic-regression
+- prompt-engineering
+- imagenet
+- multimodal-models
+- semantic-retrieval
+- vector-databases
+- bias-in-nlp
+- openai
+relations:
+- from: clip
+  type: BASED_ON
+  to: contrastive-learning
+  evidence: it maximises the cosine similarity of the N real pairs and minimises it for the N² − N wrong ones with a symmetric cross-entropy loss
+- from: clip
+  type: DEVELOPED_BY
+  to: openai
+  evidence: CLIP (Contrastive Language–Image Pre-training) is an OpenAI model
+- from: imagenet
+  type: EVALUATES
+  to: clip
+  evidence: matching the original ResNet-50 without any of its 1.28 million labelled examples
