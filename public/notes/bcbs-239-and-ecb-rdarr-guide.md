@@ -25,7 +25,7 @@ sources:
 
 ### TL;DR
 
-BCBS 239 is the Basel Committee's set of 14 principles for effective risk data aggregation and risk reporting (RDARR), published in January 2013 in response to the financial crisis, when many banks could not aggregate their risk exposures quickly and accurately. The principles cover governance and IT infrastructure, the accuracy, completeness, timeliness and adaptability of risk data, the quality of risk reports, and supervisory review. The [[ecb|ECB]] Guide on effective risk data aggregation and risk reporting of May 2024 sets out the ECB's minimum supervisory expectations for the banks it supervises directly, with a focus on management body responsibility, scope of application, [[data-governance|data governance]], an integrated data architecture, data quality management, timely reporting and implementation programmes.
+BCBS 239 is the Basel Committee's set of 14 principles for effective risk data aggregation and risk reporting (RDARR), published in January 2013 in response to the financial crisis, when many banks could not aggregate their risk exposures quickly and accurately. The principles cover governance and IT infrastructure, the accuracy, completeness, timeliness and adaptability of risk data, the quality of risk reports, and supervisory review. The [[ecb|ECB]] Guide on effective risk data aggregation and risk reporting of May 2024 sets out the ECB's minimum supervisory expectations for the banks it supervises directly, with a focus on management body responsibility, scope of application, [[data-governance|data governance]], an integrated data architecture, [[data-quality|data quality]] management, timely reporting and implementation programmes.
 
 ### Key facts
 
@@ -287,7 +287,7 @@ Verlangt, dass der Rahmen für die Data Governance alle wesentlichen Rechtseinhe
 
 #### Abschnitt 3.3 – Wirksamer Rahmen für die Data Governance
 
-Verlangt eine klare Zuweisung von Rollen, Verantwortlichkeiten und Eigentümerschaft für die Datenqualität in Geschäftsbereichen, internen Kontrollfunktionen und IT.
+Verlangt eine klare Zuweisung von Rollen, Verantwortlichkeiten und Eigentümerschaft für die [[data-quality|Datenqualität]] in Geschäftsbereichen, internen Kontrollfunktionen und IT.
 
 #### Abschnitt 3.4 – Integrierte Datenarchitektur
 

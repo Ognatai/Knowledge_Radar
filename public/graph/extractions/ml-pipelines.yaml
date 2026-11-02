@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a996fac7522ad9df6a94eef1487ee357443b07d519f5619915a66f81f3e19cec
+note_sha256: 0a95bbbf9ac0c35861490ee44c6c035264a5f7014da24bd07e2a5ae1386f7922
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - ci-cd
@@ -17,6 +17,7 @@ discusses:
 - mlflow
 - model-registry
 - apache-airflow
+- data-quality
 relations:
 - from: zenml
   type: IMPLEMENTS

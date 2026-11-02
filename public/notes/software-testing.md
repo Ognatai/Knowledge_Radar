@@ -102,7 +102,7 @@ The pyramid goes back to Mike Cohn; Vocke's 2018 article on martinfowler.com rew
 | Integration test | one integration point (database, file, HTTP) | seconds | pytest with a test database, WireMock |
 | Contract test | interface between consumer and provider | seconds | Pact |
 | End-to-end test | whole deployed system through UI or API | minutes | Playwright, Selenium, REST-assured |
-| ML tests | data, model, pipeline, monitoring | varies | data validation, canary releases |
+| ML tests | data, model, pipeline, monitoring | varies | [[data-quality\|data validation]], canary releases |
 | LLM evaluation | quality of generated outputs | minutes | evaluation sets, [[llm-as-a-judge\|LLM as a judge]] |
 
 Sources: Vocke (2018); Breck et al. (2017); Playwright docs.

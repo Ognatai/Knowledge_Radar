@@ -1,5 +1,5 @@
 version: 1
-note_sha256: a34c813b7d2ee1ebd457a63e55ac58b8fe2b3396a9a94d9b4b0ed461eeca290f
+note_sha256: 5b258e7a83857fa49bc407425e8b2cc95cdb5bd8be13fbbeadb6944613d9b3b7
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bdsg
@@ -11,6 +11,7 @@ discusses:
 - federal-network-agency
 - gdpr
 - llm-observability-and-tracing
+- data-quality
 relations:
 - from: law-enforcement-directive
   type: COMPLEMENTS

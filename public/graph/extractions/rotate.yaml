@@ -9,6 +9,7 @@ discusses:
 - self-adversarial-negative-sampling
 - rag-retrieval-evaluation
 - knowledge-graphs
+- knowledge-graph-engineering
 relations:
 - from: rotate
   type: IS_EXAMPLE_OF

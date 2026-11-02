@@ -13,6 +13,7 @@ discusses:
 - reification
 - graph-databases
 - open-world-assumption
+- knowledge-graph-engineering
 relations:
 - from: rdf
   type: DEVELOPED_BY

@@ -123,7 +123,7 @@ Requires staffing aligned with business activities and the risk situation, with 
 
 #### AT 7.2 — Technical and organisational resources
 
-Requires appropriate technical and organisational resources, sufficient capacity to generate risk data and effective processes to ensure data quality.
+Requires appropriate technical and organisational resources, sufficient capacity to generate risk data and effective processes to ensure [[data-quality|data quality]].
 
 #### AT 7.3 — Contingency management
 
@@ -337,7 +337,7 @@ Verlangt eine an den Geschäftsaktivitäten und der Risikosituation ausgerichtet
 
 #### AT 7.2 – Technisch-organisatorische Ausstattung
 
-Verlangt eine angemessene technisch-organisatorische Ausstattung, ausreichende Kapazitäten zur Generierung von Risikodaten und effektive Prozesse zur Sicherstellung der Datenqualität.
+Verlangt eine angemessene technisch-organisatorische Ausstattung, ausreichende Kapazitäten zur Generierung von Risikodaten und effektive Prozesse zur Sicherstellung der [[data-quality|Datenqualität]].
 
 #### AT 7.3 – Notfallmanagement
 

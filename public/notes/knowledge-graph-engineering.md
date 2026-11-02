@@ -43,7 +43,7 @@ Hogan et al. (2020) summarise the life cycle of knowledge graphs: creation from 
 
 #### 2. Entity resolution
 
-Entity resolution identifies different descriptions that refer to the same real-world entity and is one of the most important tasks for data quality (Christophides et al., 2019). Modern workflows handle loosely structured, diverse, fast-changing and large collections of entity descriptions through blocking or indexing, which limits the candidate pairs, followed by matching and [[clustering|clustering]]; the database, semantic web and machine learning communities have proposed different methods for these steps.
+Entity resolution identifies different descriptions that refer to the same real-world entity and is one of the most important tasks for [[data-quality|data quality]] (Christophides et al., 2019). Modern workflows handle loosely structured, diverse, fast-changing and large collections of entity descriptions through blocking or indexing, which limits the candidate pairs, followed by matching and [[clustering|clustering]]; the database, semantic web and machine learning communities have proposed different methods for these steps.
 
 #### 3. Validation with shapes
 

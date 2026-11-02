@@ -15,6 +15,7 @@ discusses:
 - fairness-gerrymandering
 - causal-inference
 - classification-metrics
+- eu-ai-act
 relations:
 - from: counterfactual-fairness
   type: BASED_ON

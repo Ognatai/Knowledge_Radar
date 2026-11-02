@@ -83,7 +83,7 @@ Source: Dettmers et al. (2023).
 
 ### In practice
 
-QLoRA makes adapting large open models feasible on a single GPU; the adapters can be merged into the base model or kept separate for serving ([[lora|LoRA]]). Because data quality outweighs quantity, a few thousand well-chosen examples are often a better starting point than a large, noisy dataset (Dettmers et al., 2023). Whether fine-tuning is the right tool at all is discussed in [[rag-vs-fine-tuning|RAG vs fine-tuning]].
+QLoRA makes adapting large open models feasible on a single GPU; the adapters can be merged into the base model or kept separate for serving ([[lora|LoRA]]). Because [[data-quality|data quality]] outweighs quantity, a few thousand well-chosen examples are often a better starting point than a large, noisy dataset (Dettmers et al., 2023). Whether fine-tuning is the right tool at all is discussed in [[rag-vs-fine-tuning|RAG vs fine-tuning]].
 
 ### Key takeaway
 
@@ -166,7 +166,7 @@ Quelle: Dettmers et al. (2023).
 
 ### In der Praxis
 
-QLoRA macht es möglich, große offene Modelle auf einer einzelnen GPU anzupassen; die Adapter können in das Basismodell eingerechnet oder für den Betrieb getrennt gehalten werden ([[lora|LoRA]]). Weil Datenqualität mehr zählt als Menge, sind einige Tausend gut gewählte Beispiele oft ein besserer Ausgangspunkt als ein großer, verrauschter Datensatz (Dettmers et al., 2023). Ob Fine-Tuning überhaupt das richtige Werkzeug ist, behandelt [[rag-vs-fine-tuning|RAG vs. Fine-Tuning]].
+QLoRA macht es möglich, große offene Modelle auf einer einzelnen GPU anzupassen; die Adapter können in das Basismodell eingerechnet oder für den Betrieb getrennt gehalten werden ([[lora|LoRA]]). Weil [[data-quality|Datenqualität]] mehr zählt als Menge, sind einige Tausend gut gewählte Beispiele oft ein besserer Ausgangspunkt als ein großer, verrauschter Datensatz (Dettmers et al., 2023). Ob Fine-Tuning überhaupt das richtige Werkzeug ist, behandelt [[rag-vs-fine-tuning|RAG vs. Fine-Tuning]].
 
 ### Merksatz
 

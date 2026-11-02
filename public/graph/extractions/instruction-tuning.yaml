@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 51183d59154afff5113220d0f4e7d1732d64144e31f8378ed6001cc62bf8669a
+note_sha256: 66585a8f41591463a97b2c76b46267cd6ff7c0a16463880518e87801b95d1a4f
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - cross-entropy
@@ -13,6 +13,7 @@ discusses:
 - few-shot-prompting
 - retrieval-augmented-generation
 - flan
+- data-quality
 relations:
 - from: instruction-tuning
   type: BASED_ON

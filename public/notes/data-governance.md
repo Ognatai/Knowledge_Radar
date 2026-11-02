@@ -7,11 +7,9 @@ aliases:
 - Data catalogue
 - Data catalog
 - Data lineage
-- Data quality
 - Data product
 - Data products
 - Data mesh
-- Datenqualität
 - Datenprodukt
 sources:
 - https://martinfowler.com/articles/data-mesh-principles.html
@@ -27,7 +25,7 @@ sources:
 
 ### TL;DR
 
-Data governance is the set of roles, rules and tools that decide who owns which data, who may use it, how good it has to be and how its origin can be traced. In practice it rests on a data catalogue that makes data findable and holds its metadata, access control and auditing, measurable data quality, for example along the six dimensions accuracy, completeness, uniqueness, consistency, timeliness and validity (Government Data Quality Hub, 2020), and lineage that records which job turned which input into which output (OpenLineage; Databricks Lineage). Data mesh shifts governance from a central team to the business domains, which publish their analytical data as products, while a federation sets global rules that the platform enforces automatically (Dehghani, 2020).
+Data governance is the set of roles, rules and tools that decide who owns which data, who may use it, how good it has to be and how its origin can be traced. In practice it rests on a data catalogue that makes data findable and holds its metadata, access control and auditing, measurable [[data-quality|data quality]], for example along the six dimensions accuracy, completeness, uniqueness, consistency, timeliness and validity (Government Data Quality Hub, 2020), and lineage that records which job turned which input into which output (OpenLineage; Databricks Lineage). Data mesh shifts governance from a central team to the business domains, which publish their analytical data as products, while a federation sets global rules that the platform enforces automatically (Dehghani, 2020).
 
 ### How it works
 
@@ -133,7 +131,7 @@ Data governance makes data owned, findable, permissioned, measurably good and tr
 
 ### TL;DR
 
-Data Governance ist die Gesamtheit aus Rollen, Regeln und Werkzeugen, die festlegt, wem welche Daten gehören, wer sie nutzen darf, wie gut sie sein müssen und wie sich ihre Herkunft nachvollziehen lässt. In der Praxis stützt sie sich auf einen Datenkatalog, der Daten auffindbar macht und ihre Metadaten hält, auf Zugriffskontrolle und Protokollierung, auf messbare Datenqualität, etwa entlang der sechs Dimensionen Genauigkeit, Vollständigkeit, Eindeutigkeit, Konsistenz, Aktualität und Gültigkeit (Government Data Quality Hub, 2020), und auf Lineage, die festhält, welcher Job welche Eingabe in welche Ausgabe verwandelt hat (OpenLineage; Databricks Lineage). Data Mesh verlagert Governance von einem zentralen Team in die Fachdomänen, die ihre analytischen Daten als Produkte veröffentlichen, während ein Verbund globale Regeln festlegt, die die Plattform automatisch durchsetzt (Dehghani, 2020).
+Data Governance ist die Gesamtheit aus Rollen, Regeln und Werkzeugen, die festlegt, wem welche Daten gehören, wer sie nutzen darf, wie gut sie sein müssen und wie sich ihre Herkunft nachvollziehen lässt. In der Praxis stützt sie sich auf einen Datenkatalog, der Daten auffindbar macht und ihre Metadaten hält, auf Zugriffskontrolle und Protokollierung, auf messbare [[data-quality|Datenqualität]], etwa entlang der sechs Dimensionen Genauigkeit, Vollständigkeit, Eindeutigkeit, Konsistenz, Aktualität und Gültigkeit (Government Data Quality Hub, 2020), und auf Lineage, die festhält, welcher Job welche Eingabe in welche Ausgabe verwandelt hat (OpenLineage; Databricks Lineage). Data Mesh verlagert Governance von einem zentralen Team in die Fachdomänen, die ihre analytischen Daten als Produkte veröffentlichen, während ein Verbund globale Regeln festlegt, die die Plattform automatisch durchsetzt (Dehghani, 2020).
 
 ### Funktionsweise
 

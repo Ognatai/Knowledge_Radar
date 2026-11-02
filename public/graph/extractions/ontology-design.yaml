@@ -10,6 +10,7 @@ discusses:
 - open-world-assumption
 - competency-questions
 - knowledge-graphs
+- knowledge-graph-engineering
 relations:
 - from: ontology-design
   type: BASED_ON

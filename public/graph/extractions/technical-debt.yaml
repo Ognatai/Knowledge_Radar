@@ -10,6 +10,7 @@ discusses:
 - data-pipelines
 - monitoring-and-alerting
 - vibe-coding
+- software-testing
 relations:
 - from: technical-debt
   type: DEVELOPED_BY

@@ -1,0 +1,25 @@
+version: 1
+note_sha256: 3d6c217d1de02982a917432c447315502afe7cb5be0bc94c6e004025fffd90fc
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- data-governance
+- data-pipelines
+- software-testing
+- ml-test-score
+- recommender-systems
+- monitoring-and-alerting
+- mlops-and-deployment
+- bias-in-nlp
+- near-duplicate-detection
+- eu-ai-act
+- bcbs-239-and-ecb-rdarr-guide
+- ml-pipelines
+relations:
+- from: eu-ai-act
+  type: REGULATES
+  to: data-quality
+  evidence: training, validation and testing data sets of high-risk AI systems must be relevant, sufficiently representative and, as far as possible, free of errors and complete
+- from: bcbs-239-and-ecb-rdarr-guide
+  type: REGULATES
+  to: data-quality
+  evidence: requires banks to produce accurate risk data aggregated largely automatically (Principle 3)

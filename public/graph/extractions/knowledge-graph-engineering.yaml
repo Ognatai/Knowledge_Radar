@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 07eaa02003c8c9fe2caf66c0b783e0eea799fb7774d427744a2e9455e5fe262e
+note_sha256: 5884b3ba64405944730cdab5d487d789456a23b02e243d0f03bb2ad490ba09e9
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - w3c
@@ -14,6 +14,9 @@ discusses:
 - dbpedia
 - yago
 - freebase
+- data-governance
+- data-quality
+- ml-pipelines
 relations:
 - from: shacl
   type: DEVELOPED_BY

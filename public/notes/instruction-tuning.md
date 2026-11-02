@@ -88,7 +88,7 @@ Instruction tuning is a form of fine-tuning, which means running additional trai
 **Limitations**
 - Can hurt generalisation for small models (Wei et al., 2022).
 - Imitating demonstrations does not by itself make outputs helpful, truthful and harmless to the degree preference learning adds (Ouyang et al., 2022; [[llm-alignment|LLM alignment]]).
-- Data quality and diversity matter more than volume; generated data inherits the errors and biases of the generating model (Wang et al., 2023; Zhou et al., 2023).
+- [[data-quality|Data quality]] and diversity matter more than volume; generated data inherits the errors and biases of the generating model (Wang et al., 2023; Zhou et al., 2023).
 - Further fine-tuning can cost performance on other benchmarks, which Ouyang et al. (2022) call an alignment tax for the RLHF stage.
 
 ### Comparison

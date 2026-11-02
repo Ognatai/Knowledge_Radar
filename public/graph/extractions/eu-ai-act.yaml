@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 18377dea6086345dc1ae7febba4a32165997bd97989a5c08d09f81b9f5e91b55
+note_sha256: 7c2ac12821832493c072988d152ef4b25a3018ea6c31293c22dec3f66292288d
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - ai-system
@@ -32,6 +32,8 @@ discusses:
 - multimodal-models
 - large-language-models
 - geschgehg
+- data-governance
+- data-quality
 relations:
 - from: eu-ai-act
   type: REGULATES

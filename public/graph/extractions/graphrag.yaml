@@ -14,6 +14,7 @@ discusses:
   - ircot
   - question-answering
   - text-summarisation
+  - knowledge-graph-engineering
 relations:
   - from: graphrag
     type: BASED_ON

@@ -728,7 +728,7 @@ The article does not specify the exact methodologies or benchmarks that must be 
 
 ##### What could this mean in practice?
 
-**Possible implementation – not a legally prescribed checklist:** A provider of a high-risk AI system may begin by identifying the relevant accuracy and robustness metrics for their system and declaring them in the instructions of use. They may also implement technical redundancy solutions, such as backup systems or fail-safe mechanisms, to ensure resilience against errors or faults. In terms of cybersecurity, they may develop measures to detect and respond to attacks on training data or pre-trained components, such as implementing data validation processes or using encryption to protect sensitive information.
+**Possible implementation – not a legally prescribed checklist:** A provider of a high-risk AI system may begin by identifying the relevant accuracy and robustness metrics for their system and declaring them in the instructions of use. They may also implement technical redundancy solutions, such as backup systems or fail-safe mechanisms, to ensure resilience against errors or faults. In terms of cybersecurity, they may develop measures to detect and respond to attacks on training data or pre-trained components, such as implementing [[data-quality|data validation]] processes or using encryption to protect sensitive information.
 
 ##### When does it apply?
 
@@ -3205,7 +3205,7 @@ Die nummerierten Absätze vor den Artikeln heißen Erwägungsgründe. Sie erklä
 
 - **65.** Risikomanagement erstreckt sich über den Lebenszyklus.
 - **66.** Zentrale Schutzanforderungen für Hochrisiko-Systeme zusammenfassen.
-- **67.** Bedeutung der Datenqualität erläutern.
+- **67.** Bedeutung der [[data-quality|Datenqualität]] erläutern.
 - **68.** Bedarf an geeigneten Entwicklungs- und Bewertungsdaten anerkennen.
 - **69.** Datenschutz- und Privatsphärengrundsätze wahren.
 - **70.** Eng abgesicherte Verarbeitung sensibler Daten zur Bias-Korrektur ermöglichen.

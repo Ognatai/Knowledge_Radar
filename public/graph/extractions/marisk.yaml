@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 6c3e1ba114e868f88cdcf4392c71cb3ccce82190cf78b23d41910fea04c6a8bc
+note_sha256: 14556e73864265279af58611ef79833037cfceae810fb3d4a01c5562065bc2c0
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - bafin
@@ -13,6 +13,8 @@ discusses:
 - risk-bearing-capacity
 - internal-control-system
 - explainable-ai
+- data-governance
+- data-quality
 relations:
 - from: marisk
   type: DEVELOPED_BY

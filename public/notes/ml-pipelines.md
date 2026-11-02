@@ -49,7 +49,7 @@ A pipeline is a directed acyclic graph of steps. In ZenML, steps are Python func
 
 #### 3. Validation gates
 
-Two checks guard the pipeline (Google Cloud). Data validation before training stops the run when incoming data does not match the expected schema (schema skew) and signals retraining when its statistics shift significantly (value skew). Model validation after training compares the new model with the current one on a test set, checks quality on important data segments and confirms compatibility with the serving infrastructure; online validation follows with canary releases or A/B tests. Drift and quality monitoring are covered in [[monitoring-and-alerting|monitoring and alerting]].
+Two checks guard the pipeline (Google Cloud). [[data-quality|Data validation]] before training stops the run when incoming data does not match the expected schema (schema skew) and signals retraining when its statistics shift significantly (value skew). Model validation after training compares the new model with the current one on a test set, checks quality on important data segments and confirms compatibility with the serving infrastructure; online validation follows with canary releases or A/B tests. Drift and quality monitoring are covered in [[monitoring-and-alerting|monitoring and alerting]].
 
 #### 4. Infrastructure abstraction: stacks and backends
 

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c788fc313eeb0f53858dff3fb1587d4e7c840e32960907c524259ee539c4e201
+note_sha256: 949909a652ae3cfcf73ec1df34968b2b0c17c259b9dbc77fab8b9ecb0c44552a
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - chatgpt
@@ -13,6 +13,7 @@ discusses:
 - quantisation
 - rag-vs-fine-tuning
 - mmlu
+- data-quality
 relations:
 - from: qlora
   type: BASED_ON

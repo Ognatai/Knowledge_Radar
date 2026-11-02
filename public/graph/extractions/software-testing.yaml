@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7f17c1c898f76f1d3a8b6d8cc39cd4f8e91aa1062c8a901203e4ee1ff2c113f5
+note_sha256: d1d0a6983f1ac3d107732cee5815366a59084d23893cfc704554fbef1c07835e
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apis
@@ -13,6 +13,7 @@ discusses:
 - technical-debt
 - martin-fowler
 - ml-test-score
+- data-quality
 relations:
 - from: ml-test-score
   type: EVALUATES

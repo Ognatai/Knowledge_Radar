@@ -17,6 +17,7 @@ discusses:
 - regularisation-and-hyperparameters
 - model-comparison
 - experiment-tracking
+- software-testing
 relations:
 - from: scikit-learn
   type: BASED_ON
