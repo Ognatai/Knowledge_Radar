@@ -9,6 +9,7 @@ areas:
     notes:
       - attention-and-transformers
       - large-language-models
+      - context-window
       - mixture-of-experts
       - reasoning-models
       - gpt
@@ -31,6 +32,7 @@ areas:
       - natural-language-understanding
       - natural-language-inference
       - question-answering
+      - text-summarisation
       - dialogue-state-tracking
       - automatic-speech-recognition
       - text-to-speech
@@ -58,6 +60,7 @@ areas:
     notes:
       - llm-adaptation
       - llm-alignment
+      - instruction-tuning
       - rag-vs-fine-tuning
       - lora
       - knowledge-distillation

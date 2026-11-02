@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 18cc5c3f07eb5a9db42e776c7a8c9458e3698b7b1dc64188585f8e913c34f9ae
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- retrieval-augmented-generation
+- context-engineering
+- attention-and-transformers
+- structured-context-construction
+- rag-chunking
+- question-answering
+- memory-in-llms
+- agentic-ai
+- llm-evaluation
+- llm-cost-optimisation
+- flashattention
+relations:
+- from: context-window
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: Self-attention computes a dot product between every pair of positions, so the score matrix is N × N
+- from: flashattention
+  type: COMPLEMENTS
+  to: context-window
+  evidence: FlashAttention computes exact attention with fewer reads and writes to GPU high-bandwidth memory and made longer contexts practical
+- from: context-engineering
+  type: BASED_ON
+  to: context-window
+  evidence: how it is filled is the subject of context engineering

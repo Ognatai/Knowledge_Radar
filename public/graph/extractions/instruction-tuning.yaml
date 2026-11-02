@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 37a354101e9d90a6d40c04f3aa97582db6415301a97b1aaf871308d19ef79a12
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- cross-entropy
+- llm-alignment
+- lora
+- llm-adaptation
+- squad
+- question-answering
+- large-language-models
+- rag-vs-fine-tuning
+- few-shot-prompting
+- retrieval-augmented-generation
+- flan
+relations:
+- from: instruction-tuning
+  type: BASED_ON
+  to: cross-entropy
+  evidence: with the usual next-token cross-entropy loss applied only to the response
+- from: llm-alignment
+  type: BASED_ON
+  to: instruction-tuning
+  evidence: It is the first post-training stage of most chat models, usually followed by preference alignment such as RLHF or DPO
+- from: flan
+  type: IS_EXAMPLE_OF
+  to: instruction-tuning
+  evidence: FLAN instruction-tuned a 137-billion-parameter model on more than 60 tasks
+- from: lora
+  type: COMPLEMENTS
+  to: instruction-tuning
+  evidence: All parameters can be updated, or only a small set with parameter-efficient methods such as LoRA

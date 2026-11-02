@@ -1,0 +1,29 @@
+version: 1
+note_sha256: 88081f7e99e24d21e0f9ac742a53bb7e74827327ffe81e43ab1d3f5f6e045c55
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- pagerank
+- t5
+- instruction-tuning
+- text-similarity-metrics
+- llm-as-a-judge
+- hallucination-detection
+- context-window
+- retrieval-augmented-generation
+- memory-in-llms
+- rag-generation-evaluation
+- rouge
+- bart
+relations:
+- from: rouge
+  type: EVALUATES
+  to: text-summarisation
+  evidence: ROUGE (Recall-Oriented Understudy for Gisting Evaluation) counts overlapping units between a system summary and human reference summaries
+- from: text-summarisation
+  type: BASED_ON
+  to: pagerank
+  evidence: ranks the vertices with a PageRank-style algorithm and picks the highest-ranked sentences
+- from: bart
+  type: IS_EXAMPLE_OF
+  to: text-summarisation
+  evidence: BART is pre-trained as a denoising autoencoder, reconstructing text after sentence shuffling and span in-filling, and improved abstractive summarisation by up to 6 ROUGE
