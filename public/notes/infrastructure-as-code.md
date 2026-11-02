@@ -62,7 +62,7 @@ IaC became practical when cloud platforms made it possible to create a server in
 
 - Environments (development, test, production) must be identical and reproducible (Microsoft Learn).
 - Infrastructure changes need an audit trail, for example in regulated settings (Fowler, 2016).
-- Many servers or services are created and removed dynamically, as with microservices or on-demand test environments (Fowler, 2016; Microsoft Learn).
+- Many servers or services are created and removed dynamically, as with [[software-architecture|microservices]] or on-demand test environments (Fowler, 2016; Microsoft Learn).
 
 ### Strengths and limitations
 
@@ -151,7 +151,7 @@ IaC wurde praktikabel, als Cloud-Plattformen es möglich machten, einen Server i
 
 - Umgebungen (Entwicklung, Test, Produktion) müssen identisch und reproduzierbar sein (Microsoft Learn).
 - Infrastrukturänderungen brauchen einen Prüfpfad, etwa in regulierten Umfeldern (Fowler, 2016).
-- Viele Server oder Dienste werden dynamisch erstellt und entfernt, etwa bei Microservices oder Testumgebungen auf Abruf (Fowler, 2016; Microsoft Learn).
+- Viele Server oder Dienste werden dynamisch erstellt und entfernt, etwa bei [[software-architecture|Microservices]] oder Testumgebungen auf Abruf (Fowler, 2016; Microsoft Learn).
 
 ### Stärken und Grenzen
 

@@ -34,6 +34,7 @@ discusses:
 - geschgehg
 - data-governance
 - data-quality
+- llm-observability-and-tracing
 relations:
 - from: eu-ai-act
   type: REGULATES

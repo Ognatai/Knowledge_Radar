@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8f9fec2cc41090a3884eaa539ae25a1fa9dee562674384522d1d7f74595f1ae9
+note_sha256: 9b3d8bad5d0eb271ea21b222b7feb511ae1a52c001de43ea0d4f68bf86d9e0f4
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - apache-kafka
@@ -9,6 +9,7 @@ discusses:
 - time-series-analysis
 - anomaly-detection
 - asynchronous-apis
+- software-architecture
 relations:
 - from: apache-kafka
   type: IMPLEMENTS

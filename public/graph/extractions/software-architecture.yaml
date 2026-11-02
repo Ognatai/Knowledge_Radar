@@ -1,0 +1,16 @@
+version: 1
+note_sha256: b9ca4be1494e380989a8b6797aea8f4a4ede05925f3dd12b6418721bffc985ab
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- martin-fowler
+- technical-debt
+- clean-code
+- refactoring
+- rest
+- asynchronous-apis
+- ci-cd
+- monitoring-and-alerting
+- docker
+- kubernetes
+- software-testing
+relations: []

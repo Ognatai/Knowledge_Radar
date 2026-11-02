@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 3c00a78f6fc34135d2e04de38770dbe8c8ce99e14e18956256f78ff183d61ffd
+note_sha256: 686de79aa6e53e330fc1bff8808ad20259909b86b138a4be2a2da25f61cd9b72
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - ci-cd
@@ -11,4 +11,5 @@ discusses:
 - thoughtworks
 - kent-beck
 - refactoring
+- software-architecture
 relations: []

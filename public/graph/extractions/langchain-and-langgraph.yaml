@@ -6,6 +6,7 @@ discusses:
 - react
 - mcp-and-related-protocols
 - tool-calling
+- llm-observability-and-tracing
 relations:
 - from: langchain-and-langgraph
   type: IMPLEMENTS

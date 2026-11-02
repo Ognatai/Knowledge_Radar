@@ -7,6 +7,7 @@ discusses:
 - claude-code
 - codex
 - context-engineering
+- llm-observability-and-tracing
 relations:
 - from: agent-skills
   type: COMPLEMENTS

@@ -11,6 +11,7 @@ discusses:
 - prompt-injection
 - context-engineering
 - llm-guardrails
+- llm-observability-and-tracing
 relations:
 - from: prompt-engineering
   type: BASED_ON

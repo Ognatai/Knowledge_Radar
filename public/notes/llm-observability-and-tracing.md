@@ -191,7 +191,7 @@ Die Aufschlüsselung der Kosten pro Span zeigt, welcher Teil einer Anfrage die K
 
 #### Ursprung und Varianten
 
-Verteiltes Tracing macht den gesamten Weg einer Anfrage sichtbar, ob die Anwendung ein Monolith mit einer Datenbank oder ein Geflecht vieler Dienste ist (OpenTelemetry traces docs). LLM-Anwendungen fügten Prompts, Token, Kosten und Werkzeugaufrufe als zu erfassende Daten hinzu, und agentische Systeme machten Traces mehrstufiger Läufe nötig; Frameworks, die Prompts und Antworten hinter Abstraktionsschichten verbergen, erschweren das Debugging, was Tracing ausgleicht (Anthropic, 2024a).
+Verteiltes Tracing macht den gesamten Weg einer Anfrage sichtbar, ob die Anwendung ein [[software-architecture|Monolith]] mit einer Datenbank oder ein Geflecht vieler Dienste ist (OpenTelemetry traces docs). LLM-Anwendungen fügten Prompts, Token, Kosten und Werkzeugaufrufe als zu erfassende Daten hinzu, und agentische Systeme machten Traces mehrstufiger Läufe nötig; Frameworks, die Prompts und Antworten hinter Abstraktionsschichten verbergen, erschweren das Debugging, was Tracing ausgleicht (Anthropic, 2024a).
 
 ### Wann einsetzen
 

@@ -12,6 +12,7 @@ discusses:
 - technical-debt
 - mcp-and-related-protocols
 - graph-engineering
+- llm-observability-and-tracing
 relations:
 - from: vibe-coding
   type: DEVELOPED_BY

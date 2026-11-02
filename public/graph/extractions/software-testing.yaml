@@ -1,5 +1,5 @@
 version: 1
-note_sha256: d1d0a6983f1ac3d107732cee5815366a59084d23893cfc704554fbef1c07835e
+note_sha256: 350e2f9e0a34b08265203b5bbee38c9871b0e35db5f54488042ab6b067639253
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apis
@@ -14,6 +14,7 @@ discusses:
 - martin-fowler
 - ml-test-score
 - data-quality
+- software-architecture
 relations:
 - from: ml-test-score
   type: EVALUATES

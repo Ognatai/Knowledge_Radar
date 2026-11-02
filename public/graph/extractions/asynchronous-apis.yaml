@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 12d7d71dda95d9113877a24a393468c7ca41defeb7881f9c69ab4b4f2676135a
+note_sha256: f1e534f034e5415b225d268343470e7890b06b56d1239815f8eb595c185553d1
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - apis
@@ -8,6 +8,7 @@ discusses:
 - microsoft
 - data-pipelines
 - api-authentication
+- software-architecture
 relations:
 - from: asynchronous-apis
   type: BASED_ON

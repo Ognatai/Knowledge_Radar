@@ -10,6 +10,7 @@ discusses:
 - natural-language-understanding
 - llm-observability-and-tracing
 - llm-evaluation
+- asynchronous-apis
 relations:
 - from: paradise-framework
   type: EVALUATES

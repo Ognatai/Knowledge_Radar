@@ -21,7 +21,7 @@ sources:
 
 ### TL;DR
 
-Martin Fowler is a software author and Chief Scientist at the software delivery company Thoughtworks, known for his books on [[refactoring|refactoring]], enterprise application architecture and UML, and for his website martinfowler.com, whose articles and "bliki" entries are widely cited definitions of software engineering practices (Fowler, n.d.-a). He co-signed the Manifesto for Agile Software Development in 2001 (Beck et al., 2001). In this knowledge base, his writing is a primary source for [[ci-cd|continuous integration]], [[technical-debt|technical debt]], [[software-testing|testing]], [[infrastructure-as-code|infrastructure as code]] and [[requirements-engineering|requirements]] practices such as user stories. Since 2023, his site has also published a series of memos by Thoughtworks colleagues on using generative AI in software delivery (Böckeler et al., 2023–2026).
+Martin Fowler is a software author and Chief Scientist at the software delivery company Thoughtworks, known for his books on [[refactoring|refactoring]], enterprise [[software-architecture|application architecture]] and UML, and for his website martinfowler.com, whose articles and "bliki" entries are widely cited definitions of software engineering practices (Fowler, n.d.-a). He co-signed the Manifesto for Agile Software Development in 2001 (Beck et al., 2001). In this knowledge base, his writing is a primary source for [[ci-cd|continuous integration]], [[technical-debt|technical debt]], [[software-testing|testing]], [[infrastructure-as-code|infrastructure as code]] and [[requirements-engineering|requirements]] practices such as user stories. Since 2023, his site has also published a series of memos by Thoughtworks colleagues on using generative AI in software delivery (Böckeler et al., 2023–2026).
 
 ### Key facts
 
@@ -123,7 +123,7 @@ Fowler definiert Refactoring als „a controlled technique for improving the des
 
 #### Architektur und Muster für Unternehmensanwendungen
 
-Sein Hauptinteresse gilt dem Entwurf von Softwaresystemen, mit denen Entwicklungsteams mehr Wert liefern; dazu untersucht er Muster guter Softwarearchitektur und die Prozesse, die den Entwurf unterstützen (Fowler, n.d.-a). *Analysis Patterns* (1996) und *Patterns of Enterprise Application Architecture* (2002) sammeln solche Muster; *Domain Specific Languages* (2010, mit Rebecca Parsons) und *NoSQL Distilled* (2012, mit Pramod J. Sadalage) übertragen sie auf Sprachentwurf und Datenhaltung (Fowler, n.d.-b).
+Sein Hauptinteresse gilt dem Entwurf von Softwaresystemen, mit denen Entwicklungsteams mehr Wert liefern; dazu untersucht er Muster guter [[software-architecture|Softwarearchitektur]] und die Prozesse, die den Entwurf unterstützen (Fowler, n.d.-a). *Analysis Patterns* (1996) und *Patterns of Enterprise Application Architecture* (2002) sammeln solche Muster; *Domain Specific Languages* (2010, mit Rebecca Parsons) und *NoSQL Distilled* (2012, mit Pramod J. Sadalage) übertragen sie auf Sprachentwurf und Datenhaltung (Fowler, n.d.-b).
 
 #### Agile Praktiken und Continuous Integration
 

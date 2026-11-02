@@ -16,6 +16,7 @@ discusses:
 - embeddings
 - llm-as-a-judge
 - context-engineering
+- llm-observability-and-tracing
 relations:
 - from: frugalgpt
   type: IS_EXAMPLE_OF

@@ -73,7 +73,7 @@ Breck et al. (2017) present 28 tests and monitoring needs from Google's producti
 
 #### Origin and variants
 
-The pyramid goes back to Mike Cohn; Vocke's 2018 article on martinfowler.com reworks it for microservices with contract tests (Vocke, 2018). The test-double vocabulary comes from Gerard Meszaros's *xUnit Test Patterns* (Fowler, 2006). Breck et al. (2017) developed the ML Test Score for an internal ML Test Certified programme at Google, inspired by its Test Certified programme for general software.
+The pyramid goes back to Mike Cohn; Vocke's 2018 article on martinfowler.com reworks it for [[software-architecture|microservices]] with contract tests (Vocke, 2018). The test-double vocabulary comes from Gerard Meszaros's *xUnit Test Patterns* (Fowler, 2006). Breck et al. (2017) developed the ML Test Score for an internal ML Test Certified programme at Google, inspired by its Test Certified programme for general software.
 
 ### When to use it
 
@@ -178,7 +178,7 @@ Breck et al. (2017) stellen 28 Tests und Monitoring-Anforderungen aus den produk
 
 #### Herkunft und Varianten
 
-Die Pyramide geht auf Mike Cohn zurück; Vockes Artikel von 2018 auf martinfowler.com überarbeitet sie für Microservices mit Contract-Tests (Vocke, 2018). Das Vokabular der Test Doubles stammt aus Gerard Meszaros' *xUnit Test Patterns* (Fowler, 2006). Breck et al. (2017) entwickelten den ML Test Score für ein internes ML-Test-Certified-Programm bei Google, angelehnt an dessen Test-Certified-Programm für allgemeine Software.
+Die Pyramide geht auf Mike Cohn zurück; Vockes Artikel von 2018 auf martinfowler.com überarbeitet sie für [[software-architecture|Microservices]] mit Contract-Tests (Vocke, 2018). Das Vokabular der Test Doubles stammt aus Gerard Meszaros' *xUnit Test Patterns* (Fowler, 2006). Breck et al. (2017) entwickelten den ML Test Score für ein internes ML-Test-Certified-Programm bei Google, angelehnt an dessen Test-Certified-Programm für allgemeine Software.
 
 ### Wann einsetzen
 

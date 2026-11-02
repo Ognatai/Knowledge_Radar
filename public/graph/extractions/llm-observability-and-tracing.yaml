@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "be79d656959c8a3ebbf0ba053930e6025338cb7a6cee435bf221d4da82ef3d39"
+note_sha256: "935b689de7448b405ea5f3b2c548b6adede8eeab3d891b09c6dc81c245a819cb"
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - langfuse
@@ -9,6 +9,7 @@ discusses:
 - engineering-methods-for-ai-systems
 - llm-cost-optimisation
 - gdpr
+- software-architecture
 relations:
 - from: llm-observability-and-tracing
   type: IS_EXAMPLE_OF

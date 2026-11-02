@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 8b34f0f27101086ad5b2fe80f0a2253407692eadcca2321ba350b147cccb4e5b
+note_sha256: d00612f81b851cc640c29bac4a09954a9f6cf12d13b9ed68f049875252dd1809
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apis
@@ -10,6 +10,7 @@ discusses:
 - technical-debt
 - terraform
 - martin-fowler
+- software-architecture
 relations:
 - from: terraform
   type: IMPLEMENTS

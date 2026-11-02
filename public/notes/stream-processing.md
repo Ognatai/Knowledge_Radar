@@ -68,7 +68,7 @@ The Dataflow Model, presented at VLDB 2015, describes the processing model of Go
 
 - Results are needed as events happen: real-time payments, fleet tracking, sensor data from factories, customer orders or patient monitoring (Kafka docs: Introduction; [[time-series-analysis|time series]]).
 - Detecting anomalies or fraud on live data ([[anomaly-detection|anomaly detection]]).
-- Connecting services and departments through durable event streams, for example in event-driven architectures and microservices (Kafka docs: Introduction; [[asynchronous-apis|asynchronous APIs]]).
+- Connecting services and departments through durable event streams, for example in event-driven architectures and [[software-architecture|microservices]] (Kafka docs: Introduction; [[asynchronous-apis|asynchronous APIs]]).
 
 ### Strengths and limitations
 
@@ -154,7 +154,7 @@ Das Dataflow-Modell, vorgestellt auf der VLDB 2015, beschreibt das Verarbeitungs
 
 - Ergebnisse werden gebraucht, während Ereignisse geschehen: Zahlungen in Echtzeit, Flottenverfolgung, Sensordaten aus Fabriken, Kundenbestellungen oder Patientenüberwachung (Kafka docs: Introduction; [[time-series-analysis|Zeitreihen]]).
 - Anomalien oder Betrug in Live-Daten erkennen ([[anomaly-detection|Anomalieerkennung]]).
-- Dienste und Abteilungen über dauerhafte Event-Streams verbinden, etwa in ereignisgetriebenen Architekturen und Microservices (Kafka docs: Introduction; [[asynchronous-apis|asynchrone APIs]]).
+- Dienste und Abteilungen über dauerhafte Event-Streams verbinden, etwa in ereignisgetriebenen Architekturen und [[software-architecture|Microservices]] (Kafka docs: Introduction; [[asynchronous-apis|asynchrone APIs]]).
 
 ### Stärken und Grenzen
 

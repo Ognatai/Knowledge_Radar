@@ -284,6 +284,7 @@ areas:
       - kubernetes
       - clean-code
       - technical-debt
+      - software-architecture
       - confluence
       - mlops-and-deployment
       - experiment-tracking

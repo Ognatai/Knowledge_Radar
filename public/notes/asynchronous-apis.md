@@ -61,7 +61,7 @@ Long polling, where the server holds the request open until data is available or
 ### When to use it
 
 - When back-end work runs for seconds, minutes or longer, so that the client cannot wait for it before getting a response (Azure: Asynchronous Request-Reply).
-- For server-to-server calls in distributed systems such as microservices, where the same considerations apply (Azure: Asynchronous Request-Reply).
+- For server-to-server calls in distributed systems such as [[software-architecture|microservices]], where the same considerations apply (Azure: Asynchronous Request-Reply).
 - When decoupling client and back end through a queue, so both can scale independently (Azure: Asynchronous Request-Reply); see also [[data-pipelines|Data Pipelines]].
 
 ### Strengths and limitations
@@ -149,7 +149,7 @@ Long Polling, bei dem der Server die Anfrage offen hält, bis Daten vorliegen od
 ### Wann einsetzen
 
 - Wenn Arbeit im Backend Sekunden, Minuten oder länger läuft, sodass der Client vor einer Antwort nicht darauf warten kann (Azure: Asynchronous Request-Reply).
-- Für Aufrufe zwischen Servern in verteilten Systemen wie Microservices, für die dieselben Überlegungen gelten (Azure: Asynchronous Request-Reply).
+- Für Aufrufe zwischen Servern in verteilten Systemen wie [[software-architecture|Microservices]], für die dieselben Überlegungen gelten (Azure: Asynchronous Request-Reply).
 - Wenn Client und Backend über eine Queue entkoppelt werden, sodass beide unabhängig skalieren (Azure: Asynchronous Request-Reply); siehe auch [[data-pipelines|Datenpipelines]].
 
 ### Stärken und Grenzen

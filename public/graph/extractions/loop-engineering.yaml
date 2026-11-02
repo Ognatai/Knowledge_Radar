@@ -12,6 +12,7 @@ discusses:
 - reflexion
 - context-engineering
 - context-window
+- llm-observability-and-tracing
 relations:
 - from: loop-engineering
   type: BASED_ON
