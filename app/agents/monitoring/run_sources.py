@@ -84,7 +84,9 @@ def collect_findings(
         except Exception as exc:  # network and parse errors of one source must not stop the run
             errors.append(f"arXiv ({phrase}): {exc}")
     if config.daily_papers_top_per_day:
-        day, last = since, today
+        # The API refuses days that have not ended in UTC (400 on 2026-11-01); today's
+        # papers are still incomplete anyway, and the next run's window begins with today.
+        day, last = since, today - timedelta(days=1)
         while day <= last:
             try:
                 batches.append(("Hugging Face Daily Papers", fetch_daily_papers(day, config.daily_papers_top_per_day), [], [], since))

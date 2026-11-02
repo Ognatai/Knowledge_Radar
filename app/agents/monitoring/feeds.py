@@ -18,8 +18,10 @@ import html
 import json
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import date, datetime
 from email.utils import parsedate_to_datetime
@@ -33,6 +35,8 @@ from app.agents.monitoring.findings import Finding
 ARXIV_API = "https://export.arxiv.org/api/query"
 DAILY_PAPERS_API = "https://huggingface.co/api/daily_papers?date={day}"
 ARXIV_REQUEST_SPACING_SECONDS = 3.0
+TRANSIENT_HTTP_CODES = (429, 500, 502, 503, 504)
+FEED_RETRY_WAITS_SECONDS = (10, 30, 60)
 USER_AGENT = "KnowledgeRadar/0.1 (+https://github.com/Ognatai/Knowledge_Radar)"
 MAX_SUMMARY_CHARACTERS = 2000
 ATOM = "{http://www.w3.org/2005/Atom}"
@@ -218,9 +222,30 @@ def parse_feed(
     return findings
 
 
+def fetch_with_retry(
+    url: str,
+    fetch: Callable[[str], str] = fetch,
+    sleep: Callable[[float], None] = time.sleep,
+) -> str:
+    """Busy and server errors are retried after a wait; YouTube's channel feeds also
+    answer 404 now and then for channels that exist (six at once on 2026-11-01)."""
+    transient = set(TRANSIENT_HTTP_CODES)
+    if urllib.parse.urlparse(url).hostname == "www.youtube.com":
+        transient.add(404)
+    for attempt, wait in enumerate((0, *FEED_RETRY_WAITS_SECONDS)):
+        if wait:
+            sleep(wait)
+        try:
+            return fetch(url)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in transient or attempt == len(FEED_RETRY_WAITS_SECONDS):
+                raise
+    raise AssertionError("unreachable")
+
+
 def fetch_feed(feed: FeedConfig) -> list[Finding]:
     return parse_feed(
-        fetch(feed.url),
+        fetch_with_retry(feed.url),
         feed_name=feed.name,
         category=feed.category,
         source_kind=feed.source_kind,

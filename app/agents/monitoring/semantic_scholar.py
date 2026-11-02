@@ -29,8 +29,9 @@ BULK_SEARCH = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
 FIELDS = "title,abstract,venue,publicationDate,year,authors,externalIds,url"
 SOURCE_NAME = "Semantic Scholar"
 REQUEST_SPACING_SECONDS = 1.5
-# The unauthenticated pool is shared by all users and answers 429 when busy.
-RETRY_WAITS_SECONDS = (5, 15, 30)
+# The unauthenticated pool is shared by all users and answers 429 when busy;
+# on 2026-11-01 three phrases were still refused after 5, 15 and 30 seconds.
+RETRY_WAITS_SECONDS = (10, 30, 60, 120)
 _last_request = 0.0
 
 

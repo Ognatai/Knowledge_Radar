@@ -1,5 +1,7 @@
 import gzip
+import io
 import json
+import urllib.error
 from datetime import date, datetime, timezone
 
 import pytest
@@ -10,6 +12,7 @@ from app.agents.monitoring.feeds import (
     ArxivQuery,
     arxiv_query_url,
     decode_body,
+    fetch_with_retry,
     parse_arxiv,
     parse_daily_papers,
     parse_feed,
@@ -337,7 +340,7 @@ def test_daily_papers_keep_the_most_upvoted_as_arxiv_findings():
     assert (findings[0].tier, findings[0].published) == ("preprint", date(2026, 10, 7))
 
 
-def test_daily_papers_are_fetched_for_every_day_of_the_window(tmp_path):
+def test_daily_papers_are_fetched_for_every_finished_day_of_the_window(tmp_path):
     config = load_sources_config(write_config(tmp_path, "huggingface_daily_papers:\n  top_per_day: 2\n" + CONFIG))
     days = []
 
@@ -355,8 +358,8 @@ def test_daily_papers_are_fetched_for_every_day_of_the_window(tmp_path):
         fetch_daily_papers=fetch_daily,
     )
 
-    assert days == [date(2026, 10, 8), date(2026, 10, 9), date(2026, 10, 10)]
-    assert len(result.findings) == 3
+    assert days == [date(2026, 10, 8), date(2026, 10, 9)]
+    assert len(result.findings) == 2
 
 
 def test_exclude_keywords_drop_items(tmp_path):
@@ -406,3 +409,34 @@ def test_youtube_channel_feeds_give_the_video_description():
     assert video.url == "https://www.youtube.com/watch?v=abc123"
     assert video.summary == "How agents keep memory on the device."
     assert video.category == "video" and video.published == date(2026, 10, 7)
+
+
+def _failing_fetch(code, failures):
+    calls = []
+
+    def fetch(url):
+        calls.append(url)
+        if len(calls) <= failures:
+            raise urllib.error.HTTPError(url, code, "error", {}, io.BytesIO(b""))
+        return "ok"
+
+    return fetch, calls
+
+
+def test_youtube_feeds_are_retried_after_a_404():
+    fetch, calls = _failing_fetch(404, 2)
+    waits = []
+    url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC1"
+
+    assert fetch_with_retry(url, fetch, sleep=waits.append) == "ok"
+    assert len(calls) == 3 and waits == [10, 30]
+
+
+def test_other_feeds_retry_busy_responses_but_not_a_404():
+    fetch, calls = _failing_fetch(503, 1)
+    assert fetch_with_retry("https://example.org/feed.xml", fetch, sleep=lambda seconds: None) == "ok"
+
+    fetch, calls = _failing_fetch(404, 1)
+    with pytest.raises(urllib.error.HTTPError):
+        fetch_with_retry("https://example.org/feed.xml", fetch, sleep=lambda seconds: None)
+    assert len(calls) == 1

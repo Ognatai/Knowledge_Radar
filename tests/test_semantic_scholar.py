@@ -87,7 +87,7 @@ def test_busy_responses_are_retried_after_a_wait():
         return "ok"
 
     assert fetch_with_retry("u", fetch, sleep=waits.append) == "ok"
-    assert len(calls) == 3 and waits[1:] == [5, 15]
+    assert len(calls) == 3 and waits[1:] == [10, 30]
 
 
 def test_other_errors_are_not_retried():
