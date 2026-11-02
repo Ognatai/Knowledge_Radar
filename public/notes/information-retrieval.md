@@ -3,7 +3,6 @@ title_en: Information Retrieval
 title_de: Information Retrieval
 entity_type: Concept
 aliases:
-- tf-idf
 - Vector space model
 sources:
 - https://edoc.ub.uni-muenchen.de/36297/

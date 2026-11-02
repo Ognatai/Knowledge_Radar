@@ -30,6 +30,7 @@ areas:
       - memory-in-llms
       - natural-language-understanding
       - natural-language-inference
+      - question-answering
       - dialogue-state-tracking
       - automatic-speech-recognition
       - text-to-speech
@@ -109,6 +110,8 @@ areas:
     notes:
       - information-retrieval
       - inverted-index
+      - tf-idf
+      - cosine-similarity
       - bm25
       - query-likelihood-model
       - query-expansion
@@ -211,6 +214,7 @@ areas:
       - convolutional-neural-networks
       - computer-vision
       - recurrent-neural-networks
+      - lstm
       - autoencoders-and-gans
       - diffusion-models
       - reinforcement-learning

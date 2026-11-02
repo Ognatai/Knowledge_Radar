@@ -1,0 +1,32 @@
+version: 1
+note_sha256: 149bc8c2b32f42ffd427cb84372e56af481139de92349b628936b1adbd02faa7
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- tf-idf
+- embeddings
+- information-retrieval
+- inverted-index
+- vector-databases
+- sentence-bert
+- semantic-retrieval
+- clustering
+- bias-in-nlp
+- text-similarity-metrics
+- k-nearest-neighbours
+- near-duplicate-detection
+- rag-failure-modes
+- glove
+- jaccard-coefficient
+relations:
+- from: sentence-bert
+  type: BASED_ON
+  to: cosine-similarity
+  evidence: Sentence-BERT fine-tunes BERT in a siamese network so that sentence embeddings can be compared with cosine similarity
+- from: cosine-similarity
+  type: IS_EXAMPLE_OF
+  to: text-similarity-metrics
+  evidence: Related measures are the raw dot product, Euclidean distance and, for sets, the Jaccard coefficient
+- from: cosine-similarity
+  type: BASED_ON
+  to: embeddings
+  evidence: the default way to compare word and sentence embeddings

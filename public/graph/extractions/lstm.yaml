@@ -1,0 +1,39 @@
+version: 1
+note_sha256: 8071c2d89f7e4058eea728e5b452bb7b61dd173e2d4ed19a537c9b0a4f7ed249
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- recurrent-neural-networks
+- back-propagation
+- attention-and-transformers
+- hidden-markov-models
+- part-of-speech-tagging
+- entity-extraction
+- time-series-analysis
+- mixture-of-experts
+- large-language-models
+- machine-translation
+- gru
+- bilstm-crf
+- gnmt
+- random-search
+relations:
+- from: lstm
+  type: IS_EXAMPLE_OF
+  to: recurrent-neural-networks
+  evidence: Long Short-Term Memory (LSTM) is a recurrent neural network architecture
+- from: gru
+  type: BASED_ON
+  to: lstm
+  evidence: the Gated Recurrent Unit (GRU) of Cho et al., which drops peepholes and the output activation and couples input and forget gate into an update gate
+- from: bilstm-crf
+  type: BASED_ON
+  to: lstm
+  evidence: Huang et al. (2015) put a conditional random field on top of a bidirectional LSTM (BiLSTM-CRF)
+- from: gnmt
+  type: BASED_ON
+  to: lstm
+  evidence: Google's neural machine translation system used 8 encoder layers (one bidirectional, seven unidirectional) and 8 decoder layers with attention
+- from: lstm
+  type: BASED_ON
+  to: back-propagation
+  evidence: Graves and Schmidhuber introduced full back-propagation through time for LSTM

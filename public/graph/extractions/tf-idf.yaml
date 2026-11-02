@@ -1,0 +1,36 @@
+version: 1
+note_sha256: 3cb0ceec10745940b219627a1c2b5051ba0107a428a3669153c064e6652176d8
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- cosine-similarity
+- bm25
+- information-retrieval
+- inverted-index
+- classification
+- clustering
+- naive-bayes
+- latent-semantic-indexing
+- embeddings
+- semantic-retrieval
+- query-likelihood-model
+- dense-passage-retrieval
+- rag-retrieval
+- reciprocal-rank-fusion
+- scikit-learn
+relations:
+- from: bm25
+  type: BASED_ON
+  to: tf-idf
+  evidence: BM25 is a tf-idf variant with a saturating term frequency (parameter k) and document length normalisation (parameter b)
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: tf-idf
+  evidence: scikit-learn's `TfidfTransformer` and `TfidfVectorizer` use raw counts as tf by default
+- from: tf-idf
+  type: COMPLEMENTS
+  to: cosine-similarity
+  evidence: the classic vector space model ranks documents by the cosine between the tf-idf vectors of query and document
+- from: tf-idf
+  type: IS_EXAMPLE_OF
+  to: information-retrieval
+  evidence: Keyword search over a document collection, for a baseline or the lexical side of hybrid retrieval

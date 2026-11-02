@@ -3741,17 +3741,6 @@ entities:
   summary_de: Die RDF-Reifikation beschreibt RDF-Aussagen mit einem eigenen Vokabular (rdf:Statement, rdf:subject, rdf:predicate, rdf:object), ohne sie selbst zu behaupten, sodass sich Aussagen über Aussagen treffen lassen (W3C 2014). Das Vokabular stammt aus der RDF-Spezifikation von 1999 und hat keine normative formale Semantik; RDF Schema 1.1 beschreibt seine beabsichtigte Bedeutung nur in einem nicht normativen Abschnitt.
   sources:
   - https://www.w3.org/TR/rdf-schema/
-- id: lstm
-  type: Method
-  name_en: Long short-term memory (LSTM)
-  name_de: Long Short-Term Memory (LSTM)
-  aliases:
-  - LSTM
-  summary_en: Long short-term memory (LSTM) is a recurrent neural network architecture that addresses the decaying error flow that makes learning over long time intervals with recurrent back-propagation slow (Hochreiter and Schmidhuber 1997). Special units enforce constant error flow through so-called constant error carousels, and multiplicative gate units learn to open and close access to them, so that LSTM can bridge time lags of more than 1,000 steps.
-  summary_de: Long Short-Term Memory (LSTM) ist eine Architektur rekurrenter neuronaler Netze, die das Abklingen des Fehlersignals angeht, das Lernen über lange Zeitabstände mit rekurrenter Backpropagation verlangsamt (Hochreiter und Schmidhuber 1997). Spezielle Einheiten erzwingen einen konstanten Fehlerfluss durch sogenannte Constant Error Carousels, und multiplikative Gate-Einheiten lernen, den Zugang dazu zu öffnen und zu schließen, sodass LSTM Zeitabstände von mehr als 1.000 Schritten überbrücken kann.
-  sources:
-  - https://doi.org/10.1162/neco.1997.9.8.1735
-  - https://www.bioinf.jku.at/publications/older/2604.pdf
 - id: gru
   type: Method
   name_en: Gated recurrent unit (GRU)

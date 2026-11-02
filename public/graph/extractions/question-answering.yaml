@@ -1,0 +1,47 @@
+version: 1
+note_sha256: c442406eaa2bcda0908281de49da7e34e974ae9a204920eac8a307c31a67a3a2
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- retrieval-augmented-generation
+- squad
+- tf-idf
+- bm25
+- dense-passage-retrieval
+- lstm
+- t5
+- sql
+- knowledge-graphs
+- hallucination-detection
+- classification-metrics
+- agentic-ai
+- conversational-ai
+- llm-evaluation
+- rag-failure-modes
+- ms-marco
+- rag-retrieval-evaluation
+- rag-generation-evaluation
+- natural-questions
+- mmlu
+- exact-match
+- f1-score
+relations:
+- from: squad
+  type: EVALUATES
+  to: question-answering
+  evidence: In SQuAD, crowdworkers wrote more than 100,000 questions on Wikipedia articles, each answered by a span of the passage
+- from: natural-questions
+  type: EVALUATES
+  to: question-answering
+  evidence: for free-text answers such as Natural Questions, token-level F1 treats prediction and gold answer as bags of tokens
+- from: mmlu
+  type: EVALUATES
+  to: question-answering
+  evidence: For multiple-choice questions such as MMLU, systems are scored by exact match
+- from: dense-passage-retrieval
+  type: COMPLEMENTS
+  to: bm25
+  evidence: outperformed a Lucene BM25 system by 9 to 19 percentage points in top-20 passage retrieval accuracy
+- from: retrieval-augmented-generation
+  type: IS_EXAMPLE_OF
+  to: question-answering
+  evidence: which is the pattern behind retrieval-augmented generation
