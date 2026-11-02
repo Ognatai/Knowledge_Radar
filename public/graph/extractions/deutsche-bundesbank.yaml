@@ -1,5 +1,5 @@
 version: 1
-note_sha256: cf7d3994d9f9ba46e40011f865c07cc8c2f3193d2330ace9fbeed85153dc531f
+note_sha256: 54649f161cf47d376896d12743a80b9c10019e4f76f97920b84afe8dacf4c751
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bafin
@@ -10,4 +10,5 @@ discusses:
 - explainable-ai
 - kwg
 - marisk
+- model-risk-management
 relations: []

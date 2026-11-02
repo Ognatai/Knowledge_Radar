@@ -62,7 +62,7 @@ The BAIT (BaFin circular 10/2017 (BA)) specified IT and information security req
 
 - When a bank or other financial entity in Germany organises its internal control system, control functions and internal audit (§ 25a KWG, MaRisk (2026)).
 - When an institution within DORA's scope sets up or reviews its ICT risk management framework, information security policy and access rules (Art. 5, 6, 9, DORA (2022)).
-- When an AI system is introduced into banking processes and must be assigned to the existing control structure, including model validation and explainability (MaRisk AT 4.3.4).
+- When an AI system is introduced into banking processes and must be assigned to the existing control structure, including [[model-risk-management|model validation]] and explainability (MaRisk AT 4.3.4).
 
 ### Strengths and limitations
 
@@ -152,7 +152,7 @@ Die BAIT (BaFin-Rundschreiben 10/2017 (BA)) konkretisierten die Anforderungen an
 
 - Wenn eine Bank oder ein anderes Finanzunternehmen in Deutschland sein internes Kontrollsystem, seine Kontrollfunktionen und die Interne Revision organisiert (§ 25a KWG, MaRisk (2026)).
 - Wenn ein Institut im Anwendungsbereich von DORA seinen Rahmen für das IKT-Risikomanagement, seine Informationssicherheitsleitlinie und seine Zugriffsregeln einrichtet oder überprüft (Art. 5, 6, 9, DORA (2022)).
-- Wenn ein KI-System in Bankprozesse eingeführt wird und in die bestehende Kontrollstruktur einzuordnen ist, einschließlich Modellvalidierung und Erklärbarkeit (MaRisk AT 4.3.4).
+- Wenn ein KI-System in Bankprozesse eingeführt wird und in die bestehende Kontrollstruktur einzuordnen ist, einschließlich [[model-risk-management|Modellvalidierung]] und Erklärbarkeit (MaRisk AT 4.3.4).
 
 ### Stärken und Grenzen
 

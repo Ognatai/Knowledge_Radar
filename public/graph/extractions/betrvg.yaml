@@ -1,0 +1,21 @@
+version: 1
+note_sha256: 32e6f5ce59e4ec8af0805e95635c4ea04715ffa2561311da25e943d5e042c2ab
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- agg
+- gdpr
+- bdsg
+- eu-ai-act
+- geschgehg
+- llm-observability-and-tracing
+- monitoring-and-alerting
+- fairness-metrics
+relations:
+- from: betrvg
+  type: COMPLEMENTS
+  to: eu-ai-act
+  evidence: this obligation applies alongside the works council's rights under the BetrVG
+- from: betrvg
+  type: COMPLEMENTS
+  to: bdsg
+  evidence: works agreements can be a legal basis for processing employee data

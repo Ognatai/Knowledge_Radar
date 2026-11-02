@@ -1,0 +1,23 @@
+version: 1
+note_sha256: b00ef8f72838704b0a8ca96d08572dfcc27544e475b5332e52ea1e1c4ccdf099
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- betrvg
+- gdpr
+- bdsg
+- eu-ai-act
+- fairness-metrics
+- bias-in-nlp
+- learning-to-rank
+- classification
+- creditworthiness-assessment
+- data-quality
+relations:
+- from: agg
+  type: COMPLEMENTS
+  to: betrvg
+  evidence: section 17(2) AGG refers to section 23(3) BetrVG for court proceedings by the works council
+- from: agg
+  type: COMPLEMENTS
+  to: eu-ai-act
+  evidence: the AI Act's obligations apply alongside the AGG's prohibitions of discrimination

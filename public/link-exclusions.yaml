@@ -91,3 +91,11 @@ exclusions:
     decoding-strategies: HMM decoding with Viterbi, not LLM text generation.
   stream-processing:
     monitoring-and-alerting: patient monitoring in hospitals, not system monitoring
+  agg:
+    natural-language-processing: words in the title of a cited dissertation
+  model-risk-management:
+    bafin: author in an in-text citation
+  ml-pipelines:
+    model-risk-management: pipeline step comparing a new model on a test set, not bank model risk management
+  rag-failure-modes:
+    model-risk-management: embedding model evaluation, not bank model risk management

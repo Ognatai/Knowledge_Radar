@@ -372,6 +372,8 @@ areas:
       - bsi-kritisv
       - kritis-dachgesetz
       - geschgehg
+      - agg
+      - betrvg
       - critical-facility
       - bsi
       - federal-network-agency
@@ -385,6 +387,7 @@ areas:
       - crr-and-crd
       - kwg
       - marisk
+      - model-risk-management
       - dora
       - eba-governance-and-outsourcing-guidelines
       - bcbs-239-and-ecb-rdarr-guide

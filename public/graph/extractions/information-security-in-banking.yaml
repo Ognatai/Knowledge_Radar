@@ -1,5 +1,5 @@
 version: 1
-note_sha256: af3d389bb5f2524f235581c7d3f060076070584c19230c0f51cae3c705df44e3
+note_sha256: b2d9187c8e7b99aa2fe182ed41dbebda1ddf0ddd4b2b0dac5a4bffc290243608
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - kwg
@@ -15,6 +15,7 @@ discusses:
 - ict-risk-management
 - least-privilege
 - data-governance
+- model-risk-management
 relations:
 - from: kwg
   type: REGULATES

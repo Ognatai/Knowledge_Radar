@@ -1,0 +1,28 @@
+version: 1
+note_sha256: 54cbad51c4e2daf69167c1a9bcb08f5c2641dadd24034c9f8ccc198e1ccba935
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- data-quality
+- cross-validation
+- logistic-regression
+- overfitting
+- hyperparameter-optimisation
+- gradient-descent
+- explainable-ai
+- mlops-and-deployment
+- experiment-tracking
+- marisk
+- crr-and-crd
+- ecb
+- monitoring-and-alerting
+- eu-ai-act
+- creditworthiness-assessment
+relations:
+- from: marisk
+  type: REGULATES
+  to: model-risk-management
+  evidence: set requirements for models used in risk management, expressly including artificial intelligence
+- from: ecb
+  type: REGULATES
+  to: model-risk-management
+  evidence: The ECB expects at least a written model risk management policy
