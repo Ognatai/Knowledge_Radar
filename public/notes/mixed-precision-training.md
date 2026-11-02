@@ -47,7 +47,7 @@ Because FP16 has a limited range, small gradient values can underflow to zero. S
 
 #### 4. BF16 without loss scaling
 
-Kalamkar et al. (2019) studied BF16 for training across image [[classification|classification]], [[automatic-speech-recognition|speech recognition]], language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no hyperparameter tuning was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
+Kalamkar et al. (2019) studied BF16 for training across image [[classification|classification]], [[automatic-speech-recognition|speech recognition]], language modelling, generative networks and recommendation systems. Because BF16 keeps the FP32 range, no [[hyperparameter-optimisation|hyperparameter tuning]] was needed for convergence, unlike FP16; training with BF16 tensors achieved the same state-of-the-art results as FP32 in the same number of iterations and with no changes to hyperparameters.
 
 #### 5. Reducing optimiser memory
 
@@ -55,7 +55,7 @@ Stateful optimisers such as [[adam-optimiser|Adam]] keep statistics of past grad
 
 #### Origin and variants
 
-Mixed precision with master weights and loss scaling was introduced by Micikevicius et al. (2017), BF16 training was validated by Kalamkar et al. (2019), and 8-bit optimisers (Dettmers et al., 2021) extended low precision to optimiser states. IO-aware kernels such as FlashAttention further reduce memory traffic during training (Dao et al., 2022).
+Mixed precision with master weights and loss scaling was introduced by Micikevicius et al. (2017), BF16 training was validated by Kalamkar et al. (2019), and 8-bit optimisers (Dettmers et al., 2021) extended low precision to optimiser states. IO-aware kernels such as [[flashattention|FlashAttention]] further reduce memory traffic during training (Dao et al., 2022).
 
 ### When to use it
 
@@ -145,7 +145,7 @@ Zustandsbehaftete Optimierer wie [[adam-optimiser|Adam]] führen Statistiken fr�
 
 #### Ursprung und Varianten
 
-Mixed Precision mit Hauptgewichten und Loss Scaling führten Micikevicius et al. (2017) ein, Kalamkar et al. (2019) bestätigten das Training mit BF16, und 8-Bit-Optimierer (Dettmers et al., 2021) übertrugen geringe Genauigkeit auf Optimiererzustände. Speicherzugriffsbewusste Kernel wie FlashAttention verringern den Datenverkehr im Speicher während des Trainings weiter (Dao et al., 2022).
+Mixed Precision mit Hauptgewichten und Loss Scaling führten Micikevicius et al. (2017) ein, Kalamkar et al. (2019) bestätigten das Training mit BF16, und 8-Bit-Optimierer (Dettmers et al., 2021) übertrugen geringe Genauigkeit auf Optimiererzustände. Speicherzugriffsbewusste Kernel wie [[flashattention|FlashAttention]] verringern den Datenverkehr im Speicher während des Trainings weiter (Dao et al., 2022).
 
 ### Wann einsetzen
 

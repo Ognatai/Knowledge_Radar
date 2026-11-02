@@ -37,7 +37,7 @@ BEIR covers fact checking (FEVER, Climate-FEVER, SciFact), citation prediction (
 
 #### 3. Evaluated systems
 
-Ten systems from five families were tested: lexical (BM25), sparse (DeepCT, SPARTA, docT5query), dense ([[dense-passage-retrieval|DPR]], ANCE, TAS-B, GenQ), late interaction (ColBERT) and re-ranking (BM25 plus a [[cross-encoder|cross-encoder]]) (Thakur et al., 2021). Except for DPR, which was trained on Natural Questions and other QA data, the neural models were trained on MS MARCO.
+Ten systems from five families were tested: lexical (BM25), sparse (DeepCT, SPARTA, docT5query), dense ([[dense-passage-retrieval|DPR]], ANCE, TAS-B, GenQ), late interaction (ColBERT) and re-ranking (BM25 plus a [[cross-encoder|cross-encoder]]) (Thakur et al., 2021). Except for DPR, which was trained on [[natural-questions|Natural Questions]] and other QA data, the neural models were trained on MS MARCO.
 
 #### 4. Findings
 
@@ -122,7 +122,7 @@ BEIR umfasst Faktenprüfung (FEVER, Climate-FEVER, SciFact), Zitationsvorhersage
 
 #### 3. Bewertete Systeme
 
-Getestet wurden zehn Systeme aus fünf Familien: lexikalisch (BM25), spärlich (DeepCT, SPARTA, docT5query), dicht ([[dense-passage-retrieval|DPR]], ANCE, TAS-B, GenQ), Late Interaction (ColBERT) und Re-Ranking (BM25 plus [[cross-encoder|Cross-Encoder]]) (Thakur et al., 2021). Außer DPR, das auf Natural Questions und weiteren QA-Daten trainiert war, wurden die neuronalen Modelle auf MS MARCO trainiert.
+Getestet wurden zehn Systeme aus fünf Familien: lexikalisch (BM25), spärlich (DeepCT, SPARTA, docT5query), dicht ([[dense-passage-retrieval|DPR]], ANCE, TAS-B, GenQ), Late Interaction (ColBERT) und Re-Ranking (BM25 plus [[cross-encoder|Cross-Encoder]]) (Thakur et al., 2021). Außer DPR, das auf [[natural-questions|Natural Questions]] und weiteren QA-Daten trainiert war, wurden die neuronalen Modelle auf MS MARCO trainiert.
 
 #### 4. Befunde
 

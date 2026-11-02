@@ -112,14 +112,6 @@ entities:
   summary_de: Masked Language Modelling ist ein Vortrainingsziel, bei dem zufällig einige Eingabetokens maskiert werden und das Modell die ursprünglichen Tokens aus ihrem linken und rechten Kontext vorhersagt, angelehnt an den Cloze-Test (Devlin et al. 2019). BERT wählt 15 % der Tokenpositionen aus; davon werden 80 % durch ein [MASK]-Token, 10 % durch ein zufälliges Token ersetzt und 10 % bleiben unverändert, um den Unterschied zum Fine-Tuning zu verringern, in dem [MASK] nicht vorkommt.
   sources:
   - https://arxiv.org/abs/1810.04805
-- id: flashattention
-  type: Method
-  name_en: FlashAttention
-  name_de: FlashAttention
-  summary_en: FlashAttention is an IO-aware exact attention algorithm that uses tiling to reduce reads and writes between GPU high-bandwidth memory and on-chip SRAM (Dao et al., 2022). It sped up training, for example threefold for GPT-2 with sequence length 1K, and enabled longer contexts, including the first Transformers to beat chance on the Path-X challenge with 16K tokens.
-  summary_de: FlashAttention ist ein exakter Attention-Algorithmus, der Speicherzugriffe berücksichtigt und mit Kachelung die Lese- und Schreibvorgänge zwischen dem Hauptspeicher der GPU (HBM) und dem SRAM auf dem Chip verringert (Dao et al., 2022). Es beschleunigte das Training, etwa um das Dreifache für GPT-2 mit Sequenzlänge 1K, und ermöglichte längere Kontexte, darunter die ersten Transformer, die bei der Path-X-Aufgabe mit 16K Tokens über dem Zufall lagen.
-  sources:
-  - https://arxiv.org/abs/2205.14135
 - id: id3
   type: Method
   name_en: ID3
@@ -827,16 +819,6 @@ entities:
   summary_de: Accuracy ist der Anteil richtiger Vorhersagen, also die Zahl der Beispiele, deren vorhergesagtes Label dem wahren entspricht, geteilt durch die Zahl aller Beispiele (scikit-learn developers, n.d.). Bei Multilabel-Klassifikation liefert accuracy_score in scikit-learn die Subset Accuracy, die ein Beispiel nur dann als richtig zählt, wenn die gesamte Menge vorhergesagter Labels mit der wahren übereinstimmt.
   sources:
   - https://scikit-learn.org/stable/modules/model_evaluation.html
-- id: f1-score
-  type: Concept
-  name_en: F1 score
-  name_de: F1-Score
-  aliases:
-  - F1
-  summary_en: The F1 score is the harmonic mean of precision, a classifier's ability not to label negative samples as positive, and recall, its ability to find all positive samples; the general F-beta measure weights the two and reaches its best value at 1 and worst at 0 (scikit-learn developers, n.d.). With beta = 1, precision and recall are equally important.
-  summary_de: Der F1-Score ist das harmonische Mittel aus Precision, der Fähigkeit eines Klassifikators, negative Beispiele nicht als positiv zu kennzeichnen, und Recall, der Fähigkeit, alle positiven Beispiele zu finden; das allgemeine F-Beta-Maß gewichtet beide und reicht von 0 (schlechtester) bis 1 (bester Wert) (scikit-learn developers, n.d.). Bei Beta = 1 sind Precision und Recall gleich wichtig.
-  sources:
-  - https://scikit-learn.org/stable/modules/model_evaluation.html
 - id: matthews-correlation-coefficient
   type: Concept
   name_en: Matthews correlation coefficient (MCC)
@@ -869,14 +851,6 @@ entities:
   summary_de: Eine Precision-Recall-Kurve zeigt Precision gegen Recall, während die Entscheidungsschwelle eines Klassifikators variiert (scikit-learn developers, n.d.). Die Average Precision fasst sie als Summe der Precision-Werte zusammen, gewichtet mit dem Zuwachs an Recall je Schwelle; bei zufälligen Vorhersagen entspricht sie dem Anteil positiver Beispiele, und lineare Interpolation zwischen den Punkten ergibt ein zu optimistisches Maß.
   sources:
   - https://scikit-learn.org/stable/modules/model_evaluation.html
-- id: exact-match
-  type: Concept
-  name_en: Exact match
-  name_de: Exact Match
-  summary_en: Exact match scores a prediction as correct only if it is identical to a reference answer; in extractive question answering such as SQuAD, it is reported alongside a token-level F1 score that gives partial credit for overlap (Rajpurkar et al. 2016).
-  summary_de: Exact Match wertet eine Vorhersage nur dann als richtig, wenn sie mit einer Referenzantwort identisch ist; bei extraktiver Fragebeantwortung wie SQuAD wird es zusammen mit einem F1-Wert auf Tokenebene berichtet, der Überlappungen teilweise anrechnet (Rajpurkar et al. 2016).
-  sources:
-  - https://arxiv.org/abs/1606.05250
 - id: robert-c-martin
   type: Person
   name_en: Robert C. Martin
@@ -1865,14 +1839,6 @@ entities:
   summary_de: GPT-NER verwandelt Named Entity Recognition in eine Generierungsaufgabe für ein LLM, etwa indem „Columbus is a city“ als „@@Columbus## is a city“ ausgegeben wird, um einen Ort zu markieren, und ergänzt eine Selbstprüfung gegen übermäßig selbstsicheres Labeln (Wang et al., 2023). Auf fünf NER-Datensätzen erreichte es Ergebnisse vergleichbar mit vollständig überwachten Baselines und war bei wenigen Trainingsdaten besser.
   sources:
   - https://arxiv.org/abs/2304.10428
-- id: bilstm-crf
-  type: Method
-  name_en: BiLSTM-CRF
-  name_de: BiLSTM-CRF
-  summary_en: A BiLSTM-CRF model combines a bidirectional LSTM, which uses both past and future input features, with a conditional random field layer that uses sentence-level tag information (Huang et al., 2015). Its authors were the first to apply it to standard NLP sequence tagging benchmarks and reached state-of-the-art or near state-of-the-art accuracy on part-of-speech tagging, chunking and named entity recognition.
-  summary_de: Ein BiLSTM-CRF-Modell verbindet ein bidirektionales LSTM, das vorherige und nachfolgende Eingaben nutzt, mit einer Conditional-Random-Field-Schicht, die Informationen über die Tags des ganzen Satzes verwendet (Huang et al., 2015). Die Autoren setzten es als Erste auf Standard-Benchmarks für Sequenz-Tagging ein und erreichten bei Wortartenerkennung, Chunking und Named Entity Recognition Bestwerte oder Werte nahe daran.
-  sources:
-  - https://arxiv.org/abs/1508.01991
 - id: coreference-resolution
   type: Method
   name_en: Coreference resolution
@@ -2197,14 +2163,6 @@ entities:
   summary_de: Merkmalsauswahl verkleinert die Menge der Eingabemerkmale, um die Genauigkeit eines Schätzers zu verbessern oder die Leistung bei sehr hochdimensionalen Daten zu steigern (scikit-learn developers, n.d.-f). Die Verfahren reichen vom Entfernen von Merkmalen mit geringer Varianz und univariaten statistischen Tests bis zu rekursiver Elimination und Auswahl über Modellgewichte, etwa die dünn besetzten Koeffizienten des Lasso.
   sources:
   - https://scikit-learn.org/stable/modules/feature_selection.html
-- id: lasso
-  type: Method
-  name_en: Lasso
-  name_de: Lasso
-  summary_en: The lasso is a linear model with an L1 penalty on the coefficients that estimates sparse solutions, setting some coefficients exactly to zero and thereby reducing the number of features a model depends on (scikit-learn developers, n.d.-d). This makes it useful for feature selection and fundamental to compressed sensing.
-  summary_de: Das Lasso ist ein lineares Modell mit L1-Strafe auf die Koeffizienten, das dünn besetzte Lösungen schätzt, einige Koeffizienten exakt auf null setzt und so die Zahl der Merkmale verringert, von denen ein Modell abhängt (scikit-learn developers, n.d.-d). Das macht es nützlich für die Merkmalsauswahl und grundlegend für Compressed Sensing.
-  sources:
-  - https://scikit-learn.org/stable/modules/linear_model.html
 - id: data-leakage
   type: Concept
   name_en: Data leakage
@@ -3750,14 +3708,6 @@ entities:
   summary_de: Ein Negative Flip ist ein Testbeispiel, das ein altes (Referenz-)Modell richtig, ein neues Modell aber falsch klassifiziert (Yan et al., 2020). Negative Flips zu verringern kann in der Praxis so wichtig sein wie die Gesamtfehlerrate zu senken; Positive-Congruent Training zielt darauf ab.
   sources:
   - https://arxiv.org/abs/2011.09161
-- id: ridge-regression
-  type: Method
-  name_en: Ridge regression (L2 regularisation)
-  name_de: Ridge-Regression (L2-Regularisierung)
-  summary_en: Ridge regression adds a penalty on the size of the coefficients to least squares, minimising the residual sum of squares plus α times the squared L2 norm of the coefficients (scikit-learn developers, n.d.-d). The larger α, the stronger the shrinkage and the more robust the coefficients become to collinearity.
-  summary_de: Ridge-Regression ergänzt die Methode der kleinsten Quadrate um eine Strafe auf die Größe der Koeffizienten und minimiert die Summe der quadrierten Abweichungen plus α mal die quadrierte L2-Norm der Koeffizienten (scikit-learn developers, n.d.-d). Je größer α, desto stärker die Schrumpfung und desto robuster werden die Koeffizienten gegenüber Kollinearität.
-  sources:
-  - https://scikit-learn.org/stable/modules/linear_model.html
 - id: dropout
   type: Method
   name_en: Dropout
@@ -3775,30 +3725,6 @@ entities:
   sources:
   - https://doi.org/10.1007/3-540-49430-8_3
   - https://page.mi.fu-berlin.de/prechelt/Biblio/stop_tricks1997.pdf
-- id: random-search
-  type: Method
-  name_en: Random search
-  name_de: Zufallssuche (Random Search)
-  summary_en: Random search samples hyperparameter settings from specified distributions instead of an exhaustive grid (scikit-learn developers, n.d.-h). Its budget can be chosen independently of the number of parameters and values, and adding parameters that do not affect performance does not reduce its efficiency.
-  summary_de: Random Search zieht Hyperparameter-Einstellungen aus vorgegebenen Verteilungen statt ein Raster vollständig abzusuchen (scikit-learn developers, n.d.-h). Sein Budget lässt sich unabhängig von der Zahl der Parameter und Werte wählen, und Parameter ohne Einfluss auf die Leistung mindern seine Effizienz nicht.
-  sources:
-  - https://scikit-learn.org/stable/modules/grid_search.html
-- id: grid-search
-  type: Method
-  name_en: Grid search
-  name_de: Rastersuche (Grid Search)
-  summary_en: Grid search exhaustively evaluates every combination of hyperparameter values from a specified grid, usually with cross-validation, and keeps the best combination (scikit-learn developers, n.d.-h). It is the most widely used approach to hyperparameter optimisation, but its cost grows with every added parameter and value.
-  summary_de: Grid Search bewertet erschöpfend jede Kombination von Hyperparameterwerten aus einem vorgegebenen Raster, meist mit Kreuzvalidierung, und behält die beste Kombination (scikit-learn developers, n.d.-h). Sie ist das am weitesten verbreitete Verfahren der Hyperparameter-Optimierung, doch ihr Aufwand wächst mit jedem zusätzlichen Parameter und Wert.
-  sources:
-  - https://scikit-learn.org/stable/modules/grid_search.html
-- id: bayesian-optimisation
-  type: Method
-  name_en: Bayesian optimisation
-  name_de: Bayessche Optimierung
-  summary_en: Bayesian optimisation tunes hyperparameters automatically by modelling a learning algorithm's generalisation performance as a sample from a Gaussian process, whose posterior guides which settings to try next (Snoek et al., 2012). Snoek et al. showed that careful choices of prior and inference can reach or surpass human expert tuning, and added variants that account for the cost of experiments and run them in parallel.
-  summary_de: Bayes'sche Optimierung stimmt Hyperparameter automatisch ab, indem sie die Generalisierungsleistung eines Lernverfahrens als Stichprobe aus einem Gaußprozess modelliert, dessen Posterior bestimmt, welche Einstellungen als Nächstes probiert werden (Snoek et al., 2012). Snoek et al. zeigten, dass eine sorgfältige Wahl von Prior und Inferenz die Abstimmung durch Fachleute erreichen oder übertreffen kann, und ergänzten Varianten, die die Kosten von Experimenten berücksichtigen und sie parallel ausführen.
-  sources:
-  - https://arxiv.org/abs/1206.2944
 - id: gaussian-process
   type: Method
   name_en: Gaussian process
@@ -4190,16 +4116,6 @@ entities:
   summary_de: LegalBench ist ein gemeinschaftlich erstellter Benchmark aus 162 Aufgaben zu sechs Arten juristischen Schlussfolgerns, von Fachleuten aus dem Recht entworfen (Guha et al., 2023). Die Autoren ordnen die Aufgaben juristischen Modellen des Schlussfolgerns zu und evaluierten 20 offene und kommerzielle LLMs.
   sources:
   - https://arxiv.org/abs/2308.11462
-- id: mmlu
-  type: Dataset
-  name_en: MMLU
-  name_de: MMLU
-  aliases:
-  - Massive Multitask Language Understanding
-  summary_en: MMLU (Measuring Massive Multitask Language Understanding) tests a text model's multitask accuracy on 57 tasks, including elementary mathematics, US history, computer science and law (Hendrycks et al., 2020). When it was introduced, most models were near chance, the largest GPT-3 model improved on chance by almost 20 percentage points, and models were near random on subjects such as morality and law.
-  summary_de: MMLU (Measuring Massive Multitask Language Understanding) prüft die Multitask-Accuracy eines Textmodells in 57 Aufgaben, darunter Elementarmathematik, US-Geschichte, Informatik und Recht (Hendrycks et al., 2020). Bei der Einführung lagen die meisten Modelle nahe am Zufall, das größte GPT-3-Modell um fast 20 Prozentpunkte darüber, und bei Themen wie Moral und Recht blieben Modelle nahe am Zufall.
-  sources:
-  - https://arxiv.org/abs/2009.03300
 - id: truthfulqa
   type: Dataset
   name_en: TruthfulQA
@@ -5092,14 +5008,6 @@ entities:
   summary_de: NVIDIA NeMo Guardrails ist ein quelloffenes Toolkit, mit dem sich programmierbare Guardrails in LLM-basierte Dialoganwendungen einbauen lassen (NeMo-Guardrails-Repository). Die Guardrails („Rails“) steuern die Ausgabe eines Modells, etwa indem bestimmte Themen vermieden, ein vordefinierter Dialogpfad eingehalten, ein bestimmter Stil verwendet oder strukturierte Daten extrahiert werden.
   sources:
   - https://github.com/NVIDIA-NeMo/Guardrails
-- id: natural-questions
-  type: Dataset
-  name_en: Natural Questions
-  name_de: Natural Questions
-  summary_en: Natural Questions is a question answering dataset whose questions are real, anonymised and aggregated queries to the Google search engine (Kwiatkowski et al. 2019). Annotators mark a long answer, typically a paragraph, and a short answer of one or more entities on a Wikipedia page from the top five search results, or null; the release contains 307,373 training examples and 5-way annotated development and test sets.
-  summary_de: Natural Questions ist ein Datensatz für Fragebeantwortung, dessen Fragen echte, anonymisierte und aggregierte Anfragen an die Google-Suche sind (Kwiatkowski et al. 2019). Annotierende markieren auf einer Wikipedia-Seite aus den ersten fünf Suchtreffern eine lange Antwort, meist einen Absatz, und eine kurze Antwort aus einer oder mehreren Entitäten oder vermerken, dass es keine gibt; die Veröffentlichung enthält 307.373 Trainingsbeispiele sowie fünffach annotierte Entwicklungs- und Testdaten.
-  sources:
-  - https://aclanthology.org/Q19-1026/
 - id: omar-khattab
   type: Person
   name_en: Omar Khattab

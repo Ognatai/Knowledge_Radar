@@ -53,7 +53,7 @@ Training chooses the weights that maximise the log probability of the correct la
 
 #### 4. Regularisation
 
-Without a penalty, a feature that happens to occur in only one class gets a huge weight and the model overfits; adding an L2 penalty (ridge) favours many small weights, an L1 penalty (lasso) favours sparse weight vectors with many zeros, and the bias is normally not penalised (Jurafsky & Martin, 2026; [[regularisation-and-hyperparameters|regularisation]]). In scikit-learn, regularisation is applied by default, which is common in machine learning but not in statistics; the parameter C is the inverse of the regularisation strength, smaller values mean stronger regularisation, and no regularisation corresponds to a very large C (scikit-learn; scikit-learn API reference).
+Without a penalty, a feature that happens to occur in only one class gets a huge weight and the model overfits; adding an L2 penalty (ridge) favours many small weights, an L1 penalty ([[ridge-and-lasso|lasso]]) favours sparse weight vectors with many zeros, and the bias is normally not penalised (Jurafsky & Martin, 2026; [[regularisation-and-hyperparameters|regularisation]]). In scikit-learn, regularisation is applied by default, which is common in machine learning but not in statistics; the parameter C is the inverse of the regularisation strength, smaller values mean stronger regularisation, and no regularisation corresponds to a very large C (scikit-learn; scikit-learn API reference).
 
 #### 5. More than two classes
 
@@ -146,7 +146,7 @@ Das Training wählt die Gewichte, die die logarithmierte Wahrscheinlichkeit der 
 
 #### 4. Regularisierung
 
-Ohne Strafterm erhält ein Merkmal, das zufällig nur in einer Klasse vorkommt, ein riesiges Gewicht, und das Modell passt sich zu stark an; ein L2-Strafterm (Ridge) bevorzugt viele kleine Gewichte, ein L1-Strafterm (Lasso) dünn besetzte Gewichtsvektoren mit vielen Nullen, und der Bias wird normalerweise nicht bestraft (Jurafsky & Martin, 2026; [[regularisation-and-hyperparameters|Regularisierung]]). In scikit-learn ist Regularisierung voreingestellt, was im maschinellen Lernen üblich ist, in der Statistik aber nicht; der Parameter C ist der Kehrwert der Regularisierungsstärke, kleinere Werte bedeuten stärkere Regularisierung, und keine Regularisierung entspricht einem sehr großen C (scikit-learn; scikit-learn-API-Referenz).
+Ohne Strafterm erhält ein Merkmal, das zufällig nur in einer Klasse vorkommt, ein riesiges Gewicht, und das Modell passt sich zu stark an; ein L2-Strafterm (Ridge) bevorzugt viele kleine Gewichte, ein L1-Strafterm ([[ridge-and-lasso|Lasso]]) dünn besetzte Gewichtsvektoren mit vielen Nullen, und der Bias wird normalerweise nicht bestraft (Jurafsky & Martin, 2026; [[regularisation-and-hyperparameters|Regularisierung]]). In scikit-learn ist Regularisierung voreingestellt, was im maschinellen Lernen üblich ist, in der Statistik aber nicht; der Parameter C ist der Kehrwert der Regularisierungsstärke, kleinere Werte bedeuten stärkere Regularisierung, und keine Regularisierung entspricht einem sehr großen C (scikit-learn; scikit-learn-API-Referenz).
 
 #### 5. Mehr als zwei Klassen
 

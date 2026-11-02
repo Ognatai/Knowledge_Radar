@@ -56,7 +56,7 @@ The value lies in comparison: runs are shown side by side with their hyperparame
 
 #### 4. Hyperparameter search and reporting
 
-Grid search, random search and Bayesian optimisation create many runs at once, each logged as its own run. Reporting test scores alone is insufficient: expected validation performance as a function of the computation budget, such as the number of hyperparameter trials, shows whether a comparison would change with more or less search (Dodge et al., 2019).
+[[hyperparameter-optimisation|Grid search]], random search and Bayesian optimisation create many runs at once, each logged as its own run. Reporting test scores alone is insufficient: expected validation performance as a function of the computation budget, such as the number of hyperparameter trials, shows whether a comparison would change with more or less search (Dodge et al., 2019).
 
 #### 5. From experiment to production
 
@@ -155,7 +155,7 @@ Der Nutzen liegt im Vergleich: Läufe werden mit ihren Hyperparametern und Metri
 
 #### 4. Hyperparametersuche und Berichterstattung
 
-Grid Search, Random Search und Bayessche Optimierung erzeugen viele Läufe auf einmal, jeder davon als eigener Run protokolliert. Nur Testergebnisse zu berichten, reicht nicht: Die erwartete Validierungsleistung in Abhängigkeit vom Rechenbudget, etwa der Zahl der Hyperparameter-Versuche, zeigt, ob sich ein Vergleich mit mehr oder weniger Suche umkehren würde (Dodge et al., 2019).
+[[hyperparameter-optimisation|Grid Search]], Random Search und Bayessche Optimierung erzeugen viele Läufe auf einmal, jeder davon als eigener Run protokolliert. Nur Testergebnisse zu berichten, reicht nicht: Die erwartete Validierungsleistung in Abhängigkeit vom Rechenbudget, etwa der Zahl der Hyperparameter-Versuche, zeigt, ob sich ein Vergleich mit mehr oder weniger Suche umkehren würde (Dodge et al., 2019).
 
 #### 5. Vom Experiment in den Betrieb
 

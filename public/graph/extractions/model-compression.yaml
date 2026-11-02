@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c9fa866df04471b0562c5b3deb114c189ce8db883b2265a4ab64e4cd5712c2a6
+note_sha256: 98d98b9d406f86f34205bd36240d83f8a9ec93acbd0811f54253762a4280f7dd
 extracted_by: claude
 discusses:
 - quantisation
@@ -7,6 +7,7 @@ discusses:
 - pruning
 - low-rank-factorisation
 - llm-cost-optimisation
+- ridge-and-lasso
 relations:
 - from: pruning
   type: IS_EXAMPLE_OF

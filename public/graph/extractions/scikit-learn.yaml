@@ -1,12 +1,11 @@
 version: 1
-note_sha256: bdf9c4ada5626c677772ed3388aac788de557d873d8a71f24a744b40489e3f1b
+note_sha256: b63fac178f594ec6ed9ce2a1885cc56cf765eecc06afc1d8cd2e4a6d847ef5c1
 extracted_by: claude
 discusses:
 - numpy
 - python
 - cross-validation
-- grid-search
-- random-search
+- hyperparameter-optimisation
 - support-vector-machines
 - classical-machine-learning
 - ml-preprocessing

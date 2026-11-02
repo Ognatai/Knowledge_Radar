@@ -55,7 +55,7 @@ Strengths:
 - Combined methods can shrink a model substantially with little or no loss in quality (Zafar et al., 2026).
 
 Limitations:
-- Pruning with l1 or l2 regularisation needs more iterations to converge, pruning criteria require manual per-layer settings, and pruning often reduces model size without speeding up training or inference (Cheng et al., 2017).
+- Pruning with l1 or [[ridge-and-lasso|l2 regularisation]] needs more iterations to converge, pruning criteria require manual per-layer settings, and pruning often reduces model size without speeding up training or inference (Cheng et al., 2017).
 - Binary networks lose considerable accuracy on large models, and structural constraints on weight matrices can bias the model, with no theoretical way to choose the right structure (Cheng et al., 2017).
 - Quantisation degrades performance as bit precision decreases, and distillation is limited when domain-specific training data is scarce (Zafar et al., 2026).
 

@@ -1,0 +1,20 @@
+version: 1
+note_sha256: f8ce7f563d09f2b04a4dbde889ec839c04bccb212b535e239057439e14a94f9e
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- regularisation-and-hyperparameters
+- cross-validation
+- ridge-and-lasso
+- gradient-descent
+- experiment-tracking
+- scikit-learn
+- gaussian-process
+relations:
+- from: hyperparameter-optimisation
+  type: BASED_ON
+  to: cross-validation
+  evidence: GridSearchCV exhaustively evaluates all combinations of given values with cross-validation
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: hyperparameter-optimisation
+  evidence: scikit-learn offers `HalvingGridSearchCV` and `HalvingRandomSearchCV`

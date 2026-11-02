@@ -59,7 +59,7 @@ Test-set scores alone are insufficient to conclude which model performs best (Do
 
 #### 6. Typical mistakes
 
-Lipton & Steinhardt (2018) describe troubling trends in machine learning papers, among them failing to distinguish explanation from speculation and failing to identify the sources of empirical gains, for example attributing improvements to architectural changes when they actually stem from hyperparameter tuning. Unequal tuning effort between a new model and its baselines is therefore a common source of misleading comparisons.
+Lipton & Steinhardt (2018) describe troubling trends in machine learning papers, among them failing to distinguish explanation from speculation and failing to identify the sources of empirical gains, for example attributing improvements to architectural changes when they actually stem from [[hyperparameter-optimisation|hyperparameter tuning]]. Unequal tuning effort between a new model and its baselines is therefore a common source of misleading comparisons.
 
 #### Origin and variants
 

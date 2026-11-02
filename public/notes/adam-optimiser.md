@@ -22,7 +22,7 @@ sources:
 
 ### TL;DR
 
-Adam (adaptive moment estimation) is a first-order optimisation method for stochastic objectives that keeps exponential moving averages of the gradient and of the squared gradient for every parameter and uses them to give each parameter its own step size (Kingma & Ba, 2015). It combines the momentum idea with the per-parameter scaling of AdaGrad and RMSProp, needs little memory and little tuning, and is a standard choice for training deep [[neural-networks|neural networks]] (Kingma & Ba, 2015; Ruder, 2016). AdamW decouples weight decay from the gradient update, which fixes the poor interaction of L2 regularisation with Adam (Loshchilov & Hutter, 2019).
+Adam (adaptive moment estimation) is a first-order optimisation method for stochastic objectives that keeps exponential moving averages of the gradient and of the squared gradient for every parameter and uses them to give each parameter its own step size (Kingma & Ba, 2015). It combines the momentum idea with the per-parameter scaling of AdaGrad and RMSProp, needs little memory and little tuning, and is a standard choice for training deep [[neural-networks|neural networks]] (Kingma & Ba, 2015; Ruder, 2016). AdamW decouples weight decay from the gradient update, which fixes the poor interaction of [[ridge-and-lasso|L2 regularisation]] with Adam (Loshchilov & Hutter, 2019).
 
 ### How it works
 

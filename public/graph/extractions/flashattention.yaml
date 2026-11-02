@@ -1,0 +1,26 @@
+version: 1
+note_sha256: fec31df8dc3dbfab581303fccf4b9c5660d41ebfd1e7bd55b3800154f93530ce
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- attention-and-transformers
+- softmax
+- context-window
+- back-propagation
+- quantisation
+- large-language-models
+- neural-network-training
+- llm-cost-optimisation
+- mixed-precision-training
+relations:
+- from: flashattention
+  type: BASED_ON
+  to: attention-and-transformers
+  evidence: FlashAttention computes exact Transformer attention faster and with memory linear instead of quadratic in sequence length
+- from: flashattention
+  type: BASED_ON
+  to: softmax
+  evidence: computes the softmax block by block with running normalisation statistics
+- from: flashattention
+  type: COMPLEMENTS
+  to: context-window
+  evidence: made longer context windows practical

@@ -1,0 +1,17 @@
+version: 1
+note_sha256: fd3be73274635c6cbdce390b9a27948d087c2780b30c4f5015ca711fe8e0dfe9
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- large-language-models
+- natural-questions
+- classification-metrics
+- few-shot-prompting
+- chain-of-thought-prompting
+- llm-evaluation
+- temperature-scaling
+- humaneval
+relations:
+- from: mmlu
+  type: EVALUATES
+  to: large-language-models
+  evidence: It tests the knowledge and problem solving a language model acquired in pretraining

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5324a1ccf4ce98d62ef35a4253dadcfb97684e582259a4f8f0073ec6e130b79a
+note_sha256: 149577d5aa373172900474181196dadb327155f6fd8724e8fba6c757ceb8e4d9
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - recurrent-neural-networks
@@ -13,9 +13,8 @@ discusses:
 - large-language-models
 - machine-translation
 - gru
-- bilstm-crf
 - gnmt
-- random-search
+- hyperparameter-optimisation
 relations:
 - from: lstm
   type: IS_EXAMPLE_OF
@@ -25,10 +24,6 @@ relations:
   type: BASED_ON
   to: lstm
   evidence: the Gated Recurrent Unit (GRU) of Cho et al., which drops peepholes and the output activation and couples input and forget gate into an update gate
-- from: bilstm-crf
-  type: BASED_ON
-  to: lstm
-  evidence: Huang et al. (2015) put a conditional random field on top of a bidirectional LSTM (BiLSTM-CRF)
 - from: gnmt
   type: BASED_ON
   to: lstm

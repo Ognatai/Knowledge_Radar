@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 991b5200a445482574e47d3dae5028ce5014594b8ee0a66c4f82a95d473fe6ba
+note_sha256: 402648ccf62831f2e7ad155d02a91f97ef552cfd73af6769406aa94e86c15888
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - fp16
@@ -10,6 +10,7 @@ discusses:
 - adam-optimiser
 - quantisation
 - flashattention
+- hyperparameter-optimisation
 relations:
 - from: mixed-precision-training
   type: BASED_ON

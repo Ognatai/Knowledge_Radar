@@ -5,6 +5,10 @@ entity_type: Concept
 aliases:
 - Precision
 - Recall
+- F1 score
+- F1
+- F1-Score
+- Exact match
 sources:
 - https://doi.org/10.1016/j.ipm.2009.03.002
 - https://doi.org/10.1016/j.patrec.2005.10.010

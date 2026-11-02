@@ -11,12 +11,20 @@ entities:
   adam-optimizer: adam-optimiser
   adamw: adam-optimiser
   anisotropic-quantization: anisotropic-quantisation
+  bayesian-optimisation: hyperparameter-optimisation
+  bilstm-crf: lstm
   eight-bit-optimizers: eight-bit-optimisers
+  exact-match: classification-metrics
+  f1-score: classification-metrics
   function-calling: tool-calling
+  grid-search: hyperparameter-optimisation
+  lasso: ridge-and-lasso
   normalized-mutual-information: normalised-mutual-information
   post-training-quantization: post-training-quantisation
   product-quantization: product-quantisation
   quantization-aware-training: quantisation-aware-training
+  random-search: hyperparameter-optimisation
+  ridge-regression: ridge-and-lasso
   stochastic-gradient-descent: gradient-descent
   subword-regularization: subword-regularisation
   unigram-language-model-tokenization: unigram-language-model-tokenisation

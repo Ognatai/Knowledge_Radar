@@ -51,7 +51,7 @@ Gradient descent moves the weights a small step against the gradient. Stochastic
 
 #### 4. Adaptive optimisers
 
-Adam (Kingma & Ba, 2014) adapts the step size for each parameter using running estimates of the first and second moments of the gradients. It is computationally efficient, needs little memory, suits large problems and noisy or sparse gradients, and its hyperparameters typically need little tuning. Loshchilov & Hutter (2017) showed that L2 regularisation and weight decay are not equivalent for adaptive methods such as Adam; decoupling the weight decay from the gradient update (AdamW) substantially improved Adam's generalisation, making it competitive with SGD with momentum on image classification.
+Adam (Kingma & Ba, 2014) adapts the step size for each parameter using running estimates of the first and second moments of the gradients. It is computationally efficient, needs little memory, suits large problems and noisy or sparse gradients, and its hyperparameters typically need little tuning. Loshchilov & Hutter (2017) showed that [[ridge-and-lasso|L2 regularisation]] and weight decay are not equivalent for adaptive methods such as Adam; decoupling the weight decay from the gradient update (AdamW) substantially improved Adam's generalisation, making it competitive with SGD with momentum on image classification.
 
 #### 5. Initialisation and normalisation
 

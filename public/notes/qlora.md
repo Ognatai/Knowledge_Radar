@@ -48,7 +48,7 @@ Long sequences can cause memory spikes during gradient checkpointing. Paged opti
 
 #### 5. Results and findings
 
-With QLoRA, the authors fine-tuned more than 1,000 models from 80 million to 65 billion parameters (Dettmers et al., 2023). Their Guanaco models, LLaMA fine-tuned on the 9,000-example OASST1 dataset, reached 99.3% of [[chatgpt|ChatGPT]]'s performance on the Vicuna benchmark after 24 hours on a single GPU; the 7B Guanaco needed 5 GB of memory. [[data-governance|Data quality]] mattered more than size: the 9,000-example OASST1 dataset outperformed a 450,000-example subsample of FLAN v2 for chatbot performance. Strong MMLU scores did not imply strong chatbot performance, and GPT-4 judgements were a cheap, reasonable alternative to human evaluation, although chatbot benchmarks proved unreliable (Dettmers et al., 2023); see [[llm-as-a-judge|LLM as a judge]].
+With QLoRA, the authors fine-tuned more than 1,000 models from 80 million to 65 billion parameters (Dettmers et al., 2023). Their Guanaco models, LLaMA fine-tuned on the 9,000-example OASST1 dataset, reached 99.3% of [[chatgpt|ChatGPT]]'s performance on the Vicuna benchmark after 24 hours on a single GPU; the 7B Guanaco needed 5 GB of memory. [[data-governance|Data quality]] mattered more than size: the 9,000-example OASST1 dataset outperformed a 450,000-example subsample of FLAN v2 for chatbot performance. Strong [[mmlu|MMLU]] scores did not imply strong chatbot performance, and GPT-4 judgements were a cheap, reasonable alternative to human evaluation, although chatbot benchmarks proved unreliable (Dettmers et al., 2023); see [[llm-as-a-judge|LLM as a judge]].
 
 #### Origin and variants
 

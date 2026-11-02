@@ -9,7 +9,7 @@ discusses:
 - overfitting
 - regularisation-and-hyperparameters
 - early-stopping
-- ridge-regression
+- ridge-and-lasso
 - gradient-descent
 relations:
 - from: double-descent

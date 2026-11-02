@@ -55,7 +55,7 @@ QA systems differ in where the knowledge comes from (given document, retrieved c
 
 #### 2. Retriever
 
-Open-domain QA traditionally retrieved passages with sparse vector space models such as [[tf-idf|TF-IDF]] or [[bm25|BM25]] (Karpukhin et al., 2020). DrQA's document retriever used bigram hashing and TF-IDF matching over Wikipedia (Chen et al., 2017). Dense Passage Retrieval learns question and passage [[embeddings|embeddings]] with a dual encoder from a small number of question–passage pairs and outperformed a Lucene BM25 system by 9 to 19 percentage points in top-20 passage retrieval accuracy; on Natural Questions it reached 65.2% top-5 accuracy against 42.9% for BM25 (Karpukhin et al., 2020; [[dense-passage-retrieval|dense passage retrieval]]).
+Open-domain QA traditionally retrieved passages with sparse vector space models such as [[tf-idf|TF-IDF]] or [[bm25|BM25]] (Karpukhin et al., 2020). DrQA's document retriever used bigram hashing and TF-IDF matching over Wikipedia (Chen et al., 2017). Dense Passage Retrieval learns question and passage [[embeddings|embeddings]] with a dual encoder from a small number of question–passage pairs and outperformed a Lucene BM25 system by 9 to 19 percentage points in top-20 passage retrieval accuracy; on [[natural-questions|Natural Questions]] it reached 65.2% top-5 accuracy against 42.9% for BM25 (Karpukhin et al., 2020; [[dense-passage-retrieval|dense passage retrieval]]).
 
 #### 3. Reader or generator
 
@@ -67,7 +67,7 @@ Extractive systems tend to make unreliable guesses when the context does not con
 
 #### 5. Evaluation
 
-For multiple-choice questions such as MMLU, systems are scored by exact match, the percentage of predictions identical to the gold answer; for free-text answers such as Natural Questions, token-level F1 treats prediction and gold answer as bags of tokens and averages F1 over questions (Jurafsky & Martin, 2026; [[classification-metrics|classification metrics]]). Before comparison, answers are usually lower-cased and stripped of articles, punctuation and extra whitespace (Roberts et al., 2020). On the first SQuAD, a [[logistic-regression|logistic regression]] model reached 51.0% F1 and humans 86.8% (Rajpurkar et al., 2016).
+For multiple-choice questions such as [[mmlu|MMLU]], systems are scored by exact match, the percentage of predictions identical to the gold answer; for free-text answers such as Natural Questions, token-level F1 treats prediction and gold answer as bags of tokens and averages F1 over questions (Jurafsky & Martin, 2026; [[classification-metrics|classification metrics]]). Before comparison, answers are usually lower-cased and stripped of articles, punctuation and extra whitespace (Roberts et al., 2020). On the first SQuAD, a [[logistic-regression|logistic regression]] model reached 51.0% F1 and humans 86.8% (Rajpurkar et al., 2016).
 
 #### Origin and variants
 
@@ -158,7 +158,7 @@ QA-Systeme unterscheiden sich darin, woher das Wissen kommt (gegebenes Dokument,
 
 #### 2. Retriever
 
-Open-Domain-QA rief Passagen traditionell mit dünn besetzten Vektorraummodellen wie [[tf-idf|TF-IDF]] oder [[bm25|BM25]] ab (Karpukhin et al., 2020). Der Dokument-Retriever von DrQA nutzte Bigram-Hashing und TF-IDF-Matching über Wikipedia (Chen et al., 2017). Dense Passage Retrieval lernt Frage- und Passagen-Embeddings mit einem Dual-Encoder aus wenigen Frage-Passagen-Paaren und übertraf ein Lucene-BM25-System bei der Top-20-Retrieval-Genauigkeit um 9 bis 19 Prozentpunkte; auf Natural Questions erreichte es 65,2 % Top-5-Genauigkeit gegenüber 42,9 % für BM25 (Karpukhin et al., 2020; [[dense-passage-retrieval|Dense Passage Retrieval]]).
+Open-Domain-QA rief Passagen traditionell mit dünn besetzten Vektorraummodellen wie [[tf-idf|TF-IDF]] oder [[bm25|BM25]] ab (Karpukhin et al., 2020). Der Dokument-Retriever von DrQA nutzte Bigram-Hashing und TF-IDF-Matching über Wikipedia (Chen et al., 2017). Dense Passage Retrieval lernt Frage- und Passagen-Embeddings mit einem Dual-Encoder aus wenigen Frage-Passagen-Paaren und übertraf ein Lucene-BM25-System bei der Top-20-Retrieval-Genauigkeit um 9 bis 19 Prozentpunkte; auf [[natural-questions|Natural Questions]] erreichte es 65,2 % Top-5-Genauigkeit gegenüber 42,9 % für BM25 (Karpukhin et al., 2020; [[dense-passage-retrieval|Dense Passage Retrieval]]).
 
 #### 3. Reader oder Generator
 
@@ -170,7 +170,7 @@ Extraktive Systeme raten oft unzuverlässig, wenn der Kontext die Antwort nicht 
 
 #### 5. Evaluation
 
-Multiple-Choice-Fragen wie in MMLU werden mit Exact Match bewertet, dem Anteil der Vorhersagen, die mit der Referenzantwort identisch sind; bei Freitextantworten wie in Natural Questions behandelt F1 auf Token-Ebene Vorhersage und Referenz als Bags of Tokens und mittelt F1 über die Fragen (Jurafsky & Martin, 2026; [[classification-metrics|Klassifikationsmetriken]]). Vor dem Vergleich werden Antworten meist kleingeschrieben und von Artikeln, Satzzeichen und überzähligen Leerzeichen befreit (Roberts et al., 2020). Beim ersten SQuAD erreichte ein Modell mit logistischer Regression 51,0 % F1 und Menschen 86,8 % (Rajpurkar et al., 2016).
+Multiple-Choice-Fragen wie in [[mmlu|MMLU]] werden mit Exact Match bewertet, dem Anteil der Vorhersagen, die mit der Referenzantwort identisch sind; bei Freitextantworten wie in Natural Questions behandelt F1 auf Token-Ebene Vorhersage und Referenz als Bags of Tokens und mittelt F1 über die Fragen (Jurafsky & Martin, 2026; [[classification-metrics|Klassifikationsmetriken]]). Vor dem Vergleich werden Antworten meist kleingeschrieben und von Artikeln, Satzzeichen und überzähligen Leerzeichen befreit (Roberts et al., 2020). Beim ersten SQuAD erreichte ein Modell mit logistischer Regression 51,0 % F1 und Menschen 86,8 % (Rajpurkar et al., 2016).
 
 #### Ursprung und Varianten
 

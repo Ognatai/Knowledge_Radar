@@ -6,6 +6,8 @@ aliases:
 - LSTM
 - Long short-term memory
 - LSTM network
+- BiLSTM-CRF
+- Bidirectional LSTM
 sources:
 - https://doi.org/10.1162/neco.1997.9.8.1735
 - https://arxiv.org/abs/1503.04069
@@ -104,7 +106,7 @@ Sources: Greff et al. (2017), Hochreiter & Schmidhuber (1997), Vaswani et al. (2
 
 ### In practice
 
-Greff et al. (2017) compared the vanilla LSTM with eight variants on [[automatic-speech-recognition|speech recognition]], handwriting recognition and music modelling, with hyperparameters found by random search. None of the variants improved significantly on the vanilla LSTM; removing the forget gate or the output activation hurt on all three tasks, while coupling input and forget gate or dropping peepholes made the model simpler without significant loss. The learning rate was the most important hyperparameter, followed by network size, and momentum mattered little (Greff et al., 2017). Today LSTMs still appear in sequence labelling and forecasting pipelines and in earlier architectures such as the sparsely-gated [[mixture-of-experts|mixture-of-experts]] layer placed between LSTM layers, while large language models are built on Transformers ([[large-language-models|large language models]]).
+Greff et al. (2017) compared the vanilla LSTM with eight variants on [[automatic-speech-recognition|speech recognition]], handwriting recognition and music modelling, with hyperparameters found by [[hyperparameter-optimisation|random search]]. None of the variants improved significantly on the vanilla LSTM; removing the forget gate or the output activation hurt on all three tasks, while coupling input and forget gate or dropping peepholes made the model simpler without significant loss. The learning rate was the most important hyperparameter, followed by network size, and momentum mattered little (Greff et al., 2017). Today LSTMs still appear in sequence labelling and forecasting pipelines and in earlier architectures such as the sparsely-gated [[mixture-of-experts|mixture-of-experts]] layer placed between LSTM layers, while large language models are built on Transformers ([[large-language-models|large language models]]).
 
 ### Key takeaway
 
@@ -208,7 +210,7 @@ Quellen: Greff et al. (2017), Hochreiter & Schmidhuber (1997), Vaswani et al. (2
 
 ### In der Praxis
 
-Greff et al. (2017) verglichen die Vanilla-LSTM mit acht Varianten auf Spracherkennung, Handschrifterkennung und Musikmodellierung, mit per Random Search gefundenen Hyperparametern. Keine Variante verbesserte die Vanilla-LSTM signifikant; das Entfernen des Forget-Gates oder der Output-Aktivierung verschlechterte alle drei Aufgaben, während das Koppeln von Input- und Forget-Gate oder das Weglassen der Peepholes das Modell ohne signifikanten Verlust vereinfachte. Die Lernrate war der wichtigste Hyperparameter, gefolgt von der Netzgröße, und Momentum spielte kaum eine Rolle (Greff et al., 2017). Heute finden sich LSTMs noch in Pipelines für Sequence Labelling und Prognosen sowie in früheren Architekturen wie der Sparsely-Gated-[[mixture-of-experts|Mixture-of-Experts]]-Schicht zwischen LSTM-Schichten, während große Sprachmodelle auf Transformern beruhen ([[large-language-models|große Sprachmodelle]]).
+Greff et al. (2017) verglichen die Vanilla-LSTM mit acht Varianten auf Spracherkennung, Handschrifterkennung und Musikmodellierung, mit per [[hyperparameter-optimisation|Random Search]] gefundenen Hyperparametern. Keine Variante verbesserte die Vanilla-LSTM signifikant; das Entfernen des Forget-Gates oder der Output-Aktivierung verschlechterte alle drei Aufgaben, während das Koppeln von Input- und Forget-Gate oder das Weglassen der Peepholes das Modell ohne signifikanten Verlust vereinfachte. Die Lernrate war der wichtigste Hyperparameter, gefolgt von der Netzgröße, und Momentum spielte kaum eine Rolle (Greff et al., 2017). Heute finden sich LSTMs noch in Pipelines für Sequence Labelling und Prognosen sowie in früheren Architekturen wie der Sparsely-Gated-[[mixture-of-experts|Mixture-of-Experts]]-Schicht zwischen LSTM-Schichten, während große Sprachmodelle auf Transformern beruhen ([[large-language-models|große Sprachmodelle]]).
 
 ### Merksatz
 

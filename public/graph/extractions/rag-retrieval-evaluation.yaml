@@ -4,7 +4,6 @@ extracted_by: claude (hand-labelled, 2026-10-13)
 discusses:
 - information-retrieval
 - classification-metrics
-- f1-score
 - r-precision
 - mean-average-precision
 - precision-recall-curve

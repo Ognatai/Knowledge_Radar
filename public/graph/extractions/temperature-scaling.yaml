@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7512121be6e1476802e9d75982708a7c0e51926a94ee59ee4d292689cc4568b7
+note_sha256: cd61a1fa21db7fa6267f7cea457fb93fbf0c0999a01b9eab4652d3a915ce997d
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - classification
@@ -15,6 +15,7 @@ discusses:
 - resnet
 - cross-entropy
 - softmax
+- hyperparameter-optimisation
 relations:
 - from: temperature-scaling
   type: BASED_ON

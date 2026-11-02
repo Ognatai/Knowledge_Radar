@@ -39,7 +39,7 @@ The softmax computes q_i = exp(z_i/T) / Σ_j exp(z_j/T) from the logits z; T is 
 
 #### 3. Fitting on held-out data
 
-T is optimised with respect to NLL on a validation set that can be the same set used for hyperparameter tuning; it is a one-dimensional convex problem that a conjugate gradient solver solves in about ten iterations (Guo et al., 2017). In Torch7, the authors implemented it as a constant multiplication of the logits by 1/T, set to 1 during training and fitted afterwards (Guo et al., 2017).
+T is optimised with respect to NLL on a validation set that can be the same set used for [[hyperparameter-optimisation|hyperparameter tuning]]; it is a one-dimensional convex problem that a conjugate gradient solver solves in about ten iterations (Guo et al., 2017). In Torch7, the authors implemented it as a constant multiplication of the logits by 1/T, set to 1 during training and fitted afterwards (Guo et al., 2017).
 
 #### 4. Family of scaling methods
 

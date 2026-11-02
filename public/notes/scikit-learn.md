@@ -54,7 +54,7 @@ Because the scaler is part of the pipeline, it is fitted on the training folds o
 ### When to use it
 - Classical machine learning on tabular data: [[classification|classification]], regression, [[clustering|clustering]], [[decision-trees|decision trees]], [[k-nearest-neighbours|k-nearest neighbours]] ([[classical-machine-learning|Classical Machine Learning]]).
 - Preprocessing, [[feature-engineering|feature engineering]] and dimensionality reduction as reusable steps ([[ml-preprocessing|ML Preprocessing]]; Buitinck et al., 2013).
-- Model selection and evaluation with cross-validation and hyperparameter search (Buitinck et al., 2013; [[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
+- Model selection and evaluation with cross-validation and [[hyperparameter-optimisation|hyperparameter search]] (Buitinck et al., 2013; [[regularisation-and-hyperparameters|Regularisation and Hyperparameters]]).
 - In teaching and for non-specialists: the library aims to bring machine learning to non-specialists in a general-purpose language (Pedregosa et al., 2011).
 
 ### Strengths and limitations

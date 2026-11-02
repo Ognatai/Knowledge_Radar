@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c84050d6907e76030233c429c806d856328d1dd1e34436536625053ebc43f392
+note_sha256: 947343fa9f980d093dcb4f174860aa26c4c2e82ad0cc3ff142571a0ee998aea4
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - cross-entropy
@@ -19,8 +19,7 @@ discusses:
 - platt-scaling
 - isotonic-regression
 - classification-metrics
-- ridge-regression
-- lasso
+- ridge-and-lasso
 relations:
 - from: logistic-regression
   type: IS_EXAMPLE_OF

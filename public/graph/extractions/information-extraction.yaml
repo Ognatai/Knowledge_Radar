@@ -12,12 +12,11 @@ discusses:
 - large-language-models
 - coreference-resolution
 - actor-level-corpus-analysis
-- bilstm-crf
+- lstm
 - knowledge-graphs
 - contract-intelligence
 - prompt-engineering
 - bias-in-nlp
-- lstm
 relations:
 - from: information-extraction
   type: BASED_ON

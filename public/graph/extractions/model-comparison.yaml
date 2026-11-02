@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 75fa2296228c2b27ec1c1a932d05922078c9d97b7c187ac1568dd6b22a8cfc1b
+note_sha256: 61df64a1d7ff65ad9d0e07b6c104849cdae65713a551a030ecdc1dd49459a79f
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - mcnemars-test
@@ -9,6 +9,7 @@ discusses:
 - expected-validation-performance
 - helm-framework
 - cross-validation
+- hyperparameter-optimisation
 relations:
 - from: model-comparison
   type: BASED_ON

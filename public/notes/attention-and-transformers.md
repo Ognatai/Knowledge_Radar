@@ -63,7 +63,7 @@ Three families build on the architecture (Urchs, 2025). Encoder-only BERT condit
 
 #### 6. Beyond text and efficiency
 
-A pure Transformer applied to sequences of image patches, the [[vision-transformer|Vision Transformer]], attained excellent [[computer-vision|image classification]] results compared with convolutional networks when pretrained on large data, while requiring substantially fewer computational resources to train (Dosovitskiy et al., 2020; [[multimodal-models|Multimodal Models]]). Self-attention's time and memory grow quadratically with sequence length. FlashAttention computes exact attention with tiling that reduces reads and writes between GPU memory levels, giving for example a 3× training speedup on GPT-2 with sequence length 1K and enabling longer contexts (Dao et al., 2022).
+A pure Transformer applied to sequences of image patches, the [[vision-transformer|Vision Transformer]], attained excellent [[computer-vision|image classification]] results compared with convolutional networks when pretrained on large data, while requiring substantially fewer computational resources to train (Dosovitskiy et al., 2020; [[multimodal-models|Multimodal Models]]). Self-attention's time and memory grow quadratically with sequence length. [[flashattention|FlashAttention]] computes exact attention with tiling that reduces reads and writes between GPU memory levels, giving for example a 3× training speedup on GPT-2 with sequence length 1K and enabling longer contexts (Dao et al., 2022).
 
 #### Origin and variants
 
@@ -163,7 +163,7 @@ Drei Modellfamilien bauen auf der Architektur auf (Urchs, 2025). Das reine Encod
 
 #### 6. Über Text hinaus und Effizienz
 
-Ein reiner Transformer, angewendet auf Folgen von Bildausschnitten (Patches), der [[vision-transformer|Vision Transformer]], erzielte bei großem Vortraining hervorragende Ergebnisse in der Bildklassifikation im Vergleich zu konvolutionalen Netzen und brauchte dabei deutlich weniger Rechenaufwand für das Training (Dosovitskiy et al., 2020; [[multimodal-models|Multimodale Modelle]]). Zeit- und Speicherbedarf der Self-Attention wachsen quadratisch mit der Sequenzlänge. FlashAttention berechnet exakte Attention mit einer Kachelung, die Lese- und Schreibzugriffe zwischen den Speicherebenen der GPU verringert, und erreicht etwa eine dreifache Trainingsbeschleunigung bei GPT-2 mit Sequenzlänge 1K; zudem ermöglicht es längere Kontexte (Dao et al., 2022).
+Ein reiner Transformer, angewendet auf Folgen von Bildausschnitten (Patches), der [[vision-transformer|Vision Transformer]], erzielte bei großem Vortraining hervorragende Ergebnisse in der Bildklassifikation im Vergleich zu konvolutionalen Netzen und brauchte dabei deutlich weniger Rechenaufwand für das Training (Dosovitskiy et al., 2020; [[multimodal-models|Multimodale Modelle]]). Zeit- und Speicherbedarf der Self-Attention wachsen quadratisch mit der Sequenzlänge. [[flashattention|FlashAttention]] berechnet exakte Attention mit einer Kachelung, die Lese- und Schreibzugriffe zwischen den Speicherebenen der GPU verringert, und erreicht etwa eine dreifache Trainingsbeschleunigung bei GPT-2 mit Sequenzlänge 1K; zudem ermöglicht es längere Kontexte (Dao et al., 2022).
 
 #### Ursprung und Varianten
 

@@ -53,10 +53,6 @@ entities:
     type: Method
     name_en: Masked language modelling
     name_de: Masked Language Modelling
-  - id: flashattention
-    type: Method
-    name_en: FlashAttention
-    name_de: FlashAttention
   - id: id3
     type: Method
     name_en: ID3

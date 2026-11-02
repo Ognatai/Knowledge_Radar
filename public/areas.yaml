@@ -70,6 +70,7 @@ areas:
       - llm-cost-optimisation
       - qlora
       - speculative-decoding
+      - flashattention
     also:
       - mixture-of-experts
   - id: agents
@@ -142,6 +143,7 @@ areas:
       - faiss
       - beir
       - ms-marco
+      - natural-questions
       - ragas
     also:
       - embeddings
@@ -171,6 +173,7 @@ areas:
       - bertscore
       - glue
       - humaneval
+      - mmlu
       - squad
     also:
       - prompt-injection
@@ -187,6 +190,7 @@ areas:
       - feature-engineering
       - classification
       - linear-regression
+      - ridge-and-lasso
       - logistic-regression
       - naive-bayes
       - classification-metrics
@@ -197,6 +201,7 @@ areas:
       - clustering
       - principal-component-analysis
       - regularisation-and-hyperparameters
+      - hyperparameter-optimisation
       - cross-validation
       - scikit-learn
       - model-comparison

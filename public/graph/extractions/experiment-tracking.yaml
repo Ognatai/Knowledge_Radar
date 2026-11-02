@@ -1,5 +1,5 @@
 version: 1
-note_sha256: c3c15b4fe6c6a6056883c255815db575e24e59b522bc302568bc4a4acabf0e8c
+note_sha256: 11a62f7fff4b4d626fb89c330230616524b59b167dc022cf7c3107053a51e733
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - mlflow
@@ -9,6 +9,7 @@ discusses:
 - model-registry
 - neurips
 - mlops-and-deployment
+- hyperparameter-optimisation
 relations:
 - from: mlflow
   type: IMPLEMENTS

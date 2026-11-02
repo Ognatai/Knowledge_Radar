@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 244c50edf0a299ea4e4b50e0714e975d83eaac3eb8be7a3af5f0faeaf5ab0b60
+note_sha256: 922564730676a4c37248c172449a73862c8754cb499f85300643cebe473b06bc
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - beir
@@ -10,6 +10,7 @@ discusses:
 - text-similarity-metrics
 - microsoft
 - question-answering
+- natural-questions
 relations:
 - from: ms-marco
   type: DEVELOPED_BY

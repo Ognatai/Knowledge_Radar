@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 5b0a06a20fed99c1c72c1b66ca88378f12e270c3af625f52fad765aec6a30e1b
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- linear-regression
+- regularisation-and-hyperparameters
+- logistic-regression
+- ml-preprocessing
+- bias-variance-tradeoff
+- cross-validation
+- scikit-learn
+- feature-engineering
+- adam-optimiser
+relations:
+- from: ridge-and-lasso
+  type: BASED_ON
+  to: linear-regression
+  evidence: Ridge regression and the lasso fit a linear model by least squares plus a penalty on the size of the coefficients
+- from: scikit-learn
+  type: IMPLEMENTS
+  to: ridge-and-lasso
+  evidence: scikit-learn implements `Ridge`, `Lasso` and `ElasticNet` with cross-validated variants
+- from: ridge-and-lasso
+  type: IS_EXAMPLE_OF
+  to: regularisation-and-hyperparameters
+  evidence: The same penalties are the standard L2 and L1 regularisation of logistic regression and neural networks

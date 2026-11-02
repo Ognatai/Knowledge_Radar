@@ -1,16 +1,14 @@
 version: 1
-note_sha256: a14d78bdf1447c4ea54a4a15c2856ba5430c60597c76f7d630883bde22af8502
+note_sha256: 09b8db7aba009d328e86d55e9e29aea894e3f1ed9b78d3a59c662a4bfe2dd05d
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - squad
 - confusion-matrix
 - specificity
 - accuracy
-- f1-score
 - matthews-correlation-coefficient
 - roc-curve
 - precision-recall-curve
-- exact-match
 - logistic-regression
 - question-answering
 relations:
@@ -26,10 +24,6 @@ relations:
   type: BASED_ON
   to: confusion-matrix
   evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
-- from: f1-score
-  type: BASED_ON
-  to: classification-metrics
-  evidence: The F1 score is the harmonic mean of precision and recall
 - from: matthews-correlation-coefficient
   type: BASED_ON
   to: confusion-matrix
@@ -43,10 +37,6 @@ relations:
   to: classification-metrics
   evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
 - from: specificity
-  type: IS_EXAMPLE_OF
-  to: classification-metrics
-  evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'
-- from: f1-score
   type: IS_EXAMPLE_OF
   to: classification-metrics
   evidence: 'Most are computed from the confusion matrix of true and false positives and negatives: accuracy, precision, recall (sensitivity), specificity and the F1 score'

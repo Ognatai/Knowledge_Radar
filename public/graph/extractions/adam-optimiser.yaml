@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 7852c428570358574b53fbacc60c51b91fef1ad8e2e89ecee9bf1c675c6ca24e
+note_sha256: b2347fee594a1f6d10db1000e6ab2fa679727ec81c18932246a8f95aa2e4ba56
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - gradient-descent
@@ -7,6 +7,7 @@ discusses:
 - regularisation-and-hyperparameters
 - mixed-precision-training
 - neural-network-training
+- ridge-and-lasso
 relations:
 - from: adam-optimiser
   type: BASED_ON

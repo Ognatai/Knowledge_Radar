@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 5e2990889d2b49fa2f8c333c115121dc312d0b7450dd4a3c54fdae828b157fc6
+note_sha256: 5e33a1ae0c47599b7c42518a1829f89c0a747b2828d266611da841f2d7221c44
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - gradient-descent
@@ -14,14 +14,13 @@ discusses:
 - cross-validation
 - overfitting
 - bias-variance-tradeoff
-- ridge-regression
-- lasso
+- ridge-and-lasso
 relations:
-- from: ridge-regression
+- from: ridge-and-lasso
   type: BASED_ON
   to: linear-regression
   evidence: Ridge regression adds `α ||w||²₂` to the objective and shrinks coefficients
-- from: lasso
+- from: ridge-and-lasso
   type: BASED_ON
   to: linear-regression
   evidence: lasso adds `α ||w||₁` and can set coefficients exactly to zero

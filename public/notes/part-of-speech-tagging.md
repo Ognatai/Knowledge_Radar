@@ -48,7 +48,7 @@ The HMM tagger estimates transition probabilities P(t_i | t_i−1) and emission 
 
 #### 4. Conditional random fields
 
-HMMs make it hard to add features for unknown words, such as capitalisation or the suffix *-ed*. A linear-chain CRF is a log-linear model that computes P(Y | X) for the whole tag sequence directly: local features may use the current and previous tag, the entire input and the position, and are summed and normalised over the sequence. Feature templates generate features such as "tag VB and word *back*"; word shape (*DC10-30* → *XXdd-dd*), prefixes and suffixes help with unknown words. Decoding uses Viterbi and training uses [[gradient-descent|stochastic gradient descent]] with a CRF version of forward-backward and L1 or L2 regularisation (Jurafsky & Martin, 2026).
+HMMs make it hard to add features for unknown words, such as capitalisation or the suffix *-ed*. A linear-chain CRF is a log-linear model that computes P(Y | X) for the whole tag sequence directly: local features may use the current and previous tag, the entire input and the position, and are summed and normalised over the sequence. Feature templates generate features such as "tag VB and word *back*"; word shape (*DC10-30* → *XXdd-dd*), prefixes and suffixes help with unknown words. Decoding uses Viterbi and training uses [[gradient-descent|stochastic gradient descent]] with a CRF version of forward-backward and L1 or [[ridge-and-lasso|L2 regularisation]] (Jurafsky & Martin, 2026).
 
 #### 5. Named entities as sequence labelling
 

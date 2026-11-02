@@ -1,5 +1,5 @@
 version: 1
-note_sha256: e02b9eeb89342975ba0fbb52a57939b33956b4045bb2ed6ef6be93aacbceb84c
+note_sha256: e80fd7cc1260389f6380ba0c768d910bdae3f8d42a82bb9e1aa0122320910b58
 extracted_by: claude (hand-labelled, 2026-11-02)
 discusses:
 - retrieval-augmented-generation
@@ -22,8 +22,6 @@ discusses:
 - rag-generation-evaluation
 - natural-questions
 - mmlu
-- exact-match
-- f1-score
 - instruction-tuning
 - logistic-regression
 relations:

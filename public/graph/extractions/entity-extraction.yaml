@@ -4,7 +4,7 @@ extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - gliner
 - gpt-ner
-- bilstm-crf
+- lstm
 - bert
 - coreference-resolution
 - actor-level-corpus-analysis
@@ -15,7 +15,6 @@ discusses:
 - natural-language-processing
 - bias-in-nlp
 - conll-2003
-- lstm
 relations:
 - from: gliner
   type: IS_EXAMPLE_OF
@@ -33,7 +32,7 @@ relations:
   type: BASED_ON
   to: large-language-models
   evidence: Out of the box, large language models performed significantly below supervised baselines on NER, because NER is a sequence labelling task and LLMs generate text (Wang et al., 2023). GPT-NER bridges this gap
-- from: bilstm-crf
+- from: lstm
   type: IS_EXAMPLE_OF
   to: entity-extraction
   evidence: 'Lample et al. (2016) introduced two neural architectures: a bidirectional LSTM combined with a conditional random field (CRF)'

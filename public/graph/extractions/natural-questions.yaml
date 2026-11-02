@@ -1,0 +1,28 @@
+version: 1
+note_sha256: ee415e6760acc812612ff02bd2aa05c87622a5959332c62fcaf8e7ebf7b5e8ac
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- question-answering
+- retrieval-augmented-generation
+- ms-marco
+- mmlu
+- classification-metrics
+- dense-passage-retrieval
+- t5
+- rag-retrieval-evaluation
+- llm-evaluation
+- squad
+- google
+relations:
+- from: natural-questions
+  type: EVALUATES
+  to: question-answering
+  evidence: Natural Questions (NQ) is a question answering benchmark built from real, anonymised queries to the Google search engine
+- from: natural-questions
+  type: EVALUATES
+  to: dense-passage-retrieval
+  evidence: Dense Passage Retrieval was evaluated this way and outperformed BM25 by a wide margin in top-5 accuracy
+- from: natural-questions
+  type: DEVELOPED_BY
+  to: google
+  evidence: NQ was created by Google Research

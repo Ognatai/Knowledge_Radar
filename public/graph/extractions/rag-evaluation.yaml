@@ -6,7 +6,7 @@ discusses:
 - ares
 - prediction-powered-inference
 - rag-retrieval-evaluation
-- exact-match
+- classification-metrics
 - rag-generation-evaluation
 - llm-as-a-judge
 - retrieval-augmented-generation

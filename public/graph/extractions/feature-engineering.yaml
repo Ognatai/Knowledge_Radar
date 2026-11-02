@@ -1,11 +1,11 @@
 version: 1
-note_sha256: 7a20d948b01955dc1bcac5cb6a7823eb2991a02cf2db3332b57d167d97ccc5b5
+note_sha256: 87d9ecd863d241905f7cc80172e9a59af4294ef706931bfcfc84acf6f041b753
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - target-encoding
 - fourier-terms
 - feature-selection
-- lasso
+- ridge-and-lasso
 - data-leakage
 - ml-preprocessing
 - time-series-analysis
@@ -24,7 +24,7 @@ relations:
   type: IS_EXAMPLE_OF
   to: feature-engineering
   evidence: seasonal patterns represented explicitly (Hyndman & Athanasopoulos, 2021), and relevant features selected
-- from: lasso
+- from: ridge-and-lasso
   type: IS_EXAMPLE_OF
   to: feature-selection
   evidence: embedded methods that select during training, such as the lasso

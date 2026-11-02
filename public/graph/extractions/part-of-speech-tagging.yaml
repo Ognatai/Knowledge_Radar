@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 139b5641b8e1a71f01f442fb43b7ea05f2c95031ca9a5661439f68b51d51bcff
+note_sha256: bcef178b9b045c12074f52570fe92008b969aab6bafc464df2217ba360d58a1f
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - hidden-markov-models
@@ -10,4 +10,5 @@ discusses:
 - constituency-parsing
 - dependency-parsing
 - gradient-descent
+- ridge-and-lasso
 relations: []

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 36828bbaeb05f9dc950caf46b0d0e91488936816f48ffbcd4efae6c9151e6b47
+note_sha256: 761c1173a025646538ddef36242c3fa6b5384943558932a164070dfbbdce2b5c
 extracted_by: qwen3:30b-a3b, reviewed by claude
 discusses:
 - attention-and-transformers
@@ -28,6 +28,7 @@ discusses:
 - cross-entropy
 - instruction-tuning
 - softmax
+- mmlu
 relations:
 - from: large-language-models
   type: BASED_ON

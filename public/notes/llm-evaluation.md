@@ -37,7 +37,7 @@ A capability is turned into a measurable task, the model's outputs are scored ag
 
 #### 1. Knowledge benchmarks
 
-MMLU (Hendrycks et al., 2020) is a multitask test of 57 tasks, including elementary mathematics, US history, computer science and law, that requires extensive world knowledge and problem-solving ability; models are scored by accuracy on multiple-choice questions. Most models were near random chance, while the largest GPT-3 model improved on random chance by almost 20 percentage points on average. Even the best models still had lopsided performance and near-random accuracy on some socially important subjects such as morality and law (Hendrycks et al., 2020).
+[[mmlu|MMLU]] (Hendrycks et al., 2020) is a multitask test of 57 tasks, including elementary mathematics, US history, computer science and law, that requires extensive world knowledge and problem-solving ability; models are scored by accuracy on multiple-choice questions. Most models were near random chance, while the largest GPT-3 model improved on random chance by almost 20 percentage points on average. Even the best models still had lopsided performance and near-random accuracy on some socially important subjects such as morality and law (Hendrycks et al., 2020).
 
 #### 2. Truthfulness
 
@@ -135,7 +135,7 @@ Eine Fähigkeit wird in eine messbare Aufgabe umgewandelt, die Ausgaben des Mode
 
 #### 1. Wissensbenchmarks
 
-MMLU (Hendrycks et al., 2020) ist ein Multitask-Test mit 57 Aufgaben, einschließlich elementarer Mathematik, US-Geschichte, Informatik und Recht, der umfangreiches Weltwissen und Problemlösefähigkeit erfordert; Modelle werden anhand der Genauigkeit bei Multiple-Choice-Fragen bewertet. Die meisten Modelle lagen nahe dem Zufall, während das größte GPT-3-Modell den Zufall im Durchschnitt um fast 20 Prozentpunkte übertraf. Selbst die besten Modelle zeigten noch immer ungleichmäßige Leistungen und nahezu zufällige Genauigkeit bei einigen sozial wichtigen Themen wie Moral und Recht (Hendrycks et al., 2020).
+[[mmlu|MMLU]] (Hendrycks et al., 2020) ist ein Multitask-Test mit 57 Aufgaben, einschließlich elementarer Mathematik, US-Geschichte, Informatik und Recht, der umfangreiches Weltwissen und Problemlösefähigkeit erfordert; Modelle werden anhand der Genauigkeit bei Multiple-Choice-Fragen bewertet. Die meisten Modelle lagen nahe dem Zufall, während das größte GPT-3-Modell den Zufall im Durchschnitt um fast 20 Prozentpunkte übertraf. Selbst die besten Modelle zeigten noch immer ungleichmäßige Leistungen und nahezu zufällige Genauigkeit bei einigen sozial wichtigen Themen wie Moral und Recht (Hendrycks et al., 2020).
 
 #### 2. Wahrhaftigkeit
 

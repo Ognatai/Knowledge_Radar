@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 55b1175cc237f239f82882b06c0b791c390bf9cc21454d02a53c22dc18e27c5f
+note_sha256: 382b22ffb9d422b0ffd0b43ece52e793c9ac9ccba39268b62bfb6c048e18a4c6
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - bm25
@@ -16,6 +16,7 @@ discusses:
 - retrieval-augmented-generation
 - ukp-lab
 - question-answering
+- natural-questions
 relations:
 - from: beir
   type: DEVELOPED_BY
