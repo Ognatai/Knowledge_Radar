@@ -11,8 +11,9 @@ never written to a file.
 | `start-app.ps1` | Starts the local app (API, chat UI and both indices in Docker) and opens `http://127.0.0.1:8080`. `-NoPrivate` starts without the private index |
 | `start-neo4j.ps1` | Starts the public local index (Neo4j in Docker, localhost only); `-Private` starts the separate private index |
 | `start-ollama.ps1` | Starts Ollama with the settings the agent pipeline expects (GPU backend, quantised KV cache); can serve as the autostart entry |
-| `run-monitoring.ps1` | The weekly monitoring run: starts Docker, Neo4j and Ollama if needed, runs `app.agents.monitoring.weekly`, writes a log to `.knowledge-radar/logs/` and shows a notification |
-| `register-scheduled-task.ps1` | Registers `run-monitoring.ps1` as a weekly Windows Task Scheduler task from `scheduled_task.xml`; `-DryRun` prints the XML only |
+| `run-monitoring.ps1` | The weekly monitoring run: starts Docker, Neo4j and Ollama if needed, runs `app.agents.monitoring.weekly`, writes a log to `.knowledge-radar/logs/` and the notice with its result |
+| `show-run-notice.ps1` | Shows the last run's result as a window until it is closed; run by the task `Run notice` after the run, at logon and at unlock |
+| `register-scheduled-task.ps1` | Registers `run-monitoring.ps1` as a weekly Windows Task Scheduler task from `scheduled_task.xml` and `show-run-notice.ps1` from `scheduled_task_notice.xml`; `-DryRun` prints the XML only |
 | `check_private_leaks.py` | Fails if added content contains absolute local paths, paths into the private repository, symlinks or private-data patterns. Used by the pre-commit hook and in CI |
 
 ```powershell

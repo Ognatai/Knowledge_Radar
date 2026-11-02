@@ -5,8 +5,11 @@
     Starts what the pipeline needs (Docker Desktop, Neo4j, Ollama) if it is not
     running, then runs app.agents.monitoring.weekly: validate the notes, update
     the index, fetch sources, assess relevance, write drafts. Writes a log file to
-    .knowledge-radar/logs/ and shows a Windows toast notification with the
-    summary; drafts wait in .knowledge-radar/monitoring/drafts/ for review.
+    .knowledge-radar/logs/ and, from it, the notice with what each step did
+    (app.agents.monitoring.notice), then starts the task "Run notice", which shows it
+    as a window that waits until it is closed (scripts/show-run-notice.ps1). A toast
+    is the fallback when that fails. Drafts wait in .knowledge-radar/monitoring/drafts/
+    for review.
 #>
 [CmdletBinding()]
 param()
@@ -42,6 +45,21 @@ function Show-Toast([string]$title, [string]$message) {
     }
     catch {
         Write-Log "Toast notification failed: $($_.Exception.Message)"
+    }
+}
+
+function Show-Notice([string]$title, [string]$message) {
+    # The run happens at night, when a toast goes unseen: the notice window waits on
+    # the desktop and comes back at logon or unlock until it was closed.
+    try {
+        $ErrorActionPreference = "Continue"
+        & $python -m app.agents.monitoring.notice $logFile 2>&1 | ForEach-Object { Write-Log "$_" }
+        if ($LASTEXITCODE -ne 0) { throw "app.agents.monitoring.notice exited with $LASTEXITCODE" }
+        Start-ScheduledTask -TaskPath "\Knowledge Radar\" -TaskName "Run notice" -ErrorAction Stop
+    }
+    catch {
+        Write-Log "Notice window failed: $($_.Exception.Message)"
+        Show-Toast $title $message
     }
 }
 
@@ -114,11 +132,11 @@ try {
     }
 
     Write-Log "Monitoring run finished successfully."
-    Show-Toast "Knowledge Radar: weekly run finished" "$summary Log: $logFile"
+    Show-Notice "Knowledge Radar: weekly run finished" "$summary Log: $logFile"
     exit 0
 }
 catch {
     Write-Log "Monitoring run FAILED: $($_.Exception.Message)"
-    Show-Toast "Knowledge Radar: weekly run failed" "$($_.Exception.Message) Log: $logFile"
+    Show-Notice "Knowledge Radar: weekly run failed" "$($_.Exception.Message) Log: $logFile"
     exit 1
 }

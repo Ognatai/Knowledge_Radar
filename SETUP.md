@@ -221,7 +221,11 @@ python -m app.backend.knowledge_radar.private_index   # build or update the priv
 The task runs Sundays at 02:00 (or at the next opportunity if the machine was
 off) as the logged-on user, which is required for toast notifications and for
 reading secrets from the Windows Credential Manager. Every run writes a log to
-`.knowledge-radar/logs/` and shows a toast on success and on failure.
+`.knowledge-radar/logs/` and, on success and on failure, a window with what each
+step did, the source errors and whether drafts wait for review. The window comes
+from the second task, `Run notice`: it is started after the run and again at logon
+and unlock, so a result from the night waits on the desktop until the PC is woken,
+and is shown until it was closed (also after a restart). A toast is the fallback.
 
 With a private repository whose retros name knowledge gaps, the run also pushes the
 findings on those gaps as a branch `inbox/<run>` to GitLab (with the GitLab token

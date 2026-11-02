@@ -29,6 +29,7 @@ Every folder has its own README with details.
 | `local-config.example.yaml` | Template for the untracked per-machine configuration |
 | `docker-compose*.yml` | Neo4j indices and the local app in Docker |
 | `scheduled_task.xml` | Windows Task Scheduler definition (template) for the weekly run |
+| `scheduled_task_notice.xml` | Windows Task Scheduler definition (template) for the window with the run's result |
 
 ## Note format
 
