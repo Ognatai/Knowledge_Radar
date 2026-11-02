@@ -1,7 +1,7 @@
 version: 1
 note_sha256: "094057da37703f7d8d7b99f220137a634a2cdac730c283a3c88a570db9d011d0"
 extracted_by: claude (hand-labelled gold standard)
-discusses: [basel-committee, ecb, risk-data-aggregation, crr-and-crd, eba-governance-and-outsourcing-guidelines, marisk, dora, data-governance, data-quality]
+discusses: [basel-committee, ecb, risk-data-aggregation, crr-and-crd, eba-governance-and-outsourcing-guidelines, marisk, dora, data-governance, data-quality, data-pipelines]
 relations:
   - from: bcbs-239-and-ecb-rdarr-guide
     type: REGULATES

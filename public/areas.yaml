@@ -322,6 +322,7 @@ areas:
       - data-warehouse
       - data-lakehouse
       - apache-spark
+      - stream-processing
       - mapreduce
       - web-analytics
       - data-visualisation

@@ -17,6 +17,7 @@ discusses:
 - data-governance
 - data-quality
 - ml-pipelines
+- data-pipelines
 relations:
 - from: shacl
   type: DEVELOPED_BY

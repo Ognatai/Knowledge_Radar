@@ -1,5 +1,5 @@
 version: 1
-note_sha256: 480dd77a897f8b20a11c0348cd7703c52f59c90c94da0a97eef6e27ee3c03cc8
+note_sha256: 3a224e3a067305f69779296ec8e2c767431831bf184426643d3179fc54adccb6
 extracted_by: claude (hand-labelled, 2026-10-12)
 discusses:
 - apache-airflow
@@ -11,6 +11,7 @@ discusses:
 - retrieval-augmented-generation
 - knowledge-graph-engineering
 - data-warehouse
+- stream-processing
 relations:
 - from: apache-airflow
   type: IMPLEMENTS

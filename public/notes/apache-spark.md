@@ -53,7 +53,7 @@ Spark SQL integrates relational processing with Spark's functional API: DataFram
 
 #### 5. Libraries and deployment
 
-On top of the core, Spark offers Spark SQL, the pandas API on Spark, MLlib for machine learning, GraphX for graphs and Structured Streaming for incremental and stream processing (Apache Spark). Spark Connect, introduced in Spark 3.4, separates client applications from the cluster in a client-server architecture. Spark runs standalone or on Hadoop YARN or [[kubernetes|Kubernetes]]; the current documentation covers version 4.2.0 and Java 17/21/25, Scala 2.13 and Python 3.10 or later (Apache Spark).
+On top of the core, Spark offers Spark SQL, the pandas API on Spark, MLlib for machine learning, GraphX for graphs and [[stream-processing|Structured Streaming]] for incremental and stream processing (Apache Spark). Spark Connect, introduced in Spark 3.4, separates client applications from the cluster in a client-server architecture. Spark runs standalone or on Hadoop YARN or [[kubernetes|Kubernetes]]; the current documentation covers version 4.2.0 and Java 17/21/25, Scala 2.13 and Python 3.10 or later (Apache Spark).
 
 ### Common usage
 
@@ -156,7 +156,7 @@ Spark SQL verbindet relationale Verarbeitung mit der funktionalen API von Spark:
 
 #### 5. Bibliotheken und Betrieb
 
-Auf dem Kern bietet Spark Spark SQL, die pandas-API auf Spark, MLlib für Machine Learning, GraphX für Graphen und Structured Streaming für inkrementelle und Stream-Verarbeitung (Apache Spark). Spark Connect, eingeführt mit Spark 3.4, trennt Client-Anwendungen in einer Client-Server-Architektur vom Cluster. Spark läuft eigenständig oder auf Hadoop YARN oder [[kubernetes|Kubernetes]]; die aktuelle Dokumentation behandelt Version 4.2.0 sowie Java 17/21/25, Scala 2.13 und Python ab 3.10 (Apache Spark).
+Auf dem Kern bietet Spark Spark SQL, die pandas-API auf Spark, MLlib für Machine Learning, GraphX für Graphen und [[stream-processing|Structured Streaming]] für inkrementelle und Stream-Verarbeitung (Apache Spark). Spark Connect, eingeführt mit Spark 3.4, trennt Client-Anwendungen in einer Client-Server-Architektur vom Cluster. Spark läuft eigenständig oder auf Hadoop YARN oder [[kubernetes|Kubernetes]]; die aktuelle Dokumentation behandelt Version 4.2.0 sowie Java 17/21/25, Scala 2.13 und Python ab 3.10 (Apache Spark).
 
 ### Typische Verwendung
 

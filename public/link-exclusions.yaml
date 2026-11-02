@@ -89,3 +89,5 @@ exclusions:
     decoding-strategies: HMM decoding is the Viterbi search for the best state sequence, not LLM text generation.
   part-of-speech-tagging:
     decoding-strategies: HMM decoding with Viterbi, not LLM text generation.
+  stream-processing:
+    monitoring-and-alerting: patient monitoring in hospitals, not system monitoring

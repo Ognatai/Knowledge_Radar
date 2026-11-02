@@ -1,0 +1,20 @@
+version: 1
+note_sha256: 8f9fec2cc41090a3884eaa539ae25a1fa9dee562674384522d1d7f74595f1ae9
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- apache-kafka
+- data-pipelines
+- apache-spark
+- google
+- time-series-analysis
+- anomaly-detection
+- asynchronous-apis
+relations:
+- from: apache-kafka
+  type: IMPLEMENTS
+  to: stream-processing
+  evidence: Kafka Streams adds transformations, aggregations, joins and windowing on top
+- from: apache-spark
+  type: IMPLEMENTS
+  to: stream-processing
+  evidence: Spark Structured Streaming treats a live stream as a table that is continuously appended

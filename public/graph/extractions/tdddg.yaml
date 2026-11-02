@@ -1,7 +1,7 @@
 version: 1
 note_sha256: "84d21d3b46b112df226c681c42c6c09b97e8da176d0e3342e3cde3bc9cc0b095"
 extracted_by: claude (hand-labelled gold standard)
-discusses: [eprivacy-directive, secrecy-of-telecommunications, cookie-consent, gdpr, bdsg, bfdi, federal-network-agency, digitale-dienste-gesetz, digital-services-act, tkg, e-evidence-regulation, einwilligungsverwaltungsverordnung]
+discusses: [eprivacy-directive, secrecy-of-telecommunications, cookie-consent, gdpr, bdsg, bfdi, federal-network-agency, digitale-dienste-gesetz, digital-services-act, tkg, e-evidence-regulation, einwilligungsverwaltungsverordnung, data-pipelines]
 relations:
   - from: tdddg
     type: IMPLEMENTS

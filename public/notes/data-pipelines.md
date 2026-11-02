@@ -36,7 +36,7 @@ sources ──extract──► raw storage ──transform──► cleaned / mo
 
 #### 1. Extract
 
-Data is read from operational sources: databases, files, [[apis|APIs]] or event streams. In event streaming, events are captured in real time from sources such as databases, sensors and mobile devices; an event records that something happened and has a key, a value, a timestamp and optional headers (Kafka docs: Introduction).
+Data is read from operational sources: databases, files, [[apis|APIs]] or event streams. In [[stream-processing|event streaming]], events are captured in real time from sources such as databases, sensors and mobile devices; an event records that something happened and has a key, a value, a timestamp and optional headers (Kafka docs: Introduction).
 
 #### 2. Load and transform: ETL or ELT
 
@@ -123,7 +123,7 @@ Quellen ──Extract──► Rohdaten ──Transform──► bereinigte / mo
 
 #### 1. Extract
 
-Daten werden aus operativen Quellen gelesen: Datenbanken, Dateien, [[apis|APIs]] oder Event-Streams. Beim Event Streaming werden Ereignisse in Echtzeit aus Quellen wie Datenbanken, Sensoren und Mobilgeräten erfasst; ein Event hält fest, dass etwas passiert ist, und hat einen Schlüssel, einen Wert, einen Zeitstempel und optionale Header (Kafka docs: Introduction).
+Daten werden aus operativen Quellen gelesen: Datenbanken, Dateien, [[apis|APIs]] oder Event-Streams. Beim [[stream-processing|Event Streaming]] werden Ereignisse in Echtzeit aus Quellen wie Datenbanken, Sensoren und Mobilgeräten erfasst; ein Event hält fest, dass etwas passiert ist, und hat einen Schlüssel, einen Wert, einen Zeitstempel und optionale Header (Kafka docs: Introduction).
 
 #### 2. Laden und Transformieren: ETL oder ELT
 

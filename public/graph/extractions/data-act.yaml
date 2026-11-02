@@ -11,6 +11,7 @@ discusses:
 - connected-product
 - cloud-switching
 - geschgehg
+- data-pipelines
 relations:
 - from: gdpr
   type: TAKES_PRECEDENCE_OVER

@@ -1,5 +1,5 @@
 version: 1
-note_sha256: bfc1af7875a40818fc2e366ed85f1ccecee66dc5fc90eb2ae08bed91e6d35ed1
+note_sha256: b5a85085810278dc8cfdf6acdf3f1ace1eb191d6bd1bb6ef648d8efbcfe3c4fb
 extracted_by: claude (hand-labelled, 2026-10-14)
 discusses:
 - apis
@@ -15,4 +15,5 @@ discusses:
 - matei-zaharia
 - databricks
 - logistic-regression
+- stream-processing
 relations: []
