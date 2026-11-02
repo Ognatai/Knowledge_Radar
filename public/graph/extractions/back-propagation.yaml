@@ -9,9 +9,9 @@ discusses:
 - neural-network-training
 - neural-networks
 - resnet
-- stochastic-gradient-descent
+- gradient-descent
 relations:
 - from: back-propagation
   type: COMPLEMENTS
-  to: stochastic-gradient-descent
+  to: gradient-descent
   evidence: an optimiser such as stochastic gradient descent then uses them to update the weights

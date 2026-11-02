@@ -1,0 +1,31 @@
+version: 1
+note_sha256: 903a7d302761ccdc06013050c9970bcf449cf6566c79514013dc3f756a36a1fa
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- gradient-descent
+- statistics-fundamentals
+- regularisation-and-hyperparameters
+- logistic-regression
+- ensemble-methods
+- neural-networks
+- k-nearest-neighbours
+- time-series-analysis
+- causal-inference
+- cross-validation
+- overfitting
+- bias-variance-tradeoff
+- ridge-regression
+- lasso
+relations:
+- from: ridge-regression
+  type: BASED_ON
+  to: linear-regression
+  evidence: Ridge regression adds `α ||w||²₂` to the objective and shrinks coefficients
+- from: lasso
+  type: BASED_ON
+  to: linear-regression
+  evidence: lasso adds `α ||w||₁` and can set coefficients exactly to zero
+- from: linear-regression
+  type: COMPLEMENTS
+  to: k-nearest-neighbours
+  evidence: parametric models tend to beat non-parametric ones such as k-nearest neighbours

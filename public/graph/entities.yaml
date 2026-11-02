@@ -733,14 +733,6 @@ entities:
   sources:
   - https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L2557
   - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557
-- id: linear-regression
-  type: Method
-  name_en: Linear regression
-  name_de: Lineare Regression
-  summary_en: Linear regression by ordinary least squares fits a linear model whose coefficients minimise the residual sum of squares between observed and predicted targets (scikit-learn developers, n.d.-d). Its coefficient estimates rely on the independence of the features; ridge and lasso regression add penalties on the coefficients.
-  summary_de: Lineare Regression nach der Methode der kleinsten Quadrate passt ein lineares Modell an, dessen Koeffizienten die Summe der quadrierten Abweichungen zwischen beobachteten und vorhergesagten Zielwerten minimieren (scikit-learn developers, n.d.-d). Ihre Koeffizientenschätzungen setzen unabhängige Merkmale voraus; Ridge- und Lasso-Regression ergänzen Strafterme auf die Koeffizienten.
-  sources:
-  - https://scikit-learn.org/stable/modules/linear_model.html
 - id: supervised-learning
   type: Concept
   name_en: Supervised learning
@@ -2950,14 +2942,6 @@ entities:
   summary_de: 8-Bit-Optimierer speichern den Zustand zustandsbehafteter Optimierer wie Adam mit blockweiser dynamischer Quantisierung in 8 Bit und erreichen so die Leistung von 32-Bit-Zuständen bei einem Bruchteil des Speichers (Dettmers et al., 2021). Eine stabile Embedding-Schicht verringert die Varianz der Gradienten, und die Optimierer lassen sich mit einer Änderung von zwei Codezeilen einsetzen.
   sources:
   - https://arxiv.org/abs/2110.02861
-- id: adam-optimiser
-  type: Method
-  name_en: Adam
-  name_de: Adam
-  summary_en: Adam is an algorithm for first-order gradient-based optimisation of stochastic objectives based on adaptive estimates of lower-order moments of the gradients (Kingma & Ba, 2014). It is simple to implement, computationally efficient, needs little memory, suits large and noisy or sparse problems, and its hyperparameters typically need little tuning.
-  summary_de: Adam ist ein Verfahren zur gradientenbasierten Optimierung stochastischer Zielfunktionen erster Ordnung, das auf adaptiven Schätzungen der niedrigen Momente der Gradienten beruht (Kingma & Ba, 2014). Es ist einfach umzusetzen, recheneffizient, braucht wenig Speicher, eignet sich für große sowie verrauschte oder dünn besetzte Probleme, und seine Hyperparameter müssen meist kaum abgestimmt werden.
-  sources:
-  - https://arxiv.org/abs/1412.6980
 - id: smote
   type: Method
   name_en: SMOTE (Synthetic Minority Over-sampling Technique)
@@ -3105,23 +3089,6 @@ entities:
   sources:
   - https://otexts.com/fpp3/accuracy.html
   - https://doi.org/10.1016/j.ijforecast.2006.03.001
-- id: stochastic-gradient-descent
-  type: Method
-  name_en: Stochastic gradient descent (SGD)
-  name_de: Stochastischer Gradientenabstieg (SGD)
-  summary_en: Stochastic gradient descent (SGD) updates model parameters using the gradient of the loss on a single training example at a time, which makes it a simple and very efficient way to fit models on large-scale and sparse problems such as text classification (scikit-learn developers, n.d.-i). It is also the basic optimisation method for training neural networks, on which adaptive variants such as Adam build.
-  summary_de: Stochastischer Gradientenabstieg (SGD) aktualisiert Modellparameter mit dem Gradienten des Verlusts für jeweils ein einzelnes Trainingsbeispiel und ist damit ein einfacher, sehr effizienter Weg, Modelle auf großen und dünn besetzten Problemen wie der Textklassifikation anzupassen (scikit-learn developers, n.d.-i). Er ist auch das grundlegende Optimierungsverfahren zum Training neuronaler Netze, auf dem adaptive Varianten wie Adam aufbauen.
-  sources:
-  - https://scikit-learn.org/stable/modules/sgd.html
-  - https://arxiv.org/abs/1412.6980
-- id: adamw
-  type: Method
-  name_en: AdamW
-  name_de: AdamW
-  summary_en: 'AdamW is Adam with decoupled weight decay: Loshchilov and Hutter showed that L2 regularisation and weight decay are not equivalent for adaptive optimisers such as Adam and applied weight decay separately from the gradient step (Loshchilov & Hutter, 2017). This decoupled the best weight decay factor from the learning rate and substantially improved Adam''s generalisation on image classification.'
-  summary_de: 'AdamW ist Adam mit entkoppeltem Weight Decay: Loshchilov und Hutter zeigten, dass L2-Regularisierung und Weight Decay für adaptive Optimierer wie Adam nicht gleichwertig sind, und wenden den Weight Decay getrennt vom Gradientenschritt an (Loshchilov & Hutter, 2017). Das entkoppelte den besten Weight-Decay-Faktor von der Lernrate und verbesserte die Generalisierung von Adam bei der Bildklassifikation deutlich.'
-  sources:
-  - https://arxiv.org/abs/1711.05101
 - id: batch-normalisation
   type: Method
   name_en: Batch normalisation

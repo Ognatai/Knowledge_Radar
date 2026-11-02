@@ -1,0 +1,26 @@
+version: 1
+note_sha256: eacab0258ae8bf609daf982b2985acd5f38ec8b30d4e3a7c39ba08a698964665
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- logistic-regression
+- neural-networks
+- adam-optimiser
+- cross-entropy
+- back-propagation
+- regularisation-and-hyperparameters
+- linear-regression
+- neural-network-training
+- overfitting
+relations:
+- from: adam-optimiser
+  type: BASED_ON
+  to: gradient-descent
+  evidence: Adam combines a decaying average of gradients (momentum) with RMSprop-style scaling and bias correction
+- from: gradient-descent
+  type: COMPLEMENTS
+  to: back-propagation
+  evidence: In neural networks the gradient is computed by back-propagation
+- from: logistic-regression
+  type: BASED_ON
+  to: gradient-descent
+  evidence: how logistic regression and neural networks are usually trained

@@ -183,6 +183,8 @@ areas:
       - ml-preprocessing
       - feature-engineering
       - classification
+      - linear-regression
+      - logistic-regression
       - naive-bayes
       - classification-metrics
       - decision-trees
@@ -210,6 +212,8 @@ areas:
     notes:
       - neural-networks
       - neural-network-training
+      - gradient-descent
+      - adam-optimiser
       - neural-network-evaluation
       - convolutional-neural-networks
       - computer-vision
@@ -220,6 +224,8 @@ areas:
       - reinforcement-learning
       - keras-and-tensorflow
       - back-propagation
+      - softmax
+      - cross-entropy
       - resnet
       - vision-transformer
       - imagenet

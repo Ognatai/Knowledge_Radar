@@ -1,0 +1,14 @@
+version: 1
+note_sha256: 7852c428570358574b53fbacc60c51b91fef1ad8e2e89ecee9bf1c675c6ca24e
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- gradient-descent
+- neural-networks
+- regularisation-and-hyperparameters
+- mixed-precision-training
+- neural-network-training
+relations:
+- from: adam-optimiser
+  type: BASED_ON
+  to: gradient-descent
+  evidence: m_t plays the role of momentum in gradient descent

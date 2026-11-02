@@ -1,0 +1,25 @@
+version: 1
+note_sha256: 2b46abcc49cb8485e57c893ef5942cb5dc43cfa44255ba99e5d2736cf15c38f5
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- logistic-regression
+- softmax
+- large-language-models
+- tokenisation
+- knowledge-distillation
+- classification
+- neural-network-training
+- temperature-scaling
+- fairness-metrics
+- linear-regression
+- perplexity
+- imagenet
+relations:
+- from: perplexity
+  type: BASED_ON
+  to: cross-entropy
+  evidence: Perplexity, the inverse probability of a test set normalised by its length, equals the exponential of the mean cross-entropy
+- from: large-language-models
+  type: BASED_ON
+  to: cross-entropy
+  evidence: A language model is trained to minimise the cross-entropy of the next token

@@ -9,6 +9,7 @@ notes:
   tokenization: tokenisation
 entities:
   adam-optimizer: adam-optimiser
+  adamw: adam-optimiser
   anisotropic-quantization: anisotropic-quantisation
   eight-bit-optimizers: eight-bit-optimisers
   function-calling: tool-calling
@@ -16,5 +17,6 @@ entities:
   post-training-quantization: post-training-quantisation
   product-quantization: product-quantisation
   quantization-aware-training: quantisation-aware-training
+  stochastic-gradient-descent: gradient-descent
   subword-regularization: subword-regularisation
   unigram-language-model-tokenization: unigram-language-model-tokenisation

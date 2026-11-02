@@ -1,0 +1,26 @@
+version: 1
+note_sha256: 4cbd629d6caf9ead0fa4887db452cb8c0bb402a2d3855888d5bf8a451a406294
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- logistic-regression
+- cross-entropy
+- large-language-models
+- attention-and-transformers
+- knowledge-distillation
+- temperature-scaling
+- neural-networks
+- classification
+- classification-metrics
+relations:
+- from: attention-and-transformers
+  type: BASED_ON
+  to: softmax
+  evidence: In scaled dot-product attention, `Attention(Q, K, V) = softmax(QKᵀ / √d_k) V`
+- from: knowledge-distillation
+  type: BASED_ON
+  to: softmax
+  evidence: Knowledge distillation uses a high temperature to produce soft targets from a large model
+- from: softmax
+  type: COMPLEMENTS
+  to: cross-entropy
+  evidence: The softmax pairs naturally with the cross-entropy (negative log-likelihood) loss

@@ -1,0 +1,36 @@
+version: 1
+note_sha256: b696bff5975f6d55bd18a0225770f847cef2eb4133db7160f8b35a5a9961b18a
+extracted_by: claude (hand-labelled, 2026-11-02)
+discusses:
+- cross-entropy
+- gradient-descent
+- softmax
+- classification
+- tf-idf
+- embeddings
+- regularisation-and-hyperparameters
+- neural-networks
+- creditworthiness-assessment
+- sentence-bert
+- bias-in-nlp
+- naive-bayes
+- support-vector-machines
+- linear-regression
+- platt-scaling
+- isotonic-regression
+- classification-metrics
+- ridge-regression
+- lasso
+relations:
+- from: logistic-regression
+  type: IS_EXAMPLE_OF
+  to: classification
+  evidence: Logistic regression is a linear model for classification
+- from: logistic-regression
+  type: BASED_ON
+  to: cross-entropy
+  evidence: Weights are learned by maximum likelihood, which amounts to minimising the cross-entropy loss
+- from: logistic-regression
+  type: BASED_ON
+  to: softmax
+  evidence: with more than two classes the sigmoid is replaced by the softmax (multinomial logistic regression)
