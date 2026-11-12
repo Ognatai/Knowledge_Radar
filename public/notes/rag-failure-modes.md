@@ -7,6 +7,7 @@ sources:
 - https://arxiv.org/abs/2307.03172
 - https://arxiv.org/abs/2401.14887
 - https://arxiv.org/abs/2305.14627
+- https://doi.org/10.18653/2026.findings-emnlp.2222
 ---
 
 ## EN
@@ -103,6 +104,11 @@ RAG systems reduce hallucinations by grounding responses in retrieved documents 
 - Cuconasu, F. et al. (2024). *The Power of Noise: Redefining Retrieval for RAG Systems.* [arXiv:2401.14887](https://arxiv.org/abs/2401.14887)
 - Gao, T. et al. (2023). *Enabling Large Language Models to Generate Text with Citations.* [arXiv:2305.14627](https://arxiv.org/abs/2305.14627)
 
+### Updates
+
+#### 2026-11-08 — Retrieval, not reading, as the bottleneck
+Banerjee et al. have models return the supporting lines together with the answer and score both jointly, which separates retrieval failures from reading failures. On MultiHop-RAG, similarity retrieval with the top 10 chunks found at least one required fact for 82% of questions but all required facts for only 19% (8% for inference questions). With this budget RAG answered 44–60% of questions correctly, against 78–86% for the same models reading all relevant articles plus 20 distractors as one long context; the comparison is therefore not pool-matched and mainly measures the cost of retrieval. On QASPER-MP, where a question names a paper only by an author or a title fragment, chunking lost the document identity and RAG declined to answer 24–40% of answerable questions. Answer-only scores also hid grounding failures: when the context contradicted the model's world knowledge, the gap between correct answers and correct answers with correct citations widened (Banerjee et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.2222](https://doi.org/10.18653/2026.findings-emnlp.2222)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -196,3 +202,8 @@ RAG-Systeme reduzieren Halluzinationen, indem sie Antworten in abgerufenen Dokum
 - Liu, N. F. et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts.* TACL. [arXiv:2307.03172](https://arxiv.org/abs/2307.03172)
 - Cuconasu, F. et al. (2024). *The Power of Noise: Redefining Retrieval for RAG Systems.* [arXiv:2401.14887](https://arxiv.org/abs/2401.14887)
 - Gao, T. et al. (2023). *Enabling Large Language Models to Generate Text with Citations.* [arXiv:2305.14627](https://arxiv.org/abs/2305.14627)
+
+### Aktualisierungen
+
+#### 2026-11-08 — Das Retrieval, nicht das Lesen, als Engpass
+Banerjee et al. lassen Modelle zusammen mit der Antwort die stützenden Zeilen ausgeben und bewerten beides gemeinsam, wodurch sich Retrieval-Fehler von Lesefehlern trennen lassen. Auf MultiHop-RAG fand Ähnlichkeits-Retrieval mit den 10 besten Chunks für 82 % der Fragen mindestens einen benötigten Fakt, aber nur für 19 % alle benötigten Fakten (bei Schlussfolgerungsfragen 8 %). Mit diesem Budget beantwortete RAG 44–60 % der Fragen richtig, dieselben Modelle mit allen relevanten Artikeln plus 20 Ablenkartikeln als langem Kontext dagegen 78–86 %; der Vergleich beruht also nicht auf demselben Dokumentbestand und misst vor allem die Kosten des Retrievals. Auf QASPER-MP, wo eine Frage ein Paper nur über einen Autorennamen oder ein Titelfragment nennt, ging durch das Chunking die Dokumentidentität verloren, und RAG verweigerte bei 24–40 % der beantwortbaren Fragen die Antwort. Reine Antwortmetriken verdeckten zudem Fehler bei der Belegung: Widersprach der Kontext dem Weltwissen des Modells, wuchs der Abstand zwischen richtigen Antworten und richtigen Antworten mit richtigen Belegen (Banerjee et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.2222](https://doi.org/10.18653/2026.findings-emnlp.2222)).

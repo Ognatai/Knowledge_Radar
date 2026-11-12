@@ -10,6 +10,7 @@ sources:
 - https://arxiv.org/abs/2306.08302
 - https://arxiv.org/abs/2005.11401
 - https://doi.org/10.1145/3805712.3809649
+- https://doi.org/10.18653/2026.findings-emnlp.2324
 ---
 
 ## EN
@@ -115,6 +116,9 @@ GraphRAG turns documents into an entity graph and retrieves along it, which help
 #### 2026-10-11 — Reinforcement learning for reasoning over knowledge graphs
 EAT tackles the cost and the spurious reasoning paths of tightly coupled LLM–graph traversal: an adaptive retrieval step separates language understanding from the exploration of the graph, and an LLM-guided reward penalises semantically inconsistent paths when the exploring agent is trained with reinforcement learning. On WebQSP, CWQ and GrailQA it reached state-of-the-art results, and with an 8B-parameter LLM it surpassed the reasoning capability of GPT-4o (Xia et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809649](https://doi.org/10.1145/3805712.3809649)).
 
+#### 2026-11-08 — ThreadRAG: keeping the retrieved text intact in the graph
+Graph-based RAG that turns text into entity–relation triplets loses context, and having an LLM verbalise subgraphs back into text adds noise. ThreadRAG instead splits the retrieved documents into self-contained text spans and links them with narrative edges (reading order), semantic edges (embedding similarity) and lexical edges (shared named entities). Personalised PageRank, started from anchor spans that match the query, selects a subgraph whose spans are then joined in document order rather than rewritten. On HotpotQA, 2WikiMultihopQA and MuSiQue it outperformed text-only and graph-based baselines, for example by 5.8 points exact match over KnowTrace on 2WikiMultihopQA, and it spent no LLM tokens on building the graph, so its total token cost was 23–26% of KnowTrace's (Li et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.2324](https://doi.org/10.18653/2026.findings-emnlp.2324)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -217,3 +221,6 @@ GraphRAG macht aus Dokumenten einen Entitätengraphen und ruft entlang dieses Gr
 
 #### 2026-10-11 — Reinforcement Learning für das Schließen über Knowledge Graphs
 EAT geht die Kosten und die irreführenden Schlusspfade eng gekoppelter LLM-Graph-Traversierung an: Ein adaptiver Retrieval-Schritt trennt das Sprachverständnis von der Erkundung des Graphen, und eine vom LLM gesteuerte Belohnung bestraft semantisch widersprüchliche Pfade, wenn der erkundende Agent mit Reinforcement Learning trainiert wird. Auf WebQSP, CWQ und GrailQA erreichte es den Stand der Technik und übertraf mit einem LLM mit 8 Mrd. Parametern die Schlussfähigkeit von GPT-4o (Xia et al., 2026; SIGIR 2026; [doi:10.1145/3805712.3809649](https://doi.org/10.1145/3805712.3809649)).
+
+#### 2026-11-08 — ThreadRAG: abgerufenen Text im Graphen unversehrt lassen
+Graphbasiertes RAG, das Text in Entität-Relation-Tripel zerlegt, verliert Kontext, und wenn ein LLM Teilgraphen wieder in Text übersetzt, kommt Rauschen hinzu. ThreadRAG zerlegt die abgerufenen Dokumente stattdessen in in sich geschlossene Textabschnitte und verbindet sie durch narrative Kanten (Lesereihenfolge), semantische Kanten (Embedding-Ähnlichkeit) und lexikalische Kanten (gemeinsame Named Entities). Personalised PageRank, gestartet bei Ankerabschnitten, die zur Anfrage passen, wählt einen Teilgraphen aus, dessen Abschnitte in Dokumentreihenfolge aneinandergereiht statt umformuliert werden. Auf HotpotQA, 2WikiMultihopQA und MuSiQue übertraf es rein textbasierte und graphbasierte Vergleichssysteme, etwa um 5,8 Punkte Exact Match gegenüber KnowTrace auf 2WikiMultihopQA, und verbrauchte für den Aufbau des Graphen keine LLM-Tokens, sodass seine gesamten Tokenkosten bei 23–26 % derer von KnowTrace lagen (Li et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.2324](https://doi.org/10.18653/2026.findings-emnlp.2324)).

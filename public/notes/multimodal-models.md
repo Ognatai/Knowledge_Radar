@@ -9,6 +9,7 @@ sources:
 - https://arxiv.org/abs/2301.12597
 - https://arxiv.org/abs/2304.08485
 - https://arxiv.org/abs/2112.10752
+- https://doi.org/10.48550/arXiv.2608.20756
 ---
 
 ## EN
@@ -103,6 +104,11 @@ Multimodal models align or connect encoders for different data types, so that la
 - Liu, H. et al. (2023). *Visual Instruction Tuning.* NeurIPS 2023. [arXiv:2304.08485](https://arxiv.org/abs/2304.08485)
 - Rombach, R. et al. (2021). *High-Resolution Image Synthesis with Latent Diffusion Models.* CVPR 2022. [arXiv:2112.10752](https://arxiv.org/abs/2112.10752)
 
+### Updates
+
+#### 2026-11-08 — Poisoning multimodal RAG with edited images
+Earlier poisoning attacks on multimodal RAG carried the false information in text such as captions or metadata, which text-side filters can catch. Vis-Poison edits only a small, question-relevant detail of a genuine image (for example a colour or a sign) and injects the image without any text. Because a captioning model attends to the image as a whole, the generated caption stays harmless and the image is still retrieved, but a question about the edited detail directs the generating model to it. Against knowledge bases of 30,000 images, without access to the victim system, 40–65% of the attacks succeeded end to end across six multimodal LLMs; where a model answered correctly without retrieval, the poisoned image still overrode that knowledge in 62.4% of cases on average. An image forgery detector blocked 3.9% of the poisoned images and a text-side check of their captions 22.8% (Liang et al., 2026; [arXiv:2608.20756](https://doi.org/10.48550/arXiv.2608.20756)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -194,3 +200,8 @@ Multimodale Modelle richten Encoder für verschiedene Datenarten aneinander aus 
 - Li, J. et al. (2023). *BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models.* ICML 2023. [arXiv:2301.12597](https://arxiv.org/abs/2301.12597)
 - Liu, H. et al. (2023). *Visual Instruction Tuning.* NeurIPS 2023. [arXiv:2304.08485](https://arxiv.org/abs/2304.08485)
 - Rombach, R. et al. (2021). *High-Resolution Image Synthesis with Latent Diffusion Models.* CVPR 2022. [arXiv:2112.10752](https://arxiv.org/abs/2112.10752)
+
+### Aktualisierungen
+
+#### 2026-11-08 — Multimodales RAG mit bearbeiteten Bildern vergiften
+Frühere Vergiftungsangriffe auf multimodales RAG transportierten die Falschinformation in Text wie Bildunterschriften oder Metadaten, den textseitige Filter erkennen können. Vis-Poison verändert nur ein kleines, für die Frage relevantes Detail eines echten Bildes (etwa eine Farbe oder ein Schild) und schleust das Bild ohne jeden Text ein. Weil ein Modell beim Beschreiben das Bild als Ganzes betrachtet, bleibt die erzeugte Bildbeschreibung harmlos und das Bild wird weiterhin abgerufen; eine Frage nach dem veränderten Detail lenkt das antwortende Modell jedoch genau dorthin. Gegen Wissensbasen mit 30.000 Bildern und ohne Zugriff auf das angegriffene System waren 40–65 % der Angriffe über sechs multimodale LLMs hinweg durchgängig erfolgreich; wo ein Modell ohne Retrieval richtig antwortete, setzte sich das vergiftete Bild im Mittel in 62,4 % der Fälle trotzdem gegen dieses Wissen durch. Ein Detektor für Bildfälschungen blockierte 3,9 % der vergifteten Bilder, eine textseitige Prüfung ihrer Beschreibungen 22,8 % (Liang et al., 2026; [arXiv:2608.20756](https://doi.org/10.48550/arXiv.2608.20756)).

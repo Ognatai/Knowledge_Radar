@@ -14,6 +14,7 @@ sources:
 - https://arxiv.org/abs/1603.09320
 - https://doi.org/10.1561/1500000019
 - https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf
+- https://doi.org/10.18653/2026.findings-emnlp.398
 ---
 
 ## EN
@@ -123,6 +124,11 @@ Retrieval in RAG balances the lexical precision and computational efficiency of 
 - Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
 - Cormack, G. V., Clarke, C. L. A. & Büttcher, S. (2009). *Reciprocal Rank Fusion outperforms Condorcet and individual Rank Learning Methods.* SIGIR 2009. [PDF](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf)
 
+### Updates
+
+#### 2026-11-08 — Reranking by temporal validity
+Laws and policies change through amendments that leave most of the text untouched, so a retriever cannot tell the version in force at the time a question refers to from its near-identical predecessors. TimelyRAG reranks a retriever's top candidates by a weighted sum of semantic similarity and a temporal score that is highest when the question's time, or a date it mentions, falls within a clause's validity period; the temporal score weighs more the more explicit the question's time reference is. On TimelyQABench, a synthetic Korean-language benchmark of amended rules in law, university regulations, company policies and terms of service, it improved nDCG@10 by up to 28.6% for sparse and dense retrievers at about 2–3 ms per query and left results unchanged on the time-independent FiQA. As a reranker it cannot recover a valid version that the first stage missed (Nam et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.398](https://doi.org/10.18653/2026.findings-emnlp.398)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Grundlage der angegebenen Quellen; sie kann unvollständig, veraltet oder falsch sein.
@@ -229,3 +235,8 @@ Die Retrieval-Methoden in RAG balancieren die lexikalische Präzision und rechne
 - Malkov, Y. A. & Yashunin, D. A. (2016). *Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs.* [arXiv:1603.09320](https://arxiv.org/abs/1603.09320)
 - Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond.* Foundations and Trends in Information Retrieval. [doi:10.1561/1500000019](https://doi.org/10.1561/1500000019)
 - Cormack, G. V., Clarke, C. L. A. & Büttcher, S. (2009). *Reciprocal Rank Fusion outperforms Condorcet and individual Rank Learning Methods.* SIGIR 2009. [PDF](https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf)
+
+### Aktualisierungen
+
+#### 2026-11-08 — Reranking nach zeitlicher Gültigkeit
+Gesetze und Richtlinien ändern sich durch Änderungen, die den größten Teil des Textes unberührt lassen; ein Retriever kann daher die Fassung, die zu dem in der Frage gemeinten Zeitpunkt galt, nicht von ihren fast gleichlautenden Vorgängern unterscheiden. TimelyRAG ordnet die besten Kandidaten eines Retrievers nach einer gewichteten Summe aus semantischer Ähnlichkeit und einem zeitlichen Wert neu, der am höchsten ist, wenn der Zeitpunkt der Frage oder ein darin genanntes Datum in den Geltungszeitraum einer Klausel fällt; der zeitliche Wert zählt umso mehr, je ausdrücklicher die Frage einen Zeitbezug hat. Auf TimelyQABench, einem synthetischen koreanischsprachigen Benchmark mit geänderten Regeln aus Recht, Hochschulordnungen, Unternehmensrichtlinien und Nutzungsbedingungen, verbesserte es nDCG@10 um bis zu 28,6 % für Sparse- und Dense-Retriever bei etwa 2–3 ms pro Anfrage und ließ die Ergebnisse auf dem zeitunabhängigen FiQA unverändert. Als Reranker kann es eine gültige Fassung, die die erste Stufe verpasst hat, nicht zurückholen (Nam et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.398](https://doi.org/10.18653/2026.findings-emnlp.398)).

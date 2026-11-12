@@ -1,5 +1,5 @@
 version: 1
-note_sha256: "0b5a4a3ad88aaee48aca5447699234648ffbc1292f4ee68df249002820da69e9"
+note_sha256: "7dbeeb0456481a27fb782d327a32e089ef48e9b16da28f5923c089eefdeefd7e"
 extracted_by: manual
 discusses:
   - retrieval-augmented-generation

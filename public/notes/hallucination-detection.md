@@ -11,6 +11,7 @@ sources:
 - https://arxiv.org/abs/2610.08026
 - https://arxiv.org/abs/2610.11389
 - https://doi.org/10.18653/v1/2026.findings-acl.1477
+- https://doi.org/10.18653/2026.findings-emnlp.1809
 ---
 
 ## EN
@@ -95,6 +96,9 @@ A hallucination detector is only as good as its evidence and its labels: it need
 #### 2026-10-11 — Checking entities against retrieved evidence
 Instead of relying on the model's internal signals, whose knowledge may be outdated, EAEV detects hallucinated entities by retrieving evidence and checking how well each generated entity aligns with it along three dimensions; a counterfactual stability analysis tests whether the alignment holds when the evidence is perturbed. It reached 87.89% AUROC on LLaMA2-13B (Jia et al., 2026; Findings of ACL 2026; [doi:10.18653/v1/2026.findings-acl.1477](https://doi.org/10.18653/v1/2026.findings-acl.1477)).
 
+#### 2026-11-08 — An attention-based hallucination signal as a training reward
+Multi-agent RAG systems trained on answer overlap (exact match or F1) are hardly penalised for claims that the evidence does not support. This approach trains a small critic once on truthful and false answer pairs from TruthfulQA, using the norms of the attention heads that separate the two, and subtracts its hallucination-risk score from the shared reward when a query planner, an evidence selector and an answer generator (LoRA adapters on one frozen model) are trained with PPO. On RAGTruth the share of answers with unsupported claims fell below that of the strongest multi-agent baseline for all three backbones, by 10.7 points for Qwen3-8B. On its own the critic reached 75.92% AUROC on held-out TruthfulQA pairs, so the paper uses it as a reward signal rather than as a standalone detector (Jia et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.1809](https://doi.org/10.18653/2026.findings-emnlp.1809)).
+
 ## DE
 
 > **Hinweis:** LLM-generierte Zusammenfassung auf Basis der angegebenen Quellen; sie kann unvollständig, veraltet oder fehlerhaft sein.
@@ -176,3 +180,6 @@ Ein Halluzinationsdetektor ist nur so gut wie seine Evidenz und seine Labels: Er
 
 #### 2026-10-11 — Entitäten gegen abgerufene Belege prüfen
 Statt sich auf interne Signale des Modells zu verlassen, dessen Wissen veraltet sein kann, erkennt EAEV halluzinierte Entitäten, indem es Belege abruft und prüft, wie gut jede erzeugte Entität in drei Dimensionen zu ihnen passt; eine kontrafaktische Stabilitätsanalyse testet, ob die Übereinstimmung bei veränderten Belegen bestehen bleibt. Auf LLaMA2-13B erreichte es 87,89 % AUROC (Jia et al., 2026; Findings of ACL 2026; [doi:10.18653/v1/2026.findings-acl.1477](https://doi.org/10.18653/v1/2026.findings-acl.1477)).
+
+#### 2026-11-08 — Ein Halluzinationssignal aus der Attention als Trainingsbelohnung
+Multi-Agenten-RAG-Systeme, die auf Antwortüberlappung (Exact Match oder F1) trainiert werden, werden für Aussagen, die die Belege nicht stützen, kaum bestraft. Dieser Ansatz trainiert einmalig einen kleinen Kritiker auf wahren und falschen Antwortpaaren aus TruthfulQA, der die Normen der Attention-Heads nutzt, die beide trennen, und zieht dessen Halluzinationsrisiko von der gemeinsamen Belohnung ab, wenn ein Query-Planer, ein Belegauswähler und ein Antwortgenerator (LoRA-Adapter auf einem eingefrorenen Modell) mit PPO trainiert werden. Auf RAGTruth sank der Anteil der Antworten mit nicht gestützten Aussagen bei allen drei Basismodellen unter den des stärksten Multi-Agenten-Vergleichssystems, bei Qwen3-8B um 10,7 Prozentpunkte. Für sich allein erreichte der Kritiker 75,92 % AUROC auf zurückgehaltenen TruthfulQA-Paaren; die Arbeit setzt ihn deshalb als Belohnungssignal und nicht als eigenständigen Detektor ein (Jia et al., 2026; Findings of EMNLP 2026; [doi:10.18653/2026.findings-emnlp.1809](https://doi.org/10.18653/2026.findings-emnlp.1809)).
