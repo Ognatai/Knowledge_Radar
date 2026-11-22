@@ -37,6 +37,9 @@ DAILY_PAPERS_API = "https://huggingface.co/api/daily_papers?date={day}"
 ARXIV_REQUEST_SPACING_SECONDS = 3.0
 TRANSIENT_HTTP_CODES = (429, 500, 502, 503, 504)
 FEED_RETRY_WAITS_SECONDS = (10, 30, 60)
+# arXiv throttles with 429 for minutes, not seconds: on 2026-11-22 one timeout was
+# followed by 429 for 16 of the next 17 phrases, each lost without a retry.
+ARXIV_RETRY_WAITS_SECONDS = (30, 60, 120)
 USER_AGENT = "KnowledgeRadar/0.1 (+https://github.com/Ognatai/Knowledge_Radar)"
 MAX_SUMMARY_CHARACTERS = 2000
 ATOM = "{http://www.w3.org/2005/Atom}"
@@ -131,13 +134,23 @@ def parse_arxiv(body: str, *, query: str, fetched_at: datetime) -> list[Finding]
     return findings
 
 
-def fetch_arxiv(query: ArxivQuery) -> list[Finding]:
+def fetch_arxiv(
+    query: ArxivQuery,
+    fetch: Callable[..., str] = fetch,
+    sleep: Callable[[float], None] = time.sleep,
+) -> list[Finding]:
+    """One search; busy answers and timeouts are retried with arXiv's longer waits."""
     global _last_arxiv_request
     wait = ARXIV_REQUEST_SPACING_SECONDS - (time.monotonic() - _last_arxiv_request)
     if wait > 0:
-        time.sleep(wait)
+        sleep(wait)
     try:
-        body = fetch(arxiv_query_url(query), timeout=60)
+        body = fetch_with_retry(
+            arxiv_query_url(query),
+            lambda url: fetch(url, timeout=60),
+            sleep=sleep,
+            waits=ARXIV_RETRY_WAITS_SECONDS,
+        )
     finally:
         _last_arxiv_request = time.monotonic()
     return parse_arxiv(body, query=query.phrase, fetched_at=datetime.now().astimezone())
@@ -222,23 +235,34 @@ def parse_feed(
     return findings
 
 
+def _timed_out(exc: OSError) -> bool:
+    return isinstance(exc, TimeoutError) or (
+        isinstance(exc, urllib.error.URLError) and isinstance(exc.reason, TimeoutError)
+    )
+
+
 def fetch_with_retry(
     url: str,
     fetch: Callable[[str], str] = fetch,
     sleep: Callable[[float], None] = time.sleep,
+    waits: tuple[float, ...] = FEED_RETRY_WAITS_SECONDS,
 ) -> str:
-    """Busy and server errors are retried after a wait; YouTube's channel feeds also
-    answer 404 now and then for channels that exist (six at once on 2026-11-01)."""
+    """Busy and server errors and timeouts are retried after a wait; YouTube's channel
+    feeds also answer 404 now and then for channels that exist (six at once on 2026-11-01)."""
     transient = set(TRANSIENT_HTTP_CODES)
     if urllib.parse.urlparse(url).hostname == "www.youtube.com":
         transient.add(404)
-    for attempt, wait in enumerate((0, *FEED_RETRY_WAITS_SECONDS)):
+    for attempt, wait in enumerate((0, *waits)):
         if wait:
             sleep(wait)
+        last = attempt == len(waits)
         try:
             return fetch(url)
         except urllib.error.HTTPError as exc:
-            if exc.code not in transient or attempt == len(FEED_RETRY_WAITS_SECONDS):
+            if exc.code not in transient or last:
+                raise
+        except OSError as exc:  # URLError and TimeoutError; HTTPError is handled above
+            if not _timed_out(exc) or last:
                 raise
     raise AssertionError("unreachable")
 

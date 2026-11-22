@@ -11,7 +11,9 @@ from app.agents.monitoring.config import ConfigError, load_sources_config
 from app.agents.monitoring.feeds import (
     ArxivQuery,
     arxiv_query_url,
+    ARXIV_RETRY_WAITS_SECONDS,
     decode_body,
+    fetch_arxiv,
     fetch_with_retry,
     parse_arxiv,
     parse_daily_papers,
@@ -440,3 +442,41 @@ def test_other_feeds_retry_busy_responses_but_not_a_404():
     with pytest.raises(urllib.error.HTTPError):
         fetch_with_retry("https://example.org/feed.xml", fetch, sleep=lambda seconds: None)
     assert len(calls) == 1
+
+
+def test_timeouts_are_retried_but_other_network_errors_are_not():
+    calls = []
+
+    def fetch(url):
+        calls.append(url)
+        if len(calls) == 1:
+            raise TimeoutError("The read operation timed out")
+        if len(calls) == 2:
+            raise urllib.error.URLError(TimeoutError("timed out"))
+        return "ok"
+
+    assert fetch_with_retry("https://example.org/feed.xml", fetch, sleep=lambda seconds: None) == "ok"
+    assert len(calls) == 3
+
+    def refused(url):
+        raise urllib.error.URLError(ConnectionRefusedError())
+
+    with pytest.raises(urllib.error.URLError):
+        fetch_with_retry("https://example.org/feed.xml", refused, sleep=lambda seconds: None)
+
+
+def test_arxiv_retries_throttling_with_long_waits():
+    calls, waits = [], []
+
+    def fetch(url, timeout):
+        calls.append(url)
+        if len(calls) == 1:
+            raise TimeoutError("The read operation timed out")
+        if len(calls) <= 3:
+            raise urllib.error.HTTPError(url, 429, "Too Many Requests", {}, io.BytesIO(b""))
+        return ARXIV_ATOM
+
+    findings = fetch_arxiv(ArxivQuery("LLM agents", ["cs.CL"], 5), fetch=fetch, sleep=waits.append)
+
+    assert len(calls) == 4 and findings
+    assert list(ARXIV_RETRY_WAITS_SECONDS) == [wait for wait in waits if wait > 3]

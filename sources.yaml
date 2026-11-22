@@ -219,10 +219,13 @@ rss:
       - elektronisch*
       - NIS-2*
     exclude_keywords: [Berichtigung]
-  - name: EDPB News
-    url: https://www.edpb.europa.eu/feed/news_en
+  # The news feed (/feed/news_en) has answered 503 since 2026-11-08, although the
+  # news page still links it; publications carry guidelines, opinions and statements.
+  - name: EDPB Publications
+    url: https://www.edpb.europa.eu/feed/publications_en
     category: regulatory
     source_kind: primary_research
+    exclude_keywords: [Binding Corporate Rules]
   - name: Datenschutzkonferenz
     url: https://www.datenschutzkonferenz-online.de/rss.xml
     category: regulatory
